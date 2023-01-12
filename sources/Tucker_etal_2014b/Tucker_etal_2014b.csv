@@ -1,0 +1,463 @@
+Taxon,"log10Homerange(km2)","log10Mass(kg)",Diet,Environment,References
+Abrothrix_olivaceus,-3.33,-1.61,Omnivore,Terrestrial,Jones et al. 2009
+Acinonyx_jubatus,2.91,1.70,Carnivore,Terrestrial,Caro 1994
+Aepyceros_melampus,0.51,1.80,Herbivore,Terrestrial,"duToit 1990, Murray 1982"
+Ailuropoda_melanoleuca,0.62,1.94,Herbivore,Terrestrial,Schaller et al. 1985
+Ailurus_fulgens,0.01,0.73,Herbivore,Terrestrial,Reid et al. 1991
+Alcelaphus_buselaphus,0.34,2.13,Herbivore,Terrestrial,Ables and Ables 1971
+Alces_alces,1.97,2.49,Herbivore,Terrestrial,"Addison et al. 1980, Ballard et al. 1991, Bangs and Bailey 1980b, Bangs et al. 1984, Cederlund andOkarma 1988, Cederlund and Sand  1994, Doerr 1983, Grauvogel 1984, Hauge and Keith 1981,Leptich and Gilbert 1989, MacCracken et al. 1997, Stenhouse et al. 1994, Van Dyke et al. 1995"
+Alouatta_seniculus,-0.80,0.81,Omnivore,Terrestrial,Jones et al. 2009
+Amblysomus_hottentotus,-3.33,-1.20,Omnivore,Terrestrial,Jones et al. 2009
+Ammospermophilus_leucurus,-1.30,-0.98,Omnivore,Terrestrial,Jones et al. 2009
+Ammospermophilus_nelsoni,-1.40,-0.79,Omnivore,Terrestrial,Jones et al. 2009
+Ammotragus_lervia,0.96,2.22,Herbivore,Terrestrial,Hampy 1978
+Antechinus_stuartii,-1.46,-1.56,Carnivore,Terrestrial,Lazenby-Cohen and Cockburn 1991
+Antilocapra_americana,1.01,1.66,Herbivore,Terrestrial,"Bayless 1969, Reynolds 1984"
+Aonyx_capensis,2.08,1.29,Omnivore,Terrestrial,Jones et al. 2009
+Aotus_trivirgatus,-1.30,-0.04,Omnivore,Terrestrial,Jones et al. 2009
+Aplodontia_rufa,-2.98,0.05,Herbivore,Terrestrial,Martin 1971
+Apodemus_flavicollis,-2.12,-1.50,Herbivore,Terrestrial,Scharzenberger and Klingel 1995
+Apodemus_sylvaticus,-1.88,-1.67,Herbivore,Terrestrial,"Attuquayefio et al. 1986, Corp et al. 1997, Wolton 1985"
+Apomys_musculus,-2.63,-1.67,Omnivore,Terrestrial,Jones et al. 2009
+Arctocephalus_gazella,3.75,1.53,Carnivore,Marine,"Personal communication; Staniland et al., 2010"
+Arctocephalus_tropicalis,5.34,1.52,Carnivore,Marine,This study
+Atherurus_africanus,-0.82,0.44,Herbivore,Terrestrial,Emmons 1983
+Atilax_paludinosus,0.35,0.56,Carnivore,Terrestrial,Ray 1997
+Axis_axis,0.56,1.80,Herbivore,Terrestrial,"Ables et al. 1977, Moe and Wegge 1994"
+Balaena_mysticetus,4.39,4.49,Carnivore,Marine,"Heide-Jorgensen et al., 2007"
+Bassariscus_astutus,-0.08,0.01,Omnivore,Terrestrial,"Toweill and Teer 1981, Trapp 1978"
+Bathyergus_suillus,-2.57,-0.20,Herbivore,Terrestrial,Davies and Jarvis 1986
+Bettongia_gaimardi,-0.34,0.22,Herbivore,Terrestrial,Taylor 1993
+Bison_bison,2.42,2.80,Herbivore,Terrestrial,"Larter and Gates 1994, Lott and Minta 1983, Van Vuren 1983"
+Bison_bonasus,1.01,2.80,Herbivore,Terrestrial,Krasinska and Krasinski 1995
+Brachylagus_idahoensis,-2.31,-0.47,Herbivore,Terrestrial,Katzner and Parker 1997
+Brachyteles_arachnoides,0.33,1.02,Omnivore,Terrestrial,Jones et al. 2009
+Bradypus_torquatus,-1.35,0.59,Herbivore,Terrestrial,Chiarello 1998
+Bunopithecus_hoolock,-0.64,0.83,Omnivore,Terrestrial,Jones et al. 2009
+Callicebus_moloch,-1.52,-0.02,Omnivore,Terrestrial,Jones et al. 2009
+Callimico_goeldii,-0.35,-0.25,Omnivore,Terrestrial,Jones et al. 2009
+Callithrix_humeralifera,-0.89,-0.43,Omnivore,Terrestrial,Jones et al. 2009
+Callithrix_pygmaea,-2.51,-0.91,Omnivore,Terrestrial,Jones et al. 2009
+Callosciurus_erythraeus,-1.85,-0.44,Omnivore,Terrestrial,Tamura et al. 1989
+Caluromys_philander,-1.50,-0.58,Omnivore,Terrestrial,Julien-Laferriere 1995
+Canis_adustus,0.04,0.98,Omnivore,Terrestrial,Fuller et al. 1989
+Canis_aureus,0.17,0.96,Omnivore,Terrestrial,"Fuller et al. 1989, Poche et al. 1987"
+Canis_familiaris,1.46,1.15,Omnivore,Terrestrial,"Daniels and Bekoff 1989, Gipson 1983, Harden 1985, Nakada et al. 1996, Scott and Causey 1973,Thomson 1992"
+Canis_latrans,1.46,1.20,Omnivore,Terrestrial,"Althoff 1978,  Andelt 1985,  Andelt and Gipson 1979, Babb and Kennedy 1988, Berg and Chesness1978, Bowen 1982, Bradley and Fagre 1988, Danner and Smith 1980, Fuller and Keith 1981, Gese etal. 1988, Harrison et al. 1989, Hibler 1977, Holzman et al. 1992, Laundre and Keller 1983, Litvaitis andShaw 1980, Major and Sherburne 1987, Mills and Knowlton 1991, Person and Hirth 1991, Pyrah 1984,Roy and Dorrance 1985, Sargeant et al. 1987, Servin and Huxley 1995, Springer 1982, Sumner et al.1984, White et al. 1994, Windberg and Knowlton 1988, Windberg et al. 1997, Witmer and de Calesta1986, Woodruff and Keller 1982"
+Canis_lupus,2.67,1.63,Carnivore,Terrestrial,"Ballard et al. 1997, Bjorge and Gunson 1989, Carbyn 1983, Ciucci et al. 1997, Fritts and Mech 1981,Fuller 1989, Messier 1985, Okarma et al. 1998, Peterson et al. 1984, Potvin 1987, VanBallenberghe etal. 1975"
+Canis_mesomelas,1.20,1.00,Omnivore,Terrestrial,"Ferguson et al. 1983, Fuller et al. 1989"
+Canis_simensis,0.73,1.44,Carnivore,Terrestrial,Sillero Zubiri and Gottelli 1995
+Capra_hircus,1.81,1.71,Herbivore,Terrestrial,"King 1992, OBrien 1984"
+Capra_pyrenaica,-0.15,1.84,Herbivore,Terrestrial,Escos and Alados 1992
+Capreolus_capreolus,-0.17,1.38,Herbivore,Terrestrial,"Bideau et al. 1993, Cederlund 1983, Chapman et al. 1993, Guillet et al. 1996"
+Caracal_caracal,2.58,1.11,Carnivore,Terrestrial,"Avenant and Nel 1998, Bothma and ldRiche 1994, Norton and Lawson 1985, vanHeezik and Seddon1998"
+Castor_canadensis,-1.11,1.31,Herbivore,Terrestrial,"Davis and Guynn 1993, Wheatley 1997"
+Catagonus_wagneri,1.04,1.54,Herbivore,Terrestrial,Taber et al. 1994
+Cebus_capucinus,-0.20,0.48,Omnivore,Terrestrial,Jones et al. 2009
+Cephalophus_callipygus,-0.38,1.26,Herbivore,Terrestrial,Feer 1989
+Cephalophus_dorsalis,-0.45,1.31,Herbivore,Terrestrial,Feer 1989
+Cephalorhynchus_heavisidii,2.78,1.88,Carnivore,Marine,"Elwin et al., 2006"
+Ceratotherium_simum,1.20,3.35,Herbivore,Terrestrial,Pienaar et al. 1993
+Cercartetus_nanus,-2.15,-1.62,Omnivore,Terrestrial,Laidlaw and Wilson 1996
+Cercopithecus_cephus,-0.46,0.54,Omnivore,Terrestrial,Jones et al. 2009
+Cercopithecus_diana,0.28,0.64,Omnivore,Terrestrial,Jones et al. 2009
+Cercopithecus_mitis,-0.80,0.70,Omnivore,Terrestrial,Jones et al. 2009
+Cercopithecus_nictitans,0.24,0.72,Omnivore,Terrestrial,Jones et al. 2009
+Cerdocyon_thous,0.48,0.76,Omnivore,Terrestrial,"MacDonald and Courtenay 1996, Sunquist et al. 1989"
+Cervus_elaphus,1.87,2.37,Herbivore,Terrestrial,"Catt and Staines 1987, Cole et al. 1997, Craighead et al. 1973, Edge et al. 1985, Franklin and Lieb1979, Georgii 1980, Irwin and Peek 1983, Jenkins and Starkey 1982, McCorquodale et al. 1989,Strohmeyer and Peek 1996, Waldrip and Shaw 1979"
+Cervus_nippon,-0.07,1.47,Herbivore,Terrestrial,"Borkowsky and Furubayashi 1998, Feldhamer et al. 1982"
+Cheirogaleus_major,-1.40,-0.35,Omnivore,Terrestrial,Jones et al. 2009
+Chrysocyon_brachyurus,1.43,1.38,Omnivore,Terrestrial,Dietz 1984
+Chrysospalax_trevelyani,-3.21,-0.36,Carnivore,Terrestrial,Jones et al. 2009
+Clethrionomys_californicus,-1.80,-1.65,Herbivore,Terrestrial,Tallmon and Mills 1994
+Coendou_prehensilis,-0.73,0.63,Herbivore,Terrestrial,Montgomery and Lubin 1978
+Condylura_cristata,-2.44,-1.32,Carnivore,Terrestrial,Jones et al. 2009
+Conepatus_humboldtii,-0.79,0.12,Omnivore,Terrestrial,Fuller et al. 1987
+Conepatus_semistriatus,-0.45,0.38,Omnivore,Terrestrial,Sunquist et al. 1989
+Crocidura_russula,-3.63,-2.00,Carnivore,Terrestrial,Jones et al. 2009
+Crocuta_crocuta,2.24,1.81,Carnivore,Terrestrial,"Gasaway et al. 1989, Sillero Zubiri and Gottelli 1992"
+Cryptomys_damarensis,-1.89,-0.83,Herbivore,Terrestrial,Lovegrove 1988
+Cryptomys_hottentotus,-2.80,-1.19,Herbivore,Terrestrial,Davies and Jarvis 1986
+Cryptoprocta_ferox,-0.05,0.98,Carnivore,Terrestrial,Jones et al. 2009
+Cryptotis_parva,-2.76,-2.30,Omnivore,Terrestrial,Jones et al. 2009
+Cuon_alpinus,1.84,1.20,Carnivore,Terrestrial,Venkataraman et al. 1995
+Cyclopes_didactylus,-1.40,-0.58,Carnivore,Terrestrial,Jones et al. 2009
+Cynictis_penicillata,-0.23,-0.21,Carnivore,Terrestrial,Cavallini 1993
+Cystophora_cristata,4.72,2.56,Carnivore,Marine,Bajzak et al. 2009
+Dactylopsila_trivirgata,-1.10,-0.38,Omnivore,Terrestrial,Jones et al. 2009
+Dama_dama,-0.01,1.85,Herbivore,Terrestrial,Nugent 1994
+Dasypus_novemcinctus,-1.52,0.60,Omnivore,Terrestrial,Jones et al. 2009
+Dasyurus_geoffroii,0.36,0.04,Carnivore,Terrestrial,Jones et al. 2009
+Dasyurus_maculatus,0.16,0.52,Omnivore,Terrestrial,Jones et al. 2009
+Dasyurus_viverrinus,-0.44,0.04,Omnivore,Terrestrial,Jones et al. 2009
+"Daubentonia_madagascariensis",-0.96,0.44,Omnivore,Terrestrial,Jones et al. 2009
+Delphinapterus_leucas,3.52,3.18,Carnivore,Marine,"Hobbs et al., 2005"
+Dendrolagus_lumholtzi,-1.71,0.82,Herbivore,Terrestrial,Newell 1999
+Desmana_moschata,-2.28,-0.37,Omnivore,Terrestrial,Jones et al. 2009
+Diceros_bicornis,1.62,3.02,Herbivore,Terrestrial,"Frame 1980, Goddard 1967, Kiwia 1989, Mukinya 1973"
+Didelphis_marsupialis,-0.25,0.04,Omnivore,Terrestrial,Sunquist et al. 1987
+Didelphis_virginiana,-0.28,0.70,Omnivore,Terrestrial,"Gillette 1980, Shirer and Fitch 1970"
+Dipodomys_ingens,-3.36,-0.81,Herbivore,Terrestrial,Braun 1985
+Dipodomys_merriami,-2.13,-1.38,Herbivore,Terrestrial,"Jones 1989, Schroder 1987"
+Dipodomys_ordii,-1.75,-1.25,Herbivore,Terrestrial,Schroder 1987
+Dipodomys_spectabilis,-2.52,-0.84,Herbivore,Terrestrial,"Schroder 1979, Schroder 1987"
+Dipodomys_stephensi,-2.83,-1.12,Herbivore,Terrestrial,Kelly and Price 1995
+Dolichotis_patagonum,-0.01,0.90,Herbivore,Terrestrial,Taber and MacDonald 1992
+Dugong_dugon,2.12,2.30,Herbivore,Marine,"Sheppard et al., 2006"
+Echymipera_clara,-2.00,0.08,Omnivore,Terrestrial,Jones et al. 2009
+Echymipera_kalubu,-1.70,-0.08,Omnivore,Terrestrial,Jones et al. 2009
+Eira_barbara,1.16,0.65,Carnivore,Terrestrial,"Konecny 1989, Sunquist et al. 1989"
+Elephantulus_rufescens,-2.47,-1.24,Carnivore,Terrestrial,Rathbun 1979
+Elephas_maximus,2.04,3.60,Herbivore,Terrestrial,Sukumar 1989
+Enhydra_lutris,0.18,1.44,Carnivore,Marine,Garshelis and Garshelis 1984
+Equus_burchelli,2.21,2.38,Herbivore,Terrestrial,Smuts 1975
+Equus_caballus,1.35,2.63,Herbivore,Terrestrial,Berger 1987
+Equus_zebra,0.97,2.46,Herbivore,Terrestrial,Penzhorn 1982
+Eremitalpa_granti,-1.33,-1.64,Carnivore,Terrestrial,Fielden 1991
+Erethizon_dorsatum,-0.44,0.94,Herbivore,Terrestrial,Roze 1987
+Erinaceus_europaeus,-0.71,-0.10,Carnivore,Terrestrial,"Boitani and Reggiani 1984, Morris 1988, Reeve 1982, Schoenfeld and YomTov 1985"
+Erythrocebus_patas,1.61,0.90,Omnivore,Terrestrial,Jones et al. 2009
+Eulemur_mongoz,-1.15,0.25,Omnivore,Terrestrial,Jones et al. 2009
+Eumetopias_jubatus,4.68,2.44,Carnivore,Marine,"Merrick et al., 1997"
+Euphractus_sexcinctus,-0.03,0.67,Omnivore,Terrestrial,Jones et al. 2009
+Felis_catus,0.17,0.53,Carnivore,Terrestrial,"Apps 1986, Fitzgerald and Karl 1986, Genovesi et al. 1995, Hall et al. 2000, Jones and Coman 1982,Konecny 1987, Norbury et al. 1998, Page et al. 1992, Weber and Dailly 1998"
+Felis_silvestris,0.45,0.68,Carnivore,Terrestrial,Stahl et al. 1988
+Fossa_fossana,-0.05,0.27,Omnivore,Terrestrial,Jones et al. 2009
+Funambulus_pennantii,-2.74,-0.99,Herbivore,Terrestrial,Prakash et al. 1968
+Galago_senegalensis,-0.96,-0.67,Omnivore,Terrestrial,Jones et al. 2009
+Galemys_pyrenaicus,-2.86,-1.22,Carnivore,Terrestrial,Jones et al. 2009
+Galerella_pulverulenta,-0.23,-0.23,Omnivore,Terrestrial,Cavallini and Nel 1990
+Galictis_vittata,0.62,0.24,Carnivore,Terrestrial,Sunquist et al. 1989
+Galidia_elegans,-0.70,-0.09,Omnivore,Terrestrial,Jones et al. 2009
+Gazella_gazella,0.27,1.33,Herbivore,Terrestrial,Dunham 1998
+Genetta_genetta,0.89,0.24,Carnivore,Terrestrial,Palomares and Delibes 1994
+Genetta_tigrina,-1.24,0.33,Carnivore,Terrestrial,Ikeda et al. 1982
+Georychus_capensis,-3.57,-0.62,Herbivore,Terrestrial,"Jarvis and Beviss-Challinor unpublished data, cited in Reichman and Smith 1990"
+Gerbillurus_paeba,-2.00,-1.59,Omnivore,Terrestrial,Jones et al. 2009
+Giraffa_camelopardalis,2.14,3.13,Herbivore,Terrestrial,"Berry 1978, duToit 1990, Langman 1973, Leuthold and Leuthold 1978"
+Glaucomys_sabrinus,-1.10,-0.83,Herbivore,Terrestrial,"Fridell and Litvaitis 1991, Witt 1992"
+Glaucomys_volans,-1.53,-1.19,Herbivore,Terrestrial,"Bendel and Gates 1987, Madden 1974, Stone et al. 1997"
+Graphiurus_ocularis,-0.96,-1.16,Herbivore,Terrestrial,vanHensbergen and Channing 1989
+Gulo_gulo,2.56,1.33,Carnivore,Terrestrial,"Banci and Harestad 1990, Gardner 1985 MS Alaska, Hornocker and Hash 1981, Landa et al. 1998,Magoun 1985, Whitman et al. 1986"
+Halichoerus_grypus,3.42,1.92,Carnivore,Marine,"Sjoberg and Ball, 2000"
+Heliophobius_argenteocinereus,-3.76,-0.81,Herbivore,Terrestrial,Jarvis and Sale 1971 cited in Reichman and Smith 1990
+Helogale_parvula,-0.55,-0.55,Carnivore,Terrestrial,Jones et al. 2009
+Hemiechinus_auritus,-1.39,-0.53,Carnivore,Terrestrial,Schoenfeld and YomTov 1985
+Herpestes_ichneumon,0.45,0.47,Omnivore,Terrestrial,Delibes and Beltran 1985
+Herpestes_javanicus,-1.50,-0.36,Omnivore,Terrestrial,Nellis and Everard 1983
+Herpestes_naso,-0.28,0.56,Omnivore,Terrestrial,Ray 1997
+Heterocephalus_glaber,-2.27,-1.41,Herbivore,Terrestrial,Jarvis 1985 cited in Reichman and Smith 1990
+Hyaena_brunnea,1.32,1.68,Carnivore,Terrestrial,Viljoen 1986
+Hyaena_hyaena,1.77,1.60,Carnivore,Terrestrial,"Kruuk 1976, vanAarde et al. 1988"
+Hydrurga_leptonyx,4.18,2.54,Carnivore,Marine,This study
+Hyemoschus_aquaticus,-0.72,1.04,Herbivore,Terrestrial,Dubost 1978citedinEmmons 1983
+Hylaeamys_megacephalus,-2.11,-1.18,Herbivore,Terrestrial,Guillotin 1982
+Hylobates_agilis,-0.57,0.77,Omnivore,Terrestrial,Jones et al. 2009
+Hylobates_klossii,-0.68,0.77,Omnivore,Terrestrial,Jones et al. 2009
+Hylobates_lar,-0.34,0.75,Omnivore,Terrestrial,Jones et al. 2009
+Hylobates_moloch,-0.77,0.77,Omnivore,Terrestrial,Jones et al. 2009
+Hylobates_muelleri,-0.42,0.77,Omnivore,Terrestrial,Jones et al. 2009
+Hylobates_pileatus,-0.48,0.74,Omnivore,Terrestrial,Jones et al. 2009
+Hylomys_suillus,-2.74,-1.24,Omnivore,Terrestrial,Jones et al. 2009
+Hypogeomys_antimena,-1.46,0.07,Herbivore,Terrestrial,Cook et al. 1991
+Hystrix_africaeaustralis,0.23,1.23,Herbivore,Terrestrial,Corbet and vanAarde 1996
+Hystrix_cristata,-0.24,1.13,Omnivore,Terrestrial,Jones et al. 2009
+Hystrix_indica,0.15,1.18,Herbivore,Terrestrial,Saltz and Alkon 1989
+Ichneumia_albicauda,-0.41,0.56,Carnivore,Terrestrial,"Ikeda et al. 1982, Waser and Waser 1985"
+Isoodon_auratus,-0.93,-0.41,Carnivore,Terrestrial,Southgate et al. 1996
+Isoodon_macrourus,-1.70,0.18,Omnivore,Terrestrial,Jones et al. 2009
+Isoodon_obesulus,-1.68,-0.11,Carnivore,Terrestrial,Broughton and Dickman 1991
+Lagostomus_maximus,-2.00,0.72,Herbivore,Terrestrial,Branch 1993
+Lagothrix_lagotricha,0.60,0.80,Omnivore,Terrestrial,Jones et al. 2009
+Lasiorhinus_krefftii,-0.60,1.41,Herbivore,Terrestrial,Johnson 1991
+Lemmus_sibiricus,-2.08,-1.04,Herbivore,Terrestrial,Banks et al. 1975
+Leontopithecus_chrysopygus,0.07,-0.18,Omnivore,Terrestrial,Jones et al. 2009
+Leontopithecus_rosalia,-0.43,-0.23,Omnivore,Terrestrial,Jones et al. 2009
+Leopardus_geoffroyi,0.85,0.56,Carnivore,Terrestrial,Johnson and Franklin 1991
+Leopardus_pardalis,0.84,1.00,Carnivore,Terrestrial,"Crawshaw and Quigley 1989, Emmons 1988, Konecny 1989, Lopez 1985, Ludlow and Sunquist 1987,Sunquist et al. 1989"
+Leopardus_wiedii,1.04,0.56,Carnivore,Terrestrial,Konecny 1989
+Lepilemur_edwardsi,-2.02,-0.09,Omnivore,Terrestrial,Jones et al. 2009
+Leptailurus_serval,0.38,1.08,Carnivore,Terrestrial,vanAarde and Skinner 1986
+Leptonychotes_weddelli,1.98,2.62,Carnivore,Marine,This study
+Lepus_americanus,-1.49,0.13,Herbivore,Terrestrial,"Boutin 1979, Ferron and Ouellet 1992"
+Lepus_arcticus,0.46,0.61,Herbivore,Terrestrial,Hearn et al. 1987
+Lepus_californicus,0.20,0.36,Herbivore,Terrestrial,Smith 1990
+Lepus_capensis,-0.28,0.55,Herbivore,Terrestrial,Parkes 1984
+Lepus_europaeus,-0.54,0.72,Herbivore,Terrestrial,Broekhuizen and Maaskamp 1982
+Lepus_nigricollis,-1.86,0.50,Herbivore,Terrestrial,Kirk and Bathe 1994
+Lepus_timidus,-0.34,0.45,Herbivore,Terrestrial,"Flux 1970, Hewson and Hinge 1990, Hulbert et al. 1996"
+Liomys_salvini,-2.76,-1.38,Omnivore,Terrestrial,Jones et al. 2009
+Lobodon_carcinophagus,5.57,2.40,Carnivore,Marine,This study
+Lophocebus_albigena,0.61,0.87,Omnivore,Terrestrial,Jones et al. 2009
+Loris_tardigradus,-2.00,-0.60,Omnivore,Terrestrial,Jones et al. 2009
+Loxodonta_africana,3.24,3.60,Herbivore,Terrestrial,"DeVilliers and Kok 1997, Dunham 1986, Leuthold 1977, Lindeque and Lindeque 1991, Tchamba et al.1994, Thouless 1996, Viljoen 1989"
+Lutra_canadensis,1.63,0.97,Carnivore,Marine,"Blundell et al., 2000"
+Lutra_lutra,1.41,0.95,Carnivore,Terrestrial,Jones et al. 2009
+Lutreolina_crassicaudata,-2.73,-0.26,Carnivore,Terrestrial,Jones et al. 2009
+Lutrogale_perspicillata,0.80,0.95,Carnivore,Terrestrial,Jones et al. 2009
+Lycaon_pictus,2.64,1.43,Carnivore,Terrestrial,"Anderka et al. 1999, Fuller and Kat 1990"
+Lynx_canadensis,1.92,1.01,Carnivore,Terrestrial,"Bailey et al. 1986, Koehler 1990, Poole 1994, Slough and Mowat 1996"
+Lynx_lynx,2.26,1.48,Carnivore,Terrestrial,"Haller and Breitenmoser 1986, Schmidt et al. 1997"
+Lynx_pardinus,0.98,1.04,Carnivore,Terrestrial,Ferreras et al. 1997
+Lynx_rufus,1.60,1.05,Carnivore,Terrestrial,"Bailey 1974, Berg 1981, Bradley and Fagre 1988, Buie et al. 1979, Conner et al. 1992, Fuller et al.1985, Knick 1990, Koehler and Hornocker 1989, Litvaitis et al. 1987, Lovallo and  and erson 1996,Major and Sherburne 1987, Rolley 1983, Rucker et al. 1989, Whitaker et al. 1987, Witmer anddeCalesta 1986, Zezulak and Schwab 1979, Zwank et al. 1985"
+Macaca_silenus,-0.07,0.78,Omnivore,Terrestrial,Jones et al. 2009
+Macropus_antilopinus,-0.19,1.44,Herbivore,Terrestrial,Croft 1987
+Macropus_dorsalis,-0.04,1.05,Herbivore,Terrestrial,Evans 1996
+Macropus_fuliginosus,0.51,1.34,Herbivore,Terrestrial,"Arnold et al. 1992, Coulson 1993, Priddell et al. 1988"
+Macropus_giganteus,0.79,1.02,Herbivore,Terrestrial,Jarman and Taylor 1983
+Macropus_robustus,-0.01,1.33,Herbivore,Terrestrial,"Clancy and Croft 1990, Croft 1987, Jarman and Taylor 1983"
+Macropus_rufogriseus,-0.79,1.23,Herbivore,Terrestrial,Johnson 1987
+Macropus_rufus,0.89,1.67,Herbivore,Terrestrial,Priddell et al. 1988
+Macroscelides_proboscideus,0.00,-1.41,Omnivore,Terrestrial,Jones et al. 2009
+Madoqua_guentheri,-1.56,0.66,Herbivore,Terrestrial,Ono et al. 1988
+Manis_temminckii,1.12,1.10,Carnivore,Terrestrial,Heath and Coulson 1997
+Marmosa_robinsoni,-2.66,-1.22,Omnivore,Terrestrial,Jones et al. 2009
+Marmota_flaviventris,-1.24,0.53,Herbivore,Terrestrial,"Salsbury and Armitage 1994, Van Vuren unpubl. data"
+Marmota_monax,-0.78,0.53,Herbivore,Terrestrial,"Ferron and Oellet 1989, Meier 1992, Swihart 1992"
+Martes_americana,0.85,-0.05,Carnivore,Terrestrial,"Archibald and Jessup 1984, Bateman 1986, Burnett 1981, Buskirk 1983, Clark et al. 1989, Davis 1983,Katnik et al. 1994, Major 1979, Mech and Rogers 1977, Simon 1980, Slough 1989, Spencer 1981,Steventon 1979, Steventon and Major 1982, Thompson and Colgan 1987, Wynne and Sherburne 1984"
+Martes_foina,0.64,0.26,Carnivore,Terrestrial,Genovesi et al. 1997
+Martes_martes,0.96,0.39,Carnivore,Terrestrial,"Clevenger 1993, Pulliainen 1984, Schropfer et al. 1997, Zalewski et al. 1995"
+Martes_pennanti,1.22,0.50,Carnivore,Terrestrial,"Arthur et al. 1989, Garant and Crete 1997"
+Mastomys_natalensis,-2.93,-1.18,Omnivore,Terrestrial,Leirs et al. 1996
+Megaptera_novaeangliae,4.68,4.52,Carnivore,Marine,"Dalla Rosa et al., 2008"
+Meles_meles,0.34,1.09,Omnivore,Terrestrial,"Broseth et al. 1997, Kruuk 1987"
+Melursus_ursinus,1.00,1.99,Carnivore,Terrestrial,Melquist 1982
+Mephitis_mephitis,0.47,0.66,Omnivore,Terrestrial,"Lariviere and Messier 1998, Shirer and Fitch 1970, Storm 1972"
+Meriones_hurrianae,-3.88,-1.05,Herbivore,Terrestrial,Fitzwater and Prakash 1969
+Microdipodops_megacephalus,-2.33,-1.91,Omnivore,Terrestrial,Jones et al. 2009
+Microtus_agrestis,-3.15,-1.42,Herbivore,Terrestrial,Agrell et al. 1996
+Microtus_californicus,-4.07,-1.15,Herbivore,Terrestrial,Heske 1987
+Microtus_montanus,-3.82,-1.25,Herbivore,Terrestrial,Douglas 1976
+Microtus_ochrogaster,-3.17,-1.45,Herbivore,Terrestrial,"Danielson and Swihart 1987, Gaulin and FitzGerald 1988, Harvey and Barbour 1965, Jike et al. 1988"
+Microtus_pennsylvanicus,-3.39,-1.30,Herbivore,Terrestrial,"Collins and Barrett 1997, Douglas 1976, Gaulin and FitzGerald 1988, Jones 1990, Jones and Sherman1983"
+Microtus_pinetorum,-4.44,-1.53,Herbivore,Terrestrial,Gettle 1975
+Microtus_richardsoni,-3.38,-1.07,Herbivore,Terrestrial,Ludwig 1981
+Miopithecus_talapoin,0.08,0.10,Omnivore,Terrestrial,Jones et al. 2009
+Mirounga_angustirostris,3.90,3.08,Carnivore,Marine,"LeBoeuf et al., 2000"
+Mirounga_leonina,5.69,3.18,Carnivore,Marine,This study
+Mirza_coquereli,-1.40,-0.49,Omnivore,Terrestrial,Jones et al. 2009
+Monachus_schauinslandi,4.00,2.31,Carnivore,Marine,"Curtice et al., 2011"
+Monodelphis_americana,-3.33,-1.71,Carnivore,Terrestrial,Jones et al. 2009
+Monodon_monoceros,4.72,3.11,Carnivore,Marine,"Dietz et al., 2008"
+Mungos_mungo,0.33,0.10,Carnivore,Terrestrial,Jones et al. 2009
+Muntiacus_reevesi,-0.79,1.13,Herbivore,Terrestrial,Chapman et al. 1993
+Mus_musculus,-3.21,-1.71,Carnivore,Terrestrial,Jones et al. 2009
+Muscardinus_avellanarius,-2.36,-1.51,Herbivore,Terrestrial,Bright and Morris 1991
+Mustela_erminea,0.12,-0.57,Carnivore,Terrestrial,"Alterio 1998, Murphy and Dowding 1994, Murphy and Dowding 1995"
+Mustela_frenata,-0.75,-0.82,Carnivore,Terrestrial,DeVan 1982
+Mustela_lutreola,-0.68,-0.25,Carnivore,Terrestrial,Jones et al. 2009
+Mustela_nigripes,0.00,-0.04,Carnivore,Terrestrial,Jones et al. 2009
+Mustela_nivalis,-0.19,-1.06,Carnivore,Terrestrial,Norbury et al. 1998
+Mustela_putorius_furo,-0.05,-0.09,Carnivore,Terrestrial,Jedrzejewski et al. 1995
+Mustela_sibirica,0.61,-0.28,Carnivore,Terrestrial,Jones et al. 2009
+Myocastor_coypus,-1.52,0.80,Omnivore,Terrestrial,Jones et al. 2009
+Myodes_californicus,-2.80,-1.65,Herbivore,Terrestrial,Tallmon and Mills 1994
+Myodes_gapperi,-3.26,-1.70,Omnivore,Terrestrial,Jones et al. 2009
+Myodes_glareolus,-2.92,-1.68,Omnivore,Terrestrial,Jones et al. 2009
+Myopus_schisticolor,-3.01,-1.52,Herbivore,Terrestrial,Andreassen and Bondrup Nielsen 1991
+Myrmecobius_fasciatus,-0.46,-0.29,Carnivore,Terrestrial,Jones et al. 2009
+Myrmecophaga_tridactyla,0.51,1.48,Carnivore,Terrestrial,Shaw et al. 1987
+Nasua_narica,0.24,0.67,Omnivore,Terrestrial,"Gompper 1997, Lanning 1976, Ratnayeke et al. 1994"
+Nasua_nasua,-0.02,0.58,Omnivore,Terrestrial,Jones et al. 2009
+Nectomys_squamipes,-2.66,-0.73,Omnivore,Terrestrial,Jones et al. 2009
+Neomys_fodiens,-3.77,-1.82,Omnivore,Terrestrial,Jones et al. 2009
+Neophoca_cinervea,2.78,1.95,Carnivore,Marine,Fowler et al. 2007
+Neotoma_cinerea,-1.32,-0.40,Herbivore,Terrestrial,Topping and Millar 1996
+Neotoma_fuscipes,-2.60,-0.51,Herbivore,Terrestrial,"Cranford 1977, Kelly 1990, Lynch et al. 1994, Sakai and Noon 1997"
+Neotoma_lepida,-3.27,-0.88,Herbivore,Terrestrial,Thompson 1982
+Neotoma_micropus,-3.24,-0.59,Herbivore,Terrestrial,Condit and Ribble 1997
+Nesomys_audeberti,-2.02,-0.67,Herbivore,Terrestrial,Ryan et al. 1994
+Nesomys_rufus,-2.30,-0.78,Herbivore,Terrestrial,Ryan et al. 1994
+Nyctereutes_procyonoides,0.40,0.81,Omnivore,Terrestrial,"Ikeda et al. 1979, Kauhala et al. 1993, Ward and Wurster Hill 1989"
+Ochotona_curzoniae,-2.86,-0.81,Herbivore,Terrestrial,Smith et al. 1986
+Ochotona_princeps,-2.73,-0.83,Herbivore,Terrestrial,"Kawamichi 1976, Smith and Ivins 1984"
+Ochrotomys_nuttalli,-2.38,-1.64,Omnivore,Terrestrial,Jones et al. 2009
+Odocoileus_hemionus,1.54,1.73,Herbivore,Terrestrial,"Dickinson and Garner 1979, Eberhardt et al. 1984, Hayes and Krausman 1993, Kohl et al. 1987, Kufeldet al. 1989, Leach and Edge 1994, Livesey 1991, Loft et al. 1989, Nicholson et al. 1997, Schoen andKirchhoff 1985, Stephenson et al. 1996"
+Odocoileus_virginianus,0.40,1.94,Herbivore,Terrestrial,"Beier and McCullough 1990, Holzenbein and Marchinton 1992, Hoskinson and Mech 1976, Ivey andCausey 1981, McShea and Schwede 1993, Mooty et al. 1987, Nelson and Mech 1981, Sargent andLabisky 1995, Scanlon and Vaughan 1985, Tierson et al. 1985, Vanderhoof and Jacobson 1993,Vercauteren and Hygnstrom 1998, Wiles and Weeks 1986"
+Okapia_johnstoni,0.77,2.36,Herbivore,Terrestrial,Hart and Hart 1989
+Ondatra_zibethicus,-2.47,0.00,Omnivore,Terrestrial,Jones et al. 2009
+Ondatra_zibethicus_,-2.22,0.13,Herbivore,Terrestrial,Dell et al. 1983
+Onychogalea_fraenata,-0.37,0.70,Herbivore,Terrestrial,Evans 1996
+Onychomys_torridus,-1.59,-1.66,Carnivore,Terrestrial,Frank and Heske 1992
+Orcaella_heinsohni,2.28,2.11,Carnivore,Marine,"Parra, 2006"
+Orcinus_orca,3.72,3.75,Carnivore,Marine,"Andrews et al., 2008"
+Oreamnos_americanus,1.37,2.80,Herbivore,Terrestrial,Rideout 1975
+Ornithorhynchus_anatinus,-1.16,0.18,Carnivore,Terrestrial,Gust and Handasyde 1995
+Oryctolagus_cuniculus,-1.20,0.20,Herbivore,Terrestrial,Hulbert et al. 1996
+Oryzomys_palustris,-2.56,-1.27,Omnivore,Terrestrial,Jones et al. 2009
+Otaria_flavescens,3.86,2.37,Carnivore,Marine,"Campagna et al., 2001"
+Otocyon_megalotis,0.55,0.62,Carnivore,Terrestrial,Malcolm 1986
+Otolemur_crassicaudatus,-1.15,0.08,Omnivore,Terrestrial,Jones et al. 2009
+Otolemur_garnettii,-0.89,-0.09,Omnivore,Terrestrial,Jones et al. 2009
+Ovis_ammon,0.77,2.06,Herbivore,Terrestrial,DuBois et al. 1993
+Ovis_canadensis,1.44,1.96,Herbivore,Terrestrial,"Bissonette and Steinkamp 1996, Bristow et al. 1996, Krausman et al. 1989, Leslie and Douglas 1979,Payer and Coblentz 1997"
+Ozotoceros_bezoarticus,0.90,1.54,Herbivore,Terrestrial,Leeuwenberg et al. 1997
+Paguma_larvata,0.57,0.48,Omnivore,Terrestrial,Rabinowitz 1991
+Pan_troglodytes,1.10,1.65,Omnivore,Terrestrial,Jones et al. 2009
+Panthera_leo,2.31,2.31,Carnivore,Terrestrial,Schaller 1972
+Panthera_onca,1.92,1.92,Carnivore,Terrestrial,"Crawshaw and Quigley 1991, Rabinowitz and Nottingham 1986"
+Panthera_pardus,2.70,1.68,Carnivore,Terrestrial,"Bailey 1993, Bothma et al. 1997, Jenny 1996, Norton and Lawson 1985, Stander et al. 1997"
+Panthera_tigris,1.73,2.05,Carnivore,Terrestrial,"McDougal 1977, Schaller 1967, Sunquist 1981"
+Paradoxurus_hermaphroditus,0.73,0.54,Omnivore,Terrestrial,"Dhungel and Edge 1985, Rabinowitz 1991"
+Parascalops_breweri,-4.35,-1.29,Omnivore,Terrestrial,Jones et al. 2009
+Paraxerus_cepapi,-2.41,-0.65,Omnivore,Terrestrial,Jones et al. 2009
+Paraxerus_palliatus,-1.56,-0.43,Herbivore,Terrestrial,Skinner and van Aarde 1987
+Pecari_tajacu,0.40,1.37,Herbivore,Terrestrial,"Bellantoni and Krausman 1993, Ilse and Hellgren 1995, Schweinsburg 1971, Taber et al. 1994"
+Perameles_bougainville,-1.15,-0.64,Omnivore,Terrestrial,Jones et al. 2009
+Perodicticus_potto,-0.92,0.03,Omnivore,Terrestrial,Jones et al. 2009
+Perognathus_inornatus,-3.75,-1.99,Omnivore,Terrestrial,Jones et al. 2009
+Perognathus_merriami,-2.05,-2.16,Omnivore,Terrestrial,Jones et al. 2009
+Perognathus_parvus,-2.73,-1.67,Omnivore,Terrestrial,Jones et al. 2009
+Peromyscus_attwateri,-2.74,-1.55,Omnivore,Terrestrial,Jones et al. 2009
+Peromyscus_boylii,-2.44,-1.55,Omnivore,Terrestrial,Ribble and Stanley 1998
+Peromyscus_californicus,-2.92,-1.34,Omnivore,Terrestrial,Ribble and Salvioni 1990
+Peromyscus_crinitus,-2.47,-1.79,Omnivore,Terrestrial,Jones et al. 2009
+Peromyscus_gossypinus,-2.30,-1.56,Carnivore,Terrestrial,Jones et al. 2009
+Peromyscus_leucopus,-1.91,-1.64,Omnivore,Terrestrial,"Mineau and Madison 1977, Ormiston 1985"
+Peromyscus_maniculatus,-2.88,-1.57,Omnivore,Terrestrial,Mullican 1988
+Peromyscus_truei,-1.85,-1.60,Omnivore,Terrestrial,"Hall and Morrison 1997, Ribble and Stanley 1998"
+Petauroides_volans,-1.81,0.11,Herbivore,Terrestrial,Comport et al. 1996
+Petaurus_australis,-0.34,-0.24,Omnivore,Terrestrial,Goldingay and Kavanagh 1993
+Petaurus_breviceps,-1.37,-1.14,Omnivore,Terrestrial,"Quin 1995, Quin et al. 1992"
+Petaurus_norfolcensis,-1.42,-0.64,Omnivore,Terrestrial,Quin 1995
+Petrodromus_tetradactylus,-1.92,-0.70,Carnivore,Terrestrial,FitzGibbon 1995
+Petrogale_assimilis,-0.92,0.67,Herbivore,Terrestrial,Horsup 1994
+Phacochoerus_aethiopicus,0.24,1.91,Herbivore,Terrestrial,Cumming 1975
+Philander_opossum,-2.51,-0.37,Omnivore,Terrestrial,Jones et al. 2009
+Phoca_vitulina,2.60,1.50,Carnivore,Marine,"Smith et al., 2006"
+Phocarctos_hookeri,2.41,2.11,Carnivore,Marine,Auge et al. 2011
+Phocoena_phocoena,4.28,1.74,Carnivore,Marine,"Johnston et al., 2005"
+Piliocolobus_badius,-0.15,0.93,Omnivore,Terrestrial,Jones et al. 2009
+Podomys_floridanus,-2.52,-1.51,Omnivore,Terrestrial,Jones et al. 2009
+Pongo_pygmaeus,0.74,1.73,Omnivore,Terrestrial,Jones et al. 2009
+Potorous_longipes,-0.43,0.28,Herbivore,Terrestrial,Green et al. 1998
+Potos_flavus,-0.55,0.46,Herbivore,Terrestrial,"Julien-LaFerriere 1993, Kays and Gittleman 1995"
+Priodontes_maximus,0.66,1.61,Carnivore,Terrestrial,Jones et al. 2009
+Prionailurus_bengalensis,0.38,0.40,Carnivore,Terrestrial,Rabinowitz 1990
+Procyon_lotor,0.52,1.03,Omnivore,Terrestrial,"Fritzell 1978, Gehrt and Fritzell 1997, Hoffman and Gottschang 1977, Sherfy and Chapman 1980,Shirer and Fitch 1970, Urban 1970"
+Proechimys_brevicauda,-2.30,-0.55,Omnivore,Terrestrial,Jones et al. 2009
+Proechimys_cuvieri,-2.24,-0.46,Herbivore,Terrestrial,Guillotin 1982
+Proechimys_longicaudatus,-2.68,-0.69,Omnivore,Terrestrial,Jones et al. 2009
+Proechimys_semispinosus,-2.98,-0.37,Herbivore,Terrestrial,Seamon and Adler 1999
+Proechimys_simonsi,-2.50,-0.55,Omnivore,Terrestrial,Jones et al. 2009
+Proteles_cristatus,0.58,1.00,Carnivore,Terrestrial,Skinner and van Aarde 1986
+Pseudalopex_culpaeus,0.69,0.87,Carnivore,Terrestrial,"Johnson and Franklin 1994, Salvatori et al. 1999"
+Pseudalopex_griseus,0.30,0.60,Carnivore,Terrestrial,Johnson and Franklin 1994
+Pseudomys_chapmani,-1.13,-2.00,Omnivore,Terrestrial,Anstee et al. 1997
+Pseudomys_fuscus,-3.20,-0.91,Herbivore,Terrestrial,Bubela et al. 1991
+Pseudomys_higginsi,-2.67,-1.20,Omnivore,Terrestrial,Jones et al. 2009
+Pteromys_volans,-1.40,-0.84,Omnivore,Terrestrial,Jones et al. 2009
+Pteronura_brasiliensis,2.01,1.41,Carnivore,Terrestrial,Jones et al. 2009
+Pudu_puda,-0.70,0.88,Herbivore,Terrestrial,Eldridge et al. 1987
+Puma_concolor,2.49,1.95,Carnivore,Terrestrial,"Belden et al. 1988, Hemker et al. 1984, Logan et al. 1986, Maehr et al. 1991, Pittman et al. 1995, Rossand Jalkotzy 1992, Seidensticker et al. 1973, Spreadbury et al. 1996"
+Puma_yagouaroundi_,1.83,0.83,Carnivore,Terrestrial,Konecny 1989
+Pygeretmus_pumilio,-2.50,-1.28,Herbivore,Terrestrial,Rogovin et al. In press
+Rangifer_tarandus,3.55,2.01,Herbivore,Terrestrial,"Bradshaw et al. 1995, Edmonds 1988, Stuart Smith et al. 1997"
+Raphicerus_campestris,-0.21,1.05,Herbivore,Terrestrial,du Toit 1990
+Rattus_everetti,-2.37,-0.60,Omnivore,Terrestrial,Jones et al. 2009
+Rattus_exulans,-3.10,-1.30,Omnivore,Terrestrial,Jones et al. 2009
+Rattus_rattus,-2.70,-0.85,Omnivore,Terrestrial,Jones et al. 2009
+Rattus_verecundus,-2.82,-1.01,Omnivore,Terrestrial,Jones et al. 2009
+Reithrodontomys_fulvescens,-2.77,-1.94,Omnivore,Terrestrial,Jones et al. 2009
+Reithrodontomys_montanus,-2.61,-1.96,Omnivore,Terrestrial,Jones et al. 2009
+Reithrodontomys_raviventris,-2.67,-1.96,Herbivore,Terrestrial,Bias and Morrison 1999
+Rhynchocyon_chrysopygus,-1.54,-0.27,Carnivore,Terrestrial,"FitzGibbon 1995, Rathbun 1979"
+Rupicapra_rupicapra,0.53,1.49,Herbivore,Terrestrial,Clarke and Henderson 1984
+Saguinus_fuscicollis,-0.48,-0.40,Omnivore,Terrestrial,Jones et al. 2009
+Saguinus_midas,-1.05,-0.27,Omnivore,Terrestrial,Jones et al. 2009
+Saguinus_oedipus,-0.77,-0.34,Omnivore,Terrestrial,Jones et al. 2009
+Saimiri_sciureus,-0.19,-0.13,Omnivore,Terrestrial,Jones et al. 2009
+Scalopus_aquaticus,-2.13,-0.99,Carnivore,Terrestrial,Harvey 1976
+Scapanus_orarius,-2.82,-1.21,Omnivore,Terrestrial,Jones et al. 2009
+Sciurus_aberti,-0.88,-0.10,Herbivore,Terrestrial,"Farentinos 1979, Hall 1981, Patton 1975, Patton et al. 1985"
+Sciurus_carolinensis,-2.31,-0.27,Herbivore,Terrestrial,Doebel and McGinnes 1974
+Sciurus_granatensis,-2.00,-0.50,Omnivore,Terrestrial,Jones et al. 2009
+Sciurus_lis,-0.77,-0.58,Herbivore,Terrestrial,Tamura 1998
+Sciurus_niger,-0.89,-0.02,Herbivore,Terrestrial,"Benson 1980, Kantola and Humphrey 1990, Sheperd and Swihart 1995"
+Sciurus_vulgaris,-1.13,-0.48,Herbivore,Terrestrial,"Wauters et al. 1994, Wiegand  1995"
+Sigmodon_hispidus,-2.55,-0.96,Omnivore,Terrestrial,Jones et al. 2009
+Sminthopsis_leucopus,-1.94,-1.64,Carnivore,Terrestrial,Laidlaw et al. 1996
+Sorex_araneus,-3.28,-2.04,Omnivore,Terrestrial,Jones et al. 2009
+Sorex_arcticus,-2.32,-2.09,Carnivore,Terrestrial,Jones et al. 2009
+Sorex_cinereus,-2.30,-2.38,Carnivore,Terrestrial,Jones et al. 2009
+Sorex_coronatus,-3.43,-2.03,Carnivore,Terrestrial,Jones et al. 2009
+Sorex_gracillimus,-3.56,-2.36,Carnivore,Terrestrial,Jones et al. 2009
+Sorex_minutus,-2.85,-2.36,Omnivore,Terrestrial,Jones et al. 2009
+Sorex_monticolus,-2.78,-2.16,Omnivore,Terrestrial,Jones et al. 2009
+Sorex_palustris,-2.59,-1.88,Omnivore,Terrestrial,Jones et al. 2009
+Sorex_unguiculatus,-4.11,-1.85,Carnivore,Terrestrial,Jones et al. 2009
+Sotalia_fluviatilis,1.18,1.74,Carnivore,Marine,"Flores et al., 2004"
+Sotalia_guianensis,0.90,1.90,Carnivore,Marine,"Oshima et al., 2010"
+Sousa_chinensis,2.29,2.33,Carnivore,Marine,"Parra, 2006"
+Spalacopus_cyanus,-4.39,-1.00,Herbivore,Terrestrial,TorresMura 1990
+Spermophilus_beecheyi,-3.28,-0.14,Herbivore,Terrestrial,Boellstorff and Owings 1995
+Spermophilus_columbianus,-3.27,-0.24,Herbivore,Terrestrial,Festa Bianchet and Boag 1982
+Spermophilus_franklinii,-0.77,-0.20,Herbivore,Terrestrial,Choromanski Norris et al. 1989
+Spermophilus_parryii,-1.52,-0.10,Herbivore,Terrestrial,Hubbs and Boonstra 1998
+Spermophilus_spilosoma,-1.82,-0.97,Herbivore,Terrestrial,Streubel 1975
+Spermophilus_tereticaudus,-2.00,-0.83,Omnivore,Terrestrial,Jones et al. 2009
+Spermophilus_tridecemlineatus,-1.81,-0.70,Herbivore,Terrestrial,Streubel 1975
+Spermophilus_variegatus,-1.37,-0.13,Herbivore,Terrestrial,"Ortega 1990, Shriner and Stacey 1991"
+Spilogale_putorius,-0.63,-0.23,Omnivore,Terrestrial,Crooks and Van Vuren 1995
+Stylodipus_telum,-2.35,-1.22,Herbivore,Terrestrial,Heske et al. 1995
+Suricata_suricatta,1.15,-0.14,Carnivore,Terrestrial,Jones et al. 2009
+Sus_scrofa,0.90,1.92,Omnivore,Terrestrial,"Baber and Coblentz 1986, Boitani et al. 1994, Caley 1997, Coblentz and Baber 1987, Ilse and Hellgren1995, Massei et al. 1997, Saunders and Kay 1996, Van Vuren and Coblentz 1989, Wood andBrenneman 1980"
+Sylvilagus_aquaticus,-1.74,0.33,Herbivore,Terrestrial,Kjolhaug and Woolf 1988
+Sylvilagus_floridanus,-1.54,0.13,Herbivore,Terrestrial,"Allen et al. 1982, Althoff and Storm 1989,  Anderson and Pelton 1976, Trent and Rongstad 1974"
+Sylvilagus_palustris,-1.40,0.13,Herbivore,Terrestrial,Forys and Humphrey 1996
+Synaptomys_cooperi,-2.34,-1.42,Herbivore,Terrestrial,Danielson and Swihart 1987
+Syncerus_caffer,1.91,2.77,Herbivore,Terrestrial,"Funston et al. 1994, Leuthold 1972, Stark 1986"
+Tachyglossus_aculeatus,-0.35,0.65,Carnivore,Terrestrial,"Abensperg Traun 1991, Augee et al. 1992, Wilkinson et al. 1998"
+Tachyoryctes_splendens,-4.00,-0.59,Herbivore,Terrestrial,Jarvis 1973 cited in Reichman and Smith 1990
+Talpa_europaea,-2.52,-1.02,Carnivore,Terrestrial,Macdonald et al. 1997
+Talpa_romana,-2.55,-1.09,Carnivore,Terrestrial,Loy et al. 1994
+Tamandua_mexicana,-0.60,0.62,Carnivore,Terrestrial,Jones et al. 2009
+Tamandua_tetradactyla,0.48,0.68,Carnivore,Terrestrial,Jones et al. 2009
+Tamias_amoenus,-2.09,-1.57,Herbivore,Terrestrial,Martinsen 1968
+Tamias_minimus,-1.83,-1.37,Herbivore,Terrestrial,"Bergstrom 1988, Martinsen 1968, Sheppard 1972"
+Tamias_quadrimaculatus,-2.22,-1.08,Omnivore,Terrestrial,Jones et al. 2009
+Tamias_quadrivittatus,-1.27,-1.37,Herbivore,Terrestrial,Bergstrom 1988
+Tamias_senex,-2.00,-1.05,Omnivore,Terrestrial,Jones et al. 2009
+Tamias_sibiricus,-2.71,-1.02,Herbivore,Terrestrial,Geinitz 1980
+Tamias_speciosus,-2.00,-1.22,Omnivore,Terrestrial,Jones et al. 2009
+Tamias_townsendii,-2.14,-1.10,Omnivore,Terrestrial,Jones et al. 2009
+Tamias_umbrinus,-1.49,-1.37,Herbivore,Terrestrial,Bergstrom 1988
+Tamiasciurus_douglasii,-2.49,-0.65,Omnivore,Terrestrial,Jones et al. 2009
+Tamiasciurus_hudsonicus,-2.32,-0.65,Herbivore,Terrestrial,"Benhamou 1996, Boutin and Schweiger 1988"
+Tarsius_bancanus,-1.70,-0.94,Omnivore,Terrestrial,Jones et al. 2009
+Tarsius_tarsier,-1.70,-0.77,Omnivore,Terrestrial,Jones et al. 2009
+Tatera_indica,-2.76,-0.86,Omnivore,Terrestrial,Jones et al. 2009
+Taxidea_taxus,0.58,0.94,Carnivore,Terrestrial,"Lindzey 1978, Messick and Hornocker 1981, Minta 1990"
+Tayassu_pecari,1.16,1.31,Herbivore,Terrestrial,Fragoso 1998
+Thomomys_bottae,-4.15,-0.80,Herbivore,Terrestrial,"Gettinger 1984, Reichman et al. 1982"
+Thylamys_elegans,-3.15,-1.54,Carnivore,Terrestrial,Jones et al. 2009
+Thylogale_stigmatica,-1.45,0.67,Herbivore,Terrestrial,Vernes et al. 1995
+Thylogale_thetis,-0.86,0.73,Herbivore,Terrestrial,Johnson 1980
+Tragelaphus_oryx,1.72,2.80,Herbivore,Terrestrial,Hillman 1988
+Tragelaphus_scriptus,-1.43,1.74,Herbivore,Terrestrial,Allsopp 1978
+Tragelaphus_strepsiceros,3.03,2.30,Herbivore,Terrestrial,"Allen Rowlandson 1980, duToit 1990"
+Trichosurus_vulpecula,-1.30,0.46,Herbivore,Terrestrial,Statham and Statham 1997
+Tupaia_glis,-2.06,-0.88,Omnivore,Terrestrial,Jones et al. 2009
+Tursiops_aduncus,2.00,2.33,Carnivore,Marine,"Hung et al., 2004"
+Tursiops_truncates,1.71,2.56,Carnivore,Marine,Gubbins et al. 2002
+Uncia_uncia,1.24,1.48,Carnivore,Terrestrial,"Jackson and Ahlborn 1989, Oli 1997, Schaller et al. 1994"
+Urocyon_cinereoargenteus,0.44,0.66,Omnivore,Terrestrial,"Fuller 1978, Hallberg 1973, Haroldson and Fritzell 1984"
+Urocyon_littoralis,-0.71,0.29,Omnivore,Terrestrial,Crooks and Van Vuren 1995
+Urotrichus_talpoides,-2.66,-1.74,Omnivore,Terrestrial,Jones et al. 2009
+Ursus_americanus,1.59,2.18,Omnivore,Terrestrial,"Amstrup and Beecham 1976, Garshelis and Pelton 1981, Hellgren and Vaughan 1989, Hellgren andVaughan 1990, Lindzey and Meslow 1977, Novick and Stewart 1982, Piekielek and Burton 1975,Warburton and Powell 1985, Young and Ruff 1982, Blanchard and Knight 1991, Huber and Roth 1993,Mace and Waller 1998, Servheen 1983, Wielgus et al. 1994"
+Ursus_arctos,2.91,2.34,Omnivore,Terrestrial,"Blanchard and Knight 1991, Huber and Roth 1993, Mace and Waller 1998, Servheen 1983, Wielgus etal. 1994"
+Ursus_maritimus,5.10,2.41,Carnivore,Marine,"Ferguson et al., 1999"
+Viverra_zibetha,1.08,0.90,Carnivore,Terrestrial,Rabinowitz 1991
+Viverricula_indica,0.49,0.53,Omnivore,Terrestrial,Rabinowitz 1991
+Vombatus_ursinus,-0.97,1.41,Herbivore,Terrestrial,Taylor 1993
+Vulpes_lagopus,1.45,0.70,Carnivore,Terrestrial,"Anthony 1997, Eberhardt et al. 1982, Landa et al. 1998, Prestrud 1992"
+Vulpes_macrotis,0.94,0.65,Carnivore,Terrestrial,"O'Neal et al. 1987, Spiegel and Bradbury 1992, White and Ralls 1993, Zoellick and Smith 1992"
+Vulpes_rueppelli,1.48,0.51,Carnivore,Terrestrial,Lindsaey and MacDonald 1986
+Vulpes_velox,0.74,0.32,Carnivore,Terrestrial,Jones et al. 2009
+Vulpes_vulpes,0.69,0.81,Omnivore,Terrestrial,"Ables 1969, Adkins and Stott 1998, Blanco 1986, Boitani et al. 1984, Cavallini 1992, Cavallini andLovari 1994, Coman et al. 1991, Goszczynski 1989, Harrison et al. 1989, Jones and Theberge 1982,Kolb 1986, Lindsaey and MacDonald 1986, Lovari et al. 1994, Major and Sherburne 1987, Meia andWeber 1995, Pandolfi et al. 1997, Phillips and Catling 1991, Poulle et al. 1994, Sargeant et al. 1987,Servin et al. 1991, Travaini et al. 1993b, White et al. 1996, Woollard and Harris 1990"
+Wallabia_bicolor,-0.82,1.18,Herbivore,Terrestrial,Troy and Coulson 1993
+Xerus_erythropus,-0.91,-0.30,Herbivore,Terrestrial,Linnandkey 1996
+Xerus_rutilus,-1.38,-0.50,Omnivore,Terrestrial,O'Shea 1976
+Zalophus_californianus,3.72,1.93,Carnivore,Marine,"Kuhn et al., 2006"
+Zapus_hudsonius,-2.64,-1.73,Omnivore,Terrestrial,Jones et al. 2009
+Zapus_princeps,-2.61,-1.57,Omnivore,Terrestrial,Jones et al. 2009
