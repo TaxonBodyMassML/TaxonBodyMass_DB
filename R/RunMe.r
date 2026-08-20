@@ -211,9 +211,18 @@ gmap$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', gmap$Bibcite, perl = TRUE)
 dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
                gmap, by = 'Bibcite', all.x = TRUE)
 
-unmapped <- dcite$Bibcite[is.na(dcite$CiteID)]
+# Auto-discover primary source citations from per-source Citation.bib files.
+# Keys found there are intentionally unmapped and suppressed from the warning.
+cite_bibs   <- list.files(wd_db, pattern = '^Citation\\.bib$',
+                          recursive = TRUE, full.names = TRUE)
+source_keys <- unlist(lapply(cite_bibs, function(f) {
+  lines <- readLines(f)
+  sub('^@\\w+\\{([^,]+),.*', '\\1', lines[grepl('^@', lines)], perl = TRUE)
+}))
+
+unmapped <- dcite$Bibcite[is.na(dcite$CiteID) & !dcite$Bibcite %in% source_keys]
 if (length(unmapped) > 0) {
-  warning(length(unmapped), ' bib entries have no CiteID mapping in Google Sheet BM_citations:\n',
+  warning(length(unmapped), ' bib entries have no CiteID mapping and no Citation.bib:\n',
           paste(unmapped, collapse = '\n'), immediate. = TRUE)
 }
 
