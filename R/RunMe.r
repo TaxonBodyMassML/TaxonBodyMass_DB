@@ -196,11 +196,9 @@ write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_wGenus.csv'), row.names 
 #    absent from the Google Sheet are retained with CiteID = NA and a
 #    warning is issued.
 ##########################################################################
-bib_raw   <- paste(readLines(file.path(wd_root, 'Bib', 'TaxonBodyMass_Citations.bib')),
-                   collapse = '\n')
-bib_parts <- strsplit(bib_raw, '\n\n(?=@)', perl = TRUE)[[1]]
+bib_lines <- readLines(file.path(wd_root, 'Bib', 'TaxonBodyMass_Citations.bib'))
 bib_keys  <- sub('^@\\w+\\{([^,]+),.*', '\\1',
-                 bib_parts[grepl('^@', trimws(bib_parts))], perl = TRUE)
+                 bib_lines[grepl('^@', bib_lines)], perl = TRUE)
 
 gmap <- read_sheet(
   'https://docs.google.com/spreadsheets/d/1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing',
