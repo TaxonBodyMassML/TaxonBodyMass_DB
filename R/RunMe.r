@@ -5,6 +5,7 @@
 library(plyr)
 library(dplyr)
 library(googlesheets4)
+library(stringr)
 
 wd_root  <- dirname(getwd())                          # TaxonBodyMass_DB/
 wd_db    <- file.path(wd_root, 'sources', 'databases')
@@ -15,7 +16,7 @@ source(file.path(wd_root, 'R', 'library', 'helpers.r'))
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Control flags
-recompile    <- FALSE   # TRUE: re-parse all raw source CSVs
+recompile    <- TRUE   # TRUE: re-parse all raw source CSVs
 DataRetrieve <- FALSE   # TRUE: re-download from rdataretriever (requires Python + Retriever)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -186,3 +187,20 @@ gdat$mass_g <- signif(gdat$mass_g, digits = 4)
 
 write.csv(adat, file = file.path(wd_out, 'TaxonBodyMass.csv'),        row.names = FALSE)
 write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_wGenus.csv'), row.names = FALSE)
+
+
+##########################################################################
+# 8. Write citations CSV (read from Google Sheet; committed to output/)
+##########################################################################
+dcite <- read_sheet(
+  'https://docs.google.com/spreadsheets/d/1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing',
+  sheet     = 'BM_citations',
+  col_types = 'ccc'
+)
+dcite <- dcite[order(dcite$CiteID), ]
+write.csv(dcite, file = file.path(wd_out, 'TaxonBodyMass_Citations.csv'), row.names = FALSE)
+
+
+##########################################################################
+##########################################################################
+##########################################################################
