@@ -190,12 +190,14 @@ write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_wGenus.csv'), row.names 
 
 
 ##########################################################################
-# 8. Write citations CSV (read from Google Sheet; committed to output/)
+# 8. Write citations CSV from Google Sheet mapping (committed to output/)
+#    Google Sheet BM_citations tab: CiteID (source_mass label) → Bibcite
+#    (bib key). Citation text lives in Bib/TaxonBodyMass_Citations.bib.
 ##########################################################################
 dcite <- read_sheet(
   'https://docs.google.com/spreadsheets/d/1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing',
   sheet     = 'BM_citations',
-  col_types = 'ccc'
+  col_types = 'cc'
 )
 dcite <- dcite[order(dcite$CiteID), ]
 write.csv(dcite, file = file.path(wd_out, 'TaxonBodyMass_Citations.csv'), row.names = FALSE)
