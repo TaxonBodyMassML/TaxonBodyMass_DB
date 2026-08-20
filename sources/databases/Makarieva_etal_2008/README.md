@@ -1,1 +1,0 @@
-A. M. Makarieva, V. G. Gorshkov, B.-L. Li, S. L. Chown, P. B. Reich, and V. M. Gavrilov. Mean mass-specific metabolic rates are strikingly similar across life’s major domains: Evidence for life’s metabolic optimum. Proceedings of the National Academy of Sciences, 105(44):16994–16999, 2008.

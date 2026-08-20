@@ -1,1 +1,0 @@
-John DeLong, & Stella Uiterwaal. (2018). The FoRAGE (Functional Responses from Around the Globe in all Ecosystems) database: a compilation of functional responses for consumers and parasitoids. Knowledge Network for Biocomplexity. doi:10.5063/F17H1GTQ.
