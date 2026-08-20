@@ -1,0 +1,41 @@
+﻿"Table S2. Summary of data for individuals used in scaling analyses. Body mass (M, g), oxygen gradient (ΔPO2, kPa), and flux (J, µmol O2 s-1).",,,
+,,,
+,,,
+,M,ΔPO2,J
+Ammotheidae,,,
+Ammothea glacialis,1.60,5.16,2.27E-04
+,1.07,8.9,2.65E-04
+,1.32,6.86,4.97E-04
+,1.36,4.15,2.23E-04
+Ammothea longispina,0.510,7.55,3.14E-04
+,0.647,6.16,2.43E-04
+,0.664,6.68,3.19E-04
+Ammothea sp.,3.54,3.16,2.66E-04
+,3.11,3.61,3.67E-04
+Colossendeidae,,,
+Colossendeis australis,21.80,12.8,2.68E-03
+Colossendeis hoeki,1.22,2.04,1.29E-04
+,0.982,7.47,2.34E-04
+,1.13,7.94,1.68E-04
+Colossendeis megalonyx,2.20,8.88,2.94E-03
+,2.54,6.61,2.31E-04
+,0.470,3.29,1.03E-04
+Colossendeis scotti,12.60,5.5,3.36E-03
+,8.39,10.4,1.61E-03
+,8.40,9,2.77E-03
+Nymphonidae,,,
+Nymphon australe,0.160,0.82,4.19E-05
+,0.100,1.43,1.18E-05
+,0.070,0.27,2.08E-06
+,0.190,2.73,3.53E-05
+Pentanymphon antarcticum,0.035,2.13,2.10E-05
+,0.068,3.94,6.97E-05
+,0.069,5.13,2.33E-04
+,0.036,1.26,1.54E-05
+Pallenopsidae,,,
+Pallenopsis patagonica,0.776,4.51,1.35E-05
+,0.395,5.17,1.08E-05
+,0.469,3.18,1.08E-05
+Pycnogonidae,,,
+Pycnogonum gaini,0.440,6.26,3.72E-05
+,0.543,5.11,2.56E-05

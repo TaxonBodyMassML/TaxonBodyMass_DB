@@ -98,10 +98,16 @@ if (DataRetrieve) {
 if (recompile) {
   scripts <- list.files(wd_db, pattern = '^BodyMass_.*\\.[Rr]$',
                         recursive = TRUE, full.names = TRUE)
-  for (script in scripts) {
-    wd_source <- dirname(script)
-    source(script)
+  n        <- length(scripts)
+  null_con <- file(nullfile(), open = 'w')
+  for (i in seq_along(scripts)) {
+    cat(sprintf('  [%d/%d] %s\n', i, n, basename(dirname(scripts[i]))),
+        file = stderr())
+    wd_source <- dirname(scripts[i])
+    sink(nullfile()); sink(null_con, type = 'message')
+    tryCatch(source(scripts[i]), finally = { sink(type = 'message'); sink() })
   }
+  close(null_con)
 }
 
 

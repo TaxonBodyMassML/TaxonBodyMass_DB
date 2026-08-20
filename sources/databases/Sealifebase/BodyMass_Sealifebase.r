@@ -1,7 +1,7 @@
 server <- 'sealifebase'
 sp    <- rfishbase::species_names(server = server)[, c('SpecCode', 'Species')]
 rfish <- rfishbase::popchar(server = server)
-rfish <- dplyr::right_join(sp, rfish)
+rfish <- dplyr::right_join(sp, rfish, by = 'SpecCode')
 rfish <- rfish[!is.na(rfish$Wmax), c('Species', 'Wmax')]
 colnames(rfish) <- c('taxon', 'mass_g')
 rfish <- FixNames(rfish)
