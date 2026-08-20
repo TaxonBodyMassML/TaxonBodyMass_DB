@@ -190,16 +190,34 @@ write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_wGenus.csv'), row.names 
 
 
 ##########################################################################
-# 8. Write citations CSV from Google Sheet mapping (committed to output/)
-#    Google Sheet BM_citations tab: CiteID (source_mass label) → Bibcite
-#    (bib key). Citation text lives in Bib/TaxonBodyMass_Citations.bib.
+# 8. Write citations CSV (committed to output/)
+#    All bib entries are included; Google Sheet BM_citations provides the
+#    CiteID (source_mass label) → Bibcite (bib key) mapping. Bib entries
+#    absent from the Google Sheet are retained with CiteID = NA and a
+#    warning is issued.
 ##########################################################################
-dcite <- read_sheet(
+bib_raw   <- paste(readLines(file.path(wd_root, 'Bib', 'TaxonBodyMass_Citations.bib')),
+                   collapse = '\n')
+bib_parts <- strsplit(bib_raw, '\n\n(?=@)', perl = TRUE)[[1]]
+bib_keys  <- sub('^@\\w+\\{([^,]+),.*', '\\1',
+                 bib_parts[grepl('^@', trimws(bib_parts))], perl = TRUE)
+
+gmap <- read_sheet(
   'https://docs.google.com/spreadsheets/d/1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing',
   sheet     = 'BM_citations',
   col_types = 'cc'
 )
-dcite <- dcite[order(dcite$CiteID), ]
+
+dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
+               gmap, by = 'Bibcite', all.x = TRUE)
+
+unmapped <- dcite$Bibcite[is.na(dcite$CiteID)]
+if (length(unmapped) > 0) {
+  warning(length(unmapped), ' bib entries have no CiteID mapping in Google Sheet BM_citations:\n',
+          paste(unmapped, collapse = '\n'), immediate. = TRUE)
+}
+
+dcite <- dcite[order(dcite$CiteID, dcite$Bibcite), ]
 write.csv(dcite, file = file.path(wd_out, 'TaxonBodyMass_Citations.csv'), row.names = FALSE)
 
 
