@@ -205,7 +205,7 @@ bib_keys  <- sub('^@\\w+\\{([^,]+),.*', '\\1',
 gmap <- read_sheet(
   'https://docs.google.com/spreadsheets/d/1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing',
   sheet     = 'BM_citations',
-  col_types = 'cc'
+  col_types = 'cc-'
 )
 
 dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
