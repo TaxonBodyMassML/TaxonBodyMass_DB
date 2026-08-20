@@ -206,6 +206,8 @@ gmap <- read_sheet(
   col_types = 'cc-'
 )
 
+gmap$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', gmap$Bibcite, perl = TRUE)
+
 dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
                gmap, by = 'Bibcite', all.x = TRUE)
 
