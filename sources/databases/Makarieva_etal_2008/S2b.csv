@@ -1,0 +1,53 @@
+row_num,species,qWkg,LogqWkg,TC,q25Wkg,Logq25Wkg,Mpg_pg,LogMpg,mass_g
+1,Acanthamoeba (Hartmanella) castellani,3.8,0.580,20,10.740,1.031,6700,3.826,6.7e-09
+2,Acanthamoeba sp.,5.3,0.724,20,14.990,1.176,4320,3.635,4.32e-09
+3,Actinosphaerium eichhornii,0.4,-0.398,20,1.132,0.054,14561000,7.163,1.4561e-05
+4,Amoeba proteus,1,0.000,20,2.828,0.451,900000,5.954,9e-07
+5,Astasia klebsii,1.8,0.255,20,5.092,0.707,3800,3.580,3.8e-09
+6,Astasia longa,2.9,0.462,20,8.202,0.914,13500,4.130,1.35e-08
+7,Bresslaua insidiatrix,21.7,1.336,20,61.376,1.788,17000,4.230,1.7e-08
+8,Chilomonas paramecium,16,1.204,20,45.254,1.656,2260,3.354,2.26e-09
+9,Coleps hirtus,4.2,0.623,20,11.880,1.075,91000,4.959,9.1e-08
+10,Colpidium campylum,10.8,1.033,20,30.548,1.485,54400,4.736,5.44e-08
+11,Crithida (Strigomonas) fasciculata,7.3,0.863,20,20.648,1.315,2078,3.318,2.078e-09
+12,Crithidia (Strigomonas) oncopelti,10,1.000,30,7.071,0.849,30,1.477,3e-11
+13,Dictyostelium discodeum,4.9,0.690,20,13.860,1.142,840,2.924,8.4e-10
+14,Eimeria acervulina,2.0,0.301,20,5.656,0.753,2640,3.422,2.64e-09
+15,Eimeria stiedae,2.5,0.398,20,7.072,0.850,7980,3.902,7.98e-09
+16,Eimeria tenella,2.3,0.362,20,6.506,0.813,5440,3.736,5.44e-09
+17,Endotrypanum schaudinni,0.84,-0.076,20,2.376,0.376,114,2.057,1.14e-10
+18,Entamoeba hystolitica,0.4,-0.398,20,1.132,0.054,8600,3.934,8.6e-09
+19,Frontonia leucas,0.4,-0.398,20,1.132,0.054,745000,5.872,7.45e-07
+20,Leishmania brasiliensis,20,1.301,20,56.568,1.753,9,0.954,9e-12
+21,Leishmania donovani,9.3,0.968,20,26.304,1.420,18,1.255,1.8e-11
+22,Leishmania enrietti,7.0,0.845,20,19.798,1.297,12,1.079,1.2e-11
+23,Mayorella palestinensis,3.7,0.568,20,10.466,1.020,8300,3.919,8.3e-09
+24,Noctiluca miliaris,1.4,0.146,20,3.960,0.598,223986000,8.350,0.000223986
+25,Paramecium aurelia,2.9,0.462,20,8.202,0.914,160000,5.204,1.6e-07
+26,Paramecium calkinsi,3.4,0.531,20,9.616,0.983,157000,5.196,1.57e-07
+27,Paramecium caudatum,0.2,-0.699,20,0.566,-0.247,526000,5.721,5.26e-07
+28,Paramecium multimicronucleatum,5.3,0.724,20,14.990,1.176,685000,5.836,6.85e-07
+29,Pelomyxa carolinensis,0.5,-0.301,20,1.414,0.150,49708000,7.696,4.9708e-05
+30,Pelomyxa palustris,0.7,-0.155,20,1.980,0.297,90000000,7.954,8.999999999999999e-05
+31,Plasmodium cathemerium,1.8,0.255,20,5.092,0.707,54,1.732,5.4e-11
+32,Plasmodium gallinaceum,0.8,-0.097,20,2.262,0.354,71,1.851,7.1e-11
+33,Plasmodium knowlesi,0.9,-0.046,20,2.546,0.406,59,1.771,5.9e-11
+34,Pleuromonas jaculans,12,1.079,20,33.942,1.531,25,1.398,2.5e-11
+35,Podophrya fixa,2.9,0.458,20,8.202,0.914,14900,4.173,1.49e-08
+36,Schizotrypanum verpertilionis,2.1,0.322,20,5.940,0.774,108,2.033,1.08e-10
+37,Spirostoma minus,3.4,0.531,20,9.616,0.983,500000,5.699,5e-07
+38,Spirostomum ambiguum,5.9,0.771,20,16.688,1.222,12000000,7.079,1.2e-05
+39,Spirostomum intermedium,1.2,0.079,20,3.394,0.531,229000,5.360,2.29e-07
+40,Spirostomum teres,0.5,-0.301,20,1.414,0.150,423000,5.626,4.23e-07
+41,Stentor coeruleus,1.8,0.255,20,5.092,0.707,1100000,6.041,1.1e-06
+42,Tetrahymena geleii (pyriformis),5.9,0.771,20,16.688,1.222,22000,4.342,2.2e-08
+43,Tetrahymena pyriformis,6.1,0.785,20,17.254,1.237,49000,4.690,4.9e-08
+44,Tracheloraphis sp.,16.0,1.204,20,45.254,1.656,340000,5.531,3.4e-07
+45,Trichomonas (Tritrichomonas) foetus,2.7,0.431,20,7.636,0.883,580,2.763,5.8e-10
+46,Trichomonas batrachorum,1.9,0.279,20,5.374,0.730,560,2.748,5.6e-10
+47,Trichomonas nasai,8.1,0.908,20,22.910,1.360,210,2.322,2.1e-10
+48,Trichomonas vaginalis,1.0,0.000,20,2.828,0.451,870,2.940,8.7e-10
+49,Trypanosoma (Schizotrypanum) cruzi,1.2,0.079,20,3.394,0.531,169,2.228,1.6899999999999999e-10
+50,Trypanosoma lewisi,0.9,-0.046,20,2.546,0.406,58,1.763,5.8e-11
+51,Urostyla grandis,57,1.756,20,161.220,2.207,166000,5.220,1.66e-07
+52,Trichosphaerium sieboldi,4,0.602,20,5.7,0.756,100,2.000,1e-10

@@ -1,0 +1,208 @@
+Species,N,Mg,Season,Time,QkJday,References,mass_g
+Eudyptes cristatus,4,2330,W,N,504.5,"Gavrilov, 1977",2330
+Eudyptes chrysolophus,4,3870,W,N,747.8,"Gavrilov, 1977",3870
+Aptenodytes patagonica,3,11080,W,N,1899.2,"Gavrilov, 1977",11080
+Aix sponsa,8,448,S,N,194.3,"Gavrilov, 1980abc,",448
+Aix sponsa,8,448,S,D,221.5,"Gavrilov, 1985ab, 1997",448
+Aix sponsa,8,468,W,N,205.6,"Gavrilov, 1981, 1997,",468
+Aix sponsa,8,468,W,D,273.4,"Gavrilov, 1981, 1997",468
+Anas penelope,4,723,S,N,244.1,"Gavrilov, 1980abc,",723
+Anas penelope,4,718,W,N,260.4,"Gavrilov, 1980abc,",718
+Anas platyrhynchos,12,1020,S,N,351.7,"Gavrilov, 1980abc,",1020
+Anas platyrhynchos,12,1020,S,D,415.6,"Gavrilov, 1985ab, 1997",1020
+Anas platyrhynchos,12,1132,W,N,435.4,"Gavrilov, 1981, 1997,",1132
+Anas platyrhynchos,12,1132,W,D,566.9,"Gavrilov, 1981, 1997",1132
+Anser anser,4,3250,S,N,937.9,"Gavrilov, Dolnik, 1985",3250
+Falco tinnunculus,4,131,A,N,67.0,"Gavrilov, 1985ab",131
+Accipiter nisus,6,135,S,N,82.1,"Gavrilov, Dolnik, 1985",135
+Falco subbuteo,4,208,A,N,112.2,"Gavrilov, Dolnik, 1985",208
+Pernis apivorus,2,652,S,N,202.2,"Gavrilov, Dolnik, 1985",652
+Excalfactoria chinensis,6,44,S,N,35.15,"Gavrilov, 1985ab",44
+Excalfactoria chinensis,6,44,S,D,35.56,"Gavrilov, 1985ab",44
+Excalfactoria chinensis,6,41,W,N,50.7,"Gavrilov, 1981",41
+Excalfactoria chinensis,6,41,W,D,60.3,"Gavrilov, 1981",41
+Coturnix coturnix,4,97,S,N,77.0,"Gavrilov, 1980abc,",97
+Coturnix coturnix,4,97,S,D,83.2,"Gavrilov, 1985ab, 1997",97
+Coturnix coturnix,4,109,W,N,71.6,"Gavrilov, 1981, 1997,",109
+Coturnix coturnix,4,109,W,D,85.4,"Gavrilov, 1981, 1997",109
+Perdix perdix,5,483,S,N,207.3,"Gavrilov, 1980abc,",483
+Perdix perdix,5,483,S,D,225.9,"Gavrilov, 1985ab, 1997",483
+Perdix perdix,5,501,W,N,186.3,"Gavrilov, 1981, 1997,",501
+Perdix perdix,5,501,W,D,235.3,"Gavrilov, 1981, 1997",501
+Lagopus lagopus,6,524,S,N,268.8,"Gavrilov, 1980abc,",524
+Lagopus lagopus,6,524,S,D,306.4,"Gavrilov, 1985ab, 1997",524
+Lagopus lagopus,6,567,W,N,248.3,"Gavrilov, 1981, 1997,",567
+Lagppus lagopus,6,567,W,D,328.7,"Gavrilov, 1981, 1997",567
+Alectoris graeca,4,620,S,N,246.6,"Gavrilov, 1980abc,",620
+Alectoris graeca,4,633,W,N,219.0,"Gavrilov, 1980abc,",633
+Tetrao urogallus ♀,2,3900,S,N,1030.0,"Gavrilov, 1980abc,",3900
+Tetrao urogallus ♀,2,4010,W,N,1021.6,"Gavrilov, 1980abc,",4010
+Crex crex,4,96,S,N,68.2,"Gavrilov, Dolnik, 1985",96
+Fulica atra,3,412,S,N,176.3,"Gavrilov, 1980abc,",412
+Fulica atra,3,436,W,N,204.3,"Gavrilov, 1980abc,",436
+Charadrius dubius,4,36,S,N,36.0,"Gavrilov, 1980abc,",36
+Charadius dubius,4,44,W,N,41.5,"Gavrilov, 1980abc,",44
+Larus ridibundus,5,285,S,N,173.3,"Gavrilov, 1980abc,",285
+Larua ridibundus,5,285,S,D,194.1,"Gavrilov, 1985ab, 1997",285
+Larus ridibundus,5,306,W,N,160.8,"Gavrilov, 1981, 1997,",306
+Larus ridibundus,5,306,W,D,193.0,"Gavrilov, 1981, 1997",306
+Larus canus,3,428,S,N,201.0,"Gavrilov, 1980abc,",428
+Larus canus,3,428,S,D,215.0,"Gavrilov, 1985ab, 1997",428
+Larus canus,3,431,W,N,194.3,"Gavrilov, 1981, 1997,",431
+Larus canus,3,431,W,D,251.2,"Gavrilov, 1981, 1997",431
+Scolopax rusticola,4,430,S,N,186.7,"Gavrilov, 1981",430
+Streptopelia senegalensis,3,108,S,N,73.3,"Gavrilov, Dolnik, 1985",108
+Streptopelia turtur,4,154,A,N,98.4,"Gavrilov, Dolnik, 1985",154
+Columba livia,6,353,W,N,160.4,"Gavrilov, 1981",353
+Columba livia,6,353,W,D,178.8,"Gavrilov, 1981",353
+Columba livia,6,368,S,N,143.2,"Gavrilov, 1985ab",368
+Columba livia,6,368,S,D,154.4,"Gavrilov, 1985ab",368
+Columba palumbus,4,493,A,N,171.3,"Gavrilov, Dolnik, 1985",493
+Melopsittacus undulatus,18,25.2,S,N,26.0,"Gavrilov, 1980abc,",25.2
+Melopsittacus undulatus,18,25.2,S,D,28.0,"Gavrilov, 1985ab, 1997",25.2
+Melopsittacus undulatus,18,33.6,W,N,28.5,"Gavrilov, 1981, 1997,",33.6
+Melopsittacus undulatus,18,33.6,W,D,31.4,"Gavrilov, 1981, 1997",33.6
+Agapornis roseicollis,6,48.1,S,N,40.2,"Gavrilov, 1980abc,",48.1
+Agapornis roseicollis,6,48.1,S,D,44.0,"Gavrilov, 1985ab, 1997",48.1
+Agapornis roseicollis,6,48.4,W,N,40.2,"Gavrilov, 1981, 1997,",48.4
+Agapornis roseicollis,6,48.4,W,D,53.2,"Gavrilov, 1981, 1997",48.4
+Agapornis fisheri,3,56.7,W,N,45.6,"Gavrilov, Dolnik, 1985",56.7
+Nymphicus hollandicus,5,85.6,S,N,59.5,"Gavrilov, 1980abc,",85.6
+Nymphicus hollandicus,5,85.6,S,D,65.4,"Gavrilov, 1985ab, 1997",85.6
+Nymphicus hollandicus,5,94.3,W,N,74.5,"Gavrilov, 1981, 1997,",94.3
+Nymphicus hollandicus,5,94.3,W,D,88.3,"Gavrilov, 1981, 1997",94.3
+Cuculus canorus,4,111.6,S,N,72.4,"Gavrilov, Dolnik, 1985",111.6
+Asio otus,6,236,S,N,113.0,"Gavrilov, Dolnik, 1985",236
+Caprimulgus europeus,3,77.4,S,N,55.7,"Gavrilov, Dolnik, 1985",77.4
+Apus apus,6,44.9,S,N,37.7,"Gavrilov, 1985ab",44.9
+Alcedo atthis,4,34.3,S,N,32.7,"Gavrilov, Dolnik, 1985",34.3
+Yynx torquilla,6,31.8,S,N,31.0,"Gavrilov, Dolnik, 1985",31.8
+Dendrocopus major,7,98.0,S,N,77.5,"Gavrilov, 1980abc,",98.0
+Dendrocopus major,7,117.0,W,N,90.0,"Gavrilov, 1980abc,",117.0
+Regulus regulus,22,5.5,S,N,12.6,"Gavrilov, 1997, 1999ab",5.5
+Regulus regulus,22,5.5,W,N,15.9,"Gavrilov, 1997, 1999ab",5.5
+Estrilda troglodytes,6,7.5,S,N,13.0,"Gavrilov, 1980abc, 1982ab",7.5
+Estrilda troglodytes,6,7.5,S,D,14.0,"Gavrilov, 1985ab, 1997",7.5
+Estrilda troglodytes,6,7.7,W,N,13.4,"Gavrilov, 1980abc,",7.7
+Estrilda troglodytes,6,7.7,W,D,14.6,"Gavrilov, 1985ab, 1997",7.7
+Tiaris canora,4,7.6,S,N,13.4,"Gavrilov, 1980abc,",7.6
+Tiaris canora,4,7.8,W,N,13.4,"Gavrilov, 1980abc,",7.8
+Phylloscopus collybita,6,8.2,A,N,14.2,"Gavrilov, Dolnik, 1985",8.2
+Aegithalos caudatus,17,8.9,S,N,17.2,"Gavrilov, 1974, 1980abc,",8.9
+Aegithalos caudatus,17,8.8,W,N,21.8,"Gavrilov, 1974, 1980abc,",8.8
+Troglodytes troglodytes,16,9.0,S,N,18.4,"Gavrilov, 1980abc,",9.0
+Troglodytes troglodytes,16,9.2,W,N,20.9,"Gavrilov, 1980abc,",9.2
+Uraeginthus bengalis,5,9.1,S,N,13.4,"Gavrilov, 1980abc,",9.1
+Uraeginthus bengalis,5,9.2,W,N,14.2,"Gavrilov, 1980abc,",9.2
+Phylloscopus sibilatrix,4,9.2,S,N,15.1,"Gavrilov, Dolnik, 1985",9.2
+Lonchura striata,6,10.1,S,N,17.2,"Gavrilov, 1980abc,",10.1
+Lonchura striata,6,10.3,W,N,18.4,"Gavrilov, 1980abc,",10.3
+Sylvia curruca,8,10.6,S,N,17.2,"Gavrilov, Dolnik, 1985",10.6
+Phylloscopus trochilus,7,10.7,W,N,18.0,"Gavrilov, Dolnik, 1985",10.7
+Acrcocephalus palustris,4,10.8,S,N,17.6,"Gavrilov, Dolnik, 1985",10.8
+Parus ater,18,10.8,S,N,20.5,"Gavrilov, 1980abc,",10.8
+Parus ater,18,10.8,S,D,22.6,"Gavrilov, 1985ab, 1997",10.8
+Parus ater,18,11.0,W,D,27.7,"Gavrilov, 1981, 1997",11.0
+Taeniopygia castanotis,14,11.8,S,D,20.3,"Gavrilov, 1985ab, 1997",11.8
+Taeniopygia castanotis,14,11.8,W,N,20.1,"Gavrilov, 1981, 1997,",11.8
+Taeniopygia castanotis,14,11.8,W,D,22.6,"Gavrilov, 1981, 1997",11.8
+Acrocephalus schoenobaenus,3,11.5,S,N,18.8,"Gavrilov, Dolnik, 1985",11.5
+Ficedula hypoleuca,9,11.7,A,N,20.1,"Gavrilov, Dolnik, 1985,",11.7
+Hippolais icterina,6,12.5,S,N,21.8,"Gavrilov, Dolnik, 1985",12.5
+Acanthis flammea,16,14.0,S,N,24.7,"Gavrilov, 1974, 1980abc,",14.0
+Acanthis flammea,16,14.3,W,N,29.3,"Gavrilov, 1974, 1980abc,",14.3
+Serinus canaria,5,13.3,A,N,19.7,"Gavrilov, Dolnik, 1985",13.3
+Riparia riparia,3,13.6,A,N,20.1,"Gavrilov, 1986",13.6
+Phoenicurus ochruros,3,13.9,S,N,20.9,"Gavrilov, Dolnik, 1985",13.9
+Spinus spinus,18,14.0,S,N,25.1,"Gavrilov, 1980abc,",14.0
+Spinus spinus,18,14.0,S,D,27.6,"Gavrilov, 1985ab, 1997",14.0
+Spinus spinus,18,14.2,W,N,28.5,"Gavrilov, 1981, 1997,",14.2
+Spinus spinus,18,14.2,W,D,31.4,"Gavrilov, 1981, 1997",14.2
+Saxicola rubetra,4,14.3,S,N,20.9,"Gavrilov, Dolnik, 1985",14.3
+Muscicapa striata,3,14.4,S,N,21.3,"Gavrilov, Dolnik, 1985",14.4
+Motacilla flava,2,14.7,S,N,22.2,"Gavrilov, Dolnik, 1985",14.7
+Tarsiger cyanurus,5,14.8,W,N,20.5,"Gavrilov, 1985ab",14.8
+Parus major,20,16.4,S,N,28.5,"Gavrilov, 1980abc,",16.4
+Parus major,20,16.4,S,D,31.6,"Gavrilov, 1985ab, 1997,",16.4
+Parus major,20,17.1,W,N,32.2,"Gavrilov, 1981, 1997,",17.1
+Parus major,20,17.1,W,D,35.6,"Gavrilov, 1981, 1997,",17.1
+Carduelis carduelis,6,16.5,W,N,30.1,"Gavrilov, 1982b",16.5
+Prunella modularls,4,16.8,A,N,28.1,"Gavrilov, Dolnik, 1985",16.8
+Acanthis cannabina,4,16.9,A,N,29.3,"Gavrilov, 1982b",16.9
+Emberiza schoeniclus,3,17.6,A,N,26.0,"Gavrilov, 1982b",17.6
+Erithacus rubecula,18,17.6,S,N,26.0,"Gavrilov, 1980abc, 1982ab",17.6
+Erithacus rubecula,18,17.6,S,D,29.1,"Gavrilov, 1985ab",17.6
+Erithacus rubecula,18,17.6,W,N,24.3,"Gavrilov, 1981",17.6
+Erithacus rubecula,18,17.6,W,D,26.4,"Gavrilov, 1981",17.6
+Parus varius,5,17.7,W,N,31.0,"Gavrilov, 1985ab",17.7
+Parus varius,5,17.7,W,D,37.2,"Gavrilov, 1985ab",17.7
+Hirundo rustica,4,18.4,S,N,26.0,"Gavrilov, 1986",18.4
+Motacilla alba,8,18.0,S,N,26.0,"Gavrilov, 1980abc, 1982ab",18.0
+Motacilla alba,8,18.2,W,N,24.3,"Gavrilov, 1980abc, 1982ab",18.2
+Authus pratensis,3,18.9,S,N,26.0,"Gavrilov, 1982b",18.9
+Anthus trivialis,5,19.7,A,N,29.3,"Gavrilov, 1982b",19.7
+Luscinia svecica,3,20.8,S,N,31.0,"Gavrilov, 1982b",20.8
+Fringilla coelebs,35,21.0,S,N,32.2,"Gavrilov, 1980abc,",21.0
+Fringilla coelebs,35,21.0,S,D,39.0,"Gavrilov, 1985ab, 1997",21.0
+Fringilla coelebs,35,20.8,W,N,38.1,"Gavrilov, 1981, 1997,",20.8
+Fringilla coelebs,35,20.8,W,D,41.5,"Gavrilov, 1981, 1997,",20.8
+Fringilla montifringilla,12,21.0,A,N,33.1,"Gavrilov, 1982b",21.0
+Sylvia nisoria,3,21.3,S,N,33.1,"Gavrilov, 1982b",21.3
+Sylvia nisoria,3,21.4,W,N,28.0,"Gavrilov, 1982b",21.4
+Carpodacus erythrinus,14,21.2,S,N,31.8,"Gavrilov, 1980abc,",21.2
+Carpodacus erythrinus,14,21.2,S,D,36.6,"Gavrilov, 1985ab, 1997",21.2
+Carpodacus erythrinus,14,21.6,W,N,31.0,"Gavrilov, 1981, 1997,",21.6
+Carpodacus erythrinus,14,21.6,W,D,33.1,"Gavrilov, 1981, 1997",21.6
+Anthus campestris,2,21.8,S,N,33.1,"Gavrilov, 1981",21.8
+Sylvia atricapilla,8,21.9,A,N,36.0,"Gavrilov, 1981",21.9
+Emberiza hortulana,8,24.3,S,N,36.0,"Gavrilov, 1980abc, 1982ab",24.3
+Emberiza hortulana,8,27.0,W,N,35.2,"Gavrilov, 1980abc, 1982ab",27.0
+Passer montanus,7,22.0,S,N,34.0,"Gavrilov, 1981",22.0
+Passer montanus,7,22.3,A,N,35.2,"Gavrilov, 1981",22.3
+Sylvia borin,12,24.8,A,N,36.0,"Gavrilov, 1982b",24.8
+Passer domesticus,33,26.5,S,N,41.0,"Gavrilov, 1980abc,",26.5
+Passer domesticus,33,26.5,S,D,47.2,"Gavrilov, 1985ab, 1997",26.5
+Passer domesticus,33,26.4,W,N,42.3,"Gavrilov, 1981, 1997,",26.4
+Passer domesticus,33,26.4,W,D,44.8,"Gavrilov, 1981, 1997",26.4
+Emberiza citrinella,27,26.8,S,N,37.7,"Gavrilov, 1980abc,",26.8
+Emberiza citrinella,27,26.8,S,D,43.3,"Gavrilov, 1985ab, 1997",26.8
+Emberiza citrinella,27,27.4,W,N,43.1,"Gavrilov, 1981, 1997,",27.4
+Emberiza citrinella,27,27.4,W,D,49.4,"Gavrilov, 1981, 1997",27.4
+Lanius collurio,4,27.0,S,N,33.1,"Gavrilov, 1982b",27.0
+Chloris chloris,17,28.2,S,N,41.0,"Gavrilov, 1980abc,",28.2
+Chloris chloris,17,28.2,S,D,46.4,"Gavrilov, 1985ab, 1997",28.2
+Chloris chloris,17,29.0,W,D,51.9,"Gavrilov, 1981, 1997",29.0
+Loxia curvirostra,9,39.4,S,N,51.9,"Gavrilov, 1980abc,",39.4
+Loxia curvirostra,9,42.7,W,N,58.2,"Gavrilov, 1980abc,",42.7
+Pyrrhula pyrrhula,11,30.4,W,N,47.7,"Gavrilov, 1982b",30.4
+Lullula arborea,7,33.2,A,N,42.3,"Gavrilov, 1982b",33.2
+Coccothraustes coccothraustes,4,48.3,A,N,60.3,"Gavrilov, 1982b",48.3
+Loxia pytiopsittacus,6,53.7,W,N,69.1,"Gavrilov, 1982b",53.7
+Turdus iliacus,9,58.0,W,N,62.4,"Gavrilov, 1979ab, 1981",58.0
+Turdus iliacus,9,58.0,W,D,72.8,"Gavrilov, 1981",58.0
+Turdus philomelos,12,62.8,S,N,62.8,"Gavrilov, 1979ab,",62.8
+Turdus philomelos,12,62.8,S,D,71.0,"Gavrilov, 1985ab, 1997",62.8
+Turdus philomelos,12,64.0,W,N,65.3,"Gavrilov, 1979ab,",64.0
+Turdus philomelos,12,64.0,W,D,74.9,"Gavrilov, 1982ab, 1997",64.0
+Oriolus oriolus,3,64.9,S,N,56.1.,"Gavrilov, 1982b",64.9
+Lanius excubitor,4,72.4,A,N,70.3,"Gavrilov, 1982b",72.4
+Bombycilla garrulus,6,72.5,A,N,82.5,"Gavrilov, Dolnik, 1985",72.5
+Sturnus vulgaris,13,75.0,A,N,77.5,"Gavrilov, 1982b",75.0
+Pinicola enucleator,5,78.4,W,N,93.8,"Gavrilov, Dolnik, 1985",78.4
+Turdus merula,12,82.6,S,N,80.4,"Gavrilov, 1979ab,",82.6
+Turdus merula,12,82.6,S,D,93.3,"Gavrilov, 1997",82.6
+Turdus merula,12,83.0,W,D,105.5,"Gavrilov, 1981, 1997,",83.0
+Turdus viscivorus,9,108.2,W,N,95.5,"Gavrilov, 1979ab",108.2
+Nucifraga caryocatactes,11,147.0,W,N,116.4,"Gavrilov, 1979ab",147.0
+Garrulus glandarius,13,153.0,W,N,119.7,"Gavrilov, 1979ab",153.0
+Pica pica,6,202.0,W,N,148.6,"Gavrilov, 1979ab",202.0
+Coleus monedula,9,209.0,S,N,131.2,"Gavrilov, 1985ab",209.0
+Coleus monedula,9,209.0,S,D,151.2,"Gavrilov, 1985ab",209.0
+Coleus monedula,9,215.0,W,N,160.8,"Gavrilov, 1979ab, 1981",215.0
+Coleus monedula,9,215.0,W,D,167.5,"Gavrilov, 1981",215.0
+Corvus frugilegus,5,390.0,W,N,226.1,"Gavrilov, 1979ab",390.0
+Cornus ruficollis,4,660.0,W,N,293.5,"Gavrilov, 1979ab",660.0
+Corvus corax,7,1203.0,S,N,476.1,"Gavrilov, 1979ab,",1203.0
+Corvus corax,7,1203.0,S,D,518.9,"Gavrilov, 1985ab, 1997",1203.0
+Corvus corax,7,1208,W,N,518.3,"Gavrilov, 1979ab,",1208
+Corvus corax,7,1208,W,D,618.0,"Gavrilov, 1981, 1997",1208

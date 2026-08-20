@@ -1,0 +1,1 @@
+[1] K. Mah´e, J. Baudrier, A. Larivain, S. Telliez, R. Elleboode, E. Bultel, and L. Pawlowski. Morphometric relationships between length and weight of 109 fish species in the caribbean sea (french west indies). Animals, 13(24):3852, 2023.

@@ -1,0 +1,1 @@
+J. C. P. Reum and K. N. Marshall. Evaluating δ15N–body size relationships across taxonomic levels using hierarchical models. Oecologia, 173(4):1159–1168, 2013.
