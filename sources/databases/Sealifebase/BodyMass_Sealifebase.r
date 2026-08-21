@@ -4,7 +4,6 @@ rfish <- rfishbase::popchar(server = server)
 rfish <- dplyr::right_join(sp, rfish, by = 'SpecCode')
 rfish <- rfish[!is.na(rfish$Wmax), c('Species', 'Wmax')]
 colnames(rfish) <- c('taxon', 'mass_g')
-rfish <- FixNames(rfish)
 rfish <- rfish[!is.na(rfish$mass_g), ]
 SB <- ddply(rfish, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 SB$source_mass <- server

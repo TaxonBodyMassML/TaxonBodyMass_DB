@@ -3,7 +3,6 @@ adat <- adat[, c('Species', 'Adult.body.mass')]
 colnames(adat) <- c('taxon', 'mass_g')
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Trochet_2014'
 TR <- adat

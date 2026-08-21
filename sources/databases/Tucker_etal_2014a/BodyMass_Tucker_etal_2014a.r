@@ -2,7 +2,6 @@ adat <- read.csv(file.path(wd_source, 'TrophicLevel_Appendix1.csv'), header = TR
 adat <- adat[, c('Taxon', 'Mass..log10.kg.')]
 colnames(adat) <- c('taxon', 'mass_g')
 adat$mass_g <- (10^adat$mass_g) * 1000
-adat <- FixNames(adat)
 adat <- adat[!is.na(adat$mass_g), ]
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Tucker_etal_2014a'

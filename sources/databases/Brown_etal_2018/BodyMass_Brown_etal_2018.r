@@ -11,7 +11,6 @@ colnames(dat2) <- c('taxon', 'mass_g')
 dat2 <- ddply(dat2, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 
 adat <- rbind(dat1, dat2)
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = sum(n))
 adat <- adat[!is.na(adat$mass_g), ]
 adat$source_mass <- 'Brown_etal_2018'

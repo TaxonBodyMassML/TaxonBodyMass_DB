@@ -6,7 +6,6 @@ for (i in 2:nrow(adat)) {
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat <- adat[, c('taxon', 'mass_g')]
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Lane_2019'
 LA <- adat

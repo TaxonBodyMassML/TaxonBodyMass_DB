@@ -5,7 +5,6 @@ adat[which(adat == '-999', arr.ind = TRUE)] <- NA
 adat$mass_g <- apply(adat[, -1], 1, mean, na.rm = TRUE)
 adat <- adat[, c('taxon', 'mass_g')]
 adat <- adat[!is.nan(adat$mass_g), ]
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = mean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Lislevand_etal_2007'
 LI <- adat

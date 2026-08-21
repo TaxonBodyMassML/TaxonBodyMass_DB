@@ -1,6 +1,5 @@
 adat <- read.csv(file.path(wd_source, 'geb12773-sup-0001-appendixs1.csv'))
 adat$taxon <- gsub('.*: (.*)', '\\1', adat$Binomial)
-adat <- FixNames(adat)
 
 intercept <- as.numeric(adat$intercept)
 slope     <- as.numeric(adat$slope)

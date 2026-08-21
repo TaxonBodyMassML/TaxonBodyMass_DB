@@ -27,7 +27,6 @@ colnames(adat1) <- colnames(adat2) <- colnames(adat3) <- colnames(adat4) <-
 adat <- rbind(adat1, adat2, adat3, adat4, adat5, adat6, adat7, adat8, adat9, adat10)
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- FixNames(adat)
 adat <- subset(adat, taxon != 'Unknown_genus')
 adat <- subset(adat, taxon != 'Unknown_species')
 adat <- subset(adat, taxon != 'Unidentified')

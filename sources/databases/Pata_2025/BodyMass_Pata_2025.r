@@ -9,7 +9,6 @@ adat$traitValue <- as.numeric(adat$traitValue) / 1000
 adat <- adat[, c('scientificName', 'traitValue')]
 colnames(adat) <- c('taxon', 'mass_g')
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Pata_2025'
 PA <- adat

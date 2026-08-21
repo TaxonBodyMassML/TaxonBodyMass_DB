@@ -3,7 +3,6 @@ adat <- adat[, c('Scientific', 'BodyMass.Value')]
 colnames(adat) <- c('taxon', 'mass_g')
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Wilman_etal_2014'
 WI <- adat

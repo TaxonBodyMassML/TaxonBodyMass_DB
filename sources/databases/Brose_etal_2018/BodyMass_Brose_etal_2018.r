@@ -6,7 +6,6 @@ adat <- rbind(adat1, adat2)
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat <- adat[adat$mass_g > 0, ]
-adat <- FixNames(adat)
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Brose_etal_2018'
 BRO <- adat

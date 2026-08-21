@@ -13,10 +13,13 @@ wd_rdata <- file.path(wd_root, 'sources', 'Rdata')
 wd_out   <- file.path(wd_root, 'output')
 
 source(file.path(wd_root, 'R', 'library', 'helpers.r'))
+source(file.path(wd_root, 'R', 'library', 'fix_formatting.r'))
+source(file.path(wd_root, 'R', 'library', 'fix_misspellings.r'))
+source(file.path(wd_root, 'R', 'library', 'fix_nontaxa.r'))
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Control flags
-recompile    <- TRUE   # TRUE: re-parse all raw source CSVs
+recompile    <- FALSE   # TRUE: re-parse all raw source CSVs
 DataRetrieve <- FALSE   # TRUE: re-download from rdataretriever (requires Python + Retriever)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -81,7 +84,9 @@ if (DataRetrieve) {
   load(file.path(wd_rdata, 'BodyMass_vertnet-reptiles.Rdata'))    # vrr
 
   adat <- rbind(mlh, bir, ppb, pan, amn, sdd, vra, vrr)
-  adat <- FixNames(adat)
+  adat <- FixFormatting(adat)
+  adat <- FixMisspellings(adat)
+  adat <- RemoveNonTaxa(adat)
   adat <- adat[which(!is.na(adat$mass_g) & adat$mass_g > 0), ]
   adat <- ddply(adat, .(taxon), summarise,
                 mass_g      = gmean(mass_g),
@@ -124,6 +129,14 @@ source_list <- lapply(rdata_files, function(f) {
 
 
 ##########################################################################
+# 2b. Apply taxon name corrections prior to merging
+##########################################################################
+source_list <- lapply(source_list, FixFormatting)   # normalise encoding/spacing, strip non-alpha, capitalise, truncate to binomial
+source_list <- lapply(source_list, FixMisspellings) # rename misspelled taxa (depends on FixFormatting)
+source_list <- lapply(source_list, RemoveNonTaxa)   # drop non-species entries
+
+
+##########################################################################
 # 3. Merge across sources
 ##########################################################################
 adat <- bind_rows(source_list) %>%
@@ -132,9 +145,10 @@ adat <- bind_rows(source_list) %>%
             n           = sum(n, na.rm = TRUE),
             source_mass = paste(source_mass, collapse = '-'))
 
-# Retain only taxa with genus_species or genus format
-adat <- adat[!grepl('^_',  adat$taxon), ]
-adat <- adat[grepl( '_',   adat$taxon), ]
+# Separate genus-only entries: included in genus averages but excluded from species export.
+adat       <- as.data.frame(adat)
+genus_only <- adat[!grepl('_', adat$taxon), ]
+adat       <- adat[grepl( '_', adat$taxon), ]
 
 DBs <- as.data.frame(adat[, c('taxon', 'mass_g', 'n', 'source_mass')])
 
@@ -163,8 +177,8 @@ dups <- max(table(adat$taxon))
 
 if (dups > 1) {
   warning('Duplicate body mass values found.', immediate. = TRUE)
-  dir.create(file.path(wd_root, 'tmp'), showWarnings = FALSE)
-  sink(file = file.path(wd_root, 'tmp', 'BodyMassErrors.txt'))
+  dir.create(file.path(wd_root, 'tmp', 'errors'), recursive = TRUE, showWarnings = FALSE)
+  sink(file = file.path(wd_root, 'tmp', 'errors', 'BodyMassErrors.txt'))
   print(adat[duplicated(adat$taxon) | duplicated(adat$taxon, fromLast = TRUE), ])
   sink()
   adat <- adat[!duplicated(adat$taxon, fromLast = TRUE), ]
@@ -174,15 +188,15 @@ if (dups > 1) {
 ##########################################################################
 # 6. Genus-level averages
 ##########################################################################
-gdat <- adat
+gdat <- bind_rows(adat, genus_only)
 gdat$taxon <- sub('\\_.*', '', gdat$taxon)
 gdat <- gdat[nchar(gdat$taxon) > 0, ]
 gdat <- ddply(gdat, .(taxon), summarise,
               mass_g = mean(mass_g),   # arithmetic mean
-              n      = sum(n, na.rm = TRUE))
-gdat$source_mass <- 'GenusAverage'
+              n      = sum(n, na.rm = TRUE),
+              source_mass = paste(source_mass, collapse = '-'))
 gdat <- gdat[, c('taxon', 'mass_g', 'source_mass', 'n')]
-gdat <- rbind(adat, gdat)
+
 
 
 ##########################################################################
@@ -192,7 +206,7 @@ adat$mass_g <- signif(adat$mass_g, digits = 4)
 gdat$mass_g <- signif(gdat$mass_g, digits = 4)
 
 write.csv(adat, file = file.path(wd_out, 'TaxonBodyMass.csv'),        row.names = FALSE)
-write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_wGenus.csv'), row.names = FALSE)
+write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_GenusLevel.csv'), row.names = FALSE)
 
 
 ##########################################################################
