@@ -6,16 +6,16 @@ FixMisspellings <- function(dat) {
   # Holmesi_septentriolis).
 
   genus_prefixes <- list(
-    c("Aligator_",        "Alligator_"),        # Aligator -> Alligator
-    c("Auriparis_",       "Auriparus_"),         # Auriparis_flaviceps
-    c("Catjartes_",       "Cathartes_"),         # Catjartes_aura
-    c("Chaoborys_",       "Chaoborus_"),         # Chaoborys_punctipennis
+    c("Aligator_",        "Alligator_"),        # Aligator -> Alligator (multiple species)
     c("Holmesi_",         "Holmesina_"),         # Holmesi__occidentalis etc. (after FixFormatting __ -> _)
     c("Lonchorhi_",       "Lonchorhina_"),       # Lonchorhi__aurita etc. (after FixFormatting)
     c("Mystaci_",         "Mystacina_"),         # Mystaci__robusta etc. (after FixFormatting)
-    c("PseudoNitzschia_", "Pseudonitzschia_"),   # PseudoNitzschia_heimii etc.
-    c("Strongylocentr_",  "Strongylocentrotus_") # Strongylocentr_droeb etc.
+    c("PseudoNitzschia_", "Pseudonitzschia_"),   # PseudoNitzschia_heimii etc. (capitalisation)
+    c("Strongylocentr_",  "Strongylocentrotus_") # Strongylocentr_droeb etc. (multiple species)
   )
+  # NOTE: single-species genus errors are handled as exact-match corrections below
+  # (Auriparis_flaviceps, Catjartes_aura, Chaoborys_punctipennis) to avoid
+  # silently renaming any future data that legitimately begins with those prefixes.
 
   for (fix in genus_prefixes) {
     dat$taxon <- sub(paste0("^", fix[[1]]), fix[[2]], dat$taxon)
@@ -45,6 +45,9 @@ FixMisspellings <- function(dat) {
 
     # Genus corrections for single-species cases (cannot use prefix substitution
     # without risk of affecting valid plant/other genera with the same name).
+    "Auriparis_flaviceps"             = "Auriparus_flaviceps",            # Verdin; demoted from prefix fix — only one species
+    "Catjartes_aura"                  = "Cathartes_aura",                 # Turkey Vulture; demoted from prefix fix — only one species
+    "Chaoborys_punctipennis"          = "Chaoborus_punctipennis",         # Phantom Midge; demoted from prefix fix — only one species
     "Coleus_monedula"                 = "Coloeus_monedula",
 
     # Epithet misspellings (pre-existing)
@@ -53,14 +56,47 @@ FixMisspellings <- function(dat) {
     "Trachinocephalus_trachinus"      = "Trachinocephalus_myops",
     "Tursiops_truncates"              = "Tursiops_truncatus",
 
-    # Duplicate pairs: merge less-accepted spelling to accepted form (pre-existing).
+    # Duplicate pairs: merge less-accepted spelling to accepted form.
     "Accipiter_cooperi"               = "Accipiter_cooperii",
     "Eolophus_roseicapillus"          = "Eolophus_roseicapilla",
     "Hydrochoeris_hydrochaeris"       = "Hydrochoerus_hydrochaeris",
     "Lagopus_mutus"                   = "Lagopus_muta",
     "Madoqua_kirki"                   = "Madoqua_kirkii",
 
-    # --- Near-duplicate misspellings identified by audit ---
+
+    # Entries correctable to a valid name
+    "Aphanocapsa_pCC"                 = "Aphanocapsa",                    # PCC culture code stripped; genus valid
+    "Bacillus_megate"                 = "Bacillus_megaterium",            # truncated; restored full epithet
+    "Beneckea_na"                     = "Beneckea",                       # truncated epithet stripped; genus valid
+    "Candiacervus_spii"               = "Candiacervus",                   # informal sp. II tag stripped; fossil deer genus
+    "Cricotopus_i"                    = "Cricotopus",                     # single-letter epithet stripped; genus valid
+    "Cricotopus_iI"                   = "Cricotopus",                     # two-letter epithet stripped; genus valid
+    "Delftia_acido"                   = "Delftia_acidovorans",            # truncated; restored full epithet
+    "Encoptolophus_s"                 = "Encoptolophus",                  # single-letter epithet stripped; genus valid
+    "Eumops_bo"                       = "Eumops",                         # truncated epithet stripped; genus valid
+    "Falco_spec"                      = "Falco",                          # spec placeholder stripped; genus valid
+    "Formica_sstr"                    = "Formica",                        # sensu stricto tag stripped; genus valid
+    "Galaxiidae_anomalus"             = "Galaxias_anomalus",              # family used as genus; correct to Galaxias
+    "Galaxiidae_new"                  = "Galaxias",                       # family + placeholder; reduce to genus Galaxias
+    "Genus_microvelia"                = "Microvelia",                     # placeholder genus replaced with actual genus
+    "Geotrupes_spec"                  = "Geotrupes",                      # spec placeholder stripped; genus valid
+    "Gomphonema_type"                 = "Gomphonema",                     # type placeholder stripped; genus valid
+    "Himasthla_b"                     = "Himasthla",                      # single-letter epithet stripped; genus valid
+    "Hydrobiosis_type"                = "Hydrobiosis",                    # type placeholder stripped; caddisfly genus valid
+    "Lagopus_spec"                    = "Lagopus",                        # spec placeholder stripped; genus valid
+    "Lamellibranchia_e"               = "Lamellibranchia",                # single-letter epithet stripped; tubeworm genus valid
+    "Larsia_i"                        = "Larsia",                         # single-letter epithet stripped; genus valid
+    "Larus_spec"                      = "Larus",                          # spec placeholder stripped; genus valid
+    "Lepidostoma_(genus_in_Opisthokonta)" = "Lepidostoma",                # parenthetical tag stripped; caddisfly genus valid
+    "Leucocarbo_phal"                 = "Leucocarbo",                     # truncated epithet stripped; shag genus valid
+    "Phalacrocorax_spec"              = "Phalacrocorax",                  # spec placeholder stripped; genus valid
+    "Stercocarius_spec"               = "Stercorarius",                   # genus misspelling fixed; spec placeholder stripped
+    "Synechocystis_pCC"               = "Synechocystis",                  # PCC culture code stripped; genus valid
+
+
+# Audit 8/20/2026
+
+    # --- Near-duplicate misspellings  ---
 
     # A
     "Acanthocercus_annectans"         = "Acanthocercus_annectens",        # Peters 1869 original
@@ -264,7 +300,174 @@ FixMisspellings <- function(dat) {
     "Hemicentetes_nigricepts"         = "Hemicentetes_nigriceps",         # black-headed tenrec; spurious t
     "Herpailurus_yaguarondi"          = "Herpailurus_yagouaroundi",       # Jaguarundi; d'Orbigny 1803 original
     "Heterocapsa_triqueta"            = "Heterocapsa_triquetra",          # dinoflagellate; triquetra missing r
-    "Holocentrus_ascensionis"         = "Holocentrus_adscensionis"        # squirrelfish; original form with d
+    "Holocentrus_ascensionis"         = "Holocentrus_adscensionis",       # squirrelfish; original form with d
+
+# Audit 8/21/2026
+
+    # A
+    "Abatus_shackeltoni"              = "Abatus_shackletoni",             # el/le transposition; Shackleton sea urchin GBIF FUZZY 95
+    "Abeomylomys_sevia"               = "Abeomelomys_sevia",              # myl→mel vowel transposition; New Guinea rodent GBIF FUZZY 85
+    "Abudefduf_tauru"                 = "Abudefduf_taurus",              # truncated; missing final s; Night Sergeant damselfish GBIF FUZZY 94
+    "Acabthodactylus_boskianus"       = "Acanthodactylus_boskianus",      # bt→nth transposition; fringe-toed lizard GBIF FUZZY 85
+    "Acanthamoeba_castellani"         = "Acanthamoeba_castellanii",       # single-i patronymic; Castellani ends consonant GBIF FUZZY 96
+    "Acerodon_mackloti"               = "Acerodon_macklotii",             # single-i patronymic; Macklot ends consonant GBIF FUZZY 96
+    "Achnanthes_lemmermanni"          = "Achnanthes_lemmermannii",        # single-i patronymic; Lemmermann ends consonant GBIF FUZZY 96
+    "Afroablepharus_wahlbergi"        = "Afroablepharus_wahlbergii",      # single-i patronymic; Wahlberg ends consonant GBIF FUZZY 96
+    "Aglaiocercus_kingi"              = "Aglaiocercus_kingii",            # single-i patronymic; King ends consonant GBIF FUZZY 95
+    "Aluterus_schoepfi"               = "Aluterus_schoepfii",             # single-i patronymic; Schoepf ends consonant GBIF FUZZY 96
+    "Amazilia_saucerrottei"           = "Amazilia_saucerottei",           # spurious r inserted; Steely-vented Hummingbird GBIF FUZZY 96
+    "Amphisbaena_darwini"             = "Amphisbaena_darwinii",           # single-i patronymic; Darwin ends consonant GBIF FUZZY 96
+    "Anolis_maynardi"                 = "Anolis_maynardii",               # single-i patronymic; Maynard ends consonant GBIF FUZZY 96
+    "Anolis_wattsi"                   = "Anolis_wattsii",                 # single-i patronymic; Watts ends consonant GBIF FUZZY 96
+    "Anomalopus_verreauxi"            = "Anomalopus_verreauxii",          # single-i patronymic; Verreaux ends consonant GBIF FUZZY 96
+    "Anoplolepis_steinergroeveri"     = "Anoplolepis_steingroeveri",      # er inserted after stein; Steingroever patronymic GBIF FUZZY 93
+    "Anotopterus_pharaoh"             = "Anotopterus_pharao",             # English spelling vs Latin pharao; Daggertooth fish GBIF FUZZY 93
+    "Aphis_gossypi"                   = "Aphis_gossypii",                 # single-i; genitive of gossypium requires double-i GBIF FUZZY 95
+    "Apteryx_haasti"                  = "Apteryx_haastii",                # single-i patronymic; Haast ends consonant GBIF FUZZY 96
+    "Archaeoindris_fontoynonti"       = "Archaeoindris_fontoynontii",     # single-i patronymic; Fontoynont ends consonant GBIF FUZZY 96
+    "Arctocephalus_philippi"          = "Arctocephalus_philippii",        # single-i; GBIF accepted form uses double-i GBIF FUZZY 95
+    "Asplanchna_sieboldi"             = "Asplanchna_sieboldii",           # single-i patronymic; Siebold ends consonant GBIF FUZZY 95
+    "Asymblepharus_tragbulense"       = "Asymblepharus_tragbulensis",     # -ense→-ensis; locality adjective requires both n's GBIF FUZZY 96
+    "Azomonas_agi"                    = "Azomonas_agilis",                # truncated; agi is first 3 letters of agilis GBIF HIGHERRANK
+
+    # B
+    "Bathycalanus_richard"            = "Bathycalanus_richardi",          # truncated; missing genitive -i GBIF FUZZY 96
+    "Brosmophycis_marginate"          = "Brosmophycis_marginata",         # English adjective; Latin -a required GBIF FUZZY 96
+
+    # C
+    "Cacactua_tenuirostris"           = "Cacatua_tenuirostris",           # doubled c; correct genus Cacatua GBIF FUZZY 85
+    "Callophora_rylandi"              = "Callopora_rylandi",              # ph→p; bryozoan genus Callopora not Callophora GBIF FUZZY 85
+    "Crithida_fasciculata"            = "Crithidia_fasciculata",          # missing i; protozoan Crithidia not polychaete Crithida GBIF HIGHERRANK
+    "Crithida_strigomonas"            = "Crithidia_strigomonas",          # missing i; same genus error as Crithida_fasciculata GBIF HIGHERRANK
+    "Crystallodytes_cookie"           = "Crystallodytes_cookei",          # English word vs Latin patronymic; GBIF HIGHERRANK
+
+    # D
+    "Dephinapterus_leucas"            = "Delphinapterus_leucas",          # missing l; Beluga Whale GBIF NONE (correct EXACT 99)
+    "Diomedia_exulans"                = "Diomedea_exulans",               # i→e substitution; Wandering Albatross GBIF FUZZY 85
+    "Diomedea_melanophrys"            = "Diomedea_melanophris",           # phrys→phris; Black-browed Albatross GBIF FUZZY 92
+
+    # E
+    "Edaphus_blÃhweissi"         = "Edaphus_bluhweissi",             # UTF-8 encoding artifact U+00C3 replacing ü GBIF FUZZY 94
+    "Enophrys_taurine"                = "Enophrys_taurina",               # English word; Latin -a required GBIF FUZZY 96
+
+    # F
+    "Felimida_purpureaÃÃ"   = "Felimida_purpurea",              # trailing 0xC3 0xC3 double-encoding artifact GBIF EXACT 99
+
+    # G
+    "Gabrius_fermoralis"              = "Gabrius_femoralis",              # vowel transposition; femoralis from femur GBIF EXACT 99
+    "Gadhus_morhua"                   = "Gadus_morhua",                   # h inserted; Atlantic cod GBIF FUZZY 85
+    "Gadus_minitus"                   = "Gadus_minutus",                  # u/i transposition; poor cod GBIF HIGHERRANK
+    "Gammarus_insensiblis"            = "Gammarus_insensibilis",          # missing i in -ibilis; amphipod GBIF FUZZY 95
+    "Garthia_gaudichaudi"             = "Garthia_gaudichaudii",           # single-i; Gaudichaud ends consonant GBIF FUZZY 96
+    "Gerbilliscus_nigricauda"         = "Gerbilliscus_nigricaudus",       # also: Girbilliscus_nigricauda; ir/er + gender fix GBIF FUZZY 85
+    "Girbilliscus_nigricauda"         = "Gerbilliscus_nigricaudus",       # ir→er genus transposition + wrong gender GBIF FUZZY 85
+    "Glossolepis_incisa"              = "Glossolepis_incisus",            # -a→-us gender agreement; masculine genus GBIF FUZZY 96
+    "Gonotodes_antillensis"           = "Gonatodes_antillensis",          # o→a substitution; Neotropical gecko GBIF FUZZY 85
+    "Gonyosoma_frenatus"              = "Gonyosoma_frenatum",             # -us→-um; -soma is neuter Greek GBIF FUZZY 96
+    "Gromphadorihna_portentosa"       = "Gromphadorhina_portentosa",      # extra i; Madagascar hissing cockroach GBIF HIGHERRANK
+
+    # H
+    "Haemulon_plumieri"               = "Haemulon_plumierii",             # single-i; Plumier ends consonant GBIF FUZZY 96
+    "Haplodrassus_silvstris"          = "Haplodrassus_silvestris",        # missing e; ground spider GBIF FUZZY 95
+    "Harmonia_confirmis"              = "Harmonia_conformis",             # o/i vowel swap; large spotted ladybird GBIF FUZZY 95
+    "Harmotoe_hartmanae"              = "Harmothoe_hartmanae",            # missing h; polychaete genus Harmothoe GBIF NONE
+    "Hipoglossoides_platessoides"     = "Hippoglossoides_platessoides",   # missing p; American plaice GBIF FUZZY 80
+
+    # I
+    "Iomys_horsfieldi"                = "Iomys_horsfieldii",              # single-i patronymic; Horsfield ends consonant GBIF FUZZY 96
+
+    # K
+    "Klebsiella_pneu"                 = "Klebsiella_pneumoniae",          # truncated stub; pneu = first 4 letters GBIF NONE
+
+    # L
+    "Lagotrix_lugens"                 = "Lagothrix_lugens",               # missing h; woolly monkey GBIF FUZZY 84
+    "Lagppus_lagopus"                 = "Lagopus_lagopus",                # doubled p; Willow Ptarmigan GBIF FUZZY 85
+    "Larua_ridibundus"                = "Larus_ridibundus",               # ua→us transposition; Common Black-headed Gull GBIF FUZZY 84
+    "Lepidonotos_squamatus"           = "Lepidonotus_squamatus",          # missing u; polychaete genus Lepidonotus GBIF FUZZY 85
+    "Leptonichotes_wedelli"           = "Leptonychotes_weddellii",        # genus y-drop + epithet double errors; Weddell Seal GBIF FUZZY 85
+    "Leptonychotes_weddelli"          = "Leptonychotes_weddellii",        # single-i; Weddell ends consonant GBIF FUZZY 96
+    "Loligo_forbesi"                  = "Loligo_forbesii",                # single-i patronymic; Forbes ends consonant GBIF FUZZY 96
+    "Loxoides_baileui"                = "Loxioides_bailleui",             # genus missing i + epithet missing l; Palila GBIF FUZZY 85
+
+    # M
+    "Magliophis_exiguum"              = "Magliophis_exiguus",             # -um→-us gender; masculine -ophis genus GBIF FUZZY 96
+    "Meitihreptus_lunatus"            = "Melithreptus_lunatus",           # ei/eli transposition; White-naped Honeyeater GBIF NONE
+    "Menmbraiporella_nitida"          = "Membraniporella_nitida",         # nm/mn transposition + ai/ani; bryozoan GBIF NONE
+    "Methylobacte_extorquens"         = "Methylobacterium_extorquens",    # truncated genus; Methylobacterium bacterium GBIF NONE
+    "Micropterus_dolomieui"           = "Micropterus_dolomieu",           # extra -i; original Lacepède 1802 used dolomieu GBIF EXACT SYNONYM 98
+    "Modiolis_modiolis"               = "Modiolus_modiolus",              # i→u substitution in both parts; horse mussel GBIF FUZZY 85
+
+    # N
+    "Nanonycteris_veldkampi"          = "Nanonycteris_veldkampii",        # single-i; Veldkamp ends consonant GBIF FUZZY 96
+    "Neisseria_gon"                   = "Neisseria_gonorrhoeae",          # truncated; gon = first 3 letters GBIF HIGHERRANK
+    "Neisseria_mu"                    = "Neisseria_mucosa",               # truncated; mu = first 2 letters GBIF HIGHERRANK
+    "Nocardia_coral"                  = "Nocardia_corallina",             # truncated; coral = first 5 letters GBIF HIGHERRANK
+    "Nocardia_far"                    = "Nocardia_farcinica",             # truncated; far = first 3 letters GBIF HIGHERRANK
+
+    # P
+    "Phaeodactyllum_tricornutum"      = "Phaeodactylum_tricornutum",      # double-l; Greek daktylon has single l GBIF FUZZY 85
+    "Phanourios_minutes"              = "Phanourios_minutus",             # English noun; Latin minutus required GBIF HIGHERRANK
+    "Phelpsia_inornatus"              = "Phelpsia_inornata",              # -us→-a gender; feminine -ia genus GBIF FUZZY 96
+    "Phocartos_hookeri"               = "Phocarctos_hookeri",             # missing c; New Zealand sea lion GBIF FUZZY 85
+    "Pholis_ornate"                   = "Pholis_ornata",                  # English adj; Latin -a required GBIF FUZZY 96
+    "Phorocantha_recurva"             = "Phoracantha_recurva",            # o→a; eucalyptus longhorn beetle GBIF FUZZY 80
+    "Phorocantha_semipunctata"        = "Phoracantha_semipunctata",       # o→a; eucalyptus longhorn borer GBIF FUZZY 80
+    "Phoxinys_neogaeus"               = "Phoxinus_neogaeus",              # y→u; Finescale Dace GBIF FUZZY 84
+    "Phyloomys_unicolor"              = "Phyllomys_unicolor",             # double-o; South American tree rat GBIF FUZZY 85
+    "Pitupophis_catenifer"            = "Pituophis_catenifer",            # extra p; Pacific Gopher Snake GBIF FUZZY 85
+    "Pooectes_gramineus"              = "Pooecetes_gramineus",            # missing first e; Vesper Sparrow GBIF FUZZY 85
+    "Posidonica_oceanica"             = "Posidonia_oceanica",             # extra c; Mediterranean seagrass GBIF FUZZY 80
+    "Potamopurgus_antipodarum"        = "Potamopyrgus_antipodarum",       # purgus→pyrgus; New Zealand mudsnail GBIF FUZZY 85
+    "Psamechinus_miliaris"            = "Psammechinus_miliaris",          # single m; Greek psammos requires double-m GBIF FUZZY 83
+    "Pseudopleuronecte_americanus"    = "Pseudopleuronectes_americanus",  # missing terminal s; Winter Flounder GBIF FUZZY 85
+    "Pterois_lunulate"                = "Pterois_lunulata",               # English adj; Latin -a required GBIF FUZZY 96
+    "Ptychorhamphus_aleuticus"        = "Ptychoramphus_aleuticus",        # spurious h; Cassin's Auklet GBIF FUZZY 85
+
+    # S
+    "Salicornia_europea"              = "Salicornia_europaea",            # ae diphthong dropped; glasswort GBIF FUZZY 93
+    "Sallinivibrio_costicola"         = "Salinivibrio_costicola",         # double-l; halotolerant bacterium GBIF FUZZY 85
+    "Sardinops_caerrula"              = "Sardinops_caerulea",             # double-r + wrong ending; caeruleus GBIF FUZZY 94
+    "Scapaloberis_mucronata"          = "Scapholeberis_mucronata",        # ph digraph dropped; cladoceran GBIF NONE
+    "Sceloporus_jarrovi"              = "Sceloporus_jarrovii",            # single-i patronymic; Yarrow ends consonant GBIF FUZZY 96
+    "Seiurus_aurocapillus"            = "Seiurus_aurocapilla",            # -us→-a gender; Ovenbird original Linnaeus 1766 GBIF FUZZY 96
+    "Serolella_bouveri"               = "Serolella_bouvieri",             # missing i; Bouvier genitive = bouvieri GBIF FUZZY 95
+    "Sialia_mexicanus"                = "Sialia_mexicana",                # -us→-a gender; feminine genus Sialia GBIF FUZZY 96
+    "Sibynomorphis_mikanii"           = "Sibynomorphus_mikanii",          # -phis→-phus; slug-eating snake genus GBIF FUZZY 84
+    "Siphonaria_lesoni"               = "Siphonaria_lessonii",            # missing s and i; Lesson patronymic GBIF FUZZY 96
+    "Sisiyphys_fasciculatus"          = "Sisyphus_fasciculatus",          # y/ph transposition; dung-beetle genus GBIF NONE
+    "Spirontocarus_lilleborgi"        = "Spirontocaris_lilljeborgii",     # genus -carus→-caris + epithet double errors GBIF FUZZY 80
+    "Spiziapteryx_circumcinctus"      = "Spiziapteryx_circumcincta",      # -us→-a gender; feminine genus Spiziapteryx GBIF FUZZY 96
+    "Synodontis_nigromaculata"        = "Synodontis_nigromaculatus",      # -a→-us gender; masculine genus Synodontis GBIF FUZZY 96
+
+    # T
+    "Talorchestia_megalophtalma"      = "Talorchestia_megalophthalma",    # missing h in Greek ophthalmos GBIF FUZZY 96
+    "Tapes_philippimarum"             = "Tapes_philippinarum",            # n/m transposition; Manila clam GBIF FUZZY 94
+    "Tauraco_schuetti"                = "Tauraco_schuettii",              # single-i patronymic; Schütt ends consonant GBIF FUZZY 96
+    "Telespyza_cantans"               = "Telespiza_cantans",              # Telespyza is junior synonym of Telespiza; Laysan Finch GBIF EXACT SYNONYM 98
+    "Tetryhymena_pyriformis"          = "Tetrahymena_pyriformis",         # y/a transposition in genus; ciliate GBIF FUZZY 83
+    "Thamnodyastes_strigatus"         = "Thamnodynastes_strigatus",       # missing n; Neotropical snake GBIF FUZZY 85
+    "Tilesina_gibbose"                = "Tilesina_gibbosa",               # English adj; Latin -a required GBIF FUZZY 96
+    "Trachytes_pauperiors"            = "Trachytes_pauperior",            # spurious -s; comparative pauperior is undeclined GBIF FUZZY 95
+    "Tudus_viscivorus"                = "Turdus_viscivorus",              # missing r; Mistle Thrush GBIF NONE
+
+    # U
+    "Urosalpinx_cinere"               = "Urosalpinx_cinerea",             # truncated; missing final -a GBIF FUZZY 95
+
+    # V
+    "Varnus_rosenbergi"               = "Varanus_rosenbergi",             # missing a; Heath Monitor GBIF FUZZY 85
+    "Viblia_antarctica"               = "Vibilia_antarctica",             # missing i; hyperiid amphipod GBIF FUZZY 85
+    "Vibrio_algino"                   = "Vibrio_alginolyticus",           # truncated stub; algino = first 5 letters GBIF FUZZY 93
+    "Vibrio_metsch"                   = "Vibrio_metschnikovii",           # truncated stub; metsch = first 5 letters GBIF NONE
+    "Vibrio_para"                     = "Vibrio_parahaemolyticus",        # truncated stub; para = first 4 letters GBIF NONE
+
+    # W
+    "Warenja_wakefieldi"              = "Warendja_wakefieldi",            # missing d; fossil wombat genus GBIF FUZZY 85
+
+    # Y
+    "Yynx_torquilla"                  = "Jynx_torquilla",                 # Y→J substitution; Eurasian Wryneck GBIF NONE
+
+    # Z
+    "Zonotricha_querula"              = "Zonotrichia_querula"             # missing i; Harris's Sparrow GBIF FUZZY 85
   )
 
   for (old in names(corrections)) {
