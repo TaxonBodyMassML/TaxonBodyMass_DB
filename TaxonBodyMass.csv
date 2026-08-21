@@ -4,7 +4,7 @@
 "Abatus_cavernosus",2.7,"Brose_etal_2018",1
 "Abatus_curvidens",1.4,"Brose_etal_2018",1
 "Abatus_nimrodi",3.7,"Brose_etal_2018",1
-"Abatus_shackeltoni",1.9,"Brose_etal_2018",1
+"Abatus_shackletoni",1.9,"Brose_etal_2018",1
 "Abax_ovalis",0.1935,"Brose_etal_2018",1
 "Abax_parallelepipedus",0.4095,"Brose_etal_2018",1
 "Abax_parallelus",0.5437,"Brose_etal_2018",1
@@ -14,8 +14,7 @@
 "Abbottina_springeri",5.2,"Cai_etal_2025",1
 "Abditomys_latidens",269,"Faurby_etal_2018-Smith_2003",2
 "Abeillia_abeillei",2.7,"Wilman_etal_2014",1
-"Abeomelomys_sevia",52,"Faurby_etal_2018",1
-"Abeomylomys_sevia",52,"Smith_2003",1
+"Abeomelomys_sevia",52,"Faurby_etal_2018-Smith_2003",2
 "Ablabesmyia_monilis",0.001004,"Brose_etal_2018",1
 "Ablennes_hians",2949,"Cai_etal_2025-fishbase",2
 "Ablepharus_bivittatus",4.382,"Feldman_etal_2016-Meiri_2018",2
@@ -84,7 +83,6 @@
 "Abudefduf_bengalensis",124.1,"Cai_etal_2025",1
 "Abudefduf_saxatilis",41.01,"Brose_etal_2018-Mahe_2023",2
 "Abudefduf_sexfasciatus",35.6,"DeLong_etal_2018",1
-"Abudefduf_tauru",900,"Brose_etal_2018",1
 "Abudefduf_taurus",227.6,"fishbase; Froese_2014",NA
 "Abudefduf_vaigiensis",203,"Cai_etal_2025",1
 "Aburria_aburri",1405,"Wilman_etal_2014",1
@@ -92,14 +90,12 @@
 "Abyssorchomene_nodimanus",0.24,"Brose_etal_2018",1
 "Abyssorchomene_plebs",0.47,"Brose_etal_2018",1
 "Abyssorchomene_rossi",1.9,"Brose_etal_2018",1
-"Acabthodactylus_boskianus",7.8,"Makarieva_2008",1
 "Acacia_victoriae",458.5,"Brown_etal_2018",1
 "Acalyptophis_peronii",238.2,"Verberk_2020",1
 "Acanalonia_latifrons",0.011,"Brose_etal_2018",1
 "Acanthagenys_rufogularis",47.8,"Wilman_etal_2014",1
 "Acanthaluteres_brownii",2625,"Cai_etal_2025",1
-"Acanthamoeba_castellani",6.7e-09,"DeLong_etal_2010",1
-"Acanthamoeba_castellanii",2.359e-09,"Castro_2025-DeLong_etal_2010",2
+"Acanthamoeba_castellanii",3.806e-09,"Castro_2025-DeLong_etal_2010-DeLong_etal_2010",3
 "Acanthamoeba_hartmanella",6.7e-09,"Makarieva_2008",1
 "Acanthamoeba_palestinensis",5.904e-09,"Castro_2025-DeLong_etal_2010",2
 "Acanthamoeba_polyphaga",1.31e-09,"DeLong_etal_2010",1
@@ -167,7 +163,7 @@
 "Acanthodactylus_beershebensis",16.72,"Feldman_etal_2016-Meiri_2018",2
 "Acanthodactylus_blanci",19.62,"Feldman_etal_2016-Meiri_2018",2
 "Acanthodactylus_blanfordii",9.79,"Feldman_etal_2016-Meiri_2018",2
-"Acanthodactylus_boskianus",19.62,"Feldman_etal_2016-Meiri_2018",2
+"Acanthodactylus_boskianus",15.68,"Feldman_etal_2016-Makarieva_2008-Meiri_2018",3
 "Acanthodactylus_boueti",5.823,"Feldman_etal_2016-Meiri_2018",2
 "Acanthodactylus_busacki",9.275,"Feldman_etal_2016-Meiri_2018",2
 "Acanthodactylus_cantoris",19.02,"Feldman_etal_2016-Meiri_2018",2
@@ -329,7 +325,7 @@
 "Acerodon_humilis",599.6,"Faurby_etal_2018",1
 "Acerodon_jubatus",1092,"Faurby_etal_2018-Quaardvark-Smith_2003",3
 "Acerodon_leucotis",513.2,"Faurby_etal_2018",1
-"Acerodon_mackloti",470.3,"Faurby_etal_2018-Smith_2003",2
+"Acerodon_macklotii",470.3,"Faurby_etal_2018-Smith_2003",2
 "Aceros_cassidix",2360,"Wilman_etal_2014",1
 "Aceros_comatus",1470,"Wilman_etal_2014",1
 "Aceros_corrugatus",1590,"Wilman_etal_2014",1
@@ -395,7 +391,7 @@
 "Achnanthes_helvetica",1.603e-09,"Brose_etal_2018",1
 "Achnanthes_joursacense",2.83e-10,"Brose_etal_2018",1
 "Achnanthes_lanceolata",1.5e-09,"Brose_etal_2018",1
-"Achnanthes_lemmermanni",1.25e-08,"Brose_etal_2018",1
+"Achnanthes_lemmermannii",1.25e-08,"Brose_etal_2018",1
 "Achnanthes_lutheri",1.32e-10,"Brose_etal_2018",1
 "Achnanthes_minutissima",6.947e-10,"Brose_etal_2018",1
 "Achnanthes_modestiformis",2.4e-10,"Brose_etal_2018",1
@@ -750,7 +746,7 @@
 "Afroablepharus_duruarum",1.6,"Feldman_etal_2016",1
 "Afroablepharus_maculicollis",1.6,"Feldman_etal_2016",1
 "Afroablepharus_seydeli",0.9,"Feldman_etal_2016",1
-"Afroablepharus_wahlbergi",5.1,"Feldman_etal_2016",1
+"Afroablepharus_wahlbergii",5.1,"Feldman_etal_2016",1
 "Afroablepharus_wilsoni",0.2,"Feldman_etal_2016",1
 "Afrocucumis_africana",0.0133,"Brose_etal_2018",1
 "Afroedura_africana",5.578,"Feldman_etal_2016-Meiri_2018",2
@@ -909,7 +905,7 @@
 "Aglaeactis_pamela",5.5,"Wilman_etal_2014",1
 "Aglaiocercus_berlepschi",4.97,"Wilman_etal_2014",1
 "Aglaiocercus_coelestis",5.61,"Wilman_etal_2014",1
-"Aglaiocercus_kingi",4.84,"Wilman_etal_2014",1
+"Aglaiocercus_kingii",4.84,"Wilman_etal_2014",1
 "Aglais_io",0.176,"Castro_2025",1
 "Aglantha_digitale",0.1737,"Castro_2025-Makarieva_2008-Pata_2025",3
 "Aglaophamus_malmgreni",0.007402,"Brose_etal_2018",1
@@ -1304,8 +1300,7 @@
 "Altiphylax_tokobajevi",2.717,"Feldman_etal_2016-Meiri_2018",2
 "Altiphylax_yarkandensis",2.9,"Feldman_etal_2016",1
 "Aluterus_monoceros",3345,"Cai_etal_2025-Mahe_2023",2
-"Aluterus_schoepfi",527.6,"Brose_etal_2018",1
-"Aluterus_schoepfii",1892,"Brose_etal_2018",1
+"Aluterus_schoepfii",1210,"Brose_etal_2018-Brose_etal_2018",2
 "Aluterus_scripta",2941,"Brose_etal_2018",1
 "Aluterus_scriptus",2257,"Cai_etal_2025-Mahe_2023",2
 "Alytes_cisternasii",5.56,"AmphiBIO-Trochet_2014",2
@@ -1366,7 +1361,7 @@
 "Amazilia_luciae",4.78,"Wilman_etal_2014",1
 "Amazilia_rosenbergi",3.575,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Amazilia_rutila",4.72,"Lislevand_etal_2007-Wilman_etal_2014",2
-"Amazilia_saucerrottei",4.533,"Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",3
+"Amazilia_saucerottei",4.533,"Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",3
 "Amazilia_tobaci",4.725,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Amazilia_tzacatl",5.063,"Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",3
 "Amazilia_versicolor",4.1,"Wilman_etal_2014",1
@@ -1702,8 +1697,7 @@
 "Amphisbaena_cubana",4.207,"Feldman_etal_2016-Meiri_2018",2
 "Amphisbaena_cuiabana",23.4,"Feldman_etal_2016-Meiri_2018",2
 "Amphisbaena_cunhai",215.6,"Feldman_etal_2016-Meiri_2018",2
-"Amphisbaena_darwini",39.5,"Feldman_etal_2016",1
-"Amphisbaena_darwinii",39.46,"Meiri_2018",1
+"Amphisbaena_darwinii",39.48,"Feldman_etal_2016-Meiri_2018",2
 "Amphisbaena_dubia",13.6,"Feldman_etal_2016-Meiri_2018",2
 "Amphisbaena_fenestrata",8.017,"Feldman_etal_2016-Meiri_2018",2
 "Amphisbaena_filiformis",6.784,"Meiri_2018",1
@@ -2365,7 +2359,7 @@
 "Anolis_marron",9.104,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_marsupialis",2.407,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_matudai",3.508,"Feldman_etal_2016-Meiri_2018",2
-"Anolis_maynardi",9.104,"Feldman_etal_2016-Meiri_2018",2
+"Anolis_maynardii",9.104,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_mccraniei",3.424,"Meiri_2018",1
 "Anolis_medemi",2.991,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_megalopithecus",12.79,"Feldman_etal_2016-Meiri_2018",2
@@ -2542,8 +2536,7 @@
 "Anolis_viridius",11.8,"Meiri_2018",1
 "Anolis_vittigerus",7.784,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_wampuensis",2.832,"Feldman_etal_2016-Meiri_2018",2
-"Anolis_wattsi",4.1,"Feldman_etal_2016",1
-"Anolis_wattsii",4.112,"Meiri_2018",1
+"Anolis_wattsii",4.106,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_websteri",2.808,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_wellbornae",2.966,"Feldman_etal_2016-Meiri_2018",2
 "Anolis_wermuthi",3.316,"Feldman_etal_2016-Meiri_2018",2
@@ -2567,8 +2560,7 @@
 "Anomalopus_mackayi",9.08,"Feldman_etal_2016-Meiri_2018",2
 "Anomalopus_pluto",1.308,"Feldman_etal_2016-Meiri_2018",2
 "Anomalopus_swansoni",2.894,"Feldman_etal_2016-Meiri_2018",2
-"Anomalopus_verreauxi",25,"Feldman_etal_2016",1
-"Anomalopus_verreauxii",24.84,"Meiri_2018",1
+"Anomalopus_verreauxii",24.92,"Feldman_etal_2016-Meiri_2018",2
 "Anomalospiza_imberbis",20.53,"Wilman_etal_2014",1
 "Anomalurus_beecrofti",476.8,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
 "Anomalurus_derbianus",655.3,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
@@ -2591,14 +2583,14 @@
 "Anoplocapros_lenticularis",742.5,"Cai_etal_2025",1
 "Anoplogaster_cornuta",67.27,"Cai_etal_2025-Castro_2025-Makarieva_2008",3
 "Anoplohydrus_aemulans",17.5,"Feldman_etal_2016",1
-"Anoplolepis_steinergroeveri",0.00494,"Makarieva_2008",1
+"Anoplolepis_steingroeveri",0.00494,"Makarieva_2008",1
 "Anoplopoma_fimbria",17290,"AnAge-Cai_etal_2025-DeLong_etal_2018",3
 "Anorrhinus_austeni",1080,"Wilman_etal_2014",1
 "Anorrhinus_galeritus",1172,"Wilman_etal_2014",1
 "Anorrhinus_tickelli",792.6,"Wilman_etal_2014",1
 "Anotomys_leander",66.4,"Faurby_etal_2018-Smith_2003",2
 "Anotopterus_nikparini",1650,"fishbase",1
-"Anotopterus_pharaoh",8,"Pauly_2024",1
+"Anotopterus_pharao",8,"Pauly_2024",1
 "Anotosaura_collaris",2.702,"Feldman_etal_2016-Meiri_2018",2
 "Anotosaura_vanzolinia",2.702,"Feldman_etal_2016-Meiri_2018",2
 "Anotylus_intricatus",0.0003706,"Brose_etal_2018",1
@@ -2629,7 +2621,6 @@
 "Anser_rossii",650.9,"Brown_etal_2018-Lislevand_etal_2007",2
 "Anseranas_semipalmata",2426,"Cai_etal_2025-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",4
 "Antaioserpens_warro",27.8,"Feldman_etal_2016",1
-"Antarctic_phytoplanktonic",1.035e-10,"Brown_etal_2018",1
 "Antarctomysis_maxima",3.758,"Brose_etal_2018-Castro_2025-Makarieva_2008-Pata_2025",4
 "Antaresia_childreni",440.6,"Feldman_etal_2016-Makarieva_2008",2
 "Antaresia_maculosa",549.5,"Feldman_etal_2016",1
@@ -2856,7 +2847,6 @@
 "Aphanius_dispar",0.5609,"Castro_2025-Makarieva_2008",2
 "Aphanius_farsicus",4.981,"fishbase; Froese_2014",NA
 "Aphanius_fasciatus",4.981,"fishbase; Froese_2014",NA
-"Aphanocapsa_pCC",1e-11,"Makarieva_2008",1
 "Aphanopus_carbo",4364,"Cai_etal_2025-fishbase",2
 "Aphanotriccus_audax",11.22,"Wilman_etal_2014",1
 "Aphanotriccus_capitalis",11.8,"Wilman_etal_2014",1
@@ -2881,8 +2871,7 @@
 "Aphis_craccivora",0.0001428,"DeLong_etal_2018",1
 "Aphis_fabae",0.0006841,"AndersonGillooly_2017-DeLong_etal_2018",2
 "Aphis_glycines",0.0001875,"AndersonGillooly_2017-DeLong_etal_2018",2
-"Aphis_gossypi",0.000304,"DeLong_etal_2018",1
-"Aphis_gossypii",0.0002572,"DeLong_etal_2018",1
+"Aphis_gossypii",0.0002806,"DeLong_etal_2018-DeLong_etal_2018",2
 "Aphis_nasturtii",5e-04,"AndersonGillooly_2017",1
 "Aphis_pomi",0.000523,"DeLong_etal_2018",1
 "Aphodius_contaminatus",0.014,"Makarieva_2008",1
@@ -3084,8 +3073,7 @@
 "Apteronotus_bonapartii",138.4,"fishbase",1
 "Apteronotus_rostratus",229.7,"Cai_etal_2025",1
 "Apteryx_australis",2487,"AnAge-Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",6
-"Apteryx_haasti",2450,"Makarieva_2008",1
-"Apteryx_haastii",2459,"Cai_etal_2025-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",4
+"Apteryx_haastii",2457,"Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",5
 "Apteryx_mantelli",2321,"Wilman_etal_2014",1
 "Apteryx_owenii",1204,"Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",4
 "Apteryx_rowi",1762,"Cai_etal_2025",1
@@ -3209,8 +3197,7 @@
 "Arborophila_sumatrana",336,"Wilman_etal_2014",1
 "Arborophila_torqueola",344.5,"Cai_etal_2025-Wilman_etal_2014",2
 "Arcella_vulgaris",2.72e-07,"DeLong_etal_2010",1
-"Archaeoindris_fontoynonti",160000,"Faurby_etal_2018",1
-"Archaeoindris_fontoynontii",2e+05,"Smith_2003",1
+"Archaeoindris_fontoynontii",180000,"Faurby_etal_2018-Smith_2003",2
 "Archaeolacerta_bedriagae",13.68,"Feldman_etal_2016-Meiri_2018",2
 "Archaeolemur_edwardsi",23250,"Faurby_etal_2018-Smith_2003",2
 "Archaeolemur_majori",19000,"Faurby_etal_2018-Smith_2003",2
@@ -3248,8 +3235,7 @@
 "Arctocephalus_forsteri",79440,"AnAge-Cai_etal_2025-Faurby_etal_2018-sealifebase-Smith_2003-Verberk_2020",6
 "Arctocephalus_galapagoensis",29170,"AnAge-Brown_etal_2018-Castro_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Verberk_2020",7
 "Arctocephalus_gazella",83870,"AnAge-Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-Castro_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b-Verberk_2020",11
-"Arctocephalus_philippi",50000,"Verberk_2020",1
-"Arctocephalus_philippii",95000,"Faurby_etal_2018-Quaardvark-Smith_2003",3
+"Arctocephalus_philippii",83750,"Faurby_etal_2018-Quaardvark-Smith_2003-Verberk_2020",4
 "Arctocephalus_pusillus",135700,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Quaardvark-sealifebase-Smith_2003-Verberk_2020",8
 "Arctocephalus_townsendi",93010,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Verberk_2020",5
 "Arctocephalus_tropicalis",84000,"Smith_2003",NA
@@ -3640,7 +3626,7 @@
 "Aspius_aspius",4950,"AnAge",1
 "Asplanchna_intermedia",0.000186,"DeLong_etal_2018",1
 "Asplanchna_priodonta",1.13e-05,"DeLong_etal_2018",1
-"Asplanchna_sieboldi",5.52e-05,"DeLong_etal_2018",1
+"Asplanchna_sieboldii",5.52e-05,"DeLong_etal_2018",1
 "Aspronema_cochabambae",9.676,"Feldman_etal_2016-Meiri_2018",2
 "Aspronema_dorsivittatum",15.31,"Feldman_etal_2016-Meiri_2018",2
 "Assa_darlingtoni",0.39,"AmphiBIO",1
@@ -3730,7 +3716,7 @@
 "Asymblepharus_ladacensis",6.981,"Feldman_etal_2016-Meiri_2018",2
 "Asymblepharus_nepalensis",1.205,"Feldman_etal_2016-Meiri_2018",2
 "Asymblepharus_sikimmensis",3.286,"Feldman_etal_2016-Meiri_2018",2
-"Asymblepharus_tragbulense",3.404,"Feldman_etal_2016-Meiri_2018",2
+"Asymblepharus_tragbulensis",3.404,"Feldman_etal_2016-Meiri_2018",2
 "Atalophlebioides_cromwelli",0.0009316,"Brose_etal_2018",1
 "Atalotriccus_pilaris",6.8,"Wilman_etal_2014",1
 "Atelecyclus_rotundatus",11.8,"Jennings_2002",1
@@ -4130,8 +4116,7 @@
 "Azeca_goodalli",0.01061,"Brose_etal_2018",1
 "Azemiops_feae",415.4,"Cai_etal_2025-Feldman_etal_2016",2
 "Azemiops_kharini",491.4,"Feldman_etal_2016",1
-"Azomonas_agi",1.3e-11,"Makarieva_2008",1
-"Azomonas_agilis",1.3e-11,"DeLong_etal_2010",1
+"Azomonas_agilis",1.3e-11,"DeLong_etal_2010-Makarieva_2008",2
 "Azorhizobium_caulinodans",5e-13,"DeLong_etal_2010",1
 "Azospirillum_brasilense",1e-12,"DeLong_etal_2010-DeLong_etal_2010",2
 "Azospirillum_lipoferum",4e-12,"DeLong_etal_2010",1
@@ -4182,8 +4167,7 @@
 "Bacillus_firmus",9e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Bacillus_licheniformis",8e-13,"DeLong_etal_2010",1
 "Bacillus_macerans",1e-12,"DeLong_etal_2010",1
-"Bacillus_megate",7e-12,"Makarieva_2008",1
-"Bacillus_megaterium",7e-12,"DeLong_etal_2010",1
+"Bacillus_megaterium",7e-12,"DeLong_etal_2010-Makarieva_2008",2
 "Bacillus_popilliae",8e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Bacillus_pumilus",7e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Bacillus_stearothermophilus",7e-13,"DeLong_etal_2010",1
@@ -4381,8 +4365,7 @@
 "Bathybiaster_loripes",7.9,"Brose_etal_2018",1
 "Bathycalanus_bradyi",0.04568,"Makarieva_2008",1
 "Bathycalanus_princeps",0.0355,"Makarieva_2008",1
-"Bathycalanus_richard",0.038,"Makarieva_2008",1
-"Bathycalanus_richardi",0.04595,"Makarieva_2008",1
+"Bathycalanus_richardi",0.04197,"Makarieva_2008-Makarieva_2008",2
 "Bathyclupea_hoskynii",76,"fishbase",1
 "Bathyclupea_megaceps",51.9,"Cai_etal_2025",1
 "Bathydoris_clavigera",3.4,"Brose_etal_2018",1
@@ -4513,7 +4496,6 @@
 "Bembrops_caudimacula",94,"fishbase",1
 "Bembrops_gobioides",82.6,"fishbase",1
 "Bemisia_tabaci",5.327e-07,"DeLong_etal_2018",1
-"Beneckea_na",1.5e-12,"Makarieva_2008",1
 "Beneckea_natriegens",1.5e-12,"DeLong_etal_2010",1
 "Benthalbella_dentata",101.9,"fishbase; Froese_2014",NA
 "Benthalbella_elongata",35.3,"Makarieva_2008",1
@@ -4755,7 +4737,6 @@
 "Bootherium_bombifrons",382200,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
 "Boraras_maculatus",0.1,"Cai_etal_2025",1
 "Boreacola_maltzani",0.0507,"Brose_etal_2018",1
-"Boreal_clubhook",750,"Brown_etal_2018",1
 "Boremysis_arctica",0.02902,"Brose_etal_2018",1
 "Boreocingula_castanea",0.136,"Brose_etal_2018",1
 "Boreogadus_saida",32.35,"Joensen_2008",NA
@@ -5176,7 +5157,7 @@
 "Brookesia_vadoni",1.392,"Feldman_etal_2016-Meiri_2018",2
 "Brookesia_valerieae",4.204,"Feldman_etal_2016-Meiri_2018",2
 "Brosme_brosme",14250,"AnAge-Quaardvark",2
-"Brosmophycis_marginate",225,"Pauly_2024",1
+"Brosmophycis_marginata",225,"Pauly_2024",1
 "Brotogeris_chiriri",61.73,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
 "Brotogeris_chrysoptera",54.5,"Wilman_etal_2014",1
 "Brotogeris_cyanoptera",60.26,"Cai_etal_2025-Lislevand_etal_2007-Wilman_etal_2014",3
@@ -5416,7 +5397,6 @@
 "Cabassous_tatouay",5350,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
 "Cabassous_unicinctus",4272,"AnAge-Cai_etal_2025-Faurby_etal_2018-Smith_2003",4
 "Cabdio_morar",59.59,"Cai_etal_2025-fishbase",2
-"Cacactua_tenuirostris",549.9,"Makarieva_2008",1
 "Cacajao_calvus",3614,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-GalanAcedo_etal_2026-Quaardvark-Smith_2003",7
 "Cacajao_hosomi",3100,"Faurby_etal_2018",1
 "Cacajao_melanocephalus",2605,"AnAge-Brown_etal_2018-GalanAcedo_etal_2026-Quaardvark-Smith_2003",5
@@ -5433,7 +5413,7 @@
 "Cacatua_roseicapilla",325.3,"Wilman_etal_2014",1
 "Cacatua_sanguinea",466.2,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
 "Cacatua_sulphurea",321.7,"AnAge-Wilman_etal_2014",2
-"Cacatua_tenuirostris",566.9,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
+"Cacatua_tenuirostris",562.6,"AnAge-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",4
 "Cachryx_alfredschmidti",225.7,"Meiri_2018",1
 "Cachryx_defensor",162.8,"Meiri_2018",1
 "Cacicus_cela",86.73,"Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",3
@@ -5738,13 +5718,13 @@
 "Callonetta_leucophrys",366.8,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
 "Callopanchax_monroviae",5.6,"Cai_etal_2025",1
 "Callopanchax_toddi",5.6,"Cai_etal_2025",1
-"Callophora_rylandi",0.02398,"Brose_etal_2018",1
 "Callopistes_flavipunctatus",1161,"Feldman_etal_2016-Meiri_2018",2
 "Callopistes_maculatus",163.4,"Feldman_etal_2016-Meiri_2018",2
 "Callopora_auriata",0.004046,"Brose_etal_2018",1
 "Callopora_craticula",0.00793,"Brose_etal_2018",1
 "Callopora_dumerlii",0.009927,"Brose_etal_2018",1
 "Callopora_lineata",0.008065,"Brose_etal_2018",1
+"Callopora_rylandi",0.02398,"Brose_etal_2018",1
 "Callorhinchus_callorynchus",3330,"Chierichetti_2017",NA
 "Callorhinchus_capensis",2887,"AnAge",1
 "Callorhinchus_milii",3500,"Quaardvark",1
@@ -6021,6 +6001,7 @@
 "Candiacervus_major",708300,"Faurby_etal_2018",1
 "Candiacervus_rethymnensis",221500,"Faurby_etal_2018",1
 "Candiacervus_ropalophorus",29920,"Faurby_etal_2018",1
+"Candiacervus_spII",42590,"Faurby_etal_2018",1
 "Candidia_barbata",24.1,"Cai_etal_2025",1
 "Candidia_pingtungensis",10.7,"Cai_etal_2025",1
 "Candoia_aspera",480.8,"Feldman_etal_2016",1
@@ -6479,7 +6460,6 @@
 "Catla_catla",116900,"Cai_etal_2025",1
 "Catonyx_cuvieri",159000,"Faurby_etal_2018",1
 "Catoprion_mento",83.05,"fishbase; Froese_2014",NA
-"Catopsis_s",0.023,"Brown_etal_2018",1
 "Catoptrophorus_semipalmatus",224.3,"Brose_etal_2018-Brown_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",5
 "Catopuma_badia",2875,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
 "Catopuma_temminckii",12300,"AnAge-Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",5
@@ -7668,7 +7648,6 @@
 "Chordeiles_pusillus",30.6,"Wilman_etal_2014",1
 "Chordeiles_rupestris",58,"Wilman_etal_2014",1
 "Chordeuma_silvestre",0.00267,"Brose_etal_2018",1
-"Chordeumatidae_juv",0.0004816,"Brose_etal_2018",1
 "Choridactylus_multibarbus",64,"fishbase",1
 "Chorismus_antarcticus",4.104,"Brose_etal_2018-Brown_etal_2018-Castro_2025-Makarieva_2008-Pata_2025",5
 "Choristoneura_biennis",0.0843,"AndersonGillooly_2017",1
@@ -8050,7 +8029,6 @@
 "Clubiona_pikei",0.0101,"DeLong_etal_2018",1
 "Clubiona_stagnatilis",0.02023,"Brose_etal_2018",1
 "Clubiona_subtilis",0.0007842,"Brose_etal_2018",1
-"Clubionidae_juv",0.003435,"Brose_etal_2018",1
 "Clupanodon_thrissa",200.8,"Cai_etal_2025-fishbase",2
 "Clupea_harengus",1050,"fishbase",NA
 "Clupea_pallasii",186.2,"Brown_etal_2018-fishbase-Reum_2012-Reum_2013",4
@@ -9244,10 +9222,9 @@
 "Crithagra_albogularis",27.1,"Cai_etal_2025",1
 "Crithagra_dorsostriata",15.1,"Cai_etal_2025",1
 "Crithagra_tristriata",15.5,"Cai_etal_2025",1
-"Crithida_fasciculata",2.08e-09,"DeLong_etal_2010",1
-"Crithida_strigomonas",2.078e-09,"Makarieva_2008",1
+"Crithidia_fasciculata",2.08e-09,"DeLong_etal_2010",1
 "Crithidia_oncopelti",3e-11,"DeLong_etal_2010",1
-"Crithidia_strigomonas",3e-11,"Makarieva_2008",1
+"Crithidia_strigomonas",1.054e-09,"Makarieva_2008-Makarieva_2008",2
 "Crocias_albonotatus",45,"Wilman_etal_2014",1
 "Crocias_langbianis",45,"Wilman_etal_2014",1
 "Crocidura_aleksandrisi",10.7,"Faurby_etal_2018",1
@@ -9692,7 +9669,7 @@
 "Crypturellus_undulatus",564.4,"Cai_etal_2025-Wilman_etal_2014",2
 "Crypturellus_variegatus",378,"Wilman_etal_2014",1
 "Crystallichthys_cyclospilus",58.3,"Pauly_2024",1
-"Crystallodytes_cookie",0.1,"Pauly_2024",1
+"Crystallodytes_cookei",0.1,"Pauly_2024",1
 "Crystallogobius_linearis",0.94,"Brose_etal_2018-Cai_etal_2025",2
 "Ctenoblepharys_adspersa",11.18,"Feldman_etal_2016-Meiri_2018",2
 "Ctenochaetus_striatus",477,"Cai_etal_2025-fishbase",2
@@ -10619,8 +10596,6 @@
 "Cyrtopodion_sistanense",4.018,"Feldman_etal_2016-Meiri_2018",2
 "Cyrtopodion_watsoni",3.488,"Feldman_etal_2016-Meiri_2018",2
 "Cyrtorhinus_lividipennis",0.00528,"DeLong_etal_2018",1
-"Cystacanthfish_bcav",0.0041,"Brose_etal_2018",1
-"Cystacanthfish_musc",0.0041,"Brose_etal_2018",1
 "Cystodytes_dellechiajei",0.01,"Brose_etal_2018",1
 "Cystophora_cristata",236200,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b-Verberk_2020",9
 "Cystoseira_abiesmarina",0.000228,"Brose_etal_2018",1
@@ -10858,8 +10833,7 @@
 "Dekeyseria_amazonica",89.6,"fishbase",1
 "Delanymys_brooksi",3.75,"Brown_etal_2018-Faurby_etal_2018-Smith_2003",3
 "Delesseria_deciplenus",20,"Brown_etal_2018",1
-"Delftia_acido",8e-13,"Makarieva_2008",1
-"Delftia_acidovorans",8e-13,"DeLong_etal_2010",1
+"Delftia_acidovorans",8e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Delichon_dasypus",18,"Wilman_etal_2014",1
 "Delichon_nipalense",14.96,"Wilman_etal_2014",1
 "Delichon_urbicum",15.56,"AnAge-Cai_etal_2025-Castro_2025-Wilman_etal_2014",4
@@ -10890,7 +10864,7 @@
 "Delomys_sublineatus",90,"Faurby_etal_2018-Smith_2003",2
 "Delothraupis_castaneoventris",28,"Wilman_etal_2014",1
 "Delphacodes_penedetecta",0.000661,"DeLong_etal_2018",1
-"Delphinapterus_leucas",1129000,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Hirt_etal_2017-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b-Verberk_2020",10
+"Delphinapterus_leucas",1030000,"AnAge-Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Hirt_etal_2017-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b-Verberk_2020",11
 "Delphinus_capensis",128100,"Faurby_etal_2018",1
 "Delphinus_delphis",20000,"EncyclopediaOfLife",NA
 "Deltamys_kempi",26.4,"Faurby_etal_2018-Quaardvark-Smith_2003",3
@@ -11148,7 +11122,6 @@
 "Deosergestes_corniculum",0.284,"Pata_2025",1
 "Deosergestes_henseni",0.476,"Pata_2025",1
 "Deosergestes_paraseminudus",0.25,"Pata_2025",1
-"Dephinapterus_leucas",40000,"Brose_etal_2018",1
 "Dephomys_defua",43.08,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
 "Dephomys_eburnea",52.5,"Smith_2003",1
 "Dercitus_bucklandi",0.1482,"Brose_etal_2018",1
@@ -11478,15 +11451,13 @@
 "Diomedea_chrysostoma",2710,"Brown_etal_2018-Makarieva_2008-Verberk_2020",3
 "Diomedea_dabbenena",6961,"Wilman_etal_2014",1
 "Diomedea_epomophora",7239,"AnAge-Brown_etal_2018-Quaardvark-Wilman_etal_2014",4
-"Diomedea_exulans",7125,"AnAge-Brown_etal_2018-Castro_2025-Hirt_etal_2017-Makarieva_2008-Quaardvark-Wilman_etal_2014",7
+"Diomedea_exulans",6473,"AnAge-Brown_etal_2018-Brown_etal_2018-Castro_2025-Hirt_etal_2017-Makarieva_2008-Quaardvark-Wilman_etal_2014",8
 "Diomedea_gibsoni",6800,"sealifebase",1
 "Diomedea_immutabilis",1352,"Brown_etal_2018-Brown_etal_2018-Makarieva_2008",3
 "Diomedea_irrorata",848.8,"Brown_etal_2018",1
-"Diomedea_melanophris",891,"Brown_etal_2018",1
-"Diomedea_melanophrys",4000,"Verberk_2020",1
+"Diomedea_melanophris",2445,"Brown_etal_2018-Verberk_2020",2
 "Diomedea_nigripes",787,"Brown_etal_2018",1
 "Diomedea_sanfordi",8906,"Wilman_etal_2014",1
-"Diomedia_exulans",1913,"Brown_etal_2018",1
 "Diomys_crumpi",52.1,"Faurby_etal_2018",1
 "Dionda_diaboli",1.7,"Cai_etal_2025",1
 "Diophrys_scutum",1.49e-07,"DeLong_etal_2010",1
@@ -12123,13 +12094,12 @@
 "Ectopistes_migratorius",340,"Cai_etal_2025",1
 "Ectopsocopsis_cryptomeriae",0.00325,"Brose_etal_2018",1
 "Edalorhina_perezi",4.63,"AmphiBIO",1
-"Edaphus_blÃhweissi",6.532e-05,"Brose_etal_2018",1
+"Edaphus_bluhweissi",6.532e-05,"Brose_etal_2018",1
 "Edolisoma_coerulescens",62.8,"Cai_etal_2025",1
 "Edotea_triloba",0.005048,"Brose_etal_2018",1
 "Edrotes_ventricosus",0.02435,"Makarieva_2008",1
 "Edwardsia_elegans",0.2174,"Brose_etal_2018",1
 "Edwardsia_meridionalis",0.018,"Brose_etal_2018",1
-"Edwardsii_mIN",0.818,"Makarieva_2008",1
 "Edwarzetes_edwardsii",0.0001259,"Brose_etal_2018",1
 "Egeria_radiata",194,"Brown_etal_2018",1
 "Egernia_cunninghami",346.6,"Feldman_etal_2016-Hirt_etal_2017-Makarieva_2008-Meiri_2018",4
@@ -12570,7 +12540,6 @@
 "Enchytraeus_buchholzi",1.941e-05,"Brose_etal_2018",1
 "Enchytraeus_minutus",7.76e-06,"Brose_etal_2018",1
 "Enchytronia_parva",4.154e-06,"Brose_etal_2018",1
-"Encoptolophus_s",0.1746,"Makarieva_2008",1
 "Encrasicholina_punctifer",6.36,"fishbase",1
 "Encyonema_caespitosum",4.74e-08,"Brose_etal_2018",1
 "Encyonema_minutum",6.601e-11,"Brose_etal_2018",1
@@ -12615,7 +12584,7 @@
 "Enophrys_bison",61.8,"Pauly_2024",1
 "Enophrys_diceraus",395.8,"Cai_etal_2025-Pauly_2024",2
 "Enophrys_lucasi",43.4,"Pauly_2024",1
-"Enophrys_taurine",37.2,"Pauly_2024",1
+"Enophrys_taurina",37.2,"Pauly_2024",1
 "Enoplochiton_niger",6,"Brose_etal_2018",1
 "Enoplognatha_ovata",0.01162,"Brose_etal_2018",1
 "Enoplosus_armatus",777.6,"Cai_etal_2025",1
@@ -12641,7 +12610,6 @@
 "Entomacrodus_nigricans",13,"Brose_etal_2018",1
 "Entomobrya_corticalis",4.34e-06,"Brose_etal_2018",1
 "Entomobrya_quinquelineata",4.75e-06,"Brose_etal_2018",1
-"Entomobryidae_juv",6.75e-06,"Brose_etal_2018",1
 "Entomocorus_gameroi",3.708,"fishbase; Froese_2014",NA
 "Entomodestes_coracinus",56,"Wilman_etal_2014",1
 "Entomodestes_leucotis",61.7,"Wilman_etal_2014",1
@@ -13425,7 +13393,6 @@
 "Eumida_sanguinea",0.1165,"Brose_etal_2018",1
 "Eumomota_superciliosa",64.5,"Quaardvark-Wilman_etal_2014",2
 "Eumops_auripendulus",28.48,"Faurby_etal_2018-Smith_2003",2
-"Eumops_bo",11.9,"Smith_2003",1
 "Eumops_bonariensis",11.27,"Faurby_etal_2018-Quaardvark-Smith_2003",3
 "Eumops_dabbenei",94.92,"Faurby_etal_2018-Quaardvark-Smith_2003",3
 "Eumops_floridanus",38.4,"Faurby_etal_2018",1
@@ -13801,7 +13768,6 @@
 "Falco_rusticolus",1426,"AnAge-Cai_etal_2025-DeLong_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",6
 "Falco_severus",200.6,"Wilman_etal_2014",1
 "Falco_sparverius",104.5,"AnAge-Brown_etal_2018-Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",7
-"Falco_spec",763.5,"Brose_etal_2018",1
 "Falco_subbuteo",184.5,"AnAge-Brose_etal_2018-Brown_etal_2018-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",6
 "Falco_subniger",748.3,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Falco_tinnunculus",157.7,"AnAge-Brown_etal_2018-Castro_2025-DeLong_etal_2018-Gillooly_etal_2016-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",9
@@ -13831,7 +13797,7 @@
 "Fejervarya_limnocharis",7,"AmphiBIO",1
 "Fejervarya_multistriata",3.2,"Cai_etal_2025",1
 "Feldmannia_globifera",0.02036,"Brose_etal_2018",1
-"Felimida_purpureaÃÃ",0.33,"Brose_etal_2018",1
+"Felimida_purpurea",0.33,"Brose_etal_2018",1
 "Felis_amnicola",5000,"Smith_2003",1
 "Felis_bieti",6583,"Faurby_etal_2018-Quaardvark-Smith_2003",3
 "Felis_catus",4240,"AnAge-Hirt_etal_2017-Quaardvark-Tucker_etal_2014a-Tucker_etal_2014b",5
@@ -13904,7 +13870,6 @@
 "Fimbrifolium_dichotomum",0.2816,"Brose_etal_2018",1
 "Fimbrios_klossi",19.9,"Feldman_etal_2016",1
 "Fimbrios_smithi",25.7,"Feldman_etal_2016",1
-"Fish_fry",0.016,"Brose_etal_2018",1
 "Fissidentalium_majorinum",0.13,"Brose_etal_2018",1
 "Fissurella_clenchi",0.03073,"Brose_etal_2018",1
 "Fissurella_costata",49.03,"Brose_etal_2018",1
@@ -13966,7 +13931,6 @@
 "Formica_occulta",0.0013,"Makarieva_2008",1
 "Formica_pratensis",0.00717,"Makarieva_2008",1
 "Formica_rufibarbis",0.00778,"DeLong_etal_2018",1
-"Formica_sstr",0.003448,"Brose_etal_2018",1
 "Formicarius_analis",61.46,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Formicarius_colma",47,"Wilman_etal_2014",1
 "Formicarius_moniliger",61.89,"Wilman_etal_2014",1
@@ -14157,7 +14121,6 @@
 "Fundulus_xenica",4.387,"fishbase; Froese_2014",NA
 "Fundulus_xenicus",4.387,"fishbase; Froese_2014",NA
 "Fundulus_zebrinus",5.279,"fishbase; Froese_2014",NA
-"Fungivorous_nematodes",5.35e-07,"Brose_etal_2018",1
 "Funisciurus_anerythrus",166.3,"AnAge-Faurby_etal_2018-Smith_2003",3
 "Funisciurus_bayonii",135,"Faurby_etal_2018-Smith_2003",2
 "Funisciurus_carruthersi",286,"Faurby_etal_2018-Smith_2003",2
@@ -14207,14 +14170,13 @@
 "Furnarius_rufus",46.42,"Wilman_etal_2014",1
 "Furnarius_torridus",52.3,"Wilman_etal_2014",1
 "Fuscozetes_setosus",7.6e-05,"Brose_etal_2018",1
-"Gabrius_fermoralis",0.0009817,"Brose_etal_2018",1
-"Gadhus_morhua",96000,"Brose_etal_2018",1
+"Gabrius_femoralis",0.0009817,"Brose_etal_2018",1
 "Gadiculus_argenteus",32.83,"fishbase",1
 "Gadopsis_marmoratus",1205,"fishbase-Quaardvark",2
 "Gadus_chalcogrammus",1199,"Castro_2025-DeLong_etal_2018-fishbase",3
 "Gadus_macrocephalus",10070,"AnAge-Cai_etal_2025-fishbase-Killen_etal_2016-Reum_2013",5
-"Gadus_minitus",24.26,"Brown_etal_2018",1
-"Gadus_morhua",1.364e+09,"AnAge-Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-Castro_2025-DeLong_etal_2010-DeLong_etal_2018-Hirt_etal_2017-Killen_etal_2016-Makarieva_2008-Quaardvark",11
+"Gadus_minutus",24.26,"Brown_etal_2018",1
+"Gadus_morhua",1.25e+09,"AnAge-Brose_etal_2018-Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-Castro_2025-DeLong_etal_2010-DeLong_etal_2018-Hirt_etal_2017-Killen_etal_2016-Makarieva_2008-Quaardvark",12
 "Gadus_ogac",180,"Killen_etal_2016-Makarieva_2008",2
 "Gaetanus_antarcticus",0.0257,"Makarieva_2008",1
 "Gaetanus_kruppi",0.0072,"Makarieva_2008",1
@@ -14244,6 +14206,7 @@
 "Galagoides_zanzibaricus",129.1,"AnAge-Faurby_etal_2018-GalanAcedo_etal_2026",3
 "Galathea_squamifera",0.2572,"Brose_etal_2018",1
 "Galathea_strigosa",0.9319,"Brose_etal_2018",1
+"Galaxias_anomalus",34.2,"Brose_etal_2018",1
 "Galaxias_depressiceps",21.33,"Brose_etal_2018",1
 "Galaxias_gollumoides",30.5,"Cai_etal_2025",1
 "Galaxias_maculatus",64.9,"Cai_etal_2025",1
@@ -14251,8 +14214,6 @@
 "Galaxias_platei",246.8,"Cai_etal_2025",1
 "Galaxias_truttaceus",49.2,"Cai_etal_2025",1
 "Galaxiella_nigrostriata",0.4,"Cai_etal_2025",1
-"Galaxiidae_anomalus",34.2,"Brose_etal_2018",1
-"Galaxiidae_new",30,"Brose_etal_2018",1
 "Galbalcyrhynchus_leucotis",46.9,"Wilman_etal_2014",1
 "Galbalcyrhynchus_purusianus",50,"Wilman_etal_2014",1
 "Galbula_albirostris",22.1,"Cai_etal_2025-Wilman_etal_2014",2
@@ -14383,7 +14344,7 @@
 "Gammarus_duebeni",0.04098,"DeLong_etal_2018-Makarieva_2008",2
 "Gammarus_fasciatus",0.001177,"Brose_etal_2018",1
 "Gammarus_fossarum",0.02453,"Brown_etal_2018-DeLong_etal_2010-Makarieva_2008",3
-"Gammarus_insensiblis",0.007402,"Brose_etal_2018",1
+"Gammarus_insensibilis",0.007402,"Brose_etal_2018",1
 "Gammarus_lacustris",0.151,"DeLong_etal_2010",1
 "Gammarus_locusta",0.02241,"Makarieva_2008",1
 "Gammarus_mucronatus",0.001177,"Brose_etal_2018",1
@@ -14478,8 +14439,7 @@
 "Garrulus_glandarius",160.4,"AnAge-Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",6
 "Garrulus_lanceolatus",97.7,"Wilman_etal_2014",1
 "Garrulus_lidthi",129.4,"Wilman_etal_2014",1
-"Garthia_gaudichaudi",0.805,"Makarieva_2008",1
-"Garthia_gaudichaudii",2.785,"Feldman_etal_2016-Meiri_2018",2
+"Garthia_gaudichaudii",2.125,"Feldman_etal_2016-Makarieva_2008-Meiri_2018",3
 "Garthia_penai",0.9975,"Feldman_etal_2016-Meiri_2018",2
 "Garthius_chaseni",177,"Feldman_etal_2016",1
 "Gasteracantha_ellipsoides",0.007,"Brose_etal_2018",1
@@ -14675,7 +14635,6 @@
 "Gennadas_propinquus",1.11,"Makarieva_2008-Pata_2025",2
 "Gennadas_scutatus",0.512,"Pata_2025",1
 "Gennadas_valens",0.941,"Donnelly_1993",NA
-"Genus_microvelia",8.25e-05,"Brose_etal_2018",1
 "Genyagnus_monopterygius",164,"Makarieva_2008",1
 "Genyatremus_cavifrons",10,"fishbase",1
 "Genyomyrus_donnyi",606.3,"Cai_etal_2025",1
@@ -14821,7 +14780,6 @@
 "Geothlypis_tolmiei",10.4,"Cai_etal_2025",1
 "Geothlypis_trichas",8.266,"AnAge-Brown_etal_2018-Quaardvark-Wilman_etal_2014",4
 "Geothlypis_velata",13.1,"Wilman_etal_2014",1
-"Geotrupes_spec",0.4129,"Brose_etal_2018",1
 "Geotrupes_spiniger",0.825,"Makarieva_2008",1
 "Geotrygon_albifacies",238,"Wilman_etal_2014",1
 "Geotrygon_caniceps",192,"Wilman_etal_2014",1
@@ -14854,7 +14812,7 @@
 "Gerbilliscus_inclusus",118.5,"Faurby_etal_2018",1
 "Gerbilliscus_kempi",101,"Faurby_etal_2018-Smith_2003",2
 "Gerbilliscus_leucogaster",73.14,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
-"Gerbilliscus_nigricaudus",123,"Faurby_etal_2018",1
+"Gerbilliscus_nigricaudus",123,"Faurby_etal_2018-Smith_2003",2
 "Gerbilliscus_phillipsi",62.9,"Faurby_etal_2018",1
 "Gerbilliscus_robustus",96,"Faurby_etal_2018-Smith_2003",2
 "Gerbilliscus_validus",107.7,"Faurby_etal_2018",1
@@ -14994,7 +14952,6 @@
 "Ginglymostoma_cirratum",217600,"AnAge-Brose_etal_2018-Quaardvark",3
 "Giraffa_camelopardalis",985000,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Gillooly_etal_2016-Hirt_etal_2017-Hirt_etal_2017-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b",11
 "Giraffa_gracilis",850000,"Smith_2003",1
-"Girbilliscus_nigricauda",123,"Smith_2003",1
 "Girella_nigricans",210,"Makarieva_2008",1
 "Girella_punctata",4215,"Cai_etal_2025",1
 "Girella_tricuspidata",4000,"fishbase",1
@@ -15113,8 +15070,7 @@
 "Glossogobius_callidus",3.54,"DeLong_etal_2018",1
 "Glossogobius_giuris",359.3,"Cai_etal_2025-Castro_2025-fishbase-Makarieva_2008",4
 "Glossogobius_olivaceus",31.5,"Cai_etal_2025",1
-"Glossolepis_incisa",22.58,"fishbase",1
-"Glossolepis_incisus",0.2,"Cai_etal_2025",1
+"Glossolepis_incisus",11.39,"Cai_etal_2025-fishbase",2
 "Glossophaga_commissarisi",9.033,"Faurby_etal_2018-Quaardvark-Smith_2003",3
 "Glossophaga_leachii",10.1,"Faurby_etal_2018-Smith_2003",2
 "Glossophaga_longirostris",12.29,"Faurby_etal_2018-Quaardvark-Smith_2003",3
@@ -15258,12 +15214,11 @@
 "Gomphonema_minutum",5e-09,"Brose_etal_2018",1
 "Gomphonema_olivaceum",2.139e-09,"Brose_etal_2018",1
 "Gomphonema_parvulum",1.758e-09,"Brose_etal_2018",1
-"Gomphonema_type",1.106e-11,"Brose_etal_2018",1
 "Gonatium_rubens",0.003309,"Brose_etal_2018",1
 "Gonatodes_albogularis",2.712,"Feldman_etal_2016-Meiri_2018",2
 "Gonatodes_alexandermendesi",2.907,"Feldman_etal_2016-Meiri_2018",2
 "Gonatodes_annularis",4.091,"Feldman_etal_2016-Meiri_2018",2
-"Gonatodes_antillensis",1.38,"Feldman_etal_2016-Meiri_2018",2
+"Gonatodes_antillensis",1.52,"Feldman_etal_2016-Makarieva_2008-Meiri_2018",3
 "Gonatodes_astralis",2.29,"Feldman_etal_2016-Meiri_2018",2
 "Gonatodes_atricucullaris",1.002,"Feldman_etal_2016-Meiri_2018",2
 "Gonatodes_caudiscutatus",2.304,"Feldman_etal_2016-Meiri_2018",2
@@ -15360,11 +15315,10 @@
 "Gonorynchus_abbreviatus",175,"Cai_etal_2025",1
 "Gonorynchus_greyi",777.6,"Cai_etal_2025",1
 "Gonostoma_denudatum",16.6,"fishbase",1
-"Gonotodes_antillensis",1.8,"Makarieva_2008",1
 "Gonyaulax_polyedra",2.57e-08,"DeLong_etal_2018",1
 "Gonyaulax_tamarensis",2.995e-09,"Castro_2025",1
 "Gonyosoma_boulengeri",265.6,"Feldman_etal_2016",1
-"Gonyosoma_frenatus",328.2,"Feldman_etal_2016",1
+"Gonyosoma_frenatum",328.2,"Feldman_etal_2016",1
 "Gonyosoma_jansenii",971.5,"Feldman_etal_2016",1
 "Gonyosoma_margaritatus",681.3,"Feldman_etal_2016",1
 "Gonyosoma_oxycephalum",1082,"Feldman_etal_2016",1
@@ -15502,9 +15456,8 @@
 "Grayia_ornata",137.5,"Feldman_etal_2016",1
 "Grayia_smithii",47.4,"Feldman_etal_2016",1
 "Grayia_tholloni",186.2,"Feldman_etal_2016",1
-"Green_gammaridean",0.00461,"Brose_etal_2018",1
 "Gromphadorhina_chopardi",3.4,"Makarieva_2008",1
-"Gromphadorihna_portentosa",4.95,"Makarieva_2008",1
+"Gromphadorhina_portentosa",4.95,"Makarieva_2008",1
 "Grundulus_bogotensis",5.2,"Cai_etal_2025",1
 "Grus_americana",5422,"AnAge-Brown_etal_2018-Cai_etal_2025-Quaardvark-Wilman_etal_2014",5
 "Grus_antigone",7693,"AnAge-Quaardvark-Wilman_etal_2014",3
@@ -15721,7 +15674,6 @@
 "Haemulon_maculicauda",557,"fishbase",1
 "Haemulon_parra",157.9,"Brose_etal_2018-Mahe_2023",2
 "Haemulon_parrai",1265,"Brose_etal_2018",1
-"Haemulon_plumieri",850,"Brose_etal_2018-Brown_etal_2018",2
 "Haemulon_plumierii",69.9,"Viana_2016",NA
 "Haemulon_sciurus",643,"AnAge-Brose_etal_2018-Mahe_2023",3
 "Haemulon_sexfasciatum",2260,"fishbase",1
@@ -15844,7 +15796,7 @@
 "Haplochromis_anaphyrmus",27.8,"Brown_etal_2018",1
 "Haplochromis_mloto",18.5,"Brown_etal_2018",1
 "Haplochromis_nyererei",6.5,"Cai_etal_2025",1
-"Haplodrassus_silvstris",0.04607,"Brose_etal_2018",1
+"Haplodrassus_silvestris",0.04607,"Brose_etal_2018",1
 "Haplodrassus_soerenseni",0.02783,"Brose_etal_2018",1
 "Haploidoceros_mediterraneus",1e+05,"Faurby_etal_2018",1
 "Haplonycteris_fischeri",18.11,"AnAge-Faurby_etal_2018-Quaardvark-Smith_2003",4
@@ -15864,11 +15816,11 @@
 "Harengula_humeralis",43.06,"fishbase; Froese_2014",NA
 "Haringtonhippus_francisci",3e+05,"Cai_etal_2025",1
 "Harmonia_axyridis",0.01347,"DeLong_etal_2018",1
-"Harmonia_confirmis",0.0259,"DeLong_etal_2018",1
+"Harmonia_conformis",0.0259,"DeLong_etal_2018",1
 "Harmothoe_crosetensis",5.8,"Brose_etal_2018",1
+"Harmothoe_hartmanae",5.8,"Brose_etal_2018",1
 "Harmothoe_imbricata",0.4,"Daly_1972",NA
 "Harmothoe_spinosa",6.1,"Brose_etal_2018",1
-"Harmotoe_hartmanae",5.8,"Brose_etal_2018",1
 "Harpactea_lepida",0.006128,"Brose_etal_2018",1
 "Harpactes_ardens",96.29,"Wilman_etal_2014",1
 "Harpactes_diardii",98.3,"Wilman_etal_2014",1
@@ -15880,7 +15832,6 @@
 "Harpactes_orrhophaeus",52.8,"Wilman_etal_2014",1
 "Harpactes_wardi",119,"Wilman_etal_2014",1
 "Harpactes_whiteheadi",52.7,"Wilman_etal_2014",1
-"Harpacticoid_copepods",6.82e-06,"Brose_etal_2018",1
 "Harpacticus_chelifer",4.01e-05,"Brose_etal_2018",1
 "Harpacticus_gracilis",4.01e-05,"Brose_etal_2018",1
 "Harpadon_microchir",1284,"Cai_etal_2025-fishbase",2
@@ -16446,7 +16397,6 @@
 "Hermaea_cruciata",0.005048,"Brose_etal_2018",1
 "Hermannia_gibba",7.2e-05,"Brose_etal_2018",1
 "Hermissenda_crassicornis",10,"Brown_etal_2018",1
-"Hermit_crabs",5,"Brose_etal_2018",1
 "Heros_efasciatus",194.8,"fishbase",1
 "Heros_notatus",138.3,"fishbase",1
 "Herpailurus_yagouaroundi",7515,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
@@ -16621,14 +16571,12 @@
 "Himantornis_haematopus",585.7,"Wilman_etal_2014",1
 "Himantura_chaophraya",6e+05,"Quaardvark",1
 "Himantura_leoparda",55000,"fishbase",1
-"Himasthla_b",0.0008558,"Brose_etal_2018",1
 "Himasthla_rhigedana",0.0005647,"Brose_etal_2018",1
 "Himatione_sanguinea",13.11,"AnAge-Brown_etal_2018-Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",6
 "Hime_japonica",138.4,"Cai_etal_2025",1
 "Hinia_incrassata",0.007402,"Brose_etal_2018",1
 "Hiodon_alosoides",1239,"AnAge-Cai_etal_2025",2
 "Hiodon_tergisus",686.6,"AnAge-Cai_etal_2025-fishbase",3
-"Hipoglossoides_platessoides",6400,"Brose_etal_2018",1
 "Hipparion_libycum",150000,"Smith_2003",1
 "Hippasteria_phrygiana",400,"Mah_2014",NA
 "Hippichthys_heptagonus",2,"fishbase",1
@@ -16659,7 +16607,7 @@
 "Hippodamia_convergens",0.01726,"DeLong_etal_2018-Makarieva_2008",2
 "Hippodamia_variegata",0.008338,"DeLong_etal_2018",1
 "Hippoglossoides_elassodon",1560,"fishbase",1
-"Hippoglossoides_platessoides",55400000,"AnAge-Brown_etal_2018-Cai_etal_2025-DeLong_etal_2010-Makarieva_2008",5
+"Hippoglossoides_platessoides",46170000,"AnAge-Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-DeLong_etal_2010-Makarieva_2008",6
 "Hippoglossus_hippoglossus",294700,"AnAge-Cai_etal_2025-Castro_2025-DeLong_etal_2018-fishbase",5
 "Hippoglossus_stenolepis",159600,"AnAge-Cai_etal_2025-fishbase",3
 "Hippolais_caligata",8.9,"Wilman_etal_2014",1
@@ -17011,7 +16959,6 @@
 "Hydrobiosis_parumbripennis",0.0005796,"Brose_etal_2018",1
 "Hydrobiosis_silvicolaclavigera",0.0005897,"Brose_etal_2018",1
 "Hydrobiosis_spathulatacharadera",0.0007388,"Brose_etal_2018",1
-"Hydrobiosis_type",0.0003314,"Brose_etal_2018",1
 "Hydrochoerus_hydrochaeris",50450,"AnAge-Faurby_etal_2018-Quaardvark-Smith_2003",4
 "Hydrochoerus_isthmius",35000,"Faurby_etal_2018",1
 "Hydrochous_gigas",35.8,"Wilman_etal_2014",1
@@ -17255,7 +17202,6 @@
 "Hymenolaimus_malacorhynchos",854.2,"Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",3
 "Hymenomonas_carterae",1.06e-10,"DeLong_etal_2018",1
 "Hymenops_perspicillatus",22.9,"Wilman_etal_2014",1
-"Hymenostome_ciliate",1.9e-08,"DeLong_etal_2010",1
 "Hynobius_chinensis",59.5,"Cai_etal_2025",1
 "Hynobius_dunni",45,"AmphiBIO-Cai_etal_2025",2
 "Hynobius_kimurae",14.9,"AmphiBIO",1
@@ -17737,8 +17683,7 @@
 "Iole_olivacea",24,"Wilman_etal_2014",1
 "Iole_propinqua",25.9,"Wilman_etal_2014",1
 "Iole_virescens",25,"Wilman_etal_2014",1
-"Iomys_horsfieldi",175,"Smith_2003",1
-"Iomys_horsfieldii",133.8,"Faurby_etal_2018-Smith_2003",2
+"Iomys_horsfieldii",147.5,"Faurby_etal_2018-Smith_2003-Smith_2003",3
 "Iomys_sipora",152.3,"Faurby_etal_2018",1
 "Iophon_radiatus",2.3,"Brose_etal_2018",1
 "Iotrochota_purpurea",0.03205,"Brose_etal_2018",1
@@ -17939,7 +17884,7 @@
 "Juscelinomys_guaporensis",88,"Faurby_etal_2018",1
 "Juscelinomys_huanchacae",109.9,"Faurby_etal_2018",1
 "Jynx_ruficollis",46.4,"Cai_etal_2025-Wilman_etal_2014",2
-"Jynx_torquilla",34.98,"AnAge-Wilman_etal_2014",2
+"Jynx_torquilla",33.92,"AnAge-Makarieva_2008-Wilman_etal_2014",3
 "Kadarsanomys_sodyi",199.5,"Faurby_etal_2018",1
 "Kaestlea_beddomii",3.704,"Feldman_etal_2016-Meiri_2018",2
 "Kaestlea_bilineata",5.379,"Feldman_etal_2016-Meiri_2018",2
@@ -18061,8 +18006,7 @@
 "Kirkpatrickia_variolosa",45,"Brose_etal_2018",1
 "Klais_guimeti",2.6,"Wilman_etal_2014",1
 "Klauberina_riversiana",19,"Makarieva_2008",1
-"Klebsiella_pneu",4e-13,"Makarieva_2008",1
-"Klebsiella_pneumoniae",4e-13,"DeLong_etal_2010",1
+"Klebsiella_pneumoniae",4e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Knipolegus_aterrimus",20.2,"Wilman_etal_2014",1
 "Knipolegus_cyanirostris",15.4,"Wilman_etal_2014",1
 "Knipolegus_franciscanus",20.5,"Wilman_etal_2014",1
@@ -18252,11 +18196,10 @@
 "Lagonosticta_senegala",9.21,"Wilman_etal_2014",1
 "Lagonosticta_umbrinodorsalis",10.6,"Wilman_etal_2014",1
 "Lagonosticta_virata",9.29,"Wilman_etal_2014",1
-"Lagopus_lagopus",493.5,"AnAge-AndersonGillooly_2017-Cai_etal_2025-DeLong_etal_2018-Makarieva_2008-Quaardvark-Wilman_etal_2014",7
+"Lagopus_lagopus",502.7,"AnAge-AndersonGillooly_2017-Cai_etal_2025-DeLong_etal_2018-Makarieva_2008-Makarieva_2008-Quaardvark-Wilman_etal_2014",8
 "Lagopus_leucura",356.2,"AnAge-Quaardvark-Wilman_etal_2014",3
 "Lagopus_leucurus",207.4,"Brown_etal_2018-Makarieva_2008",2
 "Lagopus_muta",512.4,"AnAge-AndersonGillooly_2017-Cai_etal_2025-DeLong_etal_2018-Wilman_etal_2014",5
-"Lagopus_spec",542.9,"Brose_etal_2018",1
 "Lagorchestes_asomatus",1500,"Faurby_etal_2018-Smith_2003",2
 "Lagorchestes_conspicillatus",2852,"AnAge-Cai_etal_2025-Castro_2025-Faurby_etal_2018-Fisher_2001-Smith_2003",6
 "Lagorchestes_hirsutus",1316,"AnAge-Cai_etal_2025-Faurby_etal_2018-Fisher_2001-Quaardvark-Smith_2003",6
@@ -18267,10 +18210,8 @@
 "Lagothrix_cana",7355,"Faurby_etal_2018-GalanAcedo_etal_2026",2
 "Lagothrix_flavicauda",7250,"GalanAcedo_etal_2026",1
 "Lagothrix_lagotricha",6709,"AnAge-Cai_etal_2025-Faurby_etal_2018-GalanAcedo_etal_2026-Quaardvark-Smith_2003-Tucker_etal_2014b",7
-"Lagothrix_lugens",6000,"Faurby_etal_2018",1
+"Lagothrix_lugens",6435,"Faurby_etal_2018-GalanAcedo_etal_2026",2
 "Lagothrix_poeppigii",5725,"Faurby_etal_2018-GalanAcedo_etal_2026",2
-"Lagotrix_lugens",6870,"GalanAcedo_etal_2026",1
-"Lagppus_lagopus",567,"Makarieva_2008",1
 "Lagurus_lagurus",22.32,"AnAge-Faurby_etal_2018-Quaardvark-Smith_2003",4
 "Laides_hexanema",28.1,"fishbase",1
 "Lalage_atrovirens",33,"Wilman_etal_2014",1
@@ -18290,7 +18231,6 @@
 "Lama_guanicoe",102300,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Hirt_etal_2017-Quaardvark-Smith_2003",7
 "Lama_pacos",60000,"Quaardvark",1
 "Lambdina_fiscellaria",0.2278,"AndersonGillooly_2017",1
-"Lamellibranchia_e",7,"Brown_etal_2018",1
 "Laminaria_digitata",0.07287,"Brose_etal_2018",1
 "Laminaria_longicruris",1500,"Brown_etal_2018",1
 "Laminaria_saccharina",4.441,"Brose_etal_2018-Brown_etal_2018",2
@@ -18482,7 +18422,6 @@
 "Lariscus_niobe",179.2,"Faurby_etal_2018",1
 "Lariscus_obscurus",188.3,"Faurby_etal_2018",1
 "Larosterna_inca",219,"AnAge-Wilman_etal_2014",2
-"Larua_ridibundus",285,"Makarieva_2008",1
 "Larus_argentatus",943,"AnAge-Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-Gillooly_etal_2016-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",9
 "Larus_armenicus",958.5,"sealifebase-Wilman_etal_2014",2
 "Larus_atlanticus",901.2,"sealifebase-Wilman_etal_2014",2
@@ -18522,13 +18461,12 @@
 "Larus_philadelphia",200,"Cornell-Lab-of-Ornithology",NA
 "Larus_pipixcan",209.3,"Brown_etal_2018-Quaardvark-Wilman_etal_2014",3
 "Larus_relictus",490.2,"Wilman_etal_2014",1
-"Larus_ridibundus",261,"Brose_etal_2018-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",5
+"Larus_ridibundus",265,"Brose_etal_2018-Lislevand_etal_2007-Makarieva_2008-Makarieva_2008-Quaardvark-Wilman_etal_2014",6
 "Larus_saundersi",198,"Wilman_etal_2014",1
 "Larus_schistisagus",1323,"Wilman_etal_2014",1
 "Larus_scopulinus",291.2,"sealifebase-Wilman_etal_2014",2
 "Larus_serranus",478,"Wilman_etal_2014",1
 "Larus_smithsonianus",1350,"Cai_etal_2025",1
-"Larus_spec",928.1,"Brose_etal_2018",1
 "Larus_thayeri",942.5,"Wilman_etal_2014",1
 "Larutia_larutensis",26.94,"Feldman_etal_2016-Meiri_2018",2
 "Larutia_miodactyla",15.07,"Feldman_etal_2016-Meiri_2018",2
@@ -18877,7 +18815,6 @@
 "Lepidodactylus_woodfordi",1.612,"Feldman_etal_2016-Meiri_2018",2
 "Lepidodactylus_yami",1.724,"Feldman_etal_2016-Meiri_2018",2
 "Lepidogalaxias_salamandroides",0.62,"Makarieva_2008",1
-"Lepidonotos_squamatus",0.1482,"Brose_etal_2018",1
 "Lepidonotothen_nudifrons",96.3,"Cai_etal_2025",1
 "Lepidonotus_squamatus",0.1,"Robinson_2010",NA
 "Lepidopa_websteri",1.5,"Brose_etal_2018",1
@@ -19111,8 +19048,6 @@
 "Leptomys_elegans",84.78,"Faurby_etal_2018-Smith_2003",2
 "Leptomys_ernstmayri",42.87,"Faurby_etal_2018-Smith_2003",2
 "Leptomys_signatus",54.4,"Faurby_etal_2018",1
-"Leptonichotes_wedelli",234500,"Verberk_2020",1
-"Leptonychotes_weddelli",593400,"Brose_etal_2018-Tucker_etal_2014b",2
 "Leptonychotes_weddellii",421700,"Ernest_2003",NA
 "Leptonycteris_curasoae",23.94,"AnAge-Faurby_etal_2018-Smith_2003",3
 "Leptonycteris_nivalis",25.08,"Faurby_etal_2018-Quaardvark-Smith_2003",3
@@ -19411,7 +19346,6 @@
 "Leuciscus_waleckii",568.1,"Cai_etal_2025",1
 "Leucocarbo_carunculatus",2500,"sealifebase",1
 "Leucocarbo_chalconotus",2220,"Cai_etal_2025",1
-"Leucocarbo_phal",2500,"Verberk_2020",1
 "Leucocelis_elegans",0.08,"Makarieva_2008",1
 "Leucochloris_albicollis",6.3,"Wilman_etal_2014",1
 "Leucogeranus_leucogeranus",5913,"Cai_etal_2025",1
@@ -19591,7 +19525,6 @@
 "Linurgus_olivaceus",20.3,"Wilman_etal_2014",1
 "Linyphia_hortensis",0.005205,"Brose_etal_2018",1
 "Linyphia_triangularis",0.0176,"DeLong_etal_2018",1
-"Linyphiidae_juv",0.0005199,"Brose_etal_2018",1
 "Liobagrus_andersoni",22.9,"Cai_etal_2025",1
 "Liobagrus_anguillicauda",17.5,"Cai_etal_2025",1
 "Liobagrus_kingi",5.8,"Cai_etal_2025",1
@@ -20181,7 +20114,6 @@
 "Lohmanniella_oviformis",3.8e-09,"DeLong_etal_2018",1
 "Lohmanniella_spiralis",1.5e-07,"DeLong_etal_2010",1
 "Loimia_medusa",1.482,"Brose_etal_2018",1
-"Loligo_forbesi",653.2,"Jennings_2002-Makarieva_2008",2
 "Loligo_forbesii",124,"Forsythe_1989",NA
 "Loligo_opalescens",30,"Makarieva_2008",1
 "Loligo_pealei",51.87,"Brose_etal_2018-Makarieva_2008",2
@@ -20395,7 +20327,7 @@
 "Loxigilla_noctis",16.63,"Wilman_etal_2014",1
 "Loxigilla_portoricensis",32.07,"AnAge-Wilman_etal_2014",2
 "Loxigilla_violacea",22.17,"Wilman_etal_2014",1
-"Loxioides_bailleui",37.85,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
+"Loxioides_bailleui",37.38,"AnAge-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",4
 "Loxipasser_anoxanthus",11.4,"Wilman_etal_2014",1
 "Loxocemus_bicolor",1571,"Feldman_etal_2016",1
 "Loxocephalus_plagius",3.31e-08,"DeLong_etal_2010",1
@@ -20403,7 +20335,6 @@
 "Loxodonta_cyclotis",4490000,"Cai_etal_2025-Quaardvark",2
 "Loxodontomys_micropus",72.7,"Faurby_etal_2018-Smith_2003",2
 "Loxodontomys_pikumche",43,"Faurby_etal_2018",1
-"Loxoides_baileui",36,"Makarieva_2008",1
 "Loxopholis_caparensis",1.473,"Meiri_2018",1
 "Loxopholis_ferreirai",0.794,"Meiri_2018",1
 "Loxopholis_guianensis",3.495,"Meiri_2018-Meiri_2018",2
@@ -20473,7 +20404,6 @@
 "Luidia_sarsi",15,"Fenchel_1965",NA
 "Luidiaster_gerlachei",0.11,"Brose_etal_2018",1
 "Lullula_arborea",28.11,"AnAge-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",4
-"Lumbricidae_undiff",0.04786,"Brose_etal_2018",1
 "Lumbriculus_variegatus",1.613,"Brose_etal_2018",1
 "Lumbricus_castaneus",0.255,"Brose_etal_2018",1
 "Lumbricus_rubellus",0.2652,"Brose_etal_2018",1
@@ -20975,7 +20905,6 @@
 "Macrocheles_dentatus",9.56e-05,"Brose_etal_2018",1
 "Macrocheles_montanus",0.0001771,"Brose_etal_2018",1
 "Macrocheles_opacus",6e-05,"Brose_etal_2018",1
-"Macrochelidae_juv",1.55e-05,"Brose_etal_2018",1
 "Macrochelys_temminckii",69500,"AnAge-Cai_etal_2025-Quaardvark",3
 "Macrochirichthys_macrochirus",8514,"Cai_etal_2025",1
 "Macroderma_gigas",132.2,"AnAge-Faurby_etal_2018-Quaardvark-Smith_2003",4
@@ -21132,7 +21061,7 @@
 "Magallana_gigas",173.1,"sealifebase",1
 "Magellania_fragilis",0.082,"Brose_etal_2018",1
 "Magellania_joubini",0.0022,"Brose_etal_2018",1
-"Magliophis_exiguum",12.7,"Feldman_etal_2016",1
+"Magliophis_exiguus",12.7,"Feldman_etal_2016",1
 "Magliophis_stahli",35.1,"Feldman_etal_2016",1
 "Magumma_parva",9.3,"Cai_etal_2025",1
 "Maja_brachydactyla",629,"Castro_2025",1
@@ -21663,7 +21592,6 @@
 "Meiglyptes_tristis",31.7,"Wilman_etal_2014",1
 "Meiglyptes_tukki",53.1,"Wilman_etal_2014",1
 "Meioneta_rurestris",0.0001727,"Brose_etal_2018",1
-"Meitihreptus_lunatus",14.3,"Makarieva_2008",1
 "Meizodon_coronatus",39.3,"Feldman_etal_2016",1
 "Meizodon_krameri",20.2,"Feldman_etal_2016",1
 "Meizodon_plumbiceps",25.7,"Feldman_etal_2016",1
@@ -21824,7 +21752,7 @@
 "Melithreptus_albogularis",11.03,"Wilman_etal_2014",1
 "Melithreptus_brevirostris",12.6,"Wilman_etal_2014",1
 "Melithreptus_gularis",19.44,"Wilman_etal_2014",1
-"Melithreptus_lunatus",14.01,"Wilman_etal_2014",1
+"Melithreptus_lunatus",14.16,"Makarieva_2008-Wilman_etal_2014",2
 "Melithreptus_validirostris",24.8,"Wilman_etal_2014",1
 "Melitograis_gilolensis",54,"Wilman_etal_2014",1
 "Melittobia_chalybii",0.0007222,"Brose_etal_2018",1
@@ -21879,6 +21807,7 @@
 "Melphidippa_antarctica",0.47,"Brose_etal_2018",1
 "Melursus_ursinus",91360,"AnAge-Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014b",6
 "Membranipora_membranaceae",0.01,"Brose_etal_2018",1
+"Membraniporella_nitida",0.01735,"Brose_etal_2018",1
 "Membras_martinica",4.988,"Brose_etal_2018-Pauly_2024",2
 "Menaethius_monoceros",0.1234,"Brose_etal_2018",1
 "Mene_maculata",200,"Ray_2025",NA
@@ -21898,7 +21827,6 @@
 "Menippe_mercenaria",0.06142,"Makarieva_2008",1
 "Menippe_nodifrons",0.2387,"Brose_etal_2018",1
 "Menippe_rumphii",56,"sealifebase",1
-"Menmbraiporella_nitida",0.01735,"Brose_etal_2018",1
 "Menneus_nemesio",0.014,"Pekar_etal_2021",1
 "Menticirrhus_americanus",53.4,"Viana_2016",NA
 "Menticirrhus_littoralis",536.6,"Cai_etal_2025-fishbase",2
@@ -22079,7 +22007,6 @@
 "Mesostephanus_appendiculatus",0.0002727,"Brose_etal_2018",1
 "Mesothuria_lactea",0.066,"Brose_etal_2018",1
 "Mesotriton_alpestris",2.96,"Trochet_2014",1
-"Mesoveliidae_indet",0.0006619,"Brose_etal_2018",1
 "Messor_capensis",0.0137,"Makarieva_2008",1
 "Messor_capitatus",0.00314,"Makarieva_2008",1
 "Messor_julianus",0.00509,"Makarieva_2008",1
@@ -22117,8 +22044,7 @@
 "Metellina_segmentata",0.004189,"Brose_etal_2018",1
 "Metepeira_labyrinthea",0.012,"Brose_etal_2018",1
 "Meterythrops_microphthalmus",0.09175,"Pata_2025",1
-"Methylobacte_extorquens",1e-12,"Makarieva_2008",1
-"Methylobacterium_extorquens",1e-12,"DeLong_etal_2010",1
+"Methylobacterium_extorquens",1e-12,"DeLong_etal_2010-Makarieva_2008",2
 "Methylophilus_methylotrophus",1.5e-13,"DeLong_etal_2010",1
 "Methylosinus_trichosporium",1e-12,"DeLong_etal_2010",1
 "Metopidius_indicus",155,"Wilman_etal_2014",1
@@ -22384,8 +22310,7 @@
 "Micropsitta_pusio",14,"Wilman_etal_2014",1
 "Micropteropus_intermedius",44,"Faurby_etal_2018",1
 "Micropteropus_pusillus",26.89,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
-"Micropterus_dolomieu",3553,"AnAge-Brose_etal_2018-Cai_etal_2025-fishbase-Quaardvark",5
-"Micropterus_dolomieui",193,"Brose_etal_2018",1
+"Micropterus_dolomieu",2993,"AnAge-Brose_etal_2018-Brose_etal_2018-Cai_etal_2025-fishbase-Quaardvark",6
 "Micropterus_floridanus",6285,"Cai_etal_2025-fishbase",2
 "Micropterus_nigricans",106,"Ranney_2024",NA
 "Micropterus_punctulatus",3829,"AnAge-fishbase",2
@@ -22720,8 +22645,8 @@
 "Mochlus_sundevalli",63.8,"Feldman_etal_2016-Meiri_2018",2
 "Mochlus_tanae",5.184,"Feldman_etal_2016-Meiri_2018",2
 "Mochlus_vinciguerrae",5.098,"Feldman_etal_2016-Meiri_2018",2
-"Modiolis_modiolis",287,"Jennings_2002",1
 "Modiolula_phaseolina",0.02829,"Brose_etal_2018",1
+"Modiolus_modiolus",287,"Jennings_2002",1
 "Modulatrix_orostruthus",32.7,"Wilman_etal_2014",1
 "Modulatrix_stictigula",30.5,"Wilman_etal_2014",1
 "Moenkhausia_ceros",0.13,"fishbase",1
@@ -23170,8 +23095,6 @@
 "Muscicapa_tessmanni",16.24,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Muscicapa_ussheri",17.84,"Wilman_etal_2014",1
 "Muscicapella_hodgsoni",11,"Wilman_etal_2014",1
-"Muscidae_copro",0.001385,"Brose_etal_2018",1
-"Muscidae_flor",0.001385,"Brose_etal_2018",1
 "Muscigralla_brevicauda",12.6,"Wilman_etal_2014",1
 "Muscipipra_vetula",27,"Wilman_etal_2014",1
 "Muscisaxicola_albifrons",34,"Wilman_etal_2014",1
@@ -23711,7 +23634,6 @@
 "Mystus_vittatus",48.68,"Cai_etal_2025-Castro_2025-fishbase-Makarieva_2008",4
 "Mythimna_straminea",0.07175,"Brose_etal_2018",1
 "Mytilaster_solisianus",0.03278,"Brose_etal_2018",1
-"Mytilid_e",17,"Brown_etal_2018",1
 "Mytilopsis_leucophaeata",0.007402,"Brose_etal_2018",1
 "Mytilus_edulis",1.411,"Brose_etal_2018-DeLong_etal_2010-Eklof_etal_2017-Quaardvark",4
 "Mytilus_galloprovincialis",0.07689,"Brose_etal_2018",1
@@ -23871,8 +23793,7 @@
 "Nannospalax_judaei",164.4,"Cai_etal_2025",1
 "Nannostomus_trifasciatus",0.41,"fishbase",1
 "Nanocladius_rectinervis",0.0001157,"Brose_etal_2018",1
-"Nanonycteris_veldkampi",21.35,"Smith_2003",1
-"Nanonycteris_veldkampii",23.1,"Cai_etal_2025-Faurby_etal_2018-Quaardvark",3
+"Nanonycteris_veldkampii",22.66,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
 "Nanorana_parkeri",8.7,"AmphiBIO",1
 "Nanorana_pleskei",3.4,"Cai_etal_2025",1
 "Nanorana_quadranus",60.3,"AmphiBIO",1
@@ -23922,7 +23843,6 @@
 "Natrix_maura",79.15,"Feldman_etal_2016-Makarieva_2008",2
 "Natrix_natrix",637.1,"AnAge-Brose_etal_2018-Feldman_etal_2016-Gillooly_etal_2016-Makarieva_2008",5
 "Natrix_tessellata",283.8,"Feldman_etal_2016",1
-"Naucoridae_indet",0.001704,"Brose_etal_2018",1
 "Naucoris_congrex",0.016,"DeLong_etal_2018",1
 "Naucrates_ductor",0.07,"Makarieva_2008",1
 "Naultinus_elegans",6.881,"Feldman_etal_2016-Meiri_2018",2
@@ -24095,11 +24015,9 @@
 "Negaprion_brevirostris",183700,"fishbase",NA
 "Neisseria_elongata",2e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Neisseria_flava",2e-13,"DeLong_etal_2010-Makarieva_2008",2
-"Neisseria_gon",2e-13,"Makarieva_2008",1
-"Neisseria_gonorrhoeae",2e-13,"DeLong_etal_2010",1
+"Neisseria_gonorrhoeae",2e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Neisseria_meningitidis",3e-13,"DeLong_etal_2010",1
-"Neisseria_mu",2e-13,"Makarieva_2008",1
-"Neisseria_mucosa",2e-13,"DeLong_etal_2010",1
+"Neisseria_mucosa",2e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Neisseria_sicca",2e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Nelsonia_goldmani",28.5,"Faurby_etal_2018",1
 "Nelsonia_neotomodon",80,"Faurby_etal_2018-Smith_2003",2
@@ -24650,10 +24568,8 @@
 "Niviventer_tenaster",103,"Faurby_etal_2018-Smith_2003",2
 "Niwaella_delicata",9.4,"Cai_etal_2025",1
 "Niwaella_multifasciata",8.1,"fishbase",1
-"Nocardia_coral",2.1e-12,"Makarieva_2008",1
-"Nocardia_corallina",2.1e-12,"DeLong_etal_2010",1
-"Nocardia_far",1e-13,"Makarieva_2008",1
-"Nocardia_farcinica",1e-13,"DeLong_etal_2010",1
+"Nocardia_corallina",2.1e-12,"DeLong_etal_2010-Makarieva_2008",2
+"Nocardia_farcinica",1e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Nocomis_asper",676.1,"Scheider_2000",NA
 "Nocomis_micropogon",377.2,"Cai_etal_2025",1
 "Noctilio_albiventris",30.88,"Faurby_etal_2018-Quaardvark-Smith_2003",3
@@ -26310,7 +26226,6 @@
 "Pachyurus_schomburgkii",431.4,"fishbase",1
 "Pachyurus_squamipennis",3200,"fishbase",1
 "Pacifastacus_leniusculus",87.58,"DeLong_etal_2018-sealifebase",2
-"Pacific_herring",100,"Brown_etal_2018",1
 "Padda_fuscata",20.7,"Wilman_etal_2014",1
 "Padda_oryzivora",25.1,"Makarieva_2008-Wilman_etal_2014",2
 "Padina_boryana",0.000228,"Brose_etal_2018",1
@@ -26776,7 +26691,6 @@
 "Parashorea_macrophylla",240000,"Brown_etal_2018",1
 "Parasinilabeo_assimilis",15.05,"Cai_etal_2025-fishbase",2
 "Parasinilabeo_longicorpus",6.3,"Cai_etal_2025",1
-"Parasitidae_juv",1.893e-05,"Brose_etal_2018",1
 "Parastenophis_betsileanus",308.3,"Feldman_etal_2016",1
 "Parastichopus_japonicus",50,"DeLong_etal_2010",1
 "Parastromateus_niger",8434,"Cai_etal_2025",1
@@ -27293,8 +27207,6 @@
 "Perdix_hodgsoniae",363.7,"Cai_etal_2025-Wilman_etal_2014",2
 "Perdix_perdix",384.7,"AnAge-AndersonGillooly_2017-Brown_etal_2018-Cai_etal_2025-Makarieva_2008-Wilman_etal_2014",6
 "Pergalumna_nervosa",7.9e-05,"Brose_etal_2018",1
-"Pergamasinae_juv",1.151e-05,"Brose_etal_2018",1
-"Pergamasinae_male",9.62e-05,"Brose_etal_2018",1
 "Pergamasus_crassipes",0.000164,"Brose_etal_2018-DeLong_etal_2018",2
 "Pergamasus_norvegicus",0.0003021,"Brose_etal_2018",1
 "Pergamasus_quisquiliarum",0.0002042,"Brose_etal_2018",1
@@ -27579,8 +27491,7 @@
 "Phaeochroa_cuvierii",8.9,"Wilman_etal_2014",1
 "Phaeocystis_antarctica",1.24e-13,"Brose_etal_2018",1
 "Phaeocystis_pouchetii",1.076e-07,"Brose_etal_2018-DeLong_etal_2018",2
-"Phaeodactyllum_tricornutum",1.9e-11,"Brown_etal_2018",1
-"Phaeodactylum_tricornutum",1.841e-10,"Castro_2025-DeLong_etal_2018",2
+"Phaeodactylum_tricornutum",1.29e-10,"Brown_etal_2018-Castro_2025-DeLong_etal_2018",3
 "Phaeognathus_hubrichti",52.5,"Cai_etal_2025-Quaardvark",2
 "Phaeomyias_murina",10,"Wilman_etal_2014",1
 "Phaeomyias_tumbezana",8,"Wilman_etal_2014",1
@@ -27662,7 +27573,6 @@
 "Phalacrocorax_purpurascens",2813,"Verberk_2020",1
 "Phalacrocorax_pygmeus",688,"Verberk_2020-Wilman_etal_2014",2
 "Phalacrocorax_ranfurlyi",2700,"sealifebase-Wilman_etal_2014",2
-"Phalacrocorax_spec",500,"Brose_etal_2018",1
 "Phalacrocorax_sulcirostris",1020,"sealifebase-Verberk_2020-Wilman_etal_2014",3
 "Phalacrocorax_urile",2118,"Wilman_etal_2014",1
 "Phalacrocorax_varius",1923,"sealifebase-Verberk_2020-Wilman_etal_2014",3
@@ -27714,8 +27624,7 @@
 "Phaner_furcifer",2652,"AnAge-Faurby_etal_2018-GalanAcedo_etal_2026-Quaardvark-Smith_2003",5
 "Phaner_pallescens",375.7,"Cai_etal_2025-Faurby_etal_2018-GalanAcedo_etal_2026",3
 "Phaner_parienti",394.5,"Cai_etal_2025-Faurby_etal_2018-GalanAcedo_etal_2026",3
-"Phanourios_minutes",2e+05,"Faurby_etal_2018",1
-"Phaoniinae_indet",0.0002012,"Brose_etal_2018",1
+"Phanourios_minutus",2e+05,"Faurby_etal_2018",1
 "Phapitreron_amethystinus",145,"Wilman_etal_2014",1
 "Phapitreron_brunneiceps",146,"Wilman_etal_2014",1
 "Phapitreron_cinereiceps",146,"Wilman_etal_2014",1
@@ -27750,7 +27659,7 @@
 "Phedina_borbonica",22.18,"Wilman_etal_2014",1
 "Phedina_brazzae",13,"Wilman_etal_2014",1
 "Phegornis_mitchellii",35.5,"Wilman_etal_2014",1
-"Phelpsia_inornatus",29.4,"Wilman_etal_2014",1
+"Phelpsia_inornata",29.4,"Wilman_etal_2014",1
 "Phelsuma_abbotti",5.8,"Feldman_etal_2016-Meiri_2018",2
 "Phelsuma_andamanense",5.419,"Feldman_etal_2016-Meiri_2018",2
 "Phelsuma_antanosy",2.506,"Feldman_etal_2016-Meiri_2018",2
@@ -27942,8 +27851,6 @@
 "Phisalixella_arctifasciata",113.4,"Feldman_etal_2016",1
 "Phisalixella_tulearensis",480.7,"Feldman_etal_2016",1
 "Phisalixella_variabilis",469.1,"Feldman_etal_2016",1
-"Phlaeothripidae_phyto",0.0005898,"Brose_etal_2018",1
-"Phlaeothripidae_pred",0.0005898,"Brose_etal_2018",1
 "Phlegopsis_erythroptera",54.58,"Wilman_etal_2014",1
 "Phlegopsis_nigromaculata",45.24,"Wilman_etal_2014",1
 "Phleocryptes_melanops",14.6,"Wilman_etal_2014",1
@@ -27960,8 +27867,7 @@
 "Phoca_largha",103000,"AnAge-Cai_etal_2025-Faurby_etal_2018-Quaardvark-sealifebase-Smith_2003",6
 "Phoca_sibirica",39390,"Brown_etal_2018-Verberk_2020",2
 "Phoca_vitulina",115000,"AnAge",NA
-"Phocarctos_hookeri",150900,"AnAge-Cai_etal_2025-Castro_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b",8
-"Phocartos_hookeri",112600,"Verberk_2020",1
+"Phocarctos_hookeri",146600,"AnAge-Cai_etal_2025-Castro_2025-Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014a-Tucker_etal_2014b-Verberk_2020",9
 "Phocides_batabano",1.363,"Brose_etal_2018",1
 "Phocitremoides_ovale",5.503e-05,"Brose_etal_2018",1
 "Phocoena_dioptrica",65630,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
@@ -28047,7 +27953,7 @@
 "Pholis_gunnellus",68.22,"Brose_etal_2018-Cai_etal_2025",2
 "Pholis_laeta",12.4,"Pauly_2024",1
 "Pholis_nebulosa",419.6,"Cai_etal_2025",1
-"Pholis_ornate",8.8,"Pauly_2024",1
+"Pholis_ornata",8.8,"Pauly_2024",1
 "Pholis_schultzi",0.9,"Pauly_2024",1
 "Pholoe_assimilis",0.005048,"Brose_etal_2018",1
 "Pholoe_minuta",0.0005017,"Brose_etal_2018",1
@@ -28055,8 +27961,8 @@
 "Phoniscus_jagorii",4.675,"Faurby_etal_2018-Smith_2003",2
 "Phoniscus_papuensis",6.2,"Faurby_etal_2018-Smith_2003",2
 "Phonognatha_graeffei",0.095,"Pekar_etal_2021",1
-"Phoracantha_recurva",0.26,"Castro_2025",1
-"Phoracantha_semipunctata",0.3327,"Castro_2025",1
+"Phoracantha_recurva",0.26,"Castro_2025-Makarieva_2008",2
+"Phoracantha_semipunctata",0.3164,"Castro_2025-Makarieva_2008",2
 "Phorbas_areolatus",1.2,"Brose_etal_2018",1
 "Phorbas_dives",0.01183,"Brose_etal_2018",1
 "Phorbas_glaberrima",1.2,"Brose_etal_2018",1
@@ -28067,19 +27973,17 @@
 "Phormia_regina",0.05,"Makarieva_2008",1
 "Phormidium_autumnale",3e-11,"Makarieva_2008",1
 "Phormidium_luridum",4.4e-12,"Makarieva_2008",1
-"Phorocantha_recurva",0.26,"Makarieva_2008",1
-"Phorocantha_semipunctata",0.3,"Makarieva_2008",1
 "Phoronis_psammophila",2.446,"Brose_etal_2018",1
 "Photis_reinhardi",0.001177,"Brose_etal_2018",1
 "Photopectoralis_bindus",23.15,"Cai_etal_2025-fishbase",2
 "Phoxinellus_pseudalepidotus",15,"fishbase",1
 "Phoxinus_eos",1.01,"Brose_etal_2018",1
 "Phoxinus_kumgangensis",5.8,"Cai_etal_2025",1
+"Phoxinus_neogaeus",1.17,"Brose_etal_2018",1
 "Phoxinus_phoxinus",8.896,"Brose_etal_2018-Brown_etal_2018-Cai_etal_2025-Killen_etal_2016",4
 "Phoxinus_semotilus",12.3,"Cai_etal_2025",1
 "Phoxinus_steindachneri",12.3,"Cai_etal_2025",1
 "Phoxinus_ujmonensis",30.4,"Cai_etal_2025",1
-"Phoxinys_neogaeus",1.17,"Brose_etal_2018",1
 "Phoxophrys_borneensis",9.199,"Feldman_etal_2016-Meiri_2018",2
 "Phoxophrys_cephalum",19.42,"Feldman_etal_2016-Meiri_2018",2
 "Phoxophrys_nigrilabris",6.179,"Feldman_etal_2016-Meiri_2018",2
@@ -28304,7 +28208,7 @@
 "Phyllomys_pattoni",269.1,"Cai_etal_2025-Faurby_etal_2018",2
 "Phyllomys_sulinus",190,"Faurby_etal_2018",1
 "Phyllomys_thomasi",560.2,"Faurby_etal_2018-Smith_2003",2
-"Phyllomys_unicolor",439,"Faurby_etal_2018",1
+"Phyllomys_unicolor",439,"Faurby_etal_2018-Smith_2003",2
 "Phyllonycteris_aphylla",24.5,"Faurby_etal_2018",1
 "Phyllonycteris_major",34.1,"Faurby_etal_2018",1
 "Phyllonycteris_poeyi",22,"Faurby_etal_2018",1
@@ -28431,7 +28335,6 @@
 "Phyllurus_nepthys",19.58,"Feldman_etal_2016-Meiri_2018",2
 "Phyllurus_ossa",13.88,"Feldman_etal_2016-Meiri_2018",2
 "Phyllurus_platurus",22.86,"Feldman_etal_2016-Meiri_2018",2
-"Phyloomys_unicolor",439,"Smith_2003",1
 "Phymactis_clematis",11.91,"Brose_etal_2018",1
 "Phymatolithon_calcareum",2e-04,"Brose_etal_2018",1
 "Phymaturus_aguanegra",38.39,"Feldman_etal_2016-Meiri_2018",2
@@ -28814,13 +28717,12 @@
 "Pitta_versicolor",88.94,"Wilman_etal_2014",1
 "Pittasoma_michleri",109,"Wilman_etal_2014",1
 "Pittasoma_rufopileatum",96.5,"Wilman_etal_2014",1
-"Pituophis_catenifer",1586,"Cai_etal_2025-Feldman_etal_2016",2
+"Pituophis_catenifer",1240,"Cai_etal_2025-Feldman_etal_2016-Makarieva_2008",3
 "Pituophis_deppei",514,"Feldman_etal_2016",1
 "Pituophis_lineaticollis",771.1,"Feldman_etal_2016",1
 "Pituophis_melanoleucus",834.8,"Feldman_etal_2016-Gillooly_etal_2016-Makarieva_2008",3
 "Pituophis_ruthveni",509.7,"Feldman_etal_2016",1
 "Pituophis_vertebralis",693.7,"Feldman_etal_2016",1
-"Pitupophis_catenifer",548,"Makarieva_2008",1
 "Pityriasis_gymnocephala",128.5,"Wilman_etal_2014",1
 "Placosoma_cipoense",8.206,"Feldman_etal_2016-Meiri_2018",2
 "Placosoma_cordylinum",1.971,"Feldman_etal_2016-Meiri_2018",2
@@ -29611,8 +29513,7 @@
 "Pontoporeia_femorata",0.04727,"Brose_etal_2018-Brown_etal_2018",2
 "Pontoporia_blainvillei",30000,"AnimalDiversityWeb",NA
 "Poodytes_punctatus",25.3,"Cai_etal_2025",1
-"Pooecetes_gramineus",19.28,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Wilman_etal_2014",4
-"Pooectes_gramineus",21.5,"Makarieva_2008",1
+"Pooecetes_gramineus",19.72,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Makarieva_2008-Wilman_etal_2014",5
 "Poospiza_alticola",28.62,"Wilman_etal_2014",1
 "Poospiza_boliviana",28.62,"Wilman_etal_2014",1
 "Poospiza_cabanisi",19.2,"Wilman_etal_2014",1
@@ -29702,8 +29603,8 @@
 "Porzana_tabuensis",42.39,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Posidonia_angustifolia",0.37,"Brown_etal_2018",1
 "Posidonia_australis",0.4,"Brown_etal_2018",1
+"Posidonia_oceanica",0.5814,"Brown_etal_2018",1
 "Posidonia_sinuosa",0.2627,"Brown_etal_2018",1
-"Posidonica_oceanica",0.5814,"Brown_etal_2018",1
 "Potamalosa_richmondia",230,"fishbase",1
 "Potamites_apodemus",6.415,"Feldman_etal_2016-Meiri_2018",2
 "Potamites_cochranae",19.5,"Feldman_etal_2016",1
@@ -29718,8 +29619,7 @@
 "Potamochoerus_porcus",67250,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",6
 "Potamogale_velox",648.3,"Faurby_etal_2018-Quaardvark-Smith_2003",3
 "Potamophylax_cingulatus",0.009757,"Brose_etal_2018",1
-"Potamopurgus_antipodarum",0.0005944,"Brose_etal_2018",1
-"Potamopyrgus_antipodarum",0.002435,"Brose_etal_2018-DeLong_etal_2018-Eklof_etal_2017",3
+"Potamopyrgus_antipodarum",0.001975,"Brose_etal_2018-Brose_etal_2018-DeLong_etal_2018-Eklof_etal_2017",4
 "Potamotrygon_brachyura",232600,"fishbase",1
 "Potamotrygon_falkneri",2300,"fishbase",1
 "Potamotrygon_histrix",7000,"fishbase",1
@@ -29759,7 +29659,6 @@
 "Prasinohaema_virens",5.379,"Feldman_etal_2016-Meiri_2018",2
 "Pratylenchus_crenatus",5.89e-08,"Brose_etal_2018",1
 "Praxillella_praetermissa",0.115,"Brose_etal_2018",1
-"Predacious_nematodes",3.56e-06,"Brose_etal_2018",1
 "Premnas_biaculeatus",191,"Cai_etal_2025",1
 "Premnoplex_brunnescens",16.3,"Wilman_etal_2014",1
 "Premnoplex_tatei",19,"Wilman_etal_2014",1
@@ -30216,8 +30115,7 @@
 "Psallus_conspurcatus",0.006,"Brose_etal_2018",1
 "Psaltria_exilis",4,"Wilman_etal_2014",1
 "Psaltriparus_minimus",5.45,"AnAge-Makarieva_2008-Quaardvark-Wilman_etal_2014",4
-"Psamechinus_miliaris",9.3,"Jennings_2002",1
-"Psammechinus_miliaris",0.6355,"Brose_etal_2018",1
+"Psammechinus_miliaris",4.968,"Brose_etal_2018-Jennings_2002",2
 "Psammobates_pardalis",18000,"Quaardvark",1
 "Psammobatis_normani",1216,"fishbase",1
 "Psammobatis_rudis",910,"fishbase",1
@@ -30645,7 +30543,6 @@
 "Pseudoplatystoma_magdaleniatum",9425,"Cai_etal_2025",1
 "Pseudoplatystoma_reticulatum",12500,"fishbase",1
 "Pseudoplatystoma_tigrinum",19750,"fishbase",1
-"Pseudopleuronecte_americanus",345,"Brown_etal_2018",1
 "Pseudopleuronectes_americanus",3600,"fishbase",NA
 "Pseudopleuronectes_obscurus",2600,"fishbase",1
 "Pseudopleuronectes_schrenki",2500,"fishbase",1
@@ -30899,7 +30796,7 @@
 "Pteroglossus_pluricinctus",261.7,"Wilman_etal_2014",1
 "Pteroglossus_torquatus",224.5,"Quaardvark-Wilman_etal_2014",2
 "Pteroglossus_viridis",135,"Wilman_etal_2014",1
-"Pterois_lunulate",45.9,"Pauly_2024",1
+"Pterois_lunulata",45.9,"Pauly_2024",1
 "Pterois_miles",840.8,"Cai_etal_2025-fishbase",2
 "Pterois_volitans",1027,"Cai_etal_2025-Mahe_2023",2
 "Pteromicra_leucopeza",0.002126,"Brose_etal_2018",1
@@ -31131,8 +31028,7 @@
 "Ptychoglossus_vallensis",3.493,"Feldman_etal_2016-Meiri_2018",2
 "Ptychophis_flavovirgatus",48.1,"Feldman_etal_2016",1
 "Ptychoptera_scutellaris",0.04271,"Brose_etal_2018",1
-"Ptychoramphus_aleuticus",147.3,"AnAge-Brown_etal_2018-Castro_2025-Wilman_etal_2014",4
-"Ptychorhamphus_aleuticus",194,"Verberk_2020",1
+"Ptychoramphus_aleuticus",156.6,"AnAge-Brown_etal_2018-Castro_2025-Verberk_2020-Wilman_etal_2014",5
 "Ptychozoon_bannaense",13.18,"Meiri_2018",1
 "Ptychozoon_horsfieldii",17.01,"Feldman_etal_2016-Meiri_2018",2
 "Ptychozoon_intermedium",18.98,"Feldman_etal_2016-Meiri_2018",2
@@ -32533,9 +32429,9 @@
 "Salea_anamallayana",46.2,"Feldman_etal_2016-Meiri_2018",2
 "Salea_gularis",59.92,"Feldman_etal_2016-Meiri_2018",2
 "Salea_horsfieldii",28.5,"Feldman_etal_2016-Meiri_2018",2
-"Salicornia_europea",0.0355,"Brown_etal_2018",1
+"Salicornia_europaea",0.0355,"Brown_etal_2018",1
+"Salinivibrio_costicola",4e-13,"DeLong_etal_2010",1
 "Salinomys_delicatus",12.5,"Faurby_etal_2018",1
-"Sallinivibrio_costicola",4e-13,"DeLong_etal_2010",1
 "Salminus_affinis",4990,"fishbase",1
 "Salminus_brasiliensis",19380,"Cai_etal_2025-fishbase",2
 "Salminus_franciscanus",27610,"fishbase",1
@@ -32693,7 +32589,7 @@
 "Sardinella_sindensis",55.7,"fishbase",1
 "Sardinella_tawilis",28.55,"fishbase",1
 "Sardinella_zunasi",37.1,"fishbase",1
-"Sardinops_caerrula",68.89,"Brown_etal_2018",1
+"Sardinops_caerulea",68.89,"Brown_etal_2018",1
 "Sardinops_melanosticta",52.3,"Brown_etal_2018",1
 "Sardinops_sagax",554.5,"AnAge-Cai_etal_2025",2
 "Sargassum_aquifolium",0.000228,"Brose_etal_2018",1
@@ -32784,7 +32680,6 @@
 "Sayornis_saya",20.29,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
 "Scalicus_amiscus",250.8,"Cai_etal_2025",1
 "Scalopus_aquaticus",71.72,"AnAge-Brown_etal_2018-Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014b",6
-"Scapaloberis_mucronata",9e-04,"Brose_etal_2018",1
 "Scapanulus_oweni",36.61,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
 "Scapanus_latimanus",55,"Faurby_etal_2018-Smith_2003",2
 "Scapanus_orarius",65.01,"Faurby_etal_2018-Quaardvark-Smith_2003-Tucker_etal_2014b",4
@@ -32802,6 +32697,7 @@
 "Scaphirhynchus_albus",39270,"fishbase",1
 "Scaphirhynchus_platorynchus",4696,"Cai_etal_2025-fishbase-Quaardvark",3
 "Scapholeberis_kingi",0.0001719,"Brose_etal_2018",1
+"Scapholeberis_mucronata",9e-04,"Brose_etal_2018",1
 "Scapteromys_aquaticus",116.7,"Faurby_etal_2018",1
 "Scapteromys_tumidus",146,"Faurby_etal_2018-Smith_2003",2
 "Scaptochirus_moschatus",90.5,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
@@ -32889,8 +32785,7 @@
 "Sceloporus_insignis",30.71,"Feldman_etal_2016-Meiri_2018",2
 "Sceloporus_internasalis",31.58,"Feldman_etal_2016-Meiri_2018",2
 "Sceloporus_jalapae",8.788,"Feldman_etal_2016-Meiri_2018",2
-"Sceloporus_jarrovi",15.3,"Hirt_etal_2017",1
-"Sceloporus_jarrovii",30.13,"Castro_2025-Feldman_etal_2016-Meiri_2018",3
+"Sceloporus_jarrovii",26.42,"Castro_2025-Feldman_etal_2016-Hirt_etal_2017-Meiri_2018",4
 "Sceloporus_lemosespinali",6.081,"Feldman_etal_2016-Meiri_2018",2
 "Sceloporus_licki",26.72,"Feldman_etal_2016-Meiri_2018",2
 "Sceloporus_lineatulus",45.88,"Feldman_etal_2016-Meiri_2018",2
@@ -33129,8 +33024,6 @@
 "Scincus_scincus",74.7,"Feldman_etal_2016-Meiri_2018",2
 "Scinus_mitranus",14.6,"Makarieva_2008",1
 "Sciocoris_cursitans",0.002468,"Brose_etal_2018",1
-"Scirtid_broad",0.0001619,"Brose_etal_2018",1
-"Scirtidae_larvae",0.000218,"Brose_etal_2018",1
 "Scissirostrum_dubium",65,"Wilman_etal_2014",1
 "Sciurillus_pusillus",39,"Faurby_etal_2018-Smith_2003",2
 "Sciurocheirus_alleni",301.2,"Faurby_etal_2018-GalanAcedo_etal_2026",2
@@ -33317,7 +33210,6 @@
 "Scyliorhinus_retifer",340,"Quaardvark",1
 "Scyliorhinus_stellaris",170,"fishbase",NA
 "Scylla_serrata",1001,"Makarieva_2008-sealifebase",2
-"Scyllarid_lobsters",63.8,"Brose_etal_2018",1
 "Scyllarus_chacei",12.44,"sealifebase",1
 "Scymnus_levaillanti",0.00103,"DeLong_etal_2018",1
 "Scymnus_syriacus",0.00594,"DeLong_etal_2018",1
@@ -33362,9 +33254,6 @@
 "Scytalopus_zimmeri",15.9,"Wilman_etal_2014",1
 "Scythrops_novaehollandiae",684,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Scytodes_thoracica",0.082,"Pekar_etal_2021",1
-"Sea_birds",310,"Brose_etal_2018",1
-"Sea_fan",22.47,"Brose_etal_2018",1
-"Sea_turtles",107500,"Brose_etal_2018",1
 "Searsia_koefoedi",33.4,"fishbase",1
 "Sebastes_aleutianus",4938,"AnAge-Brown_etal_2018",2
 "Sebastes_alutus",585.9,"AnAge-Brown_etal_2018",2
@@ -33451,8 +33340,7 @@
 "Seicercus_tephrocephalus",7.3,"Wilman_etal_2014",1
 "Seicercus_valentini",7.3,"Wilman_etal_2014",1
 "Seicercus_whistleri",7.3,"Wilman_etal_2014",1
-"Seiurus_aurocapilla",19.6,"AnAge-Quaardvark-Wilman_etal_2014",3
-"Seiurus_aurocapillus",13.48,"Brown_etal_2018-Lislevand_etal_2007",2
+"Seiurus_aurocapilla",17.15,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",5
 "Seiurus_motacilla",17.72,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",5
 "Seiurus_noveboracensis",14.93,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",5
 "Sekeetamys_calurus",55.87,"AnAge-Castro_2025-Faurby_etal_2018-Quaardvark-Smith_2003",5
@@ -33598,7 +33486,7 @@
 "Seriola_rivoliana",39020,"Cai_etal_2025-fishbase-Mahe_2023",3
 "Seriolella_brama",2200,"AnAge",1
 "Seriolina_nigrofasciata",5440,"Cai_etal_2025",1
-"Serolella_bouveri",0.1,"Brose_etal_2018",1
+"Serolella_bouvieri",0.1,"Brose_etal_2018",1
 "Serolis_cornuta",2.016,"Makarieva_2008",1
 "Serolis_polita",0.5247,"Brose_etal_2018-Brown_etal_2018-Makarieva_2008",3
 "Serpenticobitis_octozona",0.8,"Cai_etal_2025",1
@@ -33662,8 +33550,7 @@
 "Siagonodon_cupinensis",0.9,"Feldman_etal_2016",1
 "Siagonodon_septemstriatus",5.5,"Feldman_etal_2016",1
 "Sialia_currucoides",22.2,"AnAge-Brown_etal_2018-Wilman_etal_2014",3
-"Sialia_mexicana",27.27,"AnAge-Castro_2025-Makarieva_2008-Quaardvark-Wilman_etal_2014",5
-"Sialia_mexicanus",7.25,"Brown_etal_2018",1
+"Sialia_mexicana",23.93,"AnAge-Brown_etal_2018-Castro_2025-Makarieva_2008-Quaardvark-Wilman_etal_2014",6
 "Sialia_sialis",24.1,"AnAge-Brown_etal_2018-Quaardvark-Wilman_etal_2014",4
 "Sialis_fuliginosa",0.00241,"Brose_etal_2018",1
 "Sialis_lutaria",0.01182,"Brose_etal_2018",1
@@ -33684,9 +33571,8 @@
 "Sibon_noalamina",36.4,"Feldman_etal_2016",1
 "Sibon_perissostichon",60.6,"Feldman_etal_2016",1
 "Sibon_sanniolus",19.8,"Feldman_etal_2016",1
-"Sibynomorphis_mikanii",11,"Makarieva_2008",1
 "Sibynomorphus_lavillai",36.7,"Feldman_etal_2016",1
-"Sibynomorphus_mikanii",72.1,"Feldman_etal_2016",1
+"Sibynomorphus_mikanii",41.55,"Feldman_etal_2016-Makarieva_2008",2
 "Sibynomorphus_neuwiedi",100.4,"Feldman_etal_2016",1
 "Sibynomorphus_oligozonatus",37,"Feldman_etal_2016",1
 "Sibynomorphus_oneilli",92.8,"Feldman_etal_2016",1
@@ -33914,7 +33800,7 @@
 "Siphlophis_longicaudatus",56,"Feldman_etal_2016",1
 "Siphlophis_pulcher",165.9,"Feldman_etal_2016",1
 "Siphlophis_worontzowi",137.4,"Feldman_etal_2016",1
-"Siphonaria_lesoni",0.018,"Brose_etal_2018",1
+"Siphonaria_lessonii",0.018,"Brose_etal_2018",1
 "Siphonoecetes_smithianus",0.001177,"Brose_etal_2018",1
 "Siphonoperla_torrentium",0.0005753,"Brose_etal_2018",1
 "Siphonops_annulatus",53.7,"Cai_etal_2025",1
@@ -33922,7 +33808,6 @@
 "Sipodotus_wallacii",7.7,"Wilman_etal_2014",1
 "Siptornis_striaticollis",13,"Wilman_etal_2014",1
 "Siptornopsis_hypochondriaca",24.45,"Wilman_etal_2014",1
-"Sipunculid_worms",12.36,"Brose_etal_2018",1
 "Sirembo_imberbis",46.2,"Cai_etal_2025",1
 "Siren_intermedia",175.2,"Cai_etal_2025-Makarieva_2008",2
 "Siren_lacertina",634.5,"AmphiBIO-Makarieva_2008",2
@@ -33932,9 +33817,9 @@
 "Siriella_thompsonii",0.005047,"Castro_2025",1
 "Sirystes_albogriseus",31.8,"Wilman_etal_2014",1
 "Sirystes_sibilator",32.3,"Wilman_etal_2014",1
-"Sisiyphys_fasciculatus",0.136,"Makarieva_2008",1
 "Sistrurus_catenatus",568,"Feldman_etal_2016",1
 "Sistrurus_miliarius",275.2,"Feldman_etal_2016",1
+"Sisyphus_fasciculatus",0.136,"Makarieva_2008",1
 "Sitana_attenboroughii",5.461,"Meiri_2018",1
 "Sitana_bahiri",3.892,"Feldman_etal_2016-Meiri_2018",2
 "Sitana_deccanensis",15.5,"Feldman_etal_2016",1
@@ -33977,7 +33862,6 @@
 "Sittasomus_griseicapillus",13.12,"Wilman_etal_2014",1
 "Sitticus_caricis",0.003114,"Brose_etal_2018",1
 "Sivacobus_sankaliai",78500,"Faurby_etal_2018",1
-"Skate_raja",18,"Brown_etal_2018",1
 "Skeletonema_costatum",7.942e-12,"Brose_etal_2018-Castro_2025",2
 "Skeneopsis_planorbis",3e-04,"Brose_etal_2018",1
 "Skutchia_borbae",50,"Wilman_etal_2014",1
@@ -34014,7 +33898,6 @@
 "Sminthopsis_psammophila",33.5,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
 "Sminthopsis_virginiae",34.64,"AnAge-Faurby_etal_2018-Fisher_2001-Smith_2003",4
 "Sminthopsis_youngsoni",10.05,"AnAge-Faurby_etal_2018-Fisher_2001-Smith_2003",4
-"Sminthuridae_juv",5.1e-06,"Brose_etal_2018",1
 "Sminthurinus_aureus",5.1e-06,"Brose_etal_2018",1
 "Sminthurinus_elegans",6.21e-06,"Brose_etal_2018",1
 "Sminthurinus_niger",5.1e-06,"Brose_etal_2018",1
@@ -34593,7 +34476,6 @@
 "Spinus_psaltria",8.8,"Cai_etal_2025",1
 "Spinus_spinus",13.64,"Cai_etal_2025-Makarieva_2008",2
 "Spinus_tristis",12.8,"Cai_etal_2025",1
-"Spiny_lobsters",58.7,"Brose_etal_2018",1
 "Spio_setosa",0.03256,"Brose_etal_2018",1
 "Spiochaetopterus_oculatus",0.1785,"Brose_etal_2018",1
 "Spiophanes_bombyx",4.904e-05,"Brose_etal_2018",1
@@ -34603,9 +34485,9 @@
 "Spirocamallanus_pereirae",6.9e-05,"Brose_etal_2018",1
 "Spirocerus_kiakhtensis",790700,"Faurby_etal_2018-Smith_2003",2
 "Spiroloculina_hyalina",2.35e-06,"Castro_2025",1
+"Spirontocaris_lilljeborgii",1.2,"Jennings_2002",1
 "Spirontocaris_spinus",0.04064,"Brose_etal_2018",1
 "Spirontocaris_turgida",0.007402,"Brose_etal_2018",1
-"Spirontocarus_lilleborgi",1.2,"Jennings_2002",1
 "Spirorbis_spirorbis",0.000342,"Brose_etal_2018",1
 "Spirostoma_minus",5e-07,"DeLong_etal_2010-Makarieva_2008",2
 "Spirostomum_ambiguum",1.055e-05,"Castro_2025-DeLong_etal_2010-Makarieva_2008",3
@@ -34627,8 +34509,7 @@
 "Spizella_passerina",10.75,"AnAge-Brown_etal_2018-Cai_etal_2025-Makarieva_2008-Quaardvark-Wilman_etal_2014",6
 "Spizella_pusilla",10.96,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",5
 "Spizella_wortheni",12.38,"Wilman_etal_2014",1
-"Spiziapteryx_circumcincta",166.2,"Wilman_etal_2014",1
-"Spiziapteryx_circumcinctus",168.2,"Lislevand_etal_2007",1
+"Spiziapteryx_circumcincta",167.2,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Spizixos_canifrons",44,"Wilman_etal_2014",1
 "Spizixos_semitorques",39,"Cai_etal_2025-Wilman_etal_2014",2
 "Spizocorys_conirostris",14.3,"Wilman_etal_2014",1
@@ -34772,7 +34653,6 @@
 "Stagonopleura_oculata",16.45,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Stainforthia_apertura",1.11e-06,"DeLong_etal_2010",1
 "Stalia_boops",0.006108,"Brose_etal_2018",1
-"Staphylinidae_spec",0.004004,"Brose_etal_2018",1
 "Staphylinus_erythropterus",0.1168,"Brose_etal_2018",1
 "Staphylococcus_aureus",2.7e-13,"DeLong_etal_2010",1
 "Staphylococcus_epidermidis",5e-13,"DeLong_etal_2010",1
@@ -34972,7 +34852,6 @@
 "Stephanorhinus_hemitoechus",2271000,"Faurby_etal_2018-Smith_2003",2
 "Stephanorhinus_kirchbergensis",2406000,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
 "Stephanoxis_lalandi",4,"Wilman_etal_2014",1
-"Stercocarius_spec",329.9,"Brose_etal_2018",1
 "Stercorarius_antarcticus",1687,"AnAge",1
 "Stercorarius_longicaudus",256.9,"AnAge-Brown_etal_2018-DeLong_etal_2018-Lislevand_etal_2007-Quaardvark-Wilman_etal_2014",6
 "Stercorarius_maccormicki",1348,"AnAge-Cai_etal_2025",2
@@ -35085,7 +34964,6 @@
 "Stomias_atriventer",34.94,"fishbase; Froese_2014",NA
 "Stomias_danae",13.8,"Makarieva_2008",1
 "Stomolophus_meleagris",760.5,"Quaardvark",1
-"Stony_corals",36.47,"Brose_etal_2018",1
 "Storena_colossea",0.162,"Pekar_etal_2021",1
 "Storeria_dekayi",20.7,"Feldman_etal_2016-Makarieva_2008",2
 "Storeria_hidalgoensis",7.3,"Feldman_etal_2016",1
@@ -35420,7 +35298,6 @@
 "Sylvisorex_vulcanorum",3.5,"Faurby_etal_2018-Smith_2003",2
 "Syma_megarhyncha",40,"Wilman_etal_2014",1
 "Syma_torotoro",37.7,"Wilman_etal_2014",1
-"Symbiotic_algae",3e-10,"Brose_etal_2018",1
 "Symbolophorus_californiensis",1.04,"CalCOFI",NA
 "Symbolophorus_evermanni",19.4,"fishbase",1
 "Symbolophorus_veranyi",21.3,"fishbase",1
@@ -35508,7 +35385,6 @@
 "Syndactyla_rufosuperciliata",25.6,"Wilman_etal_2014",1
 "Syndactyla_subalaris",28.9,"Wilman_etal_2014",1
 "Synechocystis_aquatilis",8e-12,"Makarieva_2008",1
-"Synechocystis_pCC",8e-12,"Makarieva_2008",1
 "Synechogobius_hasta",1052,"Cai_etal_2025",1
 "Synedra_minuscula",5.35e-09,"Brose_etal_2018",1
 "Synedra_nana",9.18e-08,"Brose_etal_2018",1
@@ -35726,7 +35602,7 @@
 "Talismania_bifurcata",136.7,"Cai_etal_2025",1
 "Talitrus_saltator",0.03182,"Brose_etal_2018",1
 "Talitrus_sylvaticus",0.01076,"Makarieva_2008",1
-"Talorchestia_megalophtalma",0.2042,"Makarieva_2008",1
+"Talorchestia_megalophthalma",0.2042,"Makarieva_2008",1
 "Talpa_altaica",85,"Faurby_etal_2018-Smith_2003",2
 "Talpa_caeca",92.5,"Faurby_etal_2018-Smith_2003",2
 "Talpa_caucasica",90,"Faurby_etal_2018-Smith_2003",2
@@ -35907,12 +35783,11 @@
 "Tanysiptera_nympha",57,"Wilman_etal_2014",1
 "Tanysiptera_riedelii",65,"Wilman_etal_2014",1
 "Tanysiptera_sylvia",49.6,"Wilman_etal_2014",1
-"Tanytarsus_bruchonidae",0.01298,"Brose_etal_2018",1
 "Tanytarsus_gracilentus",0.0017,"AndersonGillooly_2017",1
 "Taoniscus_nanus",43,"Wilman_etal_2014",1
 "Tapecomys_primus",71.5,"Faurby_etal_2018",1
 "Tapera_naevia",51.71,"Quaardvark-Wilman_etal_2014",2
-"Tapes_philippimarum",4.73,"Brown_etal_2018",1
+"Tapes_philippinarum",4.73,"Brown_etal_2018",1
 "Taphozous_achates",26.6,"Faurby_etal_2018",1
 "Taphozous_australis",22.9,"Faurby_etal_2018-Smith_2003",2
 "Taphozous_georgianus",27.68,"Faurby_etal_2018-Smith_2003",2
@@ -36042,8 +35917,7 @@
 "Tauraco_porphyreolophus",259,"Wilman_etal_2014",1
 "Tauraco_ruspolii",247.5,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Tauraco_schalowi",206.4,"Wilman_etal_2014",1
-"Tauraco_schuetti",235,"Wilman_etal_2014",1
-"Tauraco_schuettii",234,"Lislevand_etal_2007",1
+"Tauraco_schuettii",234.5,"Lislevand_etal_2007-Wilman_etal_2014",2
 "Taurotragus_derbianus",760200,"AnAge-Hirt_etal_2017-Quaardvark-Smith_2003",4
 "Taurotragus_oryx",427200,"AnAge-Gillooly_etal_2016-Hirt_etal_2017-Quaardvark-Smith_2003",5
 "Taurulus_bubalis",240.6,"Brose_etal_2018",1
@@ -36091,9 +35965,8 @@
 "Telescopus_tessellatus",126.4,"Feldman_etal_2016",1
 "Telescopus_tripolitanus",75.3,"Feldman_etal_2016",1
 "Telescopus_variegatus",89.7,"Feldman_etal_2016",1
-"Telespiza_cantans",33.29,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
+"Telespiza_cantans",27.02,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Wilman_etal_2014",4
 "Telespiza_ultima",24.41,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
-"Telespyza_cantans",8.2,"Brown_etal_2018",1
 "Tellina_agilis",0.02164,"Brose_etal_2018",1
 "Tellina_fabula",0.097,"Brown_etal_2018",1
 "Tellina_martinicensis",1.26,"Brown_etal_2018",1
@@ -36224,7 +36097,7 @@
 "Tetragonurus_cuvieri",1653,"Cai_etal_2025",1
 "Tetrahymena_corlissi",1.13e-11,"DeLong_etal_2018",1
 "Tetrahymena_geleii",2.2e-08,"Makarieva_2008",1
-"Tetrahymena_pyriformis",0.0008334,"AndersonGillooly_2017-Brown_etal_2018-Castro_2025-DeLong_etal_2010-DeLong_etal_2018-Makarieva_2008",6
+"Tetrahymena_pyriformis",0.0007143,"AndersonGillooly_2017-Brown_etal_2018-Castro_2025-DeLong_etal_2010-DeLong_etal_2010-DeLong_etal_2018-Makarieva_2008",7
 "Tetralepis_fruhstorferi",20.2,"Feldman_etal_2016",1
 "Tetrameryx_shuleri",60000,"Faurby_etal_2018-Smith_2003",2
 "Tetramorium_caespitum",0.0006275,"DeLong_etal_2018-Makarieva_2008",2
@@ -36261,7 +36134,6 @@
 "Tetrix_subulata",0.01463,"Brose_etal_2018",1
 "Tetronarce_peruana",1644,"fishbase; Froese_2014",NA
 "Tetrorchis_erythrogaster",0.44,"Makarieva_2008",1
-"Tetryhymena_pyriformis",1.93e-08,"DeLong_etal_2010",1
 "Teuchocercus_keyi",12.8,"Feldman_etal_2016",1
 "Teuchophorus_calcaratus",0.0002658,"Brose_etal_2018",1
 "Textularia_kattegatensis",1.24e-06,"DeLong_etal_2010",1
@@ -36331,7 +36203,6 @@
 "Thamnaconus_tessellatus",133.2,"Cai_etal_2025",1
 "Thamneus_rostratus",0.006256,"Castro_2025",1
 "Thamnistes_anabatinus",20.7,"Wilman_etal_2014",1
-"Thamnodyastes_strigatus",55,"Makarieva_2008",1
 "Thamnodynastes_almae",47.3,"Feldman_etal_2016",1
 "Thamnodynastes_ceibae",42.9,"Feldman_etal_2016",1
 "Thamnodynastes_chaquensis",95.8,"Feldman_etal_2016",1
@@ -36349,7 +36220,7 @@
 "Thamnodynastes_ramonriveroi",26.4,"Feldman_etal_2016",1
 "Thamnodynastes_rutilus",54.6,"Feldman_etal_2016",1
 "Thamnodynastes_sertanejo",100.8,"Feldman_etal_2016",1
-"Thamnodynastes_strigatus",95.8,"Feldman_etal_2016",1
+"Thamnodynastes_strigatus",75.4,"Feldman_etal_2016-Makarieva_2008",2
 "Thamnodynastes_yavi",15.5,"Feldman_etal_2016",1
 "Thamnomanes_ardesiacus",17.7,"Wilman_etal_2014",1
 "Thamnomanes_caesius",15.7,"Wilman_etal_2014",1
@@ -36713,7 +36584,7 @@
 "Tilapia_rendalli",712.5,"AnAge-Makarieva_2008",2
 "Tilapia_sparrmanii",7.19,"DeLong_etal_2018",1
 "Tilapia_zillii",663.7,"AnAge-Cai_etal_2025-Makarieva_2008",3
-"Tilesina_gibbose",18.3,"Pauly_2024",1
+"Tilesina_gibbosa",18.3,"Pauly_2024",1
 "Tiliqua_adelaidensis",26.79,"Feldman_etal_2016-Meiri_2018",2
 "Tiliqua_gigas",1152,"Feldman_etal_2016-Meiri_2018",2
 "Tiliqua_multifasciata",747.5,"Feldman_etal_2016-Meiri_2018",2
@@ -37080,8 +36951,7 @@
 "Trachysomus_peregrinus",0.547,"Makarieva_2008",1
 "Trachystoma_petardi",2000,"fishbase",1
 "Trachytes_aegrota",2.415e-05,"Brose_etal_2018",1
-"Trachytes_pauperior",1.16e-05,"Brose_etal_2018",1
-"Trachytes_pauperiors",1.92e-05,"Brose_etal_2018",1
+"Trachytes_pauperior",1.54e-05,"Brose_etal_2018-Brose_etal_2018",2
 "Trachythyone_parva",0.043,"Brose_etal_2018",1
 "Tragelaphus_angasii",94260,"AnAge-Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",5
 "Tragelaphus_buxtoni",217500,"Cai_etal_2025-Faurby_etal_2018-Quaardvark-Smith_2003",4
@@ -37572,7 +37442,6 @@
 "Tropheus_moorii",42.6,"Cai_etal_2025",1
 "Trophon_clathratus",0.07009,"Brose_etal_2018",1
 "Trophon_longstaffi",0.00026,"Brose_etal_2018",1
-"Tropical_atlantic",1.9e-11,"Brown_etal_2018",1
 "Tropicranus_albocristatus",289.4,"Wilman_etal_2014",1
 "Tropidechis_carinatus",252.3,"Feldman_etal_2016",1
 "Tropidoclonion_lineatum",44.3,"Feldman_etal_2016",1
@@ -37742,7 +37611,6 @@
 "Tubifex_costatus",0.0005556,"Brose_etal_2018",1
 "Tubificoides_benedeni",0.01111,"Brose_etal_2018",1
 "Tubularia_ralphii",0.029,"Brose_etal_2018",1
-"Tudus_viscivorus",108.2,"Makarieva_2008",1
 "Tukutuku_rakiurae",7.183,"Feldman_etal_2016-Meiri_2018",2
 "Tumbezia_salvini",12.2,"Wilman_etal_2014",1
 "Tumbunascincus_luteilateralis",31.02,"Feldman_etal_2016-Meiri_2018",2
@@ -37887,7 +37755,7 @@
 "Turdus_tephronotus",49.4,"Wilman_etal_2014",1
 "Turdus_torquatus",109,"AnAge-Wilman_etal_2014",2
 "Turdus_unicolor",64.19,"Wilman_etal_2014",1
-"Turdus_viscivorus",114.4,"AnAge-Makarieva_2008-Wilman_etal_2014",3
+"Turdus_viscivorus",112.8,"AnAge-Makarieva_2008-Makarieva_2008-Wilman_etal_2014",4
 "Turnagra_capensis",80.7,"Cai_etal_2025",1
 "Turnerella_pennyi",0.2816,"Brose_etal_2018",1
 "Turnix_castanotus",82.71,"Wilman_etal_2014",1
@@ -38124,15 +37992,11 @@
 "Uncia_uncia",43590,"AnAge-Quaardvark-Smith_2003-Tucker_etal_2014b",4
 "Unciola_irrorata",0.001177,"Brose_etal_2018",1
 "Unciola_leucopis",0.002996,"Brose_etal_2018",1
-"Unclassified_flagellates",3.46e-10,"Brose_etal_2018",1
-"Unclassified_microflagellates",1.02e-10,"Brose_etal_2018",1
 "Underwoodisaurus_milii",22.86,"Feldman_etal_2016-Meiri_2018",2
 "Underwoodisaurus_seorsus",18.27,"Feldman_etal_2016-Meiri_2018",2
 "Undinula_vulgaris",0.0007775,"Castro_2025-Makarieva_2008",2
 "Ungaliophis_continentalis",221.2,"Feldman_etal_2016",1
 "Ungaliophis_panamensis",153.2,"Feldman_etal_2016",1
-"UnID_chrysomonad",1.8e-10,"DeLong_etal_2010",1
-"UNID_kinetoplastid",9e-11,"DeLong_etal_2010",1
 "Unidentified_amoeba",7.2e-11,"DeLong_etal_2010",1
 "Unidentified_bacterium",6e-13,"DeLong_etal_2010",1
 "Unio_tumidis",5.35,"Brown_etal_2018",1
@@ -38332,7 +38196,6 @@
 "Uropsilus_soricipes",16,"Cai_etal_2025-Faurby_etal_2018-Smith_2003",3
 "Uropterygius_marmoratus",12.5,"Pauly_2024",1
 "Uropterygius_micropterus",41.5,"fishbase",1
-"Urosalpinx_cinere",1.277,"DeLong_etal_2018",1
 "Urosalpinx_cinerea",1.61,"Lord_2013",NA
 "Urosaurus_auriculatus",14.1,"Feldman_etal_2016-Meiri_2018",2
 "Urosaurus_bicarinatus",8.829,"Feldman_etal_2016-Meiri_2018",2
@@ -38524,7 +38387,7 @@
 "Varanus_rainerguentheri",521.4,"Feldman_etal_2016-Meiri_2018",2
 "Varanus_rasmusseni",2144,"Feldman_etal_2016-Meiri_2018",2
 "Varanus_reisingeri",412.6,"Feldman_etal_2016-Meiri_2018",2
-"Varanus_rosenbergi",2061,"Castro_2025-Feldman_etal_2016-Hirt_etal_2017-Meiri_2018",4
+"Varanus_rosenbergi",1902,"Castro_2025-Feldman_etal_2016-Hirt_etal_2017-Makarieva_2008-Meiri_2018",5
 "Varanus_rudicollis",4599,"Feldman_etal_2016-Meiri_2018",2
 "Varanus_salvadorii",39990,"Feldman_etal_2016-Meiri_2018-Quaardvark",3
 "Varanus_salvator",33480,"Cai_etal_2025-Castro_2025-Feldman_etal_2016-Meiri_2018",4
@@ -38547,7 +38410,6 @@
 "Varecia_variegata",3687,"AnAge-Cai_etal_2025-Faurby_etal_2018-GalanAcedo_etal_2026-Quaardvark-Smith_2003",6
 "Variola_albimarginata",6474,"Cai_etal_2025",1
 "Variola_louti",8591,"Cai_etal_2025",1
-"Varnus_rosenbergi",1269,"Makarieva_2008",1
 "Varzea_altamazonica",19.62,"Feldman_etal_2016-Meiri_2018",2
 "Varzea_bistriata",28.42,"Feldman_etal_2016-Meiri_2018",2
 "Vasula_melones",9.9,"Vermeij_1980",NA
@@ -38601,7 +38463,6 @@
 "Vertigo_antivertigo",0.0582,"Brose_etal_2018",1
 "Vertigo_moulinsiana",0.05609,"Brose_etal_2018",1
 "Vertigo_pygmaea",0.05291,"Brose_etal_2018",1
-"Vesicomyid_e",21,"Brown_etal_2018",1
 "Vespadelus_baverstocki",5,"Faurby_etal_2018",1
 "Vespadelus_caurinus",4,"Faurby_etal_2018",1
 "Vespadelus_darlingtoni",6.225,"Faurby_etal_2018-Smith_2003",2
@@ -38616,17 +38477,13 @@
 "Vestiaria_coccinea",18.27,"AnAge-Lislevand_etal_2007-Wilman_etal_2014",3
 "Vexillifera_bacillipedes",3.15e-10,"DeLong_etal_2010",1
 "Vhembelacerta_rupicola",3.213,"Feldman_etal_2016-Meiri_2018",2
-"Vibilia_antarctica",0.0181,"Brose_etal_2018-Castro_2025",2
+"Vibilia_antarctica",0.0324,"Brose_etal_2018-Castro_2025-Makarieva_2008",3
 "Vibilia_stebbingi",0.05856,"Brose_etal_2018-Pata_2025",2
-"Viblia_antarctica",0.061,"Makarieva_2008",1
-"Vibrio_algino",6e-13,"Makarieva_2008",1
-"Vibrio_alginolyticus",6e-13,"DeLong_etal_2010",1
+"Vibrio_alginolyticus",6e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Vibrio_anguillarum",2.6e-12,"DeLong_etal_2010",1
 "Vibrio_fischeri",6e-13,"DeLong_etal_2010-Makarieva_2008",2
-"Vibrio_metsch",6e-13,"Makarieva_2008",1
-"Vibrio_metschnikovii",6e-13,"DeLong_etal_2010",1
-"Vibrio_para",6e-13,"Makarieva_2008",1
-"Vibrio_parahaemolyticus",6e-13,"DeLong_etal_2010",1
+"Vibrio_metschnikovii",6e-13,"DeLong_etal_2010-Makarieva_2008",2
+"Vibrio_parahaemolyticus",6e-13,"DeLong_etal_2010-Makarieva_2008",2
 "Vicugna_pacos",62000,"AnAge",1
 "Vicugna_vicugna",42760,"AnAge-Brown_etal_2018-Cai_etal_2025-Faurby_etal_2018-Hirt_etal_2017-Quaardvark-Smith_2003",7
 "Vidua_camerunensis",12.09,"Wilman_etal_2014",1
@@ -38777,8 +38634,7 @@
 "Wallago_leerii",12610,"fishbase",1
 "Walterinnesia_aegyptia",567.2,"Feldman_etal_2016",1
 "Walterinnesia_morgani",368.2,"Feldman_etal_2016",1
-"Warendja_wakefieldi",10000,"Faurby_etal_2018",1
-"Warenja_wakefieldi",10000,"Smith_2003",1
+"Warendja_wakefieldi",10000,"Faurby_etal_2018-Smith_2003",2
 "Wetmorethraupis_sterrhopteron",50.2,"Wilman_etal_2014",1
 "Weyprechtia_pinguis",0.001177,"Brose_etal_2018",1
 "Wiedomys_cerradensis",49.3,"Cai_etal_2025-Faurby_etal_2018",2
@@ -39040,7 +38896,6 @@
 "Yunnanilus_jinxiensis",2.5,"Cai_etal_2025",1
 "Yunnanilus_pulcherrimus",1.3,"Cai_etal_2025",1
 "Yunnanilus_sichuanensis",2,"Cai_etal_2025",1
-"Yynx_torquilla",31.8,"Makarieva_2008",1
 "Zabrotes_subfasciatus",0.00286,"DeLong_etal_2018",1
 "Zacco_acutipinnis",24,"fishbase",1
 "Zacco_platypus",66.38,"Cai_etal_2025-fishbase-Killen_etal_2016",3
@@ -39147,12 +39002,11 @@
 "Zonosaurus_subunicolor",15.3,"Feldman_etal_2016-Meiri_2018",2
 "Zonosaurus_trilineatus",94.21,"Feldman_etal_2016-Meiri_2018",2
 "Zonosaurus_tsingy",14.78,"Feldman_etal_2016-Meiri_2018",2
-"Zonotricha_querula",33.3,"Makarieva_2008",1
 "Zonotrichia_albicollis",21.12,"AnAge-Brown_etal_2018-Cai_etal_2025-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",7
 "Zonotrichia_atricapilla",25.75,"AnAge-Brown_etal_2018-Lislevand_etal_2007-Wilman_etal_2014",4
 "Zonotrichia_capensis",21.4,"Quaardvark-Wilman_etal_2014",2
 "Zonotrichia_leucophrys",24.45,"AnAge-Brown_etal_2018-Cai_etal_2025-Castro_2025-Lislevand_etal_2007-Makarieva_2008-Quaardvark-Wilman_etal_2014",8
-"Zonotrichia_querula",28.57,"AnAge-Brown_etal_2018-Quaardvark-Wilman_etal_2014",4
+"Zonotrichia_querula",29.51,"AnAge-Brown_etal_2018-Makarieva_2008-Quaardvark-Wilman_etal_2014",5
 "Zoonavena_grandidieri",10.5,"Wilman_etal_2014",1
 "Zoonavena_sylvatica",13,"Wilman_etal_2014",1
 "Zoonavena_thomensis",8,"Wilman_etal_2014",1
