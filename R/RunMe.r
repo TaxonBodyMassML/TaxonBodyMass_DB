@@ -205,8 +205,8 @@ gdat <- gdat[, c('taxon', 'mass_g', 'source_mass', 'n')]
 adat$mass_g <- signif(adat$mass_g, digits = 4)
 gdat$mass_g <- signif(gdat$mass_g, digits = 4)
 
-write.csv(adat, file = file.path(wd_out, 'TaxonBodyMass.csv'),        row.names = FALSE)
-write.csv(gdat, file = file.path(wd_out, 'TaxonBodyMass_GenusLevel.csv'), row.names = FALSE)
+write.csv(adat, file = file.path(wd_root, 'TaxonBodyMass.csv'),        row.names = FALSE)
+write.csv(gdat, file = file.path(wd_root, 'TaxonBodyMass_GenusLevel.csv'), row.names = FALSE)
 
 
 ##########################################################################
