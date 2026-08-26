@@ -165,6 +165,7 @@ FixMisspellings <- function(dat) {
 
     # I
     "Idotea_balthica"                 = "Idotea_baltica",                 # spurious h
+    "Isodyctia_steifera"              = "Isodictya_setifera",             # Steifera is a misspelling of setifera
 
     # K
     "Kerivoula_hardwickei"            = "Kerivoula_hardwickii",           # standard double-i patronymic
@@ -233,12 +234,17 @@ FixMisspellings <- function(dat) {
     "Prunella_modularls"              = "Prunella_modularis",             # Dunnock; i→l typo
     "Przewalskium_albirostris"        = "Przewalskium_albirostre",        # Przewalskium is neuter; -e required
     "Pseudomonas_natrigiens"          = "Pseudomonas_natriegens",         # transposition ie
+    "Pseudoupeneus_macularus"         = "Pseudupeneus_maculatus",         # Maculated Goatfish; macularus not recognized
     "Pycnonotus_jocusus"              = "Pycnonotus_jocosus",             # Red-whiskered Bulbul; vowel transposition
     "Python_curtis"                   = "Python_curtus",                  # Blood Python; i→u
 
     # R
     "Rhinolophus_yunanensis"          = "Rhinolophus_yunnanensis",        # Yunnan; missing n
+    "Rhinopitechus_roxella"           = "Rhinopithecus_roxellana",         # Golden Snub-nosed Monkey; genus and epithet corrected
     "Rousettus_egyptiacus"            = "Rousettus_aegyptiacus",          # from Aegyptus; missing ae
+    "Rhizophor_amucronata"            = "Rhizophora_mucronata",          # spurious a
+    "Rhytonomus_isobellina"           = "Rhytonomus isabellina",          # 
+
 
     # S
     "Sagitta_elegana"                 = "Sagitta_elegans",                # ns dropped
@@ -252,6 +258,7 @@ FixMisspellings <- function(dat) {
     "Sphenodon_punctatum"             = "Sphenodon_punctatus",            # Tuatara; accepted form is punctatus
     "Stegastes_variabillis"           = "Stegastes_variabilis",           # doubled-l typo
     "Strobilidium_iacustris"          = "Strobilidium_lacustris",         # Latin lacustris (of lakes); iacustris invalid
+    "Spanioconnus_wetterhali"          = "Euconnus_wetterhali",           # Euconnus is the valid genus; Spanioconnus is a junior synonym
 
     # T
     "Tamiops_rodolphei"               = "Tamiops_rodolphii",              # standard double-i patronymic
@@ -263,9 +270,12 @@ FixMisspellings <- function(dat) {
     "Thunnus_macoyi"                  = "Thunnus_maccoyii",               # Southern Bluefin; missing c and i
     "Torgos_tracheliotus"             = "Torgos_tracheliotos",            # Lappet-faced Vulture; IOC form
     "Tortanus_discaudalus"            = "Tortanus_discaudatus",           # spurious -al- insertion
-    "Trapelus_savignii"               = "Trapelus_savignyi",              # honors Savigny; patronymic form
+    "Trapelus_savignyi"               = "Trapelus_savignii",              # savignyi is an invalid subsequent spelling; GBIF/WoRMS accepted form is T. savignii (Audouin 1809)
     "Trogonophis_weigmanni"           = "Trogonophis_wiegmanni",          # honors Wiegmann; missing i
     "Turdoides_reinwardii"            = "Turdoides_reinwardtii",          # honors Reinwardt; t from surname retained
+    "Thalassionema_proschkinae"       = "Minidiscus_proschkinae",      # 
+    "Trichomonas_foetus"              = "Tritrichomonas_foetus",           # Tritrichomonas is the valid genus; Trichomonas is a junior synonym
+  
 
     # U
     "Uca_pugnas"                      = "Uca_pugnax",                     # pugnax is adjective; pugnas is verb form
@@ -423,6 +433,9 @@ FixMisspellings <- function(dat) {
     "Pterois_lunulate"                = "Pterois_lunulata",               # English adj; Latin -a required GBIF FUZZY 96
     "Ptychorhamphus_aleuticus"        = "Ptychoramphus_aleuticus",        # spurious h; Cassin's Auklet GBIF FUZZY 85
 
+    # R
+    "Rhinopithecus_roxella"            = "Rhinopithecus_roxellana",         # English noun; Latin -ana required GBIF FUZZY 96
+
     # S
     "Salicornia_europea"              = "Salicornia_europaea",            # ae diphthong dropped; glasswort GBIF FUZZY 93
     "Sallinivibrio_costicola"         = "Salinivibrio_costicola",         # double-l; halotolerant bacterium GBIF FUZZY 85
@@ -467,7 +480,72 @@ FixMisspellings <- function(dat) {
     "Yynx_torquilla"                  = "Jynx_torquilla",                 # Y→J substitution; Eurasian Wryneck GBIF NONE
 
     # Z
-    "Zonotricha_querula"              = "Zonotrichia_querula"             # missing i; Harris's Sparrow GBIF FUZZY 85
+    "Zonotricha_querula"              = "Zonotrichia_querula",            # missing i; Harris's Sparrow GBIF FUZZY 85
+
+# Audit outlier review — taxonomy corrections (invalid names / junior synonyms)
+
+    "Carangoides_latus"               = "Caranx_latus",                  # junior synonym; FishBase valid name is Caranx latus (Carangidae)
+    "Casurarius_bennetti"             = "Casuarius_bennetti",            # transposed a/u in genus; duplicate entry for dwarf cassowary (Makarieva_2008)
+    "Limecoma_balthica"               = "Limecola_balthica",             # Limecoma invalid; WoRMS correct genus is Limecola (formerly Macoma balthica; Tellinidae)
+    "Nectarinia_tsavoensis"           = "Cinnyris_tsavoensis",           # Nectarinia is a non-monophyletic grade; IOC accepts Cinnyris tsavoensis (Tsavo sunbird)
+    "Notothenia_marmorata"            = "Notothenia_rossii",             # junior synonym; FishBase valid name is Notothenia rossii (marbled notothenia)
+    "Octopus_tuberculata"             = "Ocythoe_tuberculata",           # junior synonym; WoRMS accepts Ocythoe tuberculata Rafinesque 1814 as valid
+    "Onacea_borealis"                 = "Triconia_borealis",             # Onacea is a misspelling of Oncaea; Oncaea borealis is now Triconia borealis (WoRMS)
+    "Pleuromonas_jaculans"            = "Bodo_saltans",                  # Pleuromonas jaculans is a synonym of Bodo saltans (Kinetoplastea; ITIS)
+    "Golfingia_nordenskojoeldi"       = "Golfingia_margaritacea",     #
+    "Proteus_mor"                     = "Morganella_morganii",           # garbled Proteus morganii; accepted name is Morganella morganii (Enterobacteriaceae)
+
+# Audit SUSPICIOUS tier 2026-08 — synonym / accepted-name corrections
+
+    # BOTH_ERRONEOUS cases (rename + mass corrected in fix_outliers.r)
+    "Momoculodes_scabriculosus"       = "Monoculodes_scabriculosus",    # Momoculodes invalid genus; correct is Monoculodes (Amphipoda: Oedicerotidae)
+    "Psenes_whiteleggii"              = "Cubiceps_whiteleggii",          # Psenes whiteleggii is junior synonym of Cubiceps whiteleggii (Carangiformes: Nomeidae)
+    "Squalinus_cephalus"              = "Squalius_cephalus",             # Squalinus not valid; correct genus is Squalius (Leuciscidae; European chub)
+
+    # Stonefly epithet correction (trailing i spurious; mass corrected in fix_outliers.r)
+    "Stenoperla_prasinia"             = "Stenoperla_prasina",            # prasinia has spurious trailing i; correct is S. prasina (Plecoptera: Eustheniidae)
+
+    # Colubrid junior synonym (mass corrected in fix_outliers.r)
+    "Coluber_fuliginosus"             = "Atractus_fuliginosus",          # Coluber fuliginosus is junior synonym of Atractus fuliginosus (Colubridae: Dipsadinae)
+
+    # Amphipod accepted-name updates
+    "Corophium_acutum"                = "Apocorophium_acutum",           # WoRMS: unaccepted; accepted is Apocorophium acutum (Corophiidae)
+    "Pontogeneia_antarctica"          = "Gondogeneia_antarctica",         # WoRMS: old synonymous genus; accepted is Gondogeneia antarctica (Chevreux 1906)
+    "Talorchestia_megalophthalma"     = "Americorchestia_megalophthalma", # WoRMS: old synonymous genus; accepted is Americorchestia megalophthalma (Bate 1862)
+    "Paracallisoma_coecus"            = "Pseudocallisoma_coecum",         # WoRMS: unaccepted (new combination); valid is Pseudocallisoma coecum (Holmes 1908)
+
+    # Fish junior synonyms / accepted-name updates
+    "Dasyatis_americana"              = "Hypanus_americanus",            # Dasyatis americana junior synonym; FishBase/WoRMS valid: Hypanus americanus (southern stingray)
+    "Dasyatis_centroura"              = "Bathytoshia_centroura",          # Dasyatis centroura junior synonym; valid: Bathytoshia centroura (roughtail stingray)
+    "Dasyatis_lata"                   = "Bathytoshia_lata",              # Dasyatis lata junior synonym; valid: Bathytoshia lata (brown stingray)
+    "Mugil_chelo"                     = "Chelon_labrosus",               # Mugil chelo junior synonym; valid: Chelon labrosus (thicklip grey mullet; Mugilidae)
+    "Myxus_capensis"                  = "Pseudomyxus_capensis",          # Myxus capensis synonym; valid: Pseudomyxus capensis (Cape mullet; Mugilidae)
+    "Osteochilus_melanopleura"        = "Osteochilus_melanopleurus",      # minor epithet discrepancy; FishBase canonical is O. melanopleurus
+
+    # Pagurid incorrect subsequent spelling
+    "Pagurus_prideauxi"               = "Pagurus_prideaux",              # WoRMS: misspelling; accepted is Pagurus prideaux Leach 1815
+
+    # Lepidoptera genus misspellings (class-field errors noted in report; names corrected here)
+    "Orgygia_detrita"                 = "Orgyia_detrita",                # Orgygia not valid; correct genus is Orgyia (Erebidae); Orgyia detrita (Guenée 1852)
+    "Orygia_pseudotsugata"            = "Orgyia_pseudotsugata",           # Orygia not valid; correct genus is Orgyia (Erebidae); Douglas-fir tussock moth
+
+    # Whale genus misspelling
+    "Eschrichtus_robustus"            = "Eschrichtius_robustus",           # Eschrichtus misspelled; valid genus is Eschrichtius (Gray whale; Eschrichtiidae)
+
+    # Odonate reclassification
+    "Tetragoneuria_cynosura"          = "Epitheca_cynosura",               # Tetragoneuria now subsumed in Epitheca; accepted name is Epitheca cynosura (common baskettail)
+
+    # Gastropod accepted-name update
+    "Mitrella_lunata"                 = "Astyris_lunata",                  # WoRMS: Mitrella lunata is a synonym; accepted is Astyris lunata (Columbellidae)
+
+    # Euphausiid alternate spelling (merge to canonical form; mass corrected in fix_outliers.r)
+    "Euphausia_krohni"                = "Euphausia_krohnii",               # alternate spelling of Euphausia krohnii; merge to canonical double-i form
+
+    # Agamid reclassification
+    "Celestus_anelpistus"             = "Caribicus_anelpistus",            # Celestus is paraphyletic; southern Caribbean species moved to Caribicus (Diploglossidae; Squamata)
+
+    # Copepod junior synonym
+    "Eutemora_hirundoides"            = "Eurytemora_affinis"               # Eutemora hirundoides is a junior synonym of Eurytemora affinis (Temoridae; Hexanauplia)
   )
 
   for (old in names(corrections)) {

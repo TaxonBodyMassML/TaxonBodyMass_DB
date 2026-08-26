@@ -4,3 +4,7 @@ sources/Rdata/
 .RData
 .Rproj.user/
 *.Rproj
+
+verified_*.csv
+verifications_*.csv
+residuals_full.csv
