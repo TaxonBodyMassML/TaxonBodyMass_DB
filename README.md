@@ -29,9 +29,9 @@ The pipeline is written in R. The main entry point is `R/RunMe.r`, which orchest
 
 | File | Description |
 |---|---|
-| `output/TaxonBodyMass.csv` | Species-level body masses; columns: `taxon`, `mass_g`, `source_mass`, `n` |
-| `output/TaxonBodyMass_GenusLevel.csv` | Genus-level arithmetic mean body masses; same columns |
-| `output/TaxonBodyMass_Citations.csv` | Maps BibTeX keys to `source_mass` labels for citation tracing |
+| `TaxonBodyMass.csv` | Species-level body masses; columns: `taxon`, `mass_g`, `source_mass`, `n` |
+| `TaxonBodyMass_GenusLevel.csv` | Genus-level arithmetic mean body masses; same columns |
+| `Bib/TaxonBodyMass_CitationCiteIDs.csv` | Maps BibTeX keys to `source_mass` labels for citation tracing |
 | `Bib/TaxonBodyMass_Citations.bib` | Full BibTeX bibliography for all sources |
 
 ## Usage
@@ -51,7 +51,11 @@ To regenerate all per-source `.Rdata` files and recompile the database from scra
 
 ### Use the compiled output
 
-The output files in `output/` are tracked in the repository and can be used directly without running the pipeline.
+`TaxonBodyMass.csv` and `TaxonBodyMass_GenusLevel.csv` are tracked at the repository root and can be used directly without running the pipeline.
+
+## Reproducibility note
+
+Step 4 of the pipeline reads a lab-internal Google Sheet for curated mass overrides and citation mapping. External users who wish to fully reproduce the database will need to either (a) disable the Google Sheet step by removing or skipping that block in `R/RunMe.r`, which will omit lab-curated values, or (b) contact mark.novak@oregonstate.edu for the sheet structure. The compiled output CSVs committed to this repository reflect the full pipeline including the Google Sheet override.
 
 ## Citation
 
