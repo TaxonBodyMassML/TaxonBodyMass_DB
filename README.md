@@ -1,6 +1,6 @@
 # TaxonBodyMass_DB
 
-A compiled, harmonized database of species body masses (in grams) drawn from many published sources spanning the full diversity of (mostly autotrophic) life — from microbes to large vertebrates. Developed in support of [FracFeed_DB](https://github.com/marknovak/FracFeed_DB).
+A compiled, harmonized database of species body masses (in grams) drawn from many published sources spanning the full diversity of (mostly autotrophic) life — from microbes to large vertebrates. Developed in support of [FracFeed_DB](https://github.com/marknovak/FracFeed_DB) and [TaxonBodyMassML](https://github.com/TaxonBodyMassML/TaxonBodyMassML).
 
 ## Data Sources
 
