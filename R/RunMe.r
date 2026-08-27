@@ -6,6 +6,12 @@ library(plyr)
 library(dplyr)
 library(googlesheets4)
 library(stringr)
+library(rgbif)
+library(taxize)
+library(worrms)
+library(ritis)
+library(httr2)
+library(cli)
 
 wd_root  <- dirname(getwd())  # TaxonBodyMass_DB/
 wd_db    <- file.path(wd_root, 'sources', 'databases')

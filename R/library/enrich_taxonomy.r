@@ -1,12 +1,4 @@
 EnrichTaxonomy <- function(compiled) {
-  library(rgbif)
-  library(taxize)
-  library(worrms)
-  library(ritis)
-  library(httr2)
-  library(cli)
-  library(dplyr)
-
   wd_passes <- file.path(wd_root, 'sources', 'passes')
   dir.create(wd_passes, showWarnings = FALSE)
 
