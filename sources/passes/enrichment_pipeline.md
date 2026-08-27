@@ -10,9 +10,22 @@ Each stage queries a different taxonomic authority and fills only the rank field
 
 **Final output:** `TaxonBodyMass_DB/TaxonBodyMass.csv` — deduplicated to one row per resolved species, with full taxonomy and provenance columns. Autotrophic taxa are removed by `FilterAutotrophs()` (see §5) before deduplication.
 
-**QC reports:** `TaxonBodyMass_DB/reports/errors.md` and `reports/warnings.md` are written by `check_enriched()` after deduplication. These replace the per-pass missed-species log files from the prior Python implementation.
+**Per-stage pass files:** after each stage completes, the full `compiled` data frame is written to `sources/passes/`:
 
-**Checkpoint:** `TaxonBodyMass_DB/tmp/enrich_checkpoint.csv` is written periodically during long per-species stages (every 100 rows for NCBI, COL, ITIS; every batch for WoRMS, Wikidata).
+| File | Written after stage |
+| --- | --- |
+| `TaxonBodyMass_GBIF_pass.csv` | Stage 1 (GBIF) |
+| `TaxonBodyMass_NCBI_pass.csv` | Stage 2 (NCBI) |
+| `TaxonBodyMass_WoRMS_pass.csv` | Stage 3 (WoRMS) |
+| `TaxonBodyMass_COL_pass.csv` | Stage 4 (COL) |
+| `TaxonBodyMass_ITIS_pass.csv` | Stage 5 (ITIS) |
+| `TaxonBodyMass_Wikidata_pass.csv` | Stage 6 (Wikidata) |
+
+Each pass file contains all rows and all columns (including pre-seeded taxonomy and the provenance columns added by Stage 0). Rows show the cumulative state after that stage — taxa resolved in earlier stages retain their resolved values; taxa not yet resolved have `NA` for `species`. These files allow resumption after a crash and serve as the authoritative record of per-stage yield.
+
+**QC reports:** `TaxonBodyMass_DB/reports/errors.md` and `reports/warnings.md` are written by `check_enriched()` after deduplication.
+
+**Intra-stage checkpoint:** `TaxonBodyMass_DB/tmp/enrich_checkpoint.csv` is written periodically during long per-species stages (every 100 rows for NCBI, COL, ITIS; every batch for WoRMS, Wikidata). This is a rolling file overwritten each checkpoint; the per-stage pass files above are the durable record.
 
 ---
 

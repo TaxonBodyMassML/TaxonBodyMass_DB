@@ -7,6 +7,9 @@ EnrichTaxonomy <- function(compiled) {
   library(cli)
   library(dplyr)
 
+  wd_passes <- file.path(wd_root, 'sources', 'passes')
+  dir.create(wd_passes, showWarnings = FALSE)
+
   ##########################################################################
   # Stage 0 — Preserve input name; initialise or normalise taxonomy columns
   ##########################################################################
@@ -100,6 +103,7 @@ EnrichTaxonomy <- function(compiled) {
     compiled$taxon_provided[resolved] != compiled$species[resolved]
   compiled$taxonomy_source[resolved] <- 'GBIF'
   message(sprintf('  Resolved: %d / %d', sum(resolved), n_total))
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_GBIF_pass.csv'), row.names = FALSE)
 
   ##########################################################################
   # Stage 2 — NCBI Taxonomy (per-species; fallback)
@@ -147,6 +151,7 @@ EnrichTaxonomy <- function(compiled) {
 
   n_ncbi <- sum(!is.na(compiled$species)) - sum(resolved)
   message(sprintf('  Resolved: %d additional', n_ncbi))
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_NCBI_pass.csv'), row.names = FALSE)
 
   ##########################################################################
   # Stage 3 — WoRMS (batch; marine taxa)
@@ -195,6 +200,7 @@ EnrichTaxonomy <- function(compiled) {
                 row.names = FALSE)
   }
   cli_progress_done(id = pb)
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_WoRMS_pass.csv'), row.names = FALSE)
 
   ##########################################################################
   # Stage 4 — COL / ChecklistBank (per-species; esp. Squamata)
@@ -233,6 +239,7 @@ EnrichTaxonomy <- function(compiled) {
                 row.names = FALSE)
   }
   cli_progress_done(id = pb)
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_COL_pass.csv'), row.names = FALSE)
 
   ##########################################################################
   # Stage 5 — ITIS (per-species; vertebrates)
@@ -278,6 +285,7 @@ EnrichTaxonomy <- function(compiled) {
                 row.names = FALSE)
   }
   cli_progress_done(id = pb)
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_ITIS_pass.csv'), row.names = FALSE)
 
   ##########################################################################
   # Stage 6 — Wikidata SPARQL (batch; last automated fallback)
@@ -348,6 +356,8 @@ EnrichTaxonomy <- function(compiled) {
                 row.names = FALSE)
   }
   cli_progress_done(id = pb)
+
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_Wikidata_pass.csv'), row.names = FALSE)
 
   n_unresolved <- sum(is.na(compiled$species))
   message(sprintf('Enrichment complete. %d taxa unresolved after all 6 stages.',
