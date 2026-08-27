@@ -1,6 +1,10 @@
 adat1  <- read.csv(file.path(wd_source, 'S1a.csv'), header = TRUE)
 adat2  <- read.csv(file.path(wd_source, 'S2b.csv'), header = TRUE)
 adat3  <- read.csv(file.path(wd_source, 'S3.csv'),  header = TRUE)
+tax_s3 <- adat3[, c('species', 'family', 'order')]
+tax_s3$family <- iconv(as.character(tax_s3$family), to = 'ASCII//TRANSLIT')
+tax_s3$order  <- iconv(as.character(tax_s3$order),  to = 'ASCII//TRANSLIT')
+names(tax_s3)[1] <- 'taxon'
 adat4  <- read.csv(file.path(wd_source, 'S4.csv'),  header = TRUE)
 adat5  <- read.csv(file.path(wd_source, 'S5a.csv'), header = TRUE)
 adat6  <- read.csv(file.path(wd_source, 'S5b.csv'), header = TRUE)
@@ -8,6 +12,12 @@ adat7  <- read.csv(file.path(wd_source, 'S5c.csv'), header = TRUE)
 adat8  <- read.csv(file.path(wd_source, 'S6a.csv'), header = TRUE)
 adat9  <- read.csv(file.path(wd_source, 'S6b.csv'), header = TRUE)
 adat10 <- read.csv(file.path(wd_source, 'S7.csv'),  header = TRUE)
+tax_s7 <- adat10[, c('species', 'order')]
+tax_s7$order  <- iconv(as.character(tax_s7$order),  to = 'ASCII//TRANSLIT')
+tax_s7$family <- NA_character_
+names(tax_s7)[1] <- 'taxon'
+taxon_tax <- rbind(tax_s3, tax_s7[, c('taxon', 'family', 'order')])
+taxon_tax <- taxon_tax[!duplicated(taxon_tax$taxon), ]
 
 adat1  <- adat1[,  c('valid_name', 'mass_g')]
 adat2  <- adat2[,  c('species',    'mass_g')]
@@ -32,5 +42,6 @@ adat <- subset(adat, taxon != 'Unknown_species')
 adat <- subset(adat, taxon != 'Unidentified')
 adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
 adat$source_mass <- 'Makarieva_2008'
+adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 MA <- adat
 save(MA, file = file.path(wd_rdata, 'BodyMass_Makarieva_2008.Rdata'))

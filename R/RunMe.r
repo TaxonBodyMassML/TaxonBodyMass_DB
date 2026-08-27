@@ -19,6 +19,12 @@ source(file.path(wd_root, 'R', 'library', 'fix_misspellings.r'))
 source(file.path(wd_root, 'R', 'library', 'fix_nontaxa.r'))
 source(file.path(wd_root, 'R', 'library', 'fix_outliers.r'))
 source(file.path(wd_root, 'R', 'library', 'fix_outliers_multisource.r'))
+source(file.path(wd_root, 'R', 'library', 'enrich_taxonomy.r'))
+source(file.path(wd_root, 'R', 'library', 'check_enriched.r'))
+source(file.path(wd_root, 'R', 'library', 'filter_autotrophs.r'))
+
+dir.create(file.path(wd_root, 'tmp'),     showWarnings = FALSE)
+dir.create(file.path(wd_root, 'reports'), showWarnings = FALSE)
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Control flags
@@ -159,20 +165,30 @@ source_list <- lapply(source_list, FixOutliers)
 ##########################################################################
 # 3. Merge/Average across sources
 ##########################################################################
-adat <- bind_rows(source_list) %>%
+tax_cols <- c('kingdom', 'phylum', 'class', 'order', 'family')
+source_list <- lapply(source_list, function(df) {
+  for (col in tax_cols)
+    if (!col %in% names(df)) df[[col]] <- NA_character_
+  df
+})
+
+compiled <- bind_rows(source_list) %>%
   group_by(taxon) %>%
-  # arithmetic mean across sources
-  summarise(mass_g      = mean(mass_g, na.rm = TRUE),
+  summarise(mass_g      = 10^mean(log10(mass_g), na.rm = TRUE),
             n           = sum(n, na.rm = TRUE),
-            source_mass = paste(source_mass, collapse = '; '))
+            source_mass = paste(unique(source_mass), collapse = '; '),
+            kingdom     = first(na.omit(kingdom)),
+            phylum      = first(na.omit(phylum)),
+            class       = first(na.omit(class)),
+            order       = first(na.omit(order)),
+            family      = first(na.omit(family)),
+            .groups     = 'drop')
 
 # Separate genus-only entries: included in genus averages but excluded from
 # species export.
-adat       <- as.data.frame(adat)
-genus_only <- adat[!grepl('_', adat$taxon), ]
-adat       <- adat[grepl( '_', adat$taxon), ]
-
-DBs <- as.data.frame(adat[, c('taxon', 'mass_g', 'n', 'source_mass')])
+compiled   <- as.data.frame(compiled)
+genus_only <- compiled[!grepl('_', compiled$taxon), ]
+compiled   <- compiled[grepl( '_', compiled$taxon), ]
 
 
 ##########################################################################
@@ -190,33 +206,46 @@ ddat <- read_sheet(
 ddat <- ddat[which(!is.na(ddat$mass_g)), 1:4]
 ddat$n <- 1
 
-sel <- DBs$taxon %!in% ddat$taxon
-DBs <- DBs[sel, ]
+sel      <- compiled$taxon %!in% ddat$taxon
+compiled <- compiled[sel, ]
 
-adat <- merge(ddat[, c('taxon', 'mass_g', 'source_mass')], DBs, all = TRUE)
+adat <- merge(ddat[, c('taxon', 'mass_g', 'source_mass')], compiled, all = TRUE)
 
 
 ##########################################################################
-# 5. Duplicate check
+# 5. Taxonomy enrichment, autotroph filter, deduplication, and QC
 ##########################################################################
-dups <- max(table(adat$taxon))
+adat <- EnrichTaxonomy(adat)
+adat <- FilterAutotrophs(adat)
 
-if (dups > 1) {
-  warning('Duplicate body mass values found.', immediate. = TRUE)
-  dir.create(file.path(wd_root, 'tmp', 'errors'),
-             recursive = TRUE, showWarnings = FALSE)
-  sink(file = file.path(wd_root, 'tmp', 'errors', 'BodyMassErrors.txt'))
-  dups_idx <- duplicated(adat$taxon) | duplicated(adat$taxon, fromLast = TRUE)
-  print(adat[dups_idx, ])
-  sink()
-  adat <- adat[!duplicated(adat$taxon, fromLast = TRUE), ]
-}
+enriched <- adat %>%
+  filter(!is.na(species)) %>%
+  group_by(kingdom, phylum, class, order, family, genus, species) %>%
+  summarise(
+    taxon           = first(taxon),
+    taxon_provided  = paste(unique(taxon_provided), collapse = '; '),
+    log10_range     = if (n() > 1) log10(max(mass_g) / min(mass_g)) else 0,
+    mass_g          = 10^mean(log10(mass_g)),
+    source_mass     = paste(unique(source_mass), collapse = '; '),
+    n               = sum(n, na.rm = TRUE) + n(),
+    taxonomy_source = paste(unique(taxonomy_source[!is.na(taxonomy_source)]), collapse = '; '),
+    gbif_confidence = suppressWarnings(min(gbif_confidence, na.rm = TRUE)),
+    gbif_status     = first(na.omit(gbif_status)),
+    gbif_family     = first(na.omit(gbif_family)),
+    gbif_order      = first(na.omit(gbif_order)),
+    species_changed = any(species_changed, na.rm = TRUE),
+    .groups         = 'drop'
+  )
+enriched$gbif_confidence[is.infinite(enriched$gbif_confidence)] <- NA_real_
+enriched$mass_g <- signif(enriched$mass_g, digits = 4)
+
+check_enriched(enriched)
 
 
 ##########################################################################
 # 6. Genus-level averages
 ##########################################################################
-gdat <- bind_rows(adat, genus_only)
+gdat <- bind_rows(enriched, genus_only)
 gdat$taxon <- sub('\\_.*', '', gdat$taxon)
 gdat <- gdat[nchar(gdat$taxon) > 0, ]
 gdat <- ddply(gdat, .(taxon), summarise,
@@ -230,10 +259,9 @@ gdat <- gdat[, c('taxon', 'mass_g', 'source_mass', 'n')]
 ##########################################################################
 # 7. Write outputs
 ##########################################################################
-adat$mass_g <- signif(adat$mass_g, digits = 4)
 gdat$mass_g <- signif(gdat$mass_g, digits = 4)
 
-write.csv(adat, file = file.path(wd_root, 'TaxonBodyMass.csv'),
+write.csv(enriched, file = file.path(wd_root, 'TaxonBodyMass.csv'),
           row.names = FALSE)
 write.csv(gdat, file = file.path(wd_root, 'TaxonBodyMass_GenusLevel.csv'),
           row.names = FALSE)

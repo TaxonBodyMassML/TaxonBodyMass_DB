@@ -8,6 +8,13 @@ FixFormatting <- function(dat) {
   # Normalise encoding and convert spaces to underscores.
   dat$taxon <- gsub(' ', '_', iconv(dat$taxon, from = 'ISO-8859-1', to = 'UTF-8'))
 
+  # Transliterate diacritics to ASCII base characters (é→e, ü→u, ñ→n, etc.)
+  # then strip any residual non-ASCII bytes and the '?' iconv inserts for
+  # untransliterable characters. Must run before any regex or API call.
+  dat$taxon <- iconv(dat$taxon, from = 'UTF-8', to = 'ASCII//TRANSLIT')
+  dat$taxon <- gsub('[^\x01-\x7F]', '', dat$taxon)
+  dat$taxon <- gsub('\\?', '', dat$taxon)
+
   # Strip characters that cannot appear in a Latin binomial (digits, punctuation, etc.).
   dat$taxon <- gsub('[^[:alpha:]_]', '', dat$taxon)
 
