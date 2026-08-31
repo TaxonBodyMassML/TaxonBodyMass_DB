@@ -6,7 +6,7 @@ for (i in 2:nrow(adat)) {
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat <- adat[, c('taxon', 'mass_g')]
-adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Lane_2019'
 LA <- adat
 save(LA, file = file.path(wd_rdata, 'BodyMass_Lane_2019.Rdata'))

@@ -43,7 +43,19 @@ Install the required R packages:
 ```r
 install.packages(c("plyr", "dplyr", "googlesheets4", "stringr"))
 install.packages("rfishbase")
+install.packages("rdataretriever")
 ```
+
+The `rdataretriever` package requires Python and the [`retriever`](https://retriever.readthedocs.io) Python package. It is used only when `DataRetrieve = TRUE` in `RunMe.r`. To set up:
+
+```bash
+# Create the virtualenv that reticulate uses
+python3 -m venv ~/.virtualenvs/r-reticulate
+source ~/.virtualenvs/r-reticulate/bin/activate
+pip install retriever
+```
+
+If `retriever` loads but `rdataretriever::get_updates()` raises `packaging.version.InvalidVersion: Invalid version: ''`, apply the workaround in [`retriever/lib/scripts.py`](https://github.com/weecology/retriever/issues) by adding an `and mod_ver` guard to the `check_retriever_minimum_version` function (line ~31).
 
 ### Reproduce the database
 

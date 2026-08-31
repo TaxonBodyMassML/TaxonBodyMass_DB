@@ -10,7 +10,7 @@ adat[which(adat == '-999', arr.ind = TRUE)] <- NA
 adat$mass_g <- apply(adat[, -1], 1, mean, na.rm = TRUE)
 adat <- adat[, c('taxon', 'mass_g')]
 adat <- adat[!is.nan(adat$mass_g), ]
-adat <- ddply(adat, .(taxon), summarise, mass_g = mean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Lislevand_etal_2007'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 LI <- adat

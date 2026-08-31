@@ -4,6 +4,7 @@ adat3  <- read.csv(file.path(wd_source, 'S3.csv'),  header = TRUE)
 tax_s3 <- adat3[, c('species', 'family', 'order')]
 tax_s3$family <- iconv(as.character(tax_s3$family), to = 'ASCII//TRANSLIT')
 tax_s3$order  <- iconv(as.character(tax_s3$order),  to = 'ASCII//TRANSLIT')
+tax_s3$order[!is.na(suppressWarnings(as.numeric(tax_s3$order)))] <- NA_character_
 names(tax_s3)[1] <- 'taxon'
 adat4  <- read.csv(file.path(wd_source, 'S4.csv'),  header = TRUE)
 adat5  <- read.csv(file.path(wd_source, 'S5a.csv'), header = TRUE)
@@ -40,7 +41,7 @@ adat <- adat[!is.na(adat$mass_g), ]
 adat <- subset(adat, taxon != 'Unknown_genus')
 adat <- subset(adat, taxon != 'Unknown_species')
 adat <- subset(adat, taxon != 'Unidentified')
-adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Makarieva_2008'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 MA <- adat

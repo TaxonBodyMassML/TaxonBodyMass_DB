@@ -1,3 +1,63 @@
+BackfillRanks <- function(compiled) {
+  wd_passes      <- file.path(wd_root, 'sources', 'passes')
+  rank_fill_cols <- c('kingdom', 'phylum', 'class', 'order', 'family')
+
+  needs <- which(
+    !is.na(compiled$species) &
+    rowSums(is.na(compiled[, rank_fill_cols])) > 0
+  )
+  if (length(needs) == 0) return(compiled)
+
+  message(sprintf('BackfillRanks: %d taxa with resolved species but missing higher ranks...',
+                  length(needs)))
+  pb <- cli_progress_bar(
+    total  = length(needs),
+    format = '  Backfill {pb_bar} {pb_current}/{pb_total} | ETA: {pb_eta}'
+  )
+
+  for (i in seq_along(needs)) {
+    idx <- needs[i]
+    cli_progress_update(id = pb)
+
+    tryCatch({
+      key <- compiled$gbif_usageKey[idx]
+
+      # For old cache entries without a stored key, fetch it first
+      if (is.na(key)) {
+        hit <- name_backbone(name = compiled$species[idx], verbose = FALSE)
+        key <- hit$usageKey
+      }
+
+      if (!is.na(key)) {
+        cl <- name_usage(key = key, data = 'parents')$data
+        if (is.data.frame(cl) && nrow(cl) > 0) {
+          for (rk in rank_fill_cols) {
+            if (is.na(compiled[[rk]][idx])) {
+              val <- cl$canonicalName[tolower(cl$rank) == rk]
+              if (length(val) == 1 && !is.na(val))
+                compiled[[rk]][idx] <- iconv(val, to = 'ASCII//TRANSLIT')
+            }
+          }
+        }
+      }
+      Sys.sleep(0.1)
+    }, error = function(e) NULL)
+
+    if (i %% 100 == 0)
+      write.csv(compiled, file.path(wd_root, 'tmp', 'enrich_checkpoint.csv'),
+                row.names = FALSE)
+  }
+  cli_progress_done(id = pb)
+
+  n_still <- sum(!is.na(compiled$species) &
+                   rowSums(is.na(compiled[, rank_fill_cols])) > 0)
+  message(sprintf('  %d taxa still have at least one missing higher rank after backfill.',
+                  n_still))
+  write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_rank_backfill_pass.csv'),
+            row.names = FALSE)
+  compiled
+}
+
 EnrichTaxonomy <- function(compiled) {
   wd_passes <- file.path(wd_root, 'sources', 'passes')
   dir.create(wd_passes, showWarnings = FALSE)
@@ -27,7 +87,7 @@ EnrichTaxonomy <- function(compiled) {
   ##########################################################################
   GBIF_BATCH <- 1000
   n_total    <- nrow(compiled)
-  message(sprintf('Stage 1/6: GBIF name backbone (%d taxa in chunks of %d)...',
+  message(sprintf('Stage 1/7: GBIF name backbone (%d taxa in chunks of %d)...',
                   n_total, GBIF_BATCH))
 
   pb <- cli_progress_bar(
@@ -39,7 +99,8 @@ EnrichTaxonomy <- function(compiled) {
     delays <- c(5, 15, 45)
     for (attempt in seq_len(max_tries)) {
       res <- tryCatch(
-        name_backbone_checklist(nameUsage = chunk, verbose = FALSE),
+        name_backbone_checklist(name_data = chunk, verbose = FALSE,
+                                bucket_size = 150, sleep = 2),
         error = function(e) {
           message(sprintf('  GBIF chunk %d-%d attempt %d/%d failed: %s',
                           start, end, attempt, max_tries, e$message))
@@ -87,13 +148,40 @@ EnrichTaxonomy <- function(compiled) {
       compiled[[col]][fill] <- iconv(gbif_res[[col]][fill], to = 'ASCII//TRANSLIT')
     }
   }
+
+  # For high-confidence GBIF matches (>=90), override any source-pre-seeded rank
+  # values with GBIF's taxonomy — catches cases where a source supplied a wrong
+  # higher rank (e.g. a plant class for a fish).
+  if ('confidence' %in% names(gbif_res)) {
+    high_conf <- !is.na(gbif_res$confidence) & gbif_res$confidence >= 90
+    for (col in c('kingdom', 'phylum', 'class', 'order', 'family')) {
+      if (col %in% names(gbif_res)) {
+        override <- high_conf & !is.na(gbif_res[[col]])
+        compiled[[col]][override] <- iconv(gbif_res[[col]][override], to = 'ASCII//TRANSLIT')
+      }
+    }
+  }
+
   compiled$gbif_confidence <- gbif_res$confidence
   compiled$gbif_status     <- gbif_res$status
+  compiled$gbif_usageKey   <- if ('usageKey' %in% names(gbif_res))
+    gbif_res$usageKey else NA_real_
+
+  # Strip author citations from GBIF species names (e.g. "Homo sapiens (L., 1758)")
+  compiled$species[!is.na(compiled$species)] <- sub(
+    '^([A-Z][a-z]+\\s+[a-z][a-z-]+).*', '\\1',
+    compiled$species[!is.na(compiled$species)]
+  )
 
   resolved <- !is.na(compiled$species)
   compiled$species_changed[resolved] <-
     compiled$taxon_provided[resolved] != compiled$species[resolved]
   compiled$taxonomy_source[resolved] <- 'GBIF'
+
+  reclassified <- resolved & compiled$species_changed &
+    !is.na(compiled$genus) & !startsWith(compiled$species, compiled$genus)
+  compiled$genus[reclassified] <- sub(' .*', '', compiled$species[reclassified])
+
   message(sprintf('  Resolved: %d / %d', sum(resolved), n_total))
   write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_GBIF_pass.csv'), row.names = FALSE)
 
@@ -101,7 +189,7 @@ EnrichTaxonomy <- function(compiled) {
   # Stage 2 — NCBI Taxonomy (per-species; fallback)
   ##########################################################################
   needs_ncbi <- which(is.na(compiled$species))
-  message(sprintf('Stage 2/6: NCBI Taxonomy (%d taxa)...', length(needs_ncbi)))
+  message(sprintf('Stage 2/7: NCBI Taxonomy (%d taxa)...', length(needs_ncbi)))
 
   pb <- cli_progress_bar(total = length(needs_ncbi),
                          format = '  NCBI {pb_bar} {pb_current}/{pb_total} | ETA: {pb_eta}')
@@ -114,7 +202,7 @@ EnrichTaxonomy <- function(compiled) {
     cli_progress_update(id = pb)
 
     tryCatch({
-      cl <- classification(name, db = 'ncbi', rows = 1)[[1]]
+      cl <- suppressMessages(classification(name, db = 'ncbi', rows = 1))[[1]]
       if (is.data.frame(cl) && nrow(cl) > 0) {
         for (rk in ncbi_ranks) {
           if (is.na(compiled[[rk]][idx])) {
@@ -127,6 +215,9 @@ EnrichTaxonomy <- function(compiled) {
           compiled$taxonomy_source[idx] <- 'NCBI'
           compiled$species_changed[idx] <-
             compiled$taxon_provided[idx] != compiled$species[idx]
+          if (compiled$species_changed[idx] && !is.na(compiled$genus[idx]) &&
+              !startsWith(compiled$species[idx], compiled$genus[idx]))
+            compiled$genus[idx] <- sub(' .*', '', compiled$species[idx])
         }
       }
       Sys.sleep(0.34)
@@ -149,7 +240,7 @@ EnrichTaxonomy <- function(compiled) {
   # Stage 3 — WoRMS (batch; marine taxa)
   ##########################################################################
   needs_worms <- which(is.na(compiled$species))
-  message(sprintf('Stage 3/6: WoRMS (%d taxa)...', length(needs_worms)))
+  message(sprintf('Stage 3/7: WoRMS (%d taxa)...', length(needs_worms)))
 
   WORMS_BATCH <- 50
   pb <- cli_progress_bar(total = length(needs_worms),
@@ -163,16 +254,16 @@ EnrichTaxonomy <- function(compiled) {
     tryCatch({
       recs <- wm_records_names(name = batch_names, marine_only = FALSE)
       for (j in seq_along(batch_idx)) {
-        idx      <- batch_idx[j]
-        rec_list <- recs[[j]]
-        if (is.null(rec_list) || length(rec_list) == 0) next
-        best <- Filter(function(r) !is.null(r$status) && r$status == 'accepted', rec_list)
-        best <- if (length(best) > 0) best[[1]] else rec_list[[1]]
-        if (!best$match_type %in% c('exact', 'phonetic', 'near_1')) next
+        idx    <- batch_idx[j]
+        rec_df <- recs[[j]]
+        if (is.null(rec_df) || !is.data.frame(rec_df) || nrow(rec_df) == 0) next
+        accepted <- rec_df[!is.na(rec_df$status) & rec_df$status == 'accepted', , drop = FALSE]
+        best     <- if (nrow(accepted) > 0) accepted[1, ] else rec_df[1, ]
+        if (!isTRUE(best$match_type %in% c('exact', 'phonetic', 'near_1'))) next
 
         worms_ranks <- c('kingdom', 'phylum', 'class', 'order', 'family', 'genus')
         for (rk in worms_ranks) {
-          if (is.na(compiled[[rk]][idx]) && !is.null(best[[rk]]))
+          if (is.na(compiled[[rk]][idx]) && !is.null(best[[rk]]) && !is.na(best[[rk]]))
             compiled[[rk]][idx] <- iconv(best[[rk]], to = 'ASCII//TRANSLIT')
         }
         if (!is.null(best$rank) && tolower(best$rank) == 'species' &&
@@ -181,6 +272,9 @@ EnrichTaxonomy <- function(compiled) {
           compiled$taxonomy_source[idx] <- 'WoRMS'
           compiled$species_changed[idx] <-
             compiled$taxon_provided[idx] != compiled$species[idx]
+          if (compiled$species_changed[idx] && !is.na(compiled$genus[idx]) &&
+              !startsWith(compiled$species[idx], compiled$genus[idx]))
+            compiled$genus[idx] <- sub(' .*', '', compiled$species[idx])
         }
       }
     }, error = function(e) NULL)
@@ -198,7 +292,7 @@ EnrichTaxonomy <- function(compiled) {
   # Stage 4 — COL / ChecklistBank (per-species; esp. Squamata)
   ##########################################################################
   needs_col <- which(is.na(compiled$species))
-  message(sprintf('Stage 4/6: COL (%d taxa)...', length(needs_col)))
+  message(sprintf('Stage 4/7: COL (%d taxa)...', length(needs_col)))
   pb <- cli_progress_bar(total = length(needs_col),
                          format = '  COL {pb_bar} {pb_current}/{pb_total} | ETA: {pb_eta}')
 
@@ -208,22 +302,40 @@ EnrichTaxonomy <- function(compiled) {
     cli_progress_update(id = pb)
 
     tryCatch({
-      cl <- classification(name, db = 'col', rows = 1)[[1]]
-      if (is.data.frame(cl) && nrow(cl) > 0) {
+      resp <- request('https://api.checklistbank.org/nidx/match') |>
+        req_url_query(name = name) |>
+        req_headers('User-Agent' = 'TaxonBodyMassDB/1.0') |>
+        req_timeout(10) |>
+        req_retry(max_tries = 3, backoff = ~ 10) |>
+        req_perform()
+
+      body <- resp_body_json(resp)
+      if (!isTRUE(body$type %in% c('EXACT', 'FUZZY'))) { Sys.sleep(0.2); next }
+
+      cl <- body$usage$classification
+      if (!is.null(cl) && length(cl) > 0) {
         col_ranks <- c('kingdom', 'phylum', 'class', 'order', 'family', 'genus')
         for (rk in col_ranks) {
           if (is.na(compiled[[rk]][idx])) {
-            val <- cl$name[tolower(cl$rank) == rk]
-            if (length(val) == 1 && !is.na(val))
-              compiled[[rk]][idx] <- iconv(val, to = 'ASCII//TRANSLIT')
+            m <- Filter(function(x) tolower(x$rank) == rk, cl)
+            if (length(m) > 0 && !is.null(m[[1]]$name) && !is.na(m[[1]]$name))
+              compiled[[rk]][idx] <- iconv(m[[1]]$name, to = 'ASCII//TRANSLIT')
           }
         }
         if (is.na(compiled$species[idx])) {
-          compiled$species[idx]  <- iconv(name, to = 'ASCII//TRANSLIT')
-          compiled$taxonomy_source[idx] <- 'COL'
+          sp <- Filter(function(x) tolower(x$rank) == 'species', cl)
+          if (length(sp) > 0 && !is.null(sp[[1]]$name) && !is.na(sp[[1]]$name)) {
+            compiled$species[idx]  <- iconv(sp[[1]]$name, to = 'ASCII//TRANSLIT')
+            compiled$taxonomy_source[idx] <- 'COL'
+            compiled$species_changed[idx] <-
+              compiled$taxon_provided[idx] != compiled$species[idx]
+            if (compiled$species_changed[idx] && !is.na(compiled$genus[idx]) &&
+                !startsWith(compiled$species[idx], compiled$genus[idx]))
+              compiled$genus[idx] <- sub(' .*', '', compiled$species[idx])
+          }
         }
       }
-      Sys.sleep(0.5)
+      Sys.sleep(0.2)
     }, error = function(e) NULL)
 
     if (i %% 100 == 0)
@@ -237,7 +349,7 @@ EnrichTaxonomy <- function(compiled) {
   # Stage 5 — ITIS (per-species; vertebrates)
   ##########################################################################
   needs_itis <- which(is.na(compiled$species))
-  message(sprintf('Stage 5/6: ITIS (%d taxa)...', length(needs_itis)))
+  message(sprintf('Stage 5/7: ITIS (%d taxa)...', length(needs_itis)))
   pb <- cli_progress_bar(total = length(needs_itis),
                          format = '  ITIS {pb_bar} {pb_current}/{pb_total} | ETA: {pb_eta}')
 
@@ -252,10 +364,10 @@ EnrichTaxonomy <- function(compiled) {
 
     tryCatch({
       hits <- search_scientific(name)
-      if (nrow(hits) == 0) { Sys.sleep(0.5); next }
+      if (nrow(hits) == 0) { Sys.sleep(1.0); next }
       tsn  <- hits$tsn[1]
       hier <- hierarchy_full(tsn)
-      if (is.null(hier) || nrow(hier) == 0) { Sys.sleep(0.5); next }
+      if (is.null(hier) || nrow(hier) == 0) { Sys.sleep(1.0); next }
 
       for (rk in names(itis_rank_map)) {
         if (is.na(compiled[[rk]][idx])) {
@@ -268,8 +380,11 @@ EnrichTaxonomy <- function(compiled) {
         compiled$taxonomy_source[idx] <- 'ITIS'
         compiled$species_changed[idx] <-
           compiled$taxon_provided[idx] != compiled$species[idx]
+        if (compiled$species_changed[idx] && !is.na(compiled$genus[idx]) &&
+            !startsWith(compiled$species[idx], compiled$genus[idx]))
+          compiled$genus[idx] <- sub(' .*', '', compiled$species[idx])
       }
-      Sys.sleep(0.5)
+      Sys.sleep(1.0)
     }, error = function(e) NULL)
 
     if (i %% 100 == 0)
@@ -283,7 +398,7 @@ EnrichTaxonomy <- function(compiled) {
   # Stage 6 — Wikidata SPARQL (batch; last automated fallback)
   ##########################################################################
   needs_wiki <- which(is.na(compiled$species))
-  message(sprintf('Stage 6/6: Wikidata SPARQL (%d taxa)...', length(needs_wiki)))
+  message(sprintf('Stage 6/7: Wikidata SPARQL (%d taxa)...', length(needs_wiki)))
   WIKI_BATCH <- 10
   pb <- cli_progress_bar(total = length(needs_wiki),
                          format = '  Wikidata {pb_bar} {pb_current}/{pb_total} | ETA: {pb_eta}')
@@ -337,6 +452,9 @@ EnrichTaxonomy <- function(compiled) {
           compiled$taxonomy_source[idx] <- 'Wikidata'
           compiled$species_changed[idx] <-
             compiled$taxon_provided[idx] != compiled$species[idx]
+          if (compiled$species_changed[idx] && !is.na(compiled$genus[idx]) &&
+              !startsWith(compiled$species[idx], compiled$genus[idx]))
+            compiled$genus[idx] <- sub(' .*', '', compiled$species[idx])
         }
       }
     }, error = function(e) NULL)
@@ -351,8 +469,14 @@ EnrichTaxonomy <- function(compiled) {
 
   write.csv(compiled, file.path(wd_passes, 'TaxonBodyMass_Wikidata_pass.csv'), row.names = FALSE)
 
+  ##########################################################################
+  # Stage 7 — GBIF rank backfill via usageKey classification endpoint
+  ##########################################################################
+  message('Stage 7/7: GBIF rank backfill (usageKey classification lookup)...')
+  compiled <- BackfillRanks(compiled)
+
   n_unresolved <- sum(is.na(compiled$species))
-  message(sprintf('Enrichment complete. %d taxa unresolved after all 6 stages.',
+  message(sprintf('Enrichment complete. %d taxa unresolved after all 7 stages.',
                   n_unresolved))
 
   compiled

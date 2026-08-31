@@ -10,7 +10,7 @@ colnames(adat)[3] <- 'mass_g'
 adat <- adat[, c('taxon', 'mass_g')]
 adat <- adat[which(adat$mass_g != -999), ]
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Smith_2003'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 MM <- adat

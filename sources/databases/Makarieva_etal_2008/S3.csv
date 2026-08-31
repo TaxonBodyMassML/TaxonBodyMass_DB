@@ -66,14 +66,14 @@ Eugaster loricatus,Gryllidae,Orthoptera,1580.0,1762.1,1.58
 Hophlosphyrum griseus,Gryllidae,Orthoptera,36.2,79.9,0.0362
 Pternonemobius fasciatus,Gryliidae,Orthoptera,26.17,469.5,0.026170000000000002
 Acheta domesticus,Gryllidae,Orthoptera,369.0,1138.6,0.369
-Teleogryllus commodus7 Gryllidae,Orthoptera,950.00,5686.0,9.0,5.686
+Teleogryllus commodus,Gryllidae,Orthoptera,950.00,5686.0,5.686
 Anurogryllis arboreus,Gryllidae,Orthoptera,310.0,550.9,0.31
 Ceuthophilis fossor,Gryllacrididae,Orthoptera,70.15,817.6,0.07015
-Ceuthophilis gracilipes11 Gryllacrididae,Orthoptera,259.10,543.0,6.0,0.543
+Ceuthophilis gracilipes,Gryllacrididae,Orthoptera,259.10,543.0,0.543
 Gryllotalpa australis,Gryllotalpidae,Orthoptera,874.0,2235.6,0.874
 Conocephalus fasciatus,Tettigoniidae,Orthoptera,51.37,717.1,0.05137
 Euconocephalus nasutus,Tettigoniidae,Orthoptera,650.0,1026.7,0.65
-Insara covilleae20 Tettigoniidae,Orthoptera,92.60,1633.0,1.0,1.633
+Insara covilleae,Tettigoniidae,Orthoptera,92.60,1633.0,1.633
 Neoconocephalus robustus,Tettigoniidae,Orthoptera,870.0,3729.9,0.87
 Requena verticalis,Tettigoniidae,Orthoptera,370.0,683.0,0.37
 Anconia integra,Acrididae,Orthoptera,816.7,2644.1,0.8167000000000001
@@ -262,7 +262,7 @@ Cypholoba chanleri,Carabidae,Coleoptera,326.0,780.2,0.326
 Cypholoba sp.,Carabidae,Coleoptera,192.0,937.4,0.192
 Cypholoba tenuicollis,Carabidae,Coleoptera,59.0,245.7,0.059
 Cypholoba tetrastigma,Carabidae,Coleoptera,132.0,802.4,0.132
-Cypholoba trilunata53 Carabidae,Coleoptera,213.00,530.0,2.0,0.53
+Cypholoba trilunata,Carabidae,Coleoptera,213.00,530.0,0.53
 Amara quenseli,Carabidae,Coleoptera,15.0,1.4,0.015
 Evarthrus sodalis,Carabidae,Coleoptera,164.1,186.7,0.1641
 Carinum sp.,Carabidae,Coleoptera,4240.0,2428.9,4.24
@@ -296,7 +296,7 @@ Pantophthalmus tabaninus,Pantophthalmidae,Diptera,1746.0,3036.9,1.746
 Simulium venustum,Simuliidae,Diptera,2.53,86.0,0.0025299999999999997
 Chironomus riparius,Chironomidae,Diptera,1.0,16.1,0.001
 Aedes campestris,Culicidae,Diptera,6.72,295.0,0.006719999999999999
-Culex tarsalis87 Culicidae,Diptera,2.23,23.0,6.0,0.023
+Culex tarsalis,Culicidae,Diptera,2.23,23.0,0.023
 Xenopsilla ramesis,Pulicidae,Siphonaptera,0.16,0.6,0.00016
 Vanessa io,Nymphalidae,Lepidoptera,230.0,922.2,0.23
 Thais cassandra,Papilionidae,Lepidoptera,130.0,3488.4,0.13

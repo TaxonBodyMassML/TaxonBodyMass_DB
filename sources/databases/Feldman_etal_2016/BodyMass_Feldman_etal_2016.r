@@ -8,7 +8,7 @@ taxon_tax <- taxon_tax[, c('taxon', 'order', 'family')]
 adat <- adat[, c('binomial', 'mass..g.')]
 colnames(adat) <- c('taxon', 'mass_g')
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Feldman_etal_2016'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 FE <- adat

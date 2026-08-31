@@ -16,6 +16,8 @@ RemoveNonTaxa <- function(dat) {
   dat <- dat[!grepl("_nr$",     dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_unk$",    dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_sp[A-Z]$", dat$taxon), ]
+  dat <- dat[!grepl("_spec$",   dat$taxon, ignore.case = FALSE), ]
+  dat <- dat[!grepl("^Order_",  dat$taxon, ignore.case = TRUE),  ]
 
   # Uninformative genus-level unknown placeholders.
   dat <- dat[!grepl('^(Unk|Unknown)($|_)', dat$taxon), ]
@@ -32,9 +34,14 @@ RemoveNonTaxa <- function(dat) {
     "Calanoid_copepods",
     "Calanoid_nauplii",                # DeLong_etal_2018 (capitalised form caught by FixFormatting)
     "Candiacervus_spii",               # informal sp. II tag stripped; fossil deer genus
-    "Chironomidae indet",              # family + indeterminate qualifier; not a species
+    "Chironomidae_indet",              # family + indeterminate qualifier; space→underscore after FixFormatting
+    "Chironomid_larvae",               # variant prefix for Chironomidae larvae
     "Chironomidae_juv",                # family + life-stage qualifier; not a species
     "Chironomidae_larvae",             # family + life-stage qualifier
+    "Diptera_larvaepupae",             # pooled larva+pupa stage descriptor; not a species
+    "Oligochaeta_indet",               # class + indeterminate qualifier; not a species
+    "Oligochaeta_type",                # class + morphotype qualifier; not a species
+    "Oligochaete_type",                # spelling variant of Oligochaeta_type
     "Copepd_nauplii",                  # OCR corruption of "Copepod nauplii"
     "Copepod_nauplii",                 # DeLong_etal_2018 (capitalised form caught by FixFormatting)
     "Copepoda_nauplii",                # OCR corruption of "Copepoda nauplii"
@@ -149,7 +156,8 @@ RemoveNonTaxa <- function(dat) {
     "Glyptotherium_mexicanum",     # extinct glyptodont (Cingulata: Glyptodontidae); Pleistocene Mexico/Central America (outlier_report_2)
     "Xaymaca_fulvopulvis",         # extinct Jamaican spiny rat (Echimyidae); no extant mass data (outlier_report_2)
     "Xenorhinotherium_bahiense",   # extinct South American litoptern (Macraucheniidae); no extant mass data (outlier_report_2)
-    "Rhinobrycon_negrensis"        # monotypic characid max 3.9 cm SL; no published mass data; ERRONEOUS_MASS with no recoverable value (AmphiBIO / outlier_report_2)
+    "Rhinobrycon_negrensis",        # monotypic characid max 3.9 cm SL; no published mass data; ERRONEOUS_MASS with no recoverable value (AmphiBIO / outlier_report_2)
+    "Gaussia_princeps"             # mesopelagic copepod; excluded from dataset
   )
 
   # Primarily autotrophic taxa erroneously included in heterotroph-focused databases.

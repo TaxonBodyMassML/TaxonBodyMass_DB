@@ -5,7 +5,7 @@ gmean <- function(x){
 '%!in%' <- function(x, y)!('%in%'(x, y))
 
 RemoveSource <- function(dat, taxon, source) {
-  rows <- dat$taxon == taxon
+  rows <- !is.na(dat$taxon) & dat$taxon == taxon
   for (src in source) {
     dat$mass_g[rows & dat$source_mass == src] <- NA
     s  <- dat$source_mass[rows]

@@ -7,7 +7,7 @@ taxon_tax <- taxon_tax[, c('taxon', 'class')]
 adat <- adat[, c('Taxa', 'DW')]
 colnames(adat) <- c('taxon', 'mass_g')
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Eklof_etal_2017'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 EK <- adat

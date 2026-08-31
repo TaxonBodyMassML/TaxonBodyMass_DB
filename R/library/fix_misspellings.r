@@ -87,7 +87,7 @@ FixMisspellings <- function(dat) {
     "Lamellibranchia_e"               = "Lamellibranchia",                # single-letter epithet stripped; tubeworm genus valid
     "Larsia_i"                        = "Larsia",                         # single-letter epithet stripped; genus valid
     "Larus_spec"                      = "Larus",                          # spec placeholder stripped; genus valid
-    "Lepidostoma_(genus_in_Opisthokonta)" = "Lepidostoma",                # parenthetical tag stripped; caddisfly genus valid
+    "Lepidostoma_genus"                   = "Lepidostoma",                # parenthetical tag stripped by FixFormatting → becomes Lepidostoma_genus; caddisfly genus valid
     "Leucocarbo_phal"                 = "Leucocarbo",                     # truncated epithet stripped; shag genus valid
     "Phalacrocorax_spec"              = "Phalacrocorax",                  # spec placeholder stripped; genus valid
     "Stercocarius_spec"               = "Stercorarius",                   # genus misspelling fixed; spec placeholder stripped
@@ -125,6 +125,7 @@ FixMisspellings <- function(dat) {
     "Azospirillum_brasiliense"        = "Azospirillum_brasilense",        # Tarrand 1979 original spelling
 
     # B
+    "Bernieria_madagascariensis_Gmelin" = "Bernieria_madagascariensis",  # trailing author citation token; FixFormatting converts '(Gmelin, 1789)' → '_Gmelin'
     "Barbonymus_schwanefeldii"        = "Barbonymus_schwanenfeldii",      # honors Schwanenfeld; missing n
     "Bathypolypus_articus"            = "Bathypolypus_arcticus",          # Arctic; missing c
     "Bodo_saliens"                    = "Bodo_saltans",                   # O.F. Müller 1786 established saltans
@@ -156,6 +157,7 @@ FixMisspellings <- function(dat) {
 
     # D
     "Dasyurus_hallacatus"             = "Dasyurus_hallucatus",            # Northern Quoll; transposition a/u
+    "Dendrocopus_major"               = "Dendrocopos_major",              # Great Spotted Woodpecker; Dendrocopus not valid; correct genus is Dendrocopos
     "Dendrelaphis_caudolineolatus"    = "Dendrelaphis_caudolineatus",     # caudolineolatus not a recognized form
     "Desmognathus_ochrophaes"         = "Desmognathus_ochrophaeus",       # Dusky Salamander; missing u
 
@@ -282,6 +284,7 @@ FixMisspellings <- function(dat) {
     "Uraeginthus_bengalis"            = "Uraeginthus_bengalus",           # Red-cheeked Cordonbleu; accepted form
     "Urocissa_erythrorhyncha"         = "Urocissa_erythroryncha",         # Gould 1857 original; h insertion unofficial
     "Urocyon_cineroargenteus"         = "Urocyon_cinereoargenteus",       # Gray Fox; cinereo- needs connecting -o-
+    "Uromacerina_ricardinii"          = "Cercophis_auratus",              # Uromacerina ricardinii is a junior synonym; accepted name is Cercophis auratus (Colubridae)
     "Uromys_neobritanicus"            = "Uromys_neobritannicus",          # New Britain requires double-n
     "Uronema_marina"                  = "Uronema_marinum",                # Uronema is neuter (-nema); -um required
 
@@ -347,6 +350,7 @@ FixMisspellings <- function(dat) {
     # C
     "Cacactua_tenuirostris"           = "Cacatua_tenuirostris",           # doubled c; correct genus Cacatua GBIF FUZZY 85
     "Callophora_rylandi"              = "Callopora_rylandi",              # ph→p; bryozoan genus Callopora not Callophora GBIF FUZZY 85
+    "Chrysallida_pellucida"           = "Spiralinella_spiralis",           # Chrysallida pellucida is a junior synonym; accepted name is Spiralinella spiralis (Pyramidellidae)
     "Crithida_fasciculata"            = "Crithidia_fasciculata",          # missing i; protozoan Crithidia not polychaete Crithida GBIF HIGHERRANK
     "Crithida_strigomonas"            = "Crithidia_strigomonas",          # missing i; same genus error as Crithida_fasciculata GBIF HIGHERRANK
     "Crystallodytes_cookie"           = "Crystallodytes_cookei",          # English word vs Latin patronymic; GBIF HIGHERRANK
@@ -371,6 +375,7 @@ FixMisspellings <- function(dat) {
     "Garthia_gaudichaudi"             = "Garthia_gaudichaudii",           # single-i; Gaudichaud ends consonant GBIF FUZZY 96
     "Gerbilliscus_nigricauda"         = "Gerbilliscus_nigricaudus",       # also: Girbilliscus_nigricauda; ir/er + gender fix GBIF FUZZY 85
     "Girbilliscus_nigricauda"         = "Gerbilliscus_nigricaudus",       # ir→er genus transposition + wrong gender GBIF FUZZY 85
+    "Glaseria_mira"                   = "Glaeseria_mira",                  # ae diphthong dropped; correct genus is Glaeseria (Rhabditophora: Macrostomorpha)
     "Glossolepis_incisa"              = "Glossolepis_incisus",            # -a→-us gender agreement; masculine genus GBIF FUZZY 96
     "Gonotodes_antillensis"           = "Gonatodes_antillensis",          # o→a substitution; Neotropical gecko GBIF FUZZY 85
     "Gonyosoma_frenatus"              = "Gonyosoma_frenatum",             # -us→-um; -soma is neuter Greek GBIF FUZZY 96
@@ -545,7 +550,44 @@ FixMisspellings <- function(dat) {
     "Celestus_anelpistus"             = "Caribicus_anelpistus",            # Celestus is paraphyletic; southern Caribbean species moved to Caribicus (Diploglossidae; Squamata)
 
     # Copepod junior synonym
-    "Eutemora_hirundoides"            = "Eurytemora_affinis"               # Eutemora hirundoides is a junior synonym of Eurytemora affinis (Temoridae; Hexanauplia)
+    "Eutemora_hirundoides"            = "Eurytemora_affinis",              # Eutemora hirundoides is a junior synonym of Eurytemora affinis (Temoridae; Hexanauplia)
+
+# Genus mismatch audit 2026-08-30 — accepted-name corrections
+
+    # A
+    "Anachalcos_convexus"             = "Chalconotus_convexus",            # Anachalcos is a synonym; accepted is Chalconotus convexus Boheman, 1857 (Tenebrionidae; GBIF)
+    "Astasia_longa"                   = "Euglena_longa",                   # Astasia Ehrenberg, 1830 is a synonym of Euglena Ehrenberg, 1830; accepted is Euglena longa (GBIF/AlgaeBase)
+
+    # C
+    "Chlamydotherium_humboldtii"      = "Pampatherium_humboldtii",         # Chlamydotherium is a junior synonym of Pampatherium Ameghino, 1875; extinct Pampatheriidae (GBIF)
+
+    # D
+    "Dendroica_aestiva"               = "Setophaga_aestiva",               # Dendroica merged into Setophaga following AOU/AOS; American Yellow Warbler (ITIS/GBIF)
+    "Diaptomus_oregonensis"           = "Skistodiaptomus_oregonensis",     # Diaptomus is a junior synonym of Skistodiaptomus; Dussart & Defaye, 2002 (WoRMS/GBIF ITIS 85846)
+
+    # F
+    "Ferdauia_ferdau"                 = "Carangoides_ferdau",              # Ferdauia is a synonym of Carangoides; Forsskål, 1775 (GBIF/WoRMS AphiaID 218395)
+
+    # H
+    "Havilanditermes_atripennis"      = "Nasutitermes_atripennis",         # Havilanditermes Light, 1930 is a junior synonym of Nasutitermes Dudley, 1890 (GBIF)
+    "Hipparion_libycum"               = "Eurygnathohippus_libycum",        # Hipparion libycum is an alternate combination; accepted is Eurygnathohippus libycum Pomel, 1897 (Fossilworks/GBIF)
+    "Hoplophorus_euphractus"          = "Glyptodon_euphractus",            # Hoplophorus treated as synonym of Glyptodon following Ameghino, 1889 (GBIF/Paleobiology Database)
+
+    # O
+    "Ophichthys_cuchia"               = "Monopterus_cuchia",               # Ophichthys is a synonym; accepted is Monopterus cuchia Hamilton, 1822 (GBIF/FishBase/WoRMS)
+
+    # Q
+    "Quadricalcarifera_punctatella"   = "Syntypistis_punctatella",         # Quadricalcarifera is a synonym of Syntypistis; Notodontidae; beech caterpillar (GBIF)
+
+    # R
+    "Rhynchops_niger"                 = "Rynchops_niger",                  # Rhynchops is an alternate/older spelling; accepted genus is Rynchops Linnaeus, 1758 (ITIS/GBIF/IOC)
+
+    # S
+    "Scyris_indica"                   = "Alectis_indica",                  # Scyris is junior synonym; Alectis Rafinesque, 1815 has priority; Indian threadfish (WoRMS/FishBase)
+
+    # T
+    "Tomocerus_flavescens"            = "Pogonognathellus_flavescens",     # Tomocerus is a synonym; accepted is Pogonognathellus flavescens Tullberg, 1871 (GBIF species 4538730)
+    "Turrum_fulvoguttatum"            = "Carangoides_fulvoguttatus"        # FishBase/GBIF accept Carangoides fulvoguttatus; WoRMS (Kimura et al. 2022) accepts Turrum — conflict; FishBase/GBIF used here
   )
 
   for (old in names(corrections)) {

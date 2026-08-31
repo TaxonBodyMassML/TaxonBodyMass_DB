@@ -8,7 +8,7 @@ dat2 <- adat[which(nNAdat[, 2] == FALSE & nNAdat[, 3] == TRUE), c(1, 3)]
 colnames(dat2) <- c('taxon', 'mass_g')
 adat <- rbind(dat1, dat2)
 adat <- adat[!is.na(adat$mass_g), ]
-adat <- ddply(adat, .(taxon), summarise, mass_g = gmean(mass_g), n = length(mass_g))
+adat$n <- 1
 adat$source_mass <- 'Quaardvark'
 AA <- adat
 save(AA, file = file.path(wd_rdata, 'BodyMass_Quaardvark.Rdata'))
