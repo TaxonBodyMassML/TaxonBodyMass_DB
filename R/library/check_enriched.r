@@ -139,6 +139,29 @@ check_enriched <- function(dat) {
     }
   }
 
+  # 11. Kingdom conflicts: a non-Animalia kingdom paired with an order or
+  #     family that otherwise occurs under Animalia. This is the signature of a
+  #     cross-kingdom homonym mis-resolution (e.g. the lizard Abronia aurita
+  #     resolved by NCBI to the plant Abronia villosa var. aurita) and of
+  #     autotrophs that slipped past FilterAutotrophs().
+  if (all(c("kingdom", "order", "family") %in% names(dat))) {
+    is_animal <- !is.na(dat$kingdom) & dat$kingdom == "Animalia"
+    animal_orders   <- unique(na.omit(dat$order[is_animal]))
+    animal_families <- unique(na.omit(dat$family[is_animal]))
+    other <- dat[!is.na(dat$kingdom) & !is_animal, ]
+    conflict <- other[(!is.na(other$order)  & other$order  %in% animal_orders) |
+                      (!is.na(other$family) & other$family %in% animal_families), ]
+    if (nrow(conflict) > 0) {
+      warn <- c(warn, sprintf(
+        "\n## Non-Animalia kingdom with an Animalia order/family (%d rows -- likely cross-kingdom misresolution)\n\n%s",
+        nrow(conflict), paste(sprintf("%s | kingdom=%s | order=%s | family=%s [%s]",
+          conflict$taxon, conflict$kingdom, conflict$order, conflict$family,
+          conflict$taxonomy_source), collapse = "\n\n")))
+      warn_summary <- c(warn_summary, sprintf(
+        "- Non-Animalia kingdom with an Animalia order/family: %d rows", nrow(conflict)))
+    }
+  }
+
   # Write reports
   now <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
   if (length(errs) > 0) {

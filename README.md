@@ -1,6 +1,6 @@
 # TaxonBodyMass_DB
 
-A compiled, harmonized database of species body masses (in grams) drawn from many published sources spanning the full diversity of (mostly autotrophic) life — from microbes to large vertebrates. Developed in support of [FracFeed_DB](https://github.com/marknovak/FracFeed_DB) and [TaxonBodyMassML](https://github.com/TaxonBodyMassML/TaxonBodyMassML).
+A compiled, harmonized database of species body masses (in grams) drawn from many published sources spanning the full diversity of heterotrophic life — from microbes to large vertebrates. Developed in support of [FracFeed_DB](https://github.com/marknovak/FracFeed_DB) and [TaxonBodyMassML](https://github.com/TaxonBodyMassML/TaxonBodyMassML).
 
 ## Data Sources
 
@@ -23,7 +23,9 @@ The pipeline is written in R. The main entry point is `R/RunMe.r`, which orchest
 
 4. **Google Sheet override** — lab-curated values add to and replace any matching entries from the compiled sources.
 
-5. **Genus-level aggregation** — species-level masses are averaged by genus to produce a supplementary genus-level output.
+5. **Taxonomy enrichment and autotroph removal** — every unique name is resolved to an accepted species and its kingdom-to-family classification through GBIF, NCBI, WoRMS, Catalogue of Life, ITIS and Wikidata in turn (`R/library/enrich_taxonomy.r`; details in `sources/passes/enrichment_pipeline.md`), with manual corrections in `R/library/fix_taxonomy_ranks.r`. `R/library/filter_autotrophs.r` then removes autotrophs: the kingdoms Plantae, Viridiplantae and Fungi; predominantly photosynthetic phyla (Ochrophyta, Bacillariophyta, Haptophyta, Cryptophyta, Chlorophyta, Rhodophyta, Charophyta, Glaucophyta, Streptophyta, Euglenophyta, Cyanobacteria); and a curated list of photosynthetic or mixotrophic dinoflagellate and euglenid genera. Heterotrophic protists (ciliates, foraminifera, apicomplexans, kinetoplastids, amoebae, heterotrophic dinoflagellates and euglenids) are retained. `R/library/check_enriched.r` writes QC reports to `reports/`.
+
+6. **Genus-level aggregation** — species-level masses are averaged by genus to produce a supplementary genus-level output.
 
 ## Outputs
 

@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-08-30 18:36:55
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-18 07:34:18
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Missing `family` after all enrichment stages: 1 rows
 - Species names not in 'Genus epithet' format: 1 rows
 - Low GBIF confidence (75-89): 105 rows
-- Species name changed during enrichment: 4525 rows
+- Species name changed during enrichment: 4509 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -251,7 +251,7 @@ Zealandobius_confusus [conf=85]
 
 Zoarces_americanus [conf=84]
 
-## Species name changed during enrichment (4525 rows)
+## Species name changed during enrichment (4509 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -268,8 +268,6 @@ Mesaspis gadovii -> Abronia gadovii [GBIF]
 Mesaspis juarezi -> Abronia juarezi [GBIF]
 
 Mesaspis monticola -> Abronia monticola [GBIF]
-
-Abronia aurita -> Abronia villosa [NCBI]
 
 Mesaspis viridiflava -> Abronia viridiflava [GBIF]
 
@@ -861,10 +859,6 @@ Aotus nancymaae -> Aotus nancymai [GBIF]
 
 Aphinius fasciatus; Aphanius fasciatus -> Aphanius fasciatus [GBIF]
 
-Anabaena flosaquae -> Aphanizomenon flosaquae [GBIF]
-
-Anacystis nidulans -> Aphanothece nidulans [GBIF]
-
 Aphelopus holomelas -> Aphelopus atratus [GBIF]
 
 Aphidius uzbeckistanicus -> Aphidius uzbekistanicus [GBIF]
@@ -1008,8 +1002,6 @@ Artedidraco loennbergi; Artedidraco lonnbergi -> Artedidraco lonnbergi [GBIF]
 Artediellus europeus; Artediellus atlanticus -> Artediellus atlanticus [GBIF]
 
 Amphispiza belli; Artemisiospiza belli -> Artemisiospiza belli [GBIF]
-
-Spirulina platensis -> Arthrospira platensis [GBIF]
 
 Dermanura anderseni; Artibeus anderseni -> Artibeus anderseni [GBIF]
 
@@ -3929,8 +3921,6 @@ Coccothraustes abeillei; Hesperiphona abeillei -> Hesperiphona abeillei [GBIF]
 
 Coccothraustes vespertinus; Hesperiphona vespertina -> Hesperiphona vespertina [GBIF]
 
-Katodinium rotundatum -> Heterocapsa rotundata [GBIF]
-
 Ekmocucumis steineni -> Heterocucumis steineni [GBIF]
 
 Heterodon gloydi; Heterodon nasicus -> Heterodon nasicus [GBIF]
@@ -4443,8 +4433,6 @@ Leishmania enrietti -> Leishmania enriettii [NCBI]
 
 Haploscoloplos fragilis -> Leitoscoloplos fragilis [GBIF]
 
-Coelosphaerium pallidum -> Lemmermanniella pallida [GBIF]
-
 Pachylemur insignis -> Lemur intermedius [GBIF]
 
 Saguinus fuscicollis; Leontocebus fuscicollis -> Leontocebus fuscicollis [GBIF]
@@ -4488,8 +4476,6 @@ Lepilemur jamesorum -> Lepilemur jamesi [GBIF]
 Lepilemur sahamalazensis -> Lepilemur sahamalaza [GBIF]
 
 Lepilemur wrightae -> Lepilemur wrighti [GBIF]
-
-Euglena acus -> Lepocinclis acus [GBIF]
 
 Lepomis gulosus; Chaenobryttus gulosus -> Lepomis gulosus [GBIF]
 
@@ -4667,8 +4653,6 @@ Myzopsetta proboscidea -> Limanda proboscidea [GBIF]
 
 Myzopsetta punctatissima -> Limanda punctatissima [GBIF]
 
-Chroococcus limneticus -> Limnococcus limneticus [GBIF]
-
 Rana blythi -> Limnonectes blythii [GBIF]
 
 Rana magna -> Limnonectes magnus [GBIF]
@@ -4684,8 +4668,6 @@ Carduelis johannis; Linaria johannis -> Linaria johannis [GBIF]
 Carduelis yemenensis; Linaria yemenensis -> Linaria yemenensis [GBIF]
 
 Lepidonotothen nudifrons -> Lindbergichthys nudifrons [GBIF]
-
-Gonyaulax polyedra; Lingulodinium polyedrum -> Lingulodinium polyedra [GBIF]
 
 Pseudoeurythoe paucibranchiata -> Linopherus paucibranchiata [GBIF]
 
@@ -5306,8 +5288,6 @@ Microcerotermes dubius -> Microcerotermes dumisae [GBIF]
 Elvira chionura -> Microchera chionura [GBIF]
 
 Elvira cupreiceps -> Microchera cupreiceps [GBIF]
-
-Phormidium autumnale -> Microcoleus autumnalis [GBIF]
 
 Eopsaltria flaviventris; Microeca flaviventris -> Microeca flaviventris [GBIF]
 
@@ -6393,8 +6373,6 @@ Parvicorbucula socialis -> Parvicorbicula socialis [GBIF]
 
 Paracalanus crassirostris -> Parvocalanus crassirostris [GBIF]
 
-Peridinium inconspicuum -> Parvodinium inconspicuum [GBIF]
-
 Parvoscincus luzonense -> Parvoscincus luzonensis [GBIF]
 
 Passerculus sandwichensis; Ammodramus sandwichensis -> Passerculus sandwichensis [GBIF]
@@ -6680,8 +6658,6 @@ Phorbas plumosum -> Phorbas plumosus [GBIF]
 Sergestes bisulcatus -> Phorcosergia bisulcata [GBIF]
 
 Sergestes phorcus; Phorcosergia phorca -> Phorcosergia phorca [GBIF]
-
-Oscillatoria terebriformis -> Phormidium terebriforme [GBIF]
 
 Nassarius vibex -> Phrontis vibex [GBIF]
 
@@ -7080,8 +7056,6 @@ Progne tapera; Phaeoprogne tapera -> Progne tapera [GBIF]
 Hapalemur simus; Prolemur simus -> Prolemur simus [GBIF]
 
 Propylaea quatuordecimpunctata; Propylea quatuordecimpunctata -> Propylaea quatuordecimpunctata [GBIF]
-
-Prorocentrum minimum -> Prorocentrum cordatum [GBIF]
 
 Proteles cristata; Proteles cristatus -> Proteles cristata [GBIF]
 
@@ -8189,8 +8163,6 @@ Streptopelia chinensis; Spilopelia chinensis; Stigmatopelia chinensis -> Spilope
 
 Streptopelia senegalensis; Stigmatopelia senegalensis; Spilopelia senegalensis -> Spilopelia senegalensis [GBIF]
 
-Gymnodinium palustre -> Spiniferodinium palustre [NCBI]
-
 Carduelis atrata; Spinus atrata -> Spinus atratus [GBIF]
 
 Carduelis atriceps; Spinus atriceps -> Spinus atriceps [GBIF]
@@ -8874,10 +8846,6 @@ Tringa incana; Heteroscelus incanus -> Tringa incana [GBIF]
 Tringa semipalmata; Catoptrophorus semipalmatus -> Tringa semipalmata [GBIF]
 
 Trioceros eisentrauti; Trioceros quadricornis -> Trioceros quadricornis [GBIF]
-
-Ceratium furca -> Tripos furca [GBIF]
-
-Ceratium tripos -> Tripos muelleri [GBIF]
 
 Diaglena spatulata -> Triprion spatulatus [GBIF]
 

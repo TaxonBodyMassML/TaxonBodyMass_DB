@@ -1,9 +1,9 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-08-30 18:36:55
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-09-18 07:34:18
 
 ## Summary
 
 - High mass disagreement (log10 range > 2): 190 species
-- Moderate mass disagreement (log10 range 1-2): 463 species
+- Moderate mass disagreement (log10 range 1-2): 461 species
 ## log10(max/min mass) > 2 after dedup (190 species) -- likely misresolution or unit error
 
 Oikopleura dioica [range=9.29]
@@ -197,7 +197,7 @@ Melanocetus johnsonii [range=2.00]
 Gadus macrocephalus [range=2.00]
 Caranx ruber [range=2.00]
 
-## Moderate mass disagreement (log10 range 1-2) (463 species)
+## Moderate mass disagreement (log10 range 1-2) (461 species)
 
 Balaenoptera musculus [range=2.00]
 Melanogrammus aeglefinus [range=1.99]
@@ -388,7 +388,6 @@ Xysticus cristatus [range=1.41]
 Epinephelus striatus [range=1.41]
 Aspidoscelis sexlineatus [range=1.40]
 Gyrodinium dominans [range=1.40]
-Prorocentrum micans [range=1.40]
 Mystus gulio [range=1.40]
 Phoxinus phoxinus [range=1.40]
 Trichosphaerium sieboldi [range=1.39]
@@ -404,7 +403,6 @@ Lepidochelys olivacea [range=1.37]
 Pollachius pollachius [range=1.37]
 Hydrurga leptonyx [range=1.37]
 Chrysaora hysoscella [range=1.37]
-Limnococcus limneticus [range=1.37]
 Odontoscion dentex [range=1.37]
 Gallotia stehlini [range=1.36]
 Trochulus hispidus [range=1.36]

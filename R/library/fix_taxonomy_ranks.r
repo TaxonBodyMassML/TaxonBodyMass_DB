@@ -247,5 +247,32 @@ FixTaxonomyRanks <- function(dat) {
     }
   }
 
+  # Part 7 ── Full taxonomy overwrites for cross-kingdom mis-resolutions
+  # Keyed by the source `taxon` string (Genus_species). Used when an authority
+  # matched the name to a homonym in another kingdom, so the species name and
+  # every rank are wrong and the Part 5 NA-fills cannot repair them. Only the
+  # columns present in `dat` are written, so this is safe both on per-source
+  # frames (no species/genus columns) and on the enrichment cache.
+  taxon_overwrites <- list(
+    # Alligator lizard (Anguidae; Feldman et al. 2016, Meiri 2018). GBIF
+    # returned no match and NCBI resolved the name to the plant Abronia villosa
+    # var. aurita, yielding Viridiplantae/Streptophyta/Magnoliopsida above the
+    # pre-seeded Squamata/Anguidae.
+    'Abronia_aurita' = c(species = 'Abronia aurita', genus = 'Abronia',
+                         kingdom = 'Animalia', phylum = 'Chordata',
+                         class = 'Reptilia', order = 'Squamata',
+                         family = 'Anguidae', taxonomy_source = 'manual')
+  )
+  if ('taxon' %in% names(dat)) {
+    for (tx in names(taxon_overwrites)) {
+      idx <- which(!is.na(dat$taxon) & dat$taxon == tx)
+      if (length(idx) == 0) next
+      fill <- taxon_overwrites[[tx]]
+      for (col in intersect(names(fill), names(dat)))
+        dat[[col]][idx] <- fill[[col]]
+      if ('species_changed' %in% names(dat)) dat$species_changed[idx] <- FALSE
+    }
+  }
+
   dat
 }

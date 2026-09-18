@@ -184,9 +184,15 @@ Rate limit: `Sys.sleep(1.0)` between batches per Wikidata's fair-use policy. Req
 **Function:** `R/library/filter_autotrophs.r`  
 **Called from:** `R/RunMe.r` after `EnrichTaxonomy()`, before deduplication.
 
-Removes taxa whose enriched `kingdom` is `"Plantae"` or `"Fungi"`, and taxa whose enriched `phylum` belongs to a list of predominantly photosynthetic lineages that fall outside those kingdoms (Ochrophyta, Haptophyta, Cryptophyta, Dinoflagellata, Chlorophyta, Rhodophyta, Charophyta, Glaucophyta). Rows with `NA` kingdom or phylum are retained.
+Removes autotrophic taxa at three levels, using the rank names the authorities actually return (GBIF `Plantae` vs NCBI `Viridiplantae`; GBIF files dinoflagellates under phylum `Myzozoa`, class `Dinophyceae`):
 
-This is more conservative than the prior `filter_kingdoms.py`, which removed `Chromista` and `Viridiplantae` as entire kingdoms. The phylum-level list targets only the photosynthetic lineages within those kingdoms, preserving heterotrophic members (e.g. fungal-like oomycetes in Chromista).
+1. **Kingdoms** `Plantae`, `Viridiplantae`, `Fungi`.
+2. **Phyla** that are predominantly or exclusively photosynthetic: `Ochrophyta`, `Bacillariophyta`, `Haptophyta`, `Cryptophyta`, `Chlorophyta`, `Rhodophyta`, `Charophyta`, `Glaucophyta`, `Streptophyta`, `Euglenophyta`, `Cyanobacteria`, `Cyanobacteriota`.
+3. **Genera** inside mixed phyla whose members are photosynthetic or mixotrophic: dinoflagellates *Alexandrium, Amphidinium, Ceratium, Cochlodinium, Dinophysis, Fragilidium, Glenodinium, Gonyaulax, Gymnodinium, Heterocapsa, Lingulodinium, Parvodinium, Peridinium, Prorocentrum, Scrippsiella, Spiniferodinium, Takayama, Thecadinium, Tripos, Yihiella* and euglenids *Euglena, Eutreptiella, Lepocinclis*.
+
+Rows with `NA` in the rank being tested are retained at every level. Heterotrophic members of the mixed phyla stay, e.g. the dinoflagellates *Noctiluca, Oxyrrhis, Gyrodinium, Protoperidinium, Pfiesteria, Polykrikos* and the euglenids *Astasia, Peranema, Entosiphon*, as do ciliates, foraminifera, apicomplexans and oomycetes in Chromista.
+
+History: the v5.0.0 filter listed the phylum as "Dinoflagellata" (never emitted by GBIF) and did not cover cyanobacteria, so 21 cyanobacteria, 33 photosynthetic dinoflagellates and 3 photosynthetic euglenids reached the v5.0.0 output; v5.1.0 corrected this. Cross-kingdom homonym mis-resolutions (e.g. the lizard *Abronia aurita* matched by NCBI to the plant *Abronia villosa* var. *aurita*) are fixed by Part 7 of `fix_taxonomy_ranks.r` and flagged by the kingdom-conflict check in `check_enriched()`.
 
 ---
 

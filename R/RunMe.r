@@ -29,8 +29,9 @@ if (nchar(Sys.getenv('ENTREZ_KEY')) == 0) {
 recompile    <- FALSE
 # TRUE: re-download from rdataretriever (requires Python + Retriever)
 DataRetrieve <- FALSE
-# TRUE: ignore enrichment cache and re-enrich all taxa from scratch
-fresh_start  <- TRUE
+# TRUE: ignore enrichment cache and re-enrich all taxa from scratch (hours of
+# API calls). FALSE: reuse sources/enrich_cache.Rdata and enrich only new taxa.
+fresh_start  <- FALSE
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
