@@ -4,6 +4,8 @@
 # Depends on: wd_rdata, FixFormatting(), FixMisspellings(), RemoveNonTaxa()
 
 # mammal-life-hist: family available; no order column
+# Ernest SM. Life history characteristics of placental nonvolant mammals: 
+# ecological archives E084‐093. Ecology. 2003 Dec;84(12):3402-.
 mlh <- rdataretriever::fetch('mammal-life-hist')[[1]]
 mlh$taxon <- paste(mlh$genus, mlh$species)
 mlh <- mlh[, c('taxon', 'mass_g', 'family')]
@@ -12,7 +14,12 @@ mlh <- mlh[which(!is.na(mlh$mass_g) & mlh$mass_g > 0), ]
 mlh$n <- 1
 mlh$source_mass <- 'rdataretriever-mammal-life-hist'
 
+
 # bird-size: family column is an integer code, not a name — drop it
+# Terje Lislevand, Jordi Figuerola, and Tam´as Sz´ekely. 
+# Avian body sizes in relation to fecundity, mating
+# system, display behavior, and resource sharing: Ecological archives 
+# e088-096. Ecology, 88(6):1605–1605,  2007.
 bir <- rdataretriever::fetch('bird-size')[[1]]
 bir <- bir[, c('species_name', 'm_mass')]
 colnames(bir) <- c('taxon', 'mass_g')
@@ -21,6 +28,10 @@ bir$n <- 1
 bir$source_mass <- 'rdataretriever-bird-size'
 
 # predator-prey-body-ratio: no taxonomy beyond binomial
+# Brose U, Cushing L, Berlow EL, Jonsson T, Banasek-Richter C, Bersier LF, 
+# Blanchard JL, Brey T, Carpenter SR, Blandenier MF, Cohen JE. 
+# BODY SIZES OF CONSUMERS AND THEIR RESOURCES: Ecological Archives 
+# E086‐135. Ecology. 2005 Sep;86(9):2545-.
 ppb <- rdataretriever::fetch('predator-prey-body-ratio')[[1]]
 ppb <- ppb[which(ppb$taxonomy_consumer != '' & ppb$taxonomy_resource != ''), ]
 ppb1 <- ppb[, c('taxonomy_consumer', 'mean_mass_g_consumer')]
@@ -32,6 +43,11 @@ ppb$n <- 1
 ppb$source_mass <- 'rdataretriever-predator-prey-body-ratio'
 
 # pantheria: order and family available
+# Jones KE, Bielby J, Cardillo M, Fritz SA, O'Dell J, Orme CD, Safi K, 
+#  Sechrest W, Boakes EH, Carbone C, Connolly C. PanTHERIA: 
+#  a species‐level database of life history, ecology, and geography of 
+#  extant and recently extinct mammals: Ecological Archives E090‐184. 
+#  Ecology. 2009 Sep;90(9):2648-.
 pan <- rdataretriever::fetch('pantheria')[[1]]
 pan <- pan[, c('msw05_binomial', 'adultbodymass_g', 'msw05_order', 'msw05_family')]
 colnames(pan) <- c('taxon', 'mass_g', 'order', 'family')
@@ -42,6 +58,9 @@ pan$n <- 1
 pan$source_mass <- 'rdataretriever-pantheria'
 
 # amniote-life-hist: EAV format — filter to adult body mass; class/order/family available
+# Myhrvold NP, Baldridge E, Chan B, Sivam D, Freeman DL, Ernest SM. An amniote 
+#  life‐history database to perform comparative analyses with birds, mammals, 
+#  and reptiles: Ecological Archives E096‐269. Ecology. 2015 Nov;96(11):3109-.
 amn <- rdataretriever::fetch('amniote-life-hist')[[1]]
 amn <- amn[amn$trait == 'adult_body_mass_g', ]
 amn$taxon  <- paste(amn$genus, amn$species)
@@ -56,6 +75,9 @@ amn$n <- 1
 amn$source_mass <- 'rdataretriever-amniote-life-hist'
 
 # socean-diet-data: multi-table dataset — must index by name; no taxonomy beyond binomial
+# Raymond B, Marshall M, Nevitt G, Gillies CL, Van Den Hoff J, Stark JS, Losekoot M, 
+#  Woehler EJ, Constable AJ. A Southern Ocean dietary database: 
+#  Ecological Archives E092‐097. Ecology. 2011 May;92(5):1188-.
 sdd <- rdataretriever::fetch('socean-diet-data')$diet
 sdd1 <- sdd[, c('predator_name', 'predator_mass_mean')]
 sdd2 <- sdd[, c('prey_name',     'prey_mass_mean')]
