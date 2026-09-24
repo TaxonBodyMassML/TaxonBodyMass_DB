@@ -53,7 +53,9 @@ FixTaxonomyRanks <- function(dat) {
     'Dorylaimida'        = 'Enoplea',
     'Triplonchida'       = 'Enoplea',
     'Enoplida'           = 'Enoplea',
-    'Mononchida'         = 'Enoplea'
+    'Mononchida'         = 'Enoplea',
+    # Flatworms — Prolecithophora is within class Rhabditophora; GBIF backbone omits class for this order
+    'Prolecithophora'    = 'Rhabditophora'
   )
   if (all(c('order', 'class') %in% names(dat))) {
     for (ord in names(order_class_fills)) {
@@ -101,7 +103,15 @@ FixTaxonomyRanks <- function(dat) {
     'Cirratulidae'     = 'Cirratulida',        # Cirratulus cirratus
     'Trichobranchidae' = 'Terebellida',        # Terebellides stroemi
     # Amoebozoa (Tubulinea)
-    'Hartmannellidae'  = 'Tubulinida'          # Glaeseria mira
+    'Hartmannellidae'    = 'Tubulinida',         # Glaeseria mira
+    # Squamata — GBIF backbone lacks order for all Scincidae genera (covers 69 species in warnings)
+    'Scincidae'          = 'Squamata',
+    # Ceriantharia — tube anemones; GBIF backbone omits order for Cerianthidae across all APIs
+    'Cerianthidae'       = 'Ceriantharia',
+    # Omalogyroida — minute heterobranch marine gastropods; order absent from GBIF backbone (per WoRMS)
+    'Omalogyridae'       = 'Omalogyroida',
+    # Tritrichomonadida — covers Tritrichomonas suis (= T. foetus synonym); order absent from GBIF backbone
+    'Tritrichomonadidae' = 'Tritrichomonadida'
   )
   if (all(c('family', 'order') %in% names(dat))) {
     for (fam in names(family_order_fills)) {
@@ -190,26 +200,31 @@ FixTaxonomyRanks <- function(dat) {
     # Nemertea — order absent from all APIs for these species
     'Carinoma mutabilis'        = c(order = 'Carinomiformes'),
     'Carinoma tremaphorus'      = c(order = 'Palaeonemertea'),
-    # Ceriantharia — order absent from all APIs
-    'Ceriantheopsis americanus' = c(order = 'Ceriantharia'),
+    # Ceriantharia — order absent from all APIs; GBIF resolves to 'Ceriantheopsis americana' (not -us)
+    'Ceriantheopsis americana'  = c(order = 'Ceriantharia'),
     # Platyhelminthes — order absent from all APIs for these species
     'Euplana gracilis'          = c(order = 'Polycladida'),
     'Stenostomum virginianum'   = c(order = 'Catenulida'),
     'Stylochus ellipticus'      = c(order = 'Polycladida'),
-    # Amoebozoa — order absent from all APIs; family Hartmannellidae → Tubulinida
-    'Glaseria mira'             = c(order = 'Tubulinida'),
+    # Amoebozoa — order and family absent from all APIs; key was 'Glaseria mira' (typo) in prior versions
+    'Glaeseria mira'            = c(order = 'Tubulinida', family = 'Hartmannellidae'),
     # Aves — order absent from all APIs
     'Dendrocopus major'         = c(order = 'Piciformes'),
-    # Kinetoplastida — order absent from all APIs
-    'Trypanosoma lewisi'        = c(order = 'Trypanosomatida'),
-    'Tritrichomonas foetus'     = c(order = 'Tritrichomonadida'),
-    # Pylopulmonata — freshwater gastropod; order absent from all APIs
-    'Spiralinella spiralis'     = c(order = 'Pylopulmonata'),
+    # Kinetoplastida — GBIF misresolved Trypanosoma lewisi to Pleurocera acuta (gastropod); handled
+    # by Part 7 taxon overwrite instead; Tritrichomonas foetus synonymized to T. suis by GBIF
+    'Tritrichomonas suis'       = c(order = 'Tritrichomonadida'),
+    # Pylopulmonata — freshwater gastropod; GBIF synonymized Spiralinella → Spiralina spiralis
+    'Spiralina spiralis'        = c(order = 'Pylopulmonata'),
     # Myriapoda — order absent from all APIs
     'Scutigerella immaculata'   = c(order = 'Scutigerellida'),
     # Bryozoa / Amoebozoa — family absent from all APIs
     'Austroflustra vulgaris'   = c(family = 'Flustridae'),
-    'Chaos carolinense'        = c(family = 'Amoebidae')
+    'Chaos carolinense'        = c(family = 'Amoebidae'),
+    # Phoronida — GBIF backbone defines no class or order for this phylum; ITIS uses Phoronidea/Phoronida
+    'Phoronis psammophila'     = c(class = 'Phoronidea',   order = 'Phoronida'),
+    # Aves — GBIF backbone match returned only Animalia root (matchType=HIGHERRANK); genus left NA by all APIs
+    'Orthorhynchus cristatus'  = c(genus = 'Orthorhynchus', class = 'Aves',
+                                   order = 'Apodiformes',   family = 'Trochilidae')
   )
   if ('species' %in% names(dat)) {
     for (sp_name in names(manual_fills)) {
@@ -237,7 +252,11 @@ FixTaxonomyRanks <- function(dat) {
     # Paranotropis accepted per AFS 2023/ITIS; API returns Notropis (outdated)
     'Paranotropis volucellus' = 'Paranotropis',
     # Lythrichthys resurrected by Wada et al. (2021); API returns Setarches
-    'Lythrichthys longimanus' = 'Lythrichthys'
+    'Lythrichthys longimanus' = 'Lythrichthys',
+    # GBIF backbone synonymizes Spreo → Lamprotornis; preserve original to match species prefix
+    'Spreo superbus'          = 'Spreo',
+    # GBIF backbone places Aegintha temporalis in genus Neochmia; preserve original to match species prefix
+    'Aegintha temporalis'     = 'Aegintha'
   )
   if (all(c('species', 'genus') %in% names(dat))) {
     for (sp_name in names(genus_overwrites)) {
@@ -258,10 +277,28 @@ FixTaxonomyRanks <- function(dat) {
     # returned no match and NCBI resolved the name to the plant Abronia villosa
     # var. aurita, yielding Viridiplantae/Streptophyta/Magnoliopsida above the
     # pre-seeded Squamata/Anguidae.
-    'Abronia_aurita' = c(species = 'Abronia aurita', genus = 'Abronia',
-                         kingdom = 'Animalia', phylum = 'Chordata',
-                         class = 'Reptilia', order = 'Squamata',
-                         family = 'Anguidae', taxonomy_source = 'manual')
+    'Abronia_aurita'      = c(species = 'Abronia aurita', genus = 'Abronia',
+                              kingdom = 'Animalia', phylum = 'Chordata',
+                              class = 'Reptilia', order = 'Squamata',
+                              family = 'Anguidae', taxonomy_source = 'manual'),
+    # Trypanosoma lewisi: GBIF backbone misresolved to Pleurocera acuta (Pleuroceridae gastropod) at
+    # conf=84 via a homonym match. Correct taxonomy from NCBI: rat kinetoplastid parasite.
+    'Trypanosoma_lewisi'       = c(species = 'Trypanosoma lewisi', genus = 'Trypanosoma',
+                                   kingdom = 'Protozoa', phylum = 'Euglenozoa',
+                                   class = 'Kinetoplastea', order = 'Trypanosomatida',
+                                   family = 'Trypanosomatidae', taxonomy_source = 'manual'),
+    # Alcippe abyssinica / atriceps: GBIF backbone returned only Animalia root (matchType=HIGHERRANK);
+    # accepted genus is Sylvia (Sylviidae) per GBIF search. Species name updated accordingly.
+    'Alcippe_abyssinica'       = c(species = 'Sylvia abyssinica', genus = 'Sylvia',
+                                   class = 'Aves', order = 'Passeriformes',
+                                   family = 'Sylviidae', taxonomy_source = 'manual'),
+    'Alcippe_atriceps'         = c(species = 'Sylvia atriceps', genus = 'Sylvia',
+                                   class = 'Aves', order = 'Passeriformes',
+                                   family = 'Sylviidae', taxonomy_source = 'manual'),
+    # Bernieria madagascariensis: species column contains author citation string from source data;
+    # strip to canonical binomial so downstream checks and API re-queries work correctly.
+    'Bernieria_madagascariensis' = c(species = 'Bernieria madagascariensis',
+                                     taxonomy_source = 'manual')
   )
   if ('taxon' %in% names(dat)) {
     for (tx in names(taxon_overwrites)) {
