@@ -3,6 +3,9 @@ adat <- read.csv(
             'trait_dataset_level2-2023-09-14.csv'),
   header = TRUE
 )
+keep <- is.na(adat$lifeStage) | trimws(adat$lifeStage) == '' |
+        grepl('^adult|female|male', trimws(adat$lifeStage), ignore.case = TRUE)
+adat <- adat[keep, ]
 taxon_tax <- adat[adat$traitName == 'wetWeight' & !is.na(adat$scientificName),
                   c('scientificName', 'kingdom', 'phylum', 'class', 'order', 'family')]
 taxon_tax <- taxon_tax[!duplicated(taxon_tax$scientificName), ]

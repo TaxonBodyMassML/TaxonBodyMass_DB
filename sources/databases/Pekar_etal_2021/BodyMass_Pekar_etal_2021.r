@@ -1,4 +1,7 @@
 adat <- read.csv(file.path(wd_source, 'wstdb-1785518160391.csv'), header = TRUE)
+keep <- is.na(adat$lifeStage) | trimws(adat$lifeStage) == '' |
+        grepl('^adult|female|male', trimws(adat$lifeStage), ignore.case = TRUE)
+adat <- adat[keep, ]
 taxon_tax <- adat[adat$trait == 'bodm' & !is.na(adat$genus) & !is.na(adat$species),
                   c('genus', 'species', 'family')]
 taxon_tax$taxon  <- paste(taxon_tax$genus, taxon_tax$species)
