@@ -1,4 +1,5 @@
 sources/Rdata/
+sources/VertNet/
 
 .Rhistory
 .RData
@@ -9,5 +10,4 @@ verified_*.csv
 verifications_*.csv
 residuals_full.csv
 
-sources/enrich_cache.Rdata
 tmp/

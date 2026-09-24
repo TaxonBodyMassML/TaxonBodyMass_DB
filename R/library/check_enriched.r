@@ -1,7 +1,8 @@
-check_enriched <- function(dat) {
+check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE) {
   dir.create(file.path(wd_root, "reports"), showWarnings = FALSE)
   warn <- character(0)
   warn_summary <- character(0)
+  warn_namechange <- character(0)
   errs <- character(0)
   mass_summary <- character(0)
 
@@ -78,26 +79,63 @@ check_enriched <- function(dat) {
   if ("species_changed" %in% names(dat)) {
     changed <- dat[!is.na(dat$species_changed) & dat$species_changed, ]
     if (nrow(changed) > 0) {
-      warn <- c(warn, sprintf("\n## Species name changed during enrichment (%d rows)\n\n%s",
+      warn_namechange <- c(warn_namechange, sprintf("\n## Species name changed during enrichment (%d rows)\n\n%s",
         nrow(changed), paste(sprintf("%s -> %s [%s]",
           changed$taxon_provided, changed$species, changed$taxonomy_source),
           collapse = "\n\n")))
-      warn_summary <- c(warn_summary, sprintf("- Species name changed during enrichment: %d rows",
-        nrow(changed)))
     }
   }
 
   # 9. High mass disagreement across collapsed taxon strings
+  fmt_mass_line <- function(row, ws_all) {
+    base <- sprintf("%s [range=%.2f]", row$species, row$log10_range)
+    if (!is.null(ws_all)) {
+      ws <- ws_all[ws_all$genus == row$genus & ws_all$species == row$species, ]
+      if (nrow(ws) > 1) {
+        min_row <- ws[which.min(ws$mass_g), ]
+        max_row <- ws[which.max(ws$mass_g), ]
+        base <- sprintf("%s\n        Min_source: %s %.4g\n        Max_source: %s %.4g",
+          base,
+          min_row$source_mass, min_row$mass_g,
+          max_row$source_mass, max_row$mass_g)
+      }
+    }
+    base
+  }
+
+  tally_suspicious_sources <- function(species_df, ws_all) {
+    if (is.null(ws_all) || nrow(species_df) == 0) return(character(0))
+    src <- character(0)
+    for (i in seq_len(nrow(species_df))) {
+      ws <- ws_all[ws_all$genus == species_df$genus[i] & ws_all$species == species_df$species[i], ]
+      if (nrow(ws) > 1)
+        src <- c(src, ws$source_mass[which.min(ws$mass_g)], ws$source_mass[which.max(ws$mass_g)])
+    }
+    if (length(src) == 0) return(character(0))
+    tbl <- sort(table(src), decreasing = TRUE)
+    paste(sprintf("  - %s (%d)", names(tbl), as.integer(tbl)), collapse = "\n")
+  }
+
   if ("log10_range" %in% names(dat)) {
+    if (remove_flagged)
+      mass_summary <- c(
+        "**Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**",
+        mass_summary)
+
     high_range <- dat[!is.na(dat$log10_range) & dat$log10_range > 2.0, ]
     high_range <- high_range[order(-high_range$log10_range), ]
     if (nrow(high_range) > 0) {
       mass_summary <- c(mass_summary, sprintf(
         "- High mass disagreement (log10 range > 2): %d species", nrow(high_range)))
+      src_high <- tally_suspicious_sources(high_range, within_source)
+      if (length(src_high) > 0)
+        mass_summary <- c(mass_summary, sprintf(
+          "- Suspicious sources (log10 > 2, by frequency):\n%s", src_high))
+      lines_high <- vapply(seq_len(nrow(high_range)), function(i)
+        fmt_mass_line(high_range[i, ], within_source), character(1))
       errs <- c(errs, sprintf(
         "## log10(max/min mass) > 2 after dedup (%d species) -- likely misresolution or unit error\n\n%s",
-        nrow(high_range), paste(sprintf("%s [range=%.2f]",
-          high_range$species, high_range$log10_range), collapse = "\n")))
+        nrow(high_range), paste(lines_high, collapse = "\n")))
     }
 
     moderate_range <- dat[!is.na(dat$log10_range) &
@@ -106,10 +144,15 @@ check_enriched <- function(dat) {
     if (nrow(moderate_range) > 0) {
       mass_summary <- c(mass_summary, sprintf(
         "- Moderate mass disagreement (log10 range 1-2): %d species", nrow(moderate_range)))
+      src_mod <- tally_suspicious_sources(moderate_range, within_source)
+      if (length(src_mod) > 0)
+        mass_summary <- c(mass_summary, sprintf(
+          "- Suspicious sources (log10 1-2, by frequency):\n%s", src_mod))
+      lines_mod <- vapply(seq_len(nrow(moderate_range)), function(i)
+        fmt_mass_line(moderate_range[i, ], within_source), character(1))
       errs <- c(errs, sprintf(
         "\n## Moderate mass disagreement (log10 range 1-2) (%d species)\n\n%s",
-        nrow(moderate_range), paste(sprintf("%s [range=%.2f]",
-          moderate_range$species, moderate_range$log10_range), collapse = "\n")))
+        nrow(moderate_range), paste(lines_mod, collapse = "\n")))
     }
   }
 
@@ -164,6 +207,15 @@ check_enriched <- function(dat) {
 
   # Write reports
   now <- format(Sys.time(), "%Y-%m-%d %H:%M:%S")
+  if (length(warn_namechange) > 0) {
+    writeLines(c(sprintf("# TaxonBodyMass_DB Species Name Changes -- %s\n", now),
+      warn_namechange),
+      file.path(wd_root, "reports", "warnings_name_change.md"))
+  } else {
+    writeLines(c(sprintf("# TaxonBodyMass_DB Species Name Changes -- %s\n", now),
+      "No name changes."),
+      file.path(wd_root, "reports", "warnings_name_change.md"))
+  }
   if (length(errs) > 0) {
     summary_block_mass <- paste0("## Summary\n\n", paste(mass_summary, collapse = "\n"))
     writeLines(c(sprintf("# TaxonBodyMass_DB Mass Value Warnings -- %s\n", now),
