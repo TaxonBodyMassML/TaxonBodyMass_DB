@@ -123,7 +123,7 @@ amn$order  <- as.character(amn$order)
 amn$family <- as.character(amn$family)
 amn <- amn[which(!is.na(amn$mass_g) & amn$mass_g > 0), ]
 amn$n <- 1
-amn$source_mass <- 'Myrhvold_2015'
+amn$source_mass <- 'Myhrvold_2015'
 
 # socean-diet-data: multi-table dataset — must index by name; no taxonomy beyond binomial
 # Raymond B, Marshall M, Nevitt G, Gillies CL, Van Den Hoff J, Stark JS, Losekoot M, 

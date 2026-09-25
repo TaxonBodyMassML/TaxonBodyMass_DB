@@ -89,7 +89,12 @@ if (DataRetrieve){
   # Use a persistent venv (Python 3.11 + retriever 2.4.0 + setuptools<70).
   # Create it once with: uv venv --python 3.11 ~/.local/share/r-rdataretriever
   #   then: uv pip install --python ~/.local/share/r-rdataretriever "retriever==2.4.0" "setuptools<70"
-  Sys.setenv(RETICULATE_PYTHON_ENV = path.expand("~/.local/share/r-rdataretriever"))
+  # and apply the scripts.py InvalidVersion guard described in README.md (Prerequisites).
+  venv_py <- path.expand("~/.local/share/r-rdataretriever")
+  if (!file.exists(file.path(venv_py, 'bin', 'python')))
+    stop("DataRetrieve = TRUE but the retriever venv is missing: ", venv_py,
+         "\nCreate it as described in README.md (Prerequisites), or set DataRetrieve = FALSE.")
+  Sys.setenv(RETICULATE_PYTHON_ENV = venv_py)
   source(file.path(wd_root, 'R', 'library', 'data_retrieve.r'))
 }
 

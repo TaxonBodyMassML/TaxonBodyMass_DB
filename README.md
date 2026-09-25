@@ -48,16 +48,21 @@ install.packages("rfishbase")
 install.packages("rdataretriever")
 ```
 
-The `rdataretriever` package requires Python and the [`retriever`](https://retriever.readthedocs.io) Python package. It is used only when `DataRetrieve = TRUE` in `RunMe.r`. To set up:
+The `rdataretriever` package requires Python and the [`retriever`](https://retriever.readthedocs.io) Python package. It is used only when `DataRetrieve = TRUE` in `RunMe.r`. `RunMe.r` points reticulate at a dedicated venv at `~/.local/share/r-rdataretriever` pinned to Python 3.11 and `retriever` 2.4.0 (the compatibility patch in `R/library/data_retrieve.r` targets the 2.x API; `retriever` 3.x is not supported). Create it once with [uv](https://docs.astral.sh/uv/) (`brew install uv`):
 
 ```bash
-# Create the virtualenv that reticulate uses
-python3 -m venv ~/.virtualenvs/r-reticulate
-source ~/.virtualenvs/r-reticulate/bin/activate
-pip install retriever
+uv venv --python 3.11 ~/.local/share/r-rdataretriever
+uv pip install --python ~/.local/share/r-rdataretriever "retriever==2.4.0" "setuptools<70"
 ```
 
-If `retriever` loads but `rdataretriever::get_updates()` raises `packaging.version.InvalidVersion: Invalid version: ''`, apply the workaround in [`retriever/lib/scripts.py`](https://github.com/weecology/retriever/issues) by adding an `and mod_ver` guard to the `check_retriever_minimum_version` function (line ~31).
+`retriever` 2.4.0 fails on import with `packaging.version.InvalidVersion: Invalid version: ''` when any cached dataset script has an empty minimum-version field. Fix it by adding an `and mod_ver` guard in the venv's `retriever/lib/scripts.py`:
+
+```bash
+sed -i '' 's/if hasattr(module, "retriever_minimum_version"):/if hasattr(module, "retriever_minimum_version") and mod_ver:/' \
+  ~/.local/share/r-rdataretriever/lib/python3.11/site-packages/retriever/lib/scripts.py
+```
+
+A message such as `tidycensus is supported by Retriever version 3.0.1-dev` on load is harmless; it only means that one dataset script is skipped.
 
 ### Reproduce the database
 
