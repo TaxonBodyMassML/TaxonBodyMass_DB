@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-09-25 08:09:40
+# TaxonBodyMass_DB Species Name Changes -- 2026-09-25 16:09:11
 
 
 ## Species name changed during enrichment (5116 rows)
@@ -5483,7 +5483,7 @@ Mastomys natalensis; Myomys fumatus -> Mastomys natalensis [GBIF]
 
 Cuvieronius hyodon -> Mastotherium hyodon [GBIF]
 
-Nandopsis urophthalmus; Mayaheros urophthalmus; Cichlasoma urophthalmum -> Mayaheros urophthalmus [GBIF]
+Nandopsis urophthalmus; Cichlasoma urophthalmum; Mayaheros urophthalmus -> Mayaheros urophthalmus [GBIF]
 
 Mazama gouazoubira; Mazama nemorivaga -> Mazama gouazoubira [GBIF]
 

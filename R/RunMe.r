@@ -152,6 +152,11 @@ source_list <- lapply(rdata_files, function(f) {
 ##########################################################################
 # normalise encoding/spacing, strip non-alpha, capitalise, truncate to binomial
 source_list <- lapply(source_list, FixFormatting)
+# normalise source labels to ASCII so they match BM_citations CiteIDs exactly
+source_list <- lapply(source_list, function(df) {
+  df$source_mass <- NormaliseSourceLabel(df$source_mass)
+  df
+})
 # rename misspelled taxa (depends on FixFormatting)
 source_list <- lapply(source_list, FixMisspellings)
 # drop non-species and (some) non-autotroph entries
@@ -198,6 +203,7 @@ ddat <- read_sheet(
   col_types = 'ccncnnn'
 )
 ddat <- ddat[which(!is.na(ddat$mass_g)), 1:4]
+ddat$source_mass <- NormaliseSourceLabel(ddat$source_mass)
 ddat$n <- 1
 for (col in tax_cols)
   if (!col %in% names(ddat)) ddat[[col]] <- NA_character_
@@ -426,6 +432,7 @@ gmap <- read_sheet(
 )
 
 gmap$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', gmap$Bibcite, perl = TRUE)
+gmap$CiteID  <- NormaliseSourceLabel(gmap$CiteID)
 
 dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
                gmap, by = 'Bibcite', all.x = TRUE)
@@ -445,6 +452,21 @@ if (length(unmapped) > 0) {
     length(unmapped),
     ' bib entries have no CiteID mapping and no Citation.bib:\n',
     paste(unmapped, collapse = '\n'), immediate. = TRUE)
+}
+
+# The reverse check: every source_mass label in the exported data must have a
+# CiteID row, otherwise downstream tools (e.g. TaxonBodyMassML::create_bib())
+# cannot cite it. Labels are counted by the number of species rows using them.
+used_labels <- trimws(unlist(strsplit(enriched$source_mass, ';', fixed = TRUE)))
+used_labels <- used_labels[!is.na(used_labels) & used_labels != '']
+label_tab   <- sort(table(used_labels), decreasing = TRUE)
+uncited     <- label_tab[names(label_tab) %!in% dcite$CiteID]
+if (length(uncited) > 0) {
+  warning(
+    length(uncited),
+    ' source_mass labels in TaxonBodyMass.csv have no CiteID row in BM_citations:\n',
+    paste0(names(uncited), ' (', as.integer(uncited), ' rows)', collapse = '\n'),
+    immediate. = TRUE)
 }
 
 dcite <- dcite[order(dcite$CiteID, dcite$Bibcite), ]

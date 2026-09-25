@@ -1,15 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-25 08:09:40
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-25 16:09:11
 
 ## Summary
 
-- Missing `order` after all enrichment stages: 1 rows
 - Low GBIF confidence (75-89): 142 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-
-## Missing `order` after all enrichment stages (1 rows)
-
-Cephalodiscus_gilchristi
 
 ## Low GBIF confidence (75-89) (142 rows)
 

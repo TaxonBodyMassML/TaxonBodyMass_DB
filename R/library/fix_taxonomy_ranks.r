@@ -224,7 +224,8 @@ FixTaxonomyRanks <- function(dat) {
     'Phoronis psammophila'     = c(class = 'Phoronidea',   order = 'Phoronida'),
     # Aves — GBIF backbone match returned only Animalia root (matchType=HIGHERRANK); genus left NA by all APIs
     'Orthorhynchus cristatus'  = c(genus = 'Orthorhynchus', class = 'Aves',
-                                   order = 'Apodiformes',   family = 'Trochilidae')
+                                   order = 'Apodiformes',   family = 'Trochilidae'),
+    'Cephalodiscus gilchristi' = c(order = 'Cephalodiscida')
   )
   if ('species' %in% names(dat)) {
     for (sp_name in names(manual_fills)) {
