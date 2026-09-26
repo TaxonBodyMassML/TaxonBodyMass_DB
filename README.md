@@ -19,11 +19,11 @@ The pipeline is written in R. The main entry point is `R/RunMe.r`, which orchest
    - `R/library/fix_misspellings.r` — corrects known misspellings
    - `R/library/fix_nontaxa.r` — removes placeholder identifiers, functional-group labels, and other non-taxon entries
 
-3. **Merging** — within each source, body masses are summarized as the geometric mean across records for the same taxon. Across sources, per-taxon values are combined as the arithmetic mean. The `source_mass` column in the output records which sources contributed to each entry.
+3. **Google Sheet override** — lab-curated values (`BM_data` tab) replace all compiled records for the same taxon.
 
-4. **Google Sheet override** — lab-curated values add to and replace any matching entries from the compiled sources.
+4. **Taxonomy enrichment and autotroph removal** — every unique name is resolved once to an accepted species and its full kingdom-to-species classification through GBIF, NCBI, WoRMS, Catalogue of Life (ChecklistBank), ITIS and Wikidata in turn, with a final GBIF backfill of missing higher ranks (`R/library/enrich_taxonomy.r`; details in `sources/passes/enrichment_pipeline.md`). Results are cached in `sources/enrich_cache.Rdata` so re-runs only query new names. Manual corrections live in `R/library/fix_taxonomy_ranks.r`. `R/library/filter_autotrophs.r` then removes autotrophs: the kingdoms Plantae, Viridiplantae and Fungi; predominantly photosynthetic phyla (Ochrophyta, Bacillariophyta, Haptophyta, Cryptophyta, Chlorophyta, Rhodophyta, Charophyta, Glaucophyta, Streptophyta, Euglenophyta, Cyanobacteria, Cyanobacteriota); and a curated list of photosynthetic or mixotrophic dinoflagellate and euglenid genera. Heterotrophic protists (ciliates, foraminifera, apicomplexans, kinetoplastids, amoebae, heterotrophic dinoflagellates and euglenids) are retained.
 
-5. **Taxonomy enrichment and autotroph removal** — every unique name is resolved to an accepted species and its kingdom-to-family classification through GBIF, NCBI, WoRMS, Catalogue of Life, ITIS and Wikidata in turn (`R/library/enrich_taxonomy.r`; details in `sources/passes/enrichment_pipeline.md`), with manual corrections in `R/library/fix_taxonomy_ranks.r`. `R/library/filter_autotrophs.r` then removes autotrophs: the kingdoms Plantae, Viridiplantae and Fungi; predominantly photosynthetic phyla (Ochrophyta, Bacillariophyta, Haptophyta, Cryptophyta, Chlorophyta, Rhodophyta, Charophyta, Glaucophyta, Streptophyta, Euglenophyta, Cyanobacteria); and a curated list of photosynthetic or mixotrophic dinoflagellate and euglenid genera. Heterotrophic protists (ciliates, foraminifera, apicomplexans, kinetoplastids, amoebae, heterotrophic dinoflagellates and euglenids) are retained. `R/library/check_enriched.r` writes QC reports to `reports/`.
+5. **Merging and range filter** — within each source, body masses are summarised as the geometric mean across records resolving to the same accepted species. Across sources, per-species values are combined as the arithmetic mean; `log10_range` records the spread of the per-source values and `source_mass` lists the contributing sources. `R/library/check_enriched.r` writes QC reports to `reports/` (`warnings_taxonomy.md`, `warnings_mass_values.md`, `warnings_name_change.md`), and species whose sources disagree by more than one order of magnitude (`log10_range > 1`) are removed (`R/library/remove_high_range.r`). Counts from this step are written to `../TaxonBodyMassML/ms/numbers_db.tex` for the manuscript.
 
 6. **Genus-level aggregation** — species-level masses are averaged by genus to produce a supplementary genus-level output.
 
@@ -31,8 +31,8 @@ The pipeline is written in R. The main entry point is `R/RunMe.r`, which orchest
 
 | File | Description |
 |---|---|
-| `TaxonBodyMass.csv` | Species-level body masses; columns: `taxon`, `mass_g`, `source_mass`, `n` |
-| `TaxonBodyMass_GenusLevel.csv` | Genus-level arithmetic mean body masses; same columns |
+| `TaxonBodyMass.csv` | One row per accepted species. Columns: `genus`, `species`, `taxon` (a representative input name), `taxon_provided` (all input names, `;`-separated), `log10_range`, `mass_g` (grams), `source_mass` (`;`-separated source labels), `n` (records), `kingdom`, `phylum`, `class`, `order`, `family`, `taxonomy_source`, `gbif_confidence`, `gbif_status`, `gbif_family`, `gbif_order`, `species_changed` |
+| `TaxonBodyMass_GenusLevel.csv` | Genus-level arithmetic mean body masses (`-`-separated source labels) |
 | `Bib/TaxonBodyMass_CitationCiteIDs.csv` | Maps BibTeX keys to `source_mass` labels for citation tracing |
 | `Bib/TaxonBodyMass_Citations.bib` | Full BibTeX bibliography for all sources |
 
@@ -74,7 +74,7 @@ To regenerate all per-source `.Rdata` files and recompile the database from scra
 
 ## Reproducibility note
 
-Step 4 of the pipeline reads a lab-internal Google Sheet for curated mass overrides and citation mapping. External users who wish to fully reproduce the database will need to either (a) disable the Google Sheet step by removing or skipping that block in `R/RunMe.r`, which will omit lab-curated values, or (b) contact mark.novak@oregonstate.edu for the sheet structure. The compiled output CSVs committed to this repository reflect the full pipeline including the Google Sheet override.
+Step 3 of the pipeline reads a lab-internal Google Sheet for curated mass overrides and citation mapping. External users who wish to fully reproduce the database will need to either (a) disable the Google Sheet step by removing or skipping that block in `R/RunMe.r`, which will omit lab-curated values, or (b) contact mark.novak@oregonstate.edu for the sheet structure. The compiled output CSVs committed to this repository reflect the full pipeline including the Google Sheet override.
 
 ## Citation
 

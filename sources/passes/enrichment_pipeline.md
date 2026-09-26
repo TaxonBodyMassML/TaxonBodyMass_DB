@@ -10,7 +10,9 @@ Each stage queries a different taxonomic authority and fills only the rank field
 
 **Final output:** `TaxonBodyMass_DB/TaxonBodyMass.csv` — deduplicated to one row per resolved species, with full taxonomy and provenance columns. Autotrophic taxa are removed by `FilterAutotrophs()` (see §5) before deduplication.
 
-**Per-stage pass files:** after each stage completes, the full `compiled` data frame is written to `sources/passes/`:
+**Caching:** `RunMe.r` enriches each unique name once and stores the result in `sources/enrich_cache.Rdata`; subsequent runs (`fresh_start = FALSE`) query only names absent from the cache. Stage 7 (`BackfillRanks()`, `rgbif::name_usage(data = "parents")` on the stored GBIF usage key) fills higher ranks still missing for resolved species.
+
+**Per-stage pass files:** after each stage completes, the data frame *passed to `EnrichTaxonomy()`* is written to `sources/passes/`. In cache mode that is only the new names of the current run (e.g. 182 rows), **not** the whole database, so these files must not be used for whole-database counts — those are computed in `RunMe.r` and written to `../TaxonBodyMassML/ms/numbers_db.tex`.
 
 | File | Written after stage |
 | --- | --- |
@@ -21,9 +23,9 @@ Each stage queries a different taxonomic authority and fills only the rank field
 | `TaxonBodyMass_ITIS_pass.csv` | Stage 5 (ITIS) |
 | `TaxonBodyMass_Wikidata_pass.csv` | Stage 6 (Wikidata) |
 
-Each pass file contains all rows and all columns (including pre-seeded taxonomy and the provenance columns added by Stage 0). Rows show the cumulative state after that stage — taxa resolved in earlier stages retain their resolved values; taxa not yet resolved have `NA` for `species`. These files allow resumption after a crash and serve as the authoritative record of per-stage yield.
+Each pass file contains all rows submitted to that run and all columns (including pre-seeded taxonomy and the provenance columns added by Stage 0). Rows show the cumulative state after that stage — taxa resolved in earlier stages retain their resolved values; taxa not yet resolved have `NA` for `species`. These files allow resumption after a crash and record the per-stage yield of that run.
 
-**QC reports:** `TaxonBodyMass_DB/reports/errors.md` and `reports/warnings.md` are written by `check_enriched()` after deduplication.
+**QC reports:** `TaxonBodyMass_DB/reports/warnings_taxonomy.md`, `reports/warnings_mass_values.md` and `reports/warnings_name_change.md` are written by `check_enriched()` after deduplication.
 
 **Intra-stage checkpoint:** `TaxonBodyMass_DB/tmp/enrich_checkpoint.csv` is written periodically during long per-species stages (every 100 rows for NCBI, COL, ITIS; every batch for WoRMS, Wikidata). This is a rolling file overwritten each checkpoint; the per-stage pass files above are the durable record.
 
@@ -31,7 +33,7 @@ Each pass file contains all rows and all columns (including pre-seeded taxonomy 
 
 ## 2. Pre-Seeded Taxonomy from Source Ingestion Scripts
 
-19 of 38 source ingestion scripts (`sources/databases/BodyMass_*.r`) encounter formal Linnean taxonomy columns in their raw data. These are now extracted before the per-source column subset and merged back after the `ddply` aggregation, so the taxonomy columns are present in each source data frame when `bind_rows()` assembles the compiled data.
+19 of the 39 source ingestion scripts (`sources/databases/*/BodyMass_*.r`) encounter formal Linnean taxonomy columns in their raw data. These are now extracted before the per-source column subset and merged back after the `ddply` aggregation, so the taxonomy columns are present in each source data frame when `bind_rows()` assembles the compiled data.
 
 The `RunMe.r` Step 3 summarise carries pre-seeded values forward using `first(na.omit(col))` per rank, so a taxon appearing in multiple sources gets a source-provided family/order/class if any source has it.
 
@@ -72,7 +74,7 @@ Stages run sequentially inside `EnrichTaxonomy()`. Each stage receives the same 
 | 1 | `rgbif::name_backbone_checklist()` | GBIF name backbone (batch POST) | 1,000 | none | — |
 | 2 | `taxize::classification(db="ncbi")` | NCBI Entrez (esearch + efetch) | 1 (sequential) | 0.34 s | every 100 rows |
 | 3 | `worrms::wm_records_names()` | WoRMS AphiaRecordsByMatchNames | 50 | 0.5 s | every 500 rows |
-| 4 | `taxize::classification(db="col")` | COL ChecklistBank | 1 (sequential) | 0.5 s | every 100 rows |
+| 4 | `httr2::request()` (`api.checklistbank.org/nidx/match`) | COL ChecklistBank names index | 1 (sequential) | 0.5 s | every 100 rows |
 | 5 | `ritis::search_scientific()` + `ritis::hierarchy_full()` | ITIS JSON service | 1 (sequential) | 0.5 s | every 100 rows |
 | 6 | `httr2::request()` (SPARQL) | Wikidata query service | 10 | 1.0 s | every 100 rows |
 
@@ -103,7 +105,7 @@ Runs on the full `compiled` data frame before any API call.
 
 These two columns are used by `check_enriched()` Check 10 to flag source-vs-GBIF family/order mismatches as potential misresolutions.
 
-**Confidence threshold:** results with `confidence < 75` have their `species` field zeroed out before the NA-fill loop; they fall through to Stage 2. Results with `75 ≤ confidence < 90` are filled but flagged in `reports/warnings.md`.
+**Confidence threshold:** results with `confidence < 75` have their `species` field zeroed out before the NA-fill loop (their higher ranks are still used to fill `NA` fields); they fall through to Stage 2. Results with `confidence ≥ 90` override source-pre-seeded kingdom..family values. Results with `75 ≤ confidence < 90` are filled but flagged in `reports/warnings_taxonomy.md`.
 
 **Chunking and retry:** all taxa are sent in chunks of 1,000. Each chunk is retried up to 3 times (delays: 5 s, 15 s, 45 s) before emitting a warning and allowing affected taxa to fall through.
 
@@ -133,13 +135,13 @@ Accepted match types: `exact`, `phonetic`, `near_1`. Records with other match ty
 
 ---
 
-### Stage 4 — COL (`taxize::classification(db="col")`)
+### Stage 4 — COL (`httr2` GET `https://api.checklistbank.org/nidx/match?name=`)
 
-**API:** COL ChecklistBank (dataset 3 — the full Catalogue of Life checklist)
+**API:** ChecklistBank names-index match (Catalogue of Life)
 
 **Fields added:** `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, `species`
 
-Queries taxa one at a time. When a classification is returned, the queried name is assigned directly as `species`. Particularly effective for Squamata because COL sources directly from the Reptile Database.
+Queries taxa one at a time. Matches of type `EXACT` or `FUZZY` are accepted; the classification is read from the returned `usage$classification`. Particularly effective for Squamata because COL sources directly from the Reptile Database.
 
 ---
 
@@ -198,9 +200,9 @@ History: the v5.0.0 filter listed the phylum as "Dinoflagellata" (never emitted 
 
 ## 6. QC and Deduplication (`check_enriched()`, `RunMe.r` Step 5)
 
-After enrichment and autotroph filtering, `RunMe.r` deduplicates the data to one row per resolved `species` (geometric mean of `mass_g` in log space across all source records resolving to the same accepted species). The resulting `enriched` data frame is passed to `check_enriched()`.
+After enrichment and autotroph filtering, `RunMe.r` deduplicates the data to one row per resolved `species` in two passes: within each source, the geometric mean of `mass_g` across records resolving to the same accepted species; across sources, the arithmetic mean of the per-source values, with `log10_range = log10(max/min)` of those values. The resulting `enriched` data frame is passed to `check_enriched()`, after which `remove_high_range_taxa()` drops species with `log10_range > 1` (1,116 species in v6.0.0).
 
-`check_enriched()` writes `reports/errors.md` (blocking issues) and `reports/warnings.md` (advisories) covering:
+`check_enriched()` writes `reports/warnings_taxonomy.md`, `reports/warnings_mass_values.md` and `reports/warnings_name_change.md` covering:
 
 1. Non-positive or non-finite `mass_g`
 2. Missing taxonomy at each rank after all 6 stages
@@ -210,7 +212,7 @@ After enrichment and autotroph filtering, `RunMe.r` deduplicates the data to one
 6. Low GBIF confidence (75–89)
 7. GBIF status `DOUBTFUL`
 8. Species name changed during enrichment (synonym collapses, misresolutions)
-9. High mass disagreement: `log10(max/min)` > 2.0 across source records collapsed to the same species
+9. High mass disagreement: `log10(max/min)` > 2.0 across per-source values collapsed to the same species (all species with `log10_range > 1` are subsequently removed)
 10. Source-provided family or order differs from GBIF-returned family or order (potential misresolution flag)
 
 ---
