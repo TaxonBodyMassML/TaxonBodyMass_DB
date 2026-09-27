@@ -410,6 +410,7 @@ FixMisspellings <- function(dat) {
     "Menmbraiporella_nitida"          = "Membraniporella_nitida",         # nm/mn transposition + ai/ani; bryozoan GBIF NONE
     "Methylobacte_extorquens"         = "Methylobacterium_extorquens",    # truncated genus; Methylobacterium bacterium GBIF NONE
     "Micropterus_dolomieui"           = "Micropterus_dolomieu",           # extra -i; original Lacepède 1802 used dolomieu GBIF EXACT SYNONYM 98
+    "Micromesistius_potassou"         = "Micromesistius_poutassou",        # misspelt epithet (Barnes_2008 prey)
     "Modiolis_modiolis"               = "Modiolus_modiolus",              # i→u substitution in both parts; horse mussel GBIF FUZZY 85
 
     # N
@@ -468,7 +469,10 @@ FixMisspellings <- function(dat) {
     "Trachytes_pauperiors"            = "Trachytes_pauperior",            # spurious -s; comparative pauperior is undeclined GBIF FUZZY 95
     "Tudus_viscivorus"                = "Turdus_viscivorus",              # missing r; Mistle Thrush GBIF NONE
 
+    "Stephus_longipes"                = "Stephos_longipes",                # misspelt genus; Stephos Scott, 1892 (Barnes_2008 prey)
+
     # U
+    "Urophysis_chuss"                 = "Urophycis_chuss",                 # misspelt genus; Urophycis Gill, 1863 (Barnes_2008 predator)
     "Urosalpinx_cinere"               = "Urosalpinx_cinerea",             # truncated; missing final -a GBIF FUZZY 95
 
     # V

@@ -85,7 +85,10 @@ RemoveNonTaxa <- function(dat) {
     "Unidentified_amoeba",            # no valid binomial; non-species entry (DeLong_etal_2010)
     "Unidentified_bacterium",         # no valid species identifier (DeLong_etal_2010)
     "UnID_chrysomonad",               # unidentified chrysophyte functional label
-    "UNID_kinetoplastid"              # unidentified kinetoplastid functional label
+    "UNID_kinetoplastid",             # unidentified kinetoplastid functional label
+    "Appendicularians_house",         # larvacean mucus house, not a taxon (Barnes_2008 prey)
+    "Hatchet_fish",                   # common name for Sternoptychidae (Barnes_2008 prey)
+    "Unidentified_crustacean"         # no valid species identifier (Barnes_2008 prey)
   )
 
   # Entries that cannot be linked to a valid genus or species binomial.

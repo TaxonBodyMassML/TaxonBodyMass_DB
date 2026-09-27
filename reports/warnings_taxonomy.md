@@ -1,12 +1,12 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-25 18:43:14
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-27 11:34:59
 
 ## Summary
 
-- Low GBIF confidence (75-89): 142 rows
+- Low GBIF confidence (75-89): 143 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
-## Low GBIF confidence (75-89) (142 rows)
+## Low GBIF confidence (75-89) (143 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -111,6 +111,8 @@ Epishura_lacustris [conf=85]
 Eryhtrops_erythrophthalma [conf=83]
 
 Eumicotremus_derjugini [conf=83]
+
+Euphausa_superba [conf=85]
 
 Oporornis_tolmiei [conf=84]
 
