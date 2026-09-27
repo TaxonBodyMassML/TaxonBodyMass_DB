@@ -25,14 +25,14 @@ The pipeline is written in R. The main entry point is `R/RunMe.r`, which orchest
 
 5. **Merging and range filter** — within each source, body masses are summarised as the geometric mean across records resolving to the same accepted species. Across sources, per-species values are combined as the arithmetic mean; `log10_range` records the spread of the per-source values and `source_mass` lists the contributing sources. `R/library/check_enriched.r` writes QC reports to `reports/` (`warnings_taxonomy.md`, `warnings_mass_values.md`, `warnings_name_change.md`), and species whose sources disagree by more than one order of magnitude (`log10_range > 1`) are removed (`R/library/remove_high_range.r`). Counts from this step are written to `../TaxonBodyMassML/ms/numbers_db.tex` for the manuscript.
 
-6. **Genus-level aggregation** — species-level masses are averaged by genus to produce a supplementary genus-level output.
+6. **Genus-level aggregation** — species-level masses are averaged by their resolved (accepted) genus to produce a supplementary genus-level output; synonymous or misspelt input genera therefore fold into the accepted name. Genus-only input records, which bypass enrichment, contribute under their raw genus name.
 
 ## Outputs
 
 | File | Description |
 |---|---|
 | `TaxonBodyMass.csv` | One row per accepted species. Columns: `genus`, `species`, `taxon` (a representative input name), `taxon_provided` (all input names, `;`-separated), `log10_range`, `mass_g` (grams), `source_mass` (`;`-separated source labels), `n` (records), `kingdom`, `phylum`, `class`, `order`, `family`, `taxonomy_source`, `gbif_confidence`, `gbif_status`, `gbif_family`, `gbif_order`, `species_changed` |
-| `TaxonBodyMass_GenusLevel.csv` | Genus-level arithmetic mean body masses (`-`-separated source labels) |
+| `TaxonBodyMass_GenusLevel.csv` | Arithmetic mean body masses by accepted genus (`-`-separated source labels) |
 | `Bib/TaxonBodyMass_CitationCiteIDs.csv` | Maps BibTeX keys to `source_mass` labels for citation tracing |
 | `Bib/TaxonBodyMass_Citations.bib` | Full BibTeX bibliography for all sources |
 

@@ -411,9 +411,12 @@ if (dir.exists(ms_dir)) {
 ##########################################################################
 # 6. Genus-level averages
 ##########################################################################
+# Species rows aggregate by their resolved (accepted) genus, so synonyms and
+# misspelt input genera fold into the accepted name (Raja erinacea -> Leucoraja).
+# Genus-only rows bypass enrichment, so their raw name is the only genus available.
 gdat <- bind_rows(enriched, genus_only)
-gdat$taxon <- sub('\\_.*', '', gdat$taxon)
-gdat <- gdat[nchar(gdat$taxon) > 0, ]
+gdat$taxon <- dplyr::coalesce(gdat$genus, sub('\\_.*', '', gdat$taxon))
+gdat <- gdat[!is.na(gdat$taxon) & nchar(gdat$taxon) > 0, ]
 gdat <- ddply(gdat, .(taxon), summarise,
               mass_g = mean(mass_g),   # arithmetic mean
               n      = sum(n, na.rm = TRUE),
