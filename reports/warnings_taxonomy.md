@@ -1,12 +1,52 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-27 12:21:20
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-27 18:00:19
 
 ## Summary
 
-- Low GBIF confidence (75-89): 143 rows
+- Missing `class` after all enrichment stages: 14 rows
+- genus column does not match species prefix: 3 rows
+- Low GBIF confidence (75-89): 154 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
-## Low GBIF confidence (75-89) (143 rows)
+## Missing `class` after all enrichment stages (14 rows)
+
+Asterropteryx_semipunctata
+
+Awaous_lateristriga
+
+Awaous_ocellaris
+
+Bathygobius_cyclopterus
+
+Brachygobius_sua
+
+Caffrogobius_caffer
+
+Callogobius_sclateri
+
+Drombus_triangularis
+
+Epinephelus_hexagonatus
+
+Epinephelus_maculatus
+
+Epinephelus_polyphekadion
+
+Eviota_guttata
+
+Eviota_prasina
+
+Gymnogobius_isaza
+
+## genus column does not match species prefix (3 rows)
+
+Baeodon_gracilis | genus=Rhogeessa | species=Baeodon gracilis
+
+Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
+
+Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
+
+## Low GBIF confidence (75-89) (154 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -15,6 +55,8 @@ Acrocephalus_palustris [conf=85]
 Actenoides_lindsayi [conf=85]
 
 Actinia_equina [conf=80]
+
+Actitis_macularius [conf=80]
 
 Aegolius_acadicus [conf=85]
 
@@ -25,6 +67,8 @@ Euatideus_giesbrechti [conf=84]
 Aglaeactis_cupripennis [conf=85]
 
 Ailuroedus_buccoides [conf=85]
+
+Alaskozeres_antarcticus [conf=85]
 
 Alectoris_chukar [conf=85]
 
@@ -62,7 +106,7 @@ Cepaea_hortensis [conf=85]
 
 Cepea_nemoralis [conf=85]
 
-Ceuthophilis_fossor [conf=85]
+Ceuthophilus_fossor [conf=85]
 
 Ceuthophilis_gracilipes [conf=85]
 
@@ -71,6 +115,8 @@ Chaetura_pelagica [conf=85]
 Chaetura_vauxi [conf=85]
 
 Charadrius_dubius [conf=85]
+
+Charadrius_vociferus [conf=85]
 
 Cichlopsis_leucogenys [conf=85]
 
@@ -130,6 +176,8 @@ Heliodoxa_xanthogonys [conf=85]
 
 Heterophasia_desgodinsi [conf=85]
 
+Hippocamelus_bisulcus [conf=80]
+
 Hophlosphyrum_griseus [conf=85]
 
 Hyperchirica_nausica [conf=85]
@@ -159,6 +207,8 @@ Gonocephalus_robinsonii [conf=84]
 Megarynchus_pitangua [conf=85]
 
 Micanurida_forsslundi [conf=85]
+
+Misumenoidea_formosipes [conf=85]
 
 Munidia_rugosa [conf=85]
 
@@ -206,7 +256,11 @@ Parvicorbucula_socialis [conf=85]
 
 Pelecanoides_urinatrix [conf=80]
 
+Pelecanus_occidentalis [conf=85]
+
 Pellorneum_ruficeps [conf=85]
+
+Peneonanthe_pulverulenta [conf=85]
 
 Phaethornis_superciliosus [conf=85]
 
@@ -216,7 +270,11 @@ Piliocolobus_preussi [conf=85]
 
 Plaxhaplous_canaliculatus [conf=85]
 
+Pogonomymex_maricopa [conf=82]
+
 Prodiames_olivacea [conf=85]
+
+Pseudoautomeris_salmonea [conf=85]
 
 Pseudochirops_cupreus [conf=85]
 
@@ -232,6 +290,8 @@ Restrelliger_kanagurta [conf=85]
 
 Rediogobius_bikolanus [conf=85]
 
+Reticlitermes_flavipes [conf=85]
+
 Rhogeessa_minutilla [conf=85]
 
 Rhogeessa_parvula [conf=85]
@@ -239,6 +299,8 @@ Rhogeessa_parvula [conf=85]
 Rhogeessa_tumida [conf=85]
 
 Roraimia_adusta [conf=85]
+
+Rothschildea_orizaba [conf=85]
 
 Scincus_mitranus [conf=85]
 
@@ -276,7 +338,7 @@ Trachurus_japonicus [conf=85]
 
 Trachylepis_albilabris [conf=84]
 
-Triaenogeius_scupturatus [conf=80]
+Triaenogenius_sculpturatus [conf=80]
 
 Trypanosoma_lewisi [conf=84]
 

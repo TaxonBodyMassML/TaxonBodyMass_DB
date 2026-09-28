@@ -66,6 +66,7 @@ wd_out   <- file.path(wd_root)
 wd_bib   <- file.path(wd_root, 'bib')
 
 source(file.path(wd_root, 'R', 'library', 'helpers.r'))
+source(file.path(wd_root, 'R', 'library', 'mass_conversion.r'))
 source(file.path(wd_root, 'R', 'library', 'fix_formatting.r'))
 source(file.path(wd_root, 'R', 'library', 'fix_misspellings.r'))
 source(file.path(wd_root, 'R', 'library', 'fix_nontaxa.r'))

@@ -1,0 +1,508 @@
+taxon,aphia_id,worms_name,kingdom,phylum,class,order,family,mass_group
+Abyla leuckarti ?,709087,Abyla leuckartii,Animalia,Cnidaria,Hydrozoa,Siphonophorae,Abylidae,gelatinous_zooplankton
+Achirus lineatus,279493,Achirus lineatus,Animalia,Chordata,Teleostei,Pleuronectiformes,Achiridae,fish
+Aequorea victoria,283998,Aequorea victoria,Animalia,Cnidaria,Hydrozoa,Leptothecata,Aequoreidae,gelatinous_zooplankton
+Aequorea vitrina,117273,Aequorea vitrina,Animalia,Cnidaria,Hydrozoa,Leptothecata,Aequoreidae,gelatinous_zooplankton
+Aglantha digitale,117849,Aglantha digitale,Animalia,Cnidaria,Hydrozoa,Trachymedusae,Rhopalonematidae,gelatinous_zooplankton
+Anchoa mitchilli,158699,Anchoa mitchilli,Animalia,Chordata,Teleostei,Clupeiformes,Engraulidae,fish
+Archosargus rhomboidalis,159239,Archosargus rhomboidalis,Animalia,Chordata,Teleostei,Eupercaria incertae sedis,Sparidae,fish
+Aurelia aurita,135306,Aurelia aurita,Animalia,Cnidaria,Scyphozoa,Semaeostomeae,Ulmaridae,gelatinous_zooplankton
+Beroe cucumia,106358,Beroe cucumis,Animalia,Ctenophora,Nuda,Beroida,Beroidae,gelatinous_zooplankton
+Beroe cucumis,106358,Beroe cucumis,Animalia,Ctenophora,Nuda,Beroida,Beroidae,gelatinous_zooplankton
+Beroe ovata,106362,Beroe ovatus,Animalia,Ctenophora,Nuda,Beroida,Beroidae,gelatinous_zooplankton
+Beroe sp.,106331,Beroe,Animalia,Ctenophora,Nuda,Beroida,Beroidae,gelatinous_zooplankton
+Boreogadus saida,126433,Boreogadus saida,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Brevoortia tyrannus,158691,Brevoortia tyrannus,Animalia,Chordata,Teleostei,Clupeiformes,Alosidae,fish
+Channichthys rhinoceratus,234619,Channichthys rhinoceratus,Animalia,Chordata,Teleostei,Perciformes,Channichthyidae,fish
+Clupea harengus,126417,Clupea harengus,Animalia,Chordata,Teleostei,Clupeiformes,Clupeidae,fish
+Crystallomia sp.,710727,Crystallomia,Animalia,Cnidaria,Hydrozoa,Siphonophorae,Agalmatidae,gelatinous_zooplankton
+Cyanea capillata,135301,Cyanea capillata,Animalia,Cnidaria,Scyphozoa,Semaeostomeae,Cyaneidae,gelatinous_zooplankton
+Diphyes antarctica,287245,Diphyes antarctica,Animalia,Cnidaria,Hydrozoa,Siphonophorae,Diphyidae,gelatinous_zooplankton
+Diphyes dispar,135420,Diphyes dispar,Animalia,Cnidaria,Hydrozoa,Siphonophorae,Diphyidae,gelatinous_zooplankton
+Diphyes sp.,135362,Diphyes,Animalia,Cnidaria,Hydrozoa,Siphonophorae,Diphyidae,gelatinous_zooplankton
+Dorosoma cepedianum,159600,Dorosoma cepedianum,Animalia,Chordata,Teleostei,Clupeiformes,Dorosomatidae,fish
+Eperetmus typus,289899,Eperetmus typus,Animalia,Cnidaria,Hydrozoa,Limnomedusae,Olindiidae,gelatinous_zooplankton
+Epinephelus akaara,273833,Epinephelus akaara,Animalia,Chordata,Teleostei,Perciformes,Epinephelidae,fish
+Euthynnus affinis,219708,Euthynnus affinis,Animalia,Chordata,Teleostei,Scombriformes,Scombridae,fish
+Euthynnus pelamis,151164,Euthynnus pelamis,Animalia,Chordata,Teleostei,Scombriformes,Scombridae,fish
+Eutonina indicans,117517,Eutonina indicans,Animalia,Cnidaria,Hydrozoa,Leptothecata,Eirenidae,gelatinous_zooplankton
+Gadus morhua,126436,Gadus morhua,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Gadus murhua,126436,Gadus morhua,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Gadus ogac,158926,Gadus ogac,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Gilchristella aestuarius,217443,Gilchristella aestuarius,Animalia,Chordata,Teleostei,Clupeiformes,Ehiravidae,fish
+Gonionemus mertens,117768,Gonionemus vertens,Animalia,Cnidaria,Hydrozoa,Limnomedusae,Olindiidae,gelatinous_zooplankton
+Gymnelus viridis,127096,Gymnelus viridis,Animalia,Chordata,Teleostei,Perciformes,Zoarcidae,fish
+Gymnodraco acuticeps,234800,Gymnodraco acuticeps,Animalia,Chordata,Teleostei,Perciformes,Bathydraconidae,fish
+Kuhlia sandvicensis,278250,Kuhlia sandvicensis,Animalia,Chordata,Teleostei,Centrarchiformes,Kuhliidae,fish
+Limanda limanda,127139,Limanda limanda,Animalia,Chordata,Teleostei,Pleuronectiformes,Pleuronectidae,fish
+Liriope tetraphylla,117568,Liriope tetraphylla,Animalia,Cnidaria,Hydrozoa,Limnomedusae,Geryoniidae,gelatinous_zooplankton
+Melanogrammus aeglefinus,126437,Melanogrammus aeglefinus,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Melanonus zugmayeri,126483,Melanonus zugmayeri,Animalia,Chordata,Teleostei,Gadiformes,Melanonidae,fish
+Metrtensiidae sp.,106323,Mertensiidae,Animalia,Ctenophora,Tentaculata,Cydippida,Mertensiidae,gelatinous_zooplankton
+Mitrocoma cellularia,292350,Mitrocoma cellularia,Animalia,Cnidaria,Hydrozoa,Leptothecata,Mitrocomidae,gelatinous_zooplankton
+Mnemiopsis mccradyi,418909,Mnemiopsis mccradyi,Animalia,Ctenophora,Tentaculata,Lobata,Bolinopsidae,gelatinous_zooplankton
+Notothenia coriiceps,234679,Notothenia coriiceps,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Notothenia cyanobrancha,234711,Notothenia cyanobrancha,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Notothenia gibberifrons,313358,Notothenia gibberifrons,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Notothenia magellanica,313369,Notothenia magellanica,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Notothenia rossii,234840,Notothenia rossii,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Pagetopsis macropterus,234707,Pagetopsis macropterus,Animalia,Chordata,Teleostei,Perciformes,Channichthyidae,fish
+Pagothenia borchgrevinki,234801,Pagothenia borchgrevinki,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Phialidium gregarium,292456,Phialidium gregarium,Animalia,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,gelatinous_zooplankton
+Phialidium lomae,761322,Phialidium lomae,Animalia,Cnidaria,Hydrozoa,Leptothecata,Campanulariidae,gelatinous_zooplankton
+Pisces,11676,Pisces,Animalia,Chordata,,,,fish
+Pleurobrachia brachei,265191,Pleurobrachia bachei,Animalia,Ctenophora,Tentaculata,Cydippida,Cydippidae,gelatinous_zooplankton
+Pleurobrachia pileus,106386,Pleurobrachia pileus,Animalia,Ctenophora,Tentaculata,Cydippida,Cydippidae,gelatinous_zooplankton
+Pleuronectes platessa,127143,Pleuronectes platessa,Animalia,Chordata,Teleostei,Pleuronectiformes,Pleuronectidae,fish
+Pseudochaenichthys georginus,234667,Pseudochaenichthys georgianus,Animalia,Chordata,Teleostei,Perciformes,Channichthyidae,fish
+Pseudopleuronectes americanus,158885,Pseudopleuronectes americanus,Animalia,Chordata,Teleostei,Pleuronectiformes,Pleuronectidae,fish
+Salmo salar,127186,Salmo salar,Animalia,Chordata,Teleostei,Salmoniformes,Salmonidae,fish
+Sarsia tubulosa,117491,Sarsia tubulosa,Animalia,Cnidaria,Hydrozoa,Anthoathecata,Corynidae,gelatinous_zooplankton
+Scomber scombrus,127023,Scomber scombrus,Animalia,Chordata,Teleostei,Scombriformes,Scombridae,fish
+Seriola quinqueradiata,276651,Seriola quinqueradiata,Animalia,Chordata,Teleostei,Carangiformes,Carangidae,fish
+Stomotoca atra,221202,Stomotoca atra,Animalia,Cnidaria,Hydrozoa,Anthoathecata,Pandeidae,gelatinous_zooplankton
+Theragra chalcogramma,254539,Theragra chalcogramma,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Trematomus bernacchii,234802,Trematomus bernacchii,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Trematomus hansoni,234772,Trematomus hansoni,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Trematomus pennellii,234709,Trematomus pennellii,Animalia,Chordata,Teleostei,Perciformes,Nototheniidae,fish
+Oithona davisae NI,353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Oithona davisae NII,353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Oithona davisae NIII,353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Oithona davisae NIV,353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Oithona davisae CI,353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Themisto libellula,156452,Themisto libellula,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+Brooksia rostrata,137256,Brooksia rostrata,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Doliold sp.,,,,,,,,gelatinous_zooplankton
+"Pegea confoederata, aggregate",137266,Pegea confoederata,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Pegea confoederata, solitary",137266,Pegea confoederata,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Salpa cylindrica, solitary",137271,Salpa cylindrica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Salpa maxima, solitary",137233,Salpa,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Salpa maxima. Agg,137233,Salpa,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Thalia democratica, solitary",137279,Thalia democratica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Oithona similis,106656,Oithona similis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Cyclosalpa sp.,137227,Cyclosalpa,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Pegea sp.,137231,Pegea,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Salpa sp.,137233,Salpa,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Acanthamoeba castellani,,,,,,,,protist
+Acanthamoeba palestinensis,,,,,,,,protist
+Acanthamoeba rhysodes,,,,,,,,protist
+Acanthamoeba sp.,120531,Acanthamoeba,Protozoa,Amoebozoa,Discosea,Centramoebida,Acanthamoebidae,protist
+Actinospaerium eichhorni,,,,,,,,protist
+Allogromia laticollaris,112420,Allogromia laticollaris,Chromista,Foraminifera,Monothalamea,Allogromiida,Allogromiidae,protist
+Amoeba proteus,,,,,,,,protist
+Astasia klebsi,614373,Astasia klebsii,Protozoa,Euglenozoa,Peranemea,Natomonadida,Astasiidae,protist
+Astasia longa,163794,Astasia longicaudata,Protozoa,Euglenozoa,Peranemea,Natomonadida,Astasiidae,protist
+Blepharisma undulans,427918,Blepharisma undulans,Chromista,Ciliophora,Heterotrichea,Heterotrichida,Blepharismidae,protist
+Bresslaua insidiatrix,,,,,,,,protist
+Carchesium polypinum,254450,Carchesium polypinum,Chromista,Ciliophora,Oligohymenophorea,Sessilida,Vorticellidae,protist
+Chaos carolinense,,,,,,,,protist
+Chilomonas paramaceum,,,,,,,,protist
+Coleps hirtus,417409,Coleps hirtus,Chromista,Ciliophora,Prostomatea,Prorodontida,Colepidae,protist
+Colpidium campylum,426729,Colpidium campylum,Chromista,Ciliophora,Oligohymenophorea,Tetrahymenida,Turaniellidae,protist
+Colpoda cucullus,426726,Colpoda cucullus,Chromista,Ciliophora,Colpodea,Colpodida,Colpodidae,protist
+Didinium nasutum,417328,Didinium nasutum,Chromista,Ciliophora,Litostomatea,Haptorida,Didiniidae,protist
+Difflugia sp.,136761,Difflugia,Protozoa,Amoebozoa,Tubulinea,Arcellinida,Difflugiidae,protist
+Dileptus cygnus,426595,Dileptus cygnis,Chromista,Ciliophora,Litostomatea,Haptorida,Tracheliidae,protist
+Diophrys sp.,179328,Diophrys,Chromista,Ciliophora,Spirotrichea,Euplotida,Uronychiidae,protist
+Euglena gracilis,163460,Euglena gracilis,Protozoa,Euglenozoa,Euglenophyceae,Euglenales,Euglenaceae,protist
+Euplotes vannus,417119,Euplotes vannus,Chromista,Ciliophora,Spirotrichea,Euplotida,Euplotidae,protist
+Frontonia leucas,426740,Frontonia leucas,Chromista,Ciliophora,Oligohymenophorea,Peniculida,Frontoniidae,protist
+Intranstylum steini,,,,,,,,protist
+Ochromonas sp,249725,Ochromonas,Chromista,Ochrophyta,Chrysophyceae,Ochromonadales,Ochromonadaceae,protist
+Opercularia nutans,426878,Opercularia nutans,Chromista,Ciliophora,Oligohymenophorea,Sessilida,Operculariidae,protist
+Paramecium aurelia,426753,Paramecium aurelia,Chromista,Ciliophora,Oligohymenophorea,Peniculida,Parameciidae,protist
+Paramecium calkinsi,417433,Paramecium calkinsi,Chromista,Ciliophora,Oligohymenophorea,Peniculida,Parameciidae,protist
+Paramecium caudatum,417432,Paramecium caudatum,Chromista,Ciliophora,Oligohymenophorea,Peniculida,Parameciidae,protist
+Placus sp. 1,341342,Placus,Chromista,Ciliophora,Prostomatea,Prorodontida,Placidae,protist
+Placus sp. 2,341342,Placus,Chromista,Ciliophora,Prostomatea,Prorodontida,Placidae,protist
+Pleuromonas jaculans,146160,Pleuromonas jaculans,Protozoa,Euglenozoa,Kinetoplastea,Bodonida,Bodonidae,protist
+Podophrya fixa,427262,Podophrya fixa,Chromista,Ciliophora,Phyllopharyngea,Exogenida,Podophryidae,protist
+Rosalina leei,582671,Rosalina leei,Chromista,Foraminifera,Globothalamea,Rotaliida,Rosalinidae,protist
+Spiroloculina hyaline,,,,,,,,protist
+Spirostomum ambiguum,427989,Spirostomum ambiguum,Chromista,Ciliophora,Heterotrichea,Heterotrichida,Spirostomidae,protist
+Spirostomum intermedium,417086,Spirostomum intermedium,Chromista,Ciliophora,Heterotrichea,Heterotrichida,Spirostomidae,protist
+Spirostomum minus,427993,Spirostomum minus,Chromista,Ciliophora,Heterotrichea,Heterotrichida,Spirostomidae,protist
+Spirostomum teres,427994,Spirostomum teres,Chromista,Ciliophora,Heterotrichea,Heterotrichida,Spirostomidae,protist
+Stentor coeruleus,427997,Stentor coeruleus,Chromista,Ciliophora,Heterotrichea,Heterotrichida,Stentoridae,protist
+Strombidium sp.,101195,Strombidium,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Stylonychia mytilus,417308,Stylonychia mytilus,Chromista,Ciliophora,Spirotrichea,,Oxytrichidae,protist
+Tetrahymena geleii,,,,,,,,protist
+Tetrahymena pyriformes,417477,Tetrahymena pyriformis,Chromista,Ciliophora,Oligohymenophorea,Tetrahymenida,Tetrahymenidae,protist
+Tiarina fusus,247943,Tiarina fusus,Chromista,Ciliophora,Prostomatea,Prorodontida,Colepidae,protist
+Tracheloraphis sp.,179292,Tracheloraphis,Chromista,Ciliophora,Karyorelictea,Protostomatida,Trachelocercidae,protist
+Uronema marinum,555270,Uronema marinum,Plantae,Chlorophyta,Chlorophyceae,Chaetophorales,Uronemataceae,protist
+Urostyla grandis,417300,Urostyla grandis,Chromista,Ciliophora,Spirotrichea,,Urostylidae,protist
+Vorticella convallaria,426952,Vorticella convallaria,Chromista,Ciliophora,Oligohymenophorea,Sessilida,Vorticellidae,protist
+Vorticella ephemerae,,,,,,,,protist
+Vorticella microstoma,426969,Vorticella microstoma,Chromista,Ciliophora,Oligohymenophorea,Sessilida,Vorticellidae,protist
+Vorticella similis,,,,,,,,protist
+Zoothamnium carinogammari,,,,,,,,protist
+"Salpa thompsoni, aggregate",266545,Salpa thompsoni,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Salpa thompsoni, solitary",266545,Salpa thompsoni,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Salpa thompsoni,266545,Salpa thompsoni,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Acartia longiremis,346037,Acartia (Acartiura) longiremis,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Calanus cristatus V,356624,Calanus cristatus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus plumchrus IV,349536,Calanus plumchrus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus plumchrus V,349536,Calanus plumchrus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Eucalanus bungii, male",196775,Eucalanus bungii,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+"Iasis zonaria, agg",137264,Iasis zonaria,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Metridia pacifica V,196784,Metridia pacifica,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+"Metridia pacifica, female",196784,Metridia pacifica,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+"Pegea confoederata, sol",137266,Pegea confoederata,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Philomedes interpuncta,127720,Philomedes interpuncta,Animalia,Arthropoda,Ostracoda,Myodocopida,Philomedidae,crustacean_zooplankton
+Pseudocalanus elongatus,104515,Pseudocalanus elongatus,Animalia,Arthropoda,Copepoda,Calanoida,Clausocalanidae,crustacean_zooplankton
+Pyrosoma verticillatum,731388,Pyrosoma verticillatum,Animalia,Chordata,Thaliacea,Pyrosomatida,Pyrosomatidae,gelatinous_zooplankton
+"Salpa fusiformis, agg",137272,Salpa fusiformis,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"salpa fusiformis, sol",137272,Salpa fusiformis,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Thalia democratica, sol",137279,Thalia democratica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Acartia sp.inicauda, female",534905,Acasta sinica,Animalia,Arthropoda,Thecostraca,Balanomorpha,Balanidae,crustacean_zooplankton
+Aega sp.,118394,Aega,Animalia,Arthropoda,Malacostraca,Isopoda,Aegidae,crustacean_zooplankton
+"Brachyscelus latipes, female",,,,,,,,crustacean_zooplankton
+Brachyuran megalopa,,,,,,,,DROP
+Brachyuran zoea,,,,,,,,DROP
+"Calanus glacialis IV,V",104465,Calanus glacialis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus gracilis, female",356625,Calanus gracilis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus pacificus, male",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus vulgaris, female",220832,Calanus vulgaris,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Candacia aethiopica, female",357673,Candacia aethiopica,Animalia,Arthropoda,Copepoda,Calanoida,Candaciidae,crustacean_zooplankton
+"Candacia columbia, female",349800,Candacia columbiae,Animalia,Arthropoda,Copepoda,Calanoida,Candaciidae,crustacean_zooplankton
+Crangon affinis,246272,Crangon affinis,Animalia,Arthropoda,Malacostraca,Decapoda,Crangonidae,crustacean_zooplankton
+Cypridina hilgendorfii,,,,,,,,crustacean_zooplankton
+"Diastylis sp., female",110398,Diastylis,Animalia,Arthropoda,Malacostraca,Cumacea,Diastylidae,crustacean_zooplankton
+"Eucalanus bungii, female",196775,Eucalanus bungii,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+"Eucalanus crassus, female",149720,Eucalanus crassus,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+"Eucalanus monarchus, female",196776,Eucalanus monachus,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+"Eucalanus mucronatus, female",196777,Eucalanus mucronatus,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+"Euchaeta marina, female",104552,Euchaeta marina,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+Euchaeta plana,346443,Euchaeta plana,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+"Euchirella amoena, female",104296,Euchirella amoena,Animalia,Arthropoda,Copepoda,Calanoida,Aetideidae,crustacean_zooplankton
+"Euphausia mutica, male",110688,Euphausia mutica,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Euphausia pacifica,237851,Euphausia pacifica,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Euthemisto libellula, adult",385287,Euthemisto libellula,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+Hypererythrops sp.,119865,Hypererythrops,Animalia,Arthropoda,Malacostraca,Mysida,Mysidae,crustacean_zooplankton
+"Hyperia galba, female",103251,Hyperia galba,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+"Hyperia galba, male",103251,Hyperia galba,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+Hyperia sp.,101796,Hyperia,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+"Hyperia sp., adult",101796,Hyperia,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+"Hyperia sp., juvenil",101796,Hyperia,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+"Iphinoe sp., female",110391,Iphinoe,Animalia,Arthropoda,Malacostraca,Cumacea,Bodotriidae,crustacean_zooplankton
+"Iphinoe sp., juvenil",110391,Iphinoe,Animalia,Arthropoda,Malacostraca,Cumacea,Bodotriidae,crustacean_zooplankton
+"Labidocera acuta, adult",104726,Labidocera acuta,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+"Labidocera detruncata, female",104730,Labidocera detruncata,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+"Labidocera sp., female",104208,Labidocera,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+"Leptochela gracilis, juvenil",514202,Leptochela (Leptochela) gracilis,Animalia,Arthropoda,Malacostraca,Decapoda,Pasiphaeidae,crustacean_zooplankton
+"Lucifer typus, adult",107122,Lucifer typus,Animalia,Arthropoda,Malacostraca,Decapoda,Luciferidae,crustacean_zooplankton
+Lysmata sp.,106992,Lysmata,Animalia,Arthropoda,Malacostraca,Decapoda,Lysmatidae,crustacean_zooplankton
+Macruran mysis,,,,,,,,DROP
+Macruran post mysis,,,,,,,,DROP
+Orchomene sp.,101633,Orchomene,Animalia,Arthropoda,Malacostraca,Amphipoda,Tryphosidae,crustacean_zooplankton
+"Paraeuchaete japonica, female",359859,Paraeuchaeta japonica,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+Penaeus sp.,106822,Penaeus,Animalia,Arthropoda,Malacostraca,Decapoda,Penaeidae,crustacean_zooplankton
+Phronima sp.,101804,Phronima,Animalia,Arthropoda,Malacostraca,Amphipoda,Phronimidae,crustacean_zooplankton
+"Pseudocalanus elongatus, adult",104515,Pseudocalanus elongatus,Animalia,Arthropoda,Copepoda,Calanoida,Clausocalanidae,crustacean_zooplankton
+Pyrocypris sp.,206184,Pyrocypris,Animalia,Arthropoda,Ostracoda,Myodocopida,Cypridinidae,crustacean_zooplankton
+"Sapphirina gemma, male",129046,Sapphirina gemma,Animalia,Arthropoda,Copepoda,Cyclopoida,Sapphirinidae,crustacean_zooplankton
+Synopia ultramarina,211240,Synopia ultramarina,Animalia,Arthropoda,Malacostraca,Amphipoda,Synopiidae,crustacean_zooplankton
+"Thysanoessa inermis, female",110708,Thysanoessa inermis,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Thysanoessa inermis, juvenil",110708,Thysanoessa inermis,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Thysanoessa raschii, female",110711,Thysanoessa raschii,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Thysanoessa raschii, male",110711,Thysanoessa raschii,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Tortanus discaudatus, adult",157684,Tortanus discaudatus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+Acartia australis,346050,Acartia (Odontacartia) australis,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Acartia clausi,149755,Acartia (Acartiura) clausii,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Acartia pacifica,346059,Acartia (Odontacartia) pacifica,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Acartia tonsa,345943,Acartia (Acanthacartia) tonsa,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+"Calanoides acutus C4,5",342434,Calanoides acutus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanoides acutus C5,342434,Calanoides acutus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanopia elliptica,104724,Calanopia elliptica,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+Calanus finmarchicus female,104464,Calanus finmarchicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus glacialis female,104465,Calanus glacialis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus hyperboreus C5,104467,Calanus hyperboreus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus hyperboreus female,104467,Calanus hyperboreus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus marshallae C5,196770,Calanus marshallae,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus propinquus,342435,Calanus propinquus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Candacia bipinnata female,104475,Candacia bipinnata,Animalia,Arthropoda,Copepoda,Calanoida,Candaciidae,crustacean_zooplankton
+Candacia clombidea female,196773,Candacia colombiae,Animalia,Arthropoda,Copepoda,Calanoida,Candaciidae,crustacean_zooplankton
+Centropages abdominaris,196774,Centropages abdominalis,Animalia,Arthropoda,Copepoda,Calanoida,Centropagidae,crustacean_zooplankton
+Centropages brachiatus,104490,Centropages brachiatus,Animalia,Arthropoda,Copepoda,Calanoida,Centropagidae,crustacean_zooplankton
+Eucalanus attenuatus,149719,Eucalanus attenuatus,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+Eucalanus bungii,196775,Eucalanus bungii,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+Eucalanus subcrassus,211835,Eucalanus subcrassus,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+Euchaeta marina,104552,Euchaeta marina,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+Euchaeta marina female,104552,Euchaeta marina,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+Gaetanus simplex female,346494,Gaetanus simplex,Animalia,Arthropoda,Copepoda,Calanoida,Aetideidae,crustacean_zooplankton
+Gaetanus simplex females,346494,Gaetanus simplex,Animalia,Arthropoda,Copepoda,Calanoida,Aetideidae,crustacean_zooplankton
+Labidocera acuta,104726,Labidocera acuta,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+Labidocera nerii,104733,Labidocera nerii,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+Mesocalanus tennuicornis female,104468,Mesocalanus tenuicornis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Mesocalanus tenuicornis,104468,Mesocalanus tenuicornis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Metridia gerlachi,344689,Metridia gerlachei,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Metridia longa female,104632,Metridia longa,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Metridia pacifica,196784,Metridia pacifica,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Metridia pacifica female,196784,Metridia pacifica,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Nannocalanus minor,104469,Nannocalanus minor,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Neocalanus cristatus C5,104470,Neocalanus cristatus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Neocalanus gracilis,104471,Neocalanus gracilis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Neocalanus plumchrus,196772,Neocalanus plumchrus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Neocalanus plumchrus C4,196772,Neocalanus plumchrus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Neocalanus plumchrus C5,196772,Neocalanus plumchrus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Paracalanus parvus,104685,Paracalanus parvus,Animalia,Arthropoda,Copepoda,Calanoida,Paracalanidae,crustacean_zooplankton
+Pleuromamma abdominalis female,104637,Pleuromamma abdominalis,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Pleuromamma scutullata female,354841,Pleuromamma scutullata,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Pleuromamma xiphias female,104643,Pleuromamma xiphias,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Pontella danae,354855,Pontella danae,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+Pseudodiaptomus marinus,360352,Pseudodiaptomus marinus,Animalia,Arthropoda,Copepoda,Calanoida,Pseudodiaptomidae,crustacean_zooplankton
+Rhincalanus gigas,220837,Rhincalanus gigas,Animalia,Arthropoda,Copepoda,Calanoida,Rhincalanidae,crustacean_zooplankton
+Tortanus discaudatus,720592,Tortanus (Boreotortanus) discaudatus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+Tortanus gracilis,720560,Tortanus (Tortanus) gracilis,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+Undinula vulgaris,104473,Undinula vulgaris,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Euphausia triacantha,236220,Euphausia triacantha,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Parathemisto gaudichaudi,149675,Parathemisto gaudichaudi,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+Thysanoessa inspinata,237872,Thysanoessa inspinata,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Eucalanus pileatus, nauplii",196778,Eucalanus pileatus,Animalia,Arthropoda,Copepoda,Calanoida,Eucalanidae,crustacean_zooplankton
+Dolioletta gegenbauri,137241,Dolioletta gegenbauri,Animalia,Chordata,Thaliacea,Doliolida,Doliolidae,gelatinous_zooplankton
+Cyclosalpa bakeri,266534,Cyclosalpa bakeri,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Calanus gracilis,356625,Calanus gracilis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus sp,104152,Calanus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Candacia spp,104157,Candacia,Animalia,Arthropoda,Copepoda,Calanoida,Candaciidae,crustacean_zooplankton
+Euchaeta spp,104174,Euchaeta,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+Euchirella rostrata,104303,Euchirella rostrata,Animalia,Arthropoda,Copepoda,Calanoida,Aetideidae,crustacean_zooplankton
+Megaynctiphanes norvegica,110690,Meganyctiphanes norvegica,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Oncaea sp,128690,Oncaea,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+Phronima sedentaria,103272,Phronima sedentaria,Animalia,Arthropoda,Malacostraca,Amphipoda,Phronimidae,crustacean_zooplankton
+Pleuromamma gracilis,104639,Pleuromamma gracilis,Animalia,Arthropoda,Copepoda,Calanoida,Metridinidae,crustacean_zooplankton
+Sergestes sp,106829,Sergestes,Animalia,Arthropoda,Malacostraca,Decapoda,Sergestidae,crustacean_zooplankton
+Systellaspis debilis,107605,Systellaspis debilis,Animalia,Arthropoda,Malacostraca,Decapoda,Oplophoridae,crustacean_zooplankton
+Themisto sp,322599,Themisto,Animalia,Arthropoda,Malacostraca,Mysida,Mysidae,crustacean_zooplankton
+"Oncaea grossa, female",361689,Oncaea grossa,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+"Oncaea grossa, male",361689,Oncaea grossa,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+Oncaea parila,128946,Oncaea parila,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+Triconia borealis,128956,Triconia borealis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+"Triconia canadensis, female",385744,Triconia canadensis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+"Triconia canadensis, male",385744,Triconia canadensis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+Oithona davisae,353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Hyas araneus,107322,Hyas araneus,Animalia,Arthropoda,Malacostraca,Decapoda,Oregoniidae,crustacean_zooplankton
+Pleuronectes ferrugineus,305717,Pleuronectes ferrugineus,Animalia,Chordata,Teleostei,Pleuronectiformes,Pleuronectidae,fish
+Dicentrarchus labrax,126975,Dicentrarchus labrax,Animalia,Chordata,Teleostei,Eupercaria incertae sedis,Moronidae,fish
+Gadhus morhua,126436,Gadus morhua,Animalia,Chordata,Teleostei,Gadiformes,Gadidae,fish
+Oncorhynchu kisutch,127184,Oncorhynchus kisutch,Animalia,Chordata,Teleostei,Salmoniformes,Salmonidae,fish
+Oncorhynchu nerka,254569,Oncorhynchus nerka,Animalia,Chordata,Teleostei,Salmoniformes,Salmonidae,fish
+Euphausia superba,236217,Euphausia superba,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Protoperidinium huberi,233267,Protoperidinium huberi,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Calanus finmarchicus,104464,Calanus finmarchicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Acipenser transmontanus,238345,Acipenser transmontanus,Animalia,Chordata,Chondrostei,Acipenseriformes,Acipenseridae,fish
+Morone saxatilis,151179,Morone saxatilis,Animalia,Chordata,Teleostei,Eupercaria incertae sedis,Moronidae,fish
+Anchoa lamprotaenia,275522,Anchoa lamprotaenia,Animalia,Chordata,Teleostei,Clupeiformes,Engraulidae,fish
+Metamysidopsis elongata,226436,Metamysidopsis elongata,Animalia,Arthropoda,Malacostraca,Mysida,Mysidae,crustacean_zooplankton
+Calliopius laeviusculus,102178,Calliopius laeviusculus,Animalia,Arthropoda,Malacostraca,Amphipoda,Calliopiidae,crustacean_zooplankton
+Thalia democratica,137279,Thalia democratica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Chanos chanos,217625,Chanos chanos,Animalia,Chordata,Teleostei,Gonorynchiformes,Chanidae,fish
+Eurytemora herdmani,157670,Eurytemora herdmani,Animalia,Arthropoda,Copepoda,Calanoida,Temoridae,crustacean_zooplankton
+Calanus chilensis,346212,Calanus chilensis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Calanus glacialis,104465,Calanus glacialis,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Centropages hamatus,104496,Centropages hamatus,Animalia,Arthropoda,Copepoda,Calanoida,Centropagidae,crustacean_zooplankton
+Centropages typicus,104499,Centropages typicus,Animalia,Arthropoda,Copepoda,Calanoida,Centropagidae,crustacean_zooplankton
+Strombidium capitatum,101282,Strombidium capitatum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Strombidium siculum,428815,Strombidium siculum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Strombidium acutum,101275,Strombidium acutum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Sytrombidium conicum,,Strombidium conicum (name corrected in script),,,,,,protist
+Strombidium sp,101195,Strombidium,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Strombidium vestitum,101342,Strombidium vestitum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Strombidium neptuni,,,,,,,,protist
+Strombidium veniliae,,,,,,,,protist
+Strobilidium lacustris,,,,,,,,protist
+Lohmaniella oviformis,101209,Lohmanniella oviformis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Lohmanniellidae,protist
+Strobilidium spiralis,101236,Strobilidium spiralis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strobilidiidae,protist
+Strombidinopsis cheshiri,427386,Strombidinopsis cheshiri,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strombidinopsidae,protist
+Strombidinopsis multiauris,595212,Strombidinopsis multiauris,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strombidinopsidae,protist
+Strombidinopsis sp.,101198,Strombidinopsis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strombidinopsidae,protist
+Limnoithona tetraspina,346621,Limnoithona tetraspina,Animalia,Arthropoda,Copepoda,Cyclopoida,Cyclopettidae,crustacean_zooplankton
+Bolionopsis infundibulum,106393,Bolinopsis infundibulum,Animalia,Ctenophora,Tentaculata,Lobata,Bolinopsidae,gelatinous_zooplankton
+Uronema sp,494309,Uronema,Plantae,Chlorophyta,Chlorophyceae,Chaetophorales,Uronemataceae,protist
+Actinomonas mirabilis,375694,Actinomonas mirabilis,Chromista,Ochrophyta,Dictyochophyceae,Pedinellales,Actinomonadaceae,protist
+Bodo designis,146154,Bodo designis,Protozoa,Euglenozoa,Kinetoplastea,Bodonida,Bodonidae,protist
+Ciliophrys infusionum,375958,Ciliophrys infusionum,Chromista,Ochrophyta,Dictyochophyceae,Pedinellales,Pedinellaceae,protist
+Codosiga gracilis,105634,Codosiga gracilis,Protozoa,Choanozoa,Choanoflagellatea,Craspedida,Codonosigidae,protist
+Diaphanoeca grandis,105571,Diaphanoeca grandis,Protozoa,Choanozoa,Choanoflagellatea,Acanthoecida,Acanthoecidae,protist
+Jakoba libera,118052,Jakoba libera,Protozoa,Loukozoa,Jakobea,Jakobida,Jakobidae,protist
+Monosiga sp.,105535,Monosiga,Protozoa,Choanozoa,Choanoflagellatea,Craspedida,Codonosigaceae,protist
+Ochromonas sp.,249725,Ochromonas,Chromista,Ochrophyta,Chrysophyceae,Ochromonadales,Ochromonadaceae,protist
+Paraphysomonas imperforata,341603,Paraphysomonas imperforata,Chromista,Ochrophyta,Chrysophyceae,Chromulinales,Paraphysomonadaceae,protist
+Paraphysomonas vestita,341605,Paraphysomonas vestita,Chromista,Ochrophyta,Chrysophyceae,Chromulinales,Paraphysomonadaceae,protist
+Pseudobodo tremulans,104015,Pseudobodo tremulans,Chromista,Bigyra,Bicosoecophyceae,Caecitellales,Cafeteriaceae,protist
+Pseudobodo sp.,103990,Pseudobodo,Chromista,Bigyra,Bicosoecophyceae,Caecitellales,Cafeteriaceae,protist
+Spumella sp.,428524,Spumella,Chromista,Ochrophyta,Chrysophyceae,Ochromonadales,Ochromonadaceae,protist
+Stephanoeca diplocostata,105623,Stephanoeca diplocostata,Protozoa,Choanozoa,Choanoflagellatea,Acanthoecida,Acanthoecidae,protist
+Amphidinium crassum,109726,Amphidinium crassum,Chromista,Myzozoa,Dinophyceae,Amphidiniales,Amphidiniaceae,protist
+Gymnodinium sp.,109475,Gymnodinium,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gymnodiniaceae,protist
+Gyrodinium dominans,109851,Gyrodinium dominans,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gyrodiniaceae,protist
+Gyrodinium spirale,109876,Gyrodinium spirale,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gyrodiniaceae,protist
+Gyrodinium sp.,109476,Gyrodinium,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gyrodiniaceae,protist
+Pblea rotunda,110155,Oblea rotunda,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Oxyrrhis marina,109902,Oxyrrhis marina,Chromista,Myzozoa,Dinophyceae,Oxyrrhinales,Oxyrrhinaceae,protist
+Protoperidinium crassipes,110214,Protoperidinium crassipes,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Protoperidinium divergens,110219,Protoperidinium divergens,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Protoperidinium hirobis,233269,Protoperidinium hirobis,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Protoperidinium pellucidum,110245,Protoperidinium pellucidum,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Eutintinnus pectinis,417214,Eutintinnus pectinis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Eutintinnidae,protist
+Favella ehrenbergii,235761,Favella ehrenbergii,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Ptychocylididae,protist
+Helicostomella subulata,240437,Helicostomella subulata,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Metacylididae,protist
+Lohmaniella spiralis,101210,Lohmanniella spiralis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Lohmanniellidae,protist
+Pseudobalanion planctonicum,,,,,,,,protist
+Strobilidium cf. spiralis,101236,Strobilidium spiralis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strobilidiidae,protist
+Strobilidium reticulata,,,,,,,,protist
+Strombidium sulcatum,101335,Strombidium sulcatum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Tintinnopsis cf. acuminata,163915,Tintinnopsis acuminata,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Codonellidae,protist
+Tintinnopsis dadayi,417147,Tintinnopsis dadayi,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Codonellidae,protist
+Tintinnopsis vasculus,163920,Tintinnopsis vasculum,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Codonellidae,protist
+Temora longicornis,104878,Temora longicornis,Animalia,Arthropoda,Copepoda,Calanoida,Temoridae,crustacean_zooplankton
+Eurytemora affinis,104872,Eurytemora affinis,Animalia,Arthropoda,Copepoda,Calanoida,Temoridae,crustacean_zooplankton
+Pleurobrachia bachei,265191,Pleurobrachia bachei,Animalia,Ctenophora,Tentaculata,Cydippida,Cydippidae,gelatinous_zooplankton
+Scomber japonicus,127022,Scomber japonicus,Animalia,Chordata,Teleostei,Scombriformes,Scombridae,fish
+Themisto japonica,744579,Themisto japonica,Animalia,Arthropoda,Malacostraca,Amphipoda,Hyperiidae,crustacean_zooplankton
+Hyas coarctatus,107323,Hyas coarctatus,Animalia,Arthropoda,Malacostraca,Decapoda,Oregoniidae,crustacean_zooplankton
+Amphorides quadrilineata,235769,Amphorides quadrilineata,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Tintinnidae,protist
+Bolinopsis mikado,265201,Bolinopsis mikado,Animalia,Ctenophora,Tentaculata,Lobata,Bolinopsidae,gelatinous_zooplankton
+Acartia tranteri,346042,Acartia (Acartiura) tranteri,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Sinocalanus tenellus,355664,Sinocalanus tenellus,Animalia,Arthropoda,Copepoda,Calanoida,Centropagidae,crustacean_zooplankton
+Pseudocalanus sp.,104165,Pseudocalanus,Animalia,Arthropoda,Copepoda,Calanoida,Clausocalanidae,crustacean_zooplankton
+Scophthalmus maximus,127149,Scophthalmus maximus,Animalia,Chordata,Teleostei,Pleuronectiformes,Scophthalmidae,fish
+Homarus americanus,156134,Homarus americanus,Animalia,Arthropoda,Malacostraca,Decapoda,Nephropidae,crustacean_zooplankton
+Morone americana,151177,Morone americana,Animalia,Chordata,Teleostei,Eupercaria incertae sedis,Moronidae,fish
+Leuresthes tenuis,281344,Leuresthes tenuis,Animalia,Chordata,Teleostei,Atheriniformes,Atherinopsidae,fish
+Menidia peninsulae,275933,Menidia peninsulae,Animalia,Chordata,Teleostei,Atheriniformes,Atherinopsidae,fish
+Noctiluca scintillans,109921,Noctiluca scintillans,Chromista,Myzozoa,Dinophyceae,Noctilucales,Noctilucaceae,protist
+Diplopsalis lenticula,663618,,,,,,,protist
+Chrysaora quinquecirrha,220476,Chrysaora quinquecirrha,Animalia,Cnidaria,Scyphozoa,Semaeostomeae,Pelagiidae,gelatinous_zooplankton
+Oikopleura dioica,103407,Oikopleura (Vexillaria) dioica,Animalia,Chordata,Appendicularia,Copelata,Oikopleuridae,gelatinous_zooplankton
+Calanus helgolandicus,104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Oncaea mediterranea,128939,Oncaea mediterranea,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
+Calanus marshallae,196770,Calanus marshallae,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Sagitta hispida,105454,Sagitta hispida,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+Engraulis mordax,272286,Engraulis mordax,Animalia,Chordata,Teleostei,Clupeiformes,Engraulidae,fish
+Labidocera euchaeta,346592,Labidocera euchaeta,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
+Ammodytes americanus,159587,Ammodytes americanus,Animalia,Chordata,Teleostei,Perciformes,Ammodytidae,fish
+Favella sp,581996,Favella,Animalia,Arthropoda,Ostracoda,Podocopida,Hemicytheridae,crustacean_zooplankton
+Balanion sp.,292899,Balanion,Chromista,Ciliophora,Prostomatea,Prorodontida,Balanionidae,protist
+Gymnodinium sp,109475,Gymnodinium,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gymnodiniaceae,protist
+Amphidinium sp,109473,Amphidinium,Chromista,Myzozoa,Dinophyceae,Amphidiniales,Amphidiniaceae,protist
+Strombidinopsis acuminatum,101350,Strombidinopsis acuminata,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strombidinopsidae,protist
+Uronema sp.,494309,Uronema,Plantae,Chlorophyta,Chlorophyceae,Chaetophorales,Uronemataceae,protist
+Sparus aurata,151523,Sparus aurata,Animalia,Chordata,Teleostei,Eupercaria incertae sedis,Sparidae,fish
+Paracalanus sp.,104196,Paracalanus,Animalia,Arthropoda,Copepoda,Calanoida,Paracalanidae,crustacean_zooplankton
+Microsetella norvegica,116115,Microsetella norvegica,Animalia,Arthropoda,Copepoda,Harpacticoida,Ectinosomatidae,crustacean_zooplankton
+Calanus sinicus,346214,Calanus sinicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Acartia omori,348515,Acartia omorii,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Calanus pacificus,196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Aurelia labiata,287213,Aurelia labiata,Animalia,Cnidaria,Scyphozoa,Semaeostomeae,Ulmaridae,gelatinous_zooplankton
+Aequorea aequorea,117268,Aequorea aequorea,Animalia,Cnidaria,Hydrozoa,Leptothecata,Aequoreidae,gelatinous_zooplankton
+Callianira antarctica,265170,Callianira antarctica,Animalia,Ctenophora,Tentaculata,Cydippida,Callianiridae,gelatinous_zooplankton
+"Clupea harengus, larvae",126417,Clupea harengus,Animalia,Chordata,Teleostei,Clupeiformes,Clupeidae,fish
+Engraulis capensis,716765,,,,,,,fish
+Mnemiopsis leidyi,106401,Mnemiopsis leidyi,Animalia,Ctenophora,Tentaculata,Lobata,Bolinopsidae,gelatinous_zooplankton
+Pelagia noctiluca,135305,Pelagia noctiluca,Animalia,Cnidaria,Scyphozoa,Semaeostomeae,Pelagiidae,gelatinous_zooplankton
+Sardina pilchardus,126421,Sardina pilchardus,Animalia,Chordata,Teleostei,Clupeiformes,Alosidae,fish
+Sardinops sagax,217452,Sardinops sagax,Animalia,Chordata,Teleostei,Clupeiformes,Alosidae,fish
+Staurophora mertensi,117730,Staurophora mertensii,Animalia,Cnidaria,Hydrozoa,Leptothecata,Laodiceidae,gelatinous_zooplankton
+Thysanoessa raschii,110711,Thysanoessa raschii,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Oithona davisae, NI-II",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+"Oithona davisae, NII-III",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+"Oithona davisae, NV-VI",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+"Oithona davisae, C2-3",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+"Salpa fusiformes, aggregate",137272,Salpa fusiformis,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Salpa fusiformes, solitary",137272,Salpa fusiformis,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Euphausia superba, juvenil",236217,Euphausia superba,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Euphausia superba, adult",236217,Euphausia superba,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Euphausia pacificus,237851,Euphausia pacifica,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Tysanoessa spinifera,237874,Thysanoessa spinifera,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Acartia tonsa, stage-by-stage",345943,Acartia (Acanthacartia) tonsa,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Cafeteria sp.,103989,Cafeteria,Chromista,Bigyra,Bicosoecophyceae,Caecitellales,Cafeteriaceae,protist
+"Dolioletta gegenbauri, gonozooid",137241,Dolioletta gegenbauri,Animalia,Chordata,Thaliacea,Doliolida,Doliolidae,gelatinous_zooplankton
+"Dolioletta gegenbauri, oozooid",137241,Dolioletta gegenbauri,Animalia,Chordata,Thaliacea,Doliolida,Doliolidae,gelatinous_zooplankton
+"Thalia democratica, aggregate",137279,Thalia democratica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Oithona similis, female",106656,Oithona similis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Acartia hudsonica,149751,Acartia (Acartiura) hudsonica,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+"Calanus pacificus, C I",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus pacificus, N V",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus pacificus, N VI",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus pacificus, NIII",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus pacificus, NIV",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus pacificus, female",196771,Calanus pacificus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Dolioletta genenbauri, gonozooids",137241,Dolioletta gegenbauri,Animalia,Chordata,Thaliacea,Doliolida,Doliolidae,gelatinous_zooplankton
+Fragilidium subglobosum,109705,Fragilidium subglobosum,Chromista,Myzozoa,Dinophyceae,Gonyaulacales,Pyrophacaceae,protist
+Ciliophrys infusionurn,375958,Ciliophrys infusionum,Chromista,Ochrophyta,Dictyochophyceae,Pedinellales,Pedinellaceae,protist
+Oblea rotunda,110155,Oblea rotunda,Chromista,Myzozoa,Dinophyceae,Peridiniales,Protoperidiniaceae,protist
+Pleoromonas jaculans,146160,Pleuromonas jaculans,Protozoa,Euglenozoa,Kinetoplastea,Bodonida,Bodonidae,protist
+S. sulcatum,,,,,,,,DROP
+Strombidium reticulatum,101325,Strombidium reticulatum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Tintinnopsis acuminata,163915,Tintinnopsis acuminata,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Codonellidae,protist
+"Acartia grani, nauplii",232027,Acartia grani,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+"Oithona davisae, nauplii",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Tortanus dextrilobatus,720588,Tortanus (Eutortanus) dextrilobatus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+"Clausocalanus lividus, female",104505,Clausocalanus lividus,Animalia,Arthropoda,Copepoda,Calanoida,Clausocalanidae,crustacean_zooplankton
+Gyrodinium cf. guttula,620439,Gyrodinium guttula,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gyrodiniaceae,protist
+Pfiesteria piscicida,246598,Pfiesteria piscicida,Chromista,Myzozoa,Dinophyceae,Thoracosphaerales,Pfiesteriaceae,protist
+Favella taraikaensis,417252,Favella taraikaensis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Ptychocylididae,protist
+Lohmanniella oviformes,101209,Lohmanniella oviformis,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Lohmanniellidae,protist
+Strobilidium sp.,101185,Strobilidium,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strobilidiidae,protist
+Strobilidium sp. (20 µm),101185,Strobilidium,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Strobilidiidae,protist
+Strombidium conicum,101289,Strombidium conicum,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Strombidium spp. (25 µm),101195,Strombidium,Chromista,Ciliophora,Oligotrichea,Oligotrichida,Strombidiidae,protist
+Tintinnidium fluviatile,410617,Tintinnidium fluviatile,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Tintinnidiidae,protist
+Tintinnidium lobiancoi,247951,,,,,,,protist
+Tintinnopsis beroidea,163782,Tintinnopsis beroidea,Chromista,Ciliophora,Oligotrichea,Choreotrichida,Codonellidae,protist
+"Oithona davisae, male",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+"Doliolum denticulatum, phorozooids and gonozooids",137246,Doliolum denticulatum,Animalia,Chordata,Thaliacea,Doliolida,Doliolidae,gelatinous_zooplankton
+"Oithona nana, female",106651,Oithona nana,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+"Oithona nana, male",106651,Oithona nana,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Corycaeus anglicus,149847,Corycaeus anglicus,Animalia,Arthropoda,Copepoda,Cyclopoida,Corycaeidae,crustacean_zooplankton
+Paracalanus crassirostris,220841,Paracalanus crassirostris,Animalia,Arthropoda,Copepoda,Calanoida,Paracalanidae,crustacean_zooplankton
+"Acartia grani, female",232027,Acartia grani,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+"Euterpina acutifrons, female",116162,Euterpina acutifrons,Animalia,Arthropoda,Copepoda,Harpacticoida,Tachidiidae,crustacean_zooplankton
+Meganyctiphanes norvegica,110690,Meganyctiphanes norvegica,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Euphausia superba Fucilia III,236217,Euphausia superba,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Alosa pseudoharengus,158669,Alosa pseudoharengus,Animalia,Chordata,Teleostei,Clupeiformes,Alosidae,fish
+Coregonus hoyi,,,,,,,,fish
+Perca flavescens,275313,Perca flavescens,Animalia,Chordata,Teleostei,Perciformes,Percidae,fish
+Sagitta crassa,268029,Sagitta crassa,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+Oithona similis copepodits,106656,Oithona similis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+DiploPsalis lenticula,109876,Gyrodinium spirale,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gyrodiniaceae,protist
+"Calanus finmarchicus CV, female",104464,Calanus finmarchicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+Nyctiphanes australis,237863,Nyctiphanes australis,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+Sagitta elegans,105450,Sagitta elegans,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+Sagitta enflata,105451,Sagitta enflata,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+"Calanus helgolandicus, NIII",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, NIV",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, NV",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, NVI",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, CI",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, CII",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, CIII",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, CIV",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, CV",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Calanus helgolandicus, female",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
+"Aetideus divergens, female",104112,Aetideus,Animalia,Arthropoda,Copepoda,Calanoida,Aetideidae,crustacean_zooplankton
+"Acartia tonsa, female",345943,Acartia (Acanthacartia) tonsa,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+"Oithona davisae, female",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
+Euterpina acutifrons,116162,Euterpina acutifrons,Animalia,Arthropoda,Copepoda,Harpacticoida,Tachidiidae,crustacean_zooplankton
+Ceratium furca,109950,Ceratium furca,Chromista,Myzozoa,Dinophyceae,Gonyaulacales,Ceratiaceae,protist
+Euphausia lucens,221055,Euphausia lucens,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
+"Cyclosalpa affinis, solitary",137257,Cyclosalpa affinis,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Cyclosalpa polae, solitary",137261,Cyclosalpa polae,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Cyclosalpa sewelli, aggregate",266537,Cyclosalpa sewelli,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Cyclosalpa sewelli, solitary",266537,Cyclosalpa sewelli,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Weelia cylindrica, aggregate",137283,Weelia cylindrica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Weelia cylindrica, solitary",137283,Weelia cylindrica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Dolioletta gegenbauri, trophozooid",137241,Dolioletta gegenbauri,Animalia,Chordata,Thaliacea,Doliolida,Doliolidae,gelatinous_zooplankton
+Tortanus forcipatus,720587,Tortanus (Tortanus) forcipatus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+"Tortanus spp., CI-III",157683,Tortanus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+"Tortanus spp., female",157683,Tortanus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+"Tortanus spp., IV-V",157683,Tortanus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+"Tortanus spp., male",157683,Tortanus,Animalia,Arthropoda,Copepoda,Calanoida,Tortanidae,crustacean_zooplankton
+Acartia Erythraea,104108,Acartia,Animalia,Arthropoda,Copepoda,Calanoida,Acartiidae,crustacean_zooplankton
+Centropages yamadai,357747,Centropages yamadai,Animalia,Arthropoda,Copepoda,Calanoida,Centropagidae,crustacean_zooplankton
+"Cyclosalpa affinis, aggregate",137257,Cyclosalpa affinis,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+"Salpa cylindrica, aggregate",137271,Salpa cylindrica,Animalia,Chordata,Thaliacea,Salpida,Salpidae,gelatinous_zooplankton
+Euchaeta elongata,351674,Euchaeta elongata,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+Euchaeta norvegica,149707,Euchaeta norvegica,Animalia,Arthropoda,Copepoda,Calanoida,Euchaetidae,crustacean_zooplankton
+"Oithona davisae, females",353995,Oithona davisae,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton

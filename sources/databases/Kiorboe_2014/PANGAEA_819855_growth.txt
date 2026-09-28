@@ -1,0 +1,1054 @@
+/* DATA DESCRIPTION:
+Citation:	Kiørboe, Thomas; Hirst, Andrew G (2013): Compilation of growth rate data for marine pelagic organisms [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.819855, 
+	In supplement to: Kiørboe, T; Hirst, AG (2014): Shifts in mass-scaling of respiration, feeding, and growth rates across life-form transitions in marine pelagic organisms. American Naturalist, 183(4), E118-E130, https://doi.org/10.1086/675241
+Abstract:	The metabolic rate of organisms may either be viewed as a basic property from which other vital rates and many ecological patterns emerge and that follows a universal allometric mass scaling law; or it may be considered a property of the organism that emerges as a result of the organism's adaptation to the environment, with consequently less universal mass scaling properties. Data on body mass, maximum ingestion and clearance rates, respiration rates and maximum growth rates of animals living in the ocean epipelagic were compiled from the literature, mainly from original papers but also from previous compilations by other authors. Data were read from tables or digitized from graphs. Only measurements made on individuals of know size, or groups of individuals of similar and known size were included. We show that clearance and respiration rates have life-form-dependent allometries that have similar scaling but different elevations, such that the mass-specific rates converge on a rather narrow size-independent range. In contrast, ingestion and growth rates follow a near-universal taxa-independent ~3/4 mass scaling power law. We argue that the declining mass-specific clearance rates with size within taxa is related to the inherent decrease in feeding efficiency of any particular feeding mode. The transitions between feeding mode and simultaneous transitions in clearance and respiration rates may then represent adaptations to the food environment and be the result of the optimization of tradeoffs that allow sufficient feeding and growth rates to balance mortality.
+Source:	Almeda, Rodrigo; Calbet, Albert; Alcaraz, Miguel; Yebra, Lidia; Saiz, Enric (2014): Growth rate of Oithona davisae determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834207
+	Anger, Klaus; Laasch, Norbert; Püschel, Cornelia; Schorn, Franziska (2014): Growth rate of Hyas araneus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834208
+	Arai, M N (2014): Growth rate of Aequorea medusae determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834267
+	Bailey, K M; Stehr, Caron L (2014): Growth rate of Theragra chalcogramma determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834268
+	Bamstedt, Ulf; Lane, J; Martinussen, Monica Bente (2014): Growth rate of Aurelia aurita determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834273
+	Bamstedt, Ulf; Wild, B; Martinussen, Monica Bente (2014): Growth rate of Aurelia aurita determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834269
+	Barahona-Fernandes, Maria Helena; Girin, Michel (2014): Growth rate of Sea-Bass larvae determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834271
+	Berggreen, U; Hansen, Benni W; Kiørboe, Thomas (2014): Growth rate of Acartia tonsa determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834272
+	Bjornsson, Björn; Steinarsson, Agnar; Arnason, Tomas (2014): Growth rate of Gadus morhua determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834274
+	Brett, J R; Blackburn, J M (2014): Growth rate of Oncorhynchu kisutch determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834275
+	Buchholz, Friedrich (2014): Growth rate of Euphausia superba determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834276
+	Buskey, Edward J; Coulter, C J; Brown, Susan L (2014): Growth rate of Protoperidinium huberi determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834277
+	Campbell, Robert G; Wagner, Melissa M; Teegarden, Gregory J; Boudreau, Bernard P; Durbin, Edward G (2014): Growth rate of Calanus finmarchicus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834285
+	Cech, Joseph J; Mitchell, Stephen J; Wragg, Trent E (2014): Growth rate of Acipenser transmontanus and Morone saxatilis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834287
+	Chitty, N (2014): Growth rate of Anchoa mitchilli and Anchoa lamprotaenia determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834288
+	Clutter, Robert I; Theilacker, Gail H (2014): Growth rate of Metamysidopsis elongata determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834301
+	Daan, N (2014): Growth rate of Sarsia tubulosa determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834302
+	Dagg, Michael (2014): Growth rate of Calliopius laeviusculus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834306
+	Deibel, Don (2014): Growth rate of Dolioletta gegenbauri and Thalia democratica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834310
+	Duray, Marietta; Bagarinao, Teodora (2014): Growth rate of Chanos chanos determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834311
+	Escribano, Rubén; Irribarren, C; RodrÌguez, L (2014): Growth rate of Calanus chilensis and Calanus glacialis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834313
+	Escribano, Rubén; McLaren, I A (2014): Growth rate of Eurytemora herdmani determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834312
+	Fryd, Michael; Haslund, Ole Hendrik; Wohlgemuth, Ole (2014): Growth rate of Centropages hamatus and Centropages typicus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834316
+	Gibson, D M; Paffenhöfer, Gustav-Adolf (2014): Growth rate of Dolioletta gegenbauri determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834330
+	Girin, Michel; Barahona-Fernandes, Maria Helena; Le Roux, A (2014): Growth rate of Dicentrarchus labrax determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834332
+	Gismervik, Ingrid (2014): Growth rate of Ciliates determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834392
+	Gould, Alison L; Kimmerer, Wim J (2014): Growth rate of Limnoithona tetraspina determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834393
+	Greve, Wulf (2014): Growth rate of Bolionopsis infundibulum determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834394
+	Hamilton, R D; Preslan, Janet E (2014): Growth rate of Uronema determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834399
+	Handeland, Sigurd O; Imsland, Albert K; Stefansson, Sigurd O (2014): Growth rate of Salmo salar determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834400
+	Hansen, Per Juel; Bjørnsen, Peter K; Hansen, Benni Winding (2014): Growth rate of Zooplankton determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834422
+	Harris, Roger P; Paffenhöfer, Gustav-Adolf (2014): Growth rate of Temora longicornis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834425
+	Heinle, D R; Flemer, DA (2014): Growth rate of Eurytemora affinis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834443
+	Hirota, J (2014): Growth rate of Pleurobrachia bachei determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834444
+	Houde, Edward D (2014): Growth rate of Pisces determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834445
+	Houde, Edward D; Schekter, Richard C (2014): Growth rate of Pisces determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834446
+	Hunter, J R; Kimbrell, C A (2014): Growth rate of Pisces determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834447
+	Ikeda, Tsutomu (2014): Growth rate of Themisto japonica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834449
+	Ikeda, Tsutomu; Dixon, P; Kirkwood, R (2014): Growth rate of Euphausia superba determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834448
+	Imsland, Albert K; Foss, A; Folkvord, Arild; Stefansson, Sigurd O; Jonassen, T M (2014): Growth rate of Themisto japonica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834452
+	Jacobi, C C; Anger, Klaus (2014): Growth rate of Hyas coarctatus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834453
+	Jakobsen, Hans Henrik; Hyatt, Cammie J; Buskey, Edward J (2014): Growth rate of Amphorides quadrilineata determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834454
+	Jeong, Hae Jin; Yoon, Joo Yih; Kim, Jae Seong; Yoo, Yeong Du; Seong, Kyeong Ah (2014): Growth rate of Tiarina fusus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834456
+	Kasuya, Tomoyuki; Ishimaru, Takashi; Murano, Masaaki (2014): Growth rate of Bolinopsis mikado determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834458
+	Kimmerer, Wim J; McKinnon, L (2014): Growth rate of Acartia tranteri determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834460
+	Kimoto, Katsunori; Uye, Shin-ichi; Onbe, Takashi (2014): Growth rate of Sinocalanus tenellus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834463
+	Kiørboe, Thomas; Munk, Peter; Richardson, Katherine (2014): Growth rate of Clupea harengus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834467
+	Klein Breteler, Wilhelmus Christinus; Fransz, H George; Gonzalez, S R (2014): Growth rate of different Calanoida determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834469
+	Kuhlmann, Dirk; Quantz, Gerrit; Witt, Ulrich (2014): Growth rate of Scophthalmus maximus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834470
+	Lasker, Reuben (2014): Growth rate of Euphausia pacifica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834472
+	Laurence, G C (2014): Growth rate of Gadus morhua and Melanogrammus aeglefinus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834474
+	Laurence, G C (2014): Growth rate of Pseudopleuronectes americanus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834473
+	Logan, D T; Epifano, C E (2014): Growth rate of Homarus americanus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834481
+	Margulies, D (2014): Growth rate of Morone americana determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834482
+	Martinez, Javiera (2014): Growth rate of Pleurobrachia pileus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834483
+	May, Robert C (2014): Growth rate of Leuresthes tenuis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834484
+	McMullen, Dennis M; Middaugh, Douglas P (2014): Growth rate of Leuresthes tenuis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834485
+	Montagnes, David J S; Lowe, Chris D; Martin, Laura; Watts, Phillip C; Downes-Tettmar, Naomi; Yang, Zhou; Roberts, Emily C; Davidson, Keith (2014): Growth rate of Oxyrrhis marina determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834489
+	Nakamura, Yasuo (2014): Growth rate of Noctiluca scintillans determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834490
+	Naustvoll, Lars Johan (2014): Growth rate of Diplopsalis lenticula determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834491
+	Olesen, Niels Jorn; Frandsen, Kristian; Riisgard, Hans Ulrik (2014): Growth rate of Aurelia aurita determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834496
+	Olesen, Niels Jorn; Purcell, Jennifer E; Stoecker, Diane K (2014): Growth rate of Chrysaora quinquecirrha determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834498
+	Paffenhöfer, Gustav-Adolf (2014): Growth rate of Calanus helgolandicus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834503
+	Paffenhöfer, Gustav-Adolf (2014): Growth rate of Oikopleura dioica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834501
+	Paffenhöfer, Gustav-Adolf (2014): Growth rate of Oncaea mediterranea determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834504
+	Paffenhöfer, Gustav-Adolf; Harris, Roger P (2014): Growth rate of Pseudocalanus elongatus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834500
+	Person-Le Ruyet, J; L'Elchat, D; Nedelec, G (2014): Growth rate of Scophthalmus maximus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834505
+	Peterson, William T (2014): Growth rate of Calanus marshallae determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834506
+	Pichavant, Karine; Person-Le Ruyet, J; Le Bayon, N; Severe, A; Le Roux, A; Boeuf, G (2014): Growth rate of Scophthalmus maximus and Dicentrarchus labrax determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834507
+	Purchase, C F; Boyce, D L; Brown, J A (2014): Growth rate of Pleuronectes ferrugineus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834508
+	Reeve, M R (2014): Growth rate of Sagitta hispida determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834509
+	Reeve, M R; Baker, L D (2014): Growth rate of Mnemiopsis mccradyi and Sagitta hispida determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834558
+	Reeve, M R; Syms, Mary Ann; Kremer, Patricia (2014): Growth rate of Mnemiopsis mccradyi and Sagitta hispida determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834663
+	Reeve, M R; Walter, M A (2014): Growth rate of Pleurobrachia bachei determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834560
+	Ross, R M (2014): Growth rate of Paraphysomonas imperforata and Euphausia pacifica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834562
+	Sabatini, Marina; Kiørboe, Thomas (2014): Growth rate of Oithona similis determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834563
+	Sakagawa, Gary T; Kimura, Makoto (2014): Growth rate of Engraulis mordax determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834568
+	Schmoker, C; Thor, Peter; Hernández-León, Santiago; Hansen, Benni Winding (2014): Growth rate of Gyrodinium dominans determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834570
+	Senjie, L; Song, L (2014): Growth rate of Labidocera euchaeta determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834574
+	Smigielski, Alphonse S; Halavik, Thomas A; Buckley, Lawrence J; Drew, Shawn M; Laurence, G C (2014): Growth rate of Ammodytes americanus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834577
+	Stoecker, D; Davis, L H; Provan, A (2014): Growth rate of Favella sp. and Balanion sp. determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834578
+	Strom, Suzanne L; Morello, T Aaron (2014): Growth rate of Ciliates and Dinoflagellates determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834582
+	Tandler, Amos; Helps, Sarah (2014): Growth rate of Ciliates and Dinoflagellates determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834589
+	Theilacker, Gail H (2014): Growth rate of Engraulis mordax determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834597
+	Uye, Shin-ichi (2014): Growth rate of Microsetella norvegica determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834600
+	Uye, Shin-ichi (2014): Growth rate of Paracalanus sp. determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834599
+	Uye, Shin-ichi; Aoto, I; Onbe, Takashi (2014): Growth rate of Acartia omori, Calanus sinicus and Paracalanus parvus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834602
+	Uye, Shin-ichi; Iwai, Y; Kasahara, S (2014): Growth rate of Pseudodiaptomus marinus determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834598
+	Vidal, J (2014): Growth rate of Calanus pacificus and Pseudocalanus sp. determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834603
+	Widmer, Chad L (2014): Growth rate of Aurelia labiata determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834604
+	Yamashita, Yoh; Bailey, K M (2014): Growth rate of Theragra chalcogramma determined experimentally [dataset]. PANGAEA, https://doi.org/10.1594/PANGAEA.834605
+Project(s):	Basin Scale Analysis, Synthesis and Integration (EURO-BASIN) (URI: https://cordis.europa.eu/project/id/264933)
+Funding:	Seventh Framework Programme of the European Commission (FP7), grant/award no. 264933: Basin Scale Analysis, Synthesis and Integration (URI: https://cordis.europa.eu/project/id/264933)
+Coverage:	MEDIAN LATITUDE: 36.895770 * MEDIAN LONGITUDE: -30.224241 * SOUTH-BOUND LATITUDE: -62.133380 * WEST-BOUND LONGITUDE: -124.209395 * NORTH-BOUND LATITUDE: 64.080110 * EAST-BOUND LONGITUDE: 145.379330
+	DATE/TIME START: 1975-04-23T00:00:00 * DATE/TIME END: 1996-05-15T00:00:00
+Event(s):	A_americanus_GROWTHEXP * LATITUDE: 42.820336 * LONGITUDE: -70.817871 * DATE/TIME: 1981-11-15T00:00:00 * LOCATION: Merrimack, Massachussets, U.S.A., North America * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Merrimack River Estuary; exact geograpical position and date is estimated
+	A_aurita_GROWTHEXP * LATITUDE: 55.445569 * LONGITUDE: 10.640602 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the Kertinge Nor and Kerteminde Fjord; exact geograpical position is estimated
+	A_aurita_GROWTHEXP-1 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	A_aurita_GROWTHEXP-2 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	A_labiata_GROWTHEXP * LATITUDE: 36.829793 * LONGITUDE: -121.980902 * LOCATION: Monterey Bay, California (URI: http://www.marineregions.org/gazetteer.php?p=details&id=19167) * METHOD/DEVICE: Hand net (HN) * COMMENT: growth experiment using cultures isolated from Monterey Bay (California, USA); collected February to May 2003
+	A_quadrilineata_GROWTHEXP * LATITUDE: 28.076126 * LONGITUDE: -96.963862 * LOCATION: Gulf of Mexico * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from the south jetty Port of Aransas (Texas, USA); exact geograpical position is estimated; mesh size = 20 µm
+	A_tonsa_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	A_tranteri_GROWTHEXP * LATITUDE: -38.426690 * LONGITUDE: 145.379330 * LOCATION: Bass Strait * METHOD/DEVICE: Water sample (WS) * COMMENT: growth experiment using cultures isolated from two stations of the Westernport Bay (Australia); exact geograpical position is estimated
+	Anchoa_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	Animalia_GROWTHEXP * LATITUDE: 25.396760 * LONGITUDE: -80.268860 * LOCATION: Biscayne Bay (URI: http://www.marineregions.org/gazetteer.php?p=details&id=19161) * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from the Biscayne Bay and Card Sound (Florida, USA); exact geograpical position is estimated; mesh size = 200 µm, mesh diameter = 50 cm
+	B_infundibulum_GROWTHEXP * LATITUDE: 56.511018 * LONGITUDE: 3.515625 * LOCATION: North Sea * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiments using cultures isolated from the North Sea; exact geograpical position estimated
+	B_mikado_GROWTHEXP * METHOD/DEVICE: Water sample (WS) * COMMENT: growth experiment using cultures isolated from the waters adjacent to the laboratory (marine laboratory of Tokyo)
+	C_chanos_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	C_finmarchicus_GROWTHEXP * LATITUDE: 41.000000 * LONGITUDE: -69.000000 * DATE/TIME: 1996-05-15T00:00:00 * LOCATION: Northwest Atlantic * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Cape Cod and Georges Bank, exact geograpical position estimated from literature
+	C_harengus_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the Clyde area and the Limfjord (Denmark)
+	C_helgolandicus_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	C_laeviusculus_GROWTHEXP * LATITUDE: 47.750000 * LONGITUDE: -122.416667 * LOCATION: Puget Sound, Salish Sea (URI: http://en.wikipedia.org/wiki/Puget_Sound) * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from a station off Point Jefferson
+	C_marshallae_GROWTHEXP * LATITUDE: 44.646695 * LONGITUDE: -124.209395 * LOCATION: North Pacific Ocean * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Newport, Oregon (USA); exact geograpical position is estimated
+	C_quinquecirrha_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from various sources; partly collected from the Chesapeake Bay (Virginia, USA) in March 1993
+	Calanoida_GROWTHEXP-1 * LATITUDE: -23.035550 * LONGITUDE: -70.433610 * LOCATION: Mejillones, Chile * METHOD/DEVICE: Experiment (EXP) * COMMENT: exact geograpical position estimated from literature
+	Calanoida_GROWTHEXP-2 * LATITUDE: 56.279961 * LONGITUDE: 11.557617 * DATE/TIME: 1989-09-15T00:00:00 * LOCATION: Kattegat * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiments using cultures isolated from the southern Kattegat (Denmark); exact geograpical position and date estimated from literature
+	Calanoida_GROWTHEXP-3 * LATITUDE: 34.358925 * LONGITUDE: 133.381780 * LOCATION: Inland Sea of Japan (URI: http://www.marineregions.org/gazetteer.php?p=details&id=4306) * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from station A (Numakuma, Hiroshima) and station B (10 km offshore from station A), exact geograpical position is estimated; collected from December 1982 to December 1983
+	Calanoida_GROWTHEXP-4 * LATITUDE: 53.683690 * LONGITUDE: 5.767820 * LOCATION: North Sea * METHOD/DEVICE: Gulf III plankton sampler (G-PS) * COMMENT: growth experiment using cultures isolated from 50 km off the Dutch coast; exact geograpical position is estimated
+	Calanoida_GROWTHEXP-5 * LATITUDE: 47.723650 * LONGITUDE: -122.471330 * LOCATION: Puget Sound, Salish Sea (URI: http://en.wikipedia.org/wiki/Puget_Sound) * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from Puget Sound (Washington USA); exact geograpical position is estimated; mesh size = 570 µm; net diameter = 100 cm
+	Ciliates_Dinoflagellates_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from various sources of the Oregon coastal waters and northern Puget Sound
+	Ciliates_GROWTHEXP-1 * LATITUDE: 59.338790 * LONGITUDE: 10.601800 * LOCATION: outer Oslofjord * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the outer Oslofjord, Norway in March, October & November; exact geograpical position estimated from literature
+	Ciliates_GROWTHEXP-2 * LATITUDE: 41.566260 * LONGITUDE: -70.584750 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from caging in Perch Pond, Falmouth, Massachusetts, USA; exact geograpical position is estimated
+	Crustacea_Nanoflagellates_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	D_dominans_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	D_gegenbauri_GROWTHEXP * LATITUDE: 31.981288 * LONGITUDE: -80.928726 * LOCATION: Savannah, Georgia, U.S.A., North America * METHOD/DEVICE: Net (NET) * COMMENT: growth experiments using cultures isolated from the Wassaw transect off the coast of Savannah, GA; exact geograpical position estimated from literature, cone net = 200 µm
+	D_labrax_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	D_lenticula_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	E_affinis_GROWTHEXP * LATITUDE: 37.584150 * LONGITUDE: -76.178370 * LOCATION: Chesapeake Bay * METHOD/DEVICE: Water sample (WS) * COMMENT: growth experiment using cultures isolated from the Patuxent River, a tributary of the Chesapeake
+	Bay; exact geograpical position is estimated
+	E_herdmani_GROWTHEXP * LATITUDE: 44.632220 * LONGITUDE: -63.549720 * LOCATION: Nova Scotia Rise * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated near Halifax, Nova Scotia, 1987 & 1988
+	E_mordax_GROWTHEXP-1 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from various sources, partly collected from the California Current (California USA)
+	E_mordax_GROWTHEXP-2 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	E_pacifica_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	E_superba_GROWTHEXP-1 * LATITUDE: -62.133380 * LONGITUDE: -58.441490 * DATE/TIME: 1983-01-05T00:00:00 * LOCATION: Admiralty Bay * METHOD/DEVICE: Trawl net (TRAWL) * COMMENT: exact geograpical position and date estimated from literature, samples were collected at the surface during night time
+	E_superba_GROWTHEXP-2 * LOCATION: Antarctic Ocean * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Antarctic waters
+	G_morhua_GROWTHEXP * LATITUDE: 64.080110 * LONGITUDE: -15.571460 * LOCATION: Iceland Sea * METHOD/DEVICE: Experiment (EXP) * COMMENT: exact geograpical position estimated from literature, sample were collected in April 2004 and 2005
+	G_morhua_GROWTHEXP-2 * LOCATION: Norwegian Sea * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Bømlo and Møre (W-Norway)
+	H_americanus_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	H_araneus_GROWTHEXP * LATITUDE: 54.179700 * LONGITUDE: 7.868000 * LOCATION: Helgoland, North Sea * METHOD/DEVICE: Dredge (DRG) * COMMENT: exact geograpical position estimated from literature
+	H_coarctatus_GROWTHEXP * LATITUDE: 54.262016 * LONGITUDE: 7.811279 * LOCATION: German Bight, North Sea * METHOD/DEVICE: Dredge (DRG) * COMMENT: growth experiment using cultures isolated near the island of Helgoland (German Bight, North Sea); exact geograpical position is estimated
+	L_euchaeta_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	L_tenuis_GROWTHEXP * LATITUDE: 28.690588 * LONGITUDE: -115.664062 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from the sandy beaches of southern and northern Baja (California); exact geograpical position is estimated
+	L_tetraspina_GROWTHEXP * LATITUDE: 38.063771 * LONGITUDE: -121.845589 * LOCATION: San Francisco Estuary (URI: http://www.marineregions.org/gazetteer.php?p=details&id=19184) * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from San Francisco Estuary; exact geograpical position estimated; mesh size = 53 µm; net diameter = 50 cm; collected March to August, weekly in 2006, biweekly in 2007
+	Larve_GROWTHEXP * DATE/TIME: 1975-04-23T00:00:00 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	M_americana_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	M_elongata_GROWTHEXP * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures from undefined sources
+	M_mccradyi_GROWTH * LATITUDE: 25.570937 * LONGITUDE: -80.233154 * LOCATION: Biscayne Bay (URI: http://www.marineregions.org/gazetteer.php?p=details&id=19161) * METHOD/DEVICE: Experiment (EXP) * COMMENT: exact geograpical position is estimated
+	M_norvegica_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	M_peninsulae_GROWTH * LATITUDE: 30.400241 * LONGITUDE: -86.775948 * LOCATION: Santa Rosa Sound (URI: http://en.wikipedia.org/wiki/Santa_Rosa_Sound) * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Santa Rosa Sound, Florida (USA); exact geograpical position is estimated
+	N_scintillans_GROWTHEXP * LATITUDE: 33.639700 * LONGITUDE: 131.998970 * LOCATION: Seto Inland Sea * METHOD/DEVICE: Bucket water sampling (BUCKET) * COMMENT: growth experiment using cultures isolated from the pier of Tsuna fishing harbor in the Seto Inland Sea; exact geograpical position is estimated
+	O_davisae_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: respiration rate experiment using cultures from undefined sources
+	O_dioica_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	O_kisutch_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	O_marina_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	O_mediterranea_GROWTHEXP * LATITUDE: 31.336640 * LONGITUDE: -81.185010 * LOCATION: Georgia Shelf (URI: http://www.marineregions.org/gazetteer.php?p=details&id=24658) * METHOD/DEVICE: Tow net (TOWN) * COMMENT: growth experiment using cultures isolated from the middle shelf off Georgia (USA); exact geograpical position is estimated; mesh size = 105 µm
+	O_similis_GROWTHEXP * LATITUDE: 55.794370 * LONGITUDE: 12.728033 * LOCATION: Oeresund (URI: http://www.marineregions.org/gazetteer.php?p=details&id=3296) * METHOD/DEVICE: WP-2 towed closing plankton net (WP2) * COMMENT: exact geograpical position is estimated
+	P_americanus_GROWTHEXP * LATITUDE: 41.600060 * LONGITUDE: -71.349760 * LOCATION: Narragansett Bay * METHOD/DEVICE: Trawl net (TRAWL) * COMMENT: growth experiment using cultures isolated from Narragansett Bay (Rhode Island, USA); exact geograpical position is estimated
+	P_bachei_GROWTHEXP-1 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	P_bachei_GROWTHEXP-2 * LATITUDE: 48.648766 * LONGITUDE: -123.504251 * LOCATION: Saanich Inlet * METHOD/DEVICE: Bongo net (BONGO) * COMMENT: growth experiment using cultures isolated from the Saanich Inlet (British Columbis); exact geograpical position is estimated
+	P_elongatus_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	P_ferrugineus_GROWTHEXP * LATITUDE: 49.000000 * LONGITUDE: -53.000000 * LOCATION: North Atlantic Ocean * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from captive broodstock from University of Newfoundland's Ocean Sciences Centre in Logy Bay, Newfoundland
+	P_huberi_GROWTHEXP * LATITUDE: 27.833333 * LONGITUDE: -97.050000 * DATE/TIME: 1992-12-15T00:00:00 * LOCATION: Gulf of Mexico * METHOD/DEVICE: Net (NET) * COMMENT: mesh size = 20 µm; net diameter = 20 cm, sampling date is estimated,
+	P_marinus_GROWTHEXP * LATITUDE: 34.370260 * LONGITUDE: 133.387270 * LOCATION: Japan Sea * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from station: Tomo, Fukuyama (Japan); exact geograpical position is estimated; mesh size = 94 µm, net diamter = 45 cm
+	P_pileus_GROWTHEXP * LATITUDE: 58.250000 * LONGITUDE: 11.433330 * LOCATION: Gullmar Fjord, Skagerrak, Sweden * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from western part of the Gullmar fjord; samples were taken from March to July; exact geograpical position is estimated
+	Paracalanus_GROWTHEXP * LATITUDE: 34.370260 * LONGITUDE: 133.387270 * LOCATION: Japan Sea * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from Harbor and at Tomo station (Cental Japan Sea); exact geograpical position is estimated; mesh size = 300 µm, net diamter = 45 cm
+	Pisces_GROWTHEXP-1 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	Pisces_GROWTHEXP-2 * LATITUDE: 25.575272 * LONGITUDE: -80.236588 * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from the Biscayne Bay, Florida; exact geograpical position is estimated
+	Pisces_GROWTHEXP-3 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	Pisces_GROWTHEXP-4 * LOCATION: North Atlantic Ocean * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the Block Island Sound, Rhode Island and 20 km east of Cape Ann, Massachusetts (USA)
+	Pisces_GROWTHEXP-5 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	S_aurata_GROWTHEXP * LATITUDE: 29.533031 * LONGITUDE: 34.968143 * LOCATION: Eilat * METHOD/DEVICE: Experiment (EXP) * COMMENT: exact geograpical position is estimated; collected from January to June 1981
+	S_hispida_GROWTHEXP * LATITUDE: 25.570620 * LONGITUDE: -80.232460 * LOCATION: Biscayne Bay (URI: http://www.marineregions.org/gazetteer.php?p=details&id=19161) * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from the Biscayne Bay (Florida, USA); exact geograpical position is estimated; mesh diameter =n 30.5 and 50.8 cm, mesh opening = 300 µm
+	S_japonicus_GROWTHEXP * LOCATION: Pacific Ocean * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the Pacific Ocean
+	S_maximus_GROWTHEXP-1 * LATITUDE: 54.796260 * LONGITUDE: 10.587720 * LOCATION: Baltic Sea * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the Western Baltic Sea (Langeland); exact geograpical position is estimated
+	S_maximus_GROWTHEXP-2 * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	S_salar_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	S_tenellus_GROWTHEXP * LATITUDE: 34.485370 * LONGITUDE: 133.361835 * METHOD/DEVICE: Net (NET) * COMMENT: growth experiment using cultures isolated from a brackish-water pond in Fukuyama; exact geograpical position is estimated; mesh opening = 100 µm, mesh diameter = 30cm
+	S_tubulosa_GROWTHEXP * LATITUDE: 52.997222 * LONGITUDE: 4.795000 * DATE/TIME START: 1983-04-18T00:00:00 * DATE/TIME END: 1983-06-16T00:00:00 * LOCATION: Wadden Sea * METHOD/DEVICE: Net (NET) * COMMENT: exact geograpical position and time estimated from literature; mesh ring = 1.6 mm, opening = 1 m**2
+	T_chalcogramma_GROWTHEXP-1 * LATITUDE: 47.283910 * LONGITUDE: -122.540290 * LOCATION: Puget Sound, Salish Sea (URI: http://en.wikipedia.org/wiki/Puget_Sound) * METHOD/DEVICE: Line Hook Bait (LHB) * COMMENT: collected in January-February 1984 and 1985
+	T_chalcogramma_GROWTHEXP-2 * LATITUDE: 47.723650 * LONGITUDE: -122.471330 * LOCATION: Puget Sound, Salish Sea (URI: http://en.wikipedia.org/wiki/Puget_Sound) * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from Puget Sound (Washington, USA); exact geograpical position is estimated
+	T_fusus_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	T_japonica_GROWTHEXP * LATITUDE: 32.750323 * LONGITUDE: 129.342041 * LOCATION: Japan Sea * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the Japan Sea; exact geograpical position is estimated
+	T_longicornis_GROWTHEXP * LATITUDE: 54.431710 * LONGITUDE: 3.691400 * LOCATION: North Sea * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures isolated from the North Sea and adjacent waters; exact geograpical position is estimated
+	Tunicata_GROWTHEXP * LATITUDE: 30.625000 * LONGITUDE: -77.287220 * LOCATION: Florida shelf * METHOD/DEVICE: Trawl net (TRAWL) * COMMENT: exact geograpical position estimated from literature; cylinder-cone = 3 m long, made of either 110 µm of 202 µm nylon mesh, mesh-to-mouth = 8:1
+	Uronema_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+	Zooplankton_GROWTHEXP * METHOD/DEVICE: Experiment (EXP) * COMMENT: growth experiment using cultures from undefined sources
+Parameter(s):	Event label (Event)
+	Taxon/taxa (Taxa)
+	Uniform resource locator/link to reference (URL ref) * COMMENT: WoRMS Aphia ID
+	Biomass as carbon per individual [µg/#] (Biom C/ind)
+	Growth rate as carbon per individual [mg/#/h] (µ C per/ind) * PI: Kiørboe, Thomas (https://orcid.org/0000-0002-3265-336X, tk@aqua.dtu.dk) * METHOD/DEVICE: Calculated
+	Growth rate as carbon per carbon biomass [mg/mg/h] (µ C per C biom) * PI: Kiørboe, Thomas (https://orcid.org/0000-0002-3265-336X, tk@aqua.dtu.dk) * METHOD/DEVICE: Calculated
+	Reference/source (Reference) * COMMENT: of the source data set
+	Uniform resource locator/link to source data file (URL source)
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	5958 data points
+*/
+Event	Taxa	URL ref	Biom C/ind [µg/#]	µ C per/ind [mg/#/h]	µ C per C biom [mg/mg/h]	Reference	URL source
+O_davisae_GROWTHEXP	Oithona davisae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=353995	.500E-1	.1844E-6	.3688E-2	Almeda et al., 2010	doi:10.1594/PANGAEA.834207
+O_davisae_GROWTHEXP	Oithona davisae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=353995	.500E-1	.3195E-6	.639E-2	Almeda et al., 2010	doi:10.1594/PANGAEA.834207
+O_davisae_GROWTHEXP	Oithona davisae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=353995	.500E-1	.386E-6	.7719E-2	Almeda et al., 2010	doi:10.1594/PANGAEA.834207
+O_davisae_GROWTHEXP	Oithona davisae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=353995	.500E-1	.3134E-6	.6268E-2	Almeda et al., 2010	doi:10.1594/PANGAEA.834207
+O_davisae_GROWTHEXP	Oithona davisae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=353995	.500E-1	.2458E-6	.4917E-2	Almeda et al., 2010	doi:10.1594/PANGAEA.834207
+H_araneus_GROWTHEXP	Hyas araneus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107322	.419E2	.2378E-3	.5675E-2	Anger et al., 1983	doi:10.1594/PANGAEA.834208
+H_araneus_GROWTHEXP	Hyas araneus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107322	.918E2	.323E-3	.3518E-2	Anger et al., 1983	doi:10.1594/PANGAEA.834208
+H_araneus_GROWTHEXP	Hyas araneus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107322	.1655E3	.5823E-3	.3518E-2	Anger et al., 1983	doi:10.1594/PANGAEA.834208
+H_araneus_GROWTHEXP	Hyas araneus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107322	.2171E3	.1971E-3	.9079E-3	Anger et al., 1983	doi:10.1594/PANGAEA.834208
+H_araneus_GROWTHEXP	Hyas araneus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107322	.2247E3	-.7651E-4	-.3405E-3	Anger et al., 1983	doi:10.1594/PANGAEA.834208
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.6067E3	.3695E-2	.6091E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.1198E4	.6943E-2	.5795E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.2427E4	.1478E-1	.6091E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.4637E4	.2194E-1	.4731E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.7431E4	.2461E-1	.3311E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.1056E5	.2497E-1	.2365E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.1329E5	.2044E-1	.1537E-2	Arai, 1980	doi:10.1594/PANGAEA.834267
+	Aequorea victoria	https://www.marinespecies.org/aphia.php?p=taxdetails&id=283998	.1531E5	.1358E-1	.887E-3	Arai, 1980	doi:10.1594/PANGAEA.834267
+T_chalcogramma_GROWTHEXP-2	Theragra chalcogramma	https://www.marinespecies.org/aphia.php?p=taxdetails&id=254539	.4471E3	.2868E-2	.6415E-2	Bailey & Stehr, 1986	doi:10.1594/PANGAEA.834268
+A_aurita_GROWTHEXP-1	Aurelia aurita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306	.205E2	.438E-3	.2137E-1	Bamstedt et al., 1999	doi:10.1594/PANGAEA.834273
+A_aurita_GROWTHEXP-2	Aurelia aurita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306	.205E2	.2633E-3	.1285E-1	Bamstedt et al., 2001	doi:10.1594/PANGAEA.834269
+A_aurita_GROWTHEXP-2	Aurelia aurita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306	.205E2	.3315E-3	.1617E-1	Bamstedt et al., 2001	doi:10.1594/PANGAEA.834269
+A_aurita_GROWTHEXP-2	Aurelia aurita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306	.205E2	.1905E-3	.9292E-2	Bamstedt et al., 2001	doi:10.1594/PANGAEA.834269
+A_aurita_GROWTHEXP-2	Aurelia aurita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306	.205E2	.2164E-3	.1056E-1	Bamstedt et al., 2001	doi:10.1594/PANGAEA.834269
+Larve_GROWTHEXP	Pleuronectes ferrugineus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=305717	.2495E7	.2986E1	.1197E-2	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Pleuronectes ferrugineus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=305717	.310E7	.2407E1	.7764E-3	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Pleuronectes ferrugineus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=305717	.365E7	.2499E1	.6847E-3	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.3913E2	-.1059E-4	-.2706E-3	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.5328E2	.2065E-3	.3876E-2	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.1236E3	.7368E-3	.5959E-2	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.2986E3	.1298E-2	.4345E-2	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.5771E3	.1934E-2	.3351E-2	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+Larve_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.7841E3	.1808E-3	.2306E-3	Barahona-Fernandes et al., 1977	doi:10.1594/PANGAEA.834271
+A_tonsa_GROWTHEXP	Acartia tonsa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=345943	.210E0	.3205E-5	.1526E-1	Berggreen et al., 1988	doi:10.1594/PANGAEA.834272
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1235E6	.2205E0	.1786E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4705E6	.6459E0	.1373E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4825E7	.4664E1	.9667E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.137E8	.1445E2	.1055E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3686E8	.2015E2	.5466E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1047E9	.4208E2	.4021E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1632E6	.5869E0	.3597E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.5794E6	.1537E1	.2653E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1412E7	.2224E1	.1575E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.5893E7	.7465E1	.1267E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1515E8	.1415E2	.9345E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3897E8	.2069E2	.531E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1147E9	.3775E2	.3291E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2083E6	.793E0	.3808E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.7107E6	.1798E1	.253E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1501E7	.2045E1	.1362E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.6175E7	.5575E1	.9029E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.149E8	.8984E1	.6029E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4001E8	.1294E2	.3235E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1104E9	.200E2	.1812E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.216E6	.5509E0	.255E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.6984E6	.1113E1	.1594E-2	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1554E7	.1305E1	.8394E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.5897E7	.3093E1	.5246E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1384E8	.4943E1	.3571E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.9959E8	.9868E1	.9909E-4	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1372E6	.1164E0	.8483E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1486E6	.9369E-1	.6306E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.5464E6	.2909E0	.5323E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.115E7	.1869E0	.1625E-3	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4011E7	.1752E0	.4369E-4	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+G_morhua_GROWTHEXP	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4011E7	.7509E-1	.1872E-4	Björnsson et al., 2007	doi:10.1594/PANGAEA.834274
+O_kisutch_GROWTHEXP	Oncorhynchu kisutch	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127184	.8155E6	.504E0	.618E-3	Brett & Blackburn, 1981	doi:10.1594/PANGAEA.834275
+O_kisutch_GROWTHEXP	Oncorhynchu nerka	https://www.marinespecies.org/aphia.php?p=taxdetails&id=254569	.2077E7	.8841E0	.4256E-3	Brett & Blackburn, 1981	doi:10.1594/PANGAEA.834275
+E_superba_GROWTHEXP-1	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.2017E5	.2115E-1	.1049E-2	Buchholz, 1991	doi:10.1594/PANGAEA.834276
+E_superba_GROWTHEXP-1	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.1873E5	.2738E-1	.1462E-2	Buchholz, 1991	doi:10.1594/PANGAEA.834276
+E_superba_GROWTHEXP-1	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.2059E5	.2061E-1	.1001E-2	Buchholz, 1991	doi:10.1594/PANGAEA.834276
+P_huberi_GROWTHEXP	Protoperidinium huberi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=233267	.5498E-2	.8214E-7	.1494E-1	Buskey et al., 1994	doi:10.1594/PANGAEA.834277
+C_finmarchicus_GROWTHEXP	Calanus finmarchicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104464	.470E0	.1011E-4	.215E-1	Campbell et al., 2001	doi:10.1594/PANGAEA.834285
+C_finmarchicus_GROWTHEXP	Calanus finmarchicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104464	.255E2	.4325E-3	.1696E-1	Campbell et al., 2001	doi:10.1594/PANGAEA.834285
+Pisces_GROWTHEXP-1	Acipenser transmontanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=238345	.1058E6	.1442E0	.1362E-2	Cech et al., 1984	doi:10.1594/PANGAEA.834287
+Pisces_GROWTHEXP-1	Acipenser transmontanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=238345	.1714E6	.2769E0	.1615E-2	Cech et al., 1984	doi:10.1594/PANGAEA.834287
+Pisces_GROWTHEXP-1	Acipenser transmontanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=238345	.1775E6	.1774E0	.9995E-3	Cech et al., 1984	doi:10.1594/PANGAEA.834287
+Pisces_GROWTHEXP-1	Morone saxatilis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151179	.966E5	.1561E0	.1615E-2	Cech et al., 1984	doi:10.1594/PANGAEA.834287
+Pisces_GROWTHEXP-1	Morone saxatilis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151179	.1231E6	.1685E0	.1368E-2	Cech et al., 1984	doi:10.1594/PANGAEA.834287
+Pisces_GROWTHEXP-1	Morone saxatilis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151179	.1807E6	.2166E0	.1198E-2	Cech et al., 1984	doi:10.1594/PANGAEA.834287
+Anchoa_GROWTHEXP	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.334E1	.7844E-5	.2349E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.3989E1	.9653E-5	.242E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.4753E1	.1086E-4	.2285E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.5669E1	.1388E-4	.2448E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.677E1	.1569E-4	.2317E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.8068E1	.1931E-4	.2393E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa lamprotaenia	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275522	.8502E1	.2412E-4	.2837E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa lamprotaenia	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275522	.1051E2	.3015E-4	.2867E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa lamprotaenia	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275522	.1306E2	.3859E-4	.2954E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa lamprotaenia	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275522	.1618E2	.4523E-4	.2795E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa lamprotaenia	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275522	.200E2	.5788E-4	.2894E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+Anchoa_GROWTHEXP	Anchoa lamprotaenia	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275522	.2481E2	.7175E-4	.2892E-2	Chitty, 1981	doi:10.1594/PANGAEA.834288
+M_elongata_GROWTHEXP	Metamysidopsis elongata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=226436	.451E2	.1101E-3	.2442E-2	Clutter & Theilacker, 1971	doi:10.1594/PANGAEA.834301
+M_elongata_GROWTHEXP	Metamysidopsis elongata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=226436	.411E2	.892E-4	.217E-2	Clutter & Theilacker, 1971	doi:10.1594/PANGAEA.834301
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.474E2	.7747E-3	.1634E-1	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.110E3	.9363E-3	.8512E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.1694E3	.1173E-2	.6923E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.2226E3	.9979E-3	.4483E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.2455E3	.1101E-2	.4483E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.3646E3	.1552E-2	.4256E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.3797E3	.948E-3	.2497E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+S_tubulosa_GROWTHEXP	Sarsia tubulosa	https://www.marinespecies.org/aphia.php?p=taxdetails&id=117491	.6524E3	.137E-2	.210E-2	Daan, 1986	doi:10.1594/PANGAEA.834302
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.150E2	.1683E-3	.1122E-1	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.300E2	.3212E-3	.1071E-1	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.500E2	.5097E-3	.1019E-1	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.100E3	.9509E-3	.9509E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.150E3	.1349E-2	.8995E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.200E3	.173E-2	.8652E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.300E3	.2441E-2	.8138E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.500E3	.3641E-2	.7281E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.750E3	.4819E-2	.6425E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.100E4	.574E-2	.574E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.150E2	.1643E-3	.1095E-1	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.300E2	.3064E-3	.1021E-1	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.500E2	.4852E-3	.9704E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.100E3	.8739E-3	.8739E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.150E3	.1234E-2	.8228E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.200E3	.1555E-2	.7774E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.300E3	.2128E-2	.7093E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.500E3	.3064E-2	.6129E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.750E3	.3915E-2	.5221E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.100E4	.4483E-2	.4483E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.150E2	.1544E-3	.1029E-1	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.300E2	.2888E-3	.9625E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.500E2	.4625E-3	.925E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.100E3	.8625E-3	.8625E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.150E3	.1231E-2	.8208E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.200E3	.1567E-2	.7833E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.300E3	.2175E-2	.725E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.500E3	.3167E-2	.6333E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.750E3	.4031E-2	.5375E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+C_laeviusculus_GROWTHEXP	Calliopius laeviusculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=102178	.100E4	.4542E-2	.4542E-2	Dagg, 1976	doi:10.1594/PANGAEA.834306
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.400E1	.8964E-5	.2241E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.400E1	.7968E-5	.1992E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.600E1	.3586E-4	.5976E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.600E1	.3137E-4	.5229E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.800E1	.3586E-4	.4482E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.100E2	.5478E-4	.5478E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.120E2	.6275E-4	.5229E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.140E2	.8715E-4	.6225E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.200E2	.3984E-4	.1992E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.220E2	.6026E-4	.2739E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.400E1	.2988E-5	.747E-3	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.400E1	.5976E-5	.1494E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.400E1	.1793E-4	.4482E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.600E1	.2689E-4	.4482E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.600E1	.1793E-4	.2988E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.800E1	.239E-4	.2988E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.800E1	.7171E-4	.8964E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.800E1	.2988E-4	.3735E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.120E2	.1016E-3	.8466E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.140E2	.7321E-4	.5229E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.160E2	.1992E-4	.1245E-2	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.160E2	.1594E-4	.996E-3	Deibel, 1982	doi:10.1594/PANGAEA.834310
+Tunicata_GROWTHEXP	Thalia democratica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137279	.160E2	.1594E-4	.996E-3	Deibel, 1982	doi:10.1594/PANGAEA.834310
+C_chanos_GROWTHEXP	Chanos chanos	https://www.marinespecies.org/aphia.php?p=taxdetails&id=217625	.3499E3	.3942E-3	.1126E-2	Duray & Bagarinao, 1984	doi:10.1594/PANGAEA.834311
+C_chanos_GROWTHEXP	Chanos chanos	https://www.marinespecies.org/aphia.php?p=taxdetails&id=217625	.1541E4	.5769E-2	.3745E-2	Duray & Bagarinao, 1984	doi:10.1594/PANGAEA.834311
+C_chanos_GROWTHEXP	Chanos chanos	https://www.marinespecies.org/aphia.php?p=taxdetails&id=217625	.5466E4	.2283E-2	.4177E-3	Duray & Bagarinao, 1984	doi:10.1594/PANGAEA.834311
+C_chanos_GROWTHEXP	Chanos chanos	https://www.marinespecies.org/aphia.php?p=taxdetails&id=217625	.7641E4	.5221E-2	.6832E-3	Duray & Bagarinao, 1984	doi:10.1594/PANGAEA.834311
+E_herdmani_GROWTHEXP	Eurytemora herdmani	https://www.marinespecies.org/aphia.php?p=taxdetails&id=157670	.109E1	.1588E-4	.1457E-1	Escribano & McLaren, 1992	doi:10.1594/PANGAEA.834312
+E_herdmani_GROWTHEXP	Eurytemora herdmani	https://www.marinespecies.org/aphia.php?p=taxdetails&id=157670	.296E1	.2334E-4	.7884E-2	Escribano & McLaren, 1992	doi:10.1594/PANGAEA.834312
+E_herdmani_GROWTHEXP	Eurytemora herdmani	https://www.marinespecies.org/aphia.php?p=taxdetails&id=157670	.747E0	.9637E-5	.129E-1	Escribano & McLaren, 1992	doi:10.1594/PANGAEA.834312
+Calanoida_GROWTHEXP-1	Calanus chilensis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346212	.399E1	.2819E-4	.7065E-2	Escribano et al., 1997	doi:10.1594/PANGAEA.834313
+Calanoida_GROWTHEXP-1	Calanus chilensis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346212	.399E1	.1929E-4	.4834E-2	Escribano et al., 1997	doi:10.1594/PANGAEA.834313
+Calanoida_GROWTHEXP-1	Calanus glacialis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104465	.656E2	.2104E-3	.3207E-2	Escribano et al., 1997	doi:10.1594/PANGAEA.834313
+Calanoida_GROWTHEXP-1	Calanus glacialis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104465	.594E2	.4513E-3	.7597E-2	Escribano et al., 1997	doi:10.1594/PANGAEA.834313
+Calanoida_GROWTHEXP-2	Centropages hamatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104496	.179E0	.1603E-5	.8953E-2	Fryd et al., 1991	doi:10.1594/PANGAEA.834316
+Calanoida_GROWTHEXP-2	Centropages hamatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104496	.1549E1	.1513E-4	.9767E-2	Fryd et al., 1991	doi:10.1594/PANGAEA.834316
+Calanoida_GROWTHEXP-2	Centropages typicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104499	.179E0	.2094E-5	.117E-1	Fryd et al., 1991	doi:10.1594/PANGAEA.834316
+Calanoida_GROWTHEXP-2	Centropages typicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104499	.1661E1	.2118E-4	.1275E-1	Fryd et al., 1991	doi:10.1594/PANGAEA.834316
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.500E1	.5356E-4	.1071E-1	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.150E2	.1392E-3	.9283E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.350E2	.9997E-4	.2856E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.500E1	.635E-4	.127E-1	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.150E2	.2615E-3	.1743E-1	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.350E2	.2963E-3	.8466E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.500E1	.4863E-4	.9725E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.150E2	.125E-3	.8336E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.350E2	.1702E-3	.4863E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.500E1	.3825E-4	.7651E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.150E2	.132E-3	.8798E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_gegenbauri_GROWTHEXP	Dolioletta gegenbauri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=137241	.350E2	.2098E-3	.5993E-2	Gibson & Paffenhöfer, 2000	doi:10.1594/PANGAEA.834330
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.3956E2	.9049E-4	.2287E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.7774E2	.4425E-3	.5692E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.2052E3	.122E-2	.5945E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.4839E3	.2205E-2	.4558E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.8204E3	.1484E-2	.1808E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.120E4	.327E-2	.2725E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.1882E4	.5091E-2	.2706E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.2637E4	.3803E-2	.1442E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.3791E4	.1109E-1	.2927E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.7071E4	.3223E-1	.4558E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.1119E5	.1175E-1	.1051E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.1318E5	.1339E-1	.1016E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.1607E5	.2319E-1	.1442E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.2119E5	.4179E-1	.1972E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.3021E5	.7005E-1	.2319E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.4946E5	.1745E0	.3529E-2	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+D_labrax_GROWTHEXP	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.6991E5	.4251E-1	.6081E-3	Girin et al., 1975	doi:10.1594/PANGAEA.834332
+Ciliates_GROWTHEXP-1	Strombidium capitatum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101282	.8715E-2	.3522E-6	.4042E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidium siculum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=428815	.4278E-2	.927E-7	.2167E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidium acutum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101275	.4293E-2	.1449E-6	.3375E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Sytrombidium conicum		.5536E-2	.2122E-6	.3833E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidium sp	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101195	.4258E-2	.181E-6	.425E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidium vestitum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101342	.1427E-2	.6778E-7	.475E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidium neptuni		.1401E-1	.9807E-6	.700E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidium veniliae		.3075E-2	.8585E-7	.2792E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strobilidium lacustris		.1435E-1	.5738E-6	.400E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Lohmaniella oviformis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101209	.7246E-3	.2204E-7	.3042E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strobilidium spiralis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101236	.9229E-2	.5845E-6	.6333E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidinopsis cheshiri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=427386	.1197E-1	.4489E-6	.375E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidinopsis multiauris	https://www.marinespecies.org/aphia.php?p=taxdetails&id=595212	.2224E-1	.6951E-6	.3125E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+Ciliates_GROWTHEXP-1	Strombidinopsis sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101198	.5867E-1	.2249E-5	.3833E-1	Gismervik, 2005	doi:10.1594/PANGAEA.834392
+L_tetraspina_GROWTHEXP	Limnoithona tetraspina	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346621	.500E-1	.9178E-7	.1836E-2	Gould & Kimmerer, 2010	doi:10.1594/PANGAEA.834393
+B_infundibulum_GROWTHEXP	Bolionopsis infundibulum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=106393	.3691E3	.2844E-2	.7706E-2	Greve, 1970	doi:10.1594/PANGAEA.834394
+B_infundibulum_GROWTHEXP	Bolionopsis infundibulum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=106393	.1577E4	.2229E-1	.1413E-1	Greve, 1970	doi:10.1594/PANGAEA.834394
+B_infundibulum_GROWTHEXP	Bolionopsis infundibulum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=106393	.1026E5	.7175E-1	.6992E-2	Greve, 1970	doi:10.1594/PANGAEA.834394
+Uronema_GROWTHEXP	Uronema sp	https://www.marinespecies.org/aphia.php?p=taxdetails&id=494309	.2239E-3	.1951E-7	.8715E-1	Hamilton & Preslan, 1970	doi:10.1594/PANGAEA.834399
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.8277E7	.1705E1	.206E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.8956E7	.8763E1	.9784E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1039E8	.1298E2	.1249E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1239E8	.1735E2	.1401E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1444E8	.1298E2	.8994E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1597E8	.9822E1	.6152E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.8587E7	.5107E1	.5947E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1033E8	.1287E2	.1246E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1345E8	.1855E2	.138E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1778E8	.2493E2	.1402E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.2287E8	.2533E2	.1108E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.2703E8	.1505E2	.5568E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.8617E7	.3596E1	.4173E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1074E8	.1111E2	.1034E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1462E8	.1462E2	.100E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1986E8	.203E2	.1022E-2	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.258E8	.1817E2	.7043E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.3035E8	.1115E2	.3673E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.8835E7	.2688E1	.3043E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1091E8	.6728E1	.6168E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1434E8	.8307E1	.5793E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.1859E8	.1033E2	.5558E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.2274E8	.7357E1	.3236E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+S_salar_GROWTHEXP	Salmo salar	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127186	.2578E8	.5827E1	.226E-3	Handeland et al., 2008	doi:10.1594/PANGAEA.834400
+Zooplankton_GROWTHEXP	Actinomonas mirabilis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=375694	.165E-4	.2465E-8	.1494E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Bodo designis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=146154	.1188E-4	.1136E-8	.9562E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Ciliophrys infusionum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=375958	.484E-4	.1302E-8	.2689E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Codosiga gracilis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105634	.770E-5	.2393E-9	.3108E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Diaphanoeca grandis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105571	.880E-5	.1056E-8	.120E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Jakoba libera	https://www.marinespecies.org/aphia.php?p=taxdetails&id=118052	.165E-4	.355E-9	.2151E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Monosiga sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105535	.440E-5	.447E-9	.1016E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Ochromonas sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=249725	.440E-4	.4996E-8	.1135E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Ochromonas sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=249725	.110E-4	.8349E-9	.759E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Paraphysomonas imperforata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341603	.4664E-4	.5853E-8	.1255E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Paraphysomonas vestita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341605	.418E-4	.5745E-8	.1375E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Pleuromonas jaculans	https://www.marinespecies.org/aphia.php?p=taxdetails&id=146160	.110E-4	.1052E-8	.9562E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Pseudobodo tremulans	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104015	.198E-4	.1775E-8	.8964E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Pseudobodo sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103990	.737E-5	.8476E-9	.115E0	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Spumella sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=428524	.1439E-4	.6834E-9	.475E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Stephanoeca diplocostata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105623	.440E-5	.2552E-9	.5801E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Stephanoeca diplocostata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105623	.1826E-4	.3819E-9	.2092E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Amphidinium crassum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109726	.4095E-3	.9828E-8	.240E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Gymnodinium sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109475	.117E-3	.5577E-8	.4767E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Gyrodinium dominans	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109851	.1352E-2	.2704E-7	.200E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Gyrodinium spirale	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109876	.1963E-2	.4319E-7	.220E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Gyrodinium sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109476	.325E-4	.156E-8	.480E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Pblea rotunda	https://www.marinespecies.org/aphia.php?p=taxdetails&id=110155	.7969E-3	.1381E-7	.1733E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Oxyrrhis marina	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109902	.819E-3	.1419E-7	.1733E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Protoperidinium crassipes	https://www.marinespecies.org/aphia.php?p=taxdetails&id=110214	.2652E-1	.2284E-6	.8612E-2	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Protoperidinium divergens	https://www.marinespecies.org/aphia.php?p=taxdetails&id=110219	.1547E-1	.1947E-6	.1259E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Protoperidinium hirobis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=233269	.546E-3	.1631E-7	.2988E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Protoperidinium pellucidum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=110245	.3289E-2	.4605E-7	.140E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Eutintinnus pectinis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=417214	.210E-2	.1126E-6	.536E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Favella ehrenbergii	https://www.marinespecies.org/aphia.php?p=taxdetails&id=235761	.294E-1	.5095E-6	.1733E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Favella ehrenbergii	https://www.marinespecies.org/aphia.php?p=taxdetails&id=235761	.1338E-1	.4551E-6	.340E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Helicostomella subulata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=240437	.294E-2	.5829E-7	.1983E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Lohmaniella spiralis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101210	.210E-1	.1258E-5	.5992E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Pseudobalanion planctonicum		.2016E-3	.8858E-8	.4394E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Strobilidium cf. spiralis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101236	.371E-2	.133E-6	.3586E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Strobilidium reticulata		.560E-2	.2746E-6	.4903E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Strombidium sulcatum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101335	.910E-3	.6526E-7	.7171E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Tintinnopsis cf. acuminata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=163915	.994E-3	.4277E-7	.4303E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Tintinnopsis cf. acuminata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=163915	.1134E-2	.4247E-7	.3745E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Tintinnopsis dadayi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=417147	.1582E-1	.5483E-6	.3466E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+Zooplankton_GROWTHEXP	Tintinnopsis vasculus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=163920	.966E-2	.483E-6	.500E-1	Hansen et al., 1997	doi:10.1594/PANGAEA.834422
+T_longicornis_GROWTHEXP	Temora longicornis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104878	.130E0	.1471E-5	.1132E-1	Harris & Paffenhöfer, 1976	doi:10.1594/PANGAEA.834425
+T_longicornis_GROWTHEXP	Temora longicornis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104878	.180E1	.3299E-4	.1833E-1	Harris & Paffenhöfer, 1976	doi:10.1594/PANGAEA.834425
+T_longicornis_GROWTHEXP	Temora longicornis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104878	.800E1	.1337E-3	.1671E-1	Harris & Paffenhöfer, 1976	doi:10.1594/PANGAEA.834425
+E_affinis_GROWTHEXP	Eurytemora affinis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104872	.376E0	.2458E-5	.6538E-2	Heinle & Flemer, 1975	doi:10.1594/PANGAEA.834443
+E_affinis_GROWTHEXP	Eurytemora affinis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104872	.361E0	.3247E-5	.8994E-2	Heinle & Flemer, 1975	doi:10.1594/PANGAEA.834443
+E_affinis_GROWTHEXP	Eurytemora affinis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104872	.347E0	.3658E-5	.1054E-1	Heinle & Flemer, 1975	doi:10.1594/PANGAEA.834443
+E_affinis_GROWTHEXP	Eurytemora affinis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104872	.295E0	.2042E-5	.6922E-2	Heinle & Flemer, 1975	doi:10.1594/PANGAEA.834443
+E_affinis_GROWTHEXP	Eurytemora affinis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104872	.270E0	.1454E-5	.5387E-2	Heinle & Flemer, 1975	doi:10.1594/PANGAEA.834443
+P_bachei_GROWTHEXP-1	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.2394E3	.169E-2	.7058E-2	Hirota, 1972	doi:10.1594/PANGAEA.834444
+P_bachei_GROWTHEXP-1	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.2482E3	.2291E-2	.923E-2	Hirota, 1972	doi:10.1594/PANGAEA.834444
+P_bachei_GROWTHEXP-1	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.469E3	.1952E-2	.4162E-2	Hirota, 1972	doi:10.1594/PANGAEA.834444
+P_bachei_GROWTHEXP-1	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.6085E3	.457E-2	.7511E-2	Hirota, 1972	doi:10.1594/PANGAEA.834444
+Pisces_GROWTHEXP-2	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.5892E2	.2117E-3	.3592E-2	Houde, 1978	doi:10.1594/PANGAEA.834445
+Pisces_GROWTHEXP-2	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.360E2	.6819E-4	.1894E-2	Houde, 1978	doi:10.1594/PANGAEA.834445
+Pisces_GROWTHEXP-2	Archosargus rhomboidalis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159239	.9252E2	.3314E-3	.3582E-2	Houde, 1978	doi:10.1594/PANGAEA.834445
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.4216E1	.3889E-4	.9225E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.6759E1	.233E-4	.3448E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.9314E1	.4811E-4	.5165E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.1915E2	.1358E-3	.7091E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.4294E2	.1612E-3	.3754E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.7446E2	.2706E-3	.3635E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.1356E3	.5992E-3	.4418E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Anchoa mitchilli	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158699	.221E3	.4718E-3	.2135E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.419E1	.1888E-4	.4506E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.6467E1	.322E-4	.4978E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.1226E2	.5518E-4	.4501E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.2508E2	.8317E-4	.3317E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.4954E2	.2042E-3	.4123E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Achirus lineatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=279493	.8463E2	.1463E-3	.1728E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Archosargus rhomboidalis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159239	.6059E1	-.2636E-5	-.435E-3	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Archosargus rhomboidalis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159239	.7806E1	.5647E-4	.7234E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Archosargus rhomboidalis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159239	.1242E2	.6513E-4	.5243E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Archosargus rhomboidalis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159239	.2104E2	.9359E-4	.4449E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+Pisces_GROWTHEXP-3	Archosargus rhomboidalis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159239	.4365E2	.2336E-3	.5352E-2	Houde & Schekter, 1981	doi:10.1594/PANGAEA.834446
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.118E2	.7117E-4	.6032E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1469E2	.405E-4	.2757E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1897E2	.7113E-4	.375E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.3125E2	.1959E-3	.6267E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.7602E2	.8788E-3	.1156E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2517E3	.3136E-2	.1246E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.519E3	.1069E-2	.2059E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1382E4	.2429E-1	.1758E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.7173E4	.7393E-1	.1031E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.203E2	.000E0	.000E0	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.254E2	.1361E-3	.5357E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.5939E2	.8872E-3	.1494E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1345E3	.6168E-3	.4587E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2646E3	.3066E-2	.1159E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.7748E3	.1091E-1	.1408E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1966E4	.1605E-1	.8164E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4047E4	.368E-1	.9093E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2387E2	.1774E-3	.7431E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4215E2	.3085E-3	.7319E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.8694E2	.9973E-3	.1147E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.162E3	.7593E-3	.4685E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1886E3	-.1402E-3	-.7433E-3	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.293E3	.3567E-2	.1217E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.519E3	.1382E-2	.2663E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.7422E3	.4911E-2	.6617E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1332E4	.1139E-1	.855E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.3221E4	.463E-1	.1437E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.7166E4	.4569E-1	.6376E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1279E2	.3897E-3	.3047E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2421E2	.3621E-4	.1496E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2854E2	.8054E-4	.2822E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.3685E2	.2855E-3	.7748E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4678E2	.2229E-3	.4764E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.5351E2	.6092E-4	.1139E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.8418E2	.9043E-3	.1074E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1481E3	.6018E-3	.4064E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2907E3	.3958E-2	.1362E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.650E3	.9727E-2	.1497E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2242E4	.3734E-1	.1665E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2281E2	.7188E-4	.3151E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.3155E2	.1773E-3	.5618E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.5063E2	.363E-3	.717E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.9149E2	.1615E-2	.1766E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1146E3	-.6273E-3	-.5473E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1338E3	.9272E-3	.6928E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1832E3	.2865E-3	.1564E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2223E3	.8155E-3	.3668E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4938E3	.8845E-2	.1791E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1191E4	.7018E-2	.5892E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4561E4	.4749E-1	.1041E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2264E2	.1475E-3	.6513E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4702E2	.3258E-3	.693E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1055E3	.9168E-3	.8688E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.217E3	.1238E-2	.5705E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4421E3	.746E-2	.1687E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.6458E3	.2751E-2	.426E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1324E4	.9474E-2	.7156E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.4577E4	.1529E0	.3341E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2197E2	.1792E-3	.8158E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.5016E2	.6153E-3	.1227E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1145E3	.1244E-2	.1086E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2105E3	.2013E-2	.9564E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2877E3	.1738E-2	.604E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.3753E3	.2375E-2	.6327E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.6276E3	.9184E-2	.1463E-1	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1039E4	.5865E-2	.5644E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.1255E4	.4655E-2	.3709E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+S_japonicus_GROWTHEXP	Scomber japonicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127022	.2695E4	.2453E-1	.9102E-2	Hunter & Kimbrell, 1980	doi:10.1594/PANGAEA.834447
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.1518E5	.2332E-1	.1536E-2	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.2477E5	.2999E-1	.1211E-2	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.363E5	.4199E-1	.1157E-2	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.3591E5	.318E-1	.8855E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.4819E5	.4093E-1	.8494E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.2621E5	.199E-1	.759E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.5158E5	.3635E-1	.7048E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.5155E5	.3167E-1	.6144E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.6453E5	.3149E-1	.4879E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+E_superba_GROWTHEXP-2	Euphausia superba	https://www.marinespecies.org/aphia.php?p=taxdetails&id=236217	.6077E5	.2196E-1	.3614E-3	Ikeda, 1985	doi:10.1594/PANGAEA.834448
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.604E1	.618E-4	.1023E-1	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1287E2	.1002E-3	.7785E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.2428E2	.151E-3	.6217E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.4224E2	.2135E-3	.5055E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.6938E2	.292E-3	.4209E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1094E3	.3853E-3	.3522E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1672E3	.5007E-3	.2994E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.2501E3	.6342E-3	.2536E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.368E3	.7972E-3	.2166E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.5363E3	.9918E-3	.1849E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.778E3	.122E-2	.1567E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.604E1	.7095E-4	.1175E-1	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1287E2	.1151E-3	.8945E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.2428E2	.1734E-3	.7141E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.4224E2	.2451E-3	.5802E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.6938E2	.3347E-3	.4824E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1094E3	.4424E-3	.4045E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1672E3	.6209E-3	.3713E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.2501E3	.729E-3	.2915E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.368E3	.9156E-3	.2488E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.5363E3	.1136E-2	.2117E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.778E3	.1396E-2	.1795E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.604E1	.5959E-4	.9867E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1287E2	.9663E-4	.7508E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.2428E2	.1454E-3	.5988E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.4224E2	.2056E-3	.4867E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.6938E2	.2807E-3	.4046E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1094E3	.3719E-3	.340E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.1672E3	.4815E-3	.2879E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.2501E3	.6116E-3	.2446E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.368E3	.7667E-3	.2083E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.5363E3	.952E-3	.1775E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+T_japonica_GROWTHEXP	Themisto japonica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=744579	.778E3	.117E-2	.1504E-2	Ikeda, 1991	doi:10.1594/PANGAEA.834449
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1206E7	.1782E1	.1477E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1149E7	.1479E1	.1288E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1752E7	.2201E1	.1256E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1609E7	.1842E1	.1145E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2183E7	.2189E1	.1003E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2269E7	.2312E1	.1019E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2815E7	.2645E1	.9395E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2959E7	.3856E1	.1303E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1277E7	.1821E1	.1425E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1394E7	.1955E1	.1403E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.209E7	.2336E1	.1118E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2265E7	.2688E1	.1187E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2961E7	.2735E1	.9237E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3252E7	.3006E1	.9243E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4035E7	.397E1	.9837E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4384E7	.3911E1	.8922E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.135E7	.1703E1	.1261E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.135E7	.1612E1	.1194E-2	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2384E7	.2242E1	.9404E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.224E7	.1879E1	.8387E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3246E7	.2557E1	.7877E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3476E7	.259E1	.7452E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.451E7	.3476E1	.7707E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4854E7	.3989E1	.8217E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1276E7	.1206E1	.9447E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.125E7	.1065E1	.8519E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2149E7	.1457E1	.6781E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.2293E7	.1612E1	.703E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3106E7	.1622E1	.5222E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.3309E7	.1604E1	.4847E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4119E7	.179E1	.4346E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+G_morhua_GROWTHEXP-2	Gadhus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.4492E7	.2346E1	.5222E-3	Imsland et al., 2005	doi:10.1594/PANGAEA.834452
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.178E2	.2252E-3	.1265E-1	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.244E2	.1302E-3	.5334E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.292E2	.1425E-3	.488E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.346E2	.1669E-3	.4823E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.387E2	.571E-4	.1475E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.415E2	.106E-3	.2554E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.532E2	.3864E-3	.7264E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.672E2	.4042E-3	.6015E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.801E2	.3136E-3	.3915E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.914E2	.3268E-3	.3575E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.101E3	.2063E-3	.2043E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.106E3	.782E-4	.7377E-3	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.112E3	.4449E-3	.3972E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1342E3	.8377E-3	.6242E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1497E3	-.8495E-5	-.5675E-4	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1558E3	.3625E-3	.2327E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1556E3	-.3708E-3	-.2383E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1567E3	.4357E-3	.2781E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1694E3	.2788E-3	.1646E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1714E3	-.1653E-3	-.9647E-3	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1422E3	-.1372E-2	-.9647E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1346E3	.8784E-3	.6526E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+H_coarctatus_GROWTHEXP	Hyas coarctatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=107323	.1355E3	-.8304E-3	-.6129E-2	Jacobi & Anger, 1985	doi:10.1594/PANGAEA.834453
+A_quadrilineata_GROWTHEXP	Amphorides quadrilineata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=235769	.3125E-2	.2668E-7	.8536E-2	Jakobsen et al., 2001	doi:10.1594/PANGAEA.834454
+T_fusus_GROWTHEXP	Tiarina fusus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=247943	.3857E-2	.5004E-7	.1297E-1	Jeong et al., 2002	doi:10.1594/PANGAEA.834456
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.4016E-5	.8679E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.4642E-5	.1003E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.4542E-5	.9817E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.5561E-5	.1202E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.6093E-5	.1317E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.6492E-5	.1403E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.5455E-5	.1179E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.6285E-5	.1358E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.4525E-5	.978E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.4922E-5	.1064E-1	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.3801E-5	.8215E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.4627E0	.3879E-5	.8384E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.6567E0	.5236E-5	.7973E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.6567E0	.5468E-5	.8326E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.6567E0	.4994E-5	.7605E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+B_mikado_GROWTHEXP	Bolinopsis mikado	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265201	.6567E0	.5782E-5	.8804E-2	Kasuya et al., 2002	doi:10.1594/PANGAEA.834458
+A_tranteri_GROWTHEXP	Acartia tranteri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346042	.600E0	.4469E-5	.7449E-2	Kimmerer & McKinnon, 1987	doi:10.1594/PANGAEA.834460
+A_tranteri_GROWTHEXP	Acartia tranteri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346042	.600E0	.4743E-5	.7905E-2	Kimmerer & McKinnon, 1987	doi:10.1594/PANGAEA.834460
+A_tranteri_GROWTHEXP	Acartia tranteri	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346042	.600E0	.421E-5	.7017E-2	Kimmerer & McKinnon, 1987	doi:10.1594/PANGAEA.834460
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.990E-1	.1019E-5	.1029E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.990E-1	.127E-5	.1283E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.990E-1	.1386E-5	.140E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.990E-1	.1289E-5	.1302E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.990E-1	.122E-5	.1232E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.990E-1	.9649E-6	.9746E-2	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.1134E1	.1133E-4	.9994E-2	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.1134E1	.1573E-4	.1387E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.1134E1	.1904E-4	.1679E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.1134E1	.192E-4	.1693E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.1134E1	.1864E-4	.1644E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+S_tenellus_GROWTHEXP	Sinocalanus tenellus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=355664	.1134E1	.1581E-4	.1394E-1	Kimoto et al., 1986	doi:10.1594/PANGAEA.834463
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.718E2	.4121E-3	.574E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.8901E2	.5109E-3	.574E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.1187E3	.8036E-3	.6767E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.1405E3	.8184E-3	.5825E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.1405E3	.7824E-3	.5568E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.1694E3	.1219E-2	.7196E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.2569E3	.1783E-2	.6939E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.2453E3	.1471E-2	.5996E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.9076E3	.6453E-2	.711E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+C_harengus_GROWTHEXP	Clupea harengus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126417	.3167E4	.1411E-1	.4455E-2	Kiorboe et al., 1987	doi:10.1594/PANGAEA.834467
+Calanoida_GROWTHEXP-4	Acartia clausi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=149755	.132E0	.1364E-5	.1033E-1	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Acartia clausi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=149755	.1131E1	.1451E-4	.1283E-1	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Centropages hamatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104496	.179E0	.2103E-5	.1175E-1	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Centropages hamatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104496	.2055E1	.2868E-4	.1396E-1	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Temora longicornis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104878	.179E0	.1917E-5	.1071E-1	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Temora longicornis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104878	.1678E1	.2363E-4	.1408E-1	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.299E0	.1869E-5	.625E-2	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+Calanoida_GROWTHEXP-4	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.2147E1	.1744E-4	.8125E-2	Klein et al., 1982	doi:10.1594/PANGAEA.834469
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1844E2	-.3711E-4	-.2012E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.6364E2	.6629E-2	.1042E0	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.8656E2	-.682E-2	-.7879E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.389E2	.499E-3	.1283E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.4871E2	.2781E-3	.571E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.6319E2	.9961E-3	.1576E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.8002E2	.2968E-3	.3709E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1005E3	.7567E-3	.7531E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1621E3	.1975E-2	.1219E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.3283E3	.3706E-2	.1129E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.9152E3	.9278E-2	.1014E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.2946E4	.3369E-1	.1144E-1	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.6862E4	.4117E-1	.600E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1052E5	.3947E-1	.3751E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.131E5	.2966E-1	.2265E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.2122E5	.7791E-1	.3671E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1296E6	.2473E0	.1908E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.2468E6	.360E0	.1459E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.3678E6	.517E0	.1406E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.5633E6	.8313E0	.1476E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+S_maximus_GROWTHEXP-1	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.9255E6	.131E1	.1415E-2	Kuhlmann et al., 1981	doi:10.1594/PANGAEA.834470
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.251E3	.350E-3	.1394E-2	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.252E3	.3338E-3	.1325E-2	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.3637E3	.4057E-3	.1116E-2	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.7956E3	.4438E-3	.5578E-3	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.4381E3	.2444E-3	.5578E-3	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.6563E3	.2288E-3	.3486E-3	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.8914E3	.435E-3	.4881E-3	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.7347E3	.2049E-3	.2789E-3	Lasker, 1966	doi:10.1594/PANGAEA.834472
+E_pacifica_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.7514E3	.1572E-3	.2092E-3	Lasker, 1966	doi:10.1594/PANGAEA.834472
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.540E1	.1888E-4	.3496E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.504E1	.2162E-4	.429E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.8505E1	.1014E-3	.1192E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.1346E2	.1411E-3	.1049E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.1386E2	.3088E-3	.2228E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.2705E2	.3092E-3	.1143E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.5526E2	.6254E-3	.1132E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.8892E2	.8507E-3	.9567E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.9036E2	.8434E-3	.9333E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.2716E3	.4246E-2	.1563E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.2923E3	.3751E-3	.1283E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.4652E3	.4179E-2	.8983E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.1031E2	.9181E-4	.8909E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.3956E2	.6506E-3	.1645E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.927E2	.9688E-3	.1045E-1	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.1935E3	.174E-2	.8995E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.319E3	.1968E-2	.6168E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+P_americanus_GROWTHEXP	Pseudopleuronectes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=158885	.654E3	.5771E-2	.8823E-2	Laurence, 1975	doi:10.1594/PANGAEA.834473
+Pisces_GROWTHEXP-4	Gadus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.527E2	.1227E-3	.2328E-2	Laurence, 1978	doi:10.1594/PANGAEA.834474
+Pisces_GROWTHEXP-4	Gadus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1101E3	.3032E-3	.2754E-2	Laurence, 1978	doi:10.1594/PANGAEA.834474
+Pisces_GROWTHEXP-4	Gadus morhua	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126436	.1496E3	.3963E-3	.2649E-2	Laurence, 1978	doi:10.1594/PANGAEA.834474
+Pisces_GROWTHEXP-4	Melanogrammus aeglefinus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126437	.5433E2	.1124E-3	.2069E-2	Laurence, 1978	doi:10.1594/PANGAEA.834474
+Pisces_GROWTHEXP-4	Melanogrammus aeglefinus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126437	.702E2	.160E-3	.2279E-2	Laurence, 1978	doi:10.1594/PANGAEA.834474
+Pisces_GROWTHEXP-4	Melanogrammus aeglefinus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126437	.1339E3	.5413E-3	.4044E-2	Laurence, 1978	doi:10.1594/PANGAEA.834474
+H_americanus_GROWTHEXP	Homarus americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=156134	.4029E3	.1633E-2	.4053E-2	Logan & Epifano, 1978	doi:10.1594/PANGAEA.834481
+H_americanus_GROWTHEXP	Homarus americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=156134	.5818E3	.1321E-2	.227E-2	Logan & Epifano, 1978	doi:10.1594/PANGAEA.834481
+H_americanus_GROWTHEXP	Homarus americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=156134	.7344E3	.195E-2	.2655E-2	Logan & Epifano, 1978	doi:10.1594/PANGAEA.834481
+H_americanus_GROWTHEXP	Homarus americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=156134	.8419E3	.1211E-2	.1439E-2	Logan & Epifano, 1978	doi:10.1594/PANGAEA.834481
+H_americanus_GROWTHEXP	Homarus americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=156134	.9565E3	.7366E-3	.7701E-3	Logan & Epifano, 1978	doi:10.1594/PANGAEA.834481
+H_americanus_GROWTHEXP	Homarus americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=156134	.164E4	.402E-2	.2452E-2	Logan & Epifano, 1978	doi:10.1594/PANGAEA.834481
+M_americana_GROWTHEXP	Morone americana	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151177	.1098E2	.2704E-4	.2462E-2	Margulies, 1986	doi:10.1594/PANGAEA.834482
+M_americana_GROWTHEXP	Morone americana	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151177	.1607E2	.7698E-4	.4792E-2	Margulies, 1986	doi:10.1594/PANGAEA.834482
+M_americana_GROWTHEXP	Morone americana	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151177	.2286E2	.1013E-3	.4432E-2	Margulies, 1986	doi:10.1594/PANGAEA.834482
+P_pileus_GROWTHEXP	Pleurobrachia pileus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=106386	.3402E3	.9923E-3	.2917E-2	Martinez, 2007	doi:10.1594/PANGAEA.834483
+L_tenuis_GROWTHEXP	Leuresthes tenuis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=281344	.2583E3	.1549E-2	.5996E-2	May, 1971	doi:10.1594/PANGAEA.834484
+L_tenuis_GROWTHEXP	Leuresthes tenuis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=281344	.4005E3	.1176E-2	.2937E-2	May, 1971	doi:10.1594/PANGAEA.834484
+L_tenuis_GROWTHEXP	Leuresthes tenuis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=281344	.5279E3	.1437E-2	.2723E-2	May, 1971	doi:10.1594/PANGAEA.834484
+L_tenuis_GROWTHEXP	Leuresthes tenuis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=281344	.6417E3	.8049E-3	.1254E-2	May, 1971	doi:10.1594/PANGAEA.834484
+L_tenuis_GROWTHEXP	Leuresthes tenuis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=281344	.8645E3	.4152E-2	.4803E-2	May, 1971	doi:10.1594/PANGAEA.834484
+L_tenuis_GROWTHEXP	Leuresthes tenuis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=281344	.1369E4	.3141E-2	.2295E-2	May, 1971	doi:10.1594/PANGAEA.834484
+M_peninsulae_GROWTH	Menidia peninsulae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275933	.1364E3	.3444E-3	.2526E-2	McMullen & Middaugh, 1985	doi:10.1594/PANGAEA.834485
+M_peninsulae_GROWTH	Menidia peninsulae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275933	.113E3	.4269E-3	.378E-2	McMullen & Middaugh, 1985	doi:10.1594/PANGAEA.834485
+M_peninsulae_GROWTH	Menidia peninsulae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275933	.441E2	.1406E-3	.3187E-2	McMullen & Middaugh, 1985	doi:10.1594/PANGAEA.834485
+M_peninsulae_GROWTH	Menidia peninsulae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=275933	.3105E2	.8196E-4	.2639E-2	McMullen & Middaugh, 1985	doi:10.1594/PANGAEA.834485
+O_marina_GROWTHEXP	Oxyrrhis marina	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109902	.638E-2	.1677E-6	.2628E-1	Montagnes et al., 2011	doi:10.1594/PANGAEA.834489
+N_scintillans_GROWTHEXP	Noctiluca scintillans	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109921	.130E0	.7505E-6	.5773E-2	Nakamura, 1998	doi:10.1594/PANGAEA.834490
+D_lenticula_GROWTHEXP	Diplopsalis lenticula	https://www.marinespecies.org/aphia.php?p=taxdetails&id=663618	.2883E-2	.4085E-7	.1417E-1	Naustvoll, 1998	doi:10.1594/PANGAEA.834491
+A_aurita_GROWTHEXP	Aurelia aurita	https://www.marinespecies.org/aphia.php?p=taxdetails&id=135306	.610E1	.5719E-4	.9375E-2	Olesen et al., 1994	doi:10.1594/PANGAEA.834496
+C_quinquecirrha_GROWTHEXP	Chrysaora quinquecirrha	https://www.marinespecies.org/aphia.php?p=taxdetails&id=220476	.930E1	.119E-3	.128E-1	Olesen et al., 1996	doi:10.1594/PANGAEA.834498
+P_elongatus_GROWTHEXP	Pseudocalanus elongatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104515	.200E0	.194E-5	.9702E-2	Paffenhöfer & Harris, 1976	doi:10.1594/PANGAEA.834500
+P_elongatus_GROWTHEXP	Pseudocalanus elongatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104515	.480E0	.9831E-5	.2048E-1	Paffenhöfer & Harris, 1976	doi:10.1594/PANGAEA.834500
+P_elongatus_GROWTHEXP	Pseudocalanus elongatus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104515	.400E1	.4096E-4	.1024E-1	Paffenhöfer & Harris, 1976	doi:10.1594/PANGAEA.834500
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.900E-1	.3179E-5	.3532E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.710E0	.2799E-4	.3942E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.360E1	.1843E-3	.5119E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.800E-1	.2662E-5	.3328E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.470E0	.2623E-4	.558E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.189E1	.7354E-4	.3891E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.377E1	.1428E-3	.3788E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.100E0	.3276E-5	.3276E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.370E0	.1818E-4	.4915E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.141E1	.4259E-4	.302E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+O_dioica_GROWTHEXP	Oikopleura dioica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=103407	.266E1	.7762E-4	.2918E-1	Paffenhöfer, 1976a	doi:10.1594/PANGAEA.834501
+C_helgolandicus_GROWTHEXP	Calanus helgolandicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104466	.669E0	.1143E-4	.1708E-1	Paffenhöfer, 1976b	doi:10.1594/PANGAEA.834503
+C_helgolandicus_GROWTHEXP	Calanus helgolandicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104466	.2503E1	.4276E-4	.1708E-1	Paffenhöfer, 1976b	doi:10.1594/PANGAEA.834503
+C_helgolandicus_GROWTHEXP	Calanus helgolandicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104466	.1461E2	.2008E-3	.1375E-1	Paffenhöfer, 1976b	doi:10.1594/PANGAEA.834503
+C_helgolandicus_GROWTHEXP	Calanus helgolandicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104466	.1562E2	.1269E-3	.8125E-2	Paffenhöfer, 1976b	doi:10.1594/PANGAEA.834503
+C_helgolandicus_GROWTHEXP	Calanus helgolandicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104466	.3295E2	.2746E-3	.8333E-2	Paffenhöfer, 1976b	doi:10.1594/PANGAEA.834503
+O_mediterranea_GROWTHEXP	Oncaea mediterranea	https://www.marinespecies.org/aphia.php?p=taxdetails&id=128939	.219E0	.1418E-5	.6474E-2	Paffenhöfer, 1983	doi:10.1594/PANGAEA.834504
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.4398E6	.4338E0	.9864E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1045E7	.8152E0	.7798E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.2259E7	.1788E1	.7917E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.4282E7	.2196E1	.5127E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.847E7	.7441E1	.8785E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1638E8	.7646E1	.4668E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+S_maximus_GROWTHEXP-2	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.279E8	.432E1	.1548E-3	Person-Le et al., 1981	doi:10.1594/PANGAEA.834505
+C_marshallae_GROWTHEXP	Calanus marshallae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196770	.400E0	.1394E-5	.3486E-2	Peterson, 1986	doi:10.1594/PANGAEA.834506
+C_marshallae_GROWTHEXP	Calanus marshallae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196770	.800E1	.9817E-4	.1227E-1	Peterson, 1986	doi:10.1594/PANGAEA.834506
+C_marshallae_GROWTHEXP	Calanus marshallae	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196770	.100E3	.1673E-3	.1673E-2	Peterson, 1986	doi:10.1594/PANGAEA.834506
+Pisces_GROWTHEXP-5	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.8692E7	.6812E1	.7837E-3	Pichavant et al., 2001	doi:10.1594/PANGAEA.834507
+Pisces_GROWTHEXP-5	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1194E8	.9019E1	.7552E-3	Pichavant et al., 2001	doi:10.1594/PANGAEA.834507
+Pisces_GROWTHEXP-5	Scophthalmus maximus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=127149	.1545E8	.7634E1	.4939E-3	Pichavant et al., 2001	doi:10.1594/PANGAEA.834507
+Pisces_GROWTHEXP-5	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.7247E7	.1642E1	.2266E-3	Pichavant et al., 2001	doi:10.1594/PANGAEA.834507
+Pisces_GROWTHEXP-5	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.8347E7	.1522E1	.1824E-3	Pichavant et al., 2001	doi:10.1594/PANGAEA.834507
+Pisces_GROWTHEXP-5	Dicentrarchus labrax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=126975	.9128E7	.7014E0	.7684E-4	Pichavant et al., 2001	doi:10.1594/PANGAEA.834507
+P_ferrugineus_GROWTHEXP	Pleuronectes ferrugineus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=305717	.1188E7	.1728E1	.1454E-2	Purchase et al., 2000	doi:10.1594/PANGAEA.834508
+P_ferrugineus_GROWTHEXP	Pleuronectes ferrugineus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=305717	.175E7	.2638E1	.1508E-2	Purchase et al., 2000	doi:10.1594/PANGAEA.834508
+S_hispida_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.278E2	.8256E-4	.297E-2	Reeve, 1970	doi:10.1594/PANGAEA.834509
+S_hispida_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.130E2	.3592E-4	.2763E-2	Reeve, 1970	doi:10.1594/PANGAEA.834509
+S_hispida_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.368E2	.1116E-3	.3033E-2	Reeve, 1970	doi:10.1594/PANGAEA.834509
+S_hispida_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.381E2	.1023E-5	.2685E-4	Reeve, 1970	doi:10.1594/PANGAEA.834509
+S_hispida_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.335E2	.5307E-4	.1584E-2	Reeve, 1970	doi:10.1594/PANGAEA.834509
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.172E1	.1932E-4	.1123E-1	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.4421E2	.4966E-3	.1123E-1	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1055E4	.4977E-2	.4718E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1221E5	.1892E-1	.155E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.2424E5	.3758E-1	.155E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.172E1	.1801E-4	.1047E-1	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.4421E2	.4629E-3	.1047E-1	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1055E4	.3258E-2	.3088E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1221E5	.1164E-1	.9532E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.2424E5	.2311E-1	.9532E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.172E1	.897E-5	.5215E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.4421E2	.2306E-3	.5215E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1055E4	.1947E-2	.1845E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1221E5	.6758E-2	.5536E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.2424E5	.1342E-1	.5536E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.980E0	.5504E-5	.5616E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.453E1	.2544E-4	.5616E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.1325E2	.7441E-4	.5616E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.3197E2	.1795E-3	.5616E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.5927E2	.3329E-3	.5616E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.9788E2	.5497E-3	.5616E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.1567E3	.2922E-3	.1865E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.2384E3	.2357E-3	.9884E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.980E0	.4605E-5	.4699E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.453E1	.2129E-4	.4699E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.1325E2	.6226E-4	.4699E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.3197E2	.1502E-3	.4699E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.5927E2	.2785E-3	.4699E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.9788E2	.4599E-3	.4699E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.1567E3	.1557E-3	.9935E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.2384E3	.2241E-4	.9398E-4	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.980E0	.3224E-5	.3289E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.453E1	.149E-4	.3289E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.1325E2	.4358E-4	.3289E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.3197E2	.1052E-3	.3289E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.5927E2	.195E-3	.3289E-2	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.9788E2	.8638E-4	.8825E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+Animalia_GROWTHEXP	Sagitta hispida	https://www.marinespecies.org/aphia.php?p=taxdetails&id=105454	.1567E3	.5155E-4	.3289E-3	Reeve, 1975	doi:10.1594/PANGAEA.834558
+P_bachei_GROWTHEXP-2	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.100E0	.2611E-5	.2611E-1	Reeve, 1976	doi:10.1594/PANGAEA.834560
+P_bachei_GROWTHEXP-2	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.410E1	.9235E-4	.2253E-1	Reeve, 1976	doi:10.1594/PANGAEA.834560
+P_bachei_GROWTHEXP-2	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.630E2	.1322E-2	.2099E-1	Reeve, 1976	doi:10.1594/PANGAEA.834560
+P_bachei_GROWTHEXP-2	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.209E3	.856E-3	.4096E-2	Reeve, 1976	doi:10.1594/PANGAEA.834560
+P_bachei_GROWTHEXP-2	Pleurobrachia bachei	https://www.marinespecies.org/aphia.php?p=taxdetails&id=265191	.364E3	.1491E-2	.4096E-2	Reeve, 1976	doi:10.1594/PANGAEA.834560
+M_mccradyi_GROWTH	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.750E3	.876E-2	.1168E-1	Reeve et al., 1989	doi:10.1594/PANGAEA.834663
+M_mccradyi_GROWTH	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1187E4	.1036E-1	.8726E-2	Reeve et al., 1989	doi:10.1594/PANGAEA.834663
+M_mccradyi_GROWTH	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.1067E4	.6589E-2	.6176E-2	Reeve et al., 1989	doi:10.1594/PANGAEA.834663
+M_mccradyi_GROWTH	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.183E4	.9336E-2	.5102E-2	Reeve et al., 1989	doi:10.1594/PANGAEA.834663
+M_mccradyi_GROWTH	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.206E5	.6361E-1	.3088E-2	Reeve et al., 1989	doi:10.1594/PANGAEA.834663
+M_mccradyi_GROWTH	Mnemiopsis mccradyi	https://www.marinespecies.org/aphia.php?p=taxdetails&id=418909	.2672E5	.122E0	.4565E-2	Reeve et al., 1989	doi:10.1594/PANGAEA.834663
+Crustacea_Nanoflagellates_GROWTHEXP	Paraphysomonas imperforata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341603	.326E-5	.3691E-9	.1132E0	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Paraphysomonas imperforata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341603	.326E-5	.6085E-9	.1867E0	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Paraphysomonas imperforata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341603	.326E-5	.591E-9	.1813E0	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Paraphysomonas imperforata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341603	.326E-5	.5705E-9	.175E0	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Paraphysomonas imperforata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=341603	.326E-5	.3247E-9	.996E-1	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.280E1	.2375E-4	.8481E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.1106E2	.1071E-3	.968E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.3391E2	.1162E-3	.3427E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.1243E3	.2555E-3	.2056E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.1986E3	.3402E-3	.1713E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.4172E3	.5361E-3	.1285E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.278E1	.1309E-4	.471E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.883E1	.7516E-4	.8512E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.3318E2	.1243E-3	.3745E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.1369E3	.3029E-3	.2213E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.2253E3	.4091E-3	.1816E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+Crustacea_Nanoflagellates_GROWTHEXP	Euphausia pacifica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=237851	.4917E3	.6697E-3	.1362E-2	Ross, 1982	doi:10.1594/PANGAEA.834562
+O_similis_GROWTHEXP	Oithona similis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=106656	.890E-1	.7417E-6	.8333E-2	Sabatini & Kiørboe, 1994	doi:10.1594/PANGAEA.834563
+O_similis_GROWTHEXP	Oithona similis	https://www.marinespecies.org/aphia.php?p=taxdetails&id=106656	.500E0	.1542E-5	.3083E-2	Sabatini & Kiørboe, 1994	doi:10.1594/PANGAEA.834563
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.9329E0	.8842E-5	.9478E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1234E1	.7383E-5	.5985E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1597E1	.9183E-5	.5752E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1463E1	-.2071E-5	-.1415E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.3693E1	.7323E-4	.1983E-1	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.4592E1	.2232E-4	.486E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.9769E1	.1234E-3	.1263E-1	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.163E2	.912E-4	.5594E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.303E2	.1734E-3	.5721E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.3183E2	.150E-4	.4713E-3	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.6406E2	.7994E-3	.1248E-1	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.8758E2	.2716E-3	.3101E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+E_mordax_GROWTHEXP-1	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1683E3	.456E-3	.271E-2	Sakagawa & Kimura, 1976	doi:10.1594/PANGAEA.834568
+D_dominans_GROWTHEXP	Gyrodinium dominans	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109851	.211E-3	.4293E-8	.2035E-1	Schmoker et al., 2011	doi:10.1594/PANGAEA.834570
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.500E0	.2229E-5	.4458E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.160E1	.1173E-4	.7333E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.132E2	.627E-4	.475E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.200E1	.1817E-4	.9083E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.108E2	.4635E-4	.4292E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.500E0	.2004E-5	.4009E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.160E1	.1183E-4	.7395E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.132E2	.5851E-4	.4432E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.200E1	.1693E-4	.8466E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.108E2	.4491E-4	.4158E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.500E0	.1897E-5	.3795E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.160E1	.9524E-5	.5952E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.132E2	.495E-4	.375E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.200E1	.1551E-4	.7753E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.108E2	.3568E-4	.3304E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.500E0	.1565E-5	.313E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.160E1	.7371E-5	.4607E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.132E2	.2348E-4	.1779E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.200E1	.1338E-4	.6688E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+L_euchaeta_GROWTHEXP	Labidocera euchaeta	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346592	.108E2	.146E-4	.1352E-2	Senjie, 1989	doi:10.1594/PANGAEA.834574
+A_americanus_GROWTHEXP	Ammodytes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159587	.117E3	.4462E-3	.3813E-2	Smigielski et al., 1984	doi:10.1594/PANGAEA.834577
+A_americanus_GROWTHEXP	Ammodytes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159587	.2619E3	.1094E-2	.4177E-2	Smigielski et al., 1984	doi:10.1594/PANGAEA.834577
+A_americanus_GROWTHEXP	Ammodytes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159587	.5225E3	.2356E-2	.451E-2	Smigielski et al., 1984	doi:10.1594/PANGAEA.834577
+A_americanus_GROWTHEXP	Ammodytes americanus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=159587	.9315E2	.365E-2	.3918E-1	Smigielski et al., 1984	doi:10.1594/PANGAEA.834577
+Ciliates_GROWTHEXP-2	Favella sp	https://www.marinespecies.org/aphia.php?p=taxdetails&id=581996	.2783E-1	.1171E-5	.4208E-1	Stoecker et al., 1983	doi:10.1594/PANGAEA.834578
+Ciliates_GROWTHEXP-2	Balanion sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=292899	.2987E-2	.2987E-6	.100E0	Stoecker et al., 1983	doi:10.1594/PANGAEA.834578
+Ciliates_Dinoflagellates_GROWTHEXP	Gymnodinium sp	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109475	.2302E-3	.5657E-8	.2457E-1	Strom & Morello, 1998	doi:10.1594/PANGAEA.834582
+Ciliates_Dinoflagellates_GROWTHEXP	Amphidinium sp	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109473	.1259E-3	.3028E-8	.2406E-1	Strom & Morello, 1998	doi:10.1594/PANGAEA.834582
+Ciliates_Dinoflagellates_GROWTHEXP	Noctiluca scintillans	https://www.marinespecies.org/aphia.php?p=taxdetails&id=109921	.2258E-1	.4739E-6	.2099E-1	Strom & Morello, 1998	doi:10.1594/PANGAEA.834582
+Ciliates_Dinoflagellates_GROWTHEXP	Favella sp	https://www.marinespecies.org/aphia.php?p=taxdetails&id=581996	.2113E-1	.9304E-6	.4403E-1	Strom & Morello, 1998	doi:10.1594/PANGAEA.834582
+Ciliates_Dinoflagellates_GROWTHEXP	Strombidinopsis acuminatum	https://www.marinespecies.org/aphia.php?p=taxdetails&id=101350	.3475E-1	.137E-5	.3942E-1	Strom & Morello, 1998	doi:10.1594/PANGAEA.834582
+Ciliates_Dinoflagellates_GROWTHEXP	Uronema sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=494309	.7346E-3	.3798E-7	.5171E-1	Strom & Morello, 1998	doi:10.1594/PANGAEA.834582
+S_aurata_GROWTHEXP	Sparus aurata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151523	.1146E2	.1338E-4	.1167E-2	Tandler & Helps, 1985	doi:10.1594/PANGAEA.834589
+S_aurata_GROWTHEXP	Sparus aurata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151523	.3701E2	.162E-3	.4377E-2	Tandler & Helps, 1985	doi:10.1594/PANGAEA.834589
+S_aurata_GROWTHEXP	Sparus aurata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151523	.1672E3	.4604E-3	.2755E-2	Tandler & Helps, 1985	doi:10.1594/PANGAEA.834589
+S_aurata_GROWTHEXP	Sparus aurata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151523	.6556E3	.2432E-2	.371E-2	Tandler & Helps, 1985	doi:10.1594/PANGAEA.834589
+S_aurata_GROWTHEXP	Sparus aurata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=151523	.2189E4	.4365E-2	.1994E-2	Tandler & Helps, 1985	doi:10.1594/PANGAEA.834589
+E_mordax_GROWTHEXP-2	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1015E2	.8249E-4	.8129E-2	Theilacker, 1987	doi:10.1594/PANGAEA.834597
+E_mordax_GROWTHEXP-2	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1241E2	.9673E-4	.7795E-2	Theilacker, 1987	doi:10.1594/PANGAEA.834597
+E_mordax_GROWTHEXP-2	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1518E2	.1237E-3	.8152E-2	Theilacker, 1987	doi:10.1594/PANGAEA.834597
+E_mordax_GROWTHEXP-2	Engraulis mordax	https://www.marinespecies.org/aphia.php?p=taxdetails&id=272286	.1862E2	.149E-3	.8003E-2	Theilacker, 1987	doi:10.1594/PANGAEA.834597
+P_marinus_GROWTHEXP	Pseudodiaptomus marinus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=360352	.136E0	.7823E-6	.5752E-2	Uye et al., 1983	doi:10.1594/PANGAEA.834598
+P_marinus_GROWTHEXP	Pseudodiaptomus marinus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=360352	.1346E1	.119E-4	.884E-2	Uye et al., 1983	doi:10.1594/PANGAEA.834598
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.460E-1	.3576E-6	.7774E-2	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.460E-1	.3603E-6	.7833E-2	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.460E-1	.3527E-6	.7667E-2	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.460E-1	.3334E-6	.7247E-2	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.460E-1	.307E-6	.6673E-2	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.632E0	.1021E-4	.1616E-1	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.632E0	.1042E-4	.1648E-1	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.632E0	.1022E-4	.1617E-1	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.632E0	.9731E-5	.154E-1	Uye, 1988	doi:10.1594/PANGAEA.834599
+Paracalanus_GROWTHEXP	Paracalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104196	.632E0	.9017E-5	.1427E-1	Uye, 1988	doi:10.1594/PANGAEA.834599
+M_norvegica_GROWTHEXP	Microsetella norvegica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=116115	.590E-1	.2644E-6	.4482E-2	Uye, 1991	doi:10.1594/PANGAEA.834600
+M_norvegica_GROWTHEXP	Microsetella norvegica	https://www.marinespecies.org/aphia.php?p=taxdetails&id=116115	.477E0	.6651E-6	.1394E-2	Uye, 1991	doi:10.1594/PANGAEA.834600
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.447E0	.6527E-5	.146E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.447E0	.7002E-5	.1567E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.447E0	.7078E-5	.1583E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.447E0	.6926E-5	.1549E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.447E0	.6542E-5	.1464E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.1975E1	.725E-4	.3671E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.1975E1	.7462E-4	.3778E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.1975E1	.734E-4	.3717E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.1975E1	.6998E-4	.3543E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.1975E1	.6398E-4	.3239E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.7746E1	.1618E-3	.2089E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.7746E1	.1523E-3	.1966E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.7746E1	.1417E-3	.1829E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.7746E1	.1267E-3	.1636E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.7746E1	.110E-3	.142E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.300E2	.1764E-3	.5881E-2	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.300E2	.1766E-3	.5887E-2	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.300E2	.1713E-3	.5708E-2	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.300E2	.1604E-3	.5347E-2	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Calanus sinicus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=346214	.300E2	.1456E-3	.4854E-2	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Paracalanus parvus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104685	.000E0	.000E0	.747E-2	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Paracalanus parvus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104685	.000E0	.000E0	.117E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Acartia omori	https://www.marinespecies.org/aphia.php?p=taxdetails&id=348515	.000E0	.000E0	.127E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-3	Acartia omori	https://www.marinespecies.org/aphia.php?p=taxdetails&id=348515	.000E0	.000E0	.1544E-1	Uye et al., 2002	doi:10.1594/PANGAEA.834602
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.360E1	.5877E-4	.1633E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.880E1	.1235E-3	.1404E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.240E2	.2634E-3	.1097E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.560E2	.3291E-3	.5877E-2	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.360E1	.6821E-4	.1895E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.880E1	.1456E-3	.1655E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.240E2	.2988E-3	.1245E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.560E2	.4157E-3	.7422E-2	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.360E1	.5795E-4	.161E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.880E1	.1288E-3	.1464E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.240E2	.337E-3	.1404E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Calanus pacificus	https://www.marinespecies.org/aphia.php?p=taxdetails&id=196771	.560E2	.568E-3	.1014E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.600E0	.597E-5	.9949E-2	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.120E1	.1168E-4	.9736E-2	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.200E1	.1805E-4	.9027E-2	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.280E1	.2234E-4	.7979E-2	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.600E0	.7664E-5	.1277E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.120E1	.1467E-4	.1222E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.200E1	.235E-4	.1175E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.280E1	.3157E-4	.1128E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.600E0	.7992E-5	.1332E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.120E1	.1593E-4	.1328E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.200E1	.2614E-4	.1307E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.280E1	.3519E-4	.1257E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+Calanoida_GROWTHEXP-5	Pseudocalanus sp.	https://www.marinespecies.org/aphia.php?p=taxdetails&id=104165	.400E1	.4554E-4	.1138E-1	Vidal, 1980	doi:10.1594/PANGAEA.834603
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.2552E-4	.4183E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.1443E-4	.2366E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.6125E-4	.1004E-1	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.604E-4	.9902E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.5962E-4	.9774E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.4145E-4	.6795E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.3258E-4	.5341E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.1458E-4	.239E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+A_labiata_GROWTHEXP	Aurelia labiata	https://www.marinespecies.org/aphia.php?p=taxdetails&id=287213	.610E1	.1373E-4	.2251E-2	Widmer, 2005	doi:10.1594/PANGAEA.834604
+T_chalcogramma_GROWTHEXP-1	Theragra chalcogramma	https://www.marinespecies.org/aphia.php?p=taxdetails&id=254539	.3686E2	.1449E-3	.3932E-2	Yamashita & Bailey, 1989	doi:10.1594/PANGAEA.834605
