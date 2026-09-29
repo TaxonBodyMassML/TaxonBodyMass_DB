@@ -13,11 +13,8 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g)) * 1000
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 for (col in c('phylum', 'class', 'order', 'family'))
   adat[[col]] <- iconv(as.character(adat[[col]]), to = 'ASCII//TRANSLIT')
-adat$mass_type <- 'wet'
-adat$mass_group <- ifelse(adat$phylum == 'Chordata', 'vertebrate',
-                   ifelse(adat$class == 'Insecta', 'insect', 'invertebrate'))
 adat$n <- 1
 adat$source_mass <- 'Herberstein_etal_2022'
 HER <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'class', 'order',
-                'family', 'mass_type', 'mass_group')]
+                'family')]
 save(HER, file = file.path(wd_rdata, 'BodyMass_Herberstein_etal_2022.Rdata'))

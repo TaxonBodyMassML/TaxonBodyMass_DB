@@ -23,10 +23,7 @@ adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon), ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|nr|indet)\\b', adat$taxon), ]
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat$class <- 'Insecta'
-adat$mass_type <- 'wet'
-adat$mass_group <- 'insect'
 adat$n <- 1
 adat$source_mass <- 'Chown_etal_2007'
-CHO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family',
-                'mass_type', 'mass_group')]
+CHO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
 save(CHO, file = file.path(wd_rdata, 'BodyMass_Chown_etal_2007.Rdata'))

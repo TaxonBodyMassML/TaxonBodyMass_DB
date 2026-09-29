@@ -10,10 +10,7 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0 & !is.na(adat$taxon), ]
 adat$order  <- iconv(as.character(adat$order),  to = 'ASCII//TRANSLIT')
 adat$family <- iconv(as.character(adat$family), to = 'ASCII//TRANSLIT')
 adat$class <- 'Mammalia'
-adat$mass_type <- 'wet'
-adat$mass_group <- 'vertebrate'
 adat$n <- 1
 adat$source_mass <- 'Soria_etal_2021'
-SOR <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family',
-                'mass_type', 'mass_group')]
+SOR <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
 save(SOR, file = file.path(wd_rdata, 'BodyMass_Soria_etal_2021.Rdata'))

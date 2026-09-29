@@ -12,9 +12,3 @@ adat <- data.frame(taxon  = adat$taxon,
                    class  = adat$class,
                    stringsAsFactors = FALSE)
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
-adat$mass_type <- 'wet'
-adat$mass_group <- ifelse(adat$class == 'Insecta', 'insect', 'invertebrate')
-adat$n <- 1
-adat$source_mass <- 'Mercer_etal_2001'
-MER <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'mass_type', 'mass_group')]
-save(MER, file = file.path(wd_rdata, 'BodyMass_Mercer_etal_2001.Rdata'))

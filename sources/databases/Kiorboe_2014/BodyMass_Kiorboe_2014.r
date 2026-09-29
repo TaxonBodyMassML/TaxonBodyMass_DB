@@ -48,10 +48,9 @@ adat <- adat[!grepl('\\?', adat$taxon) & !grepl('\\b(sp|spp|cf|aff|indet)\\b\\.?
 adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+', adat$taxon), ]   # binomials only
 for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
   adat[[col]] <- ifelse(adat[[col]] == '', NA_character_, adat[[col]])
-adat$mass_type <- 'carbon'
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'carbon', group = adat$mass_group)
 adat$n <- 1
 adat$source_mass <- 'Kiorboe_2014'
 KIO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
-                'order', 'family', 'mass_type', 'mass_group')]
+                'order', 'family')]
 save(KIO, file = file.path(wd_rdata, 'BodyMass_Kiorboe_2014.Rdata'))

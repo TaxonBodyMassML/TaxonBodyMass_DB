@@ -31,10 +31,9 @@ group_map <- c(COPE = 'crustacean_zooplankton', EUPH = 'crustacean_zooplankton',
                POLY = 'invertebrate', HETE = 'invertebrate')
 unknown <- setdiff(unique(adat$taxon_group), names(group_map))
 if (length(unknown) > 0) stop('Ikeda_2014: unmapped taxon group(s): ', paste(unknown, collapse = ', '))
-adat$mass_group <- unname(group_map[adat$taxon_group])
-adat$mass_type <- 'dry'
-adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = adat$mass_group)
+mass_group <- unname(group_map[adat$taxon_group])
+adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
 adat$source_mass <- 'Ikeda_2014'
-IKE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'mass_type', 'mass_group')]
+IKE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
 save(IKE, file = file.path(wd_rdata, 'BodyMass_Ikeda_2014.Rdata'))

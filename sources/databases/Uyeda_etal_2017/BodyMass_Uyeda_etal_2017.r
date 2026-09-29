@@ -18,9 +18,7 @@ fb_env <- new.env(); load(file.path(wd_rdata, 'BodyMass_Fishbase.Rdata'), envir 
 fish_genera <- unique(sub(' .*$', '', get(ls(fb_env)[1], envir = fb_env)$taxon))
 adat <- adat[!(adat$endo == 0 & sub(' .*$', '', adat$taxon) %in% fish_genera), ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon), ]
-adat$mass_type <- 'wet'
-adat$mass_group <- 'vertebrate'
 adat$n <- 1
 adat$source_mass <- 'Uyeda_etal_2017'
-UYE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'mass_type', 'mass_group')]
+UYE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
 save(UYE, file = file.path(wd_rdata, 'BodyMass_Uyeda_etal_2017.Rdata'))

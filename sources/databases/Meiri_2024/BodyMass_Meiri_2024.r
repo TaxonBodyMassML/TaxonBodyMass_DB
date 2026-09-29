@@ -13,10 +13,7 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat$family <- iconv(as.character(adat$family), to = 'ASCII//TRANSLIT')
 adat$class <- 'Reptilia'
 adat$order <- 'Squamata'
-adat$mass_type <- 'wet'
-adat$mass_group <- 'vertebrate'
 adat$n <- 1
 adat$source_mass <- 'Meiri_2024'
-MEI <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family',
-                'mass_type', 'mass_group')]
+MEI <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
 save(MEI, file = file.path(wd_rdata, 'BodyMass_Meiri_2024.Rdata'))

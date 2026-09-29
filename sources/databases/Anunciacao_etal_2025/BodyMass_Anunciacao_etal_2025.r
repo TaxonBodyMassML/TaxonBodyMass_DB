@@ -21,10 +21,7 @@ out <- do.call(rbind, lapply(mass_cols, function(col) {
 out$class  <- 'Insecta'
 out$order  <- 'Coleoptera'
 out$family <- 'Scarabaeidae'
-out$mass_type <- 'wet'
-out$mass_group <- 'insect'
 out$n <- 1
 out$source_mass <- 'Anunciacao_etal_2025'
-ANU <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family',
-               'mass_type', 'mass_group')]
+ANU <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
 save(ANU, file = file.path(wd_rdata, 'BodyMass_Anunciacao_etal_2025.Rdata'))

@@ -23,11 +23,8 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon) & grepl(' ', adat$taxon), ]
 for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
   adat[[col]] <- iconv(as.character(adat[[col]]), to = 'ASCII//TRANSLIT')
-adat$mass_type <- 'wet'
-adat$mass_group <- ifelse(adat$phylum == 'Chordata', 'vertebrate',
-                   ifelse(adat$class %in% 'Insecta', 'insect', 'invertebrate'))
 adat$n <- 1
 adat$source_mass <- 'Hechinger_etal_2011'
 HEC <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
-                'order', 'family', 'mass_type', 'mass_group')]
+                'order', 'family')]
 save(HEC, file = file.path(wd_rdata, 'BodyMass_Hechinger_etal_2011.Rdata'))

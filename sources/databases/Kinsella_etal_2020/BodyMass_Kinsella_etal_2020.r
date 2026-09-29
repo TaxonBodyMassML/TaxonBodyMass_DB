@@ -12,11 +12,9 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0 & !is.na(adat$taxon), ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet|agg)\\b|/', adat$taxon), ]
 adat$class <- 'Insecta'
 adat$order <- 'Lepidoptera'
-adat$mass_type <- 'dry'
-adat$mass_group <- 'insect'
-adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = adat$mass_group)
+mass_group <- 'insect'
+adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
 adat$source_mass <- 'Kinsella_etal_2020'
-KIN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family',
-                'mass_type', 'mass_group')]
+KIN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
 save(KIN, file = file.path(wd_rdata, 'BodyMass_Kinsella_etal_2020.Rdata'))

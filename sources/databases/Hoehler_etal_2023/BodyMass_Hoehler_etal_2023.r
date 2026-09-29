@@ -27,13 +27,8 @@ out <- data.frame(taxon = adat$taxon, mass_g = adat$mass_g,
                   order = adat$Order, family = adat$Family, stringsAsFactors = FALSE)
 for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
   out[[col]] <- iconv(as.character(out[[col]]), to = 'ASCII//TRANSLIT')
-out$mass_type <- 'wet'
-out$mass_group <- ifelse(out$phylum %in% 'Chordata', 'vertebrate',
-                  ifelse(out$class %in% 'Insecta', 'insect',
-                  ifelse(adat$Group %in% c('Bacteria', 'Archaea', 'Heterotrophic protozoa'), 'protist',
-                         'invertebrate')))
 out$n <- 1
 out$source_mass <- 'Hoehler_etal_2023'
 HOE <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
-               'order', 'family', 'mass_type', 'mass_group')]
+               'order', 'family')]
 save(HOE, file = file.path(wd_rdata, 'BodyMass_Hoehler_etal_2023.Rdata'))

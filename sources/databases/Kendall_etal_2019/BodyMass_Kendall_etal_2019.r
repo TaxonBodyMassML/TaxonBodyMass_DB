@@ -13,11 +13,9 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon), ]
 adat$family <- as.character(adat$family)
 adat$class <- 'Insecta'
-adat$mass_type <- 'dry'
-adat$mass_group <- 'insect'
-adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = adat$mass_group)
+mass_group <- 'insect'
+adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
 adat$source_mass <- 'Kendall_etal_2019'
-KEN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family',
-                'mass_type', 'mass_group')]
+KEN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family')]
 save(KEN, file = file.path(wd_rdata, 'BodyMass_Kendall_etal_2019.Rdata'))

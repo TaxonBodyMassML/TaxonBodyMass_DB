@@ -17,10 +17,7 @@ colnames(adat) <- c('taxon', 'mass_g', 'order', 'family')
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat$class <- 'Aves'
-adat$mass_type <- 'wet'
-adat$mass_group <- 'vertebrate'
 adat$n <- 1
 adat$source_mass <- 'Tobias_2022'
-TOB <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family',
-                'mass_type', 'mass_group')]
+TOB <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
 save(TOB, file = file.path(wd_rdata, 'BodyMass_Tobias_2022.Rdata'))

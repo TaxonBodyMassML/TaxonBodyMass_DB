@@ -19,10 +19,9 @@ adat <- data.frame(taxon  = adat$taxon,
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon) & grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon), ]
 adat$phylum <- 'Arthropoda'
-adat$mass_type <- 'dry'
-adat$mass_group <- 'crustacean_zooplankton'
-adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = adat$mass_group)
+mass_group <- 'crustacean_zooplankton'
+adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
 adat$source_mass <- 'Hebert_etal_2016'
-HEB <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'class', 'mass_type', 'mass_group')]
+HEB <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'class')]
 save(HEB, file = file.path(wd_rdata, 'BodyMass_Hebert_etal_2016.Rdata'))

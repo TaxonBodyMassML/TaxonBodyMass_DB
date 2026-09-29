@@ -32,10 +32,7 @@ for (grp in names(files)) {
 adat <- do.call(rbind, out)
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b|\\?', adat$taxon), ]
-adat$mass_type <- 'wet'
-adat$mass_group <- 'vertebrate'
 adat$n <- 1
 adat$source_mass <- 'Tsuboi_etal_2018'
-TSU <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'order', 'family',
-                'mass_type', 'mass_group')]
+TSU <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'order', 'family')]
 save(TSU, file = file.path(wd_rdata, 'BodyMass_Tsuboi_etal_2018.Rdata'))
