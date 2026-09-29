@@ -12,3 +12,7 @@ adat <- data.frame(taxon  = adat$taxon,
                    class  = adat$class,
                    stringsAsFactors = FALSE)
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
+adat$n <- 1
+adat$source_mass <- 'Mercer_etal_2001'
+MER <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class')]
+save(MER, file = file.path(wd_rdata, 'BodyMass_Mercer_etal_2001.Rdata'))
