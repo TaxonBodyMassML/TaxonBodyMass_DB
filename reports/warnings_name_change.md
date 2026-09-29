@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-09-29 09:48:55
+# TaxonBodyMass_DB Species Name Changes -- 2026-09-29 14:24:09
 
 
-## Species name changed during enrichment (5870 rows)
+## Species name changed during enrichment (5873 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -1085,6 +1085,8 @@ Atalotriccus pilaris; Lophotriccus pilaris -> Atalotriccus pilaris [GBIF]
 
 Ateles fusciceps; Ateles dariensis -> Ateles fusciceps [GBIF]
 
+Ateuchus puncticollis -> Ateuchetus puncticollis [GBIF]
+
 Athene cunicularia; Speotyto cunicularia -> Athene cunicularia [GBIF]
 
 Reinhardtius stomias; Atheresthes stomias -> Atheresthes stomias [GBIF]
@@ -1682,6 +1684,8 @@ Canonopsis sericeus -> Canonopsis sericea [GBIF]
 Cantharis fulvicollis -> Cantharis flavilabris [NCBI]
 
 Canthidermis maculata; Canthidermis maculatus -> Canthidermis maculata [GBIF]
+
+Canthon conformis -> Canthon virens [GBIF]
 
 Thryothorus griseus -> Cantorchilus griseus [GBIF]
 
@@ -10832,6 +10836,8 @@ Tessarabrachion oculatus; Tessarabrachion oculatum -> Tessarabrachion oculatum [
 Tetanocera ferruginea -> Tetanocera ferriginea [GBIF]
 
 Tetartopeus terminatum -> Tetartopeus terminatus [GBIF]
+
+Canthon lituratus -> Tetraechma liturata [GBIF]
 
 Tetragnatha maxillosa -> Tetragnatha keyserlingi [GBIF]
 

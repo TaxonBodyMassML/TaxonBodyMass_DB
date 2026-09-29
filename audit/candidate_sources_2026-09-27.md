@@ -164,4 +164,4 @@ Files supplied by the owner for 8 of the 12 requested sources (Cejp 2024, Ehnes 
 
 - **Ingested**: Uyeda_etal_2017 (fishes excluded: juvenile SMR specimens), Hebert_etal_2016 (dry mass; freshwater length-weight rows excluded), Hoehler_etal_2023 (wet mass; fishes, autotrophs and fungi excluded), Chown_etal_2007 (appendices parsed from the Word supplement), Mercer_etal_2001 (adult rows hand-transcribed from the scanned PDF), Ikeda_2014 (ESM PDF tables parsed by column position; adults only).
 - **Excluded**: Brocher_etal_2025 -- JEXIS metadata states body mass was calculated from body length with Sohlström et al. (2018) equations (model-estimated).
-- **Pending owner decision**: Anunciacao_etal_2025 dung beetles -- 'Biomass (g)' is not stated as dry or fresh (individuals weighed to 0.001 g); no script written until the mass type is settled.
+- **Ingested after owner decision**: Anunciacao_etal_2025 dung beetles -- 'Biomass (g)' is not stated as dry or fresh; owner chose to treat it as fresh mass (100 species).
