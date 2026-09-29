@@ -1,0 +1,623 @@
+{
+  "id": 401,
+  "title": "arthropod_traits",
+  "desciption": "Ecological traits for 1,374 arthropod species collected in a German grassland",
+  "inUse": true,
+  "variables": [
+    {
+      "id": 3261,
+      "label": "Taxa",
+      "description": "Species scientific name (Genus, Species)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1403362369",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4060,
+        "name": "scientific name",
+        "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)"
+      },
+      "meanings": [
+        {
+          "id": 213,
+          "name": "scientific name",
+          "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3262,
+      "label": "Genus",
+      "description": "Taxonomic resolution Genus",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1403420449",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4060,
+        "name": "scientific name",
+        "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)"
+      },
+      "meanings": [
+        {
+          "id": 213,
+          "name": "scientific name",
+          "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3263,
+      "label": "Family",
+      "description": "Taxonomic resolution Family",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1403050581",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4060,
+        "name": "scientific name",
+        "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)"
+      },
+      "meanings": [
+        {
+          "id": 213,
+          "name": "scientific name",
+          "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3264,
+      "label": "Order",
+      "description": "Taxonomic resolution Order",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1398736567",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4060,
+        "name": "scientific name",
+        "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)"
+      },
+      "meanings": [
+        {
+          "id": 213,
+          "name": "scientific name",
+          "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3265,
+      "label": "Class",
+      "description": "Taxonomic resolution Class",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1398399153",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4060,
+        "name": "scientific name",
+        "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)"
+      },
+      "meanings": [
+        {
+          "id": 213,
+          "name": "scientific name",
+          "description": "species name (both full name or abbreviation) and  other taxonomic ranks of organisms (e.g. order, family, genus)",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3266,
+      "label": "Feeding guild",
+      "description": "The type of food, which is consumed by the arthropod (detritivores, herbivores, omnivores, predators)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1398424121",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3918,
+        "name": "specification, string (unable to order)",
+        "description": "specification; sample variables in string format (e.g. soil type )"
+      },
+      "meanings": [
+        {
+          "id": 74,
+          "name": "specification, string (unable to order)",
+          "description": "specification; sample variables in string format (e.g. soil type )",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3267,
+      "label": "Feeding source",
+      "description": "The type of material which is consumed by the arthropod species (plant material, plant sap, nectar_pollen, animals, dead animals, dead plant material, feces, mycelium)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1398025850",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3918,
+        "name": "specification, string (unable to order)",
+        "description": "specification; sample variables in string format (e.g. soil type )"
+      },
+      "meanings": [
+        {
+          "id": 74,
+          "name": "specification, string (unable to order)",
+          "description": "specification; sample variables in string format (e.g. soil type )",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3268,
+      "label": "Food acquisition",
+      "description": "Describes how consumers obtain their food (active, parasitizing, passive)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1397975559",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3918,
+        "name": "specification, string (unable to order)",
+        "description": "specification; sample variables in string format (e.g. soil type )"
+      },
+      "meanings": [
+        {
+          "id": 74,
+          "name": "specification, string (unable to order)",
+          "description": "specification; sample variables in string format (e.g. soil type )",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3269,
+      "label": "Feeding mode",
+      "description": "Describes how taxa process their food (extraintestinal, chewing, sucking)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1397617964",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3918,
+        "name": "specification, string (unable to order)",
+        "description": "specification; sample variables in string format (e.g. soil type )"
+      },
+      "meanings": [
+        {
+          "id": 74,
+          "name": "specification, string (unable to order)",
+          "description": "specification; sample variables in string format (e.g. soil type )",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3270,
+      "label": "Food specialization",
+      "description": "The range of food, which is consumed by the arthropod species (m = monophagous, o = oligophagous, p = polyphagous)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1397641838",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3918,
+        "name": "specification, string (unable to order)",
+        "description": "specification; sample variables in string format (e.g. soil type )"
+      },
+      "meanings": [
+        {
+          "id": 74,
+          "name": "specification, string (unable to order)",
+          "description": "specification; sample variables in string format (e.g. soil type )",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3271,
+      "label": "Stratum",
+      "description": "The habitat layer inhabited by the taxa (g = ground, h = herb, n = animal nests, t = tree, w = water and all possible combinations of g, h, n, t and w separated by slash)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1397240343",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3918,
+        "name": "specification, string (unable to order)",
+        "description": "specification; sample variables in string format (e.g. soil type )"
+      },
+      "meanings": [
+        {
+          "id": 74,
+          "name": "specification, string (unable to order)",
+          "description": "specification; sample variables in string format (e.g. soil type )",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3272,
+      "label": "Aerial mobility",
+      "description": "The mobility of taxa (a = unable to fly,  b = passive flyer, c = active flyer during dispersion or mating, d = active flyer during their entire adult stage)",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1397398539",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4072,
+        "name": "specification, string (able to order)",
+        "description": "specification, order, ranking (e.g. vitality of a tree: vital, normal, weak, dead)"
+      },
+      "meanings": [
+        {
+          "id": 225,
+          "name": "specification, string (able to order)",
+          "description": "specification, order, ranking (e.g. vitality of a tree: vital, normal, weak, dead)",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3273,
+      "label": "Body mass",
+      "description": "Body mass in mg (numeric). Body mass was calculated based on body length values using the equations published in Sohlström et al. (2018).",
+      "isOptional": true,
+      "dataType": "Floating Point Number",
+      "systemType": "Double",
+      "displayPattern": "",
+      "unit": {
+        "id": 103,
+        "name": "milligram",
+        "abbrevation": "mg",
+        "description": "",
+        "dimension": {
+          "name": "mass",
+          "description": "g, mg, kg",
+          "specification": "L(0,0)M(1,0)T(0,0)I(0,0)?(0,0)N(0,0)J(0,0)"
+        },
+        "measurementSystem": "Metric"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1.79769313486232E+307",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3877,
+        "name": "mass",
+        "description": "SI based mass"
+      },
+      "meanings": [
+        {
+          "id": 33,
+          "name": "mass",
+          "description": "SI based mass",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3274,
+      "label": "Body length",
+      "description": "Body size in mm (numeric). Mean lengths of adult males and females, generated from literature, were averaged.",
+      "isOptional": true,
+      "dataType": "Floating Point Number",
+      "systemType": "Double",
+      "displayPattern": "",
+      "unit": {
+        "id": 111,
+        "name": "millimeter",
+        "abbrevation": "mm",
+        "description": "",
+        "dimension": {
+          "name": "length",
+          "description": "m, cm, km",
+          "specification": "L(1,0)M(0,0)T(0,0)I(0,0)?(0,0)N(0,0)J(0,0)"
+        },
+        "measurementSystem": "Metric"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1.79769313486232E+307",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 4038,
+        "name": "width",
+        "description": "SI based length"
+      },
+      "meanings": [
+        {
+          "id": 193,
+          "name": "width",
+          "description": "SI based length",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    },
+    {
+      "id": 3275,
+      "label": "Reference",
+      "description": "Literature reference for species traits.",
+      "isOptional": true,
+      "dataType": "String",
+      "systemType": "String",
+      "displayPattern": "",
+      "unit": {
+        "id": 1,
+        "name": "none",
+        "abbrevation": "none",
+        "description": "If no unit is used.",
+        "dimension": {
+          "name": "none",
+          "description": "none",
+          "specification": "If no unit is used."
+        },
+        "measurementSystem": "Unknown"
+      },
+      "missingValues": [
+        {
+          "placeholder": "1400636690",
+          "displayName": "NA"
+        }
+      ],
+      "template": {
+        "id": 3885,
+        "name": "identifier, code based",
+        "description": "identifier, code based"
+      },
+      "meanings": [
+        {
+          "id": 41,
+          "name": "identifier, code based",
+          "description": "identifier, code based",
+          "externallinks": []
+        }
+      ],
+      "constraints": []
+    }
+  ]
+}

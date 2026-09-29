@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<metaProfile xmlns:bgc="https://www.w3schools.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="https://www.w3schools.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <general>
+    <title>Data from: Ecological traits for 1,374 arthropod species collected in a German grassland</title>
+    <abstract>Using suction and pitfall sampling in the field site of the Jena Experiment, we collected 1,374 arthropod  species (Arachnida, Coleoptera, Hemiptera, Hymenoptera, Isopoda, Myriapoda, and Orthoptera) over a period of 10 years to document arthropod taxa in the area. We then surveyed existing literature to compile nine important functional traits for each species. The nine selected traits give information about feeding ecology (feeding guild, feeding source, food acquisition, feeding mode, food specialization), habitat requirements (stratum), flight capability (aerial mobility), and size (body mass, body length).</abstract>
+    <synthesis>No</synthesis>
+    <experiment>Other-specify</experiment>
+    <OtherExperimentSpecify>Main and Trait</OtherExperimentSpecify>
+    <doi>https://doi.org/10.25829/Q570-JR82</doi>
+    <datasetID>703</datasetID>
+    <versionID>10</versionID>
+    <registrationDate>2/24/2025 1:49:26 PM</registrationDate>
+    <metadataLastModificationDate>4/1/2025 10:33:20 AM</metadataLastModificationDate>
+    <dataCreationDate>2/24/2025 3:44:32 PM</dataCreationDate>
+    <dataLastModificationDate>2/25/2025 12:04:13 PM</dataLastModificationDate>
+  </general>
+  <authorship>
+    <metadataCreator>Maximilian Bröcher</metadataCreator>
+    <dataCreator>Anne Ebeling</dataCreator>
+    <dataCreator>Sebastian Meyer</dataCreator>
+    <dataCreator>Maximilian Bröcher</dataCreator>
+    <dataCreator>Ana Garcia Leher</dataCreator>
+    <dataCollector>Anne Ebeling</dataCollector>
+    <dataCollector>Sebastian Meyer</dataCollector>
+    <dataCollector>Maximilian Bröcher</dataCollector>
+    <dataCollector>Ana Garcia Leher</dataCollector>
+    <ProjectLeader>
+      <name>Anne Ebeling</name>
+      <email>anne.ebeling@uni-jena.de</email>
+    </ProjectLeader>
+    <contactPerson>
+      <name>Maximilian Bröcher</name>
+      <email>maximilian.broecher@uni-jena.de</email>
+    </contactPerson>
+    <institute>
+      <instituteName>Friedrich-Schiller-Universität Jena</instituteName>
+    </institute>
+    <authorshipContribution>AE, SM and MB collected arthropod species. AE, MB and AL collected arthropod traits. MB prepared the data and created the metadata.</authorshipContribution>
+  </authorship>
+  <methods>
+    <measurements>
+      <samplingDesign>The arthropod species presented in this dataset come from regular sampling campaigns conducted in the framework of the Jena Experiment. Data collection was done in the Main Experiment (80 plots of 100m² size, differing in plant species richness from 1 to 60 species; Roscher et al., 2004), and the Trait-Based Experiment (138 plots of 12.25m² size, differing in plant species richness from 1-8; Ebeling et al., 2014). Ground- and vegetation-associated arthropods were sampled in ten years (2010, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020) using pitfall traps (Main Experiment 42 sampling dates, Trait-Based Experiment 37 sampling dates) and suction sampling (Main Experiment 23 sampling dates, Trait-Based Experiment 11 sampling dates). Pitfall traps were of 4.5 cm in size and emptied every two weeks (except during the mowing periods). Suction sampling was conducted on sunny days between 9 am and 4 pm in randomly placed cages of 0.75 m x 0.75 m x 0.75 m, using a modified commercial vacuum cleaner (Kärcher A2500, Kärcher GmbH, Winnenden, Germany). All sampled arthropods  were stored in 70% ethanol before further processing. After sorting into taxonomic groups (Arachnida, Coleoptera, Hemiptera, Hymenoptera, Isopoda, Myriapoda, and Orthoptera), individuals were sent to experts for identification. All individuals were identified to species level and all species names were cross-referenced to match the accepted name provided by GBIF (GBIF: The Global Biodiversity Information Facility, 2024). All samples are stored at the Institute of Ecology and Evolution at the University Jena (Germany).</samplingDesign>
+    </measurements>
+    <dataProcessing>
+      <dataPreparation>All species names were cross-referenced with the online database GBIF (GBIF: The Global Biodiversity Information Facility, 2024) to check for synonyms and any changes in species names across sampling campaigns. However, species names may change in the future (last updated: December 2024). Multiple sources were considered for each taxon to provide robust information on their ecology, behavior, and body length. While the reliability of these traits depends on careful and systematic data collection, some traits are derived from field observations and assumptions that may not fully capture the species' complete ecology. Additionally, traits can depend on ecological and environmental contexts and often exhibit underlying intraspecific variability.
+
+Traits for all species were generated from literature sources. When several sources had different trait information for the same species, we decided for the trait label with the highest reliability. Reliability of data sources were weighted as followed (from highest to lowest): 1) studies on the focal species, 2) books for species identification, 3) online databases, and 4) other online sources. For each species, the sources from which trait data originate are given. The reference numbers given in the data table refer to the references listed in the attached supplement files (S1_references).</dataPreparation>
+    </dataProcessing>
+    <references>
+      <literatureReferences>Ebeling, A. et al. (2014) ‘A trait-based experimental approach to understand the mechanisms underlying biodiversity-ecosystem functioning relationships’, Basic and Applied Ecology, 15(3), pp. 229–240. Available at: https://doi.org/10.1016/j.baae.2014.02.003.
+
+GBIF: The Global Biodiversity Information Facility (2024). Available at: https://www.gbif.org/. (Accessed: 24 June 2024).
+
+Roscher, C. et al. (2004) ‘The role of biodiversity for element cycling and trophic interactions: an experimental approach in a grassland community’, Basic and Applied Ecology, 5(2), pp. 107–121. Available at: https://doi.org/10.1078/1439-1791-00216.
+
+Sohlström, E.H. et al. (2018) ‘Applying generalized allometric regressions to predict live body mass of tropical and temperate arthropods’, Ecology and Evolution, 8(24), pp. 12737–12749. Available at: https://doi.org/10.1002/ece3.4702.</literatureReferences>
+    </references>
+    <importantNotes>Attached is a document with all references and their ID. The ID matches the value in the "reference" column in the data.</importantNotes>
+  </methods>
+  <weeding>
+    <weedingInformation>
+      <year>not related to weeding</year>
+      <weeding_Block1>None</weeding_Block1>
+      <weeding_Block2>None</weeding_Block2>
+      <weeding_Block3>None</weeding_Block3>
+      <weeding_Block4>None</weeding_Block4>
+    </weedingInformation>
+  </weeding>
+  <keywords>
+    <environmentalDescriptors>
+      <environmentalDescriptor>None</environmentalDescriptor>
+    </environmentalDescriptors>
+    <processesAndServices>
+      <processAndService>None</processAndService>
+    </processesAndServices>
+    <bioticDataTypes>
+      <bioticDataType>Multiple species</bioticDataType>
+    </bioticDataTypes>
+    <relativePositionToGround>
+      <aboveGround>Yes</aboveGround>
+      <belowGround>Yes</belowGround>
+    </relativePositionToGround>
+    <additionalKeywords>
+      <additionalKeyword>Arthropods</additionalKeyword>
+      <additionalKeyword>Traits</additionalKeyword>
+      <additionalKeyword>Predators</additionalKeyword>
+      <additionalKeyword>Herbivores</additionalKeyword>
+    </additionalKeywords>
+  </keywords>
+  <coverage>
+    <temporalCoverage>
+      <startDate>2010-05-05</startDate>
+      <endDate>2020-08-17</endDate>
+    </temporalCoverage>
+    <dataLevel>Species level</dataLevel>
+    <plotNumbers>
+      <allPlotNumbers>NA</allPlotNumbers>
+    </plotNumbers>
+    <taxonomicCoverage>
+      <taxon>Animals - Invertebrates</taxon>
+    </taxonomicCoverage>
+  </coverage>
+  <dataStatus>
+    <dataStatus>Processed</dataStatus>
+    <uploadStatus>Complete</uploadStatus>
+    <primaryData>Tabular</primaryData>
+  </dataStatus>
+</metaProfile>

@@ -157,3 +157,11 @@ Re-screened against the raw files and metadata while writing the parsing scripts
 
 Ingested in this round (scripts in `sources/databases/`): Tobias_etal_2022 (label Tobias_2022), Tsuboi_etal_2018, Meiri_2024, Soria_etal_2021, Herberstein_etal_2022, Kendall_etal_2019, Kinsella_etal_2020, Hechinger_etal_2011, Kiorboe_2014.
 Awaiting owner download: Uyeda_etal_2017, Brocher_etal_2025, Hoehler_etal_2023, Cejp_2024, Ikeda_2014, Ehnes_etal_2011, Chown_etal_2007, Hebert_etal_2016, Kaspari_1999, Mercer_etal_2001, Hengherr_etal_2007, RibeiroAnunciacao_etal_2025.
+
+## Round 2 (2026-09-29): owner-downloaded sources
+
+Files supplied by the owner for 8 of the 12 requested sources (Cejp 2024, Ehnes 2011, Kaspari 1999 and Hengherr 2007 judged not useful / unobtainable).
+
+- **Ingested**: Uyeda_etal_2017 (fishes excluded: juvenile SMR specimens), Hebert_etal_2016 (dry mass; freshwater length-weight rows excluded), Hoehler_etal_2023 (wet mass; fishes, autotrophs and fungi excluded), Chown_etal_2007 (appendices parsed from the Word supplement), Mercer_etal_2001 (adult rows hand-transcribed from the scanned PDF), Ikeda_2014 (ESM PDF tables parsed by column position; adults only).
+- **Excluded**: Brocher_etal_2025 -- JEXIS metadata states body mass was calculated from body length with Sohlström et al. (2018) equations (model-estimated).
+- **Pending owner decision**: Anunciacao_etal_2025 dung beetles -- 'Biomass (g)' is not stated as dry or fresh (individuals weighed to 0.001 g); no script written until the mass type is settled.

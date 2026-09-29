@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-27 18:00:19
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-29 09:48:55
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 3 rows
-- Low GBIF confidence (75-89): 154 rows
+- Low GBIF confidence (75-89): 159 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -46,7 +46,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (154 rows)
+## Low GBIF confidence (75-89) (159 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -86,11 +86,13 @@ Aporectodea_longa [conf=85]
 
 Blattela_germanica [conf=85]
 
+Beockella_delicata [conf=85]
+
 Boremysis_arctica [conf=85]
 
 Bougainvillea_ramosa [conf=84]
 
-Caeosagitta_macrocephala [conf=85]
+Caecosagitta_macrocephala [conf=85]
 
 Caligavis_obscura [conf=84]
 
@@ -100,13 +102,15 @@ Callosobruchu_analis [conf=85]
 
 Camylaspis_maculata [conf=85]
 
+Cardiapoda_placenta [conf=85]
+
 Centomerus_sylvaticus [conf=85]
 
 Cepaea_hortensis [conf=85]
 
 Cepea_nemoralis [conf=85]
 
-Ceuthophilus_fossor [conf=85]
+Ceuthophilis_fossor [conf=85]
 
 Ceuthophilis_gracilipes [conf=85]
 
@@ -126,7 +130,7 @@ Coeloesis_biloba [conf=85]
 
 Colletheca_mutabilis [conf=85]
 
-Colobenema_sericeum [conf=85]
+Colobonema_sericeum [conf=85]
 
 Columbina_inca [conf=84]
 
@@ -159,6 +163,8 @@ Eryhtrops_erythrophthalma [conf=83]
 Eumicotremus_derjugini [conf=83]
 
 Euphausa_superba [conf=85]
+
+Ferosagatta_hispida [conf=85]
 
 Oporornis_tolmiei [conf=84]
 
@@ -270,7 +276,7 @@ Piliocolobus_preussi [conf=85]
 
 Plaxhaplous_canaliculatus [conf=85]
 
-Pogonomymex_maricopa [conf=82]
+Pogonomyrmex_maricopa [conf=82]
 
 Prodiames_olivacea [conf=85]
 
@@ -290,7 +296,7 @@ Restrelliger_kanagurta [conf=85]
 
 Rediogobius_bikolanus [conf=85]
 
-Reticlitermes_flavipes [conf=85]
+Reticulitermes_flavipes [conf=85]
 
 Rhogeessa_minutilla [conf=85]
 
@@ -324,7 +330,7 @@ Synthliboramphus_antiquus [conf=85]
 
 Tafaliscu_lurida [conf=85]
 
-Molga_torosa [conf=84]
+Taricha_torosa [conf=84]
 
 Musophaga_porphyreolopha [conf=84]
 
@@ -346,6 +352,8 @@ Tympanuchus_cupido [conf=85]
 
 Umbonua_ovicellata [conf=85]
 
+Undinula_vulgaris [conf=85]
+
 Uromastyx_aegyptia [conf=84]
 
 Volatinia_jacarina [conf=85]
@@ -355,6 +363,8 @@ Xenopsilla_ramesis [conf=82]
 Sorex_caudatus [conf=83]
 
 Zoarces_americanus [conf=84]
+
+Zenosagitta_bedoti [conf=85]
 
 ## Source family != GBIF family (1 rows -- review for misresolution)
 

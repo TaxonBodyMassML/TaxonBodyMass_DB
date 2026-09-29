@@ -1,0 +1,354 @@
+{
+  "Id": 401,
+  "Title": "arthropod_traits",
+  "Description": "Ecological traits for 1,374 arthropod species collected in a German grassland",
+  "inUse": true,
+  "Structured": true,
+  "Variables": [
+    {
+      "Id": 3261,
+      "Label": "Taxa",
+      "Description": "Species scientific name (Genus, Species)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3262,
+      "Label": "Genus",
+      "Description": "Taxonomic resolution Genus",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3263,
+      "Label": "Family",
+      "Description": "Taxonomic resolution Family",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3264,
+      "Label": "Order",
+      "Description": "Taxonomic resolution Order",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3265,
+      "Label": "Class",
+      "Description": "Taxonomic resolution Class",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3266,
+      "Label": "Feeding guild",
+      "Description": "The type of food, which is consumed by the arthropod (detritivores, herbivores, omnivores, predators)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3267,
+      "Label": "Feeding source",
+      "Description": "The type of material which is consumed by the arthropod species (plant material, plant sap, nectar_pollen, animals, dead animals, dead plant material, feces, mycelium)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3268,
+      "Label": "Food acquisition",
+      "Description": "Describes how consumers obtain their food (active, parasitizing, passive)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3269,
+      "Label": "Feeding mode",
+      "Description": "Describes how taxa process their food (extraintestinal, chewing, sucking)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3270,
+      "Label": "Food specialization",
+      "Description": "The range of food, which is consumed by the arthropod species (m = monophagous, o = oligophagous, p = polyphagous)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3271,
+      "Label": "Stratum",
+      "Description": "The habitat layer inhabited by the taxa (g = ground, h = herb, n = animal nests, t = tree, w = water and all possible combinations of g, h, n, t and w separated by slash)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3272,
+      "Label": "Aerial mobility",
+      "Description": "The mobility of taxa (a = unable to fly,  b = passive flyer, c = active flyer during dispersion or mating, d = active flyer during their entire adult stage)",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    },
+    {
+      "Id": 3273,
+      "Label": "Body mass",
+      "Description": "Body mass in mg (numeric). Body mass was calculated based on body length values using the equations published in Sohlström et al. (2018).",
+      "isOptional": true,
+      "unit": {
+        "Id": 103,
+        "Name": "milligram",
+        "Description": "",
+        "Dimension": {
+          "Name": "mass",
+          "Description": "g, mg, kg",
+          "Specification": "L(0,0)M(1,0)T(0,0)I(0,0)?(0,0)N(0,0)J(0,0)"
+        },
+        "MeasurementSystem": "Metric"
+      },
+      "dataType": {
+        "Id": 5,
+        "Name": "double",
+        "Description": "A real number",
+        "SystemType": "Double"
+      }
+    },
+    {
+      "Id": 3274,
+      "Label": "Body length",
+      "Description": "Body size in mm (numeric). Mean lengths of adult males and females, generated from literature, were averaged.",
+      "isOptional": true,
+      "unit": {
+        "Id": 111,
+        "Name": "millimeter",
+        "Description": "",
+        "Dimension": {
+          "Name": "length",
+          "Description": "m, cm, km",
+          "Specification": "L(1,0)M(0,0)T(0,0)I(0,0)?(0,0)N(0,0)J(0,0)"
+        },
+        "MeasurementSystem": "Metric"
+      },
+      "dataType": {
+        "Id": 5,
+        "Name": "double",
+        "Description": "A real number",
+        "SystemType": "Double"
+      }
+    },
+    {
+      "Id": 3275,
+      "Label": "Reference",
+      "Description": "Literature reference for species traits.",
+      "isOptional": true,
+      "unit": {
+        "Id": 1,
+        "Name": "none",
+        "Description": "If no unit is used.",
+        "Dimension": {
+          "Name": "none",
+          "Description": "none",
+          "Specification": "If no unit is used."
+        },
+        "MeasurementSystem": "Unknown"
+      },
+      "dataType": {
+        "Id": 1,
+        "Name": "string",
+        "Description": "String",
+        "SystemType": "String"
+      }
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+﻿{
+  "downloadInformation": {
+    "downloadSource": "jexis.idiv.de",
+    "downloadDate": "9/28/2026 5:15:51 AM",
+    "downloadedBy": "ANONYMOUS",
+    "downloadedFilter": null
+  },
+  "id": 703,
+  "version": 10,
+  "versionId": 3280,
+  "title": "Data from: Ecological traits for 1,374 arthropod species collected in a German grassland",
+  "description": "Using suction and pitfall sampling in the field site of the Jena Experiment, we collected 1,374 arthropod  species (Arachnida, Coleoptera, Hemiptera, Hymenoptera, Isopoda, Myriapoda, and Orthoptera) over a period of 10 years to document arthropod taxa in the area. We then surveyed existing literature to compile nine important functional traits for each species. The nine selected traits give information about feeding ecology (feeding guild, feeding source, food acquisition, feeding mode, food specialization), habitat requirements (stratum), flight capability (aerial mobility), and size (body mass, body length).",
+  "dataStructureId": 401,
+  "metadataStructureId": 85,
+  "entityTemplateId": 2,
+  "isPublic": true,
+  "publicationDate": "2/25/2025 3:39:03 PM",
+  "additionalInformations": {
+    "author": "Ebeling ,Anne,Meyer ,Sebastian,Bröcher ,Maximilian,Garcia ,Ana,Ebeling, Anne,Meyer, Sebastian,Bröcher, Maximilian,Garcia, Ana",
+    "description": "Using suction and pitfall sampling in the field site of the Jena Experiment, we collected 1,374 arthropod  species (Arachnida, Coleoptera, Hemiptera, Hymenoptera, Isopoda, Myriapoda, and Orthoptera) over a period of 10 years to document arthropod taxa in the area. We then surveyed existing literature to compile nine important functional traits for each species. The nine selected traits give information about feeding ecology (feeding guild, feeding source, food acquisition, feeding mode, food specialization), habitat requirements (stratum), flight capability (aerial mobility), and size (body mass, body length).",
+    "title": "Data from: Ecological traits for 1,374 arthropod species collected in a German grassland",
+    "email": "maximilian.broecher@uni-jena.de",
+    "id": "703",
+    "version": "10",
+    "metadataCreationDate": "2/24/2025 1:49:26 PM",
+    "metadataLastModfied": "4/1/2025 10:33:20 AM",
+    "dataCreationDate": "2/24/2025 3:44:32 PM",
+    "dataLastModified": "2/25/2025 12:04:13 PM"
+  },
+  "parties": {
+    "anne Ebeling": {
+      "firstName": "Anne",
+      "lastName": "Ebeling"
+    },
+    "sebastian Meyer": {
+      "firstName": "Sebastian T.",
+      "lastName": "Meyer"
+    },
+    "maximilian Bröcher": {
+      "firstName": "Maximilian",
+      "lastName": "Bröcher"
+    },
+    "maximilian.broecher@uni-jena.de": {
+      "firstName": "Maximilian",
+      "lastName": "Bröcher"
+    }
+  },
+  "versionDate": "4/1/2025 8:33:20 AM",
+  "names": {
+    "ana Garcia Leher": {
+      "givenName": "Ana Garcia",
+      "familyName": "Leher"
+    }
+  },
+  "links": {
+    "from": [
+      {
+        "refId": 348,
+        "target": {
+          "id": 703,
+          "version": 9,
+          "typeId": 1,
+          "type": "Dataset",
+          "title": "Data from: Ecological traits for 1,374 arthropod species collected in a German grassland",
+          "latestVersion": false
+        },
+        "source": {
+          "id": 747,
+          "version": 5,
+          "typeId": 1,
+          "type": "Dataset",
+          "title": "Cleaned and extended arthropod species abundance, body length and biomass data from 80 Jena Experiment plots, 2010-2020",
+          "latestVersion": false
+        },
+        "context": null,
+        "referenceType": "IsSupplementTo"
+      }
+    ],
+    "to": []
+  }
+}

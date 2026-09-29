@@ -1,0 +1,54 @@
+table,page,order_family,species_as_printed,taxon,class,stage,fresh_mass_mean_mg,n
+I,136,Cryptostigmata/Peloppiidae,Macquarioppia striata (Wallwork),Macquarioppia striata,Arachnida,A,0.0416,4
+I,136,Cryptostigmata/Oppiidae,Austroppia crozetensis (Richters),Austroppia crozetensis,Arachnida,A,0.0055,10
+I,136,Cryptostigmata/Oribatulidae,Dometorina marionensis van Pletzen & Kok,Dometorina marionensis,Arachnida,A,0.0109,15
+I,136,Cryptostigmata/Ameronothridae,Alaskozetes antarcticus intermedius (Michael),Alaskozetes antarcticus,Arachnida,A,0.1601,10
+I,136,Cryptostigmata/Ameronothridae,Halozetes belgicae (Michael),Halozetes belgicae,Arachnida,A,0.0325,20
+I,136,Cryptostigmata/Ameronothridae,Halozetes fulvus Englebrecht,Halozetes fulvus,Arachnida,A,0.0314,22
+I,136,Cryptostigmata/Ameronothridae,Halozetes marinus (Lohmann),Halozetes marinus,Arachnida,A,0.0948,58
+I,136,Cryptostigmata/Ameronothridae,Halozetes marionensis Englebrecht,Halozetes marionensis,Arachnida,A,0.0666,20
+I,136,Cryptostigmata/Ameronothridae,Podacarus auberti Grandjean,Podacarus auberti,Arachnida,A,0.1950,11
+I,136,Prostigmata/Halacaridae,Isobactrus magnus (Lohmann),Isobactrus magnus,Arachnida,A/N,0.0168,18
+I,136,Astigmata/Hyadesiidae,Hyadesia halophila Fain,Hyadesia halophila,Arachnida,A/N,0.0131,26
+II,137,Collembola/Neanuridae,Friesea tilbrooki Wise,Friesea tilbrooki,Collembola,A,0.1472,20
+II,137,Collembola/Hypogastruridae,Ceratophysella denticulata (Bagnall),Ceratophysella denticulata,Collembola,A,0.0201,20
+II,137,Collembola/Hypogastruridae,Hypogastrura viatica (Tullberg),Hypogastrura viatica,Collembola,A,0.2862,20
+II,137,Collembola/Onychiuridae,Tullbergia bisetosa (Borner),Tullbergia bisetosa,Collembola,A,0.0882,20
+II,137,Collembola/Isotomidae,Cryptopygus antarcticus travei (Deharveng),Cryptopygus antarcticus,Collembola,A,0.0441,20
+II,137,Collembola/Isotomidae,Cryptopygus caecus (Wahlgren),Cryptopygus caecus,Collembola,A,0.0050,20
+II,137,Collembola/Isotomidae,Cryptopygus dubius (Deharveng),Cryptopygus dubius,Collembola,A,0.0058,20
+II,137,Collembola/Isotomidae,Cryptopygus tricuspis (Enderlein),Cryptopygus tricuspis,Collembola,A,0.0068,20
+II,137,Collembola/Isotomidae,Isotoma marionensis (Deharveng),Isotoma marionensis,Collembola,A,0.0128,20
+II,137,Collembola/Isotomidae,Isotoma notabilis (Schaffer),Isotoma notabilis,Collembola,A,0.0097,20
+II,137,Collembola/Tomoceridae,Pogonognathellus flavescens (Tullberg),Pogonognathellus flavescens,Collembola,A,0.5088,20
+II,137,Collembola/Sminthuridae,Sminthurinus granulosus Enderlein,Sminthurinus granulosus,Collembola,A,0.0518,20
+II,137,Collembola/Sminthuridae,S. tuberculatus Delamare Deboutteville and Massoud,Sminthurinus tuberculatus,Collembola,A,0.0076,20
+III,138,Psocoptera/Elipsocidae,Antarctopsocus jeanneli Badonnel,Antarctopsocus jeanneli,Insecta,A,0.4205,23
+III,138,Hemiptera/Aphidoidea,Rhopalosiphum padi (L.),Rhopalosiphum padi,Insecta,A?,0.2759,64
+III,138,Thysanoptera/Thripidae,Apterothrips apteris (Daniel),Apterothrips apteris,Insecta,A,0.0393,40
+III,138,Coleoptera/Hydraenidae,Meropathus chuni Enderlein,Meropathus chuni,Insecta,A,0.5577,10
+III,138,Coleoptera/Staphylinidae,Halmaeusa atriceps (C.O. Waterhouse),Halmaeusa atriceps,Insecta,A,0.8002,49
+III,138,Coleoptera/Curculionidae,Bothrometopus parvulus (C.O. Waterhouse),Bothrometopus parvulus,Insecta,A,4.5441,119
+III,138,Coleoptera/Curculionidae,Bothrometopus randi Jeannel,Bothrometopus randi,Insecta,A,18.0877,90
+III,138,Coleoptera/Curculionidae,Bothrometopus elongatus (Jeannel),Bothrometopus elongatus,Insecta,A,1.7149,155
+III,138,Coleoptera/Curculionidae,Ectemnorhinus marioni Jeannel,Ectemnorhinus marioni,Insecta,A,12.3286,80
+III,138,Coleoptera/Curculionidae,Ectemnorhinus similis Waterhouse,Ectemnorhinus similis,Insecta,A,23.4954,76
+III,138,Coleoptera/Curculionidae,Palirhoeus eatoni (C.O. Waterhouse),Palirhoeus eatoni,Insecta,A,7.3126,90
+III,138,Diptera/Psychodidae,Psychoda parthenogenetica Tonnoir,Psychoda parthenogenetica,Insecta,A,0.2450,8
+III,138,Diptera/Chironomidae,Telmatogeton amphibius (Eaton),Telmatogeton amphibius,Insecta,A,1.0843,50
+III,138,Diptera/Chironomidae,Limnophyes minimus Meigen,Limnophyes minimus,Insecta,A,0.1298,18
+III,139,Diptera/Sciaridae,Lycoriella auberti Seguy,Lycoriella auberti,Insecta,A,0.0550,22
+III,139,Diptera/Helcomyzidae,Paractora dreuxi mirabilis Seguy,Paractora dreuxi,Insecta,A,12.2375,40
+III,139,Diptera/Tethinidae,Listriomastax litorea Enderlein,Listriomastax litorea,Insecta,A,0.2253,20
+III,139,Diptera/Tethinidae,Apetaenus litoralis Eaton,Apetaenus litoralis,Insecta,A,1.9022,66
+III,139,Diptera/Fanniidae,Fannia canicularis (Linnaeus),Fannia canicularis,Insecta,A,1.7199,21
+III,139,Diptera/Calliphoridae,Calliphora vicina Robineau-Desvoidy,Calliphora vicina,Insecta,A,55.9160,19
+III,139,Lepidoptera/Tineidae,Pringleophaga marioni Viette,Pringleophaga marioni,Insecta,A,26.1739,18
+III,139,Lepidoptera/Yponomeutidae,Embryonopsis halticella Eaton,Embryonopsis halticella,Insecta,A,3.8290,14
+III,139,Lepidoptera/Yponomeutidae,Plutella xylostella (Linnaeus),Plutella xylostella,Insecta,A,9.7080,12
+III,139,Hymenoptera/Eucoilidae,Kleidotoma icarus (Quinlan),Kleidotoma icarus,Insecta,A,0.3184,13
+III,139,Arachnida,Myro paucispinosus Berland (high),Myro paucispinosus,Arachnida,A,36.2069,21
+III,139,Arachnida,Myro paucispinosus Berland (low),Myro paucispinosus,Arachnida,A,10.1752,32
+III,139,Arachnida,M. kerguelensis Cambridge,Myro kerguelensis,Arachnida,A,1.3422,20
+III,139,Gastropoda/Stylommatophora,Notodiscus hookeri Reeve,Notodiscus hookeri,Gastropoda,A,35.0143,20
+III,139,Gastropoda/Stylommatophora,Deroceras caruanae (Pollonera),Deroceras caruanae,Gastropoda,A,137.216,20
