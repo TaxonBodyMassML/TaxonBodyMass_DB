@@ -8,3 +8,4 @@ Parsing: `parse_ikeda_esm.py` runs `pdftotext -layout`, splits each table's side
 Columns used: species, stage, taxon_group, dw_mg (individual dry mass, mg).
 Filters: copepodite stages C1-C5, juveniles (J) and stage text embedded in the species field (e.g. 'Calanoides acutus C4,5') are dropped; C6 adults, F/M/FG/A, salp aggregate/solitary forms and unstaged records are kept. Genus-level and 'misc' names dropped; subspecies/forms truncated to binomials.
 Mass type: dry mass, mg -> g, converted with group factors in R/library/mass_conversion.r: crustacean groups -> crustacean_zooplankton (dry = 0.20 x wet), CNID/CTEN/THAL/APPE -> gelatinous_zooplankton (dry = 0.045 x wet), CHAE/MOLL/POLY -> generic invertebrate (dry = 0.20 x wet, unverified factor).
+Source labels: 'Ikeda_2014; Kiorboe_2013' (crustaceans), 'Ikeda_2014; Kiorboe_2013; Lucas_2011' (gelatinous groups), 'Ikeda_2014' (CHAE/MOLL/POLY, generic uncited factor).

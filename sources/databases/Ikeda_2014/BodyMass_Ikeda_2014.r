@@ -34,6 +34,6 @@ if (length(unknown) > 0) stop('Ikeda_2014: unmapped taxon group(s): ', paste(unk
 mass_group <- unname(group_map[adat$taxon_group])
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
-adat$source_mass <- 'Ikeda_2014'
+adat$source_mass <- LabelWithConversion('Ikeda_2014', mass_group)
 IKE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
 save(IKE, file = file.path(wd_rdata, 'BodyMass_Ikeda_2014.Rdata'))

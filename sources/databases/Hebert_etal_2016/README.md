@@ -6,3 +6,4 @@ Data: Wiley Supporting Information (former Ecological Archives data paper): `zoo
 Columns used: `Genus` + `Species`, `Dry.mass` (individual mean body dry mass, mg; semicolon-delimited file with decimal commas), `Group`, `Ref.dm`.
 Filters: rows whose dry mass reference includes codes 18 (Culver et al. 1985) or 20 (McCauley 1984) are excluded because those values come from length-weight regressions (the freshwater sub-data set); genus-level rows dropped. Adult (mostly female) individuals by design of the compilation.
 Mass type: dry mass, mg -> g, converted with the 'crustacean_zooplankton' factor in R/library/mass_conversion.r (dry = 0.20 x wet; Kiorboe 2013).
+Source label: 'Hebert_etal_2016; Kiorboe_2013' (conversion reference appended).

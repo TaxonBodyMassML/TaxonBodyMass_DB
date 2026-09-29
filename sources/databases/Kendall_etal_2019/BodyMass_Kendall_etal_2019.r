@@ -16,6 +16,6 @@ adat$class <- 'Insecta'
 mass_group <- 'insect'
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
-adat$source_mass <- 'Kendall_etal_2019'
+adat$source_mass <- LabelWithConversion('Kendall_etal_2019', mass_group)
 KEN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family')]
 save(KEN, file = file.path(wd_rdata, 'BodyMass_Kendall_etal_2019.Rdata'))

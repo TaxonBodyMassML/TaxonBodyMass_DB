@@ -355,7 +355,7 @@ enriched <- within_source %>%
     taxon_provided  = paste(unique(unlist(strsplit(taxon_provided, '; '))), collapse = '; '),
     log10_range     = if (n() > 1) log10(max(mass_g) / min(mass_g)) else 0,
     mass_g          = mean(mass_g, na.rm = TRUE), # arithmetic mean
-    source_mass     = paste(unique(source_mass), collapse = '; '),
+    source_mass     = paste(unique(trimws(unlist(strsplit(source_mass, ';', fixed = TRUE)))), collapse = '; '),
     n               = sum(n, na.rm = TRUE),
     kingdom         = na.omit(kingdom)[1],
     phylum          = na.omit(phylum)[1],

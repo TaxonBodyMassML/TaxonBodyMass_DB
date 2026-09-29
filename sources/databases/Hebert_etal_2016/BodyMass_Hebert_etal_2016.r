@@ -22,6 +22,6 @@ adat$phylum <- 'Arthropoda'
 mass_group <- 'crustacean_zooplankton'
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
-adat$source_mass <- 'Hebert_etal_2016'
+adat$source_mass <- LabelWithConversion('Hebert_etal_2016', mass_group)
 HEB <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'class')]
 save(HEB, file = file.path(wd_rdata, 'BodyMass_Hebert_etal_2016.Rdata'))

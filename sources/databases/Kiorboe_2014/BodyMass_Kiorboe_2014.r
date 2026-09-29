@@ -50,7 +50,7 @@ for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
   adat[[col]] <- ifelse(adat[[col]] == '', NA_character_, adat[[col]])
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'carbon', group = adat$mass_group)
 adat$n <- 1
-adat$source_mass <- 'Kiorboe_2014'
+adat$source_mass <- LabelWithConversion('Kiorboe_2014', adat$mass_group)
 KIO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
                 'order', 'family')]
 save(KIO, file = file.path(wd_rdata, 'BodyMass_Kiorboe_2014.Rdata'))

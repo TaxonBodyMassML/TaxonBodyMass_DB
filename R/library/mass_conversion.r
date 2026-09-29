@@ -44,6 +44,10 @@ MassConversionFactors <- data.frame(
   citation = c('Kiorboe:2013aa; Lucas:2011aa', 'Kiorboe:2013aa',
                'Studier:1992aa (dw_per_ww); generic (others)',
                'Menden-Deuer:2000aa', 'generic', 'generic', 'generic', 'generic'),
+  # BM_citations CiteIDs appended to source_mass for converted records (see
+  # ConversionCiteIDs); empty where only generic, uncited factors are used.
+  cite_id = c('Kiorboe_2013; Lucas_2011', 'Kiorboe_2013', 'Studier_1992',
+              'MendenDeuer_2000', '', '', '', ''),
   verified = c(TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, FALSE, FALSE),
   stringsAsFactors = FALSE
 )
@@ -71,6 +75,22 @@ ToWetMass <- function(value, from = c('wet', 'dry', 'afdw', 'carbon'),
   if (any(is.na(out) & !is.na(value)))
     stop('ToWetMass(): no factor for some from/group combination')
   out
+}
+
+# CiteIDs of the conversion references used for a mass_group (vectorised).
+ConversionCiteIDs <- function(group) {
+  idx <- match(group, MassConversionFactors$group)
+  if (any(is.na(idx))) stop('ConversionCiteIDs(): unknown mass_group: ',
+                            paste(unique(group[is.na(idx)]), collapse = ', '))
+  MassConversionFactors$cite_id[idx]
+}
+
+# Source label with the conversion CiteIDs appended ('Label; Kiorboe_2013'),
+# so that the references behind a converted body mass are cited with the taxon.
+# Records converted only with generic (uncited) factors keep the bare label.
+LabelWithConversion <- function(label, group) {
+  cites <- ConversionCiteIDs(group)
+  ifelse(cites == '', label, paste0(label, '; ', cites))
 }
 
 # Cell volume (um^3) to wet mass (g) assuming unit density.

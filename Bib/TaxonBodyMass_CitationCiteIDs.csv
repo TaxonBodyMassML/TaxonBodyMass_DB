@@ -155,8 +155,10 @@
 "Hatfield:2002aa","Hatfield_2002"
 "Hayashi:1999aa","Hayashi_1999"
 "Hebert:2016aa","Hebert_etal_2016"
+"Hechinger:2011aa","Hechinger_etal_2011"
 "Heggland:2015aa","Heggland_2015"
 "Henschel:1994aa","Henschel_1994"
+"Herberstein:2022aa","Herberstein_etal_2022"
 "Hirota:1974aa","Hirota_1974"
 "Hirst:1998aa","Hirst_1998"
 "Hirt:2017aa","Hirt_etal_2017"
@@ -178,6 +180,7 @@
 "Kangausaru:2018aa","Kangausaru_2018"
 "Kara:2024aa","Kara_2024"
 "Karamanlidis:2015aa","Karamanlidis_2015"
+"Kendall:2019aa","Kendall_etal_2019"
 "Khan:2003aa","Khan_2003"
 "Kideys:2003aa","Kideys_2003"
 "Kilic:2022aa","Kilic_2022"
@@ -185,6 +188,9 @@
 "Kim:2023aa","Kim_2023"
 "King:1996aa","King_1996"
 "King:1979aa","King_2012"
+"Kinsella:2020aa","Kinsella_etal_2020"
+"Kiorboe:2013aa","Kiorboe_2013"
+"Kiorboe:2014aa","Kiorboe_2014"
 "Kocharina:1997aa","Kocharina_1997"
 "Kreibich:2010aa","Kreibich_2010"
 "Kritzer:2002aa","Kritzer_2002"
@@ -207,6 +213,7 @@
 "Lislevand:2007aa","Lislevand_etal_2007"
 "Logan:2001aa","Logan_2001"
 "Lord:2013aa","Lord_2013"
+"Lucas:2011aa","Lucas_2011"
 "Lundberg:2006aa","Lundberg_2006"
 "Lundrigan:2000aa","Lundrigan_2000"
 "Maciel:2012aa","Maciel_2012"
@@ -231,6 +238,8 @@
 "Megina:2007aa","Megina_2007"
 "Meiri:2010aa","Meiri_2010"
 "Meiri:2018aa","Meiri_2018"
+"Meiri:2024aa","Meiri_2024"
+"Menden-Deuer:2000aa","MendenDeuer_2000"
 "Menge:1974aa","Menge_1974"
 "Mercer:2001aa","Mercer_etal_2001"
 "Miller:1975aa","Miller_1975"
@@ -340,11 +349,13 @@
 "Smith:2003aa","Smith_2003"
 "Smith:2008aa","Smith_2008"
 "Sole:2019aa","Sole_2019"
+"Soria:2021aa","Soria_etal_2021"
 "Spong:2002aa","Spong_2002"
 "Stefanelli-Silva:2024aa","Stefanelli-Silva_2024"
 "Steward:2009aa","Steward_2009"
 "Strickland:1987aa","Strickland_1987"
 "Stuart:1991aa","Stuart_1991"
+"Studier:1992aa","Studier_1992"
 "Suntsov:2008aa","Suntsova_2008"
 "Sydlowski:2000aa","Sydlowski_2000"
 "Takahashi:2004aa","Takahashi_2004"
@@ -360,6 +371,7 @@
 "Tsang:2007aa","Tsang_2007"
 "Tsang:2024aa","Tsang_2024"
 "Tsikliras:2015aa","Tsikliras_2014"
+"Tsuboi:2018aa","Tsuboi_etal_2018"
 "Tucker:2014aa","Tucker_etal_2014a"
 "Tucker:2014ab","Tucker_etal_2014b"
 "Uyeda:2017aa","Uyeda_etal_2017"
@@ -406,15 +418,3 @@
 "Yusupov:2021aa","Yusupov_2021"
 "Zhang:2024aa","Zhang_2024"
 "Zhou:1998aa","Zhou_1988"
-"Hechinger:2011aa",NA
-"Herberstein:2022aa",NA
-"Kendall:2019aa",NA
-"Kinsella:2020aa",NA
-"Kiorboe:2013aa",NA
-"Kiorboe:2014aa",NA
-"Lucas:2011aa",NA
-"Meiri:2024aa",NA
-"Menden-Deuer:2000aa",NA
-"Soria:2021aa",NA
-"Studier:1992aa",NA
-"Tsuboi:2018aa",NA
