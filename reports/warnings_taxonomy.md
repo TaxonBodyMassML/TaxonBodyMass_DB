@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-29 15:55:16
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-29 17:12:29
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
-- genus column does not match species prefix: 3 rows
-- Low GBIF confidence (75-89): 159 rows
+- genus column does not match species prefix: 5 rows
+- Low GBIF confidence (75-89): 163 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -38,7 +38,11 @@ Eviota_prasina
 
 Gymnogobius_isaza
 
-## genus column does not match species prefix (3 rows)
+## genus column does not match species prefix (5 rows)
+
+Heteromurus_tenuicornis | genus=Alloscopus | species=Heteromurus tenuicornis
+
+Sphaeroderma_rubidum | genus=Anapleus | species=Sphaeroderma rubidum
 
 Baeodon_gracilis | genus=Rhogeessa | species=Baeodon gracilis
 
@@ -46,7 +50,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (159 rows)
+## Low GBIF confidence (75-89) (163 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -104,11 +108,13 @@ Camylaspis_maculata [conf=85]
 
 Cardiapoda_placenta [conf=85]
 
-Centomerus_sylvaticus [conf=85]
+Centromerus_sylvaticus [conf=85]
 
 Cepaea_hortensis [conf=85]
 
 Cepea_nemoralis [conf=85]
+
+Ceratorimeria_yasumatsui [conf=85]
 
 Ceuthophilis_fossor [conf=85]
 
@@ -176,7 +182,11 @@ Glycimeris_glycimeris [conf=85]
 
 Glyphorynchus_spirurus [conf=85]
 
+Harisotoma_maritima [conf=85]
+
 Halobaena_caerulea [conf=85]
+
+Harlomilsia_oculata [conf=85]
 
 Heliodoxa_xanthogonys [conf=85]
 
@@ -222,6 +232,8 @@ Myophonus_caeruleus [conf=84]
 
 Myophonus_insularis [conf=84]
 
+Salina_affinis [conf=81]
+
 Chelodactylus_macropterus [conf=84]
 
 Neochmia_modesta [conf=85]
@@ -254,7 +266,7 @@ Mastigodryas_bifossatus [conf=84]
 
 Gallicolumba_jobiensis [conf=84]
 
-Pamagaeus_bipustulatus [conf=85]
+Panagaeus_bipustulatus [conf=85]
 
 Pareledone_charcoti [conf=80]
 

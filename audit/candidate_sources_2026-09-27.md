@@ -165,3 +165,10 @@ Files supplied by the owner for 8 of the 12 requested sources (Cejp 2024, Ehnes 
 - **Ingested**: Uyeda_etal_2017 (fishes excluded: juvenile SMR specimens), Hebert_etal_2016 (dry mass; freshwater length-weight rows excluded), Hoehler_etal_2023 (wet mass; fishes, autotrophs and fungi excluded), Chown_etal_2007 (appendices parsed from the Word supplement), Mercer_etal_2001 (adult rows hand-transcribed from the scanned PDF), Ikeda_2014 (ESM PDF tables parsed by column position; adults only).
 - **Excluded**: Brocher_etal_2025 -- JEXIS metadata states body mass was calculated from body length with Sohlström et al. (2018) equations (model-estimated).
 - **Ingested after owner decision**: Anunciacao_etal_2025 dung beetles -- 'Biomass (g)' is not stated as dry or fresh; owner chose to treat it as fresh mass (100 species).
+
+## Round 3 (2026-09-29): owner review of Tier 3 / held sources
+
+Owner decisions: Benesh 2017, Nemaplex (not a citable publication), Preston 2012, Miličić 2026 and Bottinelli 2020 are not used. Length-derived masses are admitted where the owner judged the source useful.
+
+- **Ingested**: Brocher_etal_2025 (1,360 arthropods; length-derived live mass, mg), Mull_etal_2022 (Sharkipedia 'Body Mass' records only, 20 species, g/kg converted), Hishi_etal_2019 (380 Japanese Collembola; trait and taxon tables joined on spID1/spID2; dry ug -> wet with the insect factor), Mathieu_2014 (97 French earthworms, maximum fresh mass from Bouché 1972), Cohen_2014 (SIZEWEB, 206 soil invertebrate genera; log10 ug dry mass, wet recovered with the source's own 0.20 ratio; genus-level output only), Mulder_2011 (104 soil nematode species, adults; dry ug from Andrássy volume, wet recovered with the source's own 0.20 ratio).
+- Offsets vs existing DB values: Brocher +0.03 (n=192), Mull -0.18 (9), Mathieu +0.35 (10; maxima), Mulder +0.50 (13), Hishi +0.81 (18) log10.
