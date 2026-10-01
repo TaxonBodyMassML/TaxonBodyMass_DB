@@ -40,6 +40,10 @@ av_out <- data.frame(taxon = Bin(av_names), status = 'AVONET:Extinct', source = 
 phy_all <- read.csv(file.path(wd_db, 'Faurby_etal_2018', 'Trait_data.csv'), stringsAsFactors = FALSE)
 extant_in_phylacine <- Bin(phy_all$Binomial.1.2[phy_all$IUCN.Status.1.2 %in% c('LC', 'NT', 'VU', 'EN', 'CR')])
 mom_out <- mom_out[!(mom_out$taxon %in% extant_in_phylacine), ]
+# Manual exceptions: MOM names that are synonyms of species PHYLACINE/IUCN list as
+# extant (checked individually).
+extant_exceptions <- c('Sphiggurus_insidiosus')   # = Coendou insidiosus (LC)
+mom_out <- mom_out[!(mom_out$taxon %in% extant_exceptions), ]
 out <- rbind(mom_out, phy_out, av_out)
 out <- out[grepl('^[A-Z][a-z]+_[a-z]+$', out$taxon), ]
 out <- aggregate(cbind(status, source) ~ taxon, data = out,
