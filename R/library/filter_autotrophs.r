@@ -35,8 +35,8 @@ FilterAutotrophs <- function(dat) {
 
   autotroph_genera <- c(
     # Dinoflagellates (Myzozoa: Dinophyceae): photosynthetic or mixotrophic
-    "Alexandrium", "Amphidinium", "Ceratium", "Cochlodinium", "Dinophysis",
-    "Fragilidium", "Glenodinium", "Gonyaulax", "Gymnodinium", "Heterocapsa",
+    "Alexandrium", "Amphidinium", "Ceratium", "Ceratocorys", "Cochlodinium", "Dinophysis",
+    "Fragilidium", "Glenodinium", "Gonyaulax", "Gymnodinium", "Heterocapsa", "Kryptoperidinium",
     "Lingulodinium", "Parvodinium", "Peridinium", "Prorocentrum",
     "Scrippsiella", "Spiniferodinium", "Takayama", "Thecadinium", "Tripos",
     "Yihiella",

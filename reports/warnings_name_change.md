@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-09-30 22:53:05
+# TaxonBodyMass_DB Species Name Changes -- 2026-09-30 23:02:19
 
 
-## Species name changed during enrichment (5992 rows)
+## Species name changed during enrichment (5991 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -5348,8 +5348,6 @@ Hepialus lupulinus -> Korscheltellus lupulina [GBIF]
 Acanthodelphax spinosa -> Kosswigianella spinosa [GBIF]
 
 Krefftichthys anderssoni; Protomyctophum anderssoni -> Krefftichthys anderssoni [GBIF]
-
-Glenodinium foliaceum -> Kryptoperidinium foliaceum [GBIF]
 
 Kunsia fronto; Gyldenstolpia fronto -> Kunsia fronto [GBIF]
 
