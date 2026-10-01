@@ -9,10 +9,15 @@
 #
 # Sources
 #  Kiorboe:2013aa   Kiørboe T. (2013) Zooplankton body composition. Limnol.
-#                   Oceanogr. 58:1843-1850. Results/Table 1: gelatinous forms
-#                   (cnidarians, ctenophores, pelagic tunicates) converge on dry
-#                   matter 4-5 % and C ~0.5 % of live weight; non-gelatinous
-#                   zooplankton 15-25 % dry matter and 5-10 % C of live weight.
+#                   Oceanogr. 58:1843-1850. Web Appendix Table A1 (raw per-record wet,
+#                   dry and C masses; stored in sources/conversion_factors/Kiorboe_2013,
+#                   downloaded 2026-09-30) gives species-level medians computed by
+#                   summarise_tableA1.py: all crustacean zooplankton DW/WW 0.214 (n=50
+#                   spp), C/WW 0.101 (n=48); gelatinous forms (Cnidaria, Ctenophora,
+#                   Tunicata) DW/WW 0.039 (n=11), C/WW 0.0029 (n=7); Protista C/WW
+#                   0.149 (n=24; 'wet mass' = cell volume at density 1). The paper's
+#                   text ranges (gelatinous 4-5 % dry matter, ~0.5 % C; non-gelatinous
+#                   15-25 % and 5-10 %) agree.
 #  Lucas:2011aa     Lucas C.H. et al. (2011) What's in a jellyfish? Ecology
 #                   92:1704 (Ecological Archives E092-144, body_composition.txt).
 #                   Species medians recomputed 2026-09-27: C (%WW) = 0.46 (Cnidaria,
@@ -23,7 +28,8 @@
 #  Menden-Deuer:2000aa  Menden-Deuer S. & Lessard E.J. (2000) Limnol. Oceanogr.
 #                   45:569-579. Non-diatom protists: pg C = 0.216 * V^0.939
 #                   (V in um^3). With density 1 g cm^-3 this gives C/WW of 0.14 at
-#                   10^3 um^3 and 0.09 at 10^6 um^3; 0.12 is used as the mid-value.
+#                   10^3 um^3 and 0.09 at 10^6 um^3, consistent with the Kiørboe
+#                   Table A1 protist median (0.149) that is used.
 #  Brey:2010aa      Brey T., Müller-Wiegmann C., Zittier Z.M.C. & Hagen W. (2010) Body
 #                   composition in aquatic organisms - a global data bank of relationships
 #                   between mass, elemental composition and energy content. J. Sea Res.
@@ -51,18 +57,20 @@ MassConversionFactors <- data.frame(
             'fish', 'invertebrate', 'mollusc', 'annelid', 'chaetognath', 'echinoderm',
             'helminth', 'vertebrate'),
   # dry mass as a fraction of wet mass
-  dw_per_ww   = c(0.045, 0.20, 0.35, NA,   0.2415, 0.2144, 0.1972, 0.1769, 0.0785, 0.2250, 0.2144, 0.25),
+  dw_per_ww   = c(0.039, 0.214, 0.35, NA,   0.2415, 0.2144, 0.1972, 0.1769, 0.0785, 0.2250, 0.2144, 0.25),
   # ash-free dry mass as a fraction of dry mass
   afdw_per_dw = c(0.70,  0.85, 0.90, NA,   0.8646, 0.8293, 0.8578, 0.8420, 0.8333, 0.4510, 0.8293, 0.85),
-  # carbon mass as a fraction of wet mass (used directly for carbon -> wet)
-  c_per_ww    = c(0.005, 0.075, 0.175, 0.12, 0.0834, 0.0946, 0.0624, 0.0504, 0.0268, 0.0471, 0.0946, 0.11),
+  # carbon mass as a fraction of wet mass (used directly for carbon -> wet);
+  # gelatinous 0.004 sits between Kiørboe A1 (0.0029), Brey Cnidaria (0.0037) and
+  # Lucas 2011 (0.0046-0.0059)
+  c_per_ww    = c(0.004, 0.101, 0.175, 0.149, 0.0834, 0.0946, 0.0624, 0.0504, 0.0268, 0.0471, 0.0946, 0.11),
   citation = c('Kiorboe:2013aa; Lucas:2011aa', 'Kiorboe:2013aa',
-               'Studier:1992aa (dw_per_ww); generic (others)', 'Menden-Deuer:2000aa',
+               'Studier:1992aa (dw_per_ww); generic (others)', 'Kiorboe:2013aa; Menden-Deuer:2000aa',
                'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa',
                'Brey:2010aa (non-gelatinous invertebrates, by analogy)', 'generic'),
   # BM_citations CiteIDs appended to source_mass for converted records (see
   # ConversionCiteIDs); empty where only generic, uncited factors are used.
-  cite_id = c('Kiorboe_2013; Lucas_2011', 'Kiorboe_2013', 'Studier_1992', 'MendenDeuer_2000',
+  cite_id = c('Kiorboe_2013; Lucas_2011', 'Kiorboe_2013', 'Studier_1992', 'Kiorboe_2013; MendenDeuer_2000',
               'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010',
               'Brey_2010', ''),
   verified = c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE),
