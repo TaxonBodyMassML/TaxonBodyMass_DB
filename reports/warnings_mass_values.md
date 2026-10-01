@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-09-29 17:12:29
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-09-30 17:26:20
 
 ## Summary
 
@@ -137,7 +137,7 @@
   - Froese_2025; Froese_2014 (1)
   - Hanlon_1983 (1)
   - Hrycik_2024 (1)
-  - Ikeda_2014 (1)
+  - Ikeda_2014; Brey_2010 (1)
   - Kiorboe_2014; MendenDeuer_2000 (1)
   - Mulder_2011 (1)
   - Mull_etal_2022 (1)
@@ -2214,9 +2214,6 @@ Cheirogaleus major [range=1.56]
 Thymallus thymallus [range=1.56]
         Min_source: Brose_etal_2018 118.3
         Max_source: fishbase 4300
-Cliopsis krohnii [range=1.56]
-        Min_source: Ikeda_2014 0.049
-        Max_source: Pata_2025 1.775
 Praomys jacksoni [range=1.56]
         Min_source: Myhrvold_2015 37.1
         Max_source: vertnet-mammalia-sept2016 1339
@@ -2250,6 +2247,9 @@ Hipposideros jonesi [range=1.55]
 Thysanoessa inermis [range=1.55]
         Min_source: Barnes_2008 0.002413
         Max_source: Ikeda_2014; Kiorboe_2013 0.0865
+Cliopsis krohnii [range=1.55]
+        Min_source: Ikeda_2014; Brey_2010 0.0497
+        Max_source: Pata_2025 1.775
 Rhinocheilus lecontei [range=1.55]
         Min_source: vertnet-reptilia-sept2016 12.12
         Max_source: Myhrvold_2015 432

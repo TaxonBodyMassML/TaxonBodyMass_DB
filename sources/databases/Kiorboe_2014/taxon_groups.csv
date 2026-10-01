@@ -378,7 +378,7 @@ Oikopleura dioica,103407,Oikopleura (Vexillaria) dioica,Animalia,Chordata,Append
 Calanus helgolandicus,104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
 Oncaea mediterranea,128939,Oncaea mediterranea,Animalia,Arthropoda,Copepoda,Cyclopoida,Oncaeidae,crustacean_zooplankton
 Calanus marshallae,196770,Calanus marshallae,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
-Sagitta hispida,105454,Sagitta hispida,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+Sagitta hispida,105454,Sagitta hispida,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,chaetognath
 Engraulis mordax,272286,Engraulis mordax,Animalia,Chordata,Teleostei,Clupeiformes,Engraulidae,fish
 Labidocera euchaeta,346592,Labidocera euchaeta,Animalia,Arthropoda,Copepoda,Calanoida,Pontellidae,crustacean_zooplankton
 Ammodytes americanus,159587,Ammodytes americanus,Animalia,Chordata,Teleostei,Perciformes,Ammodytidae,fish
@@ -464,13 +464,13 @@ Euphausia superba Fucilia III,236217,Euphausia superba,Animalia,Arthropoda,Malac
 Alosa pseudoharengus,158669,Alosa pseudoharengus,Animalia,Chordata,Teleostei,Clupeiformes,Alosidae,fish
 Coregonus hoyi,,,,,,,,fish
 Perca flavescens,275313,Perca flavescens,Animalia,Chordata,Teleostei,Perciformes,Percidae,fish
-Sagitta crassa,268029,Sagitta crassa,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+Sagitta crassa,268029,Sagitta crassa,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,chaetognath
 Oithona similis copepodits,106656,Oithona similis,Animalia,Arthropoda,Copepoda,Cyclopoida,Oithonidae,crustacean_zooplankton
 DiploPsalis lenticula,109876,Gyrodinium spirale,Chromista,Myzozoa,Dinophyceae,Gymnodiniales,Gyrodiniaceae,protist
 "Calanus finmarchicus CV, female",104464,Calanus finmarchicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
 Nyctiphanes australis,237863,Nyctiphanes australis,Animalia,Arthropoda,Malacostraca,Euphausiacea,Euphausiidae,crustacean_zooplankton
-Sagitta elegans,105450,Sagitta elegans,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
-Sagitta enflata,105451,Sagitta enflata,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,invertebrate
+Sagitta elegans,105450,Sagitta elegans,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,chaetognath
+Sagitta enflata,105451,Sagitta enflata,Animalia,Chaetognatha,Sagittoidea,Aphragmophora,Sagittidae,chaetognath
 "Calanus helgolandicus, NIII",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
 "Calanus helgolandicus, NIV",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
 "Calanus helgolandicus, NV",104466,Calanus helgolandicus,Animalia,Arthropoda,Copepoda,Calanoida,Calanidae,crustacean_zooplankton
