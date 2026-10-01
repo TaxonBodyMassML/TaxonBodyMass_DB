@@ -1,15 +1,24 @@
-"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Coleps_spetai","Chromista","Ciliophora","Prostomatea","Prostomatida","Colepidae","Coleps spetai",FALSE,"GBIF","Coleps","Coleps spetai",99,"ACCEPTED","Colepidae","Prostomatida","8196318"
-"Glaucomides_bromelicola","Chromista","Ciliophora","Oligohymenophorea","Hymenostomatida","Bromeliophryidae","Glaucomides bromelicola",FALSE,"GBIF","Glaucomides","Glaucomides bromelicola",99,"ACCEPTED","Bromeliophryidae","Hymenostomatida","9961431"
-"Mesodinium_pulex","Chromista","Ciliophora","Gymnostomatea","Cyclotrichida","Mesodiniidae","Mesodinium pulex",FALSE,"GBIF","Mesodinium","Mesodinium pulex",97,"ACCEPTED","Mesodiniidae","Cyclotrichida","8184117"
-"Mesodinium_rubrum","Chromista","Ciliophora","Gymnostomatea","Cyclotrichida","Mesodiniidae","Mesodinium rubrum",FALSE,"GBIF","Mesodinium","Mesodinium rubrum",99,"ACCEPTED","Mesodiniidae","Cyclotrichida","7985577"
-"Metacylis_angulata","Chromista","Ciliophora","Oligotrichea","Choreotrichida","Metacylididae","Metacylis angulata",FALSE,"GBIF","Metacylis","Metacylis angulata",99,"ACCEPTED","Metacylididae","Choreotrichida","7875927"
-"Parallelostrombidium_siculum","Chromista","Ciliophora","Oligotrichea","Strombidiida","Strombidiidae","Parallelostrombidium siculum",FALSE,"GBIF","Parallelostrombidium","Parallelostrombidium siculum",99,"ACCEPTED","Strombidiidae","Strombidiida","7692189"
-"Pelagostrobilidium_neptuni","Chromista","Ciliophora","Oligotrichea","Choreotrichida","Strobilidiidae","Pelagostrobilidium neptuni",FALSE,"GBIF","Pelagostrobilidium","Pelagostrobilidium neptuni",99,"ACCEPTED","Strobilidiidae","Choreotrichida","7876464"
-"Pelagostrobilidium_spirale","Chromista","Ciliophora","Oligotrichea","Choreotrichida","Strobilidiidae","Pelagostrobilidium spirale",FALSE,"GBIF","Pelagostrobilidium","Pelagostrobilidium spirale",99,"ACCEPTED","Strobilidiidae","Choreotrichida","8413021"
-"Rimostrombidium_lacustre","Chromista","Ciliophora","Oligotrichea","Choreotrichida","Strobilidiidae","Rimostrombidium lacustre",TRUE,"GBIF","Rimostrombidium","Rimostrombidium lacustris",96,"ACCEPTED","Strobilidiidae","Choreotrichida","7397984"
-"Schmidingerella_taraikaensis","Chromista","Ciliophora","Oligotrichea","Choreotrichida","Rhabdonellidae","Schmidingerella taraikaensis",FALSE,"GBIF","Schmidingerella","Schmidingerella taraikaensis",99,"ACCEPTED","Rhabdonellidae","Choreotrichida","7948670"
-"Strobilidium_caudatum","Chromista","Ciliophora","Oligotrichea","Choreotrichida","Strobilidiidae","Strobilidium caudatum",FALSE,"GBIF","Strobilidium","Strobilidium caudatum",97,"ACCEPTED","Strobilidiidae","Choreotrichida","8273294"
-"Strombidium_coronatum","Chromista","Ciliophora","Oligotrichea","Strombidiida","Strombidiidae","Strombidium coronatum",FALSE,"GBIF","Strombidium","Strombidium coronatum",99,"ACCEPTED","Strombidiidae","Strombidiida","8289961"
-"Strombidium_rassoulzadegani","Chromista","Ciliophora","Oligotrichea","Strombidiida","Strombidiidae","Strombidium rassoulzadegani",FALSE,"GBIF","Strombidium","Strombidium rassoulzadegani",99,"ACCEPTED","Strombidiidae","Strombidiida","5839545"
-"Vorticella_natans","Chromista","Ciliophora","Oligohymenophorea","Peritrichida","Vorticellidae","Vorticella natans",TRUE,"GBIF","Pelagovorticella","Pelagovorticella natans",98,"SYNONYM","Vorticellidae","Peritrichida","8040049"
+"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_family","gbif_order","gbif_usageKey"
+"Acanthocephalus_galaxii","Animalia","Acanthocephala","Palaeacanthocephala","Echinorhynchida","Paracanthocephalidae","Acanthocephalus galaxii",FALSE,"WoRMS","Acanthocephalus","Acanthocephalus galaxii",NA,NA,NA
+"Austridotea_annectens","Animalia","Arthropoda","Malacostraca","Isopoda","Idoteidae","Austridotea annectens",FALSE,"NCBI","Austridotea","Austridotea annectens",NA,NA,NA
+"Austridotea_lacustris","Animalia","Arthropoda","Malacostraca","Isopoda","Idoteidae","Austridotea lacustris",FALSE,"NCBI","Austridotea","Austridotea lacustris",NA,NA,NA
+"Bromeliothrix_metopoides",NA,"Ciliophora","Colpodea","Colpodida",NA,"Bromeliothrix metopoides",FALSE,"NCBI","Bromeliothrix","Bromeliothrix metopoides",NA,NA,NA
+"Coitocaecum_parvum","Animalia","Platyhelminthes","Trematoda","Plagiorchiida","Opecoelidae","Coitocaecum parvum",FALSE,"NCBI","Coitocaecum","Coitocaecum parvum",NA,NA,NA
+"Colpidium_colpoda",NA,"Ciliophora","Oligohymenophorea","Hymenostomatida","Turaniellidae","Colpidium colpoda",FALSE,"NCBI","Colpidium","Colpidium colpoda",NA,NA,NA
+"Colpidium_kleini",NA,"Ciliophora","Oligohymenophorea","Hymenostomatida","Turaniellidae","Colpidium kleini",FALSE,"NCBI","Colpidium","Colpidium kleini",NA,NA,NA
+"Euplotes_patella",NA,"Ciliophora","Spirotrichea","Euplotida","Euplotidae","Euplotes patella",FALSE,"NCBI","Euplotes","Euplotes patella",NA,NA,NA
+"Galaxias_argenteus","Animalia","Chordata","Actinopteri","Galaxiiformes","Galaxiidae","Galaxias argenteus",FALSE,"NCBI","Galaxias","Galaxias argenteus",NA,NA,NA
+"Glaucoma_scintillans",NA,"Ciliophora","Oligohymenophorea","Hymenostomatida","Glaucomidae","Glaucoma scintillans",FALSE,"NCBI","Glaucoma","Glaucoma scintillans",NA,NA,NA
+"Gobiomorphus_cotidianus","Animalia","Chordata","Actinopteri","Gobiiformes","Eleotridae","Gobiomorphus cotidianus",FALSE,"NCBI","Gobiomorphus","Gobiomorphus cotidianus",NA,NA,NA
+"Hedruris_spinigera","Animalia","Nematoda","Chromadorea","Rhabditida","Hedruridae","Hedruris spinigera",FALSE,"NCBI","Hedruris","Hedruris spinigera",NA,NA,NA
+"Paracalliope_fluviatilis","Animalia","Arthropoda","Malacostraca","Amphipoda","Paracalliopiidae","Paracalliope fluviatilis",FALSE,"NCBI","Paracalliope","Paracalliope fluviatilis",NA,NA,NA
+"Paracorophium_excavatum","Animalia","Arthropoda","Malacostraca","Amphipoda","Corophiidae","Paracorophium excavatum",FALSE,"NCBI","Paracorophium","Paracorophium excavatum",NA,NA,NA
+"Parallelostrombidium_mirabile",NA,"Ciliophora",NA,"Oligotrichida",NA,"Parallelostrombidium mirabile",FALSE,NA,NA,NA,NA,NA,NA
+"Parallelostrombidium_neptuni",NA,"Ciliophora",NA,"Oligotrichida",NA,"Parallelostrombidium neptuni",FALSE,NA,NA,NA,NA,NA,NA
+"Paratya_curvirostris","Animalia","Arthropoda","Malacostraca","Decapoda","Atyidae","Paratya curvirostris",FALSE,"NCBI","Paratya","Paratya curvirostris",NA,NA,NA
+"Placobdelloides_maorica","Animalia","Annelida","Clitellata","Rhynchobdellida","Glossiphoniidae","Placobdelloides maorica",FALSE,"WoRMS","Placobdelloides","Placobdelloides maorica",NA,NA,NA
+"Rhombosolea_retiaria","Animalia","Chordata","Actinopteri","Pleuronectiformes","Rhombosoleidae","Rhombosolea retiaria",FALSE,"NCBI","Rhombosolea","Rhombosolea retiaria",NA,NA,NA
+"Rimostrombidium_lacustris",NA,"Ciliophora","Spirotrichea","Choreotrichida","Strobilidiidae","Rimostrombidium lacustris",FALSE,"NCBI","Rimostrombidium","Rimostrombidium lacustris",NA,NA,NA
+"Stegodexamene_anguillae","Animalia","Platyhelminthes","Trematoda","Plagiorchiida","Lepocreadiidae","Stegodexamene anguillae",FALSE,"NCBI","Stegodexamene","Stegodexamene anguillae",NA,NA,NA
+"Telogaster_opisthorchis","Animalia","Platyhelminthes","Trematoda","Plagiorchiida","Cryptogonimidae","Telogaster opisthorchis",FALSE,"WoRMS","Telogaster","Telogaster opisthorchis",NA,NA,NA
+"Tenagomysis_chiltoni","Animalia","Arthropoda","Malacostraca","Mysida","Mysidae","Tenagomysis chiltoni",FALSE,"WoRMS","Tenagomysis","Tenagomysis chiltoni",NA,NA,NA

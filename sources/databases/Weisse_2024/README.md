@@ -1,13 +1,8 @@
-# Physiological mortality rates of planktonic ciliates
+# Weisse (2024) planktonic ciliate mortality compilation
 
-## Description of the Data and file structure
+Source: Weisse, T. (2024) Physiological mortality of planktonic ciliates: Estimates, causes, and consequences. Limnology and Oceanography 69:524-532. https://doi.org/10.1002/lno.12503
+Data: Dryad https://doi.org/10.5061/dryad.cnp5hqc99 (CC0): `dataset_v2.xlsx` (102 experiments, 65 name strings), `Units_table.xlsx`, `References.xlsx`, and the Dryad README (`README_dryad.md`); downloaded by M. Novak 2026-10-01.
 
-I used ISI Web of Science and Google Scholar to search for experiments that measured growth and mortality rates of ciliates as a function of prey concentration (i.e. numerical responses). The main dataset containing available experimental studies reporting ciliate species, experimental temperature, prey species, ciliate maximum growth rates, ciliate cell volumes, habitat of ciliate isolation, method of study and reported or calculated ciliate mortality
-rates are reported in the 'Dataset_v2.xlsx' file. This is the main document. Missing data codes: N.A. = not available; n/a = not applicable.
-More details about each column of the main document can be found in the  'Units_table.xlsx' file.
-Details on the references - i.e. authors, publication year, title, journal/book, volume and page/article numbers -
-used to compile this dataset can be found in 'References.xlsx'.
-
-## Sharing/access Information
-
-The individual data were derived mainly from the ISI Web of Science. The data compilation is novel.
+Columns used: `species`, `volume` (cell volume, µm³), `order`.
+Filters: abbreviated genus names expanded (C. = Colpidium, F. = Favella, H. = Histiobalantium, P. = Parallelostrombidium, R. = Rimostrombidium, S. = Strombidinopsis, Str. = Strombidium, T. = Tintinnopsis, U. = Urotricha, V. = Vorticella; verified against the order column); 'sp.' and 'cf.' entries dropped; 47 species.
+Mass type: cell volume converted to wet mass at unit density (1 µm³ = 1e-12 g) with CellVolumeToWetMass(); no literature factor involved, so no conversion CiteID is appended.

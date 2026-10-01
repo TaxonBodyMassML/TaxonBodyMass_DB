@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-01 08:43:06
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-01 09:08:38
 
 ## Summary
 
@@ -70,10 +70,10 @@
   - Reum_2012 (1)
   - Viana_2016 (1)
   - Wilman_etal_2014 (1)
-- Moderate mass disagreement (log10 range 1-2): 917 species
+- Moderate mass disagreement (log10 range 1-2): 919 species
 - Suspicious sources (log10 1-2, by frequency):
   - Brose_etal_2018 (161)
-  - Cai_etal_2025 (160)
+  - Cai_etal_2025 (161)
   - Myhrvold_2015 (125)
   - vertnet-aves-sept2016 (106)
   - fishbase (87)
@@ -86,7 +86,7 @@
   - Quaardvark (50)
   - Brown_etal_2018 (49)
   - Meiri_2024 (49)
-  - Castro_2025 (43)
+  - Castro_2025 (42)
   - Hoehler_etal_2023 (40)
   - Makarieva_2008 (39)
   - AnAge (38)
@@ -99,8 +99,8 @@
   - Herberstein_etal_2022 (21)
   - Mahe_2023 (19)
   - vertnet-fishes-sept2016 (18)
+  - DeLong_etal_2010 (15)
   - Uyeda_etal_2017 (15)
-  - DeLong_etal_2010 (14)
   - Killen_etal_2016 (14)
   - Hirt_etal_2017 (13)
   - Tobias_2022 (13)
@@ -131,6 +131,7 @@
   - Chown_etal_2007 (3)
   - Hechinger_etal_2011 (3)
   - Kiorboe_2013; Brey_2010 (3)
+  - Lagrue_etal_2014 (3)
   - Verberk_2020 (3)
   - AndersonGillooly_2017 (2)
   - Ikeda_2014; Brey_2010 (2)
@@ -140,13 +141,13 @@
   - Eklof_etal_2017 (1)
   - Froese_2025; Froese_2014 (1)
   - Hanlon_1983 (1)
-  - Hrycik_2024 (1)
   - Kiorboe_2013; Lucas_2011 (1)
   - Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000 (1)
   - Mathieu_2014 (1)
   - Mulder_2011 (1)
   - Mull_etal_2022 (1)
   - Watson_2007 (1)
+  - Weisse_2024 (1)
 ## log10(max/min mass) > 2 after dedup (435 species) -- likely misresolution or unit error
 
 Gadus morhua [range=11.04]
@@ -1455,7 +1456,7 @@ Caranx ruber [range=2.00]
         Min_source: Viana_2016 81.9
         Max_source: Froese_2025 8200
 
-## Moderate mass disagreement (log10 range 1-2) (917 species)
+## Moderate mass disagreement (log10 range 1-2) (919 species)
 
 Balaenoptera musculus [range=2.00]
         Min_source: Brose_etal_2018 1.9e+06
@@ -3041,6 +3042,9 @@ Odontaster meridionalis [range=1.29]
 Anguilla japonica [range=1.29]
         Min_source: Makarieva_2008 325
         Max_source: Cai_etal_2025 6330
+Anguilla australis [range=1.29]
+        Min_source: Lagrue_etal_2014 366.5
+        Max_source: fishbase 7132
 Boa constrictor [range=1.29]
         Min_source: Herberstein_etal_2022 1829
         Max_source: Feldman_etal_2016 3.528e+04
@@ -3245,6 +3249,9 @@ Sylvia minula [range=1.22]
 Cuora amboinensis [range=1.22]
         Min_source: vertnet-traits-sept2016 60.3
         Max_source: Cai_etal_2025 1000
+Galaxias maculatus [range=1.22]
+        Min_source: Lagrue_etal_2014 3.944
+        Max_source: Cai_etal_2025 64.9
 Pholidoscelis auberi [range=1.22]
         Min_source: vertnet-traits-sept2016 4.7
         Max_source: Meiri_2018 77.32
@@ -3335,6 +3342,9 @@ Pegea confoederata [range=1.19]
 Pterodroma defilippiana [range=1.19]
         Min_source: vertnet-aves-sept2016 11.34
         Max_source: Myhrvold_2015 175.2
+Favella ehrenbergii [range=1.19]
+        Min_source: Weisse_2024 1.68e-08
+        Max_source: DeLong_etal_2010 2.595e-07
 Lagopus leucura [range=1.19]
         Min_source: Hoehler_etal_2023 25.14
         Max_source: Quaardvark 387.5
@@ -3860,6 +3870,9 @@ Caranx lugubris [range=1.07]
 Hexaprotodon liberiensis [range=1.07]
         Min_source: vertnet-traits-sept2016 1.982e+04
         Max_source: Faurby_etal_2018 2.35e+05
+Potamopyrgus antipodarum [range=1.07]
+        Min_source: Brose_2005 0.0006584
+        Max_source: Lagrue_etal_2014 0.007796
 Evadne nordmanni [range=1.07]
         Min_source: Hebert_etal_2016; Kiorboe_2013 7.944e-06
         Max_source: Brose_etal_2018 9.39e-05
@@ -3965,9 +3978,6 @@ Hippocampus kuda [range=1.05]
 Lampronycteris brachyotis [range=1.05]
         Min_source: vertnet-mammalia-sept2016 1
         Max_source: Tsuboi_etal_2018 11.25
-Potamopyrgus antipodarum [range=1.05]
-        Min_source: Brose_2005 0.0006584
-        Max_source: Hrycik_2024 0.00738
 Lasiorhinus krefftii [range=1.05]
         Min_source: Smith_2003 2900
         Max_source: Quaardvark 3.25e+04
@@ -3992,9 +4002,6 @@ Bothrops ammodytoides [range=1.04]
 Ptyodactylus puiseuxi [range=1.04]
         Min_source: Meiri_2024 1.7
         Max_source: Feldman_etal_2016 18.8
-Anguilla australis [range=1.04]
-        Min_source: Castro_2025 646.5
-        Max_source: fishbase 7132
 Hippopotamus amphibius [range=1.04]
         Min_source: Brown_etal_2018 3.399e+05
         Max_source: AnAge 3.75e+06

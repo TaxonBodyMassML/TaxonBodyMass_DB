@@ -243,6 +243,13 @@ if (!fresh_start && file.exists(cache_path)) {
   ))
   if (nrow(new_taxa) > 0) {
     new_enriched <- EnrichTaxonomy(new_taxa)
+    # When an API chunk fails outright the new rows carry all-NA columns of the
+    # wrong type (e.g. character gbif_usageKey); coerce to the cache's types
+    # before binding so a transient outage cannot abort the run.
+    for (col in intersect(names(enrich_cache), names(new_enriched))) {
+      if (!identical(class(enrich_cache[[col]]), class(new_enriched[[col]])))
+        new_enriched[[col]] <- methods::as(new_enriched[[col]], class(enrich_cache[[col]])[1])
+    }
     enrich_cache <- bind_rows(enrich_cache, new_enriched)
   }
 } else {

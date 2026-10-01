@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-01 08:43:06
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-01 09:08:38
 
 
 ## Species name changed during enrichment (6021 rows)
@@ -9861,7 +9861,7 @@ Chlorostilbon swainsonii -> Riccordia swainsonii [GBIF]
 
 Ridgwayia pinicola; Zoothera pinicola -> Ridgwayia pinicola [GBIF]
 
-Rimostrombidium lacustre -> Rimostrombidium lacustris [GBIF]
+Rimostrombidium lacustre; Rimostrombidium lacustris -> Rimostrombidium lacustris [GBIF; NCBI]
 
 Rimostrombidium veniliae; Strobilidium veniliae -> Rimostrombidium veniliae [GBIF]
 

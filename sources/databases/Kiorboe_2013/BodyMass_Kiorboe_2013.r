@@ -1,15 +1,14 @@
 # Kiørboe (2013) Limnology and Oceanography 58:1843-1850, Web Appendix Table A1:
 # per-record wet, dry and carbon masses (mg) of marine zooplankton and protists
-# compiled from 18 literature sources. The parsed table lives in
-# sources/conversion_factors/Kiorboe_2013/Kiorboe2013_TableA1.csv (it also supplies
-# the zooplankton conversion factors). Wet mass is used where reported; otherwise
+# compiled from 18 literature sources. The parsed table (Kiorboe2013_TableA1.csv) is
+# kept in this folder; a copy also sits in sources/conversion_factors/Kiorboe_2013,
+# where it supplies the zooplankton conversion factors. Wet mass is used where reported; otherwise
 # dry mass, then carbon mass, is converted to wet grams with the group factors in
 # R/library/mass_conversion.r. Protist 'wet mass' in the source is cell volume at
 # density 1; gastropod wet mass includes the shell.
 # Juvenile stages (copepodite CI-CV, Roman-numeral stages below VI, larvae, juv) are
 # dropped; adult markers (female, male, CVI/VI, aggregate, solitary) are stripped.
-a1_path <- file.path(wd_source, '..', '..', 'conversion_factors', 'Kiorboe_2013',
-                     'Kiorboe2013_TableA1.csv')
+a1_path <- file.path(wd_source, 'Kiorboe2013_TableA1.csv')
 adat <- read.csv(a1_path, header = TRUE, check.names = FALSE, stringsAsFactors = FALSE,
                  na.strings = c('', 'NA'), encoding = 'UTF-8')
 Num <- function(x) suppressWarnings(as.numeric(gsub('[−–]', '-', x)))
