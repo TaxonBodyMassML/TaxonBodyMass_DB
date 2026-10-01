@@ -172,3 +172,9 @@ Owner decisions: Benesh 2017, Nemaplex (not a citable publication), Preston 2012
 
 - **Ingested**: Brocher_etal_2025 (1,360 arthropods; length-derived live mass, mg), Mull_etal_2022 (Sharkipedia 'Body Mass' records only, 20 species, g/kg converted), Hishi_etal_2019 (380 Japanese Collembola; trait and taxon tables joined on spID1/spID2; dry ug -> wet with the insect factor), Mathieu_2014 (97 French earthworms, maximum fresh mass from Bouché 1972), Cohen_2014 (SIZEWEB, 206 soil invertebrate genera; log10 ug dry mass, wet recovered with the source's own 0.20 ratio; genus-level output only), Mulder_2011 (104 soil nematode species, adults; dry ug from Andrássy volume, wet recovered with the source's own 0.20 ratio).
 - Offsets vs existing DB values: Brocher +0.03 (n=192), Mull -0.18 (9), Mathieu +0.35 (10; maxima), Mulder +0.50 (13), Hishi +0.81 (18) log10.
+
+## Round 4 (2026-10-01)
+
+- Wang & Zhao (2026, Biology 15:84) Table S1 was screened for its sources only (owner did not want its data): Ehnes et al. 2011, White et al. 2006, Makarieva et al. 2008 and FishBase. Only Ehnes 2011 was absent from the DB; White 2006 enters through Uyeda 2017.
+- **Ingested**: Ehnes_etal_2011 (Wiley supplement Appendix a, parsed from PDF; 494 species of soil invertebrates, live mass; median offset 0.00 against 293 overlapping DB species).
+- Kiorboe_2013 Table A1 was also ingested as a body-mass source (159 species, mostly already present).

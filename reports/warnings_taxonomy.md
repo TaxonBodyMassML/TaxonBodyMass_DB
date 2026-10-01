@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-30 23:12:55
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-01 08:19:39
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 167 rows
+- Low GBIF confidence (75-89): 174 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -50,7 +50,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (167 rows)
+## Low GBIF confidence (75-89) (174 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -68,11 +68,13 @@ Aethopyga_pulcherrima [conf=85]
 
 Euatideus_giesbrechti [conf=84]
 
+Aglelenopsis_aperta [conf=85]
+
 Aglaeactis_cupripennis [conf=85]
 
 Ailuroedus_buccoides [conf=85]
 
-Alaskozeres_antarcticus [conf=85]
+Alaskozetes_antarcticus [conf=85]
 
 Alectoris_chukar [conf=85]
 
@@ -86,7 +88,11 @@ Anurogryllus_arboreus [conf=85]
 
 Aphinius_fasciatus [conf=80]
 
+Aporrectodea_caliginosa [conf=85]
+
 Aporectodea_longa [conf=85]
+
+Aporrectodea_rosea [conf=85]
 
 Blattela_germanica [conf=85]
 
@@ -137,6 +143,8 @@ Coeloesis_biloba [conf=85]
 Colletheca_mutabilis [conf=85]
 
 Colobonema_sericeum [conf=85]
+
+Thiodana_sylvana [conf=84]
 
 Columbina_inca [conf=84]
 
@@ -192,6 +200,8 @@ Halobaena_caerulea [conf=85]
 
 Harlomilsia_oculata [conf=85]
 
+Pseudophonus_rufipes [conf=84]
+
 Heliodoxa_xanthogonys [conf=85]
 
 Heterophasia_desgodinsi [conf=85]
@@ -228,9 +238,11 @@ Gonocephalus_robinsonii [conf=84]
 
 Megarynchus_pitangua [conf=85]
 
+Menemeruns_bivittatus [conf=85]
+
 Micanurida_forsslundi [conf=85]
 
-Misumenoidea_formosipes [conf=85]
+Misumenoides_formosipes [conf=85]
 
 Munidia_rugosa [conf=85]
 
@@ -275,6 +287,8 @@ Mastigodryas_bifossatus [conf=84]
 Gallicolumba_jobiensis [conf=84]
 
 Panagaeus_bipustulatus [conf=85]
+
+Pardos_astrigera [conf=85]
 
 Pareledone_charcoti [conf=80]
 
@@ -364,7 +378,7 @@ Trachurus_japonicus [conf=85]
 
 Trachylepis_albilabris [conf=84]
 
-Triaenogenius_sculpturatus [conf=80]
+Triaenogeius_scupturatus [conf=80]
 
 Trypanosoma_lewisi [conf=84]
 
