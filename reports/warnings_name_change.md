@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-01 08:19:39
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-01 08:43:06
 
 
-## Species name changed during enrichment (6019 rows)
+## Species name changed during enrichment (6021 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -8115,9 +8115,11 @@ Pegea confoederata; Pegea confederata -> Pegea confoederata [GBIF]
 
 Martes pennanti -> Pekania pennanti [GBIF]
 
-Strobilidium neptuni -> Pelagostrobilidium neptuni [GBIF]
+Strobilidium neptuni; Pelagostrobilidium neptuni -> Pelagostrobilidium neptuni [GBIF]
 
-Strobilidium spirales; Strobilidium spiralis -> Pelagostrobilidium spirale [GBIF]
+Strobilidium spirales; Strobilidium spiralis; Pelagostrobilidium spirale -> Pelagostrobilidium spirale [GBIF]
+
+Vorticella natans -> Pelagovorticella natans [GBIF]
 
 Pelargopsis capensis; Halcyon capensis; Pelargopsis malaccensis -> Pelargopsis capensis [GBIF; NCBI]
 
@@ -9859,6 +9861,8 @@ Chlorostilbon swainsonii -> Riccordia swainsonii [GBIF]
 
 Ridgwayia pinicola; Zoothera pinicola -> Ridgwayia pinicola [GBIF]
 
+Rimostrombidium lacustre -> Rimostrombidium lacustris [GBIF]
+
 Rimostrombidium veniliae; Strobilidium veniliae -> Rimostrombidium veniliae [GBIF]
 
 Lygosoma albopunctata -> Riopa albopunctata [GBIF]
@@ -10091,7 +10095,7 @@ Asthenes palpebralis; Schizoeaca palpebralis -> Schizoeaca palpebralis [GBIF]
 
 Asthenes vilcabambae; Asthenes ayacuchensis; Schizoeaca vilcabambae -> Schizoeaca vilcabambae [GBIF]
 
-Favella taraikaensis -> Schmidingerella taraikaensis [GBIF]
+Favella taraikaensis; Schmidingerella taraikaensis -> Schmidingerella taraikaensis [GBIF]
 
 Schoenicola platyura; Schoenicola platyurus -> Schoenicola platyurus [GBIF]
 
@@ -10741,7 +10745,7 @@ Strix virgata; Ciccaba virgata -> Strix virgata [GBIF]
 
 Strix woodfordii; Ciccaba woodfordii -> Strix woodfordii [GBIF]
 
-Strobilidium gyrans -> Strobilidium caudatum [GBIF]
+Strobilidium gyrans; Strobilidium caudatum -> Strobilidium caudatum [GBIF]
 
 Strombidinopsis acuminatum; Strombidinopsis acuminata -> Strombidinopsis acuminata [GBIF]
 
