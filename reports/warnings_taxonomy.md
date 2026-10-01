@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-30 17:35:49
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-09-30 22:53:05
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 163 rows
+- Low GBIF confidence (75-89): 167 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -50,7 +50,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (163 rows)
+## Low GBIF confidence (75-89) (167 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -154,6 +154,8 @@ Cymberemaeus_cymba [conf=85]
 
 Hypocyphtus_discoideus [conf=84]
 
+Cyphocaris_challengeri [conf=85]
+
 Cyrtonyx_montezumae [conf=85]
 
 Dendronanthus_indicus [conf=85]
@@ -165,6 +167,8 @@ Edwarzetes_edwardsii [conf=85]
 Epishura_lacustris [conf=85]
 
 Eryhtrops_erythrophthalma [conf=83]
+
+Eukrohnia_fowleri [conf=85]
 
 Eumicotremus_derjugini [conf=83]
 
@@ -197,6 +201,8 @@ Hippocamelus_bisulcus [conf=80]
 Hophlosphyrum_griseus [conf=85]
 
 Hyperchirica_nausica [conf=85]
+
+Idothea_metallica [conf=85]
 
 Inarchus_dorsettensis [conf=85]
 
@@ -247,6 +253,8 @@ Neosiluris_ater [conf=85]
 Neotetracus_sinensis [conf=85]
 
 Neptunia_antiqua [conf=85]
+
+Noctiluca_miliaris [conf=80]
 
 Nothobalanus_flosculus [conf=85]
 
