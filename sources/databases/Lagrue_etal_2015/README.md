@@ -1,6 +1,6 @@
 # Lagrue, Poulin & Cohen (2015, online 2014) New Zealand lake metazoan community
 
-Source: Lagrue, C., Poulin, R., & Cohen, J. E. (2015) Parasitism alters three power laws of scaling in a metazoan community: Taylor's law, density-mass allometry, and variance-mass allometry. PNAS 112:1791-1796 (published online December 2014, hence the folder name). https://doi.org/10.1073/pnas.1422475112
+Source: Lagrue, C., Poulin, R., & Cohen, J. E. (2015) Parasitism alters three power laws of scaling in a metazoan community: Taylor's law, density-mass allometry, and variance-mass allometry. PNAS 112:1791-1796 (published online December 2014). https://doi.org/10.1073/pnas.1422475112
 Data: PNAS Supporting Information `pnas.1422475112.sd01.txt` (Dataset S1, 733 rows: species x life stage x lake x season) and `pnas.1422475112.sapp.pdf` (SI Appendix); downloaded by M. Novak 2026-10-01.
 
 Columns used: `Species`, `Life stage`, `Body mass (mg)`, `Taxonomic group`.

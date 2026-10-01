@@ -181,7 +181,7 @@ Owner decisions: Benesh 2017, Nemaplex (not a citable publication), Preston 2012
 
 ## Round 5 (2026-10-01): protist volumes, Lagrue 2014/2015, BacDive assessment
 
-- **Ingested**: Lukic_2022 (42 ciliate species) and Weisse_2024 (46 ciliate species; abbreviated genus names expanded) with cell volume -> wet mass at unit density; median offsets -0.03 and -0.01 log10 against 32-34 overlapping species. Lagrue_etal_2014 (PNAS 2015 Dataset S1; 24 adult species of New Zealand lake fish, invertebrates and parasites; wet mass).
+- **Ingested**: Lukic_2022 (42 ciliate species) and Weisse_2024 (46 ciliate species; abbreviated genus names expanded) with cell volume -> wet mass at unit density; median offsets -0.03 and -0.01 log10 against 32-34 overlapping species. Lagrue_etal_2015 (PNAS 2015 Dataset S1; 24 adult species of New Zealand lake fish, invertebrates and parasites; wet mass).
 - Kiorboe_2013 data files now duplicated inside sources/databases/Kiorboe_2013 (copy retained under sources/conversion_factors).
 - RunMe.r: enrichment-cache merge made type-safe after a GBIF outage aborted a run (character vs numeric gbif_usageKey).
 - **BacDive** (api.bacdive.dsmz.de, CC BY 4.0, no login as of 2026): no mass or volume field. Cell morphology holds `cell length` / `cell width` as text ranges in um (e.g. '1.5-6.0 um') plus `cell shape`; roughly 6% of ~100,000 strains carry both dimensions (several thousand species, mostly type strains). Mass would require parsing the ranges, a shape-based volume (spherocylinder for rods, sphere for cocci) and a density (~1.1 g cm^-3); Madin et al. 2020 already merged these dimensions as diameter/length bounds, so starting from Madin's species table is the cheaper route. No published precedent converts BacDive dimensions to mass.

@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-01 09:08:38
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-01 09:21:00
 
 ## Summary
 
@@ -131,7 +131,7 @@
   - Chown_etal_2007 (3)
   - Hechinger_etal_2011 (3)
   - Kiorboe_2013; Brey_2010 (3)
-  - Lagrue_etal_2014 (3)
+  - Lagrue_etal_2015 (3)
   - Verberk_2020 (3)
   - AndersonGillooly_2017 (2)
   - Ikeda_2014; Brey_2010 (2)
@@ -3043,7 +3043,7 @@ Anguilla japonica [range=1.29]
         Min_source: Makarieva_2008 325
         Max_source: Cai_etal_2025 6330
 Anguilla australis [range=1.29]
-        Min_source: Lagrue_etal_2014 366.5
+        Min_source: Lagrue_etal_2015 366.5
         Max_source: fishbase 7132
 Boa constrictor [range=1.29]
         Min_source: Herberstein_etal_2022 1829
@@ -3250,7 +3250,7 @@ Cuora amboinensis [range=1.22]
         Min_source: vertnet-traits-sept2016 60.3
         Max_source: Cai_etal_2025 1000
 Galaxias maculatus [range=1.22]
-        Min_source: Lagrue_etal_2014 3.944
+        Min_source: Lagrue_etal_2015 3.944
         Max_source: Cai_etal_2025 64.9
 Pholidoscelis auberi [range=1.22]
         Min_source: vertnet-traits-sept2016 4.7
@@ -3872,7 +3872,7 @@ Hexaprotodon liberiensis [range=1.07]
         Max_source: Faurby_etal_2018 2.35e+05
 Potamopyrgus antipodarum [range=1.07]
         Min_source: Brose_2005 0.0006584
-        Max_source: Lagrue_etal_2014 0.007796
+        Max_source: Lagrue_etal_2015 0.007796
 Evadne nordmanni [range=1.07]
         Min_source: Hebert_etal_2016; Kiorboe_2013 7.944e-06
         Max_source: Brose_etal_2018 9.39e-05
