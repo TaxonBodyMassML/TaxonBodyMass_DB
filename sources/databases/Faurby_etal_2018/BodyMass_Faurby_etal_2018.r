@@ -1,4 +1,7 @@
 adat <- read.csv(file.path(wd_source, 'Trait_data.csv'), header = TRUE)
+# Keep extant species only: drop IUCN status EP (extinct in prehistory),
+# EX (extinct) and EW (extinct in the wild).
+adat <- adat[!(adat$IUCN.Status.1.2 %in% c('EP', 'EX', 'EW')), ]
 taxon_tax <- adat[, c('Binomial.1.2', 'Order.1.2', 'Family.1.2')]
 taxon_tax <- taxon_tax[!duplicated(taxon_tax$Binomial.1.2), ]
 taxon_tax$order  <- iconv(as.character(taxon_tax$Order.1.2),  to = 'ASCII//TRANSLIT')

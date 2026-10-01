@@ -1,12 +1,12 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-01 09:21:00
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-01 09:52:31
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
-- High mass disagreement (log10 range > 2): 435 species
+- High mass disagreement (log10 range > 2): 434 species
 - Suspicious sources (log10 > 2, by frequency):
   - Cai_etal_2025 (91)
-  - vertnet-mammalia-sept2016 (68)
+  - vertnet-mammalia-sept2016 (67)
   - Brose_etal_2018 (62)
   - DeLong_etal_2018 (48)
   - fishbase (41)
@@ -27,7 +27,7 @@
   - Hoehler_etal_2023 (15)
   - Tobias_2022 (13)
   - Tsuboi_etal_2018 (13)
-  - Faurby_etal_2018 (12)
+  - Faurby_etal_2018 (11)
   - sealifebase (11)
   - Feldman_etal_2016 (9)
   - Killen_etal_2016 (9)
@@ -148,7 +148,7 @@
   - Mull_etal_2022 (1)
   - Watson_2007 (1)
   - Weisse_2024 (1)
-## log10(max/min mass) > 2 after dedup (435 species) -- likely misresolution or unit error
+## log10(max/min mass) > 2 after dedup (434 species) -- likely misresolution or unit error
 
 Gadus morhua [range=11.04]
         Min_source: DeLong_etal_2018 0.1367
@@ -924,9 +924,6 @@ Anguilla dieffenbachii [range=2.61]
 Macrovipera lebetinus [range=2.60]
         Min_source: Meiri_2024 12.1
         Max_source: Feldman_etal_2016 4770
-Onychogalea lunata [range=2.59]
-        Min_source: vertnet-mammalia-sept2016 9
-        Max_source: Faurby_etal_2018 3500
 Acipenser gueldenstaedtii [range=2.58]
         Min_source: Makarieva_2008 208
         Max_source: Cai_etal_2025 7.929e+04

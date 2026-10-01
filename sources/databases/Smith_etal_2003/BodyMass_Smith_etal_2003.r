@@ -1,4 +1,11 @@
-adat <- read.csv(file.path(wd_source, 'MOMv10.2.csv'))
+# MOM v10.2 (Smith et al. 2003, updated). The xlsx sheet 'MOM v10.0' carries a
+# 'Status' column (extant / extinct / historical / introduction) that the csv
+# export lacks; only extant (incl. introduced) species are kept so that Late
+# Quaternary and historically extinct mammals do not enter the database.
+adat <- readxl::read_excel(file.path(wd_source, 'MOM v10.2.xlsx'), sheet = 'MOM v10.0')
+adat <- as.data.frame(adat); names(adat) <- trimws(names(adat))
+adat <- adat[!is.na(adat$Genus) & tolower(trimws(adat$Status)) %in% c('extant', 'introduction', 'introduced'), ]
+names(adat)[names(adat) == 'Combined.Mass (g)'] <- 'Combined.Mass..g.'
 taxon_tax <- adat[, c('Genus', 'Species', 'Order', 'FAMILY')]
 taxon_tax$taxon  <- paste(taxon_tax$Genus, taxon_tax$Species, sep = '_')
 taxon_tax$order  <- iconv(as.character(taxon_tax$Order),  to = 'ASCII//TRANSLIT')

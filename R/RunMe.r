@@ -77,6 +77,7 @@ source(file.path(wd_root, 'R', 'library', 'enrich_taxonomy.r'))
 source(file.path(wd_root, 'R', 'library', 'check_enriched.r'))
 source(file.path(wd_root, 'R', 'library', 'remove_high_range.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_autotrophs.r'))
+source(file.path(wd_root, 'R', 'library', 'filter_extinct.r'))
 
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
 dir.create(file.path(wd_root, 'reports'),      showWarnings = FALSE)
@@ -162,6 +163,8 @@ source_list <- lapply(source_list, function(df) {
 source_list <- lapply(source_list, FixMisspellings)
 # drop non-species and (some) non-autotroph entries
 source_list <- lapply(source_list, RemoveNonTaxa)
+# drop extinct taxa (list compiled from MOM, PHYLACINE and AVONET status columns)
+source_list <- lapply(source_list, RemoveExtinct)
 
 # Apply audit-flagged mass corrections
 # (Additional single-source corrections are applied in the lab Google Sheet override.)

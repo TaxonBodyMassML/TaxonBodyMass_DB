@@ -18,6 +18,7 @@ The pipeline is written in R. The main entry point is `R/RunMe.r`, which orchest
    - `R/library/fix_formatting.r` — normalizes encoding, whitespace, capitalization, and truncates subspecific epithets to binomials
    - `R/library/fix_misspellings.r` — corrects known misspellings
    - `R/library/fix_nontaxa.r` — removes placeholder identifiers, functional-group labels, and other non-taxon entries
+   - `R/library/filter_extinct.r` — removes extinct species (list in `R/library/extinct_taxa.csv`, compiled by `sources/extinct_taxa/build_extinct_taxa.r` from the status columns of MOM v10.2, PHYLACINE 1.2 and AVONET); the MOM and PHYLACINE scripts also drop their own extinct rows
 
 3. **Google Sheet override** — lab-curated values (`BM_data` tab) replace all compiled records for the same taxon.
 
