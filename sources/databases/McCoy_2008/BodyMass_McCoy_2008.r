@@ -18,16 +18,35 @@
 # mass", but the 'dry mass' column is only wet mass / 4 where the reference
 # supplied a wet mass; the reference code decides the unit, so the rules below
 # are keyed on group x ref (owner decisions of 2026-10-02, issue #7):
-#  1. Bird, Mammal, Fish (all refs): the references are wet-mass compilations
-#     (Carey & Judge 2000, Dunning 1993, Ricklefs 1998, Smith et al. 2003;
-#     Pauly's 1980 asymptotic weights and the other fish references), so wet mass
-#     is recovered by inverting the source's own ratio, mass_g = value / 0.25
-#     (Accipiter gentilis 256.1 x 4 = 1,024.4 g, the mean of the male and female
-#     masses in Dunning; ratio of other sources to these values 3.999 for birds,
-#     4.000 for mammals; fish values are stock asymptotic weights). No external
-#     factor is involved, so no conversion CiteID is appended (precedent:
-#     Cohen_2014, Mulder_2011). Parus inornatus (blank ref) belongs to refs 1,2
-#     and is kept.
+#  1. Bird and Mammal (all refs) and Fish refs 5 (Pauly 1980 asymptotic weights,
+#     175 rows), 4 (Gillooly et al. 2001 killifish), 7 (Childress et al. 1980
+#     mesopelagic fish), 8,9 (Latimeria) and 9,12 / 9,13 / 9,14 (orange roughy,
+#     grenadiers): the references supplied wet masses, so wet mass is recovered
+#     by inverting the source's own ratio, mass_g = value / 0.25 (Accipiter
+#     gentilis 256.1 x 4 = 1,024.4 g, the mean of the male and female masses in
+#     Dunning; ratio of other sources to these values 3.999 for birds, 4.000 for
+#     mammals; the x4 fish values sit at a median 0.34 of the FishBase maximum
+#     published weight for Pauly's stocks and at 0.26-0.84 for the other refs,
+#     Latimeria 80 kg = the literature value). No external factor is involved, so
+#     no conversion CiteID is appended (precedent: Cohen_2014, Mulder_2011).
+#     Parus inornatus (blank ref) belongs to refs 1,2 and is kept. Cathartes aura
+#     is dropped: the appendix prints 3.668E+03 g 'dry', already twice the wet
+#     mass of a turkey vulture (1.4-2.0 kg; 12 other sources in this database), a
+#     decimal-exponent error that x4 would turn into 14.7 kg; the value is not
+#     'corrected'.
+#  1b. Fish refs 9,10,11 (Cailliet et al. 2001 and Orr et al. 1998; 40 Sebastes
+#     and Sebastolobus rows): the printed values are already wet maximum-type
+#     weights, not wet / 4: they sit at a median 0.39 of the FishBase maximum
+#     published weight (37 species with a maximum) and at 1.01x the other
+#     sources' adult masses, where Pauly's validated values reach 0.34 and 1.6
+#     only after x4; x4 would exceed the FishBase maximum for 27 of the 37
+#     species (S. aleutianus 9.38 kg -> 37.5 kg). Used as printed (x1).
+#  1c. Fish ref 6 (Mauchline 1988: Benthosema glaciale, Cyclothone braueri,
+#     Lampanyctus macdonaldi, Maurolicus muelleri): neither reading fits; x4
+#     gives 10x the other sources' masses and exceeds the maximum size of
+#     Cyclothone braueri (0.52 g vs 0.44 g at the maximum length), x1 puts
+#     asymptotic weights at 0.03 of the maximum; the unit is undeterminable and
+#     the four rows are excluded (DropImputed).
 #  2. Invertebrate, ref 25 (Brey 2001 data bank, 117 rows): the values are kJ
 #     per mean individual, not grams (the temperatures end in .x5, i.e. Kelvin -
 #     273.15, as in Brey's data bank; as grams or x4 grams the values exceed the
@@ -98,8 +117,11 @@ inv    <- adat$group == 'Invertebrate'
 # ---- rule per record, keyed on group x ref (see header) -----------------------
 zooplankton <- c('Daphnia', 'Acanthocyclops', 'Cyclops', 'Eucyclops', 'Mesocyclops',
                  'Keratella', 'Filinia', 'Notholca')
+fish <- adat$group == 'Fish'
 rule <- rep(NA_character_, nrow(adat))
 rule[!inv] <- 'quarter'                                                        # 1
+rule[fish & adat$ref == '9,10,11'] <- 'asis'                                    # 1b
+rule[fish & adat$ref == '6'] <- 'drop_fish6'                                    # 1c
 rule[inv & adat$ref == '25'] <- 'energy'                                        # 2
 rule[inv & adat$ref == '4' & genus %in% c('Gammarus', 'Siliqua')] <- 'quarter'  # 3
 rule[inv & adat$ref == '4' & genus %in% zooplankton] <- 'drop_zooplankton'      # 3
@@ -117,6 +139,9 @@ adat$rule <- rule
 # Nucella lapillus (ref 25): 2.060E+01 in the appendix, 2.06 in Brown et al.'s copy;
 # the value is ambiguous between the two publications, so the record is dropped.
 adat <- adat[!(adat$rule == 'energy' & adat$taxon == 'Nucella lapillus'), ]
+# Cathartes aura (refs 1,2): printed 3.668E+03 g 'dry', twice a turkey vulture's wet
+# mass before any x4; a decimal-exponent error in the appendix, dropped (see header).
+adat <- adat[!(adat$group == 'Bird' & adat$taxon == 'Cathartes aura'), ]
 
 # ---- rule 2: energy (kJ) -> whole wet mass, class/order from the genus --------
 energy_group <- c(
@@ -154,11 +179,15 @@ adat$mass_group[e] <- unname(energy_group[genus[e]])
 adat$mass_g <- NA_real_
 q <- adat$rule == 'quarter'
 adat$mass_g[q] <- adat$dry_mass_g[q] / 0.25                                  # invert dry = wet / 4
+x1 <- adat$rule == 'asis'
+adat$mass_g[x1] <- adat$dry_mass_g[x1]                                       # refs 9,10,11: already wet
 adat$mass_g[e] <- ToWetMass(adat$dry_mass_g[e], from = 'energy', group = adat$mass_group[e])
 adat$source_mass <- 'McCoy_2008'
 adat$source_mass[e] <- LabelWithConversion('McCoy_2008', adat$mass_group[e])   # 'McCoy_2008; Brey_2010'
 
-# ---- exclusions (rules 3, 5, 6), logged to reports/imputed_rows.csv -----------
+# ---- exclusions (rules 1c, 3, 5, 6), logged to reports/imputed_rows.csv -------
+adat <- DropImputed(adat, adat$rule == 'drop_fish6', 'McCoy_2008',
+                    'mesopelagic fish rows of undeterminable unit (ref 6)')
 adat <- DropImputed(adat, adat$rule == 'drop_zooplankton', 'McCoy_2008',
                     'lab zooplankton rows of mixed dry/dry-quarter units (ref 4)')
 adat <- DropImputed(adat, adat$rule == 'drop_euphausiid', 'McCoy_2008',

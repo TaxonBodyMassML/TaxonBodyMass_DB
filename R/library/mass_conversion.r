@@ -63,7 +63,12 @@
 #                   this database. Polyplacophora have no energy or shell record in the
 #                   data bank (2 species without data), so 'polyplacophoran' borrows the
 #                   pooled Mollusca energy density and the gastropod shell ratio
-#                   (verified = FALSE).
+#                   (verified = FALSE). The same shell ratios serve the dry/afdw
+#                   branches through ToWetMass(whole = TRUE, shell_group = ...), so
+#                   that shelled taxa reported as tissue mass (Eklof_etal_2017) enter
+#                   as whole wet mass as well; 'barnacle' holds the gastropod ratio by
+#                   analogy because the data bank's 27 Cirripedia records carry no
+#                   WM / (WM+Shell) value (verified = FALSE).
 #  unverified       'helminth' reuses the Brey non-gelatinous invertebrate medians by
 #                   analogy (the data bank holds 1 nematode and no flatworm species);
 #                   'vertebrate' (non-fish) keeps conventional values (Peters 1983,
@@ -72,34 +77,35 @@
 
 # The first twelve groups convert dry, ash-free dry and carbon mass; the eleven
 # energy groups (bivalve ... aquatic_insect) convert energy content (kJ per
-# individual) only and have no dry/AFDW/carbon factors.
+# individual) only and have no dry/AFDW/carbon factors; 'barnacle' carries only a
+# shell ratio for ToWetMass(whole = TRUE).
 MassConversionFactors <- data.frame(
   group = c('gelatinous_zooplankton', 'crustacean_zooplankton', 'insect', 'protist',
             'fish', 'invertebrate', 'mollusc', 'annelid', 'chaetognath', 'echinoderm',
             'helminth', 'vertebrate',
             'bivalve', 'gastropod', 'polyplacophoran', 'echinoid', 'ophiuroid', 'holothurian',
-            'decapod', 'amphipod', 'isopod', 'polychaete', 'aquatic_insect'),
+            'decapod', 'amphipod', 'isopod', 'polychaete', 'aquatic_insect', 'barnacle'),
   # dry mass as a fraction of wet mass
   dw_per_ww   = c(0.039, 0.214, 0.35, NA,   0.2415, 0.2144, 0.1972, 0.1769, 0.0785, 0.2250, 0.2144, 0.25,
-                  rep(NA, 11)),
+                  rep(NA, 12)),
   # ash-free dry mass as a fraction of dry mass
   afdw_per_dw = c(0.70,  0.85, 0.90, NA,   0.8646, 0.8293, 0.8578, 0.8420, 0.8333, 0.4510, 0.8293, 0.85,
-                  rep(NA, 11)),
+                  rep(NA, 12)),
   # carbon mass as a fraction of wet mass (used directly for carbon -> wet);
   # gelatinous 0.004 sits between Kiørboe A1 (0.0029), Brey Cnidaria (0.0037) and
   # Lucas 2011 (0.0046-0.0059)
   c_per_ww    = c(0.004, 0.101, 0.175, 0.149, 0.0834, 0.0946, 0.0624, 0.0504, 0.0268, 0.0471, 0.0946, 0.11,
-                  rep(NA, 11)),
+                  rep(NA, 12)),
   # energy density, kJ per g wet mass (Conversion04 'J / mgWM'; shell-free for
   # molluscs), for sources that report energy content per individual (from = 'energy')
   kj_per_g_ww = c(rep(NA, 12),
-                  3.0574, 3.9211, 3.8817, 1.1609, 2.0276, 1.7935, 3.8962, 3.769, 2.2817, 3.1341, 4.5745),
+                  3.0574, 3.9211, 3.8817, 1.1609, 2.0276, 1.7935, 3.8962, 3.769, 2.2817, 3.1341, 4.5745, NA),
   # wet mass as a fraction of whole wet mass including the shell (Conversion04
-  # 'WM / (WM+Shell)'); 1 where there is no shell. Applied only in the energy
-  # branch, whose output is whole-animal wet mass; the dry/afdw/carbon branches
-  # keep the shell-free convention of their factors.
+  # 'WM / (WM+Shell)'); 1 where there is no shell. Applied in the energy branch,
+  # whose output is always whole-animal wet mass, and in the dry/afdw/carbon
+  # branches only when whole = TRUE (their factors refer to shell-free tissue).
   ww_per_whole = c(rep(NA, 12),
-                   0.44, 0.40, 0.40, 1, 1, 1, 1, 1, 1, 1, 1),
+                   0.44, 0.40, 0.40, 1, 1, 1, 1, 1, 1, 1, 1, 0.40),
   citation = c('Kiorboe:2013aa; Lucas:2011aa', 'Kiorboe:2013aa',
                'Studier:1992aa (dw_per_ww); generic (others)', 'Kiorboe:2013aa; Menden-Deuer:2000aa',
                'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa',
@@ -107,29 +113,36 @@ MassConversionFactors <- data.frame(
                'Brey:2010aa', 'Brey:2010aa',
                'Brey:2010aa (Mollusca pooled energy density and gastropod shell ratio, by analogy)',
                'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa',
-               'Brey:2010aa', 'Brey:2010aa'),
+               'Brey:2010aa', 'Brey:2010aa',
+               'Brey:2010aa (gastropod shell ratio, by analogy; no Cirripedia shell record)'),
   # BM_citations CiteIDs appended to source_mass for converted records (see
   # ConversionCiteIDs); empty where only generic, uncited factors are used.
   cite_id = c('Kiorboe_2013; Lucas_2011', 'Kiorboe_2013', 'Studier_1992', 'Kiorboe_2013; MendenDeuer_2000',
               'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010',
               'Brey_2010', '',
-              rep('Brey_2010', 11)),
+              rep('Brey_2010', 12)),
   verified = c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE,
-               TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE),
+               TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   stringsAsFactors = FALSE
 )
 
 # Convert a vector of masses (grams) of type `from` to wet grams; with
 # from = 'energy' the input is energy content in kJ per individual and the result
-# is whole-animal wet grams (kJ / kj_per_g_ww / ww_per_whole).
-# `from` and `group` are recycled against `value`.
+# is whole-animal wet grams (kJ / kj_per_g_ww / ww_per_whole). The dry, afdw and
+# carbon factors refer to shell-free tissue; `whole = TRUE` divides that tissue
+# wet mass by the shell ratio ww_per_whole of `shell_group` (default `group`),
+# giving whole wet mass including the shell, so shell_group must be a group with
+# a shell ratio (bivalve, gastropod, polyplacophoran, barnacle).
+# `from`, `group`, `whole` and `shell_group` are recycled against `value`.
 ToWetMass <- function(value, from = c('wet', 'dry', 'afdw', 'carbon', 'energy'),
-                      group = 'invertebrate') {
+                      group = 'invertebrate', whole = FALSE, shell_group = group) {
   from  <- match.arg(tolower(from), c('wet', 'dry', 'afdw', 'carbon', 'energy'),
                      several.ok = TRUE)
   n     <- length(value)
   from  <- rep_len(from,  n)
   group <- rep_len(group, n)
+  whole <- rep_len(as.logical(whole), n)
+  shell_group <- rep_len(shell_group, n)
   bad <- setdiff(unique(group[from != 'wet']), MassConversionFactors$group)
   if (length(bad) > 0)
     stop('ToWetMass(): unknown mass_group: ', paste(bad, collapse = ', '))
@@ -138,14 +151,24 @@ ToWetMass <- function(value, from = c('wet', 'dry', 'afdw', 'carbon', 'energy'),
   afdw  <- MassConversionFactors$afdw_per_dw[idx]
   cww   <- MassConversionFactors$c_per_ww[idx]
   kj    <- MassConversionFactors$kj_per_g_ww[idx]
-  whole <- MassConversionFactors$ww_per_whole[idx]
+  whole_ratio <- MassConversionFactors$ww_per_whole[idx]
   out  <- value
   sel <- from == 'dry';    out[sel] <- value[sel] / dw[sel]
   sel <- from == 'afdw';   out[sel] <- value[sel] / (afdw[sel] * dw[sel])
   sel <- from == 'carbon'; out[sel] <- value[sel] / cww[sel]
-  sel <- from == 'energy'; out[sel] <- value[sel] / kj[sel] / whole[sel]
+  sel <- from == 'energy'; out[sel] <- value[sel] / kj[sel] / whole_ratio[sel]
   if (any(is.na(out) & !is.na(value)))
     stop('ToWetMass(): no factor for some from/group combination')
+  if (any(whole & from == 'energy'))
+    stop("ToWetMass(): from = 'energy' already returns whole wet mass; do not combine it with whole = TRUE")
+  sel <- whole & from %in% c('dry', 'afdw', 'carbon')
+  if (any(sel)) {
+    ratio <- MassConversionFactors$ww_per_whole[match(shell_group[sel], MassConversionFactors$group)]
+    if (any(is.na(ratio)))
+      stop('ToWetMass(): no shell ratio (ww_per_whole) for shell_group: ',
+           paste(unique(shell_group[sel][is.na(ratio)]), collapse = ', '))
+    out[sel] <- out[sel] / ratio
+  }
   out
 }
 
@@ -159,10 +182,19 @@ ConversionCiteIDs <- function(group) {
 
 # Source label with the conversion CiteIDs appended ('Label; Kiorboe_2013'),
 # so that the references behind a converted body mass are cited with the taxon.
-# Records converted only with generic (uncited) factors keep the bare label.
-LabelWithConversion <- function(label, group) {
-  cites <- ConversionCiteIDs(group)
-  ifelse(cites == '', label, paste0(label, '; ', cites))
+# Further group vectors (e.g. the shell_group of a whole-mass conversion) add
+# their CiteIDs once each, in order. Records converted only with generic
+# (uncited) factors keep the bare label.
+LabelWithConversion <- function(label, group, ...) {
+  groups <- list(group, ...)
+  n      <- max(length(label), lengths(groups))
+  label  <- rep_len(label, n)
+  cites  <- lapply(groups, function(g) rep_len(ConversionCiteIDs(g), n))
+  vapply(seq_len(n), function(i) {
+    ids <- unlist(strsplit(vapply(cites, `[`, character(1), i), ';\\s*'))
+    ids <- unique(ids[nzchar(ids)])
+    if (length(ids) == 0) label[i] else paste(c(label[i], ids), collapse = '; ')
+  }, character(1))
 }
 
 # Cell volume (um^3) to wet mass (g) assuming unit density.
