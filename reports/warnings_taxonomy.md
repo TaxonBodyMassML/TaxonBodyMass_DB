@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-01 09:52:31
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-02 18:40:10
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 172 rows
+- Low GBIF confidence (75-89): 170 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -50,7 +50,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (172 rows)
+## Low GBIF confidence (75-89) (170 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -107,8 +107,6 @@ Caecosagitta_macrocephala [conf=85]
 Caligavis_obscura [conf=84]
 
 Callipepla_gambelii [conf=85]
-
-Callosobruchu_analis [conf=85]
 
 Camylaspis_maculata [conf=85]
 
@@ -248,7 +246,7 @@ Munidia_rugosa [conf=85]
 
 Myophonus_caeruleus [conf=84]
 
-Myophonus_insularis [conf=84]
+Myiophoneus_insularis [conf=84]
 
 Salina_affinis [conf=81]
 
@@ -257,8 +255,6 @@ Chelodactylus_macropterus [conf=84]
 Neochmia_modesta [conf=85]
 
 Neogloboquadriana_pachyderma [conf=85]
-
-Neoseilulus_longispinosus [conf=85]
 
 Neosiluris_ater [conf=85]
 

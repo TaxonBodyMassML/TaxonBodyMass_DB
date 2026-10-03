@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-01 09:52:31
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-02 18:40:10
 
 
-## Species name changed during enrichment (5919 rows)
+## Species name changed during enrichment (5779 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -94,8 +94,6 @@ Acleris gloverana -> Acleris gloveranus [GBIF]
 Acontias plumbeus; Acontias poecilus -> Acontias plumbeus [GBIF]
 
 Sturnus burmannicus -> Acridotheres burmannicus [GBIF]
-
-Acridotheres melanopterus; Sturnus melanopterus -> Acridotheres melanopterus [GBIF]
 
 Acritillas indica; Iole indica -> Acritillas indica [GBIF]
 
@@ -191,25 +189,11 @@ Aerodramus germani; Collocalia germani -> Aerodramus germani [GBIF]
 
 Aerodramus hirundinaceus; Collocalia hirundinacea -> Aerodramus hirundinaceus [GBIF]
 
-Collocalia infuscata -> Aerodramus infuscatus [GBIF]
-
-Aerodramus inquietus; Collocalia inquieta -> Aerodramus inquietus [GBIF]
-
-Collocalia leucophaea -> Aerodramus leucophaeus [GBIF]
-
 Aerodramus maximus; Collocalia maxima -> Aerodramus maximus [GBIF]
 
 Aerodramus mearnsi; Collocalia mearnsi -> Aerodramus mearnsi [GBIF]
 
-Collocalia nuditarsus -> Aerodramus nuditarsus [GBIF]
-
-Collocalia ocista -> Aerodramus ocistus [GBIF]
-
-Collocalia orientalis -> Aerodramus orientalis [GBIF]
-
 Aerodramus papuensis; Collocalia papuensis -> Aerodramus papuensis [GBIF]
-
-Collocalia pelewensis -> Aerodramus pelewensis [GBIF]
 
 Aerodramus salangana; Collocalia salangana; Aerodramus salanganus -> Aerodramus salangana [GBIF]
 
@@ -297,8 +281,6 @@ Aglais io; Vanessa io -> Aglais io [GBIF]
 
 Diaptomus leptopus -> Aglaodiaptomus leptopus [GBIF]
 
-Carpodacus rubescens -> Agraphospiza rubescens [GBIF]
-
 Melaenornis infuscatus -> Agricola infuscatus [NCBI]
 
 Pitar morrhuanus -> Agriopoma morrhuanum [GBIF]
@@ -329,13 +311,11 @@ Ainigmaptilon antarcticus -> Ainigmaptilon antarcticum [GBIF]
 
 Akodon aliquantulus; Akodon caenosus -> Akodon caenosus [GBIF]
 
-Akodon leucolimnaeus; Akodon oenos; Akodon spegazzinii -> Akodon spegazzinii [GBIF]
+Akodon oenos; Akodon spegazzinii -> Akodon spegazzinii [GBIF]
 
 Baetis muticus -> Alainites muticus [GBIF]
 
 Alaskozetes antarcticus; Alaskozeres antarcticus -> Alaskozetes antarcticus [GBIF]
-
-Alauda arvensis; Alauda japonica -> Alauda arvensis [GBIF]
 
 Glossiphonia heteroclita -> Alboglossiphonia heteroclita [GBIF]
 
@@ -477,8 +457,6 @@ Amblyomma cajenense; Amblyomma cajennense -> Amblyomma cajennense [GBIF]
 
 Amblyornis newtonianus -> Amblyornis newtoniana [GBIF]
 
-Typhlodromips swirskii -> Amblyseius swirskii [GBIF]
-
 Amblysomus hottentotus; Amblysomus iris -> Amblysomus hottentotus [GBIF]
 
 Ambystoma maculatum; Ambystoma punctatum -> Ambystoma maculatum [GBIF]
@@ -538,8 +516,6 @@ Amphisbaena amazonica; Amphisbaena bassleri; Amphisbaena fuliginosa; Amphisbaena
 Amphisbaena mensae; Amphisbaena talisiae -> Amphisbaena talisiae [GBIF]
 
 Aimophila quinquestriata; Amphispiza quinquestriata -> Amphispizopsis quinquestriata [GBIF]
-
-Tetranychus viennensis -> Amphitetranychus viennensis [GBIF]
 
 Radix balthica -> Ampullaceana balthica [GBIF]
 
@@ -653,8 +629,6 @@ Anolis whitemani; Anolis saxatilis -> Anolis saxatilis [GBIF]
 
 Anolis sericeus; Anolis williamsii -> Anolis sericeus [GBIF]
 
-Norops serranoi; Anolis serranoi -> Anolis serranoi [GBIF]
-
 Anomalepis mexicanus -> Anomalepis mexicana [GBIF]
 
 Anoura latidens; Anoura carishina -> Anoura latidens [GBIF]
@@ -711,8 +685,6 @@ Anthracoceros albirostris; Anthracoceros malabaricus -> Anthracoceros albirostri
 
 Anthracothorax dominicus; Anthracothorax aurulentus -> Anthracothorax dominicus [GBIF]
 
-Anthreptes aurantius; Anthreptes aurantium -> Anthreptes aurantius [GBIF]
-
 Anthreptes rectirostris; Anthreptes tephrolaemus -> Anthreptes rectirostris [GBIF]
 
 Anthreptes rhodolaemus; Anthreptes rhodolaema -> Anthreptes rhodolaemus [GBIF]
@@ -761,8 +733,6 @@ Caprimulgus carolinensis; Antrostomus carolinensis -> Antrostomus carolinensis [
 
 Antrostomus cubanensis; Caprimulgus cubanensis -> Antrostomus cubanensis [GBIF]
 
-Antrostomus ekmani; Caprimulgus ekmani -> Antrostomus ekmani [GBIF]
-
 Antrostomus noctitherus; Caprimulgus noctitherus -> Antrostomus noctitherus [GBIF]
 
 Caprimulgus ridgwayi; Antrostomus ridgwayi -> Antrostomus ridgwayi [GBIF]
@@ -802,10 +772,6 @@ Listriomastax litorea -> Apetaenus enderleini [GBIF]
 Aphinius fasciatus; Aphanius fasciatus -> Aphanius fasciatus [GBIF]
 
 Aphelopus holomelas -> Aphelopus atratus [GBIF]
-
-Aphidius uzbeckistanicus -> Aphidius uzbekistanicus [GBIF]
-
-Toxoptera citricida -> Aphis citricidus [GBIF]
 
 Aphrodite aculeata; Aphrodita aculeata -> Aphrodita aculeata [GBIF]
 
@@ -877,7 +843,7 @@ Eupsittula aurea; Aratinga aurea -> Aratinga aurea [GBIF]
 
 Aratinga auricapillus; Aratinga auricapilla -> Aratinga auricapillus [GBIF]
 
-Eupsittula cactorum; Aratinga cactorum -> Aratinga cactorum [GBIF]
+Eupsittula cactorum -> Aratinga cactorum [GBIF]
 
 Aratinga canicularis; Eupsittula canicularis -> Aratinga canicularis [GBIF]
 
@@ -1195,7 +1161,7 @@ Avahi ramanantsoavanai -> Avahi ramanantsoavani [GBIF]
 
 Aythya marila; Athya marila -> Aythya marila [GBIF]
 
-Garrulax koslowi; Babax koslowi -> Babax koslowi [GBIF]
+Garrulax koslowi -> Babax koslowi [GBIF]
 
 Pterorhinus lanceolatus; Garrulax lanceolatus; Babax lanceolatus -> Babax lanceolatus [GBIF]
 
@@ -1245,7 +1211,7 @@ Barilius bendelisis; Opsarius bendelisis -> Barilius bendelisis [GBIF]
 
 Barnardius zonarius; Platycercus zonarius; Barnardius barnardi -> Barnardius zonarius [GBIF]
 
-Myiothlypis basilica; Basileuterus basilicus -> Basileuterus basilicus [GBIF]
+Myiothlypis basilica -> Basileuterus basilicus [GBIF]
 
 Basileuterus culicivorus; Basileuterus auricapilla; Basileuterus hypoleucus -> Basileuterus culicivorus [GBIF]
 
@@ -1300,8 +1266,6 @@ Rana nicobariensis -> Bijurana nicobariensis [GBIF]
 Allolobophoridella eiseni -> Bimastos eiseni [GBIF]
 
 Dendrodrilus subrubicundus -> Bimastos rubidus [GBIF]
-
-Biomphalaria globrata -> Biomphalaria glabrata [GBIF]
 
 Somatogyrus subglobosus -> Birgella subglobosa [GBIF]
 
@@ -1469,8 +1433,6 @@ Arremon poliophrys -> Buarremon poliophrys [ITIS]
 
 Bubalus bubalis; Bubalus arnee -> Bubalus bubalis [GBIF]
 
-Bubo blakistoni; Ketupa blakistoni -> Bubo blakistoni [GBIF]
-
 Bubo bubo; Bubo hemachalana -> Bubo bubo [GBIF]
 
 Bubo scandiacus; Nyctea scandiaca; Bubo scandiaca -> Bubo scandiacus [GBIF]
@@ -1547,7 +1509,7 @@ Cacicus melanicterus; Cassiculus melanicterus -> Cacicus melanicterus [GBIF]
 
 Cacicus microrhynchus; Cacicus uropygialis -> Cacicus uropygialis [GBIF]
 
-Cacomantis variolosus; Cacomantis sepulcralis; Cacomantis heinrichi -> Cacomantis variolosus [GBIF]
+Cacomantis variolosus; Cacomantis sepulcralis -> Cacomantis variolosus [GBIF]
 
 Gnathia calva -> Caecognathia calva [GBIF]
 
@@ -1580,8 +1542,6 @@ Huetia leucorhina -> Calcochloris leucorhinus [GBIF]
 Mirafra africanoides; Calendulauda africanoides -> Calendulauda africanoides [GBIF]
 
 Certhilauda albescens; Calendulauda albescens; Mirafra albescens -> Calendulauda albescens [GBIF]
-
-Calendulauda alopex; Mirafra alopex -> Calendulauda alopex [GBIF]
 
 Certhilauda burra; Calendulauda burra -> Calendulauda burra [GBIF]
 
@@ -1631,8 +1591,6 @@ Callopora dumerlii -> Callopora dumerilii [GBIF]
 
 Callosciurus notatus; Callosciurus albescens -> Callosciurus notatus [GBIF]
 
-Callosobruchu analis -> Callosobruchus analis [GBIF]
-
 Callospermophilus lateralis; Spermophilus lateralis -> Callospermophilus lateralis [GBIF]
 
 Callospermophilus madrensis; Spermophilus madrensis -> Callospermophilus madrensis [GBIF]
@@ -1677,7 +1635,7 @@ Campaea margaritata -> Campaea margaritaria [GBIF]
 
 Campephaga phoenicea; Campephaga phoenicia -> Campephaga phoenicea [GBIF]
 
-Saxicola bifasciata; Campicoloides bifasciatus; Oenanthe bifasciata -> Campicoloides bifasciatus [GBIF]
+Saxicola bifasciata; Campicoloides bifasciatus -> Campicoloides bifasciatus [GBIF]
 
 Francolinus albogularis; Peliperdix albogularis -> Campocolinus albogularis [GBIF]
 
@@ -1711,11 +1669,7 @@ Canthidermis maculata; Canthidermis maculatus -> Canthidermis maculata [GBIF]
 
 Canthon conformis -> Canthon virens [GBIF]
 
-Thryothorus griseus -> Cantorchilus griseus [GBIF]
-
 Cantorchilus guarayanus; Thryothorus guarayanus -> Cantorchilus guarayanus [GBIF]
-
-Cantorchilus leucopogon; Thryothorus leucopogon -> Cantorchilus leucopogon [GBIF]
 
 Cantorchilus leucotis; Thryothorus leucotis -> Cantorchilus leucotis [GBIF]
 
@@ -1813,8 +1767,6 @@ Carpodacus sipahi; Haematospiza sipahi -> Carpodacus sipahi [GBIF]
 
 Carpodacus subhimachalus; Pinicola subhimachala -> Carpodacus subhimachalus [GBIF]
 
-Carpodacus waltoni; Carpodacus eos -> Carpodacus waltoni [GBIF]
-
 Carpospiza brachydactyla; Petronia brachydactyla -> Carpospiza brachydactyla [GBIF]
 
 Coryphella pellucida -> Carronella pellucida [GBIF]
@@ -1823,7 +1775,7 @@ Monarcha chrysomela; Carterornis chrysomela -> Carterornis chrysomela [GBIF]
 
 Carterornis leucotis; Monarcha leucotis -> Carterornis leucotis [GBIF]
 
-Carterornis pileatus; Monarcha castus; Monarcha pileatus -> Carterornis pileatus [GBIF]
+Carterornis pileatus; Monarcha pileatus -> Carterornis pileatus [GBIF]
 
 Caryothraustes canadensis; Caryothraustes canadenis -> Caryothraustes canadensis [GBIF]
 
@@ -1851,7 +1803,7 @@ Pantosteus platyrhynchus -> Catostomus platyrhynchus [GBIF]
 
 Catreus wallichii; Catreus wallichi -> Catreus wallichii [GBIF]
 
-Cavia aperea; Cavia patzelti; Cavia apera -> Cavia aperea [GBIF]
+Cavia aperea; Cavia apera; Cavia patzelti -> Cavia aperea [GBIF]
 
 Callithrix pygmaea; Cebuella pygmaea -> Cebuella pygmaea [GBIF]
 
@@ -1893,8 +1845,6 @@ Ammodramus henslowii; Passerculus henslowii -> Centronyx henslowii [GBIF]
 
 Centropages yamadai -> Centropages tenuiremis [GBIF]
 
-Centropus chlororhynchus -> Centropus chlororhynchos [GBIF]
-
 Centropus superciliosus; Centropus burchellii -> Centropus superciliosus [GBIF]
 
 Centropyge flavicauda; Centropyge fisheri -> Centropyge fisheri [GBIF]
@@ -1935,7 +1885,7 @@ Cercomacra laeta; Cercomacroides laeta -> Cercomacra laeta [GBIF]
 
 Cercomacra nigrescens; Cercomacroides fuscicauda; Cercomacroides nigrescens -> Cercomacra nigrescens [GBIF]
 
-Cercomacroides parkeri; Cercomacra parkeri -> Cercomacra parkeri [GBIF]
+Cercomacroides parkeri -> Cercomacra parkeri [GBIF]
 
 Cercomacra serva; Cercomacroides serva -> Cercomacra serva [GBIF]
 
@@ -2063,8 +2013,6 @@ Venus striatula -> Chamelea striatula [GBIF]
 
 Channa marulius; Channa pseudomarulius -> Channa marulius [GBIF]
 
-Chaoborus obscuripe; Chaoborus obscuripes -> Chaoborus obscuripes [GBIF]
-
 Chaos carolinense; Pelomyxa carolinensis -> Chaos carolinense [GBIF]
 
 Charadrius alexandrinus; Charadrius alexandrinius -> Charadrius alexandrinus [GBIF]
@@ -2104,8 +2052,6 @@ Aspitrigla cuculus; Chelidonichthys cuculus -> Chelidonichthys cuculus [GBIF]
 Chelidonichthys lucernus; Chelidonichthys lucerna -> Chelidonichthys lucerna [GBIF]
 
 Chelidorhynx hypoxantha; Chelidorhynx hypoxanthus; Rhipidura hypoxantha -> Chelidorhynx hypoxantha [GBIF]
-
-Chelodina colliei; Chelodina oblonga -> Chelodina oblonga [GBIF]
 
 Chelon auratus; Liza aurata -> Chelon auratus [GBIF]
 
@@ -2205,8 +2151,6 @@ Carduelis ambigua -> Chloris ambigua [GBIF]
 
 Carduelis chloris; Chloris chloris -> Chloris chloris [GBIF; NCBI]
 
-Chloris monguilloti; Carduelis monguilloti -> Chloris monguilloti [GBIF]
-
 Chloris sinica; Carduelis sinica -> Chloris sinica [NCBI; GBIF]
 
 Chloris spinoides; Carduelis spinoides -> Chloris spinoides [GBIF]
@@ -2230,8 +2174,6 @@ Hemignathus kauaiensis; Chlorodrepanis stejnegeri -> Chlorodrepanis stejnegeri [
 Hemignathus virens; Chlorodrepanis virens; Loxops virens -> Chlorodrepanis virens [GBIF]
 
 Telophorus bocagei; Chlorophoneus bocagei -> Chlorophoneus bocagei [GBIF]
-
-Telophorus kupeensis -> Chlorophoneus kupeensis [GBIF]
 
 Telophorus multicolor; Chlorophoneus multicolor -> Chlorophoneus multicolor [GBIF]
 
@@ -2269,7 +2211,7 @@ Chodsigoa hypsibia; Soriculus hypsibius -> Chodsigoa hypsibia [GBIF]
 
 Choeronycteris mexicana; Choeronycteris mexica -> Choeronycteris mexicana [GBIF]
 
-Cholornis paradoxus; Paradoxornis paradoxus -> Cholornis paradoxa [GBIF]
+Cholornis paradoxus -> Cholornis paradoxa [GBIF]
 
 Cholornis unicolor; Paradoxornis unicolor -> Cholornis unicolor [GBIF]
 
@@ -2316,8 +2258,6 @@ Chrysococcyx minutillus; Chrysococcyx russatus; Chalcites minutillus -> Chrysoco
 Chrysococcyx osculans; Chalcites osculans -> Chrysococcyx osculans [GBIF]
 
 Chrysococcyx ruficollis; Chalcites ruficollis -> Chrysococcyx ruficollis [GBIF]
-
-Serinus estherae -> Chrysocorythus estherae [GBIF]
 
 Chrysomela marginata -> Chrysolina marginata [GBIF]
 
@@ -2375,8 +2315,6 @@ Cinnyris bifasciatus; Nectarinia bifasciata -> Cinnyris bifasciatus [GBIF]
 
 Nectarinia bouvieri; Cinnyris bouvieri -> Cinnyris bouvieri [GBIF]
 
-Nectarinia buettikoferi -> Cinnyris buettikoferi [GBIF]
-
 Cinnyris chalcomelas; Nectarinia chalcomelas -> Cinnyris chalcomelas [GBIF]
 
 Nectarinia chalybea; Cinnyris chalybeus -> Cinnyris chalybeus [GBIF]
@@ -2386,8 +2324,6 @@ Nectarinia chloropygia; Cinnyris chloropygius; Nectarinia chloropygius -> Cinnyr
 Nectarinia coccinigaster; Cinnyris coccinigastrus -> Cinnyris coccinigastrus [GBIF]
 
 Cinnyris comorensis; Nectarinia comorensis -> Cinnyris comorensis [GBIF]
-
-Cinnyris congensis; Nectarinia congensis -> Cinnyris congensis [GBIF]
 
 Cinnyris coquerellii; Nectarinia coquerellii -> Cinnyris coquerellii [GBIF]
 
@@ -2433,10 +2369,6 @@ Cinnyris notatus; Cinnyris moebii; Cinnyris voeltzkowi; Nectarinia notata -> Cin
 
 Nectarinia osea; Cinnyris osea -> Cinnyris osea [GBIF]
 
-Nectarinia oustaleti -> Cinnyris oustaleti [GBIF]
-
-Nectarinia pembae -> Cinnyris pembae [GBIF]
-
 Nectarinia pulchella; Cinnyris pulchellus; Cinnyris melanogastrus -> Cinnyris pulchellus [GBIF]
 
 Nectarinia regia; Cinnyris regius -> Cinnyris regius [GBIF]
@@ -2448,8 +2380,6 @@ Nectarinia rockefelleri; Cinnyris rockefelleri -> Cinnyris rockefelleri [GBIF]
 Nectarinia rufipennis; Cinnyris rufipennis -> Cinnyris rufipennis [GBIF]
 
 Nectarinia shelleyi; Cinnyris shelleyi -> Cinnyris shelleyi [GBIF]
-
-Nectarinia solaris -> Cinnyris solaris [GBIF]
 
 Cinnyris sovimanga; Nectarinia sovimanga -> Cinnyris sovimanga [GBIF]
 
@@ -2480,8 +2410,6 @@ Cisticola aridulus; Cisticola aridula -> Cisticola aridulus [GBIF]
 Cisticola cherina; Cisticola cherinus -> Cisticola cherina [GBIF]
 
 Cisticola chinianus; Cisticola chiniana -> Cisticola chiniana [GBIF]
-
-Cisticola chubbi; Cisticola discolor -> Cisticola chubbi [GBIF]
 
 Cisticola eximius; Cisticola eximia -> Cisticola eximius [GBIF]
 
@@ -2599,8 +2527,6 @@ Eilema griseola -> Collita griseola [GBIF]
 
 Colletheca mutabilis -> Collotheca mutabilis [GBIF]
 
-Colluricincla tenebrosa; Colluricincla umbrina -> Colluricincla tenebrosa [GBIF]
-
 Colobonema sericeum; Colobenema sericeum -> Colobonema sericeum [GBIF]
 
 Coloeus dauuricus; Corvus dauuricus -> Coloeus dauuricus [GBIF]
@@ -2637,7 +2563,7 @@ Conochiloides dossuarius; Conochiluides dossuarius -> Conochilus dossuarius [GBI
 
 Conopias albovittatus; Conopias parvus; Conopias parva -> Conopias albovittatus [GBIF]
 
-Conopias trivirgatus; Conopias trivirgata -> Conopias trivirgatus [GBIF]
+Conopias trivirgata -> Conopias trivirgatus [GBIF]
 
 Conostoma aemodium; Conostoma oemodium -> Conostoma aemodium [GBIF]
 
@@ -2795,8 +2721,6 @@ Cossypha polioptera; Sheppardia polioptera -> Cossypha polioptera [GBIF]
 
 Cossyphicula roberti; Cossypha roberti -> Cossyphicula roberti [GBIF]
 
-Cottus bairdii; Cottus bairdi -> Cottus bairdii [GBIF]
-
 Coua ruficeps; Coua olivaceiceps -> Coua ruficeps [GBIF]
 
 Helodrilus putricola -> Coventina putricola [GBIF]
@@ -2877,8 +2801,6 @@ Serinus donaldsoni; Crithagra donaldsoni -> Crithagra donaldsoni [GBIF]
 
 Crithagra dorsostriata; Serinus dorsostriatus -> Crithagra dorsostriata [GBIF]
 
-Serinus flavigula -> Crithagra flavigula [GBIF]
-
 Serinus flaviventris; Crithagra flaviventris -> Crithagra flaviventris [GBIF]
 
 Serinus frontalis; Crithagra frontalis -> Crithagra frontalis [GBIF]
@@ -2894,8 +2816,6 @@ Crithagra leucoptera; Serinus leucopterus -> Crithagra leucoptera [GBIF]
 Serinus leucopygius; Crithagra leucopygia -> Crithagra leucopygia [GBIF]
 
 Crithagra melanochroa; Serinus melanochrous -> Crithagra melanochroa [GBIF]
-
-Serinus menachensis -> Crithagra menachensis [GBIF]
 
 Crithagra mennelli; Serinus mennelli -> Crithagra mennelli [GBIF]
 
@@ -2924,8 +2844,6 @@ Crithagra tristriata; Serinus tristriatus -> Crithagra tristriata [GBIF]
 Crithagra whytii; Serinus whytii -> Crithagra whytii [GBIF]
 
 Crithagra xantholaema; Serinus xantholaemus -> Crithagra xantholaema [GBIF]
-
-Crithagra xanthopygia; Serinus xanthopygius -> Crithagra xanthopygia [GBIF]
 
 Crocodylus johnstoni -> Crocodylus johnsoni [GBIF]
 
@@ -3012,8 +2930,6 @@ Hierococcyx bocki; Hierococcyx sparverioides; Cuculus sparverioides -> Cuculus s
 Hierococcyx vagans; Cuculus vagans -> Cuculus vagans [GBIF]
 
 Hierococcyx varius; Cuculus varius -> Cuculus varius [GBIF]
-
-Culex fatigans; Culex quinquefasciatus -> Culex quinquefasciatus [GBIF]
 
 Cuniculus paca; Agouti paca -> Cuniculus paca [GBIF]
 
@@ -3297,8 +3213,6 @@ Dicaeum hirundinaceum; Dicaeum keiense -> Dicaeum hirundinaceum [GBIF]
 
 Dicaeum ignipectus; Dicaeum cambodianum -> Dicaeum ignipectus [GBIF]
 
-Dicaeum melanoxanthum -> Dicaeum melanozanthum [GBIF]
-
 Tetraodon nigroviridis -> Dichotomyctere nigroviridis [GBIF]
 
 Tetraodon biocellatus -> Dichotomyctere ocellatus [GBIF]
@@ -3463,8 +3377,6 @@ Austrodoris kerguelenensis -> Doris kerguelenensis [GBIF]
 
 Archidoris pseudoargus -> Doris pseudoargus [GBIF]
 
-Doru lineara -> Doru lineare [GBIF]
-
 Doryfera ludovicae; Doryfera ludoviciae -> Doryfera ludovicae [GBIF]
 
 Doryichthys martensi -> Doryichthys martensii [GBIF]
@@ -3613,7 +3525,7 @@ Orthriophis hodgsoni -> Elaphe hodgsoni [GBIF]
 
 Orthriophis moellendorffi -> Elaphe moellendorffi [GBIF]
 
-Elaphe taeniura; Orthriophis taeniurus -> Elaphe taeniura [GBIF]
+Orthriophis taeniurus -> Elaphe taeniura [GBIF]
 
 Elaphrornis palliseri; Bradypterus palliseri -> Elaphrornis palliseri [GBIF]
 
@@ -3721,8 +3633,6 @@ Eophona migratoria; Coccothraustes migratorius; Eophona migratorius -> Eophona m
 
 Eophona personata; Coccothraustes personatus -> Eophona personata [GBIF]
 
-Anagasta kuehniella; Ephestia kuehniella -> Ephestia kuehniella [GBIF]
-
 Lioscincus greeri; Epibator greeri -> Epibator greeri [GBIF]
 
 Lioscincus nigrofasciolatum; Epibator nigrofasciolatum -> Epibator nigrofasciolatus [GBIF]
@@ -3819,7 +3729,7 @@ Erythropitta ussheri; Pitta ussheri -> Erythropitta ussheri [GBIF]
 
 Eryhtrops erythrophthalma -> Erythrops erythrophthalma [GBIF]
 
-Tychaedon barbata; Erythropygia barbata -> Erythropygia barbata [GBIF]
+Tychaedon barbata -> Erythropygia barbata [GBIF]
 
 Cercotrichas coryphaeus; Erythropygia coryphaeus -> Erythropygia coryphoeus [GBIF]
 
@@ -3937,7 +3847,7 @@ Eupodotis rueppelii; Eupodotis rueppellii -> Eupodotis rueppellii [GBIF]
 
 Eupodotis vigorsii; Heterotetrax vigorsii -> Eupodotis vigorsii [GBIF]
 
-Euprepiophis perlaceus; Euprepiophis perlacea -> Euprepiophis perlaceus [GBIF]
+Euprepiophis perlacea -> Euprepiophis perlaceus [GBIF]
 
 Andropadus ansorgei; Eurillas ansorgei; Pycnonotus ansorgei -> Eurillas ansorgei [GBIF; NCBI]
 
@@ -4093,17 +4003,11 @@ Fukomys mechowi; Fukomys mechowii -> Fukomys mechowii [GBIF]
 
 Fulvetta cinereiceps; Alcippe cinereiceps -> Fulvetta cinereiceps [GBIF]
 
-Fulvetta danisi; Alcippe danisi -> Fulvetta danisi [GBIF]
-
 Fulvetta formosana; Alcippe formosana -> Fulvetta formosana [GBIF]
 
 Fulvetta ludlowi; Alcippe ludlowi -> Fulvetta ludlowi [GBIF]
 
 Fulvetta manipurensis; Alcippe manipurensis -> Fulvetta manipurensis [GBIF]
-
-Fulvetta ruficapilla; Alcippe ruficapilla -> Fulvetta ruficapilla [GBIF]
-
-Alcippe striaticollis -> Fulvetta striaticollis [GBIF]
 
 Fulvetta vinipectus; Alcippe vinipectus -> Fulvetta vinipectus [GBIF]
 
@@ -4144,8 +4048,6 @@ Galagoides thomasi; Galago thomasi -> Galagoides thomasi [GBIF]
 Egeria radiata -> Galatea paradoxa [GBIF]
 
 Galea musteloides; Galea leucoblephara -> Galea musteloides [GBIF]
-
-Galendromus occidentalis; Metaseiulus occidentalis; Typhlodromus occidentalis -> Galendromus occidentalis [GBIF]
 
 Cynocephalus variegatus; Galeopterus variegatus -> Galeopterus variegatus [GBIF]
 
@@ -4291,8 +4193,6 @@ Geokichla citrina; Zoothera citrina -> Geokichla citrina [GBIF]
 
 Zoothera crossleyi; Geokichla crossleyi -> Geokichla crossleyi [GBIF]
 
-Geokichla dohertyi; Zoothera dohertyi -> Geokichla dohertyi [GBIF]
-
 Geokichla dumasi; Zoothera dumasi -> Geokichla dumasi [GBIF]
 
 Geokichla erythronota; Zoothera erythronota -> Geokichla erythronota [GBIF]
@@ -4305,19 +4205,13 @@ Zoothera interpres -> Geokichla interpres [GBIF]
 
 Geokichla joiceyi; Zoothera joiceyi -> Geokichla joiceyi [GBIF]
 
-Zoothera leucolaema -> Geokichla leucolaema [GBIF]
-
 Geokichla mendeni; Zoothera mendeni -> Geokichla mendeni [GBIF]
 
 Zoothera oberlaenderi; Geokichla oberlaenderi -> Geokichla oberlaenderi [GBIF]
 
-Zoothera peronii -> Geokichla peronii [GBIF]
-
 Zoothera piaggiae; Geokichla piaggiae; Zoothera tanganjicae -> Geokichla piaggiae [GBIF]
 
 Zoothera princei; Geokichla princei -> Geokichla princei [GBIF]
-
-Zoothera schistacea -> Geokichla schistacea [GBIF]
 
 Geokichla sibirica; Zoothera sibirica -> Geokichla sibirica [GBIF]
 
@@ -4605,8 +4499,6 @@ Hapsidophrys smaragdina -> Hapsidophrys smaragdinus [GBIF]
 
 Harlomilsia oculata -> Harlomillsia oculata [GBIF]
 
-Harpalus pennsylvanicus -> Harpalus pensylvanicus [GBIF]
-
 Pseudophonus rufipes; Harpalus rufipes -> Harpalus rufipes [GBIF]
 
 Thaumatorhynchus brooksi -> Harpesaurus brooksi [GBIF]
@@ -4861,8 +4753,6 @@ Huso huso; Acipenser huso -> Huso huso [GBIF]
 
 Hyaena brunnea; Parahyaena brunnea -> Hyaena brunnea [GBIF]
 
-Brachycaudus helichrysi; Hyalopterus pruni -> Hyalopterus pruni [GBIF]
-
 Ophisaurus koellikeri; Hyalosaurus koellikeri -> Hyalosaurus koellikeri [GBIF]
 
 Tabanus affinis -> Hybomitra affinis [NCBI]
@@ -5007,7 +4897,7 @@ Hypotermes xenotermites -> Hypotermes xenotermitis [GBIF]
 
 Hypothymis azurea; Hypothymis puella -> Hypothymis azurea [GBIF]
 
-Hypsiglena ochrorhynchus; Hypsiglena ochrorhyncha -> Hypsiglena ochrorhynchus [GBIF]
+Hypsiglena ochrorhyncha -> Hypsiglena ochrorhynchus [GBIF]
 
 Hypsiglena unaocularis -> Hypsiglena unaocularus [GBIF]
 
@@ -5018,8 +4908,6 @@ Hypsipetes everetti; Hypsipetes haynaldi; Ixos everetti -> Hypsipetes everetti [
 Hypsipetes philippinus; Ixos philippinus -> Hypsipetes philippinus [GBIF]
 
 Hypsipetes rufigularis; Ixos rufigularis -> Hypsipetes rufigularis [GBIF]
-
-Ixos siquijorensis; Hypsipetes siquijorensis -> Hypsipetes siquijorensis [GBIF]
 
 Hypsirhynchus callilaemus; Arrhyton callilaemus -> Hypsirhynchus callilaemus [GBIF]
 
@@ -5173,10 +5061,6 @@ Ixoreus naevius; Zoothera naevia -> Ixoreus naevius [GBIF]
 
 Ixos mcclellandii; Hypsipetes mcclellandii; Ixos mcclelandii -> Ixos mcclellandii [GBIF]
 
-Ixos nicobariensis; Hypsipetes nicobariensis -> Ixos nicobariensis [GBIF]
-
-Hypsipetes virescens -> Ixos virescens [GBIF]
-
 Tangara guttata -> Ixothraupis guttata [GBIF]
 
 Tangara punctata -> Ixothraupis punctata [GBIF]
@@ -5235,7 +5119,7 @@ Cryptochelys dunni -> Kinosternon dunni [GBIF]
 
 Cryptochelys herrerai -> Kinosternon herrerai [GBIF]
 
-Kinosternon leucostomum; Cryptochelys leucostomum -> Kinosternon leucostomum [GBIF]
+Cryptochelys leucostomum; Kinosternon leucostomum -> Kinosternon leucostomum [GBIF]
 
 Psammophylax acutus -> Kladirostratus acutus [GBIF]
 
@@ -5250,8 +5134,6 @@ Hemispingus auricularis -> Kleinothraupis auricularis [GBIF]
 Hemispingus calophrys; Kleinothraupis calophrys -> Kleinothraupis calophrys [GBIF]
 
 Hemispingus parodii; Kleinothraupis parodii -> Kleinothraupis parodii [GBIF]
-
-Kleinothraupis reyi; Hemispingus reyi -> Kleinothraupis reyi [GBIF]
 
 Kobus ellipsiprymnus; Kobus defassa -> Kobus ellipsiprymnus [GBIF]
 
@@ -5319,8 +5201,6 @@ Lepidiolamprologus lemairii -> Lamprologus lemairii [NCBI]
 
 Lampropeltis getula; Lampropeltis getulus -> Lampropeltis getula [GBIF]
 
-Spreo albicapillus -> Lamprotornis albicapillus [GBIF]
-
 Spreo bicolor; Lamprotornis bicolor -> Lamprotornis bicolor [GBIF]
 
 Spreo fischeri; Lamprotornis fischeri -> Lamprotornis fischeri [GBIF]
@@ -5338,8 +5218,6 @@ Laniarius fuelleborni; Laniarius fulleborni -> Laniarius fuelleborni [GBIF]
 Laniarius luehderi; Laniarius luhderi -> Laniarius luehderi [GBIF; NCBI]
 
 Laniarius poensis; Laniarius holomelas -> Laniarius poensis [GBIF]
-
-Lanius collaris; Lanius marwitzi -> Lanius collaris [GBIF]
 
 Lankascincus deignani; Lankascincus greeri -> Lankascincus deignani [GBIF]
 
@@ -5368,8 +5246,6 @@ Lathrotriccus euleri; Empidonax euleri -> Lathrotriccus euleri [GBIF]
 Lathrotriccus griseipectus; Empidonax griseipectus -> Lathrotriccus griseipectus [GBIF]
 
 Laticauda schistorhynchus -> Laticauda schistorhyncha [GBIF]
-
-Laticilla burnesii; Prinia burnesii -> Laticilla burnesii [GBIF]
 
 Oppiella falcata; Oppiella marginedentata -> Lauroppia falcata [GBIF]
 
@@ -5505,7 +5381,7 @@ Leptocoma calcostetha; Nectarinia calcostetha -> Leptocoma calcostetha [GBIF]
 
 Leptocoma minima; Nectarinia minima -> Leptocoma minima [GBIF]
 
-Leptocoma aspasia; Leptocoma sericea; Nectarinia aspasia; Nectarinia aspisia -> Leptocoma sericea [GBIF]
+Leptocoma aspasia; Leptocoma sericea; Nectarinia aspisia; Nectarinia aspasia -> Leptocoma sericea [GBIF]
 
 Leptocoma sperata; Leptocoma juliae; Nectarinia sperata -> Leptocoma sperata [GBIF]
 
@@ -5637,7 +5513,7 @@ Raja erinacea -> Leucoraja erinacea [GBIF]
 
 Raja naevus -> Leucoraja naevus [GBIF]
 
-Raja ocellata; Leucoraja ocellata -> Leucoraja ocellata [GBIF]
+Raja ocellata -> Leucoraja ocellata [GBIF]
 
 Protothaca staminea -> Leukoma staminea [GBIF]
 
@@ -5797,11 +5673,7 @@ Lobodon carcinophaga; Lobodon carcinophagus -> Lobodon carcinophaga [GBIF]
 
 Campephaga lobata; Lobotos lobatus -> Lobotos lobatus [GBIF]
 
-Lobotos oriolinus; Campephaga oriolina -> Lobotos oriolinus [GBIF]
-
 Bradypterus accentor -> Locustella accentor [GBIF]
-
-Locustella alishanensis; Bradypterus alishanensis -> Locustella alishanensis [GBIF]
 
 Locustella castanea; Bradypterus castaneus -> Locustella castanea [GBIF]
 
@@ -5834,8 +5706,6 @@ Spermestes cucullatus; Lonchura cucullata; Spermestes cucullata -> Lonchura cucu
 Lonchura fringilloides; Spermestes fringilloides -> Lonchura fringilloides [GBIF]
 
 Lonchura fuscata; Padda fuscata -> Lonchura fuscata [GBIF]
-
-Lonchura hunsteini; Lonchura nigerrima -> Lonchura hunsteini [GBIF]
 
 Lonchura oryzivora; Padda oryzivora -> Lonchura oryzivora [GBIF]
 
@@ -5888,8 +5758,6 @@ Lophostoma silvicolum; Tonatia silvicolum; Tonatia silvicola -> Lophostoma silvi
 Eupodotis gindiana; Lophotis gindiana -> Lophotis gindiana [GBIF]
 
 Lophotis ruficrista; Eupodotis ruficrista -> Lophotis ruficrista [GBIF]
-
-Eupodotis savilei -> Lophotis savilei [GBIF]
 
 Lophotriorchis kienerii; Hieraaetus kienerii -> Lophotriorchis kienerii [GBIF]
 
@@ -5969,7 +5837,7 @@ Larvivora cyane; Luscinia cyane -> Luscinia cyane [GBIF]
 
 Luscinia luscinia; Erithacus luscinia -> Luscinia luscinia [GBIF]
 
-Calliope pectardens; Luscinia pectardens -> Luscinia pectardens [GBIF]
+Calliope pectardens -> Luscinia pectardens [GBIF]
 
 Calliope pectoralis; Luscinia pectoralis -> Luscinia pectoralis [GBIF]
 
@@ -6327,8 +6195,6 @@ Aphodius prodromus -> Melinopterus prodromus [GBIF]
 
 Melidectes fuscus -> Melionyx fuscus [GBIF]
 
-Melidectes nouhuysi -> Melionyx nouhuysi [GBIF]
-
 Melidectes princeps -> Melionyx princeps [GBIF]
 
 Xanthotis provocator -> Meliphacator provocator [GBIF]
@@ -6491,8 +6357,6 @@ Microlophus stolzmanni; Tropidurus arenarius -> Microlophus arenarius [GBIF]
 
 Murexia habbema; Micromurexia habbema -> Micromurexia habbema [GBIF]
 
-Plea atomaria -> Micronecta minutissima [GBIF]
-
 Micronisus gabar; Melierax gabar -> Micronisus gabar [GBIF]
 
 Mormopterus norfolkensis -> Micronomus norfolkensis [GBIF]
@@ -6523,8 +6387,6 @@ Meliphaga montana; Microptilotis montanus -> Microptilotis montanus [GBIF]
 
 Meliphaga orientalis; Microptilotis orientalis -> Microptilotis orientalis [GBIF]
 
-Meliphaga vicina -> Microptilotis vicina [GBIF]
-
 Microspingus alticola; Poospiza alticola -> Microspingus alticola [GBIF]
 
 Microspingus cabanisi; Poospiza cabanisi -> Microspingus cabanisi [GBIF]
@@ -6541,8 +6403,6 @@ Poospiza torquata; Microspingus pectoralis; Microspingus torquatus -> Microsping
 
 Hemispingus trifasciatus; Microspingus trifasciatus -> Microspingus trifasciatus [GBIF]
 
-Microtus daghestanicus; Microtus nasarovi -> Microtus daghestanicus [GBIF]
-
 Microtus levis; Microtus rossiaemeridionalis -> Microtus levis [GBIF]
 
 Microtus mexicanus; Microtus mogollonensis -> Microtus mexicanus [GBIF]
@@ -6557,7 +6417,7 @@ Microtus richardsoni; Arvicola richardsoni -> Microtus richardsoni [GBIF]
 
 Microtus townsendii; Microtus townsendi -> Microtus townsendii [GBIF]
 
-Microtus kermanensis; Microtus transcaspicus -> Microtus transcaspicus [GBIF]
+Microtus transcaspicus; Microtus kermanensis -> Microtus transcaspicus [GBIF]
 
 Micrurus tamaulipensis; Micrurus tener -> Micrurus tener [GBIF]
 
@@ -6675,8 +6535,6 @@ Monticola cinclorhynchus; Monticola cinclorhyncha -> Monticola cinclorhynchus [G
 
 Monticola imerina; Monticola imerinus -> Monticola imerina [GBIF]
 
-Myrmecocichla semirufa -> Monticola semirufus [GBIF]
-
 Coluber zebrinus -> Mopanveldophis zebrinus [GBIF]
 
 Mops mops; Tadarida mops -> Mops mops [GBIF]
@@ -6706,8 +6564,6 @@ Motacilla alba; Motacilla lugens -> Motacilla alba [GBIF]
 Motacilla capensis; Motacilla capensa -> Motacilla capensis [GBIF]
 
 Motacilla maderaspatensis; Motacilla madaraspatensis -> Motacilla maderaspatensis [GBIF]
-
-Chrysomma poecilotis -> Moupinia poecilotis [GBIF]
 
 Cryptopygus caecus -> Mucrosomia caeca [GBIF]
 
@@ -6765,7 +6621,7 @@ Mussurana bicolor; Clelia bicolor -> Mussurana bicolor [GBIF]
 
 Mustela eversmanii; Mustela eversmannii -> Mustela eversmanii [GBIF]
 
-Mustela nivalis; Mustela russelliana; Mustela subpalmata; Mustela tonkinensis; Mustela rixosa -> Mustela nivalis [GBIF]
+Mustela nivalis; Mustela subpalmata; Mustela rixosa; Mustela russelliana; Mustela tonkinensis -> Mustela nivalis [GBIF]
 
 Neovison vison; Mustela vison -> Mustela vison [GBIF]
 
@@ -6795,8 +6651,6 @@ Myiodynastes bairdii; Myiodynastes bairdi -> Myiodynastes bairdii [GBIF]
 
 Myiodynastes maculatus; Myiodynastes solitarius -> Myiodynastes maculatus [GBIF]
 
-Cinclidium diana -> Myiomela diana [GBIF]
-
 Myiomela leucura; Myiomela cambodiana; Cinclidium leucurum -> Myiomela leucura [GBIF]
 
 Myiopagis caniceps; Myiopagis cinerea; Myiopagis parambae -> Myiopagis caniceps [GBIF]
@@ -6817,13 +6671,7 @@ Myiopsitta monachus; Myiopsitta luchsi; Myiopsitta monarchus -> Myiopsitta monac
 
 Basileuterus bivittatus; Myiothlypis bivittata; Myiothlypis roraimae -> Myiothlypis bivittata [GBIF]
 
-Myiothlypis chlorophrys; Basileuterus chlorophrys -> Myiothlypis chlorophrys [GBIF; NCBI]
-
 Myiothlypis chrysogaster; Basileuterus chrysogaster -> Myiothlypis chrysogaster [GBIF]
-
-Myiothlypis cinereicollis; Basileuterus cinereicollis -> Myiothlypis cinereicollis [GBIF]
-
-Myiothlypis conspicillata; Basileuterus conspicillatus -> Myiothlypis conspicillata [GBIF]
 
 Basileuterus coronatus; Myiothlypis coronata -> Myiothlypis coronata [GBIF]
 
@@ -6832,8 +6680,6 @@ Myiothlypis flaveola; Basileuterus flaveolus -> Myiothlypis flaveola [GBIF]
 Myiothlypis fraseri; Basileuterus fraseri -> Myiothlypis fraseri [GBIF]
 
 Myiothlypis fulvicauda; Phaeothlypis fulvicauda -> Myiothlypis fulvicauda [GBIF]
-
-Basileuterus griseiceps -> Myiothlypis griseiceps [GBIF]
 
 Myiothlypis leucoblephara; Basileuterus leucoblepharus -> Myiothlypis leucoblephara [GBIF]
 
@@ -6867,7 +6713,7 @@ Myoictis wallacei; Myoictis wallacii -> Myoictis wallacii [GBIF]
 
 Myophonus caeruleus; Myiophoneus caeruleus -> Myophonus caeruleus [GBIF]
 
-Myophonus insularis; Myiophoneus insularis -> Myophonus insularis [GBIF]
+Myiophoneus insularis -> Myophonus insularis [GBIF]
 
 Myotis bechsteini; Myotis bechsteinii -> Myotis bechsteinii [GBIF]
 
@@ -6927,11 +6773,11 @@ Myrmeciza hemimelaena; Sciaphylax hemimelaena -> Myrmeciza hemimelaena [GBIF]
 
 Myrmeciza hyperythra; Myrmelastes hyperythrus -> Myrmeciza hyperythra [GBIF]
 
-Myrmoderus loricatus; Myrmeciza loricata -> Myrmeciza loricata [GBIF]
+Myrmoderus loricatus -> Myrmeciza loricata [GBIF]
 
 Myrmeciza pelzelni; Ammonastes pelzelni -> Myrmeciza pelzelni [GBIF]
 
-Myrmoderus ruficauda; Myrmeciza ruficauda -> Myrmeciza ruficauda [GBIF]
+Myrmoderus ruficauda -> Myrmeciza ruficauda [GBIF]
 
 Myrmeciza squamosa; Myrmoderus squamosus -> Myrmeciza squamosa [GBIF]
 
@@ -6944,8 +6790,6 @@ Capromys garridoi -> Mysateles garridoi [GBIF]
 Mystacides azurea -> Mystacides azureus [GBIF]
 
 Salina affinis -> Mytilina mucronata [GBIF]
-
-Myzus nicotianae; Myzus persicae -> Myzus persicae [GBIF]
 
 Paranura suenoi -> Nahuanura suenoi [GBIF]
 
@@ -6971,8 +6815,6 @@ Lampanyctus regalis; Nannobrachium regale -> Nannobrachium regale [GBIF]
 
 Lampanyctus ritteri; Nannobrachium ritteri -> Nannobrachium ritteri [GBIF]
 
-Nannospalax judaei -> Nannospalax ehrenbergi [NCBI]
-
 Nanorana quadranus; Chaparana quadranus -> Nanorana quadranus [GBIF]
 
 Nanorana yunnanensis; Paa yunnanensis -> Nanorana yunnanensis [GBIF]
@@ -6989,7 +6831,7 @@ Nargus wilkini -> Nargus wilkinii [GBIF]
 
 Rhantus grapii -> Nartus grapii [GBIF]
 
-Nasuella meridensis; Nasuella olivacea -> Nasua olivacea [GBIF]
+Nasuella olivacea; Nasuella meridensis -> Nasua olivacea [GBIF]
 
 Natalus espiritosantensis -> Natalus macrourus [GBIF]
 
@@ -7079,21 +6921,11 @@ Neoromicia somalica; Neoromicia somalicus -> Neoromicia somalica [GBIF]
 
 Verilus atlanticus -> Neoscombrops atlanticus [GBIF]
 
-Neoscona mukherjei -> Neoscona mukerjei [GBIF]
-
 Neoscona oacavensis; Neoscona oaxacensis -> Neoscona oaxacensis [GBIF]
 
-Neoscona rumpfi -> Neoscona vigilans [GBIF]
-
-Amblyseius californicus; Neoseiulus californicus -> Neoseiulus californicus [GBIF]
-
-Amblyseius cucumeris; Neoseiulus cucumeris -> Neoseiulus cucumeris [GBIF]
-
-Neoseilulus longispinosus -> Neoseiulus longispinosus [GBIF]
+Amblyseius cucumeris -> Neoseiulus cucumeris [GBIF]
 
 Neosiluris ater -> Neosilurus ater [GBIF]
-
-Neosuthora davidiana; Paradoxornis davidianus -> Neosuthora davidiana [GBIF]
 
 Kalotermes jouteli -> Neotermes jouteli [GBIF]
 
@@ -7267,8 +7099,6 @@ Nyctiphrynus mcleodii; Otophanes mcleodii -> Nyctiphrynus mcleodii [GBIF]
 
 Nyctiphrynus yucatanicus; Otophanes yucatanicus -> Nyctiphrynus yucatanicus [GBIF]
 
-Nyctipolus hirundinaceus; Caprimulgus hirundinaceus -> Nyctipolus hirundinaceus [GBIF]
-
 Nyctipolus nigrescens; Caprimulgus nigrescens -> Nyctipolus nigrescens [GBIF]
 
 Simalia oenpelliensis -> Nyctophilopython oenpelliensis [GBIF]
@@ -7281,7 +7111,7 @@ Nyssicus setosus -> Nyssicus topographicus [GBIF]
 
 Oblada melanura; Oblada melanurus -> Oblada melanura [GBIF]
 
-Fregetta maoriana; Oceanites maorianus -> Oceanites maorianus [GBIF]
+Fregetta maoriana -> Oceanites maorianus [GBIF]
 
 Oceanodroma castro; Hydrobates castro -> Oceanodroma castro [GBIF]
 
@@ -7364,8 +7194,6 @@ Oedistoma iliolophus; Toxorhamphus iliolophus; Oedistoma iliolophum -> Oedistoma
 Oenanthe alboniger; Oenanthe albonigra -> Oenanthe albonigra [GBIF]
 
 Oenanthe bottae; Oenanthe frenata -> Oenanthe bottae [GBIF]
-
-Cercomela dubia -> Oenanthe dubia [GBIF]
 
 Cercomela familiaris; Oenanthe familiaris -> Oenanthe familiaris [GBIF]
 
@@ -7641,11 +7469,7 @@ Lipinia pulchra -> Palaia pulchra [GBIF]
 
 Palleon nasus; Brookesia nasus -> Palleon nasus [GBIF]
 
-Eristalis interruptus -> Palpada interrupta [GBIF]
-
 Tachyporus nitidulus -> Palporus nitidulus [GBIF]
-
-Ortygospiza locustella -> Paludipasser locustella [GBIF]
 
 Mastigodryas bifossatus; Masticodryas bifossatus -> Palusophis bifossatus [GBIF]
 
@@ -7665,23 +7489,17 @@ Gallicolumba canifrons -> Pampusana canifrons [GBIF]
 
 Gallicolumba erythroptera; Alopecoenas erythropterus -> Pampusana erythroptera [GBIF]
 
-Gallicolumba hoedtii -> Pampusana hoedtii [GBIF]
-
 Gallicolumba jobiensis; Alopecoenas jobiensis; Gallicolumbia jobiensis -> Pampusana jobiensis [GBIF]
 
 Gallicolumba kubaryi -> Pampusana kubaryi [GBIF]
 
 Gallicolumba rubescens; Alopecoenas rubescens -> Pampusana rubescens [GBIF]
 
-Gallicolumba sanctaecrucis -> Pampusana sanctaecrucis [GBIF]
-
 Gallicolumba stairi; Alopecoenas stairi -> Pampusana stairi [GBIF]
 
 Gallicolumba xanthonura; Alopecoenas xanthonurus -> Pampusana xanthonura [GBIF]
 
 Panagaeus bipustulatus; Pamagaeus bipustulatus -> Panagaeus bipustulatus [GBIF]
-
-Callaphis juglandis -> Panaphis juglandis [GBIF]
 
 Afroablepharus africanus; Panaspis africanus -> Panaspis africana [GBIF]
 
@@ -7831,8 +7649,6 @@ Pardosa amentata; Pardosa amenatata -> Pardosa amentata [GBIF]
 
 Pardos astrigera -> Pardosa astrigera [GBIF]
 
-Pardosa cribata -> Pardosa cribrata [GBIF]
-
 Pareledone charcoti; Paraledone characoti -> Pareledone charcoti [GBIF]
 
 Pareledone antarctica -> Pareledone harrissoni [GBIF]
@@ -7865,7 +7681,7 @@ Parus cinerascens; Melaniparus cinerascens -> Parus cinerascens [GBIF]
 
 Parus fasciiventer; Melaniparus fasciiventer -> Parus fasciiventer [GBIF]
 
-Parus fringillinus; Melaniparus fringillinus -> Parus fringillinus [GBIF]
+Melaniparus fringillinus; Parus fringillinus -> Parus fringillinus [GBIF]
 
 Parus funereus; Melaniparus funereus -> Parus funereus [GBIF]
 
@@ -8003,8 +7819,6 @@ Melicertus marginatus -> Penaeus marginatus [GBIF]
 
 Litopenaeus schmitti -> Penaeus schmitti [GBIF]
 
-Litopenaeus setiferus -> Penaeus setiferus [GBIF]
-
 Peneonanthe pulverulenta; Eopsaltria pulverulenta; Peneoenanthe pulverulenta -> Peneoenanthe pulverulenta [GBIF]
 
 Peneothello bimaculata; Peneothello bimaculatus -> Peneothello bimaculata [GBIF]
@@ -8057,21 +7871,15 @@ Peromyscus sitkensis; Peromyscus keeni; Peromyscus oreas -> Peromyscus keeni [GB
 
 Nesovitrea hammonis -> Perpolita hammonis [GBIF]
 
-Petaurista philippensis; Petaurista yunanensis -> Petaurista philippensis [GBIF]
-
 Petricola pholadiformis -> Petricolaria pholadiformis [GBIF]
 
 Petrochelidon ariel; Hirundo ariel -> Petrochelidon ariel [GBIF]
 
 Petrochelidon fluvicola; Hirundo fluvicola -> Petrochelidon fluvicola [GBIF]
 
-Hirundo fuliginosa -> Petrochelidon fuliginosa [GBIF]
-
 Petrochelidon fulva; Hirundo fulva; Petrochelidon fulua -> Petrochelidon fulva [GBIF]
 
 Petrochelidon nigricans; Hirundo nigricans -> Petrochelidon nigricans [GBIF]
-
-Hirundo perdita -> Petrochelidon perdita [GBIF]
 
 Hirundo preussi; Petrochelidon preussi -> Petrochelidon preussi [GBIF]
 
@@ -8190,8 +7998,6 @@ Pheugopedius mystacalis; Thryothorus mystacalis -> Pheugopedius mystacalis [GBIF
 Pheugopedius rutilus; Thryothorus rutilus -> Pheugopedius rutilus [GBIF]
 
 Pheugopedius sclateri; Pheugopedius columbianus; Pheugopedius paucimaculatus; Thryothorus sclateri -> Pheugopedius sclateri [GBIF]
-
-Pheugopedius spadix; Thryothorus spadix -> Pheugopedius spadix [GBIF]
 
 Phidippus pulcherrimus -> Phidippus princeps [GBIF]
 
@@ -8319,8 +8125,6 @@ Phthiracarus clavatus; Phthiracarus stramineus -> Phthiracarus bryobius [GBIF]
 
 Phthiracarus ferrugineus; Phthiracarus italicus -> Phthiracarus ferrugineus [GBIF]
 
-Tuta absoluta -> Phthorimaea absoluta [GBIF]
-
 Phylidonyris niger; Phylidonyris nigra -> Phylidonyris niger [GBIF]
 
 Phylidonyris novaehollandiae; Philidonyris novaehollandiae -> Phylidonyris novaehollandiae [GBIF]
@@ -8395,8 +8199,6 @@ Pleuroxus striatus -> Picripleuroxus striatus [GBIF]
 
 Picumnus granadensis; Picumnus grandensis -> Picumnus granadensis [GBIF]
 
-Picumnus fulvescens; Picumnus limae -> Picumnus limae [GBIF]
-
 Picus canus; Picus dedemi; Picus guerini -> Picus canus [GBIF]
 
 Piesma maculata; Piesma maculatum -> Piesma maculata [GBIF]
@@ -8421,8 +8223,6 @@ Pionites leucogaster; Pionites xanthomerius -> Pionites leucogaster [GBIF]
 
 Pionites melanocephalus; Pionites melanocephala -> Pionites melanocephalus [GBIF]
 
-Pyrilia aurantiocephala -> Pionopsitta aurantiocephala [GBIF]
-
 Pyrilia barrabandi -> Pionopsitta barrabandi [GBIF]
 
 Pyrilia caica -> Pionopsitta caica [GBIF]
@@ -8430,8 +8230,6 @@ Pyrilia caica -> Pionopsitta caica [GBIF]
 Pyrilia haematotis; Pionopsitta haematotis -> Pionopsitta haematotis [GBIF]
 
 Pyrilia pulchra; Pionopsitta pulchra -> Pionopsitta pulchra [GBIF]
-
-Pyrilia pyrilia -> Pionopsitta pyrilia [GBIF]
 
 Pyrilia vulturina -> Pionopsitta vulturina [GBIF]
 
@@ -8495,7 +8293,7 @@ Hydrornis caeruleus; Pitta caerulea -> Pitta caerulea [GBIF]
 
 Hydrornis cyaneus; Pitta cyanea -> Pitta cyanea [GBIF]
 
-Hydrornis elliotii; Pitta elliotii -> Pitta elliotii [GBIF]
+Hydrornis elliotii -> Pitta elliotii [GBIF]
 
 Pitta erythrogaster; Erythropitta erythrogaster; Erythropitta caeruleitorques; Erythropitta celebensis; Erythropitta gazellae; Erythropitta inspeculata; Erythropitta macklotii; Erythropitta meeki; Erythropitta novaehibernicae; Erythropitta palliceps; Erythropitta rubrinucha; Erythropitta rufiventris; Erythropitta splendida; Pitta dohertyi -> Pitta erythrogaster [GBIF]
 
@@ -8562,8 +8360,6 @@ Callicebus bernhardi; Plecturocebus bernhardi -> Plecturocebus bernhardi [GBIF]
 Callicebus brunneus; Plecturocebus brunneus -> Plecturocebus brunneus [GBIF]
 
 Callicebus caligatus; Callicebus dubius; Plecturocebus caligatus; Plecturocebus dubius -> Plecturocebus caligatus [GBIF]
-
-Callicebus caquetensis; Plecturocebus caquetensis -> Plecturocebus caquetensis [GBIF]
 
 Callicebus cinerascens; Plecturocebus cinerascens -> Plecturocebus cinerascens [GBIF]
 
@@ -8651,8 +8447,6 @@ Poecilodryas albonotata; Plesiodryas albonotata -> Poecilodryas albonotata [GBIF
 
 Poecilodryas placens; Gennaeodryas placens -> Poecilodryas placens [GBIF]
 
-Tangara cabanisi -> Poecilostreptus cabanisi [GBIF]
-
 Tangara palmeri -> Poecilostreptus palmeri [GBIF]
 
 Poecilotriccus calopterus; Poecilotriccus pulchellus -> Poecilotriccus calopterus [GBIF]
@@ -8664,8 +8458,6 @@ Poecilotriccus latirostris; Todirostrum latirostre -> Poecilotriccus latirostris
 Poecilotriccus russatus; Poecilotriccus russatum -> Poecilotriccus russatus [GBIF]
 
 Poecilotriccus sylvia; Todirostrum sylvia -> Poecilotriccus sylvia [GBIF]
-
-Cinnyricinclus femoralis; Poeoptera femoralis -> Poeoptera femoralis [GBIF]
 
 Cinnyricinclus sharpii; Poeoptera sharpii; Pholia sharpii -> Poeoptera sharpii [GBIF]
 
@@ -8721,8 +8513,6 @@ Compsospiza baeri; Poospiza baeri -> Poospiza baeri [GBIF]
 
 Compsospiza garleppi -> Poospiza garleppi [GBIF]
 
-Hemispingus goeringi -> Poospiza goeringi [GBIF]
-
 Hemispingus rufosuperciliaris; Poospiza rufosuperciliaris -> Poospiza rufosuperciliaris [GBIF]
 
 Poospiza caesar -> Poospizopsis caesar [GBIF]
@@ -8740,8 +8530,6 @@ Phrygilus alaudinus; Corydospiza alaudina -> Porphyrospiza alaudina [GBIF]
 Phrygilus carbonarius; Corydospiza carbonaria -> Porphyrospiza carbonaria [GBIF]
 
 Zapornia atra; Porzana atra -> Porzana atra [GBIF]
-
-Amaurornis bicolor -> Porzana bicolor [GBIF]
 
 Porzana cinerea; Amaurornis cinerea; Porzana cinereus -> Porzana cinerea [GBIF]
 
@@ -8833,8 +8621,6 @@ Phaeoprogne tapera; Progne tapera -> Progne tapera [GBIF]
 
 Hapalemur simus; Prolemur simus -> Prolemur simus [GBIF]
 
-Propylaea quatuordecimpunctata; Propylea quatuordecimpunctata -> Propylaea quatuordecimpunctata [GBIF]
-
 Protaphorurodes tomuraushiensis -> Protaphorurodes tomuraushensis [GBIF]
 
 Proteles cristata; Proteles cristatus -> Proteles cristata [GBIF]
@@ -8873,7 +8659,7 @@ Pseudacris regilla; Hyla regilla -> Pseudacris regilla [GBIF]
 
 Heterocephalobus elongatus -> Pseudacrobeles elongatus [GBIF]
 
-Pseudagkistrodon rudis; Macropisthodon rudis -> Pseudagkistrodon rudis [GBIF]
+Macropisthodon rudis -> Pseudagkistrodon rudis [GBIF]
 
 Pseudalaemon fremantlii; Spizocorys fremantlii -> Pseudalaemon fremantlii [GBIF]
 
@@ -8943,8 +8729,6 @@ Abyssorchomene rossi -> Pseudorchomene rossi [GBIF]
 
 Pseudorectes ferrugineus; Pitohui ferrugineus -> Pseudorectes ferrugineus [GBIF]
 
-Pseudorectes incertus; Pitohui incertus -> Pseudorectes incertus [GBIF]
-
 Neoromicia brunnea; Neoromicia brunneus -> Pseudoromicia brunnea [GBIF]
 
 Neoromicia rendalli; Eptesicus rendalli -> Pseudoromicia rendalli [GBIF]
@@ -8981,8 +8765,6 @@ Megalaima corvina; Psilopogon corvinus -> Psilopogon corvinus [GBIF]
 
 Psilopogon cyanotis; Psilopogon duvaucelii -> Psilopogon duvaucelii [GBIF]
 
-Megalaima eximia -> Psilopogon eximius [GBIF]
-
 Megalaima faber; Psilopogon faber -> Psilopogon faber [GBIF]
 
 Megalaima faiostricta -> Psilopogon faiostrictus [GBIF]
@@ -8995,11 +8777,7 @@ Psilopogon haemacephalus; Megalaima haemacephala -> Psilopogon haemacephalus [GB
 
 Megalaima henricii; Psilopogon henricii -> Psilopogon henricii [GBIF]
 
-Megalaima incognita -> Psilopogon incognitus [GBIF]
-
 Megalaima javensis; Psilopogon javensis -> Psilopogon javensis [GBIF]
-
-Megalaima lagrandieri -> Psilopogon lagrandieri [GBIF]
 
 Megalaima lineata; Psilopogon lineatus -> Psilopogon lineatus [GBIF]
 
@@ -9203,7 +8981,7 @@ Cyclophiops doriae; Cyclophiops hamptoni -> Ptyas doriae [GBIF]
 
 Cyclophiops herminae -> Ptyas herminae [GBIF]
 
-Ptyas major; Cyclophiops major -> Ptyas major [GBIF]
+Cyclophiops major -> Ptyas major [GBIF]
 
 Cyclophiops multicinctus -> Ptyas multicincta [GBIF]
 
@@ -9309,8 +9087,6 @@ Pygopristis denticulata; Pygopristis denticulatus -> Pygopristis denticulata [GB
 
 Pygoscelis antarcticus; Pygoscelis antarctica; Pygoscelis antartica -> Pygoscelis antarcticus [GBIF]
 
-Pyrgilauda blanfordi; Montifringilla blanfordi -> Pyrgilauda blanfordi [GBIF]
-
 Pyrgilauda davidiana; Montifringilla davidiana -> Pyrgilauda davidiana [GBIF]
 
 Pyrgilauda ruficollis; Montifringilla ruficollis -> Pyrgilauda ruficollis [GBIF]
@@ -9328,8 +9104,6 @@ Pyrrhomyias cinnamomea; Pyrrhomyias cinnamomeus -> Pyrrhomyias cinnamomeus [GBIF
 Pyrrhura emma; Pyrrhura leucotis -> Pyrrhura leucotis [GBIF]
 
 Pyrrhura lucianii; Pyrrhura picta; Pyrrhura roseifrons -> Pyrrhura picta [GBIF]
-
-Otus podarginus -> Pyrroglaux podargina [GBIF]
 
 Pyura tunicata -> Pyura tunica [GBIF]
 
@@ -9450,8 +9224,6 @@ Litoria xanthomera -> Ranoidea xanthomera [GBIF]
 Restrelliger neglectus; Rastrelliger brachysoma -> Rastrelliger brachysoma [GBIF]
 
 Restrelliger kanagurta; Rastrelliger kanagurta -> Rastrelliger kanagurta [GBIF]
-
-Rattus arfakienis; Rattus arfakiensis -> Rattus arfakiensis [GBIF]
 
 Rattus marmosurus; Rattus facetus -> Rattus marmosurus [GBIF]
 
@@ -9653,8 +9425,6 @@ Leucophaea maderae; Rhyparobia maderae -> Rhyparobia maderae [GBIF]
 
 Aceros cassidix; Rhyticeros cassidix -> Rhyticeros cassidix [GBIF]
 
-Aceros everetti -> Rhyticeros everetti [GBIF]
-
 Rhyticeros narcondami; Aceros narcondami -> Rhyticeros narcondami [GBIF]
 
 Rhyticeros plicatus; Aceros plicatus -> Rhyticeros plicatus [GBIF]
@@ -9663,7 +9433,7 @@ Rhyticeros subruficollis; Aceros subruficollis -> Rhyticeros subruficollis [GBIF
 
 Rhyticeros undulatus; Aceros undulatus -> Rhyticeros undulatus [GBIF]
 
-Rhizopertha dominica; Rhyzopertha dominica -> Rhyzopertha dominica [GBIF]
+Rhizopertha dominica -> Rhyzopertha dominica [GBIF]
 
 Ribautodelphax collina -> Ribautodelphax collinus [GBIF]
 
@@ -9753,7 +9523,7 @@ Rusa unicolor; Cervus unicolor -> Rusa unicolor [GBIF]
 
 Musophaga johnstoni; Ruwenzorornis johnstoni; Gallirex johnstoni -> Ruwenzorornis johnstoni [GBIF]
 
-Saduria entomon; Mesidothea entomon -> Saduria entomon [GBIF]
+Mesidothea entomon -> Saduria entomon [GBIF]
 
 Saguinus mystax; Saguinus pileatus -> Saguinus mystax [GBIF]
 
@@ -9887,7 +9657,7 @@ Schistocichla rufifacies; Myrmelastes rufifacies -> Schistocichla rufifacies [GB
 
 Schistocichla saturata; Myrmelastes saturatus -> Schistocichla saturata [GBIF]
 
-Myrmelastes schistaceus; Schistocichla schistacea -> Schistocichla schistacea [GBIF]
+Myrmelastes schistaceus -> Schistocichla schistacea [GBIF]
 
 Prinia leontica; Schistolais leontica -> Schistolais leontica [GBIF]
 
@@ -10057,8 +9827,6 @@ Mormopterus eleryi -> Setirostris eleryi [GBIF]
 
 Setopagis heterura; Caprimulgus heterurus -> Setopagis heterura [GBIF]
 
-Caprimulgus maculosus -> Setopagis maculosa [GBIF]
-
 Setopagis parvula; Caprimulgus parvulus -> Setopagis parvula [GBIF]
 
 Hydropsalis parvula; Hydropsalis parvulus -> Setopagis parvulus [NCBI]
@@ -10149,17 +9917,11 @@ Silverstoneia nubicola; Colostethus nubicola -> Silverstoneia nubicola [GBIF]
 
 Pseudocrossocheilus bamaensis; Sinocrossocheilus bamaensis -> Sinocrossocheilus bamaensis [GBIF]
 
-Sinosuthora alphonsiana; Paradoxornis alphonsianus; Suthora alphonsianus -> Sinosuthora alphonsiana [GBIF]
+Sinosuthora alphonsiana; Suthora alphonsianus -> Sinosuthora alphonsiana [GBIF]
 
-Sinosuthora brunnea; Sinosuthora ricketti; Paradoxornis brunneus -> Sinosuthora brunnea [GBIF]
-
-Sinosuthora conspicillata; Paradoxornis conspicillatus -> Sinosuthora conspicillata [GBIF]
-
-Paradoxornis przewalskii -> Sinosuthora przewalskii [GBIF]
+Sinosuthora brunnea; Sinosuthora ricketti -> Sinosuthora brunnea [GBIF]
 
 Sinosuthora webbiana; Paradoxornis webbianus; Paradoxornis webbiana; Suthora webbianus -> Sinosuthora webbiana [GBIF]
-
-Sinosuthora zappeyi; Paradoxornis zappeyi -> Sinosuthora zappeyi [GBIF]
 
 Cadulus dalli -> Siphonodentalium dalli [GBIF]
 
@@ -10301,7 +10063,7 @@ Hemispingus ochraceus -> Sphenopsis ochracea [GBIF]
 
 Hemispingus piurae -> Sphenopsis piurae [GBIF]
 
-Coendou insidiosus -> Sphiggurus insidiosus [GBIF]
+Coendou insidiosus; Sphiggurus insidiosus -> Sphiggurus insidiosus [GBIF]
 
 Coendou melanurus; Sphiggurus melanurus -> Sphiggurus melanurus [GBIF]
 
@@ -10349,8 +10111,6 @@ Carduelis pinus; Spinus pinus -> Spinus pinus [GBIF]
 
 Carduelis psaltria; Spinus psaltria -> Spinus psaltria [GBIF]
 
-Carduelis siemiradzkii -> Spinus siemiradzkii [GBIF]
-
 Spinus spinescens; Carduelis spinescens -> Spinus spinescens [GBIF]
 
 Carduelis spinus; Spinus spinus -> Spinus spinus [GBIF]
@@ -10362,8 +10122,6 @@ Carduelis tristis; Spinus tristis -> Spinus tristis [GBIF]
 Spinus uropygialis; Carduelis uropygialis -> Spinus uropygialis [GBIF]
 
 Spinus xanthogastra; Spinus xanthogastrus; Carduelis xanthogastra -> Spinus xanthogastrus [GBIF]
-
-Spinus yarrellii; Carduelis yarrellii -> Spinus yarrellii [GBIF]
 
 Spiralinella spiralis -> Spiralina spiralis [GBIF]
 
@@ -10409,8 +10167,6 @@ Oryzoborus funereus; Sporophila funerea -> Sporophila funerea [GBIF]
 
 Sporophila maximiliani; Oryzoborus maximiliani -> Sporophila maximiliani [GBIF]
 
-Sporophila nigricollis; Sporophila melanops -> Sporophila nigricollis [GBIF]
-
 Oryzoborus nuttingi; Sporophila nuttingi -> Sporophila nuttingi [GBIF]
 
 Leuciscus cephalus; Squalius cephalus -> Squalius cephalus [GBIF]
@@ -10439,7 +10195,7 @@ Abyssocucumis liouvillei -> Staurocucumis liouvillei [GBIF]
 
 Ekmocucumis turqueti -> Staurocucumis turqueti [GBIF]
 
-Staurostoma mertensii; Staurophora mertensii -> Staurostoma mertensii [GBIF]
+Staurophora mertensii -> Staurostoma mertensii [GBIF]
 
 Cyphocharax corumbae -> Steindachnerina corumbae [GBIF]
 
@@ -10545,7 +10301,7 @@ Crithidia oncopelti -> Strigomonas oncopelti [NCBI]
 
 Strigops habroptila; Strigops habroptilus -> Strigops habroptila [GBIF]
 
-Ciccaba albitarsis; Strix albitarsis; Ciccaba albitarsus -> Strix albitarsis [GBIF]
+Ciccaba albitarsis; Ciccaba albitarsus -> Strix albitarsis [GBIF]
 
 Strix butleri; Asio butleri -> Strix butleri [GBIF]
 
@@ -10573,8 +10329,6 @@ Sturnella militaris; Leistes militaris -> Sturnella militaris [GBIF]
 
 Sturnella superciliaris; Leistes superciliaris -> Sturnella superciliaris [GBIF]
 
-Sturnus erythropygius -> Sturnia erythropygia [GBIF]
-
 Sturnia malabarica; Sturnus malabaricus -> Sturnia malabarica [GBIF]
 
 Sturnia pagodarum; Sturnus pagodarum -> Sturnia pagodarum [GBIF]
@@ -10582,8 +10336,6 @@ Sturnia pagodarum; Sturnus pagodarum -> Sturnia pagodarum [GBIF]
 Sturnia sinensis; Sturnus sinensis -> Sturnia sinensis [GBIF]
 
 Sturnira thomasi; Sturnira angeli -> Sturnira angeli [GBIF]
-
-Sturnus albofrontatus -> Sturnornis albofrontatus [GBIF]
 
 Stymphalornis acutirostris; Formicivora acutirostris -> Stymphalornis acutirostris [GBIF]
 
@@ -10679,25 +10431,11 @@ Symposiachrus boanensis; Monarcha boanensis -> Symposiachrus boanensis [GBIF]
 
 Monarcha brehmii -> Symposiachrus brehmii [GBIF]
 
-Monarcha browni -> Symposiachrus browni [GBIF]
-
 Monarcha everetti -> Symposiachrus everetti [GBIF]
 
 Monarcha guttulus; Symposiachrus guttula; Monarcha guttula -> Symposiachrus guttula [GBIF]
 
-Monarcha infelix -> Symposiachrus infelix [GBIF]
-
-Monarcha julianae -> Symposiachrus julianae [GBIF]
-
-Monarcha leucurus -> Symposiachrus leucurus [GBIF]
-
-Monarcha loricatus -> Symposiachrus loricatus [GBIF]
-
 Monarcha manadensis; Symposiachrus manadensis -> Symposiachrus manadensis [GBIF]
-
-Monarcha menckei -> Symposiachrus menckei [GBIF]
-
-Monarcha mundus -> Symposiachrus mundus [GBIF]
 
 Monarcha sacerdotum -> Symposiachrus sacerdotum [GBIF]
 
@@ -10903,8 +10641,6 @@ Meliphaga albilineata; Microptilotis albilineatus -> Territornis albilineata [GB
 
 Meliphaga fordiana; Microptilotis fordianus -> Territornis fordiana [GBIF]
 
-Meliphaga reticulata -> Territornis reticulata [GBIF]
-
 Tessarabrachion oculatus; Tessarabrachion oculatum -> Tessarabrachion oculatum [GBIF]
 
 Tetanocera ferruginea -> Tetanocera ferriginea [GBIF]
@@ -10913,11 +10649,9 @@ Tetartopeus terminatum -> Tetartopeus terminatus [GBIF]
 
 Canthon lituratus -> Tetraechma liturata [GBIF]
 
-Tetragnatha maxillosa -> Tetragnatha keyserlingi [GBIF]
-
 Tetrahymena pyriformis; Tetrahymena geleii -> Tetrahymena pyriformis [GBIF]
 
-Tetranychus cinnabarinus; Tetranychus urticae -> Tetranychus urticae [GBIF]
+Tetranychus urticae; Tetranychus cinnabarinus -> Tetranychus urticae [GBIF]
 
 Tetrao urogalloides; Tetrao parvirostris -> Tetrao urogalloides [GBIF]
 
@@ -10999,13 +10733,13 @@ Leucippus taczanowskii -> Thaumasius taczanowskii [GBIF]
 
 Themisto gracilipes; Euthemisto compressa; Themisto compressa -> Themisto compressa [GBIF]
 
-Parathemisto gaudichaudi; Themisto gaudichaudii; Parathemisto gaudichaudii -> Themisto gaudichaudii [GBIF]
+Themisto gaudichaudii; Parathemisto gaudichaudi; Parathemisto gaudichaudii -> Themisto gaudichaudii [GBIF]
 
 Themisto japonica; Parathemisto japonica -> Themisto japonica [GBIF]
 
 Themisto libellula; Parathemisto libellula; Euthemisto libellula -> Themisto libellula [GBIF]
 
-Themisto pacifica; Parathemisto pacifica -> Themisto pacifica [GBIF]
+Parathemisto pacifica; Themisto pacifica -> Themisto pacifica [GBIF]
 
 Theristicus caerulescens; Harpiprion caerulescens -> Theristicus caerulescens [GBIF]
 
@@ -11039,8 +10773,6 @@ Thraupis sayaca; Tangara sayaca -> Thraupis sayaca [GBIF]
 
 Threskiornis molucca; Threskiornis moluccus; Threskiornis molacca -> Threskiornis molucca [GBIF]
 
-Thryothorus nicefori -> Thryophilus nicefori [GBIF]
-
 Thryophilus pleurostictus; Thryothorus pleurostictus -> Thryophilus pleurostictus [GBIF]
 
 Thryophilus rufalbus; Thryothorus rufalbus -> Thryophilus rufalbus [GBIF]
@@ -11056,8 +10788,6 @@ Thyasira gouldi -> Thyasira gouldii [GBIF]
 Thylamys elegans; Marmosa elegans -> Thylamys elegans [GBIF]
 
 Thylogale billardierii; Thylogale billardieri -> Thylogale billardierii [GBIF]
-
-Thysanoessa spinefera; Thysanoessa spinifera -> Thysanoessa spinifera [GBIF]
 
 Thysanopoda monocantha; Thysanopoda monacantha -> Thysanopoda monacantha [GBIF]
 
@@ -11255,7 +10985,7 @@ Trochalopteron affine; Garrulax affinis -> Trochalopteron affine [GBIF]
 
 Trochalopteron austeni; Garrulax austeni -> Trochalopteron austeni [GBIF]
 
-Trochalopteron cachinnans; Montecincla cachinnans; Montecincla jerdoni; Strophocincla cachinnans; Garrulax cachinnans -> Trochalopteron cachinnans [GBIF]
+Trochalopteron cachinnans; Montecincla cachinnans; Montecincla jerdoni; Garrulax cachinnans -> Trochalopteron cachinnans [GBIF]
 
 Trochalopteron chrysopterum; Garrulax chrysopterus -> Trochalopteron chrysopterum [GBIF]
 
@@ -11267,8 +10997,6 @@ Montecincla fairbanki; Strophocincla fairbanki -> Trochalopteron fairbanki [GBIF
 
 Trochalopteron formosum; Garrulax formosus -> Trochalopteron formosum [GBIF]
 
-Trochalopteron henrici; Garrulax henrici -> Trochalopteron henrici [GBIF]
-
 Trochalopteron imbricatum; Garrulax imbricatus -> Trochalopteron imbricatum [GBIF]
 
 Trochalopteron lineatum; Garrulax lineatus -> Trochalopteron lineatum [GBIF]
@@ -11279,8 +11007,6 @@ Trochalopteron milnei; Garrulax milnei -> Trochalopteron milnei [GBIF]
 
 Trochalopteron morrisonianum; Garrulax morrisonianus -> Trochalopteron morrisonianum [GBIF]
 
-Garrulax ngoclinhensis -> Trochalopteron ngoclinhense [GBIF]
-
 Trochalopteron peninsulae; Garrulax peninsulae -> Trochalopteron peninsulae [GBIF]
 
 Trochalopteron squamatum; Garrulax squamatus -> Trochalopteron squamatum [GBIF]
@@ -11290,8 +11016,6 @@ Trochalopteron subunicolor; Garrulax subunicolor -> Trochalopteron subunicolor [
 Trochalopteron variegatum; Garrulax variegatus -> Trochalopteron variegatum [GBIF]
 
 Trochalopteron virgatum; Garrulax virgatus -> Trochalopteron virgatum [GBIF]
-
-Garrulax yersini -> Trochalopteron yersini [GBIF]
 
 Trichia sericea -> Trochulus hispidus [GBIF]
 
@@ -11733,15 +11457,11 @@ Dendrocopos nanus -> Yungipicus nanus [GBIF]
 
 Picoides ramsayi -> Yungipicus ramsayi [GBIF]
 
-Dendrocopos temminckii -> Yungipicus temminckii [GBIF]
-
 Zaglossus bruijni; Zaglossus bruijnii -> Zaglossus bruijni [GBIF]
 
 Zamenis longissimus; Elaphe longissima -> Zamenis longissimus [GBIF]
 
 Rhinechis scalaris -> Zamenis scalaris [GBIF]
-
-Phaenicophaeus calyorhynchus -> Zanclostomus calyorhynchus [GBIF]
 
 Phaenicophaeus curvirostris -> Zanclostomus curvirostris [GBIF]
 
