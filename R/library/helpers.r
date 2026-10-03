@@ -26,26 +26,6 @@ NormaliseSourceLabel <- function(x) {
   x
 }
 
-RemoveSource <- function(dat, taxon, source) {
-  rows <- !is.na(dat$taxon) & dat$taxon == taxon
-  for (src in source) {
-    dat$mass_g[rows & dat$source_mass == src] <- NA
-    s  <- dat$source_mass[rows]
-    s  <- gsub(paste0(src, "(-|; )"), "", s)
-    s  <- gsub(paste0("(-|; )", src), "", s)
-    dat$source_mass[rows] <- s
-  }
-  dat
-}
-
-RemoveRecord <- function(dat, taxon, source = NULL) {
-  if (is.null(source)) {
-    dat[dat$taxon != taxon, ]
-  } else {
-    dat[!(dat$taxon == taxon & dat$source_mass == source), ]
-  }
-}
-
 # Rows that a source itself flags as not species-specific measurements
 # (statistical or phylogenetic imputations, genus/family averages, values
 # copied from another species, unsatisfactory conversions) are removed in the
