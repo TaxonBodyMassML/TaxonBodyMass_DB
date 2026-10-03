@@ -4,6 +4,10 @@
 # ammonia-excretion and O:N analyses; table S4 maps data codes to species and
 # stage/sex. The PDF tables were parsed with parse_ikeda_esm.py (pdftotext -layout,
 # column-position splitting) into ikeda2014_esm_parsed.csv, which is read here.
+# Table S3 (O:N ratio) is excluded in full: its rows are the O:N measurements of
+# the same specimens as tables S1 (respiration) and S2 (ammonia excretion), so
+# they add no independent dry mass (owner decision, #11; logged with DropImputed()
+# after the stage and name filters below).
 # Only adult records are used: copepodite stage C6 (adult) females/males, adults
 # (A), gravid females (FG), F/M, or unstaged records; C1-C5 copepodites and
 # juveniles (J) are dropped, as are genus-level names. Dry mass is converted to
@@ -22,6 +26,9 @@ adat$taxon <- trimws(adat$species)
 adat$taxon <- sub('^([A-Z][a-z]+ [a-z]+).*$', '\\1', adat$taxon)          # drop 'f. sulcata' etc.
 adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon), ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon), ]
+# S3 is dropped once `taxon` exists so that the imputed log records the taxa affected.
+adat <- DropImputed(adat, adat$table == 'S3', 'Ikeda_2014',
+                    'Table S3 O:N rows duplicate the S1/S2 specimens (owner decision, #11)')
 adat$mass_g <- suppressWarnings(as.numeric(adat$dw_mg)) / 1000           # mg dry -> g dry
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat$ref_keys <- ifelse(nzchar(trimws(adat$ref)), trimws(adat$ref), NA_character_)

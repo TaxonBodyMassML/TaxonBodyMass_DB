@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-03 09:19:02
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-03 09:30:39
 
 ## Summary
 
@@ -1621,9 +1621,6 @@ Liolaemus forsteri [range=1.82]
 Myrmarachne formicaria [range=1.81]
         Min_source: Brose_2005 0.00025
         Max_source: Brocher_etal_2025 0.01632
-Pelagia noctiluca [range=1.81]
-        Min_source: Kiorboe_2014; Kiorboe_2013; Lucas_2011 0.1663
-        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 10.8
 Thamnophis hammondii [range=1.81]
         Min_source: vertnet-reptilia-sept2016 6.164
         Max_source: Myhrvold_2015 400
@@ -1693,9 +1690,6 @@ Champsocephalus gunnari [range=1.77]
 Paradisaea decora [range=1.77]
         Min_source: vertnet-aves-sept2016 4
         Max_source: Myhrvold_2015 237
-Poralia rufescens [range=1.77]
-        Min_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 5.651
-        Max_source: Pata_2025 333.8
 Erythrogonys cinctus [range=1.77]
         Min_source: vertnet-aves-sept2016 1
         Max_source: vertnet-traits-sept2016 59.03
@@ -1711,6 +1705,9 @@ Myiarchus oberi [range=1.76]
 Doryteuthis pealeii [range=1.76]
         Min_source: Brose_etal_2018 3.737
         Max_source: Hanlon_1983 216.3
+Pelagia noctiluca [range=1.76]
+        Min_source: Kiorboe_2014; Kiorboe_2013; Lucas_2011 0.1663
+        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 9.614
 Lachesis muta [range=1.76]
         Min_source: Meiri_2024 375
         Max_source: Feldman_etal_2016 2.167e+04
@@ -1876,12 +1873,12 @@ Gobius paganellus [range=1.66]
 Hypsirhynchus callilaemus [range=1.66]
         Min_source: vertnet-reptilia-sept2016 0.9
         Max_source: Feldman_etal_2016 41
-Salpa thompsoni [range=1.66]
-        Min_source: Brose_etal_2018 0.14
-        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 6.378
 Netta rufina [range=1.66]
         Min_source: vertnet-aves-sept2016 27.25
         Max_source: Herberstein_etal_2022 1237
+Poralia rufescens [range=1.66]
+        Min_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 7.377
+        Max_source: Pata_2025 333.8
 Uratelornis chimaera [range=1.66]
         Min_source: vertnet-aves-sept2016 5
         Max_source: Wilman_etal_2014 226
@@ -2059,6 +2056,9 @@ Crotalus oreganus [range=1.58]
 Lates niloticus [range=1.58]
         Min_source: Quaardvark 3000
         Max_source: fishbase 1.137e+05
+Salpa thompsoni [range=1.58]
+        Min_source: Brose_etal_2018 0.14
+        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 5.291
 Syngnathus leptorhynchus [range=1.58]
         Min_source: Hechinger_etal_2011 0.5375
         Max_source: fishbase 20.3
@@ -3184,9 +3184,6 @@ Naja katiensis [range=1.19]
 Buteo rufinus [range=1.19]
         Min_source: vertnet-aves-sept2016 75.83
         Max_source: AnAge 1175
-Pegea confoederata [range=1.19]
-        Min_source: Castro_2025 0.05188
-        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 0.8024
 Pterodroma defilippiana [range=1.19]
         Min_source: vertnet-aves-sept2016 11.34
         Max_source: Myhrvold_2015 175.2
@@ -3286,6 +3283,9 @@ Thunnus obesus [range=1.17]
 Psammechinus miliaris [range=1.17]
         Min_source: Brose_etal_2018 0.6355
         Max_source: Jennings_2002 9.3
+Themisto japonica [range=1.16]
+        Min_source: Kiorboe_2014; Kiorboe_2013 0.0009086
+        Max_source: Ikeda_2014; Kiorboe_2013 0.01328
 Prinia hodgsonii [range=1.16]
         Min_source: Myhrvold_2015 6.4
         Max_source: vertnet-aves-sept2016 93
@@ -3295,9 +3295,6 @@ Nesofregetta fuliginosa [range=1.16]
 Trypoxylon attenuatum [range=1.16]
         Min_source: Brose_2005 0.001196
         Max_source: Brocher_etal_2025 0.01736
-Themisto japonica [range=1.16]
-        Min_source: Kiorboe_2014; Kiorboe_2013 0.0009086
-        Max_source: Ikeda_2014; Kiorboe_2013 0.01319
 Rhinolophus alcyone [range=1.16]
         Min_source: Jones_2009 18.62
         Max_source: vertnet-mammalia-sept2016 270
@@ -3415,6 +3412,9 @@ Ambystoma laterale [range=1.14]
 Epalzeorhynchos frenatus [range=1.14]
         Min_source: Killen_etal_2016 2.1
         Max_source: Cai_etal_2025 28.8
+Pegea confoederata [range=1.14]
+        Min_source: Castro_2025 0.05188
+        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 0.7114
 Pleuromamma gracilis [range=1.14]
         Min_source: Hoehler_etal_2023 0.000225
         Max_source: DeLong_etal_2010 0.00308
@@ -3820,6 +3820,9 @@ Trachycephalus typhonius [range=1.05]
 Hynobius nebulosus [range=1.05]
         Min_source: Tsuboi_etal_2018 2
         Max_source: Cai_etal_2025 22.3
+Salpa fusiformis [range=1.05]
+        Min_source: Castro_2025 0.02263
+        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 0.2518
 Araniella cucurbitina [range=1.05]
         Min_source: Brocher_etal_2025 0.01453
         Max_source: Brose_etal_2018 0.1617
@@ -3886,9 +3889,6 @@ Crocidura sibirica [range=1.02]
 Atractaspis engaddensis [range=1.02]
         Min_source: Feldman_etal_2016 44.6
         Max_source: Myhrvold_2015 471
-Salpa fusiformis [range=1.02]
-        Min_source: Castro_2025 0.02263
-        Max_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 0.2389
 Anabolia nervosa [range=1.02]
         Min_source: Brose_2005 0.001139
         Max_source: Brose_etal_2018 0.01202

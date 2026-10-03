@@ -4,12 +4,14 @@
 The ESM PDF is laid out in 3-4 side-by-side column groups per table. We run
 `pdftotext -layout`, split each line at the header positions of the 'Taxon'/'Taxa'
 labels, and read the column groups in reading order (top to bottom, left to
-right), carrying the taxon-group label (COPE, EUPH, ...) and, in S4, the species
-name down through blank cells. Records in S1-S3 that say 'see S4' are resolved
-through the (group, code) -> species/stage table S4. The Reference column of
-S1-S3 (author-year key of the primary study) is printed only on the first record
-of each run of records from one study; it is validated, canonicalised and filled
-down in reading order (also across malformed lines) into the last column, `ref`.
+right), carrying the taxon-group label (COPE, EUPH, ...; also taken from malformed
+lines) and, in S4, the species name down through blank cells. Records in S1-S3
+that say 'see S4' are resolved through the (group, code) -> species/stage table
+S4. The Reference column of S1-S3 (author-year key of the primary study) is
+printed only on the first record of each run of records from one study; it is
+validated, canonicalised and filled down in reading order (also across malformed
+lines) into the last column, `ref`. Every non-blank column piece of S1-S3 is
+counted on stderr as parsed, skipped malformed, title/header or footnote.
 Output: ikeda2014_esm_parsed.csv (one row per S1-S3 record with a dry mass).
 """
 import re, subprocess, csv, sys, collections
@@ -90,26 +92,46 @@ def ref_key_tail(line):
     m = ref_tail_re.search(line)
     return ref_key(m.group('ref')) if m else None
 
+# Table titles ('S3. Summary of O:N ratio data') and column headers ('Taxa  Code  Species ...')
+# precede the data rows of every table: header_offsets() locates the header line and chunks()
+# yields only the lines below it, so neither reaches the loop. They are still recognised and
+# counted here so that a layout change cannot turn them into records or silent drops. The
+# earlier filter `piece.strip().startswith(('Tax', 'S1', 'S2', 'S3'))` never saw a title but
+# dropped the S3 rows whose code (S1, S2, S3, S10, ...) starts the piece because the row has
+# no group label (65 pieces, 59 of them records; issue #11).
+title_re = re.compile(r'^\s*(?:S[1-4]\.\s|Tax(?:on|a)\b)')
+# The tables' only footnote, '(Italic codes/data are outliers and did not included in the
+# analyses)', is cut into fragments by the column boundaries. A piece of three or more words
+# without a single digit cannot be a data row (every record has depth, temperature, rate and
+# dry mass), a title or a group label.
+foot_re = re.compile(r'^\s*(?:[^\d\s]+\s+){2,}[^\d\s]+\s*$')
+
 for tab in ['S1', 'S2', 'S3']:
     block = lines[bounds[tab][0]:bounds[tab][1]]
     hi, offs = header_offsets(block, r'Tax(?:on|a)')
-    grp = None; cur_ref = None; n_ok = n_bad = n_ref = n_ref_skip = 0
+    grp = None; cur_ref = None; n_ref = n_ref_skip = 0
+    n = collections.Counter()   # every non-blank piece ends up in exactly one of its keys
     for piece in chunks(block, hi, offs):
         if not piece.strip():
             continue
-        is_title = piece.strip().startswith(('Tax', 'S1', 'S2', 'S3'))
-        m = None if is_title else rec_re.match(piece)
+        kind = 'title/header' if title_re.match(piece) else 'footnote' if foot_re.match(piece) else None
+        m = None if kind else rec_re.match(piece)
         if not m:
-            # A key printed on a line that is not parsed as a record still starts a run of records
-            # in the PDF: consume it so that the fill-down below stays in step with the tables.
+            kind = kind or 'malformed'
+            # A group label or a key printed on a line that is not parsed as a record still starts
+            # a run of records in the PDF: consume both so that the fill-down below stays in step
+            # with the tables (S3 prints each label once, e.g. on the malformed POLY S1 line).
+            mg = re.match(r'^\s*([A-Z]{4})\s', piece)
+            if mg and kind == 'malformed':
+                grp = {'CHNI': 'CNID'}.get(mg.group(1), mg.group(1))
             key = ref_key_tail(piece)
             if key:
                 cur_ref = key; n_ref_skip += 1
-            elif re.search(r'[^\d\s]\s*$', piece):
+            elif kind == 'malformed' and re.search(r'[^\d\s]\s*$', piece):
                 print(f'{tab}: ignored trailing text', repr(piece.strip()[-45:]), file=sys.stderr)
-            if not is_title:
-                n_bad += 1
-                if n_bad <= 4: print(f'{tab} skipped:', repr(piece.strip()[:90]), file=sys.stderr)
+            if kind == 'malformed':
+                print(f'{tab} skipped (no record pattern):', repr(piece.strip()[:90]), file=sys.stderr)
+            n[kind] += 1
             continue
         if m.group('grp'): grp = {'CHNI': 'CNID'}.get(m.group('grp'), m.group('grp'))  # CHNI is a typo for CNID in S3
         raw_ref = (m.group('ref') or '').strip()
@@ -125,7 +147,8 @@ for tab in ['S1', 'S2', 'S3']:
         if sp == 'see S4':
             sp, stage = s4map.get((grp, m.group('code').replace('\u2013', '-')), (None, ''))
             if sp is None:
-                print(f'{tab}: unresolved code {grp} {m.group("code")}', file=sys.stderr); n_bad += 1; continue
+                print(f'{tab} skipped (unresolved S4 code {grp} {m.group("code")}):', repr(piece.strip()[:90]), file=sys.stderr)
+                n['malformed'] += 1; continue
         else:
             ms = re.match(r'^([A-Z][a-z]+ [a-z]+)\s*(.*)$', sp)
             if ms: sp, stage = ms.group(1), ms.group(2).strip()
@@ -134,8 +157,10 @@ for tab in ['S1', 'S2', 'S3']:
         recs.append(dict(table=tab, taxon_group=grp, code=m.group('code').replace('\u2013', '-'), species=sp, stage=stage,
                          depth_m=t.group('depth'), temp_C=t.group('T'), dw_mg=t.group('dw'),
                          c_mg=t.group('c') or '', n_mg=t.group('n') or '', ref=cur_ref or ''))
-        n_ok += 1
-    print(f'{tab}: parsed {n_ok}, skipped {n_bad}, explicit refs {n_ref} (+{n_ref_skip} on lines that are not records)', file=sys.stderr)
+        n['record'] += 1
+    print(f'{tab}: {sum(n.values())} pieces = parsed {n["record"]} + skipped malformed {n["malformed"]} '
+          f'+ title/header {n["title/header"]} + footnote {n["footnote"]}; '
+          f'explicit refs {n_ref} (+{n_ref_skip} on lines that are not records)', file=sys.stderr)
 with open('ikeda2014_esm_parsed.csv', 'w', newline='') as fh:
     w = csv.DictWriter(fh, fieldnames=list(recs[0].keys())); w.writeheader(); w.writerows(recs)
 print('S4 entries', len(s4map), 'records', len(recs), 'species', len({r['species'] for r in recs}), file=sys.stderr)

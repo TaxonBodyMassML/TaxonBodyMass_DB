@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 09:19:02
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 09:30:39
 
 
 ## Species name changed during enrichment (5778 rows)
@@ -8095,7 +8095,7 @@ Sergia bisulcata; Sergestes bisulcatus -> Phorcosergia bisulcata [GBIF]
 
 Sergia grandis; Phorcosergia grandis -> Phorcosergia grandis [GBIF]
 
-Sergestes phorcus; Sergia phorca; Phorcosergia phorca -> Phorcosergia phorca [GBIF]
+Sergia phorca; Sergestes phorcus; Phorcosergia phorca -> Phorcosergia phorca [GBIF]
 
 Nassarius tegula -> Phrontis tiarula [GBIF]
 
