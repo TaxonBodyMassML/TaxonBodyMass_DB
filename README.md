@@ -67,7 +67,19 @@ A message such as `tidycensus is supported by Retriever version 3.0.1-dev` on lo
 
 ### Reproduce the database
 
-To regenerate all per-source `.Rdata` files and recompile the database from scratch, set `recompile = TRUE` at the top of `R/RunMe.r` before running it. Google Sheet access requires authentication via `googlesheets4` on first use.  Contact mark.novak@oregonstate.edu to contribute new sources or curated values.
+To regenerate all per-source `.Rdata` files and recompile the database from scratch, set `recompile = TRUE` at the top of `R/RunMe.r` before running it; the download flags `DataRetrieve`, `DataVertNet` and `DataFishbase` control the four live-download frames. Google Sheet access requires authentication via `googlesheets4` on first use.  Contact mark.novak@oregonstate.edu to contribute new sources or curated values.
+
+The run stops before any cached frame is loaded (step 2) when:
+
+- **a parse script fails** (`recompile = TRUE`) -- every failure is printed as an `ERROR:` line and all of them are listed in the stop message, so one run reports them all. Fix the scripts and rerun with `recompile = TRUE`.
+- **a cached frame was not rewritten** (`recompile = TRUE`) -- a frame in `sources/Rdata/` is older than the loop, e.g. an orphan left by a renamed or removed source, or a script that ran without saving. Delete the orphan or fix the script.
+- **an expected frame is missing** (whatever `recompile` is) -- `R/library/check_cache.r` expects `BodyMass_<Source>.Rdata` for every `sources/databases/<Source>/BodyMass_<Source>.r` plus the four download frames, and the stop message names the flag to set for each missing frame (`recompile`, `DataRetrieve`, `DataVertNet` or `DataFishbase`). Frames that no current script writes only raise a warning. The three scripts whose `save()` target differs from their folder name are listed in `frame_overrides` in `check_cache.r`; a new source whose script saves under another name must be added there, otherwise the check stops and says so.
+
+These guards are exercised on a throwaway source tree, without network access, by
+
+```bash
+Rscript R/library/tests/test_recompile_guard.R
+```
 
 ### Use the compiled output
 
