@@ -121,19 +121,39 @@ if (recompile) {
   null_con  <- file(nullfile(), open = 'w')
   out_depth <- sink.number()
   msg_depth <- sink.number('message')
+  t0 <- Sys.time()   # every frame the loop owns must be rewritten after this
   for (i in seq_along(scripts)) {
     cat(sprintf('  [%d/%d] %s\n', i, n, basename(dirname(scripts[i]))),
         file = stderr())
     wd_source <- dirname(scripts[i])
+    # While the message sink is active stderr() is diverted to null_con, so a
+    # message printed inside the error handler is lost. Capture it here and
+    # print it once `finally` has restored the sinks.
+    err_msg <- NULL
     sink(nullfile()); sink(null_con, type = 'message')
     tryCatch(source(scripts[i]),
-             error   = function(e) cat(sprintf('    ERROR: %s\n', conditionMessage(e)), file = stderr()),
+             error   = function(e) err_msg <<- conditionMessage(e),
              finally = {
                while (sink.number('message') > msg_depth) sink(type = 'message')
                while (sink.number()           > out_depth) sink()
              })
+    if (!is.null(err_msg))
+      cat(sprintf('    ERROR: %s\n', err_msg), file = stderr())
   }
   close(null_con)
+  # A parser that fails leaves its previous .Rdata in place, which step 2 would
+  # load as if it were current. Stop on any cached frame the loop did not
+  # rewrite; the four live-download frames are written by the blocks above and
+  # are exempt. One second of tolerance covers coarse file-system timestamps.
+  live_frames <- c('BodyMass_DataRetrieverAll.Rdata', 'BodyMass_VertNetAll.Rdata',
+                   'BodyMass_Fishbase.Rdata', 'BodyMass_Sealifebase.Rdata')
+  cached <- list.files(wd_rdata, pattern = '\\.Rdata$', full.names = TRUE)
+  cached <- cached[basename(cached) %!in% live_frames]
+  stale  <- cached[file.mtime(cached) < t0 - 1]
+  if (length(stale) > 0)
+    stop('recompile = TRUE but ', length(stale), ' cached frame(s) in sources/Rdata ',
+         'were not rewritten (parser error above, or an orphaned file):\n',
+         paste0('  ', basename(stale), collapse = '\n'))
 }
 
 
