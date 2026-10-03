@@ -79,6 +79,7 @@ source(file.path(wd_root, 'R', 'library', 'remove_high_range.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_autotrophs.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_extinct.r'))
 source(file.path(wd_root, 'R', 'library', 'check_source_docs.r'))
+source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
 
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
 dir.create(file.path(wd_root, 'reports'),      showWarnings = FALSE)
@@ -123,6 +124,7 @@ if (recompile) {
   out_depth <- sink.number()
   msg_depth <- sink.number('message')
   t0 <- Sys.time()   # every frame the loop owns must be rewritten after this
+  parser_errors <- list()
   for (i in seq_along(scripts)) {
     cat(sprintf('  [%d/%d] %s\n', i, n, basename(dirname(scripts[i]))),
         file = stderr())
@@ -138,10 +140,21 @@ if (recompile) {
                while (sink.number('message') > msg_depth) sink(type = 'message')
                while (sink.number()           > out_depth) sink()
              })
-    if (!is.null(err_msg))
+    if (!is.null(err_msg)) {
       cat(sprintf('    ERROR: %s\n', err_msg), file = stderr())
+      parser_errors[[basename(dirname(scripts[i]))]] <- err_msg
+    }
   }
   close(null_con)
+  # A parser that fails with no frame to leave behind (fresh checkout, newly
+  # added source) is otherwise invisible to the stale check below, and step 2
+  # would build an incomplete database. Failures are accumulated so one run
+  # reports them all, then the run stops.
+  if (length(parser_errors) > 0)
+    stop(length(parser_errors), ' parse script(s) failed (ERROR lines above); ',
+         'fix them and rerun with recompile = TRUE:\n',
+         paste0('  ', names(parser_errors), ': ', unlist(parser_errors),
+                collapse = '\n'))
   # A parser that fails leaves its previous .Rdata in place, which step 2 would
   # load as if it were current. Stop on any cached frame the loop did not
   # rewrite; the four live-download frames are written by the blocks above and
@@ -174,6 +187,10 @@ CheckSourceDocs(wd_db)
 ##########################################################################
 # 2. Load all per-source Rdata files
 ##########################################################################
+# Whatever `recompile` was, every frame a parse script or download block
+# writes must be present (else the database is built incomplete) and nothing
+# else should be (an orphan would be loaded as current). check_cache.r.
+CheckCacheComplete(wd_db, wd_rdata)
 rdata_files <- list.files(wd_rdata, pattern = '\\.Rdata$', full.names = TRUE)
 
 source_list <- lapply(rdata_files, function(f) {
