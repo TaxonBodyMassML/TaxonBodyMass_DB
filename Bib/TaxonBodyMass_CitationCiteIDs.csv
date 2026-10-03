@@ -150,6 +150,7 @@
 "Greeley:1984aa","Greeley_1984"
 "Grigione:2002aa","Grigione_2002"
 "Guerra:1994aa","Guerra_1994"
+"Guo:2024aa","GuoBailly_2024"
 "Gurkan:2007aa","Gurkan_2007"
 "Haacke:1993aa","Haacke_1993"
 "Hanlon:1983aa","Hanlon_1983"
@@ -240,6 +241,7 @@
 "Duncan-Matthews:1887aa","Matthews_1887"
 "Mayo:1976aa","Mayo_1976"
 "McBride:2003aa","McBride_2003"
+"McCoy:2008aa","McCoy_2008"
 "McDermott:1987aa","McDermott_1987"
 "Measey:2005aa","Measey_2005"
 "Megina:2007aa","Megina_2007"
@@ -289,7 +291,6 @@
 "Park:2023aa","Park_2023"
 "Pastor-de-Ward:2007aa","Pastor-de-Ward_2007"
 "Pata:2025aa","Pata_2025"
-"Pauly:2014aa","Pauly_2024"
 "Pekar:2021aa","Pekar_etal_2021"
 "Petersen:1999aa","Petersen_1999"
 "Piedra-Castro:2018aa","PiedraCastro_2018"
@@ -428,4 +429,4 @@
 "Yusupov:2021aa","Yusupov_2021"
 "Zhang:2024aa","Zhang_2024"
 "Zhou:1998aa","Zhou_1988"
-"McCoy:2008aa",NA
+"Pauly:2014aa",NA
