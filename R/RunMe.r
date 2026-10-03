@@ -75,6 +75,7 @@ source(file.path(wd_root, 'R', 'library', 'filter_autotrophs.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_extinct.r'))
 source(file.path(wd_root, 'R', 'library', 'check_source_docs.r'))
 source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
+source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
 
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
 dir.create(file.path(wd_root, 'reports'),      showWarnings = FALSE)
@@ -374,13 +375,22 @@ adat_enriched <- FilterAutotrophs(adat_enriched)
 n_names_autotroph <- n_resolved_pre_autotroph -
   n_distinct(adat_enriched$taxon[!is.na(adat_enriched$species)])
 
-# Pass 1: within-source geometric mean per accepted species
+# Pass 1: within-source geometric mean per accepted species. Records are
+# grouped by the source label (the first token of source_mass: the conversion
+# CiteIDs that LabelWithConversion() appends after ';' must not split a source)
+# and the VertNet dumps are pooled as one source (SourceGroup(): the 'traits'
+# dump re-exports specimens of the class dumps). source_mass keeps every label
+# and conversion CiteID of the group for citation (dedupe_sources.r, #5).
+adat_enriched$source_label <- SourceLabel(adat_enriched$source_mass)
+adat_enriched$source_group <- SourceGroup(adat_enriched$source_label)
 within_source <- adat_enriched %>%
   filter(!is.na(species)) %>%
-  group_by(genus, species, source_mass) %>%
+  group_by(genus, species, source_group) %>%
   summarise(
     taxon           = first(taxon),
     taxon_provided  = paste(unique(taxon_provided), collapse = '; '),
+    source_label    = paste(sort(unique(source_label)), collapse = '+'),
+    source_mass     = paste(unique(trimws(unlist(strsplit(sort(unique(source_mass)), ';', fixed = TRUE)))), collapse = '; '),
     mass_g          = 10^mean(log10(mass_g), na.rm = TRUE), # geometric mean
     n               = n(),
     kingdom         = na.omit(kingdom)[1],
@@ -398,16 +408,41 @@ within_source <- adat_enriched %>%
   )
 within_source$gbif_confidence[is.infinite(within_source$gbif_confidence)] <- NA_real_
 
-# Pass 2: across-source arithmetic mean per accepted species
+# De-duplicate values that enter through several compilations (#5): the
+# registry Bib/source_dependencies.csv and value identity decide which
+# per-source values are independent; the others are collapsed into the value
+# they copy (dedupe_sources.r). A registry label that matches no source stops
+# the run. The summary goes to reports/dedupe_summary.md.
+source_deps <- LoadSourceDependencies(file.path(wd_root, 'Bib', 'source_dependencies.csv'),
+                                      known_labels = unique(adat_enriched$source_label))
+dedupe        <- DedupeSources(within_source, source_deps)
+within_source <- dedupe$values
+WriteDedupeReport(dedupe, source_deps, file.path(wd_root, 'reports', 'dedupe_summary.md'))
+message(sprintf(paste('DedupeSources: %d of %d per-source values collapsed as copies',
+                      '(%d by the %d-edge registry, %d by the blind rule).'),
+                sum(!within_source$independent), nrow(within_source),
+                sum(within_source$dedupe_rule %in% 'registry'), nrow(source_deps),
+                sum(within_source$dedupe_rule %in% 'blind')))
+
+# Pass 2: across-source arithmetic mean per accepted species over the
+# independent values only (#5; the arithmetic mean is kept by owner decision,
+# #16). source_mass still lists every contributing label and n every record;
+# n_sources counts the per-source values, n_independent those entering the
+# mean, and source_dependencies records each collapsed value as 'dropped<kept'.
 enriched <- within_source %>%
   group_by(genus, species) %>%
   summarise(
     taxon           = first(taxon),
     taxon_provided  = paste(unique(unlist(strsplit(taxon_provided, '; '))), collapse = '; '),
-    log10_range     = if (n() > 1) log10(max(mass_g) / min(mass_g)) else 0,
-    mass_g          = mean(mass_g, na.rm = TRUE), # arithmetic mean
+    log10_range     = if (sum(independent) > 1) log10(max(mass_g[independent]) / min(mass_g[independent])) else 0,
+    mass_g          = mean(mass_g[independent], na.rm = TRUE), # arithmetic mean
     source_mass     = paste(unique(trimws(unlist(strsplit(source_mass, ';', fixed = TRUE)))), collapse = '; '),
     n               = sum(n, na.rm = TRUE),
+    n_sources       = n(),
+    n_independent   = sum(independent),
+    source_dependencies = if (any(!independent))
+      paste(paste0(source_label[!independent], '<', collapsed_into[!independent]), collapse = '; ')
+      else NA_character_,
     kingdom         = na.omit(kingdom)[1],
     phylum          = na.omit(phylum)[1],
     class           = na.omit(class)[1],
@@ -424,9 +459,16 @@ enriched <- within_source %>%
 enriched$gbif_confidence[is.infinite(enriched$gbif_confidence)] <- NA_real_
 enriched$mass_g <- signif(enriched$mass_g, digits = 4)
 
-check_enriched(enriched, within_source, remove_flagged = RemoveHighMaxMinRatio)
+# QC reports name the extreme sources among the independent values, the ones
+# log10_range is computed from.
+check_enriched(enriched, within_source[within_source$independent, ],
+               remove_flagged = RemoveHighMaxMinRatio)
 
 n_species_after_filter <- nrow(enriched)   # accepted species before the range filter
+# De-duplication counts (#5), taken like nSpeciesAfterFilter before the range filter
+n_values_collapsed     <- sum(!within_source$independent)
+n_species_single_datum <- sum(enriched$n_sources > 1 & enriched$n_independent == 1)
+n_dependency_edges     <- nrow(source_deps)
 n_removed_high_range <- 0L
 if (RemoveHighMaxMinRatio) {
   res      <- remove_high_range_taxa(enriched, threshold = 1)
@@ -449,7 +491,10 @@ if (dir.exists(ms_dir)) {
     nNamesResolved      = n_names_resolved,      # ... resolved to an accepted species
     nNamesAutotroph     = n_names_autotroph,     # ... resolved names removed as autotrophs
     nSpeciesAfterFilter = n_species_after_filter,# accepted species before the range filter
-    nRemovedHighRange   = n_removed_high_range   # species removed by log10_range > 1
+    nRemovedHighRange   = n_removed_high_range,  # species removed by log10_range > 1
+    nValuesCollapsed    = n_values_collapsed,    # per-source values collapsed as copies (#5)
+    nSpeciesSingleDatum = n_species_single_datum,# multi-source species left with one independent value
+    nDependencyEdges    = n_dependency_edges     # edges in Bib/source_dependencies.csv
   )
   writeLines(c(
     '% TaxonBodyMass_DB pipeline macros -- auto-generated by TaxonBodyMass_DB/R/RunMe.r',
@@ -466,14 +511,18 @@ if (dir.exists(ms_dir)) {
 # Species rows aggregate by their resolved (accepted) genus, so synonyms and
 # misspelt input genera fold into the accepted name (Raja erinacea -> Leucoraja).
 # Genus-only rows bypass enrichment, so their raw name is the only genus available.
+# Genus-only records bypass Pass 1 and 2, so each enters the genus mean as one
+# independent value; n_independent sums the species-level counts (#5).
+genus_only$n_independent <- 1L
 gdat <- bind_rows(enriched, genus_only)
 gdat$taxon <- dplyr::coalesce(gdat$genus, sub('\\_.*', '', gdat$taxon))
 gdat <- gdat[!is.na(gdat$taxon) & nchar(gdat$taxon) > 0, ]
 gdat <- ddply(gdat, .(taxon), summarise,
               mass_g = mean(mass_g),   # arithmetic mean
               n      = sum(n, na.rm = TRUE),
+              n_independent = sum(n_independent, na.rm = TRUE),
               source_mass = paste(source_mass, collapse = '-'))
-gdat <- gdat[, c('taxon', 'mass_g', 'source_mass', 'n')]
+gdat <- gdat[, c('taxon', 'mass_g', 'source_mass', 'n', 'n_independent')]
 
 
 
