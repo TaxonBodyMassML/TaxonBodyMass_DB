@@ -344,22 +344,22 @@ FixOutliers <- function(dat) {
   #   small
   dat <- RemoveRecord(dat, "Exoglossum_maxillingua", "Pappantoniou_1984")
 
-  # --- Pauly_2024 ---
+  # --- GuoBailly_2024 ---
   # 0.4 g → 6 g; crescent gunnel max 13 cm; expected 2-20 g; 0.4 g too small
-  dat <- RemoveRecord(dat, "Pholis_clemensi", "Pauly_2024")
+  dat <- RemoveRecord(dat, "Pholis_clemensi", "GuoBailly_2024")
   # 1.1 g → 100 g; leopard searobin max 25 cm; adults ~20-400 g; 1.1 g too
   #   small
-  dat <- RemoveRecord(dat, "Prionotus_scitulus", "Pauly_2024")
+  dat <- RemoveRecord(dat, "Prionotus_scitulus", "GuoBailly_2024")
   # 1.6 g → 200 g; Easter Island scorpionfish; Scorpaena typically 50-500+
   #   g; 1.6 g too small
-  dat <- RemoveRecord(dat, "Scorpaena_pascuensis", "Pauly_2024")
+  dat <- RemoveRecord(dat, "Scorpaena_pascuensis", "GuoBailly_2024")
   # 0.7 g → 80 g; sauro lizardfish max 27 cm; congeners up to 900 g; 0.7 g
   #   too small
-  dat <- RemoveRecord(dat, "Synodus_lacertinus", "Pauly_2024")
+  dat <- RemoveRecord(dat, "Synodus_lacertinus", "GuoBailly_2024")
   # 1.5 g; longfin sculpin max TL 15 cm; Bayesian LWR gives 18.2 g at max;
   #   1.5 g ~6.7 cm juvenile; 1.08 log10 below expected; food-web model likely
   #   used juvenile mean
-  dat <- RemoveRecord(dat, "Jordania_zonope", "Pauly_2024")
+  dat <- RemoveRecord(dat, "Jordania_zonope", "GuoBailly_2024")
 
   # --- Quaardvark ---
   # 25 g → 0.35 g; western black widow; known mass 0.18-0.87 g; 25 g
@@ -664,12 +664,6 @@ FixOutliers <- function(dat) {
   # 27.5 g → 300 g; leatherjacket FishBase max 900 g at 50 cm; 27.5 g too
   #   small
   dat <- RemoveRecord(dat, "Oligoplites_saliens", "fishbase")
-  # 7.1 g → 400 g; leopard toadfish max 38 cm; LWR yields ~688 g; 7.1 g too
-  #   small
-  dat <- RemoveRecord(dat, "Opsanus_pardus", "Pauly_2024")
-  # 1.6 g → 18 g; snubnose sculpin max 14 cm; typical cottid LWR 12-25 g;
-  #   1.6 g too small
-  dat <- RemoveRecord(dat, "Orthonopias_triacis", "Pauly_2024")
   # 1,293 g → 80 g; striped Raphael catfish FishBase Wmax ~113 g; 1290 g too
   #   large
   dat <- RemoveRecord(dat, "Platydoras_armatulus", "Cai_etal_2025")
@@ -677,9 +671,6 @@ FixOutliers <- function(dat) {
   dat <- RemoveRecord(dat, "Psenes_pellucidus", "Cai_etal_2025")
   # 215,400 g → 30,000 g; oilfish FishBase max 63.5 kg; 215 kg too large
   dat <- RemoveRecord(dat, "Ruvettus_pretiosus", "Cai_etal_2025")
-  # 8.2 g → 300 g; rockfish max SL 40 cm; Bayesian LWR typical 250-380 g;
-  #   8.2 g too small
-  dat <- RemoveRecord(dat, "Sebastes_itinus", "Pauly_2024")
   # 2.461 g → 38 g; FishBase Bayesian LWR gives ~38 g at 18 cm; 2.46 g too
   #   small
   dat <- RemoveRecord(dat, "Securicula_gora", "fishbase")
@@ -692,6 +683,17 @@ FixOutliers <- function(dat) {
   # 145 g → 20,000 g; spotted gully shark; South African endemic reaching
   #   170 cm; 145 g impossible
   dat <- RemoveRecord(dat, "Triakis_megalopterus", "fishbase")
+
+  # --- GuoBailly_2024 ---
+  # 7.1 g → 400 g; leopard toadfish max 38 cm; LWR yields ~688 g; 7.1 g too
+  #   small
+  dat <- RemoveRecord(dat, "Opsanus_pardus", "GuoBailly_2024")
+  # 1.6 g → 18 g; snubnose sculpin max 14 cm; typical cottid LWR 12-25 g;
+  #   1.6 g too small
+  dat <- RemoveRecord(dat, "Orthonopias_triacis", "GuoBailly_2024")
+  # 8.2 g → 300 g; rockfish max SL 40 cm; Bayesian LWR typical 250-380 g;
+  #   8.2 g too small
+  dat <- RemoveRecord(dat, "Sebastes_itinus", "GuoBailly_2024")
 
   # --- Makarieva_2008 ---
   # 0.0506 g → 1 g; crangonid sand shrimp; congener C. crangon typical 1-10

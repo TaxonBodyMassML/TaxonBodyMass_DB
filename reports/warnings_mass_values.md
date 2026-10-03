@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-03 09:30:39
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-03 10:05:11
 
 ## Summary
 
@@ -63,11 +63,11 @@
   - Chomsky_2004 (1)
   - Froese_2025; Sinclair_2015 (1)
   - Gillooly_etal_2016 (1)
+  - GuoBailly_2024 (1)
   - Hrycik_2024 (1)
   - Kangausaru_2018 (1)
   - Lane_2019 (1)
   - Mathieu_2014 (1)
-  - Pauly_2024 (1)
   - Reum_2012 (1)
   - Viana_2016 (1)
 - Moderate mass disagreement (log10 range 1-2): 895 species
@@ -128,8 +128,8 @@
   - Soria_etal_2021 (5)
   - Tucker_etal_2014b (5)
   - Brown_etal_2018 (4)
+  - GuoBailly_2024 (4)
   - Ikeda_2014; Kiorboe_2013 (4)
-  - Pauly_2024 (4)
   - AndersonGillooly_2017 (3)
   - Eklof_etal_2017; Brey_2010 (3)
   - Hechinger_etal_2011 (3)
@@ -1043,7 +1043,7 @@ Concholepas concholepas [range=2.30]
         Min_source: Brose_etal_2018 2.3
         Max_source: sealifebase 461.4
 Anotopterus pharao [range=2.30]
-        Min_source: Pauly_2024 8
+        Min_source: GuoBailly_2024 8
         Max_source: vertnet-fishes-sept2016 1600
 Oithona nana [range=2.30]
         Min_source: DeLong_etal_2018 1.85e-06
@@ -2579,7 +2579,7 @@ Cisticola ayresii [range=1.38]
         Min_source: Myhrvold_2015 7
         Max_source: vertnet-aves-sept2016 167.9
 Enophrys diceraus [range=1.38]
-        Min_source: Pauly_2024 31.7
+        Min_source: GuoBailly_2024 31.7
         Max_source: Cai_etal_2025 760
 Myoxocephalus quadricornis [range=1.38]
         Min_source: AnAge 143
@@ -2915,7 +2915,7 @@ Agabus bipustulatus [range=1.28]
         Min_source: Brocher_etal_2025 0.03216
         Max_source: Brose_etal_2018 0.612
 Lycodes brevipes [range=1.28]
-        Min_source: Pauly_2024 7.9
+        Min_source: GuoBailly_2024 7.9
         Max_source: Cai_etal_2025 150.1
 Ptilinopus cinctus [range=1.28]
         Min_source: vertnet-aves-sept2016 26.86
@@ -3467,13 +3467,13 @@ Bison bison [range=1.13]
         Min_source: Tsuboi_etal_2018 5.48e+04
         Max_source: Hirt_etal_2017 7.35e+05
 Xiphister atropurpureus [range=1.13]
-        Min_source: Pauly_2024 12.4
+        Min_source: GuoBailly_2024 12.4
         Max_source: Cai_etal_2025 166.3
 Hoplobatrachus occipitalis [range=1.13]
         Min_source: vertnet-amphibia-sept2016 4.069
         Max_source: vertnet-traits-sept2016 54.51
 Sebastes saxicola [range=1.13]
-        Min_source: Pauly_2024 22.4
+        Min_source: GuoBailly_2024 22.4
         Max_source: McCoy_2008 300
 Chelon dumerili [range=1.13]
         Min_source: Castro_2025 16.99
