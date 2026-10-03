@@ -1,4 +1,5 @@
 "source","reason","n_dropped","n_taxa","n_kept"
+"AnAge","metabolic-rate body mass only, no adult weight",0,0,2946
 "Barnes_2008","length-mass conversion quality 4 (general shape) or 5 (unsatisfactory)",1596,17,25261
 "Cai_etal_2025","Ref.BodyMass Estimated, Sister species, My or genus/family average",52,52,5372
 "DeLong_etal_2018","mass source code: alternate taxon, % adult mass or genus/order average",1097,285,876
