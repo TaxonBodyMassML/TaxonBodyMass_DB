@@ -1,6 +1,20 @@
 "source","reason","n_dropped","n_taxa","n_kept"
+"Brose_2005","group-level placeholder: mass value shared by >= 5 taxa within Cattin Blandenier (2004) (#14)",2269,68,16906
 "AnAge","metabolic-rate body mass only, no adult weight",0,0,2946
 "Barnes_2008","length-mass conversion quality 4 (general shape) or 5 (unsatisfactory)",1596,17,25261
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Cattin Blandenier (2004) (#14)",803,26,350007
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Digel et al. (2014) (#14)",6217,46,343790
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Ekloef et al. (2013) (#14)",738,89,343052
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Sutherland (1989), Havens (1992) (#14)",2002,18,341050
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Jacob et al. (2011) (#14)",9513,162,331537
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Kroll, unpublished (#14)",14347,189,317190
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Piechnik et al. (2008), Simberloff and Wilson (1969) (#14)",961,20,316229
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Jacob et al. (2015) (#14)",1772,77,314457
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Mendonca et al. (2018) (#14)",24832,416,289625
+"Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Gray et al. (2015), Thompson et al. (2017) (#14)",1859,21,287766
+"Brose_etal_2018","Townsend et al. 1998 Taieri tributaries: no body-size source, inconsistent values (owner decision 2026-10-03, #14)",1448,40,286318
+"Brose_etal_2018","Mendonca et al. 2018 tide pools outside the Gulf of St Lawrence: juvenile nursery population means and 0.01 g placeholders, no body sizes in the source paper (owner decision 2026-10-03, #14)",17045,235,269273
+"Brose_etal_2018","Warren 1989 Skipwith Pond: masses are one generic length-mass regression (M = 0.50 L^2.64) on the Brose 2005 lengths, 10-20x too high for insects (owner decision 2026-10-03, #14)",372,19,268901
 "Cai_etal_2025","Ref.BodyMass Estimated, Sister species, My or genus/family average",52,52,5372
 "DeLong_etal_2010","sd01 active-rate Entamoeba hystolitica row 1e3 above the endogenous-rate row of the same species (unit slip)",1,1,528
 "DeLong_etal_2018","mass source code: alternate taxon, % adult mass or genus/order average",1097,285,876

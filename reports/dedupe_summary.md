@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-03 14:55:38
+# Source de-duplication summary -- 2026-10-03 16:52:28
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits; `provenance_only` edges never collapse. Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,18 +6,18 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 120129 |
-| accepted species | 40291 |
-| multi-source species | 25401 |
-| within-species value pairs | 250952 |
-| pairs identical (|dlog10| <= 1e-06) | 39445 |
-| pairs related by the registry and within its tolerance | 60319 |
-| pairs identical to >= 3 significant digits (blind rule) | 34281 |
-| values collapsed (total) | 40997 |
-| values collapsed by a registry edge | 39743 |
+| species x source values (Pass-1 rows) | 119431 |
+| accepted species | 39723 |
+| multi-source species | 25314 |
+| within-species value pairs | 250731 |
+| pairs identical (|dlog10| <= 1e-06) | 39446 |
+| pairs related by the registry and within its tolerance | 60320 |
+| pairs identical to >= 3 significant digits (blind rule) | 34282 |
+| values collapsed (total) | 40998 |
+| values collapsed by a registry edge | 39744 |
 | values collapsed by the blind rule only | 1254 |
-| species with at least one collapsed value | 20335 |
-| multi-source species left with one independent value | 6939 |
+| species with at least one collapsed value | 20336 |
+| multi-source species left with one independent value | 6943 |
 
 ## Registry edges with the parent in the database
 
@@ -55,8 +55,8 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | McCoy_2008 | Smith_2003 | copies | confirmed | 0.001 | 301 | 68 | 166 | 0.23 | 180 | 526 |
 | Tucker_etal_2014b | Jones_2009 | via | confirmed | 0.0105 | 444 | 1 | 232 | 0 | 138 | 302 |
 | Pata_2025 | Kiorboe_2013 | copies | confirmed | 0.000001 | 54 | 20 | 20 | 0.37 | 18 | 21 |
-| Brose_etal_2018 | Hechinger_etal_2011 | copies | confirmed | 0.000001 | 93 | 64 | 64 | 0.69 | 62 | 84 |
-| Brose_etal_2018 | Brose_2005 | copies | confirmed | 0.000001 | 295 | 18 | 18 | 0.06 | 18 | 84 |
+| Brose_etal_2018 | Hechinger_etal_2011 | copies | confirmed | 0.000001 | 93 | 64 | 64 | 0.69 | 62 | 85 |
+| Brose_etal_2018 | Brose_2005 | copies | confirmed | 0.000001 | 251 | 19 | 19 | 0.08 | 19 | 85 |
 
 ## Siblings sharing an external parent
 
@@ -92,11 +92,11 @@ Pairs of sources that the registry traces to the same compilation outside the da
 
 ## Multi-source species left with one independent value
 
-6939 multi-source species rest on a single independent value after de-duplication, by number of sources:
+6943 multi-source species rest on a single independent value after de-duplication, by number of sources:
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4368 |
+| 2 | 4372 |
 | 3 | 1668 |
 | 4 | 296 |
 | 5 | 469 |
