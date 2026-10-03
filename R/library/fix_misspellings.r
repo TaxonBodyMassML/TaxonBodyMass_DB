@@ -506,15 +506,15 @@ FixMisspellings <- function(dat) {
 
 # Audit SUSPICIOUS tier 2026-08 — synonym / accepted-name corrections
 
-    # BOTH_ERRONEOUS cases (rename + mass corrected in fix_outliers.r)
+    # BOTH_ERRONEOUS cases (rename only; mass rule retired with #24, a wrong value is handled through the BM_data Sheet override)
     "Momoculodes_scabriculosus"       = "Monoculodes_scabriculosus",    # Momoculodes invalid genus; correct is Monoculodes (Amphipoda: Oedicerotidae)
     "Psenes_whiteleggii"              = "Cubiceps_whiteleggii",          # Psenes whiteleggii is junior synonym of Cubiceps whiteleggii (Carangiformes: Nomeidae)
     "Squalinus_cephalus"              = "Squalius_cephalus",             # Squalinus not valid; correct genus is Squalius (Leuciscidae; European chub)
 
-    # Stonefly epithet correction (trailing i spurious; mass corrected in fix_outliers.r)
+    # Stonefly epithet correction (trailing i spurious; mass rule retired with #24, a wrong value is handled through the BM_data Sheet override)
     "Stenoperla_prasinia"             = "Stenoperla_prasina",            # prasinia has spurious trailing i; correct is S. prasina (Plecoptera: Eustheniidae)
 
-    # Colubrid junior synonym (mass corrected in fix_outliers.r)
+    # Colubrid junior synonym (mass rule retired with #24, a wrong value is handled through the BM_data Sheet override)
     "Coluber_fuliginosus"             = "Atractus_fuliginosus",          # Coluber fuliginosus is junior synonym of Atractus fuliginosus (Colubridae: Dipsadinae)
 
     # Amphipod accepted-name updates
@@ -547,7 +547,7 @@ FixMisspellings <- function(dat) {
     # Gastropod accepted-name update
     "Mitrella_lunata"                 = "Astyris_lunata",                  # WoRMS: Mitrella lunata is a synonym; accepted is Astyris lunata (Columbellidae)
 
-    # Euphausiid alternate spelling (merge to canonical form; mass corrected in fix_outliers.r)
+    # Euphausiid alternate spelling (merge to canonical form; mass rule retired with #24, a wrong value is handled through the BM_data Sheet override)
     "Euphausia_krohni"                = "Euphausia_krohnii",               # alternate spelling of Euphausia krohnii; merge to canonical double-i form
 
     # Agamid reclassification
