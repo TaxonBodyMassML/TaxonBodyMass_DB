@@ -1,1102 +1,1102 @@
-table,taxon_group,code,species,stage,depth_m,temp_C,dw_mg,c_mg,n_mg
-S1,COPE,1,Pachyptilus pacificus,C6F,750,3,2.07,0.892,0.13
-S1,COPE,2,Lucicutia bicornuta,C6M,750,3,0.625,0.253,0.050
-S1,COPE,3,Lucicutia grandis,C5F,750,3,0.429,0.188,0.032
-S1,COPE,4,Metridia asymmetrica,C6F,750,3,0.457,0.242,0.033
-S1,COPE,5,Metridia curticauda,C6F,750,3,0.484,0.270,0.034
-S1,COPE,6,Metridia okhotensis,C6F,750,3,0.713,0.429,0.050
-S1,COPE,7,Pleuromamma scutullata,C6M,750,3,0.564,0.251,0.067
-S1,COPE,8,Pleuromamma scutullata,C6F,750,3,0.429,0.218,0.031
-S1,COPE,9,Pleuromamma xiphias,C6F,750,3,0.563,0.24,0.067
-S1,COPE,10,Candacia columbiae,C6M,750,3,0.435,0.179,0.050
-S1,COPE,11,Aetideopsis rostrata,C5M,750,3,0.762,0.335,0.080
-S1,COPE,12,Chiridius pacificus,C6F,750,3,0.692,0.316,0.080
-S1,COPE,13,Chirundina streetsi,C6F,750,3,1.24,0.54,0.16
-S1,COPE,14,Euchirella brevis,C6F,750,3,0.952,0.506,0.084
-S1,COPE,15,Euchirella galeata,C6F,750,3,2.46,1.13,0.28
-S1,COPE,16,Euchirella messinensis,C6F,750,3,1.92,0.86,0.215
-S1,COPE,17,Euchirella rostrata,C6F,750,3,0.930,0.455,0.086
-S1,COPE,18,Euchirella truncata,C4M,750,3,0.517,0.241,0.054
-S1,COPE,19,Gaidius brevispinus,C6F,750,3,0.914,0.439,0.077
-S1,COPE,20,Gaidius brevispinus,C6F,750,3,0.949,0.419,0.104
-S1,COPE,21,Gaetanus robustus,C4F,750,3,0.381,0.18,0.041
-S1,COPE,22,Gaidius tenuispinus,C5F,750,3,1.24,0.624,0.117
-S1,COPE,23,Gaidius tenuispinus,C6F,750,3,0.436,0.197,0.053
-S1,COPE,24,Gaidius variabilis,C5M,750,3,0.488,0.223,0.051
-S1,COPE,25,Gaidius variabilis,C5F,750,3,0.323,0.13,0.034
-S1,COPE,26,Gaidius variabilis,C6F,750,3,0.509,0.243,0.055
-S1,COPE,27,Pseudochirella pacifica,C5M,750,3,0.700,0.296,0.071
-S1,COPE,28,Pseudochirella spinifera,C5M,750,3,1.59,0.92,0.13
-S1,COPE,29,Pseudochirella spinifera,C5M,750,3,1.28,0.69,0.11
-S1,COPE,30,Undeuchaeta plumosa,C6F,750,3,3.33,1.70,0.32
-S1,COPE,31,Paraeuchaeta barbata,C6F,750,3,3.86,2.39,0.25
-S1,COPE,32,Paraeuchaeta birostrata,C5M,750,3,1.35,0.76,0.10
-S1,COPE,33,Paraeuchaeta birostrata,C5F,750,3,1.79,1.04,0.13
-S1,COPE,34,Paraeuchaeta birostrata,C6F,750,3,4.85,2.83,0.36
-S1,COPE,35,Paraeuchaeta brevirostris,C6F,750,3,4.97,2.88,0.36
-S1,COPE,36,Paraeuchaeta elongata,C4M,750,3,0.714,0.407,0.052
-S1,COPE,37,Paraeuchaeta elongata,C4F,750,3,0.939,0.55,0.066
-S1,COPE,38,Paraeuchaeta elongata,C5M,750,3,1.12,0.66,0.08
-S1,COPE,39,Paraeuchaeta elongata,C5M,750,3,1.25,0.68,0.10
-S1,COPE,40,Paraeuchaeta elongata,C5F,750,3,1.19,0.65,0.08
-S1,COPE,41,Paraeuchaeta elongata,C5F,750,3,2.38,1.38,0.17
-S1,COPE,42,Paraeuchaeta elongata,C6F,750,3,5.72,3.41,0.38
-S1,COPE,43,Paraeuchaeta elongata,C6F,750,3,1.94,1.00,0.19
-S1,COPE,44,Paraeuchaeta modesta,C6F,750,3,3.87,2.27,0.29
-S1,COPE,45,Paraeuchaeta orientalis,C6F,750,3,8.56,4.72,0.53
-S1,COPE,46,Paraeuchaeta pseudotumidula,C6M,750,3,2.27,1.33,0.17
-S1,COPE,47,Paraeuchaeta pseudotumidula,C6F,750,3,2.59,1.54,0.17
-S1,COPE,48,Paraeuchaeta rubra,C5M,750,3,1.90,1.14,0.13
-S1,COPE,49,Paraeuchaeta rubra,C6F,750,3,3.50,1.96,0.27
-S1,COPE,50,Amallothrix valida,C5M,750,3,0.684,0.384,0.055
-S1,COPE,51,Amallothrix valida,C6F,750,3,0.872,0.416,0.094
-S1,COPE,52,Mixtocalanus robustus,C6F,750,3,1.01,0.475,0.112
-S1,COPE,53,Scaphocalanus medius,C6F,750,3,1.06,0.609,0.079
-S1,COPE,54,Spinocalanus stellatus,C6F,750,3,0.818,0.356,0.059
-S1,COPE,55,Pachyptilus pacificus,C6F,1500,2,2.41,1.13,0.18
-S1,COPE,56,Lucicutia bicornuta,C6F,1500,2,1.02,0.537,0.076
-S1,COPE,57,Lucicutia grandis,C6M,1500,2,2.19,1.19,0.19
-S1,COPE,58,Lucicutia pacifica,C6F,1500,2,1.81,0.85,0.13
-S1,COPE,59,Lucicutia pacifica,C6F,1500,2,1.63,0.77,0.12
-S1,COPE,60,Metridia asymmetrica,C6F,1500,2,0.360,0.188,0.027
-S1,COPE,61,Metridia asymmetrica,C6F,1500,2,0.344,0.162,0.025
-S1,COPE,62,Metridia curticauda,C6F,1500,2,0.99,0.471,0.073
-S1,COPE,63,Metridia ornata,C6F,1500,2,2.90,1.47,0.23
-S1,COPE,64,Aetideopsis rostrata,C5M,1500,2,1.84,0.96,0.11
-S1,COPE,65,Aetideopsis rostrata,C5F,1500,2,0.707,0.369,0.058
-S1,COPE,66,Bradyidius pacificus,C5M,1500,2,0.890,0.451,0.078
-S1,COPE,67,Euchirella rostrata,C6F,1500,2,0.804,0.356,0.090
-S1,COPE,68,Euchirella rostrata,C6F,1500,2,0.820,0.344,0.103
-S1,COPE,69,Gaidius brevispinus,C6F,1500,2,0.971,0.425,0.099
-S1,COPE,70,Gaidius variabilis,C6F,1500,2,0.672,0.296,0.067
-S1,COPE,71,Gaidius variabilis,C6F,1500,2,0.935,0.43,0.100
-S1,COPE,72,Pseudochirella pacifica,C5M,1500,2,0.554,0.294,0.051
-S1,COPE,73,Pseudochirella pacifica,C5F,1500,2,1.95,1.05,0.15
-S1,COPE,74,Pseudochirella pacifica,C5F,1500,2,1.64,0.925,0.14
-S1,COPE,75,Pseudochirella polyspina,C6F,1500,2,2.53,1.17,0.26
-S1,COPE,76,Pseudochirella polyspina,C6F,1500,2,3.06,1.62,0.29
-S1,COPE,77,Pseudochirella spinifera,C5F,1500,2,1.79,0.977,0.15
-S1,COPE,78,Pseudochirella spinifera,C6M,1500,2,1.20,0.64,0.11
-S1,COPE,79,Pseudochirella spinifera,C6M,1500,2,1.36,0.837,0.10
-S1,COPE,80,Undeuchaeta major,C6F,1500,2,3.35,1.75,0.27
-S1,COPE,81,Undeuchaeta major,C6F,1500,2,2.48,1.24,0.26
-S1,COPE,82,Undeuchaeta plumosa,C6F,1500,2,2.82,1.45,0.28
-S1,COPE,83,Paraeuchaeta birostrata,C5M,1500,2,3.53,2.16,0.28
-S1,COPE,84,Paraeuchaeta birostrata,C6M,1500,2,2.47,1.52,0.19
-S1,COPE,85,Paraeuchaeta birostrata,C6M,1500,2,2.46,1.49,0.18
-S1,COPE,86,Paraeuchaeta birostrata,C6F,1500,2,4.22,2.39,0.30
-S1,COPE,87,Paraeuchaeta birostrata,C6F,1500,2,4.46,2.65,0.34
-S1,COPE,88,Paraeuchaeta brevirostris,C6F,1500,2,4.81,2.87,0.36
-S1,COPE,89,Paraeuchaeta elongata,C5M,1500,2,2.15,1.26,0.17
-S1,COPE,90,Paraeuchaeta elongata,C5F,1500,2,2.13,1.13,0.19
-S1,COPE,91,Paraeuchaeta pseudotumidula,C6F,1500,2,2.98,1.71,0.22
-S1,COPE,92,Paraeuchaeta rubra,C5M,1500,2,2.10,1.28,0.16
-S1,COPE,93,Paraeuchaeta rubra,C5F,1500,2,1.90,1.14,0.17
-S1,COPE,94,Paraeuchaeta rubra,C6M,1500,2,1.65,1.10,0.12
-S1,COPE,95,Paraeuchaeta rubra,C6F,1500,2,4.63,2.64,0.29
-S1,COPE,96,Cornucalanus indicus,C5F,1500,2,3.55,1.82,0.30
-S1,COPE,97,Cornucalanus indicus,C6F,1500,2,6.92,3.81,0.55
-S1,COPE,98,Onchocalanus magnus,C5F,1500,2,6.60,3.97,0.48
-S1,COPE,99,Onchocalanus magnus,C6F,1500,2,5.77,2.83,0.42
-S1,COPE,100,Amallothrix inornata,C6M,1500,2,0.524,0.291,0.042
-S1,COPE,101,Amallothrix inornata,C5M,1500,2,0.912,0.553,0.066
-S1,COPE,102,Amallothrix inornata,C6F,1500,2,0.946,0.522,0.076
-S1,COPE,103,Amallothrix paravalida,C6F,1500,2,0.664,0.369,0.047
-S1,COPE,104,Amallothrix valida,C5F,1500,2,1,0.568,0.075
-S1,COPE,105,Amallothrix valida,C6F,1500,2,1.09,0.66,0.079
-S1,COPE,106,Lophothrix frontalis,C6F,1500,2,3.19,1.45,0.30
-S1,COPE,107,Lophothrix frontalis,C6F,1500,2,1.42,0.80,0.13
-S1,COPE,108,Scaphocalanus magnus,C6F,1500,2,1.17,0.60,0.12
-S1,COPE,109,Scaphocalanus medius,C6F,1500,2,1.12,0.68,0.08
-S1,COPE,110,Scottocalanus securifrons,C6F,1500,2,1.45,0.72,0.16
-S1,COPE,111,Bathycalanus bradyi,C6F,1500,2,34.5,21.8,2.4
-S1,COPE,112,Euaugaptilus pseudaffinis,C6F,2500,1.5,1.68,0.88,0.13
-S1,COPE,113,Pachyptilus pacificus,C6F,2500,1.5,2.72,1.22,0.19
-S1,COPE,114,Heterostylites major,C6F,2500,1.5,0.53,0.23,0.050
-S1,COPE,115,Lucicutia ellipsoidalis,C6F,2500,1.5,0.78,0.41,0.049
-S1,COPE,116,Lucicutia grandis,C6M,2500,1.5,1.53,0.88,0.094
-S1,COPE,117,Lucicutia grandis,C6F,2500,1.5,1.40,0.72,0.093
-S1,COPE,118,Lucicutia longifurca,C5,2500,1.5,1.19,0.60,0.095
-S1,COPE,119,Lucicutia longifurca,C6M,2500,1.5,1.53,0.91,0.092
-S1,COPE,120,Lucicutia pacifica,C6F,2500,1.5,1.71,0.86,0.132
-S1,COPE,121,Metridia asymmetrica,C6F,2500,1.5,0.43,0.23,0.032
-S1,COPE,122,Metridia asymmetrica,C6F,2500,1.5,0.45,0.25,0.037
-S1,COPE,123,Metridia ornata,C5F,2500,1.5,1.91,0.93,0.162
-S1,COPE,124,Metridia ornata,C6M,2500,1.5,0.87,0.42,0.072
-S1,COPE,125,Metridia ornata,C6M,2500,1.5,0.82,0.40,0.063
-S1,COPE,126,Metridia ornata,C6F,2500,1.5,1.27,0.65,0.10
-S1,COPE,127,Gaetanus paracurvicornis,C6F,2500,1.5,0.74,0.34,0.069
-S1,COPE,128,Gaetanus robustus,C5M,2500,1.5,0.71,0.30,0.068
-S1,COPE,129,Gaetanus robustus,C5M,2500,1.5,3.44,2.17,0.21
-S1,COPE,130,Gaetanus robustus,C5M,2500,1.5,1.26,0.46,0.10
-S1,COPE,131,Gaetanus robustus,C6F,2500,1.5,7.03,3.49,0.67
-S1,COPE,132,Gaidius variabilis,C5F,2500,1.5,0.84,0.42,0.085
-S1,COPE,133,Gaidius variabilis,C6F,2500,1.5,1.32,0.74,0.10
-S1,COPE,134,Pseudochirella pacifica,C5,2500,1.5,4.07,2.15,0.33
-S1,COPE,135,Pseudochirella pacifica,C6F,2500,1.5,2.77,1.24,0.31
-S1,COPE,136,Pseudochirella polyspina,C5F,2500,1.5,1.09,0.59,0.070
-S1,COPE,137,Pseudochirella polyspina,C6F,2500,1.5,2.69,1.33,0.26
-S1,COPE,138,Pseudochirella polyspina,C6F,2500,1.5,4.15,2.02,0.45
-S1,COPE,139,Pseudochirella polyspina,C6F,2500,1.5,2.53,1.25,0.26
-S1,COPE,140,Pseudochirella spinifera,C5M,2500,1.5,3.64,2.20,0.24
-S1,COPE,141,Undeuchaeta major,C5F,2500,1.5,0.445,0.21,0.045
-S1,COPE,142,Paraeuchaeta birostrata,C6M,2500,1.5,2.16,1.30,0.15
-S1,COPE,143,Paraeuchaeta birostrata,C6F,2500,1.5,8.89,4.92,0.77
-S1,COPE,144,Paraeuchaeta pseudotumidula,C6F,2500,1.5,1.16,0.70,0.090
-S1,COPE,145,Paraeuchaeta rubra,C5M,2500,1.5,2.64,1.63,0.175
-S1,COPE,146,Paraeuchaeta rubra,C5F,2500,1.5,2.13,1.25,0.149
-S1,COPE,147,Paraeuchaeta rubra,C6F,2500,1.5,4.64,2.84,0.339
-S1,COPE,148,Xanthocalanus kurilensis,C6F,2500,1.5,1.04,0.58,0.094
-S1,COPE,149,Amallothrix inornata,C6F,2500,1.5,0.80,0.39,0.084
-S1,COPE,150,Amallothrix inornata,C6F,2500,1.5,1.03,0.55,0.107
-S1,COPE,151,Scaphocalanus affinis,C5F,2500,1.5,2.58,1.65,0.143
-S1,COPE,152,Scaphocalanus affinis,C6F,2500,1.5,1.52,0.82,0.137
-S1,COPE,153,Scolecithricella sp.,C6F,2500,1.5,0.45,0.23,0.038
-S1,COPE,154,Scottocalanus securifrons,C6F,2500,1.5,5.64,3.14,0.49
-S1,COPE,155,Bathycalanus bradyi,C6F,2500,1.5,16.78,9.93,1.19
-S1,COPE,156,Bathycalanus bradyi,C6F,2500,1.5,10.52,4.99,0.92
-S1,COPE,157,Spinocalanus magnus,C6F,2500,1.5,0.868,0.52,0.061
-S1,COPE,158,Aetideopsis rostrata,C6F,4000,1.5,0.975,0.46,0.071
-S1,COPE,159,Amallothrix inornata,C5M,4000,1.5,0.471,0.24,0.031
-S1,COPE,160,Amallothrix inornata,C6F,4000,1.5,0.581,0.29,0.039
-S1,COPE,161,Batheuchaeta lamellata,C5M,4000,1.5,0.647,0.39,0.042
-S1,COPE,162,Batheuchaeta lamellata,C6F,4000,1.5,1.32,0.69,0.10
-S1,COPE,163,Batheuchaeta lamellata,C6M,4000,1.5,0.765,0.43,0.056
-S1,COPE,164,Bathycalanus bradyi,C3,4000,1.5,1.2,0.56,0.12
-S1,COPE,165,Bathycalanus bradyi,C5,4000,1.5,8.69,5.10,0.54
-S1,COPE,166,Benthomisophria palliata,C6M,4000,1.5,0.53,0.20,0.035
-S1,COPE,167,Chiridiella abyssalis,C6F,4000,1.5,0.81,0.43,0.054
-S1,COPE,168,Chiridiella pacifica,C6F,4000,1.5,1.20,0.47,0.076
-S1,COPE,169,Gaetanus paracurvicornis,C6F,4000,1.5,0.69,0.32,0.057
-S1,COPE,170,Gaidius pungens,C6F,4000,1.5,0.64,0.34,0.046
-S1,COPE,171,Gaetanus robustus,C6F,4000,1.5,8.48,4.53,0.74
-S1,COPE,172,Metridia ornata,C5M,4000,1.5,0.33,0.12,0.024
-S1,COPE,173,Metridia ornata,C6F,4000,1.5,1.67,0.72,0.14
-S1,COPE,174,Metridia ornata,C6M,4000,1.5,0.94,0.40,0.082
-S1,COPE,175,Mixtocalanus robustus,C6F,4000,1.5,1.06,0.57,0.080
-S1,COPE,176,Onchocalanus magnus,C5F,4000,1.5,2.01,1.24,0.11
-S1,COPE,177,Onchocalanus magnus,C6F,4000,1.5,1.47,0.76,0.14
-S1,COPE,178,Paraeuchaeta rubra,C4F,4000,1.5,0.49,0.25,0.033
-S1,COPE,179,Pseudochirella pacifica,C5M,4000,1.5,0.95,0.56,0.054
-S1,COPE,180,Pseudochirella polyspina,C6F,4000,1.5,2.23,1.19,0.16
-S1,COPE,181,Scaphocalanus magnus,C6F,4000,1.5,1.35,0.68,0.13
-S1,COPE,182,Spinocalanus magnus,C6F,4000,1.5,0.36,0.16,0.029
-S1,COPE,183,Undeuchaeta incisa,C5M,4000,1.5,2.84,1.72,0.17
-S1,COPE,184,Undeuchaeta major,C6F,4000,1.5,1.18,0.54,0.14
-S1,COPE,185,Undeuchaeta plumosa,C5F,4000,1.5,0.475,0.22,0.04
-S1,COPE,186,Undeuchaeta plumosa,C6F,4000,1.5,1.38,0.79,0.091
-S1,COPE,187,Valdeviella imperfecta,C5F,4000,1.5,0.89,0.49,0.066
-S1,COPE,188,Xanthocalanus kurilensis,C6F,4000,1.5,0.66,0.36,0.048
-S1,COPE,189,Calanus propinquus,,2,-1,1.04,0.46,0.13
-S1,COPE,190,Metridia gerlachei,,2,-1.4,0.265,0.12,0.030
-S1,COPE,191,Calanoides acutus,C5,2,-0.2,0.394,0.193,0.034
-S1,COPE,192,"Calanoides acutus              C4,5",,2,-0.6,0.266,0.121,0.021
-S1,COPE,193,Calanus finmarchicus,C6F,2,0.1,0.387,0.215,0.030
-S1,COPE,194,Calanus glacialis,C6F,50,1.9,0.474,0.223,0.050
-S1,COPE,195,Calanus hyperboreus,C6F,50,1.3,3.95,2.34,0.28
-S1,COPE,196,Calanus hyperboreus,C5,50,0.9,1.94,1.12,0.14
-S1,COPE,197,Calanus hyperboreus,C5,50,-0.3,2.68,1.63,0.18
-S1,COPE,198,Metridia longa,C6F,50,0.1,0.353,0.17,0.037
-S1,COPE,199,Rincalanus gigas,,50,-1.7,1.08,0.50,0.11
-S1,COPE,200,Neocalanus cristatus,C5,2,6.3,1.59,0.79,0.13
-S1,COPE,201,Neocalanus plumchrus,C4,2,5.6,0.26,0.148,0.02
-S1,COPE,202,Neocalanus plumchrus,C5,2,7.3,0.79,0.45,0.06
-S1,COPE,203,Eucalanus bungii,,2,6,1.01,0.404,0.099
-S1,COPE,204,Pseudocalanus elongatus,,2,8.6,0.0116,0.0053,0.0014
-S1,COPE,205,Metridia pacifica,,2,8.2,0.148,0.065,0.016
-S1,COPE,206,Acartia longiremis,,2,9.6,0.0081,0.0035,0.0010
-S1,COPE,207,Tortanus discaudatus,,2,7,0.0569,0.025,0.0064
-S1,COPE,208,Metridia pacifica,,2,13,0.094,0.043,0.011
-S1,COPE,209,Mesocalanus tenuicornis,,2,15.8,0.0313,0.0123,0.0038
-S1,COPE,210,Paracalanus parvus,,2,13.9,0.0038,0.0016,0.0005
-S1,COPE,211,Centropages abdominaris,,2,15.9,0.0167,0.0067,0.002
-S1,COPE,212,Pseudodiaptomus marinus,,2,14.3,0.0142,0.0057,0.0017
-S1,COPE,213,Neocalanus plumchrus,,2,15.1,0.294,0.135,0.026
-S1,COPE,214,Acartia clausi,,2,14.8,0.0085,0.0035,0.0011
-S1,COPE,215,Neocalanus gracilis,,2,19.7,0.500,0.23,0.05
-S1,COPE,216,Centropages brachiatus,,2,17.3,0.0198,0.0083,0.0020
-S1,COPE,217,Acartia tonsa,,2,22,0.0072,0.0030,0.0007
-S1,COPE,218,Undinula vulgaris,,2,23.5,0.185,0.077,0.018
-S1,COPE,219,Euchaeta marina,,2,24,0.291,0.121,0.028
-S1,COPE,220,Acartia pacifica,,2,26,0.0078,0.0032,0.0008
-S1,COPE,221,Calanopia elliptica,,2,26,0.0563,0.0234,0.0054
-S1,COPE,222,Tortanus gracilis,,2,26,0.0235,0.0098,0.0023
-S1,COPE,223,Eucalanus subcrassus,,2,24,0.104,0.043,0.010
-S1,COPE,224,Labidocera acuta,,2,24,0.233,0.097,0.022
-S1,COPE,225,Acartia australis,,2,25,0.0091,0.0038,0.0009
-S1,COPE,226,Nannocalanus minor,,2,26.9,0.0401,0.017,0.0045
-S1,COPE,227,Undinula vulgaris,,2,27.6,0.167,0.070,0.018
-S1,COPE,228,Eucalanus attenuatus,,2,27.4,0.137,0.054,0.013
-S1,COPE,229,Labidocera acuta,,2,28.5,0.232,0.100,0.028
-S1,COPE,230,Labidocera nerii,,2,26.4,0.221,0.0953,0.027
-S1,COPE,231,Pontella danae,,2,26.4,0.7,0.2996,0.084
-S1,COPE,232,Neocalanus cristatus,C5,25,5,1.72,0.68,0.17
-S1,COPE,233,Calanus marshallae,C5,15,8,0.421,0.239,0.036
-S1,COPE,234,Neocalanus plumchrus,C5,75,5.8,0.244,0.111,0.019
-S1,COPE,235,Neocalanus plumchrus,C5,15,8,0.928,0.551,0.070
-S1,COPE,236,Mesocalanus tenuicornis,C6F,15,22,0.265,0.123,0.028
-S1,COPE,237,Metridia pacifica,C6F,135,4.7,0.203,0.095,0.025
-S1,COPE,238,Metridia pacifica,C6F,75,5.8,0.183,0.082,0.022
-S1,COPE,239,Pleuromamma scutullata,C6F,75,6,0.322,0.146,0.035
-S1,COPE,240,Pleuromamma scutullata,C6F,75,5.8,0.403,0.196,0.043
-S1,COPE,241,Pleuromamma scutullata,C6F,100,3,0.359,0.180,0.036
-S1,COPE,242,Pleuromamma abdominalis,C6F,100,13.6,0.359,0.155,0.043
-S1,COPE,243,Pleuromamma xiphias,C6F,100,12,0.387,0.160,0.045
-S1,COPE,244,Gaetanus simplex,C6F,75,6,0.451,0.218,0.052
-S1,COPE,245,Gaetanus simplex,C6F,100,3,0.434,0.230,0.048
-S1,COPE,246,Euchaeta marina,C6F,100,11.3,0.415,0.205,0.044
-S1,COPE,247,Euchaeta marina,C6F,15,20.2,0.18,0.0862,0.0196
-S1,COPE,248,Euchaeta marina,C6F,100,20,0.23,0.104,0.0281
-S1,COPE,249,Euchaeta marina,C6F,100,16,0.335,0.1514,0.0409
-S1,COPE,250,Candacia bipinnata,C6F,100,11.3,0.333,0.1438,0.0371
-S1,COPE,251,Candacia bipinnata,C6F,15,20.2,0.102,0.0444,0.0117
-S1,COPE,252,Candacia bipinnata,C6F,100,13,0.164,0.07,0.0193
-S1,COPE,253,Candacia clombidea,C6F,100,4.7,0.559,0.2541,0.066
-S1,COPE,S1,Neocalanus cristatus,C4,75,6,0.268,0.082,0.030
-S1,COPE,S2,Neocalanus cristatus,C5,75,6,1.86,0.77,0.20
-S1,COPE,S3,Neocalanus cristatus,C5,75,3,8.20,5.13,0.55
-S1,COPE,S4,Neocalanus flemingeri,C5,75,5,1.34,0.86,0.08
-S1,COPE,S5,Neocalanus flemingeri,C5,75,4,1.38,0.84,0.09
-S1,COPE,S6,Eucalanus bungii,C6F,75,5,1.07,0.47,0.10
-S1,COPE,S7,Labidocera farrani,,25,25.0,0.160,0.057,0.016
-S1,COPE,S8,Undinula vulgaris,,25,25.5,0.220,0.09,0.03
-S1,COPE,S9,Paracalanus indicus,,1,23.0,0.0072,0.00323,0.0008
-S1,COPE,S10,Macrosetella gracilis,,1,25.0,0.0065,0.00238,0.00051
-S1,COPE,S11,Oithona nishidai,,1,24.0,0.00120,0.00039,0.00011
-S1,EUPH,1a,Bentheuphausia amblyops,,4000,1.5,41.7,21.7,3.7
-S1,EUPH,1b,Bentheuphausia amblyops,,1500,3.5,27.9,10.9,1.8
-S1,EUPH,1c,Bentheuphausia amblyops,,600,5.5,60.0,23.5,3.8
-S1,EUPH,2a,Euphausia crystallorophias,,10,-1.6,30.8,14.0,3.4
-S1,EUPH,2b,Euphausia crystallorophias,J,5,-1.3,9.1,3.8,1.1
-S1,EUPH,3,Euphausia diomedeae,,2,26,1.9,0.78,0.20
-S1,EUPH,4,Euphausia distinquenda,,2,27,3.5,1.40,0.38
-S1,EUPH,5,Euphausia gibba,,1,28,3.3,1.37,0.37
-S1,EUPH,6,Euphausia gibboides,,200,18,5.1,2.14,0.54
-S1,EUPH,7,Euphausia krohnii,,2,19.7,0.29,0.12,0.03
-S1,EUPH,8,Euphausia lucens,,40,12.5,5.0,2.02,0.54
-S1,EUPH,9,Euphausia mutica,,1,28,1.8,0.74,0.21
-S1,EUPH,10a,Euphausia pacifica,,2,13,5.0,2.06,0.54
-S1,EUPH,10b,Euphausia pacifica,M,100,5,12.8,4.6,1.2
-S1,EUPH,10c,Euphausia pacifica,F,100,5,11.5,4.0,1.1
-S1,EUPH,11a,Euphausia superba,,35,-1.1,86.3,38.4,8.8
-S1,EUPH,11b,Euphausia superba,J,3,-1.7,40.3,16.4,4.8
-S1,EUPH,11c,Euphausia superba,FG,35,-1.1,247.1,115.9,24.7
-S1,EUPH,11d,Euphausia superba,FG,3,-1.7,80.5,32.5,9.6
-S1,EUPH,11e,Euphausia superba,M,3,-1.7,97.7,39.5,11.4
-S1,EUPH,12,Euphausia tenera,,2,27,0.77,0.31,0.08
-S1,EUPH,13a,Euphausia triacantha,,100,-0.8,23.0,9.5,2.7
-S1,EUPH,13b,Euphausia triacantha,,600,0,82.8,39.2,8.9
-S1,EUPH,14a,Meganyctiphanes norvegica,,250,4,74.1,25.9,7.6
-S1,EUPH,14b,Meganyctiphanes norvegica,,300,13,32.5,12.8,3.7
-S1,EUPH,14c,Meganyctiphanes norvegica,,50,4,45.8,17.0,5.0
-S1,EUPH,15,Nyctiphanes australis,,2,15,2.0,0.87,0.23
-S1,EUPH,16,Tessarabrachion oculatus,,750,3,9.2,4.01,0.95
-S1,EUPH,17,Thysanoessa inermis,,50,1,17.3,8.88,1.55
-S1,EUPH,18a,Thysanoessa macrura,J,2,-0.4,0.47,0.20,0.05
-S1,EUPH,18b,Thysanoessa macrura,,2,-1.7,5.5,2.23,0.54
-S1,EUPH,18c,Thysanoessa macrura,,300,-0.46,6.9,2.96,0.83
-S1,EUPH,19,Thysanoessa raschii,,25,4,10.0,4.16,1.29
-S1,EUPH,20,Thysanoessa spp.,,15,20,5.0,2.10,0.53
-S1,EUPH,21a,Thysanoessa spinifera,F,100,5,12.2,4.47,1.20
-S1,EUPH,21b,Thysanoessa spinifera,M,100,5,7.0,2.60,0.71
-S1,EUPH,22,Thysanopoda cornuta,,650,5,1405,589,149
-S1,EUPH,23,Thysanopoda monocantha,,500,7,46.1,19.32,4.89
-S1,EUPH,24,Thysanopoda tricuspidata,,1,26,12.8,5.44,1.62
-S1,AMPH,1,Chuneola spinifera,,4000,1.5,239.0,118.2,10.9
-S1,AMPH,2,Cyllopus lucasii,,100,0.5,61.8,27.75,3.52
-S1,AMPH,3,Hemityphis tenuimanus,,2,26.4,1.62,0.41,0.07
-S1,AMPH,4,Hyperia galba,,125,5.6,6.63,1.94,0.40
-S1,AMPH,5,Hyperia gaudichaudii,,3,-0.8,105.3,49.2,7.5
-S1,AMPH,6,Lanceola loveni,,1500,2,5.16,1.64,0.48
-S1,AMPH,7a,Oxycephalus clausi,,1,27.5,14.0,3.56,0.87
-S1,AMPH,7b,Oxycephalus cluasi,,2,27.4,17.7,4.26,0.97
-S1,AMPH,8a,Phronima sedentaria,,2,27.4,9.48,2.26,0.48
-S1,AMPH,8b,Phronima sedentaria,,2,19.7,7.29,1.74,0.37
-S1,AMPH,8c,Phronima sedentaria,,750,3,7.57,1.74,0.43
-S1,AMPH,9a,Primno abyssalis,F,550,0.5,14.8,5.78,1.39
-S1,AMPH,9b,Primno abyssalis,,250,5,6.15,3.28,0.46
-S1,AMPH,10,Primno macropa,,100,0.5,37.9,15.80,2.50
-S1,AMPH,11,Scina borealis,,1500,2,8.74,3.12,0.68
-S1,AMPH,12,Scina crassicornis,,2,22.4,2.99,1.25,0.30
-S1,AMPH,13,Thamneus rostratus,,2,27.4,2.44,0.59,0.10
-S1,AMPH,14,Themisto compressa,,250,4,2.13,0.98,0.20
-S1,AMPH,15a,Themisto gaudichaudii,,2,-0.9,7.06,2.67,0.58
-S1,AMPH,15b,Themisto gaudichaudii,,100,0.5,60.5,22.9,5.0
-S1,AMPH,15c,Themisto gaudichaudii,,2,15,1.00,0.38,0.08
-S1,AMPH,16a,Themisto japonica,,2,8.6888889,2.90,1.19,0.23
-S1,AMPH,16b,Themisto japonica,,250,5,2.65,1.23,0.23
-S1,AMPH,16c,Themisto japonica,F,550,0.5,3.14,1.16,0.28
-S1,AMPH,17,Themisto libellula,,90,-0.1454545,2.98,1.14,0.24
-S1,AMPH,18,Themisto pacifica,,250,5,1.18,0.56,0.10
-S1,AMPH,19,Vibilia sp.,,2,27.8,1.24,0.44,0.09
-S1,AMPH,20,Vibilia propinqua,,2,-1.1,12.1,4.90,0.99
-S1,AMPH,21,Vibilia stebbingi,,100,0.5,24.2,8.40,1.79
-S1,AMPH,22a,Cyphocaris challengeri,,2,13,3.96,1.62,0.32
-S1,AMPH,22b,Cyphocaris challengeri,,250,5,5.90,2.17,0.40
-S1,AMPH,23,Cyphocaris faueri,,100,0.5,293.2,115.2,15.0
-S1,AMPH,24,Cyphocaris richardi,,500,0.5,127.2,48.7,7.5
-S1,AMPH,25,Cyphocaris sp.,A,600,0.2416667,81.4,38.5,5.7
-S1,AMPH,26,Cyphocaris sp. B,,750,3,1.23,0.69,0.05
-S1,AMPH,27,Eusirus antarcticus,,100,0.5,18.4,8.34,1.16
-S1,AMPH,28,Eusirus microps,,55,-1.6,193.1,87.6,12.2
-S1,AMPH,29,Eusirus perdentatus,,290,-1,344.0,155.8,21.7
-S1,AMPH,30,Gammaridea sp.,,750,3,4.01,2.40,0.19
-S1,AMPH,31b,Paracallisoma coecus,,600,5.5,31.8,16.3,1.4
-S1,AMPH,32,Parandania boecki,,500,0.5,75.9,27.5,4.3
-S1,DECA,1,Acanthephyra acutifrons,,650,5,2278,1050,181
-S1,DECA,2b,Acanthephyra curtirostris,,650,5,604,278,48
-S1,DECA,2c,Acanthephyra curtirostris,,650,5.5,651,300,52
-S1,DECA,3,Acanthephyra eximia,,4200,14.5,786,362,54
-S1,DECA,4a,Acanthephyra purpurea,,300,14,367,169,31
-S1,DECA,4b,Acanthephyra purpurea,,200,10,448,207,39
-S1,DECA,5,Acanthephyra quadrispinosa,,1000,2.5,8.29,3.8,0.6
-S1,DECA,6,Acanthephyra smithi,,200,10,1013,467,88
-S1,DECA,7b,Hymenodora frontalis,,750,3,22.8,10.5,1.8
-S1,DECA,7c,Hymenodora frontalis,,650,5.5,290,134,23
-S1,DECA,8,Janicella spinicauda,,200,10,92.3,42.6,8.0
-S1,DECA,9,Nematocarcinus lanceopes,,1,0.5,68.5,31.6,8.1
-S1,DECA,10,Notostomus elegans,,650,5,5944,2740,472
-S1,DECA,11,Notostomus gibbosus,,650,5,2742,1264,218
-S1,DECA,12,Notostomus sp.,,1100,4,800,369,61
-S1,DECA,13a,Oplophorus gracilirostris,,100,20,613,283,56
-S1,DECA,13b,Oplophorus gracilirostris,,200,10,681,314,59
-S1,DECA,14a,Oplophorus spinosus,,200,10,770,355,67
-S1,DECA,14b,Oplophorus spinosus,,200,10,105,48.4,9.1
-S1,DECA,15a,Parapandalus richardi,,200,17,82.9,38.2,7.2
-S1,DECA,15b,Parapandalus richardi,,200,10,52.7,24.3,4.6
-S1,DECA,17b,Pasiphaea chacei,,200,7.5,195,89.8,16.9
-S1,DECA,18b,Pasiphaea emarginata,,650,5.5,116.5,53.7,9.3
-S1,DECA,20,Pasiphaea multidentata,,100,5.5,56.16,25.9,5.1
-S1,DECA,21a,Pasiphaea scotiae,,600,0.2,265,122,21
-S1,DECA,21b,Pasiphaea scotiae,,100,0.5,957,441,87
-S1,DECA,23b,Systellaspis cristata,,1100,5.5,884,408,67
-S1,DECA,24a,Systellaspis debilis,,200,18,353,163,31
-S1,DECA,24b,Systellaspis debilis,,300,14,318,146,27
-S1,DECA,24c,Systellaspis debilis,,200,10,321,148,28
-S1,DECA,24d,Systellaspis debilis,,200,10,210,97,18
-S1,DECA,25,Funchalia villosa,,100,20,565,261,51
-S1,DECA,26,Gennadas capensis,,700,7,86.1,39.7,6.8
-S1,DECA,27a,Gennadas kempi,,500,0.5,561,258,45.5
-S1,DECA,27b,Gennadas kempi/Petalidium foliaceum,,600,0.2,339,156.1,27.1
-S1,DECA,28b,Gennadas propinquus,,650,5.5,140,64.4,11.1
-S1,DECA,29,Gennadas scutatus,,100,20,127,58.5,11.5
-S1,DECA,30,Gennadas valens,,300,14,131,60.3,11.0
-S1,DECA,31b,Acetes sibogae australis,,1,30,26.7,12.3,3.2
-S1,DECA,32b,Eusergestes similis,,100,10,74,34.1,6.7
-S1,DECA,36,Parasergestes armatus,,300,14,8.0,3.7,0.68
-S1,DECA,37,Petalidium foliaceum,,500,0.5,248,114,20.1
-S1,DECA,38,Seosergestes corniculum,,100,20,86.9,40.1,7.9
-S1,DECA,39,Sergestes atlanticus,,1,27.5,23.5,10.8,2.8
-S1,DECA,40,Sergia bisulcata,,200,10,670,309,58.1
-S1,DECA,41,Sergia splendens,,200,10,79.1,36.5,6.9
-S1,DECA,42,Sergia fulgens,,200,10,280,129,24.3
-S1,DECA,43b,Sergia phorca,,650,5.5,664,306,52.8
-S1,DECA,44,Sergia tenuiremis,,650,5,688,317,54.7
-S1,DECA,46,Sergia grandis,,300,14,170,78.2,14.3
-S1,DECA,47,Sergia robusta,,300,14,409,188,34.4
-S1,DECA,48,Sergia splendens,,300,14,84.1,38.8,7.1
-S1,DECA,49,Sergia talismani,,100,20,51.1,23.6,4.6
-S1,DECA,50,Pleuroncodes planipes,,200,15,812,374,70.3
-S1,DECA,31a,Acetes sibogae australis,,1,25,6.49,2.99,0.77
-S1,MYSI,1,Acanthomysis pseudomacropsis,,2,15,2.88,1.27,0.32
-S1,MYSI,2,Acanthomysis sp.,A,2,10,1.89,0.78,0.20
-S1,MYSI,3,Acanthomysis sp.B,,750,3,12.90,7.11,0.93
-S1,MYSI,4,Anisomysis lamellicauda,,10,29,0.27,0.13,0.03
-S1,MYSI,5,Anisomysis pelewensis,,6,20,0.07,0.03,0.01
-S1,MYSI,6,Antarctomysis maxima,,60,-1.6,170.5,75.3,17.9
-S1,MYSI,7,Archaeomysis grebnitzkii,,1,10,1.00,0.39,0.12
-S1,MYSI,8,Boreomysis arctica,,100,5.5,19.23,9.03,1.63
-S1,MYSI,9a,Boreomysis californica,,650,5.5,12.18,5.29,0.97
-S1,MYSI,11,Boreomysis rostrata,,100,0.5,588.9,277.6,46.6
-S1,MYSI,12,Charalaspidium sp.,,600,5.5,280.0,143.1,18.3
-S1,MYSI,15a,Gnathophausia gigas,,600,0.2,127.3,52.6,9.23
-S1,MYSI,15b,Gnathophausia gigas,,500,0.5,131.3,67.1,6.30
-S1,MYSI,16,Gnathophausia gracilis,,600,5.5,930,479,57.7
-S1,MYSI,17,Gnathophausia ingens,,550,5.5,1040,512,66.0
-S1,MYSI,18,Hemimysis abyssicola,,100,5.5,3.34,1.55,0.30
-S1,MYSI,19,Hemimysis speluncola,,1,14,0.82,0.324,0.097
-S1,MYSI,20a,Leptomysis lingvura,,1,14,1.72,0.68,0.20
-S1,MYSI,21,Longithorax fuscus,,750,3,24.63,13.69,1.60
-S1,MYSI,22,Mesopodopsis slabberi,,1,20,0.58,0.24,0.067
-S1,MYSI,23a,Metamysidopsis elongata,F,1,15,0.28,0.10,0.032
-S1,MYSI,23b,Metamysidopsis elongata,F,1,14,0.31,0.12,0.038
-S1,MYSI,25,Mysidopsis surugae,,6,20,0.61,0.266,0.062
-S1,MYSI,27,Neomysis americana,,100,4,1.47,0.67,0.14
-S1,MYSI,28,Neomysis awatschensis,,1,10,2.00,0.78,0.24
-S1,MYSI,29a,Neomysis integer,,1,20,3.19,1.32,0.35
-S1,MYSI,29b,Neomysis integer,F,1,16,4.20,1.70,0.47
-S1,MYSI,29c,Neomysis integer,F,1,16,2.90,1.17,0.33
-S1,MYSI,31,Praunus flexuosus,M,1,8.2,6.20,2.42,0.73
-S1,MYSI,32a,Rhopalophthalmus africana,,2,28.5,0.16,0.07,0.02
-S1,MYSI,32b,Rhopalophthalmus africana,J,2,29,1.33,0.59,0.14
-S1,MYSI,33,Rhopalophthalmus mediterraneus,A,1,20,5.29,2.20,0.57
-S1,MYSI,36,Siriella media,,1,29,4.09,1.79,0.45
-S1,MYSI,37,Siriella sp.,,2,9,1.10,0.43,0.12
-S1,MYSI,38a,Siriella thompsoni,,2,28,1.47,0.59,0.15
-S1,OSTR,S1,Conchoecia borealis,,100,5.5,0.320,0.142,0.026
-S1,OSTR,S2,Conchoecissa ametra,,2500,1.5,2.660,1.250,0.390
-S1,OSTR,S3,Discoconchoecia pseudodiscophora,,400,3,0.060,0.030,0.005
-S1,OSTR,S4,Orthoconchoecia haddoni,AF,400,3,0.500,0.229,0.044
-S1,OSTR,S5,Orthoconchoecia haddoni,AM,400,3,0.340,0.144,0.031
-S1,OSTR,S6,Orthoconchoecia haddoni,,1500,2,0.860,0.307,0.071
-S1,OSTR,S7,Metaconchoecia skogsbergi,VII/A,400,3,0.080,0.032,0.008
-S1,OSTR,S8,Discoconchoecia pseudodiscophora,,500,1,0.028,0.013,0.002
-S1,OSTR,S9,Discoconchoecia pseudodiscophora,,500,1,0.042,0.017,0.003
-S1,OSTR,S10,Paramollicia dichotoma,,4000,1.5,0.520,0.279,0.030
-S1,OSTR,S11,Gigantocypris mulleri,,500,0.5,122.0,44.0,10.0
-S1,OSTR,S12,Gigantocypris agassizii,,900,4,158.4,16.8,4.7
-S1,OSTR,S13,Gigantocypris mulleri,,500,0.2,54.9,17.7,4.5
-S1,OSTR,S14,Gigantocypris mulleri,,500,0.2,160.1,56.7,14.9
-S1,OSTR,S15,Gigantocypris mulleri,,500,-0.9,48.0,14.2,3.9
-S1,OSTR,S16,Gigantocypris mulleri,,500,-1,139.7,44.4,11.7
-S1,CHAE,S1,Aidanosagitta negrecta,,2,23,0.29,0.091,0.026
-S1,CHAE,S2,Caecosagitta macrocephala,,1500,2,6.39,2.87,0.63
-S1,CHAE,S3,Ferosagatta hispida,,2,24,0.33,0.13,0.04
-S1,CHAE,S5,Ferosagitta robusta,,2,27,0.75,0.29,0.07
-S1,CHAE,S6,Flaccisagitta enflata,,2,27,0.71,0.25,0.06
-S1,CHAE,S7,Mesosagitta minima,,2,15,0.094,0.034,0.010
-S1,CHAE,S8,Parasagitta elegans,,2,9,1.03,0.42,0.12
-S1,CHAE,S14,Parasagitta tenuis,,2,22,0.24,0.091,0.024
-S1,CHAE,S15,Pseudosagitta gazellae,,100,-1,35.33,7.10,2.01
-S1,CHAE,S16,Pseudosagitta scrippsae,,750,3,13.91,3.17,0.82
-S1,CHAE,S17,Sagitta bipunctata,,2,27.5,0.45,0.17,0.04
-S1,CHAE,S18,Serratosagitta serratodentata,,2,27,0.73,0.28,0.07
-S1,CHAE,S19,Solidosagitta zetesios,,1500,2,8.89,3.65,0.93
-S1,CHAE,S20,Zenosagitta bedoti,f. minor,2,24,0.084,0.032,0.010
-S1,CHAE,S21,Eukrohnia bathypelagica,,750,3,1.61,0.61,0.13
-S1,CHAE,S22,Eukrohnia fowleri,,2500,1.5,8.08,3.49,0.69
-S1,CHAE,S23,Eukrohnia hamata,,750,3,1.24,0.40,0.10
-S1,CHAE,S24,Eukrohnia hamata,,100,5.5,6.21,2.02,0.48
-S1,CHAE,S25,E.hamata/bathypelagica,,750,0,2.50,0.79,0.17
-S1,CHAE,S26,Caecosagitta macrocephala,,700,5,2.12,0.95,0.21
-S1,CHAE,S27,Decipisagitta decipiens,,250,5,0.52,0.20,0.05
-S1,CHAE,S28,Flaccisagitta hexaptera,,10,5,18.53,6.21,1.45
-S1,CHAE,S29,Parasagitta euneritica,,10,15,0.22,0.09,0.02
-S1,CHAE,S30,Pseudosagitta lyra,,10,5,28.65,6.30,1.69
-S1,CHAE,S31,Pseudosagitta maxima,,200,5,26.76,5.89,1.58
-S1,CHAE,S32,Solidosagitta zetesios,,300,5,8.19,3.37,0.86
-S1,CHAE,S33,Eukrohnia fowleri,,750,5,10.49,4.53,0.89
-S1,CHAE,S34,Eukrohnia hamata,,400,5,2.06,0.67,0.16
-S1,CHAE,S35,Heterokrohnia murina,,1900,5,19.58,7.60,1.92
-S1,CNID,1,Aeginura grimaldii,,600,6,80,5.38,1.34
-S1,CNID,2,Aequorea victoria,,1,10,290,10.50,2.78
-S1,CNID,3a,Aglantha digitale,,2,8.5,3.39,1.02,0.37
-S1,CNID,3b,Aglantha digitale,,150,1.1,14.0,2.34,0.60
-S1,CNID,3c,Aglantha digitale,,125,3,5.74,0.78,0.22
-S1,CNID,3d,Aglantha digitale,,1,10,6,0.96,0.28
-S1,CNID,4,Benthocodon pedunculata,,767,9,200,16.40,5.40
-S1,CNID,6,Bougainvillia muscus,,1,28,0.70,0.08,0.03
-S1,CNID,7a,Calycopsis borchgrevinki,,100,-0.7,136.0,12.90,3.34
-S1,CNID,8,Clytia hemisphaerica,,1,28,1.1,0.10,0.03
-S1,CNID,9,Colobonema sericeum,,600,6,660,112,29.2
-S1,CNID,10,Crossota sp.,,750,3,6.22,1.23,0.23
-S1,CNID,11a,Earleria cellularia,,1,10,280,7.84,2.24
-S1,CNID,11b,Earleria cellularia,,1,15,310,8.68,2.48
-S1,CNID,12,Eperetmus typus,,1,10,99,8.51,2.48
-S1,CNID,13,Eutonina indicans,,1,10,43,3.83,1.08
-S1,CNID,14,Gonionemus vertens,,1,10,31,4.25,1.27
-S1,CNID,15,Liriope tetraphylla,,2,27,2.27,0.16,0.07
-S1,CNID,16,Nemopsis bachei,,1,12,5.1,0.72,0.20
-S1,CNID,17,Pantachogon haeckeli,,1125,3,38.78,14.62,2.87
-S1,CNID,18a,Phialidium gregarium,,1,10,16,1.50,0.40
-S1,CNID,18b,Phialidium gregarium,,1,15,14,1.32,0.35
-S1,CNID,19,Phialidium lomae,,1,15,7,0.48,0.12
-S1,CNID,20,Sarsia princeps,,1,10,15,1.01,0.27
-S1,CNID,21,Solmissus incisus,,600,6,1040,15.91,4.37
-S1,CNID,22a,Stomotoca atra,,1,10,15,1.44,0.39
-S1,CNID,22b,Stomotoca atra,,1,15,24,2.30,0.62
-S1,CNID,23,Abylopsis tetragona,,1,15,12.5,1.06,0.30
-S1,CNID,24,Chelophyes appendiculata,,1,15,5.0,0.59,0.17
-S1,CNID,25a,Diphyes antarctica,,100,-0.7,37.10,3.67,1.19
-S1,CNID,26,Diphyes sp.,,2,25,0.48,0.07,0.02
-S1,CNID,27,19 species,,15,26,4.7,0.41,0.11
-S1,CNID,27,19 species,,15,26,47.4,4.12,1.09
-S1,CNID,27,19 species,,15,26,474.0,41.2,10.9
-S1,CNID,29a,Aurelia aurita,,1,10,490,21.1,6.4
-S1,CNID,29b,Aurelia aurita,,1,15,470,20.2,6.1
-S1,CNID,29c,Aurelia aurita,,1,20,25200,932,252
-S1,CNID,30a,Cassiopea xamachana,,1,30,7583,660,174
-S1,CNID,30b,Cassiopea xamachana,,1,24,7583,660,174
-S1,CNID,33a,Cyanea capillata,,600,6,6710,672,170
-S1,CNID,33b,Cyanea capillata,,1,10,240,30.7,8.9
-S1,CNID,33c,Cyanea capillata,,1,15,130,16.6,4.8
-S1,CNID,34,Mastigias sp.,,1,29,4000,65.9,19.0
-S1,CNID,35a,Pelagia noctiluca,,200,18,147.9,15.7,4.4
-S1,CNID,35b,Pelagia noctiluca,,1,21,597,68.1,17.3
-S1,CNID,36,Periphylla periphylla,,200,7,279,54.6,8.1
-S1,CNID,37a,Poralia rufescens,,600,6,12010,70.9,16.8
-S1,CNID,37b,Poralia rufescens,,1300,3,59.6,21.7,5.7
-S1,CNID,37c,Poralia rufescens,,1300,3,214.9,49.0,12.6
-S1,CNID,38,Stomolophus meleagris,,1,30,2050,40.6,11.9
-S1,CNID,TC1,Aegina citrea,,800,5,212.6,11.64,3.00
-S1,CNID,TC2,Botrynema brucei,,600,5,55.9,4.98,1.31
-S1,CNID,TC3,Colobonema sericeum,,300,5,205.8,11.40,2.94
-S1,CNID,TC4,Crossota alba,,100,5,25.1,3.00,0.80
-S1,CNID,TC5,Crossota rufobrunnea,,500,5,24.0,2.91,0.77
-S1,CNID,TC6,Crossota sp.,A,1100,5,5.7,1.17,0.32
-S1,CNID,TC7,Eirene mollis,,10,15,10.8,0.96,0.27
-S1,CNID,TC8,Haliscera bigelowi,,800,5,28.5,3.25,0.86
-S1,CNID,TC9,Halitrephes maasi,,500,5,849.6,28.05,7.11
-S1,CNID,TC10,Pantachogon sp.,A,800,5,22.8,2.82,0.75
-S1,CNID,TC11,Tetrorchis erythrogaster,,600,5,18.3,2.46,0.65
-S1,CNID,TC12,Vallentinia adherens,,10,15,1.4,0.26,0.08
-S1,CNID,TC13,Vampyrocrossota childressi,,750,5,14.7,2.13,0.57
-S1,CNID,TC14,Atolla vanhoeffeni,,450,5,25.3,11.17,2.98
-S1,CNID,TC15,Atolla wyvillei,,500,5,366.2,60.92,15.72
-S1,CNID,TC16,Nausithoe rubra,,1100,5,284.9,51.94,13.44
-S1,CNID,TC17,Paraphyllina ransoni,,800,5,11.2,6.64,1.79
-S1,CNID,TC18,Periphylla periphylla,,650,5,948.1,111.45,28.40
-S1,CTEN,40a,Bathocyroe fosteri,,615,11,444,3.29,0.89
-S1,CTEN,40b,Bathocyroe fosteri,,600,6,980,3.63,0.98
-S1,CTEN,40c,Bathocyroe fosteri,,767,9,1900,8.17,2.66
-S1,CTEN,41,Beroe abyssicola,,550,0.5,63.6,7.12,1.91
-S1,CTEN,42a,Beroe cucumis,,2,15,3.43,0.39,0.13
-S1,CTEN,42b,Beroe cucumis,,2,15,52.1,5.89,1.93
-S1,CTEN,43a,Beroe ovata,,10,25,76,2.83,0.75
-S1,CTEN,43b,Beroe ovata,,5,21,100,2.76,0.79
-S1,CTEN,44,Beroe sp.,A,2,-0.8,401.6,36.10,9.40
-S1,CTEN,45,Beroe sp. B,,1,-1.6,1362,75.96,20.88
-S1,CTEN,46,Bolinopsis infundibulum,,180,6,1921,41.88,8.64
-S1,CTEN,47,Bolinopsis mikado,,1,22,224,2.46,0.76
-S1,CTEN,48,Bolinopsis vitrea,,10,25,56.30,0.34,0.07
-S1,CTEN,49,Callianira antarctica,,5,1,232,19.51,4.25
-S1,CTEN,50,Eurhamphaea vexilligera,,10,25,202,1.78,0.48
-S1,CTEN,51,Mertensia ovum,,15,0,300,19.55,4.87
-S1,CTEN,52,Mertensiidae sp.,,1,-1.6,93.7,10.47,2.25
-S1,CTEN,53a,Mnemiopsis leidyi,,1,20,300,5.10,1.50
-S1,CTEN,54,Mnemiopsis mccradyi,,1,22,720,10.30,2.66
-S1,CTEN,55,Ocyropsis maculata,,10,25,1263,28.67,8.08
-S1,CTEN,56,Ocyropsis spp.,,10,25,141,1.66,0.42
-S1,CTEN,57a,Pleurobrachia pileus,,2,7.3,5.80,0.66,0.21
-S1,CTEN,58,Pleurobrachia sp.,,2,25,52.3,1.47,0.44
-S1,CTEN,59,UC–1,,767,9,18400,93.84,29.44
-S1,MOLL,1a,Cavolinia globulosa,,2,22.4,18.65,4.84,0.83
-S1,MOLL,1b,Cavolinia globulosa,,2,27.4,14.34,2.77,0.40
-S1,MOLL,2a,Cavolinia inflexa,,1,15,2.43,0.67,0.13
-S1,MOLL,2c,Cavolinia inflexa,,100,17.8,1.3,0.34,0.06
-S1,MOLL,2d,Cavolinia inflexa,,15,20,2.9,0.67,0.12
-S1,MOLL,3a,Cavolinia tridentata,,1,18,11.4,3.08,0.56
-S1,MOLL,3b,Cavolinia tridentata,,1,24,1.91,0.47,0.08
-S1,MOLL,3c,Cavolinia tridentata,,200,18,115,32.06,5.75
-S1,MOLL,4a,Cavolinia uncinata,,2,19.7,18.5,4.94,0.88
-S1,MOLL,4b,Cavolinia uncinata,,15,20,10.2,2.35,0.42
-S1,MOLL,5,Clio cuspidata,,2,22.4,30,7.83,1.34
-S1,MOLL,6a,Clio pyramidata,,200,15,7.73,2.15,0.41
-S1,MOLL,6b,Clio pyramidata,,15,20,2.05,0.53,0.10
-S1,MOLL,6e,Clio pyramidata,,100,13.9,3,0.83,0.16
-S1,MOLL,7,Clio pyramidata f. sulcata,,2,-1.05,54.75,20.15,4.65
-S1,MOLL,9,Corolla spectabilis,,15,26,100,25.48,4.12
-S1,MOLL,10a,Corolla spp.,,1,18,0.074,0.019,0.004
-S1,MOLL,11a,Creseis clava,,2,24.5,1.62,0.397,0.068
-S1,MOLL,11b,Creseis clava,,1,15,0.732,0.197,0.038
-S1,MOLL,11d,Creseis clava,,1,19,0.44,0.11,0.021
-S1,MOLL,12,Creseis virgula,,15,20,1.53,0.39,0.07
-S1,MOLL,13a,Cuvierina columnella,,100,20,5.21,1.36,0.24
-S1,MOLL,14,Cymbulia peronii,,100,13.9,333,98.47,18.46
-S1,MOLL,15,Diacria quadridentata,,15,20,2.18,0.56,0.10
-S1,MOLL,16a,Diacavolinia longirostris,,2,27,8.71,2.13,0.35
-S1,MOLL,16b,Diacavolinia longirostris,,15,20,1.85,0.48,0.09
-S1,MOLL,16c,Diacavolinia longirostris,,15,26,0.5,0.12,0.020
-S1,MOLL,17a,Diacria trispinosa,,2,27.4,12.26,2.99,0.48
-S1,MOLL,17b,Diacria trispinosa,,100,20,6.4,1.67,0.30
-S1,MOLL,17c,Diacria trispinosa,,100,13.9,15.2,4.32,0.83
-S1,MOLL,18,Gleba cordata,,15,26,30.0,7.53,1.23
-S1,MOLL,19,Hyalocylis striata,,15,20,2.4,0.61,0.11
-S1,MOLL,20a,Limacina antarctica,,2,-0.91,6.4,2.13,0.52
-S1,MOLL,20b,Limacina antarctica,,1,-2,2.0,0.64,0.15
-S1,MOLL,22a,Limacina helicina,,2,7.6,0.336,0.10,0.03
-S1,MOLL,22b,Limacina helicina,,2,15.5,0.028,0.007,0.002
-S1,MOLL,22c,Limacina helicina,,75,0,0.6,0.22,0.052
-S1,MOLL,25a,Thielea helicoides,,500,10,2.1,0.62,0.13
-S1,MOLL,25b,Thielea helicoides,,100,13.9,1.7,0.47,0.09
-S1,MOLL,26a,Clione limacina,,2,12.7,22.5,6.33,1.37
-S1,MOLL,26b,Clione limacina,,75,0.0,38.3,10.40,1.91
-S1,MOLL,26c,Clione limacina,,1,5,36.2,11.45,2.45
-S1,MOLL,26d,Clione limacina,,1,10,25.4,7.59,1.53
-S1,MOLL,27a,Clione limacina antarctica,,2,-1.3,25.3,9.91,2.00
-S1,MOLL,27b,Clione limacina antarctica,,1,-2,10.4,3.50,0.83
-S1,MOLL,27c,Clione limacina antarctica,,1,-1.8,15.0,5.05,1.19
-S1,MOLL,28,Cliopsis krohni,,1,24,9.8,2.47,0.42
-S1,MOLL,29,Hydromyles globulosus,,2,27.4,3.4,1.27,0.28
-S1,MOLL,31a,Pneumodermopsis spp.,,1,18,18.9,5.16,0.94
-S1,MOLL,31b,Pneumodermopsis spp.,,1,24,0.9,0.21,0.04
-S1,MOLL,32,Thliptodon spp.,,1,20,4.1,1.08,0.19
-S1,MOLL,33,Atlanta peronii,,2,22.4,14.6,3.78,0.65
-S1,MOLL,34a,Cardiapoda placenta,,1,26,34.3,8.61,1.41
-S1,MOLL,35,Carinaria lamarckii,,200,18,625,178,31.5
-S1,MOLL,36,Pterotrachea hippocampus,,15,26,100.0,25.5,4.1
-S1,MOLL,37,Pterotrachea scutata,,200,18,484,137,24.4
-S1,THAL,S1,Ihlea recovitzai,,2,-1.00,10.94,1.11,0.30
-S1,THAL,S2,Salpa thompsoni,,2,-1.10,115.1,5.4,1.3
-S1,THAL,S3,Thalia democratica,,2,17.30,2.97,0.23,0.05
-S1,THAL,S4,Salpa fusiformis,,2,17.3,11.64,0.91,0.19
-S1,THAL,S5,Iasis zonaria,,2,27,4.94,0.386,0.083
-S1,THAL,S6,Pegea confoederata,,2,25.7,81.96,6.41,1.37
-S1,THAL,S7,Salpa fusiformis,,2,27.4,4.88,0.38,0.08
-S1,THAL,S8,Pyrosoma verticillatum,,2,25.7,65.02,5.08,1.09
-S1,THAL,S9,Salpa thompsoni,,1,-1.6,763.32,33.84,7.54
-S1,THAL,S10,Salpa thompsoni,sol/agg,1,1.3,100,5.87,1.49
-S1,THAL,S11,Dolioletta gegenbauri,,1,21.0,0.25,0.02,0.00
-S1,THAL,S12,Pyrosoma atlanticum,,1,15.0,10.53,0.82,0.18
-S1,THAL,S14,Salpa maxima,,1,15.0,78.38,6.13,1.31
-S1,THAL,S16,Thalia democratica,,1,15.0,26.70,2.09,0.45
-S1,THAL,S17,Cyclosalpa affinis,agg,15,24.5,12.8,1,0.24
-S1,THAL,S18,Cyclosalpa pinnata,agg,15,24.5,12.8,1,0.22
-S1,THAL,S19,Cyclosalpa polae,sol,15,24.5,12.8,1,0.23
-S1,THAL,S20,Pegea confoederata,agg,15,24.5,12.8,1,0.21
-S1,THAL,S21,Salpa cylindrica,sol,15,24.5,12.8,1,0.23
-S1,THAL,S22,Salpa fusiformis,agg,15,16.5,12.8,1,0.23
-S1,THAL,S23,Salpa fusiformis,sol,15,16.5,12.8,1,0.24
-S1,THAL,S24,Salpa maxima,agg,15,24.5,12.8,1,0.22
-S1,THAL,S25,Salpa cylindrica,sol,15,26,75.3,5.89,1.26
-S1,THAL,S26,Salpa cylindrica,agg,15,26,7.5,0.59,0.13
-S1,THAL,S27,Salpa maxima,sol,15,26,75.3,5.89,1.26
-S1,THAL,S28,Salpa maxima,agg,15,26,75.3,5.89,1.26
-S1,THAL,S29,Pegea confederata,sol,15,26,75.3,5.89,1.26
-S1,THAL,S30,Pegea confederata,agg,15,26,7.5,0.59,0.13
-S1,APPE,S1,Oikopleura dioica,,1,15,0.00112,0.00065,0.00013
-S1,APPE,S2,Oikopleura dioica,,1,20,0.00121,0.00071,0.00014
-S1,APPE,S3,Oikopleura dioica,,1,24,0.00126,0.00074,0.00014
-S1,APPE,S4,Oikopleura dioica,,1,15,0.00112,0.00065,0.00013
-S1,POLY,S1,Tomopteris carpenteri,,100,0.5,37.2,15.0,3.7
-S1,POLY,S2,Tomopteris carpenteri,,100,0.5,95.4,38.5,9.5
-S1,POLY,S3,Tomopteris helgolandica,,100,5.5,4.01,,
-S1,POLY,S4,Poeobius meseres,,1000,5,32.6,5.7,1.2
-S1,POLY,S5,Pelagobia sp,.A,2400,5,2.68,,
-S1,POLY,S6,Tomopteris pacifica,,500,5,2.37,0.43,0.08
-S1,POLY,S7,Tomopteris nisseni,,500,5,859,,
-S1,POLY,S8,Travisiopsis lobifera,,500,5,23.7,9.0,2.2
-S1,POLY,S9,Tomopteris carpenteri,,3,-0.9,63.1,22.1,5.4
-S1,POLY,S10,Naiades cantrainii,,2,20,3.66,1.50,0.31
-S1,POLY,S11,Tomopteris sp,.,2,28,2.44,0.98,0.23
-S1,POLY,S12,Tomopteris sp,.,4000,1.5,3.511,1.37,0.33
-S2,COPE,S1,Calanus propinquus,,2,-1.0,1.043,0.41,0.12
-S2,COPE,S2,Calanoides acutus,C5,2,-0.2,0.394,0.19,0.03
-S2,COPE,S3,Calanoides acutus,"C4, C5",2,-0.5,0.218,0.10,0.02
-S2,COPE,S4,Rhincalanus gigas,,50,-1.7,1.080,0.50,0.11
-S2,COPE,S5,Metridia gerlachei,,2,-1.4,0.265,0.11,0.027
-S2,COPE,S6,Calanus finmarchicus,C6 F,2,0.1,0.387,0.21,0.030
-S2,COPE,S7,Calanus glacialis,C6F,50,2.3,0.474,0.22,0.050
-S2,COPE,S8,Calanus hyperboreus,C6 F,50,1.3,3.95,2.34,0.28
-S2,COPE,S9,Calanus hyperboreus,C5 (bloom),50,0.9,1.94,1.12,0.14
-S2,COPE,S10,Calanus hyperboreus,C5 (late bloom),50,-0.3,2.677,1.63,0.18
-S2,COPE,S11,Metridia longa,C6 F,50,0.1,0.353,0.17,0.037
-S2,COPE,S12,Neocalanus plumchrus,C5,2,7.3,0.785,0.45,0.063
-S2,COPE,S13,Neocalanus plumchrus,C4,2,5.6,0.263,0.15,0.021
-S2,COPE,S14,Neocalanus plumchrus,,2,15.1,0.294,0.14,0.026
-S2,COPE,S15,Neocalanus cristatus,,2,6.3,1.59,0.79,0.13
-S2,COPE,S16,Eucalanus bungii,C6F,2,6.0,1.01,0.40,0.10
-S2,COPE,S17,Pseudocalanus elongatus,,2,8.6,0.0116,0.0053,0.0014
-S2,COPE,S18,Metridia pacifica,,2,8.2,0.148,0.0654,0.0164
-S2,COPE,S19,Metridia pacifica,,2,13.0,0.094,0.0433,0.0113
-S2,COPE,S20,Acartia clausi,,2,14.8,0.0085,0.0035,0.0010
-S2,COPE,S21,Acartia longiremis,,2,9.6,0.0081,0.0035,0.0010
-S2,COPE,S22,Tortanus discaudatus,,2,7.0,0.057,0.025,0.006
-S2,COPE,S23,Canthocalanus pauper,C6F,2,22.0,0.034,0.014,0.003
-S2,COPE,S24,Neocalanus gracilis,,2,19.7,0.500,0.234,0.051
-S2,COPE,S25,Undinula vulgaris,,2,23.5,0.185,0.077,0.018
-S2,COPE,S26,Acrocalanus gibber,C6F,2,22.0,0.021,0.009,0.002
-S2,COPE,S27,Paracalanus parvus,,2,22.0,0.034,0.014,0.003
-S2,COPE,S28,Eucalanus subcrassus,C6F,2,22.0,0.103,0.043,0.010
-S2,COPE,S29,Euchaeta marina,,2,24.0,0.291,0.121,0.028
-S2,COPE,S30,Centropages furcatus,C6M,2,22.0,0.033,0.014,0.003
-S2,COPE,S31,Centropages brachiatus,,2,17.3,0.020,0.0082,0.0020
-S2,COPE,S32,Temora turbinata,,2,22.0,0.016,0.0066,0.0015
-S2,COPE,S33,Calanopia elliptica,C6F,2,22.0,0.077,0.032,0.007
-S2,COPE,S34,Labidocera sp,.,2,22.0,0.184,0.076,0.018
-S2,COPE,S35,Tortanus gracilis,C6F,2,22.8,0.0298,0.012,0.003
-S2,COPE,S36,Acartia australis,C6F,2,22.0,0.0117,0.0049,0.0011
-S2,COPE,S37,Acartia tonsa,,2,22.0,0.0072,0.0030,0.0007
-S2,COPE,S38,Corycaeus sp,.,2,22.0,0.032,0.013,0.003
-S2,COPE,S39,Nannocalanus minor,,2,26.9,0.040,0.017,0.005
-S2,COPE,S40,Undinulla vulgaris,,2,27.6,0.167,0.070,0.018
-S2,COPE,S41,Eucalanus subcrassus,C6F,2,27.7,0.069,0.029,0.007
-S2,COPE,S42,Eucalanus subcrassus,C6F,2,24.0,0.104,0.043,0.010
-S2,COPE,S43,Eucalanus attenuatus,,2,27.4,0.137,0.054,0.013
-S2,COPE,S44,Paracalanus aculeatus,,2,29.0,0.017,0.007,0.002
-S2,COPE,S45,Acrocalanus gibber,C6F,2,28.7,0.010,0.004,0.001
-S2,COPE,S46,Temora turbinata,,2,27.0,0.0055,0.002,0.001
-S2,COPE,S47,Centropages furcatus,C6M,2,27.8,0.019,0.008,0.002
-S2,COPE,S48,Calanopia elliptica,C6F,2,26.0,0.056,0.023,0.005
-S2,COPE,S49,Calanopia elliptica,C6F,2,27.4,0.049,0.020,0.005
-S2,COPE,S50,Labidocera acuta,,2,24.0,0.233,0.097,0.022
-S2,COPE,S51,Labidocera acuta,,2,28.5,0.228,0.098,0.028
-S2,COPE,S52,Labidocera nerii,,2,26.4,0.221,0.095,0.027
-S2,COPE,S53,Labidocera sp,. C6F,2,28.5,0.024,0.010,0.002
-S2,COPE,S54,Acartia australis,,2,25.0,0.0091,0.004,0.001
-S2,COPE,S55,Acartia australis,,2,27.0,0.017,0.007,0.002
-S2,COPE,S56,Acartia pacifica,C6F,2,27.8,0.018,0.008,0.002
-S2,COPE,S57,Tortanus gracilis,C6M,2,26.0,0.024,0.010,0.002
-S2,COPE,S58,Tortanus gracilis,C6M,2,29.0,0.013,0.0053,0.0012
-S2,COPE,S59,Labidocera farrani,,25,25.0,0.160,0.0566,0.016
-S2,COPE,S60,Undinula vulgaris,,25,25.5,0.220,0.0939,0.026
-S2,COPE,S61,Paracalanus indicus,,1,23.0,0.0072,0.0032,0.0008
-S2,COPE,S62,Macrosetella gracilis,,1,25.0,0.0065,0.0024,0.0005
-S2,COPE,S63,Oithona nishidai,,1,24.0,0.0012,0.00039,0.00011
-S2,EUPH,1c,Bentheuphausia amblyops,,600,5.5,60.0,23.5,3.84
-S2,EUPH,2a,Euphausia crystallorophias,,10,-1.6,30.8,14.0,3.39
-S2,EUPH,2b,Euphausia crystallorophias,J,5,-1.3,9.10,3.82,1.06
-S2,EUPH,3,Euphausia diomedeae,,2,26,1.89,0.78,0.20
-S2,EUPH,4,Euphausia distinquenda,,2,27,3.54,1.40,0.38
-S2,EUPH,5,Euphausia gibba,,1,28,3.29,1.37,0.37
-S2,EUPH,7,Euphausia krohnii,,2,19.7,0.29,0.12,0.03
-S2,EUPH,8,Euphausia lucens,,40,12.5,5.00,2.02,0.54
-S2,EUPH,9,Euphausia mutica,,1,28,1.82,0.74,0.21
-S2,EUPH,10a,Euphausia pacifica,,2,13,4.97,2.06,0.54
-S2,EUPH,10b,Euphausia pacifica,M,100,5,12.8,4.58,1.23
-S2,EUPH,10c,Euphausia pacifica,F,100,5,11.5,4.00,1.06
-S2,EUPH,11a,Euphausia superba,,35,-1.1,86.3,38.39,8.79
-S2,EUPH,11b,Euphausia superba,J,3,-1.7,40.3,16.42,4.80
-S2,EUPH,11c,Euphausia superba,FG,35,-1.1,247.1,115.9,24.7
-S2,EUPH,11d,Euphausia superba,FG,3,-1.7,80.5,32.5,9.6
-S2,EUPH,11e,Euphausia superba,M,3,-1.7,97.7,39.5,11.4
-S2,EUPH,12,Euphausia tenera,,2,27,0.77,0.31,0.08
-S2,EUPH,13a,Euphausia triacantha,,100,-0.8,23.0,9.5,2.66
-S2,EUPH,13b,Euphausia triacantha,,600,0,82.8,39.2,8.86
-S2,EUPH,14a,Meganyctiphanes norvegica,,250,4,74.1,25.9,7.63
-S2,EUPH,14b,Meganyctiphanes norvegica,,300,13,32.5,12.8,3.73
-S2,EUPH,14c,Meganyctiphanes norvegica,,50,4,45.8,17.0,4.99
-S2,EUPH,15,Nyctiphanes australis,,2,15,2.00,0.87,0.23
-S2,EUPH,17,Thysanoessa inermis,,50,1,17.3,8.9,1.5
-S2,EUPH,18a,Thysanoessa macrura,J,2,-0.4,0.47,0.20,0.05
-S2,EUPH,18b,Thysanoessa macrura,,2,-1.7,5.49,2.23,0.54
-S2,EUPH,18c,Thysanoessa macrura,,300,-0.46,6.89,2.96,0.83
-S2,EUPH,20,Thysanoessa spp.,,15,20,5.00,2.10,0.53
-S2,EUPH,21a,Thysanoessa spinifera,F,100,5,12.2,4.5,1.2
-S2,EUPH,21b,Thysanoessa spinifera,M,100,5,7.02,2.60,0.71
-S2,EUPH,24,Thysanopoda tricuspidata,,1,26,12.8,5.4,1.6
-S2,EUPH,S1,Thysanopoda tricuspidata,,20,17,19.5,7.7,2.2
-S2,EUPH,S2,Thysanopoda sp,.,25,17,25.7,10.1,2.7
-S2,EUPH,S3,Euphausia fallax,,25,17,12.5,5.2,1.4
-S2,AMPH,3,Hemityphis tenuimanus,,2,26.4,1.62,0.41,0.07
-S2,AMPH,5,Hyperia gaudichaudii,,3,-0.8,105.3,49.2,7.5
-S2,AMPH,7a,Oxycephalus clausi,,1,27.5,14.0,3.56,0.87
-S2,AMPH,7b,Oxycephalus cluasi,,2,27.4,17.7,4.26,0.97
-S2,AMPH,8a,Phronima sedentaria,,2,27.4,9.48,2.26,0.48
-S2,AMPH,8b,Phronima sedentaria,,2,19.7,7.29,1.74,0.37
-S2,AMPH,9b,Primno abyssalis,,250,5,6.15,3.28,0.46
-S2,AMPH,12,Scina crassicornis,,2,22.4,2.99,1.25,0.30
-S2,AMPH,13,Thamneus rostratus,,2,27.4,2.44,0.59,0.10
-S2,AMPH,14,Themisto compressa,,250,4,2.13,0.98,0.20
-S2,AMPH,15a,Themisto gaudichaudii,,2,-0.9,7.06,2.67,0.58
-S2,AMPH,15c,Themisto gaudichaudii,,2,15,1.00,0.38,0.08
-S2,AMPH,16a,Themisto japonica,,2,8.7,2.90,1.19,0.23
-S2,AMPH,16b,Themisto japonica,,250,5,2.65,1.23,0.23
-S2,AMPH,17,Themisto libellula,,90,-0.1,2.98,1.14,0.24
-S2,AMPH,18,Themisto pacifica,,250,5,1.18,0.56,0.10
-S2,AMPH,19,Vibilia sp.,,2,27.8,1.24,0.44,0.09
-S2,AMPH,20,Vibilia propinqua,,2,-1.1,12.1,4.90,0.99
-S2,AMPH,22a,Cyphocaris challengeri,,2,13,3.96,1.62,0.32
-S2,AMPH,22b,Cyphocaris challengeri,,250,5,5.90,2.17,0.40
-S2,AMPH,25,Cyphocaris sp.,A,600,0.2,81.4,38.5,5.7
-S2,AMPH,28,Eusirus microps,,55,-1.6,193.1,87.6,12.2
-S2,AMPH,31b,Paracallisoma coecus,,600,5.5,50.0,28.7,4.4
-S2,DECA,2a,Acanthephyra curitirostris,,600,5.5,840,387.2,67.2
-S2,DECA,7a,Hymenodora frontalis,,600,5.5,400,184.4,32.0
-S2,DECA,16,Parapasiphaea sulcatifrons,,600,5.5,520,239.7,41.6
-S2,DECA,17a,Pasiphaea chacei,,100,5.5,340,156.7,30.9
-S2,DECA,18a,Pasiphaea emarginata,,600,5.5,790,364.2,63.2
-S2,DECA,21a,Pasiphaea scotiae,,600,0.2,265,122.2,21.2
-S2,DECA,22,Systellaspis braueri,,600,5.5,360,166.0,28.8
-S2,DECA,23a,Systellaspis cristata,,600,5.5,740,341.1,59.2
-S2,DECA,27b,Gennadas kempi/Petalidium foliaceum,,600,0.2,339,156.1,27.1
-S2,DECA,28a,Gennadas propinquus,,600,5.5,140,64.5,11.2
-S2,DECA,31a,Acetes sibogae australis,,1,24.5,6.49,3.0,0.8
-S2,DECA,31b,Acetes sibogae australis,,1,30,26.7,12.3,3.2
-S2,DECA,32a,Eusergestes similis,,100,5.5,110,50.7,10.0
-S2,DECA,35,Lucifer sp.,,1,28.5,0.0135,0.0062,0.0016
-S2,DECA,39,Sergestes atlanticus,,1,27.5,23.5,10.8,2.8
-S2,DECA,43a,Sergia phorca,,600,5.5,500,230.5,40.0
-S2,DECA,45,Sergestes tenuroides,,600,5.5,210,96.8,16.8
-S2,DECA,S1,Sergestoidea sp,.,25,17,33.8,13.9,3.8
-S2,DECA,S2,Caridea sp,.,25,17,12.2,4.5,1.0
-S2,MYSI,1,Acanthomysis pseudomacropsis,,2,14.9,2.88,1.27,0.32
-S2,MYSI,2,Acanthomysis sp.,A,2,10,1.89,0.78,0.20
-S2,MYSI,6,Antarctomysis maxima,,60,-1.6,171,75.3,17.9
-S2,MYSI,12,Charalaspidium sp.,,600,5.5,280,143,18.3
-S2,MYSI,15a,Gnathophausia gigas,,600,0.15,127,52.6,9.2
-S2,MYSI,16,Gnathophausia gracilis,,600,5.5,930,479,57.7
-S2,MYSI,17,Gnathophausia ingens,,550,5.5,1040,512,66.0
-S2,MYSI,19,Hemimysis speluncola,,1,14,0.82,0.32,0.10
-S2,MYSI,20a,Leptomysis lingvura,,1,14,1.72,0.68,0.20
-S2,MYSI,29b,Neomysis integer,F,1,16,4.20,1.70,0.47
-S2,MYSI,29c,Neomysis integer,F,1,16,2.90,1.17,0.33
-S2,MYSI,32a,Rhopalophthalmus africana,,2,28.5,0.16,0.069,0.017
-S2,MYSI,32b,Rhopalophthalmus africana,J,2,28.5,1.33,0.59,0.14
-S2,MYSI,36,Siriella media,,1,28.5,4.09,1.79,0.45
-S2,MYSI,38a,Siriella thompsoni,,2,27.8,1.47,0.59,0.15
-S2,OSTR,S1,Gigantocypris mulleri,,500,0.2,54.9,17.7,4.5
-S2,OSTR,S2,Gigantocypris mulleri,,500,0.2,160.1,56.7,14.9
-S2,OSTR,S3,Gigantocypris mulleri,,500,-0.9,48.0,14.2,3.9
-S2,OSTR,S4,Gigantocypris mulleri,,500,-1,139.7,44.4,11.7
-S2,CHAE,S1,Aidanosagitta negrecta,,2,23,0.224,0.070,0.020
-S2,CHAE,S2,Ferosagatta hispida,,2,24,0.33,0.134,0.037
-S2,CHAE,S3,Ferosagatta hispida,,2,26,0.1,0.041,0.011
-S2,CHAE,S4,Ferosagitta robusta,,2,27,0.75,0.291,0.074
-S2,CHAE,S5,Flaccisagitta enflata,,2,27,0.71,0.249,0.056
-S2,CHAE,S6,Flaccisagitta enflata,,1,25,0.053,0.018,0.004
-S2,CHAE,S7,Mesosagitta minima,,2,15,0.094,0.034,0.010
-S2,CHAE,S8,Parasagitta elegans,,2,9,1.03,0.420,0.121
-S2,CHAE,S9,Parasagitta elegans,,50,-0.4,4.5,1.728,0.468
-S2,CHAE,S10,Pseudosagitta gazellae,,100,-1,35.3,7.1,2.0
-S2,CHAE,S11,Sagitta bipunctata,,2,27.5,0.45,0.175,0.044
-S2,CHAE,S12,Serratosagitta serratodentata,,2,27,0.73,0.283,0.072
-S2,CHAE,S13,Zenosagitta bedoti,f. minor,2,24,0.084,0.032,0.010
-S2,CNID,3a,Aglantha digitale,,2,8.5,3.39,1.0,0.4
-S2,CNID,3b,Aglantha digitale,,150,1.1,14.0,2.3,0.6
-S2,CNID,4,Benthocodon pedunculata,,767,9,200,16.4,5.4
-S2,CNID,7a,Calycopsis borchgrevinki,,100,-0.7,136,12.9,3.3
-S2,CNID,15,Liriope tetraphylla,,2,27,2.27,0.2,0.1
-S2,CNID,25a,Diphyes antarctica,,100,-0.7,37,3.7,1.2
-S2,CNID,26,Diphyes sp.,,2,25,0.48,0.1,0.0
-S2,CNID,27,19 species,,15,26,4.7,0.4,0.1
-S2,CNID,27,19 species,,15,26,47.4,4.1,1.1
-S2,CNID,27,19 species,,15,26,474,41.2,10.9
-S2,CNID,29d,Aurelia aurita,,1,15,6054,315,85
-S2,CNID,31,Catostylus mosaicus,,1,25,90762,608,163
-S2,CNID,32,Chrysaora quinquecirrha,,1,23,195,21.6,5.5
-S2,CNID,35b,Pelagia noctiluca,,1,21,597,68.1,17.3
-S2,CNID,37b,Poralia rufescens,,1300,3,59.6,21.7,5.7
-S2,CNID,37c,Poralia rufescens,,1300,3,215,49.0,12.6
-S2,CTEN,40a,Bathocyroe fosteri,,615,11,444,3.3,0.9
-S2,CTEN,40c,Bathocyroe fosteri,,767,9,1900,8.2,2.7
-S2,CTEN,41,Beroe abyssicola,,550,0.5,63.6,7.1,1.9
-S2,CTEN,42b,Beroe cucumis,,2,15,52.1,5.9,1.9
-S2,CTEN,43a,Beroe ovata,,10,25,76,2.8,0.8
-S2,CTEN,44,Beroe sp.,A,2,-0.8,402,36.1,9.4
-S2,CTEN,45,Beroe sp. B,,1,-1.6,1362,76.0,20.9
-S2,CTEN,47,Bolinopsis mikado,,1,22,224,2.5,0.8
-S2,CTEN,48,Bolinopsis vitrea,,10,25,56.3,0.34,0.07
-S2,CTEN,49,Callianira antarctica,,5,1,232,19.5,4.2
-S2,CTEN,50,Eurhamphaea vexilligera,,10,25,202,1.8,0.5
-S2,CTEN,51,Mertensia ovum,,15,0,300,19.5,4.9
-S2,CTEN,52,Mertensiidae sp.,,1,-1.6,93.7,10.5,2.3
-S2,CTEN,53a,Mnemiopsis leidyi,,1,20,300,5.1,1.5
-S2,CTEN,53b,Mnemiopsis leidyi,,1,23,52.3,2.67,0.68
-S2,CTEN,54,Mnemiopsis mccradyi,,1,22,720,10.30,2.66
-S2,CTEN,55,Ocyropsis maculata,,10,25,1263,28.7,8.1
-S2,CTEN,56,Ocyropsis spp.,,10,25,141,1.66,0.42
-S2,CTEN,57b,Pleurobrachia pileus,,100,6,5.22,0.49,0.13
-S2,CTEN,58,Pleurobrachia sp.,,2,25,52.3,1.47,0.44
-S2,CTEN,59,UC–1,,767,9,18400,93.8,29.4
-S2,MOLL,1a,Cavolinia globulosa,,2,22.4,18.7,4.84,0.83
-S2,MOLL,1b,Cavolinia globulosa,,2,27.4,14.3,2.77,0.40
-S2,MOLL,4b,Cavolinia uncinata,,2,19.7,18.5,4.94,0.88
-S2,MOLL,5,Clio cuspidata,,2,22.4,30.0,7.83,1.34
-S2,MOLL,6b,Clio pyramidata,,15,20,2.1,0.53,0.10
-S2,MOLL,7,Clio pyramidata f. sulcata,,2,-1.05,54.8,20.15,4.65
-S2,MOLL,9,Corolla spectabilis,,15,26,100,25,4.12
-S2,MOLL,11a,Creseis clava,,2,24.5,1.6,0.40,0.07
-S2,MOLL,11d,Creseis clava,,1,19,0.44,0.11,0.02
-S2,MOLL,12,Creseis virgula,,15,20,1.5,0.39,0.07
-S2,MOLL,15,Diacria quadridentata,,15,20,2.2,0.56,0.10
-S2,MOLL,16a,Diacavolinia longirostris,,2,27,8.7,2.13,0.35
-S2,MOLL,16b,Diacavolinia longirostris,,15,20,1.9,0.48,0.09
-S2,MOLL,17a,Diacria trispinosa,,2,27.4,12.3,2.99,0.48
-S2,MOLL,19,Hyalocylis striata,,15,20,2.4,0.61,0.11
-S2,MOLL,20a,Limacina antarctica,,2,-0.91,6.4,2.13,0.52
-S2,MOLL,22a,Limacina helicina,,2,7.6,0.34,0.10,0.035
-S2,MOLL,22c,Limacina helicina,,75,0,0.59,0.22,0.052
-S2,MOLL,26a,Clione limacina,,2,12.7,22.5,6.33,1.37
-S2,MOLL,26b,Clione limacina,,75,0.0,38.3,10.40,1.91
-S2,MOLL,27a,Clione limacina antarctica,,2,-1.3,25.3,9.91,2.00
-S2,MOLL,27c,Clione limacina antarctica,,1,-1.8,15.0,5.05,1.19
-S2,MOLL,29,Hydromyles globulosus,,2,27.4,3.4,1.27,0.28
-S2,MOLL,33,Atlanta peronii,,2,22.4,14.6,3.78,0.65
-S2,MOLL,34b,Cardiopoda placenta,,2,28.4,7.8,2.43,0.56
-S2,MOLL,36,Pterotrachea hippocampus,,15,26,100,25.5,4.1
-S2,THAL,S1,Ihlea recovitzai,,2,-1.0,10.94,1.11,0.30
-S2,THAL,S2,Salpa thompsoni,,2,-1.1,115.1,5.39,1.32
-S2,THAL,S3,Thalia democratica,,2,17.3,2.97,0.23,0.05
-S2,THAL,S4,Salpa fusiformis,,2,17.3,11.64,0.91,0.19
-S2,THAL,S5,Iasis zonaria,,2,27.0,4.94,0.386,0.083
-S2,THAL,S6,Pegea confoederata,,2,25.7,82.0,6.41,1.37
-S2,THAL,S7,Salpa fusiformis,,2,27.4,4.88,0.38,0.08
-S2,THAL,S8,Pyrosoma verticillatum,,2,25.7,65.0,5.08,1.09
-S2,THAL,S9,Salpa thompsoni,,1,-1.6,763,33.84,7.54
-S2,THAL,S10,Salpa thompsoni,sol/agg,1,1.3,100,5.87,1.49
-S2,THAL,S11,Cyclosalpa bak,eri,15,11.0,104,3.33,0.62
-S2,THAL,S12,Thalia democratica,,1,15.0,26.7,2.09,0.45
-S2,THAL,S13,Cyclosalpa affinis,agg,15,24.5,12.8,1,0.24
-S2,THAL,S14,Cyclosalpa pinnata,agg,15,24.5,12.8,1,0.22
-S2,THAL,S15,Cyclosalpa polae,sol,15,24.5,12.8,1,0.23
-S2,THAL,S16,Pegea confoederata,agg,15,24.5,12.8,1,0.21
-S2,THAL,S17,Salpa cylindrica,sol,15,24.5,12.8,1,0.23
-S2,THAL,S18,Salpa fusiformis,agg,15,16.5,12.8,1,0.23
-S2,THAL,S19,Salpa fusiformis,sol,15,16.5,12.8,1,0.24
-S2,THAL,S20,Salpa maxima,agg,15,24.5,12.8,1,0.22
-S2,THAL,S21,Salpa cylindrica,sol,15,26,75.3,5.89,1.26
-S2,THAL,S22,Salpa cylindrica,agg,15,26,7.5,0.59,0.13
-S2,THAL,S23,Salpa maxima,sol,15,26,75.3,5.89,1.26
-S2,THAL,S24,Salpa maxima,agg,15,26,75.3,5.89,1.26
-S2,THAL,S25,Pegea confederata,sol,15,26,75.3,5.89,1.26
-S2,THAL,S26,Pegea confederata,agg,15,26,7.5,0.59,0.13
-S2,APPE,S1,Oik opleura,dioica,1,15,0.0011,0.00065,0.000126
-S2,APPE,S2,Oik opleura,dioica,1,20,0.0012,0.00071,0.000137
-S2,APPE,S3,Oik opleura,dioica,1,24,0.0013,0.00074,0.000142
-S2,POLY,S1,Tomopteris carpenteri,,3,-0.91,63.15,22.14,5.36
-S2,POLY,S2,Naiades cantrainii,,2,19.7,3.66,1.50,0.31
-S2,POLY,S3,Tomopteris sp,.,2,28.4,2.44,0.98,0.23
-S3,COPE,S1,Calanus propinquus,,2,-1.0,1.04,0.409,0.118
-S3,COPE,S4,Rhincalanus gigas,,50,-1.7,1.08,0.503,0.106
-S3,COPE,S5,Metridia gerlachei,,2,-1.4,0.265,0.106,0.027
-S3,COPE,S6,Calanus finmarchicus,C6F,2,0.1,0.387,0.215,0.030
-S3,COPE,S7,Calanus glacialis,C6F,50,2.3,0.474,0.223,0.050
-S3,COPE,S8,Calanus hyperboreus,C6F,50,1.3,3.95,2.338,0.283
-S3,COPE,S9,Calanus hyperboreus,C5 (bloom),50,0.9,1.94,1.117,0.144
-S3,COPE,S40,Paracalanus indicus,,1,23.0,0.0072,0.0032,0.0008
-S3,COPE,S41,Macrosetella gracilis,,1,25.0,0.0065,0.0024,0.0005
-S3,COPE,S42,Oithona nishidai,,1,24.0,0.0012,0.0004,0.0001
-S3,EUPH,1c,Bentheuphausia amblyops,,600,5.5,60.0,23.5,3.8
-S3,EUPH,2a,Euphausia crystallorophias,,10,-1.6,30.8,14.0,3.4
-S3,EUPH,2b,Euphausia crystallorophias,J,5,-1.3,9.10,3.82,1.06
-S3,EUPH,3,Euphausia diomedeae,,2,26,1.89,0.78,0.20
-S3,EUPH,4,Euphausia distinquenda,,2,27,3.54,1.40,0.38
-S3,EUPH,5,Euphausia gibba,,1,28,3.29,1.37,0.37
-S3,EUPH,7,Euphausia krohnii,,2,19.7,0.287,0.117,0.029
-S3,EUPH,8,Euphausia lucens,,40,12.5,5.00,2.02,0.54
-S3,EUPH,9,Euphausia mutica,,1,28,1.82,0.74,0.21
-S3,EUPH,10a,Euphausia pacifica,,2,13,4.97,2.06,0.54
-S3,EUPH,10b,Euphausia pacifica,M,100,5,12.8,4.6,1.2
-S3,EUPH,10c,Euphausia pacifica,F,100,5,11.5,4.0,1.1
-S3,EUPH,11a,Euphausia superba,,35,-1.1,86.3,38.4,8.8
-S3,EUPH,11b,Euphausia superba,J,3,-1.7,40.3,16.4,4.8
-S3,EUPH,11c,Euphausia superba,FG,35,-1.1,247.1,115.9,24.7
-S3,EUPH,11d,Euphausia superba,FG,3,-1.7,80.5,32.5,9.6
-S3,EUPH,11e,Euphausia superba,M,3,-1.7,97.7,39.5,11.4
-S3,EUPH,12,Euphausia tenera,,2,27,0.77,0.31,0.08
-S3,EUPH,13a,Euphausia triacantha,,100,-0.8,23.0,9.5,2.7
-S3,EUPH,13b,Euphausia triacantha,,600,0,82.8,39.2,8.9
-S3,EUPH,14a,Meganyctiphanes norvegica,,250,4,74.1,25.9,7.6
-S3,EUPH,14b,Meganyctiphanes norvegica,,300,12,32.50,12.8,3.7
-S3,EUPH,14c,Meganyctiphanes norvegica,,50,4,45.8,17.0,5.0
-S3,EUPH,15,Nyctiphanes australis,,2,15,2.00,0.87,0.232
-S3,EUPH,17,Thysanoessa inermis,,50,1,17.3,8.9,1.5
-S3,EUPH,18a,Thysanoessa macrura,J,2,-0.4,0.47,0.20,0.05
-S3,EUPH,18b,Thysanoessa macrura,,2,-1.7,5.49,2.23,0.54
-S3,EUPH,18c,Thysanoessa macrura,,300,-0.46,6.89,2.96,0.83
-S3,EUPH,20,Thysanoessa spp.,,15,20,5.00,2.10,0.53
-S3,EUPH,21a,Thysanoessa spinifera,F,100,5,12.2,4.5,1.2
-S3,EUPH,21b,Thysanoessa spinifera,M,100,5,7.02,2.60,0.71
-S3,EUPH,24,Thysanopoda tricuspidata,,1,26,12.8,5.4,1.6
-S3,AMPH,13,Thamneus rostratus,,2,27,2.44,0.59,0.10
-S3,AMPH,3,Hemityphis tenuimanus,,2,26,1.62,0.41,0.07
-S3,AMPH,5,Hyperia gaudichaudii,,3,-0.8,105.3,49.2,7.5
-S3,AMPH,7a,Oxycephalus clausi,,1,28,13.98,3.56,0.87
-S3,AMPH,7b,Oxycephalus cluasi,,2,27,17.67,4.26,0.97
-S3,AMPH,8a,Phronima sedentaria,,2,27,9.48,2.26,0.48
-S3,AMPH,8b,Phronima sedentaria,,2,20,7.29,1.74,0.37
-S3,AMPH,9b,Primno abyssalis,,250,5,6.15,3.28,0.46
-S3,AMPH,12,Scina crassicornis,,2,22,2.99,1.25,0.30
-S3,AMPH,14,Themisto compressa,,250,4,2.13,0.98,0.20
-S3,AMPH,15a,Themisto gaudichaudii,,2,-0.9,7.06,2.67,0.58
-S3,AMPH,15c,Themisto gaudichaudii,,2,15,1.00,0.38,0.08
-S3,AMPH,16a,Themisto japonica,,2,9,2.90,1.19,0.23
-S3,AMPH,16b,Themisto japonica,,250,5,2.65,1.23,0.23
-S3,AMPH,17,Themisto libellula,,90,-0.1,2.98,1.14,0.24
-S3,AMPH,18,Themisto pacifica,,250,5,1.18,0.56,0.10
-S3,AMPH,19,Vibilia sp.,,2,28,1.24,0.44,0.09
-S3,AMPH,20,Vibilia propinqua,,2,-1.1,12.14,4.90,0.99
-S3,AMPH,22a,Cyphocaris challengeri,,2,13,3.96,1.62,0.32
-S3,AMPH,22b,Cyphocaris challengeri,,250,5,5.90,2.17,0.40
-S3,AMPH,28,Eusirus microps,,55,-1.6,193.1,87.6,12.2
-S3,AMPH,25,Cyphocaris sp.,A,600,0.2,81.4,38.5,5.7
-S3,DECA,21a,Pasiphaea scotiae,,600,0.2,265,122.2,21.2
-S3,DECA,27b,Gennadas kempi/Petalidium foliaceum,,600,0.2,339,156.1,27.1
-S3,DECA,31b,Acetes sibogae australis,,1,30,26.7,12.3,3.2
-S3,DECA,39,Sergestes atlanticus,,1,27.5,23.5,10.8,2.8
-S3,DECA,31a,Acetes sibogae australis,,1,24.5,6.49,2.99,0.77
-S3,DECA,S4,Pasiphaea chacei,,100,5.5,340,,
-S3,DECA,S5,Pasiphaea emarginata,,600,5.5,790,,
-S3,DECA,S6,Systellaspis cristata,,600,5.5,740,,
-S3,DECA,S7,Gennadas propinquus,,600,5.5,140,,
-S3,DECA,S8,Sergestes similis,,100,5.5,110,,
-S3,DECA,S9,Sergestes phorcus,,600,5.5,500,,
-S3,MYSI,1,Acanthomysis pseudomacropsis,,2,14.9,2.88,1.27,0.32
-S3,MYSI,2,Acanthomysis sp.,A,2,10,1.89,0.78,0.20
-S3,MYSI,6,Antarctomysis maxima,,60,-1.6,171,75.3,17.9
-S3,MYSI,12,Charalaspidium sp.,,600,5.5,280,143,18.3
-S3,MYSI,15a,Gnathophausia gigas,,600,0.15,127,52.6,9.2
-S3,MYSI,16,Gnathophausia gracilis,,600,5.5,930,479,57.7
-S3,MYSI,17,Gnathophausia ingens,,550,5.5,1040,512,66.0
-S3,MYSI,19,Hemimysis speluncola,,1,14,0.82,0.32,0.10
-S3,MYSI,20a,Leptomysis lingvura,,1,14,1.72,0.68,0.20
-S3,MYSI,29b,Neomysis integer,F,1,16,4.20,1.70,0.47
-S3,MYSI,29c,Neomysis integer,F,1,16,2.90,1.17,0.33
-S3,MYSI,32a,Rhopalophthalmus africana,,2,28.5,0.16,0.069,0.017
-S3,MYSI,32b,Rhopalophthalmus africana,J,2,28.5,1.33,0.59,0.14
-S3,MYSI,36,Siriella media,,1,28.5,4.09,1.79,0.45
-S3,MYSI,38a,Siriella thompsoni,,2,27.8,1.47,0.59,0.15
-S3,OSTR,S1,Gigantocypris mulleri,,500,0.2,54.9,17.7,4.5
-S3,OSTR,S4,Gigantocypris mulleri,,500,-1,139.7,44.4,11.7
-S3,CHAE,S1,Aidanosagitta negrecta,,2,23,0.224,0.070,0.020
-S3,CHAE,S4,Ferosagitta robusta,,2,27,0.750,0.291,0.074
-S3,CHAE,S5,Flaccisagitta enflata,,2,27,0.710,0.249,0.056
-S3,CHAE,S6,Mesosagitta minima,,2,15,0.094,0.034,0.010
-S3,CHAE,S7,Parasagitta elegans,,2,9,1.03,0.42,0.12
-S3,CHAE,S9,Pseudosagitta gazellae,,100,-1,35.3,7.1,2.0
-S3,CNID,3a,Aglantha digitale,,2,8.5,3.39,1.02,0.37
-S3,CNID,3b,Aglantha digitale,,150,1.1,14.00,2.34,0.60
-S3,CNID,4,Benthocodon pedunculata,,767,9,200,16.4,5.4
-S3,CNID,7a,Calycopsis borchgrevinki,,100,-0.7,136,12.9,3.3
-S3,CNID,15,Liriope tetraphylla,,2,27,2.27,0.16,0.07
-S3,CNID,25a,Diphyes antarctica,,100,-0.7,37.1,3.7,1.2
-S3,CNID,26,Diphyes sp.,,2,25,0.480,0.075,0.024
-S3,CNID,27,19 species,,15,26,4.7,0.41,0.11
-S3,CNID,27,19 species,,15,26,47.4,4.12,1.09
-S3,CNID,27,19 species,,15,26,474,41.2,10.9
-S3,CNID,35b,Pelagia noctiluca,,1,21,597,68.1,17.3
-S3,CNID,37b,Poralia rufescens,,1300,3,59.6,21.7,5.7
-S3,CNID,37c,Poralia rufescens,,1300,3,215,49.0,12.6
-S3,CTEN,40a,Bathocyroe fosteri,,615,11,444,3.29,0.89
-S3,CTEN,40c,Bathocyroe fosteri,,767,9,1900,8.17,2.66
-S3,CTEN,41,Beroe abyssicola,,550,0.5,63.6,7.12,1.91
-S3,CTEN,42b,Beroe cucumis,,2,15,52.1,5.89,1.93
-S3,CTEN,43a,Beroe ovata,,10,25,76,2.83,0.75
-S3,CTEN,44,Beroe sp.,A,2,-0.8,401.6,36.1,9.4
-S3,CTEN,45,Beroe sp. B,,1,-1.6,1362,76.0,20.9
-S3,CTEN,47,Bolinopsis mikado,,1,22,224,2.46,0.76
-S3,CTEN,48,Bolinopsis vitrea,,10,25,56.3,0.34,0.07
-S3,CTEN,49,Callianira antarctica,,5,1,232,19.5,4.25
-S3,CTEN,50,Eurhamphaea vexilligera,,10,25,202,1.78,0.48
-S3,CTEN,51,Mertensia ovum,,15,0,300,19.5,4.87
-S3,CTEN,52,Mertensiidae sp.,,1,-1.6,93.7,10.5,2.25
-S3,CTEN,53a,Mnemiopsis leidyi,,1,20,300,5.10,1.50
-S3,CTEN,54,Mnemiopsis mccradyi,,1,22,720,10.3,2.66
-S3,CTEN,55,Ocyropsis maculata,,10,25,1263,28.7,8.1
-S3,CTEN,56,Ocyropsis spp.,,10,25,141,1.66,0.42
-S3,CTEN,58,Pleurobrachia sp.,,2,25,52.3,1.47,0.44
-S3,CTEN,59,UC–1,,767,9,18400,93.8,29.4
-S3,MOLL,1a,Cavolinia globulosa,,2,22.4,18.65,4.84,0.83
-S3,MOLL,1b,Cavolinia globulosa,,2,27.4,14.34,2.77,0.40
-S3,MOLL,5,Clio cuspidata,,2,22.4,30.00,7.83,1.34
-S3,MOLL,6b,Clio pyramidata,,15,20,2.05,0.53,0.10
-S3,MOLL,7,Clio pyramidata f. sulcata,,2,-1.05,54.75,20.15,4.65
-S3,MOLL,9,Corolla spectabilis,,15,26,100.0,25.5,4.1
-S3,MOLL,11a,Creseis clava,,2,24.5,1.62,0.40,0.07
-S3,MOLL,11d,Creseis clava,,1,19,0.44,0.11,0.02
-S3,MOLL,12,Creseis virgula,,15,20,1.53,0.39,0.07
-S3,MOLL,15,Diacria quadridentata,,15,20,2.18,0.56,0.10
-S3,MOLL,16a,Diacavolinia longirostris,,2,27,8.71,2.13,0.35
-S3,MOLL,16b,Diacavolinia longirostris,,15,20,1.85,0.48,0.09
-S3,MOLL,17a,Diacria trispinosa,,2,27.4,12.26,2.99,0.48
-S3,MOLL,19,Hyalocylis striata,,15,20,2.36,0.61,0.11
-S3,MOLL,20a,Limacina antarctica,,2,-0.91,6.45,2.13,0.52
-S3,MOLL,22a,Limacina helicina,,2,7.6,0.34,0.10,0.03
-S3,MOLL,22c,Limacina helicina,,75,0,0.59,0.22,0.05
-S3,MOLL,26a,Clione limacina,,2,12.7,22.53,6.33,1.37
-S3,MOLL,26b,Clione limacina,,75,-0.0363636,38.25,10.40,1.91
-S3,MOLL,27a,Clione limacina antarctica,,2,-1.3333333,25.34,9.91,2.00
-S3,MOLL,27c,Clione limacina antarctica,,1,-1.8,14.97,5.05,1.19
-S3,MOLL,29,Hydromyles globulosus,,2,27.4,3.37,1.27,0.28
-S3,MOLL,33,Atlanta peronii,,2,22.4,14.60,3.78,0.65
-S3,MOLL,34b,Cardiopoda placenta,,2,28.4,7.75,2.43,0.56
-S3,MOLL,36,Pterotrachea hippocampus,,15,26,100.0,25.5,4.1
-S3,THAL,S1,Ihlea recovitzai,,2,-1.00,10.94,1.11,0.30
-S3,THAL,S4,Salpa fusiformis,,2,17.30,11.64,0.91,0.19
-S3,THAL,S5,Iasis zonaria,,2,27,4.94,0.386,0.083
-S3,THAL,S6,Pegea confoederata,,2,25.70,81.96,6.41,1.37
-S3,THAL,S7,Salpa fusiformis,,2,27.40,4.88,0.38,0.08
-S3,THAL,S8,Pyrosoma verticillatum,,2,25.70,65.02,5.08,1.09
-S3,THAL,S9,Salpa thompsoni,,1,-1.61,763.32,33.84,7.54
-S3,APPE,S1,Oikopleura dioica,,1,15,0.00112,0.00065,0.00013
+table,taxon_group,code,species,stage,depth_m,temp_C,dw_mg,c_mg,n_mg,ref
+S1,COPE,1,Pachyptilus pacificus,C6F,750,3,2.07,0.892,0.13,Ikeda et al. (2007)
+S1,COPE,2,Lucicutia bicornuta,C6M,750,3,0.625,0.253,0.050,Ikeda et al. (2007)
+S1,COPE,3,Lucicutia grandis,C5F,750,3,0.429,0.188,0.032,Ikeda et al. (2007)
+S1,COPE,4,Metridia asymmetrica,C6F,750,3,0.457,0.242,0.033,Ikeda et al. (2007)
+S1,COPE,5,Metridia curticauda,C6F,750,3,0.484,0.270,0.034,Ikeda et al. (2007)
+S1,COPE,6,Metridia okhotensis,C6F,750,3,0.713,0.429,0.050,Ikeda et al. (2007)
+S1,COPE,7,Pleuromamma scutullata,C6M,750,3,0.564,0.251,0.067,Ikeda et al. (2007)
+S1,COPE,8,Pleuromamma scutullata,C6F,750,3,0.429,0.218,0.031,Ikeda et al. (2007)
+S1,COPE,9,Pleuromamma xiphias,C6F,750,3,0.563,0.24,0.067,Ikeda et al. (2007)
+S1,COPE,10,Candacia columbiae,C6M,750,3,0.435,0.179,0.050,Ikeda et al. (2007)
+S1,COPE,11,Aetideopsis rostrata,C5M,750,3,0.762,0.335,0.080,Ikeda et al. (2007)
+S1,COPE,12,Chiridius pacificus,C6F,750,3,0.692,0.316,0.080,Ikeda et al. (2007)
+S1,COPE,13,Chirundina streetsi,C6F,750,3,1.24,0.54,0.16,Ikeda et al. (2007)
+S1,COPE,14,Euchirella brevis,C6F,750,3,0.952,0.506,0.084,Ikeda et al. (2007)
+S1,COPE,15,Euchirella galeata,C6F,750,3,2.46,1.13,0.28,Ikeda et al. (2007)
+S1,COPE,16,Euchirella messinensis,C6F,750,3,1.92,0.86,0.215,Ikeda et al. (2007)
+S1,COPE,17,Euchirella rostrata,C6F,750,3,0.930,0.455,0.086,Ikeda et al. (2007)
+S1,COPE,18,Euchirella truncata,C4M,750,3,0.517,0.241,0.054,Ikeda et al. (2007)
+S1,COPE,19,Gaidius brevispinus,C6F,750,3,0.914,0.439,0.077,Ikeda et al. (2007)
+S1,COPE,20,Gaidius brevispinus,C6F,750,3,0.949,0.419,0.104,Ikeda et al. (2007)
+S1,COPE,21,Gaetanus robustus,C4F,750,3,0.381,0.18,0.041,Ikeda et al. (2007)
+S1,COPE,22,Gaidius tenuispinus,C5F,750,3,1.24,0.624,0.117,Ikeda et al. (2007)
+S1,COPE,23,Gaidius tenuispinus,C6F,750,3,0.436,0.197,0.053,Ikeda et al. (2007)
+S1,COPE,24,Gaidius variabilis,C5M,750,3,0.488,0.223,0.051,Ikeda et al. (2007)
+S1,COPE,25,Gaidius variabilis,C5F,750,3,0.323,0.13,0.034,Ikeda et al. (2007)
+S1,COPE,26,Gaidius variabilis,C6F,750,3,0.509,0.243,0.055,Ikeda et al. (2007)
+S1,COPE,27,Pseudochirella pacifica,C5M,750,3,0.700,0.296,0.071,Ikeda et al. (2007)
+S1,COPE,28,Pseudochirella spinifera,C5M,750,3,1.59,0.92,0.13,Ikeda et al. (2007)
+S1,COPE,29,Pseudochirella spinifera,C5M,750,3,1.28,0.69,0.11,Ikeda et al. (2007)
+S1,COPE,30,Undeuchaeta plumosa,C6F,750,3,3.33,1.70,0.32,Ikeda et al. (2007)
+S1,COPE,31,Paraeuchaeta barbata,C6F,750,3,3.86,2.39,0.25,Ikeda et al. (2007)
+S1,COPE,32,Paraeuchaeta birostrata,C5M,750,3,1.35,0.76,0.10,Ikeda et al. (2007)
+S1,COPE,33,Paraeuchaeta birostrata,C5F,750,3,1.79,1.04,0.13,Ikeda et al. (2007)
+S1,COPE,34,Paraeuchaeta birostrata,C6F,750,3,4.85,2.83,0.36,Ikeda et al. (2007)
+S1,COPE,35,Paraeuchaeta brevirostris,C6F,750,3,4.97,2.88,0.36,Ikeda et al. (2007)
+S1,COPE,36,Paraeuchaeta elongata,C4M,750,3,0.714,0.407,0.052,Ikeda et al. (2007)
+S1,COPE,37,Paraeuchaeta elongata,C4F,750,3,0.939,0.55,0.066,Ikeda et al. (2007)
+S1,COPE,38,Paraeuchaeta elongata,C5M,750,3,1.12,0.66,0.08,Ikeda et al. (2007)
+S1,COPE,39,Paraeuchaeta elongata,C5M,750,3,1.25,0.68,0.10,Ikeda et al. (2007)
+S1,COPE,40,Paraeuchaeta elongata,C5F,750,3,1.19,0.65,0.08,Ikeda et al. (2007)
+S1,COPE,41,Paraeuchaeta elongata,C5F,750,3,2.38,1.38,0.17,Ikeda et al. (2007)
+S1,COPE,42,Paraeuchaeta elongata,C6F,750,3,5.72,3.41,0.38,Ikeda et al. (2007)
+S1,COPE,43,Paraeuchaeta elongata,C6F,750,3,1.94,1.00,0.19,Ikeda et al. (2007)
+S1,COPE,44,Paraeuchaeta modesta,C6F,750,3,3.87,2.27,0.29,Ikeda et al. (2007)
+S1,COPE,45,Paraeuchaeta orientalis,C6F,750,3,8.56,4.72,0.53,Ikeda et al. (2007)
+S1,COPE,46,Paraeuchaeta pseudotumidula,C6M,750,3,2.27,1.33,0.17,Ikeda et al. (2007)
+S1,COPE,47,Paraeuchaeta pseudotumidula,C6F,750,3,2.59,1.54,0.17,Ikeda et al. (2007)
+S1,COPE,48,Paraeuchaeta rubra,C5M,750,3,1.90,1.14,0.13,Ikeda et al. (2007)
+S1,COPE,49,Paraeuchaeta rubra,C6F,750,3,3.50,1.96,0.27,Ikeda et al. (2007)
+S1,COPE,50,Amallothrix valida,C5M,750,3,0.684,0.384,0.055,Ikeda et al. (2007)
+S1,COPE,51,Amallothrix valida,C6F,750,3,0.872,0.416,0.094,Ikeda et al. (2007)
+S1,COPE,52,Mixtocalanus robustus,C6F,750,3,1.01,0.475,0.112,Ikeda et al. (2007)
+S1,COPE,53,Scaphocalanus medius,C6F,750,3,1.06,0.609,0.079,Ikeda et al. (2007)
+S1,COPE,54,Spinocalanus stellatus,C6F,750,3,0.818,0.356,0.059,Ikeda et al. (2007)
+S1,COPE,55,Pachyptilus pacificus,C6F,1500,2,2.41,1.13,0.18,Ikeda et al. (2007)
+S1,COPE,56,Lucicutia bicornuta,C6F,1500,2,1.02,0.537,0.076,Ikeda et al. (2007)
+S1,COPE,57,Lucicutia grandis,C6M,1500,2,2.19,1.19,0.19,Ikeda et al. (2007)
+S1,COPE,58,Lucicutia pacifica,C6F,1500,2,1.81,0.85,0.13,Ikeda et al. (2007)
+S1,COPE,59,Lucicutia pacifica,C6F,1500,2,1.63,0.77,0.12,Ikeda et al. (2007)
+S1,COPE,60,Metridia asymmetrica,C6F,1500,2,0.360,0.188,0.027,Ikeda et al. (2007)
+S1,COPE,61,Metridia asymmetrica,C6F,1500,2,0.344,0.162,0.025,Ikeda et al. (2007)
+S1,COPE,62,Metridia curticauda,C6F,1500,2,0.99,0.471,0.073,Ikeda et al. (2007)
+S1,COPE,63,Metridia ornata,C6F,1500,2,2.90,1.47,0.23,Ikeda et al. (2007)
+S1,COPE,64,Aetideopsis rostrata,C5M,1500,2,1.84,0.96,0.11,Ikeda et al. (2007)
+S1,COPE,65,Aetideopsis rostrata,C5F,1500,2,0.707,0.369,0.058,Ikeda et al. (2007)
+S1,COPE,66,Bradyidius pacificus,C5M,1500,2,0.890,0.451,0.078,Ikeda et al. (2007)
+S1,COPE,67,Euchirella rostrata,C6F,1500,2,0.804,0.356,0.090,Ikeda et al. (2007)
+S1,COPE,68,Euchirella rostrata,C6F,1500,2,0.820,0.344,0.103,Ikeda et al. (2007)
+S1,COPE,69,Gaidius brevispinus,C6F,1500,2,0.971,0.425,0.099,Ikeda et al. (2007)
+S1,COPE,70,Gaidius variabilis,C6F,1500,2,0.672,0.296,0.067,Ikeda et al. (2007)
+S1,COPE,71,Gaidius variabilis,C6F,1500,2,0.935,0.43,0.100,Ikeda et al. (2007)
+S1,COPE,72,Pseudochirella pacifica,C5M,1500,2,0.554,0.294,0.051,Ikeda et al. (2007)
+S1,COPE,73,Pseudochirella pacifica,C5F,1500,2,1.95,1.05,0.15,Ikeda et al. (2007)
+S1,COPE,74,Pseudochirella pacifica,C5F,1500,2,1.64,0.925,0.14,Ikeda et al. (2007)
+S1,COPE,75,Pseudochirella polyspina,C6F,1500,2,2.53,1.17,0.26,Ikeda et al. (2007)
+S1,COPE,76,Pseudochirella polyspina,C6F,1500,2,3.06,1.62,0.29,Ikeda et al. (2007)
+S1,COPE,77,Pseudochirella spinifera,C5F,1500,2,1.79,0.977,0.15,Ikeda et al. (2007)
+S1,COPE,78,Pseudochirella spinifera,C6M,1500,2,1.20,0.64,0.11,Ikeda et al. (2007)
+S1,COPE,79,Pseudochirella spinifera,C6M,1500,2,1.36,0.837,0.10,Ikeda et al. (2007)
+S1,COPE,80,Undeuchaeta major,C6F,1500,2,3.35,1.75,0.27,Ikeda et al. (2007)
+S1,COPE,81,Undeuchaeta major,C6F,1500,2,2.48,1.24,0.26,Ikeda et al. (2007)
+S1,COPE,82,Undeuchaeta plumosa,C6F,1500,2,2.82,1.45,0.28,Ikeda et al. (2007)
+S1,COPE,83,Paraeuchaeta birostrata,C5M,1500,2,3.53,2.16,0.28,Ikeda et al. (2007)
+S1,COPE,84,Paraeuchaeta birostrata,C6M,1500,2,2.47,1.52,0.19,Ikeda et al. (2007)
+S1,COPE,85,Paraeuchaeta birostrata,C6M,1500,2,2.46,1.49,0.18,Ikeda et al. (2007)
+S1,COPE,86,Paraeuchaeta birostrata,C6F,1500,2,4.22,2.39,0.30,Ikeda et al. (2007)
+S1,COPE,87,Paraeuchaeta birostrata,C6F,1500,2,4.46,2.65,0.34,Ikeda et al. (2007)
+S1,COPE,88,Paraeuchaeta brevirostris,C6F,1500,2,4.81,2.87,0.36,Ikeda et al. (2007)
+S1,COPE,89,Paraeuchaeta elongata,C5M,1500,2,2.15,1.26,0.17,Ikeda et al. (2007)
+S1,COPE,90,Paraeuchaeta elongata,C5F,1500,2,2.13,1.13,0.19,Ikeda et al. (2007)
+S1,COPE,91,Paraeuchaeta pseudotumidula,C6F,1500,2,2.98,1.71,0.22,Ikeda et al. (2007)
+S1,COPE,92,Paraeuchaeta rubra,C5M,1500,2,2.10,1.28,0.16,Ikeda et al. (2007)
+S1,COPE,93,Paraeuchaeta rubra,C5F,1500,2,1.90,1.14,0.17,Ikeda et al. (2007)
+S1,COPE,94,Paraeuchaeta rubra,C6M,1500,2,1.65,1.10,0.12,Ikeda et al. (2007)
+S1,COPE,95,Paraeuchaeta rubra,C6F,1500,2,4.63,2.64,0.29,Ikeda et al. (2007)
+S1,COPE,96,Cornucalanus indicus,C5F,1500,2,3.55,1.82,0.30,Ikeda et al. (2007)
+S1,COPE,97,Cornucalanus indicus,C6F,1500,2,6.92,3.81,0.55,Ikeda et al. (2007)
+S1,COPE,98,Onchocalanus magnus,C5F,1500,2,6.60,3.97,0.48,Ikeda et al. (2007)
+S1,COPE,99,Onchocalanus magnus,C6F,1500,2,5.77,2.83,0.42,Ikeda et al. (2007)
+S1,COPE,100,Amallothrix inornata,C6M,1500,2,0.524,0.291,0.042,Ikeda et al. (2007)
+S1,COPE,101,Amallothrix inornata,C5M,1500,2,0.912,0.553,0.066,Ikeda et al. (2007)
+S1,COPE,102,Amallothrix inornata,C6F,1500,2,0.946,0.522,0.076,Ikeda et al. (2007)
+S1,COPE,103,Amallothrix paravalida,C6F,1500,2,0.664,0.369,0.047,Ikeda et al. (2007)
+S1,COPE,104,Amallothrix valida,C5F,1500,2,1,0.568,0.075,Ikeda et al. (2007)
+S1,COPE,105,Amallothrix valida,C6F,1500,2,1.09,0.66,0.079,Ikeda et al. (2007)
+S1,COPE,106,Lophothrix frontalis,C6F,1500,2,3.19,1.45,0.30,Ikeda et al. (2007)
+S1,COPE,107,Lophothrix frontalis,C6F,1500,2,1.42,0.80,0.13,Ikeda et al. (2007)
+S1,COPE,108,Scaphocalanus magnus,C6F,1500,2,1.17,0.60,0.12,Ikeda et al. (2007)
+S1,COPE,109,Scaphocalanus medius,C6F,1500,2,1.12,0.68,0.08,Ikeda et al. (2007)
+S1,COPE,110,Scottocalanus securifrons,C6F,1500,2,1.45,0.72,0.16,Ikeda et al. (2007)
+S1,COPE,111,Bathycalanus bradyi,C6F,1500,2,34.5,21.8,2.4,Ikeda et al. (2007)
+S1,COPE,112,Euaugaptilus pseudaffinis,C6F,2500,1.5,1.68,0.88,0.13,Ikeda et al. (2007)
+S1,COPE,113,Pachyptilus pacificus,C6F,2500,1.5,2.72,1.22,0.19,Ikeda et al. (2007)
+S1,COPE,114,Heterostylites major,C6F,2500,1.5,0.53,0.23,0.050,Ikeda et al. (2007)
+S1,COPE,115,Lucicutia ellipsoidalis,C6F,2500,1.5,0.78,0.41,0.049,Ikeda et al. (2007)
+S1,COPE,116,Lucicutia grandis,C6M,2500,1.5,1.53,0.88,0.094,Ikeda et al. (2007)
+S1,COPE,117,Lucicutia grandis,C6F,2500,1.5,1.40,0.72,0.093,Ikeda et al. (2007)
+S1,COPE,118,Lucicutia longifurca,C5,2500,1.5,1.19,0.60,0.095,Ikeda et al. (2007)
+S1,COPE,119,Lucicutia longifurca,C6M,2500,1.5,1.53,0.91,0.092,Ikeda et al. (2007)
+S1,COPE,120,Lucicutia pacifica,C6F,2500,1.5,1.71,0.86,0.132,Ikeda et al. (2007)
+S1,COPE,121,Metridia asymmetrica,C6F,2500,1.5,0.43,0.23,0.032,Ikeda et al. (2007)
+S1,COPE,122,Metridia asymmetrica,C6F,2500,1.5,0.45,0.25,0.037,Ikeda et al. (2007)
+S1,COPE,123,Metridia ornata,C5F,2500,1.5,1.91,0.93,0.162,Ikeda et al. (2007)
+S1,COPE,124,Metridia ornata,C6M,2500,1.5,0.87,0.42,0.072,Ikeda et al. (2007)
+S1,COPE,125,Metridia ornata,C6M,2500,1.5,0.82,0.40,0.063,Ikeda et al. (2007)
+S1,COPE,126,Metridia ornata,C6F,2500,1.5,1.27,0.65,0.10,Ikeda et al. (2007)
+S1,COPE,127,Gaetanus paracurvicornis,C6F,2500,1.5,0.74,0.34,0.069,Ikeda et al. (2007)
+S1,COPE,128,Gaetanus robustus,C5M,2500,1.5,0.71,0.30,0.068,Ikeda et al. (2007)
+S1,COPE,129,Gaetanus robustus,C5M,2500,1.5,3.44,2.17,0.21,Ikeda et al. (2007)
+S1,COPE,130,Gaetanus robustus,C5M,2500,1.5,1.26,0.46,0.10,Ikeda et al. (2007)
+S1,COPE,131,Gaetanus robustus,C6F,2500,1.5,7.03,3.49,0.67,Ikeda et al. (2007)
+S1,COPE,132,Gaidius variabilis,C5F,2500,1.5,0.84,0.42,0.085,Ikeda et al. (2007)
+S1,COPE,133,Gaidius variabilis,C6F,2500,1.5,1.32,0.74,0.10,Ikeda et al. (2007)
+S1,COPE,134,Pseudochirella pacifica,C5,2500,1.5,4.07,2.15,0.33,Ikeda et al. (2007)
+S1,COPE,135,Pseudochirella pacifica,C6F,2500,1.5,2.77,1.24,0.31,Ikeda et al. (2007)
+S1,COPE,136,Pseudochirella polyspina,C5F,2500,1.5,1.09,0.59,0.070,Ikeda et al. (2007)
+S1,COPE,137,Pseudochirella polyspina,C6F,2500,1.5,2.69,1.33,0.26,Ikeda et al. (2007)
+S1,COPE,138,Pseudochirella polyspina,C6F,2500,1.5,4.15,2.02,0.45,Ikeda et al. (2007)
+S1,COPE,139,Pseudochirella polyspina,C6F,2500,1.5,2.53,1.25,0.26,Ikeda et al. (2007)
+S1,COPE,140,Pseudochirella spinifera,C5M,2500,1.5,3.64,2.20,0.24,Ikeda et al. (2007)
+S1,COPE,141,Undeuchaeta major,C5F,2500,1.5,0.445,0.21,0.045,Ikeda et al. (2007)
+S1,COPE,142,Paraeuchaeta birostrata,C6M,2500,1.5,2.16,1.30,0.15,Ikeda et al. (2007)
+S1,COPE,143,Paraeuchaeta birostrata,C6F,2500,1.5,8.89,4.92,0.77,Ikeda et al. (2007)
+S1,COPE,144,Paraeuchaeta pseudotumidula,C6F,2500,1.5,1.16,0.70,0.090,Ikeda et al. (2007)
+S1,COPE,145,Paraeuchaeta rubra,C5M,2500,1.5,2.64,1.63,0.175,Ikeda et al. (2007)
+S1,COPE,146,Paraeuchaeta rubra,C5F,2500,1.5,2.13,1.25,0.149,Ikeda et al. (2007)
+S1,COPE,147,Paraeuchaeta rubra,C6F,2500,1.5,4.64,2.84,0.339,Ikeda et al. (2007)
+S1,COPE,148,Xanthocalanus kurilensis,C6F,2500,1.5,1.04,0.58,0.094,Ikeda et al. (2007)
+S1,COPE,149,Amallothrix inornata,C6F,2500,1.5,0.80,0.39,0.084,Ikeda et al. (2007)
+S1,COPE,150,Amallothrix inornata,C6F,2500,1.5,1.03,0.55,0.107,Ikeda et al. (2007)
+S1,COPE,151,Scaphocalanus affinis,C5F,2500,1.5,2.58,1.65,0.143,Ikeda et al. (2007)
+S1,COPE,152,Scaphocalanus affinis,C6F,2500,1.5,1.52,0.82,0.137,Ikeda et al. (2007)
+S1,COPE,153,Scolecithricella sp.,C6F,2500,1.5,0.45,0.23,0.038,Ikeda et al. (2007)
+S1,COPE,154,Scottocalanus securifrons,C6F,2500,1.5,5.64,3.14,0.49,Ikeda et al. (2007)
+S1,COPE,155,Bathycalanus bradyi,C6F,2500,1.5,16.78,9.93,1.19,Ikeda et al. (2007)
+S1,COPE,156,Bathycalanus bradyi,C6F,2500,1.5,10.52,4.99,0.92,Ikeda et al. (2007)
+S1,COPE,157,Spinocalanus magnus,C6F,2500,1.5,0.868,0.52,0.061,Ikeda et al. (2007)
+S1,COPE,158,Aetideopsis rostrata,C6F,4000,1.5,0.975,0.46,0.071,Ikeda et al. (2007)
+S1,COPE,159,Amallothrix inornata,C5M,4000,1.5,0.471,0.24,0.031,Ikeda et al. (2007)
+S1,COPE,160,Amallothrix inornata,C6F,4000,1.5,0.581,0.29,0.039,Ikeda et al. (2007)
+S1,COPE,161,Batheuchaeta lamellata,C5M,4000,1.5,0.647,0.39,0.042,Ikeda et al. (2007)
+S1,COPE,162,Batheuchaeta lamellata,C6F,4000,1.5,1.32,0.69,0.10,Ikeda et al. (2007)
+S1,COPE,163,Batheuchaeta lamellata,C6M,4000,1.5,0.765,0.43,0.056,Ikeda et al. (2007)
+S1,COPE,164,Bathycalanus bradyi,C3,4000,1.5,1.2,0.56,0.12,Ikeda et al. (2007)
+S1,COPE,165,Bathycalanus bradyi,C5,4000,1.5,8.69,5.10,0.54,Ikeda et al. (2007)
+S1,COPE,166,Benthomisophria palliata,C6M,4000,1.5,0.53,0.20,0.035,Ikeda et al. (2007)
+S1,COPE,167,Chiridiella abyssalis,C6F,4000,1.5,0.81,0.43,0.054,Ikeda et al. (2007)
+S1,COPE,168,Chiridiella pacifica,C6F,4000,1.5,1.20,0.47,0.076,Ikeda et al. (2007)
+S1,COPE,169,Gaetanus paracurvicornis,C6F,4000,1.5,0.69,0.32,0.057,Ikeda et al. (2007)
+S1,COPE,170,Gaidius pungens,C6F,4000,1.5,0.64,0.34,0.046,Ikeda et al. (2007)
+S1,COPE,171,Gaetanus robustus,C6F,4000,1.5,8.48,4.53,0.74,Ikeda et al. (2007)
+S1,COPE,172,Metridia ornata,C5M,4000,1.5,0.33,0.12,0.024,Ikeda et al. (2007)
+S1,COPE,173,Metridia ornata,C6F,4000,1.5,1.67,0.72,0.14,Ikeda et al. (2007)
+S1,COPE,174,Metridia ornata,C6M,4000,1.5,0.94,0.40,0.082,Ikeda et al. (2007)
+S1,COPE,175,Mixtocalanus robustus,C6F,4000,1.5,1.06,0.57,0.080,Ikeda et al. (2007)
+S1,COPE,176,Onchocalanus magnus,C5F,4000,1.5,2.01,1.24,0.11,Ikeda et al. (2007)
+S1,COPE,177,Onchocalanus magnus,C6F,4000,1.5,1.47,0.76,0.14,Ikeda et al. (2007)
+S1,COPE,178,Paraeuchaeta rubra,C4F,4000,1.5,0.49,0.25,0.033,Ikeda et al. (2007)
+S1,COPE,179,Pseudochirella pacifica,C5M,4000,1.5,0.95,0.56,0.054,Ikeda et al. (2007)
+S1,COPE,180,Pseudochirella polyspina,C6F,4000,1.5,2.23,1.19,0.16,Ikeda et al. (2007)
+S1,COPE,181,Scaphocalanus magnus,C6F,4000,1.5,1.35,0.68,0.13,Ikeda et al. (2007)
+S1,COPE,182,Spinocalanus magnus,C6F,4000,1.5,0.36,0.16,0.029,Ikeda et al. (2007)
+S1,COPE,183,Undeuchaeta incisa,C5M,4000,1.5,2.84,1.72,0.17,Ikeda et al. (2007)
+S1,COPE,184,Undeuchaeta major,C6F,4000,1.5,1.18,0.54,0.14,Ikeda et al. (2007)
+S1,COPE,185,Undeuchaeta plumosa,C5F,4000,1.5,0.475,0.22,0.04,Ikeda et al. (2007)
+S1,COPE,186,Undeuchaeta plumosa,C6F,4000,1.5,1.38,0.79,0.091,Ikeda et al. (2007)
+S1,COPE,187,Valdeviella imperfecta,C5F,4000,1.5,0.89,0.49,0.066,Ikeda et al. (2007)
+S1,COPE,188,Xanthocalanus kurilensis,C6F,4000,1.5,0.66,0.36,0.048,Ikeda et al. (2007)
+S1,COPE,189,Calanus propinquus,,2,-1,1.04,0.46,0.13,Ikeda et al. (2007)
+S1,COPE,190,Metridia gerlachei,,2,-1.4,0.265,0.12,0.030,Ikeda et al. (2007)
+S1,COPE,191,Calanoides acutus,C5,2,-0.2,0.394,0.193,0.034,Ikeda et al. (2007)
+S1,COPE,192,"Calanoides acutus              C4,5",,2,-0.6,0.266,0.121,0.021,Ikeda et al. (2007)
+S1,COPE,193,Calanus finmarchicus,C6F,2,0.1,0.387,0.215,0.030,Ikeda et al. (2007)
+S1,COPE,194,Calanus glacialis,C6F,50,1.9,0.474,0.223,0.050,Ikeda et al. (2007)
+S1,COPE,195,Calanus hyperboreus,C6F,50,1.3,3.95,2.34,0.28,Ikeda et al. (2007)
+S1,COPE,196,Calanus hyperboreus,C5,50,0.9,1.94,1.12,0.14,Ikeda et al. (2007)
+S1,COPE,197,Calanus hyperboreus,C5,50,-0.3,2.68,1.63,0.18,Ikeda et al. (2007)
+S1,COPE,198,Metridia longa,C6F,50,0.1,0.353,0.17,0.037,Ikeda et al. (2007)
+S1,COPE,199,Rincalanus gigas,,50,-1.7,1.08,0.50,0.11,Ikeda et al. (2007)
+S1,COPE,200,Neocalanus cristatus,C5,2,6.3,1.59,0.79,0.13,Ikeda et al. (2007)
+S1,COPE,201,Neocalanus plumchrus,C4,2,5.6,0.26,0.148,0.02,Ikeda et al. (2007)
+S1,COPE,202,Neocalanus plumchrus,C5,2,7.3,0.79,0.45,0.06,Ikeda et al. (2007)
+S1,COPE,203,Eucalanus bungii,,2,6,1.01,0.404,0.099,Ikeda et al. (2007)
+S1,COPE,204,Pseudocalanus elongatus,,2,8.6,0.0116,0.0053,0.0014,Ikeda et al. (2007)
+S1,COPE,205,Metridia pacifica,,2,8.2,0.148,0.065,0.016,Ikeda et al. (2007)
+S1,COPE,206,Acartia longiremis,,2,9.6,0.0081,0.0035,0.0010,Ikeda et al. (2007)
+S1,COPE,207,Tortanus discaudatus,,2,7,0.0569,0.025,0.0064,Ikeda et al. (2007)
+S1,COPE,208,Metridia pacifica,,2,13,0.094,0.043,0.011,Ikeda et al. (2007)
+S1,COPE,209,Mesocalanus tenuicornis,,2,15.8,0.0313,0.0123,0.0038,Ikeda et al. (2007)
+S1,COPE,210,Paracalanus parvus,,2,13.9,0.0038,0.0016,0.0005,Ikeda et al. (2007)
+S1,COPE,211,Centropages abdominaris,,2,15.9,0.0167,0.0067,0.002,Ikeda et al. (2007)
+S1,COPE,212,Pseudodiaptomus marinus,,2,14.3,0.0142,0.0057,0.0017,Ikeda et al. (2007)
+S1,COPE,213,Neocalanus plumchrus,,2,15.1,0.294,0.135,0.026,Ikeda et al. (2007)
+S1,COPE,214,Acartia clausi,,2,14.8,0.0085,0.0035,0.0011,Ikeda et al. (2007)
+S1,COPE,215,Neocalanus gracilis,,2,19.7,0.500,0.23,0.05,Ikeda et al. (2007)
+S1,COPE,216,Centropages brachiatus,,2,17.3,0.0198,0.0083,0.0020,Ikeda et al. (2007)
+S1,COPE,217,Acartia tonsa,,2,22,0.0072,0.0030,0.0007,Ikeda et al. (2007)
+S1,COPE,218,Undinula vulgaris,,2,23.5,0.185,0.077,0.018,Ikeda et al. (2007)
+S1,COPE,219,Euchaeta marina,,2,24,0.291,0.121,0.028,Ikeda et al. (2007)
+S1,COPE,220,Acartia pacifica,,2,26,0.0078,0.0032,0.0008,Ikeda et al. (2007)
+S1,COPE,221,Calanopia elliptica,,2,26,0.0563,0.0234,0.0054,Ikeda et al. (2007)
+S1,COPE,222,Tortanus gracilis,,2,26,0.0235,0.0098,0.0023,Ikeda et al. (2007)
+S1,COPE,223,Eucalanus subcrassus,,2,24,0.104,0.043,0.010,Ikeda et al. (2007)
+S1,COPE,224,Labidocera acuta,,2,24,0.233,0.097,0.022,Ikeda et al. (2007)
+S1,COPE,225,Acartia australis,,2,25,0.0091,0.0038,0.0009,Ikeda et al. (2007)
+S1,COPE,226,Nannocalanus minor,,2,26.9,0.0401,0.017,0.0045,Ikeda et al. (2007)
+S1,COPE,227,Undinula vulgaris,,2,27.6,0.167,0.070,0.018,Ikeda et al. (2007)
+S1,COPE,228,Eucalanus attenuatus,,2,27.4,0.137,0.054,0.013,Ikeda et al. (2007)
+S1,COPE,229,Labidocera acuta,,2,28.5,0.232,0.100,0.028,Ikeda et al. (2007)
+S1,COPE,230,Labidocera nerii,,2,26.4,0.221,0.0953,0.027,Ikeda et al. (2007)
+S1,COPE,231,Pontella danae,,2,26.4,0.7,0.2996,0.084,Ikeda et al. (2007)
+S1,COPE,232,Neocalanus cristatus,C5,25,5,1.72,0.68,0.17,Ikeda et al. (2007)
+S1,COPE,233,Calanus marshallae,C5,15,8,0.421,0.239,0.036,Ikeda et al. (2007)
+S1,COPE,234,Neocalanus plumchrus,C5,75,5.8,0.244,0.111,0.019,Ikeda et al. (2007)
+S1,COPE,235,Neocalanus plumchrus,C5,15,8,0.928,0.551,0.070,Ikeda et al. (2007)
+S1,COPE,236,Mesocalanus tenuicornis,C6F,15,22,0.265,0.123,0.028,Ikeda et al. (2007)
+S1,COPE,237,Metridia pacifica,C6F,135,4.7,0.203,0.095,0.025,Ikeda et al. (2007)
+S1,COPE,238,Metridia pacifica,C6F,75,5.8,0.183,0.082,0.022,Ikeda et al. (2007)
+S1,COPE,239,Pleuromamma scutullata,C6F,75,6,0.322,0.146,0.035,Ikeda et al. (2007)
+S1,COPE,240,Pleuromamma scutullata,C6F,75,5.8,0.403,0.196,0.043,Ikeda et al. (2007)
+S1,COPE,241,Pleuromamma scutullata,C6F,100,3,0.359,0.180,0.036,Ikeda et al. (2007)
+S1,COPE,242,Pleuromamma abdominalis,C6F,100,13.6,0.359,0.155,0.043,Ikeda et al. (2007)
+S1,COPE,243,Pleuromamma xiphias,C6F,100,12,0.387,0.160,0.045,Ikeda et al. (2007)
+S1,COPE,244,Gaetanus simplex,C6F,75,6,0.451,0.218,0.052,Ikeda et al. (2007)
+S1,COPE,245,Gaetanus simplex,C6F,100,3,0.434,0.230,0.048,Ikeda et al. (2007)
+S1,COPE,246,Euchaeta marina,C6F,100,11.3,0.415,0.205,0.044,Ikeda et al. (2007)
+S1,COPE,247,Euchaeta marina,C6F,15,20.2,0.18,0.0862,0.0196,Ikeda et al. (2007)
+S1,COPE,248,Euchaeta marina,C6F,100,20,0.23,0.104,0.0281,Ikeda et al. (2007)
+S1,COPE,249,Euchaeta marina,C6F,100,16,0.335,0.1514,0.0409,Ikeda et al. (2007)
+S1,COPE,250,Candacia bipinnata,C6F,100,11.3,0.333,0.1438,0.0371,Ikeda et al. (2007)
+S1,COPE,251,Candacia bipinnata,C6F,15,20.2,0.102,0.0444,0.0117,Ikeda et al. (2007)
+S1,COPE,252,Candacia bipinnata,C6F,100,13,0.164,0.07,0.0193,Ikeda et al. (2007)
+S1,COPE,253,Candacia clombidea,C6F,100,4.7,0.559,0.2541,0.066,Ikeda et al. (2007)
+S1,COPE,S1,Neocalanus cristatus,C4,75,6,0.268,0.082,0.030,Ikeda (unpublished data)
+S1,COPE,S2,Neocalanus cristatus,C5,75,6,1.86,0.77,0.20,Ikeda (unpublished data)
+S1,COPE,S3,Neocalanus cristatus,C5,75,3,8.20,5.13,0.55,Ikeda (unpublished data)
+S1,COPE,S4,Neocalanus flemingeri,C5,75,5,1.34,0.86,0.08,Ikeda (unpublished data)
+S1,COPE,S5,Neocalanus flemingeri,C5,75,4,1.38,0.84,0.09,Ikeda (unpublished data)
+S1,COPE,S6,Eucalanus bungii,C6F,75,5,1.07,0.47,0.10,Ikeda (unpublished data)
+S1,COPE,S7,Labidocera farrani,,25,25.0,0.160,0.057,0.016,Ikeda and McKinnon (2012)
+S1,COPE,S8,Undinula vulgaris,,25,25.5,0.220,0.09,0.03,Ikeda and McKinnon (2012)
+S1,COPE,S9,Paracalanus indicus,,1,23.0,0.0072,0.00323,0.0008,Ikeda and McKinnon (2012)
+S1,COPE,S10,Macrosetella gracilis,,1,25.0,0.0065,0.00238,0.00051,Ikeda and McKinnon (2012)
+S1,COPE,S11,Oithona nishidai,,1,24.0,0.00120,0.00039,0.00011,Ikeda and McKinnon (2012)
+S1,EUPH,1a,Bentheuphausia amblyops,,4000,1.5,41.7,21.7,3.7,Ikeda (2013a)
+S1,EUPH,1b,Bentheuphausia amblyops,,1500,3.5,27.9,10.9,1.8,Ikeda (2013a)
+S1,EUPH,1c,Bentheuphausia amblyops,,600,5.5,60.0,23.5,3.8,Ikeda (2013a)
+S1,EUPH,2a,Euphausia crystallorophias,,10,-1.6,30.8,14.0,3.4,Ikeda (2013a)
+S1,EUPH,2b,Euphausia crystallorophias,J,5,-1.3,9.1,3.8,1.1,Ikeda (2013a)
+S1,EUPH,3,Euphausia diomedeae,,2,26,1.9,0.78,0.20,Ikeda (2013a)
+S1,EUPH,4,Euphausia distinquenda,,2,27,3.5,1.40,0.38,Ikeda (2013a)
+S1,EUPH,5,Euphausia gibba,,1,28,3.3,1.37,0.37,Ikeda (2013a)
+S1,EUPH,6,Euphausia gibboides,,200,18,5.1,2.14,0.54,Ikeda (2013a)
+S1,EUPH,7,Euphausia krohnii,,2,19.7,0.29,0.12,0.03,Ikeda (2013a)
+S1,EUPH,8,Euphausia lucens,,40,12.5,5.0,2.02,0.54,Ikeda (2013a)
+S1,EUPH,9,Euphausia mutica,,1,28,1.8,0.74,0.21,Ikeda (2013a)
+S1,EUPH,10a,Euphausia pacifica,,2,13,5.0,2.06,0.54,Ikeda (2013a)
+S1,EUPH,10b,Euphausia pacifica,M,100,5,12.8,4.6,1.2,Ikeda (2013a)
+S1,EUPH,10c,Euphausia pacifica,F,100,5,11.5,4.0,1.1,Ikeda (2013a)
+S1,EUPH,11a,Euphausia superba,,35,-1.1,86.3,38.4,8.8,Ikeda (2013a)
+S1,EUPH,11b,Euphausia superba,J,3,-1.7,40.3,16.4,4.8,Ikeda (2013a)
+S1,EUPH,11c,Euphausia superba,FG,35,-1.1,247.1,115.9,24.7,Ikeda (2013a)
+S1,EUPH,11d,Euphausia superba,FG,3,-1.7,80.5,32.5,9.6,Ikeda (2013a)
+S1,EUPH,11e,Euphausia superba,M,3,-1.7,97.7,39.5,11.4,Ikeda (2013a)
+S1,EUPH,12,Euphausia tenera,,2,27,0.77,0.31,0.08,Ikeda (2013a)
+S1,EUPH,13a,Euphausia triacantha,,100,-0.8,23.0,9.5,2.7,Ikeda (2013a)
+S1,EUPH,13b,Euphausia triacantha,,600,0,82.8,39.2,8.9,Ikeda (2013a)
+S1,EUPH,14a,Meganyctiphanes norvegica,,250,4,74.1,25.9,7.6,Ikeda (2013a)
+S1,EUPH,14b,Meganyctiphanes norvegica,,300,13,32.5,12.8,3.7,Ikeda (2013a)
+S1,EUPH,14c,Meganyctiphanes norvegica,,50,4,45.8,17.0,5.0,Ikeda (2013a)
+S1,EUPH,15,Nyctiphanes australis,,2,15,2.0,0.87,0.23,Ikeda (2013a)
+S1,EUPH,16,Tessarabrachion oculatus,,750,3,9.2,4.01,0.95,Ikeda (2013a)
+S1,EUPH,17,Thysanoessa inermis,,50,1,17.3,8.88,1.55,Ikeda (2013a)
+S1,EUPH,18a,Thysanoessa macrura,J,2,-0.4,0.47,0.20,0.05,Ikeda (2013a)
+S1,EUPH,18b,Thysanoessa macrura,,2,-1.7,5.5,2.23,0.54,Ikeda (2013a)
+S1,EUPH,18c,Thysanoessa macrura,,300,-0.46,6.9,2.96,0.83,Ikeda (2013a)
+S1,EUPH,19,Thysanoessa raschii,,25,4,10.0,4.16,1.29,Ikeda (2013a)
+S1,EUPH,20,Thysanoessa spp.,,15,20,5.0,2.10,0.53,Ikeda (2013a)
+S1,EUPH,21a,Thysanoessa spinifera,F,100,5,12.2,4.47,1.20,Ikeda (2013a)
+S1,EUPH,21b,Thysanoessa spinifera,M,100,5,7.0,2.60,0.71,Ikeda (2013a)
+S1,EUPH,22,Thysanopoda cornuta,,650,5,1405,589,149,Ikeda (2013a)
+S1,EUPH,23,Thysanopoda monocantha,,500,7,46.1,19.32,4.89,Ikeda (2013a)
+S1,EUPH,24,Thysanopoda tricuspidata,,1,26,12.8,5.44,1.62,Ikeda (2013a)
+S1,AMPH,1,Chuneola spinifera,,4000,1.5,239.0,118.2,10.9,Ikeda (2013b)
+S1,AMPH,2,Cyllopus lucasii,,100,0.5,61.8,27.75,3.52,Ikeda (2013b)
+S1,AMPH,3,Hemityphis tenuimanus,,2,26.4,1.62,0.41,0.07,Ikeda (2013b)
+S1,AMPH,4,Hyperia galba,,125,5.6,6.63,1.94,0.40,Ikeda (2013b)
+S1,AMPH,5,Hyperia gaudichaudii,,3,-0.8,105.3,49.2,7.5,Ikeda (2013b)
+S1,AMPH,6,Lanceola loveni,,1500,2,5.16,1.64,0.48,Ikeda (2013b)
+S1,AMPH,7a,Oxycephalus clausi,,1,27.5,14.0,3.56,0.87,Ikeda (2013b)
+S1,AMPH,7b,Oxycephalus cluasi,,2,27.4,17.7,4.26,0.97,Ikeda (2013b)
+S1,AMPH,8a,Phronima sedentaria,,2,27.4,9.48,2.26,0.48,Ikeda (2013b)
+S1,AMPH,8b,Phronima sedentaria,,2,19.7,7.29,1.74,0.37,Ikeda (2013b)
+S1,AMPH,8c,Phronima sedentaria,,750,3,7.57,1.74,0.43,Ikeda (2013b)
+S1,AMPH,9a,Primno abyssalis,F,550,0.5,14.8,5.78,1.39,Ikeda (2013b)
+S1,AMPH,9b,Primno abyssalis,,250,5,6.15,3.28,0.46,Ikeda (2013b)
+S1,AMPH,10,Primno macropa,,100,0.5,37.9,15.80,2.50,Ikeda (2013b)
+S1,AMPH,11,Scina borealis,,1500,2,8.74,3.12,0.68,Ikeda (2013b)
+S1,AMPH,12,Scina crassicornis,,2,22.4,2.99,1.25,0.30,Ikeda (2013b)
+S1,AMPH,13,Thamneus rostratus,,2,27.4,2.44,0.59,0.10,Ikeda (2013b)
+S1,AMPH,14,Themisto compressa,,250,4,2.13,0.98,0.20,Ikeda (2013b)
+S1,AMPH,15a,Themisto gaudichaudii,,2,-0.9,7.06,2.67,0.58,Ikeda (2013b)
+S1,AMPH,15b,Themisto gaudichaudii,,100,0.5,60.5,22.9,5.0,Ikeda (2013b)
+S1,AMPH,15c,Themisto gaudichaudii,,2,15,1.00,0.38,0.08,Ikeda (2013b)
+S1,AMPH,16a,Themisto japonica,,2,8.6888889,2.90,1.19,0.23,Ikeda (2013b)
+S1,AMPH,16b,Themisto japonica,,250,5,2.65,1.23,0.23,Ikeda (2013b)
+S1,AMPH,16c,Themisto japonica,F,550,0.5,3.14,1.16,0.28,Ikeda (2013b)
+S1,AMPH,17,Themisto libellula,,90,-0.1454545,2.98,1.14,0.24,Ikeda (2013b)
+S1,AMPH,18,Themisto pacifica,,250,5,1.18,0.56,0.10,Ikeda (2013b)
+S1,AMPH,19,Vibilia sp.,,2,27.8,1.24,0.44,0.09,Ikeda (2013b)
+S1,AMPH,20,Vibilia propinqua,,2,-1.1,12.1,4.90,0.99,Ikeda (2013b)
+S1,AMPH,21,Vibilia stebbingi,,100,0.5,24.2,8.40,1.79,Ikeda (2013b)
+S1,AMPH,22a,Cyphocaris challengeri,,2,13,3.96,1.62,0.32,Ikeda (2013b)
+S1,AMPH,22b,Cyphocaris challengeri,,250,5,5.90,2.17,0.40,Ikeda (2013b)
+S1,AMPH,23,Cyphocaris faueri,,100,0.5,293.2,115.2,15.0,Ikeda (2013b)
+S1,AMPH,24,Cyphocaris richardi,,500,0.5,127.2,48.7,7.5,Ikeda (2013b)
+S1,AMPH,25,Cyphocaris sp.,A,600,0.2416667,81.4,38.5,5.7,Ikeda (2013b)
+S1,AMPH,26,Cyphocaris sp. B,,750,3,1.23,0.69,0.05,Ikeda (2013b)
+S1,AMPH,27,Eusirus antarcticus,,100,0.5,18.4,8.34,1.16,Ikeda (2013b)
+S1,AMPH,28,Eusirus microps,,55,-1.6,193.1,87.6,12.2,Ikeda (2013b)
+S1,AMPH,29,Eusirus perdentatus,,290,-1,344.0,155.8,21.7,Ikeda (2013b)
+S1,AMPH,30,Gammaridea sp.,,750,3,4.01,2.40,0.19,Ikeda (2013b)
+S1,AMPH,31b,Paracallisoma coecus,,600,5.5,31.8,16.3,1.4,Ikeda (2013b)
+S1,AMPH,32,Parandania boecki,,500,0.5,75.9,27.5,4.3,Ikeda (2013b)
+S1,DECA,1,Acanthephyra acutifrons,,650,5,2278,1050,181,Ikeda (2013d)
+S1,DECA,2b,Acanthephyra curtirostris,,650,5,604,278,48,Ikeda (2013d)
+S1,DECA,2c,Acanthephyra curtirostris,,650,5.5,651,300,52,Ikeda (2013d)
+S1,DECA,3,Acanthephyra eximia,,4200,14.5,786,362,54,Ikeda (2013d)
+S1,DECA,4a,Acanthephyra purpurea,,300,14,367,169,31,Ikeda (2013d)
+S1,DECA,4b,Acanthephyra purpurea,,200,10,448,207,39,Ikeda (2013d)
+S1,DECA,5,Acanthephyra quadrispinosa,,1000,2.5,8.29,3.8,0.6,Ikeda (2013d)
+S1,DECA,6,Acanthephyra smithi,,200,10,1013,467,88,Ikeda (2013d)
+S1,DECA,7b,Hymenodora frontalis,,750,3,22.8,10.5,1.8,Ikeda (2013d)
+S1,DECA,7c,Hymenodora frontalis,,650,5.5,290,134,23,Ikeda (2013d)
+S1,DECA,8,Janicella spinicauda,,200,10,92.3,42.6,8.0,Ikeda (2013d)
+S1,DECA,9,Nematocarcinus lanceopes,,1,0.5,68.5,31.6,8.1,Ikeda (2013d)
+S1,DECA,10,Notostomus elegans,,650,5,5944,2740,472,Ikeda (2013d)
+S1,DECA,11,Notostomus gibbosus,,650,5,2742,1264,218,Ikeda (2013d)
+S1,DECA,12,Notostomus sp.,,1100,4,800,369,61,Ikeda (2013d)
+S1,DECA,13a,Oplophorus gracilirostris,,100,20,613,283,56,Ikeda (2013d)
+S1,DECA,13b,Oplophorus gracilirostris,,200,10,681,314,59,Ikeda (2013d)
+S1,DECA,14a,Oplophorus spinosus,,200,10,770,355,67,Ikeda (2013d)
+S1,DECA,14b,Oplophorus spinosus,,200,10,105,48.4,9.1,Ikeda (2013d)
+S1,DECA,15a,Parapandalus richardi,,200,17,82.9,38.2,7.2,Ikeda (2013d)
+S1,DECA,15b,Parapandalus richardi,,200,10,52.7,24.3,4.6,Ikeda (2013d)
+S1,DECA,17b,Pasiphaea chacei,,200,7.5,195,89.8,16.9,Ikeda (2013d)
+S1,DECA,18b,Pasiphaea emarginata,,650,5.5,116.5,53.7,9.3,Ikeda (2013d)
+S1,DECA,20,Pasiphaea multidentata,,100,5.5,56.16,25.9,5.1,Ikeda (2013d)
+S1,DECA,21a,Pasiphaea scotiae,,600,0.2,265,122,21,Ikeda (2013d)
+S1,DECA,21b,Pasiphaea scotiae,,100,0.5,957,441,87,Ikeda (2013d)
+S1,DECA,23b,Systellaspis cristata,,1100,5.5,884,408,67,Ikeda (2013d)
+S1,DECA,24a,Systellaspis debilis,,200,18,353,163,31,Ikeda (2013d)
+S1,DECA,24b,Systellaspis debilis,,300,14,318,146,27,Ikeda (2013d)
+S1,DECA,24c,Systellaspis debilis,,200,10,321,148,28,Ikeda (2013d)
+S1,DECA,24d,Systellaspis debilis,,200,10,210,97,18,Ikeda (2013d)
+S1,DECA,25,Funchalia villosa,,100,20,565,261,51,Ikeda (2013d)
+S1,DECA,26,Gennadas capensis,,700,7,86.1,39.7,6.8,Ikeda (2013d)
+S1,DECA,27a,Gennadas kempi,,500,0.5,561,258,45.5,Ikeda (2013d)
+S1,DECA,27b,Gennadas kempi/Petalidium foliaceum,,600,0.2,339,156.1,27.1,Ikeda (2013d)
+S1,DECA,28b,Gennadas propinquus,,650,5.5,140,64.4,11.1,Ikeda (2013d)
+S1,DECA,29,Gennadas scutatus,,100,20,127,58.5,11.5,Ikeda (2013d)
+S1,DECA,30,Gennadas valens,,300,14,131,60.3,11.0,Ikeda (2013d)
+S1,DECA,31b,Acetes sibogae australis,,1,30,26.7,12.3,3.2,Ikeda (2013d)
+S1,DECA,32b,Eusergestes similis,,100,10,74,34.1,6.7,Ikeda (2013d)
+S1,DECA,36,Parasergestes armatus,,300,14,8.0,3.7,0.68,Ikeda (2013d)
+S1,DECA,37,Petalidium foliaceum,,500,0.5,248,114,20.1,Ikeda (2013d)
+S1,DECA,38,Seosergestes corniculum,,100,20,86.9,40.1,7.9,Ikeda (2013d)
+S1,DECA,39,Sergestes atlanticus,,1,27.5,23.5,10.8,2.8,Ikeda (2013d)
+S1,DECA,40,Sergia bisulcata,,200,10,670,309,58.1,Ikeda (2013d)
+S1,DECA,41,Sergia splendens,,200,10,79.1,36.5,6.9,Ikeda (2013d)
+S1,DECA,42,Sergia fulgens,,200,10,280,129,24.3,Ikeda (2013d)
+S1,DECA,43b,Sergia phorca,,650,5.5,664,306,52.8,Ikeda (2013d)
+S1,DECA,44,Sergia tenuiremis,,650,5,688,317,54.7,Ikeda (2013d)
+S1,DECA,46,Sergia grandis,,300,14,170,78.2,14.3,Ikeda (2013d)
+S1,DECA,47,Sergia robusta,,300,14,409,188,34.4,Ikeda (2013d)
+S1,DECA,48,Sergia splendens,,300,14,84.1,38.8,7.1,Ikeda (2013d)
+S1,DECA,49,Sergia talismani,,100,20,51.1,23.6,4.6,Ikeda (2013d)
+S1,DECA,50,Pleuroncodes planipes,,200,15,812,374,70.3,Ikeda (2013d)
+S1,DECA,31a,Acetes sibogae australis,,1,25,6.49,2.99,0.77,Ikeda (2013d)
+S1,MYSI,1,Acanthomysis pseudomacropsis,,2,15,2.88,1.27,0.32,Ikeda (2013c)
+S1,MYSI,2,Acanthomysis sp.,A,2,10,1.89,0.78,0.20,Ikeda (2013c)
+S1,MYSI,3,Acanthomysis sp.B,,750,3,12.90,7.11,0.93,Ikeda (2013c)
+S1,MYSI,4,Anisomysis lamellicauda,,10,29,0.27,0.13,0.03,Ikeda (2013c)
+S1,MYSI,5,Anisomysis pelewensis,,6,20,0.07,0.03,0.01,Ikeda (2013c)
+S1,MYSI,6,Antarctomysis maxima,,60,-1.6,170.5,75.3,17.9,Ikeda (2013c)
+S1,MYSI,7,Archaeomysis grebnitzkii,,1,10,1.00,0.39,0.12,Ikeda (2013c)
+S1,MYSI,8,Boreomysis arctica,,100,5.5,19.23,9.03,1.63,Ikeda (2013c)
+S1,MYSI,9a,Boreomysis californica,,650,5.5,12.18,5.29,0.97,Ikeda (2013c)
+S1,MYSI,11,Boreomysis rostrata,,100,0.5,588.9,277.6,46.6,Ikeda (2013c)
+S1,MYSI,12,Charalaspidium sp.,,600,5.5,280.0,143.1,18.3,Ikeda (2013c)
+S1,MYSI,15a,Gnathophausia gigas,,600,0.2,127.3,52.6,9.23,Ikeda (2013c)
+S1,MYSI,15b,Gnathophausia gigas,,500,0.5,131.3,67.1,6.30,Ikeda (2013c)
+S1,MYSI,16,Gnathophausia gracilis,,600,5.5,930,479,57.7,Ikeda (2013c)
+S1,MYSI,17,Gnathophausia ingens,,550,5.5,1040,512,66.0,Ikeda (2013c)
+S1,MYSI,18,Hemimysis abyssicola,,100,5.5,3.34,1.55,0.30,Ikeda (2013c)
+S1,MYSI,19,Hemimysis speluncola,,1,14,0.82,0.324,0.097,Ikeda (2013c)
+S1,MYSI,20a,Leptomysis lingvura,,1,14,1.72,0.68,0.20,Ikeda (2013c)
+S1,MYSI,21,Longithorax fuscus,,750,3,24.63,13.69,1.60,Ikeda (2013c)
+S1,MYSI,22,Mesopodopsis slabberi,,1,20,0.58,0.24,0.067,Ikeda (2013c)
+S1,MYSI,23a,Metamysidopsis elongata,F,1,15,0.28,0.10,0.032,Ikeda (2013c)
+S1,MYSI,23b,Metamysidopsis elongata,F,1,14,0.31,0.12,0.038,Ikeda (2013c)
+S1,MYSI,25,Mysidopsis surugae,,6,20,0.61,0.266,0.062,Ikeda (2013c)
+S1,MYSI,27,Neomysis americana,,100,4,1.47,0.67,0.14,Ikeda (2013c)
+S1,MYSI,28,Neomysis awatschensis,,1,10,2.00,0.78,0.24,Ikeda (2013c)
+S1,MYSI,29a,Neomysis integer,,1,20,3.19,1.32,0.35,Ikeda (2013c)
+S1,MYSI,29b,Neomysis integer,F,1,16,4.20,1.70,0.47,Ikeda (2013c)
+S1,MYSI,29c,Neomysis integer,F,1,16,2.90,1.17,0.33,Ikeda (2013c)
+S1,MYSI,31,Praunus flexuosus,M,1,8.2,6.20,2.42,0.73,Ikeda (2013c)
+S1,MYSI,32a,Rhopalophthalmus africana,,2,28.5,0.16,0.07,0.02,Ikeda (2013c)
+S1,MYSI,32b,Rhopalophthalmus africana,J,2,29,1.33,0.59,0.14,Ikeda (2013c)
+S1,MYSI,33,Rhopalophthalmus mediterraneus,A,1,20,5.29,2.20,0.57,Ikeda (2013c)
+S1,MYSI,36,Siriella media,,1,29,4.09,1.79,0.45,Ikeda (2013c)
+S1,MYSI,37,Siriella sp.,,2,9,1.10,0.43,0.12,Ikeda (2013c)
+S1,MYSI,38a,Siriella thompsoni,,2,28,1.47,0.59,0.15,Ikeda (2013c)
+S1,OSTR,S1,Conchoecia borealis,,100,5.5,0.320,0.142,0.026,Bamstedt (1979)
+S1,OSTR,S2,Conchoecissa ametra,,2500,1.5,2.660,1.250,0.390,Ikeda (2012)
+S1,OSTR,S3,Discoconchoecia pseudodiscophora,,400,3,0.060,0.030,0.005,Kaeriyama and Ikeda (2004)
+S1,OSTR,S4,Orthoconchoecia haddoni,AF,400,3,0.500,0.229,0.044,Kaeriyama and Ikeda (2004)
+S1,OSTR,S5,Orthoconchoecia haddoni,AM,400,3,0.340,0.144,0.031,Kaeriyama and Ikeda (2004)
+S1,OSTR,S6,Orthoconchoecia haddoni,,1500,2,0.860,0.307,0.071,Ikeda (2012)
+S1,OSTR,S7,Metaconchoecia skogsbergi,VII/A,400,3,0.080,0.032,0.008,Kaeriyama and Ikeda (2004)
+S1,OSTR,S8,Discoconchoecia pseudodiscophora,,500,1,0.028,0.013,0.002,Ikeda (1990)
+S1,OSTR,S9,Discoconchoecia pseudodiscophora,,500,1,0.042,0.017,0.003,Ikeda (1990)
+S1,OSTR,S10,Paramollicia dichotoma,,4000,1.5,0.520,0.279,0.030,Ikeda (2012)
+S1,OSTR,S11,Gigantocypris mulleri,,500,0.5,122.0,44.0,10.0,Torres et al. (1994)
+S1,OSTR,S12,Gigantocypris agassizii,,900,4,158.4,16.8,4.7,Childress (1975)
+S1,OSTR,S13,Gigantocypris mulleri,,500,0.2,54.9,17.7,4.5,Ikeda (1988)
+S1,OSTR,S14,Gigantocypris mulleri,,500,0.2,160.1,56.7,14.9,Ikeda (1988)
+S1,OSTR,S15,Gigantocypris mulleri,,500,-0.9,48.0,14.2,3.9,Ikeda (1988)
+S1,OSTR,S16,Gigantocypris mulleri,,500,-1,139.7,44.4,11.7,Ikeda (1988)
+S1,CHAE,S1,Aidanosagitta negrecta,,2,23,0.29,0.091,0.026,Ikeda and Takahashi (2012)
+S1,CHAE,S2,Caecosagitta macrocephala,,1500,2,6.39,2.87,0.63,Ikeda and Takahashi (2012)
+S1,CHAE,S3,Ferosagatta hispida,,2,24,0.33,0.13,0.04,Ikeda and Takahashi (2012)
+S1,CHAE,S5,Ferosagitta robusta,,2,27,0.75,0.29,0.07,Ikeda and Takahashi (2012)
+S1,CHAE,S6,Flaccisagitta enflata,,2,27,0.71,0.25,0.06,Ikeda and Takahashi (2012)
+S1,CHAE,S7,Mesosagitta minima,,2,15,0.094,0.034,0.010,Ikeda and Takahashi (2012)
+S1,CHAE,S8,Parasagitta elegans,,2,9,1.03,0.42,0.12,Ikeda and Takahashi (2012)
+S1,CHAE,S14,Parasagitta tenuis,,2,22,0.24,0.091,0.024,Ikeda and Takahashi (2012)
+S1,CHAE,S15,Pseudosagitta gazellae,,100,-1,35.33,7.10,2.01,Ikeda and Takahashi (2012)
+S1,CHAE,S16,Pseudosagitta scrippsae,,750,3,13.91,3.17,0.82,Ikeda and Takahashi (2012)
+S1,CHAE,S17,Sagitta bipunctata,,2,27.5,0.45,0.17,0.04,Ikeda and Takahashi (2012)
+S1,CHAE,S18,Serratosagitta serratodentata,,2,27,0.73,0.28,0.07,Ikeda and Takahashi (2012)
+S1,CHAE,S19,Solidosagitta zetesios,,1500,2,8.89,3.65,0.93,Ikeda and Takahashi (2012)
+S1,CHAE,S20,Zenosagitta bedoti,f. minor,2,24,0.084,0.032,0.010,Ikeda and Takahashi (2012)
+S1,CHAE,S21,Eukrohnia bathypelagica,,750,3,1.61,0.61,0.13,Ikeda and Takahashi (2012)
+S1,CHAE,S22,Eukrohnia fowleri,,2500,1.5,8.08,3.49,0.69,Ikeda and Takahashi (2012)
+S1,CHAE,S23,Eukrohnia hamata,,750,3,1.24,0.40,0.10,Ikeda and Takahashi (2012)
+S1,CHAE,S24,Eukrohnia hamata,,100,5.5,6.21,2.02,0.48,Ikeda and Takahashi (2012)
+S1,CHAE,S25,E.hamata/bathypelagica,,750,0,2.50,0.79,0.17,Ikeda and Takahashi (2012)
+S1,CHAE,S26,Caecosagitta macrocephala,,700,5,2.12,0.95,0.21,Ikeda and Takahashi (2012)
+S1,CHAE,S27,Decipisagitta decipiens,,250,5,0.52,0.20,0.05,Ikeda and Takahashi (2012)
+S1,CHAE,S28,Flaccisagitta hexaptera,,10,5,18.53,6.21,1.45,Ikeda and Takahashi (2012)
+S1,CHAE,S29,Parasagitta euneritica,,10,15,0.22,0.09,0.02,Ikeda and Takahashi (2012)
+S1,CHAE,S30,Pseudosagitta lyra,,10,5,28.65,6.30,1.69,Ikeda and Takahashi (2012)
+S1,CHAE,S31,Pseudosagitta maxima,,200,5,26.76,5.89,1.58,Ikeda and Takahashi (2012)
+S1,CHAE,S32,Solidosagitta zetesios,,300,5,8.19,3.37,0.86,Ikeda and Takahashi (2012)
+S1,CHAE,S33,Eukrohnia fowleri,,750,5,10.49,4.53,0.89,Ikeda and Takahashi (2012)
+S1,CHAE,S34,Eukrohnia hamata,,400,5,2.06,0.67,0.16,Ikeda and Takahashi (2012)
+S1,CHAE,S35,Heterokrohnia murina,,1900,5,19.58,7.60,1.92,Ikeda and Takahashi (2012)
+S1,CNID,1,Aeginura grimaldii,,600,6,80,5.38,1.34,Ikeda (2014a)
+S1,CNID,2,Aequorea victoria,,1,10,290,10.50,2.78,Ikeda (2014a)
+S1,CNID,3a,Aglantha digitale,,2,8.5,3.39,1.02,0.37,Ikeda (2014a)
+S1,CNID,3b,Aglantha digitale,,150,1.1,14.0,2.34,0.60,Ikeda (2014a)
+S1,CNID,3c,Aglantha digitale,,125,3,5.74,0.78,0.22,Ikeda (2014a)
+S1,CNID,3d,Aglantha digitale,,1,10,6,0.96,0.28,Ikeda (2014a)
+S1,CNID,4,Benthocodon pedunculata,,767,9,200,16.40,5.40,Ikeda (2014a)
+S1,CNID,6,Bougainvillia muscus,,1,28,0.70,0.08,0.03,Ikeda (2014a)
+S1,CNID,7a,Calycopsis borchgrevinki,,100,-0.7,136.0,12.90,3.34,Ikeda (2014a)
+S1,CNID,8,Clytia hemisphaerica,,1,28,1.1,0.10,0.03,Ikeda (2014a)
+S1,CNID,9,Colobonema sericeum,,600,6,660,112,29.2,Ikeda (2014a)
+S1,CNID,10,Crossota sp.,,750,3,6.22,1.23,0.23,Ikeda (2014a)
+S1,CNID,11a,Earleria cellularia,,1,10,280,7.84,2.24,Ikeda (2014a)
+S1,CNID,11b,Earleria cellularia,,1,15,310,8.68,2.48,Ikeda (2014a)
+S1,CNID,12,Eperetmus typus,,1,10,99,8.51,2.48,Ikeda (2014a)
+S1,CNID,13,Eutonina indicans,,1,10,43,3.83,1.08,Ikeda (2014a)
+S1,CNID,14,Gonionemus vertens,,1,10,31,4.25,1.27,Ikeda (2014a)
+S1,CNID,15,Liriope tetraphylla,,2,27,2.27,0.16,0.07,Ikeda (2014a)
+S1,CNID,16,Nemopsis bachei,,1,12,5.1,0.72,0.20,Ikeda (2014a)
+S1,CNID,17,Pantachogon haeckeli,,1125,3,38.78,14.62,2.87,Ikeda (2014a)
+S1,CNID,18a,Phialidium gregarium,,1,10,16,1.50,0.40,Ikeda (2014a)
+S1,CNID,18b,Phialidium gregarium,,1,15,14,1.32,0.35,Ikeda (2014a)
+S1,CNID,19,Phialidium lomae,,1,15,7,0.48,0.12,Ikeda (2014a)
+S1,CNID,20,Sarsia princeps,,1,10,15,1.01,0.27,Ikeda (2014a)
+S1,CNID,21,Solmissus incisus,,600,6,1040,15.91,4.37,Ikeda (2014a)
+S1,CNID,22a,Stomotoca atra,,1,10,15,1.44,0.39,Ikeda (2014a)
+S1,CNID,22b,Stomotoca atra,,1,15,24,2.30,0.62,Ikeda (2014a)
+S1,CNID,23,Abylopsis tetragona,,1,15,12.5,1.06,0.30,Ikeda (2014a)
+S1,CNID,24,Chelophyes appendiculata,,1,15,5.0,0.59,0.17,Ikeda (2014a)
+S1,CNID,25a,Diphyes antarctica,,100,-0.7,37.10,3.67,1.19,Ikeda (2014a)
+S1,CNID,26,Diphyes sp.,,2,25,0.48,0.07,0.02,Ikeda (2014a)
+S1,CNID,27,19 species,,15,26,4.7,0.41,0.11,Ikeda (2014a)
+S1,CNID,27,19 species,,15,26,47.4,4.12,1.09,Ikeda (2014a)
+S1,CNID,27,19 species,,15,26,474.0,41.2,10.9,Ikeda (2014a)
+S1,CNID,29a,Aurelia aurita,,1,10,490,21.1,6.4,Ikeda (2014a)
+S1,CNID,29b,Aurelia aurita,,1,15,470,20.2,6.1,Ikeda (2014a)
+S1,CNID,29c,Aurelia aurita,,1,20,25200,932,252,Ikeda (2014a)
+S1,CNID,30a,Cassiopea xamachana,,1,30,7583,660,174,Ikeda (2014a)
+S1,CNID,30b,Cassiopea xamachana,,1,24,7583,660,174,Ikeda (2014a)
+S1,CNID,33a,Cyanea capillata,,600,6,6710,672,170,Ikeda (2014a)
+S1,CNID,33b,Cyanea capillata,,1,10,240,30.7,8.9,Ikeda (2014a)
+S1,CNID,33c,Cyanea capillata,,1,15,130,16.6,4.8,Ikeda (2014a)
+S1,CNID,34,Mastigias sp.,,1,29,4000,65.9,19.0,Ikeda (2014a)
+S1,CNID,35a,Pelagia noctiluca,,200,18,147.9,15.7,4.4,Ikeda (2014a)
+S1,CNID,35b,Pelagia noctiluca,,1,21,597,68.1,17.3,Ikeda (2014a)
+S1,CNID,36,Periphylla periphylla,,200,7,279,54.6,8.1,Ikeda (2014a)
+S1,CNID,37a,Poralia rufescens,,600,6,12010,70.9,16.8,Ikeda (2014a)
+S1,CNID,37b,Poralia rufescens,,1300,3,59.6,21.7,5.7,Ikeda (2014a)
+S1,CNID,37c,Poralia rufescens,,1300,3,214.9,49.0,12.6,Ikeda (2014a)
+S1,CNID,38,Stomolophus meleagris,,1,30,2050,40.6,11.9,Ikeda (2014a)
+S1,CNID,TC1,Aegina citrea,,800,5,212.6,11.64,3.00,Ikeda (2014a)
+S1,CNID,TC2,Botrynema brucei,,600,5,55.9,4.98,1.31,Ikeda (2014a)
+S1,CNID,TC3,Colobonema sericeum,,300,5,205.8,11.40,2.94,Ikeda (2014a)
+S1,CNID,TC4,Crossota alba,,100,5,25.1,3.00,0.80,Ikeda (2014a)
+S1,CNID,TC5,Crossota rufobrunnea,,500,5,24.0,2.91,0.77,Ikeda (2014a)
+S1,CNID,TC6,Crossota sp.,A,1100,5,5.7,1.17,0.32,Ikeda (2014a)
+S1,CNID,TC7,Eirene mollis,,10,15,10.8,0.96,0.27,Ikeda (2014a)
+S1,CNID,TC8,Haliscera bigelowi,,800,5,28.5,3.25,0.86,Ikeda (2014a)
+S1,CNID,TC9,Halitrephes maasi,,500,5,849.6,28.05,7.11,Ikeda (2014a)
+S1,CNID,TC10,Pantachogon sp.,A,800,5,22.8,2.82,0.75,Ikeda (2014a)
+S1,CNID,TC11,Tetrorchis erythrogaster,,600,5,18.3,2.46,0.65,Ikeda (2014a)
+S1,CNID,TC12,Vallentinia adherens,,10,15,1.4,0.26,0.08,Ikeda (2014a)
+S1,CNID,TC13,Vampyrocrossota childressi,,750,5,14.7,2.13,0.57,Ikeda (2014a)
+S1,CNID,TC14,Atolla vanhoeffeni,,450,5,25.3,11.17,2.98,Ikeda (2014a)
+S1,CNID,TC15,Atolla wyvillei,,500,5,366.2,60.92,15.72,Ikeda (2014a)
+S1,CNID,TC16,Nausithoe rubra,,1100,5,284.9,51.94,13.44,Ikeda (2014a)
+S1,CNID,TC17,Paraphyllina ransoni,,800,5,11.2,6.64,1.79,Ikeda (2014a)
+S1,CNID,TC18,Periphylla periphylla,,650,5,948.1,111.45,28.40,Ikeda (2014a)
+S1,CTEN,40a,Bathocyroe fosteri,,615,11,444,3.29,0.89,Ikeda (2014a)
+S1,CTEN,40b,Bathocyroe fosteri,,600,6,980,3.63,0.98,Ikeda (2014a)
+S1,CTEN,40c,Bathocyroe fosteri,,767,9,1900,8.17,2.66,Ikeda (2014a)
+S1,CTEN,41,Beroe abyssicola,,550,0.5,63.6,7.12,1.91,Ikeda (2014a)
+S1,CTEN,42a,Beroe cucumis,,2,15,3.43,0.39,0.13,Ikeda (2014a)
+S1,CTEN,42b,Beroe cucumis,,2,15,52.1,5.89,1.93,Ikeda (2014a)
+S1,CTEN,43a,Beroe ovata,,10,25,76,2.83,0.75,Ikeda (2014a)
+S1,CTEN,43b,Beroe ovata,,5,21,100,2.76,0.79,Ikeda (2014a)
+S1,CTEN,44,Beroe sp.,A,2,-0.8,401.6,36.10,9.40,Ikeda (2014a)
+S1,CTEN,45,Beroe sp. B,,1,-1.6,1362,75.96,20.88,Ikeda (2014a)
+S1,CTEN,46,Bolinopsis infundibulum,,180,6,1921,41.88,8.64,Ikeda (2014a)
+S1,CTEN,47,Bolinopsis mikado,,1,22,224,2.46,0.76,Ikeda (2014a)
+S1,CTEN,48,Bolinopsis vitrea,,10,25,56.30,0.34,0.07,Ikeda (2014a)
+S1,CTEN,49,Callianira antarctica,,5,1,232,19.51,4.25,Ikeda (2014a)
+S1,CTEN,50,Eurhamphaea vexilligera,,10,25,202,1.78,0.48,Ikeda (2014a)
+S1,CTEN,51,Mertensia ovum,,15,0,300,19.55,4.87,Ikeda (2014a)
+S1,CTEN,52,Mertensiidae sp.,,1,-1.6,93.7,10.47,2.25,Ikeda (2014a)
+S1,CTEN,53a,Mnemiopsis leidyi,,1,20,300,5.10,1.50,Ikeda (2014a)
+S1,CTEN,54,Mnemiopsis mccradyi,,1,22,720,10.30,2.66,Ikeda (2014a)
+S1,CTEN,55,Ocyropsis maculata,,10,25,1263,28.67,8.08,Ikeda (2014a)
+S1,CTEN,56,Ocyropsis spp.,,10,25,141,1.66,0.42,Ikeda (2014a)
+S1,CTEN,57a,Pleurobrachia pileus,,2,7.3,5.80,0.66,0.21,Ikeda (2014a)
+S1,CTEN,58,Pleurobrachia sp.,,2,25,52.3,1.47,0.44,Ikeda (2014a)
+S1,CTEN,59,UC–1,,767,9,18400,93.84,29.44,Ikeda (2014a)
+S1,MOLL,1a,Cavolinia globulosa,,2,22.4,18.65,4.84,0.83,Ikeda (2014b)
+S1,MOLL,1b,Cavolinia globulosa,,2,27.4,14.34,2.77,0.40,Ikeda (2014b)
+S1,MOLL,2a,Cavolinia inflexa,,1,15,2.43,0.67,0.13,Ikeda (2014b)
+S1,MOLL,2c,Cavolinia inflexa,,100,17.8,1.3,0.34,0.06,Ikeda (2014b)
+S1,MOLL,2d,Cavolinia inflexa,,15,20,2.9,0.67,0.12,Ikeda (2014b)
+S1,MOLL,3a,Cavolinia tridentata,,1,18,11.4,3.08,0.56,Ikeda (2014b)
+S1,MOLL,3b,Cavolinia tridentata,,1,24,1.91,0.47,0.08,Ikeda (2014b)
+S1,MOLL,3c,Cavolinia tridentata,,200,18,115,32.06,5.75,Ikeda (2014b)
+S1,MOLL,4a,Cavolinia uncinata,,2,19.7,18.5,4.94,0.88,Ikeda (2014b)
+S1,MOLL,4b,Cavolinia uncinata,,15,20,10.2,2.35,0.42,Ikeda (2014b)
+S1,MOLL,5,Clio cuspidata,,2,22.4,30,7.83,1.34,Ikeda (2014b)
+S1,MOLL,6a,Clio pyramidata,,200,15,7.73,2.15,0.41,Ikeda (2014b)
+S1,MOLL,6b,Clio pyramidata,,15,20,2.05,0.53,0.10,Ikeda (2014b)
+S1,MOLL,6e,Clio pyramidata,,100,13.9,3,0.83,0.16,Ikeda (2014b)
+S1,MOLL,7,Clio pyramidata f. sulcata,,2,-1.05,54.75,20.15,4.65,Ikeda (2014b)
+S1,MOLL,9,Corolla spectabilis,,15,26,100,25.48,4.12,Ikeda (2014b)
+S1,MOLL,10a,Corolla spp.,,1,18,0.074,0.019,0.004,Ikeda (2014b)
+S1,MOLL,11a,Creseis clava,,2,24.5,1.62,0.397,0.068,Ikeda (2014b)
+S1,MOLL,11b,Creseis clava,,1,15,0.732,0.197,0.038,Ikeda (2014b)
+S1,MOLL,11d,Creseis clava,,1,19,0.44,0.11,0.021,Ikeda (2014b)
+S1,MOLL,12,Creseis virgula,,15,20,1.53,0.39,0.07,Ikeda (2014b)
+S1,MOLL,13a,Cuvierina columnella,,100,20,5.21,1.36,0.24,Ikeda (2014b)
+S1,MOLL,14,Cymbulia peronii,,100,13.9,333,98.47,18.46,Ikeda (2014b)
+S1,MOLL,15,Diacria quadridentata,,15,20,2.18,0.56,0.10,Ikeda (2014b)
+S1,MOLL,16a,Diacavolinia longirostris,,2,27,8.71,2.13,0.35,Ikeda (2014b)
+S1,MOLL,16b,Diacavolinia longirostris,,15,20,1.85,0.48,0.09,Ikeda (2014b)
+S1,MOLL,16c,Diacavolinia longirostris,,15,26,0.5,0.12,0.020,Ikeda (2014b)
+S1,MOLL,17a,Diacria trispinosa,,2,27.4,12.26,2.99,0.48,Ikeda (2014b)
+S1,MOLL,17b,Diacria trispinosa,,100,20,6.4,1.67,0.30,Ikeda (2014b)
+S1,MOLL,17c,Diacria trispinosa,,100,13.9,15.2,4.32,0.83,Ikeda (2014b)
+S1,MOLL,18,Gleba cordata,,15,26,30.0,7.53,1.23,Ikeda (2014b)
+S1,MOLL,19,Hyalocylis striata,,15,20,2.4,0.61,0.11,Ikeda (2014b)
+S1,MOLL,20a,Limacina antarctica,,2,-0.91,6.4,2.13,0.52,Ikeda (2014b)
+S1,MOLL,20b,Limacina antarctica,,1,-2,2.0,0.64,0.15,Ikeda (2014b)
+S1,MOLL,22a,Limacina helicina,,2,7.6,0.336,0.10,0.03,Ikeda (2014b)
+S1,MOLL,22b,Limacina helicina,,2,15.5,0.028,0.007,0.002,Ikeda (2014b)
+S1,MOLL,22c,Limacina helicina,,75,0,0.6,0.22,0.052,Ikeda (2014b)
+S1,MOLL,25a,Thielea helicoides,,500,10,2.1,0.62,0.13,Ikeda (2014b)
+S1,MOLL,25b,Thielea helicoides,,100,13.9,1.7,0.47,0.09,Ikeda (2014b)
+S1,MOLL,26a,Clione limacina,,2,12.7,22.5,6.33,1.37,Ikeda (2014b)
+S1,MOLL,26b,Clione limacina,,75,0.0,38.3,10.40,1.91,Ikeda (2014b)
+S1,MOLL,26c,Clione limacina,,1,5,36.2,11.45,2.45,Ikeda (2014b)
+S1,MOLL,26d,Clione limacina,,1,10,25.4,7.59,1.53,Ikeda (2014b)
+S1,MOLL,27a,Clione limacina antarctica,,2,-1.3,25.3,9.91,2.00,Ikeda (2014b)
+S1,MOLL,27b,Clione limacina antarctica,,1,-2,10.4,3.50,0.83,Ikeda (2014b)
+S1,MOLL,27c,Clione limacina antarctica,,1,-1.8,15.0,5.05,1.19,Ikeda (2014b)
+S1,MOLL,28,Cliopsis krohni,,1,24,9.8,2.47,0.42,Ikeda (2014b)
+S1,MOLL,29,Hydromyles globulosus,,2,27.4,3.4,1.27,0.28,Ikeda (2014b)
+S1,MOLL,31a,Pneumodermopsis spp.,,1,18,18.9,5.16,0.94,Ikeda (2014b)
+S1,MOLL,31b,Pneumodermopsis spp.,,1,24,0.9,0.21,0.04,Ikeda (2014b)
+S1,MOLL,32,Thliptodon spp.,,1,20,4.1,1.08,0.19,Ikeda (2014b)
+S1,MOLL,33,Atlanta peronii,,2,22.4,14.6,3.78,0.65,Ikeda (2014b)
+S1,MOLL,34a,Cardiapoda placenta,,1,26,34.3,8.61,1.41,Ikeda (2014b)
+S1,MOLL,35,Carinaria lamarckii,,200,18,625,178,31.5,Ikeda (2014b)
+S1,MOLL,36,Pterotrachea hippocampus,,15,26,100.0,25.5,4.1,Ikeda (2014b)
+S1,MOLL,37,Pterotrachea scutata,,200,18,484,137,24.4,Ikeda (2014b)
+S1,THAL,S1,Ihlea recovitzai,,2,-1.00,10.94,1.11,0.30,Ikeda and Mitchell (1982)
+S1,THAL,S2,Salpa thompsoni,,2,-1.10,115.1,5.4,1.3,Ikeda and Mitchell (1982)
+S1,THAL,S3,Thalia democratica,,2,17.30,2.97,0.23,0.05,Ikeda (1974)
+S1,THAL,S4,Salpa fusiformis,,2,17.3,11.64,0.91,0.19,Ikeda (1974)
+S1,THAL,S5,Iasis zonaria,,2,27,4.94,0.386,0.083,Ikeda (1974)
+S1,THAL,S6,Pegea confoederata,,2,25.7,81.96,6.41,1.37,Ikeda (1974)
+S1,THAL,S7,Salpa fusiformis,,2,27.4,4.88,0.38,0.08,Ikeda (1974)
+S1,THAL,S8,Pyrosoma verticillatum,,2,25.7,65.02,5.08,1.09,Ikeda (1974)
+S1,THAL,S9,Salpa thompsoni,,1,-1.6,763.32,33.84,7.54,Ikeda and Bruce (1986)
+S1,THAL,S10,Salpa thompsoni,sol/agg,1,1.3,100,5.87,1.49,Iguchi and Ikeda (2004)
+S1,THAL,S11,Dolioletta gegenbauri,,1,21.0,0.25,0.02,0.00,Köster et al. (2010)
+S1,THAL,S12,Pyrosoma atlanticum,,1,15.0,10.53,0.82,0.18,Nival et al. (1972)
+S1,THAL,S14,Salpa maxima,,1,15.0,78.38,6.13,1.31,Nival et al. (1972)
+S1,THAL,S16,Thalia democratica,,1,15.0,26.70,2.09,0.45,Mayzaud and Dallot (1973)
+S1,THAL,S17,Cyclosalpa affinis,agg,15,24.5,12.8,1,0.24,Cetta et al. (1986)
+S1,THAL,S18,Cyclosalpa pinnata,agg,15,24.5,12.8,1,0.22,Cetta et al. (1986)
+S1,THAL,S19,Cyclosalpa polae,sol,15,24.5,12.8,1,0.23,Cetta et al. (1986)
+S1,THAL,S20,Pegea confoederata,agg,15,24.5,12.8,1,0.21,Cetta et al. (1986)
+S1,THAL,S21,Salpa cylindrica,sol,15,24.5,12.8,1,0.23,Cetta et al. (1986)
+S1,THAL,S22,Salpa fusiformis,agg,15,16.5,12.8,1,0.23,Cetta et al. (1986)
+S1,THAL,S23,Salpa fusiformis,sol,15,16.5,12.8,1,0.24,Cetta et al. (1986)
+S1,THAL,S24,Salpa maxima,agg,15,24.5,12.8,1,0.22,Cetta et al. (1986)
+S1,THAL,S25,Salpa cylindrica,sol,15,26,75.3,5.89,1.26,Biggs (1977)
+S1,THAL,S26,Salpa cylindrica,agg,15,26,7.5,0.59,0.13,Biggs (1977)
+S1,THAL,S27,Salpa maxima,sol,15,26,75.3,5.89,1.26,Biggs (1977)
+S1,THAL,S28,Salpa maxima,agg,15,26,75.3,5.89,1.26,Biggs (1977)
+S1,THAL,S29,Pegea confederata,sol,15,26,75.3,5.89,1.26,Biggs (1977)
+S1,THAL,S30,Pegea confederata,agg,15,26,7.5,0.59,0.13,Biggs (1977)
+S1,APPE,S1,Oikopleura dioica,,1,15,0.00112,0.00065,0.00013,Gorsky et al. (1987)
+S1,APPE,S2,Oikopleura dioica,,1,20,0.00121,0.00071,0.00014,Gorsky et al. (1987)
+S1,APPE,S3,Oikopleura dioica,,1,24,0.00126,0.00074,0.00014,Gorsky et al. (1987)
+S1,APPE,S4,Oikopleura dioica,,1,15,0.00112,0.00065,0.00013,Lombard et al. (2005)
+S1,POLY,S1,Tomopteris carpenteri,,100,0.5,37.2,15.0,3.7,Donnelly et al. (2004)
+S1,POLY,S2,Tomopteris carpenteri,,100,0.5,95.4,38.5,9.5,Donnelly et al. (2004)
+S1,POLY,S3,Tomopteris helgolandica,,100,5.5,4.01,,,Bamstedt (1979)
+S1,POLY,S4,Poeobius meseres,,1000,5,32.6,5.7,1.2,Thuesen and Childress (1993)
+S1,POLY,S5,Pelagobia sp,.A,2400,5,2.68,,,Thuesen and Childress (1993)
+S1,POLY,S6,Tomopteris pacifica,,500,5,2.37,0.43,0.08,Thuesen and Childress (1993)
+S1,POLY,S7,Tomopteris nisseni,,500,5,859,,,Thuesen and Childress (1993)
+S1,POLY,S8,Travisiopsis lobifera,,500,5,23.7,9.0,2.2,Thuesen and Childress (1993)
+S1,POLY,S9,Tomopteris carpenteri,,3,-0.9,63.1,22.1,5.4,Ikeda and Mitchell (1982)
+S1,POLY,S10,Naiades cantrainii,,2,20,3.66,1.50,0.31,Ikeda (1974)
+S1,POLY,S11,Tomopteris sp,.,2,28,2.44,0.98,0.23,Ikeda (1974)
+S1,POLY,S12,Tomopteris sp,.,4000,1.5,3.511,1.37,0.33,Ikeda (2012)
+S2,COPE,S1,Calanus propinquus,,2,-1.0,1.043,0.41,0.12,Ikeda et al. (2001)
+S2,COPE,S2,Calanoides acutus,C5,2,-0.2,0.394,0.19,0.03,Ikeda et al. (2001)
+S2,COPE,S3,Calanoides acutus,"C4, C5",2,-0.5,0.218,0.10,0.02,Ikeda et al. (2001)
+S2,COPE,S4,Rhincalanus gigas,,50,-1.7,1.080,0.50,0.11,Ikeda et al. (2001)
+S2,COPE,S5,Metridia gerlachei,,2,-1.4,0.265,0.11,0.027,Ikeda et al. (2001)
+S2,COPE,S6,Calanus finmarchicus,C6 F,2,0.1,0.387,0.21,0.030,Ikeda et al. (2001)
+S2,COPE,S7,Calanus glacialis,C6F,50,2.3,0.474,0.22,0.050,Ikeda et al. (2001)
+S2,COPE,S8,Calanus hyperboreus,C6 F,50,1.3,3.95,2.34,0.28,Ikeda et al. (2001)
+S2,COPE,S9,Calanus hyperboreus,C5 (bloom),50,0.9,1.94,1.12,0.14,Ikeda et al. (2001)
+S2,COPE,S10,Calanus hyperboreus,C5 (late bloom),50,-0.3,2.677,1.63,0.18,Ikeda et al. (2001)
+S2,COPE,S11,Metridia longa,C6 F,50,0.1,0.353,0.17,0.037,Ikeda et al. (2001)
+S2,COPE,S12,Neocalanus plumchrus,C5,2,7.3,0.785,0.45,0.063,Ikeda et al. (2001)
+S2,COPE,S13,Neocalanus plumchrus,C4,2,5.6,0.263,0.15,0.021,Ikeda et al. (2001)
+S2,COPE,S14,Neocalanus plumchrus,,2,15.1,0.294,0.14,0.026,Ikeda et al. (2001)
+S2,COPE,S15,Neocalanus cristatus,,2,6.3,1.59,0.79,0.13,Ikeda et al. (2001)
+S2,COPE,S16,Eucalanus bungii,C6F,2,6.0,1.01,0.40,0.10,Ikeda et al. (2001)
+S2,COPE,S17,Pseudocalanus elongatus,,2,8.6,0.0116,0.0053,0.0014,Ikeda et al. (2001)
+S2,COPE,S18,Metridia pacifica,,2,8.2,0.148,0.0654,0.0164,Ikeda et al. (2001)
+S2,COPE,S19,Metridia pacifica,,2,13.0,0.094,0.0433,0.0113,Ikeda et al. (2001)
+S2,COPE,S20,Acartia clausi,,2,14.8,0.0085,0.0035,0.0010,Ikeda et al. (2001)
+S2,COPE,S21,Acartia longiremis,,2,9.6,0.0081,0.0035,0.0010,Ikeda et al. (2001)
+S2,COPE,S22,Tortanus discaudatus,,2,7.0,0.057,0.025,0.006,Ikeda et al. (2001)
+S2,COPE,S23,Canthocalanus pauper,C6F,2,22.0,0.034,0.014,0.003,Ikeda et al. (2001)
+S2,COPE,S24,Neocalanus gracilis,,2,19.7,0.500,0.234,0.051,Ikeda et al. (2001)
+S2,COPE,S25,Undinula vulgaris,,2,23.5,0.185,0.077,0.018,Ikeda et al. (2001)
+S2,COPE,S26,Acrocalanus gibber,C6F,2,22.0,0.021,0.009,0.002,Ikeda et al. (2001)
+S2,COPE,S27,Paracalanus parvus,,2,22.0,0.034,0.014,0.003,Ikeda et al. (2001)
+S2,COPE,S28,Eucalanus subcrassus,C6F,2,22.0,0.103,0.043,0.010,Ikeda et al. (2001)
+S2,COPE,S29,Euchaeta marina,,2,24.0,0.291,0.121,0.028,Ikeda et al. (2001)
+S2,COPE,S30,Centropages furcatus,C6M,2,22.0,0.033,0.014,0.003,Ikeda et al. (2001)
+S2,COPE,S31,Centropages brachiatus,,2,17.3,0.020,0.0082,0.0020,Ikeda et al. (2001)
+S2,COPE,S32,Temora turbinata,,2,22.0,0.016,0.0066,0.0015,Ikeda et al. (2001)
+S2,COPE,S33,Calanopia elliptica,C6F,2,22.0,0.077,0.032,0.007,Ikeda et al. (2001)
+S2,COPE,S34,Labidocera sp,.,2,22.0,0.184,0.076,0.018,Ikeda et al. (2001)
+S2,COPE,S35,Tortanus gracilis,C6F,2,22.8,0.0298,0.012,0.003,Ikeda et al. (2001)
+S2,COPE,S36,Acartia australis,C6F,2,22.0,0.0117,0.0049,0.0011,Ikeda et al. (2001)
+S2,COPE,S37,Acartia tonsa,,2,22.0,0.0072,0.0030,0.0007,Ikeda et al. (2001)
+S2,COPE,S38,Corycaeus sp,.,2,22.0,0.032,0.013,0.003,Ikeda et al. (2001)
+S2,COPE,S39,Nannocalanus minor,,2,26.9,0.040,0.017,0.005,Ikeda et al. (2001)
+S2,COPE,S40,Undinulla vulgaris,,2,27.6,0.167,0.070,0.018,Ikeda et al. (2001)
+S2,COPE,S41,Eucalanus subcrassus,C6F,2,27.7,0.069,0.029,0.007,Ikeda et al. (2001)
+S2,COPE,S42,Eucalanus subcrassus,C6F,2,24.0,0.104,0.043,0.010,Ikeda et al. (2001)
+S2,COPE,S43,Eucalanus attenuatus,,2,27.4,0.137,0.054,0.013,Ikeda et al. (2001)
+S2,COPE,S44,Paracalanus aculeatus,,2,29.0,0.017,0.007,0.002,Ikeda et al. (2001)
+S2,COPE,S45,Acrocalanus gibber,C6F,2,28.7,0.010,0.004,0.001,Ikeda et al. (2001)
+S2,COPE,S46,Temora turbinata,,2,27.0,0.0055,0.002,0.001,Ikeda et al. (2001)
+S2,COPE,S47,Centropages furcatus,C6M,2,27.8,0.019,0.008,0.002,Ikeda et al. (2001)
+S2,COPE,S48,Calanopia elliptica,C6F,2,26.0,0.056,0.023,0.005,Ikeda et al. (2001)
+S2,COPE,S49,Calanopia elliptica,C6F,2,27.4,0.049,0.020,0.005,Ikeda et al. (2001)
+S2,COPE,S50,Labidocera acuta,,2,24.0,0.233,0.097,0.022,Ikeda et al. (2001)
+S2,COPE,S51,Labidocera acuta,,2,28.5,0.228,0.098,0.028,Ikeda et al. (2001)
+S2,COPE,S52,Labidocera nerii,,2,26.4,0.221,0.095,0.027,Ikeda et al. (2001)
+S2,COPE,S53,Labidocera sp,. C6F,2,28.5,0.024,0.010,0.002,Ikeda et al. (2001)
+S2,COPE,S54,Acartia australis,,2,25.0,0.0091,0.004,0.001,Ikeda et al. (2001)
+S2,COPE,S55,Acartia australis,,2,27.0,0.017,0.007,0.002,Ikeda et al. (2001)
+S2,COPE,S56,Acartia pacifica,C6F,2,27.8,0.018,0.008,0.002,Ikeda et al. (2001)
+S2,COPE,S57,Tortanus gracilis,C6M,2,26.0,0.024,0.010,0.002,Ikeda et al. (2001)
+S2,COPE,S58,Tortanus gracilis,C6M,2,29.0,0.013,0.0053,0.0012,Ikeda et al. (2001)
+S2,COPE,S59,Labidocera farrani,,25,25.0,0.160,0.0566,0.016,Ikeda et al. (2001)
+S2,COPE,S60,Undinula vulgaris,,25,25.5,0.220,0.0939,0.026,Ikeda et al. (2001)
+S2,COPE,S61,Paracalanus indicus,,1,23.0,0.0072,0.0032,0.0008,Ikeda et al. (2001)
+S2,COPE,S62,Macrosetella gracilis,,1,25.0,0.0065,0.0024,0.0005,Ikeda et al. (2001)
+S2,COPE,S63,Oithona nishidai,,1,24.0,0.0012,0.00039,0.00011,Ikeda et al. (2001)
+S2,EUPH,1c,Bentheuphausia amblyops,,600,5.5,60.0,23.5,3.84,Ikeda (2013a)
+S2,EUPH,2a,Euphausia crystallorophias,,10,-1.6,30.8,14.0,3.39,Ikeda (2013a)
+S2,EUPH,2b,Euphausia crystallorophias,J,5,-1.3,9.10,3.82,1.06,Ikeda (2013a)
+S2,EUPH,3,Euphausia diomedeae,,2,26,1.89,0.78,0.20,Ikeda (2013a)
+S2,EUPH,4,Euphausia distinquenda,,2,27,3.54,1.40,0.38,Ikeda (2013a)
+S2,EUPH,5,Euphausia gibba,,1,28,3.29,1.37,0.37,Ikeda (2013a)
+S2,EUPH,7,Euphausia krohnii,,2,19.7,0.29,0.12,0.03,Ikeda (2013a)
+S2,EUPH,8,Euphausia lucens,,40,12.5,5.00,2.02,0.54,Ikeda (2013a)
+S2,EUPH,9,Euphausia mutica,,1,28,1.82,0.74,0.21,Ikeda (2013a)
+S2,EUPH,10a,Euphausia pacifica,,2,13,4.97,2.06,0.54,Ikeda (2013a)
+S2,EUPH,10b,Euphausia pacifica,M,100,5,12.8,4.58,1.23,Ikeda (2013a)
+S2,EUPH,10c,Euphausia pacifica,F,100,5,11.5,4.00,1.06,Ikeda (2013a)
+S2,EUPH,11a,Euphausia superba,,35,-1.1,86.3,38.39,8.79,Ikeda (2013a)
+S2,EUPH,11b,Euphausia superba,J,3,-1.7,40.3,16.42,4.80,Ikeda (2013a)
+S2,EUPH,11c,Euphausia superba,FG,35,-1.1,247.1,115.9,24.7,Ikeda (2013a)
+S2,EUPH,11d,Euphausia superba,FG,3,-1.7,80.5,32.5,9.6,Ikeda (2013a)
+S2,EUPH,11e,Euphausia superba,M,3,-1.7,97.7,39.5,11.4,Ikeda (2013a)
+S2,EUPH,12,Euphausia tenera,,2,27,0.77,0.31,0.08,Ikeda (2013a)
+S2,EUPH,13a,Euphausia triacantha,,100,-0.8,23.0,9.5,2.66,Ikeda (2013a)
+S2,EUPH,13b,Euphausia triacantha,,600,0,82.8,39.2,8.86,Ikeda (2013a)
+S2,EUPH,14a,Meganyctiphanes norvegica,,250,4,74.1,25.9,7.63,Ikeda (2013a)
+S2,EUPH,14b,Meganyctiphanes norvegica,,300,13,32.5,12.8,3.73,Ikeda (2013a)
+S2,EUPH,14c,Meganyctiphanes norvegica,,50,4,45.8,17.0,4.99,Ikeda (2013a)
+S2,EUPH,15,Nyctiphanes australis,,2,15,2.00,0.87,0.23,Ikeda (2013a)
+S2,EUPH,17,Thysanoessa inermis,,50,1,17.3,8.9,1.5,Ikeda (2013a)
+S2,EUPH,18a,Thysanoessa macrura,J,2,-0.4,0.47,0.20,0.05,Ikeda (2013a)
+S2,EUPH,18b,Thysanoessa macrura,,2,-1.7,5.49,2.23,0.54,Ikeda (2013a)
+S2,EUPH,18c,Thysanoessa macrura,,300,-0.46,6.89,2.96,0.83,Ikeda (2013a)
+S2,EUPH,20,Thysanoessa spp.,,15,20,5.00,2.10,0.53,Ikeda (2013a)
+S2,EUPH,21a,Thysanoessa spinifera,F,100,5,12.2,4.5,1.2,Ikeda (2013a)
+S2,EUPH,21b,Thysanoessa spinifera,M,100,5,7.02,2.60,0.71,Ikeda (2013a)
+S2,EUPH,24,Thysanopoda tricuspidata,,1,26,12.8,5.4,1.6,Ikeda (2013a)
+S2,EUPH,S1,Thysanopoda tricuspidata,,20,17,19.5,7.7,2.2,Roger (1988)
+S2,EUPH,S2,Thysanopoda sp,.,25,17,25.7,10.1,2.7,Roger (1988)
+S2,EUPH,S3,Euphausia fallax,,25,17,12.5,5.2,1.4,Roger (1988)
+S2,AMPH,3,Hemityphis tenuimanus,,2,26.4,1.62,0.41,0.07,Ikeda (2013b)
+S2,AMPH,5,Hyperia gaudichaudii,,3,-0.8,105.3,49.2,7.5,Ikeda (2013b)
+S2,AMPH,7a,Oxycephalus clausi,,1,27.5,14.0,3.56,0.87,Ikeda (2013b)
+S2,AMPH,7b,Oxycephalus cluasi,,2,27.4,17.7,4.26,0.97,Ikeda (2013b)
+S2,AMPH,8a,Phronima sedentaria,,2,27.4,9.48,2.26,0.48,Ikeda (2013b)
+S2,AMPH,8b,Phronima sedentaria,,2,19.7,7.29,1.74,0.37,Ikeda (2013b)
+S2,AMPH,9b,Primno abyssalis,,250,5,6.15,3.28,0.46,Ikeda (2013b)
+S2,AMPH,12,Scina crassicornis,,2,22.4,2.99,1.25,0.30,Ikeda (2013b)
+S2,AMPH,13,Thamneus rostratus,,2,27.4,2.44,0.59,0.10,Ikeda (2013b)
+S2,AMPH,14,Themisto compressa,,250,4,2.13,0.98,0.20,Ikeda (2013b)
+S2,AMPH,15a,Themisto gaudichaudii,,2,-0.9,7.06,2.67,0.58,Ikeda (2013b)
+S2,AMPH,15c,Themisto gaudichaudii,,2,15,1.00,0.38,0.08,Ikeda (2013b)
+S2,AMPH,16a,Themisto japonica,,2,8.7,2.90,1.19,0.23,Ikeda (2013b)
+S2,AMPH,16b,Themisto japonica,,250,5,2.65,1.23,0.23,Ikeda (2013b)
+S2,AMPH,17,Themisto libellula,,90,-0.1,2.98,1.14,0.24,Ikeda (2013b)
+S2,AMPH,18,Themisto pacifica,,250,5,1.18,0.56,0.10,Ikeda (2013b)
+S2,AMPH,19,Vibilia sp.,,2,27.8,1.24,0.44,0.09,Ikeda (2013b)
+S2,AMPH,20,Vibilia propinqua,,2,-1.1,12.1,4.90,0.99,Ikeda (2013b)
+S2,AMPH,22a,Cyphocaris challengeri,,2,13,3.96,1.62,0.32,Ikeda (2013b)
+S2,AMPH,22b,Cyphocaris challengeri,,250,5,5.90,2.17,0.40,Ikeda (2013b)
+S2,AMPH,25,Cyphocaris sp.,A,600,0.2,81.4,38.5,5.7,Ikeda (2013b)
+S2,AMPH,28,Eusirus microps,,55,-1.6,193.1,87.6,12.2,Ikeda (2013b)
+S2,AMPH,31b,Paracallisoma coecus,,600,5.5,50.0,28.7,4.4,Ikeda (2013b)
+S2,DECA,2a,Acanthephyra curitirostris,,600,5.5,840,387.2,67.2,Ikeda (2013d)
+S2,DECA,7a,Hymenodora frontalis,,600,5.5,400,184.4,32.0,Ikeda (2013d)
+S2,DECA,16,Parapasiphaea sulcatifrons,,600,5.5,520,239.7,41.6,Ikeda (2013d)
+S2,DECA,17a,Pasiphaea chacei,,100,5.5,340,156.7,30.9,Ikeda (2013d)
+S2,DECA,18a,Pasiphaea emarginata,,600,5.5,790,364.2,63.2,Ikeda (2013d)
+S2,DECA,21a,Pasiphaea scotiae,,600,0.2,265,122.2,21.2,Ikeda (2013d)
+S2,DECA,22,Systellaspis braueri,,600,5.5,360,166.0,28.8,Ikeda (2013d)
+S2,DECA,23a,Systellaspis cristata,,600,5.5,740,341.1,59.2,Ikeda (2013d)
+S2,DECA,27b,Gennadas kempi/Petalidium foliaceum,,600,0.2,339,156.1,27.1,Ikeda (2013d)
+S2,DECA,28a,Gennadas propinquus,,600,5.5,140,64.5,11.2,Ikeda (2013d)
+S2,DECA,31a,Acetes sibogae australis,,1,24.5,6.49,3.0,0.8,Ikeda (2013d)
+S2,DECA,31b,Acetes sibogae australis,,1,30,26.7,12.3,3.2,Ikeda (2013d)
+S2,DECA,32a,Eusergestes similis,,100,5.5,110,50.7,10.0,Ikeda (2013d)
+S2,DECA,35,Lucifer sp.,,1,28.5,0.0135,0.0062,0.0016,Ikeda (2013d)
+S2,DECA,39,Sergestes atlanticus,,1,27.5,23.5,10.8,2.8,Ikeda (2013d)
+S2,DECA,43a,Sergia phorca,,600,5.5,500,230.5,40.0,Ikeda (2013d)
+S2,DECA,45,Sergestes tenuroides,,600,5.5,210,96.8,16.8,Ikeda (2013d)
+S2,DECA,S1,Sergestoidea sp,.,25,17,33.8,13.9,3.8,Roger (1988)
+S2,DECA,S2,Caridea sp,.,25,17,12.2,4.5,1.0,Roger (1988)
+S2,MYSI,1,Acanthomysis pseudomacropsis,,2,14.9,2.88,1.27,0.32,Ikeda (2013c)
+S2,MYSI,2,Acanthomysis sp.,A,2,10,1.89,0.78,0.20,Ikeda (2013c)
+S2,MYSI,6,Antarctomysis maxima,,60,-1.6,171,75.3,17.9,Ikeda (2013c)
+S2,MYSI,12,Charalaspidium sp.,,600,5.5,280,143,18.3,Ikeda (2013c)
+S2,MYSI,15a,Gnathophausia gigas,,600,0.15,127,52.6,9.2,Ikeda (2013c)
+S2,MYSI,16,Gnathophausia gracilis,,600,5.5,930,479,57.7,Ikeda (2013c)
+S2,MYSI,17,Gnathophausia ingens,,550,5.5,1040,512,66.0,Ikeda (2013c)
+S2,MYSI,19,Hemimysis speluncola,,1,14,0.82,0.32,0.10,Ikeda (2013c)
+S2,MYSI,20a,Leptomysis lingvura,,1,14,1.72,0.68,0.20,Ikeda (2013c)
+S2,MYSI,29b,Neomysis integer,F,1,16,4.20,1.70,0.47,Ikeda (2013c)
+S2,MYSI,29c,Neomysis integer,F,1,16,2.90,1.17,0.33,Ikeda (2013c)
+S2,MYSI,32a,Rhopalophthalmus africana,,2,28.5,0.16,0.069,0.017,Ikeda (2013c)
+S2,MYSI,32b,Rhopalophthalmus africana,J,2,28.5,1.33,0.59,0.14,Ikeda (2013c)
+S2,MYSI,36,Siriella media,,1,28.5,4.09,1.79,0.45,Ikeda (2013c)
+S2,MYSI,38a,Siriella thompsoni,,2,27.8,1.47,0.59,0.15,Ikeda (2013c)
+S2,OSTR,S1,Gigantocypris mulleri,,500,0.2,54.9,17.7,4.5,Ikeda (1988)
+S2,OSTR,S2,Gigantocypris mulleri,,500,0.2,160.1,56.7,14.9,Ikeda (1988)
+S2,OSTR,S3,Gigantocypris mulleri,,500,-0.9,48.0,14.2,3.9,Ikeda (1988)
+S2,OSTR,S4,Gigantocypris mulleri,,500,-1,139.7,44.4,11.7,Ikeda (1988)
+S2,CHAE,S1,Aidanosagitta negrecta,,2,23,0.224,0.070,0.020,Ikeda and McKinnon (2012)
+S2,CHAE,S2,Ferosagatta hispida,,2,24,0.33,0.134,0.037,Ikeda (unpublished data)
+S2,CHAE,S3,Ferosagatta hispida,,2,26,0.1,0.041,0.011,Reeve et al. (1970)
+S2,CHAE,S4,Ferosagitta robusta,,2,27,0.75,0.291,0.074,Ikeda (1974)
+S2,CHAE,S5,Flaccisagitta enflata,,2,27,0.71,0.249,0.056,Ikeda (unpublished data)
+S2,CHAE,S6,Flaccisagitta enflata,,1,25,0.053,0.018,0.004,Szyper (1981)
+S2,CHAE,S7,Mesosagitta minima,,2,15,0.094,0.034,0.010,Ikeda (1974)
+S2,CHAE,S8,Parasagitta elegans,,2,9,1.03,0.420,0.121,Ikeda (1974)
+S2,CHAE,S9,Parasagitta elegans,,50,-0.4,4.5,1.728,0.468,Ikeda and Skjoldal (1989)
+S2,CHAE,S10,Pseudosagitta gazellae,,100,-1,35.3,7.1,2.0,Ikeda and Kirkwood (1989)
+S2,CHAE,S11,Sagitta bipunctata,,2,27.5,0.45,0.175,0.044,Ikeda (1974)
+S2,CHAE,S12,Serratosagitta serratodentata,,2,27,0.73,0.283,0.072,Ikeda (1974)
+S2,CHAE,S13,Zenosagitta bedoti,f. minor,2,24,0.084,0.032,0.010,Ikeda and McKinnon (2012)
+S2,CNID,3a,Aglantha digitale,,2,8.5,3.39,1.0,0.4,Ikeda (2014a)
+S2,CNID,3b,Aglantha digitale,,150,1.1,14.0,2.3,0.6,Ikeda (2014a)
+S2,CNID,4,Benthocodon pedunculata,,767,9,200,16.4,5.4,Ikeda (2014a)
+S2,CNID,7a,Calycopsis borchgrevinki,,100,-0.7,136,12.9,3.3,Ikeda (2014a)
+S2,CNID,15,Liriope tetraphylla,,2,27,2.27,0.2,0.1,Ikeda (2014a)
+S2,CNID,25a,Diphyes antarctica,,100,-0.7,37,3.7,1.2,Ikeda (2014a)
+S2,CNID,26,Diphyes sp.,,2,25,0.48,0.1,0.0,Ikeda (2014a)
+S2,CNID,27,19 species,,15,26,4.7,0.4,0.1,Ikeda (2014a)
+S2,CNID,27,19 species,,15,26,47.4,4.1,1.1,Ikeda (2014a)
+S2,CNID,27,19 species,,15,26,474,41.2,10.9,Ikeda (2014a)
+S2,CNID,29d,Aurelia aurita,,1,15,6054,315,85,Ikeda (2014a)
+S2,CNID,31,Catostylus mosaicus,,1,25,90762,608,163,Ikeda (2014a)
+S2,CNID,32,Chrysaora quinquecirrha,,1,23,195,21.6,5.5,Ikeda (2014a)
+S2,CNID,35b,Pelagia noctiluca,,1,21,597,68.1,17.3,Ikeda (2014a)
+S2,CNID,37b,Poralia rufescens,,1300,3,59.6,21.7,5.7,Ikeda (2014a)
+S2,CNID,37c,Poralia rufescens,,1300,3,215,49.0,12.6,Ikeda (2014a)
+S2,CTEN,40a,Bathocyroe fosteri,,615,11,444,3.3,0.9,Ikeda (2014a)
+S2,CTEN,40c,Bathocyroe fosteri,,767,9,1900,8.2,2.7,Ikeda (2014a)
+S2,CTEN,41,Beroe abyssicola,,550,0.5,63.6,7.1,1.9,Ikeda (2014a)
+S2,CTEN,42b,Beroe cucumis,,2,15,52.1,5.9,1.9,Ikeda (2014a)
+S2,CTEN,43a,Beroe ovata,,10,25,76,2.8,0.8,Ikeda (2014a)
+S2,CTEN,44,Beroe sp.,A,2,-0.8,402,36.1,9.4,Ikeda (2014a)
+S2,CTEN,45,Beroe sp. B,,1,-1.6,1362,76.0,20.9,Ikeda (2014a)
+S2,CTEN,47,Bolinopsis mikado,,1,22,224,2.5,0.8,Ikeda (2014a)
+S2,CTEN,48,Bolinopsis vitrea,,10,25,56.3,0.34,0.07,Ikeda (2014a)
+S2,CTEN,49,Callianira antarctica,,5,1,232,19.5,4.2,Ikeda (2014a)
+S2,CTEN,50,Eurhamphaea vexilligera,,10,25,202,1.8,0.5,Ikeda (2014a)
+S2,CTEN,51,Mertensia ovum,,15,0,300,19.5,4.9,Ikeda (2014a)
+S2,CTEN,52,Mertensiidae sp.,,1,-1.6,93.7,10.5,2.3,Ikeda (2014a)
+S2,CTEN,53a,Mnemiopsis leidyi,,1,20,300,5.1,1.5,Ikeda (2014a)
+S2,CTEN,53b,Mnemiopsis leidyi,,1,23,52.3,2.67,0.68,Ikeda (2014a)
+S2,CTEN,54,Mnemiopsis mccradyi,,1,22,720,10.30,2.66,Ikeda (2014a)
+S2,CTEN,55,Ocyropsis maculata,,10,25,1263,28.7,8.1,Ikeda (2014a)
+S2,CTEN,56,Ocyropsis spp.,,10,25,141,1.66,0.42,Ikeda (2014a)
+S2,CTEN,57b,Pleurobrachia pileus,,100,6,5.22,0.49,0.13,Ikeda (2014a)
+S2,CTEN,58,Pleurobrachia sp.,,2,25,52.3,1.47,0.44,Ikeda (2014a)
+S2,CTEN,59,UC–1,,767,9,18400,93.8,29.4,Ikeda (2014a)
+S2,MOLL,1a,Cavolinia globulosa,,2,22.4,18.7,4.84,0.83,Ikeda (2014b)
+S2,MOLL,1b,Cavolinia globulosa,,2,27.4,14.3,2.77,0.40,Ikeda (2014b)
+S2,MOLL,4b,Cavolinia uncinata,,2,19.7,18.5,4.94,0.88,Ikeda (2014b)
+S2,MOLL,5,Clio cuspidata,,2,22.4,30.0,7.83,1.34,Ikeda (2014b)
+S2,MOLL,6b,Clio pyramidata,,15,20,2.1,0.53,0.10,Ikeda (2014b)
+S2,MOLL,7,Clio pyramidata f. sulcata,,2,-1.05,54.8,20.15,4.65,Ikeda (2014b)
+S2,MOLL,9,Corolla spectabilis,,15,26,100,25,4.12,Ikeda (2014b)
+S2,MOLL,11a,Creseis clava,,2,24.5,1.6,0.40,0.07,Ikeda (2014b)
+S2,MOLL,11d,Creseis clava,,1,19,0.44,0.11,0.02,Ikeda (2014b)
+S2,MOLL,12,Creseis virgula,,15,20,1.5,0.39,0.07,Ikeda (2014b)
+S2,MOLL,15,Diacria quadridentata,,15,20,2.2,0.56,0.10,Ikeda (2014b)
+S2,MOLL,16a,Diacavolinia longirostris,,2,27,8.7,2.13,0.35,Ikeda (2014b)
+S2,MOLL,16b,Diacavolinia longirostris,,15,20,1.9,0.48,0.09,Ikeda (2014b)
+S2,MOLL,17a,Diacria trispinosa,,2,27.4,12.3,2.99,0.48,Ikeda (2014b)
+S2,MOLL,19,Hyalocylis striata,,15,20,2.4,0.61,0.11,Ikeda (2014b)
+S2,MOLL,20a,Limacina antarctica,,2,-0.91,6.4,2.13,0.52,Ikeda (2014b)
+S2,MOLL,22a,Limacina helicina,,2,7.6,0.34,0.10,0.035,Ikeda (2014b)
+S2,MOLL,22c,Limacina helicina,,75,0,0.59,0.22,0.052,Ikeda (2014b)
+S2,MOLL,26a,Clione limacina,,2,12.7,22.5,6.33,1.37,Ikeda (2014b)
+S2,MOLL,26b,Clione limacina,,75,0.0,38.3,10.40,1.91,Ikeda (2014b)
+S2,MOLL,27a,Clione limacina antarctica,,2,-1.3,25.3,9.91,2.00,Ikeda (2014b)
+S2,MOLL,27c,Clione limacina antarctica,,1,-1.8,15.0,5.05,1.19,Ikeda (2014b)
+S2,MOLL,29,Hydromyles globulosus,,2,27.4,3.4,1.27,0.28,Ikeda (2014b)
+S2,MOLL,33,Atlanta peronii,,2,22.4,14.6,3.78,0.65,Ikeda (2014b)
+S2,MOLL,34b,Cardiopoda placenta,,2,28.4,7.8,2.43,0.56,Ikeda (2014b)
+S2,MOLL,36,Pterotrachea hippocampus,,15,26,100,25.5,4.1,Ikeda (2014b)
+S2,THAL,S1,Ihlea recovitzai,,2,-1.0,10.94,1.11,0.30,Ikeda and Mitchell (1982)
+S2,THAL,S2,Salpa thompsoni,,2,-1.1,115.1,5.39,1.32,Ikeda and Mitchell (1982)
+S2,THAL,S3,Thalia democratica,,2,17.3,2.97,0.23,0.05,Ikeda (1974)
+S2,THAL,S4,Salpa fusiformis,,2,17.3,11.64,0.91,0.19,Ikeda (1974)
+S2,THAL,S5,Iasis zonaria,,2,27.0,4.94,0.386,0.083,Ikeda (1974)
+S2,THAL,S6,Pegea confoederata,,2,25.7,82.0,6.41,1.37,Ikeda (1974)
+S2,THAL,S7,Salpa fusiformis,,2,27.4,4.88,0.38,0.08,Ikeda (1974)
+S2,THAL,S8,Pyrosoma verticillatum,,2,25.7,65.0,5.08,1.09,Ikeda (1974)
+S2,THAL,S9,Salpa thompsoni,,1,-1.6,763,33.84,7.54,Ikeda and Bruce (1986)
+S2,THAL,S10,Salpa thompsoni,sol/agg,1,1.3,100,5.87,1.49,Iguchi and Ikeda (2004)
+S2,THAL,S11,Cyclosalpa bak,eri,15,11.0,104,3.33,0.62,Madin and Purcell (1992)
+S2,THAL,S12,Thalia democratica,,1,15.0,26.7,2.09,0.45,Mayzaud and Dallot (1973)
+S2,THAL,S13,Cyclosalpa affinis,agg,15,24.5,12.8,1,0.24,Cetta et al. (1986)
+S2,THAL,S14,Cyclosalpa pinnata,agg,15,24.5,12.8,1,0.22,Cetta et al. (1986)
+S2,THAL,S15,Cyclosalpa polae,sol,15,24.5,12.8,1,0.23,Cetta et al. (1986)
+S2,THAL,S16,Pegea confoederata,agg,15,24.5,12.8,1,0.21,Cetta et al. (1986)
+S2,THAL,S17,Salpa cylindrica,sol,15,24.5,12.8,1,0.23,Cetta et al. (1986)
+S2,THAL,S18,Salpa fusiformis,agg,15,16.5,12.8,1,0.23,Cetta et al. (1986)
+S2,THAL,S19,Salpa fusiformis,sol,15,16.5,12.8,1,0.24,Cetta et al. (1986)
+S2,THAL,S20,Salpa maxima,agg,15,24.5,12.8,1,0.22,Biggs (1977)
+S2,THAL,S21,Salpa cylindrica,sol,15,26,75.3,5.89,1.26,Biggs (1977)
+S2,THAL,S22,Salpa cylindrica,agg,15,26,7.5,0.59,0.13,Biggs (1977)
+S2,THAL,S23,Salpa maxima,sol,15,26,75.3,5.89,1.26,Biggs (1977)
+S2,THAL,S24,Salpa maxima,agg,15,26,75.3,5.89,1.26,Biggs (1977)
+S2,THAL,S25,Pegea confederata,sol,15,26,75.3,5.89,1.26,Biggs (1977)
+S2,THAL,S26,Pegea confederata,agg,15,26,7.5,0.59,0.13,Biggs (1977)
+S2,APPE,S1,Oik opleura,dioica,1,15,0.0011,0.00065,0.000126,Gorsky et al. (1987)
+S2,APPE,S2,Oik opleura,dioica,1,20,0.0012,0.00071,0.000137,Gorsky et al. (1987)
+S2,APPE,S3,Oik opleura,dioica,1,24,0.0013,0.00074,0.000142,Gorsky et al. (1987)
+S2,POLY,S1,Tomopteris carpenteri,,3,-0.91,63.15,22.14,5.36,Ikeda and Mitchell (1982)
+S2,POLY,S2,Naiades cantrainii,,2,19.7,3.66,1.50,0.31,Ikeda (1974)
+S2,POLY,S3,Tomopteris sp,.,2,28.4,2.44,0.98,0.23,Ikeda (1974)
+S3,COPE,S1,Calanus propinquus,,2,-1.0,1.04,0.409,0.118,Ikeda et al. (2001)
+S3,COPE,S4,Rhincalanus gigas,,50,-1.7,1.08,0.503,0.106,Ikeda et al. (2001)
+S3,COPE,S5,Metridia gerlachei,,2,-1.4,0.265,0.106,0.027,Ikeda et al. (2001)
+S3,COPE,S6,Calanus finmarchicus,C6F,2,0.1,0.387,0.215,0.030,Ikeda et al. (2001)
+S3,COPE,S7,Calanus glacialis,C6F,50,2.3,0.474,0.223,0.050,Ikeda et al. (2001)
+S3,COPE,S8,Calanus hyperboreus,C6F,50,1.3,3.95,2.338,0.283,Ikeda et al. (2001)
+S3,COPE,S9,Calanus hyperboreus,C5 (bloom),50,0.9,1.94,1.117,0.144,Ikeda et al. (2001)
+S3,COPE,S40,Paracalanus indicus,,1,23.0,0.0072,0.0032,0.0008,Ikeda and McKinnon (2012)
+S3,COPE,S41,Macrosetella gracilis,,1,25.0,0.0065,0.0024,0.0005,Ikeda and McKinnon (2012)
+S3,COPE,S42,Oithona nishidai,,1,24.0,0.0012,0.0004,0.0001,Ikeda and McKinnon (2012)
+S3,EUPH,1c,Bentheuphausia amblyops,,600,5.5,60.0,23.5,3.8,Ikeda (2013a)
+S3,EUPH,2a,Euphausia crystallorophias,,10,-1.6,30.8,14.0,3.4,Ikeda (2013a)
+S3,EUPH,2b,Euphausia crystallorophias,J,5,-1.3,9.10,3.82,1.06,Ikeda (2013a)
+S3,EUPH,3,Euphausia diomedeae,,2,26,1.89,0.78,0.20,Ikeda (2013a)
+S3,EUPH,4,Euphausia distinquenda,,2,27,3.54,1.40,0.38,Ikeda (2013a)
+S3,EUPH,5,Euphausia gibba,,1,28,3.29,1.37,0.37,Ikeda (2013a)
+S3,EUPH,7,Euphausia krohnii,,2,19.7,0.287,0.117,0.029,Ikeda (2013a)
+S3,EUPH,8,Euphausia lucens,,40,12.5,5.00,2.02,0.54,Ikeda (2013a)
+S3,EUPH,9,Euphausia mutica,,1,28,1.82,0.74,0.21,Ikeda (2013a)
+S3,EUPH,10a,Euphausia pacifica,,2,13,4.97,2.06,0.54,Ikeda (2013a)
+S3,EUPH,10b,Euphausia pacifica,M,100,5,12.8,4.6,1.2,Ikeda (2013a)
+S3,EUPH,10c,Euphausia pacifica,F,100,5,11.5,4.0,1.1,Ikeda (2013a)
+S3,EUPH,11a,Euphausia superba,,35,-1.1,86.3,38.4,8.8,Ikeda (2013a)
+S3,EUPH,11b,Euphausia superba,J,3,-1.7,40.3,16.4,4.8,Ikeda (2013a)
+S3,EUPH,11c,Euphausia superba,FG,35,-1.1,247.1,115.9,24.7,Ikeda (2013a)
+S3,EUPH,11d,Euphausia superba,FG,3,-1.7,80.5,32.5,9.6,Ikeda (2013a)
+S3,EUPH,11e,Euphausia superba,M,3,-1.7,97.7,39.5,11.4,Ikeda (2013a)
+S3,EUPH,12,Euphausia tenera,,2,27,0.77,0.31,0.08,Ikeda (2013a)
+S3,EUPH,13a,Euphausia triacantha,,100,-0.8,23.0,9.5,2.7,Ikeda (2013a)
+S3,EUPH,13b,Euphausia triacantha,,600,0,82.8,39.2,8.9,Ikeda (2013a)
+S3,EUPH,14a,Meganyctiphanes norvegica,,250,4,74.1,25.9,7.6,Ikeda (2013a)
+S3,EUPH,14b,Meganyctiphanes norvegica,,300,12,32.50,12.8,3.7,Ikeda (2013a)
+S3,EUPH,14c,Meganyctiphanes norvegica,,50,4,45.8,17.0,5.0,Ikeda (2013a)
+S3,EUPH,15,Nyctiphanes australis,,2,15,2.00,0.87,0.232,Ikeda (2013a)
+S3,EUPH,17,Thysanoessa inermis,,50,1,17.3,8.9,1.5,Ikeda (2013a)
+S3,EUPH,18a,Thysanoessa macrura,J,2,-0.4,0.47,0.20,0.05,Ikeda (2013a)
+S3,EUPH,18b,Thysanoessa macrura,,2,-1.7,5.49,2.23,0.54,Ikeda (2013a)
+S3,EUPH,18c,Thysanoessa macrura,,300,-0.46,6.89,2.96,0.83,Ikeda (2013a)
+S3,EUPH,20,Thysanoessa spp.,,15,20,5.00,2.10,0.53,Ikeda (2013a)
+S3,EUPH,21a,Thysanoessa spinifera,F,100,5,12.2,4.5,1.2,Ikeda (2013a)
+S3,EUPH,21b,Thysanoessa spinifera,M,100,5,7.02,2.60,0.71,Ikeda (2013a)
+S3,EUPH,24,Thysanopoda tricuspidata,,1,26,12.8,5.4,1.6,Ikeda (2013a)
+S3,AMPH,13,Thamneus rostratus,,2,27,2.44,0.59,0.10,Ikeda (2013b)
+S3,AMPH,3,Hemityphis tenuimanus,,2,26,1.62,0.41,0.07,Ikeda (2013b)
+S3,AMPH,5,Hyperia gaudichaudii,,3,-0.8,105.3,49.2,7.5,Ikeda (2013b)
+S3,AMPH,7a,Oxycephalus clausi,,1,28,13.98,3.56,0.87,Ikeda (2013b)
+S3,AMPH,7b,Oxycephalus cluasi,,2,27,17.67,4.26,0.97,Ikeda (2013b)
+S3,AMPH,8a,Phronima sedentaria,,2,27,9.48,2.26,0.48,Ikeda (2013b)
+S3,AMPH,8b,Phronima sedentaria,,2,20,7.29,1.74,0.37,Ikeda (2013b)
+S3,AMPH,9b,Primno abyssalis,,250,5,6.15,3.28,0.46,Ikeda (2013b)
+S3,AMPH,12,Scina crassicornis,,2,22,2.99,1.25,0.30,Ikeda (2013b)
+S3,AMPH,14,Themisto compressa,,250,4,2.13,0.98,0.20,Ikeda (2013b)
+S3,AMPH,15a,Themisto gaudichaudii,,2,-0.9,7.06,2.67,0.58,Ikeda (2013b)
+S3,AMPH,15c,Themisto gaudichaudii,,2,15,1.00,0.38,0.08,Ikeda (2013b)
+S3,AMPH,16a,Themisto japonica,,2,9,2.90,1.19,0.23,Ikeda (2013b)
+S3,AMPH,16b,Themisto japonica,,250,5,2.65,1.23,0.23,Ikeda (2013b)
+S3,AMPH,17,Themisto libellula,,90,-0.1,2.98,1.14,0.24,Ikeda (2013b)
+S3,AMPH,18,Themisto pacifica,,250,5,1.18,0.56,0.10,Ikeda (2013b)
+S3,AMPH,19,Vibilia sp.,,2,28,1.24,0.44,0.09,Ikeda (2013b)
+S3,AMPH,20,Vibilia propinqua,,2,-1.1,12.14,4.90,0.99,Ikeda (2013b)
+S3,AMPH,22a,Cyphocaris challengeri,,2,13,3.96,1.62,0.32,Ikeda (2013b)
+S3,AMPH,22b,Cyphocaris challengeri,,250,5,5.90,2.17,0.40,Ikeda (2013b)
+S3,AMPH,28,Eusirus microps,,55,-1.6,193.1,87.6,12.2,Ikeda (2013b)
+S3,AMPH,25,Cyphocaris sp.,A,600,0.2,81.4,38.5,5.7,Ikeda (2013b)
+S3,DECA,21a,Pasiphaea scotiae,,600,0.2,265,122.2,21.2,Ikeda (2013d)
+S3,DECA,27b,Gennadas kempi/Petalidium foliaceum,,600,0.2,339,156.1,27.1,Ikeda (2013d)
+S3,DECA,31b,Acetes sibogae australis,,1,30,26.7,12.3,3.2,Ikeda (2013d)
+S3,DECA,39,Sergestes atlanticus,,1,27.5,23.5,10.8,2.8,Ikeda (2013d)
+S3,DECA,31a,Acetes sibogae australis,,1,24.5,6.49,2.99,0.77,Ikeda (2013d)
+S3,DECA,S4,Pasiphaea chacei,,100,5.5,340,,,Ikeda (2013d)
+S3,DECA,S5,Pasiphaea emarginata,,600,5.5,790,,,Ikeda (2013d)
+S3,DECA,S6,Systellaspis cristata,,600,5.5,740,,,Ikeda (2013d)
+S3,DECA,S7,Gennadas propinquus,,600,5.5,140,,,Ikeda (2013d)
+S3,DECA,S8,Sergestes similis,,100,5.5,110,,,Ikeda (2013d)
+S3,DECA,S9,Sergestes phorcus,,600,5.5,500,,,Ikeda (2013d)
+S3,MYSI,1,Acanthomysis pseudomacropsis,,2,14.9,2.88,1.27,0.32,Ikeda (2013c)
+S3,MYSI,2,Acanthomysis sp.,A,2,10,1.89,0.78,0.20,Ikeda (2013c)
+S3,MYSI,6,Antarctomysis maxima,,60,-1.6,171,75.3,17.9,Ikeda (2013c)
+S3,MYSI,12,Charalaspidium sp.,,600,5.5,280,143,18.3,Ikeda (2013c)
+S3,MYSI,15a,Gnathophausia gigas,,600,0.15,127,52.6,9.2,Ikeda (2013c)
+S3,MYSI,16,Gnathophausia gracilis,,600,5.5,930,479,57.7,Ikeda (2013c)
+S3,MYSI,17,Gnathophausia ingens,,550,5.5,1040,512,66.0,Ikeda (2013c)
+S3,MYSI,19,Hemimysis speluncola,,1,14,0.82,0.32,0.10,Ikeda (2013c)
+S3,MYSI,20a,Leptomysis lingvura,,1,14,1.72,0.68,0.20,Ikeda (2013c)
+S3,MYSI,29b,Neomysis integer,F,1,16,4.20,1.70,0.47,Ikeda (2013c)
+S3,MYSI,29c,Neomysis integer,F,1,16,2.90,1.17,0.33,Ikeda (2013c)
+S3,MYSI,32a,Rhopalophthalmus africana,,2,28.5,0.16,0.069,0.017,Ikeda (2013c)
+S3,MYSI,32b,Rhopalophthalmus africana,J,2,28.5,1.33,0.59,0.14,Ikeda (2013c)
+S3,MYSI,36,Siriella media,,1,28.5,4.09,1.79,0.45,Ikeda (2013c)
+S3,MYSI,38a,Siriella thompsoni,,2,27.8,1.47,0.59,0.15,Ikeda (2013c)
+S3,OSTR,S1,Gigantocypris mulleri,,500,0.2,54.9,17.7,4.5,Ikeda (1988)
+S3,OSTR,S4,Gigantocypris mulleri,,500,-1,139.7,44.4,11.7,Ikeda (1988)
+S3,CHAE,S1,Aidanosagitta negrecta,,2,23,0.224,0.070,0.020,Ikeda and McKinnon (2012)
+S3,CHAE,S4,Ferosagitta robusta,,2,27,0.750,0.291,0.074,Ikeda (1974)
+S3,CHAE,S5,Flaccisagitta enflata,,2,27,0.710,0.249,0.056,Ikeda (unpublished data)
+S3,CHAE,S6,Mesosagitta minima,,2,15,0.094,0.034,0.010,Ikeda (1974)
+S3,CHAE,S7,Parasagitta elegans,,2,9,1.03,0.42,0.12,Ikeda (1974)
+S3,CHAE,S9,Pseudosagitta gazellae,,100,-1,35.3,7.1,2.0,Ikeda and Kirkwood (1989)
+S3,CNID,3a,Aglantha digitale,,2,8.5,3.39,1.02,0.37,Ikeda (2014a)
+S3,CNID,3b,Aglantha digitale,,150,1.1,14.00,2.34,0.60,Ikeda (2014a)
+S3,CNID,4,Benthocodon pedunculata,,767,9,200,16.4,5.4,Ikeda (2014a)
+S3,CNID,7a,Calycopsis borchgrevinki,,100,-0.7,136,12.9,3.3,Ikeda (2014a)
+S3,CNID,15,Liriope tetraphylla,,2,27,2.27,0.16,0.07,Ikeda (2014a)
+S3,CNID,25a,Diphyes antarctica,,100,-0.7,37.1,3.7,1.2,Ikeda (2014a)
+S3,CNID,26,Diphyes sp.,,2,25,0.480,0.075,0.024,Ikeda (2014a)
+S3,CNID,27,19 species,,15,26,4.7,0.41,0.11,Ikeda (2014a)
+S3,CNID,27,19 species,,15,26,47.4,4.12,1.09,Ikeda (2014a)
+S3,CNID,27,19 species,,15,26,474,41.2,10.9,Ikeda (2014a)
+S3,CNID,35b,Pelagia noctiluca,,1,21,597,68.1,17.3,Ikeda (2014a)
+S3,CNID,37b,Poralia rufescens,,1300,3,59.6,21.7,5.7,Ikeda (2014a)
+S3,CNID,37c,Poralia rufescens,,1300,3,215,49.0,12.6,Ikeda (2014a)
+S3,CTEN,40a,Bathocyroe fosteri,,615,11,444,3.29,0.89,Ikeda (2014a)
+S3,CTEN,40c,Bathocyroe fosteri,,767,9,1900,8.17,2.66,Ikeda (2014a)
+S3,CTEN,41,Beroe abyssicola,,550,0.5,63.6,7.12,1.91,Ikeda (2014a)
+S3,CTEN,42b,Beroe cucumis,,2,15,52.1,5.89,1.93,Ikeda (2014a)
+S3,CTEN,43a,Beroe ovata,,10,25,76,2.83,0.75,Ikeda (2014a)
+S3,CTEN,44,Beroe sp.,A,2,-0.8,401.6,36.1,9.4,Ikeda (2014a)
+S3,CTEN,45,Beroe sp. B,,1,-1.6,1362,76.0,20.9,Ikeda (2014a)
+S3,CTEN,47,Bolinopsis mikado,,1,22,224,2.46,0.76,Ikeda (2014a)
+S3,CTEN,48,Bolinopsis vitrea,,10,25,56.3,0.34,0.07,Ikeda (2014a)
+S3,CTEN,49,Callianira antarctica,,5,1,232,19.5,4.25,Ikeda (2014a)
+S3,CTEN,50,Eurhamphaea vexilligera,,10,25,202,1.78,0.48,Ikeda (2014a)
+S3,CTEN,51,Mertensia ovum,,15,0,300,19.5,4.87,Ikeda (2014a)
+S3,CTEN,52,Mertensiidae sp.,,1,-1.6,93.7,10.5,2.25,Ikeda (2014a)
+S3,CTEN,53a,Mnemiopsis leidyi,,1,20,300,5.10,1.50,Ikeda (2014a)
+S3,CTEN,54,Mnemiopsis mccradyi,,1,22,720,10.3,2.66,Ikeda (2014a)
+S3,CTEN,55,Ocyropsis maculata,,10,25,1263,28.7,8.1,Ikeda (2014a)
+S3,CTEN,56,Ocyropsis spp.,,10,25,141,1.66,0.42,Ikeda (2014a)
+S3,CTEN,58,Pleurobrachia sp.,,2,25,52.3,1.47,0.44,Ikeda (2014a)
+S3,CTEN,59,UC–1,,767,9,18400,93.8,29.4,Ikeda (2014a)
+S3,MOLL,1a,Cavolinia globulosa,,2,22.4,18.65,4.84,0.83,Ikeda (2014b)
+S3,MOLL,1b,Cavolinia globulosa,,2,27.4,14.34,2.77,0.40,Ikeda (2014b)
+S3,MOLL,5,Clio cuspidata,,2,22.4,30.00,7.83,1.34,Ikeda (2014b)
+S3,MOLL,6b,Clio pyramidata,,15,20,2.05,0.53,0.10,Ikeda (2014b)
+S3,MOLL,7,Clio pyramidata f. sulcata,,2,-1.05,54.75,20.15,4.65,Ikeda (2014b)
+S3,MOLL,9,Corolla spectabilis,,15,26,100.0,25.5,4.1,Ikeda (2014b)
+S3,MOLL,11a,Creseis clava,,2,24.5,1.62,0.40,0.07,Ikeda (2014b)
+S3,MOLL,11d,Creseis clava,,1,19,0.44,0.11,0.02,Ikeda (2014b)
+S3,MOLL,12,Creseis virgula,,15,20,1.53,0.39,0.07,Ikeda (2014b)
+S3,MOLL,15,Diacria quadridentata,,15,20,2.18,0.56,0.10,Ikeda (2014b)
+S3,MOLL,16a,Diacavolinia longirostris,,2,27,8.71,2.13,0.35,Ikeda (2014b)
+S3,MOLL,16b,Diacavolinia longirostris,,15,20,1.85,0.48,0.09,Ikeda (2014b)
+S3,MOLL,17a,Diacria trispinosa,,2,27.4,12.26,2.99,0.48,Ikeda (2014b)
+S3,MOLL,19,Hyalocylis striata,,15,20,2.36,0.61,0.11,Ikeda (2014b)
+S3,MOLL,20a,Limacina antarctica,,2,-0.91,6.45,2.13,0.52,Ikeda (2014b)
+S3,MOLL,22a,Limacina helicina,,2,7.6,0.34,0.10,0.03,Ikeda (2014b)
+S3,MOLL,22c,Limacina helicina,,75,0,0.59,0.22,0.05,Ikeda (2014b)
+S3,MOLL,26a,Clione limacina,,2,12.7,22.53,6.33,1.37,Ikeda (2014b)
+S3,MOLL,26b,Clione limacina,,75,-0.0363636,38.25,10.40,1.91,Ikeda (2014b)
+S3,MOLL,27a,Clione limacina antarctica,,2,-1.3333333,25.34,9.91,2.00,Ikeda (2014b)
+S3,MOLL,27c,Clione limacina antarctica,,1,-1.8,14.97,5.05,1.19,Ikeda (2014b)
+S3,MOLL,29,Hydromyles globulosus,,2,27.4,3.37,1.27,0.28,Ikeda (2014b)
+S3,MOLL,33,Atlanta peronii,,2,22.4,14.60,3.78,0.65,Ikeda (2014b)
+S3,MOLL,34b,Cardiopoda placenta,,2,28.4,7.75,2.43,0.56,Ikeda (2014b)
+S3,MOLL,36,Pterotrachea hippocampus,,15,26,100.0,25.5,4.1,Ikeda (2014b)
+S3,THAL,S1,Ihlea recovitzai,,2,-1.00,10.94,1.11,0.30,Ikeda and Mitchell (1982)
+S3,THAL,S4,Salpa fusiformis,,2,17.30,11.64,0.91,0.19,Ikeda (1974)
+S3,THAL,S5,Iasis zonaria,,2,27,4.94,0.386,0.083,Ikeda (1974)
+S3,THAL,S6,Pegea confoederata,,2,25.70,81.96,6.41,1.37,Ikeda (1974)
+S3,THAL,S7,Salpa fusiformis,,2,27.40,4.88,0.38,0.08,Ikeda (1974)
+S3,THAL,S8,Pyrosoma verticillatum,,2,25.70,65.02,5.08,1.09,Ikeda (1974)
+S3,THAL,S9,Salpa thompsoni,,1,-1.61,763.32,33.84,7.54,Ikeda and Bruce (1986)
+S3,APPE,S1,Oikopleura dioica,,1,15,0.00112,0.00065,0.00013,Gorsky et al. (1987)
