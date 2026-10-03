@@ -41,37 +41,15 @@ excluded_labels <- c('Brose_etal_2018', 'Brose_2005')
 ##########################################################################
 message('Reading GATEWAy csv ...')
 raw <- read.csv(file.path(wd_src, '283_2_FoodWebDataBase_2018_12_10.csv'), header = TRUE)
-raw$con.lifestage <- as.character(raw$con.lifestage)
-raw$res.lifestage <- as.character(raw$res.lifestage)
-n_links_web <- raw %>% count(foodweb.name, link.citation, name = 'n_links')
-
-keep_con <- is.na(raw$con.lifestage) | trimws(raw$con.lifestage) == '' |
-            grepl('^adult|female|male', trimws(raw$con.lifestage), ignore.case = TRUE)
-keep_res <- is.na(raw$res.lifestage) | trimws(raw$res.lifestage) == '' |
-            grepl('^adult|female|male', trimws(raw$res.lifestage), ignore.case = TRUE)
-
-Stack <- function(keep, side) {
-  g <- function(col) raw[[paste0(side, '.', col)]][keep]
-  data.frame(autoID        = raw$autoID[keep],
-             foodweb.name  = raw$foodweb.name[keep],
-             link.citation = raw$link.citation[keep],
-             ecosystem     = raw$ecosystem.type[keep],
-             location      = raw$geographic.location[keep],
-             role          = side,
-             taxon         = g('taxonomy'),
-             tax_level     = g('taxonomy.level'),
-             lifestage     = g('lifestage'),
-             metab         = g('metabolic.type'),
-             size_method   = g('size.method'),
-             size_citation = g('size.citation'),
-             length_cm     = suppressWarnings(as.numeric(g('length.mean.cm.'))),
-             mass_g        = suppressWarnings(as.numeric(g('mass.mean.g.'))),
-             stringsAsFactors = FALSE)
-}
-dat <- rbind(Stack(keep_con, 'con'), Stack(keep_res, 'res'))
-dat <- dat[!is.na(dat$mass_g) & dat$mass_g > 0, ]
-dat$n <- 1
-dat$source_mass <- 'Brose_etal_2018'
+n_links_web <- raw %>% mutate(link.citation = trimws(link.citation)) %>% count(foodweb.name, link.citation, name = 'n_links')
+# the parser's stacking and life-stage filter (R/library/foodweb_units.r)
+dat <- StackGateway(raw, extra = c('taxonomy.level', 'lifestage', 'size.method', 'size.citation', 'length.mean.cm.'))
+names(dat)[names(dat) %in% c('taxonomy.level', 'size.method', 'size.citation', 'length.mean.cm.')] <-
+  c('tax_level', 'size_method', 'size_citation', 'length_cm')
+dat$length_cm <- suppressWarnings(as.numeric(dat$length_cm))
+dat$ecosystem <- raw$ecosystem.type[match(dat$foodweb.name, raw$foodweb.name)]
+dat$location  <- raw$geographic.location[match(dat$foodweb.name, raw$foodweb.name)]
+dat$taxon_raw <- dat$taxon
 message(sprintf('  %d stacked rows after the parser filters', nrow(dat)))
 
 raw_web <- dat %>% group_by(foodweb.name, link.citation) %>%
@@ -141,9 +119,26 @@ out$evidence <- ifelse(is.na(out$evidence), web_note, paste(out$evidence, web_no
 
 tracked <- out[, c('foodweb.name', 'link.citation', 'n_rows', 'n_species', 'n_shared',
                    'median_log10_ratio', 'iqr_log10_ratio', 'unit_class', 'proposed_action',
-                   'factor', 'evidence', 'refs')]
+                   'factor', 'evidence', 'refs', 'action', 'mass_group', 'log_reason')]
 tracked <- tracked[order(tracked$link.citation, tracked$foodweb.name), ]
 write.csv(tracked, file.path(wd_src, 'foodweb_units.csv'), row.names = FALSE, na = '')
+
+# taxon-level conversion groups for the convert_dry webs (read by the parser)
+convert_cits <- unique(trimws(out$link.citation[out$action == 'convert_dry']))
+ExcludeGateway <- function(tab) {
+  cit  <- trimws(tab$link.citation)
+  lumbricid <- '^(Lumbricus|Aporrectodea|Allolobophora|Octolasion|Dendrobaena|Dendrodrilus|Eiseniella|Eisenia|Satchellius|Murchieona|Lumbricidae)\\b'
+  worm <- cit == 'Mulder & Elser (2009)' & (tab$family %in% 'Lumbricidae' | grepl(lumbricid, tab$taxon))
+  fish <- cit == 'Layer et al. (2010)' & tab$mass_group == 'fish'
+  list(flag = worm | fish,
+       note = ifelse(worm, 'not converted: earthworm values already match wet masses (owner decision 2026-10-03)',
+              ifelse(fish, 'not converted: trout stay as wet mass (owner decision 2026-10-03)', '')))
+}
+groups <- BuildGroupsTable(dat, bro, convert_cits, 'link.citation', ExcludeGateway)
+write.csv(groups, file.path(wd_src, 'foodweb_units_groups.csv'), row.names = FALSE, na = '')
+message(sprintf('  groups table: %d taxa in %d convert_dry citations, %d not converted',
+                nrow(groups), length(convert_cits), sum(!groups$convert)))
+print(as.data.frame(groups %>% group_by(link.citation, mass_group, whole, convert) %>% summarise(n_taxa = n(), .groups = 'drop')))
 write.csv(out,     file.path(wd_tmp, 'foodweb_units_evidence.csv'), row.names = FALSE, na = '')
 write.csv(cit_sum, file.path(wd_tmp, 'foodweb_units_citation.csv'), row.names = FALSE, na = '')
 write.csv(ws,      file.path(wd_tmp, 'foodweb_units_species.csv'), row.names = FALSE, na = '')

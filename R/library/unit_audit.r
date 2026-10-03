@@ -17,8 +17,8 @@ suppressPackageStartupMessages(library(dplyr))
 # needs `wd_root` there) and load the enrichment cache once.
 UnitAuditInit <- function(wd_root) {
   assign('wd_root', wd_root, envir = .GlobalEnv)
-  for (f in c('helpers.r', 'mass_conversion.r', 'fix_formatting.r', 'fix_misspellings.r',
-              'fix_nontaxa.r', 'filter_extinct.r', 'filter_autotrophs.r'))
+  for (f in c('helpers.r', 'mass_conversion.r', 'foodweb_units.r', 'fix_formatting.r',
+              'fix_misspellings.r', 'fix_nontaxa.r', 'filter_extinct.r', 'filter_autotrophs.r'))
     source(file.path(wd_root, 'R', 'library', f), local = FALSE)
   e <- new.env(); load(file.path(wd_root, 'sources', 'enrich_cache.Rdata'), envir = e)
   ec <- e$enrich_cache[, c('taxon', 'species', 'genus', 'kingdom', 'phylum', 'class', 'order', 'family')]
@@ -136,16 +136,19 @@ RatioSummary <- function(d) {
 }
 
 # Merge a hand-made decisions table (columns: <key>, optional <subkey>,
-# unit_class, proposed_action, factor, evidence, refs) into the evidence table.
-# Rows with an empty <subkey> apply to every sub-unit of <key>; rows with a
-# <subkey> override them.
+# unit_class, proposed_action, factor, evidence, refs, and the owner's
+# action, mass_group, log_reason) into the evidence table. Rows with an empty
+# <subkey> apply to every sub-unit of <key>; rows with a <subkey> override them.
+decision_columns <- c('unit_class', 'proposed_action', 'factor', 'evidence', 'refs',
+                      'action', 'mass_group', 'log_reason')
 MergeDecisions <- function(ev, dec_file, key, subkey = NULL) {
-  dec_cols <- c('unit_class', 'proposed_action', 'factor', 'evidence', 'refs')
+  dec_cols <- decision_columns
   for (col in dec_cols) ev[[col]] <- NA_character_
   if (!file.exists(dec_file)) return(ev)
   dec <- read.csv(dec_file, stringsAsFactors = FALSE, na.strings = c('', 'NA'), strip.white = TRUE)
-  if (is.null(subkey) || subkey %!in% names(dec)) dec[[subkey %||% '.sub']] <- NA_character_
+  dec_cols <- intersect(dec_cols, names(dec))
   sub <- subkey %||% '.sub'
+  if (sub %!in% names(dec)) dec[[sub]] <- NA_character_
   dec[[sub]][is.na(dec[[sub]])] <- ''
   dec_key <- dec[dec[[sub]] == '', ]
   dec_sub <- dec[dec[[sub]] != '', ]
@@ -161,6 +164,56 @@ MergeDecisions <- function(ev, dec_file, key, subkey = NULL) {
   if (length(missing)) message('No decision row for: ', paste(missing, collapse = '; '))
   ev$unit_class[is.na(ev$unit_class)]           <- 'undetermined'
   ev$proposed_action[is.na(ev$proposed_action)] <- 'undecided'
+  ev$action[is.na(ev$action)]                   <- 'keep'
   ev
+}
+
+# Taxon-level conversion groups for the convert_dry studies: one row per
+# (key_col, TaxonKey(taxon)) among the stacked rows `dat` of those studies. Ranks
+# come from the resolved species (`resolved` = CleanResolve() output that kept
+# the raw name in `taxon_raw`), else from the enrichment cache entries of the
+# same genus when they agree on phylum and class, else the group falls back to
+# the source's metabolic type. `exclude(tab)` returns list(flag, note) for taxa
+# whose values stay unconverted (owner decisions).
+BuildGroupsTable <- function(dat, resolved, convert_keys, key_col,
+                             exclude = function(tab) list(flag = rep(FALSE, nrow(tab)), note = rep('', nrow(tab)))) {
+  d <- dat[trimws(dat[[key_col]]) %in% trimws(convert_keys), ]
+  d$taxon_key <- TaxonKey(d$taxon)
+  tab <- d %>% group_by(.data[[key_col]], taxon_key) %>%
+    summarise(taxon = first(taxon), metab = ModeOf(metab), n_rows = n(), .groups = 'drop')
+  r <- resolved
+  r$taxon_key <- TaxonKey(r$taxon_raw)
+  r <- r %>% group_by(taxon_key) %>%
+    summarise(species = first(species), phylum = first(phylum), class = first(class), order = first(order),
+              family = first(family), .groups = 'drop')
+  tab <- left_join(tab, r, by = 'taxon_key')
+  tab$basis <- ifelse(!is.na(tab$species), 'enrichment phylum/class of the resolved species', NA_character_)
+  un <- is.na(tab$species)
+  if (any(un)) {
+    genus <- gsub('[^A-Za-z]', '', sub('\\s.*$', '', trimws(tab$taxon[un])))
+    one <- function(x) if (n_distinct(na.omit(x)) == 1) na.omit(x)[1] else NA_character_
+    ec <- unit_audit_enrich %>% filter(!is.na(genus)) %>% group_by(genus) %>%
+      summarise(phylum = one(phylum), class = one(class), order = one(order), family = one(family), .groups = 'drop')
+    m <- match(genus, ec$genus)
+    hit <- !is.na(m) & !is.na(ec$phylum[m])
+    tab$phylum[un][hit] <- ec$phylum[m][hit]
+    tab$class[un][hit]  <- ec$class[m][hit]
+    tab$order[un][hit]  <- ec$order[m][hit]
+    tab$family[un][hit] <- ec$family[m][hit]
+    tab$basis[un][hit]  <- 'enrichment phylum/class of the genus (name not resolved to a species)'
+  }
+  fb <- is.na(tab$basis)
+  tab$basis[fb] <- paste0('source metabolic type (', tab$metab[fb], '); name not in the enrichment cache')
+  mg <- MassGroupFromRanks(tab$phylum, tab$class, tab$family, tab$order)
+  mg$mass_group[fb] <- ifelse(grepl('ectotherm vertebrate', tab$metab[fb]), 'fish',
+                        ifelse(grepl('endotherm vertebrate', tab$metab[fb]), 'vertebrate', 'invertebrate'))
+  mg$shell_group[fb] <- mg$mass_group[fb]
+  tab <- bind_cols(tab, mg)
+  tab$convert <- TRUE
+  ex <- exclude(tab)
+  tab$convert[ex$flag] <- FALSE
+  tab$basis[ex$flag]   <- paste(tab$basis[ex$flag], ex$note[ex$flag], sep = '; ')
+  as.data.frame(tab[, c(key_col, 'taxon', 'taxon_key', 'n_rows', 'species', 'phylum', 'class', 'order', 'family',
+                        'mass_group', 'whole', 'shell_group', 'convert', 'basis')])
 }
 `%||%` <- function(a, b) if (is.null(a)) b else a
