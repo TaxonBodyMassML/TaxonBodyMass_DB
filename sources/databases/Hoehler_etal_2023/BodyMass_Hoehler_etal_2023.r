@@ -22,6 +22,11 @@ adat$taxon <- trimws(adat$Species)
 adat$taxon <- sub('^([A-Z][a-z]+ [a-z]+).*$', '\\1', adat$taxon)   # drop subspecies/strain suffixes
 adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon), ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon), ]
+# Rows whose Comments mark the cell size as a genus-level value ('BacDive,
+# GENUS', 'BM Vol 3, genus') are not species-specific.
+adat <- DropImputed(adat,
+                    !is.na(adat$Comments) & grepl('genus', adat$Comments, ignore.case = TRUE),
+                    'Hoehler_etal_2023', 'genus-level cell size (Comments)')
 out <- data.frame(taxon = adat$taxon, mass_g = adat$mass_g,
                   kingdom = adat$Kingdom, phylum = adat$Phylum, class = adat$Class,
                   order = adat$Order, family = adat$Family, stringsAsFactors = FALSE)

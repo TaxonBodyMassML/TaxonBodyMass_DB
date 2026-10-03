@@ -8,10 +8,20 @@ taxon_tax$order  <- iconv(as.character(taxon_tax$Order.1.2),  to = 'ASCII//TRANS
 taxon_tax$family <- iconv(as.character(taxon_tax$Family.1.2), to = 'ASCII//TRANSLIT')
 names(taxon_tax)[1] <- 'taxon'
 taxon_tax <- taxon_tax[, c('taxon', 'order', 'family')]
-adat <- adat[, c('Binomial.1.2', 'Mass.g')]
-colnames(adat) <- c('taxon', 'mass_g')
+adat <- adat[, c('Binomial.1.2', 'Mass.g', 'Mass.Method')]
+colnames(adat)[1:2] <- c('taxon', 'mass_g')
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
+# Phylogenetically imputed masses and masses taken from a relative of suggested
+# similar size are not species-specific. 'Reported' values and the 'Assumed
+# isometric based on <dimension>' / 'Estimated based on equation from
+# <dimension>' values (a measured dimension of the species scaled to mass) are
+# kept, the latter as allometry-derived values.
+adat <- DropImputed(adat,
+                    adat$Mass.Method == 'Imputed' | grepl('^As relative', adat$Mass.Method),
+                    'Faurby_etal_2018',
+                    'Mass.Method Imputed or As relative of suggested similar size')
+adat <- adat[, c('taxon', 'mass_g')]
 adat$n <- 1
 adat$source_mass <- 'Faurby_etal_2018'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)

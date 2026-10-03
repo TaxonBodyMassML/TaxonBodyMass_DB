@@ -6,3 +6,4 @@ Data: Ecological Archives E092-066, `Metaweb_Nodes.txt` (UTF-16 tab-delimited) a
 Columns used: `Genus` + `SpecificEpithet`, `BodySize(g)` (individual fresh mass including hard parts; metadata II.C.2), `BodySizeEstimation`, `Resolution`, `Stage`, Kingdom..Family.
 Filters: species-resolution nodes; adult or unstaged rows; BodySizeEstimation 'species' or 'population' only (nodes whose size was approximated from another species are excluded). Values from the three estuaries are averaged by RunMe Pass 1.
 Mass type: wet mass in grams; no conversion.
+Imputed rows: the 142 nodes whose `BodySizeEstimation` is 'approximation' (size taken from another species) are excluded by the filter above; the source carries no other flag.

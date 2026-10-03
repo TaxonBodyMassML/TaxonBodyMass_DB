@@ -6,3 +6,4 @@ Data: Ecological Archives E092-171, `Traitsoilnematofauna.txt` (29,552 individua
 Columns used: `Taxonomy`, `Lifestage`, `Mass` (individual dry body mass, ug, from the Andrassy 1956 volumetric formula on measured length and width, with dry = 0.20 x wet after Petersen & Luxton 1982).
 Filters: adults only (Lifestage female or male); species-level names only (104 species); genus/family records and Dauerlarvae dropped. Individual records averaged within species by RunMe Pass 1.
 Mass type: dry mass, ug -> g, wet mass recovered with the source's own ratio (dry / 0.20).
+Imputed rows: none flagged as imputed; masses are computed from each individual's measured length and width (allometry-derived, see Mass type) and are kept.

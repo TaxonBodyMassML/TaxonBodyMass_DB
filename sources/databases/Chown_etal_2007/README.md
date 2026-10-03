@@ -6,3 +6,4 @@ Data: Wiley Supporting Information `fec1245_supmat.doc` (Appendix S1: eight size
 Columns used: Species, Mass (mg), Family, Order.
 Filters: unidentified taxa ('Species 1', 'sp.', 'nr.') dropped; subspecies truncated.
 Mass type: live body mass (mg -> g), as used in the paper's metabolic-scaling analysis; no conversion.
+Imputed rows: none flagged in source (measured masses of the metabolic-rate specimens).

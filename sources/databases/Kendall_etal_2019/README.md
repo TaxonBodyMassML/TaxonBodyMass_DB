@@ -7,3 +7,4 @@ Columns used: `Species` (Genus_species), `Spec.wgt` (specimen dry weight, mg), `
 Filters: none beyond positive mass. The package's allometric (ITD-based) predictions are not used.
 Mass type: dry mass, mg -> g, then converted to wet mass with the 'insect' factor in R/library/mass_conversion.r (dry = 0.35 x wet; Studier & Sevick 1992).
 Source label: 'Kendall_etal_2019; Studier_1992' (conversion reference appended).
+Imputed rows: none; only weighed specimens are used (the package's ITD-based allometric predictions are excluded, see Filters).

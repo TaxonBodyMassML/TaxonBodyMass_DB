@@ -45,3 +45,28 @@ RemoveRecord <- function(dat, taxon, source = NULL) {
     dat[!(dat$taxon == taxon & dat$source_mass == source), ]
   }
 }
+
+# Rows that a source itself flags as not species-specific measurements
+# (statistical or phylogenetic imputations, genus/family averages, values
+# copied from another species, unsatisfactory conversions) are removed in the
+# parse scripts with DropImputed(), which appends one record per filter to
+# `imputed_log`. RunMe.r prints the log after the recompile loop and writes it
+# to reports/imputed_rows.csv. Allometry-derived values (a measured dimension of
+# the species itself through a published equation) are kept, not dropped here.
+imputed_log <- list()
+
+DropImputed <- function(dat, drop, source, reason) {
+  stopifnot(length(drop) == nrow(dat))
+  drop <- !is.na(drop) & drop            # an NA flag is not evidence of imputation
+  entry <- data.frame(
+    source    = source,
+    reason    = reason,
+    n_dropped = sum(drop),
+    n_taxa    = if ('taxon' %in% names(dat)) length(unique(dat$taxon[drop])) else NA_integer_,
+    n_kept    = sum(!drop),
+    stringsAsFactors = FALSE)
+  imputed_log[[length(imputed_log) + 1L]] <<- entry
+  message(sprintf('    %s: dropped %d imputed rows (%d taxa; %s), %d kept',
+                  source, entry$n_dropped, entry$n_taxa, reason, entry$n_kept))
+  dat[!drop, , drop = FALSE]
+}

@@ -6,3 +6,4 @@ Data: `ATLANTIC_DUNG_BEETLE_TRAITS_revised.csv` (figshare, CC0), downloaded by M
 Columns used: `species` (subgenus and author/year stripped, truncated to binomial), `Biomass (g)` (259 records compiled from 29 published studies) and `Biomass (mean - g) (g)` (species means from up to 15 individuals weighed by the authors to 0.001 g). Habitat-specific biomass columns are not used.
 Filters: taxa not identified to species (sp., aff., morphospecies) dropped. 100 species remain.
 Mass type: the data set does not state dry or fresh mass. Owner decision (2026-09-29): treated as fresh (wet) mass, no conversion.
+Imputed rows: none flagged in source; all biomass values are measured by the authors or compiled from published studies.

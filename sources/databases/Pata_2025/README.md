@@ -18,3 +18,4 @@ The figures in the manuscript can be generated from the following files:
 - Supp Fig 2 - 2-Database summary figures and tables.Rmd
 
 Please note that the zooplankton trait database is continuously being developed and will eventually be hosted in a different repository. We welcome any feedback and support to improve the contents and structure of the database. We are also open to collaborations in applying and analyzing the database for your study region or research interests and/or to assisting you in extracting trait information from the database. Please send us an email at p.pata@oceans.ubc.ca.
+Imputed rows: none; the level-2 wet-weight records are species-specific (`basisOfRecord` 'calculated taxon average', 54 rows, and 'derived from midpoint of range', 16 rows, summarise that taxon's own records) and the database's estimated trait values (data_output/) are not used.

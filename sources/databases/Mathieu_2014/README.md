@@ -6,3 +6,4 @@ Data: `traits.txt` (100 species, traits compiled from Bouche, M. B. (1972) Lombr
 Columns used: `species.name` (Fauna Europaea names, '.' separated), `maximal_weight` (mg), `family`.
 Filters: species with a weight (97). Values are maximum fresh body masses (e.g. Lumbricus terrestris 15,000 mg).
 Mass type: fresh mass, mg -> g.
+Imputed rows: none flagged in source.

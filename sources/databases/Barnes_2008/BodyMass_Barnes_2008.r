@@ -14,16 +14,18 @@ ls <- tolower(trimws(adat$Predator.lifestage))
 keep_pred <- is.na(ls) | ls == '' | grepl('^adult|female|male', ls)
 pred <- adat[keep_pred, ]
 pred <- pred[!duplicated(pred[, c('Predator', 'Individual.ID')]), ]
-pred <- data.frame(taxon  = pred$Predator,
-                   mass_g = pred$Predator.mass * unit_to_g[pred$Predator.mass.unit])
+pred <- data.frame(taxon   = pred$Predator,
+                   mass_g  = pred$Predator.mass * unit_to_g[pred$Predator.mass.unit],
+                   quality = pred$Predator.quality.of.length.mass.conversion)
 
 # Prey: no lifestage column, so all are "unspecified" unless the name or the
 # Prey taxon field marks eggs or a developmental stage.
 stage_re  <- 'naupli|copepodit|egg|larv|zoea|megalop|juv|furcilia|calyptop|postlarv'
 keep_prey <- adat$Prey.taxon != 'egg' & !grepl(stage_re, adat$Prey, ignore.case = TRUE)
 prey <- adat[keep_prey, ]
-prey <- data.frame(taxon  = prey$Prey,
-                   mass_g = prey$Prey.mass * unit_to_g[prey$Prey.mass.unit])
+prey <- data.frame(taxon   = prey$Prey,
+                   mass_g  = prey$Prey.mass * unit_to_g[prey$Prey.mass.unit],
+                   quality = prey$Prey.quality.of.conversion.to.mass)
 
 adat <- rbind(pred, prey)
 adat$taxon <- trimws(gsub('\\s+', ' ', adat$taxon))
@@ -36,6 +38,13 @@ adat$taxon <- trimws(gsub('\\s+', ' ', adat$taxon))
 adat <- adat[grepl('^[A-Z][a-z]+ ([a-z]+|sp\\.)$', adat$taxon), ]
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
+# Quality of the length-mass conversion (metadata.htm): 0 = mass measured,
+# 1 = species regression, 2 = genus regression, 3 = family regression,
+# 4 = general shape, 5 = unsatisfactory. Codes 1-3 are species-specific
+# allometries and are kept; 4 and 5 are dropped (owner decision 2026-10-02).
+adat <- DropImputed(adat, adat$quality %in% c(4, 5), 'Barnes_2008',
+                    'length-mass conversion quality 4 (general shape) or 5 (unsatisfactory)')
+adat <- adat[, c('taxon', 'mass_g')]
 adat$n <- 1
 adat$source_mass <- 'Barnes_2008'
 BA <- adat
