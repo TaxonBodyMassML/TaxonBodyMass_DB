@@ -2,6 +2,7 @@
 "AnAge","metabolic-rate body mass only, no adult weight",0,0,2946
 "Barnes_2008","length-mass conversion quality 4 (general shape) or 5 (unsatisfactory)",1596,17,25261
 "Cai_etal_2025","Ref.BodyMass Estimated, Sister species, My or genus/family average",52,52,5372
+"DeLong_etal_2010","sd01 active-rate Entamoeba hystolitica row 1e3 above the endogenous-rate row of the same species (unit slip)",1,1,528
 "DeLong_etal_2018","mass source code: alternate taxon, % adult mass or genus/order average",1097,285,876
 "Faurby_etal_2018","Mass.Method Imputed or As relative of suggested similar size",204,204,5273
 "Hoehler_etal_2023","genus-level cell size (Comments)",7,5,4413

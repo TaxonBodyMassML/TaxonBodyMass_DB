@@ -1976,7 +1976,7 @@
 "Cercyon",0.0008747,"Brocher_etal_2025-Brocher_etal_2025-Brocher_etal_2025-Brose_2005; Brose_etal_2018-Brocher_etal_2025",14
 "Cereopsis",4081,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014",7
 "Ceriantheopsis",2.724,"Brose_etal_2018",4
-"Ceriodaphnia",3.466e-05,"Brose_etal_2018-DeLong_etal_2018-Brose_etal_2018; DeLong_etal_2018-Hebert_etal_2016; Kiorboe_2013",118
+"Ceriodaphnia",3.269e-05,"DeLong_etal_2010; DeLong_etal_2018-Brose_etal_2018-DeLong_etal_2018-Brose_etal_2018; DeLong_etal_2018-Hebert_etal_2016; Kiorboe_2013",126
 "Cerithideopsis",1.059,"Brose_etal_2018; Hechinger_etal_2011",43
 "Cerithiopsis",0.002387,"Brose_etal_2018",29
 "Cerithium",0.04478,"Brose_etal_2018",43
@@ -3550,6 +3550,7 @@
 "Ensifer",7e-13,"DeLong_etal_2010",1
 "Ensifera",0.3205,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_2005",88
 "Ensis",1.937,"Brose_etal_2018",43
+"Entamoeba",8.6e-09,"DeLong_etal_2010; Makarieva_2008",2
 "Entedontini",0.0007222,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",105
 "Entelecara",0.0009685,"Brocher_etal_2025",1
 "Enterobacter",7e-13,"DeLong_etal_2010; Hoehler_etal_2023-Makarieva_2008-Makarieva_2008",4
@@ -3704,7 +3705,7 @@
 "Estrilda",7.992,"Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Myhrvold_2015; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016-Tobias_2022-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Tobias_2022-Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015-Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016-Myhrvold_2015-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016-Myhrvold_2015-Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-vertnet-aves-sept2016",123
 "Etelis",3520,"Mahe_2023; fishbase",90
 "Eteone",0.1573,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",57
-"Etheostoma",3.414,"Quaardvark-Castro_2025-Cai_etal_2025-Cai_etal_2025-vertnet-fishes-sept2016-Cai_etal_2025-Castro_2025-Hatch_2014-vertnet-fishes-sept2016-Cai_etal_2025-Castro_2025-Cai_etal_2025-Quaardvark-Cai_etal_2025; fishbase; vertnet-fishes-sept2016-Brose_etal_2018; Cai_etal_2025-Cai_etal_2025-vertnet-fishes-sept2016-Cai_etal_2025-Castro_2025-Castro_2025-Cai_etal_2025-vertnet-fishes-sept2016-Cai_etal_2025-Cai_etal_2025-Cai_etal_2025; fishbase-Cai_etal_2025-vertnet-fishes-sept2016-vertnet-fishes-sept2016",145
+"Etheostoma",3.372,"Quaardvark-Castro_2025-Cai_etal_2025-Cai_etal_2025-vertnet-fishes-sept2016-Cai_etal_2025-Castro_2025-Hatch_2014-Cai_etal_2025; Castro_2025; DeLong_etal_2010; fishbase; vertnet-fishes-sept2016-vertnet-fishes-sept2016-Cai_etal_2025-Castro_2025-Cai_etal_2025-Quaardvark-Cai_etal_2025; fishbase; vertnet-fishes-sept2016-Brose_etal_2018; Cai_etal_2025-Cai_etal_2025-vertnet-fishes-sept2016-Cai_etal_2025-Castro_2025-Castro_2025-Cai_etal_2025-vertnet-fishes-sept2016-Cai_etal_2025-Cai_etal_2025-Cai_etal_2025; fishbase-Cai_etal_2025-vertnet-fishes-sept2016-vertnet-fishes-sept2016",154
 "Etheridgeum",1.4,"Feldman_etal_2016",1
 "Ethmalosa",1648,"Cai_etal_2025",1
 "Ethmolaimus",6.2e-08,"Brose_2005",1
@@ -3845,7 +3846,7 @@
 "Euroscaptor",56.02,"Faurby_etal_2018; Soria_etal_2021-Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021-Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021-Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021-Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021-Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021",21
 "Eurostopodus",103.8,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Herberstein_etal_2022; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014-Myhrvold_2015; Tobias_2022-Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Tobias_2022-Myhrvold_2015; Tobias_2022; Wilman_etal_2014",25
 "Eurycea",3.019,"Cai_etal_2025-Hoehler_etal_2023; Makarieva_2008; Tsuboi_etal_2018; Uyeda_etal_2017-Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017-Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017-Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017-Makarieva_2008; Uyeda_etal_2017",17
-"Eurycercus",47.13,"Hebert_etal_2016; Kiorboe_2013-DeLong_etal_2010-DeLong_etal_2010",3
+"Eurycercus",0.001139,"Hebert_etal_2016; Kiorboe_2013-DeLong_etal_2010-DeLong_etal_2010",3
 "Euryceros",96.82,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3
 "Eurydactylodes",3.94,"Feldman_etal_2016; Meiri_2018; Meiri_2024-Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018",9
 "Eurydema",0.01054,"Brocher_etal_2025",1
@@ -3957,7 +3958,7 @@
 "Figaro",200,"Tsuboi_etal_2018",1
 "Filenchus",3.775e-08,"Brose_2005-Mulder_2011-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Cohen_2014",44
 "Filicrisia",0.02164,"Brose_etal_2018",6
-"Filinia",0.1667,"DeLong_etal_2018-DeLong_etal_2010-DeLong_etal_2010",3
+"Filinia",2.167e-07,"DeLong_etal_2018-DeLong_etal_2010-DeLong_etal_2010",3
 "Filippovia",277.1,"Raymond_2011",1
 "Fimbrios",22.8,"Feldman_etal_2016-Feldman_etal_2016",2
 "Finschia",12.32,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",5
@@ -8316,7 +8317,7 @@
 "Pica",186.3,"Tobias_2022-AnAge; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Tobias_2022-AnAge; Herberstein_etal_2022; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Tobias_2022; Uyeda_etal_2017; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-AnAge; Cai_etal_2025; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",223
 "Picathartes",208.8,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",9
 "Picoides",49.88,"Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Tobias_2022-Tobias_2022-AnAge; Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-vertnet-traits-sept2016",126
-"Picripleuroxus",11.35,"DeLong_etal_2010-Brose_etal_2018",29
+"Picripleuroxus",3.14e-05,"DeLong_etal_2010-Brose_etal_2018",29
 "Picrophilus",1e-12,"DeLong_etal_2010; Hoehler_etal_2023-Makarieva_2008",5
 "Pictichromis",2.1,"Cai_etal_2025",1
 "Piculus",66.16,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Myhrvold_2015; Tobias_2022-Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016-Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016-Myhrvold_2015-Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",28
@@ -8332,7 +8333,7 @@
 "Pilogalumna",5.6e-05,"Brose_etal_2018; Ehnes_etal_2011-Brose_etal_2018",28
 "Pimelia",1.479,"Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008-Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",6
 "Pimelodus",537.6,"fishbase-fishbase-fishbase-Cai_etal_2025; fishbase-Cai_etal_2025",7
-"Pimephales",11.39,"Brose_etal_2018; Cai_etal_2025; fishbase; vertnet-fishes-sept2016-vertnet-fishes-sept2016",13
+"Pimephales",9.801,"Brose_etal_2018; Cai_etal_2025; fishbase; vertnet-fishes-sept2016-Brose_etal_2018; Cai_etal_2025; DeLong_etal_2010; Makarieva_2008; Quaardvark; vertnet-fishes-sept2016-vertnet-fishes-sept2016",67
 "Pinarochroa",20.42,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",8
 "Pinarocorys",34.29,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",8
 "Pinaroloxias",13.02,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",13
