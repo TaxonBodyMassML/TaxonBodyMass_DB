@@ -6,3 +6,4 @@ Data: article PDF (`Invertebrate_body_sizes_from_Marion_Island.pdf`), downloaded
 Columns used: species (subspecies truncated), mean fresh mass (mg), class.
 Filters: adult rows (A, A/N, A?) identified to species only; genus-level taxa (Nanorchestes spp., Rhagidia sp., Ereynetes sp., Bdellodes sp., Eryngiopus sp., Balaustium sp., Megalothorax sp., Katianna sp., Ectemnorhinus spp., Scaptomyza sp., Erigone spp., Microscolex sp., Enchytraeidae), 'cf.' rows, nymphs, larvae, pupae and immatures omitted. Myro paucispinosus has two rows (high- and low-altitude populations).
 Mass type: fresh mass, mg -> g; no conversion.
+Imputed rows: none flagged in source (measured fresh masses).

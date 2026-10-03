@@ -4,4 +4,6 @@ Source: Soria, C. D. et al. (2021) COMBINE: a coalesced mammal database of intri
 Data: figshare 10.6084/m9.figshare.13028255 (CC BY 4.0), file `trait_data_reported.csv` (reported values only; the imputed file is deliberately not used), downloaded 2026-09-27 from https://ndownloader.figshare.com/files/27703263.
 
 Columns used: `iucn2020_binomial`, `adult_mass_g`, `order`, `family`.
+Filters: rows with a binomial and a positive `adult_mass_g`; no other filter.
 Mass type: wet mass in grams; no conversion.
+Imputed rows: none; only `trait_data_reported.csv` is read (COMBINE's imputed file is not used). Values inherited from the parent of a taxonomic split (flagged in figshare `trait_data_sources.csv`) and the 26 rows that reproduce PHYLACINE imputed or sister-species values are kept for now; their treatment is deferred to issue #5.

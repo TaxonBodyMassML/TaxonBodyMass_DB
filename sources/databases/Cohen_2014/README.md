@@ -6,3 +6,4 @@ Data: Ecological Archives E095-051, `135FoodWebs.txt` and `metadata.htm`; downlo
 Columns used: `Genus/Morphon`, `Log(averageMass)` (log10 average individual dry body mass, ug).
 Filters: genus-level names only (family names such as Tylenchidae and morphons such as 'Dauerlarvae stage' dropped); distinct taxon/mass values used once (masses were held constant across webs). Genus-level values enter the genus-level output only.
 Mass type: dry mass estimated in the source from body length by allometry assuming dry = 20% of wet mass (metadata II.B); wet mass recovered with that same ratio (dry / 0.20). No external conversion reference is involved.
+Imputed rows: none flagged as imputed; the length-derived genus masses are kept as allometry-derived values (see Mass type).

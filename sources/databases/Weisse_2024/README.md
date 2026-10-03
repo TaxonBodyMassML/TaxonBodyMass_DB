@@ -6,3 +6,4 @@ Data: Dryad https://doi.org/10.5061/dryad.cnp5hqc99 (CC0): `dataset_v2.xlsx` (10
 Columns used: `species`, `volume` (cell volume, µm³), `order`.
 Filters: abbreviated genus names expanded (C. = Colpidium, F. = Favella, H. = Histiobalantium, P. = Parallelostrombidium, R. = Rimostrombidium, S. = Strombidinopsis, Str. = Strombidium, T. = Tintinnopsis, U. = Urotricha, V. = Vorticella; verified against the order column); 'sp.' and 'cf.' entries dropped; 47 species.
 Mass type: cell volume converted to wet mass at unit density (1 µm³ = 1e-12 g) with CellVolumeToWetMass(); no literature factor involved, so no conversion CiteID is appended.
+Imputed rows: none flagged in source (cell volumes measured in each experiment).

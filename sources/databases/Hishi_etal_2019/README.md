@@ -6,3 +6,4 @@ Data: JaLTER ERDP-2019-03, files `ERDP_2019_03_5_1_D_trait.csv` (traits) and `ER
 Columns used: trait file `spID1`, `spID2`, `body_mass`; joined on (spID1, spID2) to the taxon file's `Genus`, `Specific_name`, `Family`.
 Filters: species-level names only (380 species). body_mass is adult dry body mass in micrograms, calculated in the source from body length with family-level length-weight equations (owner decision 2026-09-29 to include).
 Mass type: dry mass, ug -> g, converted with the insect (hexapod) factor of R/library/mass_conversion.r (dry = 0.35 x wet; Studier & Sevick 1992). Source label: 'Hishi_etal_2019; Studier_1992'.
+Imputed rows: none flagged as imputed; all masses are length-derived species values (allometry-derived, see Filters) and are kept.

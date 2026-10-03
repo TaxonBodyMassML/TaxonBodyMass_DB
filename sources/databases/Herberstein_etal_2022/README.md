@@ -6,3 +6,4 @@ Data: Zenodo 10.5281/zenodo.6468938 (CC0), `observations.csv` and `column-docume
 Columns used: `species`, `body mass` (standardised, kg; converted to g), `phylum`, `class`, `order`, `family`.
 Filters: rows with a body-mass value (2,856 observations, 1,830 species). All sexes retained; RunMe Pass 1 averages within species.
 Mass type: wet mass; kg -> g only.
+Imputed rows: none flagged in source (AnimalTraits compiles published observations and carries no imputation or inference flag).

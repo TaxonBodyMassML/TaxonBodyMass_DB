@@ -6,3 +6,4 @@ Data: `Sharkipedia-Traits-v1.0-22-01-25.csv` (sharkipedia.org traits export, v1.
 Columns used: `species_name`, `trait_name` == 'Body Mass', `value`, `standard_name` (unit: g or kg), `dubious`.
 Filters: 'Offspring mass' and all length/age/reproduction traits excluded; records flagged dubious excluded. All value types (max, mean, min, raw) retained; RunMe Pass 1 averages within species. 20 species.
 Mass type: wet mass; kg -> g where needed.
+Imputed rows: none flagged in source beyond the `dubious` records excluded above.

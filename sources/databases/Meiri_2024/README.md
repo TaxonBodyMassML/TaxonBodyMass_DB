@@ -6,3 +6,4 @@ Data: Zenodo 10.5281/zenodo.10602503 (CC0), `Supplementary_Table_S1_-_squamBase1
 Columns used: `Species name (Binomial)`, `mean female mass (g)`, `Family`.
 Filters: only the measured column `mean female mass (g)` (1,211 species with data) is used. The allometry-derived columns ("derived from allometric equations", Feldman et al. 2016 equations) are not used because those equations already enter the DB via Feldman_etal_2016 and Meiri_2018.
 Mass type: wet mass in grams; no conversion.
+Imputed rows: none; the allometry-derived mass columns are not used (see Filters) and the measured column carries no imputation flag.

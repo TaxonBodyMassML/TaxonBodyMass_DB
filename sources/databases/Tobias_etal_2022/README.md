@@ -6,3 +6,4 @@ Data: figshare 10.6084/m9.figshare.16586228, Supplementary dataset 1 (`AVONET_Su
 Columns used: sheet `AVONET1_BirdLife` (BirdLife taxonomy, 11,009 species): `Species1`, `Mass` (g, species mean body mass), `Order1`, `Family1`.
 Filters: rows with `Mass.Source` in {Inferred, EltonTraits_GenAvg, EltonTraits_Model} or with `Traits.inferred` containing "Body Mass" are excluded (inferred or genus-average masses). 10,184 species remain.
 Mass type: wet (live) mass in grams; no conversion. Label `Tobias_2022` (shared with the Google-Sheet override rows).
+Imputed rows: the 825 rows with `Mass.Source` Inferred, EltonTraits_GenAvg or EltonTraits_Model, or with 'Body Mass' in `Traits.inferred`, are excluded by the filter above; the 917 'DataFromSplit' rows (mass inherited through a taxonomic split) are kept pending issue #5.

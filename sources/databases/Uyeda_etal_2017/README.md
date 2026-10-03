@@ -6,3 +6,4 @@ Data: Dryad https://doi.org/10.5061/dryad.3c6d2 (CC0), `vertData.csv` (857 speci
 Columns used: row names (Genus_species), `lnMass` (natural log of body mass in g), `endo`.
 Filters: fishes (ectotherms whose genus occurs in the FishBase cache) are dropped because the fish records are small/juvenile individuals from metabolic studies (median 0.4 log10 below other sources).
 Mass type: wet mass; exp(lnMass) g.
+Imputed rows: none flagged in source.

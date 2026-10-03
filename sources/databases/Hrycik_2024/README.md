@@ -38,3 +38,4 @@ Description for file "SpeciesList.csv"
 This file shows which taxa were grouped for calculations. The column headers are as follows:
 Name (character string) = Name of the taxonomic unit represented following the format “Genus species” or “Genus species subspecies” if subspecies is known. Abbreviations: sp. = unknown species; spp. = unknown species but genus likely encompasses multiple species.
 Group (character string) = Higher taxonomic used to classify the species for calculations in file "IndividualWeights_MajorGroups.csv."
+Imputed rows: none flagged in source.

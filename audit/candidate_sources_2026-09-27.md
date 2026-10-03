@@ -11,6 +11,19 @@ at the end. Masses derived from species-specific measured dimensions through a p
 allometry or unit conversion are kept but separated into their own tier, because the DB already
 uses such values (Froese 2014 length–weight, Santini 2018, Meiri 2010, Feldman 2016).
 
+**Imputed-value audit (2026-10-02, issue #8):** four older parsers still ingested rows that the source
+itself flags as not species-specific. They are now removed in the parse scripts with `DropImputed()`
+and logged to `reports/imputed_rows.csv`: EltonTraits genus/family averages and copied values (877
+rows), PHYLACINE imputed and relative-based masses (204), Cai et al. 2025 'Estimated', 'Sister
+species', 'My' and genus/family averages (52), FoRAGE alternate-taxon masses, % adult mass and
+genus/order averages (1,097 of 1,973 rows; that parser had also been failing silently in a UTF-8
+locale, leaving a stale 757-row cache in use), Hoehler et al. 2023 genus-level cell sizes (7) and
+Barnes et al. 2008 length-mass conversions of quality 4 and 5 (1,596). Owner decisions: Cai's 90
+'Estimated by total length' amphibians are kept as allometry-derived values (tier 3); COMBINE 'split
+from parent' rows and the EltonTraits/AVONET `DataFromSplit` records are kept and deferred to issue
+#5; Barnes quality 4 is dropped together with quality 5. Sources without a method flag are documented
+as such in the `Imputed rows:` line of their README.
+
 ## Where the DB is thin (TaxonBodyMass.csv, 36,573 species)
 
 | Group | Species in DB | Comment |

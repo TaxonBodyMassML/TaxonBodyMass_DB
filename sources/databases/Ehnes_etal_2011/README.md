@@ -8,3 +8,4 @@ Parsing: `parse_ehnes_appendix.py` runs `pdftotext -layout` and reads each recor
 Columns used: `sp` (species), `mg` (individual body weight, mg), group.1-4 (phylum, class/subclass, order, family).
 Filters: species-level names only; 'sp.', 'cf.' and 'juv.' records dropped. 496 species. Individual records are averaged within species by RunMe Pass 1. About 200 records originate from Chown et al. 2007 (already a separate source); the cross-source range filter handles the overlap.
 Mass type: live (fresh) body mass, mg -> g; no conversion.
+Imputed rows: none flagged in source (individual weights of the respiration specimens).

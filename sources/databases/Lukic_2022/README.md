@@ -6,3 +6,4 @@ Data: Dryad https://doi.org/10.5061/dryad.ksn02v76k (CC0): `Dataset_v2.xlsx` (22
 Columns used: `ciliate.species`, `ciliate.volume (µm3)` (cell volume of the ciliates used in each growth experiment).
 Filters: species-level names only (42 species); 'sp.', 'cf.' and 'nomen dubium' entries dropped.
 Mass type: cell volume converted to wet mass at unit density (1 µm^3 = 1e-12 g) with CellVolumeToWetMass() in R/library/mass_conversion.r; no literature factor is involved, so no conversion CiteID is appended. Mixotrophic ciliates (e.g. Mesodinium rubrum) are retained, consistent with the pipeline's treatment of ciliates as heterotrophic protists.
+Imputed rows: none flagged in source (cell volumes measured in each experiment).

@@ -6,3 +6,4 @@ Data: PNAS Supporting Information `pnas.1422475112.sd01.txt` (Dataset S1, 733 ro
 Columns used: `Species`, `Life stage`, `Body mass (mg)`, `Taxonomic group`.
 Filters: adults ('Ad') only; larval insects (L) and larval parasite stages (Mc, Rd, Sp, C) dropped; genus- and family-level names dropped. Fish masses vary by lake and season (one row each); other species have one constant mass. Both free-living species and adult parasites (trematodes, nematodes, acanthocephalans in their definitive hosts) are included.
 Mass type: wet mass, mg -> g. Per the SI Appendix, free-living animals and fish were weighed; parasite masses are volumes of average-dimension individuals converted at the density of water. No conversion factor applied.
+Imputed rows: none flagged in source; the parasite masses are volume-based estimates for the species itself (see Mass type) and are kept.
