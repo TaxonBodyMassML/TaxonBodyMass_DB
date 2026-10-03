@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-02 18:40:10
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-02 21:15:27
 
 ## Summary
 
@@ -86,7 +86,7 @@ Anthus_pratensis [conf=85]
 
 Anurogryllus_arboreus [conf=85]
 
-Aphinius_fasciatus [conf=80]
+Aphanius_fasciatus [conf=80]
 
 Aporrectodea_caliginosa [conf=85]
 
@@ -316,9 +316,9 @@ Hirundo_rupestris [conf=85]
 
 Rallus_limicola [conf=85]
 
-Restrelliger_neglectus [conf=84]
+Rastrelliger_brachysoma [conf=84]
 
-Restrelliger_kanagurta [conf=85]
+Rastrelliger_kanagurta [conf=85]
 
 Rediogobius_bikolanus [conf=85]
 

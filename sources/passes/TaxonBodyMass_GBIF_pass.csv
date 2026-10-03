@@ -1,24 +1,2 @@
-"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_family","gbif_order","gbif_usageKey"
-"Acanthocephalus_galaxii",NA,"Acanthocephala",NA,NA,NA,"Acanthocephalus galaxii",FALSE,NA,NA,NA,NA,NA,NA
-"Austridotea_annectens",NA,"Arthropoda",NA,NA,NA,"Austridotea annectens",FALSE,NA,NA,NA,NA,NA,NA
-"Austridotea_lacustris",NA,"Arthropoda",NA,NA,NA,"Austridotea lacustris",FALSE,NA,NA,NA,NA,NA,NA
-"Bromeliothrix_metopoides",NA,"Ciliophora",NA,"Colpodida",NA,"Bromeliothrix metopoides",FALSE,NA,NA,NA,NA,NA,NA
-"Coitocaecum_parvum",NA,"Platyhelminthes",NA,NA,NA,"Coitocaecum parvum",FALSE,NA,NA,NA,NA,NA,NA
-"Colpidium_colpoda",NA,"Ciliophora",NA,"Hymenostomatida",NA,"Colpidium colpoda",FALSE,NA,NA,NA,NA,NA,NA
-"Colpidium_kleini",NA,"Ciliophora",NA,"Hymenostomatida",NA,"Colpidium kleini",FALSE,NA,NA,NA,NA,NA,NA
-"Euplotes_patella",NA,"Ciliophora",NA,"Euplotida",NA,"Euplotes patella",FALSE,NA,NA,NA,NA,NA,NA
-"Galaxias_argenteus",NA,"Chordata",NA,NA,NA,"Galaxias argenteus",FALSE,NA,NA,NA,NA,NA,NA
-"Glaucoma_scintillans",NA,"Ciliophora",NA,"Hymenostomatida",NA,"Glaucoma scintillans",FALSE,NA,NA,NA,NA,NA,NA
-"Gobiomorphus_cotidianus",NA,"Chordata",NA,NA,NA,"Gobiomorphus cotidianus",FALSE,NA,NA,NA,NA,NA,NA
-"Hedruris_spinigera",NA,"Nematoda",NA,NA,NA,"Hedruris spinigera",FALSE,NA,NA,NA,NA,NA,NA
-"Paracalliope_fluviatilis",NA,"Arthropoda",NA,NA,NA,"Paracalliope fluviatilis",FALSE,NA,NA,NA,NA,NA,NA
-"Paracorophium_excavatum",NA,"Arthropoda",NA,NA,NA,"Paracorophium excavatum",FALSE,NA,NA,NA,NA,NA,NA
-"Parallelostrombidium_mirabile",NA,"Ciliophora",NA,"Oligotrichida",NA,"Parallelostrombidium mirabile",FALSE,NA,NA,NA,NA,NA,NA
-"Parallelostrombidium_neptuni",NA,"Ciliophora",NA,"Oligotrichida",NA,"Parallelostrombidium neptuni",FALSE,NA,NA,NA,NA,NA,NA
-"Paratya_curvirostris",NA,"Arthropoda",NA,NA,NA,"Paratya curvirostris",FALSE,NA,NA,NA,NA,NA,NA
-"Placobdelloides_maorica",NA,"Annelida",NA,NA,NA,"Placobdelloides maorica",FALSE,NA,NA,NA,NA,NA,NA
-"Rhombosolea_retiaria",NA,"Chordata",NA,NA,NA,"Rhombosolea retiaria",FALSE,NA,NA,NA,NA,NA,NA
-"Rimostrombidium_lacustris",NA,"Ciliophora",NA,"Choreotrichida",NA,"Rimostrombidium lacustris",FALSE,NA,NA,NA,NA,NA,NA
-"Stegodexamene_anguillae",NA,"Platyhelminthes",NA,NA,NA,"Stegodexamene anguillae",FALSE,NA,NA,NA,NA,NA,NA
-"Telogaster_opisthorchis",NA,"Platyhelminthes",NA,NA,NA,"Telogaster opisthorchis",FALSE,NA,NA,NA,NA,NA,NA
-"Tenagomysis_chiltoni",NA,"Arthropoda",NA,NA,NA,"Tenagomysis chiltoni",FALSE,NA,NA,NA,NA,NA,NA
+"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
+"Sebastes_jorani","Animalia","Chordata",NA,"Scorpaeniformes","Sebastidae","Sebastes jorani",TRUE,"GBIF","Sebastes","Sebastes jordani",95,"ACCEPTED","Sebastidae","Scorpaeniformes","2335495"
