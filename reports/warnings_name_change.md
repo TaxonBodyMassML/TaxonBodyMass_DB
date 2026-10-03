@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-02 18:40:10
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 07:42:16
 
 
-## Species name changed during enrichment (5779 rows)
+## Species name changed during enrichment (5778 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -135,7 +135,7 @@ Actinodura waldeni; Sibia waldeni -> Actinodura waldeni [GBIF]
 
 Actitis hypoleucos; Tringa hypoleucos -> Actitis hypoleucos [GBIF]
 
-Actitis macularius; Actitis macularia; Tringa macularia; Actitus macularia -> Actitis macularius [GBIF]
+Actitis macularius; Actitis macularia; Actitus macularia; Tringa macularia -> Actitis macularius [GBIF]
 
 Actophilornis africanus; Actophilornis africana -> Actophilornis africanus [GBIF]
 
@@ -769,7 +769,7 @@ Apaloderma vittatum; Apaloderma vittatus -> Apaloderma vittatum [GBIF]
 
 Listriomastax litorea -> Apetaenus enderleini [GBIF]
 
-Aphinius fasciatus; Aphanius fasciatus -> Aphanius fasciatus [GBIF]
+Aphanius fasciatus; Aphinius fasciatus -> Aphanius fasciatus [GBIF]
 
 Aphelopus holomelas -> Aphelopus atratus [GBIF]
 
@@ -1479,7 +1479,7 @@ Buteo swainsoni; Buteo swainsonii -> Buteo swainsoni [GBIF]
 
 Buteogallus anthracinus; Buteogallus subtilis -> Buteogallus anthracinus [GBIF]
 
-Butorides striatus; Butorides striata; Ardeola striata -> Butorides striata [GBIF]
+Butorides striata; Butorides striatus; Ardeola striata -> Butorides striata [GBIF]
 
 Bycanistes brevis; Ceratogymna brevis -> Bycanistes brevis [GBIF]
 
@@ -3687,7 +3687,7 @@ Eptesicus serotinus; Vespertilio serotinus; Eptesicus lobatus -> Eptesicus serot
 
 Equus hemionus; Equus onager -> Equus hemionus [GBIF]
 
-Equus quagga; Equus burchelli; Equus burchellii -> Equus quagga [GBIF]
+Equus quagga; Equus burchellii; Equus burchelli -> Equus quagga [GBIF]
 
 Stiliger fuscatus -> Ercolania fuscata [GBIF]
 
@@ -4233,7 +4233,7 @@ Oporornis formosus; Geothlypis formosa -> Geothlypis formosa [GBIF]
 
 Oporornis philadelphia; Geothlypis philadelphia -> Geothlypis philadelphia [GBIF]
 
-Oporornis tolmiei; Oporonis tolmiei; Geothlypis tolmiei -> Geothlypis tolmiei [GBIF]
+Oporornis tolmiei; Geothlypis tolmiei; Oporonis tolmiei -> Geothlypis tolmiei [GBIF]
 
 Rana aspersa -> Gephyromantis asper [GBIF]
 
@@ -4484,8 +4484,6 @@ Halomonas halo -> Halomonas halophila [ITIS]
 Haminoea solitaria -> Haminella solitaria [GBIF]
 
 Nematoscelis atlantica -> Hansarsia atlantica [GBIF]
-
-Nematoscelis megalops -> Hansarsia megalops [GBIF]
 
 Orocharis gryllodes -> Hapithus gryllodes [GBIF]
 
@@ -6249,7 +6247,7 @@ Mesocapromys melanurus; Mysateles melanurus -> Mesocapromys melanurus [GBIF]
 
 Strongylocentrotus franciscanus -> Mesocentrotus franciscanus [GBIF]
 
-Mesocyclops leuckarti; Cyclops leuckarti -> Mesocyclops leuckarti [GBIF]
+Cyclops leuckarti -> Mesocyclops leuckarti [GBIF]
 
 Mesodorylaimus centrocercus; Eudorylaimus centrocercus -> Mesodorylaimus centrocercus [GBIF]
 
@@ -7073,7 +7071,7 @@ Nucula turgida -> Nucula nitidosa [GBIF]
 
 Troxochrus nasutus -> Nusoncus nasutus [GBIF]
 
-Nycticorax violaceus; Nyctanassa violacea; Nycticorax violacea -> Nyctanassa violacea [GBIF]
+Nyctanassa violacea; Nycticorax violaceus; Nycticorax violacea -> Nyctanassa violacea [GBIF]
 
 Nycteris macrotis; Nycteris vinsoni -> Nycteris macrotis [GBIF]
 
@@ -7249,7 +7247,7 @@ Onychoprion aleuticus; Sterna aleutica -> Onychoprion aleuticus [GBIF]
 
 Onychoprion anaethetus; Sterna anaethetus -> Onychoprion anaethetus [GBIF]
 
-Onychoprion fuscatus; Sterna fuscata; Onychoprion fuscata -> Onychoprion fuscatus [GBIF]
+Onychoprion fuscatus; Onychoprion fuscata; Sterna fuscata -> Onychoprion fuscatus [GBIF]
 
 Onychoprion lunatus; Sterna lunata -> Onychoprion lunatus [GBIF]
 
@@ -7299,7 +7297,7 @@ Hemidoras morei -> Opsodoras morei [GBIF]
 
 Hemidoras stuebelii -> Opsodoras stuebelii [GBIF]
 
-Tilapia esculenta; Oreochromis esculentus -> Oreochromis esculentus [GBIF]
+Oreochromis esculentus; Tilapia esculenta -> Oreochromis esculentus [GBIF]
 
 Apalis pulchra; Oreolais pulcher -> Oreolais pulcher [GBIF]
 
@@ -8627,7 +8625,7 @@ Proteles cristata; Proteles cristatus -> Proteles cristata [GBIF]
 
 Protomeliturga turnerea -> Protomeliturga turnerae [GBIF]
 
-Pseudosciaena diacanthus; Protonibea diacanthus -> Protonibea diacanthus [GBIF]
+Protonibea diacanthus; Pseudosciaena diacanthus -> Protonibea diacanthus [GBIF]
 
 Prosuberites epiphytum -> Protosuberites epiphytum [GBIF]
 
@@ -8695,7 +8693,7 @@ Anthidium scapulare -> Pseudoanthidium scapulare [ITIS]
 
 Cheilobarbus serra -> Pseudobarbus serra [GBIF]
 
-Bathylagus milleri; Pseudobathylagus milleri -> Pseudobathylagus milleri [GBIF]
+Pseudobathylagus milleri; Bathylagus milleri -> Pseudobathylagus milleri [GBIF]
 
 Rhinobatos productus -> Pseudobatos productus [GBIF]
 
@@ -9221,9 +9219,9 @@ Litoria verrucosa -> Ranoidea verrucosa [GBIF]
 
 Litoria xanthomera -> Ranoidea xanthomera [GBIF]
 
-Restrelliger neglectus; Rastrelliger brachysoma -> Rastrelliger brachysoma [GBIF]
+Rastrelliger brachysoma; Restrelliger neglectus -> Rastrelliger brachysoma [GBIF]
 
-Restrelliger kanagurta; Rastrelliger kanagurta -> Rastrelliger kanagurta [GBIF]
+Rastrelliger kanagurta; Restrelliger kanagurta -> Rastrelliger kanagurta [GBIF]
 
 Rattus marmosurus; Rattus facetus -> Rattus marmosurus [GBIF]
 
@@ -9756,6 +9754,8 @@ Scotozous dormeri; Pipistrellus dormeri -> Scotozous dormeri [GBIF]
 Scyliorhinus caniculata; Scyliorhinus canicula -> Scyliorhinus canicula [GBIF]
 
 Sebastes dalli -> Sebastes dallii [GBIF]
+
+Sebastes jorani -> Sebastes jordani [GBIF]
 
 Sebastes marinus; Sebastes norvegicus -> Sebastes norvegicus [GBIF]
 
@@ -11106,8 +11106,6 @@ Turdus olivater; Turdus olivator -> Turdus olivater [GBIF]
 Turdus poliocephalus; Turdus niveiceps -> Turdus poliocephalus [GBIF]
 
 Turnagra capensis; Turnagra tanagra -> Turnagra capensis [GBIF]
-
-Calyptogena magnifica -> Turneroconcha magnifica [GBIF]
 
 Turnix castanota; Turnix castanotus -> Turnix castanotus [GBIF]
 

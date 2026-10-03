@@ -1,24 +1,2 @@
-"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_family","gbif_order","gbif_usageKey"
-"Acanthocephalus_galaxii",NA,"Acanthocephala",NA,NA,NA,"Acanthocephalus galaxii",FALSE,NA,NA,NA,NA,NA,NA
-"Austridotea_annectens","Animalia","Arthropoda","Malacostraca","Isopoda","Idoteidae","Austridotea annectens",FALSE,"NCBI","Austridotea","Austridotea annectens",NA,NA,NA
-"Austridotea_lacustris","Animalia","Arthropoda","Malacostraca","Isopoda","Idoteidae","Austridotea lacustris",FALSE,"NCBI","Austridotea","Austridotea lacustris",NA,NA,NA
-"Bromeliothrix_metopoides",NA,"Ciliophora","Colpodea","Colpodida",NA,"Bromeliothrix metopoides",FALSE,"NCBI","Bromeliothrix","Bromeliothrix metopoides",NA,NA,NA
-"Coitocaecum_parvum","Animalia","Platyhelminthes","Trematoda","Plagiorchiida","Opecoelidae","Coitocaecum parvum",FALSE,"NCBI","Coitocaecum","Coitocaecum parvum",NA,NA,NA
-"Colpidium_colpoda",NA,"Ciliophora","Oligohymenophorea","Hymenostomatida","Turaniellidae","Colpidium colpoda",FALSE,"NCBI","Colpidium","Colpidium colpoda",NA,NA,NA
-"Colpidium_kleini",NA,"Ciliophora","Oligohymenophorea","Hymenostomatida","Turaniellidae","Colpidium kleini",FALSE,"NCBI","Colpidium","Colpidium kleini",NA,NA,NA
-"Euplotes_patella",NA,"Ciliophora","Spirotrichea","Euplotida","Euplotidae","Euplotes patella",FALSE,"NCBI","Euplotes","Euplotes patella",NA,NA,NA
-"Galaxias_argenteus","Animalia","Chordata","Actinopteri","Galaxiiformes","Galaxiidae","Galaxias argenteus",FALSE,"NCBI","Galaxias","Galaxias argenteus",NA,NA,NA
-"Glaucoma_scintillans",NA,"Ciliophora","Oligohymenophorea","Hymenostomatida","Glaucomidae","Glaucoma scintillans",FALSE,"NCBI","Glaucoma","Glaucoma scintillans",NA,NA,NA
-"Gobiomorphus_cotidianus","Animalia","Chordata","Actinopteri","Gobiiformes","Eleotridae","Gobiomorphus cotidianus",FALSE,"NCBI","Gobiomorphus","Gobiomorphus cotidianus",NA,NA,NA
-"Hedruris_spinigera","Animalia","Nematoda","Chromadorea","Rhabditida","Hedruridae","Hedruris spinigera",FALSE,"NCBI","Hedruris","Hedruris spinigera",NA,NA,NA
-"Paracalliope_fluviatilis","Animalia","Arthropoda","Malacostraca","Amphipoda","Paracalliopiidae","Paracalliope fluviatilis",FALSE,"NCBI","Paracalliope","Paracalliope fluviatilis",NA,NA,NA
-"Paracorophium_excavatum","Animalia","Arthropoda","Malacostraca","Amphipoda","Corophiidae","Paracorophium excavatum",FALSE,"NCBI","Paracorophium","Paracorophium excavatum",NA,NA,NA
-"Parallelostrombidium_mirabile",NA,"Ciliophora",NA,"Oligotrichida",NA,"Parallelostrombidium mirabile",FALSE,NA,NA,NA,NA,NA,NA
-"Parallelostrombidium_neptuni",NA,"Ciliophora",NA,"Oligotrichida",NA,"Parallelostrombidium neptuni",FALSE,NA,NA,NA,NA,NA,NA
-"Paratya_curvirostris","Animalia","Arthropoda","Malacostraca","Decapoda","Atyidae","Paratya curvirostris",FALSE,"NCBI","Paratya","Paratya curvirostris",NA,NA,NA
-"Placobdelloides_maorica",NA,"Annelida",NA,NA,NA,"Placobdelloides maorica",FALSE,NA,NA,NA,NA,NA,NA
-"Rhombosolea_retiaria","Animalia","Chordata","Actinopteri","Pleuronectiformes","Rhombosoleidae","Rhombosolea retiaria",FALSE,"NCBI","Rhombosolea","Rhombosolea retiaria",NA,NA,NA
-"Rimostrombidium_lacustris",NA,"Ciliophora","Spirotrichea","Choreotrichida","Strobilidiidae","Rimostrombidium lacustris",FALSE,"NCBI","Rimostrombidium","Rimostrombidium lacustris",NA,NA,NA
-"Stegodexamene_anguillae","Animalia","Platyhelminthes","Trematoda","Plagiorchiida","Lepocreadiidae","Stegodexamene anguillae",FALSE,"NCBI","Stegodexamene","Stegodexamene anguillae",NA,NA,NA
-"Telogaster_opisthorchis",NA,"Platyhelminthes",NA,NA,NA,"Telogaster opisthorchis",FALSE,NA,NA,NA,NA,NA,NA
-"Tenagomysis_chiltoni",NA,"Arthropoda",NA,NA,NA,"Tenagomysis chiltoni",FALSE,NA,NA,NA,NA,NA,NA
+"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
+"Sebastes_jorani","Animalia","Chordata",NA,"Scorpaeniformes","Sebastidae","Sebastes jorani",TRUE,"GBIF","Sebastes","Sebastes jordani",95,"ACCEPTED","Sebastidae","Scorpaeniformes","2335495"

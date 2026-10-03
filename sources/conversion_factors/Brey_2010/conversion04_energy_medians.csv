@@ -1,0 +1,13 @@
+group,selector,n_records,kj_per_g_ww_median,kj_per_g_ww_n_species,kj_per_g_ww_n_records,kj_per_g_afdw_median,kj_per_g_afdw_n_species,ww_per_whole_median,ww_per_whole_n_species,ww_per_whole_n_records
+bivalve,class Bivalvia,271,3.0574,44,51,20.9919,106,0.44,17,19
+gastropod,class Gastropoda,191,3.9211,27,30,22.6618,85,0.4,5,6
+polyplacophoran,class Polyplacophora,2,,0,0,,0,,0,0
+mollusca_pooled,major taxon Mollusca,548,3.8817,117,134,21.9505,230,0.4,23,26
+echinoid,class Echinoidea,19,1.1609,8,11,23.7991,9,,0,0
+ophiuroid,class Ophiuroidea,38,2.0276,7,9,20.3672,14,,0,0
+holothurian,class Holothuroidea,65,1.7935,11,17,22.4772,19,,0,0
+decapod,order Decapoda,434,3.8962,134,151,21.3418,174,,0,0
+amphipod,order Amphipoda,224,3.769,27,28,20.9243,64,,0,0
+isopod,order Isopoda,40,2.2817,5,5,21.95,15,,0,0
+polychaete,class Polychaeta,177,3.1341,33,38,21.5887,102,,0,0
+aquatic_insect,major taxon Insecta,186,4.5745,13,14,24.0721,49,,0,0

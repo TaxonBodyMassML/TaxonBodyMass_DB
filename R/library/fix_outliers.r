@@ -150,10 +150,10 @@ FixOutliers <- function(dat) {
   #   mg; 0.092 mg too small
   dat <- RemoveRecord(dat, "Stenoperla_prasina", "Brose_etal_2018")
 
-  # --- Brown_etal_2018 ---
+  # --- McCoy_2008 (formerly read as Brown_etal_2018 Table 1) ---
   # 18,250 g → 130 g; Dall's pika; all Ochotona 70-300 g; 18.25 kg ~2 log10
-  #   too large
-  dat <- RemoveRecord(dat, "Ochotona_dalli", "Brown_etal_2018")
+  #   too large (appendix row 4.563E+03 'dry' x 4)
+  dat <- RemoveRecord(dat, "Ochotona_dalli", "McCoy_2008")
 
   # --- Cai_etal_2025 ---
   # 185.6 g → 15 g; medium hylid; 5-35 g typical; 185.6 g ~5-10x too high
@@ -689,9 +689,6 @@ FixOutliers <- function(dat) {
   # 26.6 g → 800 g; guaguanche barracuda FishBase max ~1.8 kg; 26.6 g too
   #   small
   dat <- RemoveRecord(dat, "Sphyraena_guachancho", "Viana_2016")
-  # 11.64 g → 100 g; Norway pout max 35 cm; max weight ~300-440 g; 11.6 g
-  #   too small
-  dat <- RemoveRecord(dat, "Trisopterus_esmarkii", "Brown_etal_2018")
   # 145 g → 20,000 g; spotted gully shark; South African endemic reaching
   #   170 cm; 145 g impossible
   dat <- RemoveRecord(dat, "Triakis_megalopterus", "fishbase")
