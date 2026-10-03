@@ -689,9 +689,6 @@ FixOutliers <- function(dat) {
   # 26.6 g → 800 g; guaguanche barracuda FishBase max ~1.8 kg; 26.6 g too
   #   small
   dat <- RemoveRecord(dat, "Sphyraena_guachancho", "Viana_2016")
-  # 11.64 g → 100 g; Norway pout max 35 cm; max weight ~300-440 g; 11.6 g
-  #   too small
-  dat <- RemoveRecord(dat, "Trisopterus_esmarkii", "Brown_etal_2018")
   # 145 g → 20,000 g; spotted gully shark; South African endemic reaching
   #   170 cm; 145 g impossible
   dat <- RemoveRecord(dat, "Triakis_megalopterus", "fishbase")
