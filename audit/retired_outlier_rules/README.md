@@ -39,11 +39,11 @@ taxon x source:
 
 | status | rules |
 | --- | ---: |
-| still matches the quoted value (within 1 %) | 173 |
+| still matches the quoted value (within 1 %) | 183 |
 | record gone (taxon no longer in that source) | 50 |
-| value changed by more than 1 % | 23 |
+| value changed by more than 1 % | 25 |
 | source label no longer exists in any frame | 13 |
-| present, but no quoted value could be parsed from the comment | 13 |
+| present, but no quoted value could be parsed from the comment | 1 |
 | **total** | **272** |
 
 The first run of the audit (PR #25) grouped the raw cached frames and so
@@ -57,14 +57,23 @@ gone"), the two written for the new names are found after all
 and two records that `FixFormatting` assembles from several raw spellings are
 found or match their quoted value (`Pyura_chilensis` from "pyura chilensis";
 `Porania_antarctica` from "Porania antarctica" plus the trinomial "Porania
-antarctica glabra", 144 rows at the quoted 0.1528 g).
+antarctica glabra", 144 rows at the quoted 0.1528 g). The first run also left
+10 rules unparsed whose comments quote the value as `# <value> g;` or, for a
+renamed taxon's rule, as `# — → ... same value` (the value stands above it);
+reading those forms fills the quoted value of 21 rules (9 of them already
+"record gone"), confirms 10 of the 12 present ones and finds two more changed
+values: `Citharichthys_spilopterus` (fishbase; 6.5 g quoted,
+92.7 g in the live snapshot) and `Astyris_lunata` (0.00118 g quoted for the
+`Mitrella_lunata` rows, 0.0044 g once they are folded into the 18
+`Astyris_lunata` rows). `Triconia_borealis` is the one rule left without a
+value: its comment refers to `Onacea_borealis`, which has no rule of its own.
 
 The clearest case: all 16 DeLong_etal_2010 rules (13 `RemoveSource()`, 3
 `RemoveRecord()`) target the sd02 metazoan rows whose µg values had been read
 as g, which #13 corrected; under `FixOutlierValues = TRUE` the corrected values
 (Gadus morhua 15 kg, Hippoglossoides platessoides 277 g, Eurycercus
 longirostris 71 µg, ...) would have been deleted again. Rather than add a
-staleness guard and re-review the 99 rules the audit cannot confirm unchanged
+staleness guard and re-review the 89 rules the audit cannot confirm unchanged
 (97 in its first run) for a mechanism that had never been switched on, the
 owner retired it (issue #24, comment of 2026-10-03). The
 two files were moved here unchanged (`git mv`, history preserved); the flag, the

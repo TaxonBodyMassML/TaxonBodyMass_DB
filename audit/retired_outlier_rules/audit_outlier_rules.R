@@ -2,8 +2,10 @@
 #
 # Parses every RemoveRecord()/RemoveSource() call in fix_outliers.r and
 # fix_outliers_multisource.r together with the value quoted in the comment
-# above it (`<Source>=<value>` in the multi-source file, `# <value> g →` in the
-# single-source file), rebuilds the per-source frames exactly as the retired
+# above it (`<Source>=<value>` in the multi-source file; `# <value> g →` or
+# `# <value> g;` in the single-source file, where a `# — → ... same value`
+# comment refers to the preceding rule for the taxon's old name and inherits
+# its value), rebuilds the per-source frames exactly as the retired
 # rules would have seen them, and compares the quoted value with the current
 # geometric mean of that taxon x source. Run from the repository root with a
 # complete sources/Rdata/ (recompile = TRUE in R/RunMe.r regenerates it):
@@ -92,8 +94,16 @@ parse_rules <- function(file) {
     src <- out$source[k]
     tok <- regmatches(block, regexpr(paste0(gsub('([.])', '\\\\\\1', src), '=[0-9.eE+-]+'), block))
     if (length(tok) > 0) out$quoted[k] <- as.numeric(sub('.*=', '', tok[1]))
-    else { v <- regmatches(block, regexpr('# ([0-9.,eE+-]+) g (→|->)', block))
-      if (length(v) > 0) out$quoted[k] <- as.numeric(gsub(',', '', sub('# ([0-9.,eE+-]+) g.*', '\\1', v[1]))) }
+    else {
+      # single-source file: `# <value> g → <expected> g; ...` or `# <value> g; ...`
+      v <- regmatches(block, regexpr('# ([0-9.,eE+-]+) g(;| (→|->))', block))
+      if (length(v) > 0) out$quoted[k] <- as.numeric(gsub(',', '', sub('# ([0-9.,eE+-]+) g.*', '\\1', v[1])))
+      # `# — → <expected> g; corrected name; same value [as above]`: the rule for
+      # a renamed taxon written directly after the rule for its old name (same
+      # source) quotes no value of its own; it saw the value quoted above it.
+      else if (k > 1 && out$source[k-1] == src && any(grepl('^\\s*# — →.*same value', block)))
+        out$quoted[k] <- out$quoted[k-1]
+    }
   }
   out
 }
