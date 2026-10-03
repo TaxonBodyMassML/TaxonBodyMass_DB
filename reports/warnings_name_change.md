@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 10:05:11
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 14:55:46
 
 
 ## Species name changed during enrichment (5778 rows)
@@ -123,7 +123,7 @@ Actenodes auronotata -> Actenodes auronotatus [GBIF]
 
 Actenoides bougainvillei; Actenoides excelsus -> Actenoides bougainvillei [GBIF]
 
-Actenoides lindsayi; Halcyon lindsayi; Acteniodes lindsayi -> Actenoides lindsayi [GBIF]
+Actenoides lindsayi; Acteniodes lindsayi; Halcyon lindsayi -> Actenoides lindsayi [GBIF]
 
 Actenoides capucinus; Actenoides monachus -> Actenoides monachus [GBIF]
 
@@ -489,9 +489,9 @@ Ammodramus nelsoni; Ammospiza nelsoni -> Ammospiza nelsoni [GBIF]
 
 Amnicola limosa -> Amnicola limosus [GBIF]
 
-Rana albolabris; Amnirana albolabris -> Amnirana albolabris [GBIF]
+Amnirana albolabris; Rana albolabris -> Amnirana albolabris [GBIF]
 
-Amnirana galamensis; Rana galamensis; Hylarana galamensis -> Amnirana galamensis [GBIF]
+Amnirana galamensis; Hylarana galamensis; Rana galamensis -> Amnirana galamensis [GBIF]
 
 Hylarana nicobariensis -> Amnirana nicobariensis [GBIF]
 
@@ -2479,7 +2479,7 @@ Buthraupis aureodorsalis; Cnemathraupis aureodorsalis -> Cnemathraupis aureodors
 
 Buthraupis eximia; Cnemathraupis eximia -> Cnemathraupis eximia [GBIF]
 
-Cnemophilus loriae; Loria loriae -> Cnemophilus loriae [GBIF; NCBI]
+Cnemophilus loriae; Loria loriae -> Cnemophilus loriae [GBIF]
 
 Cnemoscopus rubrirostris; Cnemoscopus chrysogaster -> Cnemoscopus rubrirostris [GBIF]
 
@@ -3851,7 +3851,7 @@ Euprepiophis perlacea -> Euprepiophis perlaceus [GBIF]
 
 Andropadus ansorgei; Eurillas ansorgei; Pycnonotus ansorgei -> Eurillas ansorgei [GBIF; NCBI]
 
-Andropadus curvirostris; Eurillas curvirostris; Pycnonotus curvirostris -> Eurillas curvirostris [GBIF; NCBI]
+Andropadus curvirostris; Eurillas curvirostris; Pycnonotus curvirostris -> Eurillas curvirostris [GBIF]
 
 Andropadus gracilis; Eurillas gracilis; Andropadus gracillis; Pycnonotus gracilis -> Eurillas gracilis [GBIF]
 
@@ -5021,7 +5021,7 @@ Typhlops longissimus -> Indotyphlops longissimus [GBIF]
 
 Eurocoelotes inermis -> Inermocoelotes inermis [GBIF]
 
-Ingerophrynus biporcatus; Bufo biporcatus -> Ingerophrynus biporcatus [GBIF]
+Bufo biporcatus; Ingerophrynus biporcatus -> Ingerophrynus biporcatus [GBIF]
 
 Bufo celebensis -> Ingerophrynus celebensis [GBIF]
 
@@ -5379,7 +5379,7 @@ Leptocoma calcostetha; Nectarinia calcostetha -> Leptocoma calcostetha [GBIF]
 
 Leptocoma minima; Nectarinia minima -> Leptocoma minima [GBIF]
 
-Leptocoma aspasia; Leptocoma sericea; Nectarinia aspisia; Nectarinia aspasia -> Leptocoma sericea [GBIF]
+Leptocoma aspasia; Leptocoma sericea; Nectarinia aspasia; Nectarinia aspisia -> Leptocoma sericea [GBIF]
 
 Leptocoma sperata; Leptocoma juliae; Nectarinia sperata -> Leptocoma sperata [GBIF]
 
@@ -5395,7 +5395,7 @@ Leptodora kindtii -> Leptodora kindti [GBIF]
 
 Leptonycteris yerbabuenae; Leptonycteris sanborni -> Leptonycteris yerbabuenae [GBIF]
 
-Leptopelis viridis; Leptopelis hyloides -> Leptopelis viridis [GBIF]
+Leptopelis hyloides; Leptopelis viridis -> Leptopelis viridis [GBIF]
 
 Leptopterna dolobrata -> Leptopterna dolabrata [GBIF]
 
@@ -8103,7 +8103,7 @@ Nassarius vibex -> Phrontis vibex [GBIF]
 
 Phrynobatrachus latifrons; Phrynobatrachus accraensis -> Phrynobatrachus latifrons [GBIF]
 
-Phrynoidis aspera; Bufo asper -> Phrynoidis asper [GBIF]
+Bufo asper; Phrynoidis aspera -> Phrynoidis asper [GBIF]
 
 Phrynonax poecilonotus; Pseustes poecilonotus -> Phrynonax poecilonotus [GBIF]
 
@@ -10623,7 +10623,7 @@ Teratoscincus roborowskii; Teratoscincus toksunicus -> Teratoscincus roborowskii
 
 Terebellides stroemi -> Terebellides stroemii [GBIF]
 
-Terenotriccus erythrurus; Myiobius erythrurus; Terenotriccus erythrorus; Terenoticcus erythrurus -> Terenotriccus erythrurus [GBIF]
+Terenotriccus erythrurus; Myiobius erythrurus; Terenoticcus erythrurus; Terenotriccus erythrorus -> Terenotriccus erythrurus [GBIF]
 
 Terenura callinota; Euchrepomis callinota -> Terenura callinota [GBIF]
 
@@ -11131,7 +11131,7 @@ Tympanuchus cupido; Tympanchus cupido -> Tympanuchus cupido [GBIF]
 
 Typhlops disparilis; Typhlops lumbricalis -> Typhlops lumbricalis [GBIF]
 
-Tyrannus forficatus; Tyrannus forficata; Muscivora forficata -> Tyrannus forficatus [GBIF]
+Tyrannus forficatus; Muscivora forficata; Tyrannus forficata -> Tyrannus forficatus [GBIF]
 
 Tyrannus savana; Tyrannus savanna -> Tyrannus savana [GBIF]
 
