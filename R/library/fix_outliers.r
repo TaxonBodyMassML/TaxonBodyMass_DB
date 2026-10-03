@@ -150,10 +150,10 @@ FixOutliers <- function(dat) {
   #   mg; 0.092 mg too small
   dat <- RemoveRecord(dat, "Stenoperla_prasina", "Brose_etal_2018")
 
-  # --- Brown_etal_2018 ---
+  # --- McCoy_2008 (formerly read as Brown_etal_2018 Table 1) ---
   # 18,250 g → 130 g; Dall's pika; all Ochotona 70-300 g; 18.25 kg ~2 log10
-  #   too large
-  dat <- RemoveRecord(dat, "Ochotona_dalli", "Brown_etal_2018")
+  #   too large (appendix row 4.563E+03 'dry' x 4)
+  dat <- RemoveRecord(dat, "Ochotona_dalli", "McCoy_2008")
 
   # --- Cai_etal_2025 ---
   # 185.6 g → 15 g; medium hylid; 5-35 g typical; 185.6 g ~5-10x too high
