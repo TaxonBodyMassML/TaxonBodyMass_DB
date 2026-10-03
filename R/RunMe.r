@@ -78,6 +78,7 @@ source(file.path(wd_root, 'R', 'library', 'check_enriched.r'))
 source(file.path(wd_root, 'R', 'library', 'remove_high_range.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_autotrophs.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_extinct.r'))
+source(file.path(wd_root, 'R', 'library', 'check_source_docs.r'))
 
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
 dir.create(file.path(wd_root, 'reports'),      showWarnings = FALSE)
@@ -155,6 +156,19 @@ if (recompile) {
          'were not rewritten (parser error above, or an orphaned file):\n',
          paste0('  ', basename(stale), collapse = '\n'))
 }
+
+# Rows the parse scripts removed because the source flags them as imputed,
+# genus-averaged or copied from another species (DropImputed() in helpers.r).
+if (length(imputed_log) > 0) {
+  imputed_tab <- do.call(rbind, imputed_log)
+  cat('  Imputed rows removed by the parse scripts:\n',
+      paste0('    ', capture.output(print(imputed_tab, row.names = FALSE)), '\n'),
+      sep = '', file = stderr())
+  write.csv(imputed_tab, file.path(wd_root, 'reports', 'imputed_rows.csv'),
+            row.names = FALSE)
+}
+# Every source README should document its Filters, Mass type and Imputed rows.
+CheckSourceDocs(wd_db)
 
 
 ##########################################################################
