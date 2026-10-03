@@ -29,25 +29,53 @@ McCoy_2008, #8 imputed rows and the FoRAGE cache, #13 DeLong 2010 units, #15
 AnAge, the 2026-09-24 lifestage filters, live FishBase snapshots), so a rule
 written for one value would now delete another. `audit_outlier_rules.R`, run on
 2026-10-03 against `sources/Rdata/` regenerated at main 39dd7fd (output:
-`outlier_rules_audit_2026-10-03.csv`), compared each rule's quoted value with
-the current geometric mean of that taxon x source:
+`outlier_rules_audit_2026-10-03.csv`), rebuilds the per-source frames as the
+rules would have seen them -- the section 2b steps that preceded the retired
+block at 39dd7fd (`FixFormatting`, `NormaliseSourceLabel`, `FixMisspellings`,
+`RemoveNonTaxa`, `RemoveExtinct`), with the exact
+`taxon == taxon & source_mass == source` matching of the retired helpers -- and
+compared each rule's quoted value with the current geometric mean of that
+taxon x source:
 
 | status | rules |
 | --- | ---: |
-| still matches the quoted value (within 1 %) | 175 |
+| still matches the quoted value (within 1 %) | 183 |
 | record gone (taxon no longer in that source) | 50 |
-| value changed by more than 1 % | 24 |
+| value changed by more than 1 % | 25 |
 | source label no longer exists in any frame | 13 |
-| present, but no quoted value could be parsed from the comment | 10 |
+| present, but no quoted value could be parsed from the comment | 1 |
 | **total** | **272** |
+
+The first run of the audit (PR #25) grouped the raw cached frames and so
+missed the name corrections that ran before the rules; it reported
+175 / 50 / 24 / 13 / 10. Reproducing the pipeline stage (Copilot's review of
+PR #25) moved seven rules, all in Brose_etal_2018: three whose taxon
+`FixMisspellings` renames before the rules ran were dead rules
+(`Golfingia_nordenskojoeldi`, `Corophium_acutum`, `Mitrella_lunata`: "record
+gone"), the two written for the new names are found after all
+(`Triconia_borealis`, `Apocorophium_acutum`, 23 rows at the quoted 0.01735 g),
+and two records that `FixFormatting` assembles from several raw spellings are
+found or match their quoted value (`Pyura_chilensis` from "pyura chilensis";
+`Porania_antarctica` from "Porania antarctica" plus the trinomial "Porania
+antarctica glabra", 144 rows at the quoted 0.1528 g). The first run also left
+10 rules unparsed whose comments quote the value as `# <value> g;` or, for a
+renamed taxon's rule, as `# — → ... same value` (the value stands above it);
+reading those forms fills the quoted value of 21 rules (9 of them already
+"record gone"), confirms 10 of the 12 present ones and finds two more changed
+values: `Citharichthys_spilopterus` (fishbase; 6.5 g quoted,
+92.7 g in the live snapshot) and `Astyris_lunata` (0.00118 g quoted for the
+`Mitrella_lunata` rows, 0.0044 g once they are folded into the 18
+`Astyris_lunata` rows). `Triconia_borealis` is the one rule left without a
+value: its comment refers to `Onacea_borealis`, which has no rule of its own.
 
 The clearest case: all 16 DeLong_etal_2010 rules (13 `RemoveSource()`, 3
 `RemoveRecord()`) target the sd02 metazoan rows whose µg values had been read
 as g, which #13 corrected; under `FixOutlierValues = TRUE` the corrected values
 (Gadus morhua 15 kg, Hippoglossoides platessoides 277 g, Eurycercus
 longirostris 71 µg, ...) would have been deleted again. Rather than add a
-staleness guard and re-review the 97 stale rules for a mechanism that had never
-been switched on, the owner retired it (issue #24, comment of 2026-10-03). The
+staleness guard and re-review the 89 rules the audit cannot confirm unchanged
+(97 in its first run) for a mechanism that had never been switched on, the
+owner retired it (issue #24, comment of 2026-10-03). The
 two files were moved here unchanged (`git mv`, history preserved); the flag, the
 two `source()` lines, the `if (FixOutlierValues)` block and the
 `RemoveSource()`/`RemoveRecord()` helpers in `R/library/helpers.r` were
@@ -73,7 +101,9 @@ dropped from the output by `RemoveHighMaxMinRatio`
   `GuoBailly_2024` by PR #22).
 - `audit_outlier_rules.R` -- the staleness audit; run
   `Rscript audit/retired_outlier_rules/audit_outlier_rules.R` from the
-  repository root with a complete `sources/Rdata/`.
+  repository root with a complete `sources/Rdata/`. It sources the fixers from
+  `R/library/` and reproduces the section 2b stage at which the rules ran (its
+  header lists the steps and the matching).
 - `outlier_rules_audit_2026-10-03.csv` -- its output, one row per rule
   (`file, line, fun, taxon, source, quoted, cur_gm, n_rows, label_exists,
   status`).
