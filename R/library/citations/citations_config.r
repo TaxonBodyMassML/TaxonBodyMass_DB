@@ -203,7 +203,7 @@ reflist_specs <- list(
   McCoy_2008   = list(format = 'csv', file = 'appendixS1_references.csv',
                       key_col = 'ref', citation_col = 'citation', doi_col = 'doi', sep = ';',
                       compiler = 'McCoy'),
-  Hebert_etal_2016 = list(format = 'csv', file = 'references.csv', csv_sep = ';',
+  Hebert_etal_2016 = list(format = 'csv', file = 'references.csv', csv_sep = ';', file_encoding = 'latin1',
                           key_col = 'Ref.code', citation_col = NULL,
                           citation_cols = c('Authors', 'Year', 'Title', 'Journal.Book'),
                           type_col = 'Pub.type', sep = ',', compiler = 'Hebert'),

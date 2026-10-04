@@ -26,9 +26,22 @@ FoldASCII <- function(x) {
   x <- gsub('\u0153', 'oe', x, fixed = TRUE); x <- gsub('\u0152', 'OE', x, fixed = TRUE)
   x <- gsub('\u0142', 'l', x, fixed = TRUE);  x <- gsub('\u0141', 'L', x, fixed = TRUE)
   x <- gsub('\u0111', 'd', x, fixed = TRUE);  x <- gsub('\u0110', 'D', x, fixed = TRUE)
-  y <- iconv(x, from = 'UTF-8', to = 'ASCII//TRANSLIT')
-  y[is.na(y)] <- iconv(x[is.na(y)], from = 'UTF-8', to = 'ASCII', sub = '')
-  y <- gsub("[?'`^~\"]", '', y)      # the stray accent marks macOS's TRANSLIT emits
+  # Only the non-ASCII characters go through iconv's TRANSLIT, one by one, so
+  # that the stray accent marks macOS's TRANSLIT emits ("Cervig'on", '?' for an
+  # untransliterable character) can be dropped without touching a legitimate
+  # '?' or quote of the text ('adaptation or stability?').
+  y <- x
+  for (i in which(!is_na)) {
+    cp <- utf8ToInt(x[i])
+    if (!any(cp > 127L)) next
+    chars <- strsplit(x[i], '', fixed = TRUE)[[1]]
+    non <- cp > 127L
+    tr <- iconv(chars[non], from = 'UTF-8', to = 'ASCII//TRANSLIT')
+    tr[is.na(tr)] <- ''
+    tr <- gsub("[?'`^~\"]", '', tr)
+    chars[non] <- tr
+    y[i] <- paste(chars, collapse = '')
+  }
   y[is_na] <- NA_character_
   y
 }

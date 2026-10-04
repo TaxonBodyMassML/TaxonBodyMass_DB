@@ -54,8 +54,8 @@ mcc <- ParseRefListCSV(file.path(repo, 'sources', 'databases', 'McCoy_2008', 'ap
                        key_col = 'ref', citation_col = 'citation', doi_col = 'doi')
 Expect(nrow(mcc) >= 29 && 'raw_doi' %in% names(mcc), 'McCoy_2008: reference list with a DOI column reads')
 heb <- ParseRefListCSV(file.path(repo, 'sources', 'databases', 'Hebert_etal_2016', 'references.csv'), key_col = 'Ref.code',
-                       citation_cols = c('Authors', 'Year', 'Title', 'Journal.Book'), type_col = 'Pub.type', csv_sep = ';')
-Expect(nrow(heb) >= 190 && heb$raw_citation[heb$native_key == '2'] == 'Lynch, M.. 1980. The evolution of cladoceran life histories. Quarterly Review of Biology.' &&
+                       citation_cols = c('Authors', 'Year', 'Title', 'Journal.Book'), type_col = 'Pub.type', csv_sep = ';', file_encoding = 'latin1')
+Expect(nrow(heb) >= 190 && heb$raw_citation[heb$native_key == '2'] == 'Lynch, M. 1980. The evolution of cladoceran life histories. Quarterly Review of Biology.' &&
          heb$note[heb$native_key == '2'] == 'Article',
        'Hebert_etal_2016: a semicolon-separated list with split fields is pasted into one citation; the type goes to note')
 dup <- tempfile(fileext = '.csv'); writeLines(c('k,c', '1,"A. 2000. T. J 1: 1-2."', '1,"B. 2001. U. K 2: 3-4."'), dup)
@@ -144,8 +144,9 @@ Expect(VolumeMatch('343', '343') && !VolumeMatch('343', '34') && !VolumeMatch(NA
 cat('SplitRefKeys(), ExplodeRefKeys(), ParseInRowCitations(), DetectSelf()\n')
 Expect(identical(SplitRefKeys(c('1, 2', '9;10; 11', NA, '', ' 7 ', 'NA', '3; 3'), sep = '[;,]'), c('1; 2', '9; 10; 11', NA, NA, '7', NA, '3')),
        'keys split at the per-source separator, trimmed, de-duplicated, empty to NA')
-ex2 <- ExplodeRefKeys(c('1; 2', '3', NA))
-Expect(identical(ex2$record, c(1L, 1L, 2L, 3L)) && identical(ex2$native_key, c('1', '2', '3', 'NA')), 'ExplodeRefKeys gives one row per record x key')
+ex2 <- ExplodeRefKeys(c('1; 2', '3', NA, '4'))
+Expect(identical(ex2$record, c(1L, 1L, 2L, 4L)) && identical(ex2$native_key, c('1', '2', '3', '4')),
+       'ExplodeRefKeys gives one row per record x key; an NA record contributes no row')
 inrow <- ParseInRowCitations(c('Taylor, G. M. (1995). Brain. J 1: 1-2. doi:10.1159/000113543', 'taylor g m 1995 brain j 1 1 2 doi 10 1159 000113543', 'Other, A. (2000). X. Y 2: 3-4.', NA))
 Expect(nrow(inrow$references) == 2 && inrow$references$n_records[inrow$references$raw_citation == 'Other, A. (2000). X. Y 2: 3-4.'] == 1 &&
          sum(inrow$references$n_records) == 3 && inrow$references$raw_doi[grepl('Taylor', inrow$references$raw_citation)] == '10.1159/000113543' &&

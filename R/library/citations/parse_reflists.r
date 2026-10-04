@@ -32,27 +32,35 @@ SplitRefKeys <- function(x, sep = ';') {
   out
 }
 
-# The keys of a '; '-joined ref_keys vector, one row per record x key.
+# The keys of a '; '-joined ref_keys vector, one row per record x key; a record
+# whose ref_keys is NA contributes no row (`record` indexes the input vector).
 ExplodeRefKeys <- function(ref_keys) {
-  keys <- strsplit(as.character(ref_keys), ';', fixed = TRUE)
-  data.frame(record = rep(seq_along(ref_keys), lengths(keys)),
-             native_key = trimws(unlist(keys)), stringsAsFactors = FALSE)
+  ref_keys <- as.character(ref_keys)
+  keys <- strsplit(ref_keys, ';', fixed = TRUE)
+  keys[is.na(ref_keys)] <- list(character(0))
+  out <- data.frame(record = rep(seq_along(ref_keys), lengths(keys)),
+                    native_key = trimws(unlist(keys)), stringsAsFactors = FALSE)
+  out[nzchar(out$native_key), , drop = FALSE]
 }
 
 # ---- reference-list formats --------------------------------------------------------
 # A CSV with one reference per row: `key_col` holds the native key as it appears
 # in the data, `citation_col` the citation text (or `citation_cols`, several
-# columns pasted with '. ' when the list is split into author/year/title/journal
-# fields, as Hebert_etal_2016's references.csv), `doi_col` an optional DOI
-# column and `type_col` an optional publication type kept in `notes`.
+# columns pasted with '. ' after trimming each field's trailing period, when
+# the list is split into author/year/title/journal fields, as Hebert_etal_2016's
+# references.csv), `doi_col` an optional DOI column and `type_col` an optional
+# publication type kept in `notes`. `file_encoding` names the file's encoding
+# when it is not UTF-8 (Hebert's list is latin1).
 # Returns native_key, raw_citation, raw_doi, note (all character).
 ParseRefListCSV <- function(path, key_col, citation_col = NULL, doi_col = NULL,
-                            citation_cols = NULL, type_col = NULL, csv_sep = ',') {
+                            citation_cols = NULL, type_col = NULL, csv_sep = ',',
+                            file_encoding = 'UTF-8') {
   if (!file.exists(path)) stop('reference list not found: ', path, call. = FALSE)
   d <- read.table(path, header = TRUE, sep = csv_sep, quote = '"', stringsAsFactors = FALSE,
                   check.names = FALSE, colClasses = 'character', na.strings = c('', 'NA'),
-                  encoding = 'UTF-8', fileEncoding = 'UTF-8', comment.char = '', fill = TRUE,
+                  encoding = 'UTF-8', fileEncoding = file_encoding, comment.char = '', fill = TRUE,
                   strip.white = TRUE)
+  for (col in names(d)) d[[col]] <- enc2utf8(d[[col]])
   need <- c(key_col, citation_col, doi_col, citation_cols, type_col)
   miss <- setdiff(need, names(d))
   if (length(miss) > 0)
@@ -176,7 +184,7 @@ InitPrimaryReferences <- function(source_label, reflist, ref_keys, compiler = NA
   if (!'note' %in% names(reflist)) reflist$note <- NA_character_
   ex <- ExplodeRefKeys(ref_keys[!is.na(ref_keys)])
   counts <- table(ex$native_key)
-  keys <- names(counts)
+  keys <- as.character(names(counts))
   # keep the reference list's order for keys it holds, then the unmatched keys
   in_list <- keys[keys %in% reflist$native_key]
   in_list <- reflist$native_key[reflist$native_key %in% in_list]

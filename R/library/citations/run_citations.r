@@ -69,7 +69,8 @@ if (Flag('--init')) {
     csv = ParseRefListCSV(file.path(cfg$wd_db, folder, spec$file), key_col = spec$key_col,
                           citation_col = spec$citation_col, doi_col = spec$doi_col,
                           citation_cols = spec$citation_cols, type_col = spec$type_col,
-                          csv_sep = if (is.null(spec$csv_sep)) ',' else spec$csv_sep),
+                          csv_sep = if (is.null(spec$csv_sep)) ',' else spec$csv_sep,
+                          file_encoding = if (is.null(spec$file_encoding)) 'UTF-8' else spec$file_encoding),
     inrow = {
       raw <- read.csv(file.path(cfg$wd_db, folder, spec$file), stringsAsFactors = FALSE, check.names = FALSE,
                       colClasses = 'character', encoding = 'UTF-8')
