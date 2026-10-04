@@ -1,4 +1,9 @@
-check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE) {
+# `unresolved`: an optional data frame (taxon, sources, rows) of the cleaned
+# names that no enrichment stage resolved to an accepted species (#38); they
+# are listed in reports/warnings_taxonomy.md, where the run log used to print
+# only their count.
+check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
+                           unresolved = NULL) {
   dir.create(file.path(wd_root, "reports"), showWarnings = FALSE)
   warn <- character(0)
   warn_summary <- character(0)
@@ -203,6 +208,23 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE) {
       warn_summary <- c(warn_summary, sprintf(
         "- Non-Animalia kingdom with an Animalia order/family: %d rows", nrow(conflict)))
     }
+  }
+
+  # 12. Names unresolved after all enrichment stages (#38): every cleaned name
+  #     without an accepted species, with its source labels and row counts.
+  #     Before #38 the run log printed only the count, so a name mangled by the
+  #     cleaning chain (Crithidia_strigomonas, Rhytonomus_isabellina) vanished
+  #     silently.
+  if (!is.null(unresolved) && nrow(unresolved) > 0) {
+    unresolved <- unresolved[order(-unresolved$rows, unresolved$taxon), ]
+    warn <- c(warn, sprintf(
+      "\n## Names unresolved after all enrichment stages (%d names, %d rows -- dropped from the output)\n\n%s",
+      nrow(unresolved), sum(unresolved$rows),
+      paste(sprintf("%s | %s | %d row%s", unresolved$taxon, unresolved$sources,
+                    unresolved$rows, ifelse(unresolved$rows == 1, "", "s")), collapse = "\n\n")))
+    warn_summary <- c(warn_summary, sprintf(
+      "- Names unresolved after all enrichment stages: %d names, %d rows",
+      nrow(unresolved), sum(unresolved$rows)))
   }
 
   # Write reports

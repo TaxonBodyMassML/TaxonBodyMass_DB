@@ -82,7 +82,6 @@ FixMisspellings <- function(dat) {
     "Larsia_i"                        = "Larsia",                         # single-letter epithet stripped; genus valid
     "Larus_spec"                      = "Larus",                          # spec placeholder stripped; genus valid
     "Lepidostoma_genus"                   = "Lepidostoma",                # parenthetical tag stripped by FixFormatting → becomes Lepidostoma_genus; caddisfly genus valid
-    "Leucocarbo_phal"                 = "Leucocarbo",                     # truncated epithet stripped; shag genus valid
     "Phalacrocorax_spec"              = "Phalacrocorax",                  # spec placeholder stripped; genus valid
     "Stercocarius_spec"               = "Stercorarius",                   # genus misspelling fixed; spec placeholder stripped
     "Synechocystis_pCC"               = "Synechocystis",                  # PCC culture code stripped; genus valid
@@ -119,7 +118,6 @@ FixMisspellings <- function(dat) {
     "Azospirillum_brasiliense"        = "Azospirillum_brasilense",        # Tarrand 1979 original spelling
 
     # B
-    "Bernieria_madagascariensis_Gmelin" = "Bernieria_madagascariensis",  # trailing author citation token; FixFormatting converts '(Gmelin, 1789)' → '_Gmelin'
     "Barbonymus_schwanefeldii"        = "Barbonymus_schwanenfeldii",      # honors Schwanenfeld; missing n
     "Bathypolypus_articus"            = "Bathypolypus_arcticus",          # Arctic; missing c
     "Bodo_saliens"                    = "Bodo_saltans",                   # O.F. Müller 1786 established saltans
@@ -345,9 +343,8 @@ FixMisspellings <- function(dat) {
     "Cacactua_tenuirostris"           = "Cacatua_tenuirostris",           # doubled c; correct genus Cacatua GBIF FUZZY 85
     "Callophora_rylandi"              = "Callopora_rylandi",              # ph→p; bryozoan genus Callopora not Callophora GBIF FUZZY 85
     "Chrysallida_pellucida"           = "Spiralinella_spiralis",           # Chrysallida pellucida is a junior synonym; accepted name is Spiralinella spiralis (Pyramidellidae)
-    "Crithida_fasciculata"            = "Crithidia_fasciculata",          # missing i; protozoan Crithidia not polychaete Crithida GBIF HIGHERRANK
-    "Crithida_strigomonas"            = "Crithidia_fasciculata",          # Makarieva_2008 "Crithida (Strigomonas) fasciculata": genus misspelt, subgenus in parentheses; FixFormatting strips the parentheses and truncates the trinomial to Crithida_strigomonas; valid current name Crithidia fasciculata (#36; the former value Crithidia_strigomonas resolved nowhere)
-    "Crithidia_strigomonas"           = "Strigomonas_oncopelti",          # Makarieva_2008 "Crithidia (Strigomonas) oncopelti": subgenus in parentheses; FixFormatting reduces it to Crithidia_strigomonas; current genus Strigomonas (#36)
+    "Crithida_fasciculata"            = "Crithidia_fasciculata",          # missing i; protozoan Crithidia not polychaete Crithida GBIF HIGHERRANK; also Makarieva_2008 "Crithida (Strigomonas) fasciculata" once FixFormatting removes the subgenus (#36, #38)
+    "Crithidia_oncopelti"             = "Strigomonas_oncopelti",          # Makarieva_2008 "Crithidia (Strigomonas) oncopelti" without its subgenus (#38) and DeLong_etal_2010 'Crithidia oncopelti'; current genus Strigomonas (#36)
     "Crystallodytes_cookie"           = "Crystallodytes_cookei",          # English word vs Latin patronymic; GBIF HIGHERRANK
 
     # D
@@ -458,7 +455,6 @@ FixMisspellings <- function(dat) {
     "Tetryhymena_pyriformis"          = "Tetrahymena_pyriformis",         # y/a transposition in genus; ciliate GBIF FUZZY 83
     "Thamnodyastes_strigatus"         = "Thamnodynastes_strigatus",       # missing n; Neotropical snake GBIF FUZZY 85
     "Tilesina_gibbose"                = "Tilesina_gibbosa",               # English adj; Latin -a required GBIF FUZZY 96
-    "Trachytes_pauperiors"            = "Trachytes_pauperior",            # spurious -s; comparative pauperior is undeclined GBIF FUZZY 95
     "Tudus_viscivorus"                = "Turdus_viscivorus",              # missing r; Mistle Thrush GBIF NONE
 
     "Stephus_longipes"                = "Stephos_longipes",                # misspelt genus; Stephos Scott, 1892 (Barnes_2008 prey)
@@ -577,6 +573,11 @@ FixMisspellings <- function(dat) {
 
     # R
     "Rhynchops_niger"                 = "Rynchops_niger",                  # Rhynchops is an alternate/older spelling; accepted genus is Rynchops Linnaeus, 1758 (ITIS/GBIF/IOC)
+
+    # P (Verberk_2020 writes the grebes as 'Podilymbus (Podiceps) epithet'; once FixFormatting removes the
+    # bracketed name (#38) only the pied-billed grebe is a Podilymbus; GBIF matches the other two to the genus alone)
+    "Podilymbus_nigricollis"          = "Podiceps_nigricollis",            # black-necked grebe; Podiceps nigricollis Brehm, 1831 accepted (GBIF EXACT 99)
+    "Podilymbus_ruficollis"           = "Tachybaptus_ruficollis",          # little grebe; Podiceps ruficollis is the old combination, Tachybaptus ruficollis (Pallas, 1764) accepted (GBIF EXACT 99)
 
     # S
     "Scyris_indica"                   = "Alectis_indica",                  # Scyris is junior synonym; Alectis Rafinesque, 1815 has priority; Indian threadfish (WoRMS/FishBase)

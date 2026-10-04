@@ -3,24 +3,37 @@ RemoveNonTaxa <- function(dat) {
   # Family-level entries from Brose_etal_2018 (genus field is literally "Family").
   dat <- dat[!grepl("^Family_", dat$taxon), ]
 
-  # Placeholder identification qualifiers used in place of species epithets:
-  # _sp   = species indeterminate (most common)
-  # _spp  = species plural (unresolved group)
-  # _cf   = confer (compare; identification uncertain)
-  # _nr   = near (closely related to but not identical to the named species)
-  # _unk  = unknown species
-  # _spX  = informal morphospecies code (e.g., spA, spB, spC, spD)
+  # Placeholder identification qualifiers used in place of species epithets.
+  # Since #38 FixFormatting() writes them explicitly: a raw epithet that is a
+  # placeholder (sp., spp., spec., indet., 'sp2', 'lassp8', 'species A', ...)
+  # or an identification qualifier (cf., aff., nr., c.f., a species group)
+  # leaves it as Genus_<word>, the word as written when it is one of those
+  # below and sp / cf otherwise (audit/raw_name_patterns.csv, epithet-scope
+  # rows); these suffixes then remove the record.
+  # _sp    = species indeterminate (most common) and every morphospecies code
+  # _spp   = species plural (unresolved group)
+  # _spec  = spec. (six Brose_etal_2018 genera are mapped to genus-level
+  #          records by fix_misspellings.r before this step and are kept)
+  # _indet = indeterminate
+  # _cf    = confer (compare; identification uncertain) and species groups
+  # _aff   = affinis (close to the named species)
+  # _nr    = near (closely related to but not identical to the named species)
+  # _unk   = unknown species
+  # _spX   = informal morphospecies code (e.g., spA, spB, spC, spD)
   dat <- dat[!grepl("_sp$",     dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_spp$",    dat$taxon, ignore.case = FALSE), ]
+  dat <- dat[!grepl("_spec$",   dat$taxon, ignore.case = FALSE), ]
+  dat <- dat[!grepl("_indet$",  dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_cf$",     dat$taxon, ignore.case = FALSE), ]
+  dat <- dat[!grepl("_aff$",    dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_nr$",     dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_unk$",    dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_sp[A-Z]$", dat$taxon), ]
-  dat <- dat[!grepl("_spec$",   dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("^Order_",  dat$taxon, ignore.case = TRUE),  ]
 
-  # Uninformative genus-level unknown placeholders.
-  dat <- dat[!grepl('^(Unk|Unknown)($|_)', dat$taxon), ]
+  # Uninformative genus-level unknown placeholders ('Unidentified 1' and
+  # 'Unid. Chironomidae' arrive as Unidentified_sp / Unid_sp since #38).
+  dat <- dat[!grepl('^(Unk|Unknown|Unid|Unidentified)($|_)', dat$taxon), ]
 
   # Placeholder "species" token as genus or epithet.
   dat <- dat[!grepl('(^|_)[Ss]pecies($|_)', dat$taxon), ]
@@ -38,7 +51,6 @@ RemoveNonTaxa <- function(dat) {
     "Chironomid_larvae",               # variant prefix for Chironomidae larvae
     "Chironomidae_juv",                # family + life-stage qualifier; not a species
     "Chironomidae_larvae",             # family + life-stage qualifier
-    "Diptera_larvaepupae",             # pooled larva+pupa stage descriptor; not a species
     "Oligochaeta_indet",               # class + indeterminate qualifier; not a species
     "Oligochaeta_type",                # class + morphotype qualifier; not a species
     "Oligochaete_type",                # spelling variant of Oligochaeta_type
@@ -47,8 +59,6 @@ RemoveNonTaxa <- function(dat) {
     "Copepoda_nauplii",                # OCR corruption of "Copepoda nauplii"
     "Cyclopoid_copepodites",           # Order-level functional group"
     "Fish_eggs",
-    "Fish_eggslarvae",
-    "Brachyuran_larvae",               # decapod larval stage descriptor; not a species (DeLong_etal_2010)
     "Lepadogaster_zebrina",            # misidentified as gastropod; actually a clingfish (Gobiesocidae); no reliable correction (Brose_etal_2018)
     "Omnivorous_nematodes",            # functional-group label, not a species; incorrectly classified as insect (DeLong_etal_2010)
     "Order_coleoptera",                # order-level descriptor, not a species; invalid binomial (Brose_etal_2018)
@@ -65,15 +75,14 @@ RemoveNonTaxa <- function(dat) {
     "Harpacticoid_copepods",          # order-level functional group
     "Hermit_crabs",                   # common name for multiple taxa, not a binomial
     "Hymenostome_ciliate",            # ciliate functional group label
-    "Pacific_herring",                # common name used in food-web datasets
     "Predacious_nematodes",           # predatory nematode functional group
     "Scirtid_broad",                  # morphological functional label
+    "Pergamasinae",                   # subfamily (Mesostigmata), not a genus; 'Pergamasinae (male)' once the sex mark is stripped (#38)
     "Scyllarid_lobsters",             # family-level common name
     "Sea_birds",                      # common name for multiple taxa, not a binomial
     "Sea_fan",                        # common name for gorgonian corals, not a binomial
     "Sea_turtles",                    # common name for multiple taxa, not a binomial
     "Sipunculid_worms",               # phylum-level common name
-    "Skate_raja",                     # hybrid descriptor (order common name + genus)
     "Spiny_lobsters",                 # common name for multiple taxa, not a binomial
     "Stony_corals",                   # common name for order Scleractinia, not a binomial
     "Benthic_algae",                  # benthic algal community descriptor, not a taxon (Brose_etal_2018)
@@ -82,8 +91,6 @@ RemoveNonTaxa <- function(dat) {
     "Tropical_atlantic",              # geographic+functional label, not a binomial
     "Unclassified_flagellates",       # classification label used in food-web databases
     "Unclassified_microflagellates",  # classification label used in food-web databases
-    "Unidentified_amoeba",            # no valid binomial; non-species entry (DeLong_etal_2010)
-    "Unidentified_bacterium",         # no valid species identifier (DeLong_etal_2010)
     "UnID_chrysomonad",               # unidentified chrysophyte functional label
     "UNID_kinetoplastid",             # unidentified kinetoplastid functional label
     "Appendicularians_house",         # larvacean mucus house, not a taxon (Barnes_2008 prey)
@@ -94,10 +101,11 @@ RemoveNonTaxa <- function(dat) {
   # Entries that cannot be linked to a valid genus or species binomial.
   invalid <- c(
     "Crayvertebrate_cambarus",     # malformed entry in Brown_etal_2018
-    # Crithidia_strigomonas and Crithida_strigomonas, Makarieva_2008's "Crithidia (Strigomonas)
-    # oncopelti" and "Crithida (Strigomonas) fasciculata" after FixFormatting, are mapped to
-    # Strigomonas_oncopelti and Crithidia_fasciculata in fix_misspellings.r (#36), not dropped
-    # here (an earlier "Crithidia strigomonas" entry, with a space, never matched; #28).
+    # Makarieva_2008's "Crithidia (Strigomonas) oncopelti" and "Crithida (Strigomonas)
+    # fasciculata" lose their subgenus in FixFormatting (#38) and reach fix_misspellings.r as
+    # Crithidia_oncopelti and Crithida_fasciculata, mapped there to Strigomonas_oncopelti and
+    # Crithidia_fasciculata (#36); they are not dropped here (an earlier "Crithidia strigomonas"
+    # entry, with a space, never matched; #28).
     "Euschides_luctata",           
     "Glossotherium_myloides",      # historical grouping of extinct ground sloths
     "Hebridae_indet",              # family + indeterminate qualifier; not a species
@@ -105,11 +113,8 @@ RemoveNonTaxa <- function(dat) {
     "Larsia_iI",                   # two-letter placeholder epithet; not a species name
     "Magistrate_armhook",          # not a real taxon in Brown_etal_2018
     "Naia_io",                     # OCR corruption of unknown Naja species
-    "Octolasion_tyrtaeumxxl",      # size-class code appended to species name
-    "Octolasion_tyrtaeumxxxl",     # size-class code appended to species name
     "Tanytarsini_i",               # Tanytarsini is a tribe name, not a genus; i not a valid epithet
     "Tanytarsini_iI",              # same
-    "Bathylagidae",                # family name used as taxon entry; no species-level data
     "Catopsis_s",                  # single-letter placeholder epithet; not resolvable
     "Chordeumatidae_juv",          # family + life-stage qualifier; not a species
     "Clubionidae_juv",             # family + life-stage qualifier; not a species
@@ -138,7 +143,6 @@ RemoveNonTaxa <- function(dat) {
     "Paramegatherium_nazarrei",        # historical grouping of extinct ground sloths
     "Parasitidae_juv",             # family + life-stage qualifier; not a species
     "Pergamasinae_juv",            # subfamily + life-stage qualifier; not a species
-    "Pergamasinae_male",           # subfamily + sex qualifier; not a species
     "Phaoniinae_indet",            # subfamily + indeterminate qualifier; not a species
     "Phlaeothripidae_phyto",       # family + ecological qualifier (phytophagous)
     "Phlaeothripidae_pred",        # family + ecological qualifier (predaceous)
@@ -155,7 +159,6 @@ RemoveNonTaxa <- function(dat) {
     "Toxodon_bilobidens",          # extinct South American ungulate
     "Trigonodops_lopesi",          # extinct South American mammal (Notoungulata)
     "Trichomonas_nasai",           # historical grouping of trichomonad flagellates
-    "Trichomonas_tritrichomonas",  # historical grouping of trichomonad flagellates
     "Vesicomyid_e",                # adjectival stub; not a valid binomial
     "Glyptotherium_cylindricum",   # extinct glyptodont (Cingulata: Glyptodontidae); Pliocene–Pleistocene North America (outlier_report_2)
     "Glyptotherium_floridanum",    # extinct glyptodont (Cingulata: Glyptodontidae); Pliocene–Pleistocene North America (outlier_report_2)

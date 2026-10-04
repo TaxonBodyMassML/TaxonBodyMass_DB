@@ -19,10 +19,12 @@ if (length(this_file) == 0)         # sourced interactively from the repo root
   this_file <- file.path('R', 'library', 'tests', 'test_fix_formatting_encoding.R')
 repo <- normalizePath(file.path(dirname(this_file), '..', '..', '..'))
 lib  <- file.path(repo, 'R', 'library')
+source(file.path(lib, 'helpers.r'))               # DropImputed(), imputed_log
 source(file.path(lib, 'fix_formatting.r'))
 source(file.path(lib, 'fix_misspellings.r'))
 source(file.path(lib, 'check_taxon_names.r'))
 source(file.path(lib, 'foodweb_units.r'))
+raw_name_patterns <- LoadRawNamePatterns(file.path(repo, 'audit', 'raw_name_patterns.csv'))
 
 failures <- character(0)
 n_checks <- 0L
@@ -78,7 +80,7 @@ Expect(identical(FixFormatting(Frame(utf8_female))$taxon, 'Tetrao_urogallus'),
        "'Tetrao urogallus \\u2640' alone is a Tetrao_urogallus record (sex sign stripped, record kept)")
 Expect(identical(FixFormatting(Frame('\u2640 Tetrao urogallus'))$taxon, 'Tetrao_urogallus'), 'a leading sex sign is stripped too')
 Expect(identical(FixFormatting(Frame('Nausitho\u00eb rubra Vanh\u00f6ffen, 1902'))$taxon, 'Nausithoe_rubra'),
-       'a diacritic in a trailing authority does not change the binomial')
+       'a diacritic in a trailing authority does not change the binomial (the authority is an annotation of audit/raw_name_patterns.csv, #38)')
 
 # ---- what the pipeline does with the real GATEWAy and Makarieva bytes --------------
 cat('the cleaning chain on the GATEWAy Edaphus record\n')
