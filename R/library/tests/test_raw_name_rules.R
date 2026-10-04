@@ -420,7 +420,7 @@ cat('R/RunMe.r wiring\n')
 runme   <- readLines(file.path(repo, 'R', 'RunMe.r'))
 i_load  <- grep("^raw_name_patterns <- LoadRawNamePatterns\\(file\\.path\\(wd_root, 'audit', 'raw_name_patterns\\.csv'\\)\\)", runme)
 i_fix   <- grep('^source_list <- lapply\\(source_list, FixFormatting\\)', runme)
-i_imp   <- grep("^if \\(length\\(imputed_log\\) > 0\\)", runme)
+i_imp   <- grep("^imputed_tab <- MergeImputedLog\\(imputed_log", runme)   # the merged log, #40
 i_rep   <- grep("^WriteRawNameReport\\(file\\.path\\(wd_root, 'reports', 'warnings_raw_names\\.md'\\)\\)", runme)
 i_chk   <- grep('^CheckRawNames\\(\\)', runme)
 i_mis   <- grep('^source_list <- lapply\\(source_list, FixMisspellings\\)', runme)

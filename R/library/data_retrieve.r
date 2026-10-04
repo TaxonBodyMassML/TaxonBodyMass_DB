@@ -1,8 +1,9 @@
 # Fetch body mass data from rdataretriever datasets and save to Rdata.
 # Requires Python + retriever package (see README Prerequisites).
 # Called from RunMe.r when DataRetrieve = TRUE.
-# Depends on: wd_rdata, wd_db, FixFormatting(), FixMisspellings(), RemoveNonTaxa(),
-# StackBrose2005(), DropPlaceholders(), ApplyUnitActions() (R/library/foodweb_units.r)
+# Depends on: wd_root, wd_rdata, wd_db, FixFormatting(), FixMisspellings(), RemoveNonTaxa(),
+# StackBrose2005(), DropPlaceholders(), ApplyUnitActions() (R/library/foodweb_units.r),
+# imputed_log, ImputedEntriesSince(), SaveImputedLive() (R/library/helpers.r)
 
 # Patch rdataretriever::fetch for retriever 2.x compatibility.
 # In retriever 2.x, dataset_names() returns a flat character vector, but the
@@ -54,6 +55,12 @@ local({
 
   assignInNamespace('fetch', patched_fetch, 'rdataretriever')
 })
+
+# The DropImputed() entries this script adds (the Brose_2005 placeholder rows,
+# DropPlaceholders() below) are saved to audit/imputed_rows_live.csv at the end,
+# so that a run with DataRetrieve = FALSE still writes them to
+# audit/imputed_rows.csv (#40).
+n_log_before <- length(imputed_log)
 
 # mammal-life-hist: family available; no order column
 # Ernest SM. Life history characteristics of placental nonvolant mammals: 
@@ -169,3 +176,5 @@ for (col in c('class', 'order', 'family'))
 DR <- adat[adat$taxon != 0, ]
 
 save(DR, file = file.path(wd_rdata, 'BodyMass_DataRetrieverAll.Rdata'))
+SaveImputedLive('DataRetrieverAll', ImputedEntriesSince(n_log_before),
+                ImputedLivePath(wd_root), wd_rdata)

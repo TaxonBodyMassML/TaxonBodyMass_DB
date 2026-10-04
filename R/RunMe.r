@@ -185,6 +185,11 @@ CheckSourceDocs(wd_db)
 # writes must be present (else the database is built incomplete) and nothing
 # else should be (an orphan would be loaded as current). check_cache.r.
 CheckCacheComplete(wd_db, wd_rdata)
+# The saved imputed-row entries of the live frames (audit/imputed_rows_live.csv,
+# written by the download scripts) must belong to the frames in the cache; a
+# frame that is not the one its entries were saved with is warned about
+# (check_cache.r, #40).
+CheckImputedLive(wd_rdata, ImputedLivePath(wd_root))
 rdata_files <- list.files(wd_rdata, pattern = '\\.Rdata$', full.names = TRUE)
 
 source_list <- lapply(rdata_files, function(f) {
@@ -209,12 +214,15 @@ source_list <- lapply(source_list, FixFormatting)
 # Rows removed because the source flags them as imputed, genus-averaged or
 # copied from another species (DropImputed() in the parse scripts, helpers.r)
 # or because the raw name marks a life stage or a small size class
-# (FixFormatting(), #38). Written only when the parse scripts
-# ran, so that a recompile = FALSE run does not overwrite the file with the
-# section-2b entries alone.
-if (length(imputed_log) > 0) {
-  imputed_tab <- do.call(rbind, imputed_log)
-  cat('  Imputed rows removed by the parse scripts and the raw-name rules:\n',
+# (FixFormatting(), #38), together with the saved entries of the live download
+# frames that were not downloaded in this run (audit/imputed_rows_live.csv,
+# written by the download scripts; #40), ordered by source. Written only when
+# the parse scripts ran, so that a recompile = FALSE run does not overwrite
+# the file with the section-2b and saved entries alone.
+imputed_tab <- MergeImputedLog(imputed_log, ReadImputedLive(ImputedLivePath(wd_root)),
+                               downloaded = DownloadedLiveFrames(DataRetrieve, DataVertNet, DataFishbase))
+if (nrow(imputed_tab) > 0) {
+  cat('  Imputed rows removed by the parse scripts, the raw-name rules and the live downloads:\n',
       paste0('    ', capture.output(print(imputed_tab, row.names = FALSE)), '\n'),
       sep = '', file = stderr())
   if (recompile)

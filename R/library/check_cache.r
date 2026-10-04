@@ -90,3 +90,58 @@ CheckCacheComplete <- function(wd_db, wd_rdata) {
                   nrow(expected)))
   invisible(expected)
 }
+
+# ---- the saved imputed-row entries of the live frames (#40) -------------------
+# The `frame` value of audit/imputed_rows_live.csv for a live frame file:
+# 'BodyMass_DataRetrieverAll.Rdata' -> 'DataRetrieverAll'.
+LiveFrameName <- function(file) sub('^BodyMass_(.*)\\.Rdata$', '\\1', file)
+
+# The live frames (by LiveFrameName()) regenerated in this run, from the
+# RunMe.r download flags; MergeImputedLog() skips their saved rows because
+# their fresh entries are already in imputed_log.
+DownloadedLiveFrames <- function(DataRetrieve, DataVertNet, DataFishbase) {
+  flags <- c(DataRetrieve = isTRUE(DataRetrieve), DataVertNet = isTRUE(DataVertNet),
+             DataFishbase = isTRUE(DataFishbase))
+  LiveFrameName(names(live_frame_flags)[flags[live_frame_flags]])
+}
+
+# Consistency of audit/imputed_rows_live.csv (ReadImputedLive(), helpers.r)
+# with the live frames in wd_rdata. Warns when the cached frame is not the
+# file whose download saved the rows (md5 differs: the frame was downloaded
+# again without saving its entries, or the cache was copied from a run with a
+# different frame; a copy of the same file passes, whatever its timestamp),
+# and when the file holds rows for a name that is not a live frame or whose
+# frame file is absent. A live frame without rows is the normal case for the
+# frames with no drop rules; only DataRetrieverAll, the one frame with drop
+# rules today, is reported, as information. Returns the table invisibly.
+CheckImputedLive <- function(wd_rdata, path) {
+  live   <- ReadImputedLive(path)
+  frames <- LiveFrameName(names(live_frame_flags))
+  unknown <- setdiff(unique(live$frame), frames)
+  if (length(unknown) > 0)
+    warning(basename(path), ' has rows for ', length(unknown), ' name(s) that are not live frames (',
+            paste(unknown, collapse = ', '), '); the live frames are ',
+            paste(frames, collapse = ', '), '.', immediate. = TRUE, call. = FALSE)
+  for (fr in intersect(frames, unique(live$frame))) {
+    f <- LiveFrameFile(wd_rdata, fr)
+    if (!file.exists(f)) {
+      warning(basename(path), ' has rows for ', fr, ' but ', basename(f),
+              ' is not in sources/Rdata.', immediate. = TRUE, call. = FALSE)
+      next
+    }
+    rows <- live[live$frame == fr, , drop = FALSE]
+    if (!all(rows$frame_md5 == unname(tools::md5sum(f))))
+      warning(basename(f), ' in sources/Rdata is not the frame whose download saved the ',
+              basename(path), ' rows of ', fr, ' (written ', max(rows$written), '); the saved ',
+              'entries may be stale. Rerun with ', live_frame_flags[basename(f)],
+              ' = TRUE to refresh the frame and its entries together.',
+              immediate. = TRUE, call. = FALSE)
+  }
+  if (!'DataRetrieverAll' %in% live$frame)
+    message('CheckImputedLive: no saved entries for DataRetrieverAll (the Brose_2005 placeholder ',
+            'rows); audit/imputed_rows.csv will lack them until a DataRetrieve = TRUE run.')
+  message(sprintf('CheckImputedLive: %d saved imputed-row entr%s for %d live frame(s) in %s.',
+                  nrow(live), if (nrow(live) == 1L) 'y' else 'ies',
+                  length(unique(live$frame)), basename(path)))
+  invisible(live)
+}
