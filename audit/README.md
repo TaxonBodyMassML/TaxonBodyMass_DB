@@ -71,8 +71,10 @@ are compiled from the status columns of three sources already in the database
 (MOM v10.2 `Status` in {extinct, historical}; PHYLACINE 1.2 `IUCN.Status.1.2`
 in {EP, EX, EW}; AVONET `Species.Status == 'Extinct'`, mapped through the
 BirdLife-BirdTree crosswalk), MOM's verdict yielding where PHYLACINE lists the
-species as extant. Written by `sources/extinct_taxa/build_extinct_taxa.r`, run
-by hand when one of the three sources changes; read by `RemoveExtinct()`
+species as extant. Written by `R/library/build_extinct_taxa.r`, a stand-alone
+script that `R/RunMe.r` does not source: run it by hand when one of the three
+sources changes (`Rscript R/library/build_extinct_taxa.r`, from any directory;
+see its header). Read by `RemoveExtinct()`
 (`R/library/filter_extinct.r`, sourced by `R/RunMe.r` through `wd_root`), which
 in section 2b drops every record of a listed name from every source after
 `FixFormatting`. Until 2026-10-04 the file lived at `R/library/extinct_taxa.csv`.

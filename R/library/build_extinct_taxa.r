@@ -8,8 +8,22 @@
 #     mapped to BirdLife names through the BirdLife-BirdTree crosswalk.
 # The list is applied to every source by RemoveExtinct() (R/library/filter_extinct.r)
 # after FixFormatting, so taxa are stored as Genus_species.
-# Run from TaxonBodyMass_DB/R (like RunMe.r) or set wd_root first.
-if (!exists('wd_root')) wd_root <- dirname(getwd())
+# Stand-alone maintenance script, not sourced by R/RunMe.r: run it by hand when
+# one of the three sources changes (needs the readxl package and the raw files
+# under sources/databases/). Under Rscript, wd_root (TaxonBodyMass_DB/) is
+# derived from the script's own path, so
+#   Rscript R/library/build_extinct_taxa.r      (from any directory)
+# just works; when source()d interactively, wd_root falls back to
+# dirname(getwd()) as in RunMe.r (so source it from TaxonBodyMass_DB/R) unless
+# wd_root is already set to the repository root.
+if (!exists('wd_root')) {
+  this_file <- sub('^--file=', '', grep('^--file=', commandArgs(), value = TRUE))
+  if (length(this_file) == 0) {       # source()d interactively from TaxonBodyMass_DB/R
+    wd_root <- dirname(getwd())
+  } else {                            # R/library/../.. = TaxonBodyMass_DB/
+    wd_root <- normalizePath(file.path(dirname(this_file), '..', '..'))
+  }
+}
 wd_db <- file.path(wd_root, 'sources', 'databases')
 Bin <- function(x) gsub(' ', '_', trimws(x))
 
