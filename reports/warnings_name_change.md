@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 21:18:04
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 23:16:35
 
 
-## Species name changed during enrichment (5656 rows)
+## Species name changed during enrichment (5655 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -4965,7 +4965,7 @@ Jabouilleia naungmungensis; Rimator naungmungensis -> Jabouilleia naungmungensis
 
 Jacamerops aureus; Jacamerops aurea -> Jacamerops aureus [GBIF]
 
-Jaera marina -> Jaera albifrons [GBIF]
+Jaera albifrons; Jaera marina -> Jaera albifrons [GBIF]
 
 Janua pagenstecheri -> Janua heterostropha [GBIF]
 
@@ -10077,8 +10077,6 @@ Streptopelia roseogrisea; Streptopelia risoria -> Streptopelia roseogrisea [GBIF
 
 Cypseloides rutilus; Streptoprocne rutila -> Streptoprocne rutila [GBIF]
 
-Crithidia oncopelti; Strigomonas oncopelti -> Strigomonas oncopelti [NCBI]
-
 Strigops habroptila; Strigops habroptilus -> Strigops habroptila [GBIF]
 
 Ciccaba albitarsis; Ciccaba albitarsus -> Strix albitarsis [GBIF]
@@ -10961,7 +10959,7 @@ Spermophilus mollis; Urocitellus mollis -> Urocitellus mollis [GBIF]
 
 Spermophilus parryii; Urocitellus parryii -> Urocitellus parryii [GBIF]
 
-Urocitellus richardsonii; Spermophilus richardsonii; Citellus richardsoni; Spermophilush richardsonii -> Urocitellus richardsonii [GBIF]
+Urocitellus richardsonii; Spermophilus richardsonii; Citellus richardsoni -> Urocitellus richardsonii [GBIF]
 
 Spermophilus townsendii; Urocitellus townsendii; Urocitellus townsendi -> Urocitellus townsendii [GBIF]
 

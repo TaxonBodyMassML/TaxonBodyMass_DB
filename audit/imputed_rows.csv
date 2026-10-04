@@ -26,3 +26,16 @@
 "McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1680
 "McCoy_2008","deep-sea rows with undefined mass basis",7,5,1673
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116
+"Brose_etal_2018","two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)",136,3,268765
+"Brown_etal_2018","two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)",2,2,72
+"DeLong_etal_2010","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",5,5,523
+"DeLong_etal_2018","two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)",3,3,873
+"Hrycik_2024","two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)",6,4,194
+"Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
+"Tsuboi_etal_2018","hybrid or intergrade between two taxa in the raw name (audit/raw_name_patterns.csv, #38)",34,2,17578
+"Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617
+"vertnet-traits-sept2016","two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)",118,14,89127
+"vertnet-aves-sept2016","two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)",122,16,80502
+"vertnet-traits-sept2016","hybrid or intergrade between two taxa in the raw name (audit/raw_name_patterns.csv, #38)",46,14,89199
+"vertnet-reptilia-sept2016","hybrid or intergrade between two taxa in the raw name (audit/raw_name_patterns.csv, #38)",1,1,2479
+"vertnet-aves-sept2016","hybrid or intergrade between two taxa in the raw name (audit/raw_name_patterns.csv, #38)",58,23,80566

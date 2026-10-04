@@ -1,3 +1,4 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Brachypera_isabellina","Animalia","Arthropoda","Insecta","Coleoptera","Curculionidae","Brachypera isabellina",FALSE,"GBIF","Brachypera","Brachypera isabellina",99,"ACCEPTED","Curculionidae","Coleoptera","9257612"
-"Strigomonas_oncopelti",NA,"Euglenozoa","Kinetoplastea","Trypanosomatida","Trypanosomatidae","Strigomonas oncopelti",FALSE,"NCBI","Strigomonas","Strigomonas oncopelti",100,NA,NA,NA,NA
+"Jaera_albifrons","Animalia","Arthropoda","Malacostraca","Isopoda","Janiridae","Jaera albifrons",FALSE,"GBIF","Jaera","Jaera albifrons",99,"ACCEPTED","Janiridae","Isopoda","5177086"
+"Podilymbus_nigricollis","Animalia","Chordata","Aves","Podicipediformes","Podicipedidae","Podilymbus nigricollis",FALSE,NA,"Podilymbus",NA,94,"ACCEPTED","Podicipedidae","Podicipediformes","2482075"
+"Podilymbus_ruficollis","Animalia","Chordata","Aves","Podicipediformes","Podicipedidae","Podilymbus ruficollis",FALSE,NA,"Podilymbus",NA,94,"ACCEPTED","Podicipedidae","Podicipediformes","2482075"
