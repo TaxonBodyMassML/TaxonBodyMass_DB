@@ -185,7 +185,7 @@ adat$mass_g[e] <- ToWetMass(adat$dry_mass_g[e], from = 'energy', group = adat$ma
 adat$source_mass <- 'McCoy_2008'
 adat$source_mass[e] <- LabelWithConversion('McCoy_2008', adat$mass_group[e])   # 'McCoy_2008; Brey_2010'
 
-# ---- exclusions (rules 1c, 3, 5, 6), logged to reports/imputed_rows.csv -------
+# ---- exclusions (rules 1c, 3, 5, 6), logged to audit/imputed_rows.csv ---------
 adat <- DropImputed(adat, adat$rule == 'drop_fish6', 'McCoy_2008',
                     'mesopelagic fish rows of undeterminable unit (ref 6)')
 adat <- DropImputed(adat, adat$rule == 'drop_zooplankton', 'McCoy_2008',

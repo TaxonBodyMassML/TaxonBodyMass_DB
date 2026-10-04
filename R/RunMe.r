@@ -175,7 +175,7 @@ if (length(imputed_log) > 0) {
   cat('  Imputed rows removed by the parse scripts:\n',
       paste0('    ', capture.output(print(imputed_tab, row.names = FALSE)), '\n'),
       sep = '', file = stderr())
-  write.csv(imputed_tab, file.path(wd_root, 'reports', 'imputed_rows.csv'),
+  write.csv(imputed_tab, file.path(wd_root, 'audit', 'imputed_rows.csv'),
             row.names = FALSE)
 }
 # Every source README should document its Filters, Mass type and Imputed rows.
