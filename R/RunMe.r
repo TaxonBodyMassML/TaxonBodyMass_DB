@@ -849,12 +849,12 @@ dcite <- merge(data.frame(Bibcite = bibs$curated$key, stringsAsFactors = FALSE),
 dcite$doi      <- bibs$curated$doi[match(dcite$Bibcite, bibs$curated$key)]
 dcite$role     <- ifelse(is.na(dcite$CiteID), NA_character_,
                          ifelse(dcite$CiteID %in% conversion_ids & !dcite$CiteID %in% prov_classes$source_label, 'conversion', 'source'))
-dcite$bib_file <- 'Citations'
+dcite$bib_file <- rep('Citations', nrow(dcite))
 pcite <- merge(data.frame(Bibcite = bibs$primary$key, stringsAsFactors = FALSE),
                pmap[, c('Bibcite', 'CiteID')], by = 'Bibcite', all.x = TRUE)
 pcite <- rbind(pcite, pmap[pmap$Bibcite %in% bibs$curated$key, c('Bibcite', 'CiteID')])
 pcite$doi      <- bib_entries$doi[match(pcite$Bibcite, bib_entries$key)]
-pcite$role     <- 'primary'
+pcite$role     <- rep('primary', nrow(pcite))              # rep(): pcite is empty until the first --sheet
 pcite$bib_file <- bib_entries$file[match(pcite$Bibcite, bib_entries$key)]
 pcite <- pcite[!paste(pcite$Bibcite, pcite$CiteID) %in% paste(dcite$Bibcite, dcite$CiteID), , drop = FALSE]
 dcite <- rbind(dcite, pcite)
