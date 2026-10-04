@@ -1,6 +1,6 @@
 # Remove extinct taxa so the database describes extant species only.
 # The list audit/extinct_taxa.csv (Genus_species; built by
-# sources/extinct_taxa/build_extinct_taxa.r from the status columns of MOM v10.2,
+# R/library/build_extinct_taxa.r from the status columns of MOM v10.2,
 # PHYLACINE 1.2 and AVONET) is applied to every source after FixFormatting,
 # whichever source a record comes from. Sources with their own status column
 # (Smith_2003, Faurby_etal_2018) additionally drop extinct rows in their scripts.
