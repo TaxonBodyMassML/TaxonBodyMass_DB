@@ -147,6 +147,8 @@ Expect(identical(SplitRefKeys(c('1, 2', '9;10; 11', NA, '', ' 7 ', 'NA', '3; 3')
 ex2 <- ExplodeRefKeys(c('1; 2', '3', NA, '4'))
 Expect(identical(ex2$record, c(1L, 1L, 2L, 4L)) && identical(ex2$native_key, c('1', '2', '3', '4')),
        'ExplodeRefKeys gives one row per record x key; an NA record contributes no row')
+Expect(JoinRefKeys(c('1; 2', '3', NA, '2;1')) == '1; 2; 3' && is.na(JoinRefKeys(c(NA, NA))) && is.na(JoinRefKeys(character())) && JoinRefKeys('7') == '7',
+       'JoinRefKeys joins the distinct keys of several records (Pass 1); NA when none')
 inrow <- ParseInRowCitations(c('Taylor, G. M. (1995). Brain. J 1: 1-2. doi:10.1159/000113543', 'taylor g m 1995 brain j 1 1 2 doi 10 1159 000113543', 'Other, A. (2000). X. Y 2: 3-4.', NA))
 Expect(nrow(inrow$references) == 2 && inrow$references$n_records[inrow$references$raw_citation == 'Other, A. (2000). X. Y 2: 3-4.'] == 1 &&
          sum(inrow$references$n_records) == 3 && inrow$references$raw_doi[grepl('Taylor', inrow$references$raw_citation)] == '10.1159/000113543' &&

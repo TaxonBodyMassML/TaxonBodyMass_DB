@@ -238,7 +238,8 @@ Expect(Has(readLines(rp), '(none)'), 'an empty check writes (none) sections')
 cat('RunMe.r and enrich_genus.r wiring\n')
 runme <- readLines(file.path(repo, 'R', 'RunMe.r'))
 Expect(any(grepl("^wd_bib\\s*<-\\s*file\\.path\\(wd_root, 'Bib'\\)", runme)) && !any(grepl("file\\.path\\(wd_root, 'bib'\\)", runme)) &&
-         any(grepl("readLines\\(file\\.path\\(wd_bib, 'TaxonBodyMass_Citations\\.bib'\\)\\)", runme)),
+         any(grepl("^curated_bib_path <- file\\.path\\(wd_bib, 'TaxonBodyMass_Citations\\.bib'\\)", runme)) &&
+         any(grepl("^primary_bib_path <- file\\.path\\(wd_bib, 'TaxonBodyMass_PrimaryCitations\\.bib'\\)", runme)),
        "wd_bib is 'Bib' and the bib is read through it")
 Expect(any(grepl("'citations_config\\.r', 'normalise_citation\\.r', 'parse_reflists\\.r', 'build_bib\\.r', 'provenance\\.r'", runme)) &&
          !any(grepl("source\\(.*(verify_services|sheet_append|decide|cite_ids|run_citations)\\.r", runme)),
@@ -248,8 +249,22 @@ Expect(any(grepl('^prov_classes <- LoadProvenanceClasses\\(file\\.path\\(wd_bib,
          which(grepl('^prov_classes <- LoadProvenanceClasses', runme)) > which(grepl('NormaliseSourceLabel\\(df\\$source_mass\\)', runme))[1] &&
          which(grepl('^prov_classes <- LoadProvenanceClasses', runme)) < which(grepl('FixMisspellings', runme))[1],
        'the registry and the primary references are loaded after the labels are normalised and before the misspelling fixes')
-Expect(any(grepl("whose Bibcite key is not in the bib", runme)) && any(grepl('^sheet_unmapped <- gmap\\[!gmap\\$Bibcite %in% bib_keys', runme)),
-       'section 8 lists the BM_citations rows whose Bibcite is not in the bib instead of dropping them silently')
+Expect(any(grepl("whose Bibcite key is in neither bib file", runme)) && any(grepl('^sheet_unmapped <- c\\(', runme)),
+       'section 8 lists the Sheet rows whose Bibcite is in neither bib instead of dropping them silently')
+Expect(any(grepl('^bibs <- CheckBibKeysUnique\\(curated_bib_path, primary_bib_path\\)', runme)) &&
+         any(grepl('sheet_tab_primary %in% sheet_names\\(bm_sheet_url\\)', runme)) && any(grepl("'BM_primary_citations_snapshot\\.csv'", runme)) &&
+         any(grepl('^provenance <- BuildProvenance\\(prov_records, prim_refs, prov_classes, dcite\\[, c\\(.CiteID., .Bibcite., .doi.\\)\\], enriched\\)', runme)) &&
+         any(grepl("'TaxonBodyMass_Provenance\\.csv\\.gz'", runme)) && any(grepl("'warnings_citations\\.md'", runme)) &&
+         any(grepl('dcite\\[order\\(dcite\\$CiteID, dcite\\$Bibcite\\), citeids_columns\\]', runme)),
+       'section 8 reads both bibs (unique keys), the primary tab or its snapshot, builds the provenance table, the report and the CiteIDs CSV with the new columns')
+Expect(any(grepl('^source_split <- SplitSourceMass\\(adat_enriched\\$source_mass, KnownConversionCiteIDs\\(\\)\\)', runme)) &&
+         any(grepl("^adat\\$origin <- ifelse\\(adat\\$taxon %in% sheet\\$species\\$taxon, 'BM_data', 'pipeline'\\)", runme)) &&
+         any(grepl('^    ref_keys        = JoinRefKeys\\(ref_keys\\),', runme)) &&
+         which(grepl('^prov_records <- adat_enriched', runme)) < which(grepl('^within_source <- adat_enriched', runme)),
+       'source_mass is split before Pass 1, origin is set after the Sheet override, ref_keys go through Pass 1, the provenance records are taken before Pass 1')
+kio <- readLines(file.path(repo, 'sources', 'databases', 'Kiorboe_2013', 'BodyMass_Kiorboe_2013.r'))
+Expect(any(grepl("^adat\\$ref_keys <- SplitRefKeys\\(adat\\$Reference, ';'\\)", kio)) && any(grepl("'source_mass', 'ref_keys'\\)\\]", kio)),
+       'the Kiorboe_2013 parser keeps the Reference column as ref_keys')
 genus <- readLines(file.path(lib, 'enrich_genus.r'))
 Expect(any(grepl("source_mass   = vapply\\(sp, function\\(d\\) paste\\(unique\\(trimws\\(unlist\\(strsplit\\(d\\$source_mass, ';', fixed = TRUE\\)\\)\\)\\), collapse = '; '\\)", genus)) &&
          !any(grepl("paste\\(d\\$source_mass, collapse = '-'\\)", genus)),

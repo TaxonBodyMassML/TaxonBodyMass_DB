@@ -334,6 +334,16 @@ ddat$source_mass <- NormaliseSourceLabel(ddat$source_mass)
 sheet      <- ApplySheetOverride(ddat, adat_raw, genus_only)
 adat       <- sheet$adat
 genus_only <- sheet$genus_only
+# Where a record comes from, for the provenance table (issue #1): a species
+# the Sheet overrides has the Sheet's rows and nothing else, so every record
+# of such a species is a lab measurement ('BM_data'); all other records are
+# the sources' ('pipeline'). The parse scripts' `ref_keys` (the native
+# reference keys of a record, '; '-joined) and `prov_type` (a record-level
+# provenance override) are NA for the Sheet rows and for sources that do not
+# keep them yet.
+adat$origin <- ifelse(adat$taxon %in% sheet$species$taxon, 'BM_data', 'pipeline')
+for (col in c('ref_keys', 'prov_type'))
+  if (!col %in% names(adat)) adat[[col]] <- NA_character_
 message(sprintf(paste('Lab Sheet (BM_data): %d species-level rows (replacing the compiled records of %d species),',
                       '%d genus-level rows (replacing the genus-only rows of %d bare names)'),
                 nrow(sheet$species), sheet$n_species_replaced, nrow(sheet$genus), sheet$n_genus_replaced))
@@ -484,14 +494,26 @@ n_names_autotroph <- n_resolved_pre_autotroph -
 # and the VertNet dumps are pooled as one source (SourceGroup(): the 'traits'
 # dump re-exports specimens of the class dumps). source_mass keeps every label
 # and conversion CiteID of the group for citation (dedupe_sources.r, #5).
-adat_enriched$source_label <- SourceLabel(adat_enriched$source_mass)
-adat_enriched$source_group <- SourceGroup(adat_enriched$source_label)
+# SplitSourceMass() (R/library/citations/provenance.r, issue #1) gives the
+# label (as SourceLabel()) and, separately, the conversion CiteIDs for the
+# provenance table; a token after the label that is no CiteID of
+# MassConversionFactors is reported.
+source_split <- SplitSourceMass(adat_enriched$source_mass, KnownConversionCiteIDs())
+adat_enriched$source_label   <- source_split$label
+adat_enriched$conversion_ids <- source_split$conversion
+adat_enriched$source_group   <- SourceGroup(adat_enriched$source_label)
 # Fixed row order before the summarise (#53): merge() leaves the records of a
 # name in the order of the bound frames, so the summation order of
 # mean(log10(mass_g)), and with it the last digit of log10_range in the output,
 # moved whenever a source or a cleaning rule reordered rows (OrderForPass1(),
 # helpers.r).
 adat_enriched <- OrderForPass1(adat_enriched)
+# The per-record frame behind the provenance table (section 8, issue #1): one
+# row per resolved record with its label, origin, conversion CiteIDs and
+# native reference keys; the table itself is restricted to the species of the
+# final output once the range filter has run.
+prov_records <- adat_enriched[!is.na(adat_enriched$species),
+                              c('genus', 'species', 'taxon', 'source_label', 'origin', 'conversion_ids', 'ref_keys', 'prov_type')]
 within_source <- adat_enriched %>%
   filter(!is.na(species)) %>%
   group_by(genus, species, source_group) %>%
@@ -500,6 +522,8 @@ within_source <- adat_enriched %>%
     taxon_provided  = paste(unique(taxon_provided), collapse = '; '),
     source_label    = paste(sort(unique(source_label)), collapse = '+'),
     source_mass     = paste(unique(trimws(unlist(strsplit(sort(unique(source_mass)), ';', fixed = TRUE)))), collapse = '; '),
+    origin          = paste(sort(unique(origin)), collapse = '; '),
+    ref_keys        = JoinRefKeys(ref_keys),                 # the distinct native reference keys of the records (issue #1)
     mass_g          = 10^mean(log10(mass_g), na.rm = TRUE), # geometric mean
     n               = n(),
     kingdom         = na.omit(kingdom)[1],
@@ -734,36 +758,88 @@ write.csv(gdat, file = file.path(wd_root, 'TaxonBodyMass_GenusLevel.csv'),
 
 
 ##########################################################################
-# 8. Write citations CSV (committed to output/)
-#    All bib entries are included; Google Sheet BM_citations provides the
-#    CiteID (source_mass label) → Bibcite (bib key) mapping. Bib entries
-#    absent from the Google Sheet are retained with CiteID = NA and a
-#    warning is issued.
+# 8. Citations and provenance (issue #1)
+#    Both bib files are read (the curated BibDesk file and the generated
+#    Bib/TaxonBodyMass_PrimaryCitations.bib; a key in both stops the run) and
+#    both Sheet tabs (BM_citations: source labels and conversion references
+#    -> bib keys, as before; BM_primary_citations: the verified primary
+#    references appended by run_citations.r --sheet, read from the Sheet
+#    when the tab exists, else from its tracked snapshot). Sheet rows whose
+#    Bibcite is in neither bib are listed, not dropped silently. The CiteIDs
+#    CSV keeps Bibcite and CiteID as its first two columns (TaxonBodyMassML
+#    reads nothing else) and gains doi, role (source | conversion | primary)
+#    and bib_file. The provenance table TaxonBodyMass_Provenance.csv.gz links
+#    every species x source label x reference, and its checks go to
+#    reports/warnings_citations.md. Nothing here touches the network beyond
+#    reading the Sheet.
 ##########################################################################
-bib_lines <- readLines(file.path(wd_bib, 'TaxonBodyMass_Citations.bib'))
-bib_keys  <- sub('^@\\w+\\{([^,]+),.*', '\\1',
-                 bib_lines[grepl('^@', bib_lines)], perl = TRUE)
+curated_bib_path <- file.path(wd_bib, 'TaxonBodyMass_Citations.bib')
+primary_bib_path <- file.path(wd_bib, 'TaxonBodyMass_PrimaryCitations.bib')
+bibs <- CheckBibKeysUnique(curated_bib_path, primary_bib_path)   # stops on a key in both files
+bib_entries <- rbind(cbind(bibs$curated, file = 'Citations', stringsAsFactors = FALSE),
+                     cbind(bibs$primary, file = 'PrimaryCitations', stringsAsFactors = FALSE))
+bib_keys <- bib_entries$key
+message(sprintf('Bib files: %d curated entries (%d with DOI), %d generated primary entries',
+                nrow(bibs$curated), sum(!is.na(bibs$curated$doi)), nrow(bibs$primary)))
 
 gmap <- read_sheet(
   bm_sheet_url,
   sheet     = 'BM_citations',
   col_types = 'cc-'
 )
+gmap <- as.data.frame(gmap, stringsAsFactors = FALSE)
+if (sheet_tab_primary %in% sheet_names(bm_sheet_url)) {
+  pmap <- as.data.frame(read_sheet(bm_sheet_url, sheet = sheet_tab_primary, col_types = 'c'), stringsAsFactors = FALSE)
+  pmap_origin <- 'the Sheet'
+} else if (file.exists(file.path(wd_bib, 'BM_primary_citations_snapshot.csv'))) {
+  pmap <- read.csv(file.path(wd_bib, 'BM_primary_citations_snapshot.csv'), stringsAsFactors = FALSE,
+                   colClasses = 'character', na.strings = c('', 'NA'), check.names = FALSE)
+  pmap_origin <- 'its snapshot'
+} else {
+  pmap <- as.data.frame(setNames(rep(list(character()), length(sheet_primary_columns)), sheet_primary_columns), stringsAsFactors = FALSE)
+  pmap_origin <- 'nowhere (no tab, no snapshot)'
+}
+message(sprintf('Sheet tabs: BM_citations %d rows; %s %d rows from %s', nrow(gmap), sheet_tab_primary, nrow(pmap), pmap_origin))
 
-gmap$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', gmap$Bibcite, perl = TRUE)
-gmap$CiteID  <- NormaliseSourceLabel(gmap$CiteID)
-# A Sheet row whose Bibcite key is not in the bib used to be dropped silently by
+CleanCiteMap <- function(m) {
+  m$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', m$Bibcite, perl = TRUE)
+  m$CiteID  <- NormaliseSourceLabel(m$CiteID)
+  m[!is.na(m$Bibcite) & nzchar(m$Bibcite), , drop = FALSE]
+}
+gmap <- CleanCiteMap(gmap)
+pmap <- CleanCiteMap(pmap)
+# A Sheet row whose Bibcite key is in neither bib used to be dropped silently by
 # the merge below (its CiteID then had no bib entry and create_bib() could not
-# cite it); it is listed instead (issue #1). The row stays out of the CSV until
-# the key is added to the bib or corrected in the Sheet.
-sheet_unmapped <- gmap[!gmap$Bibcite %in% bib_keys, , drop = FALSE]
-if (nrow(sheet_unmapped) > 0) {
-  warning(nrow(sheet_unmapped), ' BM_citations row(s) whose Bibcite key is not in the bib (left out of the CiteIDs CSV):\n',
-          paste0(sheet_unmapped$CiteID, ' -> ', sheet_unmapped$Bibcite, collapse = '\n'), immediate. = TRUE)
+# cite it); it is listed instead (issue #1), here and in
+# reports/warnings_citations.md. The row stays out of the CSV until the key is
+# added to a bib or corrected in the Sheet.
+sheet_unmapped <- c(
+  if (any(!gmap$Bibcite %in% bib_keys)) paste0('BM_citations: ', gmap$CiteID, ' -> ', gmap$Bibcite)[!gmap$Bibcite %in% bib_keys],
+  if (any(!pmap$Bibcite %in% bib_keys)) paste0(sheet_tab_primary, ': ', pmap$CiteID, ' -> ', pmap$Bibcite)[!pmap$Bibcite %in% bib_keys])
+if (length(sheet_unmapped) > 0) {
+  warning(length(sheet_unmapped), ' Sheet citation row(s) whose Bibcite key is in neither bib file (left out of the CiteIDs CSV):\n',
+          paste(sheet_unmapped, collapse = '\n'), immediate. = TRUE)
 }
 
-dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
-               gmap, by = 'Bibcite', all.x = TRUE)
+# The CiteIDs CSV: every curated entry with its BM_citations CiteID (NA when
+# the Sheet has no row), then every primary entry with its BM_primary_citations
+# CiteID, then the primary-tab rows that reuse a curated key (a reference whose
+# DOI the curated bib already held) when they add a new (Bibcite, CiteID) pair.
+conversion_ids <- KnownConversionCiteIDs()
+dcite <- merge(data.frame(Bibcite = bibs$curated$key, stringsAsFactors = FALSE),
+               gmap[, c('Bibcite', 'CiteID')], by = 'Bibcite', all.x = TRUE)
+dcite$doi      <- bibs$curated$doi[match(dcite$Bibcite, bibs$curated$key)]
+dcite$role     <- ifelse(is.na(dcite$CiteID), NA_character_,
+                         ifelse(dcite$CiteID %in% conversion_ids & !dcite$CiteID %in% prov_classes$source_label, 'conversion', 'source'))
+dcite$bib_file <- 'Citations'
+pcite <- merge(data.frame(Bibcite = bibs$primary$key, stringsAsFactors = FALSE),
+               pmap[, c('Bibcite', 'CiteID')], by = 'Bibcite', all.x = TRUE)
+pcite <- rbind(pcite, pmap[pmap$Bibcite %in% bibs$curated$key, c('Bibcite', 'CiteID')])
+pcite$doi      <- bib_entries$doi[match(pcite$Bibcite, bib_entries$key)]
+pcite$role     <- 'primary'
+pcite$bib_file <- bib_entries$file[match(pcite$Bibcite, bib_entries$key)]
+pcite <- pcite[!paste(pcite$Bibcite, pcite$CiteID) %in% paste(dcite$Bibcite, dcite$CiteID), , drop = FALSE]
+dcite <- rbind(dcite, pcite)
 
 # Primary source citations from per-source Citation.bib files.
 # Keys found there are intentionally unmapped and suppressed from the warning.
@@ -797,9 +873,31 @@ if (length(uncited) > 0) {
     immediate. = TRUE)
 }
 
-dcite <- dcite[order(dcite$CiteID, dcite$Bibcite), ]
+dcite <- dcite[order(dcite$CiteID, dcite$Bibcite), citeids_columns]
+rownames(dcite) <- NULL
 write.csv(dcite, file = file.path(wd_bib, 'TaxonBodyMass_CitationCiteIDs.csv'),
           row.names = FALSE)
+
+# The provenance table (R/library/citations/provenance.r): one row per species
+# x source label x reference for the species of TaxonBodyMass.csv, with the
+# hop and provenance type of each reference, the primary CiteID / bib key /
+# DOI where a reference is resolved, the registry's default where a record
+# carries no key, one row per conversion CiteID, and the lab-Sheet rows as
+# measurements in their cited source.
+provenance <- BuildProvenance(prov_records, prim_refs, prov_classes, dcite[, c('CiteID', 'Bibcite', 'doi')], enriched)
+prov_con <- gzfile(file.path(wd_root, 'TaxonBodyMass_Provenance.csv.gz'), open = 'wb')
+write.csv(provenance, prov_con, row.names = FALSE)
+close(prov_con)
+citation_checks <- CheckCitations(provenance, bib_entries, dcite, prim_refs, sheet_bibcites = pmap$Bibcite)
+WriteCitationsReport(file.path(wd_root, 'reports', 'warnings_citations.md'), citation_checks, classes = prov_classes,
+                     unmapped_sheet = sheet_unmapped,
+                     uncited_labels = if (length(uncited) > 0) paste0(names(uncited), ' (', as.integer(uncited), ' rows)') else character())
+message(sprintf(paste('Provenance: %d rows for %d species (%s); %d distinct primary CiteIDs; %d reference(s) pending / not found,',
+                      '%d unverified; %d problem(s) -- see reports/warnings_citations.md'),
+                citation_checks$counts[['rows']], citation_checks$counts[['species']],
+                paste(sprintf('%s %d', names(table(provenance$provenance_type)), table(provenance$provenance_type)), collapse = ', '),
+                citation_checks$counts[['primary_refs']], citation_checks$counts[['unresolved_refs']],
+                citation_checks$counts[['unverified_refs']], length(citation_checks$problems)))
 
 
 ##########################################################################

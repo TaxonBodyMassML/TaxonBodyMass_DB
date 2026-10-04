@@ -2,6 +2,7 @@
 # the skeleton of sources/databases/<Src>/primary_references.csv.
 #
 #   SplitRefKeys(x, sep)        records' reference column -> '; '-joined native keys
+#   JoinRefKeys(ref_keys)       the distinct keys of several records (Pass 1 of RunMe.r)
 #   ParseRefListCSV(...)        a key/citation CSV (Kiorboe_2013, McCoy_2008, Hebert_etal_2016, ...)
 #   ParseInRowCitations(...)    full-text citations carried by every record (Herberstein_etal_2022, ...)
 #   ExpandSameAuthorMarkers()   the '---' / em-dash "same author as above" convention
@@ -30,6 +31,14 @@ SplitRefKeys <- function(x, sep = ';') {
     if (length(toks) == 0) NA_character_ else paste(unique(toks), collapse = '; ')
   }, character(1), USE.NAMES = FALSE)
   out
+}
+
+# The distinct keys of several records' ref_keys as one '; '-joined string (the
+# Pass-1 summarise of RunMe.r); NA when no record carries a key.
+JoinRefKeys <- function(ref_keys) {
+  k <- unique(trimws(unlist(strsplit(as.character(ref_keys[!is.na(ref_keys)]), ';', fixed = TRUE))))
+  k <- k[nzchar(k)]
+  if (length(k) == 0) NA_character_ else paste(k, collapse = '; ')
 }
 
 # The keys of a '; '-joined ref_keys vector, one row per record x key; a record
