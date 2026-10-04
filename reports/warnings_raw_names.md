@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 06:41:34
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 07:39:40
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
@@ -52,7 +52,7 @@ By source: Verberk_2020 (10 names, 107 rows); Hrycik_2024 (2 names, 15 rows); De
 
 ## placeholder (672 names, 36,154 rows)
 
-No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it, unless a rename rule maps the marker to a genus-level record (six Brose_etal_2018 'Genus spec.' names, fix_misspellings.r).
+No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).
 
 By source: Brose_etal_2018 (270 names, 32,459 rows); Barnes_2008 (20 names, 2,601 rows); Kendall_etal_2019 (49 names, 300 rows); Eklof_etal_2017 (7 names, 194 rows); Makarieva_2008 (98 names, 144 rows); Herberstein_etal_2022 (85 names, 137 rows); DeLong_etal_2010 (57 names, 62 rows); DeLong_etal_2018 (27 names, 61 rows); Hrycik_2024 (44 names, 54 rows); Ehnes_etal_2011 (2 names, 49 rows); Brown_etal_2018 (19 names, 19 rows); Kinsella_etal_2020 (13 names, 13 rows); vertnet-traits-sept2016 (9 names, 12 rows); Chown_etal_2007 (2 names, 11 rows); Hirt_etal_2017 (7 names, 9 rows); Castro_2025 (2 names, 7 rows); vertnet-aves-sept2016 (5 names, 6 rows); vertnet-fishes-sept2016 (2 names, 5 rows); Hechinger_etal_2011 (1 names, 3 rows); Killen_etal_2016 (2 names, 2 rows); Lane_2019 (1 names, 2 rows); McCoy_2008 (2 names, 2 rows); Gillooly_etal_2016 (1 names, 1 rows); Smith_2003 (1 names, 1 rows).
 
