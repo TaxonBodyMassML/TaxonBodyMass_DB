@@ -481,8 +481,11 @@ leak <- grep('genus_only|GenusOnly|genus_values|genus_records|genus_res\\b|highe
 Expect(length(i_sheet) == 1 && length(leak) == 0, 'the species path (sections 4-5) does not refer to the genus-only objects')
 after <- runme[i_5b:i_wsp]
 assign_enriched <- grep('^\\s*enriched\\s*<-|^\\s*enriched\\$', after)
+# the write-time rounding of log10_range in section 7 (#53) is the one other
+# assignment, after the genus table has been built
+assign_enriched <- assign_enriched[!grepl('^enriched\\$log10_range <- round\\(enriched\\$log10_range, 6\\)$', after[assign_enriched])]
 Expect(length(assign_enriched) == 1 && grepl('^\\s*enriched <- res\\$dat', after[assign_enriched]),
-       'after section 5b, `enriched` is reassigned only by the range filter before TaxonBodyMass.csv is written')
+       'after section 5b, `enriched` is reassigned only by the range filter (and the write-time rounding of log10_range, #53) before TaxonBodyMass.csv is written')
 Expect(!any(grepl('genus_only\\$n_independent <- 1L|bind_rows\\(enriched, genus_only\\)', runme)),
        'the pre-#49 aggregation (every raw genus-only row as one value) is gone')
 Expect(!any(grepl('HigherRankRecords|genus_records_alt|TaxonBodyMass_HigherRank', runme)),
