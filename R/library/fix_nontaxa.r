@@ -94,7 +94,10 @@ RemoveNonTaxa <- function(dat) {
   # Entries that cannot be linked to a valid genus or species binomial.
   invalid <- c(
     "Crayvertebrate_cambarus",     # malformed entry in Brown_etal_2018
-    "Crithidia strigomonas",       # historical grouping of insect trypanosomatid flagellates
+    # Crithidia_strigomonas and Crithida_strigomonas, Makarieva_2008's "Crithidia (Strigomonas)
+    # oncopelti" and "Crithida (Strigomonas) fasciculata" after FixFormatting, are mapped to
+    # Strigomonas_oncopelti and Crithidia_fasciculata in fix_misspellings.r (#36), not dropped
+    # here (an earlier "Crithidia strigomonas" entry, with a space, never matched; #28).
     "Euschides_luctata",           
     "Glossotherium_myloides",      # historical grouping of extinct ground sloths
     "Hebridae_indet",              # family + indeterminate qualifier; not a species

@@ -245,7 +245,7 @@ FixMisspellings <- function(dat) {
     "Rhinopitechus_roxella"           = "Rhinopithecus_roxellana",         # Golden Snub-nosed Monkey; genus and epithet corrected
     "Rousettus_egyptiacus"            = "Rousettus_aegyptiacus",          # from Aegyptus; missing ae
     "Rhizophor_amucronata"            = "Rhizophora_mucronata",          # spurious a
-    "Rhytonomus_isobellina"           = "Rhytonomus isabellina",          # 
+    "Rhytonomus_isobellina"           = "Brachypera_isabellina",          # Chown 2007 S2 'Rhytonomus isobellina' (Heatwole et al. 1986, Tunisia) = Phytonomus isabellinus Boheman 1834, now Brachypera (Antidonus) isabellina (Skuhrovec 2008); GBIF 9257612 (#28; only "isobellina" occurs in the raw sources; the value was once typed with a space, which filed the record as a genus)
 
 
     # S
@@ -352,7 +352,8 @@ FixMisspellings <- function(dat) {
     "Callophora_rylandi"              = "Callopora_rylandi",              # ph→p; bryozoan genus Callopora not Callophora GBIF FUZZY 85
     "Chrysallida_pellucida"           = "Spiralinella_spiralis",           # Chrysallida pellucida is a junior synonym; accepted name is Spiralinella spiralis (Pyramidellidae)
     "Crithida_fasciculata"            = "Crithidia_fasciculata",          # missing i; protozoan Crithidia not polychaete Crithida GBIF HIGHERRANK
-    "Crithida_strigomonas"            = "Crithidia_strigomonas",          # missing i; same genus error as Crithida_fasciculata GBIF HIGHERRANK
+    "Crithida_strigomonas"            = "Crithidia_fasciculata",          # Makarieva_2008 "Crithida (Strigomonas) fasciculata": genus misspelt, subgenus in parentheses; FixFormatting strips the parentheses and truncates the trinomial to Crithida_strigomonas; valid current name Crithidia fasciculata (#36; the former value Crithidia_strigomonas resolved nowhere)
+    "Crithidia_strigomonas"           = "Strigomonas_oncopelti",          # Makarieva_2008 "Crithidia (Strigomonas) oncopelti": subgenus in parentheses; FixFormatting reduces it to Crithidia_strigomonas; current genus Strigomonas (#36)
     "Crystallodytes_cookie"           = "Crystallodytes_cookei",          # English word vs Latin patronymic; GBIF HIGHERRANK
 
     # D

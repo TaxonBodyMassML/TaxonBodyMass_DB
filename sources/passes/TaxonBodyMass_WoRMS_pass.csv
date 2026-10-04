@@ -1,2 +1,3 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Sebastes_jorani","Animalia","Chordata",NA,"Scorpaeniformes","Sebastidae","Sebastes jorani",TRUE,"GBIF","Sebastes","Sebastes jordani",95,"ACCEPTED","Sebastidae","Scorpaeniformes","2335495"
+"Brachypera_isabellina","Animalia","Arthropoda","Insecta","Coleoptera","Curculionidae","Brachypera isabellina",FALSE,"GBIF","Brachypera","Brachypera isabellina",99,"ACCEPTED","Curculionidae","Coleoptera","9257612"
+"Strigomonas_oncopelti",NA,"Euglenozoa","Kinetoplastea","Trypanosomatida","Trypanosomatidae","Strigomonas oncopelti",FALSE,"NCBI","Strigomonas","Strigomonas oncopelti",100,NA,NA,NA,NA

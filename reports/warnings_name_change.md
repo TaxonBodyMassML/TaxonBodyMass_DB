@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 16:52:36
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 19:47:37
 
 
 ## Species name changed during enrichment (5655 rows)
@@ -10075,7 +10075,7 @@ Streptopelia roseogrisea; Streptopelia risoria -> Streptopelia roseogrisea [GBIF
 
 Cypseloides rutilus; Streptoprocne rutila -> Streptoprocne rutila [GBIF]
 
-Crithidia oncopelti -> Strigomonas oncopelti [NCBI]
+Crithidia oncopelti; Strigomonas oncopelti -> Strigomonas oncopelti [NCBI]
 
 Strigops habroptila; Strigops habroptilus -> Strigops habroptila [GBIF]
 

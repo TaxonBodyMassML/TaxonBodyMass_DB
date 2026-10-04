@@ -110,4 +110,6 @@ dropped from the output by `RemoveHighMaxMinRatio`
 - Review documents: `../outlier_report.md` (CRITICAL tier),
   `../outlier_report_2.md` (SUSPICIOUS tier),
   `../outlier_corrections_single_source.md` (per-record corrections and
-  rationale), `../flagged_species.csv` (the 2,082 model-flagged records).
+  rationale), `../flagged_species.csv` (the register of flagged records; its
+  `model_2026-08-25` rows are the 2,082 records this review flagged, see
+  `../README.md`).
