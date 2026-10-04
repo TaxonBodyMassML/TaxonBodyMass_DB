@@ -65,6 +65,9 @@ e <- ErrorOf(CachedGET('https://api.crossref.org/works?query.bibliographic=nothi
 Expect(Has(e, 'offline: no cached response'), 'offline: an uncached URL stops instead of reaching the network')
 got <- CachedGET(CrossrefQueryURL(query1, cfg), cfg)
 Expect(got$cached && got$status == 200L, 'offline: a cached URL is served from the cache')
+t0 <- Sys.time(); PaceRequest('example.org', 4); PaceRequest('example.org', 4); PaceRequest('other.org', 4); dt <- as.numeric(Sys.time() - t0, units = 'secs')
+Expect(dt >= 0.25 && dt < 0.6 && inherits(.citations_last_request[['example.org']], 'POSIXct'),
+       sprintf('PaceRequest() spaces requests to one host by 1/rate seconds (%.2f s for two to one host and one to another)', dt))
 tmpc <- tempfile('cache'); dir.create(tmpc)
 key <- WriteCachedResponse('https://example.org/w?a=1&mailto=x', 200L, '{"ok":true}', tmpc, '2026-01-01T00:00:00Z')
 back <- ReadCachedResponse('https://example.org/w?a=1&mailto=y', tmpc)

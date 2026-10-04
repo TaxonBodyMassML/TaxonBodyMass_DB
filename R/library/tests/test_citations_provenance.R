@@ -257,7 +257,7 @@ Expect(any(grepl('^bibs <- CheckBibKeysUnique\\(curated_bib_path, primary_bib_pa
          any(grepl("'TaxonBodyMass_Provenance\\.csv\\.gz'", runme)) && any(grepl("'warnings_citations\\.md'", runme)) &&
          any(grepl('dcite\\[order\\(dcite\\$CiteID, dcite\\$Bibcite\\), citeids_columns\\]', runme)),
        'section 8 reads both bibs (unique keys), the primary tab or its snapshot, builds the provenance table, the report and the CiteIDs CSV with the new columns')
-Expect(any(grepl('^source_split <- SplitSourceMass\\(adat_enriched\\$source_mass, KnownConversionCiteIDs\\(\\)\\)', runme)) &&
+Expect(any(grepl('^source_split <- SplitSourceMass\\(adat_enriched\\$source_mass\\)', runme)) && any(grepl('KnownConversionCiteIDs\\(\\)\\)$', runme)) &&
          any(grepl("^adat\\$origin <- ifelse\\(adat\\$taxon %in% sheet\\$species\\$taxon, 'BM_data', 'pipeline'\\)", runme)) &&
          any(grepl('^    ref_keys        = JoinRefKeys\\(ref_keys\\),', runme)) &&
          which(grepl('^prov_records <- adat_enriched', runme)) < which(grepl('^within_source <- adat_enriched', runme)),

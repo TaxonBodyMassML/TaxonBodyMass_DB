@@ -498,10 +498,18 @@ n_names_autotroph <- n_resolved_pre_autotroph -
 # label (as SourceLabel()) and, separately, the conversion CiteIDs for the
 # provenance table; a token after the label that is no CiteID of
 # MassConversionFactors is reported.
-source_split <- SplitSourceMass(adat_enriched$source_mass, KnownConversionCiteIDs())
+source_split <- SplitSourceMass(adat_enriched$source_mass)
 adat_enriched$source_label   <- source_split$label
 adat_enriched$conversion_ids <- source_split$conversion
 adat_enriched$source_group   <- SourceGroup(adat_enriched$source_label)
+# Only the sources' records carry conversion CiteIDs after the label; a lab
+# Sheet row may cite several sources ('Froese_2014; Kritzer_2002'), which the
+# provenance records below treat as one measurement source each.
+unknown_tokens <- setdiff(unique(trimws(unlist(strsplit(na.omit(source_split$conversion[adat_enriched$origin == 'pipeline']), ';', fixed = TRUE)))),
+                          KnownConversionCiteIDs())
+if (length(unknown_tokens) > 0)
+  warning('source_mass token(s) after the label are not conversion CiteIDs of MassConversionFactors: ',
+          paste(unknown_tokens, collapse = ', '), immediate. = TRUE)
 # Fixed row order before the summarise (#53): merge() leaves the records of a
 # name in the order of the bound frames, so the summation order of
 # mean(log10(mass_g)), and with it the last digit of log10_range in the output,
@@ -514,6 +522,16 @@ adat_enriched <- OrderForPass1(adat_enriched)
 # final output once the range filter has run.
 prov_records <- adat_enriched[!is.na(adat_enriched$species),
                               c('genus', 'species', 'taxon', 'source_label', 'origin', 'conversion_ids', 'ref_keys', 'prov_type')]
+# a lab-Sheet row citing several sources: one record per cited source
+multi_sheet <- prov_records$origin == 'BM_data' & !is.na(prov_records$conversion_ids)
+if (any(multi_sheet)) {
+  ex    <- ExplodeRefKeys(prov_records$conversion_ids[multi_sheet])
+  extra <- prov_records[which(multi_sheet)[ex$record], ]
+  extra$source_label   <- ex$native_key
+  extra$conversion_ids <- NA_character_
+  prov_records$conversion_ids[multi_sheet] <- NA_character_
+  prov_records <- rbind(prov_records, extra)
+}
 within_source <- adat_enriched %>%
   filter(!is.na(species)) %>%
   group_by(genus, species, source_group) %>%
@@ -776,8 +794,8 @@ write.csv(gdat, file = file.path(wd_root, 'TaxonBodyMass_GenusLevel.csv'),
 curated_bib_path <- file.path(wd_bib, 'TaxonBodyMass_Citations.bib')
 primary_bib_path <- file.path(wd_bib, 'TaxonBodyMass_PrimaryCitations.bib')
 bibs <- CheckBibKeysUnique(curated_bib_path, primary_bib_path)   # stops on a key in both files
-bib_entries <- rbind(cbind(bibs$curated, file = 'Citations', stringsAsFactors = FALSE),
-                     cbind(bibs$primary, file = 'PrimaryCitations', stringsAsFactors = FALSE))
+bib_entries <- rbind(transform(bibs$curated, file = rep('Citations', nrow(bibs$curated))),
+                     transform(bibs$primary, file = rep('PrimaryCitations', nrow(bibs$primary))))
 bib_keys <- bib_entries$key
 message(sprintf('Bib files: %d curated entries (%d with DOI), %d generated primary entries',
                 nrow(bibs$curated), sum(!is.na(bibs$curated$doi)), nrow(bibs$primary)))

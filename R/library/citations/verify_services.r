@@ -56,17 +56,36 @@ WriteCachedResponse <- function(url, status, body, cache_dir, fetched_at) {
   invisible(key)
 }
 
+# The time of the last request sent to each host, for the rate limit below.
+.citations_last_request <- new.env(parent = emptyenv())
+
+# Wait until at least 1 / rate_per_s seconds have passed since the last request
+# to `host`. httr2's req_throttle() alone lets the first requests of a session
+# through as a burst (token bucket), so the spacing is enforced here as well,
+# per host and across every request object of the session.
+PaceRequest <- function(host, rate_per_s) {
+  last <- .citations_last_request[[host]]
+  if (!is.null(last)) {
+    wait <- 1 / rate_per_s - as.numeric(Sys.time() - last, units = 'secs')
+    if (wait > 0) Sys.sleep(wait)
+  }
+  assign(host, Sys.time(), envir = .citations_last_request)
+  invisible(NULL)
+}
+
 # GET `url`: from the cache when present, else over the network (unless
 # cfg$offline, which stops instead) with the politeness settings of
-# citations_config.r. 2xx and 404 responses are cached (a 404 from
-# /works/<doi> means "no such DOI" and must not be fetched again); anything else
-# after the retries is an error.
+# citations_config.r: one request per second per host (PaceRequest() and
+# req_throttle()), retries on 429 / 5xx. 2xx and 404 responses are cached (a
+# 404 from /works/<doi> means "no such DOI" and must not be fetched again);
+# anything else after the retries is an error.
 CachedGET <- function(url, cfg) {
   hit <- ReadCachedResponse(url, cfg$cache_dir)
   if (!is.null(hit)) return(hit)
   if (isTRUE(cfg$offline))
     stop('offline: no cached response for ', url, call. = FALSE)
   host <- sub('^https?://([^/]+)/.*$', '\\1', url)
+  PaceRequest(host, cfg$network$rate_per_s)
   req <- httr2::request(url)
   req <- httr2::req_user_agent(req, cfg$user_agent)
   req <- httr2::req_headers(req, Accept = 'application/json')
