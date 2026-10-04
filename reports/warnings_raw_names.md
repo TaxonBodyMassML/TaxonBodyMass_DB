@@ -1,22 +1,23 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-03 23:15:22
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 06:41:34
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
 ## Summary
 
-1,124 distinct raw names (50,446 rows) in 14 class(es). Names not covered by any rule (class `error`): 0.
+1,124 distinct raw names (50,446 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
 
 | class | names | rows | records dropped | sources |
 |---|---:|---:|---:|---|
 | life_stage | 17 | 127 | 127 | Verberk_2020 (10), DeLong_etal_2010 (5), Hrycik_2024 (2) |
 | placeholder | 672 | 36,154 | 0 | Brose_etal_2018 (270), Makarieva_2008 (98), Herberstein_etal_2022 (85), DeLong_etal_2010 (57), Kendall_etal_2019 (49), Hrycik_2024 (44), DeLong_etal_2018 (27), Barnes_2008 (20), Brown_etal_2018 (19), Kinsella_etal_2020 (13), vertnet-traits-sept2016 (9), Eklof_etal_2017 (7), Hirt_etal_2017 (7), vertnet-aves-sept2016 (5), Castro_2025 (2), Chown_etal_2007 (2), Ehnes_etal_2011 (2), Killen_etal_2016 (2), McCoy_2008 (2), vertnet-fishes-sept2016 (2), Gillooly_etal_2016 (1), Hechinger_etal_2011 (1), Lane_2019 (1), Smith_2003 (1) |
-| qualifier | 38 | 3,574 | 0 | Brose_etal_2018 (25), Hrycik_2024 (5), DeLong_etal_2018 (2), Kendall_etal_2019 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2) |
-| hybrid | 37 | 139 | 139 | vertnet-aves-sept2016 (23), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
-| ambiguous | 32 | 387 | 387 | vertnet-aves-sept2016 (16), vertnet-traits-sept2016 (14), Hrycik_2024 (4), Brose_etal_2018 (3), DeLong_etal_2018 (3), Brown_etal_2018 (2) |
+| qualifier | 31 | 3,521 | 0 | Brose_etal_2018 (25), DeLong_etal_2018 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2) |
+| hybrid | 37 | 139 | 0 | vertnet-aves-sept2016 (23), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
+| ambiguous | 32 | 387 | 0 | vertnet-aves-sept2016 (16), vertnet-traits-sept2016 (14), Hrycik_2024 (4), Brose_etal_2018 (3), DeLong_etal_2018 (3), Brown_etal_2018 (2) |
 | subgenus | 17 | 33 | 0 | Makarieva_2008 (5), Verberk_2020 (5), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Brose_etal_2018 (1), Pata_2025 (1), vertnet-aves-sept2016 (1) |
 | sex | 38 | 659 | 0 | Verberk_2020 (35), Brose_etal_2018 (1), DeLong_etal_2010 (1), Makarieva_2008 (1) |
 | form_strain_region | 11 | 46 | 0 | DeLong_etal_2010 (3), Makarieva_2008 (3), Brose_etal_2018 (2), Verberk_2020 (2), Kiorboe_2014 (1) |
-| size_class | 25 | 6,021 | 0 | Brose_etal_2018 (25) |
+| size_class | 25 | 6,021 | 1,255 | Brose_etal_2018 (25) |
+| species_group | 7 | 53 | 0 | Hrycik_2024 (5), Kendall_etal_2019 (2) |
 | synonym | 10 | 35 | 0 | Makarieva_2008 (4), DeLong_etal_2018 (2), Verberk_2020 (2), vertnet-aves-sept2016 (2) |
 | authority | 3 | 15 | 0 | Makarieva_2008 (2), Brose_etal_2018 (1) |
 | trinomial | 160 | 2,743 | 0 | Cai_etal_2025 (41), Makarieva_2008 (34), Brose_etal_2018 (31), McCoy_2008 (14), Quaardvark (11), Hirt_etal_2017 (10), Herberstein_etal_2022 (5), Lislevand_etal_2007 (5), AndersonGillooly_2017 (2), Verberk_2020 (2), Brown_etal_2018 (1), Hrycik_2024 (1), Kendall_etal_2019 (1), sealifebase (1), Smith_2003 (1), Tucker_etal_2014b (1) |
@@ -120,11 +121,11 @@ The 60 names with most records (of 726):
 | `Brachysomus sp.` | `Brachysomus_sp` | placeholder | 89 | Brose_etal_2018 |
 | `Ctenocalanus sp.` | `Ctenocalanus_sp` | placeholder | 89 | Barnes_2008 |
 
-## qualifier (38 names, 3,574 rows)
+## qualifier (31 names, 3,521 rows)
 
-An identification qualifier (cf., aff., nr., a species group or aggregate): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.
+An identification qualifier before the epithet (cf., aff., nr.): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.
 
-By source: Brose_etal_2018 (25 names, 3,510 rows); Kendall_etal_2019 (2 names, 47 rows); vertnet-aves-sept2016 (2 names, 7 rows); Hrycik_2024 (5 names, 6 rows); DeLong_etal_2018 (2 names, 2 rows); Makarieva_2008 (2 names, 2 rows).
+By source: Brose_etal_2018 (25 names, 3,510 rows); vertnet-aves-sept2016 (2 names, 7 rows); DeLong_etal_2018 (2 names, 2 rows); Makarieva_2008 (2 names, 2 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -146,7 +147,6 @@ By source: Brose_etal_2018 (25 names, 3,510 rows); Kendall_etal_2019 (2 names, 4
 | `Epicrius cf. spinituberculatus` | `Epicrius_cf` | qualifier | 49 | Brose_etal_2018 |
 | `Zercon cf romagniolus` | `Zercon_cf` | qualifier | 47 | Brose_etal_2018 |
 | `Pseudachorutes cf dubius` | `Pseudachorutes_cf` | qualifier | 45 | Brose_etal_2018 |
-| `Hylaeus modestus grp` | `Hylaeus_cf` | qualifier | 40 | Kendall_etal_2019 |
 | `Amblyseius cf. nemorivagus` | `Amblyseius_cf` | qualifier | 37 | Brose_etal_2018 |
 | `Melogona cf. voigti` | `Melogona_cf` | qualifier | 37 | Brose_etal_2018 |
 | `Cornodendrolaelaps cf cornutulus` | `Cornodendrolaelaps_cf` | qualifier | 27 | Brose_etal_2018 |
@@ -154,118 +154,112 @@ By source: Brose_etal_2018 (25 names, 3,510 rows); Kendall_etal_2019 (2 names, 4
 | `Micranurida cf sensillata` | `Micranurida_cf` | qualifier | 18 | Brose_etal_2018 |
 | `Ballistura cf. hankoi` | `Ballistura_cf` | qualifier | 14 | Brose_etal_2018 |
 | `Phthiracarus cf crenophilus` | `Phthiracarus_cf` | qualifier | 14 | Brose_etal_2018 |
-| `Lasioglossum tegulare grp` | `Lasioglossum_cf` | qualifier | 7 | Kendall_etal_2019 |
 | `Empidonax [traillii]` | `Empidonax_traillii` | qualifier | 6 | vertnet-aves-sept2016 |
-| `Heterotrissocladius marcidus group` | `Heterotrissocladius_cf` | qualifier | 2 | Hrycik_2024 |
 | `Arietellus cf.` | `Arietellus_cf` | qualifier | 1 | Makarieva_2008 |
 | `Buteo (rufofuscus)` | `Buteo_rufofuscus` | qualifier | 1 | vertnet-aves-sept2016 |
-| `Heterotrissocladius subpilosus group` | `Heterotrissocladius_cf` | qualifier | 1 | Hrycik_2024 |
-| `Phaenopsectra obediens group` | `Phaenopsectra_cf` | qualifier | 1 | Hrycik_2024 |
-| `Polypedilum halterale group` | `Polypedilum_cf` | qualifier | 1 | Hrycik_2024 |
-| `Polypedilum scalaenum group` | `Polypedilum_cf` | qualifier | 1 | Hrycik_2024 |
 | `Procapritermes nr. sandakanensis` | `Procapritermes_nr` | qualifier | 1 | Makarieva_2008 |
 | `Protoperidinium cf. divergens` | `Protoperidinium_cf` | qualifier | 1 | DeLong_etal_2018 |
 | `Pseudobodo c.f. tremulans` | `Pseudobodo_cf` | qualifier | 1 | DeLong_etal_2018 |
 
 ## hybrid (37 names, 139 rows)
 
-A hybrid or intergrade between two taxa (names joined by x): a record of neither parent, dropped through DropImputed().
+A hybrid or intergrade, two names joined by x: the record is credited to the first name written (the name is cut at the x; a genus alone before it gives a genus-level record), owner decision 2026-10-04.
 
 By source: vertnet-aves-sept2016 (23 names, 58 rows); vertnet-traits-sept2016 (14 names, 46 rows); Tsuboi_etal_2018 (2 names, 34 rows); vertnet-reptilia-sept2016 (1 names, 1 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
-| `Cebus nigritusXlibidinosus` | (dropped) | hybrid | 33 | Tsuboi_etal_2018 |
-| `Icterus bullockii x galbula` | (dropped) | hybrid | 18 | vertnet-traits-sept2016 |
-| `Tympanuchus phasianellus X cupido` | (dropped) | hybrid | 17 | vertnet-aves-sept2016 |
-| `Geomys bursarius x lutescens` | (dropped) | hybrid | 12 | vertnet-traits-sept2016 |
-| `Aechmophorus clarkii x occidentalis` | (dropped) | hybrid | 9 | vertnet-aves-sept2016 |
-| `Colaptes cafer X auratus` | (dropped) | hybrid | 4 | vertnet-aves-sept2016 |
-| `Melanerpes aurifrons x hoffmannii ?` | (dropped) | hybrid | 4 | vertnet-traits-sept2016 |
-| `Anas platyrhynchos x rubripes` | (dropped) | hybrid | 3 | vertnet-aves-sept2016 |
-| `Passer domesticus x hispaniolensis` | (dropped) | hybrid | 3 | vertnet-aves-sept2016 |
-| `Tympanuchus cupido X phasianellus` | (dropped) | hybrid | 3 | vertnet-aves-sept2016 |
-| `Melanerpes aurifrons x hoffmannii ?` | (dropped) | hybrid | 2 | vertnet-aves-sept2016 |
-| `Spermophilus-h richardsonii x elegans` | (dropped) | hybrid | 2 | vertnet-traits-sept2016 |
-| `Vermivora chrysoptera x pinus` | (dropped) | hybrid | 2 | vertnet-aves-sept2016 |
-| `Anas rubripes x platyrhynchos` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Aythya baeri x novaeseelandia` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Carduelis sinica x Serinus canaria` | (dropped) | hybrid | 1 | Tsuboi_etal_2018 |
-| `Centrocercus X Tympanuchus urophasianus X phasianellus` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Colinus virginianus x cristatus` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Corvus albus x ruficollis` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Icterus galbula x bullockii` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Lonchura cantans x striata` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Lonchura X Poephila cantans x guttata` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Loxia curvirostra x leucoptera` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Melidectes belfordi x rufocrissalis` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Parus atricapillus x carolinensis` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Phasianus X Chrysolo colchicus` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Pheucticus ludovicianus x melan` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Pheucticus ludovicianus x melan` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Pheucticus ludovicianus X melanocephalus` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Ploceus castanops X ssp?` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Sphyrapicus nuchalis x ruber` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Sphyrapicus ruber x varius` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
-| `Sphyrapicus ruber x varius` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Thamnophis atratus x hammondii` | (dropped) | hybrid | 1 | vertnet-reptilia-sept2016 |
-| `Tympanuchus cupido x phasianellus` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Uraeginthus bengalus x cyanocephalus` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Vermivora peregrina X ruficapilla` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Vidua purpurascens x paradisaea` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Zenaida aurita x galapagoens` | (dropped) | hybrid | 1 | vertnet-aves-sept2016 |
-| `Zenaida galapagoensis x macr` | (dropped) | hybrid | 1 | vertnet-traits-sept2016 |
+| `Cebus nigritusXlibidinosus` | `Cebus_nigritus` | hybrid | 33 | Tsuboi_etal_2018 |
+| `Icterus bullockii x galbula` | `Icterus_bullockii` | hybrid | 18 | vertnet-traits-sept2016 |
+| `Tympanuchus phasianellus X cupido` | `Tympanuchus_phasianellus` | hybrid | 17 | vertnet-aves-sept2016 |
+| `Geomys bursarius x lutescens` | `Geomys_bursarius` | hybrid | 12 | vertnet-traits-sept2016 |
+| `Aechmophorus clarkii x occidentalis` | `Aechmophorus_clarkii` | hybrid | 9 | vertnet-aves-sept2016 |
+| `Colaptes cafer X auratus` | `Colaptes_cafer` | hybrid | 4 | vertnet-aves-sept2016 |
+| `Melanerpes aurifrons x hoffmannii ?` | `Melanerpes_aurifrons` | hybrid | 4 | vertnet-traits-sept2016 |
+| `Anas platyrhynchos x rubripes` | `Anas_platyrhynchos` | hybrid | 3 | vertnet-aves-sept2016 |
+| `Passer domesticus x hispaniolensis` | `Passer_domesticus` | hybrid | 3 | vertnet-aves-sept2016 |
+| `Tympanuchus cupido X phasianellus` | `Tympanuchus_cupido` | hybrid | 3 | vertnet-aves-sept2016 |
+| `Melanerpes aurifrons x hoffmannii ?` | `Melanerpes_aurifrons` | hybrid | 2 | vertnet-aves-sept2016 |
+| `Spermophilus-h richardsonii x elegans` | `Spermophilush_richardsonii` | hybrid | 2 | vertnet-traits-sept2016 |
+| `Vermivora chrysoptera x pinus` | `Vermivora_chrysoptera` | hybrid | 2 | vertnet-aves-sept2016 |
+| `Anas rubripes x platyrhynchos` | `Anas_rubripes` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Aythya baeri x novaeseelandia` | `Aythya_baeri` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Carduelis sinica x Serinus canaria` | `Carduelis_sinica` | hybrid | 1 | Tsuboi_etal_2018 |
+| `Centrocercus X Tympanuchus urophasianus X phasianellus` | `Centrocercus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Colinus virginianus x cristatus` | `Colinus_virginianus` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Corvus albus x ruficollis` | `Corvus_albus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Icterus galbula x bullockii` | `Icterus_galbula` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Lonchura cantans x striata` | `Lonchura_cantans` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Lonchura X Poephila cantans x guttata` | `Lonchura` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Loxia curvirostra x leucoptera` | `Loxia_curvirostra` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Melidectes belfordi x rufocrissalis` | `Melidectes_belfordi` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Parus atricapillus x carolinensis` | `Parus_atricapillus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Phasianus X Chrysolo colchicus` | `Phasianus` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Pheucticus ludovicianus x melan` | `Pheucticus_ludovicianus` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Pheucticus ludovicianus x melan` | `Pheucticus_ludovicianus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Pheucticus ludovicianus X melanocephalus` | `Pheucticus_ludovicianus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Ploceus castanops X ssp?` | `Ploceus_castanops` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Sphyrapicus nuchalis x ruber` | `Sphyrapicus_nuchalis` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Sphyrapicus ruber x varius` | `Sphyrapicus_ruber` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Sphyrapicus ruber x varius` | `Sphyrapicus_ruber` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Thamnophis atratus x hammondii` | `Thamnophis_atratus` | hybrid | 1 | vertnet-reptilia-sept2016 |
+| `Tympanuchus cupido x phasianellus` | `Tympanuchus_cupido` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Uraeginthus bengalus x cyanocephalus` | `Uraeginthus_bengalus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Vermivora peregrina X ruficapilla` | `Vermivora_peregrina` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Vidua purpurascens x paradisaea` | `Vidua_purpurascens` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Zenaida aurita x galapagoens` | `Zenaida_aurita` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Zenaida galapagoensis x macr` | `Zenaida_galapagoensis` | hybrid | 1 | vertnet-traits-sept2016 |
 
 ## ambiguous (32 names, 387 rows)
 
-Two or more alternative taxa in one name (joined by /, a comma, a semicolon or "and"): dropped through DropImputed().
+Two or more alternative taxa in one name (joined by /, a comma, a semicolon or "and"): the record is credited to the first name written (the name is cut at the separator; an incomplete first fragment such as Lithobius_cyrt is left to the enrichment), owner decision 2026-10-04.
 
 By source: Brose_etal_2018 (3 names, 136 rows); vertnet-aves-sept2016 (16 names, 122 rows); vertnet-traits-sept2016 (14 names, 118 rows); Hrycik_2024 (4 names, 6 rows); DeLong_etal_2018 (3 names, 3 rows); Brown_etal_2018 (2 names, 2 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
-| `Lithobius cyrt/mutabi` | (dropped) | ambiguous | 80 | Brose_etal_2018 |
-| `Pipilo maculatus,  ocai` | (dropped) | ambiguous | 60 | vertnet-aves-sept2016 |
-| `Fish eggs/larvae` | (dropped) | ambiguous | 54 | Brose_etal_2018 |
-| `Pipilo maculatus,  ocai` | (dropped) | ambiguous | 42 | vertnet-traits-sept2016 |
-| `Larus glaucescens,  occidentalis` | (dropped) | ambiguous | 17 | vertnet-traits-sept2016 |
-| `Junco caniceps,  oreganus` | (dropped) | ambiguous | 13 | vertnet-traits-sept2016 |
-| `Larus glaucescens,  occidentalis` | (dropped) | ambiguous | 13 | vertnet-aves-sept2016 |
-| `Empidonax traillii/alnorum` | (dropped) | ambiguous | 11 | vertnet-aves-sept2016 |
-| `Carduelis hornemanni,  flammea` | (dropped) | ambiguous | 9 | vertnet-traits-sept2016 |
-| `Carduelis hornemanni,  flammea` | (dropped) | ambiguous | 9 | vertnet-aves-sept2016 |
-| `Empidonax traillii/alnorum` | (dropped) | ambiguous | 9 | vertnet-traits-sept2016 |
-| `Junco caniceps,  oreganus` | (dropped) | ambiguous | 8 | vertnet-aves-sept2016 |
-| `Leucosticte tephrocotis,  atrata` | (dropped) | ambiguous | 8 | vertnet-traits-sept2016 |
-| `Leucosticte tephrocotis,  atrata` | (dropped) | ambiguous | 8 | vertnet-aves-sept2016 |
-| `Sphyrapicus nuchalis,  ruber` | (dropped) | ambiguous | 8 | vertnet-traits-sept2016 |
-| `Baeolophus atricristatus,  bicolor` | (dropped) | ambiguous | 3 | vertnet-traits-sept2016 |
-| `Empidonax alnorum/traillii` | (dropped) | ambiguous | 3 | vertnet-traits-sept2016 |
-| `Musculium/Sphaerium` | (dropped) | ambiguous | 3 | Hrycik_2024 |
-| `Pheucticus melanocephalus,  ludovicianus` | (dropped) | ambiguous | 3 | vertnet-aves-sept2016 |
-| `Diptera larvae/pupae` | (dropped) | ambiguous | 2 | Brose_etal_2018 |
-| `Neotoma bryanti,  lepida` | (dropped) | ambiguous | 2 | vertnet-traits-sept2016 |
-| `Vermivora pinus,  chrysoptera` | (dropped) | ambiguous | 2 | vertnet-aves-sept2016 |
-| `Baeolophus atricristatus,  bicolor` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Coccinella septempunctata and Harpalus pennsylvanicus` | (dropped) | ambiguous | 1 | DeLong_etal_2018 |
-| `Coccinella transversalis and Coccinella septempunctata` | (dropped) | ambiguous | 1 | DeLong_etal_2018 |
-| `Empidonax alnorum/traillii` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Empidonax difficilis/occidentalis` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Junco aikeni,  oreganus` | (dropped) | ambiguous | 1 | vertnet-traits-sept2016 |
-| `Junco aikeni,  oreganus` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Junco oreganus,  hyemalis` | (dropped) | ambiguous | 1 | vertnet-traits-sept2016 |
-| `Nais communis/variablis` | (dropped) | ambiguous | 1 | Hrycik_2024 |
-| `Pacific herring, Clupea palasi` | (dropped) | ambiguous | 1 | Brown_etal_2018 |
-| `Petrochelidon; Hirundo fulva; rustica` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Polioptila albiloris/nigriceps` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Potamothrix bedoti/bavaricus` | (dropped) | ambiguous | 1 | Hrycik_2024 |
-| `Serinus, Carpodacus Carpodacus mexicanus` | (dropped) | ambiguous | 1 | vertnet-traits-sept2016 |
-| `Sitobion avenae, Metopolophium dirhodum` | (dropped) | ambiguous | 1 | DeLong_etal_2018 |
-| `Skate, Raja orinacea` | (dropped) | ambiguous | 1 | Brown_etal_2018 |
-| `Sphyrapicus nuchalis,  ruber` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Sylvia atricapilla/borin` | (dropped) | ambiguous | 1 | vertnet-aves-sept2016 |
-| `Valvata sincera/piscinalis` | (dropped) | ambiguous | 1 | Hrycik_2024 |
-| `Vireo gilvus,  olivaceus` | (dropped) | ambiguous | 1 | vertnet-traits-sept2016 |
+| `Lithobius cyrt/mutabi` | `Lithobius_cyrt` | ambiguous | 80 | Brose_etal_2018 |
+| `Pipilo maculatus,  ocai` | `Pipilo_maculatus` | ambiguous | 60 | vertnet-aves-sept2016 |
+| `Fish eggs/larvae` | `Fish_eggs` | ambiguous | 54 | Brose_etal_2018 |
+| `Pipilo maculatus,  ocai` | `Pipilo_maculatus` | ambiguous | 42 | vertnet-traits-sept2016 |
+| `Larus glaucescens,  occidentalis` | `Larus_glaucescens` | ambiguous | 17 | vertnet-traits-sept2016 |
+| `Junco caniceps,  oreganus` | `Junco_caniceps` | ambiguous | 13 | vertnet-traits-sept2016 |
+| `Larus glaucescens,  occidentalis` | `Larus_glaucescens` | ambiguous | 13 | vertnet-aves-sept2016 |
+| `Empidonax traillii/alnorum` | `Empidonax_traillii` | ambiguous | 11 | vertnet-aves-sept2016 |
+| `Carduelis hornemanni,  flammea` | `Carduelis_hornemanni` | ambiguous | 9 | vertnet-traits-sept2016 |
+| `Carduelis hornemanni,  flammea` | `Carduelis_hornemanni` | ambiguous | 9 | vertnet-aves-sept2016 |
+| `Empidonax traillii/alnorum` | `Empidonax_traillii` | ambiguous | 9 | vertnet-traits-sept2016 |
+| `Junco caniceps,  oreganus` | `Junco_caniceps` | ambiguous | 8 | vertnet-aves-sept2016 |
+| `Leucosticte tephrocotis,  atrata` | `Leucosticte_tephrocotis` | ambiguous | 8 | vertnet-traits-sept2016 |
+| `Leucosticte tephrocotis,  atrata` | `Leucosticte_tephrocotis` | ambiguous | 8 | vertnet-aves-sept2016 |
+| `Sphyrapicus nuchalis,  ruber` | `Sphyrapicus_nuchalis` | ambiguous | 8 | vertnet-traits-sept2016 |
+| `Baeolophus atricristatus,  bicolor` | `Baeolophus_atricristatus` | ambiguous | 3 | vertnet-traits-sept2016 |
+| `Empidonax alnorum/traillii` | `Empidonax_alnorum` | ambiguous | 3 | vertnet-traits-sept2016 |
+| `Musculium/Sphaerium` | `Musculium` | ambiguous | 3 | Hrycik_2024 |
+| `Pheucticus melanocephalus,  ludovicianus` | `Pheucticus_melanocephalus` | ambiguous | 3 | vertnet-aves-sept2016 |
+| `Diptera larvae/pupae` | `Diptera_larvae` | ambiguous | 2 | Brose_etal_2018 |
+| `Neotoma bryanti,  lepida` | `Neotoma_bryanti` | ambiguous | 2 | vertnet-traits-sept2016 |
+| `Vermivora pinus,  chrysoptera` | `Vermivora_pinus` | ambiguous | 2 | vertnet-aves-sept2016 |
+| `Baeolophus atricristatus,  bicolor` | `Baeolophus_atricristatus` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Coccinella septempunctata and Harpalus pennsylvanicus` | `Coccinella_septempunctata` | ambiguous | 1 | DeLong_etal_2018 |
+| `Coccinella transversalis and Coccinella septempunctata` | `Coccinella_transversalis` | ambiguous | 1 | DeLong_etal_2018 |
+| `Empidonax alnorum/traillii` | `Empidonax_alnorum` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Empidonax difficilis/occidentalis` | `Empidonax_difficilis` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Junco aikeni,  oreganus` | `Junco_aikeni` | ambiguous | 1 | vertnet-traits-sept2016 |
+| `Junco aikeni,  oreganus` | `Junco_aikeni` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Junco oreganus,  hyemalis` | `Junco_oreganus` | ambiguous | 1 | vertnet-traits-sept2016 |
+| `Nais communis/variablis` | `Nais_communis` | ambiguous | 1 | Hrycik_2024 |
+| `Pacific herring, Clupea palasi` | `Pacific_herring` | ambiguous | 1 | Brown_etal_2018 |
+| `Petrochelidon; Hirundo fulva; rustica` | `Petrochelidon` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Polioptila albiloris/nigriceps` | `Polioptila_albiloris` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Potamothrix bedoti/bavaricus` | `Potamothrix_bedoti` | ambiguous | 1 | Hrycik_2024 |
+| `Serinus, Carpodacus Carpodacus mexicanus` | `Serinus` | ambiguous | 1 | vertnet-traits-sept2016 |
+| `Sitobion avenae, Metopolophium dirhodum` | `Sitobion_avenae` | ambiguous | 1 | DeLong_etal_2018 |
+| `Skate, Raja orinacea` | `Skate` | ambiguous | 1 | Brown_etal_2018 |
+| `Sphyrapicus nuchalis,  ruber` | `Sphyrapicus_nuchalis` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Sylvia atricapilla/borin` | `Sylvia_atricapilla` | ambiguous | 1 | vertnet-aves-sept2016 |
+| `Valvata sincera/piscinalis` | `Valvata_sincera` | ambiguous | 1 | Hrycik_2024 |
+| `Vireo gilvus,  olivaceus` | `Vireo_gilvus` | ambiguous | 1 | vertnet-traits-sept2016 |
 
 ## subgenus (17 names, 33 rows)
 
@@ -362,7 +356,7 @@ By source: Makarieva_2008 (3 names, 19 rows); Brose_etal_2018 (2 names, 18 rows)
 
 ## size_class (25 names, 6,021 rows)
 
-A size-class tag ({s}, {m}, {l}, {xl}, large, small) is removed; every class feeds the species mean (not a life stage; owner to decide).
+A size-class tag of the Brose_etal_2018 soil food webs: {m}, {l}, {xl}, {xxl}, {xxxl}, medium and large are removed and the record kept; the small classes {xs}, {s} and small are non-adult records and are dropped through DropImputed() (owner decision 2026-10-04).
 
 By source: Brose_etal_2018 (25 names, 6,021 rows).
 
@@ -373,26 +367,42 @@ By source: Brose_etal_2018 (25 names, 6,021 rows).
 | `Harpactea lepida large` | `Harpactea_lepida` | size_class | 673 | Brose_etal_2018 |
 | `Lithobius aeruginosus {l}` | `Lithobius_aeruginosus` | size_class | 655 | Brose_etal_2018 |
 | `Lithobius curtipes {l}` | `Lithobius_curtipes` | size_class | 450 | Brose_etal_2018 |
-| `Scutigerella immaculata {s}` | `Scutigerella_immaculata` | size_class | 438 | Brose_etal_2018 |
+| `Scutigerella immaculata {s}` | (dropped) | size_class | 438 | Brose_etal_2018 |
 | `Lithobius curtipes {m}` | `Lithobius_curtipes` | size_class | 392 | Brose_etal_2018 |
 | `Lithobius aeruginosus {m}` | `Lithobius_aeruginosus` | size_class | 388 | Brose_etal_2018 |
-| `Trachytes pauperior{s}` | `Trachytes_pauperior` | size_class | 369 | Brose_etal_2018 |
+| `Trachytes pauperior{s}` | (dropped) | size_class | 369 | Brose_etal_2018 |
 | `Allaiulus nitidus {xl}` | `Allaiulus_nitidus` | size_class | 236 | Brose_etal_2018 |
-| `Harpactea lepida small` | `Harpactea_lepida` | size_class | 185 | Brose_etal_2018 |
-| `Lithobius aeruginosus {s}` | `Lithobius_aeruginosus` | size_class | 82 | Brose_etal_2018 |
+| `Harpactea lepida small` | (dropped) | size_class | 185 | Brose_etal_2018 |
+| `Lithobius aeruginosus {s}` | (dropped) | size_class | 82 | Brose_etal_2018 |
 | `Allaiulus nitidus {xxl}` | `Allaiulus_nitidus` | size_class | 80 | Brose_etal_2018 |
 | `Trichoniscus pusillus {l}` | `Trichoniscus_pusillus` | size_class | 77 | Brose_etal_2018 |
-| `Lithobius curtipes {s}` | `Lithobius_curtipes` | size_class | 71 | Brose_etal_2018 |
-| `Trichoniscus pusillus {s}` | `Trichoniscus_pusillus` | size_class | 53 | Brose_etal_2018 |
+| `Lithobius curtipes {s}` | (dropped) | size_class | 71 | Brose_etal_2018 |
+| `Trichoniscus pusillus {s}` | (dropped) | size_class | 53 | Brose_etal_2018 |
 | `Glomeris conspersa {xl}` | `Glomeris_conspersa` | size_class | 46 | Brose_etal_2018 |
 | `Lumbricus rubellus {xxl}` | `Lumbricus_rubellus` | size_class | 45 | Brose_etal_2018 |
 | `Salvelinus fontinalis large` | `Salvelinus_fontinalis` | size_class | 35 | Brose_etal_2018 |
-| `Salvelinus fontinalis small` | `Salvelinus_fontinalis` | size_class | 35 | Brose_etal_2018 |
+| `Salvelinus fontinalis small` | (dropped) | size_class | 35 | Brose_etal_2018 |
 | `Octolasion tyrtaeum{xxxl}` | `Octolasion_tyrtaeum` | size_class | 25 | Brose_etal_2018 |
 | `Glomeris conspersa {l}` | `Glomeris_conspersa` | size_class | 23 | Brose_etal_2018 |
 | `Octolasion tyrtaeum{xxl}` | `Octolasion_tyrtaeum` | size_class | 23 | Brose_etal_2018 |
-| `Scutigerella immaculata {xs}` | `Scutigerella_immaculata` | size_class | 22 | Brose_etal_2018 |
+| `Scutigerella immaculata {xs}` | (dropped) | size_class | 22 | Brose_etal_2018 |
 | `Lumbricus rubellus {xl}` | `Lumbricus_rubellus` | size_class | 8 | Brose_etal_2018 |
+
+## species_group (7 names, 53 rows)
+
+A species group or aggregate marker after a binomial (group, grp, complex, agg., s.l.) is removed and the record credited to the nominal species written before it (owner decision 2026-10-04).
+
+By source: Kendall_etal_2019 (2 names, 47 rows); Hrycik_2024 (5 names, 6 rows).
+
+| raw name | result | classes | rows | source |
+|---|---|---|---:|---|
+| `Hylaeus modestus grp` | `Hylaeus_modestus` | species_group | 40 | Kendall_etal_2019 |
+| `Lasioglossum tegulare grp` | `Lasioglossum_tegulare` | species_group | 7 | Kendall_etal_2019 |
+| `Heterotrissocladius marcidus group` | `Heterotrissocladius_marcidus` | species_group | 2 | Hrycik_2024 |
+| `Heterotrissocladius subpilosus group` | `Heterotrissocladius_subpilosus` | species_group | 1 | Hrycik_2024 |
+| `Phaenopsectra obediens group` | `Phaenopsectra_obediens` | species_group | 1 | Hrycik_2024 |
+| `Polypedilum halterale group` | `Polypedilum_halterale` | species_group | 1 | Hrycik_2024 |
+| `Polypedilum scalaenum group` | `Polypedilum_scalaenum` | species_group | 1 | Hrycik_2024 |
 
 ## synonym (10 names, 35 rows)
 

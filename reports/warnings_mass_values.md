@@ -1,9 +1,9 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-03 23:16:35
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 06:43:01
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
-- High mass disagreement (log10 range > 2): 356 species
+- High mass disagreement (log10 range > 2): 357 species
 - Suspicious sources (log10 > 2, by frequency):
   - Cai_etal_2025 (78)
   - vertnet-mammalia-sept2016 (56)
@@ -15,11 +15,11 @@
   - Castro_2025 (30)
   - Quaardvark (29)
   - vertnet-fishes-sept2016 (28)
-  - Myhrvold_2015 (24)
+  - Myhrvold_2015 (25)
   - Smith_2003 (20)
   - Tobias_2022 (19)
+  - vertnet-reptilia-sept2016 (19)
   - Barnes_2008 (18)
-  - vertnet-reptilia-sept2016 (18)
   - Raymond_2011 (17)
   - DeLong_etal_2018 (13)
   - Feldman_etal_2016 (13)
@@ -72,10 +72,10 @@
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (1)
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Viana_2016 (1)
-- Moderate mass disagreement (log10 range 1-2): 804 species
+- Moderate mass disagreement (log10 range 1-2): 803 species
 - Suspicious sources (log10 1-2, by frequency):
   - Cai_etal_2025 (143)
-  - Myhrvold_2015 (110)
+  - Myhrvold_2015 (109)
   - Feldman_etal_2016 (108)
   - Brose_etal_2018 (104)
   - fishbase (85)
@@ -85,7 +85,7 @@
   - Quaardvark (53)
   - Meiri_2024 (49)
   - vertnet-mammalia-sept2016 (48)
-  - vertnet-reptilia-sept2016 (41)
+  - vertnet-reptilia-sept2016 (40)
   - Castro_2025 (39)
   - Tobias_2022 (39)
   - AnAge (37)
@@ -161,7 +161,7 @@
   - Watson_2007 (1)
   - Weisse_2024 (1)
   - Wilman_etal_2014 (1)
-## log10(max/min mass) > 2 after dedup (356 species) -- likely misresolution or unit error
+## log10(max/min mass) > 2 after dedup (357 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
         Min_source: DeLong_etal_2010 4.2e-08
@@ -1228,11 +1228,14 @@ Themisto gaudichaudii [range=2.00]
 Gadus macrocephalus [range=2.00]
         Min_source: Makarieva_2008 180
         Max_source: Cai_etal_2025 1.814e+04
+Thamnophis atratus [range=2.00]
+        Min_source: vertnet-reptilia-sept2016 4.358
+        Max_source: Myhrvold_2015 439
 Caranx ruber [range=2.00]
         Min_source: Viana_2016 81.9
         Max_source: Froese_2025 8200
 
-## Moderate mass disagreement (log10 range 1-2) (804 species)
+## Moderate mass disagreement (log10 range 1-2) (803 species)
 
 Balaenoptera musculus [range=2.00]
         Min_source: Brose_etal_2018 1.9e+06
@@ -1240,9 +1243,6 @@ Balaenoptera musculus [range=2.00]
 Harpia harpyja [range=2.00]
         Min_source: vertnet-traits-sept2016 70
         Max_source: Quaardvark 7000
-Thamnophis atratus [range=2.00]
-        Min_source: vertnet-reptilia-sept2016 4.406
-        Max_source: Myhrvold_2015 439
 Scotorepens sanborni [range=2.00]
         Min_source: Smith_2003 8.033
         Max_source: vertnet-mammalia-sept2016 796

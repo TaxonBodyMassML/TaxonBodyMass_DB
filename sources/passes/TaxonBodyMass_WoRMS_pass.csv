@@ -1,4 +1,3 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Jaera_albifrons","Animalia","Arthropoda","Malacostraca","Isopoda","Janiridae","Jaera albifrons",FALSE,"GBIF","Jaera","Jaera albifrons",99,"ACCEPTED","Janiridae","Isopoda","5177086"
-"Podilymbus_nigricollis","Animalia","Chordata","Aves","Podicipediformes","Podicipedidae","Podilymbus nigricollis",FALSE,NA,"Podilymbus",NA,94,"ACCEPTED","Podicipedidae","Podicipediformes","2482075"
-"Podilymbus_ruficollis","Animalia","Chordata","Aves","Podicipediformes","Podicipedidae","Podilymbus ruficollis",FALSE,NA,"Podilymbus",NA,94,"ACCEPTED","Podicipedidae","Podicipediformes","2482075"
+"Lithobius_cyrt","Animalia","Arthropoda","Chilopoda","Lithobiomorpha","Lithobiidae","Lithobius cyrt",TRUE,"GBIF","Lithobius","Lithobius cyrtopus",93,"ACCEPTED","Lithobiidae","Lithobiomorpha","2230461"
+"Potamothrix_bedoti","Animalia","Annelida","Clitellata","Tubificida","Naididae","Potamothrix bedoti",FALSE,"GBIF","Potamothrix","Potamothrix bedoti",99,"ACCEPTED","Naididae","Tubificida","2308604"

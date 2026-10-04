@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 23:16:35
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 06:43:01
 
 
-## Species name changed during enrichment (5655 rows)
+## Species name changed during enrichment (5656 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -5527,6 +5527,8 @@ Lithobates sylvaticus; Rana sylvatica -> Lithobates sylvaticus [GBIF]
 
 Rana virgatipes -> Lithobates virgatipes [GBIF]
 
+Lithobius cyrt -> Lithobius cyrtopus [GBIF]
+
 Lithobius aulacopus -> Lithobius macilentus [GBIF]
 
 Leptodactylus lineatus -> Lithodytes lineatus [GBIF]
@@ -10959,7 +10961,7 @@ Spermophilus mollis; Urocitellus mollis -> Urocitellus mollis [GBIF]
 
 Spermophilus parryii; Urocitellus parryii -> Urocitellus parryii [GBIF]
 
-Urocitellus richardsonii; Spermophilus richardsonii; Citellus richardsoni -> Urocitellus richardsonii [GBIF]
+Urocitellus richardsonii; Spermophilus richardsonii; Citellus richardsoni; Spermophilush richardsonii -> Urocitellus richardsonii [GBIF]
 
 Spermophilus townsendii; Urocitellus townsendii; Urocitellus townsendi -> Urocitellus townsendii [GBIF]
 
