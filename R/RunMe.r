@@ -79,6 +79,7 @@ source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
 source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
 source(file.path(wd_root, 'R', 'library', 'enrich_genus.r'))
+source(file.path(wd_root, 'R', 'library', 'sheet_override.r'))
 
 # The raw-name vocabulary FixFormatting() applies (#38): tracked in audit/,
 # validated on loading (columns, classes, actions, regexes).
@@ -274,7 +275,8 @@ adat_raw <- bind_rows(source_list)
 
 # Separate genus-only entries: included in genus averages but excluded from
 # species export. They are resolved at genus rank, filtered, weighted and
-# de-duplicated in section 5b (#49).
+# de-duplicated in section 5b (#49); the genus-level rows of the lab Sheet
+# join them in section 4 (#57).
 genus_only <- adat_raw[!grepl('_', adat_raw$taxon), ]
 adat_raw   <- adat_raw[ grepl('_', adat_raw$taxon), ]
 
@@ -301,14 +303,22 @@ ddat <- ddat[which(!is.na(ddat$mass_g)), 1:4]
 # offending rows and asks for the Sheet to be corrected.
 ddat <- CheckSheetTaxa(ddat)
 ddat$source_mass <- NormaliseSourceLabel(ddat$source_mass)
-ddat$n <- 1
-for (col in tax_cols)
-  if (!col %in% names(ddat)) ddat[[col]] <- NA_character_
-
-sel  <- adat_raw$taxon %!in% ddat$taxon
-adat <- bind_rows(ddat[, c('taxon', 'mass_g', 'source_mass', 'n',
-                           'kingdom', 'phylum', 'class', 'order', 'family')],
-                  adat_raw[sel, ])
+# The Sheet rows are split by the rule of section 3 (sheet_override.r, #57):
+# a species-level row (Genus_species) replaces every compiled record of the
+# species, as before; a genus-level row (a bare Genus) replaces the sources'
+# genus-only rows of that bare name and joins the genus-only path of section
+# 5b, where it is resolved at genus rank, filtered, combined per genus and
+# source and de-duplicated like the sources' rows. Until #57 a bare Sheet
+# name entered the species path, where it was dropped as unresolved or,
+# worse, resolved to a species (ITIS made the genus-level value of Hypopomus
+# a record of Hypopomus artedi). The species-level values of such a genus are
+# not touched; the genus mean of section 6 averages both.
+sheet      <- ApplySheetOverride(ddat, adat_raw, genus_only)
+adat       <- sheet$adat
+genus_only <- sheet$genus_only
+message(sprintf(paste('Lab Sheet (BM_data): %d species-level rows (replacing the compiled records of %d species),',
+                      '%d genus-level rows (replacing the genus-only rows of %d bare names)'),
+                nrow(sheet$species), sheet$n_species_replaced, nrow(sheet$genus), sheet$n_genus_replaced))
 
 
 ##########################################################################
@@ -333,6 +343,18 @@ cache_path <- file.path(wd_root, 'sources', 'enrich_cache.Rdata')
 if (!fresh_start && file.exists(cache_path)) {
   load(cache_path)                                            # loads `enrich_cache` (and `genus_cache`, #49)
   if (!exists('genus_cache')) genus_cache <- EmptyGenusCache()  # a cache file written before #49
+  # A bare name (no underscore) can no longer reach the species path: the
+  # genus-level Sheet rows take the genus-only path (section 4, #57). The rows
+  # those Sheet rows left in the species cache before then (eight genera, one
+  # of which ITIS had resolved to a species, Hypopomus -> Hypopomus artedi, and
+  # the family Bathylagidae) are dropped, so that CacheGenera() (enrich_genus.r)
+  # does not count a bare name as a resolved species. Self-extinguishing:
+  # nothing writes such a row again.
+  stale_bare <- !grepl('_', enrich_cache$taxon, fixed = TRUE)
+  if (any(stale_bare)) {
+    cli::cli_inform(c('i' = '{sum(stale_bare)} bare (genus-level) name{?s} dropped from the species enrichment cache (#57): {paste(enrich_cache$taxon[stale_bare], collapse = ", ")}'))
+    enrich_cache <- enrich_cache[!stale_bare, ]
+  }
   new_taxa    <- unique_taxa[unique_taxa$taxon %!in% enrich_cache$taxon, ]
   cached_taxa <- unique_taxa[unique_taxa$taxon %in%  enrich_cache$taxon, ]
   cli::cli_inform(c(
@@ -532,8 +554,9 @@ enriched$mass_g <- signif(enriched$mass_g, digits = 4)
 ##########################################################################
 # 5b. Genus-only records: resolve at genus rank, filter, weight, de-duplicate
 ##########################################################################
-# The records identified to genus only (section 3) get the machinery of the
-# species path (enrich_genus.r, #49). Every bare name is resolved once to an
+# The records identified to genus only (section 3, and the genus-level rows
+# of the lab Sheet, section 4, #57) get the machinery of the species path
+# (enrich_genus.r, #49). Every bare name is resolved once to an
 # accepted GBIF genus, or found to be a rank above genus, through the
 # enrichment cache and the GBIF backbone, with the class/order/family hints
 # the frames carry (VertNet, Castro_2025, Pata_2025, Makarieva_2008); the

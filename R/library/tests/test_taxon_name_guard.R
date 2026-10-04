@@ -161,9 +161,9 @@ Expect(length(i_ext) == 1 && length(i_bind) == 1 && i_ext < i_call && i_call < i
        'the call sits after RemoveExtinct() and before the section-3 bind')
 i_filt  <- grep("^ddat <- ddat\\[which\\(!is\\.na\\(ddat\\$mass_g\\)\\), 1:4\\]", runme)
 i_sheet <- grep('^ddat <- CheckSheetTaxa\\(ddat\\)', runme)
-i_adat  <- grep('^adat <- bind_rows\\(ddat\\[', runme)
+i_adat  <- grep('^sheet      <- ApplySheetOverride\\(ddat, adat_raw, genus_only\\)', runme)
 Expect(length(i_filt) == 1 && length(i_sheet) == 1 && length(i_adat) == 1 && i_filt < i_sheet && i_sheet < i_adat,
-       'RunMe.r checks the Sheet taxa (CheckSheetTaxa(), #48) after the mass filter and before binding them to the source rows')
+       'RunMe.r checks the Sheet taxa (CheckSheetTaxa(), #48) after the mass filter and before the override binds them to the source rows (ApplySheetOverride(), #57)')
 
 # ---- summary -------------------------------------------------------------------
 cat(sprintf('\n%d expectations, %d failed\n', n_checks, length(failures)))
