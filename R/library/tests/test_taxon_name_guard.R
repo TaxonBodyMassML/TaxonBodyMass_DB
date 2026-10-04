@@ -33,7 +33,7 @@ Frame <- function(taxon, source)
 
 # ---- synthetic frames ----------------------------------------------------------
 cat('CheckTaxonNames() on synthetic frames\n')
-clean <- list(Frame(c('Genus_species', 'Genus', 'Rhytonomus_isabellina'), 'SrcA'),
+clean <- list(Frame(c('Genus_species', 'Genus', 'Brachypera_isabellina'), 'SrcA'),
               Frame(c('Alpha_beta', NA), 'SrcB; Conv_2010'))
 Expect(is.null(ErrorOf(CheckTaxonNames(clean))),
        'species-level, genus-level and NA names pass')
@@ -61,8 +61,8 @@ Expect(Has(ErrorOf(CheckTaxonNames(one)), '1 cleaned taxon name(s)'), 'a single 
 # ---- the real cleaning chain on the name that motivated the guard ---------------
 cat('the cleaning chain on the Rhytonomus record\n')
 out <- FixMisspellings(FixFormatting(Frame('Rhytonomus isobellina', 'Chown_etal_2007')))
-Expect(identical(out$taxon, 'Rhytonomus_isabellina'),
-       "fix_misspellings.r maps 'Rhytonomus isobellina' to 'Rhytonomus_isabellina'")
+Expect(identical(out$taxon, 'Brachypera_isabellina'),
+       "fix_misspellings.r maps 'Rhytonomus isobellina' to 'Brachypera_isabellina' (Phytonomus isabellinus Boheman 1834)")
 Expect(grepl('_', out$taxon, fixed = TRUE), 'the corrected name passes the species test of section 3')
 Expect(is.null(ErrorOf(CheckTaxonNames(list(out)))), 'and the guard passes on it')
 
