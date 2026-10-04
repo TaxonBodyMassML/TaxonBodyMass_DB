@@ -30,9 +30,25 @@ RemoveNonTaxa <- function(dat) {
   dat <- dat[!grepl("_sp[A-Z]$", dat$taxon), ]
   dat <- dat[!grepl("^Order_",  dat$taxon, ignore.case = TRUE),  ]
 
+  # Fragment and immature labels of groups identified above genus level
+  # (Hrycik_2024: 'Oligochaeta Fragments' 9 rows, 'Tubificid fragment' 7,
+  # 'Naidid fragment' 1, 'Oligochaeta immature' 1; its SpeciesList.csv also
+  # names 'Enchytraeid fragment', 'Lumbriculid fragment' and 'Immature
+  # lumbriculid', which carry no weight row). Body fragments weighed as a lot
+  # and immatures sorted to a family are not adult records of any taxon (#44).
+  # _fragment(s)  = fragments of a family- or class-level group
+  # _immature(s)  = immatures of such a group ('immature tubificid with hairs'
+  #                 is dropped earlier by the life-stage rule of #38)
+  # Immature_     = the same label with the stage word first
+  dat <- dat[!grepl("_fragments?$", dat$taxon), ]
+  dat <- dat[!grepl("_immatures?$", dat$taxon), ]
+  dat <- dat[!grepl("^Immatures?_", dat$taxon), ]
+
   # Uninformative genus-level unknown placeholders ('Unidentified 1' and
-  # 'Unid. Chironomidae' arrive as Unidentified_sp / Unid_sp since #38).
-  dat <- dat[!grepl('^(Unk|Unknown|Unid|Unidentified)($|_)', dat$taxon), ]
+  # 'Unid. Chironomidae' arrive as Unidentified_sp / Unid_sp since #38; the
+  # bare VertNet labels 'Undefinable' (5 rows) and 'Unidentifiable' (4 rows)
+  # would otherwise enter the genus-level output as genera, #44).
+  dat <- dat[!grepl('^(Unk|Unknown|Unid|Unidentified|Unidentifiable|Undefinable)($|_)', dat$taxon), ]
 
   # Placeholder "species" token as genus or epithet.
   dat <- dat[!grepl('(^|_)[Ss]pecies($|_)', dat$taxon), ]
@@ -103,6 +119,7 @@ RemoveNonTaxa <- function(dat) {
   # Entries that cannot be linked to a valid genus or species binomial.
   invalid <- c(
     "Crayvertebrate_cambarus",     # malformed entry in Brown_etal_2018
+    "Not_recognised",              # Soria_etal_2021 (COMBINE): iucn2020_binomial 'Not recognised' on 260 rows of taxa the IUCN 2020 list does not recognise; a placeholder, not a name (#44)
     # Makarieva_2008's "Crithidia (Strigomonas) oncopelti" and "Crithida (Strigomonas)
     # fasciculata" lose their subgenus in FixFormatting (#38) and reach fix_misspellings.r as
     # Crithidia_oncopelti and Crithida_fasciculata, mapped there to Strigomonas_oncopelti and
@@ -179,8 +196,97 @@ RemoveNonTaxa <- function(dat) {
     "Nitzschia_pandora"           # diatom (Bacillariophyceae); labelled as bivalve in Brown_etal_2018
   )
 
+  # One-token functional-group labels and common names used as names in the
+  # food-web compilations (#44). A cleaned name without an underscore is filed
+  # as a genus-level record in RunMe.r section 3 and never reaches the
+  # enrichment, so these words entered TaxonBodyMass_GenusLevel.csv as genera.
+  # Row counts are records in the cached frames (main ab9af69). None is a
+  # genus in the GBIF backbone; the three with a GBIF genus homonym are noted.
+  # Latin names of ranks above genus (Oligochaeta, Chironomidae, Araneae,
+  # Cyanobacteria, ...) are taxa and are left for a separate decision.
+  functional_groups <- c(
+    # microbial, planktonic and benthic resource groups
+    "Algae",                       # Brose_etal_2018, 48 rows ('algae' of the Digel et al. 2014 soil webs, 'Algae' of the Florida island webs)
+    "Amoebae",                     # Brose_etal_2018, 568 rows (Dutch microfauna webs); vernacular plural, not the genus Amoeba
+    "Bacteria",                    # Brose_etal_2018, 1053 rows ('bacteria' 1016, 'Bacteria' 37); kingdom label used as a resource group
+    "Ciliates",                    # Brose_etal_2018, 748 rows
+    "Cryptophyte",                 # DeLong_etal_2018, 1 row; vernacular for a cryptophyte alga
+    "Diatoms",                     # Brose_etal_2018, 261 rows
+    "Eubactaria",                  # DeLong_etal_2018, 1 row; misspelt 'Eubacteria', a domain label
+    "Flagellates",                 # Brose_etal_2018, 568 rows
+    "Fungi",                       # Brose_etal_2018, 87 rows (Florida island and Iceland stream webs); kingdom label used as a resource group
+    "Microfauna",                  # Brose_etal_2018, 106 rows (Caribbean reef web, Opitz 1996)
+    "Microphytobenthos",           # Brose_etal_2018, 38 rows (Lough Hyne web, Jacob et al. 2015)
+    "Nanoflagellates",             # Brose_etal_2018, 204 rows
+    "Phytoplankton",               # Brose_etal_2018, 12 rows
+    "PhytoP",                      # Brose_etal_2018, 82 rows; 'PhytoP' with common name 'PhytoPlamcton' (Mendonca et al. 2018 webs); GBIF parses it as the fly genus Phyto, a spurious match
+    "Plankton",                    # Brose_etal_2018, 53 rows (Chilean intertidal webs, Kefi et al. 2015)
+    "Scuticociliate",              # DeLong_etal_2010, 1 row; ciliate functional group (Scuticociliatia), described as removed in the source README
+    "Zooplankton",                 # Brose_etal_2018, 25 rows
+    # invertebrate group names (Brose_etal_2018 unless stated)
+    "Arthropods",                  # 29 rows
+    "Asteroids",                   # 27 rows; sea stars
+    "Barnacles",                   # 12 rows
+    "Bryozoan",                    # 1 row
+    "Bryozoans",                   # 12 rows
+    "Chitons",                     # 36 rows
+    "Copepod",                     # 25 rows (Carpinteria web, Lafferty et al. 2006)
+    "Crabs",                       # 128 rows
+    "Echinoids",                   # 50 rows
+    "Echiuroids",                  # 6 rows
+    "Hemichordates",               # 10 rows
+    "Holothurians",                # 17 rows
+    "Hydrozoans",                  # 21 rows
+    "Insect",                      # Hirt_etal_2017, 3 rows
+    "Nematodes",                   # 6 rows (Ythan Estuary web, Cohen et al. 2009); the worms as a group, not the eucnemid beetle genus Nematodes that GBIF matches
+    "Nemertean",                   # 25 rows
+    "NonOribatida",                # 1 row; the non-oribatid mites of a soil web, a residual group
+    "Octopuses",                   # 36 rows
+    "Ophiuroids",                  # 43 rows
+    "Ostracods",                   # 7 rows
+    "Polychaetes",                 # 99 rows
+    "Priapuloids",                 # 2 rows
+    "Pycnogonids",                 # 9 rows
+    "Rotifers",                    # 176 rows
+    "Shrimps",                     # 129 rows
+    "Sponges",                     # 30 rows
+    "Squids",                      # 25 rows
+    "Stomatopods",                 # 58 rows
+    "Tanaids",                     # 21 rows
+    "Tunicates",                   # 23 rows
+    # vertebrate group names
+    "Fish",                        # Raymond_2011, 1 row
+    "Herring",                     # Brose_2005, 1 row
+    "Lemmings",                    # Brose_etal_2018, 65 rows (Arctic tundra webs, Legagneux et al. 2014; taxonomy level 'family')
+    "Passerines",                  # Brose_etal_2018, 34 rows (Legagneux et al. 2014)
+    "Shorebirds",                  # Brose_etal_2018, 23 rows (Legagneux et al. 2014)
+    "Waterfowl",                   # Brose_etal_2018, 41 rows (Legagneux et al. 2014)
+    # Chichewa common names of the Lake Malawi web (Nsiku 1999) in Brose_etal_2018
+    "Bombe",                       # 11 rows
+    "Chambo",                      # 6 rows
+    "Chilunguni",                  # 6 rows
+    "Chisawasawa",                 # 10 rows
+    "Kambuzi",                     # 8 rows
+    "Kampango",                    # 8 rows
+    "Matemba",                     # 16 rows
+    "Mbuna",                       # 14 rows; GBIF holds 'Mbuna' only as a DOUBTFUL genus in Cichlidae, an artefact of the vernacular
+    "Mcheni",                      # 8 rows
+    "Mlamba",                      # 15 rows
+    "Mpasa",                       # 4 rows
+    "Nchila",                      # 4 rows
+    "Ndunduma",                    # 12 rows
+    "Nkholokolo",                  # 7 rows
+    "Nkhono",                      # 14 rows; common-name column 'molluscs'
+    "Nkunga",                      # 7 rows
+    "Samwamowa",                   # 15 rows
+    "Sanjika",                     # 4 rows
+    "Usipa",                       # 10 rows
+    "Utaka"                        # 12 rows
+  )
+
   # Match after lowercasing to handle any remaining capitalisation variants.
-  dat <- dat[!(tolower(dat$taxon) %in% c(tolower(nontaxa), tolower(invalid), tolower(autotrophs))), ]
+  dat <- dat[!(tolower(dat$taxon) %in% c(tolower(nontaxa), tolower(invalid), tolower(autotrophs),
+                                         tolower(functional_groups))), ]
 
   return(dat)
 }
