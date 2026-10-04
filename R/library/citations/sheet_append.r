@@ -57,10 +57,10 @@ Initials <- function(given) {
 }
 
 CrossrefAuthorList <- function(work) {
-  if (length(work$author) == 0) return(NA_character_)
-  names <- vapply(work$author, function(a) {
-    if (!is.null(a$family)) { ini <- Initials(if (is.null(a$given)) '' else a$given); if (nzchar(ini)) paste0(a$family, ', ', ini) else a$family }
-    else if (!is.null(a$name)) a$name else NA_character_ }, character(1))
+  if (length(work[['author']]) == 0) return(NA_character_)
+  names <- vapply(work[['author']], function(a) {
+    if (!is.null(a[['family']])) { ini <- Initials(if (is.null(a[['given']])) '' else a[['given']]); if (nzchar(ini)) paste0(a[['family']], ', ', ini) else a[['family']] }
+    else if (!is.null(a[['name']])) a[['name']] else NA_character_ }, character(1))
   names <- names[!is.na(names)]
   if (length(names) == 0) return(NA_character_)
   if (length(names) == 1) return(names)
@@ -73,18 +73,18 @@ StripTags <- function(x) { x <- gsub('<[^>]+>', '', x, perl = TRUE); x <- gsub('
 # 'Authors (Year). Title. Container, volume(issue), pages. https://doi.org/DOI'
 # from a Crossref work record and nothing else.
 FormatCitationText <- function(work) {
-  if (is.null(work) || is.null(work$DOI)) stop('FormatCitationText(): a Crossref work record with a DOI is required', call. = FALSE)
+  if (is.null(work) || is.null(work[['DOI']])) stop('FormatCitationText(): a Crossref work record with a DOI is required', call. = FALSE)
   au <- CrossrefAuthorList(work); yr <- CrossrefYear(work)
   title <- StripTags(CrossrefTitle(work))
   cont <- if (length(work[['container-title']]) > 0) StripTags(work[['container-title']][[1]]) else
-          if (!is.null(work$publisher)) StripTags(work$publisher) else NA_character_
-  vol <- work$volume; iss <- work$issue; pg <- work$page
+          if (!is.null(work[['publisher']])) StripTags(work[['publisher']]) else NA_character_
+  vol <- work[['volume']]; iss <- work[['issue']]; pg <- work[['page']]   # [[ ]]: `$issue` would match `issued`
   src <- cont
   if (!is.null(vol)) src <- paste0(src, ', ', vol, if (!is.null(iss)) paste0('(', iss, ')') else '')
   if (!is.null(pg)) src <- paste0(src, ', ', gsub('-+', '-', pg))
   parts <- c(if (!is.na(au)) au, paste0('(', if (is.na(yr)) 'n.d.' else yr, ').'),
              if (!is.na(title)) paste0(sub('[.]$', '', title), '.'), if (!is.na(src)) paste0(src, '.'),
-             paste0('https://doi.org/', CleanDOI(work$DOI)))
+             paste0('https://doi.org/', CleanDOI(work[['DOI']])))
   paste(parts, collapse = ' ')
 }
 

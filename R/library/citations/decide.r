@@ -278,7 +278,10 @@ QueueRow <- function(ref, cands, queued_at) {
   row$n_records <- as.character(ref$n_records); row$parsed_year <- as.character(ref$parsed_year)
   row$reason <- ref$match_reason
   if (!is.null(cands) && nrow(cands) > 0) {
-    cands <- CollapseByDOI(cands)
+    # the open-search decision already hands over the DOI-collapsed frame (with
+    # services_for_doi); collapsing it again would recount the services from
+    # the one surviving row per DOI and lose the second service
+    if (!'services_for_doi' %in% names(cands)) cands <- CollapseByDOI(cands)
     for (k in seq_len(min(3L, nrow(cands)))) {
       row[[paste0('c', k, '_doi')]]       <- cands$doi[k]
       row[[paste0('c', k, '_title')]]     <- cands$title[k]
