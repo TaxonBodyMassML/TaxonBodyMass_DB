@@ -76,6 +76,7 @@ source(file.path(wd_root, 'R', 'library', 'filter_autotrophs.r'))
 source(file.path(wd_root, 'R', 'library', 'filter_extinct.r'))
 source(file.path(wd_root, 'R', 'library', 'check_source_docs.r'))
 source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
+source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
 
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
@@ -213,6 +214,12 @@ source_list <- lapply(source_list, FixMisspellings)
 source_list <- lapply(source_list, RemoveNonTaxa)
 # drop extinct taxa (list compiled from MOM, PHYLACINE and AVONET status columns)
 source_list <- lapply(source_list, RemoveExtinct)
+# Every cleaned name must be one token, Genus_species or Genus: section 3
+# files names without an underscore as genus-level records, so a replacement
+# value typed with a space ('Rhytonomus isabellina', #28) demotes a species to
+# a bogus genus. FixFormatting leaves no whitespace, hence any found here comes
+# from a rename table; stop and name the offenders with their sources.
+CheckTaxonNames(source_list)
 # Single-record mass corrections are not applied here; they are made in the
 # lab Google Sheet override (section 4).
 
