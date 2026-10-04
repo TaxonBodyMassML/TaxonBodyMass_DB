@@ -1,6 +1,6 @@
-# Source de-duplication summary -- 2026-10-03 16:52:28
+# Source de-duplication summary -- 2026-10-03 17:25:07
 
-Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits; `provenance_only` edges never collapse. Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
+Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
 ## Totals
 
@@ -16,6 +16,8 @@ Values that enter through several compilations are collapsed before the cross-so
 | values collapsed (total) | 40998 |
 | values collapsed by a registry edge | 39744 |
 | values collapsed by the blind rule only | 1254 |
+| ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
+| ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
 | species with at least one collapsed value | 20336 |
 | multi-source species left with one independent value | 6943 |
 
@@ -81,14 +83,17 @@ Pairs of sources that the registry traces to the same compilation outside the da
 | Dunning_2008 | Tobias_2022 - Wilman_etal_2014 | 0.000001 | 8656 | 8415 | 8415 | 0.97 | 7766 |
 | CareyJudge_2000 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 148 |
 
-## Provenance-only edges (never collapse)
+## Provenance-only edges (no tolerance-based collapse)
 
-| child | parent | parent_in_db | shared | exact |
-| --- | --- | --- | ---: | ---: |
-| Cai_etal_2025 | fishbase | TRUE | 609 | 10 |
-| McCoy_2008 | Brey_2001 | FALSE |  |  |
-| Tucker_etal_2014a | Jones_2009 | TRUE | 190 | 0 |
-| Hebert_etal_2016 | Kiorboe_2013 | TRUE | 41 | 0 |
+A provenance_only edge documents a relation whose values generally differ and takes no part in the registry closure. Values identical to >= 3 significant digits on such a pair are still collapsed by the blind rule and labelled `blind (provenance_only edge)`; values joined to the partner only through a third source are labelled `blind (via third source)` (#31).
+
+| child | parent | parent_in_db | shared | exact | blind_identical | collapsed_blind_direct | collapsed_via_third_source |
+| --- | --- | --- | ---: | ---: | ---: | ---: | ---: |
+| Cai_etal_2025 | fishbase | TRUE | 609 | 10 | 2 | 2 | 0 |
+| AnAge | fishbase | TRUE | 212 | 0 | 0 | 0 | 0 |
+| McCoy_2008 | Brey_2001 | FALSE |  |  |  | 0 | 0 |
+| Tucker_etal_2014a | Jones_2009 | TRUE | 190 | 0 | 0 | 0 | 4 |
+| Hebert_etal_2016 | Kiorboe_2013 | TRUE | 41 | 0 | 0 | 0 | 0 |
 
 ## Multi-source species left with one independent value
 
