@@ -6,4 +6,4 @@ Data: PNAS Supporting Information `pnas.2303764120.sd01.xlsx` (sheet Metabolic_D
 Columns used: `Species`, `tsn rank`, `Group`, `Wet Mass (g)`, Kingdom..Family.
 Filters: species/subspecies-rank rows only; autotroph and fungal groups (Seedling, Tree sapling, Eukaryotic Microalgae, Cyanobacteria, Fungi) excluded; the Fishes group excluded (juvenile/small experimental fish, median 0.2-0.7 log10 below other sources); the six rows whose wet mass is a spreadsheet formula from dry mass are dropped; the seven rows whose `Comments` mark the cell size as a genus-level value ('BacDive, GENUS', 'BM Vol 3, genus') are dropped. Subspecies and strain suffixes truncated to binomials.
 Mass type: wet mass in grams (entered values); the dry and carbon columns in the file are formulas derived from wet mass and are not used.
-Imputed rows: 7 rows with genus-level cell sizes dropped (Comments 'BacDive, GENUS' or 'BM Vol 3, genus'); 4,413 kept (logged to reports/imputed_rows.csv).
+Imputed rows: 7 rows with genus-level cell sizes dropped (Comments 'BacDive, GENUS' or 'BM Vol 3, genus'); 4,413 kept (logged to audit/imputed_rows.csv).

@@ -13,7 +13,7 @@ uses such values (Froese 2014 length–weight, Santini 2018, Meiri 2010, Feldman
 
 **Imputed-value audit (2026-10-02, issue #8):** four older parsers still ingested rows that the source
 itself flags as not species-specific. They are now removed in the parse scripts with `DropImputed()`
-and logged to `reports/imputed_rows.csv`: EltonTraits genus/family averages and copied values (877
+and logged to `audit/imputed_rows.csv`: EltonTraits genus/family averages and copied values (877
 rows), PHYLACINE imputed and relative-based masses (204), Cai et al. 2025 'Estimated', 'Sister
 species', 'My' and genus/family averages (52), FoRAGE alternate-taxon masses, % adult mass and
 genus/order averages (1,097 of 1,973 rows; that parser had also been failing silently in a UTF-8

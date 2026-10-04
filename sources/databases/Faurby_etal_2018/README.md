@@ -7,4 +7,4 @@ Columns used: `Binomial.1.2`, `Mass.g`, `Mass.Method`, `IUCN.Status.1.2`, `Order
 Filters: extinct species (IUCN status EP, EX, EW) are dropped, leaving 5,477 extant species with a mass (the pipeline's extinct-taxon list also draws on this column). Rows with `Mass.Method` 'Imputed' (phylogenetic imputation) or 'As relative of suggested similar size' (value of a related species) are dropped. 'Reported' values (4,585) are kept, as are the 685 'Assumed isometric based on <dimension>' and 3 'Estimated based on equation from <dimension>' values (a measured dimension of the species scaled to mass), the latter two groups as allometry-derived values.
 Mass type: wet mass in grams; no conversion.
 Source label: 'Faurby_etal_2018'.
-Imputed rows: 204 of 5,477 extant rows dropped (186 Imputed + 18 As relative of suggested similar size); 5,273 kept (logged to reports/imputed_rows.csv).
+Imputed rows: 204 of 5,477 extant rows dropped (186 Imputed + 18 As relative of suggested similar size); 5,273 kept (logged to audit/imputed_rows.csv).

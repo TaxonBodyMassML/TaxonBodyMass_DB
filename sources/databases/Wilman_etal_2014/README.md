@@ -7,4 +7,4 @@ Columns used: `Scientific`, `BodyMass-Value` (g; for source Dunning08 the geomet
 Filters: rows with `BodyMass-Source` 'GenAvg' (genus or family typical value, `BodyMass-SpecLevel` 0) and rows whose `BodyMass-Comment` begins 'Copied' (value copied from another species) are dropped. The 484 'PrimScale' rows (a measured length of the species through a family-level mass-length relationship) are kept as allometry-derived values. The 273 records whose `Record-Comment` is 'DataFromSplit' (record created by a taxonomic split; 262 of them carry species-level masses) are kept; their treatment is deferred to issue #5 together with the COMBINE split-inherited values.
 Mass type: wet mass in grams; no conversion.
 Source label: 'Wilman_etal_2014'.
-Imputed rows: 877 of 9,993 rows dropped (870 GenAvg genus/family averages + 7 copied from another species); 9,116 kept (logged to reports/imputed_rows.csv).
+Imputed rows: 877 of 9,993 rows dropped (870 GenAvg genus/family averages + 7 copied from another species); 9,116 kept (logged to audit/imputed_rows.csv).
