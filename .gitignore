@@ -1,5 +1,6 @@
 sources/Rdata/
 sources/VertNet/
+sources/citations_cache/
 
 .Rhistory
 .RData

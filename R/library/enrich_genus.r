@@ -615,8 +615,11 @@ GenusOnlyRecords <- function(values) {
 # cross-source means (`enriched`: genus, mass_g, n, n_independent, source_mass)
 # and the genus-only record of the genus (`records` from
 # GenusOnlyRecords()). n sums the records, n_independent the independent
-# values; source_mass joins the contributors with '-' as before #49. Rows are
-# ordered by genus in the C locale.
+# values; source_mass lists the distinct labels and conversion CiteIDs of the
+# contributors joined by '; ' as in TaxonBodyMass.csv (joined by '-' without
+# unique() before issue #1, which hyphenated labels such as vertnet-aves-sept2016
+# and Martinez-Palacios_1992 made ambiguous). Rows are ordered by genus in the
+# C locale.
 GenusLevelTable <- function(enriched, records) {
   Take <- function(d, taxon) data.frame(taxon = taxon, mass_g = d$mass_g, n = d$n, n_independent = d$n_independent,
                                         source_mass = d$source_mass, stringsAsFactors = FALSE)
@@ -629,7 +632,7 @@ GenusLevelTable <- function(enriched, records) {
   out <- data.frame(
     taxon         = names(sp),
     mass_g        = vapply(sp, function(d) mean(d$mass_g), numeric(1)),
-    source_mass   = vapply(sp, function(d) paste(d$source_mass, collapse = '-'), character(1)),
+    source_mass   = vapply(sp, function(d) paste(unique(trimws(unlist(strsplit(d$source_mass, ';', fixed = TRUE)))), collapse = '; '), character(1)),
     n             = vapply(sp, function(d) sum(d$n, na.rm = TRUE), numeric(1)),
     n_independent = vapply(sp, function(d) as.integer(sum(d$n_independent, na.rm = TRUE)), integer(1)),
     stringsAsFactors = FALSE)

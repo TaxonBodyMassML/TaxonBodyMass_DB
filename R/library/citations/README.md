@@ -1,0 +1,86 @@
+# R/library/citations: verified primary-source citations (issue #1)
+
+Tooling that attributes the records of a compilation to the studies that
+measured them and lets a new citation enter the bibliography only after
+automated verification against Crossref and OpenAlex, or an explicit decision
+by the owner. `R/RunMe.r` sources only the offline part (`citations_config.r`,
+`normalise_citation.r`, `parse_reflists.r`, `build_bib.r`, `provenance.r`);
+everything that talks to a service or to the Google Sheet runs by hand through
+`run_citations.r`. No Google Scholar.
+
+## Files
+
+| file | contents |
+| --- | --- |
+| `citations_config.r` | paths, the column schemas of the tracked files, the controlled vocabularies, the decision thresholds, the polite-pool identity (`CROSSREF_MAILTO` / `OPENALEX_MAILTO`, else git `user.email`), the per-source reference-list specifications `reflist_specs` |
+| `normalise_citation.r` | `NormaliseCitationString()`, `ParseCitationString()` (regex parse into `parsed_*` query fields), `TitleSimilarity()` (mean of Jaro-Winkler and token-set Jaccard), the author / container / volume / pages comparisons |
+| `parse_reflists.r` | `SplitRefKeys()` for the parse scripts, `ParseRefListCSV()`, `ParseInRowCitations()`, `ExpandSameAuthorMarkers()`, `InitPrimaryReferences()`, `MergePrimaryReferences()`; the other formats (xlsx, bib, docx, pdf, html, EndNote) stop until their tier is reached |
+| `verify_services.r` | `CachedGET()` (httr2, User-Agent with mailto, one request per second, retries on 429/5xx, every raw response cached under `sources/citations_cache/` keyed by sha1 of the URL without the mailto), `CrossrefQuery()`, `CrossrefWork()` (with `reference[]`, `update-to`, `updated-by`), `CandidatesFromCompilationReflist()`, `OpenAlexQuery()`, `OpenAlexWork()` (`is_retracted`), `ReadSciteChecks()` |
+| `decide.r` | `ScoreCandidate()`, `DecideMatch()` (the rules below), `VerifyReference()`, `VerifyPrimaryReferences()`, `ApplySciteChecks()`, `WritePendingQueue()`, `ApplyQueueDecisions()` |
+| `build_bib.r` | `ReadBibEntries()`, `BibKeyFor()`, `BuildBibEntry()` (Crossref record only), `BuildBibEntryNoDOI()`, `WritePrimaryBib()`, `CheckBibKeysUnique()`, `CheckBibSyntax()` |
+| `cite_ids.r` | `CiteIDFor()` |
+| `sheet_append.r` | `ReadSheetTab()`, `FormatCitationText()`, `BuildSheetRows()`, `AppendPrimaryCitations()` (dry run by default, idempotent on Bibcite, append-only, snapshots before and after, `BM_primary_citations` only) |
+| `provenance.r` | `LoadPrimaryReferences()`, `LoadProvenanceClasses()`, `SplitSourceMass()`, `BuildProvenance()`, `CheckCitations()`, `WriteCitationsReport()` (sourced by RunMe.r) |
+| `run_citations.r` | the command line |
+| `tests/fixtures/cache/` | recorded Crossref and OpenAlex responses for the unit tests in `R/library/tests/test_citations_*.R` (no network in tests) |
+
+## Tracked data
+
+- `sources/databases/<Src>/primary_references.csv`: one row per native reference key a source's records cite (`raw_citation` verbatim and immutable; `parsed_*` query fields; the resolved `doi`, `bibcite`, `cite_id`; `match_status`, `match_reason`, `services`, the locally computed agreement, `verified_at`, `tool_version`; the owner's `decided_by` / `decided_at`). The owner may edit `role`, `parsed_*` and `notes` only.
+- `Bib/source_provenance_classes.csv`: the registry of every `source_mass` label (`class`: primary, compilation, derived, database, live, unknown; `default_provenance_type`: the type a record gets when it carries no resolved primary reference; `equation_bibcite` for allometry-derived sources). RunMe.r stops on an unregistered label.
+- `Bib/pending_citations.csv`: the review queue. Rows are appended by `--queue`, never rewritten; approval is a committed `decision` with `decided_by` and `decided_at`: `1|2|3` (that candidate), `doi:10.…` (re-verified), `manual:<Key>` (an entry the owner added to the curated bib), `nodoi` (a DOI-less entry built from the corrected `parsed_*`), `self`, `drop`.
+- `Bib/scite_checks.csv`: the retraction / correction screen of accepted DOIs, written in Claude Code sessions from the Scite MCP tools (`checked_by = scite-mcp`; `editorialNotices` read per DOI). When Scite is unavailable, returns nothing or fails on quota or permission, the Consensus MCP tools are the fallback (`checked_by = consensus-mcp`; Consensus has no retraction field, so the row says `notice_type = unchecked` and the DOI relies on the Crossref `update-to` and OpenAlex `is_retracted` flags the R tool consults for every DOI); when neither answers the gap is recorded (`checked_by = none`) and the reference stays pending. Any notice or retraction turns a certain row back to pending; a screened DOI's `services` gains `;scite-mcp` or `;consensus-mcp`. Neither service ever writes a bib entry or a Sheet row.
+- `Bib/TaxonBodyMass_PrimaryCitations.bib`: generated (`%% GENERATED … do not edit`), rebuilt by `--bib` from every source's accepted references and the response cache, keys in byte order; a key present in the curated `Bib/TaxonBodyMass_Citations.bib` as well fails the pipeline.
+- `Bib/BM_primary_citations_snapshot.csv`, `Bib/BM_citations_snapshot.csv`: the two Sheet tabs as last read (the offline fallback for section 8 of RunMe.r and the record of every append).
+- `TaxonBodyMass_Provenance.csv.gz`: species x source label x reference (see the main README once pipeline integration lands).
+
+## Workflow for one source
+
+```
+Rscript R/library/citations/run_citations.r --source Kiorboe_2013 --init          # skeleton from the reference list + ref_keys
+Rscript R/library/citations/run_citations.r --source Kiorboe_2013 --verify --queue
+#   Scite screen of the accepted DOIs in a Claude Code session -> Bib/scite_checks.csv
+#   owner fills `decision` in Bib/pending_citations.csv and commits
+Rscript R/library/citations/run_citations.r --source Kiorboe_2013 --apply-queue --bib
+Rscript R/library/citations/run_citations.r --source Kiorboe_2013 --sheet               # dry run
+Rscript R/library/citations/run_citations.r --source Kiorboe_2013 --sheet --no-dry-run
+```
+
+Every step writes `reports/citations_<Src>.md`. `--offline` forbids network access (cached responses only); `--force` re-verifies `certain` rows.
+
+## Decision rules (issue #1, section 2.3)
+
+Service relevance scores are cached with the raw responses but never enter a decision. Candidates of type dataset, component, peer-review, journal issue and the like are dropped before scoring. For each reference:
+
+| condition | status / reason |
+| --- | --- |
+| `raw_doi` resolves at Crossref and (author and year agree, or `title_sim >= 0.80`) | `certain` / `doi_resolves` |
+| `raw_doi` present but unresolvable or disagreeing | `pending` / `doi_mismatch` |
+| no candidate at all | `not_found` / `no_candidates` |
+| best `title_sim < 0.70` and the citation reads as grey literature (thesis, report, unpublished, …) | `pending` / `grey_literature` |
+| best `title_sim < 0.70` otherwise | `not_found` / `below_threshold` |
+| a retraction (OpenAlex `is_retracted`, Crossref `update-to` / `updated-by`, Scite) or any editorial notice on the best DOI | `pending` / `retracted` (never auto-certain); a `checked_by = none` screening row gives `pending` / `unscreened` |
+| runner-up with a different DOI within 0.05 of the best | `pending` / `ambiguous` |
+| best not strong (`title_sim >= 0.93`, author, year within 1, and one of container / volume / pages) | `pending` / `weak_match` |
+| strong and Crossref and OpenAlex both return that DOI | `certain` / `two_service_agreement` |
+| strong, one service, the candidate comes from the compilation's deposited reference list, `title_sim >= 0.95` | `certain` / `closed_world` |
+| strong, one open-search service | `pending` / `single_service` |
+| the citation is the compiler's own study or unpublished data | `self`, no service call |
+
+`weak_match`, `below_threshold`, `no_candidates` and `unscreened` are reason codes added to the issue's list so that every queue row says why it is there.
+
+## Hallucination-robustness rules (issue #1, section 6)
+
+Nothing typed by a person or an LLM reaches a bib file or the Sheet: entries come from `BuildBibEntry()` (a Crossref record) or `BuildBibEntryNoDOI()` (owner-approved fields, with a note saying so); the Sheet's Citation cell from `FormatCitationText()`. `raw_citation` is immutable. Every accepted row stores the services, the similarity and agreement flags, `verified_at` and `tool_version`; every decision stores `decided_by` / `decided_at`. Keys and CiteIDs are reused by DOI before a new one is minted, collisions get suffixes. Sheet writes are append-only, dry-run by default, deduplicated on Bibcite, snapshotted, and go to `BM_primary_citations` only.
+
+## Dependencies
+
+`httr2`, `jsonlite`, `digest`, `stringdist` (title similarity), `RefManageR` (syntax check of the generated bib; optional), `googlesheets4`. `pdftools` and `rvest` are not needed until the pdf / html reference lists of tiers A2 and C.
+
+## Tests
+
+```
+for f in R/library/tests/test_citations_*.R; do Rscript "$f"; done
+```
+
+All tests are offline; the service responses they need are the recorded fixtures in `tests/fixtures/cache/` (the cache layout of `CachedGET()`).

@@ -60,7 +60,7 @@ wd_root  <- dirname(getwd())  # TaxonBodyMass_DB/
 wd_db    <- file.path(wd_root, 'sources', 'databases')
 wd_rdata <- file.path(wd_root, 'sources', 'Rdata')
 wd_out   <- file.path(wd_root)
-wd_bib   <- file.path(wd_root, 'bib')
+wd_bib   <- file.path(wd_root, 'Bib')   # 'bib' until #1: only a case-insensitive file system found it
 
 source(file.path(wd_root, 'R', 'library', 'helpers.r'))
 source(file.path(wd_root, 'R', 'library', 'mass_conversion.r'))
@@ -80,6 +80,12 @@ source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
 source(file.path(wd_root, 'R', 'library', 'enrich_genus.r'))
 source(file.path(wd_root, 'R', 'library', 'sheet_override.r'))
+# The offline part of the citation tooling (issue #1): the registry of source
+# classes and the primary references feed the provenance table; the network
+# steps (Crossref, OpenAlex, the Sheet append) live in run_citations.r and are
+# never run from here.
+for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'build_bib.r', 'provenance.r'))
+  source(file.path(wd_root, 'R', 'library', 'citations', f))
 
 # The raw-name vocabulary FixFormatting() applies (#38): tracked in audit/,
 # validated on loading (columns, classes, actions, regexes).
@@ -242,6 +248,18 @@ source_list <- lapply(source_list, function(df) {
   df$source_mass <- NormaliseSourceLabel(df$source_mass)
   df
 })
+# Every source label must be registered in Bib/source_provenance_classes.csv
+# (issue #1): the registry gives each source's class (primary, compilation,
+# derived, database, live) and the provenance type its records get when they
+# carry no primary reference; an unregistered label stops the run. The
+# per-source primary_references.csv files are loaded here as well (unique on
+# source_label x native_key; a certain/approved row must carry a DOI).
+prov_classes <- LoadProvenanceClasses(file.path(wd_bib, 'source_provenance_classes.csv'),
+                                      known_labels = unlist(lapply(source_list, function(df) unique(SourceLabel(df$source_mass)))))
+prim_refs <- LoadPrimaryReferences(wd_db)
+message(sprintf('Provenance registry: %d labels (%s); %d primary references in %d source(s)',
+                nrow(prov_classes), paste(sprintf('%s %d', names(table(prov_classes$class)), table(prov_classes$class)), collapse = ', '),
+                nrow(prim_refs), length(unique(prim_refs$source_label))))
 # rename misspelled taxa (depends on FixFormatting)
 source_list <- lapply(source_list, FixMisspellings)
 # drop non-species and (some) non-autotroph entries
@@ -722,7 +740,7 @@ write.csv(gdat, file = file.path(wd_root, 'TaxonBodyMass_GenusLevel.csv'),
 #    absent from the Google Sheet are retained with CiteID = NA and a
 #    warning is issued.
 ##########################################################################
-bib_lines <- readLines(file.path(wd_root, 'Bib', 'TaxonBodyMass_Citations.bib'))
+bib_lines <- readLines(file.path(wd_bib, 'TaxonBodyMass_Citations.bib'))
 bib_keys  <- sub('^@\\w+\\{([^,]+),.*', '\\1',
                  bib_lines[grepl('^@', bib_lines)], perl = TRUE)
 
@@ -734,6 +752,15 @@ gmap <- read_sheet(
 
 gmap$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', gmap$Bibcite, perl = TRUE)
 gmap$CiteID  <- NormaliseSourceLabel(gmap$CiteID)
+# A Sheet row whose Bibcite key is not in the bib used to be dropped silently by
+# the merge below (its CiteID then had no bib entry and create_bib() could not
+# cite it); it is listed instead (issue #1). The row stays out of the CSV until
+# the key is added to the bib or corrected in the Sheet.
+sheet_unmapped <- gmap[!gmap$Bibcite %in% bib_keys, , drop = FALSE]
+if (nrow(sheet_unmapped) > 0) {
+  warning(nrow(sheet_unmapped), ' BM_citations row(s) whose Bibcite key is not in the bib (left out of the CiteIDs CSV):\n',
+          paste0(sheet_unmapped$CiteID, ' -> ', sheet_unmapped$Bibcite, collapse = '\n'), immediate. = TRUE)
+}
 
 dcite <- merge(data.frame(Bibcite = bib_keys, stringsAsFactors = FALSE),
                gmap, by = 'Bibcite', all.x = TRUE)
