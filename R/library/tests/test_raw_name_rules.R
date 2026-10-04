@@ -2,7 +2,8 @@
 # vocabulary loader, one fixture per class of audit/raw_name_patterns.csv
 # (subgenus removed, sex stripped, form/strain/size stripped, synonym and
 # authority stripped, trinomial folded, placeholder and qualifier markers,
-# life stage / hybrid / ambiguous dropped and logged, an uncovered bracket
+# life stage and small size class dropped and logged, species group folded,
+# hybrid and alternative names credited to the first name, an uncovered bracket
 # stopping the run), the report writer, the format of the rename tables
 # (fix_misspellings.r, fix_nontaxa.r; the keys of fix_taxonomy_ranks.r match
 # the `species` column and are checked separately), a regression list of 60
@@ -55,7 +56,7 @@ Expect(is.data.frame(raw_name_patterns) && nrow(raw_name_patterns) >= 25,
 Expect(all(raw_name_pattern_columns %in% names(raw_name_patterns)), 'the six columns are present')
 Expect(all(raw_name_patterns$class %in% raw_name_classes) && all(raw_name_patterns$action %in% raw_name_actions) &&
          all(raw_name_patterns$scope %in% raw_name_scopes), 'every class, action and scope is a known one')
-Expect(all(c('subgenus', 'sex', 'form_strain_region', 'life_stage', 'size_class', 'synonym', 'authority',
+Expect(all(c('subgenus', 'sex', 'form_strain_region', 'life_stage', 'size_class', 'species_group', 'synonym', 'authority',
              'trinomial', 'qualifier', 'placeholder', 'hybrid', 'ambiguous') %in% raw_name_patterns$class),
        'every class but other_drop has at least one row')
 Expect(all(nzchar(raw_name_patterns$note)) && all(grepl('^[0-9]{4}-[0-9]{2}-[0-9]{2}$', raw_name_patterns$added)),
@@ -68,7 +69,9 @@ WriteVocab <- function(rows) {
 bad_class <- data.frame(pattern = '^x$', scope = 'annotation', class = 'colour', action = 'strip', note = 'n', added = '2026-10-04')
 Expect(Has(ErrorOf(LoadRawNamePatterns(WriteVocab(bad_class))), 'class not one of'), 'an unknown class stops the load')
 bad_combo <- data.frame(pattern = '^x$', scope = 'annotation', class = 'life_stage', action = 'strip', note = 'n', added = '2026-10-04')
-Expect(Has(ErrorOf(LoadRawNamePatterns(WriteVocab(bad_combo))), 'action strip with a drop class'), 'a drop class with action strip stops the load')
+Expect(Has(ErrorOf(LoadRawNamePatterns(WriteVocab(bad_combo))), 'action strip with a class that is not stripped'), 'a drop class with action strip stops the load')
+bad_fold <- data.frame(pattern = '^x$', scope = 'name', class = 'life_stage', action = 'fold', note = 'n', added = '2026-10-04')
+Expect(Has(ErrorOf(LoadRawNamePatterns(WriteVocab(bad_fold))), 'action fold with a class that cannot fold'), 'a drop-only class with action fold stops the load')
 bad_regex <- data.frame(pattern = '^(x$', scope = 'annotation', class = 'sex', action = 'strip', note = 'n', added = '2026-10-04')
 Expect(Has(ErrorOf(LoadRawNamePatterns(WriteVocab(bad_regex))), 'not a valid Perl regex'), 'an invalid regex stops the load')
 Expect(Has(ErrorOf(LoadRawNamePatterns(tempfile())), 'not found'), 'a missing file stops the load')
@@ -103,7 +106,7 @@ Expect(identical(Cleaned('Pergamasinae (male)'), 'Pergamasinae') && nrow(pm) == 
        "'Pergamasinae (male)' becomes the bare subfamily, which RemoveNonTaxa() lists and removes")
 
 # ---- form, strain, region, size class --------------------------------------------
-cat('form_strain_region and size_class: stripped, record kept\n')
+cat('form_strain_region: stripped, record kept; size_class: large classes stripped, small classes dropped\n')
 Expect(identical(Cleaned(c('Conochilus (colonial)', 'Conochilus (solitary)', 'Paraphysomonas imperforata (arctic)*',
                            'Ilybius chalconatus Bulgaria', 'Mycoplasma pulmonis UAB CTIP', 'Spirulina platensis 1968-3786',
                            'Anacystis nidulans PCC (Synechococcus', 'Salpa maxima. Agg')),
@@ -111,12 +114,24 @@ Expect(identical(Cleaned(c('Conochilus (colonial)', 'Conochilus (solitary)', 'Pa
                    'Spirulina_platensis', 'Anacystis_nidulans', 'Salpa_maxima')),
        'colony forms, isolate origins, populations, strain codes and the salp aggregate generation are removed')
 Expect(identical(LogOf('Conochilus (colonial)')$class, 'form_strain_region'), 'logged as class form_strain_region')
-Expect(identical(Cleaned(c('Lithobius aeruginosus {l}', 'Scutigerella immaculata {xs}', 'Trachytes pauperior{s}',
-                           'Octolasion tyrtaeum{xxxl}', 'Harpactea lepida large', 'Salvelinus fontinalis small')),
-                 c('Lithobius_aeruginosus', 'Scutigerella_immaculata', 'Trachytes_pauperior', 'Octolasion_tyrtaeum',
-                   'Harpactea_lepida', 'Salvelinus_fontinalis')),
-       'size classes in braces (glued or not) and as words fold into the species')
-Expect(identical(LogOf('Lithobius aeruginosus {l}')$class, 'size_class'), 'logged as class size_class')
+Expect(identical(Cleaned(c('Lithobius aeruginosus {l}', 'Lithobius curtipes {m}', 'Allaiulus nitidus {xl}', 'Lumbricus rubellus {xxl}',
+                           'Octolasion tyrtaeum{xxxl}', 'Harpactea lepida large', 'Genus epitheton medium')),
+                 c('Lithobius_aeruginosus', 'Lithobius_curtipes', 'Allaiulus_nitidus', 'Lumbricus_rubellus', 'Octolasion_tyrtaeum',
+                   'Harpactea_lepida', 'Genus_epitheton')),
+       'the medium and large size classes, in braces (glued or not) or as words, fold into the species')
+Expect(identical(LogOf('Lithobius aeruginosus {l}')$class, 'size_class') && !LogOf('Lithobius aeruginosus {l}')$dropped,
+       'logged as class size_class, not dropped')
+r <- Run(c('Lithobius aeruginosus {s}', 'Scutigerella immaculata {xs}', 'Trachytes pauperior{s}', 'Harpactea lepida small',
+           'Salvelinus fontinalis SMALL', 'Lithobius aeruginosus {l}'), 'Brose_etal_2018')
+Expect(identical(r$out$taxon, 'Lithobius_aeruginosus') && r$out$mass_g == 6,
+       'the small classes {s}, {xs} and small (any case) are dropped; the {l} row survives')
+Expect(!is.null(r$imputed) && nrow(r$imputed) == 1 && r$imputed$n_dropped == 5 && r$imputed$n_taxa == 5 && r$imputed$n_kept == 1 &&
+         grepl('small size class', r$imputed$reason) && grepl('owner decision 2026-10-04', r$imputed$reason),
+       'one imputed-log entry for the five small-class rows, reason naming the rule and the decision')
+Expect(all(r$log$class == 'size_class') && sum(r$log$dropped) == 5, 'all six names logged as class size_class, five dropped')
+Expect(identical(Cleaned(c('Calanus pacificus (M)', 'Lithobius curtipes {m}')), c('Calanus_pacificus', 'Lithobius_curtipes')) &&
+         identical(LogOf('Calanus pacificus (M)')$class, 'sex') && identical(LogOf('Lithobius curtipes {m}')$class, 'size_class'),
+       "'(M)' is a sex mark and '{m}' a size class: the sex row precedes the size rows")
 
 # ---- synonym and authority --------------------------------------------------------
 cat('synonym and authority: stripped, record kept\n')
@@ -165,15 +180,25 @@ rn <- RemoveNonTaxa(FixMisspellings(r$out))
 Expect(identical(rn$taxon, c('Lagopus', 'Gomphonema')),
        "after FixMisspellings() and RemoveNonTaxa() only 'Lagopus spec.' and 'Gomphonema type D' survive, as the genus-level records their rename rules make of them (as before #38)")
 ql <- c('Zercon cf gurensis', 'Lithobius cf. mutabilis', 'Pseudobodo c.f. tremulans', 'Arietellus cf.', 'Procapritermes nr. sandakanensis',
-        'Macrocheles cf. opacus aciculatus', 'Scolopendrella cf. subnuda {s}', 'Polypedilum halterale group', 'Hylaeus modestus grp')
+        'Macrocheles cf. opacus aciculatus', 'Scolopendrella cf. subnuda {s}')
 Expect(identical(Cleaned(ql), c('Zercon_cf', 'Lithobius_cf', 'Pseudobodo_cf', 'Arietellus_cf', 'Procapritermes_nr',
-                                'Macrocheles_cf', 'Scolopendrella_cf', 'Polypedilum_cf', 'Hylaeus_cf')),
-       'cf./c.f./nr. before the epithet and a species group after it leave as Genus_cf / Genus_nr')
+                                'Macrocheles_cf', 'Scolopendrella_cf')),
+       'cf./c.f./nr. before the epithet leave as Genus_cf / Genus_nr (a size class after a qualifier is not checked)')
 r <- Run(ql)
 Expect(all(r$log$class == 'qualifier') && nrow(RemoveNonTaxa(r$out)) == 0, 'qualifiers are logged as class qualifier and RemoveNonTaxa() removes every marker')
 Expect(identical(Cleaned(c('Buteo (rufofuscus)', 'Empidonax [traillii]')), c('Buteo_rufofuscus', 'Empidonax_traillii')) &&
          identical(LogOf('Buteo (rufofuscus)')$class, 'qualifier'),
        'the two VertNet names with the epithet alone in brackets fold to the binomial (class qualifier, action fold)')
+
+# ---- species groups: folded to the nominal species ----------------------------------
+cat('species_group: the marker stripped, the nominal species kept\n')
+r <- Run(c('Polypedilum halterale group', 'Heterotrissocladius marcidus group', 'Hylaeus modestus grp', 'Lasioglossum tegulare grp',
+           'Genus epitheton complex', 'Genus epitheton s.l.'), 'Hrycik_2024')
+Expect(identical(r$out$taxon, c('Polypedilum_halterale', 'Heterotrissocladius_marcidus', 'Hylaeus_modestus', 'Lasioglossum_tegulare',
+                                'Genus_epitheton', 'Genus_epitheton')),
+       'group, grp, complex and s.l. after a binomial are removed and the nominal species kept (owner decision 2026-10-04)')
+Expect(all(r$log$class == 'species_group') && !any(r$log$dropped) && is.null(r$imputed) && nrow(RemoveNonTaxa(r$out)) == 6,
+       'logged as class species_group; nothing dropped or logged as imputed; RemoveNonTaxa() keeps them')
 
 # ---- life stage: dropped through DropImputed() -----------------------------------
 cat('life_stage: dropped through DropImputed() and logged\n')
@@ -198,24 +223,31 @@ Expect(identical(Cleaned(c('Gnathophausia zoea', 'Clubiona juvenis', 'Ducula zoe
                  c('Gnathophausia_zoea', 'Clubiona_juvenis', 'Ducula_zoeae', 'Columba_larvata')),
        'stage-like epithets of real species are not annotations and are kept')
 
-# ---- hybrids and ambiguous names: dropped through DropImputed() -------------------
-cat('hybrid and ambiguous: dropped through DropImputed() and logged\n')
+# ---- hybrids and ambiguous names: credited to the first name ----------------------
+cat('hybrid and ambiguous: the name cut at the separator, the first name kept\n')
 r <- Run(c('Anas platyrhynchos x rubripes', 'Tympanuchus phasianellus X cupido', 'Lonchura X Poephila cantans x guttata',
-           'Melanerpes aurifrons x hoffmannii ?', 'Zygiella x-notata', 'Gadus morhua'), 'vertnet-aves-sept2016')
-Expect(identical(r$out$taxon, c('Zygiella_xnotata', 'Gadus_morhua')), 'names joined by x or X are dropped; an epithet containing x- is not')
-Expect(!is.null(r$imputed) && nrow(r$imputed) == 1 && r$imputed$n_dropped == 4 && grepl('hybrid', r$imputed$reason),
-       'one imputed-log entry for the four hybrids, reason naming the rule')
-Expect(all(r$log$class[r$log$dropped] == 'hybrid'), 'logged as class hybrid')
-r <- Run(c('Pipilo maculatus,  ocai', 'Empidonax traillii/alnorum', 'Coccinella septempunctata and Harpalus pennsylvanicus',
-           'Musculium/Sphaerium', 'Pacific herring, Clupea palasi', 'Petrochelidon; Hirundo fulva; rustica',
-           'Nausithoe rubra Vanhoffen, 1902', 'Myotis velifer /'), 'SrcA')
-Expect(identical(r$out$taxon, c('Nausithoe_rubra', 'Myotis_velifer')),
-       'comma, slash, semicolon and "and" between names drop the record; an author year after a comma and a stray slash do not')
-Expect(!is.null(r$imputed) && nrow(r$imputed) == 1 && r$imputed$n_dropped == 6 && grepl('alternative taxa', r$imputed$reason) &&
-         all(r$log$class[r$log$dropped] == 'ambiguous'),
-       'one imputed-log entry for the six ambiguous names; logged as class ambiguous')
-r <- Run(c('Anas platyrhynchos x rubripes', 'Anas rubripes x platyrhynchos'), c('vertnet-aves-sept2016', 'vertnet-traits-sept2016'))
-Expect(!is.null(r$imputed) && nrow(r$imputed) == 2 && setequal(r$imputed$source, c('vertnet-aves-sept2016', 'vertnet-traits-sept2016')),
+           'Centrocercus X Tympanuchus urophasianus X phasianellus', 'Melanerpes aurifrons x hoffmannii ?',
+           'Cebus nigritusXlibidinosus', 'Carduelis sinica x Serinus canaria', 'Zygiella x-notata', 'Gadus morhua'), 'vertnet-aves-sept2016')
+Expect(identical(r$out$taxon, c('Anas_platyrhynchos', 'Tympanuchus_phasianellus', 'Lonchura', 'Centrocercus', 'Melanerpes_aurifrons',
+                                'Cebus_nigritus', 'Carduelis_sinica', 'Zygiella_xnotata', 'Gadus_morhua')),
+       'names joined by x or X (spaced or glued) are cut at the x and credited to the first name, a bare genus giving a genus-level record; x- inside an epithet is not a hybrid')
+Expect(is.null(r$imputed) && !any(r$log$dropped) && all(r$log$class[r$log$raw != 'Zygiella x-notata'] == 'hybrid') &&
+         all(r$log$action[r$log$class == 'hybrid'] == 'fold'),
+       'nothing dropped or logged as imputed; the hybrids are logged as class hybrid, action fold (owner decision 2026-10-04)')
+r <- Run(c('Pipilo maculatus,  ocai', 'Empidonax traillii/alnorum', 'Lithobius cyrt/mutabi', 'Coccinella septempunctata and Harpalus pennsylvanicus',
+           'Sitobion avenae, Metopolophium dirhodum', 'Musculium/Sphaerium', 'Pacific herring, Clupea palasi', 'Skate, Raja orinacea',
+           'Diptera larvae/pupae', 'Petrochelidon; Hirundo fulva; rustica', 'Nausithoe rubra Vanhoffen, 1902', 'Myotis velifer /'), 'SrcA')
+Expect(identical(r$out$taxon, c('Pipilo_maculatus', 'Empidonax_traillii', 'Lithobius_cyrt', 'Coccinella_septempunctata', 'Sitobion_avenae',
+                                'Musculium', 'Pacific_herring', 'Skate', 'Diptera_larvae', 'Petrochelidon', 'Nausithoe_rubra', 'Myotis_velifer')),
+       'comma, slash, semicolon and "and" cut the name; the first fragment is kept even when incomplete (Lithobius_cyrt); an author year after a comma and a stray slash are not separators')
+Expect(is.null(r$imputed) && !any(r$log$dropped) && sum(r$log$class == 'ambiguous') == 10,
+       'nothing dropped; the ten names with alternatives are logged as class ambiguous')
+Expect(identical(sort(RemoveNonTaxa(FixMisspellings(r$out))$taxon),
+                 sort(c('Pipilo_maculatus', 'Empidonax_traillii', 'Lithobius_cyrt', 'Coccinella_septempunctata', 'Sitobion_avenae',
+                        'Musculium', 'Petrochelidon', 'Nausithoe_rubra', 'Myotis_velifer'))),
+       'RemoveNonTaxa() then lists Pacific_herring, Skate and Diptera_larvae, the labels the cut leaves')
+r <- Run(c('Lithobius aeruginosus {s}', 'Harpactea lepida small'), c('Brose_etal_2018', 'SrcB'))
+Expect(!is.null(r$imputed) && nrow(r$imputed) == 2 && setequal(r$imputed$source, c('Brose_etal_2018', 'SrcB')),
        'a frame with several source labels gets one imputed-log entry per label')
 
 # ---- symbols and encoding ---------------------------------------------------------
@@ -255,14 +287,16 @@ f <- tempfile('raw_names_', fileext = '.md')
 WriteRawNameReport(f)
 rep <- readLines(f)
 Expect(any(grepl('^# TaxonBodyMass_DB Raw Name Report -- ', rep)) && any(rep == '## Summary'), 'header and summary present')
-Expect(any(grepl('^\\| error \\| 1 \\| 1 \\| 0 \\| SrcR \\(1\\) \\|$', rep)) && any(grepl('^\\| life_stage \\| 1 \\| 1 \\| 1 \\|', rep)),
-       'the summary table counts names, rows and dropped records per class')
+Expect(any(grepl('^\\| error \\| 1 \\| 1 \\| 0 \\| SrcR \\(1\\) \\|$', rep)) && any(grepl('^\\| life_stage \\| 1 \\| 1 \\| 1 \\|', rep)) &&
+         any(grepl('^\\| hybrid \\| 1 \\| 1 \\| 0 \\|', rep)),
+       'the summary table counts names, rows and dropped records per class (the hybrid is kept, the life stage dropped)')
 Expect(any(grepl('class `error`\\): 1 -- THE RUN STOPS', rep)), 'the summary flags the uncovered name')
 Expect(all(c('## error (1 names, 1 rows)', '## life_stage (1 names, 1 rows)', '## hybrid (1 names, 1 rows)',
              '## placeholder (1 names, 1 rows)', '## subgenus (1 names, 1 rows)') %in% rep),
        'one section per class, drop classes first')
 Expect(any(grepl('`Jaera (Jaera) albifrons` | `Jaera_albifrons` | subgenus | 1 | SrcR', rep, fixed = TRUE)) &&
-         any(grepl('`Calanus pacificus (IV)` | (dropped) | life_stage | 1 | SrcR', rep, fixed = TRUE)),
+         any(grepl('`Calanus pacificus (IV)` | (dropped) | life_stage | 1 | SrcR', rep, fixed = TRUE)) &&
+         any(grepl('`Anas platyrhynchos x rubripes` | `Anas_platyrhynchos` | hybrid | 1 | SrcR', rep, fixed = TRUE)),
        'each name is listed with its result, classes, rows and source')
 raw_name_log <- list(); WriteRawNameReport(f)
 Expect(any(readLines(f) == 'No raw name was changed or classified.'), 'an empty log writes an empty report')

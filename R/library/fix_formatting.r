@@ -34,10 +34,11 @@ Latin1ToUtf8 <- function(x) {
 #                          token by token);
 #            'name'        the whole raw name, underscores read as spaces and
 #                          runs of blanks collapsed.
-#   class    subgenus | sex | form_strain_region | size_class | synonym |
-#            authority | trinomial (removed, record kept) and life_stage |
-#            placeholder | qualifier | hybrid | ambiguous | other_drop (record
-#            dropped)
+#   class    subgenus | sex | form_strain_region | size_class | species_group |
+#            synonym | authority | trinomial (annotation removed, record kept),
+#            life_stage | size_class (the small classes) | placeholder |
+#            qualifier | other_drop (record dropped), hybrid | ambiguous (the
+#            name is cut at the separator and the first name kept)
 #   action   strip  remove the matched annotation, keep the record;
 #            drop   remove the record: placeholder and qualifier records leave
 #                   FixFormatting() as a marker, Genus_<word> with the matched
@@ -48,7 +49,15 @@ Latin1ToUtf8 <- function(x) {
 #                   removes (their historical path); the other drop classes
 #                   are removed here through DropImputed() and logged to
 #                   audit/imputed_rows.csv;
-#            fold   (name scope) keep the first two tokens of the name.
+#            fold   (name scope) cut the name at the first match of the pattern
+#                   and keep the first two tokens of what precedes the cut; a
+#                   pattern anchored at the start of the name therefore keeps the
+#                   first two tokens of the whole name ('Buteo (rufofuscus)' ->
+#                   Buteo_rufofuscus), one matched inside it credits the record
+#                   to the first name written ('Anas platyrhynchos x rubripes' ->
+#                   Anas_platyrhynchos, 'Empidonax traillii/alnorum' ->
+#                   Empidonax_traillii, 'Centrocercus X Tympanuchus ...' -> the
+#                   genus-level record Centrocercus; owner decision 2026-10-04).
 #   note, added   the evidence and the date the row was added.
 # Rows are tried in file order; the first match wins.
 #
@@ -77,10 +86,14 @@ raw_name_pattern_columns <- c('pattern', 'scope', 'class', 'action', 'note', 'ad
 raw_name_scopes          <- c('epithet', 'annotation', 'name')
 raw_name_actions         <- c('strip', 'drop', 'fold')
 raw_name_strip_classes   <- c('subgenus', 'sex', 'form_strain_region', 'size_class',
-                              'synonym', 'authority', 'trinomial')
-raw_name_drop_classes    <- c('life_stage', 'placeholder', 'qualifier', 'hybrid',
-                              'ambiguous', 'other_drop')
-raw_name_classes         <- c(raw_name_strip_classes, raw_name_drop_classes)
+                              'species_group', 'synonym', 'authority', 'trinomial')
+# size_class is in both sets: the large classes are stripped, the small ones
+# ({xs}, {s}, small) dropped as non-adult records (owner decision 2026-10-04)
+raw_name_drop_classes    <- c('life_stage', 'size_class', 'placeholder', 'qualifier', 'other_drop')
+# classes a name-scope row may fold: every strip class, the bracketed epithet
+# of a bare genus (qualifier) and the first name of a hybrid or alternative
+raw_name_fold_classes    <- c(raw_name_strip_classes, 'qualifier', 'hybrid', 'ambiguous')
+raw_name_classes         <- unique(c(raw_name_strip_classes, raw_name_drop_classes, raw_name_fold_classes))
 # drop classes that leave a marker for RemoveNonTaxa() instead of dropping here:
 # the matched word itself when RemoveNonTaxa() (or a rename rule) knows it,
 # else the class default ('Lithobius sp2' -> Lithobius_sp, 'Lagopus spec.' ->
@@ -92,14 +105,14 @@ raw_name_marker_words    <- list(placeholder = c('sp', 'spp', 'spec', 'indet', '
 # the reasons DropImputed() logs for the classes dropped here
 raw_name_drop_reasons <- c(
   life_stage = 'life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)',
-  hybrid     = 'hybrid or intergrade between two taxa in the raw name (audit/raw_name_patterns.csv, #38)',
-  ambiguous  = 'two or more alternative taxa in one raw name (audit/raw_name_patterns.csv, #38)',
+  size_class = 'small size class in the raw name ({xs}, {s}, small): treated as a non-adult record (owner decision 2026-10-04, #38)',
   other_drop = 'raw name matched an other_drop rule of audit/raw_name_patterns.csv (#38)')
 # classes assigned by code, not by the vocabulary
 raw_name_code_classes    <- c('encoding', 'symbols', 'error')
 # the class a name is filed under in the report when several apply
-raw_name_class_order     <- c('error', raw_name_drop_classes, 'subgenus', 'sex',
-                              'form_strain_region', 'size_class', 'synonym', 'authority',
+raw_name_class_order     <- c('error', 'life_stage', 'placeholder', 'qualifier', 'other_drop',
+                              'hybrid', 'ambiguous', 'subgenus', 'sex', 'form_strain_region',
+                              'size_class', 'species_group', 'synonym', 'authority',
                               'trinomial', 'encoding', 'symbols')
 
 # One entry per FixFormatting() call: the names it classified or changed, with
@@ -125,8 +138,9 @@ LoadRawNamePatterns <- function(path) {
       "an epithet-scope row must be class placeholder or qualifier with action drop")
   Bad(p$scope != 'annotation' | p$action != 'fold', "an annotation-scope row cannot fold")
   Bad(p$scope != 'name' | p$action != 'strip', "a name-scope row cannot strip (use fold or drop)")
-  Bad(p$action != 'strip' | p$class %in% raw_name_strip_classes, 'action strip with a drop class')
-  Bad(p$action != 'drop'  | p$class %in% raw_name_drop_classes,  'action drop with a strip class')
+  Bad(p$action != 'strip' | p$class %in% raw_name_strip_classes, 'action strip with a class that is not stripped')
+  Bad(p$action != 'drop'  | p$class %in% raw_name_drop_classes,  'action drop with a class that is not dropped')
+  Bad(p$action != 'fold'  | p$class %in% raw_name_fold_classes,  'action fold with a class that cannot fold')
   compiles <- vapply(p$pattern, function(re)
     !inherits(tryCatch(suppressWarnings(grepl(re, 'x', perl = TRUE)), error = function(e) e), 'error'), logical(1))
   Bad(compiles, 'pattern is not a valid Perl regex')
@@ -210,8 +224,12 @@ ParseOneRawName <- function(x, pat) {
   r <- MatchRow(norm, nm_rows)
   if (!is.null(r)) {
     if (r$action == 'drop') return(Drop(r$class, tokens[1]))
-    Add(r$class)                                        # fold: the first two tokens
-    kept <- strsplit(NormaliseBlanks(gsub('[][(){}]', ' ', x)), ' ', fixed = TRUE)[[1]]
+    Add(r$class)
+    # fold: cut at the first match (a match at the start keeps the whole name),
+    # then the first two tokens of what precedes the cut
+    at   <- regexpr(r$pattern, norm, perl = TRUE)[1]
+    kept <- if (at > 1) substr(norm, 1, at - 1) else norm
+    kept <- strsplit(NormaliseBlanks(gsub('[][(){}]', ' ', kept)), ' ', fixed = TRUE)[[1]]
     kept <- kept[nzchar(kept)]
     return(Done(Assemble(kept[1], if (length(kept) >= 2) kept[2] else ''), 'fold'))
   }
@@ -369,8 +387,8 @@ FixFormatting <- function(dat, patterns = raw_name_patterns) {
     raw_name_log[[length(raw_name_log) + 1L]] <<- entry
   }
 
-  # Records dropped here (life stages, hybrids, ambiguous names) are logged
-  # through DropImputed(), one entry per class and source label.
+  # Records dropped here (life stages, small size classes) are logged through
+  # DropImputed(), one entry per class and source label.
   for (cl in unique(drop_class[dropped])) {
     for (lab in unique(labels[dropped & drop_class %in% cl])) {
       in_lab <- which(labels == lab)
@@ -403,14 +421,15 @@ raw_name_class_text <- c(
   error              = 'A bracket group or a trailing token that no row of audit/raw_name_patterns.csv covers. The name keeps its brackets and CheckRawNames() stops the run: add a row to the vocabulary (or fix the source) so that the pattern is classified, never absorbed.',
   life_stage         = 'A life-stage annotation (stage code, nauplius, copepodite, larva, megalops, juvenile, immature, egg, pupa, ...): the record is not an adult and is dropped through DropImputed() (scope rule of #8), one entry per source in audit/imputed_rows.csv.',
   placeholder        = "No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it, unless a rename rule maps the marker to a genus-level record (six Brose_etal_2018 'Genus spec.' names, fix_misspellings.r).",
-  qualifier          = 'An identification qualifier (cf., aff., nr., a species group or aggregate): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.',
-  hybrid             = 'A hybrid or intergrade between two taxa (names joined by x): a record of neither parent, dropped through DropImputed().',
-  ambiguous          = 'Two or more alternative taxa in one name (joined by /, a comma, a semicolon or "and"): dropped through DropImputed().',
+  qualifier          = 'An identification qualifier before the epithet (cf., aff., nr.): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.',
+  hybrid             = 'A hybrid or intergrade, two names joined by x: the record is credited to the first name written (the name is cut at the x; a genus alone before it gives a genus-level record), owner decision 2026-10-04.',
+  ambiguous          = 'Two or more alternative taxa in one name (joined by /, a comma, a semicolon or "and"): the record is credited to the first name written (the name is cut at the separator; an incomplete first fragment such as Lithobius_cyrt is left to the enrichment), owner decision 2026-10-04.',
   other_drop         = 'Dropped by an other_drop rule of the vocabulary.',
   subgenus           = 'A subgenus in brackets between the genus and the epithet, or the genus written twice, is removed; the binomial is kept.',
   sex                = "A sex mark (F, M, female(s), male(s), the signs U+2640/U+2642) is removed; the record is kept as the species' value (owner decision, #37).",
   form_strain_region = 'A form, strain, culture or population annotation is removed; the record is kept.',
-  size_class         = 'A size-class tag ({s}, {m}, {l}, {xl}, large, small) is removed; every class feeds the species mean (not a life stage; owner to decide).',
+  size_class         = 'A size-class tag of the Brose_etal_2018 soil food webs: {m}, {l}, {xl}, {xxl}, {xxxl}, medium and large are removed and the record kept; the small classes {xs}, {s} and small are non-adult records and are dropped through DropImputed() (owner decision 2026-10-04).',
+  species_group      = 'A species group or aggregate marker after a binomial (group, grp, complex, agg., s.l.) is removed and the record credited to the nominal species written before it (owner decision 2026-10-04).',
   synonym            = 'An alternative name, epithet or common name in brackets after the binomial is removed.',
   authority          = 'An author or author-and-year citation is removed.',
   trinomial          = 'A third, lowercase token (a subspecies or variety epithet, with or without a rank marker such as var. or ssp.) folds into the species.',

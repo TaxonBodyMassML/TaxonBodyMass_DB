@@ -87,13 +87,19 @@ per rule: `pattern` (a Perl regex), `scope` (what it is matched against:
 placeholders and identification qualifiers; `annotation`, the content of a
 `()`, `[]` or `{}` group or a token after the binomial; `name`, the whole raw
 name with underscores read as spaces and blanks collapsed), `class`
-(`subgenus`, `sex`, `form_strain_region`, `size_class`, `synonym`,
-`authority`, `trinomial`: the annotation is removed and the record kept;
-`placeholder`, `qualifier`: the record leaves as a `Genus_sp` / `Genus_cf`
-marker, or the word as written, which `RemoveNonTaxa()` removes;
-`life_stage`, `hybrid`, `ambiguous`, `other_drop`: the record is dropped
-through `DropImputed()` and logged to `imputed_rows.csv`), `action` (`strip`,
-`drop`, or `fold`, which keeps the first two tokens of a whole name), `note`
+(`subgenus`, `sex`, `form_strain_region`, `size_class`, `species_group`,
+`synonym`, `authority`, `trinomial`: the annotation is removed and the record
+kept; `placeholder`, `qualifier`: the record leaves as a `Genus_sp` /
+`Genus_cf` marker, or the word as written, which `RemoveNonTaxa()` removes;
+`life_stage`, `size_class` for the small classes `{xs}`, `{s}`, `small`, and
+`other_drop`: the record is dropped through `DropImputed()` and logged to
+`imputed_rows.csv`; `hybrid`, `ambiguous`: the name is cut at the separator
+and the record credited to the first name written), `action` (`strip`,
+`drop`, or `fold`, which cuts a whole name at the first match of the pattern
+and keeps the first two tokens before the cut, i.e. the first two tokens of
+the whole name when the pattern is anchored at its start; owner decisions of
+2026-10-04 on the size classes, species groups, hybrids and alternatives),
+`note`
 (the evidence: the raw names and sources that motivated the row, what happened
 to them before #38) and `added` (date). Rows are tried in file order and the
 first match wins; `LoadRawNamePatterns()` validates the columns, the class,
@@ -123,9 +129,9 @@ another species, and for the exclusions recorded in their `README.md`
 `R/library/data_retrieve.r` calls it, through `DropPlaceholders()`, for the
 Brose_2005 placeholder values of the live DataRetriever download; and
 `FixFormatting()` calls it in pipeline step 2 for the records whose raw name
-carries a life-stage annotation, names a hybrid or lists alternative taxa
-(`raw_name_patterns.csv`, issue #38), one entry per rule class and source
-label (the `n_kept` of these entries counts the label's rows in its frame).
+carries a life-stage annotation or a small size class (`{xs}`, `{s}`,
+`small`; `raw_name_patterns.csv`, issue #38), one entry per rule class and
+source label (the `n_kept` of these entries counts the label's rows in its frame).
 Every call appends to the in-memory list `imputed_log`, which `R/RunMe.r`
 prints and writes here after `FixFormatting()`, overwriting the file, but only
 in a run with `recompile = TRUE` (when the parse scripts did not run the log

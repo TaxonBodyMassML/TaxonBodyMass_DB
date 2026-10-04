@@ -201,14 +201,15 @@ source_list <- lapply(rdata_files, function(f) {
 # audit/raw_name_patterns.csv (#38): subgenera, sex marks, form/strain/size
 # annotations, synonyms and authorities are removed, subspecies fold into the
 # species, placeholders and qualifiers leave as Genus_sp / Genus_cf markers
-# for RemoveNonTaxa(), and life stages, hybrids and ambiguous names are
-# dropped through DropImputed(). Encoding is normalised first (#37).
+# for RemoveNonTaxa(), hybrids and alternative names are credited to the
+# first name written, and life stages and small size classes are dropped
+# through DropImputed(). Encoding is normalised first (#37).
 raw_name_log <- list()
 source_list <- lapply(source_list, FixFormatting)
 # Rows removed because the source flags them as imputed, genus-averaged or
 # copied from another species (DropImputed() in the parse scripts, helpers.r)
-# or because the raw name marks a life stage, a hybrid or an ambiguous
-# identification (FixFormatting(), #38). Written only when the parse scripts
+# or because the raw name marks a life stage or a small size class
+# (FixFormatting(), #38). Written only when the parse scripts
 # ran, so that a recompile = FALSE run does not overwrite the file with the
 # section-2b entries alone.
 if (length(imputed_log) > 0) {

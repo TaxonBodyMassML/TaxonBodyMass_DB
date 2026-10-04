@@ -6,8 +6,7 @@ RemoveNonTaxa <- function(dat) {
   # Placeholder identification qualifiers used in place of species epithets.
   # Since #38 FixFormatting() writes them explicitly: a raw epithet that is a
   # placeholder (sp., spp., spec., indet., 'sp2', 'lassp8', 'species A', ...)
-  # or an identification qualifier (cf., aff., nr., c.f., a species group)
-  # leaves it as Genus_<word>, the word as written when it is one of those
+  # or an identification qualifier (cf., aff., nr., c.f.) leaves it as Genus_<word>, the word as written when it is one of those
   # below and sp / cf otherwise (audit/raw_name_patterns.csv, epithet-scope
   # rows); these suffixes then remove the record.
   # _sp    = species indeterminate (most common) and every morphospecies code
@@ -15,7 +14,7 @@ RemoveNonTaxa <- function(dat) {
   # _spec  = spec. (six Brose_etal_2018 genera are mapped to genus-level
   #          records by fix_misspellings.r before this step and are kept)
   # _indet = indeterminate
-  # _cf    = confer (compare; identification uncertain) and species groups
+  # _cf    = confer (compare; identification uncertain)
   # _aff   = affinis (close to the named species)
   # _nr    = near (closely related to but not identical to the named species)
   # _unk   = unknown species
@@ -78,6 +77,9 @@ RemoveNonTaxa <- function(dat) {
     "Predacious_nematodes",           # predatory nematode functional group
     "Scirtid_broad",                  # morphological functional label
     "Pergamasinae",                   # subfamily (Mesostigmata), not a genus; 'Pergamasinae (male)' once the sex mark is stripped (#38)
+    "Pacific_herring",                # common name: 'Pacific herring, Clupea palasi' cut at the comma (Brown_etal_2018, #38)
+    "Skate",                          # common name: 'Skate, Raja orinacea' cut at the comma (Brown_etal_2018, #38)
+    "Diptera_larvae",                 # order + life-stage label: 'Diptera larvae/pupae' cut at the slash (Brose_etal_2018, #38)
     "Scyllarid_lobsters",             # family-level common name
     "Sea_birds",                      # common name for multiple taxa, not a binomial
     "Sea_fan",                        # common name for gorgonian corals, not a binomial
