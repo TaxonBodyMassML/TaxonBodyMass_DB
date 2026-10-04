@@ -227,7 +227,7 @@ RelatedPairs <- function(closure) {
   sib <- sib[sib$label.x < sib$label.y, , drop = FALSE]
   sib <- data.frame(a = sib$label.x, b = sib$label.y,
                     tol_log10 = pmax(sib$tol_log10.x, sib$tol_log10.y),
-                    kind = 'sibling', stringsAsFactors = FALSE)
+                    kind = rep('sibling', nrow(sib)), stringsAsFactors = FALSE)
   rel <- rbind(direct, sib)
   k1 <- pmin(rel$a, rel$b); k2 <- pmax(rel$a, rel$b)
   rel$a <- k1; rel$b <- k2

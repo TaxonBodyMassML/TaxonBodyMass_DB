@@ -78,6 +78,7 @@ source(file.path(wd_root, 'R', 'library', 'check_source_docs.r'))
 source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
 source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
+source(file.path(wd_root, 'R', 'library', 'enrich_genus.r'))
 
 # The raw-name vocabulary FixFormatting() applies (#38): tracked in audit/,
 # validated on loading (columns, classes, actions, regexes).
@@ -272,7 +273,8 @@ source_list <- lapply(source_list, function(df) {
 adat_raw <- bind_rows(source_list)
 
 # Separate genus-only entries: included in genus averages but excluded from
-# species export.
+# species export. They are resolved at genus rank, filtered, weighted and
+# de-duplicated in section 5b (#49).
 genus_only <- adat_raw[!grepl('_', adat_raw$taxon), ]
 adat_raw   <- adat_raw[ grepl('_', adat_raw$taxon), ]
 
@@ -321,7 +323,8 @@ n_names_submitted <- nrow(unique_taxa)
 cache_path <- file.path(wd_root, 'sources', 'enrich_cache.Rdata')
 
 if (!fresh_start && file.exists(cache_path)) {
-  load(cache_path)                                            # loads `enrich_cache`
+  load(cache_path)                                            # loads `enrich_cache` (and `genus_cache`, #49)
+  if (!exists('genus_cache')) genus_cache <- EmptyGenusCache()  # a cache file written before #49
   new_taxa    <- unique_taxa[unique_taxa$taxon %!in% enrich_cache$taxon, ]
   cached_taxa <- unique_taxa[unique_taxa$taxon %in%  enrich_cache$taxon, ]
   cli::cli_inform(c(
@@ -342,9 +345,10 @@ if (!fresh_start && file.exists(cache_path)) {
   if (fresh_start)
     cli::cli_inform(c('i' = 'fresh_start = TRUE: skipping cache, re-enriching all taxa.'))
   enrich_cache <- EnrichTaxonomy(unique_taxa)                 # This step will take a while
+  genus_cache  <- EmptyGenusCache()                           # genus-rank resolutions (section 5b, #49)
 }
 
-save(enrich_cache, file = cache_path)
+save(enrich_cache, genus_cache, file = cache_path)
 
 # Backfill higher ranks for cached taxa enriched before Stage 7 existed.
 # Self-extinguishing: once the cache is updated the condition is false on
@@ -356,7 +360,7 @@ if (any(cache_needs_backfill)) {
   cli::cli_inform(c('i' = '{sum(cache_needs_backfill)} cached taxa need rank backfill; running now...'))
   enrich_cache[cache_needs_backfill, ] <-
     BackfillRanks(enrich_cache[cache_needs_backfill, ])
-  save(enrich_cache, file = cache_path)
+  save(enrich_cache, genus_cache, file = cache_path)
 }
 
 # Normalize rank-level synonyms and apply manual fills before inference.
@@ -364,7 +368,7 @@ if (any(cache_needs_backfill)) {
 # other fixes handle reptile class synonyms, cross-kingdom noise, and fringe
 # protist/flatworm/nematode taxa that all APIs leave incomplete.
 enrich_cache <- FixTaxonomyRanks(enrich_cache)
-save(enrich_cache, file = cache_path)
+save(enrich_cache, genus_cache, file = cache_path)
 
 # Infer missing ranks from unambiguous within-cache mappings.
 # GBIF's backbone omits CLASS for many fish; order→class inference fills the gap
@@ -399,7 +403,7 @@ for (pairs in list(c('order', 'class'), c('family', 'class'),
     cli::cli_inform(c('i' = 'Rank inference: filled {length(fill_idx)} missing `{to_col}` from `{from_col}`.'))
   }
 }
-if (cache_updated) save(enrich_cache, file = cache_path)
+if (cache_updated) save(enrich_cache, genus_cache, file = cache_path)
 
 unique_taxa <- enrich_cache[enrich_cache$taxon %in% unique_taxa$taxon, ]
 n_names_resolved <- sum(!is.na(unique_taxa$species))
@@ -510,6 +514,74 @@ enriched <- within_source %>%
 enriched$gbif_confidence[is.infinite(enriched$gbif_confidence)] <- NA_real_
 enriched$mass_g <- signif(enriched$mass_g, digits = 4)
 
+
+##########################################################################
+# 5b. Genus-only records: resolve at genus rank, filter, weight, de-duplicate
+##########################################################################
+# The records identified to genus only (section 3) get the machinery of the
+# species path (enrich_genus.r, #49). Every bare name is resolved once to an
+# accepted GBIF genus, or found to be a rank above genus, through the
+# enrichment cache and the GBIF backbone, with the class/order/family hints
+# the frames carry (VertNet, Castro_2025, Pata_2025, Makarieva_2008); the
+# answers are cached in sources/enrich_cache.Rdata (object genus_cache).
+genus_only$source_label <- SourceLabel(genus_only$source_mass)
+genus_only$source_group <- SourceGroup(genus_only$source_label)
+genus_cache <- ResolveGenusNames(genus_only, genus_cache, enrich_cache)
+save(enrich_cache, genus_cache, file = cache_path)
+genus_res <- FixTaxonomyRanks(genus_cache[genus_cache$taxon %in% genus_only$taxon, ])
+genus_res$outcome <- ifelse(is.na(genus_res$rank), 'unresolved',
+                            ifelse(genus_res$rank == 'GENUS', 'genus', 'above genus'))
+genus_only <- merge(genus_only[, setdiff(names(genus_only), tax_cols)],
+                    genus_res[, c('taxon', 'genus', 'rank', 'gbif_status', 'match_type', 'outcome', tax_cols)],
+                    by = 'taxon', all.x = TRUE)
+# Names resolved above genus (families, orders, tribes, ...) leave the genus
+# table; HigherRankRecords() keeps one row per name for the optional
+# TaxonBodyMass_HigherRank.csv (owner decision pending, #49). Names no stage
+# resolved leave too and join the unresolved-names section of
+# warnings_taxonomy.md (check_enriched() below).
+higher_rank_records <- HigherRankRecords(genus_only[genus_only$outcome == 'above genus', ])
+unresolved_genus_names <- genus_only %>%
+  filter(outcome == 'unresolved') %>%
+  group_by(taxon) %>%
+  summarise(rows    = n(),
+            sources = paste(sort(unique(source_label)), collapse = ', '),
+            .groups = 'drop') %>% as.data.frame()
+unresolved_names <- rbind(unresolved_names, unresolved_genus_names)
+message(sprintf(paste('Genus-only records: %d rows / %d bare names; %d names resolved to %d accepted genera (%d rows),',
+                      '%d names above genus (%d rows), %d unresolved (%d rows)'),
+                nrow(genus_only), nrow(genus_res),
+                sum(genus_res$outcome == 'genus'), n_distinct(genus_res$genus[genus_res$outcome == 'genus']),
+                sum(genus_only$outcome == 'genus'),
+                sum(genus_res$outcome == 'above genus'), sum(genus_only$outcome == 'above genus'),
+                sum(genus_res$outcome == 'unresolved'), sum(genus_only$outcome == 'unresolved')))
+# FilterAutotrophs() on the resolved classification (plants, algae,
+# cyanobacteria and the listed dinoflagellate and euglenid genera, as for
+# species). The extinct list (audit/extinct_taxa.csv) is species-level and
+# does not apply to genus-only records.
+genus_rows      <- genus_only[genus_only$outcome == 'genus', ]
+genus_rows_kept <- FilterAutotrophs(genus_rows)
+removed_autotrophs <- genus_rows[genus_rows$genus %!in% genus_rows_kept$genus, ] %>%
+  group_by(genus, kingdom, phylum) %>%
+  summarise(rows    = n(),
+            names   = paste(sort(unique(taxon)), collapse = ', '),
+            sources = paste(sort(unique(source_label)), collapse = ', '),
+            .groups = 'drop') %>%
+  arrange(-rows) %>% as.data.frame()
+message(sprintf('  FilterAutotrophs: %d autotroph genera removed from the genus-only records (%d rows)',
+                nrow(removed_autotrophs), sum(removed_autotrophs$rows)))
+# Pass 1 (geometric mean per genus and source group), de-duplication with the
+# registry, Pass 2 (arithmetic mean of the independent values): one genus-only
+# record per genus, the pseudo-taxon that enters the genus mean in section 6
+# with the weight of one species. The alternative weighting (each independent
+# per-source value entering the genus mean separately) is kept for comparison.
+genus_values <- GenusOnlyValues(genus_rows_kept)
+genus_dedupe <- DedupeGenusValues(genus_values, source_deps)
+genus_values <- genus_dedupe$values
+genus_records     <- GenusOnlyRecords(genus_values, variant = 'pseudo-taxon')
+genus_records_alt <- GenusOnlyRecords(genus_values, variant = 'per-source')
+message(sprintf('  %d genus x source values, %d collapsed as copies; %d genus-only records',
+                nrow(genus_values), sum(!genus_values$independent), nrow(genus_records)))
+
 # QC reports name the extreme sources among the independent values, the ones
 # log10_range is computed from.
 check_enriched(enriched, within_source[within_source$independent, ],
@@ -560,20 +632,34 @@ if (dir.exists(ms_dir)) {
 # 6. Genus-level averages
 ##########################################################################
 # Species rows aggregate by their resolved (accepted) genus, so synonyms and
-# misspelt input genera fold into the accepted name (Raja erinacea -> Leucoraja).
-# Genus-only rows bypass enrichment, so their raw name is the only genus available.
-# Genus-only records bypass Pass 1 and 2, so each enters the genus mean as one
-# independent value; n_independent sums the species-level counts (#5).
-genus_only$n_independent <- 1L
-gdat <- bind_rows(enriched, genus_only)
-gdat$taxon <- dplyr::coalesce(gdat$genus, sub('\\_.*', '', gdat$taxon))
-gdat <- gdat[!is.na(gdat$taxon) & nchar(gdat$taxon) > 0, ]
-gdat <- ddply(gdat, .(taxon), summarise,
-              mass_g = mean(mass_g),   # arithmetic mean
-              n      = sum(n, na.rm = TRUE),
-              n_independent = sum(n_independent, na.rm = TRUE),
-              source_mass = paste(source_mass, collapse = '-'))
-gdat <- gdat[, c('taxon', 'mass_g', 'source_mass', 'n', 'n_independent')]
+# misspelt input genera fold into the accepted name (Raja erinacea -> Leucoraja);
+# the genus-only record of a genus (section 5b: one value per genus, the
+# arithmetic mean of its independent per-source values) enters the mean with
+# the weight of one species. n_independent sums the species' independent
+# values and the independent sources of the genus-only record (#5, #49).
+gdat <- GenusLevelTable(enriched, genus_records)
+
+# The report on the genus-only path (reports/genus_only_records.md): names
+# above genus, autotroph genera removed, fuzzy matches and homonym choices,
+# synonyms folded, collapsed values, and the genus-only records more than an
+# order of magnitude from the genus's species-based mean. The intermediates
+# go to tmp/ (git-ignored) for audits of the weighting variants.
+species_genus_means <- enriched %>%
+  group_by(genus) %>%
+  summarise(species_mean = mean(mass_g), n_species = n(), .groups = 'drop') %>% as.data.frame()
+genus_name_summary <- genus_only %>%
+  group_by(taxon) %>%
+  summarise(rows    = n(),
+            sources = paste(sort(unique(source_label)), collapse = ', '),
+            gm      = 10^mean(log10(mass_g), na.rm = TRUE),
+            .groups = 'drop') %>% as.data.frame()
+WriteGenusOnlyReport(file.path(wd_root, 'reports', 'genus_only_records.md'),
+                     res = merge(genus_res, genus_name_summary, by = 'taxon'),
+                     removed_autotrophs = removed_autotrophs, dedupe = genus_dedupe,
+                     records = genus_records, species_genus_means = species_genus_means,
+                     deps = source_deps)
+save(genus_res, genus_values, genus_records, genus_records_alt, higher_rank_records,
+     file = file.path(wd_root, 'tmp', 'genus_only_records.Rdata'))
 
 
 
