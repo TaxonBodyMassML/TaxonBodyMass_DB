@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 06:43:01
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 07:16:09
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 438 names, 4490 rows
+- Names unresolved after all enrichment stages: 433 names, 4212 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -381,11 +381,9 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (438 names, 4490 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (433 names, 4212 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
-
-Not_recognised | Soria_etal_2021 | 260 rows
 
 Stoidis_aurata | Brose_etal_2018 | 244 rows
 
@@ -487,8 +485,6 @@ Anthodiaeta_collaris | vertnet-aves-sept2016 | 9 rows
 
 Dichotomius_opacus | Anunciacao_etal_2025 | 9 rows
 
-Oligochaeta_fragments | Hrycik_2024 | 9 rows
-
 Rhamphococcyx_curvirostris | vertnet-aves-sept2016 | 9 rows
 
 Thripophaga_pyrrholeuca | vertnet-aves-sept2016 | 9 rows
@@ -506,8 +502,6 @@ Conochiloides_hippocrepis | Brose_etal_2018 | 7 rows
 Niltava_superba | vertnet-aves-sept2016 | 7 rows
 
 Pezites_militaris | vertnet-aves-sept2016, vertnet-traits-sept2016 | 7 rows
-
-Tubificid_fragment | Hrycik_2024 | 7 rows
 
 Varacosa_terricola | Hirt_etal_2017 | 7 rows
 
@@ -1043,8 +1037,6 @@ Molothrus_aenus | vertnet-traits-sept2016 | 1 row
 
 Murexechinus_san | Smith_2003 | 1 row
 
-Naidid_fragment | Hrycik_2024 | 1 row
-
 Neanura_abietis | Hishi_etal_2019 | 1 row
 
 Neanura_amamiana | Hishi_etal_2019 | 1 row
@@ -1078,8 +1070,6 @@ Niltava_herioti | vertnet-aves-sept2016 | 1 row
 Nycitdromus_nigrescens | vertnet-traits-sept2016 | 1 row
 
 Ochotona_dalli | McCoy_2008 | 1 row
-
-Oligochaeta_immature | Hrycik_2024 | 1 row
 
 Oreochelidon_murina | vertnet-aves-sept2016 | 1 row
 
