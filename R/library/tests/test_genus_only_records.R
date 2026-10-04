@@ -5,8 +5,8 @@
 # genus, the curated list, the suffix rule, fuzzy matches accepted and
 # rejected, unresolved names, caching), the autotroph filter on the resolved
 # classification, the exclusion of higher-rank names, Pass 1 and
-# de-duplication of the genus x source values, the pseudo-taxon and
-# per-source weightings, the genus table, and the wiring in RunMe.r (the
+# de-duplication of the genus x source values, the one-record-per-genus
+# weighting (against a per-source fixture), the genus table, and the wiring in RunMe.r (the
 # species path must stay untouched: TaxonBodyMass.csv is byte-identical to
 # the run before #49). No network access and no packages beyond base R.
 #
@@ -343,18 +343,10 @@ Expect(nrow(FilterAutotrophs(data.frame(genus = c('Oligochaeta', 'Zea', 'Gymnodi
                                         kingdom = c('Plantae', 'Plantae', 'Chromista', 'Chromista'),
                                         phylum = c('Tracheophyta', 'Tracheophyta', 'Myzozoa', 'Myzozoa'), stringsAsFactors = FALSE))) == 1,
        'a plant genus homonym and a listed dinoflagellate genus are removed, the heterotrophic Noctiluca stays')
-hr <- HigherRankRecords(go[go$outcome == 'above genus', ])
-Expect(identical(names(hr), c('taxon', 'rank', 'kingdom', 'phylum', 'class', 'order', 'family', 'mass_g', 'source_mass', 'n', 'n_independent')) &&
-         nrow(hr) == 13 && hr$taxon[1] == 'Staphylinidae',
-       'HigherRankRecords(): one row per name, the columns of TaxonBodyMass_HigherRank.csv, most rows first')
-st <- hr[hr$taxon == 'Staphylinidae', ]
-Expect(st$rank == 'FAMILY' && st$n == 3 && st$n_independent == 2 &&
-         abs(st$mass_g - signif(mean(c(10^mean(log10(c(0.01, 0.012))), 0.011)), 4)) < 1e-12 &&
-         st$source_mass == 'Brose_2005; Brose_etal_2018',
-       'Staphylinidae: three rows from two sources, the mean of the two sources\' geometric means')
-Expect(setequal(hr$taxon[hr$rank == 'SUBORDER'], c('Anisoptera', 'Zygoptera', 'Ensifera')) && hr$rank[hr$taxon == 'Brachyderinae'] == 'SUBFAMILY' &&
-         hr$rank[hr$taxon == 'Crustacea'] == 'CLASS' && hr$rank[hr$taxon == 'Heteroptera'] == 'ORDER',
-       'ranks of the curated, checklist- and suffix-derived names are carried')
+above <- go[go$outcome == 'above genus', ]
+Expect(setequal(above$taxon[above$rank == 'SUBORDER'], c('Anisoptera', 'Zygoptera', 'Ensifera')) && all(above$rank[above$taxon == 'Brachyderinae'] == 'SUBFAMILY') &&
+         all(above$rank[above$taxon == 'Crustacea'] == 'CLASS') && all(above$rank[above$taxon == 'Heteroptera'] == 'ORDER') && all(is.na(above$genus)),
+       'ranks of the curated, checklist- and suffix-derived names are carried on the rows; no genus is attached')
 
 # ---- Pass 1, de-duplication and Pass 2 --------------------------------------------
 cat('GenusOnlyValues(), DedupeGenusValues(), GenusOnlyRecords()\n')
@@ -389,10 +381,10 @@ Expect(!lb$independent && lb$collapsed_into == 'Brose_2005' && lb$dedupe_rule ==
 Expect(all(v$independent[v$genus != 'Lagopus']), 'single-source genera are untouched')
 Expect(nrow(DedupeGenusValues(vals[0, ], deps)$values) == 0, 'no values: an empty result')
 
-rec <- GenusOnlyRecords(v, variant = 'pseudo-taxon')
+rec <- GenusOnlyRecords(v)
 Expect(!anyDuplicated(rec$genus) && nrow(rec) == length(unique(v$genus)) &&
          all(c('genus', 'mass_g', 'n', 'n_sources', 'n_independent', 'source_mass', 'log10_range', 'source_dependencies') %in% names(rec)),
-       'pseudo-taxon variant: one record per genus')
+       'one record per genus')
 lr <- rec[rec$genus == 'Lagopus', ]
 exp_mass <- mean(c(10^mean(log10(c(14.0, 70.8, 500))), sqrt(511.5 * 598)))
 Expect(abs(lr$mass_g - exp_mass) < 1e-9 && lr$n == 7 && lr$n_sources == 3 && lr$n_independent == 2 &&
@@ -400,9 +392,9 @@ Expect(abs(lr$mass_g - exp_mass) < 1e-9 && lr$n == 7 && lr$n_sources == 3 && lr$
        'Lagopus record: the arithmetic mean of the two independent values (VertNet, Brose_2005), n 7, n_independent 2, the collapse recorded')
 Expect(abs(lr$log10_range - abs(log10(10^mean(log10(c(14.0, 70.8, 500))) / sqrt(511.5 * 598)))) < 1e-9,
        'log10_range of the record spans the independent values')
-alt <- GenusOnlyRecords(v, variant = 'per-source')
-Expect(sum(alt$genus == 'Lagopus') == 2 && all(alt$n_independent == 1) && nrow(alt) == sum(v$independent),
-       'per-source variant: one record per independent value (two for Lagopus)')
+# the per-source alternative the owner declined (2026-10-04), as a fixture: one record per independent value
+alt <- with(v[v$independent, ], data.frame(genus = genus, mass_g = mass_g, n = n, n_independent = 1L, source_mass = source_mass, stringsAsFactors = FALSE))
+Expect(sum(alt$genus == 'Lagopus') == 2 && nrow(alt) == sum(v$independent), 'fixture: two independent Lagopus values')
 Expect(nrow(GenusOnlyRecords(v[0, ])) == 0, 'no values: no records')
 
 # ---- the genus table ---------------------------------------------------------------
@@ -426,8 +418,9 @@ Expect(!any(c('Staphylinidae', 'Coleoptera', 'Oligochaeta', 'Anisoptera', 'Gomph
          all(c('Setophaga', 'Idotea', 'Phasianus', 'Peromyscus', 'Limonia') %in% gt$taxon),
        'higher ranks, autotrophs, unresolved names and synonym spellings are absent; the accepted genera are present')
 gt_alt <- GenusLevelTable(enriched, alt)
-Expect(abs(gt_alt$mass_g[gt_alt$taxon == 'Lagopus'] - mean(c(514, 500, 10^mean(log10(c(14.0, 70.8, 500))), sqrt(511.5 * 598)))) < 1e-9,
-       'per-source variant: each independent genus-only value enters the genus mean separately')
+Expect(abs(gt_alt$mass_g[gt_alt$taxon == 'Lagopus'] - mean(c(514, 500, 10^mean(log10(c(14.0, 70.8, 500))), sqrt(511.5 * 598)))) < 1e-9 &&
+         abs(gt_alt$mass_g[gt_alt$taxon == 'Lagopus'] - lg$mass_g) > 0.01,
+       'the per-source alternative would weight each independent genus-only value separately and give a different Lagopus mean')
 Expect(nrow(GenusLevelTable(enriched[0, ], rec[0, ])) == 0, 'empty inputs: an empty table')
 
 # ---- the report --------------------------------------------------------------------
@@ -465,9 +458,9 @@ i_res   <- grep('^genus_cache <- ResolveGenusNames\\(genus_only, genus_cache, en
 i_unres <- grep('^unresolved_names <- rbind\\(unresolved_names, unresolved_genus_names\\)', runme)
 i_ce    <- grep('^check_enriched\\(enriched, within_source\\[within_source\\$independent, \\],', runme)
 i_auto  <- grep('^genus_rows_kept <- FilterAutotrophs\\(genus_rows\\)', runme)
-i_vals  <- grep('^genus_values <- GenusOnlyValues\\(genus_rows_kept\\)', runme)
-i_dd    <- grep('^genus_dedupe <- DedupeGenusValues\\(genus_values, source_deps\\)', runme)
-i_rec   <- grep("^genus_records     <- GenusOnlyRecords\\(genus_values, variant = 'pseudo-taxon'\\)", runme)
+i_vals  <- grep('^genus_values  <- GenusOnlyValues\\(genus_rows_kept\\)', runme)
+i_dd    <- grep('^genus_dedupe  <- DedupeGenusValues\\(genus_values, source_deps\\)', runme)
+i_rec   <- grep('^genus_records <- GenusOnlyRecords\\(genus_values\\)', runme)
 i_tab   <- grep('^gdat <- GenusLevelTable\\(enriched, genus_records\\)', runme)
 i_wsp   <- grep("^write\\.csv\\(enriched, file = file\\.path\\(wd_root, 'TaxonBodyMass\\.csv'\\),", runme)
 i_wg    <- grep('^write\\.csv\\(gdat, file = file\\.path\\(wd_root, \'TaxonBodyMass_GenusLevel\\.csv\'\\),', runme)
@@ -492,6 +485,8 @@ Expect(length(assign_enriched) == 1 && grepl('^\\s*enriched <- res\\$dat', after
        'after section 5b, `enriched` is reassigned only by the range filter before TaxonBodyMass.csv is written')
 Expect(!any(grepl('genus_only\\$n_independent <- 1L|bind_rows\\(enriched, genus_only\\)', runme)),
        'the pre-#49 aggregation (every raw genus-only row as one value) is gone')
+Expect(!any(grepl('HigherRankRecords|genus_records_alt|TaxonBodyMass_HigherRank', runme)),
+       'no higher-rank output and no per-source variant in the pipeline (owner decisions 2026-10-04)')
 
 # ---- summary -------------------------------------------------------------------
 cat(sprintf('\n%d expectations, %d failed\n', n_checks, length(failures)))

@@ -535,11 +535,10 @@ genus_only <- merge(genus_only[, setdiff(names(genus_only), tax_cols)],
                     genus_res[, c('taxon', 'genus', 'rank', 'gbif_status', 'match_type', 'outcome', tax_cols)],
                     by = 'taxon', all.x = TRUE)
 # Names resolved above genus (families, orders, tribes, ...) leave the genus
-# table; HigherRankRecords() keeps one row per name for the optional
-# TaxonBodyMass_HigherRank.csv (owner decision pending, #49). Names no stage
-# resolved leave too and join the unresolved-names section of
-# warnings_taxonomy.md (check_enriched() below).
-higher_rank_records <- HigherRankRecords(genus_only[genus_only$outcome == 'above genus', ])
+# table and are listed in reports/genus_only_records.md (owner decision
+# 2026-10-04: no separate output for them). Names no stage resolved leave too
+# and join the unresolved-names section of warnings_taxonomy.md
+# (check_enriched() below).
 unresolved_genus_names <- genus_only %>%
   filter(outcome == 'unresolved') %>%
   group_by(taxon) %>%
@@ -571,14 +570,15 @@ message(sprintf('  FilterAutotrophs: %d autotroph genera removed from the genus-
                 nrow(removed_autotrophs), sum(removed_autotrophs$rows)))
 # Pass 1 (geometric mean per genus and source group), de-duplication with the
 # registry, Pass 2 (arithmetic mean of the independent values): one genus-only
-# record per genus, the pseudo-taxon that enters the genus mean in section 6
-# with the weight of one species. The alternative weighting (each independent
-# per-source value entering the genus mean separately) is kept for comparison.
-genus_values <- GenusOnlyValues(genus_rows_kept)
-genus_dedupe <- DedupeGenusValues(genus_values, source_deps)
-genus_values <- genus_dedupe$values
-genus_records     <- GenusOnlyRecords(genus_values, variant = 'pseudo-taxon')
-genus_records_alt <- GenusOnlyRecords(genus_values, variant = 'per-source')
+# record per genus, which enters the genus mean in section 6 with the weight
+# of one species (owner decision 2026-10-04; one record per source instead
+# would have moved 48 genera by at most 0.17 log10). Genus-only records are
+# not range-checked against the genus's species values (#34); the records more
+# than an order of magnitude from them are listed in the report.
+genus_values  <- GenusOnlyValues(genus_rows_kept)
+genus_dedupe  <- DedupeGenusValues(genus_values, source_deps)
+genus_values  <- genus_dedupe$values
+genus_records <- GenusOnlyRecords(genus_values)
 message(sprintf('  %d genus x source values, %d collapsed as copies; %d genus-only records',
                 nrow(genus_values), sum(!genus_values$independent), nrow(genus_records)))
 
@@ -642,8 +642,7 @@ gdat <- GenusLevelTable(enriched, genus_records)
 # The report on the genus-only path (reports/genus_only_records.md): names
 # above genus, autotroph genera removed, fuzzy matches and homonym choices,
 # synonyms folded, collapsed values, and the genus-only records more than an
-# order of magnitude from the genus's species-based mean. The intermediates
-# go to tmp/ (git-ignored) for audits of the weighting variants.
+# order of magnitude from the genus's species-based mean (#34).
 species_genus_means <- enriched %>%
   group_by(genus) %>%
   summarise(species_mean = mean(mass_g), n_species = n(), .groups = 'drop') %>% as.data.frame()
@@ -658,8 +657,6 @@ WriteGenusOnlyReport(file.path(wd_root, 'reports', 'genus_only_records.md'),
                      removed_autotrophs = removed_autotrophs, dedupe = genus_dedupe,
                      records = genus_records, species_genus_means = species_genus_means,
                      deps = source_deps)
-save(genus_res, genus_values, genus_records, genus_records_alt, higher_rank_records,
-     file = file.path(wd_root, 'tmp', 'genus_only_records.Rdata'))
 
 
 

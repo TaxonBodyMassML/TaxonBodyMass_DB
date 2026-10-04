@@ -21,16 +21,20 @@
 #                        Bib/source_dependencies.csv (Brose_etal_2018 ->
 #                        Brose_2005, -> Hechinger_etal_2011, ...);
 #   GenusOnlyRecords()   Pass 2: one genus-only record per genus, the
-#                        arithmetic mean of its independent per-source values
-#                        (the "pseudo-taxon": it enters the genus mean with the
-#                        weight of one species), or, as the alternative
-#                        variant, one record per independent source;
+#                        arithmetic mean of its independent per-source values;
+#                        it enters the genus mean with the weight of one
+#                        species (owner decision 2026-10-04; one record per
+#                        source instead would have moved 48 genera by at most
+#                        0.17 log10);
 #   GenusLevelTable()    the genus table: the arithmetic mean, by accepted
 #                        genus, over the species' cross-source means and the
-#                        genus-only record(s);
-#   HigherRankRecords()  the names resolved above genus, one row per name,
-#                        for the optional TaxonBodyMass_HigherRank.csv;
+#                        genus-only record;
 #   WriteGenusOnlyReport()  reports/genus_only_records.md.
+# Names resolved above genus (families, orders, tribes, ...) are dropped and
+# listed in the report; no separate output is written for them (owner
+# decision 2026-10-04). Genus-only records are not range-checked against the
+# genus's species values (issue #34); the report lists the records more than
+# an order of magnitude from them.
 #
 # Resolution stages (ResolveGenusName(), one bare name at a time):
 #   0. curated list genus_only_higher_rank_names: names the sources use for
@@ -565,14 +569,13 @@ DedupeGenusValues <- function(values, deps) {
   list(values = v, pairs = dd$pairs)
 }
 
-# Pass 2 for genus-only values. variant 'pseudo-taxon' (the default): one
-# record per genus, the arithmetic mean of its independent per-source values,
-# n_independent the number of those values, source_mass every label; it then
-# enters the genus mean with the weight of one species. variant 'per-source':
-# one record per independent per-source value, each entering the genus mean
-# separately (the alternative weighting, for comparison).
-GenusOnlyRecords <- function(values, variant = c('pseudo-taxon', 'per-source')) {
-  variant <- match.arg(variant)
+# Pass 2 for genus-only values: one record per genus, the arithmetic mean of
+# its independent per-source values, n_independent the number of those values,
+# n the rows, source_mass every label, log10_range the spread of the
+# independent values and source_dependencies the collapses, as Pass 2 of the
+# species path records them. The record then enters the genus mean with the
+# weight of one species.
+GenusOnlyRecords <- function(values) {
   cols <- c('genus', 'mass_g', 'n', 'n_sources', 'n_independent', 'source_mass', 'source_label', 'log10_range',
             'source_dependencies', 'taxon_provided', 'kingdom', 'phylum', 'class', 'order', 'family')
   if (nrow(values) == 0) {
@@ -585,32 +588,23 @@ GenusOnlyRecords <- function(values, variant = c('pseudo-taxon', 'per-source')) 
   if (!'collapsed_into' %in% names(values)) values$collapsed_into <- NA_character_
   First <- function(x) { x <- x[!is.na(x)]; if (length(x)) as.character(x[1]) else NA_character_ }
   Union <- function(x) paste(unique(trimws(unlist(strsplit(x, ';', fixed = TRUE)))), collapse = '; ')
-  if (variant == 'per-source') {
-    v <- values[values$independent, , drop = FALSE]
-    out <- data.frame(genus = v$genus, mass_g = v$mass_g, n = as.integer(v$n), n_sources = 1L, n_independent = 1L,
-                      source_mass = v$source_mass, source_label = v$source_label, log10_range = 0,
-                      source_dependencies = NA_character_, taxon_provided = v$taxon_provided,
-                      kingdom = v$kingdom, phylum = v$phylum, class = v$class, order = v$order, family = v$family,
-                      stringsAsFactors = FALSE)
-  } else {
-    sp <- split(values, values$genus)
-    out <- do.call(rbind, lapply(sp, function(d) {
-      ind <- d$independent
-      data.frame(
-        genus         = d$genus[1],
-        mass_g        = mean(d$mass_g[ind]),
-        n             = as.integer(sum(d$n)),
-        n_sources     = nrow(d),
-        n_independent = as.integer(sum(ind)),
-        source_mass   = Union(d$source_mass),
-        source_label  = paste(sort(unique(d$source_label)), collapse = '; '),
-        log10_range   = if (sum(ind) > 1) log10(max(d$mass_g[ind]) / min(d$mass_g[ind])) else 0,
-        source_dependencies = if (any(!ind)) paste(paste0(d$source_label[!ind], '<', d$collapsed_into[!ind]), collapse = '; ') else NA_character_,
-        taxon_provided = paste(unique(unlist(strsplit(d$taxon_provided, '; ', fixed = TRUE))), collapse = '; '),
-        kingdom = First(d$kingdom), phylum = First(d$phylum), class = First(d$class), order = First(d$order), family = First(d$family),
-        stringsAsFactors = FALSE)
-    }))
-  }
+  sp <- split(values, values$genus)
+  out <- do.call(rbind, lapply(sp, function(d) {
+    ind <- d$independent
+    data.frame(
+      genus         = d$genus[1],
+      mass_g        = mean(d$mass_g[ind]),
+      n             = as.integer(sum(d$n)),
+      n_sources     = nrow(d),
+      n_independent = as.integer(sum(ind)),
+      source_mass   = Union(d$source_mass),
+      source_label  = paste(sort(unique(d$source_label)), collapse = '; '),
+      log10_range   = if (sum(ind) > 1) log10(max(d$mass_g[ind]) / min(d$mass_g[ind])) else 0,
+      source_dependencies = if (any(!ind)) paste(paste0(d$source_label[!ind], '<', d$collapsed_into[!ind]), collapse = '; ') else NA_character_,
+      taxon_provided = paste(unique(unlist(strsplit(d$taxon_provided, '; ', fixed = TRUE))), collapse = '; '),
+      kingdom = First(d$kingdom), phylum = First(d$phylum), class = First(d$class), order = First(d$order), family = First(d$family),
+      stringsAsFactors = FALSE)
+  }))
   out <- out[order(out$genus), cols]
   rownames(out) <- NULL
   out
@@ -618,7 +612,7 @@ GenusOnlyRecords <- function(values, variant = c('pseudo-taxon', 'per-source')) 
 
 # The genus table: the arithmetic mean by accepted genus over the species'
 # cross-source means (`enriched`: genus, mass_g, n, n_independent, source_mass)
-# and the genus-only record(s) of the genus (`records` from
+# and the genus-only record of the genus (`records` from
 # GenusOnlyRecords()). n sums the records, n_independent the independent
 # values; source_mass joins the contributors with '-' as before #49. Rows are
 # ordered by genus in the C locale.
@@ -643,34 +637,6 @@ GenusLevelTable <- function(enriched, records) {
   out
 }
 
-# The names resolved above genus, one row per name: taxon (as written), rank,
-# the kingdom-to-family classification GBIF gives the usage, mass_g (the
-# arithmetic mean over the sources' geometric means, as for a genus-only
-# record), source_mass, n (rows) and n_independent (sources). The content of
-# the optional TaxonBodyMass_HigherRank.csv.
-HigherRankRecords <- function(dat) {
-  dat <- dat[!is.na(dat$rank) & dat$rank != 'GENUS' & !is.na(dat$mass_g), , drop = FALSE]
-  cols <- c('taxon', 'rank', 'kingdom', 'phylum', 'class', 'order', 'family', 'mass_g', 'source_mass', 'n', 'n_independent')
-  if (nrow(dat) == 0)
-    return(data.frame(taxon = character(0), rank = character(0), kingdom = character(0), phylum = character(0),
-                      class = character(0), order = character(0), family = character(0), mass_g = numeric(0),
-                      source_mass = character(0), n = integer(0), n_independent = integer(0), stringsAsFactors = FALSE))
-  First <- function(x) { x <- x[!is.na(x)]; if (length(x)) as.character(x[1]) else NA_character_ }
-  sp <- split(dat, dat$taxon)
-  out <- do.call(rbind, lapply(sp, function(d) {
-    by_src <- tapply(log10(d$mass_g), d$source_group, mean)
-    data.frame(taxon = d$taxon[1], rank = d$rank[1],
-               kingdom = First(d$kingdom), phylum = First(d$phylum), class = First(d$class),
-               order = First(d$order), family = First(d$family),
-               mass_g = signif(mean(10^by_src), 4),
-               source_mass = paste(unique(trimws(unlist(strsplit(sort(unique(d$source_mass)), ';', fixed = TRUE)))), collapse = '; '),
-               n = nrow(d), n_independent = length(by_src), stringsAsFactors = FALSE)
-  }))
-  out <- out[order(-out$n, out$taxon), cols]
-  rownames(out) <- NULL
-  out
-}
-
 # ---- report -------------------------------------------------------------------
 # reports/genus_only_records.md: how the genus-only names resolved, the names
 # above genus and the autotroph genera that left the table, the fuzzy matches
@@ -682,8 +648,7 @@ HigherRankRecords <- function(dat) {
 # FilterAutotrophs() removed, `dedupe` the result of DedupeGenusValues(),
 # `records` the pseudo-taxon records, `species_genus_means` a data frame
 # (genus, species_mean, n_species) of the species path.
-WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records, species_genus_means, deps,
-                                 variant = 'pseudo-taxon') {
+WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records, species_genus_means, deps) {
   Tab <- function(df) if (nrow(df) == 0) '(none)' else MarkdownTable(df)
   Fmt <- function(x) ifelse(is.na(x), '', formatC(x, digits = 3, format = 'g'))
   rows_total <- sum(res$rows)
@@ -724,7 +689,7 @@ WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records,
           'through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with',
           'FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the',
           'registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the',
-          sprintf('independent per-source values; variant: %s) that enters the genus mean of TaxonBodyMass_GenusLevel.csv', variant),
+          'independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv',
           'with the weight of one species. Names resolving above genus and names no stage resolved leave the table;',
           'the latter are also listed in reports/warnings_taxonomy.md.'),
     '', '## Totals', '',
@@ -757,7 +722,7 @@ WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records,
     '', Tab(dd_tab),
     '', '## Genus-only records more than one order of magnitude from the genus\'s species values', '',
     paste('The genus-only record against the arithmetic mean of the genus\'s species cross-source means (the two',
-          'enter the genus mean with equal weight). Candidates for a sanity rule; nothing is removed here.'),
+          'enter the genus mean with equal weight). Genus-only records are not range-checked (issue #34); nothing is removed here.'),
     '', Tab(far_tab), '')
   writeLines(lines, path)
   invisible(list(higher = higher, unresolved = unres, autotrophs = auto, fuzzy = fuzzy, homonym = homonym, cross = cross,
