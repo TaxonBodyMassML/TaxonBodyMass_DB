@@ -245,7 +245,7 @@ FixMisspellings <- function(dat) {
     "Rhinopitechus_roxella"           = "Rhinopithecus_roxellana",         # Golden Snub-nosed Monkey; genus and epithet corrected
     "Rousettus_egyptiacus"            = "Rousettus_aegyptiacus",          # from Aegyptus; missing ae
     "Rhizophor_amucronata"            = "Rhizophora_mucronata",          # spurious a
-    "Rhytonomus_isobellina"           = "Rhytonomus isabellina",          # 
+    "Rhytonomus_isobellina"           = "Rhytonomus_isabellina",          # o→a; the value was typed with a space, which filed the species as a genus (#28)
 
 
     # S
