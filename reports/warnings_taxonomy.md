@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 10:34:53
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 11:04:33
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 426 names, 4238 rows
+- Names unresolved after all enrichment stages: 419 names, 4231 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -381,7 +381,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (426 names, 4238 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (419 names, 4231 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -735,8 +735,6 @@ Amoropsittaca_aymara | vertnet-traits-sept2016 | 1 row
 
 Ampelion_cedrorum | vertnet-aves-sept2016 | 1 row
 
-Amphinemura | Jop_1987 | 1 row
-
 Anas_plathyrhynchos | Herberstein_etal_2022 | 1 row
 
 Ancylodactylus_gigas | Meiri_2024 | 1 row
@@ -788,8 +786,6 @@ Carduelis_communis | vertnet-aves-sept2016 | 1 row
 Carduelis_linaria | vertnet-aves-sept2016 | 1 row
 
 Carollia_carollia | vertnet-mammalia-sept2016 | 1 row
-
-Caroperla | Nakagawa_2014 | 1 row
 
 Catharactus_skua | Makarieva_2008 | 1 row
 
@@ -883,8 +879,6 @@ Euphonia_aureata | vertnet-traits-sept2016 | 1 row
 
 Eurostopodus_guttatus | vertnet-traits-sept2016 | 1 row
 
-Evermannella | Froese_2025 | 1 row
-
 Formosanochiurus_nipponicus | Hishi_etal_2019 | 1 row
 
 Gabianus_pacificus | vertnet-aves-sept2016 | 1 row
@@ -937,8 +931,6 @@ Isotomiella_japonica | Hishi_etal_2019 | 1 row
 
 Isotomurus_parasinus | Hishi_etal_2019 | 1 row
 
-Kiotina | Nakagawa_2014 | 1 row
-
 Labidocera_actifrons | Hebert_etal_2016 | 1 row
 
 Lacerta_muralis | Tsuboi_etal_2018 | 1 row
@@ -950,8 +942,6 @@ Lampropeltis_miliaris | Makarieva_2008 | 1 row
 Lasioglossum_qudrinotatum | Kendall_etal_2019 | 1 row
 
 Leognathus_equulus | Brose_2005 | 1 row
-
-Lepidostoma | Nakagawa_2014 | 1 row
 
 Leucoptera_myricki | AndersonGillooly_2017 | 1 row
 
@@ -1073,8 +1063,6 @@ Paracapoeta_mandica | fishbase | 1 row
 
 Paraeuchaeta_brevicauda | Makarieva_2008 | 1 row
 
-Paragnetina | Nakagawa_2014 | 1 row
-
 Parallelostrombidium_mirabile | Weisse_2024 | 1 row
 
 Parallelostrombidium_neptuni | Weisse_2024 | 1 row
@@ -1172,8 +1160,6 @@ Spatulosminthurus_sensibilis | Hishi_etal_2019 | 1 row
 Spermophilus_nayaritensis | Ernest_2003 | 1 row
 
 Spizella_monticola | vertnet-aves-sept2016 | 1 row
-
-Stavsolus | Nakagawa_2014 | 1 row
 
 Stenomys_omlichodes | Smith_2003 | 1 row
 
