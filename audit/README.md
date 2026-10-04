@@ -1,7 +1,10 @@
 # audit/
 
-Review documents of the body-mass audits and the register of flagged records.
-Nothing in this directory is read by the pipeline.
+Review documents of the body-mass audits, the register of flagged records, and
+two pipeline files moved here on 2026-10-04 (owner decision): the extinct-taxa
+list the pipeline reads (`extinct_taxa.csv`) and the log of imputed rows it
+writes (`imputed_rows.csv`). Nothing else in this directory is read or written
+by the pipeline.
 
 ## `flagged_species.csv`: the register of flagged records
 
@@ -56,6 +59,40 @@ Methods, with their dates and severity rules:
 
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.
+
+## `extinct_taxa.csv`: the extinct-taxa list (read by the pipeline)
+
+One row per extinct species: `taxon` (`Genus_species`), `status` (the source's
+status code, e.g. `IUCN:EP`, `MOM:historical`, `AVONET:Extinct`) and `source`.
+The binomials of extinct, historically extinct and extinct-in-the-wild species
+are compiled from the status columns of three sources already in the database
+(MOM v10.2 `Status` in {extinct, historical}; PHYLACINE 1.2 `IUCN.Status.1.2`
+in {EP, EX, EW}; AVONET `Species.Status == 'Extinct'`, mapped through the
+BirdLife-BirdTree crosswalk), MOM's verdict yielding where PHYLACINE lists the
+species as extant. Written by `sources/extinct_taxa/build_extinct_taxa.r`, run
+by hand when one of the three sources changes; read by `RemoveExtinct()`
+(`R/library/filter_extinct.r`, sourced by `R/RunMe.r` through `wd_root`), which
+in section 2b drops every record of a listed name from every source after
+`FixFormatting`. Until 2026-10-04 the file lived at `R/library/extinct_taxa.csv`.
+
+## `imputed_rows.csv`: the log of rows dropped as imputed (written by the pipeline)
+
+One row per `DropImputed()` call (`R/library/helpers.r`): `source`, `reason`,
+`n_dropped`, `n_taxa` (distinct taxon names among the dropped rows) and
+`n_kept`. The parse scripts under `sources/databases/` call `DropImputed()` for
+the rows a source itself flags as imputed, genus-averaged or copied from
+another species, and for the exclusions recorded in their `README.md`
+(unverifiable units, duplicated tables, group-level placeholder values);
+`R/library/data_retrieve.r` calls it, through `DropPlaceholders()`, for the
+Brose_2005 placeholder values of the live DataRetriever download. Every call
+appends to the in-memory list `imputed_log`, which `R/RunMe.r` prints and
+writes here after the recompile loop, overwriting the file. The file therefore
+describes the last run that wrote it: a run with `recompile = TRUE` and
+`DataRetrieve = FALSE` rewrites it without the `Brose_2005` row, which only a
+`DataRetrieve = TRUE` run produces (the committed row is from the #14 run,
+commit 11dd2f5). Each source's `README.md` states the same decisions in words
+in its `Imputed rows:` line, which `R/library/check_source_docs.r` checks at
+every run. Until 2026-10-04 the file lived at `reports/imputed_rows.csv`.
 
 ## Other files
 

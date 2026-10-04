@@ -31,7 +31,7 @@ NormaliseSourceLabel <- function(x) {
 # copied from another species, unsatisfactory conversions) are removed in the
 # parse scripts with DropImputed(), which appends one record per filter to
 # `imputed_log`. RunMe.r prints the log after the recompile loop and writes it
-# to reports/imputed_rows.csv. Allometry-derived values (a measured dimension of
+# to audit/imputed_rows.csv. Allometry-derived values (a measured dimension of
 # the species itself through a published equation) are kept, not dropped here.
 imputed_log <- list()
 

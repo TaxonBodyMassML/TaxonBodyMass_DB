@@ -1,4 +1,4 @@
-# Build R/library/extinct_taxa.csv: binomials of extinct (including historically
+# Build audit/extinct_taxa.csv: binomials of extinct (including historically
 # and prehistorically extinct, and extinct-in-the-wild) species, compiled from the
 # status columns of sources already in the database:
 #   - MOM v10.2 (Smith et al. 2003 update), sheet 'MOM v10.0', column 'Status'
@@ -49,5 +49,5 @@ out <- out[grepl('^[A-Z][a-z]+_[a-z]+$', out$taxon), ]
 out <- aggregate(cbind(status, source) ~ taxon, data = out,
                  FUN = function(x) paste(sort(unique(x)), collapse = '; '))
 out <- out[order(out$taxon), ]
-write.csv(out, file.path(wd_root, 'R', 'library', 'extinct_taxa.csv'), row.names = FALSE)
-cat(nrow(out), 'extinct taxa written to R/library/extinct_taxa.csv\n')
+write.csv(out, file.path(wd_root, 'audit', 'extinct_taxa.csv'), row.names = FALSE)
+cat(nrow(out), 'extinct taxa written to audit/extinct_taxa.csv\n')

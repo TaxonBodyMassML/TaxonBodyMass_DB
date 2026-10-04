@@ -56,7 +56,7 @@
 # cur_gm, n_rows, label_exists, status.
 suppressPackageStartupMessages(library(dplyr))
 if (!file.exists('R/RunMe.r')) stop('run this script from the repository root')
-wd_root  <- getwd()          # filter_extinct.r reads R/library/extinct_taxa.csv through it
+wd_root  <- getwd()          # filter_extinct.r reads audit/extinct_taxa.csv through it
 rdata    <- 'sources/Rdata'
 rule_dir <- 'audit/retired_outlier_rules'
 for (f in c('helpers.r', 'fix_formatting.r', 'fix_misspellings.r', 'fix_nontaxa.r', 'filter_extinct.r'))
