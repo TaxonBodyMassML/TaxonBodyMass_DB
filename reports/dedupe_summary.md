@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-03 19:47:28
+# Source de-duplication summary -- 2026-10-03 21:17:56
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,15 +6,15 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 119436 |
-| accepted species | 39724 |
-| multi-source species | 25317 |
-| within-species value pairs | 250736 |
-| pairs identical (|dlog10| <= 1e-06) | 39450 |
-| pairs related by the registry and within its tolerance | 60324 |
-| pairs identical to >= 3 significant digits (blind rule) | 34283 |
-| values collapsed (total) | 41002 |
-| values collapsed by a registry edge | 39747 |
+| species x source values (Pass-1 rows) | 119438 |
+| accepted species | 39725 |
+| multi-source species | 25318 |
+| within-species value pairs | 250737 |
+| pairs identical (|dlog10| <= 1e-06) | 39449 |
+| pairs related by the registry and within its tolerance | 60323 |
+| pairs identical to >= 3 significant digits (blind rule) | 34282 |
+| values collapsed (total) | 41001 |
+| values collapsed by a registry edge | 39746 |
 | values collapsed by the blind rule only | 1255 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
@@ -28,7 +28,7 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 
 | child | parent | relation | status | tol_log10 | shared | exact | within_tol | f_exact | collapsed_into_parent | child_collapsed_total |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 723 | 723 | 0.77 | 611 | 990 |
+| Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 722 | 722 | 0.77 | 610 | 989 |
 | DeLong_etal_2010 | Makarieva_2008 | copies | confirmed | 0.000001 | 104 | 53 | 53 | 0.51 | 55 | 127 |
 | Ehnes_etal_2011 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 268 | 268 | 1 | 268 | 305 |
 | Makarieva_2008 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 256 | 256 | 0.95 | 256 | 268 |
@@ -66,7 +66,7 @@ Pairs of sources that the registry traces to the same compilation outside the da
 
 | external_parent | pair | tol_log10 | shared | exact | within_tol | f_exact | collapsed |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 723 | 723 | 0.77 | 611 |
+| White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 722 | 722 | 0.77 | 610 |
 | White_2006 | Hoehler_etal_2023 - Uyeda_etal_2017 | 0.000001 | 704 | 347 | 347 | 0.49 | 183 |
 | White_2006 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
 | McKechnie_2004 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |

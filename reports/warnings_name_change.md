@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 19:47:37
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 21:18:04
 
 
-## Species name changed during enrichment (5655 rows)
+## Species name changed during enrichment (5656 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -3414,6 +3414,8 @@ Teuchocercus keyi; Echinosaura keyi -> Echinosaura keyi [GBIF]
 Eclectus roratus; Eclectus polychloros -> Eclectus roratus [GBIF]
 
 Tubularia ralphii -> Ectopleura crocea [GBIF]
+
+Edaphus bluhweissi -> Edaphus lederi [GBIF]
 
 Edolisoma obiense; Edolisoma tenuirostre -> Edolisoma tenuirostre [GBIF]
 

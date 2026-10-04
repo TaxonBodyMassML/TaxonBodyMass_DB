@@ -3284,6 +3284,7 @@
 "Ectopleura",0.029,"Brose_etal_2018",53,1
 "Ecumenicus",6.58e-07,"Mulder_2011",2,1
 "Edalorhina",4.63,"AmphiBIO",1,1
+"Edaphus",6.532e-05,"Brose_etal_2018",100,1
 "Edolisoma",62.17,"Tobias_2022-Tobias_2022-Tobias_2022-Tobias_2022-Tobias_2022",6,5
 "Edrotes",0.02435,"Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",4,1
 "Edwardsia",0.2174,"Brose_etal_2018",70,1
@@ -6573,7 +6574,7 @@
 "Naultinus",10.92,"Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018; Myhrvold_2015-Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Hoehler_etal_2023; Meiri_2018; Myhrvold_2015-Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018; Meiri_2024-Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018",20,12
 "Nauphoeta",0.5125,"Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",5,2
 "Naushonia",0.06595,"Brose_etal_2018",28,1
-"Nausithoe",7.305,"Ikeda_2014; Kiorboe_2013; Lucas_2011",1,1
+"Nausithoe",4.953,"Ikeda_2014; Kiorboe_2013; Lucas_2011; Makarieva_2008",2,2
 "Nautichthys",33.05,"GuoBailly_2024; Reum_2013",2,2
 "Nchila",1220,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",4,4
 "Ndunduma",292,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",12,12
@@ -10177,7 +10178,7 @@
 "Tetramorium",0.00046,"Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",5,2
 "Tetranematichthys",35.8,"Cai_etal_2025",1,1
 "Tetranychus",0.000415,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",26,26
-"Tetrao",2816,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-AnAge; AndersonGillooly_2017; Cai_etal_2025; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016",26,10
+"Tetrao",2854,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-AnAge; AndersonGillooly_2017; Cai_etal_2025; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016",28,11
 "Tetraodon",1980,"Cai_etal_2025; fishbase-Cai_etal_2025-Cai_etal_2025",4,4
 "Tetraogallus",2255,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",19,9
 "Tetraophasis",1026,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",8,4
