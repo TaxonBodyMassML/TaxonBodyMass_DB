@@ -461,8 +461,7 @@
 "Amnicola",0.006806,"Hrycik_2024",1,1
 "Amnirana",5.996,"vertnet-amphibia-sept2016; vertnet-traits-sept2016-vertnet-amphibia-sept2016; vertnet-traits-sept2016-Uyeda_etal_2017-vertnet-amphibia-sept2016-vertnet-amphibia-sept2016-vertnet-amphibia-sept2016",21,6
 "Amoeba",9.182e-07,"Castro_2025; DeLong_etal_2010; DeLong_etal_2018; Hoehler_etal_2023; Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000; Makarieva_2008",19,5
-"Amoebobacter",2.05e-11,"Makarieva_2008-Makarieva_2008",2,2
-"Amoebobaeter",5e-12,"Makarieva_2008",1,1
+"Amoebobacter",1.533e-11,"Makarieva_2008-Makarieva_2008-Makarieva_2008",3,3
 "Amolops",14.48,"Tsuboi_etal_2018-Tsuboi_etal_2018-Tsuboi_etal_2018-AmphiBIO; Cai_etal_2025; Tsuboi_etal_2018-Cai_etal_2025-Cai_etal_2025",30,7
 "Amorphochilus",3.583,"Faurby_etal_2018; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021",5,3
 "Ampeliceps",87.87,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
@@ -4396,6 +4395,7 @@
 "Helophorus",0.002186,"Brocher_etal_2025-Brocher_etal_2025-Brocher_etal_2025",3,3
 "Hemachatus",669.7,"Feldman_etal_2016",1,1
 "Hemaris",3,"Quaardvark",1,1
+"Hemerodromia",0.0004412,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",105,105
 "Hemerophis",317.2,"Feldman_etal_2016",1,1
 "Hemiaspis",77.84,"Feldman_etal_2016; Meiri_2024-Feldman_etal_2016",3,3
 "Hemibagrus",15090,"Cai_etal_2025; fishbase-Cai_etal_2025; fishbase-fishbase-fishbase-Cai_etal_2025; fishbase-Cai_etal_2025-fishbase-Cai_etal_2025; fishbase",22,12
@@ -4477,7 +4477,6 @@
 "Heptranchias",2288,"fishbase",1,1
 "Hercostomus",0.001654,"Brose_2005; Studier_1992; Brose_etal_2018",51,2
 "Heremites",17.4,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015-Feldman_etal_2016; Meiri_2018; Myhrvold_2015-Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",10,8
-"Heremodromia",0.0004412,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",105,105
 "Heriades",0.01416,"Kendall_etal_2019; Studier_1992-Kendall_etal_2019; Studier_1992-Kendall_etal_2019; Studier_1992-Kendall_etal_2019; Studier_1992",34,4
 "Herichthys",801.5,"Cai_etal_2025",1,1
 "Herina",0.001404,"Brose_2005; Studier_1992; Brose_etal_2018-Brose_2005; Studier_1992; Brose_etal_2018-Brose_2005; Studier_1992; Brose_etal_2018",225,6
@@ -8834,8 +8833,7 @@
 "Remiz",8.873,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016-Myhrvold_2015; Wilman_etal_2014-AnAge; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",22,9
 "Remora",402.8,"Froese_2025; Froese_2014-Froese_2025; Froese_2014-Froese_2025; Froese_2014-Froese_2025",5,4
 "Rena",5.694,"Feldman_etal_2016-Feldman_etal_2016-Feldman_etal_2016-Feldman_etal_2016; Myhrvold_2015-Feldman_etal_2016; Myhrvold_2015-Feldman_etal_2016; Myhrvold_2015-Feldman_etal_2016; vertnet-traits-sept2016-Feldman_etal_2016; Myhrvold_2015-Feldman_etal_2016; Myhrvold_2015",15,15
-"Renic",3.1e-05,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",24,24
-"Renicola",3.1e-05,"Brose_etal_2018; Hechinger_etal_2011-Brose_etal_2018; Hechinger_etal_2011",30,2
+"Renicola",3.1e-05,"Brose_etal_2018; Hechinger_etal_2011-Brose_etal_2018; Hechinger_etal_2011-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",54,26
 "Repomucenus",25.38,"fishbase-Cai_etal_2025; fishbase",4,3
 "Requena",0.3705,"Castro_2025; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",5,2
 "Reticulitermes",0.003555,"Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",5,2
@@ -9112,9 +9110,8 @@
 "Saldula",0.003333,"Brocher_etal_2025-Brocher_etal_2025",2,2
 "Salea",44.87,"Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018-Feldman_etal_2016; Meiri_2018",6,3
 "Salina",0.0001042,"Hishi_etal_2019; Studier_1992-Hishi_etal_2019; Studier_1992-Hishi_etal_2019; Studier_1992-Hishi_etal_2019; Studier_1992",4,4
-"Salinivibrio",4e-13,"DeLong_etal_2010; Hoehler_etal_2023",2,1
+"Salinivibrio",4e-13,"DeLong_etal_2010; Hoehler_etal_2023-Makarieva_2008",3,2
 "Salinomys",12.12,"Faurby_etal_2018; Soria_etal_2021",2,2
-"Sallinivibrio",4e-13,"Makarieva_2008",1,1
 "Salminus",13390,"fishbase-Cai_etal_2025; fishbase-fishbase-fishbase",11,5
 "Salmo",12870,"fishbase-fishbase-fishbase-fishbase-Cai_etal_2025-fishbase-fishbase-Cai_etal_2025; fishbase",16,9
 "Salmonella",6.6e-13,"DeLong_etal_2010-Makarieva_2008",2,2
@@ -10046,6 +10043,7 @@
 "Teius",46.54,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015-Feldman_etal_2016; Meiri_2018; Meiri_2024-Feldman_etal_2016; Meiri_2018; Myhrvold_2015",10,7
 "Telacanthura",41.77,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",9,4
 "Teledromas",37.95,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",4,2
+"Telenomus",0.0009216,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",47,47
 "Teleocichla",178,"fishbase",1,1
 "Teleogryllus",2.413,"Castro_2025; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",5,3
 "Telescopium",69.91,"sealifebase",1,1
@@ -10056,7 +10054,6 @@
 "Telmatochromis",5.071,"Tsuboi_etal_2018",24,1
 "Telmatogeton",0.001084,"Mercer_etal_2001",1,1
 "Telogaster",0.0001313,"Lagrue_etal_2015",10,1
-"Telonemus",0.0009216,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",47,47
 "Telophorus",41.75,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016-Myhrvold_2015; vertnet-aves-sept2016-Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",25,13
 "Temeritas",0.0001251,"Hishi_etal_2019; Studier_1992",1,1
 "Temnostethus",0.001092,"Brocher_etal_2025",1,1
@@ -10105,7 +10102,7 @@
 "Tetragonurus",1215,"Cai_etal_2025-Cai_etal_2025",2,2
 "Tetrahymena",1.13e-11,"DeLong_etal_2018",1,1
 "Tetralepis",20.2,"Feldman_etal_2016",1,1
-"Tetraluerodes",0.0025,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",44,44
+"Tetraleurodes",0.0025,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",44,44
 "Tetramorium",0.00046,"Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",5,2
 "Tetranematichthys",35.8,"Cai_etal_2025",1,1
 "Tetranychus",0.000415,"Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018-Brose_etal_2018",26,26

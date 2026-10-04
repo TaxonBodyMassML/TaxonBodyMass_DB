@@ -577,7 +577,19 @@ FixMisspellings <- function(dat) {
 
     # T
     "Tomocerus_flavescens"            = "Pogonognathellus_flavescens",     # Tomocerus is a synonym; accepted is Pogonognathellus flavescens Tullberg, 1871 (GBIF species 4538730)
-    "Turrum_fulvoguttatum"            = "Carangoides_fulvoguttatus"        # FishBase/GBIF accept Carangoides fulvoguttatus; WoRMS (Kimura et al. 2022) accepts Turrum — conflict; FishBase/GBIF used here
+    "Turrum_fulvoguttatum"            = "Carangoides_fulvoguttatus",       # FishBase/GBIF accept Carangoides fulvoguttatus; WoRMS (Kimura et al. 2022) accepts Turrum — conflict; FishBase/GBIF used here
+
+# One-token names that are misspelt genera (#47, 2026-10-04). A bare genus is
+# filed by RunMe section 3 as a genus-level record, so each value is the genus
+# alone and the record enters TaxonBodyMass_GenusLevel.csv under the corrected
+# name (no species row is created). GBIF: species/match, rank GENUS.
+
+    "Heremodromia"                    = "Hemerodromia",                   # Brose_etal_2018, 105 rows: the five UK stream webs of Gray et al. 2015 / Thompson et al. 2017 (Bure, Loddon, Lyde, Test, Wensum; 3.6e-4 to 6.6e-4 g, listed next to the other aquatic empidid Clinocera); 'er'/'me' transposed; Hemerodromia Meigen, 1822 (Diptera: Empididae), GBIF 1444910 EXACT; the raw spelling matches nothing
+    "Telonemus"                       = "Telenomus",                      # Brose_etal_2018, 47 rows: Florida mangrove-island webs E1 and E3 (Simberloff & Wilson 1969 via Piechnik et al. 2008; 9.2e-4 g, the value the web gives the other scelionid, Probaryconus); 'o'/'e' swapped; Telenomus Haliday, 1833 (Hymenoptera: Scelionidae, egg parasitoids), GBIF 1401305 EXACT; the raw spelling matches nothing
+    "Tetraluerodes"                   = "Tetraleurodes",                  # Brose_etal_2018, 44 rows: Florida mangrove-island webs E1-E3, taxonomy.level 'genus', common name 'whiteflies' (with Aleurothrixus and Paraleyrodes, all 2.5e-3 g); 'ue'/'eu' transposed; Tetraleurodes Cockerell, 1902 (Hemiptera: Aleyrodidae), GBIF 4404483 EXACT (FUZZY 85 on the raw spelling)
+    "Renic"                           = "Renicola",                       # Brose_etal_2018, 24 adult rows of the Carpinteria web (Lafferty et al. 2006), i.e. the Hechinger_etal_2011 node 'renic': family Renicolidae, genus left blank, size 'set equal to congener (renc)' = Renicola cerithidicola, 3.1e-5 g like every Carpinteria Renicola adult (its 'small cyathocotylid' is sized from a 'confamilial', so the authors' wording places renic in Renicola); Renicola Cohn, 1904 (Trematoda: Renicolidae), GBIF 5431622 EXACT; the least certain of the six
+    "Amoebobaeter"                    = "Amoebobacter",                   # Makarieva_2008 S1a, 1 row: the valid_name typed for 'Amoebobaeter pendens (5813)' (Overmann & Pfennig 1992, purple sulfur bacteria; 5e-12 g), 'c' read as 'e'; the two sister rows of the table carry 'Amoebobacter'; Amoebobacter Winogradsky, 1888 (Chromatiales: Chromatiaceae), GBIF 9666951 (status DOUBTFUL: its species now sit in Thiocapsa and Lamprocystis); the raw spelling matches nothing
+    "Sallinivibrio"                   = "Salinivibrio"                    # Makarieva_2008 S1a, 1 row: the valid_name typed for 'Vibrio costicola (NRCC 37001)' (Kushner et al. 1983; 4e-13 g), doubled 'l'; Salinivibrio Mellado et al., 1996 (Vibrionaceae), GBIF 3222411 EXACT (FUZZY 85 on the raw spelling); the DeLong_etal_2010 and Hoehler_etal_2023 copies of the record are handled by the Sallinivibrio_costicola rule above
   )
 
   for (old in names(corrections)) {
