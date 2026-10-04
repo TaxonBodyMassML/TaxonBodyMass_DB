@@ -79,6 +79,10 @@ source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
 source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
 
+# The raw-name vocabulary FixFormatting() applies (#38): tracked in audit/,
+# validated on loading (columns, classes, actions, regexes).
+raw_name_patterns <- LoadRawNamePatterns(file.path(wd_root, 'audit', 'raw_name_patterns.csv'))
+
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
 dir.create(file.path(wd_root, 'reports'),      showWarnings = FALSE)
 dir.create(file.path(wd_root, 'sources', 'Rdata'), showWarnings = FALSE)
@@ -168,17 +172,9 @@ if (recompile) {
          paste0('  ', basename(stale), collapse = '\n'))
 }
 
-# Rows the parse scripts removed because the source flags them as imputed,
-# genus-averaged or copied from another species (DropImputed() in helpers.r).
-if (length(imputed_log) > 0) {
-  imputed_tab <- do.call(rbind, imputed_log)
-  cat('  Imputed rows removed by the parse scripts:\n',
-      paste0('    ', capture.output(print(imputed_tab, row.names = FALSE)), '\n'),
-      sep = '', file = stderr())
-  write.csv(imputed_tab, file.path(wd_root, 'audit', 'imputed_rows.csv'),
-            row.names = FALSE)
-}
 # Every source README should document its Filters, Mass type and Imputed rows.
+# (The imputed-rows log itself is printed and written after FixFormatting() in
+# section 2b, which adds the records dropped by the raw-name rules, #38.)
 CheckSourceDocs(wd_db)
 
 
@@ -201,8 +197,36 @@ source_list <- lapply(rdata_files, function(f) {
 ##########################################################################
 # 2b. Apply taxon name corrections and  filters prior to merging
 ##########################################################################
-# normalise encoding/spacing, strip non-alpha, capitalise, truncate to binomial
+# Reduce every raw name to Genus_species or Genus by the explicit rules of
+# audit/raw_name_patterns.csv (#38): subgenera, sex marks, form/strain/size
+# annotations, synonyms and authorities are removed, subspecies fold into the
+# species, placeholders and qualifiers leave as Genus_sp / Genus_cf markers
+# for RemoveNonTaxa(), hybrids and alternative names are credited to the
+# first name written, and life stages and small size classes are dropped
+# through DropImputed(). Encoding is normalised first (#37).
+raw_name_log <- list()
 source_list <- lapply(source_list, FixFormatting)
+# Rows removed because the source flags them as imputed, genus-averaged or
+# copied from another species (DropImputed() in the parse scripts, helpers.r)
+# or because the raw name marks a life stage or a small size class
+# (FixFormatting(), #38). Written only when the parse scripts
+# ran, so that a recompile = FALSE run does not overwrite the file with the
+# section-2b entries alone.
+if (length(imputed_log) > 0) {
+  imputed_tab <- do.call(rbind, imputed_log)
+  cat('  Imputed rows removed by the parse scripts and the raw-name rules:\n',
+      paste0('    ', capture.output(print(imputed_tab, row.names = FALSE)), '\n'),
+      sep = '', file = stderr())
+  if (recompile)
+    write.csv(imputed_tab, file.path(wd_root, 'audit', 'imputed_rows.csv'),
+              row.names = FALSE)
+}
+# Every raw name FixFormatting() changed or classified, by class and source
+# (reports/warnings_raw_names.md); then stop if any raw name carried brackets
+# or trailing tokens that no rule covers (class error), so that a new pattern
+# is classified by hand instead of being folded into a plausible binomial.
+WriteRawNameReport(file.path(wd_root, 'reports', 'warnings_raw_names.md'))
+CheckRawNames()
 # normalise source labels to ASCII so they match BM_citations CiteIDs exactly
 source_list <- lapply(source_list, function(df) {
   df$source_mass <- NormaliseSourceLabel(df$source_mass)
@@ -217,8 +241,9 @@ source_list <- lapply(source_list, RemoveExtinct)
 # Every cleaned name must be one token, Genus_species or Genus: section 3
 # files names without an underscore as genus-level records, so a replacement
 # value typed with a space ('Rhytonomus isabellina', #28) demotes a species to
-# a bogus genus. FixFormatting leaves no whitespace, hence any found here comes
-# from a rename table; stop and name the offenders with their sources.
+# a bogus genus. FixFormatting leaves only letters and one underscore, hence
+# any whitespace, bracket, digit or third token found here comes from a rename
+# table; stop and name the offenders with their sources (#28, #38).
 CheckTaxonNames(source_list)
 # Single-record mass corrections are not applied here; they are made in the
 # lab Google Sheet override (section 4).
@@ -378,6 +403,16 @@ enrich_cols  <- c('taxon', 'species', 'genus', 'kingdom', 'phylum', 'class', 'or
                   'gbif_usageKey')
 adat_nm       <- adat[, setdiff(names(adat), c('kingdom', 'phylum', 'class', 'order', 'family'))]
 adat_enriched <- merge(adat_nm, unique_taxa[, enrich_cols], by = 'taxon', all.x = TRUE)
+# Names no stage resolved, with their sources and row counts, for the
+# taxonomy report (#38); their rows leave at Pass 1 (filter(!is.na(species))).
+unresolved_names <- adat_enriched %>%
+  filter(is.na(species)) %>%
+  group_by(taxon) %>%
+  summarise(rows    = n(),
+            sources = paste(sort(unique(SourceLabel(source_mass))), collapse = ', '),
+            .groups = 'drop') %>% as.data.frame()
+message(sprintf('%d cleaned names (%d rows) unresolved after all enrichment stages; listed in reports/warnings_taxonomy.md',
+                nrow(unresolved_names), sum(unresolved_names$rows)))
 n_resolved_pre_autotroph <- n_distinct(adat_enriched$taxon[!is.na(adat_enriched$species)])
 adat_enriched <- FilterAutotrophs(adat_enriched)
 n_names_autotroph <- n_resolved_pre_autotroph -
@@ -470,7 +505,7 @@ enriched$mass_g <- signif(enriched$mass_g, digits = 4)
 # QC reports name the extreme sources among the independent values, the ones
 # log10_range is computed from.
 check_enriched(enriched, within_source[within_source$independent, ],
-               remove_flagged = RemoveHighMaxMinRatio)
+               remove_flagged = RemoveHighMaxMinRatio, unresolved = unresolved_names)
 
 n_species_after_filter <- nrow(enriched)   # accepted species before the range filter
 # De-duplication counts (#5), taken like nSpeciesAfterFilter before the range filter

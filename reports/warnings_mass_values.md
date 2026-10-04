@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-03 16:52:36
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 06:43:01
 
 ## Summary
 
@@ -1243,9 +1243,6 @@ Balaenoptera musculus [range=2.00]
 Harpia harpyja [range=2.00]
         Min_source: vertnet-traits-sept2016 70
         Max_source: Quaardvark 7000
-Noturus flavus [range=2.00]
-        Min_source: vertnet-fishes-sept2016 3
-        Max_source: Quaardvark 300
 Scotorepens sanborni [range=2.00]
         Min_source: Smith_2003 8.033
         Max_source: vertnet-mammalia-sept2016 796
@@ -3559,6 +3556,9 @@ Smaug giganteus [range=1.02]
 Tapirella bairdii [range=1.02]
         Min_source: Tsuboi_etal_2018 2.878e+04
         Max_source: Smith_2003 3e+05
+Noturus flavus [range=1.02]
+        Min_source: vertnet-fishes-sept2016 28.85
+        Max_source: Quaardvark 300
 Leptodactylus fuscus [range=1.02]
         Min_source: Uyeda_etal_2017 5.1
         Max_source: Tsuboi_etal_2018 53

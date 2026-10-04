@@ -26,3 +26,7 @@
 "McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1680
 "McCoy_2008","deep-sea rows with undefined mass basis",7,5,1673
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116
+"Brose_etal_2018","small size class in the raw name ({xs}, {s}, small): treated as a non-adult record (owner decision 2026-10-04, #38)",1255,8,267646
+"DeLong_etal_2010","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",5,5,523
+"Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
+"Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617

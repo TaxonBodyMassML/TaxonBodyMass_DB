@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-03 19:47:37
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 06:43:01
 
 
-## Species name changed during enrichment (5655 rows)
+## Species name changed during enrichment (5656 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -3415,6 +3415,8 @@ Eclectus roratus; Eclectus polychloros -> Eclectus roratus [GBIF]
 
 Tubularia ralphii -> Ectopleura crocea [GBIF]
 
+Edaphus bluhweissi -> Edaphus lederi [GBIF]
+
 Edolisoma obiense; Edolisoma tenuirostre -> Edolisoma tenuirostre [GBIF]
 
 Edwarzetes edwardsii -> Edwardzetes edwardsi [GBIF]
@@ -4963,7 +4965,7 @@ Jabouilleia naungmungensis; Rimator naungmungensis -> Jabouilleia naungmungensis
 
 Jacamerops aureus; Jacamerops aurea -> Jacamerops aureus [GBIF]
 
-Jaera marina -> Jaera albifrons [GBIF]
+Jaera albifrons; Jaera marina -> Jaera albifrons [GBIF]
 
 Janua pagenstecheri -> Janua heterostropha [GBIF]
 
@@ -5524,6 +5526,8 @@ Lithobates pipiens; Rana pipiens -> Lithobates pipiens [GBIF]
 Lithobates sylvaticus; Rana sylvatica -> Lithobates sylvaticus [GBIF]
 
 Rana virgatipes -> Lithobates virgatipes [GBIF]
+
+Lithobius cyrt -> Lithobius cyrtopus [GBIF]
 
 Lithobius aulacopus -> Lithobius macilentus [GBIF]
 
@@ -10074,8 +10078,6 @@ Streptopelia bitorquata; Streptopelia dusumieri -> Streptopelia bitorquata [GBIF
 Streptopelia roseogrisea; Streptopelia risoria -> Streptopelia roseogrisea [GBIF]
 
 Cypseloides rutilus; Streptoprocne rutila -> Streptoprocne rutila [GBIF]
-
-Crithidia oncopelti; Strigomonas oncopelti -> Strigomonas oncopelti [NCBI]
 
 Strigops habroptila; Strigops habroptilus -> Strigops habroptila [GBIF]
 

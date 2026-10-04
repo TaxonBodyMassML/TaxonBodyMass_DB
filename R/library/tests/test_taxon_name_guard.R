@@ -14,10 +14,12 @@ if (length(this_file) == 0)         # sourced interactively from the repo root
   this_file <- file.path('R', 'library', 'tests', 'test_taxon_name_guard.R')
 repo <- normalizePath(file.path(dirname(this_file), '..', '..', '..'))
 lib  <- file.path(repo, 'R', 'library')
+source(file.path(lib, 'helpers.r'))               # DropImputed(), imputed_log
 source(file.path(lib, 'check_taxon_names.r'))
 source(file.path(lib, 'fix_formatting.r'))
 source(file.path(lib, 'fix_misspellings.r'))
 source(file.path(lib, 'fix_nontaxa.r'))
+raw_name_patterns <- LoadRawNamePatterns(file.path(repo, 'audit', 'raw_name_patterns.csv'))
 
 failures <- character(0)
 n_checks <- 0L
@@ -33,11 +35,11 @@ Frame <- function(taxon, source)
 
 # ---- synthetic frames ----------------------------------------------------------
 cat('CheckTaxonNames() on synthetic frames\n')
-clean <- list(Frame(c('Genus_species', 'Genus', 'Brachypera_isabellina'), 'SrcA'),
+clean <- list(Frame(c('Genus_species', 'Genus', 'Brachypera_isabellina', 'Edaphus_blYhweissi', 'UnID_chrysomonad'), 'SrcA'),
               Frame(c('Alpha_beta', NA), 'SrcB; Conv_2010'))
 Expect(is.null(ErrorOf(CheckTaxonNames(clean))),
-       'species-level, genus-level and NA names pass')
-Expect(identical(suppressWarnings(CheckTaxonNames(clean)), 5L),
+       'species-level, genus-level, mixed-case and NA names pass')
+Expect(identical(suppressWarnings(CheckTaxonNames(clean)), 7L),
        'returns the number of names checked')
 
 dirty <- list(Frame(c('Genus_species', 'Rhytonomus isabellina'), 'Chown_etal_2007'),
@@ -46,6 +48,9 @@ dirty <- list(Frame(c('Genus_species', 'Rhytonomus isabellina'), 'Chown_etal_200
 e <- ErrorOf(CheckTaxonNames(dirty))
 Expect(!is.null(e), 'a name with a space stops the run')
 Expect(Has(e, '4 cleaned taxon name(s)'), 'the four distinct offending names are counted')
+e38 <- ErrorOf(CheckTaxonNames(list(Frame(c('Genus_species_(weird)', 'Genus_sp2', 'Genus_species_subsp', 'genus_species', 'Genus_Species'), 'SrcD'))))
+Expect(Has(e38, '5 cleaned taxon name(s)'),
+       'brackets, digits, a third token, a lowercase genus and a capitalised epithet stop the run too (#38)')
 Expect(Has(e, "'Rhytonomus isabellina'  (Chown_etal_2007, Makarieva_2008)"),
        'the taxon is named with every source that carries it')
 Expect(Has(e, "'Gamma delta epsilon'  (SrcC)"),
@@ -66,16 +71,16 @@ Expect(identical(out$taxon, 'Brachypera_isabellina'),
 Expect(grepl('_', out$taxon, fixed = TRUE), 'the corrected name passes the species test of section 3')
 Expect(is.null(ErrorOf(CheckTaxonNames(list(out)))), 'and the guard passes on it')
 
-odd <- Frame(c('Genus  species', '  Genus species subsp. x', 'Genus\tspecies',
-               'Genus species (auth., 1900)', 'Genus_species'), 'SrcA')
+odd <- Frame(c('Genus  species', '  Genus species subsp. x', 'Genus species',
+               'Genus species (Auth., 1900)', 'Genus_species'), 'SrcA')
 Expect(is.null(ErrorOf(CheckTaxonNames(list(FixFormatting(odd))))),
-       'FixFormatting leaves no whitespace whatever the input spacing')
+       'FixFormatting leaves no whitespace whatever the input spacing (a tab inside a name is a removed symbol)')
 
 # ---- #36: Makarieva_2008's Crithidia (Strigomonas) records -----------------------
-cat('the cleaning chain on the Makarieva Crithidia (Strigomonas) records (#36)\n')
+cat('the cleaning chain on the Makarieva Crithidia (Strigomonas) records (#36, #38)\n')
 ff <- FixFormatting(Frame(c('Crithidia (Strigomonas) oncopelti', 'Crithida (Strigomonas) fasciculata'), 'Makarieva_2008'))
-Expect(identical(ff$taxon, c('Crithidia_strigomonas', 'Crithida_strigomonas')),
-       'FixFormatting strips the parentheses and truncates the trinomials to two distinct keys')
+Expect(identical(ff$taxon, c('Crithidia_oncopelti', 'Crithida_fasciculata')),
+       'FixFormatting removes the bracketed subgenus and keeps genus and epithet (#38; before, Crithidia_strigomonas)')
 mk <- FixMisspellings(ff)
 Expect(identical(mk$taxon, c('Strigomonas_oncopelti', 'Crithidia_fasciculata')),
        'each rule maps its own row: Strigomonas_oncopelti and Crithidia_fasciculata')
@@ -97,8 +102,8 @@ Entries <- function(file) {           # quoted entries of the character vectors
 vals <- Values('fix_misspellings.r')
 Expect(length(vals) > 300, sprintf('%d replacement values read from fix_misspellings.r', length(vals)))
 Expect(!any(grepl('[[:space:]]', vals)), 'no replacement value of fix_misspellings.r contains whitespace')
-Expect(all(grepl('^[A-Z][A-Za-z]*(_[a-z][A-Za-z]*)?$', vals)),
-       'every replacement value is Genus or Genus_species')
+Expect(all(grepl('^[A-Z][a-z]+(_[a-z]+)?$', vals)),
+       'every replacement value is Genus or Genus_species (letters only, lowercase epithet)')
 ents <- Entries('fix_nontaxa.r')
 Expect(length(ents) > 100, sprintf('%d entries read from fix_nontaxa.r', length(ents)))
 Expect(!any(grepl('[[:space:]]', ents)),

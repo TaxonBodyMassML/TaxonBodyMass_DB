@@ -1,10 +1,12 @@
 # audit/
 
 Review documents of the body-mass audits, the register of flagged records, and
-two pipeline files moved here on 2026-10-04 (owner decision): the extinct-taxa
-list the pipeline reads (`extinct_taxa.csv`) and the log of imputed rows it
-writes (`imputed_rows.csv`). Nothing else in this directory is read or written
-by the pipeline.
+three pipeline files (owner decision of 2026-10-04: review inputs live here,
+run outputs under `reports/`): the extinct-taxa list the pipeline reads
+(`extinct_taxa.csv`), the vocabulary of raw-name rules it reads
+(`raw_name_patterns.csv`, issue #38) and the log of imputed rows it writes
+(`imputed_rows.csv`). Nothing else in this directory is read or written by the
+pipeline.
 
 ## `flagged_species.csv`: the register of flagged records
 
@@ -75,6 +77,47 @@ by hand when one of the three sources changes; read by `RemoveExtinct()`
 in section 2b drops every record of a listed name from every source after
 `FixFormatting`. Until 2026-10-04 the file lived at `R/library/extinct_taxa.csv`.
 
+## `raw_name_patterns.csv`: the vocabulary of raw-name rules (read by the pipeline)
+
+The rules by which `FixFormatting()` (`R/library/fix_formatting.r`, pipeline
+step 2) reduces a raw taxon name with brackets, three or more parts or
+non-alphabetic characters to `Genus_species` or `Genus` (issue #38). One row
+per rule: `pattern` (a Perl regex), `scope` (what it is matched against:
+`epithet`, the second token of the name, matched case-insensitively, for
+placeholders and identification qualifiers; `annotation`, the content of a
+`()`, `[]` or `{}` group or a token after the binomial; `name`, the whole raw
+name with underscores read as spaces and blanks collapsed), `class`
+(`subgenus`, `sex`, `form_strain_region`, `size_class`, `species_group`,
+`synonym`, `authority`, `trinomial`: the annotation is removed and the record
+kept; `placeholder`, `qualifier`: the record leaves as a `Genus_sp` /
+`Genus_cf` marker, or the word as written, which `RemoveNonTaxa()` removes;
+`life_stage`, `size_class` for the small classes `{xs}`, `{s}`, `small`, and
+`other_drop`: the record is dropped through `DropImputed()` and logged to
+`imputed_rows.csv`; `hybrid`, `ambiguous`: the name is cut at the separator
+and the record credited to the first name written), `action` (`strip`,
+`drop`, or `fold`, which cuts a whole name at the first match of the pattern
+and keeps the first two tokens before the cut, i.e. the first two tokens of
+the whole name when the pattern is anchored at its start; owner decisions of
+2026-10-04 on the size classes, species groups, hybrids and alternatives),
+`note`
+(the evidence: the raw names and sources that motivated the row, what happened
+to them before #38) and `added` (date). Rows are tried in file order and the
+first match wins; `LoadRawNamePatterns()` validates the columns, the class,
+action and scope sets, their combinations and every regex when `R/RunMe.r`
+loads the file. The structural rules (encoding, the position of a subgenus,
+a genus written twice, the fold of a lowercase third token, the removal of
+symbols) are code and are documented in the header of `fix_formatting.r`.
+
+A bracket group or trailing token that no row covers is an error:
+`FixFormatting()` leaves the name as it is, `reports/warnings_raw_names.md`
+lists it under the class `error`, and `CheckRawNames()`
+(`R/library/check_taxon_names.r`) stops the run. To admit a new pattern, add a
+row with its class and action (and a note naming the raw names), rerun, and
+check the name's entry in the report. The 993 raw names of the 2026-10-04
+audit (TaxonBodyMass_DB-scratch/names/) are all covered; the fixtures of
+`R/library/tests/test_raw_name_rules.R` pin one example per class and 60
+ordinary names whose output must not change.
+
 ## `imputed_rows.csv`: the log of rows dropped as imputed (written by the pipeline)
 
 One row per `DropImputed()` call (`R/library/helpers.r`): `source`, `reason`,
@@ -84,15 +127,21 @@ the rows a source itself flags as imputed, genus-averaged or copied from
 another species, and for the exclusions recorded in their `README.md`
 (unverifiable units, duplicated tables, group-level placeholder values);
 `R/library/data_retrieve.r` calls it, through `DropPlaceholders()`, for the
-Brose_2005 placeholder values of the live DataRetriever download. Every call
-appends to the in-memory list `imputed_log`, which `R/RunMe.r` prints and
-writes here after the recompile loop, overwriting the file. The file therefore
-describes the last run that wrote it: a run with `recompile = TRUE` and
-`DataRetrieve = FALSE` rewrites it without the `Brose_2005` row, which only a
-`DataRetrieve = TRUE` run produces (the committed row is from the #14 run,
-commit 11dd2f5). Each source's `README.md` states the same decisions in words
-in its `Imputed rows:` line, which `R/library/check_source_docs.r` checks at
-every run. Until 2026-10-04 the file lived at `reports/imputed_rows.csv`.
+Brose_2005 placeholder values of the live DataRetriever download; and
+`FixFormatting()` calls it in pipeline step 2 for the records whose raw name
+carries a life-stage annotation or a small size class (`{xs}`, `{s}`,
+`small`; `raw_name_patterns.csv`, issue #38), one entry per rule class and
+source label (the `n_kept` of these entries counts the label's rows in its frame).
+Every call appends to the in-memory list `imputed_log`, which `R/RunMe.r`
+prints and writes here after `FixFormatting()`, overwriting the file, but only
+in a run with `recompile = TRUE` (when the parse scripts did not run the log
+would hold the step-2 entries alone). The file therefore describes the last
+run that wrote it: a run with `recompile = TRUE` and `DataRetrieve = FALSE`
+rewrites it without the `Brose_2005` row, which only a `DataRetrieve = TRUE`
+run produces (the committed row is from the #14 run, commit 11dd2f5; issue
+#40). Each source's `README.md` states the same decisions in words in its
+`Imputed rows:` line, which `R/library/check_source_docs.r` checks at every
+run. Until 2026-10-04 the file lived at `reports/imputed_rows.csv`.
 
 ## Other files
 

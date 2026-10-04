@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-03 19:47:28
+# Source de-duplication summary -- 2026-10-04 06:42:52
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,20 +6,20 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 119436 |
-| accepted species | 39724 |
-| multi-source species | 25317 |
-| within-species value pairs | 250736 |
-| pairs identical (|dlog10| <= 1e-06) | 39450 |
-| pairs related by the registry and within its tolerance | 60324 |
-| pairs identical to >= 3 significant digits (blind rule) | 34283 |
-| values collapsed (total) | 41002 |
-| values collapsed by a registry edge | 39747 |
+| species x source values (Pass-1 rows) | 119448 |
+| accepted species | 39727 |
+| multi-source species | 25321 |
+| within-species value pairs | 250770 |
+| pairs identical (|dlog10| <= 1e-06) | 39452 |
+| pairs related by the registry and within its tolerance | 60325 |
+| pairs identical to >= 3 significant digits (blind rule) | 34284 |
+| values collapsed (total) | 41003 |
+| values collapsed by a registry edge | 39748 |
 | values collapsed by the blind rule only | 1255 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
-| species with at least one collapsed value | 20339 |
-| multi-source species left with one independent value | 6946 |
+| species with at least one collapsed value | 20341 |
+| multi-source species left with one independent value | 6949 |
 
 ## Registry edges with the parent in the database
 
@@ -28,8 +28,8 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 
 | child | parent | relation | status | tol_log10 | shared | exact | within_tol | f_exact | collapsed_into_parent | child_collapsed_total |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 723 | 723 | 0.77 | 611 | 990 |
-| DeLong_etal_2010 | Makarieva_2008 | copies | confirmed | 0.000001 | 104 | 53 | 53 | 0.51 | 55 | 127 |
+| Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 722 | 722 | 0.77 | 610 | 989 |
+| DeLong_etal_2010 | Makarieva_2008 | copies | confirmed | 0.000001 | 107 | 55 | 55 | 0.51 | 57 | 129 |
 | Ehnes_etal_2011 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 268 | 268 | 1 | 268 | 305 |
 | Makarieva_2008 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 256 | 256 | 0.95 | 256 | 268 |
 | Ehnes_etal_2011 | Makarieva_2008 | shared_primary | confirmed | 0.000001 | 300 | 281 | 281 | 0.94 | 28 | 305 |
@@ -66,7 +66,7 @@ Pairs of sources that the registry traces to the same compilation outside the da
 
 | external_parent | pair | tol_log10 | shared | exact | within_tol | f_exact | collapsed |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 723 | 723 | 0.77 | 611 |
+| White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 722 | 722 | 0.77 | 610 |
 | White_2006 | Hoehler_etal_2023 - Uyeda_etal_2017 | 0.000001 | 704 | 347 | 347 | 0.49 | 183 |
 | White_2006 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
 | McKechnie_2004 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
@@ -97,12 +97,12 @@ A provenance_only edge documents a relation whose values generally differ and ta
 
 ## Multi-source species left with one independent value
 
-6946 multi-source species rest on a single independent value after de-duplication, by number of sources:
+6949 multi-source species rest on a single independent value after de-duplication, by number of sources:
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4374 |
-| 3 | 1669 |
+| 2 | 4376 |
+| 3 | 1670 |
 | 4 | 296 |
 | 5 | 469 |
 | 6 | 102 |
@@ -146,7 +146,7 @@ Source pairs with no registry relation whose values are identical for many speci
 | AnAge - Makarieva_2008 | 325 | 35 | 0.11 | 26 | 9 |
 | Cai_etal_2025 - Ernest_2003 | 560 | 34 | 0.06 | 21 | 17 |
 | Faurby_etal_2018 - GalanAcedo_etal_2026 | 409 | 34 | 0.08 | 10 | 26 |
-| Castro_2025 - Makarieva_2008 | 282 | 33 | 0.12 | 21 | 14 |
+| Castro_2025 - Makarieva_2008 | 283 | 33 | 0.12 | 21 | 14 |
 | AnAge - Hoehler_etal_2023 | 765 | 32 | 0.04 | 27 | 8 |
 | Ernest_2003 - McCoy_2008 | 258 | 29 | 0.11 | 13 | 18 |
 | McCoy_2008 - Quaardvark | 625 | 29 | 0.05 | 15 | 21 |
