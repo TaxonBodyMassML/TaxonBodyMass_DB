@@ -33,12 +33,8 @@ AdultOrUnspecified <- function(stage) {
 # bytes (the retriever's copy of Brose 2005) to UTF-8, diacritics
 # transliterated, lower case, blanks squeezed, so that the groups tables
 # written by the analysis scripts match the strings the parsers read.
-Latin1ToUtf8 <- function(x) {
-  x <- as.character(x)
-  bad <- !is.na(x) & !validUTF8(x)
-  x[bad] <- iconv(x[bad], from = 'latin1', to = 'UTF-8')
-  x
-}
+# Latin1ToUtf8() is defined in fix_formatting.r, shared with FixFormatting()
+# (#37); RunMe.r and unit_audit.r source both files.
 TaxonKey <- function(x) {
   x <- Latin1ToUtf8(x)
   x <- iconv(x, from = 'UTF-8', to = 'ASCII//TRANSLIT', sub = '')
