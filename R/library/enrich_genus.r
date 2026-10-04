@@ -4,7 +4,8 @@
 #
 # A cleaned name without an underscore (a bare genus, or whatever else one
 # token is) is split off in R/RunMe.r section 3 before the species path and
-# feeds TaxonBodyMass_GenusLevel.csv. Until #49 every such raw row entered the
+# feeds TaxonBodyMass_GenusLevel.csv; the genus-level rows of the lab Sheet
+# join those rows in section 4 (sheet_override.r, #57). Until #49 every such raw row entered the
 # genus mean under its raw spelling, as one value with the weight of a species'
 # cross-source mean, without rank resolution, autotroph filter, one value per
 # source or de-duplication. The functions here give the genus-only path the
@@ -685,7 +686,8 @@ WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records,
   lines <- c(
     sprintf('# Genus-only records -- %s', format(Sys.time(), '%Y-%m-%d %H:%M:%S')),
     '',
-    paste('Input records identified to genus only (a cleaned name without an underscore) are resolved at genus rank',
+    paste('Input records identified to genus only (a cleaned name without an underscore; the sources\' rows and the',
+          'genus-level rows of the lab Sheet, which replace the sources\' rows of the same bare name, issue #57) are resolved at genus rank',
           'through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with',
           'FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the',
           'registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the',

@@ -472,13 +472,22 @@ Expect(all(lengths(list(i_5b, i_res, i_unres, i_ce, i_auto, i_vals, i_dd, i_rec,
 Expect(any(grepl('^save\\(enrich_cache, genus_cache, file = cache_path\\)', runme)) && !any(grepl('^\\s*save\\(enrich_cache, file = cache_path\\)', runme)) &&
          any(grepl("^  if \\(!exists\\('genus_cache'\\)\\) genus_cache <- EmptyGenusCache\\(\\)", runme)),
        'the genus cache is saved with the enrichment cache and created when the cache file predates #49')
-# the species path is untouched: between the Sheet override and section 5b
-# nothing refers to the genus-only objects except the cache lines, and
-# `enriched` is only reassigned by the range filter before it is written
+# the species path is untouched: in section 4 the genus-only rows are
+# referred to only by the Sheet override, which hands the Sheet's genus-level
+# rows to them (#57), and between section 5 and section 5b nothing refers to
+# the genus-only objects except the cache lines; `enriched` is only
+# reassigned by the range filter before it is written
 i_sheet <- grep('^# 4\\. Lab Google Sheet override', runme)
-species_path <- runme[i_sheet:(i_5b - 1)]
-leak <- grep('genus_only|GenusOnly|genus_values|genus_records|genus_res\\b|higher_rank', species_path)
-Expect(length(i_sheet) == 1 && length(leak) == 0, 'the species path (sections 4-5) does not refer to the genus-only objects')
+i_5     <- grep('^# 5\\. Enrich unique taxa', runme)
+genus_only_re <- 'genus_only|GenusOnly|genus_values|genus_records|genus_res\\b|higher_rank'
+sheet_block <- runme[i_sheet:(i_5 - 1)]
+leak_sheet  <- grep(genus_only_re, sheet_block)
+Expect(length(i_sheet) == 1 && length(i_5) == 1 && length(leak_sheet) > 0 &&
+         all(grepl('^#|^sheet      <- ApplySheetOverride\\(ddat, adat_raw, genus_only\\)$|^genus_only <- sheet\\$genus_only$', sheet_block[leak_sheet])),
+       'section 4 refers to the genus-only rows only through the Sheet override call that hands them the Sheet\'s genus-level rows (#57)')
+species_path <- runme[i_5:(i_5b - 1)]
+leak <- grep(genus_only_re, species_path)
+Expect(length(leak) == 0, 'the species path (section 5) does not refer to the genus-only objects')
 after <- runme[i_5b:i_wsp]
 assign_enriched <- grep('^\\s*enriched\\s*<-|^\\s*enriched\\$', after)
 # the write-time rounding of log10_range in section 7 (#53) is the one other

@@ -1,33 +1,33 @@
-# Genus-only records -- 2026-10-04 10:34:53
+# Genus-only records -- 2026-10-04 11:04:34
 
-Input records identified to genus only (a cleaned name without an underscore) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
+Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
 ## Totals
 
 | quantity | value |
 | --- | ---: |
-| genus-only rows | 23649 |
-| distinct bare names | 840 |
-| names resolved to an accepted genus | 671 |
-| ... rows | 14359 |
-| distinct accepted genera | 667 |
+| genus-only rows | 23657 |
+| distinct bare names | 848 |
+| names resolved to an accepted genus | 679 |
+| ... rows | 14367 |
+| distinct accepted genera | 675 |
 | names resolved above genus | 167 |
 | ... rows | 9249 |
 | names unresolved | 2 |
 | ... rows | 41 |
 | autotroph genera removed | 18 |
 | ... rows | 313 |
-| genus x source values (after the autotroph filter) | 716 |
+| genus x source values (after the autotroph filter) | 724 |
 | values collapsed as copies | 2 |
-| genus-only records (pseudo-taxa) | 649 |
+| genus-only records (pseudo-taxa) | 657 |
 | records more than 1 log10 from the genus's species mean | 47 |
 
 ## Resolution by stage
 
 | match_type | outcome | names | rows |
 | --- | --- | ---: | ---: |
-| cache | genus | 467 | 7416 |
-| EXACT | genus | 203 | 6942 |
+| cache | genus | 469 | 7418 |
+| EXACT | genus | 209 | 6948 |
 | EXACT | above genus | 123 | 6558 |
 | checklists | above genus | 39 | 2038 |
 | curated | above genus | 2 | 411 |

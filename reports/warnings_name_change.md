@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 10:34:53
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 11:04:33
 
 
-## Species name changed during enrichment (5654 rows)
+## Species name changed during enrichment (5653 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -4774,8 +4774,6 @@ Hypogastrura itaya -> Hypogastrura distincta [GBIF]
 Hypogramma hypogrammicum; Kurochkinegramma hypogrammica -> Hypogramma hypogrammicum [GBIF]
 
 Hypophthalmichthys nobilis; Aristichthys nobilis -> Hypophthalmichthys nobilis [GBIF]
-
-Hypopomus -> Hypopomus artedi [ITIS]
 
 Epinephelus acanthistius -> Hyporthodus acanthistius [GBIF]
 

@@ -83,7 +83,8 @@ CheckTaxonNames <- function(source_list) {
 # section 4 matches Sheet names against the cleaned source names by equality:
 # a cell with brackets, whitespace, a digit, a lowercase genus or no name at
 # all overrides nothing and enters as a malformed name (one with a space has
-# no underscore and would be filed as a genus).
+# no underscore and would be filed as a genus). A well-formed one-token name
+# is a genus-level row and takes the genus-only path (sheet_override.r, #57).
 #
 # CheckSheetTaxa(ddat) takes the Sheet rows that carry a mass (columns taxon,
 # mass_g, source_mass) and returns them. A three-part name,
