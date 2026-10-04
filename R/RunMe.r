@@ -423,7 +423,7 @@ message(sprintf(paste('DedupeSources: %d of %d per-source values collapsed as co
                       '(%d by the %d-edge registry, %d by the blind rule).'),
                 sum(!within_source$independent), nrow(within_source),
                 sum(within_source$dedupe_rule %in% 'registry'), nrow(source_deps),
-                sum(within_source$dedupe_rule %in% 'blind')))
+                sum(grepl('^blind', within_source$dedupe_rule))))
 
 # Pass 2: across-source arithmetic mean per accepted species over the
 # independent values only (#5; the arithmetic mean is kept by owner decision,
