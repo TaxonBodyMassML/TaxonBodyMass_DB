@@ -1,7 +1,8 @@
 # Tests for the taxon-name guard of R/RunMe.r section 2b (#28):
 # CheckTaxonNames() in R/library/check_taxon_names.r on synthetic per-source
-# frames, the real cleaning chain on the name that motivated the guard, a
-# static check of the rename tables, and the wiring in RunMe.r. No network
+# frames, the real cleaning chain on the name that motivated the guard and on
+# the Makarieva Crithidia (Strigomonas) records (#36), a static check of the
+# rename tables, and the wiring in RunMe.r. No network
 # access and no packages beyond base R are needed.
 #
 #   Rscript R/library/tests/test_taxon_name_guard.R      (from any directory)
@@ -16,6 +17,7 @@ lib  <- file.path(repo, 'R', 'library')
 source(file.path(lib, 'check_taxon_names.r'))
 source(file.path(lib, 'fix_formatting.r'))
 source(file.path(lib, 'fix_misspellings.r'))
+source(file.path(lib, 'fix_nontaxa.r'))
 
 failures <- character(0)
 n_checks <- 0L
@@ -68,6 +70,17 @@ odd <- Frame(c('Genus  species', '  Genus species subsp. x', 'Genus\tspecies',
                'Genus species (auth., 1900)', 'Genus_species'), 'SrcA')
 Expect(is.null(ErrorOf(CheckTaxonNames(list(FixFormatting(odd))))),
        'FixFormatting leaves no whitespace whatever the input spacing')
+
+# ---- #36: Makarieva_2008's Crithidia (Strigomonas) records -----------------------
+cat('the cleaning chain on the Makarieva Crithidia (Strigomonas) records (#36)\n')
+ff <- FixFormatting(Frame(c('Crithidia (Strigomonas) oncopelti', 'Crithida (Strigomonas) fasciculata'), 'Makarieva_2008'))
+Expect(identical(ff$taxon, c('Crithidia_strigomonas', 'Crithida_strigomonas')),
+       'FixFormatting strips the parentheses and truncates the trinomials to two distinct keys')
+mk <- FixMisspellings(ff)
+Expect(identical(mk$taxon, c('Strigomonas_oncopelti', 'Crithidia_fasciculata')),
+       'each rule maps its own row: Strigomonas_oncopelti and Crithidia_fasciculata')
+Expect(nrow(RemoveNonTaxa(mk)) == 2, 'RemoveNonTaxa keeps both')
+Expect(is.null(ErrorOf(CheckTaxonNames(list(mk)))), 'neither name trips the guard')
 
 # ---- static check of the rename tables -----------------------------------------
 cat('static check of the rename tables in R/library\n')
