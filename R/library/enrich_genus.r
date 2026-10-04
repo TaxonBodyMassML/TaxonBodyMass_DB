@@ -57,15 +57,24 @@
 #      present in the species table, then the lowest usage key. A choice
 #      between kingdoms or between homonyms is written to `note` and reported;
 #   2b. the exact-name lookup across every GBIF checklist (/v1/species?name=)
-#      decides the rank when the backbone gives no usage or only weak evidence
-#      (a synonym or doubtful genus): when at least 60 % of the ranked usages
-#      sit above genus, the name is a higher taxon of their modal rank
-#      (Crustacea CLASS, Heteroptera ORDER, Acarina ORDER, Apocrita SUBORDER,
-#      Hirudinea CLASS, Caelifera SUBORDER: the backbone holds none of these
-#      above genus). For every resolved genus the same lookup also flags, in
-#      `note`, a name that the checklists mostly use for a higher taxon
-#      (Ensifera: the hummingbird genus and the orthopteran suborder), which
-#      no lookup can settle for a source without hints;
+#      gives the ranks the taxonomic community uses the name for. When at
+#      least 60 % of the ranked usages sit above genus, the name is a higher
+#      taxon of their modal rank unless the source's own classification
+#      supports the genus (a class, order or family agreeing with it; a
+#      kingdom or phylum hint holds for any genus of the group and does not
+#      count, Arthropoda PHYLUM):
+#      this settles names the backbone holds only as synonym or doubtful
+#      genera (Crustacea CLASS, Heteroptera ORDER, Acarina ORDER, Apocrita
+#      SUBORDER, Hirudinea CLASS, Caelifera SUBORDER), names the backbone
+#      holds as stray accepted genus-rank usages (Apidae, Sciaridae,
+#      Cecidomyiidae, Hesionidae, Arthropoda) and names that are both a valid
+#      genus and a well-known higher taxon (Polychaeta the tachinid genus and
+#      the class, Plecoptera the moth genus and the order, Ensifera the
+#      hummingbird genus and the orthopteran suborder: a food-web source
+#      writing the bare name means the group). A resolved genus that the
+#      checklists use for a higher taxon in at least 20 % of its usages is
+#      flagged in `note`. The counts are kept in the cache (checklist_above,
+#      checklist_ranked) so the thresholds can be revisited without new calls;
 #   3. no usage of the name anywhere: a family-group suffix (-oidea, -idae,
 #      -inae, -ini; -aceae, -ales) gives the rank;
 #   4. otherwise GBIF species/match with rank=GENUS and the hints, fuzzy
@@ -88,7 +97,7 @@
 
 genus_cache_columns <- c('taxon', 'genus', 'rank', 'gbif_status', 'match_type', 'gbif_confidence',
                          'gbif_usageKey', 'kingdom', 'phylum', 'class', 'order', 'family',
-                         'taxonomy_source', 'note', 'hints', 'resolved')
+                         'taxonomy_source', 'note', 'hints', 'checklist_above', 'checklist_ranked', 'resolved')
 
 EmptyGenusCache <- function() {
   data.frame(taxon = character(0), genus = character(0), rank = character(0),
@@ -96,6 +105,7 @@ EmptyGenusCache <- function() {
              gbif_usageKey = character(0), kingdom = character(0), phylum = character(0),
              class = character(0), order = character(0), family = character(0),
              taxonomy_source = character(0), note = character(0), hints = character(0),
+             checklist_above = integer(0), checklist_ranked = integer(0),
              resolved = character(0), stringsAsFactors = FALSE)
 }
 
@@ -131,6 +141,7 @@ genus_only_fuzzy_min_confidence <- 80
 genus_only_fuzzy_max_distance   <- 2
 genus_only_fuzzy_min_length     <- 6
 genus_only_checklist_min_share  <- 0.6     # share of ranked checklist usages above genus that makes a name a higher taxon
+genus_only_checklist_flag_share <- 0.2     # ... that flags a resolved genus as a possible cross-rank homonym
 genus_hint_ranks <- c('kingdom', 'phylum', 'class', 'order', 'family')
 # Kingdom spellings of the non-backbone checklists, mapped to the backbone's.
 genus_only_kingdom_synonyms <- c(Metazoa = 'Animalia', Animal = 'Animalia', Viridiplantae = 'Plantae', Protista = 'Protozoa')
@@ -253,13 +264,18 @@ HintString <- function(hints) {
 
 # Agreement of candidate usages with the hints: +1 per hint rank the usage
 # carries with the same name, -2 per rank where both are given and differ
-# (class names normalised on both sides).
-HintScore <- function(cands, hints) {
+# (class names normalised on both sides). `ranks` restricts the comparison:
+# whether the source's classification supports a genus against the
+# checklists' higher-rank reading is judged on class, order and family only
+# (genus_support_ranks), since agreement at kingdom or phylum holds for any
+# genus of the group and says nothing about the rank meant.
+genus_support_ranks <- c('class', 'order', 'family')
+HintScore <- function(cands, hints, ranks = genus_hint_ranks) {
   if (is.null(hints)) return(rep(0, nrow(cands)))
   hints[] <- CleanHint(hints)
   if (all(is.na(hints))) return(rep(0, nrow(cands)))
   score <- rep(0, nrow(cands))
-  for (rk in genus_hint_ranks) {
+  for (rk in ranks) {
     if (is.na(hints[rk])) next
     cv <- as.character(cands[[rk]]); hv <- hints[[rk]]
     if (rk == 'class') { cv <- NormaliseClassName(cv); hv <- NormaliseClassName(hv) }
@@ -358,7 +374,7 @@ RankBySuffix <- function(name) {
 
 GenusCacheRow <- function(taxon, genus = NA_character_, rank = NA_character_, status = NA_character_,
                           match_type, confidence = NA_real_, key = NA_character_, classification = NULL,
-                          source = NA_character_, note = NA_character_, hints = NULL) {
+                          source = NA_character_, note = NA_character_, hints = NULL, checklist = NULL) {
   cl <- setNames(rep(NA_character_, length(genus_hint_ranks)), genus_hint_ranks)
   if (!is.null(classification))
     for (rk in genus_hint_ranks) if (!is.null(classification[[rk]]) && !is.na(classification[[rk]][1]) && nzchar(classification[[rk]][1]))
@@ -368,7 +384,10 @@ GenusCacheRow <- function(taxon, genus = NA_character_, rank = NA_character_, st
              kingdom = cl[['kingdom']], phylum = cl[['phylum']], class = cl[['class']], order = cl[['order']],
              family = cl[['family']], taxonomy_source = source,
              note = if (is.na(note) || !nzchar(note)) NA_character_ else note,
-             hints = HintString(hints), resolved = format(Sys.Date()), stringsAsFactors = FALSE)
+             hints = HintString(hints),
+             checklist_above  = if (is.null(checklist)) NA_integer_ else as.integer(checklist$n_above),
+             checklist_ranked = if (is.null(checklist)) NA_integer_ else as.integer(checklist$n_ranked),
+             resolved = format(Sys.Date()), stringsAsFactors = FALSE)
 }
 
 # Resolve one bare name (stages 0-5 of the header). `cache_genera` is
@@ -381,17 +400,19 @@ ResolveGenusName <- function(name, hints = NULL, cache_genera, api) {
     return(GenusCacheRow(name, rank = unname(genus_only_higher_rank_names[name]), match_type = 'curated',
                          source = 'manual', note = 'a group above genus that GBIF carries mostly as a homonymous genus (genus_only_higher_rank_names)',
                          hints = hints))
-  # the ranks the checklists give the name: decisive when the backbone is
-  # weak (2b), a flag otherwise
-  checklist <- NULL
-  AboveGenusRow <- function(cl, extra = NULL)
-    GenusCacheRow(name, rank = cl$rank, match_type = 'checklists', classification = cl$classification, source = 'GBIF checklists',
-                  note = paste(c(sprintf('%d of %d ranked exact usages in the GBIF checklists are above genus (modal rank %s); the backbone has no accepted usage of the name',
-                                         cl$n_above, cl$n_ranked, cl$rank), extra), collapse = '; '),
-                  hints = hints)
+  # the ranks the GBIF checklists give the name (2b): decisive for a genus the
+  # source's hints do not support, a flag for the rest
+  checklist <- ChecklistRank(name, api)
+  above <- !is.null(checklist) && checklist$above
+  AboveGenusRow <- function(extra = NULL)
+    GenusCacheRow(name, rank = checklist$rank, match_type = 'checklists', classification = checklist$classification,
+                  source = 'GBIF checklists',
+                  note = paste(c(sprintf('%d of %d ranked exact usages in the GBIF checklists are above genus (modal rank %s)',
+                                         checklist$n_above, checklist$n_ranked, checklist$rank), extra), collapse = '; '),
+                  hints = hints, checklist = checklist)
   Flag <- function(row) {
-    if (is.null(checklist)) checklist <<- ChecklistRank(name, api)
-    if (!is.null(checklist) && checklist$above)
+    if (!is.null(checklist) && row$rank == 'GENUS' && checklist$n_ranked > 0 &&
+        checklist$share >= genus_only_checklist_flag_share)
       row$note <- paste(c(row$note[!is.na(row$note)],
                           sprintf('also a higher taxon in the checklists: %d of %d ranked exact usages above genus (%s)',
                                   checklist$n_above, checklist$n_ranked, checklist$rank)), collapse = '; ')
@@ -399,28 +420,33 @@ ResolveGenusName <- function(name, hints = NULL, cache_genera, api) {
   }
   # 1. the accepted genus of a resolved species
   cg <- cache_genera[cache_genera$genus == name, , drop = FALSE]
-  if (nrow(cg) == 1 && HintScore(cg, hints) >= 0)
+  if (nrow(cg) == 1 && HintScore(cg, hints) >= 0) {
+    if (above && HintScore(cg, hints, genus_support_ranks) <= 0)
+      return(AboveGenusRow(sprintf('the enrichment cache has the name as the accepted genus of %d resolved species, but the source gives no classification that supports the genus', cg$n_species)))
     return(Flag(GenusCacheRow(name, genus = name, rank = 'GENUS', status = 'ACCEPTED', match_type = 'cache',
                               classification = cg, source = 'enrich_cache',
-                              note = sprintf('accepted genus of %d resolved species', cg$n_species), hints = hints)))
+                              note = sprintf('accepted genus of %d resolved species', cg$n_species), hints = hints,
+                              checklist = checklist)))
+  }
   # 2. exact usages of the name in the backbone
   cands <- api$lookup(name)
   if (!is.null(cands)) cands <- cands[!is.na(cands$canonicalName) & cands$canonicalName == name, , drop = FALSE]
   ch <- ChooseGenusUsage(cands, hints, known)
-  if (!is.null(ch) && !ch$weak) {
-    row <- UsageToCacheRow(name, ch, 'EXACT', api, hints)
-    return(if (row$rank == 'GENUS') Flag(row) else row)
+  if (!is.null(ch)) {
+    if (ch$choice$rank != 'GENUS') return(UsageToCacheRow(name, ch, 'EXACT', api, hints, checklist))
+    supported <- HintScore(ch$choice, hints, genus_support_ranks) > 0
+    if (above && !supported)
+      return(AboveGenusRow(sprintf('backbone: only a %s genus usage, which the source\'s classification does not support', tolower(ch$choice$status))))
+    return(Flag(UsageToCacheRow(name, ch, 'EXACT', api, hints, checklist)))
   }
-  # 2b. the backbone gives nothing or only a synonym / doubtful genus: the checklists decide the rank
-  checklist <- ChecklistRank(name, api)
-  if (!is.null(checklist) && checklist$above)
-    return(AboveGenusRow(checklist, if (!is.null(ch)) sprintf('backbone: only %s %s usage(s)', tolower(ch$choice$status), tolower(ch$choice$rank))))
-  if (!is.null(ch)) return(UsageToCacheRow(name, ch, 'EXACT', api, hints))
+  # 2b. no backbone usage: the checklists alone
+  if (above) return(AboveGenusRow('no usage of the name in the backbone'))
   # 3. no usage at all: the rank by suffix
   rk <- RankBySuffix(name)
   if (!is.na(rk))
     return(GenusCacheRow(name, rank = rk, match_type = 'suffix', source = 'suffix',
-                         note = 'no GBIF usage of this name at any rank; rank from the family-group suffix', hints = hints))
+                         note = 'no GBIF usage of this name at any rank; rank from the family-group suffix', hints = hints,
+                         checklist = checklist))
   # 4. fuzzy genus match
   m <- if (nchar(name) >= genus_only_fuzzy_min_length) api$match(name, hints) else NULL
   if (!is.null(m)) {
@@ -429,15 +455,16 @@ ResolveGenusName <- function(name, hints = NULL, cache_genera, api) {
              !is.na(m$canonicalName) &
              as.integer(utils::adist(name, m$canonicalName)) <= genus_only_fuzzy_max_distance, , drop = FALSE]
     ch <- ChooseGenusUsage(m, hints, known)
-    if (!is.null(ch)) return(UsageToCacheRow(name, ch, 'FUZZY', api, hints))
+    if (!is.null(ch)) return(UsageToCacheRow(name, ch, 'FUZZY', api, hints, checklist))
   }
   # 5. unresolved
-  GenusCacheRow(name, match_type = 'NONE', note = 'no GBIF usage of this name at any rank and no acceptable fuzzy genus match', hints = hints)
+  GenusCacheRow(name, match_type = 'NONE', note = 'no GBIF usage of this name at any rank and no acceptable fuzzy genus match',
+                hints = hints, checklist = checklist)
 }
 
 # A chosen usage as a cache row: a synonym genus is followed to its accepted
 # genus (one more API call), a usage above genus is recorded with its rank.
-UsageToCacheRow <- function(name, ch, match_type, api, hints) {
+UsageToCacheRow <- function(name, ch, match_type, api, hints, checklist = NULL) {
   u <- ch$choice
   note <- ch$note
   if (match_type == 'FUZZY')
@@ -445,16 +472,18 @@ UsageToCacheRow <- function(name, ch, match_type, api, hints) {
                             as.integer(utils::adist(name, u$canonicalName))), note[nzchar(note)]), collapse = '; ')
   if (u$rank != 'GENUS')
     return(GenusCacheRow(name, rank = u$rank, status = u$status, match_type = match_type, confidence = u$confidence,
-                         key = u$key, classification = u, source = 'GBIF', note = note, hints = hints))
+                         key = u$key, classification = u, source = 'GBIF', note = note, hints = hints, checklist = checklist))
   if (u$status %in% genus_only_synonym_statuses && !is.na(u$acceptedKey)) {
     acc <- api$usage(u$acceptedKey)
     accepted <- sub(' .*$', '', acc$canonicalName)
     note <- paste(c(sprintf('%s is a synonym of %s', u$canonicalName, accepted), note[nzchar(note)]), collapse = '; ')
     return(GenusCacheRow(name, genus = accepted, rank = 'GENUS', status = 'SYNONYM', match_type = match_type,
-                         confidence = u$confidence, key = acc$key, classification = acc, source = 'GBIF', note = note, hints = hints))
+                         confidence = u$confidence, key = acc$key, classification = acc, source = 'GBIF', note = note, hints = hints,
+                         checklist = checklist))
   }
   GenusCacheRow(name, genus = u$canonicalName, rank = 'GENUS', status = u$status, match_type = match_type,
-                confidence = u$confidence, key = u$key, classification = u, source = 'GBIF', note = note, hints = hints)
+                confidence = u$confidence, key = u$key, classification = u, source = 'GBIF', note = note, hints = hints,
+                checklist = checklist)
 }
 
 # Resolve the bare names of `genus_only` (columns taxon and, where the frames

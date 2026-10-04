@@ -82,7 +82,9 @@ lookup_answers <- list(
   Phasianus = rbind(
     U('2473738', 'Phasianus', 'GENUS', 'ACCEPTED', 'Animalia', 'Chordata', 'Aves', 'Galliformes', 'Phasianidae', 'Phasianus'),
     U('3247049', 'Phasianus', 'GENUS', 'DOUBTFUL', 'Animalia', 'Mollusca', NA, genus = 'Phasianus')),
-  Ensifera = U('2476000', 'Ensifera', 'GENUS', 'ACCEPTED', 'Animalia', 'Chordata', 'Aves', 'Apodiformes', 'Trochilidae', 'Ensifera'))
+  Ensifera = U('2476000', 'Ensifera', 'GENUS', 'ACCEPTED', 'Animalia', 'Chordata', 'Aves', 'Apodiformes', 'Trochilidae', 'Ensifera'),
+  Polychaeta = U('1200000', 'Polychaeta', 'GENUS', 'ACCEPTED', 'Animalia', 'Arthropoda', 'Insecta', 'Diptera', 'Tachinidae', 'Polychaeta'),
+  Arthropoda = U('1300000', 'Arthropoda', 'GENUS', 'ACCEPTED', 'Animalia', 'Arthropoda', NA, genus = 'Arthropoda'))   # a stray genus-rank usage of the phylum name
 # the checklists' exact usages (stage 2b): one row per usage, rank and kingdom spellings as the checklists give them
 CL <- function(name, ranks, kingdoms = 'Animalia')
   data.frame(key = seq_along(ranks), canonicalName = name, rank = ranks, status = 'ACCEPTED', matchType = 'EXACT', confidence = NA,
@@ -98,7 +100,10 @@ checklist_answers <- list(
   Lithobius   = CL('Lithobius', c(rep('GENUS', 185), rep('SUBGENUS', 14))),
   Idothea     = CL('Idothea', rep('GENUS', 8)),
   Myodes      = CL('Myodes', rep('GENUS', 30)),
-  Limonia     = CL('Limonia', rep('GENUS', 50)),
+  Limonia     = CL('Limonia', c(rep('GENUS', 50), rep('FAMILY', 20))),      # a flag (share 0.29), not a decision
+  Peromyscus  = CL('Peromyscus', c(rep('GENUS', 10), rep('FAMILY', 20))),  # above 0.6, but the VertNet hints support the genus
+  Polychaeta  = CL('Polychaeta', c(rep('CLASS', 181), rep('GENUS', 10))),
+  Arthropoda  = CL('Arthropoda', c(rep('PHYLUM', 182), rep('GENUS', 8))),
   Hydrobiosis = CL('Hydrobiosis', rep('GENUS', 9)),
   Gomphonema  = CL('Gomphonema', rep('GENUS', 20), 'Chromista'),
   Phasianus   = CL('Phasianus', rep('GENUS', 40)),
@@ -125,14 +130,14 @@ mock_api <- list(
   usage  = function(key) { calls <<- c(calls, paste('usage', key)); usage_answers[[as.character(key)]] })
 # the species path's cache: resolved species whose accepted genera are Lithobius, Idotea, Myodes, Gomphonema
 enrich_cache <- data.frame(
-  taxon   = c('Lithobius_forficatus', 'Lithobius_mutabilis', 'Idotea_balthica', 'Myodes_glareolus', 'Gomphonema_parvulum', 'Nomen_dubium'),
-  species = c('Lithobius forficatus', 'Lithobius mutabilis', 'Idotea balthica', 'Myodes glareolus', 'Gomphonema parvulum', NA),
-  genus   = c('Lithobius', 'Lithobius', 'Idotea', 'Myodes', 'Gomphonema', NA),
-  kingdom = c('Animalia', 'Animalia', 'Animalia', 'Animalia', 'Chromista', NA),
-  phylum  = c('Arthropoda', 'Arthropoda', 'Arthropoda', 'Chordata', 'Ochrophyta', NA),
-  class   = c('Chilopoda', 'Chilopoda', 'Malacostraca', 'Mammalia', 'Bacillariophyceae', NA),
-  order   = c('Lithobiomorpha', 'Lithobiomorpha', 'Isopoda', 'Rodentia', 'Cymbellales', NA),
-  family  = c('Lithobiidae', 'Lithobiidae', 'Idoteidae', 'Cricetidae', 'Gomphonemataceae', NA),
+  taxon   = c('Lithobius_forficatus', 'Lithobius_mutabilis', 'Idotea_balthica', 'Myodes_glareolus', 'Gomphonema_parvulum', 'Nomen_dubium', 'Peromyscus_leucopus'),
+  species = c('Lithobius forficatus', 'Lithobius mutabilis', 'Idotea balthica', 'Myodes glareolus', 'Gomphonema parvulum', NA, 'Peromyscus leucopus'),
+  genus   = c('Lithobius', 'Lithobius', 'Idotea', 'Myodes', 'Gomphonema', NA, 'Peromyscus'),
+  kingdom = c('Animalia', 'Animalia', 'Animalia', 'Animalia', 'Chromista', NA, 'Animalia'),
+  phylum  = c('Arthropoda', 'Arthropoda', 'Arthropoda', 'Chordata', 'Ochrophyta', NA, 'Chordata'),
+  class   = c('Chilopoda', 'Chilopoda', 'Malacostraca', 'Mammalia', 'Bacillariophyceae', NA, 'Mammalia'),
+  order   = c('Lithobiomorpha', 'Lithobiomorpha', 'Isopoda', 'Rodentia', 'Cymbellales', NA, 'Rodentia'),
+  family  = c('Lithobiidae', 'Lithobiidae', 'Idoteidae', 'Cricetidae', 'Gomphonemataceae', NA, 'Cricetidae'),
   stringsAsFactors = FALSE)
 
 # genus-only rows as section 3 of RunMe.r splits them off (taxon, mass_g, n,
@@ -163,6 +168,9 @@ genus_only <- rbind(
   Rows('Heteroptera', c(0.003, 0.002), 'Brose_etal_2018'),
   Rows('Crustacea', 0.5, 'Brose_etal_2018'),
   Rows('Ensifera', c(0.05, 0.04), 'Brose_etal_2018'),
+  Rows('Polychaeta', 0.02, 'Brose_etal_2018'),
+  Rows('Arthropoda', 0.1, 'Castro_2025', kingdom = 'Animalia', phylum = 'Arthropoda', class = 'Malacostraca'),
+  Rows('Peromyscus', 20, 'vertnet-mammalia-sept2016', class = 'Mammalia', order = 'Rodentia', family = 'Cricetidae'),
   Rows('Anisoptera', 0.24, 'Brose_etal_2018'),
   Rows('Zygoptera', 0.05, 'Brose_etal_2018'),
   Rows('Brachyderinae', 0.002, 'Brose_etal_2018'),
@@ -258,12 +266,12 @@ r <- Row('Anisoptera')
 Expect(r$match_type == 'curated' && r$rank == 'SUBORDER' && !any(grepl('Anisoptera$', calls)),
        'Anisoptera: the curated higher-rank list, no API call')
 r <- Row('Zygoptera')
-Expect(r$match_type == 'checklists' && r$rank == 'SUBORDER' && r$kingdom == 'Animalia' && Has(r$note, '17 of 20 ranked exact usages') && Has(r$note, 'doubtful genus'),
+Expect(r$match_type == 'checklists' && r$rank == 'SUBORDER' && r$kingdom == 'Animalia' && Has(r$note, '17 of 20 ranked exact usages') && Has(r$note, 'only a doubtful genus usage'),
        'Zygoptera: the backbone has only a doubtful protozoan genus; the checklists make it a suborder (kingdom spelling Metazoa mapped)')
-Expect(Row('Isopoda')$rank == 'ORDER' && Row('Isopoda')$match_type == 'EXACT' && !any(calls == 'lookup_all Isopoda'),
-       'Isopoda: the accepted order of the backbone, no checklist call needed')
+Expect(Row('Isopoda')$rank == 'ORDER' && Row('Isopoda')$match_type == 'EXACT' && is.na(Row('Isopoda')$checklist_ranked),
+       'Isopoda: the accepted order of the backbone (the mock checklists have nothing to add)')
 r <- Row('Heteroptera')
-Expect(r$rank == 'ORDER' && r$match_type == 'checklists' && is.na(r$genus) && Has(r$note, 'backbone: only synonym genus'),
+Expect(r$rank == 'ORDER' && r$match_type == 'checklists' && is.na(r$genus) && Has(r$note, 'backbone: only a synonym genus usage'),
        'Heteroptera: the synonym genus Coproica is weak evidence; the checklists (ORDER 33, SUBORDER 21 of 71) make it a higher taxon')
 Expect(Row('Crustacea')$rank == 'CLASS' && Row('Crustacea')$match_type == 'checklists',
        'Crustacea: the doubtful bee genus is weak evidence; the checklists make it a class')
@@ -271,10 +279,26 @@ r <- Row('Phasianus')
 Expect(r$match_type == 'EXACT' && r$genus == 'Phasianus' && r$gbif_status == 'ACCEPTED' && r$family == 'Phasianidae' && r$hints == 'class=Aves',
        'Phasianus with the VertNet placeholders \'unknown Order\' / \'Unidentified\': the placeholders are dropped and the accepted bird genus wins')
 r <- Row('Ensifera')
-Expect(r$genus == 'Ensifera' && r$rank == 'GENUS' && r$match_type == 'EXACT' && Has(r$note, 'also a higher taxon in the checklists: 30 of 36'),
-       'Ensifera: an accepted genus kept as such, flagged because the checklists mostly use the name for a suborder')
-Expect(!Has(Row('Dendroica')$note, 'also a higher taxon') && !Has(Row('Lithobius')$note, 'also a higher taxon'),
-       'genera the checklists use only as genera carry no flag')
+Expect(is.na(r$genus) && r$rank == 'SUBORDER' && r$match_type == 'checklists' && Has(r$note, '30 of 36 ranked exact usages') &&
+         Has(r$note, 'backbone: only a accepted genus usage') && r$checklist_above == 30 && r$checklist_ranked == 36,
+       'Ensifera (no hints): the accepted hummingbird genus of the backbone yields to the checklists, which use the name for the orthopteran suborder')
+r <- Row('Polychaeta')
+Expect(is.na(r$genus) && r$rank == 'CLASS' && r$match_type == 'checklists' && r$kingdom == 'Animalia',
+       'Polychaeta (no hints): the tachinid genus of the backbone yields to the class (181 of 191 checklist usages)')
+r <- Row('Arthropoda')
+Expect(is.na(r$genus) && r$rank == 'PHYLUM' && r$match_type == 'checklists',
+       'Arthropoda (hints kingdom Animalia, phylum Arthropoda, class Malacostraca): kingdom/phylum agreement does not support the stray genus usage; the checklists make it a phylum')
+Expect(identical(HintScore(lookup_answers$Arthropoda, c(kingdom = 'Animalia', phylum = 'Arthropoda', class = 'Malacostraca', order = NA, family = NA), genus_support_ranks), 0),
+       'HintScore() on the support ranks ignores kingdom and phylum')
+r <- Row('Peromyscus')
+Expect(r$genus == 'Peromyscus' && r$match_type == 'cache' && Has(r$note, 'also a higher taxon in the checklists: 20 of 30'),
+       'Peromyscus (VertNet hints Mammalia/Rodentia/Cricetidae): the hints support the cache genus, so the checklist majority only flags it')
+r <- Row('Limonia')
+Expect(r$rank == 'GENUS' && Has(r$note, 'also a higher taxon in the checklists: 20 of 70'),
+       'Limonia: a 29 % checklist share flags the genus without deciding')
+Expect(!Has(Row('Dendroica')$note, 'also a higher taxon') && !Has(Row('Lithobius')$note, 'also a higher taxon') &&
+         Row('Lithobius')$checklist_above == 0 && Row('Lithobius')$checklist_ranked == 199,
+       'genera the checklists use only as genera carry no flag; the counts are stored')
 Expect(any(calls == 'lookup_all Lithobius') && any(calls == 'lookup_all Dendroica'),
        'the checklists are consulted for every resolved genus (the flag) and for the weak backbone cases')
 r <- Row('Brachyderinae')
@@ -308,8 +332,8 @@ go <- merge(genus_only[, setdiff(names(genus_only), tax_cols)],
             gc[, c('taxon', 'genus', 'rank', 'gbif_status', 'match_type', 'outcome', tax_cols)], by = 'taxon', all.x = TRUE)
 go$source_label <- SourceLabel(go$source_mass)
 go$source_group <- SourceGroup(go$source_label)
-Expect(setequal(unique(go$taxon[go$outcome == 'above genus']), c('Staphylinidae', 'Coleoptera', 'Oligochaeta', 'Hebridae', 'Anisoptera', 'Zygoptera', 'Brachyderinae', 'Isopoda', 'Heteroptera', 'Crustacea')),
-       'ten names are above genus')
+Expect(setequal(unique(go$taxon[go$outcome == 'above genus']), c('Staphylinidae', 'Coleoptera', 'Oligochaeta', 'Hebridae', 'Anisoptera', 'Zygoptera', 'Brachyderinae', 'Isopoda', 'Heteroptera', 'Crustacea', 'Ensifera', 'Polychaeta', 'Arthropoda')),
+       'thirteen names are above genus')
 Expect(setequal(unique(go$taxon[go$outcome == 'unresolved']), c('Isolauctis', 'Lithobiusxxx', 'Xyzzyq', 'Renic')), 'four names are unresolved')
 genus_rows <- go[go$outcome == 'genus', ]
 kept <- FilterAutotrophs(genus_rows)
@@ -321,14 +345,14 @@ Expect(nrow(FilterAutotrophs(data.frame(genus = c('Oligochaeta', 'Zea', 'Gymnodi
        'a plant genus homonym and a listed dinoflagellate genus are removed, the heterotrophic Noctiluca stays')
 hr <- HigherRankRecords(go[go$outcome == 'above genus', ])
 Expect(identical(names(hr), c('taxon', 'rank', 'kingdom', 'phylum', 'class', 'order', 'family', 'mass_g', 'source_mass', 'n', 'n_independent')) &&
-         nrow(hr) == 10 && hr$taxon[1] == 'Staphylinidae',
+         nrow(hr) == 13 && hr$taxon[1] == 'Staphylinidae',
        'HigherRankRecords(): one row per name, the columns of TaxonBodyMass_HigherRank.csv, most rows first')
 st <- hr[hr$taxon == 'Staphylinidae', ]
 Expect(st$rank == 'FAMILY' && st$n == 3 && st$n_independent == 2 &&
          abs(st$mass_g - signif(mean(c(10^mean(log10(c(0.01, 0.012))), 0.011)), 4)) < 1e-12 &&
          st$source_mass == 'Brose_2005; Brose_etal_2018',
        'Staphylinidae: three rows from two sources, the mean of the two sources\' geometric means')
-Expect(setequal(hr$taxon[hr$rank == 'SUBORDER'], c('Anisoptera', 'Zygoptera')) && hr$rank[hr$taxon == 'Brachyderinae'] == 'SUBFAMILY' &&
+Expect(setequal(hr$taxon[hr$rank == 'SUBORDER'], c('Anisoptera', 'Zygoptera', 'Ensifera')) && hr$rank[hr$taxon == 'Brachyderinae'] == 'SUBFAMILY' &&
          hr$rank[hr$taxon == 'Crustacea'] == 'CLASS' && hr$rank[hr$taxon == 'Heteroptera'] == 'ORDER',
        'ranks of the curated, checklist- and suffix-derived names are carried')
 
@@ -398,8 +422,8 @@ Expect(abs(lg$mass_g - mean(c(514, 500, exp_mass))) < 1e-9 && lg$n == 22 && lg$n
 Expect(gt$mass_g[gt$taxon == 'Zz'] == 1 && gt$n_independent[gt$taxon == 'Zz'] == 1, 'a genus with species values only is unchanged')
 Expect(abs(gt$mass_g[gt$taxon == 'Stercorarius'] - sqrt(298 * 391)) < 1e-9 && gt$n_independent[gt$taxon == 'Stercorarius'] == 1,
        'a genus with a genus-only record only enters with that record')
-Expect(!any(c('Staphylinidae', 'Coleoptera', 'Oligochaeta', 'Anisoptera', 'Gomphonema', 'Isolauctis', 'Stercocarius', 'Dendroica', 'Idothea', 'Isopoda', 'Isopeda', 'Heteroptera', 'Coproica', 'Crustacea') %in% gt$taxon) &&
-         all(c('Setophaga', 'Idotea', 'Phasianus', 'Ensifera') %in% gt$taxon),
+Expect(!any(c('Staphylinidae', 'Coleoptera', 'Oligochaeta', 'Anisoptera', 'Gomphonema', 'Isolauctis', 'Stercocarius', 'Dendroica', 'Idothea', 'Isopoda', 'Isopeda', 'Heteroptera', 'Coproica', 'Crustacea', 'Ensifera', 'Polychaeta', 'Arthropoda') %in% gt$taxon) &&
+         all(c('Setophaga', 'Idotea', 'Phasianus', 'Peromyscus', 'Limonia') %in% gt$taxon),
        'higher ranks, autotrophs, unresolved names and synonym spellings are absent; the accepted genera are present')
 gt_alt <- GenusLevelTable(enriched, alt)
 Expect(abs(gt_alt$mass_g[gt_alt$taxon == 'Lagopus'] - mean(c(514, 500, 10^mean(log10(c(14.0, 70.8, 500))), sqrt(511.5 * 598)))) < 1e-9,
@@ -421,14 +445,14 @@ Expect(any(grepl('^## Totals', txt)) && any(grepl('^## Names resolved above genu
          any(grepl('^## Homonyms and doubtful usages', txt)) && any(grepl('^## De-duplication of the genus x source values', txt)) &&
          any(grepl('more than one order of magnitude', txt)),
        'the report has its sections')
-Expect(nrow(rp$higher) == 10 && rp$higher$taxon[1] == 'Staphylinidae' && 'Stercocarius' %in% rp$fuzzy$taxon &&
+Expect(nrow(rp$higher) == 13 && rp$higher$taxon[1] == 'Staphylinidae' && 'Stercocarius' %in% rp$fuzzy$taxon &&
          any(rp$homonym$taxon == 'Limonia') && any(rp$synonyms$taxon == 'Dendroica') && any(rp$unresolved$taxon == 'Isolauctis'),
        'the tables list the higher ranks, the fuzzy match, the homonym choice, the synonym and the unresolved name')
 Expect(nrow(rp$dedupe) == 1 && rp$dedupe$dropped == 'Brose_etal_2018' && rp$dedupe$kept == 'Brose_2005' && rp$dedupe$values == 1,
        'the de-duplication table counts the collapsed Brose value')
 Expect(nrow(rp$far) == 1 && rp$far$genus == 'Lithobius', 'Lithobius (4.5e-4 g against 1.25e-2 g) is the one record more than 1 log10 from its species mean')
-Expect(any(grepl('^## Genera that the GBIF checklists mostly use for a higher taxon', txt)) && nrow(rp$cross) == 1 && rp$cross$taxon == 'Ensifera',
-       'the cross-rank homonym section lists Ensifera')
+Expect(any(grepl('^## Genera that the GBIF checklists mostly use for a higher taxon', txt)) && setequal(rp$cross$taxon, c('Limonia', 'Peromyscus')),
+       'the cross-rank homonym section lists the flagged genera (Limonia, Peromyscus)')
 
 # ---- wiring in RunMe.r -----------------------------------------------------------
 cat('R/RunMe.r wiring\n')
