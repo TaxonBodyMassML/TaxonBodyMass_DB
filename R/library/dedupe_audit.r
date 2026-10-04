@@ -102,7 +102,7 @@ Section('2. De-duplication (replication)')
 key <- paste(v$genus, v$species)
 multi <- names(which(table(key) > 1))
 Line('  values collapsed: %d of %d (registry %d, blind rule %d)', sum(!v$independent), nrow(v),
-     sum(v$dedupe_rule %in% 'registry'), sum(v$dedupe_rule %in% 'blind'))
+     sum(v$dedupe_rule %in% 'registry'), sum(grepl('^blind', v$dedupe_rule)))
 Line('  species with at least one collapsed value: %d of %d multi-source species', length(unique(key[!v$independent])), length(multi))
 Line('  multi-source species left with one independent value: %d', sum(new$n_sources > 1 & new$n_independent == 1))
 j <- inner_join(regroup, new, by = c('genus', 'species'), suffix = c('.all', '.ind'))

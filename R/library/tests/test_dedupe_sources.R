@@ -100,11 +100,16 @@ ws <- data.frame(
               'G sp10', 'G sp10',                   # blind: 1234 vs 1236 not identical
               'G sp11', 'G sp11',                   # siblings S1 = S2
               'G sp12', 'G sp12',                   # siblings differ
-              'G sp13'),                            # single source
+              'G sp13',                             # single source
+              'G sp14', 'G sp14',                   # provenance_only P identical to C, not a round number (#31)
+              'G sp15', 'G sp15', 'G sp15',         # chain: R ~ C by registry (0.0105), X ~ C by the blind rule, R and X differ (#31)
+              'G sp16', 'G sp16', 'G sp16'),        # provenance_only P joined to C only through R (#31)
   source_label = c('B', 'C', 'C', 'R', 'C', 'R', 'B', 'C', 'C', 'P', 'A', 'B', 'C', 'A', 'B', 'C', 'A', 'C',
-                   'X', 'Y', 'X', 'Y', 'X', 'Y', 'S1', 'S2', 'S1', 'S2', 'X'),
+                   'X', 'Y', 'X', 'Y', 'X', 'Y', 'S1', 'S2', 'S1', 'S2', 'X',
+                   'C', 'P', 'C', 'R', 'X', 'C', 'R', 'P'),
   mass_g = c(100.5, 100.5, 1234.5, 1250, 1000, 1100, 1001, 1000, 500, 500, 42.42, 42.42, 42.42,
-             42.42, 42.42, 50, 42.42, 42.42, 1234, 1230, 1200, 1200, 1234, 1236, 77.7, 77.7, 77.7, 77.9, 3.3),
+             42.42, 42.42, 50, 42.42, 42.42, 1234, 1230, 1200, 1200, 1234, 1236, 77.7, 77.7, 77.7, 77.9, 3.3,
+             500.5, 500.5, 1234.5, 1246, 1230, 1240, 1234.4, 1234),
   stringsAsFactors = FALSE)
 dd <- DedupeSources(ws, deps)
 v  <- dd$values
@@ -122,7 +127,7 @@ Expect(Row('G sp3', 'R')$independent && Row('G sp3', 'C')$independent, 'near cop
 Expect(Row('G sp3b', 'B')$independent && Row('G sp3b', 'C')$independent,
        'copies edge (1e-6) does not collapse values 4e-4 log10 apart')
 Expect(Row('G sp4', 'P')$independent && Row('G sp4', 'C')$independent,
-       'provenance_only never collapses, even identical values')
+       'provenance_only edge: identical round values (500, two significant digits) are not collapsed')
 Expect(Row('G sp5', 'A')$collapsed_into == 'C' && Row('G sp5', 'B')$collapsed_into == 'C' &&
          Row('G sp5', 'C')$independent,
        'chain A = B = C collapses into the root C')
@@ -138,13 +143,30 @@ Expect(!Row('G sp11', 'S2')$independent && Row('G sp11', 'S2')$collapsed_into ==
        'siblings of an external parent collapse into the lower priority label')
 Expect(Row('G sp12', 'S1')$independent && Row('G sp12', 'S2')$independent, 'siblings that differ are both kept')
 Expect(Row('G sp13', 'X')$independent && is.na(Row('G sp13', 'X')$collapsed_into), 'single-source species untouched')
+# ---- #31 (resolution B): the blind rule applies to provenance_only pairs too,
+# such collapses are labelled, and component coalescing may chain values that
+# do not match each other.
+Expect(!Row('G sp14', 'P')$independent && Row('G sp14', 'P')$collapsed_into == 'C' &&
+         Row('G sp14', 'P')$dedupe_rule == 'blind (provenance_only edge)',
+       '#31: identical non-round values 500.5 on a provenance_only edge are collapsed and labelled blind (provenance_only edge)')
+Expect(!Row('G sp15', 'R')$independent && Row('G sp15', 'R')$collapsed_into == 'C' && Row('G sp15', 'R')$dedupe_rule == 'registry' &&
+         !Row('G sp15', 'X')$independent && Row('G sp15', 'X')$collapsed_into == 'C' && Row('G sp15', 'X')$dedupe_rule == 'blind' &&
+         Row('G sp15', 'C')$independent,
+       '#31: R (registry, 0.0105) and X (blind) both collapse into C although R = 1246 and X = 1230 do not match each other')
+Expect(!Row('G sp16', 'P')$independent && Row('G sp16', 'P')$collapsed_into == 'C' &&
+         Row('G sp16', 'P')$dedupe_rule == 'blind (via third source)',
+       '#31: provenance_only P = 1234 reaches C = 1240 through R = 1234.4 (blind with P, registry with C), collapsed and labelled blind (via third source)')
+Expect(Row('G sp1', 'B')$dedupe_rule == 'registry' && Row('G sp8', 'Y')$dedupe_rule == 'blind',
+       '#31: values without a provenance_only partner keep the plain registry / blind labels')
+Expect(sum(dd$pairs$prov_only) == 3 && all(dd$pairs$species_key[dd$pairs$prov_only] %in% c('G G sp4', 'G G sp14', 'G G sp16')),
+       'pairs table flags the three provenance_only pairs (sp4, sp14, sp16)')
 keep_per_species <- tapply(v$independent, v$species, sum)
 Expect(all(keep_per_species >= 1), 'every species keeps at least one independent value')
 ok_ref <- all(vapply(which(!v$independent), function(i)
   any(v$independent & v$species == v$species[i] & v$source_label == v$collapsed_into[i]), logical(1)))
 Expect(ok_ref, 'collapsed_into always names an independent value of the same species')
 Expect(all(c('species_key', 'd', 'exact', 'reg_tol', 'registry', 'blind') %in% names(dd$pairs)) &&
-         nrow(dd$pairs) == 17, 'pairs table has one row per within-species pair (17)')
+         nrow(dd$pairs) == 24, 'pairs table has one row per within-species pair (24)')
 
 e <- ErrorOf(DedupeSources(rbind(ws, ws[1, ]), deps))
 Expect(Has(e, 'more than one value per species and source label'), 'stops on duplicated species x label rows')
@@ -168,6 +190,13 @@ Expect(rep$edges$collapsed_into_parent[rep$edges$child == 'B' & rep$edges$parent
          rep$edges$shared[rep$edges$child == 'B' & rep$edges$parent == 'C'] == 4,
        'edge table counts shared species and collapses for B -> C')
 Expect(rep$siblings$collapsed[rep$siblings$pair == 'S1 - S2'] == 1, 'sibling table counts the S1 - S2 collapse')
+pc <- rep$provenance_only[rep$provenance_only$child == 'P' & rep$provenance_only$parent == 'C', ]
+Expect(nrow(pc) == 1 && pc$shared == 3 && pc$blind_identical == 1 && pc$collapsed_blind_direct == 1 && pc$collapsed_via_third_source == 1,
+       '#31: provenance-only table counts the P - C pairs (3 shared, 1 blind-identical, 1 direct and 1 via-third-source collapse)')
+Expect(rep$totals$value[grepl('blind \\(provenance_only edge\\)', rep$totals$quantity)] == 1 &&
+         rep$totals$value[grepl('via third source', rep$totals$quantity)] == 1 &&
+         rep$totals$value[rep$totals$quantity == 'values collapsed by the blind rule only'] == 4,
+       '#31: totals count the labelled collapses (1 + 1) within the 4 blind-only collapses (sp8, sp14, sp15, sp16)')
 Expect(any(rep$residual$pair == 'X - Y') && rep$residual$identical_but_round[rep$residual$pair == 'X - Y'] == 1,
        'residual table lists X - Y with its round-number identical pair')
 Expect(rep$totals$value[rep$totals$quantity == 'values collapsed (total)'] == sum(!v$independent),

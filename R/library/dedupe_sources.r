@@ -20,13 +20,17 @@
 #     re-derived the value). Edges are transitive, labels that share a parent
 #     outside the database (Dunning_2008, White_2006, ...) are compared with each
 #     other, and a `provenance_only` edge documents a relation whose values
-#     differ and never collapses anything;
+#     generally differ: it grants no tolerance-based collapse (layer 2 still
+#     applies to it, see below);
 #  2. a blind rule for values that are the same number to at least
 #     `blind_min_sf` significant digits in any two sources of a species (two
 #     independent estimates agreeing to three significant digits essentially
 #     only happens when both copied the same number); values with one or two
 #     significant digits (round numbers such as 20 or 1500 g) are excluded as
-#     ambiguous.
+#     ambiguous. The blind rule applies to every pair of sources, including
+#     pairs registered provenance_only: values identical to that many digits
+#     are the same datum whatever the registry says about the pair (owner
+#     decision, issue #31); such collapses are labelled in `dedupe_rule`.
 # Matching pairs are joined into components within each species; one member of
 # each component is kept (a registry ancestor of the others where there is one,
 # otherwise the member with the lowest `priority`, then the fewest registry
@@ -263,8 +267,12 @@ IdenticalToSF <- function(x, y, min_sf = 3) {
 # species x source label; columns genus, species, source_label, mass_g).
 # Returns a list:
 #   values   within_source with `independent` (logical), `collapsed_into` (label
-#            of the kept value, NA where independent) and `dedupe_rule`
-#            ('registry' or 'blind', NA where independent)
+#            of the kept value, NA where independent) and `dedupe_rule` (NA
+#            where independent; 'registry' when the value has a registry match
+#            in its component; otherwise 'blind', or 'blind (provenance_only
+#            edge)' when it is blind-identical to a provenance_only partner, or
+#            'blind (via third source)' when it shares a component with a
+#            provenance_only partner it does not match itself)
 #   pairs    every within-species pair of values with the log10 difference,
 #            the registry tolerance that applied (NA if unrelated) and the
 #            registry / blind matches (the material of WriteDedupeReport)
@@ -294,8 +302,14 @@ DedupeSources <- function(within_source, deps, blind_min_sf = 3, exact_tol = 1e-
   m <- match(paste(a, b), paste(rel$a, rel$b))
   pairs$reg_tol  <- rel$tol_log10[m]
   pairs$registry <- !is.na(pairs$reg_tol) & pairs$d <= pairs$reg_tol
+  # The blind rule is registry-independent by design: it also fires on pairs
+  # registered provenance_only (identical values are the same datum whatever
+  # the relation; #31). Such pairs are flagged so the collapses can be labelled.
   pairs$blind    <- IdenticalToSF(pairs$mass_g.i, pairs$mass_g.j, blind_min_sf)
-  pairs$match    <- pairs$registry | pairs$blind
+  prov <- deps[deps$relation == 'provenance_only' & deps$parent_in_db, , drop = FALSE]
+  pairs$prov_only <- paste(a, b) %in% paste(pmin(prov$child_label, prov$parent_label),
+                                            pmax(prov$child_label, prov$parent_label))
+  pairs$match    <- pairs$registry | pairs$blind      # provenance_only pairs included (#31)
 
   # connected components of matching pairs within species: propagate the
   # smallest row id along the edges until nothing changes
@@ -336,11 +350,20 @@ DedupeSources <- function(within_source, deps, blind_min_sf = 3, exact_tol = 1e-
     ws$independent <- is.na(rep_row) | rep_row == ws$.row
     ws$collapsed_into[!ws$independent] <- ws$source_label[rep_row[!ws$independent]]
     reg_rows <- unique(c(pairs$.row.i[pairs$registry], pairs$.row.j[pairs$registry]))
-    ws$dedupe_rule[!ws$independent] <- ifelse(ws$.row[!ws$independent] %in% reg_rows, 'registry', 'blind')
+    # blind-identical to a provenance_only partner, or sharing a component with
+    # one it does not match itself (joined through a third source)
+    pb <- pairs[pairs$blind & pairs$prov_only, , drop = FALSE]
+    pv <- pairs[pairs$prov_only & pairs$same_component & !pairs$match, , drop = FALSE]
+    direct_rows   <- unique(c(pb$.row.i, pb$.row.j))
+    indirect_rows <- unique(c(pv$.row.i, pv$.row.j))
+    rule <- ifelse(ws$.row %in% reg_rows, 'registry',
+            ifelse(ws$.row %in% direct_rows, 'blind (provenance_only edge)',
+            ifelse(ws$.row %in% indirect_rows, 'blind (via third source)', 'blind')))
+    ws$dedupe_rule[!ws$independent] <- rule[!ws$independent]
   }
   values <- ws[, setdiff(names(ws), c('.row', '.key', '.comp'))]
   pairs  <- pairs[, c('.key', 'source_label.i', 'source_label.j', 'mass_g.i', 'mass_g.j', 'd',
-                      'exact', 'reg_tol', 'registry', 'blind', 'match', 'same_component')]
+                      'exact', 'reg_tol', 'registry', 'blind', 'prov_only', 'match', 'same_component')]
   names(pairs)[1] <- 'species_key'
   rownames(pairs) <- NULL
   list(values = values, pairs = pairs, closure = closure, related = rel,
@@ -362,7 +385,8 @@ MarkdownTable <- function(df) {
 
 # Summary of what the registry and the blind rule did, written as markdown:
 # totals, every registry edge with the species it shares and collapsed, the
-# sibling pairs behind each external parent, the provenance-only edges, the
+# sibling pairs behind each external parent, the provenance-only edges (with
+# the values the blind rule collapsed on them, #31), the
 # species left with a single independent value, and the pairs of sources that
 # are value-identical for >= `min_residual` species without any registry
 # relation (candidates for new edges, or shared primary literature).
@@ -380,11 +404,16 @@ WriteDedupeReport <- function(dd, deps, path, min_residual = 20) {
                  'pairs related by the registry and within its tolerance',
                  sprintf('pairs identical to >= %d significant digits (blind rule)', dd$blind_min_sf),
                  'values collapsed (total)', 'values collapsed by a registry edge',
-                 'values collapsed by the blind rule only', 'species with at least one collapsed value',
+                 'values collapsed by the blind rule only',
+                 '... of which blind-identical to a provenance_only partner (blind (provenance_only edge))',
+                 '... of which joined to a provenance_only partner through a third source (blind (via third source))',
+                 'species with at least one collapsed value',
                  'multi-source species left with one independent value'),
     value = c(nrow(v), length(n_per_species), length(multi_keys), nrow(p), sum(p$exact),
               sum(p$registry), sum(p$blind), sum(!v$independent),
-              sum(v$dedupe_rule %in% 'registry'), sum(v$dedupe_rule %in% 'blind'),
+              sum(v$dedupe_rule %in% 'registry'), sum(grepl('^blind', v$dedupe_rule)),
+              sum(v$dedupe_rule %in% 'blind (provenance_only edge)'),
+              sum(v$dedupe_rule %in% 'blind (via third source)'),
               length(species_dep), length(single)),
     stringsAsFactors = FALSE)
 
@@ -428,10 +457,24 @@ WriteDedupeReport <- function(dd, deps, path, min_residual = 20) {
   if (is.null(sib_tab)) sib_tab <- data.frame()
 
   prov <- deps[deps$relation == 'provenance_only', ]
+  # values the blind rule collapsed on a provenance_only pair: directly
+  # identical to the partner, or joined to it through a third source (#31)
+  v_key <- paste(v$genus, v$species)
+  prov_collapsed <- function(child, parent, label) {
+    s <- p[(p$source_label.i == child & p$source_label.j == parent) | (p$source_label.i == parent & p$source_label.j == child), ]
+    s <- s[s$same_component, , drop = FALSE]
+    if (nrow(s) == 0) return(0L)
+    rows <- unique(c(match(paste(s$species_key, s$source_label.i), paste(v_key, v$source_label)),
+                     match(paste(s$species_key, s$source_label.j), paste(v_key, v$source_label))))
+    sum(v$dedupe_rule[rows] %in% label)
+  }
   prov_tab <- do.call(rbind, lapply(seq_len(nrow(prov)), function(i) {
     st <- if (prov$parent_in_db[i]) pair_stats(prov$child_label[i], prov$parent_label[i]) else c(shared = NA, exact = NA, within_tol = NA, blind = NA)
     data.frame(child = prov$child_label[i], parent = prov$parent_label[i], parent_in_db = prov$parent_in_db[i],
-               shared = st[['shared']], exact = st[['exact']], stringsAsFactors = FALSE)
+               shared = st[['shared']], exact = st[['exact']], blind_identical = st[['blind']],
+               collapsed_blind_direct = if (prov$parent_in_db[i]) prov_collapsed(prov$child_label[i], prov$parent_label[i], 'blind (provenance_only edge)') else 0L,
+               collapsed_via_third_source = if (prov$parent_in_db[i]) prov_collapsed(prov$child_label[i], prov$parent_label[i], 'blind (via third source)') else 0L,
+               stringsAsFactors = FALSE)
   }))
   if (is.null(prov_tab)) prov_tab <- data.frame()
 
@@ -458,7 +501,8 @@ WriteDedupeReport <- function(dd, deps, path, min_residual = 20) {
     paste('Values that enter through several compilations are collapsed before the cross-source mean',
           '(issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an',
           'external parent) when the two agree within the edge tolerance; the blind rule collapses values',
-          sprintf('identical to >= %d significant digits; `provenance_only` edges never collapse.', dd$blind_min_sf),
+          sprintf('identical to >= %d significant digits in any two sources, whatever the registry says about the pair;', dd$blind_min_sf),
+          '`provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31).',
           'Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.'),
     '', '## Totals', '', MarkdownTable(totals),
     '', '## Registry edges with the parent in the database', '',
@@ -468,7 +512,12 @@ WriteDedupeReport <- function(dd, deps, path, min_residual = 20) {
     '', '## Siblings sharing an external parent', '',
     'Pairs of sources that the registry traces to the same compilation outside the database; collapsed = values of either collapsed into the other.',
     '', MarkdownTable(sib_tab),
-    '', '## Provenance-only edges (never collapse)', '', MarkdownTable(prov_tab),
+    '', '## Provenance-only edges (no tolerance-based collapse)', '',
+    paste('A provenance_only edge documents a relation whose values generally differ and takes no part in the registry',
+          'closure. Values identical to >= 3 significant digits on such a pair are still collapsed by the blind rule and',
+          'labelled `blind (provenance_only edge)`; values joined to the partner only through a third source are labelled',
+          '`blind (via third source)` (#31).'),
+    '', MarkdownTable(prov_tab),
     '', '## Multi-source species left with one independent value', '',
     sprintf('%d multi-source species rest on a single independent value after de-duplication, by number of sources:', length(single)),
     '', MarkdownTable(single_tab),
