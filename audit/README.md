@@ -110,6 +110,12 @@ loads the file. The structural rules (encoding, the position of a subgenus,
 a genus written twice, the fold of a lowercase third token, the removal of
 symbols) are code and are documented in the header of `fix_formatting.r`.
 
+A placeholder marker drops the record and does not feed
+`TaxonBodyMass_GenusLevel.csv` as a genus-only record (only a name written as
+a bare genus does); the former exception, the six Brose_etal_2018 `Genus spec.`
+markers and `Gomphonema type D` that `fix_misspellings.r` renamed to bare
+genera, was removed under #43 (2026-10-04).
+
 A bracket group or trailing token that no row covers is an error:
 `FixFormatting()` leaves the name as it is, `reports/warnings_raw_names.md`
 lists it under the class `error`, and `CheckRawNames()`

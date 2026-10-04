@@ -11,8 +11,11 @@ RemoveNonTaxa <- function(dat) {
   # rows); these suffixes then remove the record.
   # _sp    = species indeterminate (most common) and every morphospecies code
   # _spp   = species plural (unresolved group)
-  # _spec  = spec. (six Brose_etal_2018 genera are mapped to genus-level
-  #          records by fix_misspellings.r before this step and are kept)
+  # _spec  = spec. (until #43 fix_misspellings.r renamed six Brose_etal_2018
+  #          'Genus spec.' markers to bare genera, which made genus-level
+  #          records of them; they are now removed here like every marker)
+  # _type  = morphotype placeholder written as the word ('Gomphonema type D'
+  #          -> Gomphonema_type; its rename rule to the bare genus went with #43)
   # _indet = indeterminate
   # _cf    = confer (compare; identification uncertain)
   # _aff   = affinis (close to the named species)
@@ -22,6 +25,7 @@ RemoveNonTaxa <- function(dat) {
   dat <- dat[!grepl("_sp$",     dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_spp$",    dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_spec$",   dat$taxon, ignore.case = FALSE), ]
+  dat <- dat[!grepl("_type$",   dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_indet$",  dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_cf$",     dat$taxon, ignore.case = FALSE), ]
   dat <- dat[!grepl("_aff$",    dat$taxon, ignore.case = FALSE), ]

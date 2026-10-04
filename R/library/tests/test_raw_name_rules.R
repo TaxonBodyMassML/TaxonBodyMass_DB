@@ -177,8 +177,10 @@ r <- Run(ph)
 Expect(all(r$log$class == 'placeholder') && !any(r$log$dropped) && is.null(r$imputed),
        'placeholders are logged as class placeholder and not dropped in FixFormatting()')
 rn <- RemoveNonTaxa(FixMisspellings(r$out))
-Expect(identical(rn$taxon, c('Lagopus', 'Gomphonema')),
-       "after FixMisspellings() and RemoveNonTaxa() only 'Lagopus spec.' and 'Gomphonema type D' survive, as the genus-level records their rename rules make of them (as before #38)")
+Expect(nrow(rn) == 0,
+       "after FixMisspellings() and RemoveNonTaxa() no placeholder survives: 'Lagopus spec.' and 'Gomphonema type D' are removed like every other marker (their rename rules to genus-level records went with #43)")
+Expect(nrow(RemoveNonTaxa(Frame(c('Gomphonema_type', 'Lagopus_spec', 'Hydrobiosis_type')))) == 0,
+       'RemoveNonTaxa() removes the _type and _spec markers directly (#43)')
 ql <- c('Zercon cf gurensis', 'Lithobius cf. mutabilis', 'Pseudobodo c.f. tremulans', 'Arietellus cf.', 'Procapritermes nr. sandakanensis',
         'Macrocheles cf. opacus aciculatus', 'Scolopendrella cf. subnuda {s}')
 Expect(identical(Cleaned(ql), c('Zercon_cf', 'Lithobius_cf', 'Pseudobodo_cf', 'Arietellus_cf', 'Procapritermes_nr',
@@ -317,6 +319,9 @@ Expect(all(grepl(key_re, keys)), paste('every correction key is Genus or Genus_s
                                       paste(keys[!grepl(key_re, keys)], collapse = ', ')))
 Expect(all(grepl(val_re, vals)), paste('every correction value is a proper Genus or Genus_species:', paste(vals[!grepl(val_re, vals)], collapse = ', ')))
 Expect(!anyDuplicated(keys), paste('no correction key is duplicated:', paste(keys[duplicated(keys)], collapse = ', ')))
+Expect(all(keys[grepl('_(sp|spp|spec|indet|unk|type|cf|nr|aff)$', keys)] %in% 'Hydrobiosis_type'),
+       paste("no correction key is a placeholder or qualifier marker, which RemoveNonTaxa() removes (#43; 'Hydrobiosis_type', with no rows in the sources, was left in place):",
+             paste(setdiff(keys[grepl('_(sp|spp|spec|indet|unk|type|cf|nr|aff)$', keys)], 'Hydrobiosis_type'), collapse = ', ')))
 Expect(all(grepl('^[A-Z][A-Za-z]*_$', pk)) && all(grepl('^[A-Z][a-z]+_$', pv)), 'every genus prefix pair is Genus_ -> Genus_')
 Expect(!any(grepl('[^\x01-\x7F]', c(keys, vals))), 'no key or value contains a non-ASCII character')
 nt <- readLines(file.path(lib, 'fix_nontaxa.r'), warn = FALSE)
