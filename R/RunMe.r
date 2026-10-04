@@ -438,6 +438,12 @@ n_names_autotroph <- n_resolved_pre_autotroph -
 # and conversion CiteID of the group for citation (dedupe_sources.r, #5).
 adat_enriched$source_label <- SourceLabel(adat_enriched$source_mass)
 adat_enriched$source_group <- SourceGroup(adat_enriched$source_label)
+# Fixed row order before the summarise (#53): merge() leaves the records of a
+# name in the order of the bound frames, so the summation order of
+# mean(log10(mass_g)), and with it the last digit of log10_range in the output,
+# moved whenever a source or a cleaning rule reordered rows (OrderForPass1(),
+# helpers.r).
+adat_enriched <- OrderForPass1(adat_enriched)
 within_source <- adat_enriched %>%
   filter(!is.na(species)) %>%
   group_by(genus, species, source_group) %>%
@@ -664,6 +670,13 @@ WriteGenusOnlyReport(file.path(wd_root, 'reports', 'genus_only_records.md'),
 # 7. Write outputs
 ##########################################################################
 gdat$mass_g <- signif(gdat$mass_g, digits = 4)
+# log10_range is written to six decimals (#53). Unrounded, write.csv printed
+# its 15-16 significant digits and so exposed the last binary digit of the
+# Pass-1 means, which no use of the column needs: the range filter above
+# compares the unrounded value to its threshold and check_enriched() reports
+# it unrounded, and both keep doing so. mass_g in both tables is already at
+# four significant figures (Pass 2, and gdat above).
+enriched$log10_range <- round(enriched$log10_range, 6)
 
 write.csv(enriched, file = file.path(wd_root, 'TaxonBodyMass.csv'),
           row.names = FALSE)

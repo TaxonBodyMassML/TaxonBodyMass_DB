@@ -154,3 +154,26 @@ MergeImputedLog <- function(log, live, downloaded = character()) {
   rownames(tab) <- NULL
   tab
 }
+
+# Row order of the per-record frame before the Pass-1 summarise (RunMe.r
+# section 5; #53). merge() orders the records by taxon and leaves ties in the
+# order of the bound source frames, so the summation order of
+# mean(log10(mass_g)) within a species x source group, and with it the last
+# binary digit of the within-source geometric mean and of log10_range in the
+# output, changed whenever a parse script or a cleaning rule reordered rows.
+# Sorting by every column that can vary within a group and enters one of its
+# summaries (the input name, which first(taxon) and na.omit(.)[1] pick; the
+# source label; the source_mass string with its conversion CiteIDs; the value)
+# fixes the order whatever the input order was; rows identical in all four
+# keys are interchangeable. Byte order (method = 'radix') is the same in every
+# locale, as in MergeImputedLog().
+OrderForPass1 <- function(dat) {
+  need <- c('taxon', 'source_label', 'source_mass', 'mass_g')
+  miss <- need[!need %in% names(dat)]
+  if (length(miss) > 0)
+    stop('OrderForPass1(): missing column(s) ', paste(miss, collapse = ', '), call. = FALSE)
+  dat <- dat[order(dat$taxon, dat$source_label, dat$source_mass, dat$mass_g,
+                   method = 'radix'), , drop = FALSE]
+  rownames(dat) <- NULL
+  dat
+}
