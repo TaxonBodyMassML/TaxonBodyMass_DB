@@ -1,12 +1,13 @@
 # audit/
 
 Review documents of the body-mass audits, the register of flagged records, and
-three pipeline files (owner decision of 2026-10-04: review inputs live here,
+four pipeline files (owner decision of 2026-10-04: review inputs live here,
 run outputs under `reports/`): the extinct-taxa list the pipeline reads
 (`extinct_taxa.csv`), the vocabulary of raw-name rules it reads
-(`raw_name_patterns.csv`, issue #38) and the log of imputed rows it writes
-(`imputed_rows.csv`). Nothing else in this directory is read or written by the
-pipeline.
+(`raw_name_patterns.csv`, issue #38), the log of imputed rows it writes
+(`imputed_rows.csv`) and the saved entries of the live download frames that
+feed that log (`imputed_rows_live.csv`, issue #40). Nothing else in this
+directory is read or written by the pipeline.
 
 ## `flagged_species.csv`: the register of flagged records
 
@@ -140,16 +141,56 @@ Brose_2005 placeholder values of the live DataRetriever download; and
 carries a life-stage annotation or a small size class (`{xs}`, `{s}`,
 `small`; `raw_name_patterns.csv`, issue #38), one entry per rule class and
 source label (the `n_kept` of these entries counts the label's rows in its frame).
-Every call appends to the in-memory list `imputed_log`, which `R/RunMe.r`
-prints and writes here after `FixFormatting()`, overwriting the file, but only
-in a run with `recompile = TRUE` (when the parse scripts did not run the log
-would hold the step-2 entries alone). The file therefore describes the last
-run that wrote it: a run with `recompile = TRUE` and `DataRetrieve = FALSE`
-rewrites it without the `Brose_2005` row, which only a `DataRetrieve = TRUE`
-run produces (the committed row is from the #14 run, commit 11dd2f5; issue
-#40). Each source's `README.md` states the same decisions in words in its
-`Imputed rows:` line, which `R/library/check_source_docs.r` checks at every
-run. Until 2026-10-04 the file lived at `reports/imputed_rows.csv`.
+Every call appends to the in-memory list `imputed_log`. After
+`FixFormatting()`, `R/RunMe.r` merges the list with the rows of
+`imputed_rows_live.csv` for the live download frames that were not downloaded
+in the run (`MergeImputedLog()`, `R/library/helpers.r`; a frame whose flag was
+TRUE has its fresh entries in the list already), orders the rows by source
+(C-locale order; the rows of one source keep the order of the calls, so
+`n_kept` reads as a running tally through the parse script and step 2), prints
+the table and writes it here, but only in a run with `recompile = TRUE` (when
+the parse scripts did not run the log would hold the step-2 and saved entries
+alone). The file is therefore the same whatever the download flags were, and a
+recompile-only run (`recompile = TRUE`, the download flags FALSE) reproduces
+the committed file byte for byte (issue #40; before #40 such a run dropped the
+`Brose_2005` row, which had to be restored by hand). Each source's `README.md`
+states the same decisions in words in its `Imputed rows:` line, which
+`R/library/check_source_docs.r` checks at every run. Until 2026-10-04 the file
+lived at `reports/imputed_rows.csv`.
+
+## `imputed_rows_live.csv`: the saved entries of the live download frames (written by the download scripts)
+
+The `DropImputed()` calls of the four live download frames run only while the
+frame is downloaded (`DataRetrieve`, `DataVertNet` or `DataFishbase` = TRUE in
+`R/RunMe.r`), so their entries would be lost to every other run. Each download
+script therefore saves its own entries here once it has saved its frame
+(`SaveImputedLive()`, `R/library/helpers.r`): `R/library/data_retrieve.r` the
+rows of `DataRetrieverAll` (the `Brose_2005` placeholder rows,
+`DropPlaceholders()`), `R/library/data_vertnet.r` those of `VertNetAll` and
+`R/library/data_fishbase.r` those of `Fishbase` and `Sealifebase` (none of
+these three has a drop rule today, so they save no rows). A script replaces
+the rows of its own frame and leaves the other frames' rows as they are, so
+the file always holds the entries of the last download of each frame; a failed
+Fishbase or Sealifebase download leaves the previous rows in place.
+
+Columns: the five of `imputed_rows.csv` (`source`, `reason`, `n_dropped`,
+`n_taxa`, `n_kept`), `frame` (the stem of the frame file in `sources/Rdata/`:
+`DataRetrieverAll`, `VertNetAll`, `Fishbase` or `Sealifebase`), `written` (the
+ISO date of the download) and `frame_md5` (the md5 of the frame file that
+download saved). Rows are ordered by frame, each frame's rows in the order of
+the calls. `CheckImputedLive()` (`R/library/check_cache.r`, called by
+`R/RunMe.r` right after the cache-completeness check) warns when a cached
+frame is not the file whose download saved its rows (the md5 differs: the
+frame was downloaded again without saving its entries, or the cache was copied
+from a run with a different frame; a copy of the same file passes, whatever
+its timestamp), and when the file holds rows for a name that is not a live
+frame or whose frame file is absent; a live frame without rows is reported
+only for `DataRetrieverAll`, as information. The file is not edited by hand
+except to seed it: its one row, `Brose_2005`, was transcribed on 2026-10-04
+from the `imputed_rows.csv` written by the `DataRetrieve = TRUE` run of PR #32
+(commit 11dd2f5), hence `written` 2026-10-03, and `frame_md5` is that of the
+`BodyMass_DataRetrieverAll.Rdata` that run saved (`1443be65...`). Exercised
+without network access by `Rscript R/library/tests/test_imputed_live.R`.
 
 ## Other files
 

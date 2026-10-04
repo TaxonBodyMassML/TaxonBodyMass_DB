@@ -1,6 +1,7 @@
 # Download VertNet Sept 2016 snapshots from CyVerse, extract body mass, save Rdata.
 # Called from RunMe.r when DataVertNet = TRUE.
-# Depends on: wd_root, wd_rdata, data.table
+# Depends on: wd_root, wd_rdata, data.table, imputed_log, ImputedEntriesSince(),
+# SaveImputedLive() (R/library/helpers.r)
 #
 # Total download ~3 GB across 6 archives; expect 30-60+ min on typical broadband.
 # Each ZIP is deleted immediately after the body mass records are extracted.
@@ -10,6 +11,11 @@
 # CyVerse Data Commons, 2016. (Bloom:2016aa-af)
 
 library(data.table)
+
+# No DropImputed() call in this script yet; its (empty) set of entries is still
+# saved to audit/imputed_rows_live.csv at the end, so that the file reflects
+# the last download of every live frame (#40).
+n_log_before <- length(imputed_log)
 
 # Large files (~600 MB each): raise timeout well above the 60-second default.
 old_timeout <- getOption('timeout')
@@ -144,3 +150,4 @@ message('\nTotal VertNet mass records: ', format(nrow(VN), big.mark = ','))
 
 save(VN, file = file.path(wd_rdata, 'BodyMass_VertNetAll.Rdata'))
 message('Saved BodyMass_VertNetAll.Rdata')
+SaveImputedLive('VertNetAll', ImputedEntriesSince(n_log_before), ImputedLivePath(wd_root), wd_rdata)
