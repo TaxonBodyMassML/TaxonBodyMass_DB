@@ -68,22 +68,15 @@ FixMisspellings <- function(dat) {
     "Delftia_acido"                   = "Delftia_acidovorans",            # truncated; restored full epithet
     "Encoptolophus_s"                 = "Encoptolophus",                  # single-letter epithet stripped; genus valid
     "Eumops_bo"                       = "Eumops",                         # truncated epithet stripped; genus valid
-    "Falco_spec"                      = "Falco",                          # spec placeholder stripped; genus valid
     "Formica_sstr"                    = "Formica",                        # sensu stricto tag stripped; genus valid
     "Galaxiidae_anomalus"             = "Galaxias_anomalus",              # family used as genus; correct to Galaxias
     "Galaxiidae_new"                  = "Galaxias",                       # family + placeholder; reduce to genus Galaxias
     "Genus_microvelia"                = "Microvelia",                     # placeholder genus replaced with actual genus
-    "Geotrupes_spec"                  = "Geotrupes",                      # spec placeholder stripped; genus valid
-    "Gomphonema_type"                 = "Gomphonema",                     # type placeholder stripped; genus valid
     "Himasthla_b"                     = "Himasthla",                      # single-letter epithet stripped; genus valid
     "Hydrobiosis_type"                = "Hydrobiosis",                    # type placeholder stripped; caddisfly genus valid
-    "Lagopus_spec"                    = "Lagopus",                        # spec placeholder stripped; genus valid
     "Lamellibranchia_e"               = "Lamellibranchia",                # single-letter epithet stripped; tubeworm genus valid
     "Larsia_i"                        = "Larsia",                         # single-letter epithet stripped; genus valid
-    "Larus_spec"                      = "Larus",                          # spec placeholder stripped; genus valid
     "Lepidostoma_genus"                   = "Lepidostoma",                # parenthetical tag stripped by FixFormatting → becomes Lepidostoma_genus; caddisfly genus valid
-    "Phalacrocorax_spec"              = "Phalacrocorax",                  # spec placeholder stripped; genus valid
-    "Stercocarius_spec"               = "Stercorarius",                   # genus misspelling fixed; spec placeholder stripped
     "Synechocystis_pCC"               = "Synechocystis",                  # PCC culture code stripped; genus valid
 
 

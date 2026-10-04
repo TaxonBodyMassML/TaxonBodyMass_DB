@@ -42,7 +42,7 @@ Latin1ToUtf8 <- function(x) {
 #   action   strip  remove the matched annotation, keep the record;
 #            drop   remove the record: placeholder and qualifier records leave
 #                   FixFormatting() as a marker, Genus_<word> with the matched
-#                   word where RemoveNonTaxa() or a rename rule knows it (sp,
+#                   word where RemoveNonTaxa() knows it (sp,
 #                   spp, spec, indet, unk, type; cf, nr, aff) and Genus_sp /
 #                   Genus_cf otherwise ('Lithobius sp2 {l}' -> Lithobius_sp,
 #                   'Lagopus spec.' -> Lagopus_spec), which RemoveNonTaxa()
@@ -95,7 +95,7 @@ raw_name_drop_classes    <- c('life_stage', 'size_class', 'placeholder', 'qualif
 raw_name_fold_classes    <- c(raw_name_strip_classes, 'qualifier', 'hybrid', 'ambiguous')
 raw_name_classes         <- unique(c(raw_name_strip_classes, raw_name_drop_classes, raw_name_fold_classes))
 # drop classes that leave a marker for RemoveNonTaxa() instead of dropping here:
-# the matched word itself when RemoveNonTaxa() (or a rename rule) knows it,
+# the matched word itself when RemoveNonTaxa() knows it,
 # else the class default ('Lithobius sp2' -> Lithobius_sp, 'Lagopus spec.' ->
 # Lagopus_spec, 'Zercon cf gurensis' -> Zercon_cf, 'Procapritermes nr.' ->
 # Procapritermes_nr)
@@ -420,7 +420,7 @@ RawNameLogTable <- function(log = raw_name_log) {
 raw_name_class_text <- c(
   error              = 'A bracket group or a trailing token that no row of audit/raw_name_patterns.csv covers. The name keeps its brackets and CheckRawNames() stops the run: add a row to the vocabulary (or fix the source) so that the pattern is classified, never absorbed.',
   life_stage         = 'A life-stage annotation (stage code, nauplius, copepodite, larva, megalops, juvenile, immature, egg, pupa, ...): the record is not an adult and is dropped through DropImputed() (scope rule of #8), one entry per source in audit/imputed_rows.csv.',
-  placeholder        = "No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it, unless a rename rule maps the marker to a genus-level record (six Brose_etal_2018 'Genus spec.' names, fix_misspellings.r).",
+  placeholder        = "No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).",
   qualifier          = 'An identification qualifier before the epithet (cf., aff., nr.): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.',
   hybrid             = 'A hybrid or intergrade, two names joined by x: the record is credited to the first name written (the name is cut at the x; a genus alone before it gives a genus-level record), owner decision 2026-10-04.',
   ambiguous          = 'Two or more alternative taxa in one name (joined by /, a comma, a semicolon or "and"): the record is credited to the first name written (the name is cut at the separator; an incomplete first fragment such as Lithobius_cyrt is left to the enrichment), owner decision 2026-10-04.',
