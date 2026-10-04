@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 07:16:09
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 09:23:49
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 433 names, 4212 rows
+- Names unresolved after all enrichment stages: 435 names, 4253 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -381,7 +381,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (433 names, 4212 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (435 names, 4253 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -447,6 +447,8 @@ Apanteles_hemileucae | Brose_etal_2018 | 33 rows
 
 Crychus_caraboides | Brose_etal_2018 | 33 rows
 
+Silicioflagellata | Brose_etal_2018 | 30 rows
+
 Rhithropanopeus_hermandii | Brose_etal_2018 | 28 rows
 
 Trichastoma_fulvescens | vertnet-aves-sept2016 | 26 rows
@@ -476,6 +478,8 @@ Turbularia_indivisa | Brose_etal_2018 | 15 rows
 Trichastoma_pyrrhopterum | vertnet-aves-sept2016 | 12 rows
 
 Filinia_longispina | Brose_2005, Brose_etal_2018 | 11 rows
+
+Flagellatae | Brose_etal_2018 | 11 rows
 
 Crocodylus_africanus | Brose_etal_2018 | 10 rows
 

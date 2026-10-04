@@ -115,7 +115,10 @@ A placeholder marker drops the record and does not feed
 `TaxonBodyMass_GenusLevel.csv` as a genus-only record (only a name written as
 a bare genus does); the former exception, the six Brose_etal_2018 `Genus spec.`
 markers and `Gomphonema type D` that `fix_misspellings.r` renamed to bare
-genera, was removed under #43 (2026-10-04).
+genera, was removed under #43 (2026-10-04). A name written as a bare genus is
+resolved at genus rank, filtered, weighted and de-duplicated by
+`R/library/enrich_genus.r` (README step 6, issue #49); names of ranks above
+genus are dropped and listed in `reports/genus_only_records.md`.
 
 A bracket group or trailing token that no row covers is an error:
 `FixFormatting()` leaves the name as it is, `reports/warnings_raw_names.md`
