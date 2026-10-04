@@ -292,6 +292,14 @@ ddat <- read_sheet(
   col_types = 'ccncnnn'
 )
 ddat <- ddat[which(!is.na(ddat$mass_g)), 1:4]
+# Every Sheet taxon must already be a cleaned name, Genus_species or Genus:
+# the Sheet bypasses FixFormatting() and the section-2b guard, and the
+# override below matches Sheet names against the cleaned source names by
+# equality, so a cell with brackets or blanks would override nothing and
+# enter as a malformed name (check_taxon_names.r, #48). A three-part name
+# folds to the species with a warning; anything else stops the run with the
+# offending rows and asks for the Sheet to be corrected.
+ddat <- CheckSheetTaxa(ddat)
 ddat$source_mass <- NormaliseSourceLabel(ddat$source_mass)
 ddat$n <- 1
 for (col in tax_cols)

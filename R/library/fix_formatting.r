@@ -27,8 +27,9 @@ Latin1ToUtf8 <- function(x) {
 #   pattern  a Perl regex
 #   scope    what the regex is matched against:
 #            'epithet'     the second token of the name (case-insensitively):
-#                          placeholders (sp., spp., sp2, 'lassp8', indet.) and
-#                          identification qualifiers (cf., aff., nr.);
+#                          placeholders (sp., spp., sp2, 'lassp8', indet., ssp,
+#                          undefinable; #38, #48) and identification
+#                          qualifiers (cf., aff., nr.);
 #            'annotation'  the content of a (), [] or {} group, or a token after
 #                          the binomial (first the whole trailing text, then
 #                          token by token);
@@ -57,7 +58,10 @@ Latin1ToUtf8 <- function(x) {
 #                   to the first name written ('Anas platyrhynchos x rubripes' ->
 #                   Anas_platyrhynchos, 'Empidonax traillii/alnorum' ->
 #                   Empidonax_traillii, 'Centrocercus X Tympanuchus ...' -> the
-#                   genus-level record Centrocercus; owner decision 2026-10-04).
+#                   genus-level record Centrocercus; owner decision 2026-10-04);
+#                   a status word in place of the epithet folds the same way
+#                   ('Anas hybrid' -> the genus-level record Anas,
+#                   'Conochilus_colonial' -> Conochilus; #48).
 #   note, added   the evidence and the date the row was added.
 # Rows are tried in file order; the first match wins.
 #
@@ -420,14 +424,14 @@ RawNameLogTable <- function(log = raw_name_log) {
 raw_name_class_text <- c(
   error              = 'A bracket group or a trailing token that no row of audit/raw_name_patterns.csv covers. The name keeps its brackets and CheckRawNames() stops the run: add a row to the vocabulary (or fix the source) so that the pattern is classified, never absorbed.',
   life_stage         = 'A life-stage annotation (stage code, nauplius, copepodite, larva, megalops, juvenile, immature, egg, pupa, ...): the record is not an adult and is dropped through DropImputed() (scope rule of #8), one entry per source in audit/imputed_rows.csv.',
-  placeholder        = "No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).",
+  placeholder        = "No species-level identification (sp., spp., spec., indet., ssp., undefinable, undetermined, morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).",
   qualifier          = 'An identification qualifier before the epithet (cf., aff., nr.): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.',
-  hybrid             = 'A hybrid or intergrade, two names joined by x: the record is credited to the first name written (the name is cut at the x; a genus alone before it gives a genus-level record), owner decision 2026-10-04.',
+  hybrid             = 'A hybrid or intergrade, two names joined by x, or the word hybrid in place of the epithet (a hybrid of unrecorded parentage): the record is credited to the first name written (the name is cut at the x or before the word; a genus alone before the cut gives a genus-level record), owner decision 2026-10-04 (#38) and the default of #48.',
   ambiguous          = 'Two or more alternative taxa in one name (joined by /, a comma, a semicolon or "and"): the record is credited to the first name written (the name is cut at the separator; an incomplete first fragment such as Lithobius_cyrt is left to the enrichment), owner decision 2026-10-04.',
   other_drop         = 'Dropped by an other_drop rule of the vocabulary.',
   subgenus           = 'A subgenus in brackets between the genus and the epithet, or the genus written twice, is removed; the binomial is kept.',
   sex                = "A sex mark (F, M, female(s), male(s), the signs U+2640/U+2642) is removed; the record is kept as the species' value (owner decision, #37).",
-  form_strain_region = 'A form, strain, culture or population annotation is removed; the record is kept.',
+  form_strain_region = 'A form, strain, culture or population annotation is removed; the record is kept (a form written in place of the epithet, Conochilus_colonial, folds to the genus-level record Conochilus, #48).',
   size_class         = 'A size-class tag of the Brose_etal_2018 soil food webs: {m}, {l}, {xl}, {xxl}, {xxxl}, medium and large are removed and the record kept; the small classes {xs}, {s} and small are non-adult records and are dropped through DropImputed() (owner decision 2026-10-04).',
   species_group      = 'A species group or aggregate marker after a binomial (group, grp, complex, agg., s.l.) is removed and the record credited to the nominal species written before it (owner decision 2026-10-04).',
   synonym            = 'An alternative name, epithet or common name in brackets after the binomial is removed.',

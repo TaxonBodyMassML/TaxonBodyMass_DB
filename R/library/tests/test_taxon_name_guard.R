@@ -1,9 +1,11 @@
-# Tests for the taxon-name guard of R/RunMe.r section 2b (#28):
+# Tests for the taxon-name guards of R/RunMe.r (#28, #48):
 # CheckTaxonNames() in R/library/check_taxon_names.r on synthetic per-source
-# frames, the real cleaning chain on the name that motivated the guard and on
-# the Makarieva Crithidia (Strigomonas) records (#36), a static check of the
-# rename tables, and the wiring in RunMe.r. No network
-# access and no packages beyond base R are needed.
+# frames (section 2b), the real cleaning chain on the name that motivated the
+# guard and on the Makarieva Crithidia (Strigomonas) records (#36), a static
+# check of the rename tables, CheckSheetTaxa() on synthetic lab Sheet frames
+# (section 4: well-formed names, parentheses, blanks, three-part names, #48),
+# and the wiring in RunMe.r. No network access and no packages beyond base R
+# are needed.
 #
 #   Rscript R/library/tests/test_taxon_name_guard.R      (from any directory)
 #
@@ -109,6 +111,43 @@ Expect(length(ents) > 100, sprintf('%d entries read from fix_nontaxa.r', length(
 Expect(!any(grepl('[[:space:]]', ents)),
        'no fix_nontaxa.r entry contains whitespace (such an entry can never match a cleaned name)')
 
+# ---- the Sheet guard (#48) -----------------------------------------------------
+cat('CheckSheetTaxa() on synthetic Sheet frames\n')
+Sheet <- function(taxon, mass = seq_along(taxon), source = 'Nakagawa_2014')
+  data.frame(taxon = taxon, mass_g = mass, source_mass = source, stringsAsFactors = FALSE)
+Warned <- function(expr) {            # the value and the (muffled) warning message, if any
+  w <- NULL
+  out <- withCallingHandlers(expr, warning = function(x) { w <<- conditionMessage(x); invokeRestart('muffleWarning') })
+  list(out = out, warning = w)
+}
+good <- Sheet(c('Gadus_morhua', 'Lepidostoma', 'Edaphus_blYhweissi', 'Osmerus_mordax'))
+g <- Warned(CheckSheetTaxa(good))
+Expect(identical(g$out, good) && is.null(g$warning), 'well-formed species- and genus-level names pass unchanged, without a warning')
+e <- ErrorOf(CheckSheetTaxa(Sheet(c('Gadus_morhua', 'Lepidostoma_(genus_in_Opisthokonta)'), c(1, 0.0028))))
+Expect(Has(e, '1 row(s) of the lab Sheet (BM_data)') &&
+         Has(e, "taxon 'Lepidostoma_(genus_in_Opisthokonta)'  mass_g 0.0028  source_mass 'Nakagawa_2014'"),
+       'parentheses stop the run; the row is listed with its taxon, mass and source')
+Expect(Has(e, "-> 'Lepidostoma'") && !Has(e, "'Gadus_morhua'"), 'the message shows the correction to make and does not list the well-formed row')
+e <- ErrorOf(CheckSheetTaxa(Sheet(c(NA, '', ' Gadus_morhua', 'Gadus_morhua ', 'gadus_morhua', 'Gadus morhua', 'Gadus_Morhua', 'Gadus_morhua2',
+                                    'Gadus_morhua_(L.)'))))
+Expect(Has(e, '9 row(s)'),
+       'an NA cell, an empty cell, leading or trailing blanks, a lowercase genus, a space, a capitalised epithet, a digit and a bracketed third part are all rejected')
+Expect(Has(e, "taxon '<empty>'  mass_g 1  source_mass") && Has(e, "taxon ''  mass_g 2  source_mass"), 'an NA cell is shown as <empty>')
+w <- Warned(CheckSheetTaxa(Sheet(c('Osmerus_mordax_dentex', 'Gadus_morhua'), c(30, 1), 'Burbidge_1969')))
+Expect(identical(w$out$taxon, c('Osmerus_mordax', 'Gadus_morhua')) && identical(w$out$mass_g, c(30, 1)) &&
+         identical(w$out$source_mass, rep('Burbidge_1969', 2)),
+       'a three-part name (a subspecies) folds to the species, as the source trinomials do; the other columns are untouched')
+Expect(Has(w$warning, '1 lab Sheet (BM_data) taxon name(s) have three parts') &&
+         Has(w$warning, "taxon 'Osmerus_mordax_dentex'  mass_g 30  source_mass 'Burbidge_1969'  -> 'Osmerus_mordax'") &&
+         Has(w$warning, 'write the species name in the Sheet'),
+       'with a warning that names the row and the folded name and asks for the species in the Sheet')
+Expect(Has(ErrorOf(CheckSheetTaxa(Sheet('Osmerus_mordax_dentex'), fold_trinomials = FALSE)), '1 row(s)'),
+       'fold_trinomials = FALSE makes a three-part name an error')
+Expect(Has(ErrorOf(suppressWarnings(CheckSheetTaxa(Sheet(c('Osmerus_mordax_Dentex', 'Osmerus_mordax_dentex_x', 'Osmerus_Mordax_dentex'))))), '3 row(s)'),
+       'a capitalised third part, four parts or a capitalised epithet are errors, not trinomials')
+Expect(Has(ErrorOf(CheckSheetTaxa(data.frame(taxon = 'Gadus_morhua', mass_g = 1))), 'columns taxon, mass_g and source_mass'),
+       'a frame without the three columns stops with a pointer')
+
 # ---- wiring in RunMe.r ------------------------------------------------------------
 cat('R/RunMe.r wiring\n')
 runme  <- readLines(file.path(repo, 'R', 'RunMe.r'))
@@ -120,6 +159,11 @@ Expect(length(i_src) == 1 && length(i_call) == 1,
        'RunMe.r sources check_taxon_names.r and calls CheckTaxonNames() once')
 Expect(length(i_ext) == 1 && length(i_bind) == 1 && i_ext < i_call && i_call < i_bind,
        'the call sits after RemoveExtinct() and before the section-3 bind')
+i_filt  <- grep("^ddat <- ddat\\[which\\(!is\\.na\\(ddat\\$mass_g\\)\\), 1:4\\]", runme)
+i_sheet <- grep('^ddat <- CheckSheetTaxa\\(ddat\\)', runme)
+i_adat  <- grep('^adat <- bind_rows\\(ddat\\[', runme)
+Expect(length(i_filt) == 1 && length(i_sheet) == 1 && length(i_adat) == 1 && i_filt < i_sheet && i_sheet < i_adat,
+       'RunMe.r checks the Sheet taxa (CheckSheetTaxa(), #48) after the mass filter and before binding them to the source rows')
 
 # ---- summary -------------------------------------------------------------------
 cat(sprintf('\n%d expectations, %d failed\n', n_checks, length(failures)))
