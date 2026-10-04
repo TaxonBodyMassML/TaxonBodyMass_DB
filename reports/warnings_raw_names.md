@@ -1,21 +1,21 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 10:01:53
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 10:33:18
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
 ## Summary
 
-1,124 distinct raw names (50,446 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
+1,133 distinct raw names (50,462 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
 
 | class | names | rows | records dropped | sources |
 |---|---:|---:|---:|---|
 | life_stage | 17 | 127 | 127 | Verberk_2020 (10), DeLong_etal_2010 (5), Hrycik_2024 (2) |
-| placeholder | 672 | 36,154 | 0 | Brose_etal_2018 (270), Makarieva_2008 (98), Herberstein_etal_2022 (85), DeLong_etal_2010 (57), Kendall_etal_2019 (49), Hrycik_2024 (44), DeLong_etal_2018 (27), Barnes_2008 (20), Brown_etal_2018 (19), Kinsella_etal_2020 (13), vertnet-traits-sept2016 (9), Eklof_etal_2017 (7), Hirt_etal_2017 (7), vertnet-aves-sept2016 (5), Castro_2025 (2), Chown_etal_2007 (2), Ehnes_etal_2011 (2), Killen_etal_2016 (2), McCoy_2008 (2), vertnet-fishes-sept2016 (2), Gillooly_etal_2016 (1), Hechinger_etal_2011 (1), Lane_2019 (1), Smith_2003 (1) |
+| placeholder | 675 | 36,163 | 0 | Brose_etal_2018 (270), Makarieva_2008 (98), Herberstein_etal_2022 (85), DeLong_etal_2010 (57), Kendall_etal_2019 (49), Hrycik_2024 (44), DeLong_etal_2018 (27), Barnes_2008 (20), Brown_etal_2018 (19), Kinsella_etal_2020 (13), vertnet-traits-sept2016 (12), Eklof_etal_2017 (7), Hirt_etal_2017 (7), vertnet-aves-sept2016 (5), Castro_2025 (2), Chown_etal_2007 (2), Ehnes_etal_2011 (2), Killen_etal_2016 (2), McCoy_2008 (2), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Gillooly_etal_2016 (1), Hechinger_etal_2011 (1), Lane_2019 (1), Smith_2003 (1) |
 | qualifier | 31 | 3,521 | 0 | Brose_etal_2018 (25), DeLong_etal_2018 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2) |
-| hybrid | 37 | 139 | 0 | vertnet-aves-sept2016 (23), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
+| hybrid | 41 | 144 | 0 | vertnet-aves-sept2016 (27), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
 | ambiguous | 32 | 387 | 0 | vertnet-aves-sept2016 (16), vertnet-traits-sept2016 (14), Hrycik_2024 (4), Brose_etal_2018 (3), DeLong_etal_2018 (3), Brown_etal_2018 (2) |
 | subgenus | 17 | 33 | 0 | Makarieva_2008 (5), Verberk_2020 (5), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Brose_etal_2018 (1), Pata_2025 (1), vertnet-aves-sept2016 (1) |
 | sex | 38 | 659 | 0 | Verberk_2020 (35), Brose_etal_2018 (1), DeLong_etal_2010 (1), Makarieva_2008 (1) |
-| form_strain_region | 11 | 46 | 0 | DeLong_etal_2010 (3), Makarieva_2008 (3), Brose_etal_2018 (2), Verberk_2020 (2), Kiorboe_2014 (1) |
+| form_strain_region | 13 | 48 | 0 | DeLong_etal_2010 (3), Makarieva_2008 (3), Brose_2005 (2), Brose_etal_2018 (2), Verberk_2020 (2), Kiorboe_2014 (1) |
 | size_class | 25 | 6,021 | 1,255 | Brose_etal_2018 (25) |
 | species_group | 7 | 53 | 0 | Hrycik_2024 (5), Kendall_etal_2019 (2) |
 | synonym | 10 | 35 | 0 | Makarieva_2008 (4), DeLong_etal_2018 (2), Verberk_2020 (2), vertnet-aves-sept2016 (2) |
@@ -50,13 +50,13 @@ By source: Verberk_2020 (10 names, 107 rows); Hrycik_2024 (2 names, 15 rows); De
 | `Erignathus barbatus Juveniles` | (dropped) | life_stage | 1 | Verberk_2020 |
 | `Phoca sibirica Juveniles` | (dropped) | life_stage | 1 | Verberk_2020 |
 
-## placeholder (672 names, 36,154 rows)
+## placeholder (675 names, 36,163 rows)
 
-No species-level identification (sp., spp., spec., indet., morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).
+No species-level identification (sp., spp., spec., indet., ssp., undefinable, undetermined, morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).
 
-By source: Brose_etal_2018 (270 names, 32,459 rows); Barnes_2008 (20 names, 2,601 rows); Kendall_etal_2019 (49 names, 300 rows); Eklof_etal_2017 (7 names, 194 rows); Makarieva_2008 (98 names, 144 rows); Herberstein_etal_2022 (85 names, 137 rows); DeLong_etal_2010 (57 names, 62 rows); DeLong_etal_2018 (27 names, 61 rows); Hrycik_2024 (44 names, 54 rows); Ehnes_etal_2011 (2 names, 49 rows); Brown_etal_2018 (19 names, 19 rows); Kinsella_etal_2020 (13 names, 13 rows); vertnet-traits-sept2016 (9 names, 12 rows); Chown_etal_2007 (2 names, 11 rows); Hirt_etal_2017 (7 names, 9 rows); Castro_2025 (2 names, 7 rows); vertnet-aves-sept2016 (5 names, 6 rows); vertnet-fishes-sept2016 (2 names, 5 rows); Hechinger_etal_2011 (1 names, 3 rows); Killen_etal_2016 (2 names, 2 rows); Lane_2019 (1 names, 2 rows); McCoy_2008 (2 names, 2 rows); Gillooly_etal_2016 (1 names, 1 rows); Smith_2003 (1 names, 1 rows).
+By source: Brose_etal_2018 (270 names, 32,459 rows); Barnes_2008 (20 names, 2,601 rows); Kendall_etal_2019 (49 names, 300 rows); Eklof_etal_2017 (7 names, 194 rows); Makarieva_2008 (98 names, 144 rows); Herberstein_etal_2022 (85 names, 137 rows); DeLong_etal_2010 (57 names, 62 rows); DeLong_etal_2018 (27 names, 61 rows); Hrycik_2024 (44 names, 54 rows); Ehnes_etal_2011 (2 names, 49 rows); Brown_etal_2018 (19 names, 19 rows); vertnet-traits-sept2016 (12 names, 18 rows); Kinsella_etal_2020 (13 names, 13 rows); Chown_etal_2007 (2 names, 11 rows); Hirt_etal_2017 (7 names, 9 rows); Castro_2025 (2 names, 7 rows); vertnet-aves-sept2016 (5 names, 6 rows); vertnet-fishes-sept2016 (2 names, 5 rows); Hechinger_etal_2011 (1 names, 3 rows); vertnet-mammalia-sept2016 (2 names, 3 rows); Killen_etal_2016 (2 names, 2 rows); Lane_2019 (1 names, 2 rows); McCoy_2008 (2 names, 2 rows); Gillooly_etal_2016 (1 names, 1 rows); Smith_2003 (1 names, 1 rows).
 
-The 60 names with most records (of 726):
+The 60 names with most records (of 731):
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -161,11 +161,11 @@ By source: Brose_etal_2018 (25 names, 3,510 rows); vertnet-aves-sept2016 (2 name
 | `Protoperidinium cf. divergens` | `Protoperidinium_cf` | qualifier | 1 | DeLong_etal_2018 |
 | `Pseudobodo c.f. tremulans` | `Pseudobodo_cf` | qualifier | 1 | DeLong_etal_2018 |
 
-## hybrid (37 names, 139 rows)
+## hybrid (41 names, 144 rows)
 
-A hybrid or intergrade, two names joined by x: the record is credited to the first name written (the name is cut at the x; a genus alone before it gives a genus-level record), owner decision 2026-10-04.
+A hybrid or intergrade, two names joined by x, or the word hybrid in place of the epithet (a hybrid of unrecorded parentage): the record is credited to the first name written (the name is cut at the x or before the word; a genus alone before the cut gives a genus-level record), owner decision 2026-10-04 (#38) and the default of #48.
 
-By source: vertnet-aves-sept2016 (23 names, 58 rows); vertnet-traits-sept2016 (14 names, 46 rows); Tsuboi_etal_2018 (2 names, 34 rows); vertnet-reptilia-sept2016 (1 names, 1 rows).
+By source: vertnet-aves-sept2016 (27 names, 63 rows); vertnet-traits-sept2016 (14 names, 46 rows); Tsuboi_etal_2018 (2 names, 34 rows); vertnet-reptilia-sept2016 (1 names, 1 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -179,6 +179,7 @@ By source: vertnet-aves-sept2016 (23 names, 58 rows); vertnet-traits-sept2016 (1
 | `Anas platyrhynchos x rubripes` | `Anas_platyrhynchos` | hybrid | 3 | vertnet-aves-sept2016 |
 | `Passer domesticus x hispaniolensis` | `Passer_domesticus` | hybrid | 3 | vertnet-aves-sept2016 |
 | `Tympanuchus cupido X phasianellus` | `Tympanuchus_cupido` | hybrid | 3 | vertnet-aves-sept2016 |
+| `Anas hybrid` | `Anas` | hybrid | 2 | vertnet-aves-sept2016 |
 | `Melanerpes aurifrons x hoffmannii ?` | `Melanerpes_aurifrons` | hybrid | 2 | vertnet-aves-sept2016 |
 | `Spermophilus-h richardsonii x elegans` | `Spermophilush_richardsonii` | hybrid | 2 | vertnet-traits-sept2016 |
 | `Vermivora chrysoptera x pinus` | `Vermivora_chrysoptera` | hybrid | 2 | vertnet-aves-sept2016 |
@@ -188,11 +189,13 @@ By source: vertnet-aves-sept2016 (23 names, 58 rows); vertnet-traits-sept2016 (1
 | `Centrocercus X Tympanuchus urophasianus X phasianellus` | `Centrocercus` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Colinus virginianus x cristatus` | `Colinus_virginianus` | hybrid | 1 | vertnet-traits-sept2016 |
 | `Corvus albus x ruficollis` | `Corvus_albus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Dendroica hybrid` | `Dendroica` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Icterus galbula x bullockii` | `Icterus_galbula` | hybrid | 1 | vertnet-traits-sept2016 |
 | `Lonchura cantans x striata` | `Lonchura_cantans` | hybrid | 1 | vertnet-traits-sept2016 |
 | `Lonchura X Poephila cantans x guttata` | `Lonchura` | hybrid | 1 | vertnet-traits-sept2016 |
 | `Loxia curvirostra x leucoptera` | `Loxia_curvirostra` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Melidectes belfordi x rufocrissalis` | `Melidectes_belfordi` | hybrid | 1 | vertnet-traits-sept2016 |
+| `Melospiza hybrid` | `Melospiza` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Parus atricapillus x carolinensis` | `Parus_atricapillus` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Phasianus X Chrysolo colchicus` | `Phasianus` | hybrid | 1 | vertnet-traits-sept2016 |
 | `Pheucticus ludovicianus x melan` | `Pheucticus_ludovicianus` | hybrid | 1 | vertnet-traits-sept2016 |
@@ -205,6 +208,7 @@ By source: vertnet-aves-sept2016 (23 names, 58 rows); vertnet-traits-sept2016 (1
 | `Thamnophis atratus x hammondii` | `Thamnophis_atratus` | hybrid | 1 | vertnet-reptilia-sept2016 |
 | `Tympanuchus cupido x phasianellus` | `Tympanuchus_cupido` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Uraeginthus bengalus x cyanocephalus` | `Uraeginthus_bengalus` | hybrid | 1 | vertnet-aves-sept2016 |
+| `Vermivora hybrid` | `Vermivora` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Vermivora peregrina X ruficapilla` | `Vermivora_peregrina` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Vidua purpurascens x paradisaea` | `Vidua_purpurascens` | hybrid | 1 | vertnet-aves-sept2016 |
 | `Zenaida aurita x galapagoens` | `Zenaida_aurita` | hybrid | 1 | vertnet-aves-sept2016 |
@@ -334,11 +338,11 @@ By source: Verberk_2020 (35 names, 402 rows); Brose_etal_2018 (1 names, 254 rows
 | `Orcinus orca Females` | `Orcinus_orca` | sex | 1 | Verberk_2020 |
 | `Physeter macrocephalus Females` | `Physeter_macrocephalus` | sex | 1 | Verberk_2020 |
 
-## form_strain_region (11 names, 46 rows)
+## form_strain_region (13 names, 48 rows)
 
-A form, strain, culture or population annotation is removed; the record is kept.
+A form, strain, culture or population annotation is removed; the record is kept (a form written in place of the epithet, Conochilus_colonial, folds to the genus-level record Conochilus, #48).
 
-By source: Makarieva_2008 (3 names, 19 rows); Brose_etal_2018 (2 names, 18 rows); Verberk_2020 (2 names, 4 rows); DeLong_etal_2010 (3 names, 3 rows); Kiorboe_2014 (1 names, 2 rows).
+By source: Makarieva_2008 (3 names, 19 rows); Brose_etal_2018 (2 names, 18 rows); Verberk_2020 (2 names, 4 rows); DeLong_etal_2010 (3 names, 3 rows); Brose_2005 (2 names, 2 rows); Kiorboe_2014 (1 names, 2 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -350,6 +354,8 @@ By source: Makarieva_2008 (3 names, 19 rows); Brose_etal_2018 (2 names, 18 rows)
 | `Ilybius chalconatus Bulgaria` | `Ilybius_chalconatus` | form_strain_region | 2 | Verberk_2020 |
 | `Ilybius chalconatus Spain` | `Ilybius_chalconatus` | form_strain_region | 2 | Verberk_2020 |
 | `Salpa maxima. Agg` | `Salpa_maxima` | form_strain_region | 2 | Kiorboe_2014 |
+| `Conochilus_colonial` | `Conochilus` | form_strain_region | 1 | Brose_2005 |
+| `Conochilus_solitary` | `Conochilus` | form_strain_region | 1 | Brose_2005 |
 | `Mycoplasma pulmonis UAB CTIP` | `Mycoplasma_pulmonis` | form_strain_region | 1 | DeLong_etal_2010 |
 | `Paraphysomonas imperforata (arctic)*` | `Paraphysomonas_imperforata` | form_strain_region+symbols | 1 | DeLong_etal_2010 |
 | `Paraphysomonas imperforata (newfoundland)*` | `Paraphysomonas_imperforata` | form_strain_region+symbols | 1 | DeLong_etal_2010 |

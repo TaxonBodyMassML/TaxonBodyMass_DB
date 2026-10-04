@@ -96,8 +96,9 @@ kept; `placeholder`, `qualifier`: the record leaves as a `Genus_sp` /
 `Genus_cf` marker, or the word as written, which `RemoveNonTaxa()` removes;
 `life_stage`, `size_class` for the small classes `{xs}`, `{s}`, `small`, and
 `other_drop`: the record is dropped through `DropImputed()` and logged to
-`imputed_rows.csv`; `hybrid`, `ambiguous`: the name is cut at the separator
-and the record credited to the first name written), `action` (`strip`,
+`imputed_rows.csv`; `hybrid`, `ambiguous`: the name is cut at the separator,
+or before the word `hybrid` written in place of the epithet (issue #48), and
+the record credited to the first name written), `action` (`strip`,
 `drop`, or `fold`, which cuts a whole name at the first match of the pattern
 and keeps the first two tokens before the cut, i.e. the first two tokens of
 the whole name when the pattern is anchored at its start; owner decisions of

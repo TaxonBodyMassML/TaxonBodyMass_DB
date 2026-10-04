@@ -1,4 +1,4 @@
-# Guards on the taxon names (#28, #38).
+# Guards on the taxon names (#28, #38, #48).
 #
 # CheckRawNames() runs right after FixFormatting() in section 2b of R/RunMe.r
 # and stops the run when a raw name carried a bracket group or a trailing token
@@ -72,4 +72,64 @@ CheckTaxonNames <- function(source_list) {
       call. = FALSE)
   }
   invisible(length(taxa))
+}
+
+# The lab Sheet (R/RunMe.r section 4, tab BM_data) is bound after the
+# section-2b chain and after CheckTaxonNames(), so a Sheet taxon passes
+# neither FixFormatting() nor the guard above: the cell
+# 'Lepidostoma_(genus_in_Opisthokonta)' reached the enrichment with its
+# brackets and was listed as unresolved (#48). Every Sheet taxon must already
+# be a cleaned name, 'Genus_species' or 'Genus', because the override of
+# section 4 matches Sheet names against the cleaned source names by equality:
+# a cell with brackets, whitespace, a digit, a lowercase genus or no name at
+# all overrides nothing and enters as a malformed name (one with a space has
+# no underscore and would be filed as a genus).
+#
+# CheckSheetTaxa(ddat) takes the Sheet rows that carry a mass (columns taxon,
+# mass_g, source_mass) and returns them. A three-part name,
+# 'Genus_species_subspecies' ('Osmerus_mordax_dentex' stood in BM_data until
+# 2026-10-04), is folded to the species, as the raw-name rules fold the
+# trinomials of the sources (audit/raw_name_patterns.csv, class trinomial),
+# with a warning that names the row: the override is keyed by the species
+# name, so the owner is asked to write the species in the Sheet. Every other
+# malformed taxon stops the run with the offending rows (taxon, mass_g,
+# source_mass) and a request to correct the Sheet; nothing is folded away
+# silently (#38). fold_trinomials = FALSE makes a three-part name an error too.
+sheet_trinomial_re <- '^([A-Z][A-Za-z]*_[a-z][A-Za-z]*)_[a-z][A-Za-z]*$'
+
+CheckSheetTaxa <- function(ddat, fold_trinomials = TRUE) {
+  need <- c('taxon', 'mass_g', 'source_mass')
+  if (!is.data.frame(ddat) || !all(need %in% names(ddat)))
+    stop('CheckSheetTaxa() needs the Sheet rows with the columns taxon, mass_g and source_mass', call. = FALSE)
+  taxa <- as.character(ddat$taxon)
+  Row  <- function(i, name = taxa[i]) sprintf("  taxon '%s'  mass_g %s  source_mass '%s'",
+                                              ifelse(is.na(name), '<empty>', name),
+                                              format(ddat$mass_g[i], trim = TRUE, digits = 6),
+                                              ifelse(is.na(ddat$source_mass[i]), '<empty>', as.character(ddat$source_mass[i])))
+  if (fold_trinomials) {
+    tri <- !is.na(taxa) & grepl(sheet_trinomial_re, taxa, perl = TRUE)
+    if (any(tri)) {
+      folded <- sub(sheet_trinomial_re, '\\1', taxa[tri], perl = TRUE)
+      warning(sprintf(paste0(
+        '%d lab Sheet (BM_data) taxon name(s) have three parts and were folded to the species, as the raw-name ',
+        'rules fold the trinomials of the sources; write the species name in the Sheet, which is what the ',
+        'override is keyed by:\n%s'), sum(tri),
+        paste(sprintf("%s  -> '%s'", vapply(which(tri), Row, character(1)), folded), collapse = '\n')),
+        call. = FALSE, immediate. = TRUE)
+      taxa[tri]  <- folded
+      ddat$taxon <- taxa
+    }
+  }
+  bad <- is.na(taxa) | !grepl(cleaned_name_re, taxa)
+  if (any(bad)) {
+    stop(sprintf(paste0(
+      '%d row(s) of the lab Sheet (BM_data) carry a taxon that is not Genus_species or Genus (brackets, ',
+      'whitespace, digits, a lowercase genus, a capitalised epithet, a third part that is not a lowercase ',
+      'epithet, or an empty cell). The Sheet bypasses FixFormatting(), and the override matches Sheet names ',
+      'against the cleaned source names by equality, so such a row overrides nothing and enters as a malformed ',
+      "name. Correct the Sheet (e.g. 'Lepidostoma_(genus_in_Opisthokonta)' -> 'Lepidostoma', or delete the ",
+      'row) and rerun:\n%s'), sum(bad), paste(vapply(which(bad), Row, character(1)), collapse = '\n')),
+      call. = FALSE)
+  }
+  ddat
 }

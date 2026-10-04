@@ -1,3 +1,2 @@
-"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Lithobius_cyrt","Animalia","Arthropoda","Chilopoda","Lithobiomorpha","Lithobiidae","Lithobius cyrt",TRUE,"GBIF","Lithobius","Lithobius cyrtopus",93,"ACCEPTED","Lithobiidae","Lithobiomorpha","2230461"
-"Potamothrix_bedoti","Animalia","Annelida","Clitellata","Tubificida","Naididae","Potamothrix bedoti",FALSE,"GBIF","Potamothrix","Potamothrix bedoti",99,"ACCEPTED","Naididae","Tubificida","2308604"
+"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_family","gbif_order","gbif_usageKey"
+"Lepidostoma","Viridiplantae","Streptophyta","Magnoliopsida","Gentianales","Rubiaceae","Lepidostoma",FALSE,NA,"Lepidostoma",NA,100,NA,NA,NA

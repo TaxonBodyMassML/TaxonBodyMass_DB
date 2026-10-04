@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 10:03:15
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 10:34:53
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 435 names, 4253 rows
+- Names unresolved after all enrichment stages: 426 names, 4238 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -381,7 +381,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (435 names, 4253 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (426 names, 4238 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -581,8 +581,6 @@ Anepsius_brunneus | Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 3 r
 
 Caloramphus_parvirostris | vertnet-aves-sept2016 | 3 rows
 
-Canis_undefinable | vertnet-mammalia-sept2016, vertnet-traits-sept2016 | 3 rows
-
 Cardiosis_fairmarei | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
 Centrioptera_muricata | Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 3 rows
@@ -595,8 +593,6 @@ Cyanocompsa_cyanea | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
 
 Meliphaga_flaviventer | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
 
-Microtus_ssp | vertnet-traits-sept2016 | 3 rows
-
 Mionectes_mcconnelli | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
 
 Oedalis_instillatus | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
@@ -606,8 +602,6 @@ Oik_opleura | Ikeda_2014 | 3 rows
 Omatophoca_rossi | Verberk_2020 | 3 rows
 
 Periplaneta_orientalis | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
-
-Peromyscus_ssp | vertnet-mammalia-sept2016, vertnet-traits-sept2016 | 3 rows
 
 Petroica_cucullata | vertnet-aves-sept2016 | 3 rows
 
@@ -771,8 +765,6 @@ Ballistura_takeshitai | Hishi_etal_2019 | 1 row
 
 Ballistura_yasakaensis | Hishi_etal_2019 | 1 row
 
-Bathylagidae | Froese_2025 | 1 row
-
 Bradornis_semipartitus | vertnet-aves-sept2016 | 1 row
 
 Bucco_pulmentum | vertnet-aves-sept2016 | 1 row
@@ -839,10 +831,6 @@ Clubiona_barroana | Herberstein_etal_2022 | 1 row
 
 Concinnia_spinosa | Meiri_2018 | 1 row
 
-Conochilus_colonial | Brose_2005 | 1 row
-
-Conochilus_solitary | Brose_2005 | 1 row
-
 Coracina_maesi | vertnet-aves-sept2016 | 1 row
 
 Crocidura_occidenlalis | Herberstein_etal_2022 | 1 row
@@ -856,8 +844,6 @@ Cyphoderus_hozawai | Hishi_etal_2019 | 1 row
 Dactylonax_tatei | Herberstein_etal_2022 | 1 row
 
 Dactylonax_trivirgata | Herberstein_etal_2022 | 1 row
-
-Dendroica_hybrid | vertnet-aves-sept2016 | 1 row
 
 Desoria_arborea | Hishi_etal_2019 | 1 row
 
@@ -965,7 +951,7 @@ Lasioglossum_qudrinotatum | Kendall_etal_2019 | 1 row
 
 Leognathus_equulus | Brose_2005 | 1 row
 
-Lepidostoma_(genus_in_Opisthokonta) | Nakagawa_2014 | 1 row
+Lepidostoma | Nakagawa_2014 | 1 row
 
 Leucoptera_myricki | AndersonGillooly_2017 | 1 row
 
@@ -1018,8 +1004,6 @@ Megascops_flammeolus | vertnet-aves-sept2016 | 1 row
 Melecta_punctata | Kendall_etal_2019 | 1 row
 
 Meliphaga_flava | vertnet-aves-sept2016 | 1 row
-
-Melospiza_hybrid | vertnet-aves-sept2016 | 1 row
 
 Metacyrba_labyrinthea | Herberstein_etal_2022 | 1 row
 
@@ -1244,8 +1228,6 @@ Tyroglyphus_linterni | Brown_etal_2018 | 1 row
 Uria_aagle | vertnet-aves-sept2016 | 1 row
 
 Urostrophus_grilli | Meiri_2024 | 1 row
-
-Vermivora_hybrid | vertnet-aves-sept2016 | 1 row
 
 Vermivora_rubricapilla | vertnet-aves-sept2016 | 1 row
 

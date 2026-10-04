@@ -3,8 +3,9 @@
 # (subgenus removed, sex stripped, form/strain/size stripped, synonym and
 # authority stripped, trinomial folded, placeholder and qualifier markers,
 # life stage and small size class dropped and logged, species group folded,
-# hybrid and alternative names credited to the first name, an uncovered bracket
-# stopping the run), the report writer, the format of the rename tables
+# hybrid and alternative names credited to the first name, the status words of
+# #48 in the epithet position, an uncovered bracket stopping the run), the
+# report writer, the format of the rename tables
 # (fix_misspellings.r, fix_nontaxa.r; the keys of fix_taxonomy_ranks.r match
 # the `species` column and are checked separately), a regression list of 60
 # ordinary raw names whose output must not change, and the wiring in RunMe.r.
@@ -114,6 +115,9 @@ Expect(identical(Cleaned(c('Conochilus (colonial)', 'Conochilus (solitary)', 'Pa
                    'Spirulina_platensis', 'Anacystis_nidulans', 'Salpa_maxima')),
        'colony forms, isolate origins, populations, strain codes and the salp aggregate generation are removed')
 Expect(identical(LogOf('Conochilus (colonial)')$class, 'form_strain_region'), 'logged as class form_strain_region')
+Expect(identical(Cleaned(c('Conochilus_colonial', 'Conochilus_solitary', 'Conochilus solitary')), c('Conochilus', 'Conochilus', 'Conochilus')) &&
+         identical(LogOf('Conochilus_colonial')$class, 'form_strain_region') && identical(LogOf('Conochilus_colonial')$action, 'fold'),
+       'the Brose_2005 spellings without brackets fold to the genus-level record Conochilus too (class form_strain_region, action fold, #48)')
 Expect(identical(Cleaned(c('Lithobius aeruginosus {l}', 'Lithobius curtipes {m}', 'Allaiulus nitidus {xl}', 'Lumbricus rubellus {xxl}',
                            'Octolasion tyrtaeum{xxxl}', 'Harpactea lepida large', 'Genus epitheton medium')),
                  c('Lithobius_aeruginosus', 'Lithobius_curtipes', 'Allaiulus_nitidus', 'Lumbricus_rubellus', 'Octolasion_tyrtaeum',
@@ -181,6 +185,14 @@ Expect(nrow(rn) == 0,
        "after FixMisspellings() and RemoveNonTaxa() no placeholder survives: 'Lagopus spec.' and 'Gomphonema type D' are removed like every other marker (their rename rules to genus-level records went with #43)")
 Expect(nrow(RemoveNonTaxa(Frame(c('Gomphonema_type', 'Lagopus_spec', 'Hydrobiosis_type')))) == 0,
        'RemoveNonTaxa() removes the _type and _spec markers directly (#43)')
+ph48 <- c('Canis undefinable', 'Microtus ssp', 'Peromyscus ssp', 'Genus undetermined', 'Genus undet.', 'Genus subsp.', 'Genus SSP', 'Genus unidentifiable')
+Expect(identical(Cleaned(ph48), c('Canis_sp', 'Microtus_sp', 'Peromyscus_sp', 'Genus_sp', 'Genus_sp', 'Genus_sp', 'Genus_sp', 'Genus_sp')),
+       'ssp, subsp, undefinable, undetermined, undet. and unidentifiable in the epithet position are placeholders: the marker Genus_sp (#48)')
+r <- Run(ph48, 'vertnet-traits-sept2016')
+Expect(all(r$log$class == 'placeholder') && !any(r$log$dropped) && is.null(r$imputed) && nrow(RemoveNonTaxa(FixMisspellings(r$out))) == 0,
+       'logged as class placeholder and removed by RemoveNonTaxa(): not turned into genus-only records (#43, option B)')
+Expect(identical(Cleaned(c('Acanthiza pusilla ssp. apicalis', 'Nostoc commune ssp.')), c('Acanthiza_pusilla', 'Nostoc_commune')),
+       'ssp. after a binomial is still the trinomial marker, not a placeholder')
 ql <- c('Zercon cf gurensis', 'Lithobius cf. mutabilis', 'Pseudobodo c.f. tremulans', 'Arietellus cf.', 'Procapritermes nr. sandakanensis',
         'Macrocheles cf. opacus aciculatus', 'Scolopendrella cf. subnuda {s}')
 Expect(identical(Cleaned(ql), c('Zercon_cf', 'Lithobius_cf', 'Pseudobodo_cf', 'Arietellus_cf', 'Procapritermes_nr',
@@ -236,6 +248,13 @@ Expect(identical(r$out$taxon, c('Anas_platyrhynchos', 'Tympanuchus_phasianellus'
 Expect(is.null(r$imputed) && !any(r$log$dropped) && all(r$log$class[r$log$raw != 'Zygiella x-notata'] == 'hybrid') &&
          all(r$log$action[r$log$class == 'hybrid'] == 'fold'),
        'nothing dropped or logged as imputed; the hybrids are logged as class hybrid, action fold (owner decision 2026-10-04)')
+r <- Run(c('Anas hybrid', 'Dendroica hybrid', 'Melospiza hybrid', 'Vermivora hybrid', 'Anas_hybrid', 'Anas hybrid?', 'Anas platyrhynchos hybrid',
+           'Chloephaga hybrida'), 'vertnet-aves-sept2016')
+Expect(identical(r$out$taxon, c('Anas', 'Dendroica', 'Melospiza', 'Vermivora', 'Anas', 'Anas', 'Anas_platyrhynchos', 'Chloephaga_hybrida')),
+       'the word hybrid in place of the epithet credits the record to the bare genus, a genus-level record (#48); after a binomial it credits the species; the epithet hybrida is a name')
+Expect(sum(r$log$class == 'hybrid') == 7 && all(r$log$action[r$log$class == 'hybrid'] == 'fold') && !any(r$log$dropped) && is.null(r$imputed) &&
+         !('Chloephaga hybrida' %in% r$log$raw),
+       'the seven hybrid labels are logged as class hybrid, action fold; nothing is dropped; Chloephaga hybrida is not logged')
 r <- Run(c('Pipilo maculatus,  ocai', 'Empidonax traillii/alnorum', 'Lithobius cyrt/mutabi', 'Coccinella septempunctata and Harpalus pennsylvanicus',
            'Sitobion avenae, Metopolophium dirhodum', 'Musculium/Sphaerium', 'Pacific herring, Clupea palasi', 'Skate, Raja orinacea',
            'Diptera larvae/pupae', 'Petrochelidon; Hirundo fulva; rustica', 'Nausithoe rubra Vanhoffen, 1902', 'Myotis velifer /'), 'SrcA')
