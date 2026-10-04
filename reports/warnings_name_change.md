@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 10:03:15
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 10:34:53
 
 
-## Species name changed during enrichment (5656 rows)
+## Species name changed during enrichment (5654 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -2080,8 +2080,6 @@ Chlidonias albostriatus; Sterna albostriata -> Chlidonias albostriatus [GBIF]
 Chlidonias hybrida; Chlidonias hybridus -> Chlidonias hybrida [GBIF]
 
 Chlidonias niger; Chlidonias nigra -> Chlidonias niger [GBIF]
-
-Chloephaga hybrida; Anas hybrid -> Chloephaga hybrida [GBIF]
 
 Amazilia candida -> Chlorestes candida [GBIF]
 
@@ -7222,8 +7220,6 @@ Handleyomys rostratus; Oryzomys rostratus -> Oryzomys rostratus [GBIF]
 Handleyomys saturatior; Oryzomys saturatior -> Oryzomys saturatior [GBIF]
 
 Oryzorictes hova; Oryzoryctes hova -> Oryzorictes hova [GBIF]
-
-Osmerus mordax dentex; Osmerus dentex -> Osmerus dentex [GBIF]
 
 Moolgarda cunnesius -> Osteomugil cunnesius [GBIF]
 

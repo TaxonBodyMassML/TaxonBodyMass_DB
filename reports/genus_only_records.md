@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-04 10:03:15
+# Genus-only records -- 2026-10-04 10:34:53
 
 Input records identified to genus only (a cleaned name without an underscore) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -6,28 +6,28 @@ Input records identified to genus only (a cleaned name without an underscore) ar
 
 | quantity | value |
 | --- | ---: |
-| genus-only rows | 23642 |
-| distinct bare names | 839 |
-| names resolved to an accepted genus | 670 |
-| ... rows | 14352 |
-| distinct accepted genera | 666 |
+| genus-only rows | 23649 |
+| distinct bare names | 840 |
+| names resolved to an accepted genus | 671 |
+| ... rows | 14359 |
+| distinct accepted genera | 667 |
 | names resolved above genus | 167 |
 | ... rows | 9249 |
 | names unresolved | 2 |
 | ... rows | 41 |
 | autotroph genera removed | 18 |
 | ... rows | 313 |
-| genus x source values (after the autotroph filter) | 713 |
+| genus x source values (after the autotroph filter) | 716 |
 | values collapsed as copies | 2 |
-| genus-only records (pseudo-taxa) | 648 |
+| genus-only records (pseudo-taxa) | 649 |
 | records more than 1 log10 from the genus's species mean | 47 |
 
 ## Resolution by stage
 
 | match_type | outcome | names | rows |
 | --- | --- | ---: | ---: |
-| cache | genus | 466 | 7410 |
-| EXACT | genus | 203 | 6941 |
+| cache | genus | 467 | 7416 |
+| EXACT | genus | 203 | 6942 |
 | EXACT | above genus | 123 | 6558 |
 | checklists | above genus | 39 | 2038 |
 | curated | above genus | 2 | 411 |
@@ -279,7 +279,7 @@ The name is an accepted genus (kept as such) but most checklists use it for a gr
 | Beneckea | Vibrio | SYNONYM | Bacteria | Vibrionaceae | 1 | Makarieva_2008 |
 | Branhamella | Moraxella | SYNONYM | Bacteria | Moraxellaceae | 2 | Makarieva_2008 |
 | Clethrionomys | Myodes | SYNONYM | Animalia | Cricetidae | 1 | vertnet-traits-sept2016 |
-| Dendroica | Setophaga | SYNONYM | Animalia | Parulidae | 535 | Brose_etal_2018 |
+| Dendroica | Setophaga | SYNONYM | Animalia | Parulidae | 536 | Brose_etal_2018, vertnet-aves-sept2016 |
 | Dolichorhynchus | Neodolichorhynchus | SYNONYM | Animalia | Telotylenchidae | 16 | Brose_etal_2018 |
 | Eniochthonius | Hypochthoniella | SYNONYM | Animalia | Eniochthoniidae | 1 | Cohen_2014 |
 | Enteromorpha | Ulva | SYNONYM | Plantae | Ulvaceae | 13 | Brose_etal_2018 |
