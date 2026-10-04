@@ -1,7 +1,8 @@
 # Fetch body mass data from rdataretriever datasets and save to Rdata.
 # Requires Python + retriever package (see README Prerequisites).
 # Called from RunMe.r when DataRetrieve = TRUE.
-# Depends on: wd_rdata, FixFormatting(), FixMisspellings(), RemoveNonTaxa()
+# Depends on: wd_rdata, wd_db, FixFormatting(), FixMisspellings(), RemoveNonTaxa(),
+# StackBrose2005(), DropPlaceholders(), ApplyUnitActions() (R/library/foodweb_units.r)
 
 # Patch rdataretriever::fetch for retriever 2.x compatibility.
 # In retriever 2.x, dataset_names() returns a flat character vector, but the
@@ -82,16 +83,25 @@ bir$source_mass <- 'Lislevand_etal_2007'
 # Brose U, Cushing L, Berlow EL, Jonsson T, Banasek-Richter C, Bersier LF, 
 # Blanchard JL, Brey T, Carpenter SR, Blandenier MF, Cohen JE. 
 # BODY SIZES OF CONSUMERS AND THEIR RESOURCES: Ecological Archives 
-# E086‐135. Ecology. 2005 Sep;86(9):2545-.
+# E086-135. Ecology. 2005 Sep;86(9):2545-.
+# Consumer and resource rows are stacked with the adult-or-unspecified
+# life-stage filter of the GATEWAy parser (StackBrose2005(),
+# R/library/foodweb_units.r), group-level placeholder values (a mean mass
+# shared by >= 5 taxa of one study) are dropped as imputed, and the per-study
+# actions of sources/databases/DataRetriever/brose2005_units.csv are applied:
+# the two Woodward-group stream studies (Broadstone Stream, Mill Stream) report
+# dry mass and are converted to wet grams with brose2005_units_groups.csv,
+# every other study is kept as reported (issue #14, owner decisions 2026-10-03).
 ppb <- rdataretriever::fetch('predator-prey-body-ratio')[[1]]
-ppb <- ppb[which(ppb$taxonomy_consumer != '' & ppb$taxonomy_resource != ''), ]
-ppb1 <- ppb[, c('taxonomy_consumer', 'mean_mass_g_consumer')]
-ppb2 <- ppb[, c('taxonomy_resource', 'mean_mass_g_resource')]
-colnames(ppb1) <- colnames(ppb2) <- c('taxon', 'mass_g')
-ppb <- bind_rows(ppb1, ppb2)
-ppb <- ppb[which(!is.na(ppb$mass_g) & ppb$mass_g > 0), ]
-ppb$n <- 1
-ppb$source_mass <- 'Brose_2005'
+ppb <- StackBrose2005(ppb)
+ppb <- DropPlaceholders(ppb, 'study', 'Brose_2005')
+ppb_units  <- read.csv(file.path(wd_db, 'DataRetriever', 'brose2005_units.csv'),
+                       stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+ppb_groups <- read.csv(file.path(wd_db, 'DataRetriever', 'brose2005_units_groups.csv'),
+                       stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+ppb <- ApplyUnitActions(ppb, ppb_units, key = 'study', groups = ppb_groups,
+                        group_key = 'study', label = 'Brose_2005')
+ppb <- ppb[, c('taxon', 'mass_g', 'n', 'source_mass')]
 
 # pantheria: order and family available
 # Jones KE, Bielby J, Cardillo M, Fritz SA, O'Dell J, Orme CD, Safi K, 

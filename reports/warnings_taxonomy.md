@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-03 14:55:46
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-03 16:52:36
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 170 rows
+- Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 
@@ -50,7 +50,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (170 rows)
+## Low GBIF confidence (75-89) (160 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -58,7 +58,7 @@ Acrocephalus_palustris [conf=85]
 
 Actenoides_lindsayi [conf=85]
 
-Actinia_equina [conf=80]
+Actina_equina [conf=80]
 
 Actitis_macularius [conf=80]
 
@@ -80,8 +80,6 @@ Alectoris_chukar [conf=85]
 
 Pternonemobius_fasciatus [conf=84]
 
-Anguilla_dieffenbachii [conf=80]
-
 Anthus_pratensis [conf=85]
 
 Anurogryllus_arboreus [conf=85]
@@ -98,17 +96,11 @@ Blattela_germanica [conf=85]
 
 Beockella_delicata [conf=85]
 
-Boremysis_arctica [conf=85]
-
-Bougainvillea_ramosa [conf=84]
-
 Caecosagitta_macrocephala [conf=85]
 
 Caligavis_obscura [conf=84]
 
 Callipepla_gambelii [conf=85]
-
-Camylaspis_maculata [conf=85]
 
 Cardiapoda_placenta [conf=85]
 
@@ -158,8 +150,6 @@ Cyanocitta_cristata [conf=85]
 
 Cymberemaeus_cymba [conf=85]
 
-Hypocyphtus_discoideus [conf=84]
-
 Cyphocaris_challengeri [conf=85]
 
 Cyrtonyx_montezumae [conf=85]
@@ -187,8 +177,6 @@ Oporornis_tolmiei [conf=84]
 Geres_filamentosis [conf=85]
 
 Globoquadriana_pachyderma [conf=80]
-
-Glycimeris_glycimeris [conf=85]
 
 Glyphorynchus_spirurus [conf=85]
 
@@ -228,8 +216,6 @@ Picoides_villosus [conf=84]
 
 Limnodromus_griseus [conf=85]
 
-Pseudoeurythoe_paucibranchiata [conf=84]
-
 Notoacmaea_scutum [conf=84]
 
 Gonocephalus_robinsonii [conf=84]
@@ -253,8 +239,6 @@ Salina_affinis [conf=81]
 Chelodactylus_macropterus [conf=84]
 
 Neochmia_modesta [conf=85]
-
-Neogloboquadriana_pachyderma [conf=85]
 
 Neosiluris_ater [conf=85]
 
@@ -305,8 +289,6 @@ Phylidonyris_novaehollandiae [conf=85]
 Piliocolobus_preussi [conf=85]
 
 Pogonomyrmex_maricopa [conf=82]
-
-Prodiames_olivacea [conf=85]
 
 Pseudoautomeris_salmonea [conf=85]
 
@@ -375,8 +357,6 @@ Triaenogeius_scupturatus [conf=80]
 Trypanosoma_lewisi [conf=84]
 
 Tympanuchus_cupido [conf=85]
-
-Umbonua_ovicellata [conf=85]
 
 Undinula_vulgaris [conf=85]
 
