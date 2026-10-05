@@ -21,6 +21,7 @@
 "DeLong_etal_2010","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",5,5,523
 "DeLong_etal_2018","mass source code: alternate taxon, % adult mass or genus/order average",1097,285,876
 "Faurby_etal_2018","Mass.Method Imputed or As relative of suggested similar size",204,204,5273
+"Ghaderi_2025","juvenile life stage (J1-J4): not adult records",14,5,559
 "Hoehler_etal_2023","genus-level cell size (Comments)",7,5,4413
 "Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
 "Hudson_2013","nestling/chick study (Appendix S6 title): not adult records",63,4,1435

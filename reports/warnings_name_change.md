@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 19:42:50
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 21:06:52
 
 
-## Species name changed during enrichment (5652 rows)
+## Species name changed during enrichment (5674 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -2379,6 +2379,8 @@ Claravis godefrida -> Claravis geoffroyi [GBIF]
 
 Claravis mondetoura; Paraclaravis mondetoura -> Claravis mondetoura [GBIF]
 
+Clarkus koreanus; Clarkus papillatus -> Clarkus papillatus [GBIF]
+
 Axociella nidificata -> Clathria nidificata [GBIF]
 
 Microciona prolifera -> Clathria prolifera [GBIF]
@@ -2418,6 +2420,10 @@ Buthraupis eximia; Cnemathraupis eximia -> Cnemathraupis eximia [GBIF]
 Cnemophilus loriae; Loria loriae -> Cnemophilus loriae [GBIF]
 
 Cnemoscopus rubrirostris; Cnemoscopus chrysogaster -> Cnemoscopus rubrirostris [GBIF]
+
+Cobbonchus longicaudatus -> Cobbonchulus longicaudatus [GBIF]
+
+Cobbonchus macrampulla -> Cobbonchus macrampula [GBIF]
 
 Cobitis granoei -> Cobitis sibirica [GBIF]
 
@@ -2478,6 +2484,8 @@ Columbina inca; Scardefella inca; Scardafella inca -> Columbina inca [GBIF]
 Columbina passerina; Columbigallina passerina -> Columbina passerina [GBIF]
 
 Colymbetes fusca -> Colymbetes fuscus [GBIF]
+
+Comiconchus trionchus; Miconchus trionchus -> Comiconchus trionchus [GBIF]
 
 Compsophis infralineatus; Geodipsas infralineata -> Compsophis infralineatus [GBIF; NCBI]
 
@@ -4921,6 +4929,14 @@ Iole charlottae; Iole olivacea -> Iole olivacea [GBIF]
 
 Ixos palawanensis; Iole palawanensis -> Iole palawanensis [GBIF]
 
+Iotonchus derreni -> Iotonchulus darreni [GBIF]
+
+Iotonchulus longicaudatus; Iotonchus longicaudatus -> Iotonchulus longicaudatus [GBIF]
+
+Iotonchus khani -> Iotonchus chantaburensis [GBIF]
+
+Iotonchus parabasiodontus -> Iotonchus parabasidontus [GBIF]
+
 Irena cyanogastra; Irena cyanogaster -> Irena cyanogastra [GBIF]
 
 Opisthotropis boonsongi -> Isanophis boonsongi [GBIF]
@@ -6167,6 +6183,8 @@ Mico melanurus; Callithrix melanura -> Mico melanurus [GBIF]
 
 Mico nigriceps; Callithrix nigriceps -> Mico nigriceps [GBIF]
 
+Miconchus koreanus -> Miconchus japonicus [GBIF]
+
 Marmosa alstoni; Micoureus alstoni -> Micoureus alstoni [GBIF]
 
 Marmosa constantiae; Micoureus constantiae -> Micoureus constantiae [GBIF]
@@ -6387,6 +6405,8 @@ Corophium uenoi -> Monocorophium uenoi [GBIF]
 
 Tomocerus modificatus -> Monodontocerus modificatus [GBIF]
 
+Mononchus oryzae; Mononchus truncatus -> Mononchus truncatus [GBIF]
+
 Monticola cinclorhynchus; Monticola cinclorhyncha -> Monticola cinclorhynchus [GBIF]
 
 Monticola imerina; Monticola imerinus -> Monticola imerina [GBIF]
@@ -6550,6 +6570,8 @@ Myiothlypis signata; Basileuterus signatus -> Myiothlypis signata [GBIF]
 Myiotriccus ornatus; Myiotriccus phoenicurus -> Myiotriccus ornatus [GBIF]
 
 Haplochromis anaphyrmus -> Mylochromis anaphyrmus [GBIF]
+
+Mylonchulus agriculturae; Mylonchulus brachyuris -> Mylonchulus brachyuris [GBIF]
 
 Myleus schomburgkii -> Myloplus schomburgkii [GBIF]
 
@@ -7429,6 +7451,8 @@ Galagoides zanzibaricus; Galago zanzibaricus; Paragalago zanzibaricus -> Paragal
 
 Paragaleus longicaudatus -> Paragaleus tengi [GBIF]
 
+Parahadronchus shakili; Parahadronchus shakilli -> Parahadronchus shakili [GBIF]
+
 Heterorhabdus farrani -> Paraheterorhabdus farrani [GBIF]
 
 Hucho perryi; Parahucho perryi -> Parahucho perryi [GBIF]
@@ -7453,7 +7477,15 @@ Melomys rubex; Paramelomys rubex -> Paramelomys rubex [GBIF]
 
 Paramisgurnus dabryanus; Misgurnus dabryanus -> Paramisgurnus dabryanus [GBIF]
 
+Paramononchus abscondtus -> Paramononchus absconditus [GBIF]
+
 Murexia rothschildi; Paramurexia rothschildi -> Paramurexia rothschildi [GBIF]
+
+Mylonchulus andrassyi -> Paramylonchulus andrassyi [GBIF]
+
+Mylonchulus mulveyi; Paramylonchulus lapidus; Paramylonchulus mulveyi -> Paramylonchulus mulveyi [GBIF]
+
+Mylonchulus paraindex -> Paramylonchulus paraindex [GBIF]
 
 Parapasiphaea sulcatifrons; Parapasiphae sulcatifrons -> Parapasiphae sulcatifrons [GBIF]
 
@@ -7488,6 +7520,10 @@ Paremballonura atrata; Emballonura atrata -> Paremballonura atrata [GBIF]
 Eucalanus attenuatus; Pareucalanus attenuatus -> Pareucalanus attenuatus [GBIF]
 
 Parisotoma notabilis; Isotoma notabilis -> Parisotoma notabilis [GBIF; NCBI]
+
+Parkellus parkus; Perkellus parkus -> Parkellus parkus [GBIF]
+
+Coomansus zschokkei; Parkellus zschokkei -> Parkellus zschokkei [GBIF]
 
 Seiurus motacilla; Parkesia motacilla -> Parkesia motacilla [GBIF]
 
@@ -8385,6 +8421,10 @@ Prinia atrogularis; Prinia khasiana -> Prinia atrogularis [GBIF]
 
 Prionace glauca; Prionace gluaca -> Prionace glauca [GBIF]
 
+Prionchulus ferox; Prionchulus muscorum; Prionchulus oleksandri; Prionchulus pachydermis; Prionchulus prasadi; Prionchulus ukhrum -> Prionchulus muscorum [GBIF]
+
+Prionchulus pinophillus -> Prionchulus pinophilus [GBIF]
+
 Prioniturus montanus; Prioniturus waterstradti -> Prioniturus montanus [GBIF]
 
 Prionops plumatus; Prionops plumata -> Prionops plumatus [GBIF]
@@ -8426,6 +8466,8 @@ Profelis aurata; Caracal aurata -> Profelis aurata [GBIF]
 Phaeoprogne tapera; Progne tapera -> Progne tapera [GBIF]
 
 Hapalemur simus; Prolemur simus -> Prolemur simus [GBIF]
+
+Promiconchus siddiqii -> Promiconchus incultus [GBIF]
 
 Protaphorurodes tomuraushiensis -> Protaphorurodes tomuraushensis [GBIF]
 
@@ -10806,6 +10848,8 @@ Tropidodryas serra; Philodryas serra -> Tropidodryas serra [GBIF]
 Tropiocolotes scortecci; Tropiocolotes scorteccii -> Tropiocolotes scorteccii [GBIF]
 
 Tropistethus holosericeus -> Tropistethus holosericus [GBIF]
+
+Anatonchus genovi -> Truxonchus genovi [GBIF]
 
 Pinnixa chaetopterana -> Tubicolixa chaetopterana [GBIF]
 
