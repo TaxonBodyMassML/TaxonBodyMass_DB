@@ -9,7 +9,10 @@
 #                                        LabelWithConversion() appended after ';'
 #   BuildProvenance(records, ...)        TaxonBodyMass_Provenance.csv.gz: one row per
 #                                        species x source label x reference (hop,
-#                                        provenance_type, primary_*), conversion-factor
+#                                        provenance_type, primary_*; match_status
+#                                        'unmatched_key' for a key the reference list
+#                                        lacks, 'uningested' for a source without a
+#                                        primary_references.csv), conversion-factor
 #                                        rows and lab-Sheet rows
 #   CheckCitations(...)                  every primary_bibcite has a bib entry, every CiteID
 #                                        a Sheet row, every accepted row a DOI or an
@@ -174,7 +177,8 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
       type[is.na(pi)] <- 'unknown'
       ov <- !is.na(g$prov_type) & g$prov_type %in% provenance_types
       type[ov] <- g$prov_type[ov]
-      status <- prim$match_status[pi]; status[is.na(pi)] <- 'unmatched_key'
+      status <- prim$match_status[pi]
+      status[is.na(pi)] <- ifelse(g$source_label[is.na(pi)] %in% prim$source_label, 'unmatched_key', 'uningested')
       resolved <- !is.na(pi) & prim$match_status[pi] %in% c('certain', 'approved', 'nodoi_approved')
       out$keyed <- Row(g, type, n, ref_role = role,
                        primary_cite_id = ifelse(resolved, prim$cite_id[pi], NA_character_),
@@ -279,6 +283,7 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
                refs_self = sum(pr$match_status %in% 'self'), refs_rejected = sum(pr$match_status %in% 'rejected'),
                refs_unverified = sum(is.na(pr$match_status)),
                unmatched_key_links = sum(p$n_records[p$match_status %in% 'unmatched_key']),
+               uningested_links    = sum(p$n_records[p$match_status %in% 'uningested']),
                stringsAsFactors = FALSE)
   }))
   if (is.null(cov)) cov <- data.frame()

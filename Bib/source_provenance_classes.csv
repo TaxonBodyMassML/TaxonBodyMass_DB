@@ -4,7 +4,7 @@ AnAge,database,database_record,,"tier A2; HAGR BIBLIO ids (biblio.php, all trait
 AndersonGillooly_2017,compilation,unknown,,"tier C; RefM -> Wayback appendix pdf (238 entries, mostly compilations)"
 Anunciacao_etal_2025,compilation,unknown,,tier B; DOI URLs in-row
 Barnes_2008,compilation,unknown,,tier A2; Reference short keys (+ per-row length-mass conversion refs) -> metadata.htm Literature Cited
-Brocher_etal_2025,derived,derived_allometry,,tier A2; numeric Reference -> S1_references.docx; mass from body length with the Sohlstrom et al. 2018 equations (not yet in the bib)
+Brocher_etal_2025,derived,derived_allometry,,tier A2; numeric Reference -> S1_references.docx; mass from body length with the Sohlstrom et al. 2018 equations. TODO (owner decision 2026-10-04): verify the equation reference like a primary reference with role equation in a later round and fill equation_bibcite
 Brose_2005,compilation,unknown,,tier A2; DataRetriever; Body size reference column
 Brose_etal_2018,compilation,unknown,,"tier B; link.citation keys -> NEE SI Table 1 (23 keys, 18 DOIs)"
 Brown_etal_2018,compilation,compilation_terminal,,"tier E; Table 1 from McCoy & Gillooly 2008 Appendix S1 (now the source McCoy_2008), Table 2 untraceable"
@@ -27,7 +27,7 @@ Hebert_etal_2016,compilation,unknown,,tier A0 pilot; Ref.dm codes -> references.
 Hechinger_etal_2011,primary,measured_in_source,,tier F; mixed: BodySizeEstimation per row to become prov_type
 Herberstein_etal_2022,compilation,unknown,,tier A0 pilot; in-row fullReference with DOI
 Hirt_etal_2017,compilation,unknown,,tier A2; mass.ref -> MOESM1 ESM pdf
-Hishi_etal_2019,derived,derived_allometry,,"tier E; family-level length-weight equations (Tanaka 1970, Petersen 1975; not yet in the bib); no per-record reference"
+Hishi_etal_2019,derived,derived_allometry,,"tier E; family-level length-weight equations (Tanaka 1970, Petersen 1975); no per-record reference. TODO (owner decision 2026-10-04): verify the two equation references like primary references with role equation in a later round and fill equation_bibcite"
 Hoehler_etal_2023,compilation,unknown,,tier A1; Reference Code -> xlsx Refs sheet (21 compilation codes); hop 2 via Hudson 2013 / Makarieva 2008 later
 Hrycik_2024,primary,measured_in_source,,tier F
 Ikeda_2014,compilation,unknown,,"tier B; ref_keys = author-year keys of the ESM; Crossref reference[] of 10.1007/s00227-014-2540-5 (101 refs, 89 DOIs)"

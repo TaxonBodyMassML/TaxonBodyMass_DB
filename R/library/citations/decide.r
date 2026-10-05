@@ -312,6 +312,14 @@ WritePendingQueue <- function(prim, candidates, path, queued_at = format(Sys.Dat
 
 ValidateDecision <- function(decision) grepl(queue_decision_pattern, trimws(decision), perl = TRUE)
 
+# The two parts of a decision: the action ('1', 'doi:10...', 'nodoi', ...) and
+# the year override (integer or NA) of a ':year=YYYY' suffix.
+SplitDecision <- function(decision) {
+  d <- trimws(decision)
+  m <- regmatches(d, regexec('^(.*?)(?::year=([0-9]{4}))?$', d, perl = TRUE))[[1]]
+  list(action = m[2], year = if (nzchar(m[3])) as.integer(m[3]) else NA_integer_)
+}
+
 # Apply the owner's decisions: every queue row with a non-empty `decision`
 # must have decided_by and an ISO decided_at, match the grammar and refer to an
 # existing reference; `1|2|3` take that candidate's DOI (approved /
@@ -330,8 +338,11 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     if (!ValidateDecision(q$decision)) { problems <- c(problems, sprintf('%s: decision %s does not match the grammar', key, shQuote(q$decision))); next }
     if (is.na(q$decided_by) || !nzchar(q$decided_by)) problems <- c(problems, sprintf('%s: decided_by is empty', key))
     if (is.na(q$decided_at) || is.na(as.Date(q$decided_at, format = '%Y-%m-%d'))) problems <- c(problems, sprintf('%s: decided_at is not an ISO date', key))
-    if (grepl('^[123]$', q$decision) && (is.na(q[[paste0('c', q$decision, '_doi')]]) || !nzchar(q[[paste0('c', q$decision, '_doi')]])))
-      problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, q$decision))
+    act <- SplitDecision(q$decision)$action
+    if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
+      problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
+    if (!is.na(SplitDecision(q$decision)$year) && !grepl('^([123]|doi:)', act))
+      problems <- c(problems, sprintf('%s: a year override needs a candidate or doi: decision', key))
   }
   if (length(problems) > 0)
     stop('pending_citations.csv: ', paste(problems, collapse = '; '), call. = FALSE)
@@ -341,9 +352,11 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     if (length(i) != 1) next           # a decision for another source's reference
     if (!is.na(prim$match_status[i]) && prim$match_status[i] %in% c('approved', 'nodoi_approved', 'rejected') &&
         !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at) next   # already applied
-    dec <- trimws(q$decision)
+    parts <- SplitDecision(q$decision)
+    dec <- parts$action
     prim$decided_by[i] <- q$decided_by; prim$decided_at[i] <- q$decided_at
     prim$tool_version[i] <- citations_tool_version
+    prim$year_override[i] <- parts$year
     if (grepl('^[123]$', dec)) {
       prim$doi[i] <- CleanDOI(q[[paste0('c', dec, '_doi')]]); prim$match_status[i] <- 'approved'
       prim$match_reason[i] <- 'owner_candidate'

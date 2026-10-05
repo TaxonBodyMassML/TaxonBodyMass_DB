@@ -197,9 +197,11 @@ Expect(Has(ErrorOf(BuildProvenance(records[, -5], prim, classes, citeids, accept
 min_rec <- records[, c('genus', 'species', 'taxon', 'source_label', 'origin')]
 Expect(nrow(BuildProvenance(min_rec, prim, classes, citeids, accepted)) == 8 && all(BuildProvenance(min_rec, prim, classes, citeids, accepted)$provenance_type[BuildProvenance(min_rec, prim, classes, citeids, accepted)$source_mass == 'Comp'] == 'unknown'),
        'records without ref_keys / conversion_ids / prov_type columns work (registry defaults only)')
-Expect(nrow(BuildProvenance(records, EmptyPrimaryReferences(), classes, citeids, accepted)) == 14 &&
-         all(BuildProvenance(records, EmptyPrimaryReferences(), classes, citeids, accepted)$match_status[!is.na(records$ref_keys[1])] %in% c('unmatched_key', NA, 'self')),
-       'without any primary_references every key is unmatched')
+un <- BuildProvenance(records, EmptyPrimaryReferences(), classes, citeids, accepted)
+Expect(nrow(un) == 14 && all(un$match_status[un$genus == 'Aa' & un$origin == 'pipeline'] == 'uningested') &&
+         sum(un$match_status %in% 'uningested') == 5 && !any(un$match_status %in% 'unmatched_key'),
+       "without a primary_references.csv for the source every key is 'uningested', not 'unmatched_key'")
+Expect(all(c('unmatched_key', 'uningested') %in% provenance_only_statuses) && !any(provenance_only_statuses %in% match_statuses), 'the provenance-only statuses are not reference statuses')
 
 # ---- the checks ---------------------------------------------------------------------------------------------
 cat('CheckCitations(), WriteCitationsReport()\n')
@@ -213,7 +215,7 @@ cov <- ck$coverage
 Expect(identical(cov$source_label, c('Comp', 'Deriv', 'Hech', 'NoEq', 'Prim')) && cov$n_species[cov$source_label == 'Comp'] == 3 &&
          cov$n_record_links[cov$source_label == 'Comp'] == 9 && cov$pct_resolved[cov$source_label == 'Comp'] == round(100 * 3 / 9, 1) &&
          cov$refs_total[cov$source_label == 'Comp'] == 4 && cov$refs_resolved[cov$source_label == 'Comp'] == 2 && cov$refs_pending[cov$source_label == 'Comp'] == 1 &&
-         cov$refs_self[cov$source_label == 'Comp'] == 1 && cov$unmatched_key_links[cov$source_label == 'Comp'] == 1 &&
+         cov$refs_self[cov$source_label == 'Comp'] == 1 && cov$unmatched_key_links[cov$source_label == 'Comp'] == 1 && cov$uningested_links[cov$source_label == 'Comp'] == 0 &&
          cov$pct_resolved[cov$source_label == 'Deriv'] == 100 && cov$pct_resolved[cov$source_label == 'Prim'] == 0 && cov$refs_total[cov$source_label == 'Prim'] == 0,
        'per-source coverage: Comp 3 of 9 record links resolved (conversion rows excluded), the equation counts for Deriv, a primary source has no hop-1 links')
 ck2 <- CheckCitations(prov, bib[bib$key != 'Doyle:2007aa', ], citeids[citeids$CiteID != 'Eq_2016', ], prim, sheet_bibcites = character())
@@ -229,7 +231,7 @@ WriteCitationsReport(rp, ck, classes = classes, unmapped_sheet = c('Foo_2001 -> 
 lines <- readLines(rp)
 Expect(startsWith(lines[1], '# Citation and provenance warnings') && Has(lines, '## Totals') && Has(lines, '- provenance rows: 14 (3 species); distinct primary CiteIDs: 7; unresolved references (pending / not_found): 1; unverified references: 0') &&
          Has(lines, '## Problems') && Has(lines, '- 1 source label(s) without a Bibcite: LabX') && Has(lines, '- Foo_2001 -> Foo:2001aa') && Has(lines, '## Per-source coverage') &&
-         Has(lines, '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 1 | 0 | 1 | 0 | 0 | 1 |'),
+         Has(lines, '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
        'the report has the totals, the problems, the unmapped Sheet rows and the coverage table with the class column')
 WriteCitationsReport(rp, CheckCitations(prov[0, ], bib, citeids, prim[0, ]))
 Expect(Has(readLines(rp), '(none)'), 'an empty check writes (none) sections')

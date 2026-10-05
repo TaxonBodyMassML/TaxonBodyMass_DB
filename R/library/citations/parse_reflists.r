@@ -175,7 +175,7 @@ DetectSelf <- function(raw_citation, compiler = NA_character_) {
 EmptyPrimaryReferences <- function() {
   out <- as.data.frame(setNames(rep(list(character()), length(primary_reference_columns)),
                                 primary_reference_columns), stringsAsFactors = FALSE)
-  out$n_records <- integer(); out$parsed_year <- integer(); out$title_sim <- numeric()
+  out$n_records <- integer(); out$parsed_year <- integer(); out$title_sim <- numeric(); out$year_override <- integer()
   for (col in c('author_match', 'year_match', 'container_match', 'volume_match', 'pages_match', 'is_retracted'))
     out[[col]] <- logical()
   out
@@ -267,6 +267,7 @@ ReadPrimaryReferences <- function(path) {
   d <- d[, primary_reference_columns]
   d$n_records   <- as.integer(d$n_records)
   d$parsed_year <- as.integer(d$parsed_year)
+  d$year_override <- as.integer(d$year_override)
   d$title_sim   <- as.numeric(d$title_sim)
   for (col in c('author_match', 'year_match', 'container_match', 'volume_match', 'pages_match', 'is_retracted'))
     d[[col]] <- as.logical(d[[col]])

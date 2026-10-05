@@ -162,16 +162,17 @@ if (Flag('--bib')) {
       yr <- CrossrefYear(w)
       key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
              else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]))
-      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key)
+      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, r$year_override)
       known_keys <- union(known_keys, key)
       all_prim$bibcite[i] <- key
       all_prim$cite_id[i] <- CiteIDFor(fam, yr, r$doi, key, known_ids)
     } else if (r$match_status == 'nodoi_approved') {
-      key <- if (!is.na(r$bibcite)) r$bibcite else BibKeyFor(r$parsed_author1, r$parsed_year, NA, known_keys)
+      surname <- FirstOfAuthorList(r$parsed_author1)
+      key <- if (!is.na(r$bibcite)) r$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
       if (!key %in% curated$key) entries[key] <- BuildBibEntryNoDOI(r, key, r$decided_by, r$decided_at)
       known_keys <- union(known_keys, key)
       all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(r$parsed_author1, r$parsed_year, NA, key, known_ids)
+      all_prim$cite_id[i] <- CiteIDFor(surname, r$parsed_year, NA, key, known_ids)
     } else if (r$match_reason %in% 'manual_bib') {
       if (!r$bibcite %in% curated$key) stop('manual bibcite ', r$bibcite, ' (', r$source_label, ' ', r$native_key, ') is not in ', basename(cfg$curated_bib))
       all_prim$cite_id[i] <- CiteIDFor(sub(':.*$', '', r$bibcite), sub('^.*:(\\d{4}).*$', '\\1', r$bibcite), NA, r$bibcite, known_ids)

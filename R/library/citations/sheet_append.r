@@ -71,10 +71,12 @@ CrossrefAuthorList <- function(work) {
 StripTags <- function(x) { x <- gsub('<[^>]+>', '', x, perl = TRUE); x <- gsub('&amp;', '&', x, fixed = TRUE); trimws(gsub('\\s+', ' ', x, perl = TRUE)) }
 
 # 'Authors (Year). Title. Container, volume(issue), pages. https://doi.org/DOI'
-# from a Crossref work record and nothing else.
-FormatCitationText <- function(work) {
+# from a Crossref work record and nothing else (`year_override`: the owner's
+# recorded ':year=' decision, see BuildBibEntry()).
+FormatCitationText <- function(work, year_override = NA_integer_) {
   if (is.null(work) || is.null(work[['DOI']])) stop('FormatCitationText(): a Crossref work record with a DOI is required', call. = FALSE)
   au <- CrossrefAuthorList(work); yr <- CrossrefYear(work)
+  if (!is.na(year_override)) yr <- as.integer(year_override)
   title <- StripTags(CrossrefTitle(work))
   cont <- if (length(work[['container-title']]) > 0) StripTags(work[['container-title']][[1]]) else
           if (!is.null(work[['publisher']])) StripTags(work[['publisher']]) else NA_character_
@@ -88,13 +90,21 @@ FormatCitationText <- function(work) {
   paste(parts, collapse = ' ')
 }
 
-# The Citation cell of a DOI-less, owner-approved entry, from the parsed fields.
+# The Citation cell of a DOI-less, owner-approved entry, from the parsed
+# fields: the author field as approved (a surname, or a BibTeX 'A and B and C'
+# list written 'A, B, & C'), never an invented 'et al.'.
 FormatCitationTextNoDOI <- function(row) {
   row <- as.list(row)
   src <- row$parsed_container
   if (!is.na(row$parsed_volume)) src <- paste0(src, ', ', row$parsed_volume)
   if (!is.na(row$parsed_pages)) src <- paste0(src, ', ', row$parsed_pages)
-  parts <- c(if (!is.na(row$parsed_author1)) paste0(row$parsed_author1, ' et al.'),
+  au <- NA_character_
+  if (!is.na(row$parsed_author1)) {
+    names <- trimws(strsplit(row$parsed_author1, '\\s+and\\s+', perl = TRUE)[[1]])
+    au <- if (length(names) == 1) names else if (length(names) == 2) paste(names, collapse = ' & ') else
+          paste0(paste(names[-length(names)], collapse = ', '), ', & ', names[length(names)])
+  }
+  parts <- c(if (!is.na(au)) au,
              paste0('(', if (is.na(row$parsed_year)) 'n.d.' else row$parsed_year, ').'),
              if (!is.na(row$parsed_title)) paste0(sub('[.]$', '', row$parsed_title), '.'),
              if (!is.na(src)) paste0(src, '.'), 'No DOI.')
@@ -108,7 +118,7 @@ BuildSheetRows <- function(prim, works, added = format(Sys.Date()), added_by = c
   ok <- prim$match_status %in% c('certain', 'approved', 'nodoi_approved') & !is.na(prim$bibcite) & !is.na(prim$cite_id)
   rows <- lapply(which(ok), function(i) {
     r <- prim[i, ]
-    cit <- if (!is.na(r$doi) && !is.null(works[[r$doi]])) FormatCitationText(works[[r$doi]])
+    cit <- if (!is.na(r$doi) && !is.null(works[[r$doi]])) FormatCitationText(works[[r$doi]], r$year_override)
            else if (r$match_status == 'nodoi_approved') FormatCitationTextNoDOI(r)
            else NA_character_
     data.frame(CiteID = r$cite_id, Bibcite = paste0('\\citep{', r$bibcite, '}'), Citation = cit,

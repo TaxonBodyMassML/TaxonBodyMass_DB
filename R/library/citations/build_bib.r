@@ -49,6 +49,13 @@ FoldSurnameForKey <- function(surname) {
   s
 }
 
+# The first surname of an owner-approved author field ('Ikeda and Hirakawa and
+# Imamura' -> 'Ikeda'; 'Kremer' -> 'Kremer'), for keys and CiteIDs of nodoi entries.
+FirstOfAuthorList <- function(author) {
+  a <- trimws(strsplit(as.character(author), '\\s+and\\s+', perl = TRUE)[[1]])[1]
+  if (is.na(a)) NA_character_ else sub(',.*$', '', a)
+}
+
 TwoLetterSuffixes <- function() {
   l <- letters
   as.vector(t(outer(l, l, paste0)))    # aa, ab, ..., az, ba, ...
@@ -145,8 +152,10 @@ FormatBibEntry <- function(type, key, fields) {
 
 # A BibTeX entry built from a Crossref work record (the `message` of
 # /works/<doi>) and nothing else: author, title, the container by type,
-# volume, number, pages, year, doi. Returns the entry text.
-BuildBibEntry <- function(work, key) {
+# volume, number, pages, year, doi. `year_override` (an owner decision
+# ':year=YYYY' recorded in primary_references.csv) replaces the record's year
+# and is noted in the entry; nothing else is ever typed in. Returns the entry text.
+BuildBibEntry <- function(work, key, year_override = NA_integer_) {
   if (is.null(work) || is.null(work[['DOI']])) stop('BuildBibEntry(): a Crossref work record with a DOI is required', call. = FALSE)
   type <- unname(crossref_type_map[work[['type']]]); if (is.null(type) || is.na(type)) type <- 'misc'
   container <- if (length(work[['container-title']]) > 0) work[['container-title']][[1]] else NA_character_
@@ -164,6 +173,10 @@ BuildBibEntry <- function(work, key) {
   f$number <- if (!is.null(work[['issue']])) EscapeLaTeX(work[['issue']]) else NA_character_
   f$pages  <- if (!is.null(work[['page']])) gsub('-+', '--', EscapeLaTeX(work[['page']])) else NA_character_
   yr <- CrossrefYear(work)
+  if (!is.na(year_override)) {
+    f$note <- sprintf('Year %s by owner decision (the Crossref record says %s)', year_override, if (is.na(yr)) 'none' else yr)
+    yr <- as.integer(year_override)
+  }
   f$year <- if (is.na(yr)) NA_character_ else as.character(yr)
   f$doi  <- CleanDOI(work[['DOI']])
   FormatBibEntry(type, key, f)

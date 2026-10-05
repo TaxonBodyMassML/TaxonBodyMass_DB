@@ -225,9 +225,13 @@ Expect(nrow(queue3) == 2 && identical(queue3$native_key, c('9', '9')) && queue3$
 Expect(Has(ErrorOf(ReadPendingQueue({ f <- tempfile(fileext = '.csv'); writeLines('a,b', f); f })), 'lacks column'), 'a queue file without the schema stops')
 
 cat('ValidateDecision(), ApplyQueueDecisions()\n')
-Expect(all(ValidateDecision(c('1', '2', '3', 'doi:10.1007/bf00392514', 'manual:Ikeda:1986aa', 'manual:Van-der-Meer:1994aa', 'nodoi', 'self', 'drop', ' drop '))) &&
-         !any(ValidateDecision(c('4', '0', 'doi:abc', 'doi:10.1/', 'manual:', 'manual:1abc', 'yes', '', 'nodoi ok'))),
-       'the decision grammar: 1|2|3, doi:10..., manual:<Key>, nodoi, self, drop')
+Expect(all(ValidateDecision(c('1', '2', '3', 'doi:10.1007/bf00392514', 'manual:Ikeda:1986aa', 'manual:Van-der-Meer:1994aa', 'nodoi', 'self', 'drop', ' drop ',
+                                '1:year=1976', 'doi:10.1007/bf00392514:year=1986', 'nodoi:year=1976'))) &&
+         !any(ValidateDecision(c('4', '0', 'doi:abc', 'doi:10.1/', 'manual:', 'manual:1abc', 'yes', '', 'nodoi ok', '1:year=76', '1:year=1976x', '1:yr=1976'))),
+       'the decision grammar: 1|2|3, doi:10..., manual:<Key>, nodoi, self, drop, with an optional :year=YYYY suffix')
+Expect(identical(SplitDecision('1:year=1976'), list(action = '1', year = 1976L)) && identical(SplitDecision('doi:10.1007/bf00392514:year=1986'), list(action = 'doi:10.1007/bf00392514', year = 1986L)) &&
+         identical(SplitDecision(' nodoi '), list(action = 'nodoi', year = NA_integer_)),
+       'SplitDecision() separates the action from the year override')
 Q <- function(key, decision, by = 'MN', at = '2026-10-06', c1 = '10.1007/bf00392514', c2 = NA, c1_sim = '0.906', c1_services = 'crossref;openalex') {
   row <- as.data.frame(as.list(setNames(rep(NA_character_, length(pending_queue_columns)), pending_queue_columns)), stringsAsFactors = FALSE)
   row$source_label <- 'Kiorboe_2013'; row$native_key <- key; row$decision <- decision; row$decided_by <- by; row$decided_at <- at
@@ -265,6 +269,15 @@ Expect(Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')),
        'every problem is reported in one stop')
 again <- ApplyQueueDecisions(Q('6', '1'), a)
 Expect(identical(again, a), 'an already applied decision (same decided_at) is a no-op')
+yo <- ApplyQueueDecisions(Q('9', '1:year=1976', c1 = '10.23860/diss-2825'), base)
+Expect(yo$match_status[yo$native_key == '9'] == 'approved' && yo$doi[yo$native_key == '9'] == '10.23860/diss-2825' && yo$year_override[yo$native_key == '9'] == 1976L &&
+         is.na(yo$year_override[yo$native_key == '6']),
+       "'1:year=1976' approves the candidate and records the year override on that row only")
+yo2 <- ApplyQueueDecisions(Q('6', 'doi:10.1007/bf00392514:year=1985'), base, cfg)
+Expect(yo2$match_status[yo2$native_key == '6'] == 'approved' && yo2$match_reason[yo2$native_key == '6'] == 'owner_doi' && yo2$year_override[yo2$native_key == '6'] == 1985L,
+       'a doi: decision takes the year override too')
+Expect(Has(ErrorOf(ApplyQueueDecisions(Q('9', 'nodoi:year=1976'), base)), 'a year override needs a candidate or doi: decision'),
+       'a year override on nodoi / self / drop stops')
 Expect(identical(ApplyQueueDecisions(Q('6', NA), base), base) && identical(ApplyQueueDecisions(Q('6', '  '), base), base), 'rows without a decision change nothing')
 
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))

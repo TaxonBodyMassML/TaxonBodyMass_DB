@@ -123,6 +123,10 @@ provenance_classes <- c('primary', 'compilation', 'derived', 'database', 'live',
 provenance_types   <- c('measured_in_source', 'compiled_from', 'compiled_via_compilation',
                         'compilation_terminal', 'derived_allometry', 'derived_imputed',
                         'database_record', 'conversion_factor', 'unknown')
+# match_status values of the provenance table that are not reference statuses:
+# 'unmatched_key' (a key the source's reference list lacks), 'uningested' (the
+# source has no primary_references.csv yet; owner decision 2026-10-04)
+provenance_only_statuses <- c('unmatched_key', 'uningested')
 # hop of a provenance row by its type (issue #1, 1.3)
 provenance_type_hop <- c(measured_in_source = 0L, compiled_from = 1L, compiled_via_compilation = 2L,
                          compilation_terminal = 1L, derived_allometry = 1L, derived_imputed = 1L,
@@ -131,8 +135,14 @@ provenance_type_hop <- c(measured_in_source = 0L, compiled_from = 1L, compiled_v
 role_provenance_type <- c(measurement = 'compiled_from', compilation = 'compilation_terminal',
                           equation = 'derived_allometry', conversion = 'conversion_factor',
                           database = 'database_record', self = 'measured_in_source')
-# the decision grammar of the review queue (issue #1, 1.5), validated by ApplyQueueDecisions()
-queue_decision_pattern <- '^(1|2|3|doi:10\\.[0-9]{4,9}/\\S+|manual:[A-Za-z][A-Za-z0-9:_-]*|nodoi|self|drop)$'
+# the decision grammar of the review queue (issue #1, 1.5), validated by
+# ApplyQueueDecisions(). A candidate or doi: decision may carry ':year=YYYY'
+# (owner decision 2026-10-04): the accepted DOI's bib entry and Citation cell
+# take that year instead of the service record's (a digitised thesis deposited
+# with its 2025 scan date); the override is kept in the queue row's decision
+# and in primary_references.csv `year_override`, and BuildBibEntry() applies it
+# only from there.
+queue_decision_pattern <- '^(1|2|3|doi:10\\.[0-9]{4,9}/\\S+?|manual:[A-Za-z][A-Za-z0-9:_-]*|nodoi|self|drop)(:year=(1[6-9][0-9]{2}|20[0-9]{2}))?$'
 
 # ---- column schemas of the tracked files --------------------------------------
 # sources/databases/<Src>/primary_references.csv (issue #1, 1.1)
@@ -143,10 +153,13 @@ primary_reference_columns <- c(
   'match_status', 'match_reason', 'services',
   'title_sim', 'author_match', 'year_match', 'container_match', 'volume_match', 'pages_match',
   'openalex_id', 'is_retracted', 'editorial_notice', 'verified_at', 'tool_version',
-  'decided_by', 'decided_at', 'notes')
+  'decided_by', 'decided_at', 'year_override', 'notes')
 # the columns the owner may edit by hand (everything else is written by the tool)
 primary_reference_owner_columns <- c('role', 'parsed_author1', 'parsed_year', 'parsed_title',
                                      'parsed_container', 'parsed_volume', 'parsed_pages', 'notes')
+# For a `nodoi` entry parsed_author1 may hold the full author list in BibTeX
+# form ('Ikeda and Hirakawa and Imamura') when the owner approved it; the
+# field is a query input only until then.
 
 # Bib/pending_citations.csv (issue #1, 1.5)
 pending_candidate_fields <- c('doi', 'title', 'author1', 'year', 'container', 'title_sim', 'services')

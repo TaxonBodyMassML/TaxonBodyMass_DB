@@ -113,6 +113,10 @@ st <- BuildBibEntry(Mk('journal-article', subtitle = list('With a subtitle'), `c
 Expect(Field(st, 'title') == 'A Title \\& more: With a subtitle', 'a subtitle is appended to the title')
 Expect(Has(ErrorOf(BuildBibEntry(list(type = 'book'), 'X')), 'Crossref work record with a DOI is required') && Has(ErrorOf(BuildBibEntry(NULL, 'X')), 'required'),
        'no record or no DOI: stop (nothing typed ever becomes an entry)')
+yo <- BuildBibEntry(w, 'Ikeda:1986ab', year_override = 1985L)
+Expect(Field(yo, 'year') == '1985' && Field(yo, 'note') == 'Year 1985 by owner decision (the Crossref record says 1986)' && Field(yo, 'doi') == '10.1007/bf00392514' &&
+         Field(e, 'year') == '1986' && is.na(Field(e, 'note')),
+       'a recorded year override replaces the year and is noted in the entry; without one the record\'s year stands')
 
 cat('BuildBibEntryNoDOI()\n')
 Row <- function(author1 = 'Kremer', year = 1976L, title = 'The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay',
@@ -129,6 +133,10 @@ bo <- BuildBibEntryNoDOI(Row(container = 'John Wiley & Sons'), 'Kremer:1976ac', 
 Expect(startsWith(bo, '@book{') && Field(bo, 'publisher') == 'John Wiley \\& Sons', 'a container without volume or pages: @book with an escaped publisher')
 mi <- BuildBibEntryNoDOI(Row(container = NA, author1 = NA, year = NA), 'anon:2000aa', 'MN', '2026-10-06')
 Expect(startsWith(mi, '@misc{') && is.na(Field(mi, 'author')) && is.na(Field(mi, 'year')) && Field(mi, 'title') == Row()$parsed_title, 'nothing but a title: @misc')
+al <- BuildBibEntryNoDOI(Row(author1 = 'Ikeda and Hirakawa and Imamura', container = 'Plankton Biology and Ecology', volume = '45', pages = '31-44', year = 1998L), 'Ikeda:1998aa', 'owner', '2026-10-04')
+Expect(Field(al, 'author') == 'Ikeda and Hirakawa and Imamura' && startsWith(al, '@article{'), 'an owner-approved author list in BibTeX form is kept as the author field')
+Expect(FirstOfAuthorList('Ikeda and Hirakawa and Imamura') == 'Ikeda' && FirstOfAuthorList('Kremer') == 'Kremer' && FirstOfAuthorList('Doe, J. and Roe, R.') == 'Doe' && is.na(FirstOfAuthorList(NA)),
+       'FirstOfAuthorList() gives the first surname of an author field for keys and CiteIDs')
 
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')
