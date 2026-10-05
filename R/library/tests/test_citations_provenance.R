@@ -4,7 +4,8 @@
 # synthetic registries; LoadPrimaryReferences() on a temporary source tree;
 # SplitSourceMass() against the conversion CiteIDs of mass_conversion.r;
 # BuildProvenance() on synthetic records covering lab-Sheet rows, keyed
-# records (resolved, pending, unmatched, self, a compilation reference),
+# records (resolved, pending, unmatched, self, a compilation reference), hop 2
+# through a reference that is itself a database source,
 # keyless records (registry defaults, an allometry equation, a primary
 # source, a prov_type override) and conversion factors; CheckCitations() and
 # WriteCitationsReport(); and the wiring in RunMe.r / enrich_genus.r. Base R
@@ -202,6 +203,63 @@ Expect(nrow(un) == 14 && all(un$match_status[un$genus == 'Aa' & un$origin == 'pi
          sum(un$match_status %in% 'uningested') == 5 && !any(un$match_status %in% 'unmatched_key'),
        "without a primary_references.csv for the source every key is 'uningested', not 'unmatched_key'")
 Expect(all(c('unmatched_key', 'uningested') %in% provenance_only_statuses) && !any(provenance_only_statuses %in% match_statuses), 'the provenance-only statuses are not reference statuses')
+
+# ---- hop 2: a reference that is itself a database source ----------------------------------------------------
+cat('BuildProvenance() hop 2\n')
+# Comp2 cites C (resolved by DOI to the label Inter, whose curated entry carries that DOI), B (resolved by bib key to
+# the label Term2, a label without a primary_references.csv) and M (an ordinary measurement). Inter's own records: for
+# Aa bb the keys i1 (certain, Doyle) and i2 (pending); for Cc dd the key iS (self); none for Ee ff.
+classes2 <- rbind(classes, Reg(source_label = c('Comp2', 'Inter', 'Term2'), class = 'compilation', default_provenance_type = 'unknown', equation_bibcite = NA, notes = NA))
+citeids2 <- rbind(citeids, Reg(CiteID = c('Comp2', 'Inter', 'Term2', 'Other_1999'), Bibcite = c('Comp2:2022aa', 'Inter:2007aa', 'Term2:2010aa', 'Other:1999aa'),
+                               doi = c('10.1/comp2', '10.1/INTER', NA, '10.1/other')))
+prim2 <- rbind(P('Comp2', c('C', 'B', 'M'), status = c('certain', 'approved', 'certain'), doi = c('10.1/inter', NA, '10.1/other'),
+                 bibcite = c(NA, 'Term2:2010aa', NA), cite_id = c(NA, NA, 'Other_1999'), reason = c('doi_resolves', 'manual_bib', 'two_service_agreement')),
+               P('Inter', c('i1', 'i2', 'iS'), status = c('certain', 'pending', 'self'), doi = c('10.1/doyle', NA, NA),
+                 bibcite = c('Doyle:2007aa', NA, NA), cite_id = c('Doyle_2007', NA, NA), role = c('measurement', 'measurement', 'self')))
+records2 <- rbind(R('Aa', 'bb', 'Comp2', ref_keys = 'C'), R('Aa', 'bb', 'Comp2', ref_keys = 'C'), R('Aa', 'bb', 'Comp2', ref_keys = 'M'),
+                  R('Aa', 'bb', 'Inter', ref_keys = 'i1; i2'),
+                  R('Cc', 'dd', 'Comp2', ref_keys = 'C'), R('Cc', 'dd', 'Inter', ref_keys = 'iS'),
+                  R('Ee', 'ff', 'Comp2', ref_keys = 'C'), R('Ee', 'ff', 'Comp2', ref_keys = 'B'),
+                  R('Ee', 'ff', 'Comp2', ref_keys = 'C', prov_type = 'compiled_from'))
+prov2 <- BuildProvenance(records2, prim2, classes2, citeids2, accepted)
+c2 <- prov2[prov2$source_mass == 'Comp2', ]
+Expect(identical(names(prov2), provenance_columns) && nrow(c2) == 6, sprintf('the hop-2 fixture gives %d Comp2 rows', nrow(c2)))
+h2 <- c2[c2$genus == 'Aa' & c2$provenance_type == 'compiled_via_compilation', ]
+Expect(nrow(h2) == 1 && h2$hop == 2L && h2$via_cite_id == 'Inter' && h2$primary_cite_id == 'Doyle_2007' && h2$primary_bibcite == 'Doyle:2007aa' &&
+         h2$primary_doi == '10.1/doyle' && h2$ref_role == 'measurement' && h2$match_status == 'certain' && h2$n_records == 2L,
+       'a reference matched by DOI to a label whose record of the species resolves: hop 2, compiled_via_compilation, via the label, the label\'s primary reference, two records')
+Expect(!any(c2$genus == 'Aa' & c2$provenance_type == 'compiled_via_compilation' & is.na(c2$primary_cite_id)),
+       'the intermediate\'s pending key gives no hop-2 row')
+m <- c2[c2$genus == 'Aa' & c2$primary_cite_id %in% 'Other_1999', ]
+Expect(nrow(m) == 1 && m$provenance_type == 'compiled_from' && m$hop == 1L && is.na(m$via_cite_id), 'an ordinary measurement reference beside it is unchanged')
+sf <- c2[c2$genus == 'Cc', ]
+Expect(nrow(sf) == 1 && sf$provenance_type == 'compiled_from' && sf$hop == 1L && sf$ref_role == 'measurement' && sf$primary_cite_id == 'Inter' &&
+         sf$primary_bibcite == 'Inter:2007aa' && sf$primary_doi == '10.1/INTER' && is.na(sf$via_cite_id) && sf$match_status == 'certain',
+       'the intermediate measured the species itself (self): compiled_from citing the intermediate at hop 1')
+tm <- c2[c2$genus == 'Ee' & c2$ref_role %in% 'compilation' & c2$primary_cite_id %in% 'Inter', ]
+Expect(nrow(tm) == 1 && tm$provenance_type == 'compilation_terminal' && tm$hop == 1L && tm$ref_role == 'compilation' && tm$primary_bibcite == 'Inter:2007aa' &&
+         is.na(tm$via_cite_id) && tm$match_status == 'certain',
+       'no resolved intermediate reference for the species: compilation_terminal citing the intermediate')
+tb <- c2[c2$genus == 'Ee' & c2$primary_cite_id %in% 'Term2', ]
+Expect(nrow(tb) == 1 && tb$provenance_type == 'compilation_terminal' && tb$ref_role == 'compilation' && tb$primary_bibcite == 'Term2:2010aa' && tb$match_status == 'approved',
+       'a reference matched by bib key to a label without a primary_references.csv: compilation_terminal citing the label')
+ovr <- c2[c2$genus == 'Ee' & c2$provenance_type == 'compiled_from', ]
+Expect(nrow(ovr) == 1 && ovr$hop == 1L && is.na(ovr$primary_cite_id) && ovr$primary_doi == '10.1/inter' && is.na(ovr$via_cite_id) && ovr$ref_role == 'measurement',
+       'a record-level prov_type override is left alone (the reference as resolved, no intermediate)')
+it <- prov2[prov2$source_mass == 'Inter', ]
+Expect(nrow(it) == 3 && sum(it$provenance_type == 'compiled_from') == 2 && sum(it$provenance_type == 'measured_in_source') == 1,
+       'the intermediate\'s own rows are untouched')
+il <- IntermediateReferences(records2, prim2, 'Inter')
+Expect(nrow(il) == 2 && all(il$label == 'Inter') && identical(sort(il$i_status), c('certain', 'self')), 'IntermediateReferences(): accepted and self references only, one row per species x reference')
+Expect(identical(MatchIntermediateLabel(c('Inter', NA, NA, NA), c(NA, 'Term2:2010aa', NA, NA), c(NA, NA, '10.1/inter', '10.1/none'),
+                                        classes2$source_label, citeids2$Bibcite[match(classes2$source_label, citeids2$CiteID)],
+                                        citeids2$doi[match(classes2$source_label, citeids2$CiteID)]),
+                 c('Inter', 'Term2', 'Inter', NA)),
+       'MatchIntermediateLabel(): by CiteID, bib key, DOI (case-insensitive), else NA')
+prov_no <- BuildProvenance(records2, prim2[prim2$source_label != 'Inter', ], classes2, citeids2, accepted)
+Expect(all(prov_no$provenance_type[prov_no$source_mass == 'Comp2' & prov_no$primary_cite_id %in% 'Inter'] == 'compilation_terminal') &&
+         sum(prov_no$source_mass == 'Comp2' & prov_no$primary_cite_id %in% 'Inter') == 3 && !any(prov_no$provenance_type == 'compiled_via_compilation'),
+       'without the intermediate\'s primary_references.csv every such record is terminal at the intermediate (no hop-2 row)')
 
 # ---- the checks ---------------------------------------------------------------------------------------------
 cat('CheckCitations(), WriteCitationsReport()\n')

@@ -38,6 +38,11 @@ Expect(identical(CleanDOI(c('https://doi.org/10.4319/LO.2013.58.5.1843', 'doi:10
 Expect(identical(ExtractDOI(c('Brain 45(2), 96-109. doi:10.1159/000113543', 'no doi here', 'see https://doi.org/10.1016/j.jembe.2006.12.010)')),
                  c('10.1159/000113543', NA, '10.1016/j.jembe.2006.12.010')),
        'ExtractDOI finds an embedded DOI and ignores a closing bracket')
+Expect(identical(ExtractDOI(c('Physiology, 56(1), 1-5. doi:10.1016/0300-9629(77)90123-4.', '(see 10.1016/0306-4565(92)90025-B))', NA, 'none')),
+                 c('10.1016/0300-9629(77)90123-4', '10.1016/0306-4565(92)90025-b', NA, NA)) && identical(ExtractDOI(c(NA, 'none')), c(NA_character_, NA_character_)),
+       'ExtractDOI keeps the parentheses of older DOIs, drops only unbalanced closing brackets, and survives a vector without any DOI')
+Expect(identical(ExtractDOI('Journal of Mammalogy, 81(2), 578-585. doi:10.1644/1545-1542(2000)081<0578:TBAMOT>2.0.CO;2'), '10.1644/1545-1542(2000)081<0578:tbamot>2.0.co;2'),
+       'ExtractDOI keeps the angle brackets and the trailing ;2 of a SICI DOI')
 h <- CitationHashKey(c('Taylor, G. M., Nol, E., & Boire, D. (1995). Brain regions', 'taylor g m nol e boire d 1995 brain regions', NA))
 Expect(grepl('^h:[0-9a-f]{8}$', h[1]) && h[1] == h[2] && is.na(h[3]), 'the hash key depends on the normalised string only')
 
@@ -173,6 +178,11 @@ Expect(nrow(inrow$references) == 2 && inrow$references$n_records[inrow$reference
          sum(inrow$references$n_records) == 3 && inrow$references$raw_doi[grepl('Taylor', inrow$references$raw_citation)] == '10.1159/000113543' &&
          length(inrow$keys) == 4 && is.na(inrow$keys[4]) && inrow$keys[1] == inrow$keys[2],
        'in-row citations: distinct normalised strings become hashed keys with record counts and embedded DOIs')
+inrow2 <- ParseInRowCitations(c('Taylor, G. M. (1995). Brain. J 1: 1-2.', 'Taylor, G. M. (1995). Brain. J 1: 1-2.', 'Other, A. (2000). X. Y 2: 3-4.', NA),
+                              labels = c('Taylor, 1995', 'Taylor 1995', NA, NA))
+Expect('note' %in% names(inrow2$references) && inrow2$references$note[grepl('Taylor', inrow2$references$raw_citation)] == 'in-text: Taylor, 1995' &&
+         is.na(inrow2$references$note[grepl('Other', inrow2$references$raw_citation)]) && !'note' %in% names(inrow$references),
+       'the optional in-text labels become the note of the first record\'s form; no note column without labels')
 Expect(identical(DetectSelf(c('This study', 'Ikeda (unpublished data)', 'Vinagre unpublished', 'Doyle et al. 2007', 'present study, own data'), 'Ikeda'),
                  c(TRUE, TRUE, FALSE, FALSE, TRUE)),
        'self: this study / own data / the compiler\'s unpublished data, not another author\'s unpublished data')

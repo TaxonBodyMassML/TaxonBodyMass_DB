@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-04 19:29:33
+# Source de-duplication summary -- 2026-10-04 19:42:39
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,15 +6,15 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 119600 |
+| species x source values (Pass-1 rows) | 119573 |
 | accepted species | 39726 |
 | multi-source species | 25320 |
-| within-species value pairs | 252429 |
-| pairs identical (|dlog10| <= 1e-06) | 39567 |
-| pairs related by the registry and within its tolerance | 60427 |
-| pairs identical to >= 3 significant digits (blind rule) | 34377 |
-| values collapsed (total) | 41083 |
-| values collapsed by a registry edge | 39811 |
+| within-species value pairs | 252354 |
+| pairs identical (|dlog10| <= 1e-06) | 39500 |
+| pairs related by the registry and within its tolerance | 60361 |
+| pairs identical to >= 3 significant digits (blind rule) | 34346 |
+| values collapsed (total) | 41056 |
+| values collapsed by a registry edge | 39784 |
 | values collapsed by the blind rule only | 1272 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
@@ -28,13 +28,13 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 
 | child | parent | relation | status | tol_log10 | shared | exact | within_tol | f_exact | collapsed_into_parent | child_collapsed_total |
 | --- | --- | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 722 | 722 | 0.77 | 603 | 1025 |
+| Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 722 | 722 | 0.77 | 610 | 1025 |
 | DeLong_etal_2010 | Makarieva_2008 | copies | confirmed | 0.000001 | 107 | 55 | 55 | 0.51 | 57 | 129 |
-| Ehnes_etal_2011 | Chown_etal_2007 | copies | confirmed | 0.000001 | 296 | 295 | 295 | 1 | 295 | 305 |
-| Makarieva_2008 | Chown_etal_2007 | copies | confirmed | 0.000001 | 296 | 283 | 283 | 0.96 | 283 | 295 |
-| Ehnes_etal_2011 | Makarieva_2008 | shared_primary | confirmed | 0.000001 | 300 | 281 | 281 | 0.94 | 1 | 305 |
+| Ehnes_etal_2011 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 268 | 268 | 1 | 268 | 305 |
+| Makarieva_2008 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 256 | 256 | 0.95 | 256 | 268 |
+| Ehnes_etal_2011 | Makarieva_2008 | shared_primary | confirmed | 0.000001 | 300 | 281 | 281 | 0.94 | 28 | 305 |
 | Hoehler_etal_2023 | Hudson_2013 | copies | confirmed | 0.000001 | 127 | 36 | 36 | 0.28 | 37 | 1025 |
-| Herberstein_etal_2022 | Chown_etal_2007 | shared_primary | confirmed | 0.000001 | 157 | 89 | 89 | 0.57 | 92 | 352 |
+| Herberstein_etal_2022 | Chown_etal_2007 | shared_primary | confirmed | 0.000001 | 152 | 84 | 84 | 0.55 | 87 | 352 |
 | Meiri_2018 | Feldman_etal_2016 | derived_same_input | confirmed | 0.0105 | 6169 | 57 | 5388 | 0.01 | 5388 | 5391 |
 | Cai_etal_2025 | Feldman_etal_2016 | copies | confirmed | 0.000001 | 239 | 210 | 210 | 0.88 | 214 | 2373 |
 | Cai_etal_2025 | AmphiBIO | copies | confirmed | 0.000001 | 62 | 29 | 29 | 0.47 | 28 | 2373 |
@@ -67,7 +67,7 @@ Pairs of sources that the registry traces to the same compilation outside the da
 
 | external_parent | pair | tol_log10 | shared | exact | within_tol | f_exact | collapsed |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 722 | 722 | 0.77 | 603 |
+| White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 722 | 722 | 0.77 | 610 |
 | White_2006 | Hoehler_etal_2023 - Uyeda_etal_2017 | 0.000001 | 704 | 347 | 347 | 0.49 | 182 |
 | White_2006 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
 | McKechnie_2004 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
@@ -102,10 +102,10 @@ A provenance_only edge documents a relation whose values generally differ and ta
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4365 |
-| 3 | 1675 |
-| 4 | 300 |
-| 5 | 471 |
+| 2 | 4376 |
+| 3 | 1670 |
+| 4 | 296 |
+| 5 | 469 |
 | 6 | 102 |
 | 7 | 25 |
 | 8 | 8 |
