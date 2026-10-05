@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 22:09:19
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 22:08:27
 
 
-## Species name changed during enrichment (5636 rows)
+## Species name changed during enrichment (5638 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -1596,6 +1596,8 @@ Francolinus albogularis; Peliperdix albogularis -> Campocolinus albogularis [GBI
 Francolinus coqui; Peliperdix coqui -> Campocolinus coqui [GBIF]
 
 Peliperdix schlegelii; Francolinus schlegelii -> Campocolinus schlegelii [GBIF]
+
+Camponotus consobrinusus -> Camponotus consobrinus [GBIF]
 
 Campylopterus hyperythrus; Campylopterus hyperthrus -> Campylopterus hyperythrus [GBIF]
 
@@ -3898,6 +3900,8 @@ Francisella tularensis; Francisella tula -> Francisella tularensis [GBIF; ITIS]
 Fratercula cirrhata; Lunda cirrhata -> Fratercula cirrhata [GBIF]
 
 Frederickena unduliger; Frederickena unduligera -> Frederickena unduliger [GBIF]
+
+Froggattella kirbyi -> Froggattella kirbii [GBIF]
 
 Frontinella communis; Frontinella pyramitela -> Frontinella pyramitela [GBIF]
 

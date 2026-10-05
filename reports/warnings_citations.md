@@ -1,27 +1,25 @@
-# Citation and provenance warnings -- 2026-10-04 22:09:24
+# Citation and provenance warnings -- 2026-10-04 22:08:32
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125071 (38474 species); distinct primary CiteIDs: 377; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 125124 (38524 species); distinct primary CiteIDs: 378; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
-- 2 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026
-- 2 source label(s) without a Bibcite: Hudson_2013, Lemoine_2026
+- 2 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Lemoine_2026, Leahy_2025
+- 3 source label(s) without a Bibcite: Hudson_2013, Lemoine_2026, Leahy_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: DunningJr_2007 -> Dunning-Jr:2007aa
-- BM_primary_citations: delHoyo_2009 -> del-Hoyo:2009aa
-- BM_primary_citations: Sekercioglu_2025 -> Sekercioglu:2025aa
-- BM_primary_citations: Atwood_1980 -> Atwood:1980aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
 - Hudson_2013 (100 rows)
 - Lemoine_2026 (55 rows)
+- Leahy_2025 (53 rows)
 
 ## Per-source coverage
 
@@ -70,6 +68,7 @@ One row per source label: species and record links (species x source x reference
 | Kiorboe_2014 | compilation | 186 | 1254 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lagrue_etal_2015 | primary | 18 | 103 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lane_2019 | primary | 9 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Leahy_2025 | primary | 53 | 1439 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Lemoine_2026 | primary | 55 | 800 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lislevand_etal_2007 | compilation | 3063 | 4319 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 41 | 192 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
