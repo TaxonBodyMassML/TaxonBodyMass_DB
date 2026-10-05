@@ -149,7 +149,12 @@ CachedGET <- function(url, cfg) {
 
 ParseJSON <- function(body) jsonlite::fromJSON(body, simplifyVector = FALSE)
 
-Enc <- function(x) utils::URLencode(enc2utf8(as.character(x)), reserved = TRUE)
+# `repeated = TRUE`: URLencode() leaves a string that already holds a '%xx'
+# sequence untouched by default, so a citation that is itself a URL with
+# '%20' escapes (Smith_2003 reference 174) went out unencoded, spaces and all,
+# and curl refused it; the literal '%' is encoded as '%25' like any other
+# reserved character (strings without such a sequence encode as before).
+Enc <- function(x) utils::URLencode(enc2utf8(as.character(x)), reserved = TRUE, repeated = TRUE)
 
 # ---- normalised candidate rows -------------------------------------------------------
 EmptyCandidates <- function() {

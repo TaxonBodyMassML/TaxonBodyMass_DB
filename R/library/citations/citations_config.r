@@ -292,7 +292,14 @@ reflist_specs <- list(
                       compiler = 'Baach'),
   Vanni_2017   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = ';',
-                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792')   # #99; Metadata S1 list via build_references.py
+                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792'),  # #99; Metadata S1 list via build_references.py
+  # MOM v10.2 workbook (label Smith_2003, folder Smith_etal_2003, #4): the 286 numbered
+  # entries of its REFERENCES sheet and the alias keys of the Mass Reference column's
+  # text and URL cells (text_keys.csv) -> references.csv written by build_references.r;
+  # the cells are split at '_' followed by a blank
+  Smith_2003   = list(format = 'csv', file = 'references.csv', folder = 'Smith_etal_2003', frame = 'Smith_2003',
+                      key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '_[[:space:]]+',
+                      compiler = 'Smith')
 )
 
 ReflistSpec <- function(source_label) {

@@ -115,6 +115,14 @@ Expect(is.numeric(cr$score) && all(!is.na(cr$score)) && cr$type[5] == 'posted-co
 Expect(nrow(CrossrefQuery(NA, cfg)) == 0 && nrow(CrossrefQuery('  ', cfg)) == 0, 'an empty query gives no candidates without a request')
 Expect(grepl('rows=5&mailto=offline%40invalid$', CrossrefQueryURL(query1, cfg)) && grepl('query.bibliographic=Doyle%202007', CrossrefQueryURL(query1, cfg), fixed = TRUE),
        'the query URL is percent-encoded with rows and mailto')
+
+# a citation that is itself a URL with '%20' escapes (Smith_2003 reference 174):
+# URLencode() skips a string holding '%xx' unless repeated = TRUE, and curl
+# refuses the raw spaces
+u_pct <- CrossrefQueryURL('www.iiasa.ac.at/~sendzim/ Trop%20Wet%20Forest.xls', cfg)
+Expect(grepl('query.bibliographic=www.iiasa.ac.at%2F~sendzim%2F%20Trop%2520Wet%2520Forest.xls&', u_pct, fixed = TRUE) &&
+         !inherits(try(curl::curl_parse_url(u_pct), silent = TRUE), 'try-error'),
+       'Enc() percent-encodes a query that already holds %xx sequences')
 w <- CrossrefWork('10.1007/BF00392514', cfg)
 Expect(!is.null(w) && w$DOI == '10.1007/bf00392514' && w$author[[1]]$family == 'Ikeda' && w$volume == '92' && length(w$reference) == 28,
        'CrossrefWork() returns the full message of a DOI (case-insensitive, with reference[])')

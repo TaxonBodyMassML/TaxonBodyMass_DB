@@ -63,7 +63,7 @@ Raymond_2011,compilation,unknown,,tier A2; DataRetriever; SOURCE_ID -> sources.c
 Reum_2012,primary,measured_in_source,,tier F
 Reum_2013,primary,measured_in_source,,tier F
 Sarmiento-Lezcano_2023,primary,measured_in_source,,tier F
-Smith_2003,compilation,unknown,,tier A1; Mass Reference ids -> xlsx REFERENCES sheet (286); unpublished lab version v10.2 (#4)
+Smith_2003,compilation,unknown,,"tier A1; Mass Reference ids -> REFERENCES sheet (286 entries) + 43 alias keys of the text/URL cells (text_keys.csv) -> references.csv (build_references.r), cells split at underscore + blank; 28 keys role compilation (Silva & Downing 1995, Jones et al. 2003, Walker's, Marquet & Cofre 1999, Ernest 2003, Grzimek, PanTHERIA = Jones_2009, ...); round of 2026-10-05 (Phases A-B; 147 keys unverified until the OpenAlex quota reset; Phase C pending); unpublished lab version v10.2 (#4)"
 Soria_etal_2021,compilation,unknown,,tier C; trait_data_sources.csv -> hop 2 via Amniote / PHYLACINE / MOM
 Tobias_2022,compilation,unknown,,tier A1; AVONET Mass.Source + Mass.Refs.Other -> Mass_Sources sheet (42); Dunning rows compilation_terminal
 Trochet_2014,compilation,unknown,,tier D; species-level reference sets from article Table 1 (BDJ XML)

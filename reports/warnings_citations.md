@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-05 13:35:41
+# Citation and provenance warnings -- 2026-10-05 14:18:38
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127209 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 127912 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 109; unverified references: 152
 
 ## Problems
 
-(none)
+- 29 accepted reference(s) without a bib entry (run --bib): Smith_2003 61, Smith_2003 69, Smith_2003 77, Smith_2003 78, Smith_2003 79, Smith_2003 80, Smith_2003 81, Smith_2003 82, Smith_2003 83, Smith_2003 84, Smith_2003 85, Smith_2003 86, Smith_2003 87, Smith_2003 88, Smith_2003 89, Smith_2003 90, Smith_2003 91, Smith_2003 92, Smith_2003 96, Smith_2003 97, Smith_2003 98, Smith_2003 99, Smith_2003 100, Smith_2003 101, Smith_2003 122, Smith_2003 127, Smith_2003 153, Smith_2003 165, Smith_2003 167
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -91,7 +91,7 @@ One row per source label: species and record links (species x source x reference
 | Reum_2012 | primary | 17 | 17 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2013 | primary | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Smith_2003 | compilation | 3515 | 4305 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Smith_2003 | compilation | 3515 | 4771 | 0 | 256 | 29 | 39 | 39 | 0 | 0 | 149 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5362 | 5459 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tobias_2022 | compilation | 9659 | 10032 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 47 | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -103,7 +103,7 @@ One row per source label: species and record links (species x source x reference
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 12218 | 12287 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12218 | 12297 | 91.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 131 | 131 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2060 | 2873 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 298 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
