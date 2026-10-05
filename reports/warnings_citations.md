@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-05 13:08:15
+# Citation and provenance warnings -- 2026-10-05 13:35:41
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127209 (38955 species); distinct primary CiteIDs: 478; unresolved references (pending / not_found): 48; unverified references: 3
+- provenance rows: 127209 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 31; unverified references: 3
 
 ## Problems
 
-- 61 accepted reference(s) without a bib entry (run --bib): Vanni_2017 Alves et al 2010, Vanni_2017 Andersen 1989, Vanni_2017 Arnott & Vanni 1996, Vanni_2017 Bamstedt & Tande 1985, Vanni_2017 Bayne & Scullard 1977, Vanni_2017 Benstead et al 2010, Vanni_2017 Burkhardt & Lehman 1994, Vanni_2017 Christian et al 2008, Vanni_2017 Clarke et al 1994, Vanni_2017 Conroy et al 2005, Vanni_2017 Evans-White & Lamberti 2005, Vanni_2017 Follum & Gray 1987, Vanni_2017 Gardner et al 1993, Vanni_2017 Gorsky et al 1987, Vanni_2017 Haertel-Borer et al 2004, Vanni_2017 Hall et al 2003, Vanni_2017 Hall et al 2007, Vanni_2017 James et al 2000, Vanni_2017 James et al 2001, Vanni_2017 Jansen et al 2012, Vanni_2017 Ji et al 2011, Vanni_2017 Johnson et al 2010, Vanni_2017 Kiibus & Kautsky 1996, Vanni_2017 Kouassi et al 2006, Vanni_2017 Lauritsen & Mozley 1989, Vanni_2017 Martin et al 2006, Vanni_2017 Mellina et al 1993, Vanni_2017 Moslemi et al 2012, Vanni_2017 Naddafi et al 2008, Vanni_2017 Paffenhofer & Gardner 1984, Vanni_2017 Prosch & McLachlan 1984, Vanni_2017 Shimauchi & Uye 2007, Vanni_2017 Solomon et al 2010, Vanni_2017 Srna & Baggaley 1976, Vanni_2017 Sterrett et al 2015, Vanni_2017 Turner 2010, Vanni_2017 Vanderploeg et al 1986, Vanni_2017 Vaughn et al 2004, Vanni_2017 Villeger et al 2012a, Vanni_2017 Wilhelm et al 1999, Vanni_2017 Brabrand et al 1990, Vanni_2017 Gido 2002, Vanni_2017 Higgins et al 2006, Vanni_2017 Lamarra 1975, Vanni_2017 Mather et al 1995, Vanni_2017 McIntyre et al 2008, Vanni_2017 Morgan & Hicks 2013, Vanni_2017 Post & Walters 2009, Vanni_2017 Roopin et al 2008, Vanni_2017 Schaus et al 1997, Vanni_2017 Schaus et al 2010, Vanni_2017 Schaus et al 2013, Vanni_2017 Sereda et al 2008, Vanni_2017 Shostell & Bukaveckas 2004, Vanni_2017 Small et al 2011, Vanni_2017 Tarvainen et al 2005, Vanni_2017 Taylor et al. 2012, Vanni_2017 Vanni et al 2002, Vanni_2017 Villeger et al 2012b, Vanni_2017 Wilson & Xenopoulos 2010, Vanni_2017 Zimmer et al 2006
+(none)
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -49,7 +49,7 @@ One row per source label: species and record links (species x source x reference
 | GalanAcedo_etal_2026 | compilation | 410 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ghaderi_2026 | derived | 221 | 551 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 551 |
 | Gillooly_etal_2016 | compilation | 71 | 75 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Gonzalez_2025 | compilation | 216 | 1543 | 72.2 | 50 | 25 | 0 | 10 | 13 | 2 | 0 | 0 | 0 |
+| Gonzalez_2025 | compilation | 216 | 1543 | 72.2 | 50 | 35 | 0 | 0 | 13 | 2 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 5 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 128 | 247 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -99,7 +99,7 @@ One row per source label: species and record links (species x source x reference
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Vanni_2017 | compilation | 173 | 3591 | 22.8 | 73 | 62 | 5 | 2 | 1 | 3 | 0 | 0 | 0 |
+| Vanni_2017 | compilation | 173 | 3591 | 95.5 | 73 | 67 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
