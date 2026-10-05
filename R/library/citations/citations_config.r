@@ -292,7 +292,12 @@ reflist_specs <- list(
                       compiler = 'Baach'),
   Vanni_2017   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = ';',
-                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792')   # #99; Metadata S1 list via build_references.py
+                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792'),  # #99; Metadata S1 list via build_references.py
+  # Dataset S01 `Reference Code` (one compilation code per row, 21 codes) -> the
+  # Refs sheet of the workbook transcribed verbatim to references.csv (#66)
+  Hoehler_etal_2023 = list(format = 'csv', file = 'references.csv',
+                           key_col = 'key', citation_col = 'citation', sep = ';',
+                           compiler = 'Hoehler', compilation_doi = '10.1073/pnas.2303764120')
 )
 
 ReflistSpec <- function(source_label) {
