@@ -2,7 +2,8 @@
 # Requires Python + retriever package (see README Prerequisites).
 # Called from RunMe.r when DataRetrieve = TRUE.
 # Depends on: wd_root, wd_rdata, wd_db, FixFormatting(), FixMisspellings(), RemoveNonTaxa(),
-# StackBrose2005(), DropPlaceholders(), ApplyUnitActions() (R/library/foodweb_units.r),
+# StackBrose2005(), DropPlaceholders(), ApplyUnitActions(), WebReferenceKeys()
+# (R/library/foodweb_units.r), JoinRefKeys() (R/library/citations/parse_reflists.r),
 # imputed_log, ImputedEntriesSince(), SaveImputedLive() (R/library/helpers.r)
 
 # Patch rdataretriever::fetch for retriever 2.x compatibility.
@@ -99,6 +100,10 @@ bir$source_mass <- 'Lislevand_etal_2007'
 # the two Woodward-group stream studies (Broadstone Stream, Mill Stream) report
 # dry mass and are converted to wet grams with brose2005_units_groups.csv,
 # every other study is kept as reported (issue #14, owner decisions 2026-10-03).
+# Every row then cites its study (the Link reference) as its primary reference,
+# one key per cited work from brose2005_references.csv (study-level
+# attribution, issue #64; WebReferenceKeys()); the keys are kept as `ref_keys`,
+# collapsed per taxon with JoinRefKeys() in the geometric mean below.
 ppb <- rdataretriever::fetch('predator-prey-body-ratio')[[1]]
 ppb <- StackBrose2005(ppb)
 ppb <- DropPlaceholders(ppb, 'study', 'Brose_2005')
@@ -108,7 +113,10 @@ ppb_groups <- read.csv(file.path(wd_db, 'DataRetriever', 'brose2005_units_groups
                        stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 ppb <- ApplyUnitActions(ppb, ppb_units, key = 'study', groups = ppb_groups,
                         group_key = 'study', label = 'Brose_2005')
-ppb <- ppb[, c('taxon', 'mass_g', 'n', 'source_mass')]
+ppb_refs <- read.csv(file.path(wd_db, 'DataRetriever', 'brose2005_references.csv'),
+                     stringsAsFactors = FALSE, na.strings = c('', 'NA'), encoding = 'UTF-8')
+ppb$ref_keys <- WebReferenceKeys(ppb$study, ppb_refs, 'link_reference', 'Brose_2005')
+ppb <- ppb[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 
 # pantheria: order and family available
 # Jones KE, Bielby J, Cardillo M, Fritz SA, O'Dell J, Orme CD, Safi K, 
@@ -164,10 +172,13 @@ adat <- FixMisspellings(adat)
 adat <- RemoveNonTaxa(adat)
 adat <- adat[which(!is.na(adat$mass_g) & adat$mass_g > 0), ]
 
-# Calculate geometric mean for each taxon within each dataset
+# Calculate geometric mean for each taxon within each dataset; the native
+# reference keys of the rows (Brose_2005 only) are collapsed to their distinct
+# set (issue #1, 1.2)
 adat <- adat %>%
   group_by(taxon, source_mass) %>%
-  mutate(mass_g = 10^mean(log10(mass_g), na.rm = TRUE), n = n()) %>%
+  mutate(mass_g = 10^mean(log10(mass_g), na.rm = TRUE), n = n(),
+         ref_keys = JoinRefKeys(ref_keys)) %>%
   slice(1) %>%
   ungroup()
 
