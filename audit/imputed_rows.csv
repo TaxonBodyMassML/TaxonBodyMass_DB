@@ -1,5 +1,7 @@
 "source","reason","n_dropped","n_taxa","n_kept"
 "AnAge","metabolic-rate body mass only, no adult weight",0,0,2946
+"Baach_2026","average of a published range (notes ""average from range""; Snow et al. 2025 visually estimated wild-pig masses): not a measured value",1,1,1091
+"Baach_2026","order/family-level records of Norberg (1978), an energy-content study whose mass type (dry or fresh) the sheet does not state: unverifiable units",22,3,1069
 "Barnes_2008","length-mass conversion quality 4 (general shape) or 5 (unsatisfactory)",1596,17,25261
 "Brose_2005","group-level placeholder: mass value shared by >= 5 taxa within Cattin Blandenier (2004) (#14)",2269,68,16906
 "Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Cattin Blandenier (2004) (#14)",803,26,350007

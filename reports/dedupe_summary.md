@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-04 19:42:39
+# Source de-duplication summary -- 2026-10-04 21:02:50
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,16 +6,16 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 119573 |
-| accepted species | 39726 |
-| multi-source species | 25320 |
-| within-species value pairs | 252354 |
-| pairs identical (|dlog10| <= 1e-06) | 39500 |
-| pairs related by the registry and within its tolerance | 60361 |
-| pairs identical to >= 3 significant digits (blind rule) | 34346 |
-| values collapsed (total) | 41056 |
-| values collapsed by a registry edge | 39784 |
-| values collapsed by the blind rule only | 1272 |
+| species x source values (Pass-1 rows) | 120115 |
+| accepted species | 39737 |
+| multi-source species | 25324 |
+| within-species value pairs | 256144 |
+| pairs identical (|dlog10| <= 1e-06) | 40691 |
+| pairs related by the registry and within its tolerance | 61777 |
+| pairs identical to >= 3 significant digits (blind rule) | 35227 |
+| values collapsed (total) | 41497 |
+| values collapsed by a registry edge | 40217 |
+| values collapsed by the blind rule only | 1280 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
 | species with at least one collapsed value | 20342 |
@@ -38,11 +38,11 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Meiri_2018 | Feldman_etal_2016 | derived_same_input | confirmed | 0.0105 | 6169 | 57 | 5388 | 0.01 | 5388 | 5391 |
 | Cai_etal_2025 | Feldman_etal_2016 | copies | confirmed | 0.000001 | 239 | 210 | 210 | 0.88 | 214 | 2373 |
 | Cai_etal_2025 | AmphiBIO | copies | confirmed | 0.000001 | 62 | 29 | 29 | 0.47 | 28 | 2373 |
-| Cai_etal_2025 | Tobias_2022 | via | confirmed | 0.0105 | 1037 | 484 | 998 | 0.47 | 855 | 2373 |
-| Myhrvold_2015 | Lislevand_etal_2007 | copies | suspected | 0.000001 | 3114 | 174 | 174 | 0.06 | 200 | 8583 |
-| Myhrvold_2015 | Ernest_2003 | copies | suspected | 0.000001 | 1311 | 310 | 310 | 0.24 | 102 | 8583 |
-| Myhrvold_2015 | Jones_2009 | via | confirmed | 0.0105 | 3457 | 1559 | 1978 | 0.45 | 710 | 8583 |
-| Myhrvold_2015 | AnAge | copies | suspected | 0.000001 | 2452 | 650 | 650 | 0.27 | 918 | 8583 |
+| Cai_etal_2025 | Tobias_2022 | via | confirmed | 0.0105 | 1037 | 484 | 998 | 0.47 | 874 | 2373 |
+| Myhrvold_2015 | Lislevand_etal_2007 | copies | suspected | 0.000001 | 3114 | 174 | 174 | 0.06 | 200 | 8585 |
+| Myhrvold_2015 | Ernest_2003 | copies | suspected | 0.000001 | 1311 | 310 | 310 | 0.24 | 102 | 8585 |
+| Myhrvold_2015 | Jones_2009 | via | confirmed | 0.0105 | 3457 | 1559 | 1978 | 0.45 | 710 | 8585 |
+| Myhrvold_2015 | AnAge | copies | suspected | 0.000001 | 2452 | 650 | 650 | 0.27 | 873 | 8585 |
 | Faurby_etal_2018 | Smith_2003 | copies | confirmed | 0.0105 | 3640 | 2082 | 3323 | 0.57 | 3328 | 3478 |
 | Soria_etal_2021 | Myhrvold_2015 | copies | confirmed | 0.0105 | 4408 | 4320 | 4352 | 0.98 | 1976 | 4960 |
 | Soria_etal_2021 | Faurby_etal_2018 | copies | confirmed | 0.000001 | 5160 | 989 | 989 | 0.19 | 404 | 4960 |
@@ -51,15 +51,18 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Jones_2009 | Smith_2003 | copies | confirmed | 0.000001 | 3287 | 629 | 629 | 0.19 | 1708 | 1852 |
 | Cai_etal_2025 | Jones_2009 | via | confirmed | 0.0105 | 994 | 410 | 939 | 0.41 | 527 | 2373 |
 | Cai_etal_2025 | Smith_2003 | copies | confirmed | 0.000001 | 1029 | 159 | 159 | 0.15 | 416 | 2373 |
-| Cai_etal_2025 | AnAge | copies | confirmed | 0.000001 | 1194 | 153 | 153 | 0.13 | 216 | 2373 |
+| Cai_etal_2025 | AnAge | copies | confirmed | 0.000001 | 1194 | 153 | 153 | 0.13 | 197 | 2373 |
 | Cai_etal_2025 | Quaardvark | copies | confirmed | 0.000001 | 1021 | 56 | 56 | 0.05 | 27 | 2373 |
-| AnAge | Smith_2003 | copies | confirmed | 0.000001 | 1258 | 178 | 178 | 0.14 | 366 | 570 |
-| AnAge | Fisher_2001 | copies | confirmed | 0.000001 | 124 | 49 | 49 | 0.4 | 40 | 570 |
-| McCoy_2008 | Smith_2003 | copies | confirmed | 0.001 | 301 | 68 | 166 | 0.23 | 180 | 526 |
+| AnAge | Smith_2003 | copies | confirmed | 0.000001 | 1258 | 178 | 178 | 0.14 | 366 | 617 |
+| AnAge | Fisher_2001 | copies | confirmed | 0.000001 | 124 | 49 | 49 | 0.4 | 40 | 617 |
+| McCoy_2008 | Smith_2003 | copies | confirmed | 0.001 | 301 | 68 | 166 | 0.23 | 180 | 529 |
 | Tucker_etal_2014b | Jones_2009 | via | confirmed | 0.0105 | 444 | 1 | 232 | 0 | 138 | 302 |
 | Pata_2025 | Kiorboe_2013 | copies | confirmed | 0.000001 | 54 | 20 | 20 | 0.37 | 18 | 21 |
 | Brose_etal_2018 | Hechinger_etal_2011 | copies | confirmed | 0.000001 | 93 | 64 | 64 | 0.69 | 62 | 85 |
 | Brose_etal_2018 | Brose_2005 | copies | confirmed | 0.000001 | 251 | 19 | 19 | 0.08 | 19 | 85 |
+| Baach_2026 | Chown_etal_2007 | copies | confirmed | 0.000001 | 258 | 258 | 258 | 1 | 258 | 432 |
+| Baach_2026 | Wilman_etal_2014 | copies | confirmed | 0.000001 | 152 | 38 | 38 | 0.25 | 1 | 432 |
+| Baach_2026 | Tobias_2022 | copies | confirmed | 0.0105 | 153 | 37 | 83 | 0.24 | 89 | 432 |
 
 ## Siblings sharing an external parent
 
@@ -72,17 +75,17 @@ Pairs of sources that the registry traces to the same compilation outside the da
 | White_2006 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
 | McKechnie_2004 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
 | Nagy_1999 | Castro_2025 - Hoehler_etal_2023 | 0.000001 | 295 | 43 | 43 | 0.15 | 42 |
-| Dunning_2008 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 148 |
-| Dunning_2008 | AnAge - Myhrvold_2015 | 0.0105 | 2452 | 650 | 1156 | 0.27 | 918 |
-| Dunning_2008 | AnAge - Tobias_2022 | 0.000001 | 1134 | 280 | 280 | 0.25 | 636 |
-| Dunning_2008 | AnAge - Wilman_etal_2014 | 0.000001 | 1149 | 284 | 284 | 0.25 | 519 |
-| Dunning_2008 | McCoy_2008 - Myhrvold_2015 | 0.0105 | 848 | 76 | 326 | 0.09 | 60 |
-| Dunning_2008 | McCoy_2008 - Tobias_2022 | 0.001 | 540 | 74 | 128 | 0.14 | 116 |
-| Dunning_2008 | McCoy_2008 - Wilman_etal_2014 | 0.001 | 544 | 77 | 131 | 0.14 | 3 |
-| Dunning_2008 | Myhrvold_2015 - Tobias_2022 | 0.0105 | 8890 | 2066 | 5858 | 0.23 | 5204 |
+| Dunning_2008 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 146 |
+| Dunning_2008 | AnAge - Myhrvold_2015 | 0.0105 | 2452 | 650 | 1156 | 0.27 | 873 |
+| Dunning_2008 | AnAge - Tobias_2022 | 0.000001 | 1134 | 280 | 280 | 0.25 | 640 |
+| Dunning_2008 | AnAge - Wilman_etal_2014 | 0.000001 | 1149 | 284 | 284 | 0.25 | 477 |
+| Dunning_2008 | McCoy_2008 - Myhrvold_2015 | 0.0105 | 848 | 76 | 326 | 0.09 | 59 |
+| Dunning_2008 | McCoy_2008 - Tobias_2022 | 0.001 | 540 | 74 | 128 | 0.14 | 121 |
+| Dunning_2008 | McCoy_2008 - Wilman_etal_2014 | 0.001 | 544 | 77 | 131 | 0.14 | 4 |
+| Dunning_2008 | Myhrvold_2015 - Tobias_2022 | 0.0105 | 8890 | 2066 | 5858 | 0.23 | 5251 |
 | Dunning_2008 | Myhrvold_2015 - Wilman_etal_2014 | 0.0105 | 8636 | 2058 | 5797 | 0.24 | 106 |
-| Dunning_2008 | Tobias_2022 - Wilman_etal_2014 | 0.000001 | 8656 | 8415 | 8415 | 0.97 | 7766 |
-| CareyJudge_2000 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 148 |
+| Dunning_2008 | Tobias_2022 - Wilman_etal_2014 | 0.000001 | 8656 | 8415 | 8415 | 0.97 | 7808 |
+| CareyJudge_2000 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 146 |
 
 ## Provenance-only edges (no tolerance-based collapse)
 
@@ -102,12 +105,12 @@ A provenance_only edge documents a relation whose values generally differ and ta
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4376 |
-| 3 | 1670 |
-| 4 | 296 |
-| 5 | 469 |
-| 6 | 102 |
-| 7 | 25 |
+| 2 | 4363 |
+| 3 | 1627 |
+| 4 | 269 |
+| 5 | 526 |
+| 6 | 127 |
+| 7 | 26 |
 | 8 | 8 |
 | 9 | 3 |
 
