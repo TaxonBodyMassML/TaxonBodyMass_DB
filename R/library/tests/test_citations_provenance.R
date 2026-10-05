@@ -43,11 +43,11 @@ cat('LoadProvenanceClasses()\n')
 reg_path <- file.path(repo, 'Bib', 'source_provenance_classes.csv')
 raw <- read.csv(reg_path, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'))
 msgs <- MessagesOf(reg <- LoadProvenanceClasses(reg_path, raw$source_label))
-Expect(nrow(reg) == 81 && identical(names(reg), provenance_class_columns) && !anyDuplicated(reg$source_label),
-       'the tracked registry loads: 81 labels, the schema columns, unique labels')
+Expect(nrow(reg) == 82 && identical(names(reg), provenance_class_columns) && !anyDuplicated(reg$source_label),
+       'the tracked registry loads: 82 labels, the schema columns, unique labels')
 tab <- table(reg$class)
-Expect(tab[['compilation']] == 50 && tab[['primary']] == 17 && tab[['live']] == 8 && tab[['derived']] == 4 && tab[['database']] == 2 && all(names(tab) %in% provenance_classes),
-       'class counts: compilation 50, primary 17, live 8, derived 4, database 2')
+Expect(tab[['compilation']] == 50 && tab[['primary']] == 18 && tab[['live']] == 8 && tab[['derived']] == 4 && tab[['database']] == 2 && all(names(tab) %in% provenance_classes),
+       'class counts: compilation 50, primary 18, live 8, derived 4, database 2')
 Expect(all(reg$default_provenance_type %in% provenance_types) &&
          all(reg$default_provenance_type[reg$class == 'primary'] == 'measured_in_source') &&
          all(reg$default_provenance_type[reg$class == 'derived'] == 'derived_allometry') &&
