@@ -129,6 +129,7 @@ FixMisspellings <- function(dat) {
     "Chalcophaps_inidica"             = "Chalcophaps_indica",             # simple transposition
     "Chaos_carolinensis"              = "Chaos_carolinense",              # Chaos is neuter; -ense not -ensis
     "Chlamydomonas_reinhadri"         = "Chlamydomonas_reinhardii",       # honors Reinhard; missing d + garbled genitive
+    "Chodromorpha_xanthotricha"       = "Chondromorpha_xanthotricha",     # Lemoine_2026, 4 rows: the source writes Chondromorpha (Paradoxosomatidae) on its five dry-only rows of the same species; missing n (#76)
     "Cinclosoma_castanotus"           = "Cinclosoma_castanotum",          # -soma is Greek neuter; -um required
     "Circus_macroarus"                = "Circus_macrourus",               # Pallid Harrier; macroarus omits u
     "Clupea_pallassii"                = "Clupea_pallasii",                # honors Pallas; spurious double s
@@ -186,6 +187,7 @@ FixMisspellings <- function(dat) {
     "Neosclerocalyptus_paskoenis"     = "Neosclerocalyptus_paskoensis",   # missing s in -ensis
     "Ningaui_timealyi"                = "Ningaui_timealeyi",              # missing e
     "Ningaui_yvonnae"                 = "Ningaui_yvonneae",               # female genitive requires -ae
+    "Nyctalus_geoffroyi"              = "Nyctophilus_geoffroyi",          # AyalaBerdon_2025 ESM table; its two cited papers (Dixon & Rose 2003, Hosken & Withers 1999) concern Nyctophilus geoffroyi; no Nyctalus geoffroyi exists (#71)
 
     # O
     "Oithona_similus"                 = "Oithona_similis",                # Latin 3rd decl similis; similus not valid
@@ -209,6 +211,7 @@ FixMisspellings <- function(dat) {
     "Phyllotis_bonaeriensis"          = "Phyllotis_bonariensis",          # spurious e (bonariensis from Bonaria)
     "Phrynosoma_douglassi"            = "Phrynosoma_douglasii",           # spurious double s
     "Pipistrellus_anchietae"          = "Pipistrellus_anchietai",         # male patronym takes -i not -ae
+    "Pipistrellus_pipitrellus"        = "Pipistrellus_pipistrellus",      # AyalaBerdon_2025 ESM table; missing s (the cited Speakman et al. 1989 is on P. pipistrellus) (#71)
     "Pipra_cornuta"                   = "Pipra_coronata",                 # Blue-crowned Manakin; cornuta not recognized
     "Piranga_olivicea"                = "Piranga_olivacea",               # Scarlet Tanager; spurious i
     "Pituophis_melanolecus"           = "Pituophis_melanoleucus",         # Pine Snake; missing u
@@ -236,6 +239,7 @@ FixMisspellings <- function(dat) {
     # S
     "Sagitta_elegana"                 = "Sagitta_elegans",                # ns dropped
     "Scarus_iserti"                   = "Scarus_iseri",                   # Striped Parrotfish Bloch 1789; spurious t
+    "Scolopocryptos_ferrugineus"      = "Scolopocryptops_ferrugineus",    # Lemoine_2026, 8 rows: Scolopocryptops Newport, 1844 (family Scolopocryptopidae in the same row); missing p (#76)
     "Sceloporus_utiformis"            = "Sceloporus_uniformis",           # n dropped
     "Sebastes_paucipinis"             = "Sebastes_paucispinis",           # Bocaccio; missing s
     "Sebastes_paucispinus"            = "Sebastes_paucispinis",           # -us→-is termination error
@@ -252,7 +256,9 @@ FixMisspellings <- function(dat) {
     "Tenebrio_mollitor"               = "Tenebrio_molitor",               # Mealworm Beetle; single-l correct
     "Tetrahymena_pyraformis"          = "Tetrahymena_pyriformis",         # pear-shaped from pyrus; pyra- wrong
     "Thalassarche_melanophrys"        = "Thalassarche_melanophris",       # IOC/BirdLife accepted form
+    "Thallasarche_melanophris"        = "Thalassarche_melanophris",       # Black-browed Albatross; transposed l/s in Wisnionski_2026 (#79)
     "Thomasomys_ischyrus"             = "Thomasomys_ischyurus",           # Greek ischys + oura; missing u
+    "Thryesphilus_rufalbus"           = "Thryophilus_rufalbus",           # Rufous-and-white Wren; misspelt genus in Wisnionski_2026 (#79)
     "Thunnus_alaunga"                 = "Thunnus_alalunga",               # Albacore; dropped l
     "Thunnus_macoyi"                  = "Thunnus_maccoyii",               # Southern Bluefin; missing c and i
     "Torgos_tracheliotus"             = "Torgos_tracheliotos",            # Lappet-faced Vulture; IOC form

@@ -1,0 +1,164 @@
+group,subgroup,species_pdf,juvenile,serum,mass_g,mass_ref_keys,msmr,msmr_ref_keys,lifespan_yr,lifespan_ref_keys,cort_ref_keys
+Reptiles,,Agkistrodon piscivorus,FALSE,FALSE,421,1,,,24.6,2,1
+Reptiles,,Alligator mississippiensis,TRUE,FALSE,793,3,0.14,4,85.0,2,3
+Reptiles,,Amblyrhynchus cristatus,FALSE,FALSE,2227,4,,,28.0,2,5
+Reptiles,,Anolis carolinensis,FALSE,FALSE,3,6,0.95,7,11.0,2,6
+Reptiles,,Anolis sagrei,FALSE,FALSE,5,8,2.20,9,8.0,2,8
+Reptiles,,Antaresia childreni,FALSE,FALSE,384,4,0.51,7,30.0,2,10
+Reptiles,,Aspidoscelis sexlineatus,FALSE,FALSE,8,4,,,,,11
+Reptiles,,Aspidoscelis uniparens,FALSE,FALSE,7,12,,,,,12
+Reptiles,,Boa constrictor,FALSE,FALSE,3950,13,0.10,4,40.4,2,13
+Reptiles,,Boaedon fuliginosus,FALSE,FALSE,182,14,0.21,15,,,14
+Reptiles,,Caiman latirostris,TRUE,FALSE,161,16,,,22.0,2,16
+Reptiles,,Caretta caretta,FALSE,FALSE,156500,4,,,76.0,2,17
+Reptiles,,Chelonia mydas,FALSE,FALSE,160000,4,0.07,18,75.0,2,19
+Reptiles,,Chelonoidis niger,FALSE,FALSE,118535,20,,,177.0,2,21
+Reptiles,,Crocodylus johnstoni,FALSE,FALSE,141832,22,0.13,23,20.0,2,22
+Reptiles,,Crocodylus niloticus,TRUE,FALSE,540,24,,,80.0,2,24
+Reptiles,,Crotalus atrox,FALSE,FALSE,480,25,,,27.0,2,25
+Reptiles,,Crotalus viridis,FALSE,FALSE,800,26,,,31.0,2,26
+Reptiles,,Elgaria coerulea,FALSE,FALSE,20,27,,,8.0,2,27
+Reptiles,,Elgaria multicarinata,FALSE,FALSE,24,27,0.42,4,15.0,2,27
+Reptiles,,Gopherus agassizii,FALSE,FALSE,2784,4,,,100.0,2,28
+Reptiles,,Heloderma horridum,FALSE,FALSE,586,29,,,,,29
+Reptiles,,Heloderma suspectum,FALSE,FALSE,553,4,0.14,30,48.0,2,31
+Reptiles,,Hoplodactylus duvaucelii,FALSE,FALSE,118,4,,,50.0,2,32
+Reptiles,,Lepidochelys kempii,TRUE,FALSE,4300,33,,,50.0,2,33
+Reptiles,,Liopholis whitii,FALSE,FALSE,,,,,,,34
+Reptiles,,Malayopython reticulatus,FALSE,FALSE,21750,35,0.12,36,29.4,2,35
+Reptiles,,Natrix tessellata,FALSE,FALSE,303,37,,,14.0,2,37
+Reptiles,,Nerodia rhombifer,FALSE,FALSE,238,7,0.53,7,10.0,2,38
+Reptiles,,Nerodia sipedon,FALSE,FALSE,1306,4,,,21.0,2,38
+Reptiles,,Phrynocephalus vlangalii,FALSE,FALSE,,,,,6.0,2,39
+Reptiles,,Pituophis c. affinis,FALSE,FALSE,457,29,0.22,40,33.8,2,29
+Reptiles,,Podarcis siculus,FALSE,FALSE,9,7,0.30,7,,,41
+Reptiles,,Python bivittatus,FALSE,FALSE,19050,42,,,28.3,2,42
+Reptiles,,Python regius,FALSE,FALSE,1086,43,0.19,7,50.0,2,43
+Reptiles,,Regina septemvittata,FALSE,FALSE,298,4,,,19.3,2,38
+Reptiles,,Sceloporus occidentalis,FALSE,FALSE,10,40,27.36,40,7.0,2,44
+Reptiles,,Sceloporus undulatus,FALSE,FALSE,6,45,1.88,7,4.0,2,45
+Reptiles,,Sphenodon punctatus,FALSE,FALSE,645,46,0.17,7,100.0,2,46
+Reptiles,,Thamnophis errans,FALSE,FALSE,400,4,,,17.8,2,47
+Reptiles,,Thamnophis s. parietalis,FALSE,FALSE,37,48,,,20.0,2,48
+Reptiles,,Tiliqua scincoides,FALSE,FALSE,303,43,0.50,7,30.0,2,43
+Reptiles,,Urosaurus ornatus,FALSE,FALSE,4,49,,,3.0,2,50
+Reptiles,,Uta stansburiana,FALSE,FALSE,4,40,15.96,40,4.8,2,51
+Reptiles,,Varanus salvator,FALSE,FALSE,7400,35,0.24,52,15.8,2,35
+Reptiles,,Varanus varius,FALSE,FALSE,4300,4,0.28,7,22.0,2,53
+Reptiles,,Vipera aspis,FALSE,FALSE,106,54,,,25.0,2,54
+Reptiles,,Zootoca vivipara,FALSE,FALSE,4,55,1.40,40,12.0,2,55
+Birds,,Acanthis flammea,FALSE,FALSE,13,56,20.63,4,12.2,4,57
+Birds,,Aethia pusilla,FALSE,FALSE,85,58,,,8.1,4,58
+Birds,,Aimophila carpalis,FALSE,FALSE,16,59,,,,,59
+Birds,,Amazona ventralis,FALSE,TRUE,239,60,,,,,60
+Birds,,Anas platyrhynchos,TRUE,FALSE,2709,61,3.99,4,29.1,4,61
+Birds,,Antigone canadensis,FALSE,TRUE,5000,62,2.07,63,36.6,4,62
+Birds,,Aphelocoma coerulescens,FALSE,FALSE,76,64,,,15.0,4,64
+Birds,,Aphrastura spinicauda,FALSE,FALSE,12,65,,,,,65
+Birds,,Asio otus,FALSE,FALSE,262,56,3.79,4,27.8,4,66
+Birds,,Calcarius lapponicus,FALSE,FALSE,27,56,,,6.0,4,67
+Birds,,Calcarius mccownii,FALSE,FALSE,25,68,,,,,69
+Birds,,Calcarius ornatus,FALSE,FALSE,19,56,,,,,69
+Birds,,Calcarius pictus,FALSE,FALSE,27,4,,,5.0,4,70
+Birds,,Calidris canutus,FALSE,FALSE,135,71,,,27.3,4,71
+Birds,,Calidris melanotos,FALSE,FALSE,81,68,,,,,72
+Birds,,Calidris pusilla,FALSE,FALSE,26,68,,,19.3,4,72
+Birds,,Columba livia,FALSE,FALSE,300,73,5.33,63,12.6,4,73
+Birds,,Cuculus canorus,FALSE,FALSE,102,74,8.22,4,12.9,4,74
+Birds,,Cuculus poliocephalus,FALSE,FALSE,56,74,,,,,74
+Birds,,Cyanistes caeruleus,FALSE,FALSE,11,68,,,14.6,4,68
+Birds,,Daption capense,FALSE,FALSE,472,75,,,25.0,4,75
+Birds,,Diomedea exulans,FALSE,FALSE,7650,56,2.26,7,50.0,4,75
+Birds,,Empidonax oberholseri,FALSE,FALSE,21,68,,,9.0,4,68
+Birds,,Eudyptes chrysocome,FALSE,FALSE,2500,56,,,,,76
+Birds,,Ficedula hypoleuca,FALSE,FALSE,12,77,19.33,4,15.0,4,77
+Birds,,Gallus gallus,FALSE,FALSE,2580,4,2.22,7,,,78
+Birds,,Haemorhous mexicanus,FALSE,FALSE,23,79,13.64,4,11.6,4,79
+Birds,,Histrionicus histrionicus,FALSE,FALSE,623,56,,,14.6,4,80
+Birds,,Horornis diphone,FALSE,FALSE,17,68,,,,,68
+Birds,,Junco hyemalis,FALSE,FALSE,20,56,16.40,4,11.3,4,81
+Birds,,Kieneria aberti,FALSE,FALSE,46,56,15.76,4,8.6,4,82
+Birds,,Lagopus muta,FALSE,FALSE,422,56,,,,,83
+Birds,,Larus hyperboreus,FALSE,FALSE,1576,75,7.21,63,21.1,4,75
+Birds,,Leuconotopicus borealis,FALSE,FALSE,44,56,,,,,84
+Birds,,Limosa lapponica,FALSE,FALSE,216,85,,,34.0,4,85
+Birds,,Megadyptes antipodes,FALSE,FALSE,5200,68,2.40,86,,,87
+Birds,,Melanitta deglandi,FALSE,FALSE,1194,88,,,,,88
+Birds,,Melospiza melodia,FALSE,FALSE,21,56,13.09,4,11.3,4,89
+Birds,,Mimus polyglottos,FALSE,FALSE,49,68,,,20.0,4,68
+Birds,,Morus serrator,FALSE,FALSE,2350,56,,,33.0,4,90
+Birds,,Pagodroma nivea,FALSE,FALSE,419,75,,,46.0,4,75
+Birds,,Parabuteo unicinctus,FALSE,FALSE,886,91,,,,,91
+Birds,,Parus major,FALSE,FALSE,19,68,21.79,63,15.4,4,68
+Birds,,Passer domesticus,FALSE,FALSE,29,68,12.99,63,23.0,4,68
+Birds,,Passerculus sandwichensis,FALSE,FALSE,20,68,13.90,4,,,68
+Birds,,Passerina cyanea,FALSE,FALSE,15,68,,,11.0,4,68
+Birds,,Perdicula asiatica,FALSE,FALSE,35,92,,,,,92
+Birds,,Petrochelidon pyrrhonota,FALSE,FALSE,23,68,,,11.8,4,68
+Birds,,Phaethon rubricauda,FALSE,FALSE,718,68,5.61,86,32.7,4,68
+Birds,,Phalaropus fulicaria,FALSE,FALSE,56,68,,,,,68
+Birds,,Plectrophenax nivalis,FALSE,FALSE,34,68,13.09,63,9.6,4,68
+Birds,,Pterodroma macroptera,FALSE,FALSE,570,68,,,,,68
+Birds,,Ptilotula penicillata,FALSE,FALSE,19,68,,,,,93
+Birds,,Pygoscelis adeliae,FALSE,FALSE,4850,56,3.08,7,,,94
+Birds,,Rissa brevirostris,FALSE,FALSE,377,68,,,27.0,4,68
+Birds,,Rissa tridactyla,FALSE,FALSE,411,95,,,28.5,4,95
+Birds,,Saxicola torquata,FALSE,FALSE,15,68,,,8.8,4,68
+Birds,,Setophaga petechia,FALSE,FALSE,10,68,,,11.0,4,68
+Birds,,Setophaga ruticilla,FALSE,FALSE,8,56,,,10.1,4,96
+Birds,,Somateria mollissima,FALSE,FALSE,1140,75,,,37.8,4,75
+Birds,,Spheniscus humboldti,FALSE,FALSE,5000,56,2.45,7,,,76
+Birds,,Spheniscus magellanicus,FALSE,FALSE,4500,56,,,30.0,4,76
+Birds,,Spheniscus mendiculus,FALSE,FALSE,2500,56,,,,,76
+Birds,,Spinus pinus,FALSE,FALSE,17,97,21.45,4,11.0,4,97
+Birds,,Spizelloides arborea,FALSE,FALSE,18,68,19.66,63,10.8,4,68
+Birds,,Stercorarius maccormicki,FALSE,FALSE,1419,75,,,23.5,4,75
+Birds,,Sterna hirundo,FALSE,FALSE,125,68,,,33.0,4,68
+Birds,,Sturnus vulgaris,FALSE,FALSE,74,56,11.69,4,22.9,4,98
+Birds,,Sula granti,FALSE,FALSE,1754,4,,4,21.0,4,99
+Birds,,Sula nebouxii,FALSE,FALSE,1542,68,,,18.0,4,68
+Birds,,Sula sula,FALSE,FALSE,850,100,4.28,86,23.0,4,100
+Birds,,Tachycineta bicolor,FALSE,FALSE,20,56,,,12.1,4,101
+Birds,,Taeniopygia guttata,FALSE,FALSE,12,68,,,12.0,4,68
+Birds,,Thalassarche melanophris,FALSE,FALSE,3552,56; 102,4.47,103,43.7,4,102; 104
+Birds,,Thryophilus rufalbus,FALSE,FALSE,27,56,,,,,105
+Birds,,Toxostoma curvirostre,FALSE,FALSE,79,56,,,10.8,4,82
+Birds,,Turdus merula,FALSE,FALSE,113,56,,,21.8,4,106
+Birds,,Uria lomvia,FALSE,FALSE,1098,58,6.87,4,29.0,4,58
+Birds,,Zenaida macroura,FALSE,FALSE,119,56,5.98,4,31.3,4,107
+Birds,,Zonotrichia capensis,FALSE,FALSE,20,68,,,,,68
+Birds,,Zonotrichia leucophrys,FALSE,FALSE,25,68,12.87,4,13.3,4,68
+Mammals,cortisol dominant,Aotus trivirgatus,FALSE,FALSE,800,4,2.73,4,30.1,4,108
+Mammals,cortisol dominant,Bos taurus,FALSE,FALSE,347000,7,0.88,4,20.0,4,109
+Mammals,cortisol dominant,Callospermophilus saturatus,FALSE,FALSE,275,4,3.31,4,,,110
+Mammals,cortisol dominant,Canis l. dingo,FALSE,FALSE,26625,4,,,20.6,4,111
+Mammals,cortisol dominant,Castor fiber,FALSE,FALSE,19100,112,,,20.6,4,112
+Mammals,cortisol dominant,Cavia porcellus,FALSE,FALSE,728,4,3.33,4,12.0,4,113
+Mammals,cortisol dominant,Ctenomys talarum,FALSE,FALSE,170,114,5.05,4,,,114
+Mammals,cortisol dominant,Dasyurus geoffroii,FALSE,FALSE,890,4,2.25,4,6.2,4,111
+Mammals,cortisol dominant,Dasyurus maculatus,FALSE,FALSE,5500,4,1.76,4,6.8,4,111
+Mammals,cortisol dominant,Elephas maximus,FALSE,TRUE,3672000,4,0.64,4,79.6,4,115
+Mammals,cortisol dominant,Macaca fascicularis,FALSE,FALSE,6363,4,2.73,116,39.0,4,108
+Mammals,cortisol dominant,Macaca mulatta,FALSE,FALSE,8235,4,2.43,116,40.0,4,108
+Mammals,cortisol dominant,Macropus giganteus,FALSE,FALSE,49500,4,,,25.0,4,111
+Mammals,cortisol dominant,Mustela p. furo,FALSE,FALSE,1140,117,,,11.1,4,117
+Mammals,cortisol dominant,Notamacropus rufogriseus,FALSE,FALSE,16200,4,,,15.2,4,118
+Mammals,cortisol dominant,Odocoileus virginianus,FALSE,FALSE,87000,4,1.99,4,23.0,4,119
+Mammals,cortisol dominant,Orcinus orca,FALSE,FALSE,3987500,4,0.57,120,,,121
+Mammals,cortisol dominant,Oryctolagus cuniculus,FALSE,FALSE,3000,122,3.41,4,9.0,4,122
+Mammals,cortisol dominant,Ovis aries,FALSE,FALSE,80000,4,,,22.8,4,111
+Mammals,cortisol dominant,Psammomys obesus,FALSE,FALSE,212,4,,,3.2,4,123
+Mammals,cortisol dominant,Saimiri sciureus,FALSE,FALSE,925,4,5.29,4,30.2,4,108
+Mammals,cortisol dominant,Setonix brachyurus,FALSE,FALSE,3500,4,1.74,4,13.8,4,111
+Mammals,cortisol dominant,Sus scrofa,FALSE,FALSE,105000,124,0.77,4,27.0,4,124
+Mammals,cortisol dominant,Tamias amoenus,FALSE,FALSE,48,4,9.42,7,,,125
+Mammals,cortisol dominant,Urocitellus beldingi,FALSE,TRUE,290,4,2.71,4,,,126
+Mammals,cortisol dominant,Urocitellus parryii,FALSE,FALSE,650,7,4.47,7,,,127
+Mammals,cortisol dominant,Vombatus ursinus,FALSE,FALSE,25500,4,,,30.0,4,118
+Mammals,cortisol dominant,Vulpes vulpes,FALSE,FALSE,4132,4,3.00,4,21.3,4,111
+Mammals,cortisol dominant,Wallabia bicolor,FALSE,FALSE,14625,4,,,16.8,4,111
+Mammals,CCST dominant,Mesocricetus auratus,FALSE,FALSE,105,4,8.40,7,3.9,4,128
+Mammals,CCST dominant,Microtus ochrogaster,FALSE,FALSE,40,4,8.51,7,5.3,4,129
+Mammals,CCST dominant,Microtus pennsylvanicus,FALSE,FALSE,49,4,10.75,7,,,130
+Mammals,CCST dominant,Mus musculus,FALSE,TRUE,33,131,8.20,131,4.0,4,132
+Mammals,CCST dominant,Tachyglossus aculeatus,FALSE,FALSE,3500,4,0.88,7,49.5,4,111
