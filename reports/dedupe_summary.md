@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-04 21:39:40
+# Source de-duplication summary -- 2026-10-04 22:03:39
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,20 +6,20 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 123085 |
-| accepted species | 39581 |
-| multi-source species | 25156 |
-| within-species value pairs | 281428 |
-| pairs identical (|dlog10| <= 1e-06) | 48110 |
+| species x source values (Pass-1 rows) | 123336 |
+| accepted species | 39739 |
+| multi-source species | 25181 |
+| within-species value pairs | 281855 |
+| pairs identical (|dlog10| <= 1e-06) | 48111 |
 | pairs related by the registry and within its tolerance | 72544 |
-| pairs identical to >= 3 significant digits (blind rule) | 41144 |
-| values collapsed (total) | 44861 |
+| pairs identical to >= 3 significant digits (blind rule) | 41145 |
+| values collapsed (total) | 44862 |
 | values collapsed by a registry edge | 43608 |
-| values collapsed by the blind rule only | 1253 |
+| values collapsed by the blind rule only | 1254 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
 | species with at least one collapsed value | 20319 |
-| multi-source species left with one independent value | 6922 |
+| multi-source species left with one independent value | 6919 |
 
 ## Registry edges with the parent in the database
 
@@ -97,15 +97,17 @@ A provenance_only edge documents a relation whose values generally differ and ta
 | McCoy_2008 | Brey_2001 | FALSE |  |  |  | 0 | 0 |
 | Tucker_etal_2014a | Jones_2009 | TRUE | 190 | 0 | 0 | 0 | 4 |
 | Hebert_etal_2016 | Kiorboe_2013 | TRUE | 41 | 0 | 0 | 0 | 0 |
+| Gonzalez_2024 | Ikeda_2014 | TRUE | 33 | 0 | 0 | 0 | 0 |
+| Gonzalez_2024 | Kiorboe_2013 | TRUE | 26 | 0 | 0 | 0 | 0 |
 
 ## Multi-source species left with one independent value
 
-6922 multi-source species rest on a single independent value after de-duplication, by number of sources:
+6919 multi-source species rest on a single independent value after de-duplication, by number of sources:
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4329 |
-| 3 | 1566 |
+| 2 | 4327 |
+| 3 | 1565 |
 | 4 | 385 |
 | 5 | 77 |
 | 6 | 432 |
