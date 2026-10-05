@@ -36,7 +36,7 @@
 "Acanthephyra",3.041,"Donnelly_1993; Ikeda_2014; Kiorboe_2013; Pata_2025; Makarieva_2008",13,10
 "Acanthidops",16.04,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",28,2
 "Acanthina",8,"Brose_etal_2018",44,1
-"Acanthinula",0.02631,"Brose_2005; Brey_2010; Brose_etal_2018",8,2
+"Acanthinula",0.02631,"Brose_2005; Brey_2010; Brose_etal_2018",5,2
 "Acanthis",14.04,"AnAge; Baach_2026; Cai_etal_2025; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; Wisnionski_2026; vertnet-aves-sept2016; vertnet-traits-sept2016",354,13
 "Acanthisitta",6.345,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",5,3
 "Acanthistius",934.4,"GuoBailly_2024; fishbase",2,2
@@ -56,7 +56,7 @@
 "Acanthogobio",85.3,"Cai_etal_2025; fishbase",2,2
 "Acanthogobius",585.9,"Brose_etal_2018; Cai_etal_2025; Hechinger_etal_2011",77,3
 "Acantholeberis",4.01e-05,"Brose_etal_2018",17,1
-"Acanthopagrus",1846,"AnAge; fishbase; Brose_2005; Cai_etal_2025",13,8
+"Acanthopagrus",1846,"AnAge; fishbase; Brose_2005; Cai_etal_2025",12,8
 "Acanthoparyphium",0.000974,"Brose_etal_2018; Hechinger_etal_2011",23,1
 "Acanthophis",221.5,"Feldman_etal_2016; Myhrvold_2015; Oskyrko_2024; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",16,14
 "Acanthopsetta",1200,"fishbase",1,1
@@ -96,7 +96,7 @@
 "Achirus",77.23,"Viana_2016; fishbase",3,3
 "Acholeplasma",3.497e-14,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",5,3
 "Achroia",0.005714,"Kinsella_etal_2020; Studier_1992",1,1
-"Achromadora",1.154e-07,"Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",39,3
+"Achromadora",1.154e-07,"Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",30,3
 "Achromobacter",3.638e-13,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",6,3
 "Acidithiobacillus",2.672e-13,"DeLong_etal_2010; Hoehler_etal_2023",7,4
 "Acidota",0.002968,"Brocher_etal_2025",1,1
@@ -151,7 +151,7 @@
 "Actophilornis",195.2,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",11,6
 "Actus",1.309e-06,"Ghaderi_2026",13,6
 "Aculepeira",0.07178,"Brocher_etal_2025",1,1
-"Acupalpus",0.002186,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025",61,3
+"Acupalpus",0.002186,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025",42,3
 "Acutotyphlops",32.66,"Feldman_etal_2016; Myhrvold_2015",6,6
 "Adalaria",0.01538,"Brose_etal_2018",9,1
 "Adalia",0.007936,"DeLong_etal_2018; Brocher_etal_2025",5,2
@@ -251,17 +251,17 @@
 "Aglenchus",2.879e-07,"Brose_etal_2018; Brey_2010; Mulder_2011; Cohen_2014",430,3
 "Aglia",0.113,"Castro_2025",1,1
 "Agonomalus",20.77,"GuoBailly_2024",3,3
-"Agonum",0.02185,"Brocher_etal_2025; Brose_etal_2018; Studier_1992; Brose_2005",96,10
+"Agonum",0.02185,"Brocher_etal_2025; Brose_etal_2018; Studier_1992; Brose_2005",54,10
 "Agrenia",0.0002651,"Hishi_etal_2019; Studier_1992",1,1
 "Agricola",36.2,"Myhrvold_2015; vertnet-aves-sept2016",2,2
 "Agriornis",69.79,"vertnet-aves-sept2016; vertnet-traits-sept2016; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",29,9
-"Agriotes",0.0346,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",61,7
+"Agriotes",0.0346,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",34,7
 "Agriphila",0.008521,"Kinsella_etal_2020; Studier_1992",14,1
 "Agrobacterium",1.5e-12,"DeLong_etal_2010; Makarieva_2008",2,2
 "Agropsar",43.01,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007",12,5
-"Agrotis",0.1272,"Brose_2005; Studier_1992; Brose_etal_2018; Castro_2025; Kinsella_etal_2020",55,6
+"Agrotis",0.1272,"Brose_2005; Studier_1992; Brose_etal_2018; Castro_2025; Kinsella_etal_2020",46,6
 "Agrypnus",0.09259,"Brocher_etal_2025",1,1
-"Agyneta",0.0008982,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",27,5
+"Agyneta",0.0008982,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",16,5
 "Ahaetulla",354.1,"Feldman_etal_2016; Myhrvold_2015",10,10
 "Aidanosagitta",0.00252,"Kiorboe_2014; Brey_2010; Ikeda_2014",15,2
 "Ailia",15,"fishbase",1,1
@@ -289,7 +289,7 @@
 "Alaskozetes",0.0001605,"Ehnes_etal_2011; Herberstein_etal_2022; Mercer_etal_2001",29,3
 "Alauda",28.72,"AnAge; Baach_2026; Cai_etal_2025; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",139,5
 "Alaudala",22.2,"Cai_etal_2025",1,1
-"Alboglossiphonia",0.3596,"Brose_2005; Brey_2010; Brose_etal_2018",12,2
+"Alboglossiphonia",0.3596,"Brose_2005; Brey_2010; Brose_etal_2018",7,2
 "Albula",2049,"Mahe_2023; Quaardvark; fishbase",78,3
 "Alburnoides",20.62,"fishbase",7,5
 "Alburnus",99.26,"fishbase; Cai_etal_2025",12,12
@@ -360,7 +360,7 @@
 "Alloteuthis",4.82,"Alujevic_2022",2,2
 "Alloxysta",5.86e-05,"Brose_2005",1,1
 "Alluaudina",18.4,"Feldman_etal_2016",2,2
-"Alluroteuthis",110.7,"Brose_etal_2018; Raymond_2011",37,2
+"Alluroteuthis",110.7,"Brose_etal_2018; Raymond_2011",20,2
 "Alnetoidia",0.003632,"Brocher_etal_2025",1,1
 "Aloconota",0.0006811,"Brocher_etal_2025",2,2
 "Alomasoma",0.57,"Brose_etal_2018",2,1
@@ -407,7 +407,7 @@
 "Amazilis",4.299,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",59,3
 "Amazona",367.6,"AnAge; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Wisnionski_2026; Herberstein_etal_2022; Lislevand_etal_2007",269,83
 "Amazonsprattus",0.1,"Cai_etal_2025",1,1
-"Ambassis",32.34,"Brose_2005; fishbase; Cai_etal_2025; Castro_2025; Makarieva_2008",31,7
+"Ambassis",32.34,"Brose_2005; fishbase; Cai_etal_2025; Castro_2025; Makarieva_2008",17,7
 "Ambastaia",1.2,"Cai_etal_2025",1,1
 "Amblema",29.14,"Vanni_2017; Brey_2010",9,1
 "Amblonyx",2966,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",14,6
@@ -504,7 +504,7 @@
 "Anabathmis",9.065,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Lislevand_etal_2007; vertnet-traits-sept2016",13,7
 "Anabazenops",40.76,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",7,3
 "Anabolia",0.01202,"Brose_etal_2018",58,1
-"Anacaena",0.001191,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",47,3
+"Anacaena",0.001191,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",25,3
 "Anaceratagallia",0.001776,"Brocher_etal_2025",2,2
 "Anadara",0.0833,"Brose_etal_2018",36,1
 "Anadenobolus",0.3138,"Lemoine_2026",54,2
@@ -535,14 +535,14 @@
 "Anchomenus",0.01415,"Ball_2015; Brose_etal_2018; Studier_1992; Ehnes_etal_2011",106,3
 "Anchovia",18.7,"Viana_2016",1,1
 "Anchoviella",32,"fishbase",1,1
-"Ancistrocheirus",579.2,"Raymond_2011",3,1
+"Ancistrocheirus",579.2,"Raymond_2011",1,1
 "Ancistrops",34.21,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",6,2
 "Ancistroteuthis",27.2,"Barnes_2008",29,1
 "Ancistrus",31.7,"Castro_2025; Gonzalez_2025; Brey_2010; fishbase; Cai_etal_2025; Vanni_2017",78,8
 "Anconia",0.8167,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",6,1
 "Ancylocranium",13.17,"Feldman_etal_2016; Meiri_2018",6,3
 "Ancylopsetta",195.5,"Froese_2025; Froese_2014",2,1
-"Ancylus",0.03678,"Brose_2005; Brey_2010; Brose_etal_2018; McCoy_2008",186,3
+"Ancylus",0.03678,"Brose_2005; Brey_2010; Brose_etal_2018; McCoy_2008",177,3
 "Andalgalomys",33.67,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",14,3
 "Andeancistrus",6.52,"Gonzalez_2025; Brey_2010",15,1
 "Andigena",315.5,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Quaardvark; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016",19,7
@@ -557,12 +557,12 @@
 "Androphobus",30.5,"Tobias_2022",1,1
 "Aneides",3.367,"AmphiBIO; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",4,3
 "Anelasmocephalus",0.008191,"Brose_etal_2018",228,1
-"Anelosimus",0.003704,"Gonzalez_2025; Studier_1992; Quaardvark; Brose_2005; Brey_2010; Brose_etal_2018",151,5
+"Anelosimus",0.003704,"Gonzalez_2025; Studier_1992; Quaardvark; Brose_2005; Brey_2010; Brose_etal_2018",111,5
 "Anelytropsis",51.7,"Feldman_etal_2016; Meiri_2018",2,1
 "Anemonia",11.3,"Brose_etal_2018; Savage_2022",16,2
 "Anepischetosia",3.22,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015",3,2
 "Anguilla",5677,"Cai_etal_2025; fishbase; AnAge",18,13
-"Anguis",39.65,"Cai_etal_2025; Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Brose_2005; Brose_etal_2018; Makarieva_2008; Tsuboi_etal_2018; Uyeda_etal_2017",184,13
+"Anguis",39.65,"Cai_etal_2025; Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Brose_2005; Brose_etal_2018; Makarieva_2008; Tsuboi_etal_2018; Uyeda_etal_2017",105,13
 "Anguliphantes",0.0005886,"Gonzalez_2025; Studier_1992",1,1
 "Angustassiminea",0.0021,"Brose_etal_2018; Hechinger_etal_2011",7,2
 "Anhima",3150,"Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014",4,1
@@ -577,7 +577,7 @@
 "Anisomysis",0.0007946,"Ikeda_2014; Kiorboe_2013",2,2
 "Anisops",0.00886,"Verberk_2020; DeLong_etal_2018",6,2
 "Anisotremus",1711,"fishbase; Brose_etal_2018; Mahe_2023; Batista_2012",50,5
-"Anisus",0.1154,"Brose_2005; Brey_2010; Brose_etal_2018",32,2
+"Anisus",0.1154,"Brose_2005; Brey_2010; Brose_etal_2018",17,2
 "Anniella",5.994,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; vertnet-traits-sept2016; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Quaardvark; Uyeda_etal_2017",21,13
 "Anodonta",7.419,"McCoy_2008; Brey_2010",1,1
 "Anodontostoma",124,"Cai_etal_2025; fishbase",2,2
@@ -608,7 +608,7 @@
 "Anotomys",66.4,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,1
 "Anotopterus",1650,"fishbase",1,1
 "Anotosaura",1.825,"Feldman_etal_2016; Meiri_2018; Meiri_2024",6,4
-"Anotylus",0.0006413,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",34,10
+"Anotylus",0.0006413,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",22,10
 "Anoura",12.9,"Soria_etal_2021; Cai_etal_2025; Castro_2025; Faurby_etal_2018; Hoehler_etal_2023; Hudson_2013; Jones_2009; Myhrvold_2015; Smith_2003; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-traits-sept2016; AnAge; Quaardvark; vertnet-mammalia-sept2016",62,19
 "Anourosorex",21.96,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Cai_etal_2025; Jones_2009; Smith_2003; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",21,8
 "Anous",101.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; AnAge; McCoy_2008; Tsuboi_etal_2018; vertnet-aves-sept2016; Herberstein_etal_2022; Quaardvark; vertnet-traits-sept2016; Castro_2025; Hoehler_etal_2023; Lislevand_etal_2007",85,22
@@ -632,7 +632,7 @@
 "Anthipes",12.18,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,3
 "Anthocephala",3.9,"Tobias_2022",2,2
 "Anthochaera",86.89,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",46,22
-"Anthocomus",0.005546,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",61,3
+"Anthocomus",0.005546,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",32,3
 "Anthocoris",0.003234,"Brocher_etal_2025",1,1
 "Anthometrina",98,"Brose_etal_2018",7,1
 "Anthonomus",0.00686,"Hirt_etal_2017",1,1
@@ -652,7 +652,7 @@
 "Antilope",33300,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Hirt_etal_2017; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",18,3
 "Antilophia",20.85,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",6,3
 "Antimora",2320,"fishbase; Raymond_2011",11,3
-"Antistea",0.001484,"Brose_2005; Brey_2010; Brose_etal_2018; Gonzalez_2025; Studier_1992",148,3
+"Antistea",0.001484,"Brose_2005; Brey_2010; Brose_etal_2018; Gonzalez_2025; Studier_1992",79,3
 "Antocha",0.0006346,"Brose_etal_2018",43,1
 "Antrops",0.00221,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",4,1
 "Antrostomus",64.74,"Myhrvold_2015; Tobias_2022; vertnet-aves-sept2016; vertnet-traits-sept2016; Wilman_etal_2014; AnAge; Cai_etal_2025; Lislevand_etal_2007; Quaardvark; Tsuboi_etal_2018; McCoy_2008",138,28
@@ -686,7 +686,7 @@
 "Aphanotorulus",2.854,"Gonzalez_2025; Brey_2010",4,1
 "Aphanotriccus",11.31,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",7,3
 "Aphanus",0.01194,"Brocher_etal_2025",1,1
-"Aphelenchoides",1.033e-07,"Mulder_2011; Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",57,6
+"Aphelenchoides",1.033e-07,"Mulder_2011; Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",52,6
 "Aphelenchus",2.15e-07,"Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",51,3
 "Aphelocephala",11.28,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",26,13
 "Aphelocheirus",0.007,"Brose_etal_2018; Studier_1992",3,1
@@ -695,7 +695,7 @@
 "Apherusa",0.00161,"Brose_etal_2018",63,2
 "Aphia",1.08,"Brose_etal_2018",25,1
 "Aphidecta",0.00855,"DeLong_etal_2018",1,1
-"Aphidius",0.000116,"Brose_2005",2,1
+"Aphidius",0.000116,"Brose_2005",1,1
 "Aphis",0.000501,"AndersonGillooly_2017; DeLong_etal_2018",24,4
 "Aphodius",0.07295,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",11,3
 "Aphomia",0.04081,"Kinsella_etal_2020; Studier_1992",7,1
@@ -712,7 +712,7 @@
 "Aphyocypris",4.085,"Cai_etal_2025; fishbase",7,7
 "Aphyosemion",1.088,"Cai_etal_2025",8,8
 "Apion",0.002196,"Brocher_etal_2025",3,3
-"Apis",0.05395,"Kendall_etal_2019; Studier_1992; Baach_2026; Brocher_etal_2025; Brose_2005; Brose_etal_2018; Castro_2025; Chown_etal_2007; Gonzalez_2025; Herberstein_etal_2022; Makarieva_2008",176,9
+"Apis",0.05395,"Kendall_etal_2019; Studier_1992; Baach_2026; Brocher_etal_2025; Brose_2005; Brose_etal_2018; Castro_2025; Chown_etal_2007; Gonzalez_2025; Herberstein_etal_2022; Makarieva_2008",169,9
 "Apistogramma",2.567,"fishbase; Froese_2025; Froese_2014",3,3
 "Aplastodiscus",3.49,"AmphiBIO",2,2
 "Aplocheilus",6.3,"Cai_etal_2025",2,2
@@ -766,11 +766,11 @@
 "Arabibarbus",30000,"fishbase",1,1
 "Arachnothera",22.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Tsuboi_etal_2018",106,27
 "Arachnura",0.032,"Pekar_etal_2021",1,1
-"Araeoncus",0.0003929,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",23,3
+"Araeoncus",0.0003929,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",17,3
 "Arakawania",1,"Vermeij_1980",1,1
 "Aramides",430.9,"Tobias_2022; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; Quaardvark; Tsuboi_etal_2018; vertnet-traits-sept2016",46,17
 "Aramus",1167,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,4
-"Araneus",0.224,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Quaardvark",105,7
+"Araneus",0.224,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Quaardvark",56,7
 "Araniella",0.0532,"Brocher_etal_2025",1,1
 "Aratinga",129.7,"AnAge; Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018; vertnet-traits-sept2016; Quaardvark",167,49
 "Aratus",0.3113,"Brose_etal_2018",27,1
@@ -805,7 +805,7 @@
 "Arctogadus",386.1,"Froese_2025; Froese_2014",1,1
 "Arctogalidia",2261,"AnAge; Ernest_2003; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; McCoy_2008; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014",13,4
 "Arctonyx",9780,"Soria_etal_2021; AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Tsuboi_etal_2018; Wilman_etal_2014",13,5
-"Arctosa",0.03596,"Pekar_etal_2021; Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",112,5
+"Arctosa",0.03596,"Pekar_etal_2021; Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",88,5
 "Arctoscopus",272.6,"Cai_etal_2025",1,1
 "Arctoseius",9.217e-06,"Brose_etal_2018; Cohen_2014",181,3
 "Arctozenus",54.93,"Froese_2025; Froese_2014",1,1
@@ -822,7 +822,7 @@
 "Argas",0.002586,"Brose_etal_2018",26,1
 "Argenna",0.001644,"Brocher_etal_2025",1,1
 "Argenteohyla",44,"AmphiBIO",1,1
-"Argentina",11.36,"Barnes_2008; Brose_2005",18,2
+"Argentina",11.36,"Barnes_2008; Brose_2005",16,2
 "Argiope",0.3368,"Herberstein_etal_2022; Pekar_etal_2021; Weiss_2020",7,2
 "Argoctenus",0.046,"Pekar_etal_2021",1,1
 "Argonectes",199.1,"fishbase",2,1
@@ -856,7 +856,7 @@
 "Arius",1751,"fishbase; Simier_2021",4,4
 "Arizelocichla",34.52,"Myhrvold_2015; Tobias_2022; vertnet-aves-sept2016; Lislevand_etal_2007; Wilman_etal_2014",74,23
 "Arkys",0.05225,"Pekar_etal_2021",4,4
-"Armadillidium",0.02785,"Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008; Brose_2005; Brey_2010; Brose_etal_2018; Brocher_etal_2025",83,7
+"Armadillidium",0.02785,"Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008; Brose_2005; Brey_2010; Brose_etal_2018; Brocher_etal_2025",69,7
 "Armadillogorgia",0.13,"Brose_etal_2018",23,1
 "Arnoglossus",47.17,"Barnes_2008; Brose_2005; Brose_etal_2018; fishbase; Cai_etal_2025",92,6
 "Arnoldichthys",18.5,"fishbase",1,1
@@ -864,7 +864,7 @@
 "Arothron",10470,"Cai_etal_2025; fishbase",6,6
 "Arremon",35.16,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Cai_etal_2025; Tsuboi_etal_2018; vertnet-traits-sept2016; Lislevand_etal_2007",195,35
 "Arremonops",28.69,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Hoehler_etal_2023; Tsuboi_etal_2018; AnAge; Lislevand_etal_2007",108,10
-"Arrhamphus",106.5,"Brose_2005",4,1
+"Arrhamphus",106.5,"Brose_2005",1,1
 "Arrhopalites",0.0001318,"Hishi_etal_2019; Studier_1992",3,3
 "Arrhyton",13.6,"Feldman_etal_2016",8,8
 "Arripis",4508,"AnAge; fishbase; Cai_etal_2025",7,7
@@ -897,10 +897,10 @@
 "Ascarosepion",4066,"Quaardvark; sealifebase",6,3
 "Ascelichthys",5.3,"GuoBailly_2024",1,1
 "Ascia",0.1,"BarrosBellanda_2002",1,1
-"Ascomorpha",2.61e-07,"Brose_2005; Brose_etal_2018",82,2
+"Ascomorpha",2.61e-07,"Brose_2005; Brose_etal_2018",61,2
 "Asellia",9.82,"Soria_etal_2021; Faurby_etal_2018; Myhrvold_2015; Jones_2009; Smith_2003; Tsuboi_etal_2018; Wilman_etal_2014",14,8
 "Aselliscus",5.065,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-mammalia-sept2016",16,6
-"Asellus",0.007829,"Brose_2005; Brey_2010; Brose_etal_2018; DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",229,3
+"Asellus",0.007829,"Brose_2005; Brey_2010; Brose_etal_2018; DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",207,3
 "Asemichthys",2.1,"GuoBailly_2024",1,1
 "Asemospiza",12.26,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",16,4
 "Aseraggodes",12.8,"Cai_etal_2025",1,1
@@ -918,6 +918,7 @@
 "Aspidophoroides",4.25,"fishbase; Cai_etal_2025",3,3
 "Aspidoscelis",27.47,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015; vertnet-reptilia-sept2016; Castro_2025; Hoehler_etal_2023; Hirt_etal_2017; vertnet-traits-sept2016; AnAge; Makarieva_2008; Uyeda_etal_2017; Wisnionski_2026",253,98
 "Aspidura",17.57,"Feldman_etal_2016",7,7
+"Aspilota",7.199e-05,"Brose_2005",1,1
 "Aspistor",126.3,"Viana_2016; fishbase",4,4
 "Aspronema",10.58,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015",6,4
 "Assa",0.39,"AmphiBIO",1,1
@@ -1001,7 +1002,7 @@
 "Attagis",331,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",11,3
 "Atticora",11.95,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",13,5
 "Attila",39.17,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018; vertnet-traits-sept2016",94,11
-"Attulus",0.003659,"Brose_2005; Brey_2010; Brose_etal_2018",132,2
+"Attulus",0.003659,"Brose_2005; Brey_2010; Brose_etal_2018",67,2
 "Atule",398.1,"Cai_etal_2025; Tsuboi_etal_2018",2,2
 "Atya",2.635,"Gonzalez_2025; Brey_2010; Vanni_2017",149,4
 "Aubria",21.49,"vertnet-amphibia-sept2016; vertnet-traits-sept2016",2,1
@@ -1056,7 +1057,7 @@
 "Aviceda",289.8,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Herberstein_etal_2022; Lislevand_etal_2007; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016",20,8
 "Avocettina",679.3,"Cai_etal_2025",1,1
 "Avocettula",4.2,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
-"Awaous",203.1,"Brose_2005; Cai_etal_2025; Tsuboi_etal_2018",13,4
+"Awaous",203.1,"Brose_2005; Cai_etal_2025; Tsuboi_etal_2018",5,4
 "Axelsonia",0.0003973,"Brose_etal_2018; Hishi_etal_2019; Studier_1992",66,2
 "Axenyllodes",9.714e-06,"Hishi_etal_2019; Studier_1992",1,1
 "Axinotarsus",0.002199,"Brocher_etal_2025",1,1
@@ -1142,7 +1143,7 @@
 "Barygenys",4.8,"AmphiBIO",1,1
 "Barynotus",0.02618,"Brocher_etal_2025",1,1
 "Baryphthengus",155.4,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",25,6
-"Basalys",6.1e-06,"Brose_2005",6,1
+"Basalys",6.1e-06,"Brose_2005",1,1
 "Baseodiscus",5800,"Brose_etal_2018",90,1
 "Basileuterus",12.24,"Tobias_2022; Lislevand_etal_2007; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018; Hoehler_etal_2023; Quaardvark",248,26
 "Basilichthys",212.1,"fishbase",2,1
@@ -1171,7 +1172,7 @@
 "Bathylagus",27.08,"Brose_etal_2018; Makarieva_2008",62,2
 "Bathymaster",109.6,"GuoBailly_2024; fishbase",5,4
 "Bathyodontus",1.412e-06,"Ghaderi_2026",5,2
-"Bathyphantes",0.001641,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",71,5
+"Bathyphantes",0.001641,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",61,5
 "Bathyplotes",4.8,"Brose_etal_2018",34,2
 "Bathypolypus",49,"sealifebase",1,1
 "Bathyporeia",0.003526,"Makarieva_2008; Brose_etal_2018; Hoehler_etal_2023",16,3
@@ -1184,7 +1185,7 @@
 "Batis",10.68,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",122,43
 "Batomys",170,"Faurby_etal_2018; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Jones_2009",20,7
 "Batophila",0.0004349,"Brocher_etal_2025",1,1
-"Batoteuthis",21.73,"Raymond_2011",5,1
+"Batoteuthis",21.73,"Raymond_2011",1,1
 "Batrachocottus",123.6,"Cai_etal_2025",4,4
 "Batrachoides",630,"fishbase",1,1
 "Batrachoseps",34.2,"Cai_etal_2025",1,1
@@ -1214,7 +1215,7 @@
 "Belonesox",10.67,"Froese_2025; Froese_2014",1,1
 "Belzebub",0.007402,"Brose_etal_2018",28,1
 "Bema",0.2056,"Brose_etal_2018",83,1
-"Bembidion",0.002616,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025; Petersen_1999",189,10
+"Bembidion",0.002616,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025; Petersen_1999",161,10
 "Bembrops",88.3,"fishbase",2,2
 "Benthalbella",68.6,"Froese_2025; Froese_2014; Makarieva_2008",2,2
 "Bentheuphausia",0.2114,"Ikeda_2014; Kiorboe_2013",4,1
@@ -1331,7 +1332,7 @@
 "Borostomias",87.97,"Castro_2025; Makarieva_2008; McCoy_2008",4,3
 "Bos",676100,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; McCoy_2008; Hirt_etal_2017; Gillooly_etal_2016; Hoehler_etal_2023; Wisnionski_2026",56,25
 "Boselaphus",170800,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Herberstein_etal_2022; Hirt_etal_2017; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",15,5
-"Bosmina",7.154e-06,"Brose_etal_2018; DeLong_etal_2018; Brose_2005; DeLong_etal_2010",439,6
+"Bosmina",7.154e-06,"Brose_etal_2018; DeLong_etal_2018; Brose_2005; DeLong_etal_2010",425,6
 "Bostockia",29.8,"fishbase",1,1
 "Bostrychia",1201,"Tobias_2022; AnAge; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016",10,3
 "Bostrychus",188.4,"Cai_etal_2025",1,1
@@ -1363,7 +1364,7 @@
 "Brachinus",0.0164,"Brocher_etal_2025",2,2
 "Brachiones",24.5,"Cai_etal_2025; Faurby_etal_2018; Soria_etal_2021",3,2
 "Brachionus",1.907e-06,"AndersonGillooly_2017; DeLong_etal_2010; DeLong_etal_2018",32,6
-"Brachioteuthis",58.04,"Raymond_2011",6,3
+"Brachioteuthis",58.04,"Raymond_2011",3,3
 "Brachirus",382.1,"Cai_etal_2025; fishbase",4,3
 "Brachonchulus",1.141e-06,"Ghaderi_2026",1,1
 "Brachycarenus",0.01093,"Brocher_etal_2025",1,1
@@ -1447,7 +1448,7 @@
 "Bruchidius",0.0012,"Brocher_etal_2025",2,2
 "Bruchus",0.002397,"Brocher_etal_2025",3,3
 "Brundinia",0.0002511,"Brocher_etal_2025",1,1
-"Bryaxis",6.987e-05,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",45,3
+"Bryaxis",6.987e-05,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",24,3
 "Brycinus",358.2,"AnAge; fishbase",5,4
 "Brycon",2217,"fishbase; Cai_etal_2025; Vanni_2017",27,11
 "Bryconamericus",6.204,"Vanni_2017; fishbase",27,7
@@ -1482,7 +1483,7 @@
 "Bulla",0.1639,"Hechinger_etal_2011",1,1
 "Bullimus",322.2,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016",17,8
 "Bulweria",151.8,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",31,6
-"Bunaka",626.7,"Brose_2005",4,1
+"Bunaka",626.7,"Brose_2005",1,1
 "Bungarus",863.5,"Feldman_etal_2016; Myhrvold_2015; Cai_etal_2025",23,21
 "Bunocephalus",3.023,"Vanni_2017; Cai_etal_2025; fishbase",10,3
 "Bunolagus",1538,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",9,4
@@ -1588,7 +1589,7 @@
 "Callistoctopus",1700,"sealifebase",1,1
 "Callistomys",519,"Cai_etal_2025; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",7,1
 "Callithrix",329.6,"Cai_etal_2025; Faurby_etal_2018; GalanAcedo_etal_2026; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Ernest_2003; AnAge; Herberstein_etal_2022; Hoehler_etal_2023; McCoy_2008; Tsuboi_etal_2018",93,31
-"Callitula",8.271e-05,"Brose_2005; Studier_1992; Brose_etal_2018",42,2
+"Callitula",8.271e-05,"Brose_2005; Studier_1992; Brose_etal_2018",22,2
 "Callobius",0.07728,"Brose_etal_2018",51,1
 "Callocephalon",245.1,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",16,4
 "Callochiton",0.00066,"Brose_etal_2018",15,1
@@ -1652,7 +1653,7 @@
 "Campocolinus",233.6,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",16,7
 "Camponotus",0.02159,"Leahy_2025; Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008; Brose_etal_2018; Herberstein_etal_2022; Lemoine_2026",666,24
 "Campostoma",19.05,"Cai_etal_2025; Makarieva_2008; Vanni_2017; vertnet-fishes-sept2016",53,5
-"Campsicnemus",0.001103,"Brose_2005; Studier_1992; Brose_etal_2018",58,2
+"Campsicnemus",0.001103,"Brose_2005; Studier_1992; Brose_etal_2018",30,2
 "Camptocercus",2.51e-05,"Brose_etal_2018",28,1
 "Camptorhynchus",864,"Myhrvold_2015",1,1
 "Camptostoma",7.508,"AnAge; McCoy_2008; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Hoehler_etal_2023",70,5
@@ -1667,11 +1668,11 @@
 "Candidia",17.4,"Cai_etal_2025",2,2
 "Candoia",765.1,"Feldman_etal_2016; Myhrvold_2015; Makarieva_2008; Uyeda_etal_2017",8,7
 "Canirallus",261.5,"Myhrvold_2015; Wilman_etal_2014; Tobias_2022",5,2
-"Canis",11980,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b; Wilman_etal_2014; Cai_etal_2025; Hirt_etal_2017; Herberstein_etal_2022; Hoehler_etal_2023; McCoy_2008; Uyeda_etal_2017; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Baach_2026; Brose_2005; Brose_etal_2018; Gillooly_etal_2016; Wisnionski_2026",502,62
+"Canis",11980,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b; Wilman_etal_2014; Cai_etal_2025; Hirt_etal_2017; Herberstein_etal_2022; Hoehler_etal_2023; McCoy_2008; Uyeda_etal_2017; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Baach_2026; Brose_2005; Brose_etal_2018; Gillooly_etal_2016; Wisnionski_2026",491,62
 "Cannomys",743.2,"AnAge; Ernest_2003; Faurby_etal_2018; Herberstein_etal_2022; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Uyeda_etal_2017; Wilman_etal_2014",12,7
 "Canonopsis",0.0589,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",4,1
 "Cansumys",57.75,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021",3,2
-"Cantharis",0.04667,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025",66,8
+"Cantharis",0.04667,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025",37,8
 "Cantherhines",424.7,"Brose_etal_2018; Mahe_2023; Cai_etal_2025; Tsuboi_etal_2018; GuoBailly_2024",355,8
 "Canthidermis",413.5,"Alarcon_2017",1,1
 "Canthidium",0.0181,"Anunciacao_etal_2025",12,6
@@ -1700,7 +1701,7 @@
 "Caputonchus",2.894e-07,"Ghaderi_2026",1,1
 "Caquetaia",548.4,"Froese_2025; Froese_2014",1,1
 "Carabodes",5.76e-05,"Brose_etal_2018; Ehnes_etal_2011",241,7
-"Carabus",0.6532,"Brocher_etal_2025; Ehnes_etal_2011; Brose_2005; Studier_1992; Brose_etal_2018",86,9
+"Carabus",0.6532,"Brocher_etal_2025; Ehnes_etal_2011; Brose_2005; Studier_1992; Brose_etal_2018",81,9
 "Caracanthus",2,"Tsuboi_etal_2018",1,1
 "Caracara",1214,"Myhrvold_2015; AnAge; Cai_etal_2025; Lislevand_etal_2007; McCoy_2008; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",26,8
 "Caradrina",0.06886,"Kinsella_etal_2020; Studier_1992",1,1
@@ -1830,7 +1831,7 @@
 "Centroscymnus",7862,"Froese_2025; Tsuboi_etal_2018; fishbase",5,4
 "Centrothele",0.073,"Pekar_etal_2021",1,1
 "Centurio",20.88,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",15,4
-"Cepaea",1.533,"Brose_2005; Brey_2010; Brose_etal_2018; Quaardvark",25,4
+"Cepaea",1.533,"Brose_2005; Brey_2010; Brose_etal_2018; Quaardvark",16,4
 "Cephalobus",2.407e-07,"Mulder_2011",4,1
 "Cephalodiscus",83000,"sealifebase; Brose_etal_2018",5,2
 "Cephalonomia",0.0023,"Brose_etal_2018",109,1
@@ -1873,7 +1874,7 @@
 "Cercopithecus",3806,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; GalanAcedo_etal_2026; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Quaardvark; Tucker_etal_2014b; vertnet-mammalia-sept2016; McCoy_2008",217,82
 "Cercosaura",3.144,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",35,25
 "Cercotrichas",24.92,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",5,3
-"Cercyon",0.0009054,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",22,6
+"Cercyon",0.0009054,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",14,6
 "Cereopsis",4168,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014",7,6
 "Ceriantheopsis",2.724,"Brose_etal_2018",4,1
 "Ceriodaphnia",1.63e-05,"DeLong_etal_2010; DeLong_etal_2018; Brose_etal_2018; Hebert_etal_2016; Kiorboe_2013",71,6
@@ -1905,12 +1906,12 @@
 "Ceutorhynchus",0.001061,"Brocher_etal_2025",6,5
 "Ceyx",22.76,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022; Lislevand_etal_2007; Tsuboi_etal_2018",173,36
 "Chacophrys",26.37,"Marangoni_2018",1,1
-"Chaenocephalus",2096,"Cai_etal_2025; Makarieva_2008; Raymond_2011; fishbase",6,4
+"Chaenocephalus",2096,"Cai_etal_2025; Makarieva_2008; Raymond_2011; fishbase",4,4
 "Chaenodraco",536.6,"Brose_etal_2018; Cai_etal_2025",33,2
 "Chaenogobius",16.9,"Cai_etal_2025; Tsuboi_etal_2018",2,2
 "Chaenomugil",108,"Cai_etal_2025",1,1
 "Chaerephon",14.82,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; vertnet-mammalia-sept2016; Smith_2003; Wilman_etal_2014; Jones_2009; Tsuboi_etal_2018; Cai_etal_2025; vertnet-traits-sept2016; Quaardvark",143,45
-"Chaetarthria",0.0002268,"Brose_2005; Studier_1992; Brose_etal_2018",24,2
+"Chaetarthria",0.0002268,"Brose_2005; Studier_1992; Brose_etal_2018",13,2
 "Chaetobranchopsis",42.4,"Cai_etal_2025",1,1
 "Chaetobranchus",248,"fishbase",1,1
 "Chaetocauda",30.88,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,2
@@ -1972,7 +1973,7 @@
 "Channa",3703,"fishbase; Cai_etal_2025; Castro_2025; Makarieva_2008",70,15
 "Channichthys",343.7,"Cai_etal_2025; Makarieva_2008; Raymond_2011",3,3
 "Chanodichthys",6001,"fishbase; Cai_etal_2025",5,4
-"Chaoborus",0.0002558,"Brose_2005",47,1
+"Chaoborus",0.0002558,"Brose_2005",1,1
 "Chaos",2.903e-05,"Castro_2025; DeLong_etal_2010; Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000; Makarieva_2008",23,4
 "Chapinophis",30.7,"Feldman_etal_2016",1,1
 "Characidium",5.422,"Vanni_2017; fishbase",17,9
@@ -1987,7 +1988,7 @@
 "Charitospiza",10.5,"Tobias_2022",1,1
 "Charmosyna",46.08,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; AnAge; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016",46,16
 "Charopus",0.0008766,"Brocher_etal_2025",1,1
-"Chartoscirta",0.00422,"Brose_2005; Studier_1992; Brose_etal_2018",314,2
+"Chartoscirta",0.003891,"Brose_etal_2018",157,1
 "Charybdis",211.4,"sealifebase; Mantelatto_2001",8,5
 "Chascanopsetta",423.6,"Cai_etal_2025; fishbase",2,2
 "Chasiempis",13.48,"Myhrvold_2015; Tobias_2022; AnAge; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",11,7
@@ -2015,7 +2016,7 @@
 "Chelemys",50.85,"Faurby_etal_2018; Myhrvold_2015; Jones_2009; Smith_2003; Soria_etal_2021; Uyeda_etal_2017; Wilman_etal_2014; vertnet-traits-sept2016",18,8
 "Cheletomimus",4.83e-07,"Brose_etal_2018",84,1
 "Chelictinia",126,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",4,2
-"Chelidonichthys",1598,"Barnes_2008; Brose_2005; Tsuboi_etal_2018; AnAge; Cai_etal_2025; fishbase",31,9
+"Chelidonichthys",1598,"Barnes_2008; Brose_2005; Tsuboi_etal_2018; AnAge; Cai_etal_2025; fishbase",27,9
 "Chelidoperca",3.6,"fishbase",1,1
 "Chelidoptera",37.84,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",15,3
 "Chelidorhynx",5.56,"Myhrvold_2015; Tobias_2022; vertnet-aves-sept2016; vertnet-traits-sept2016",10,3
@@ -2047,7 +2048,7 @@
 "Chilabothrus",5837,"Feldman_etal_2016; Meiri_2024",11,11
 "Chilacis",0.003957,"Brocher_etal_2025",1,1
 "Chilia",36.47,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",5,2
-"Chilocorus",0.001971,"Brose_2005; Studier_1992; Brose_etal_2018",74,2
+"Chilocorus",0.001971,"Brose_2005; Studier_1992; Brose_etal_2018",38,2
 "Chilodonella",6.17e-09,"DeLong_etal_2010",1,1
 "Chilodus",70.5,"Cai_etal_2025",1,1
 "Chilomycterus",2303,"Froese_2025; Froese_2014; Cai_etal_2025; Brose_etal_2018; fishbase",89,4
@@ -2069,7 +2070,7 @@
 "Chionis",585.8,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",16,8
 "Chionista",6.254,"Hechinger_etal_2011",1,1
 "Chionobathyscus",1896,"Cai_etal_2025",1,1
-"Chionodraco",1042,"Brose_etal_2018; Cai_etal_2025; Raymond_2011; fishbase",129,9
+"Chionodraco",1042,"Brose_etal_2018; Cai_etal_2025; Raymond_2011; fishbase",86,9
 "Chionoecetes",1448,"Froese_2025; Quaardvark; sealifebase",3,3
 "Chionomesa",4.816,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",27,7
 "Chionomys",76.74,"Faurby_etal_2018; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Ernest_2003; Herberstein_etal_2022; Hoehler_etal_2023; Jones_2009; Myhrvold_2015",17,7
@@ -2092,7 +2093,7 @@
 "Chiropotes",2826,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; GalanAcedo_etal_2026; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Tsuboi_etal_2018",57,21
 "Chiropsalmus",257.7,"sealifebase",1,1
 "Chirostoma",13.99,"fishbase; Cai_etal_2025",7,7
-"Chiroteuthis",73.2,"Raymond_2011",11,4
+"Chiroteuthis",73.2,"Raymond_2011",4,4
 "Chiroxiphia",18.64,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Hoehler_etal_2023; Quaardvark; Tsuboi_etal_2018",132,15
 "Chiruromys",63.67,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Ernest_2003; vertnet-traits-sept2016",22,5
 "Chitala",11720,"Cai_etal_2025; fishbase",12,7
@@ -2152,13 +2153,13 @@
 "Choridactylus",64,"fishbase",1,1
 "Choristoneura",0.07848,"AndersonGillooly_2017",33,4
 "Chorizopora",0.007796,"Brose_etal_2018",6,1
-"Chorthippus",0.1425,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",27,7
+"Chorthippus",0.1425,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",17,7
 "Christinus",9.158,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015; Hirt_etal_2017",10,7
 "Chroicocephalus",324.8,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; sealifebase; Lislevand_etal_2007; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Tsuboi_etal_2018; Herberstein_etal_2022; AllAboutBirds_2025; Brose_etal_2018; Gillooly_etal_2016; Gonzalez_2025; Horn_2016; Hoehler_etal_2023; Makarieva_2008; Quaardvark",157,40
 "Chromis",27.77,"Tsuboi_etal_2018; Killen_etal_2016; Makarieva_2008; Froese_2025; Froese_2014; Emery_1973; Welicky_2018; Cai_etal_2025",14,13
 "Chromobotia",469,"Cai_etal_2025; fishbase",2,1
 "Chronogaster",1.11e-07,"Brose_etal_2018; Brey_2010",27,1
-"Chrosomus",2.354,"Brose_2005; Brose_etal_2018; Cai_etal_2025; Vanni_2017",184,6
+"Chrosomus",2.354,"Brose_2005; Brose_etal_2018; Cai_etal_2025; Vanni_2017",166,6
 "Chrotogale",2875,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",9,2
 "Chrotomys",141.2,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016",23,9
 "Chrotopterus",81.97,"Cai_etal_2025; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Uyeda_etal_2017; Wilman_etal_2014; vertnet-traits-sept2016",13,5
@@ -2183,7 +2184,7 @@
 "Chrysopelea",305.1,"Feldman_etal_2016; Myhrvold_2015; vertnet-traits-sept2016",10,9
 "Chrysophlegma",116.1,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",21,9
 "Chrysopilus",0.005486,"Gonzalez_2025; Studier_1992",1,1
-"Chrysops",0.01464,"Brose_2005; Studier_1992; Brose_etal_2018",62,2
+"Chrysops",0.01464,"Brose_2005; Studier_1992; Brose_etal_2018",32,2
 "Chrysospalax",297.4,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tucker_etal_2014b; Wilman_etal_2014; Ernest_2003",15,4
 "Chrysoteuchia",0.01282,"Kinsella_etal_2020; Studier_1992",6,1
 "Chrysothlypis",12.66,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,6
@@ -2195,7 +2196,7 @@
 "Chunga",1298,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,1
 "Chydorus",2.18e-06,"Brose_etal_2018",15,1
 "Cibicidoides",6.89e-06,"DeLong_etal_2010",1,1
-"Cicadella",0.01032,"Brose_2005; Studier_1992; Brose_etal_2018",76,2
+"Cicadella",0.01032,"Brose_2005; Studier_1992; Brose_etal_2018",39,2
 "Cicadula",0.004717,"Brocher_etal_2025",1,1
 "Cichla",6523,"Froese_2025; fishbase; Cai_etal_2025",14,11
 "Cichladusa",27.94,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",35,9
@@ -2269,11 +2270,11 @@
 "Cliona",2009,"Brose_etal_2018; sealifebase",14,2
 "Clione",0.1022,"Castro_2025; Kiorboe_2013; Brey_2010; Vanni_2017",8,3
 "Clivina",0.0214,"Brocher_etal_2025; Lemoine_2026",10,3
-"Cloeon",0.002308,"Brose_2005; Studier_1992; Brose_etal_2018",106,2
+"Cloeon",0.002308,"Brose_2005; Studier_1992; Brose_etal_2018",63,2
 "Cloeotis",4.05,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,1
 "Clonophis",75.05,"Feldman_etal_2016; Myhrvold_2015",2,2
 "Closterotomus",0.01279,"Brocher_etal_2025",1,1
-"Clubiona",0.02617,"Brocher_etal_2025; Brose_etal_2018; Brose_2005; Brey_2010; Pekar_etal_2021",503,15
+"Clubiona",0.02617,"Brocher_etal_2025; Brose_etal_2018; Brose_2005; Brey_2010; Pekar_etal_2021",386,15
 "Clupanodon",200.8,"Cai_etal_2025; fishbase",2,2
 "Clupea",1050,"Froese_2025",1,1
 "Clupeonella",24.85,"Cai_etal_2025; fishbase",7,4
@@ -2308,7 +2309,7 @@
 "Coccymys",29.7,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,1
 "Coccyzus",52.14,"AnAge; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",246,28
 "Cochlearius",661,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",18,3
-"Cochlicopa",0.06931,"Brose_etal_2018; Brose_2005; Brey_2010",21,3
+"Cochlicopa",0.06931,"Brose_etal_2018; Brose_2005; Brey_2010",14,3
 "Cochliopodium",3.25e-09,"DeLong_etal_2010",1,1
 "Cochlodina",0.2016,"Brose_etal_2018",24,1
 "Cochoa",100.1,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",9,4
@@ -2324,7 +2325,7 @@
 "Coelorinchus",192.6,"Cai_etal_2025",1,1
 "Coelosis",3.673,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",6,2
 "Coelotes",0.06794,"Brocher_etal_2025; Brose_etal_2018",307,2
-"Coenagrion",0.01846,"Brose_2005; Studier_1992; Brose_etal_2018",160,2
+"Coenagrion",0.01846,"Brose_2005; Studier_1992; Brose_etal_2018",81,2
 "Coendou",2971,"Soria_etal_2021; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Wilman_etal_2014; AnAge; Ernest_2003; Herberstein_etal_2022; Hoehler_etal_2023; McCoy_2008; Quaardvark; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b; Uyeda_etal_2017",39,20
 "Coenobita",41.8,"Makarieva_2008; Quaardvark",3,2
 "Coenocorypha",103.2,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",14,9
@@ -2377,7 +2378,7 @@
 "Columba",341.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Lislevand_etal_2007; Tsuboi_etal_2018; vertnet-traits-sept2016; Cai_etal_2025; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; AnAge; Gillooly_etal_2016; Hirt_etal_2017; McCoy_2008; Quaardvark; Wisnionski_2026; Baach_2026",260,74
 "Columbina",44.27,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018; vertnet-traits-sept2016; AnAge; Hoehler_etal_2023; Makarieva_2008; McCoy_2008; Quaardvark; Uyeda_etal_2017",313,29
 "Colus",21.3,"Jennings_2002",1,1
-"Colymbetes",0.3028,"Brose_2005; Studier_1992; Brose_etal_2018",14,2
+"Colymbetes",0.3028,"Brose_2005; Studier_1992; Brose_etal_2018",8,2
 "Comephorus",19.2,"Cai_etal_2025",1,1
 "Comiconchus",1.491e-05,"Ghaderi_2026",6,2
 "Complicitus",14.3,"Feldman_etal_2016; Meiri_2018",2,1
@@ -2401,8 +2402,8 @@
 "Conirostrum",11.65,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",141,20
 "Connochaetes",163200,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Hirt_etal_2017; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Gillooly_etal_2016; Hoehler_etal_2023; vertnet-traits-sept2016",35,15
 "Conocara",266.5,"Cai_etal_2025",2,2
-"Conocephalus",0.05142,"Brose_2005; Studier_1992; Brose_etal_2018; Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008; Brocher_etal_2025",464,6
-"Conochilus",5.547e-07,"Brose_2005; Brose_etal_2018",225,3
+"Conocephalus",0.05142,"Brose_2005; Studier_1992; Brose_etal_2018; Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008; Brocher_etal_2025",237,6
+"Conochilus",6.42e-07,"Brose_2005; Brose_etal_2018",189,4
 "Conodon",147.2,"GuoBailly_2024; Viana_2016",2,2
 "Conolophus",4700,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Cai_etal_2025; Meiri_2024",11,7
 "Conopeum",1.06e-05,"Brose_etal_2018",5,1
@@ -2467,7 +2468,7 @@
 "Corolla",0.5071,"Ikeda_2014; Brey_2010",2,1
 "Coronatella",4.42e-06,"Brose_etal_2018",14,1
 "Coronelaps",29.1,"Feldman_etal_2016",1,1
-"Coronella",84.13,"Brose_2005; Brose_etal_2018; Feldman_etal_2016; Myhrvold_2015; Tsuboi_etal_2018",20,7
+"Coronella",84.13,"Brose_2005; Brose_etal_2018; Feldman_etal_2016; Myhrvold_2015; Tsuboi_etal_2018",14,7
 "Corophium",0.005017,"Brose_etal_2018",43,2
 "Correlophus",32.5,"Feldman_etal_2016; Meiri_2018; Quaardvark; Meiri_2024",8,5
 "Corticaria",0.0006695,"Brocher_etal_2025",5,5
@@ -2503,7 +2504,7 @@
 "Corytophanes",44.98,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",8,5
 "Coscinasterias",424.5,"Bell_1977",1,1
 "Coscoroba",3867,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014",6,4
-"Coslenchus",2.842e-07,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",31,4
+"Coslenchus",2.842e-07,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",26,4
 "Cosmasterias",250,"Pastor-de-Ward_2007",1,1
 "Cosmia",0.05164,"Kinsella_etal_2020; Studier_1992",28,1
 "Cosmocalanus",0.0002864,"Castro_2025; Hebert_etal_2016; Kiorboe_2013; Vanni_2017",4,3
@@ -2537,7 +2538,7 @@
 "Crassicorophium",0.001438,"Brose_etal_2018",19,2
 "Crassolabium",5.48e-06,"Mulder_2011; Cohen_2014",3,2
 "Crassostrea",36.26,"Brose_etal_2018; Vanni_2017; Brey_2010",79,2
-"Craterocephalus",1.219,"Brose_2005; Cai_etal_2025",8,2
+"Craterocephalus",1.219,"Brose_2005; Cai_etal_2025",2,2
 "Crateromys",894.1,"Faurby_etal_2018; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",12,5
 "Crateroscelis",15.42,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",38,8
 "Cratogeomys",291,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",62,19
@@ -2711,7 +2712,7 @@
 "Cyclodomorphus",131.9,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",22,13
 "Cycloneda",0.0182,"DeLong_etal_2018",3,1
 "Cyclopinoides",2.3e-05,"Hebert_etal_2016; Kiorboe_2013",3,1
-"Cyclops",7.553e-05,"DeLong_etal_2018; Brose_etal_2018; Hebert_etal_2016; Kiorboe_2013; Brose_2005",238,7
+"Cyclops",7.553e-05,"DeLong_etal_2018; Brose_etal_2018; Hebert_etal_2016; Kiorboe_2013; Brose_2005",196,7
 "Cyclopsetta",168,"fishbase",2,1
 "Cyclopsitta",34.85,"Tobias_2022; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-traits-sept2016",16,8
 "Cycloptilum",0.01846,"Brose_etal_2018",30,1
@@ -2778,7 +2779,7 @@
 "Cyrtoxipha",0.01846,"Brose_etal_2018",41,1
 "Cystophora",249600,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b; Verberk_2020; Wilman_etal_2014; vertnet-traits-sept2016",21,12
 "Cystosoma",1.239,"Baach_2026; Castro_2025; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",5,2
-"Cytilus",0.006066,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",31,3
+"Cytilus",0.006066,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",17,3
 "Cyttarops",5.3,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",8,2
 "Cyttus",357.4,"GuoBailly_2024",1,1
 "Daboia",1556,"Feldman_etal_2016; Myhrvold_2015; Meiri_2024",9,9
@@ -2807,7 +2808,7 @@
 "Damon",0.64,"Herberstein_etal_2022",1,1
 "Danacetichthys",0.8,"Cai_etal_2025",1,1
 "Danio",9.544,"fishbase; Cai_etal_2025; Killen_etal_2016",7,7
-"Daphnia",0.0003763,"DeLong_etal_2010; Hebert_etal_2016; Kiorboe_2013; Hoehler_etal_2023; Makarieva_2008; DeLong_etal_2018; Vanni_2017; Brose_2005; Brose_etal_2018",443,28
+"Daphnia",0.0003763,"DeLong_etal_2010; Hebert_etal_2016; Kiorboe_2013; Hoehler_etal_2023; Makarieva_2008; DeLong_etal_2018; Vanni_2017; Brose_2005; Brose_etal_2018",356,28
 "Daphoenositta",13.51,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",16,7
 "Daptrius",346.7,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",5,3
 "Darevskia",6.517,"Feldman_etal_2016; Meiri_2018; Cai_etal_2025; Myhrvold_2015; Meiri_2024",97,56
@@ -2861,7 +2862,7 @@
 "Deltocephalus",0.001311,"Brocher_etal_2025",1,1
 "Deltochilum",0.3096,"Anunciacao_etal_2025",80,8
 "Demansia",242.2,"Feldman_etal_2016; Myhrvold_2015",15,15
-"Demetrias",0.007168,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",27,3
+"Demetrias",0.007168,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",15,3
 "Dendragama",11.31,"Meiri_2018; Meiri_2024; Feldman_etal_2016; vertnet-reptilia-sept2016",15,7
 "Dendragapus",1039,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; AnAge; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Quaardvark; Tsuboi_etal_2018; vertnet-traits-sept2016",130,8
 "Dendrelaphis",368,"Feldman_etal_2016; Myhrvold_2015; Meiri_2024",57,54
@@ -3021,7 +3022,7 @@
 "Diphyllodes",81.86,"Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",32,6
 "Diplacanthopoma",6.1,"Cai_etal_2025",1,1
 "Diplapion",0.0006945,"Brocher_etal_2025",2,2
-"Diplasterias",10.88,"Brose_2005; Brose_etal_2018",32,2
+"Diplasterias",10.88,"Brose_2005; Brose_etal_2018",30,2
 "Diplectrum",122.6,"Brose_etal_2018; fishbase; vertnet-fishes-sept2016",157,7
 "Diplocephalus",0.00103,"Brocher_etal_2025; Brose_etal_2018",1862,5
 "Diplocolenus",0.004357,"Brocher_etal_2025",1,1
@@ -3039,7 +3040,7 @@
 "Diplopoma",0.05188,"Lemoine_2026",20,1
 "Diploprion",154.7,"Cai_etal_2025; Tsuboi_etal_2018",2,2
 "Diplopsalis",1.935e-08,"Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000",1,1
-"Diploscapter",1.15e-07,"Brose_2005",6,1
+"Diploscapter",1.15e-07,"Brose_2005",1,1
 "Diplostyla",0.002061,"Brocher_etal_2025; Brose_etal_2018",280,2
 "Diplotaxodon",60,"Cai_etal_2025",1,1
 "Diplothrix",284.9,"Faurby_etal_2018; Soria_etal_2021",2,2
@@ -3080,7 +3081,7 @@
 "Ditrema",131.8,"Cai_etal_2025",1,1
 "Ditrichocorycaeus",2.213e-05,"Kiorboe_2013; Kiorboe_2014",2,2
 "Ditropsis",0.001063,"Brocher_etal_2025",1,1
-"Ditylenchus",1.203e-07,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010",18,3
+"Ditylenchus",1.203e-07,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010",13,3
 "Ditypophis",8.6,"Feldman_etal_2016",1,1
 "Diuca",34.74,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",11,2
 "Dives",85.46,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Cai_etal_2025; vertnet-traits-sept2016",31,9
@@ -3096,16 +3097,16 @@
 "Dolichoderus",0.003806,"Leahy_2025",37,2
 "Dolichonyx",36.03,"AnAge; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",93,6
 "Dolichophis",3001,"Feldman_etal_2016; Myhrvold_2015",3,3
-"Dolichopus",0.0025,"Brose_2005; Studier_1992; Brose_etal_2018",300,4
+"Dolichopus",0.0025,"Brose_2005; Studier_1992; Brose_etal_2018",152,4
 "Dolichotis",5454,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014; Herberstein_etal_2022; Hoehler_etal_2023; Uyeda_etal_2017",22,7
-"Dolichovespula",0.08613,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",79,3
+"Dolichovespula",0.08613,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",41,3
 "Dolichus",0.1184,"Brocher_etal_2025",1,1
 "Dolioletta",0.00398,"Ikeda_2014; Kiorboe_2013; Lucas_2011; Kiorboe_2014",238,2
 "Doliolum",11.25,"Kiorboe_2014; Kiorboe_2013; Lucas_2011; Pata_2025",2,2
 "Doliornis",60.88,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",7,3
 "Dolloidraco",16,"Brose_etal_2018; Cai_etal_2025; fishbase",171,3
 "Dologale",354,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",7,3
-"Dolomedes",0.4641,"Brose_2005; Brey_2010; Brose_etal_2018; Hirt_etal_2017; Quaardvark; Pekar_etal_2021",244,8
+"Dolomedes",0.4641,"Brose_2005; Brey_2010; Brose_etal_2018; Hirt_etal_2017; Quaardvark; Pekar_etal_2021",152,8
 "Dolophones",0.012,"Pekar_etal_2021",1,1
 "Dolycoris",0.03675,"Brocher_etal_2025",1,1
 "Domene",0.003846,"Brose_etal_2018",63,1
@@ -3128,10 +3129,10 @@
 "Dorydorella",4.212e-07,"Mulder_2011",2,1
 "Doryfera",5.212,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",45,8
 "Doryichthys",10.4,"Cai_etal_2025; Tsuboi_etal_2018",18,4
-"Dorylaimus",7.647e-06,"Brose_2005; Cohen_2014",18,2
+"Dorylaimus",7.647e-06,"Brose_2005; Cohen_2014",2,2
 "Doryrhamphus",0.4961,"Cai_etal_2025; Tsuboi_etal_2018",8,2
 "Doryrhina",18.54,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Jones_2009; Smith_2003; Wilman_etal_2014; vertnet-mammalia-sept2016",45,14
-"Doryteuthis",57.79,"Raymond_2011; Hoehler_etal_2023; Makarieva_2008; sealifebase",15,3
+"Doryteuthis",57.79,"Raymond_2011; Hoehler_etal_2023; Makarieva_2008; sealifebase",13,3
 "Dosidicus",4500,"Ferreri_2014",1,1
 "Dosinia",376.2,"McCoy_2008; Brey_2010; sealifebase",2,2
 "Dracaena",2388,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",6,4
@@ -3177,7 +3178,7 @@
 "Dryomys",28.44,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; AnAge; Baach_2026; Ernest_2003; Quaardvark; vertnet-mammalia-sept2016; vertnet-traits-sept2016",21,10
 "Dryophiops",176.5,"Feldman_etal_2016; Myhrvold_2015",3,3
 "Dryophytes",4.866,"Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; AmphiBIO; Castro_2025; Santini_2018; Cai_etal_2025; Park_2023; AnAge; Herberstein_etal_2022; Quaardvark",45,33
-"Dryops",0.004368,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025",65,3
+"Dryops",0.004368,"Brose_2005; Studier_1992; Brose_etal_2018; Brocher_etal_2025",34,3
 "Dryoscopus",30.9,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018; vertnet-traits-sept2016; Cai_etal_2025",81,19
 "Drysdalia",30.83,"Feldman_etal_2016",3,3
 "Duberria",16.75,"Feldman_etal_2016; Myhrvold_2015",6,6
@@ -3247,7 +3248,7 @@
 "Ectopleura",0.029,"Brose_etal_2018",53,1
 "Ecumenicus",6.58e-07,"Mulder_2011",2,1
 "Edalorhina",4.63,"AmphiBIO",1,1
-"Edaphus",7.071e-05,"Brose_2005; Studier_1992; Brose_etal_2018",200,2
+"Edaphus",6.532e-05,"Brose_etal_2018",100,1
 "Edolisoma",62.17,"Tobias_2022",6,5
 "Edrotes",0.02435,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",5,1
 "Edwardsia",0.2174,"Brose_etal_2018",70,1
@@ -3284,7 +3285,7 @@
 "Elassoma",0.6376,"Froese_2025; Froese_2014; Cai_etal_2025",2,2
 "Elaver",0.035,"Pekar_etal_2021",1,1
 "Electron",62.65,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016; Lislevand_etal_2007; vertnet-aves-sept2016",12,6
-"Electrona",13.44,"Brose_etal_2018; Makarieva_2008; Raymond_2011; fishbase; Cai_etal_2025",103,9
+"Electrona",13.44,"Brose_etal_2018; Makarieva_2008; Raymond_2011; fishbase; Cai_etal_2025",73,9
 "Electrophorus",20000,"Quaardvark",1,1
 "Eledone",1482,"sealifebase",5,2
 "Eleginus",866.2,"AnAge; Cai_etal_2025; fishbase; Froese_2025; Froese_2014",6,4
@@ -3316,7 +3317,7 @@
 "Elymana",0.004967,"Brocher_etal_2025",1,1
 "Emarginata",17.85,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",7,3
 "Emballonura",7.313,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016; vertnet-mammalia-sept2016; Quaardvark; Tsuboi_etal_2018",51,20
-"Emberiza",20.16,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; AnAge; Cai_etal_2025; Lislevand_etal_2007; Tsuboi_etal_2018; vertnet-traits-sept2016; Herberstein_etal_2022; Baach_2026; Hoehler_etal_2023; Makarieva_2008; Brose_2005; Brose_etal_2018",1444,130
+"Emberiza",20.16,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; AnAge; Cai_etal_2025; Lislevand_etal_2007; Tsuboi_etal_2018; vertnet-traits-sept2016; Herberstein_etal_2022; Baach_2026; Hoehler_etal_2023; Makarieva_2008; Brose_2005; Brose_etal_2018",1068,130
 "Emberizoides",25.52,"Myhrvold_2015; Lislevand_etal_2007; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",18,7
 "Embernagra",40.09,"Tobias_2022; Myhrvold_2015; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,4
 "Embiotoca",950,"AnAge; Cai_etal_2025; Castro_2025; Makarieva_2008",5,3
@@ -3343,13 +3344,13 @@
 "Enchelynassa",22340,"Cai_etal_2025",1,1
 "Enchelyopus",139.4,"Froese_2025; Froese_2014",1,1
 "Enchisthenes",15.72,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",8,3
-"Enchodelus",3.525e-06,"Brose_2005",17,1
+"Enchodelus",3.525e-06,"Brose_2005",1,1
 "Enchytraeus",6.632e-05,"Brose_etal_2018; Brey_2010; Cohen_2014",62,3
 "Enchytronia",2.192e-05,"Brose_etal_2018; Brey_2010; Cohen_2014",9,2
 "Encoptolophus",0.1358,"Baach_2026; Herberstein_etal_2022; Chown_etal_2007; Makarieva_2008",4,3
 "Encrasicholina",6.36,"fishbase",1,1
 "Endotrypanum",1.14e-10,"DeLong_etal_2010; Makarieva_2008",2,1
-"Engraulis",24.65,"Viana_2016; Barnes_2008; Brose_2005; Samsun_2004; Cai_etal_2025; McCoy_2008; fishbase",18,7
+"Engraulis",24.65,"Viana_2016; Barnes_2008; Brose_2005; Samsun_2004; Cai_etal_2025; McCoy_2008; fishbase",15,7
 "Engyophrys",24.36,"Brose_etal_2018",5,1
 "Engyprosopon",40.09,"fishbase",2,1
 "Engystomops",3.875,"AmphiBIO; Castro_2025; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",6,5
@@ -3367,7 +3368,7 @@
 "Enoplognatha",0.009712,"Brocher_etal_2025; Brose_etal_2018",45,3
 "Enoplosus",777.6,"Cai_etal_2025",1,1
 "Ensifer",7e-13,"DeLong_etal_2010",1,1
-"Ensifera",5.298,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Brose_2005; Brose_etal_2018",88,5
+"Ensifera",5.298,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Brose_2005; Brose_etal_2018",49,5
 "Ensis",1.937,"Brose_etal_2018",43,1
 "Entamoeba",8.6e-09,"DeLong_etal_2010; Makarieva_2008",2,1
 "Entelecara",0.0009685,"Brocher_etal_2025",1,1
@@ -3419,7 +3420,7 @@
 "Epicrius",3.176e-05,"Brose_etal_2018; Herberstein_etal_2022",461,3
 "Epictia",2.693,"Feldman_etal_2016; Myhrvold_2015; vertnet-reptilia-sept2016",28,27
 "Epidalea",27.83,"AmphiBIO; Hoehler_etal_2023; Makarieva_2008; Trochet_2014; Uyeda_etal_2017",6,5
-"Epidorylaimus",3.892e-06,"Mulder_2011; Brose_2005; Cohen_2014",21,4
+"Epidorylaimus",3.892e-06,"Mulder_2011; Brose_2005; Cohen_2014",5,4
 "Epigonus",381.5,"fishbase; Cai_etal_2025",6,5
 "Epilabidocera",0.00385,"DeLong_etal_2010",1,1
 "Epimachus",169.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,5
@@ -3435,7 +3436,7 @@
 "Epischura",0.000122,"Brose_etal_2018",213,1
 "Episinus",0.0203,"Brocher_etal_2025; Pekar_etal_2021",2,2
 "Episoriculus",8.561,"Cai_etal_2025; Faurby_etal_2018; Myhrvold_2015; Smith_2003; Soria_etal_2021; Jones_2009; Wilman_etal_2014",20,8
-"Episyrphus",0.01556,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025; Kendall_etal_2019",90,5
+"Episyrphus",0.01556,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025; Kendall_etal_2019",55,5
 "Epixerus",483.4,"Ernest_2003; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",9,6
 "Epoicocladius",9.71e-05,"Brose_etal_2018",354,1
 "Epomophorus",76.9,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Jones_2009; Wilman_etal_2014; vertnet-mammalia-sept2016; Cai_etal_2025; Smith_2003; AnAge; Herberstein_etal_2022; Quaardvark; Tsuboi_etal_2018; vertnet-traits-sept2016",92,36
@@ -3490,7 +3491,7 @@
 "Eroticoscincus",0.4,"Feldman_etal_2016; Meiri_2018",2,1
 "Erpetoichthys",60.3,"Cai_etal_2025; Makarieva_2008",2,2
 "Erpeton",195.1,"Feldman_etal_2016; Myhrvold_2015",2,2
-"Erpobdella",0.04091,"Brose_2005; Brey_2010; Brose_etal_2018; DeLong_etal_2010",225,3
+"Erpobdella",0.04091,"Brose_2005; Brey_2010; Brose_etal_2018; DeLong_etal_2010",208,3
 "Erpornis",11.97,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",20,3
 "Errastunus",0.002203,"Brocher_etal_2025",1,1
 "Erromyzon",0.8,"Cai_etal_2025",1,1
@@ -3520,13 +3521,13 @@
 "Etheostoma",3.386,"Quaardvark; Castro_2025; Cai_etal_2025; Vanni_2017; vertnet-fishes-sept2016; Hatch_2014; DeLong_etal_2010; fishbase; Brose_etal_2018",175,39
 "Etheridgeum",1.4,"Feldman_etal_2016",1,1
 "Ethmalosa",1648,"Cai_etal_2025",1,1
-"Ethmolaimus",6.2e-08,"Brose_2005",6,1
+"Ethmolaimus",6.2e-08,"Brose_2005",1,1
 "Ethnodrilus",0.4667,"Mathieu_2014",3,3
 "Etmopterus",1723,"Froese_2025; Tsuboi_etal_2018; Froese_2014",4,4
 "Etroplus",712.8,"Cai_etal_2025; fishbase",3,3
 "Etropus",46.25,"Viana_2016; fishbase",3,2
 "Etrumeus",137.3,"fishbase; Wang_2017; Brose_etal_2018; Cai_etal_2025",99,6
-"Euaesthetus",0.0002853,"Brose_2005; Studier_1992; Brose_etal_2018",132,2
+"Euaesthetus",0.0002853,"Brose_2005; Studier_1992; Brose_etal_2018",67,2
 "Eualus",0.1482,"Brose_etal_2018",5,1
 "Euaugaptilus",0.03024,"Makarieva_2008; Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013",6,4
 "Eubalaena",49900000,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; sealifebase; Tucker_etal_2014a; Verberk_2020; vertnet-traits-sept2016; Cai_etal_2025",26,11
@@ -3547,9 +3548,9 @@
 "Euchrysia",0.00387,"Brose_etal_2018",37,1
 "Eucinostomus",61.79,"Viana_2016; fishbase",10,9
 "Eucometis",28.24,"Hoehler_etal_2023; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",33,4
-"Euconnus",0.0002406,"Brose_2005; Studier_1992; Brose_etal_2018",86,4
+"Euconnus",0.0002406,"Brose_2005; Studier_1992; Brose_etal_2018",45,4
 "Euconocephalus",0.65,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008",5,1
-"Euconulus",0.02416,"Brose_2005; Brey_2010; Brose_etal_2018",72,3
+"Euconulus",0.02416,"Brose_2005; Brey_2010; Brose_etal_2018",51,3
 "Eucopia",1.437,"Chikugo_2013; Donnelly_1993",3,3
 "Eucranta",4.7,"Brose_etal_2018",68,1
 "Eucyclogobius",1.4,"Cai_etal_2025",1,1
@@ -3601,7 +3602,7 @@
 "Eumicrotremus",28.25,"Brose_etal_2018; Frost_1983; GuoBailly_2024; Berge_2013",8,5
 "Eumida",0.2594,"Brose_etal_2018",77,1
 "Eumomota",62.92,"Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",30,3
-"Eumonhystera",9.361e-08,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",37,6
+"Eumonhystera",9.361e-08,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",18,6
 "Eumops",32.1,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Quaardvark; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Hoehler_etal_2023; Uyeda_etal_2017",81,37
 "Eumyias",16.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",28,7
 "Eunectes",18330,"Feldman_etal_2016; Hoehler_etal_2023; Makarieva_2008; Quaardvark; Uyeda_etal_2017",7,5
@@ -3620,7 +3621,7 @@
 "Eupetes",69,"Tobias_2022",1,1
 "Eupetomena",8.089,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",9,3
 "Euphagus",61.56,"AnAge; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",340,9
-"Euphausia",0.1532,"Castro_2025; Gonzalez_2025; Kiorboe_2013; Hoehler_etal_2023; Ikeda_2014; Makarieva_2008; Pata_2025; Raymond_2011; Vanni_2017; Brose_etal_2018; Kiorboe_2014",472,44
+"Euphausia",0.1532,"Castro_2025; Gonzalez_2025; Kiorboe_2013; Hoehler_etal_2023; Ikeda_2014; Makarieva_2008; Pata_2025; Raymond_2011; Vanni_2017; Brose_etal_2018; Kiorboe_2014",468,44
 "Eupherusa",4.154,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",49,13
 "Euphilomedes",0.002552,"Kiorboe_2013; Kiorboe_2014",6,2
 "Euphlyctis",88.15,"Makarieva_2008; AmphiBIO; Cai_etal_2025; Hoehler_etal_2023",5,3
@@ -3700,7 +3701,7 @@
 "Eutropiichthys",1400,"Froese_2025",1,1
 "Eutropis",17.06,"Meiri_2018; Feldman_etal_2016; Meiri_2024; Myhrvold_2015; vertnet-traits-sept2016; vertnet-reptilia-sept2016",149,47
 "Euzetes",0.0001835,"Brose_etal_2018; Ehnes_etal_2011; Cohen_2014",18,3
-"Evarcha",0.009614,"Brose_2005; Brey_2010; Brose_etal_2018; Gonzalez_2025; Studier_1992",228,3
+"Evarcha",0.009614,"Brose_2005; Brey_2010; Brose_etal_2018; Gonzalez_2025; Studier_1992",135,3
 "Evasterias",315,"Rogers_2013",1,1
 "Evermannella",28.94,"Froese_2025; Froese_2014",1,1
 "Eviota",0.2245,"fishbase; Tsuboi_etal_2018",6,6
@@ -3733,7 +3734,7 @@
 "Falagria",0.0002239,"Brocher_etal_2025",1,1
 "Falagrioma",0.0003619,"Brocher_etal_2025",1,1
 "Falcipennis",685.6,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
-"Falco",349,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Cai_etal_2025; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Quaardvark; Herberstein_etal_2022; Tsuboi_etal_2018; AnAge; McCoy_2008; Baach_2026; Hirt_etal_2017; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; Brose_2005; Brose_etal_2018; Castro_2025; Gillooly_etal_2016; Hudson_2013",1088,141
+"Falco",349,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Cai_etal_2025; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Quaardvark; Herberstein_etal_2022; Tsuboi_etal_2018; AnAge; McCoy_2008; Baach_2026; Hirt_etal_2017; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; Brose_2005; Brose_etal_2018; Castro_2025; Gillooly_etal_2016; Hudson_2013",1020,141
 "Falculea",111,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Falcunculus",27.73,"Cai_etal_2025; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-traits-sept2016",13,7
 "Falsistrellus",22.32,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014; Smith_2003",11,3
@@ -3754,12 +3755,12 @@
 "Fibramia",53,"fishbase",1,1
 "Ficedula",11.44,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Baach_2026; Castro_2025; Hoehler_etal_2023; Hudson_2013; Lislevand_etal_2007; Tsuboi_etal_2018; Herberstein_etal_2022; Makarieva_2008; McCoy_2008; Quaardvark; Wisnionski_2026",415,76
 "Ficimia",12.59,"Feldman_etal_2016; Myhrvold_2015",8,8
-"Fictor",9.3e-07,"Brose_2005",4,1
+"Fictor",9.3e-07,"Brose_2005",1,1
 "Fidicina",2.84,"Baach_2026; Castro_2025; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",7,1
 "Figaro",200,"Tsuboi_etal_2018",1,1
-"Filenchus",1.673e-07,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",49,4
+"Filenchus",1.673e-07,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",44,4
 "Filinia",2.167e-07,"DeLong_etal_2018; DeLong_etal_2010",3,3
-"Filippovia",277.1,"Raymond_2011",19,1
+"Filippovia",277.1,"Raymond_2011",1,1
 "Fimbrios",22.8,"Feldman_etal_2016",2,2
 "Finschia",12.46,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",5,2
 "Fissurella",20.78,"Brose_etal_2018",1224,6
@@ -3787,7 +3788,7 @@
 "Forcipata",0.002406,"Brocher_etal_2025",1,1
 "Fordonia",525.4,"Feldman_etal_2016; Myhrvold_2015",2,2
 "Forficula",0.05,"LeNavenant_2021",1,1
-"Formica",0.003713,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Gonzalez_2025; Studier_1992",89,11
+"Formica",0.003715,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Gonzalez_2025; Studier_1992; Brose_2005; Brose_etal_2018",142,13
 "Formicarius",60.35,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",77,13
 "Formicivora",10.25,"Tobias_2022; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",31,12
 "Formosania",8.1,"Cai_etal_2025",2,2
@@ -3833,7 +3834,7 @@
 "Fursenkoina",1.11e-06,"DeLong_etal_2010",1,1
 "Fuscozetes",7.6e-05,"Brose_etal_2018",34,1
 "Gabbia",0.8592,"Vanni_2017; Brey_2010",12,1
-"Gabrius",0.001628,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",131,5
+"Gabrius",0.001628,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",68,5
 "Gactornis",52.8,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Gadopsis",1205,"Quaardvark; fishbase",3,2
 "Gaeolaelaps",4.51e-05,"Brose_etal_2018",290,1
@@ -3863,7 +3864,7 @@
 "Galictis",1697,"AnAge; Faurby_etal_2018; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Ernest_2003; Tucker_etal_2014b",25,10
 "Galidia",803.3,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014",11,3
 "Galidictis",774.8,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",14,4
-"Galiteuthis",18.21,"Barnes_2008; Raymond_2011; Hoehler_etal_2023; Makarieva_2008",8,3
+"Galiteuthis",18.21,"Barnes_2008; Raymond_2011; Hoehler_etal_2023; Makarieva_2008",6,3
 "Galleria",0.0536,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",4,1
 "Gallicolumba",171.2,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Quaardvark; Tsuboi_etal_2018",40,11
 "Gallicrex",331.9,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",18,3
@@ -3898,7 +3899,7 @@
 "Gastrophryne",3.217,"AmphiBIO; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",7,5
 "Gastrophysa",0.004962,"Brocher_etal_2025",1,1
 "Gastropsetta",28.7,"GuoBailly_2024",1,1
-"Gastropus",4.146e-07,"Brose_2005; Brose_etal_2018",296,4
+"Gastropus",4.146e-07,"Brose_2005; Brose_etal_2018",267,4
 "Gatesona",2,"Mathieu_2014",1,1
 "Gattyana",0.09277,"Brose_etal_2018",16,1
 "Gavia",2994,"AnAge; Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Verberk_2020; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; McCoy_2008; Hechinger_etal_2011; Tsuboi_etal_2018; Herberstein_etal_2022",203,37
@@ -4024,7 +4025,7 @@
 "Gloiobdella",0.003064,"Hrycik_2024",1,1
 "Glomeridesmus",0.004727,"Lemoine_2026",8,1
 "Glomeris",0.01088,"Brose_etal_2018; Brey_2010",179,5
-"Glossamia",3.191,"Brose_2005",14,1
+"Glossamia",3.191,"Brose_2005",1,1
 "Glossanodon",53.9,"Cai_etal_2025",1,1
 "Glossina",0.027,"Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008; Herberstein_etal_2022",8,3
 "Glossiphonia",0.03473,"Brose_etal_2018; DeLong_etal_2010",84,2
@@ -4052,7 +4053,7 @@
 "Gnathocharax",1.496,"Froese_2025; Froese_2014",1,1
 "Gnathochromis",15.02,"Tsuboi_etal_2018",19,2
 "Gnatholepis",3.902,"fishbase; Froese_2025; Froese_2014",2,2
-"Gnathonarium",0.001409,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",99,3
+"Gnathonarium",0.001409,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",51,3
 "Gnathophausia",4.177,"Hoehler_etal_2023; Makarieva_2008; McCoy_2008",9,2
 "Gnathopogon",15.97,"Cai_etal_2025; fishbase",11,10
 "Gnorimopsar",63.45,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",5,2
@@ -4066,7 +4067,7 @@
 "Gobiomorphus",4.194,"fishbase; Lagrue_etal_2015",13,2
 "Gobiomorus",3903,"Froese_2025; Cai_etal_2025",2,2
 "Gobionellus",22.2,"Viana_2016",1,1
-"Gobionotothen",15.64,"Raymond_2011",4,3
+"Gobionotothen",15.64,"Raymond_2011",3,3
 "Gobiopterus",0.1,"Cai_etal_2025",1,1
 "Gobiosoma",1.173,"Froese_2025; Froese_2014; Brose_etal_2018",5,3
 "Gobius",37.14,"Brose_etal_2018; fishbase; Makarieva_2008; Tsuboi_etal_2018",155,7
@@ -4083,9 +4084,9 @@
 "Gomphocerippus",0.1506,"Brocher_etal_2025",1,1
 "Gonatium",0.003164,"Brocher_etal_2025; Brose_etal_2018",61,2
 "Gonatodes",2.728,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; Meiri_2024; Hirt_etal_2017",76,49
-"Gonatus",129.4,"Brose_etal_2018; Raymond_2011; Hoehler_etal_2023; Makarieva_2008; Barnes_2008",441,5
+"Gonatus",129.4,"Brose_etal_2018; Raymond_2011; Hoehler_etal_2023; Makarieva_2008; Barnes_2008",417,5
 "Gondogeneia",0.01204,"Makarieva_2008",2,1
-"Gongylidiellum",0.0007356,"Brose_etal_2018; Brose_2005; Brey_2010",191,3
+"Gongylidiellum",0.0007356,"Brose_etal_2018; Brose_2005; Brey_2010",162,3
 "Gongylomorphus",7.5,"Feldman_etal_2016; Meiri_2018",2,1
 "Gongylosoma",19.44,"Feldman_etal_2016",5,5
 "Goniada",0.3771,"Brose_etal_2018",1,1
@@ -4195,7 +4196,7 @@
 "Gymnorhina",273.5,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",18,4
 "Gymnorhinus",101.8,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wascher_2025; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",75,4
 "Gymnoris",21.94,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",32,15
-"Gymnoscopelus",32.93,"Raymond_2011; Brose_etal_2018; Makarieva_2008; fishbase",210,12
+"Gymnoscopelus",32.93,"Raymond_2011; Brose_etal_2018; Makarieva_2008; fishbase",184,12
 "Gymnothorax",2912,"GuoBailly_2024; fishbase; Tsuboi_etal_2018; Cai_etal_2025; Quaardvark; Brose_etal_2018; Mahe_2023; Froese_2025",81,18
 "Gymnotus",505.9,"Froese_2025; Froese_2014; Cai_etal_2025",3,3
 "Gymnura",1490,"Tsuboi_etal_2018; fishbase",2,2
@@ -4218,7 +4219,7 @@
 "Habrophallos",1.2,"Feldman_etal_2016",1,1
 "Haddadus",2.77,"Reboucas_2013",1,1
 "Hadena",0.1263,"Kinsella_etal_2020; Studier_1992",2,1
-"Hadrodenus",9.3e-08,"Brose_2005",6,1
+"Hadrodenus",9.3e-08,"Brose_2005",1,1
 "Hadromys",59,"Faurby_etal_2018; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,2
 "Hadronchoides",6.337e-07,"Ghaderi_2026",1,1
 "Hadronchulus",6.393e-06,"Ghaderi_2026",2,1
@@ -4230,14 +4231,14 @@
 "Haematortyx",296.5,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",5,2
 "Haemodracon",36.65,"Feldman_etal_2016; Meiri_2018",4,2
 "Haemophilus",2.589e-13,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",6,3
-"Haemopis",0.1771,"Brose_2005; Brey_2010; Brose_etal_2018",36,2
+"Haemopis",0.1771,"Brose_2005; Brey_2010; Brose_etal_2018",19,2
 "Haemorhous",23.97,"AnAge; Cai_etal_2025; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Tobias_2022; Uyeda_etal_2017; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Quaardvark; Tsuboi_etal_2018; Wisnionski_2026",992,17
 "Haemulon",739.9,"Brose_etal_2018; McCoy_2008; Mahe_2023; fishbase; vertnet-fishes-sept2016; Froese_2025; Viana_2016; AnAge; Froese_2014",2783,28
 "Haemulopsis",283.7,"fishbase; Viana_2016",6,5
 "Haeromys",13,"Faurby_etal_2018; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",14,5
 "Hafferia",47.1,"Tobias_2022",2,2
 "Hagenius",1.2,"Quaardvark",1,1
-"Hahnia",0.0005787,"Brocher_etal_2025; Gonzalez_2025; Studier_1992; Brose_2005; Brey_2010; Brose_etal_2018",644,6
+"Hahnia",0.0005787,"Brocher_etal_2025; Gonzalez_2025; Studier_1992; Brose_2005; Brey_2010; Brose_etal_2018",640,6
 "Haitiophis",2179,"Feldman_etal_2016",1,1
 "Hakaria",4.1,"Feldman_etal_2016; Meiri_2018",2,1
 "Halcyon",66.22,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Tsuboi_etal_2018; AnAge; Quaardvark",140,34
@@ -4255,14 +4256,14 @@
 "Halictus",0.02905,"Brocher_etal_2025; Kendall_etal_2019; Studier_1992",190,15
 "Halieutichthys",3.2,"GuoBailly_2024",1,1
 "Haliotis",231.4,"McCoy_2008; Brey_2010",1,1
-"Haliphron",342.4,"Barnes_2008; Raymond_2011",13,2
+"Haliphron",342.4,"Barnes_2008; Raymond_2011",11,2
 "Haliporoides",48.09,"sealifebase",2,1
 "Haliscera",0.6268,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Lucas_2011; Makarieva_2008; Pata_2025",4,3
 "Halisotoma",4.771e-05,"Hishi_etal_2019; Studier_1992",1,1
 "Halitrephes",21.78,"Ikeda_2014; Kiorboe_2013; Lucas_2011",1,1
 "Halmaheramys",89,"Cai_etal_2025",1,1
 "Halobacterium",3.9e-12,"Hoehler_etal_2023; Makarieva_2008",2,2
-"Halobaena",191.9,"Brose_etal_2018; Herberstein_etal_2022; Myhrvold_2015; Palomares_2025; Raymond_2011; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",121,8
+"Halobaena",191.9,"Brose_etal_2018; Herberstein_etal_2022; Myhrvold_2015; Palomares_2025; Raymond_2011; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",57,8
 "Halocynthia",0.9815,"Brose_etal_2018",7,1
 "Halofriesea",7.6e-05,"Hishi_etal_2019; Studier_1992",1,1
 "Halomonas",4e-13,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",3,2
@@ -4307,7 +4308,7 @@
 "Harpactea",0.01469,"Brose_etal_2018",673,1
 "Harpactes",76.52,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",68,19
 "Harpadon",1284,"Cai_etal_2025; fishbase",2,2
-"Harpagifer",7.521,"Brose_etal_2018; Raymond_2011; Makarieva_2008",84,6
+"Harpagifer",7.521,"Brose_etal_2018; Raymond_2011; Makarieva_2008",83,6
 "Harpagus",201,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",15,5
 "Harpalus",0.04347,"Brocher_etal_2025; Brose_etal_2018; Ehnes_etal_2011; El-Danasoury_2016",239,18
 "Harpesaurus",10.27,"Feldman_etal_2016; Meiri_2018; Meiri_2024",13,7
@@ -4327,7 +4328,7 @@
 "Haustrum",2.065,"Novak_2013",2,2
 "Hebata",0.002463,"Brocher_etal_2025",4,4
 "Hebius",92.99,"Feldman_etal_2016; Myhrvold_2015; Cai_etal_2025",44,42
-"Hebrus",0.00429,"Brose_2005; Studier_1992; Brose_etal_2018",286,4
+"Hebrus",0.00429,"Brose_2005; Studier_1992; Brose_etal_2018",145,4
 "Hedinichthys",241.7,"Cai_etal_2025",1,1
 "Hediste",0.2625,"Brose_etal_2018; McCoy_2008; Brey_2010",211,2
 "Hedruris",0.001314,"Lagrue_etal_2015",3,1
@@ -4450,17 +4451,17 @@
 "Henricia",62.78,"Brose_etal_2018; Jennings_2002",60,3
 "Hentzia",0.008363,"Lemoine_2026; Brose_etal_2018; Ehnes_etal_2011",296,3
 "Heosemys",5201,"Cai_etal_2025; Myhrvold_2015",4,4
-"Hephaestus",2978,"Cai_etal_2025; fishbase; Brose_2005",13,3
+"Hephaestus",2978,"Cai_etal_2025; fishbase; Brose_2005",3,3
 "Hephthocara",40.7,"fishbase",1,1
 "Hepialus",0.4306,"Kinsella_etal_2020; Studier_1992",5,1
 "Hepsetus",21.27,"Froese_2025; Froese_2014",1,1
 "Heptagenia",0.0004337,"Brose_etal_2018",133,1
 "Heptranchias",2288,"fishbase",1,1
-"Hercostomus",0.001654,"Brose_2005; Studier_1992; Brose_etal_2018",100,2
+"Hercostomus",0.001654,"Brose_2005; Studier_1992; Brose_etal_2018",51,2
 "Heremites",17.4,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024",10,8
 "Heriades",0.01416,"Kendall_etal_2019; Studier_1992",34,4
 "Herichthys",801.5,"Cai_etal_2025",1,1
-"Herina",0.001404,"Brose_2005; Studier_1992; Brose_etal_2018",362,6
+"Herina",0.001404,"Brose_2005; Studier_1992; Brose_etal_2018",225,6
 "Herklotsichthys",15,"fishbase",1,1
 "Hermannia",5.046e-05,"Brose_etal_2018; Ehnes_etal_2011; Cohen_2014",16,3
 "Hermissenda",10,"Brown_etal_2018",1,1
@@ -4525,7 +4526,7 @@
 "Hieraaetus",782.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; AnAge; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016",22,11
 "Hierophis",469.6,"Feldman_etal_2016; Myhrvold_2015; Herberstein_etal_2022",5,5
 "Hilaira",0.00076,"Gonzalez_2025; Studier_1992",1,1
-"Himacerus",0.0176,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",94,4
+"Himacerus",0.0176,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",49,4
 "Himantolophus",71.1,"Cai_etal_2025",2,2
 "Himantopus",169.6,"AnAge; Cai_etal_2025; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; McCoy_2008",60,16
 "Himantornis",585.7,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
@@ -4557,7 +4558,7 @@
 "Histiodraco",128.2,"fishbase",1,1
 "Histiopterus",1534,"Cai_etal_2025",1,1
 "Histiostoma",7.744e-07,"Cohen_2014",1,1
-"Histioteuthis",127.8,"Raymond_2011; Barnes_2008; Hoehler_etal_2023; Makarieva_2008",50,7
+"Histioteuthis",127.8,"Raymond_2011; Barnes_2008; Hoehler_etal_2023; Makarieva_2008",27,7
 "Histiotus",11.51,"Faurby_etal_2018; Soria_etal_2021; Myhrvold_2015; Jones_2009; Smith_2003; Wilman_etal_2014; Hoehler_etal_2023; Uyeda_etal_2017",27,11
 "Histopona",0.03071,"Brose_etal_2018",251,1
 "Histrionicus",634.8,"AnAge; Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Verberk_2020; Wilman_etal_2014; Wisnionski_2026; vertnet-aves-sept2016; vertnet-traits-sept2016",391,7
@@ -4579,7 +4580,7 @@
 "Hololena",0.0264,"Hirt_etal_2017",2,2
 "Holoparamecus",1,"Brocher_etal_2025; Brose_etal_2018",65,2
 "Holoparasitus",3.743e-05,"Ehnes_etal_2011; Brose_etal_2018; Cohen_2014",100,3
-"Holopedium",6.747e-05,"Brose_2005; Brose_etal_2018",703,2
+"Holopedium",6.747e-05,"Brose_2005; Brose_etal_2018",663,2
 "Holothuria",1371,"sealifebase; McCoy_2008; Brey_2010",15,12
 "Holotrichapion",0.0009399,"Brocher_etal_2025",3,3
 "Homallotermes",0.0022,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",4,1
@@ -4681,7 +4682,7 @@
 "Hyetornis",145.5,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",6,2
 "Hygophum",2.993,"fishbase",3,2
 "Hygrolycosa",0.01987,"Ehnes_etal_2011",3,1
-"Hyla",4.261,"AmphiBIO; Cai_etal_2025; Tsuboi_etal_2018; Brose_2005; Brose_etal_2018; Gillooly_etal_2016; Hoehler_etal_2023; Makarieva_2008; Trochet_2014",89,15
+"Hyla",4.261,"AmphiBIO; Cai_etal_2025; Tsuboi_etal_2018; Brose_2005; Brose_etal_2018; Gillooly_etal_2016; Hoehler_etal_2023; Makarieva_2008; Trochet_2014",64,15
 "Hyladelphys",16.19,"Faurby_etal_2018; Myhrvold_2015; Quaardvark; Soria_etal_2021; Wilman_etal_2014",5,3
 "Hylaeamys",63.7,"Faurby_etal_2018; Soria_etal_2021; Jones_2009; Myhrvold_2015; Wilman_etal_2014; vertnet-traits-sept2016; Ernest_2003; Smith_2003; Tucker_etal_2014b; vertnet-mammalia-sept2016",67,17
 "Hylaeus",0.009862,"Kendall_etal_2019; Studier_1992; Brocher_etal_2025",111,23
@@ -4773,7 +4774,7 @@
 "Hypothymis",12.36,"Herberstein_etal_2022; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",88,8
 "Hypsagonus",8.5,"GuoBailly_2024",1,1
 "Hypselecara",137.2,"Cai_etal_2025; fishbase",2,2
-"Hypseleotris",1.78,"Brose_2005; Cai_etal_2025",15,2
+"Hypseleotris",1.78,"Brose_2005; Cai_etal_2025",2,2
 "Hypselobarbus",8650,"fishbase; Cai_etal_2025",12,8
 "Hypsibarbus",1453,"fishbase",6,2
 "Hypsicalotes",105.9,"Feldman_etal_2016; Meiri_2018",2,1
@@ -4811,11 +4812,11 @@
 "Ichthyomyzon",17.15,"Quaardvark; Makarieva_2008",5,5
 "Ichthyophis",62,"Ngo_2014; Cai_etal_2025; AmphiBIO",3,3
 "Ichthyosaura",5.713,"AmphiBIO; Cai_etal_2025; Trochet_2014; Tsuboi_etal_2018; Verberk_2020",31,5
-"Icichthys",119.8,"Raymond_2011; GuoBailly_2024",4,2
+"Icichthys",119.8,"Raymond_2011; GuoBailly_2024",2,2
 "Icosteus",545,"vertnet-traits-sept2016",1,1
 "Ictalurus",2174,"Cai_etal_2025; Cameron_1985",2,2
 "Icteria",25.54,"AnAge; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",117,5
-"Icterus",38.32,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; AnAge; Cai_etal_2025; Quaardvark; vertnet-traits-sept2016; Lislevand_etal_2007; McCoy_2008; Hoehler_etal_2023; Makarieva_2008; Tsuboi_etal_2018; Uyeda_etal_2017",1275,86
+"Icterus",38.32,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; AnAge; Cai_etal_2025; Quaardvark; vertnet-traits-sept2016; Lislevand_etal_2007; McCoy_2008; Hoehler_etal_2023; Makarieva_2008; Tsuboi_etal_2018; Uyeda_etal_2017",1274,86
 "Icthyophaga",1186,"Tobias_2022; Wilman_etal_2014",4,2
 "Ictidomys",167.2,"Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; AnAge; AndersonGillooly_2017; Baach_2026; Cai_etal_2025; Herberstein_etal_2022; Hirt_etal_2017; Hoehler_etal_2023; Quaardvark; Tucker_etal_2014b; vertnet-mammalia-sept2016; vertnet-traits-sept2016",103,16
 "Ictinaetus",1028,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
@@ -4827,7 +4828,7 @@
 "Idionycteris",11.49,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016",9,4
 "Idiopsar",40.35,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",12,6
 "Idiosepius",0.4,"Quaardvark",1,1
-"Idiotypa",4.5e-05,"Brose_2005",4,1
+"Idiotypa",4.5e-05,"Brose_2005",1,1
 "Idiurus",35.14,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Ernest_2003; vertnet-mammalia-sept2016",16,8
 "Idotea",0.7809,"Makarieva_2008; Brose_etal_2018; Kiorboe_2013",4,3
 "Iduna",11.99,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge",75,19
@@ -4838,10 +4839,10 @@
 "Iheringichthys",194.9,"fishbase",1,1
 "Iksookimia",7.388,"Cai_etal_2025; fishbase",5,5
 "Ilicura",13.34,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,2
-"Ilione",0.009072,"Brose_2005; Studier_1992; Brose_etal_2018",224,4
+"Ilione",0.009072,"Brose_2005; Studier_1992; Brose_etal_2018",114,4
 "Ilisha",484.9,"Cai_etal_2025; Prata_2025; fishbase",6,5
 "Illadopsis",30.15,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Cai_etal_2025; vertnet-traits-sept2016",51,21
-"Illex",216.2,"Raymond_2011; sealifebase",7,2
+"Illex",216.2,"Raymond_2011; sealifebase",3,2
 "Ilybius",0.06147,"Verberk_2020",18,8
 "Ilyobates",0.001196,"Brocher_etal_2025",1,1
 "Ilyocryptus",1.14e-05,"Brose_etal_2018",13,1
@@ -4889,7 +4890,7 @@
 "Iridomyrmex",0.002514,"Leahy_2025",243,10
 "Iridophanes",15.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Iridosornis",22.99,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",34,10
-"Ironus",8.32e-07,"Brose_2005",4,1
+"Ironus",8.32e-07,"Brose_2005",1,1
 "Isacia",183,"fishbase",1,1
 "Isala",0.046,"Pekar_etal_2021",1,1
 "Isanophis",333.9,"Feldman_etal_2016; Myhrvold_2015",2,2
@@ -4901,11 +4902,11 @@
 "Ischnopoda",0.0004778,"Brocher_etal_2025",1,1
 "Ischnopterapion",0.0008606,"Brocher_etal_2025",3,3
 "Ischnosoma",0.001196,"Brocher_etal_2025",1,1
-"Ischnura",0.01933,"Brose_2005; Studier_1992; Brose_etal_2018",128,2
+"Ischnura",0.01933,"Brose_2005; Studier_1992; Brose_etal_2018",65,2
 "Isistius",254.4,"fishbase",1,1
 "Iskandaria",14.2,"fishbase",1,1
 "Isleria",10.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",27,5
-"Ismarus",7.35e-05,"Brose_2005",3,1
+"Ismarus",7.35e-05,"Brose_2005",1,1
 "Iso",0.6,"Cai_etal_2025",1,1
 "Isobactrus",1.68e-05,"Mercer_etal_2001",1,1
 "Isochaetides",0.001432,"Hrycik_2024",1,1
@@ -5002,7 +5003,7 @@
 "Katria",25.4,"Cai_etal_2025",1,1
 "Katsuwonus",5360,"Varghese_2014",1,1
 "Kaupichthys",33.8,"Cai_etal_2025",1,1
-"Kellicottia",2.648e-08,"Brose_2005; Brose_etal_2018",353,3
+"Kellicottia",2.648e-08,"Brose_2005; Brose_etal_2018",335,3
 "Kenopia",19.64,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",9,2
 "Kentrocapros",45,"Cai_etal_2025",1,1
 "Kentropyx",30.4,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024",24,15
@@ -5023,7 +5024,7 @@
 "Klais",2.557,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",8,3
 "Klebsiella",3.855e-13,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",23,4
 "Kleidocerys",0.006352,"Brocher_etal_2025",1,1
-"Kleidotoma",0.00017,"Mercer_etal_2001; Brose_2005",3,2
+"Kleidotoma",0.00017,"Mercer_etal_2001; Brose_2005",2,2
 "Kleinothraupis",20.87,"Myhrvold_2015; Tobias_2022; vertnet-aves-sept2016; vertnet-traits-sept2016; Wilman_etal_2014",33,10
 "Knipolegus",17.88,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",76,21
 "Knodus",661,"Bojsen_2005",1,1
@@ -5054,7 +5055,7 @@
 "Labeobarbus",9894,"fishbase; Cai_etal_2025",8,8
 "Labichthys",679.3,"Cai_etal_2025",1,1
 "Labidesthes",2.82,"Froese_2025; Froese_2014",1,1
-"Labidiaster",169.3,"Brose_2005; Brose_etal_2018",153,2
+"Labidiaster",169.3,"Brose_2005; Brose_etal_2018",145,2
 "Labidocera",0.00534,"Castro_2025; Hebert_etal_2016; Kiorboe_2013; Hoehler_etal_2023; Ikeda_2014; Kiorboe_2014; Makarieva_2008; Vanni_2017; Pata_2025",76,20
 "Labidostomis",0.007297,"Brocher_etal_2025",1,1
 "Labidostomma",1.346e-05,"Cohen_2014",1,1
@@ -5068,7 +5069,7 @@
 "Lacanobia",0.1228,"Kinsella_etal_2020; Studier_1992",3,1
 "Laccobius",0.003145,"Brocher_etal_2025",1,1
 "Lacedo",47.27,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,1
-"Lacerta",36.95,"Brose_2005; Brose_etal_2018; Cai_etal_2025; Feldman_etal_2016; Hirt_etal_2017; Makarieva_2008; Meiri_2018; Meiri_2024; Myhrvold_2015; Tsuboi_etal_2018; Uyeda_etal_2017; AnAge; Castro_2025; Gillooly_etal_2016; Herberstein_etal_2022",250,37
+"Lacerta",36.95,"Brose_2005; Brose_etal_2018; Cai_etal_2025; Feldman_etal_2016; Hirt_etal_2017; Makarieva_2008; Meiri_2018; Meiri_2024; Myhrvold_2015; Tsuboi_etal_2018; Uyeda_etal_2017; AnAge; Castro_2025; Gillooly_etal_2016; Herberstein_etal_2022",151,37
 "Lacertaspis",4.74,"Feldman_etal_2016; Meiri_2018",10,5
 "Lacertoides",33.36,"Feldman_etal_2016; Meiri_2018; Meiri_2024",3,3
 "Lachesis",15300,"Feldman_etal_2016; Myhrvold_2015",5,5
@@ -5147,7 +5148,7 @@
 "Lapposyrphus",0.01691,"Kendall_etal_2019; Studier_1992",4,1
 "Larimichthys",612.1,"Cai_etal_2025; fishbase",2,2
 "Larimus",271.1,"fishbase; Viana_2016",2,2
-"Larinioides",0.09211,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Quaardvark",243,5
+"Larinioides",0.09211,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Quaardvark",124,5
 "Larinus",0.01245,"Brocher_etal_2025",2,2
 "Lariscus",188,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; AnAge; Cai_etal_2025",23,9
 "Larosterna",209.9,"AnAge; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",6,3
@@ -5170,7 +5171,7 @@
 "Laternula",0.55,"Brose_etal_2018",30,1
 "Lates",18270,"fishbase; Cai_etal_2025",12,5
 "Lathamus",62.81,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014",17,3
-"Lathrobium",0.004032,"Brose_etal_2018; Brocher_etal_2025; Brose_2005; Studier_1992",319,8
+"Lathrobium",0.004032,"Brose_etal_2018; Brocher_etal_2025; Brose_2005; Studier_1992",257,8
 "Lathrotriccus",11.28,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",40,4
 "Latiblattella",0.05793,"Brose_etal_2018",29,1
 "Laticauda",436.5,"Cai_etal_2025; Feldman_etal_2016; Myhrvold_2015; Quaardvark; Verberk_2020; sealifebase",34,18
@@ -5253,18 +5254,18 @@
 "Lepidodactylus",2.539,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Cai_etal_2025; Hirt_etal_2017; vertnet-traits-sept2016; Tsuboi_etal_2018; Meiri_2024",87,47
 "Lepidogalaxias",0.62,"Makarieva_2008",1,1
 "Lepidogrammus",174.9,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",8,2
-"Lepidonotothen",147.1,"Raymond_2011; Tsuboi_etal_2018",5,2
+"Lepidonotothen",147.1,"Raymond_2011; Tsuboi_etal_2018",3,2
 "Lepidonotus",0.1,"Robinson_2010",1,1
 "Lepidopa",1.5,"Brose_etal_2018",29,1
 "Lepidophanes",4.4,"fishbase",1,1
 "Lepidophyma",14.72,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Cai_etal_2025; Myhrvold_2015; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",52,31
 "Lepidopsetta",1880,"fishbase",1,1
 "Lepidopus",1145,"vertnet-fishes-sept2016",1,1
-"Lepidorhombus",545.4,"Barnes_2008; Brose_2005; fishbase",93,6
+"Lepidorhombus",545.4,"Barnes_2008; Brose_2005; fishbase",67,6
 "Lepidosira",0.0004426,"Hishi_etal_2019; Studier_1992",1,1
 "Lepidosiren",810.3,"Gillooly_etal_2016",2,1
 "Lepidostoma",0.001735,"Brose_etal_2018; Nakagawa_2014",186,2
-"Lepidoteuthis",6641,"Raymond_2011; sealifebase",3,2
+"Lepidoteuthis",6641,"Raymond_2011; sealifebase",2,2
 "Lepidothrix",9.392,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Lislevand_etal_2007",143,14
 "Lepidotrigla",114.8,"GuoBailly_2024; Cai_etal_2025",3,3
 "Lepilemur",829.4,"Cai_etal_2025; Faurby_etal_2018; GalanAcedo_etal_2026; Soria_etal_2021; Myhrvold_2015; Jones_2009; Smith_2003; Wilman_etal_2014; Quaardvark; Tucker_etal_2014b; Ernest_2003; AnAge; Herberstein_etal_2022; Hoehler_etal_2023; Hudson_2013; Tsuboi_etal_2018",183,80
@@ -5299,7 +5300,7 @@
 "Leptodactylus",146.4,"AmphiBIO; vertnet-amphibia-sept2016; Brodeur_2020; Sole_2019",20,20
 "Leptodeira",101.6,"Feldman_etal_2016; Myhrvold_2015; Meiri_2024",15,15
 "Leptoderma",44.87,"Cai_etal_2025",3,3
-"Leptodiaptomus",1.069e-05,"Brose_etal_2018; Brose_2005; Hebert_etal_2016; Kiorboe_2013",1121,4
+"Leptodiaptomus",1.069e-05,"Brose_etal_2018; Brose_2005; Hebert_etal_2016; Kiorboe_2013",1099,4
 "Leptodius",9.5,"sealifebase",1,1
 "Leptodon",532.5,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",9,3
 "Leptodoras",114,"fishbase",1,1
@@ -5342,7 +5343,7 @@
 "Lerwa",574.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,2
 "Lesbia",4.328,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",48,7
 "Lessonia",13.94,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",32,4
-"Lesteva",0.001717,"Brose_2005; Studier_1992; Brose_etal_2018",285,2
+"Lesteva",0.001717,"Brose_2005; Studier_1992; Brose_etal_2018",196,2
 "Lestidiops",6.3,"fishbase",1,1
 "Lestodelphys",77.13,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,2
 "Lestoros",24.37,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",7,4
@@ -5370,7 +5371,7 @@
 "Leucopsarion",0.6,"fishbase",1,1
 "Leucoptera",6e-04,"AndersonGillooly_2017",1,1
 "Leucopternis",599,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",30,14
-"Leucoraja",5751,"Mnasri_2009; Barnes_2008; Froese_2025; Froese_2014; Brose_2005",1886,6
+"Leucoraja",5751,"Mnasri_2009; Barnes_2008; Froese_2025; Froese_2014; Brose_2005",1876,6
 "Leucorchestris",4.5,"Norgaard_2006; Henschel_1994",2,2
 "Leucos",355.7,"fishbase",1,1
 "Leucosarcia",417.8,"AnAge; Herberstein_etal_2022; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-aves-sept2016",16,6
@@ -5386,7 +5387,7 @@
 "Liacarus",0.0001688,"Brose_etal_2018; Ehnes_etal_2011",64,5
 "Liachirus",41,"Cai_etal_2025",1,1
 "Liasis",8284,"Feldman_etal_2016; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Myhrvold_2015; Uyeda_etal_2017",13,9
-"Libellula",0.3606,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Brose_2005; Studier_1992; Brose_etal_2018",214,6
+"Libellula",0.3606,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Brose_2005; Studier_1992; Brose_etal_2018",115,6
 "Liberiictis",2092,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",7,3
 "Libinia",159,"Brose_etal_2018; DeLong_etal_2010",30,2
 "Liburnascincus",5.098,"Meiri_2018; Feldman_etal_2016; Myhrvold_2015",9,7
@@ -5398,7 +5399,7 @@
 "Licinus",0.02092,"Brocher_etal_2025",1,1
 "Liebstadia",2.684e-05,"Brose_etal_2018; Brey_2010; Cohen_2014",42,3
 "Ligia",1.074,"Brose_etal_2018; Hoehler_etal_2023; Makarieva_2008",51,2
-"Ligidium",0.01588,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Makarieva_2008",124,4
+"Ligidium",0.01588,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Makarieva_2008",107,4
 "Lile",34.85,"fishbase",1,1
 "Liljeborgia",0.2951,"Brose_etal_2018",162,2
 "Limacina",0.01238,"Kiorboe_2013; Brey_2010; Castro_2025; Gonzalez_2025; Ikeda_2014; Vanni_2017",27,5
@@ -5407,9 +5408,9 @@
 "Limax",5.424,"Baach_2026; Brose_etal_2018; Herberstein_etal_2022",32,3
 "Limenitis",0.2551,"Gonzalez_2025; Studier_1992",1,1
 "Limnephilus",0.01096,"Brose_etal_2018",270,2
-"Limnia",0.003521,"Brose_2005; Studier_1992; Brose_etal_2018",172,2
+"Limnia",0.003521,"Brose_2005; Studier_1992; Brose_etal_2018",87,2
 "Limnius",0.0003357,"Brose_etal_2018",233,1
-"Limnobaris",0.01222,"Brose_2005; Studier_1992; Brose_etal_2018",158,2
+"Limnobaris",0.01222,"Brose_2005; Studier_1992; Brose_etal_2018",80,2
 "Limnocalanus",0.0001598,"Hebert_etal_2016; Kiorboe_2013",1,1
 "Limnochromis",35.29,"Tsuboi_etal_2018",10,1
 "Limnodrilus",0.001457,"Hrycik_2024",5,5
@@ -5429,7 +5430,7 @@
 "Limopsis",0.0046,"Brose_etal_2018",29,1
 "Limosa",289.9,"AnAge; Brose_etal_2018; Hechinger_etal_2011; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Gonzalez_2025; Horn_2016; Herberstein_etal_2022; Wisnionski_2026",316,28
 "Limotettix",0.003957,"Brocher_etal_2025",1,1
-"Limothrips",0.0002479,"Brose_2005; Studier_1992; Brose_etal_2018",40,2
+"Limothrips",0.0002479,"Brose_2005; Studier_1992; Brose_etal_2018",21,2
 "Limulus",2000,"Brose_etal_2018",127,1
 "Linaria",14.78,"AnAge; Baach_2026; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",70,12
 "Linckia",13.5,"Quaardvark",1,1
@@ -5444,7 +5445,7 @@
 "Liochthonius",1.119e-06,"Cohen_2014",1,1
 "Liocichla",37.33,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",13,7
 "Liocranchia",21.28,"Makarieva_2008",1,1
-"Liocranoeca",0.001015,"Brose_2005; Brey_2010; Brose_etal_2018",50,2
+"Liocranoeca",0.001015,"Brose_2005; Brey_2010; Brose_etal_2018",26,2
 "Liocranoides",0.1455,"Pekar_etal_2021",1,1
 "Liocyma",0.2098,"Brose_etal_2018",3,1
 "Liocyrtusa",0.0003764,"Brocher_etal_2025",2,2
@@ -5487,7 +5488,7 @@
 "Lissotis",1006,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",11,7
 "Lissotriton",1.547,"AmphiBIO; Trochet_2014; Tsuboi_etal_2018",11,10
 "Lithobates",81.13,"Smith_1948; Makarieva_2008; Uyeda_etal_2017; AmphiBIO; Quaardvark; Gillooly_etal_2016; Cai_etal_2025",18,16
-"Lithobius",0.01252,"Brocher_etal_2025; Brose_etal_2018; Wignarajah_1968; Albert_1983; Brose_2005; Brey_2010",3318,22
+"Lithobius",0.01252,"Brocher_etal_2025; Brose_etal_2018; Wignarajah_1968; Albert_1983; Brose_2005; Brey_2010",3306,22
 "Lithodes",536.3,"Jennings_2002; sealifebase",3,2
 "Lithodoras",15000,"Froese_2025",1,1
 "Lithodytes",12.5,"AmphiBIO",1,1
@@ -5500,7 +5501,7 @@
 "Lixus",0.2313,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008; Brocher_etal_2025",5,2
 "Liza",105.6,"Cai_etal_2025; fishbase",3,2
 "Lobella",0.0006243,"Hishi_etal_2019; Studier_1992",3,3
-"Lobellina",0.0005066,"Hishi_etal_2019; Studier_1992",1,1
+"Lobellina",0.0003724,"Hishi_etal_2019; Studier_1992",2,2
 "Lobianchia",3.433,"fishbase; Barnes_2008",8,2
 "Lobocheilos",69.3,"Cai_etal_2025",1,1
 "Lobochilotes",32.65,"Tsuboi_etal_2018",14,1
@@ -5510,7 +5511,7 @@
 "Lobulia",3.777,"Feldman_etal_2016; Meiri_2018; Meiri_2024",6,4
 "Lochmias",23.32,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",8,2
 "Locusta",1.5,"Baach_2026; Chown_etal_2007; Makarieva_2008",3,1
-"Locustella",15.31,"Tobias_2022; Myhrvold_2015; Cai_etal_2025; Wilman_etal_2014; vertnet-traits-sept2016; Lislevand_etal_2007; vertnet-aves-sept2016; AnAge; Baach_2026; Brose_2005; Brose_etal_2018; Tsuboi_etal_2018",735,50
+"Locustella",15.31,"Tobias_2022; Myhrvold_2015; Cai_etal_2025; Wilman_etal_2014; vertnet-traits-sept2016; Lislevand_etal_2007; vertnet-aves-sept2016; AnAge; Baach_2026; Brose_2005; Brose_etal_2018; Tsuboi_etal_2018",419,50
 "Loddigesia",3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Lohmanniella",7.641e-08,"DeLong_etal_2018; Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000; Lukic_2022; Weisse_2024; DeLong_etal_2010",8,5
 "Loimia",11.68,"Brose_etal_2018",36,1
@@ -5527,12 +5528,12 @@
 "Longithorax",0.1151,"Ikeda_2014; Kiorboe_2013",1,1
 "Lontra",9395,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; AnAge; Ernest_2003",26,11
 "Lophaetus",1076,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",6,4
-"Lophaster",19.95,"Brose_2005; Brose_etal_2018",15,2
+"Lophaster",19.95,"Brose_2005; Brose_etal_2018",13,2
 "Lophiodes",1611,"Cai_etal_2025; fishbase",2,2
 "Lophiogobius",10.95,"Cai_etal_2025; fishbase",2,2
 "Lophiomys",755,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",9,1
 "Lophiosilurus",4327,"Cai_etal_2025; fishbase",3,2
-"Lophius",1158,"Barnes_2008; Brose_2005; Silva_2022",39,3
+"Lophius",1158,"Barnes_2008; Brose_2005; Silva_2022",29,3
 "Lophocalotes",24.95,"Meiri_2018; Feldman_etal_2016",3,2
 "Lophocebus",7141,"AnAge; Ernest_2003; Faurby_etal_2018; GalanAcedo_etal_2026; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014; vertnet-mammalia-sept2016; Cai_etal_2025",37,12
 "Lophoceros",203.5,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Cai_etal_2025",47,20
@@ -5642,7 +5643,7 @@
 "Lygosoma",25.97,"Feldman_etal_2016; Meiri_2018; Meiri_2024; vertnet-reptilia-sept2016; vertnet-traits-sept2016",32,21
 "Lygus",0.008524,"Brocher_etal_2025",4,4
 "Lymantria",0.6162,"AndersonGillooly_2017",15,2
-"Lymnaea",0.348,"Brose_2005; Brey_2010; Brose_etal_2018",12,2
+"Lymnaea",0.348,"Brose_2005; Brey_2010; Brose_etal_2018",7,2
 "Lymnocryptes",54.45,"AnAge; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",13,6
 "Lynchia",0.0055,"Brose_etal_2018",65,1
 "Lyncodon",612.5,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",7,2
@@ -5656,7 +5657,7 @@
 "Lyroderma",42.36,"AnAge; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",10,4
 "Lyrurus",839.5,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,2
 "Lysapsus",0.53,"DosSantos_2022",1,1
-"Lysasterias",11.7,"Brose_2005; Brose_etal_2018",34,2
+"Lysasterias",11.7,"Brose_2005; Brose_etal_2018",31,2
 "Lysigamasus",4.345e-05,"Brose_etal_2018; Brey_2010; Cohen_2014",2121,10
 "Lythrichthys",58,"fishbase",1,1
 "Lythrurus",4.168,"vertnet-fishes-sept2016",6,2
@@ -5706,7 +5707,7 @@
 "Macropis",0.02006,"Kendall_etal_2019; Studier_1992",5,2
 "Macropodus",4.377,"Cai_etal_2025; fishbase",5,5
 "Macroprotodon",48.64,"Feldman_etal_2016; Myhrvold_2015; Meiri_2024",8,8
-"Macroptychaster",158.2,"Brose_2005",7,1
+"Macroptychaster",158.2,"Brose_2005",1,1
 "Macropus",19410,"AnAge; Cai_etal_2025; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Fisher_2001; Herberstein_etal_2022; McCoy_2008; Tucker_etal_2014a; Tucker_etal_2014b; vertnet-traits-sept2016; AndersonGillooly_2017; Tsuboi_etal_2018; Castro_2025; Hoehler_etal_2023; Hirt_etal_2017",116,48
 "Macropygia",161.9,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",78,21
 "Macroramphosus",53.83,"Cai_etal_2025; fishbase",2,2
@@ -5722,7 +5723,7 @@
 "Macrotocinclus",1.1,"Cai_etal_2025",1,1
 "Macrotritopus",56.4,"sealifebase",1,1
 "Macrotus",14.27,"AnAge; Cai_etal_2025; Castro_2025; Faurby_etal_2018; Hoehler_etal_2023; Hudson_2013; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Uyeda_etal_2017; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",57,10
-"Macrourus",6777,"Froese_2025; Froese_2014; Brose_etal_2018; Raymond_2011; Cai_etal_2025; fishbase",182,6
+"Macrourus",6777,"Froese_2025; Froese_2014; Brose_etal_2018; Raymond_2011; Cai_etal_2025; fishbase",181,6
 "Macrovipera",970.3,"Cai_etal_2025; Feldman_etal_2016; Myhrvold_2015",3,2
 "Macruromys",228.5,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Jones_2009; Smith_2003; Wilman_etal_2014",9,3
 "Macruronus",3913,"AnAge; fishbase",2,2
@@ -5735,7 +5736,7 @@
 "Magallana",116.6,"Brose_etal_2018; sealifebase",41,2
 "Magellania",0.0421,"Brose_etal_2018",4,2
 "Magliophis",23.9,"Feldman_etal_2016",2,2
-"Magnisudis",500,"Raymond_2011",2,1
+"Magnisudis",500,"Raymond_2011",1,1
 "Magumma",9.411,"AnAge; Cai_etal_2025; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,6
 "Maja",629,"Castro_2025",1,1
 "Makaira",217900,"fishbase; Varghese_2014",3,2
@@ -5760,13 +5761,13 @@
 "Malayopython",6445,"Feldman_etal_2016; Meiri_2024",2,2
 "Malayotyphlops",10.88,"Feldman_etal_2016",10,10
 "Malcorus",10.42,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016",5,2
-"Malenchus",8.926e-08,"Mulder_2011; Brose_2005; Cohen_2014",43,5
+"Malenchus",8.926e-08,"Mulder_2011; Brose_2005; Cohen_2014",34,5
 "Malimbus",35.7,"Tobias_2022; Lislevand_etal_2007; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",70,21
 "Mallodon",2.821,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",7,2
 "Mallomys",1661,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",24,5
 "Mallotus",41.88,"Brose_etal_2018; Cai_etal_2025; McCoy_2008; fishbase",19,4
 "Malpolon",1652,"Feldman_etal_2016; Meiri_2024; Myhrvold_2015",5,5
-"Malurus",14.13,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022; Cai_etal_2025",152,48
+"Malurus",14.13,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022; Cai_etal_2025",150,48
 "Malvapion",0.0007377,"Brocher_etal_2025",1,1
 "Mamestra",0.139,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008",5,1
 "Mammelomys",142.9,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",12,4
@@ -5810,10 +5811,10 @@
 "Marmosops",32.73,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014; Jones_2009; Smith_2003; Tsuboi_etal_2018; vertnet-traits-sept2016; vertnet-mammalia-sept2016; AnAge; Quaardvark",104,45
 "Marmota",4654,"Faurby_etal_2018; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; AnAge; Quaardvark; Ernest_2003; vertnet-traits-sept2016; Jones_2009; Cai_etal_2025; Hoehler_etal_2023; Tucker_etal_2014b; Uyeda_etal_2017; McCoy_2008; Hirt_etal_2017; vertnet-mammalia-sept2016; Herberstein_etal_2022",273,68
 "Maro",0.0003193,"Brose_etal_2018",341,1
-"Marpissa",0.07587,"Ehnes_etal_2011; Herberstein_etal_2022; Pekar_etal_2021; Brose_2005; Brey_2010; Brose_etal_2018",216,4
+"Marpissa",0.07587,"Ehnes_etal_2011; Herberstein_etal_2022; Pekar_etal_2021; Brose_2005; Brey_2010; Brose_etal_2018",114,4
 "Martes",1303,"AnAge; Baach_2026; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Herberstein_etal_2022; Hoehler_etal_2023; Hudson_2013; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Tucker_etal_2014a; McCoy_2008",458,37
 "Marthasterias",0.2728,"Brose_etal_2018",45,1
-"Martialia",279.9,"Brose_etal_2018; Raymond_2011",52,2
+"Martialia",279.9,"Brose_etal_2018; Raymond_2011",34,2
 "Masasteron",0.007,"Pekar_etal_2021",1,1
 "Masius",11.46,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",10,3
 "Maso",0.0006139,"Brocher_etal_2025",1,1
@@ -5823,7 +5824,7 @@
 "Masticophis",912.7,"Feldman_etal_2016; Myhrvold_2015; Meiri_2024",8,8
 "Mastigias",35,"Pata_2025",1,1
 "Mastigodryas",264.2,"Feldman_etal_2016",13,13
-"Mastigoteuthis",60.1,"Raymond_2011",2,1
+"Mastigoteuthis",60.1,"Raymond_2011",1,1
 "Mastomys",49.83,"Faurby_etal_2018; Soria_etal_2021; Cai_etal_2025; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Smith_2003; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016; AnAge; Ernest_2003; Castro_2025; Hoehler_etal_2023; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017",78,30
 "Masturus",1747000,"Cai_etal_2025",1,1
 "Matoatoa",2.85,"Feldman_etal_2016; Meiri_2018",4,2
@@ -6027,7 +6028,7 @@
 "Mesocyclops",5.308e-05,"DeLong_etal_2018; Hebert_etal_2016; Kiorboe_2013",8,4
 "Mesodesma",15.87,"McCoy_2008; Brey_2010",2,2
 "Mesodinium",2.986e-09,"Lukic_2022; Weisse_2024",6,3
-"Mesodorylaimus",1.82e-06,"Mulder_2011; Brose_2005; Cohen_2014",57,8
+"Mesodorylaimus",1.82e-06,"Mulder_2011; Brose_2005; Cohen_2014",25,8
 "Mesogastrura",3.571e-05,"Hishi_etal_2019; Studier_1992",1,1
 "Mesogobius",162,"fishbase",1,1
 "Mesoligia",0.03,"Kinsella_etal_2020; Studier_1992",1,1
@@ -6056,10 +6057,10 @@
 "Metapenaeopsis",9.918,"sealifebase",4,2
 "Metapenaeus",18.42,"sealifebase",10,4
 "Metaphoxus",0.0006988,"Brose_etal_2018",16,1
-"Metateratocephalus",1.168e-07,"Brose_2005; Brose_etal_2018; Brey_2010; Mulder_2011; Cohen_2014",50,4
+"Metateratocephalus",1.168e-07,"Brose_2005; Brose_etal_2018; Brey_2010; Mulder_2011; Cohen_2014",45,4
 "Metatropiphorus",0.009,"Brose_etal_2018",140,1
 "Metazygia",0.01755,"Herberstein_etal_2022; Pekar_etal_2021",20,1
-"Metelectrona",6.316,"Raymond_2011",3,1
+"Metelectrona",6.316,"Raymond_2011",1,1
 "Metellina",0.01435,"Brocher_etal_2025; Brose_etal_2018",258,2
 "Metepeira",0.012,"Brose_etal_2018",275,1
 "Meterythrops",0.08406,"Kiorboe_2013; Pata_2025",4,2
@@ -6110,7 +6111,7 @@
 "Microcerculus",18.86,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Quaardvark",46,12
 "Microcerotermes",0.00205,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",8,2
 "Microchera",2.886,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",12,8
-"Microchirus",46.03,"fishbase; Barnes_2008; Brose_2005",34,4
+"Microchirus",46.03,"fishbase; Barnes_2008; Brose_2005",27,4
 "Micrococcus",1.1e-12,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",7,2
 "Microcottus",23.6,"GuoBailly_2024",1,1
 "Microdeutopus",0.002532,"Brose_etal_2018",17,1
@@ -6176,7 +6177,7 @@
 "Microtendipes",0.000566,"Brose_etal_2018",224,1
 "Microthrissa",3.4,"Cai_etal_2025",1,1
 "Microtritia",1.474e-05,"Brose_etal_2018; Cohen_2014",16,2
-"Microtus",38.08,"Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016; AnAge; AndersonGillooly_2017; Baach_2026; Brose_2005; Brose_etal_2018; Cai_etal_2025; Castro_2025; Hoehler_etal_2023; McCoy_2008; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; vertnet-mammalia-sept2016; Herberstein_etal_2022; Quaardvark; Tucker_etal_2014a; DeLong_etal_2018; Wisnionski_2026; Hirt_etal_2017; Hudson_2013",6709,224
+"Microtus",38.08,"Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016; AnAge; AndersonGillooly_2017; Baach_2026; Brose_2005; Brose_etal_2018; Cai_etal_2025; Castro_2025; Hoehler_etal_2023; McCoy_2008; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; vertnet-mammalia-sept2016; Herberstein_etal_2022; Quaardvark; Tucker_etal_2014a; DeLong_etal_2018; Wisnionski_2026; Hirt_etal_2017; Hudson_2013",6687,224
 "Microtydeus",6.902e-07,"Cohen_2014",1,1
 "Microvelia",0.0003848,"Brose_etal_2018; Brey_2010",3,1
 "Micrurus",254,"Feldman_etal_2016; Myhrvold_2015; Meiri_2024; Cai_etal_2025",99,97
@@ -6300,7 +6301,7 @@
 "Mormyrus",3748,"fishbase; Froese_2025; AnAge",5,5
 "Morococcyx",63.96,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",28,2
 "Morone",3352,"Froese_2025; AnAge; Quaardvark",3,3
-"Moroteuthopsis",2255,"Jackson_1997; Brose_etal_2018; Raymond_2011",48,3
+"Moroteuthopsis",2255,"Jackson_1997; Brose_etal_2018; Raymond_2011",28,3
 "Morphnus",1725,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",4,2
 "Morulina",0.0007226,"Hishi_etal_2019; Studier_1992",3,3
 "Morulodes",0.0003586,"Hishi_etal_2019; Studier_1992",1,1
@@ -6330,7 +6331,7 @@
 "Muntiacus",19770,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; AnAge; Cai_etal_2025; Ernest_2003; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b",66,24
 "Muraena",1682,"fishbase; GuoBailly_2024",4,3
 "Muraenesox",30940,"Cai_etal_2025; fishbase",3,3
-"Muraenolepis",549.3,"Brose_etal_2018; Raymond_2011; Cai_etal_2025",127,4
+"Muraenolepis",549.3,"Brose_etal_2018; Raymond_2011; Cai_etal_2025",126,4
 "Murchieona",0.08,"Mathieu_2014",1,1
 "Murexechinus",35.01,"Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-traits-sept2016",15,7
 "Murexia",226.9,"Cai_etal_2025; Faurby_etal_2018; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",11,5
@@ -6385,7 +6386,7 @@
 "Mylesinus",1650,"fishbase",2,1
 "Myleus",1528,"fishbase",3,2
 "Myliobatis",65,"Froese_2025",1,1
-"Myllaena",0.0002152,"Brose_2005; Studier_1992; Brose_etal_2018",132,4
+"Myllaena",0.0002152,"Brose_2005; Studier_1992; Brose_etal_2018",68,4
 "Mylochromis",111.2,"McCoy_2008",1,1
 "Mylomys",147.3,"Cai_etal_2025; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-mammalia-sept2016",12,5
 "Mylonchulus",1.394e-06,"Ghaderi_2026; Brose_etal_2018; Brey_2010; Cohen_2014",161,28
@@ -6416,7 +6417,7 @@
 "Myripristis",245.6,"fishbase; Cai_etal_2025; Brose_etal_2018; Mahe_2023; GuoBailly_2024",121,7
 "Myrmarachne",0.01632,"Brocher_etal_2025",1,1
 "Myrmechixenus",0.0002921,"Brocher_etal_2025",1,1
-"Myrmecia",0.04292,"Herberstein_etal_2022; Leahy_2025",274,13
+"Myrmecia",0.04374,"Herberstein_etal_2022; Leahy_2025",305,15
 "Myrmeciza",27.36,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018; Hoehler_etal_2023",114,37
 "Myrmecobius",466.8,"AnAge; Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Hirt_etal_2017; Hoehler_etal_2023; Hudson_2013; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; Wilman_etal_2014",28,9
 "Myrmecocichla",44.55,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",30,11
@@ -6450,7 +6451,7 @@
 "Mystacornis",23.62,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",5,2
 "Mystromys",90.73,"AnAge; Ernest_2003; Faurby_etal_2018; Herberstein_etal_2022; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014",13,5
 "Mystus",13.19,"Castro_2025; Makarieva_2008; fishbase; Cai_etal_2025",13,6
-"Mythimna",0.1031,"Kinsella_etal_2020; Studier_1992; Brose_2005; Brose_etal_2018",67,5
+"Mythimna",0.1031,"Kinsella_etal_2020; Studier_1992; Brose_2005; Brose_etal_2018",56,5
 "Mytilina",0.0001091,"Hishi_etal_2019; Studier_1992",1,1
 "Mytilopsis",0.007402,"Brose_etal_2018",36,1
 "Mytilus",0.2572,"Brose_etal_2018",12,1
@@ -6556,7 +6557,7 @@
 "Nemadoras",52,"fishbase",1,1
 "Nemapogon",0.02534,"Brose_etal_2018",88,1
 "Nemastoma",0.00202,"Brose_etal_2018; Brey_2010; Brocher_etal_2025",8,2
-"Nematalosa",328,"Cai_etal_2025; Brose_2005; fishbase",7,6
+"Nematalosa",328,"Cai_etal_2025; Brose_2005; fishbase",6,6
 "Nemateleotris",3.7,"Cai_etal_2025",2,2
 "Nematobrycon",1,"Cai_etal_2025",1,1
 "Nematocarcinus",0.307,"Ikeda_2014; Kiorboe_2013; Pata_2025",2,2
@@ -6566,7 +6567,7 @@
 "Nemobius",0.05936,"Ehnes_etal_2011",13,1
 "Nemopilema",2e+05,"sealifebase",1,1
 "Nemosia",18.72,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",8,4
-"Nemotelus",0.002189,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025",37,3
+"Nemotelus",0.002189,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025",20,3
 "Nemoura",0.003862,"Brose_etal_2018",90,1
 "Nenteria",8.891e-06,"Cohen_2014",1,1
 "Neoaliturus",0.0019,"Brocher_etal_2025",1,1
@@ -6615,7 +6616,7 @@
 "Neomorphus",358.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",14,6
 "Neomys",13.57,"AnAge; Baach_2026; Ernest_2003; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; McCoy_2008; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Cai_etal_2025; Herberstein_etal_2022; Quaardvark; Tsuboi_etal_2018; Tucker_etal_2014b; Verberk_2020; vertnet-traits-sept2016; vertnet-mammalia-sept2016",38,16
 "Neomysis",0.009379,"Ikeda_2014; Kiorboe_2013; Hoehler_etal_2023; Makarieva_2008",28,4
-"Neon",0.001237,"Brose_etal_2018; Brose_2005; Brey_2010",234,3
+"Neon",0.001237,"Brose_etal_2018; Brose_2005; Brey_2010",201,3
 "Neonaphorura",4.34e-06,"Brose_etal_2018",16,1
 "Neoniphon",93.34,"Brose_etal_2018; Mahe_2023; Froese_2025; Froese_2014",30,3
 "Neonycteris",6.705,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021",3,2
@@ -6639,11 +6640,11 @@
 "Neoscapteriscus",0.953,"Castro_2025",3,2
 "Neoscolecithrix",8.13e-05,"Brose_etal_2018",10,1
 "Neoscombrops",181.4,"fishbase",1,1
-"Neoscona",0.09904,"Brose_2005; Brey_2010; Brose_etal_2018; Herberstein_etal_2022; Pekar_etal_2021",194,3
+"Neoscona",0.09904,"Brose_2005; Brey_2010; Brose_etal_2018; Herberstein_etal_2022; Pekar_etal_2021",100,3
 "Neoscopelus",130.7,"Cai_etal_2025",1,1
 "Neoscorpis",1600,"fishbase",1,1
 "Neoseiulus",2.82e-05,"DeLong_etal_2018",6,1
-"Neosilurus",234.8,"Brose_2005; fishbase",18,2
+"Neosilurus",234.8,"Brose_2005; fishbase",2,2
 "Neosminthurus",6.371e-05,"Hishi_etal_2019; Studier_1992",1,1
 "Neosuthora",8.5,"Tobias_2022",1,1
 "Neotamias",75.4,"Faurby_etal_2018; Soria_etal_2021",6,5
@@ -6731,7 +6732,7 @@
 "Ninnigobius",3.3,"fishbase",1,1
 "Ninox",240.9,"Myhrvold_2015; Tobias_2022; Lislevand_etal_2007; Wilman_etal_2014; vertnet-aves-sept2016; Herberstein_etal_2022; Tsuboi_etal_2018; Cai_etal_2025; vertnet-traits-sept2016",121,65
 "Ninurta",13.2,"Feldman_etal_2016; Meiri_2018",2,1
-"Niphargus",0.0265,"Brose_2005; Brey_2010; Makarieva_2008; DeLong_etal_2010",9,6
+"Niphargus",0.0265,"Brose_2005; Brey_2010; Makarieva_2008; DeLong_etal_2010",7,6
 "Nipponia",1450,"AnAge; Cai_etal_2025; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014",6,2
 "Nipponocypris",56.97,"Cai_etal_2025",3,3
 "Nisaetus",1598,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",24,11
@@ -6754,7 +6755,7 @@
 "Notacanthus",2098,"Cai_etal_2025",2,2
 "Notaden",15.03,"AmphiBIO",4,4
 "Notarius",1815,"fishbase",3,2
-"Notasterias",2.6,"Brose_2005; Brose_etal_2018",15,2
+"Notasterias",2.6,"Brose_2005; Brose_etal_2018",13,2
 "Notechis",1338,"Feldman_etal_2016",1,1
 "Notesthes",213,"Brose_2005",1,1
 "Notharchus",72.87,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007",37,15
@@ -6779,7 +6780,7 @@
 "Notocitellus",274.4,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Tsuboi_etal_2018",14,4
 "Notocrangon",1.323,"Brose_etal_2018; Makarieva_2008; Raymond_2011",180,3
 "Notodiscus",0.03501,"Mercer_etal_2001",1,1
-"Notolepis",9.058,"Brose_etal_2018; Raymond_2011",61,2
+"Notolepis",9.058,"Brose_etal_2018; Raymond_2011",59,2
 "Notomabuya",11.95,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015",3,2
 "Notomys",37.56,"AnAge; Ernest_2003; Faurby_etal_2018; Hirt_etal_2017; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-mammalia-sept2016",50,19
 "Notonecta",0.07371,"Brocher_etal_2025",1,1
@@ -6880,14 +6881,14 @@
 "Ocypus",0.06474,"Brocher_etal_2025; Ehnes_etal_2011",43,7
 "Ocyropsis",32.38,"Ikeda_2014; Kiorboe_2013; Lucas_2011",2,1
 "Ocyusa",0.000211,"Brocher_etal_2025",1,1
-"Odacantha",0.01022,"Brose_2005; Studier_1992; Brose_etal_2018",14,2
+"Odacantha",0.01022,"Brose_2005; Studier_1992; Brose_etal_2018",8,2
 "Odaxothrissa",30.3,"Cai_etal_2025",1,1
 "Odiellus",0.00623,"Brose_etal_2018; Brey_2010",1,1
 "Odobenus",1067000,"AnAge; Brose_etal_2018; Ernest_2003; Faurby_etal_2018; Hoehler_etal_2023; Hudson_2013; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Verberk_2020; Wilman_etal_2014; vertnet-traits-sept2016",314,12
 "Odocoileus",68990,"AnAge; AndersonGillooly_2017; Baach_2026; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Hirt_etal_2017; Hoehler_etal_2023; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b; Wilman_etal_2014; Wisnionski_2026",32,11
 "Odonestis",0.245,"Baach_2026; Castro_2025; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",5,2
 "Odontamblyopus",48.17,"Cai_etal_2025",3,3
-"Odontaster",2.6,"Brose_2005; Brose_etal_2018",259,2
+"Odontaster",2.6,"Brose_2005; Brose_etal_2018",235,2
 "Odontesthes",1071,"fishbase",5,3
 "Odonteus",0.02435,"Brocher_etal_2025",1,1
 "Odontobutis",72.66,"Cai_etal_2025",7,7
@@ -6912,7 +6913,7 @@
 "Oecobius",0.002,"Pekar_etal_2021",1,1
 "Oecomys",63.13,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Jones_2009; Smith_2003; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Ernest_2003",101,26
 "Oedalechilus",160.8,"Cai_etal_2025; fishbase",2,2
-"Oedemera",0.02789,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",60,6
+"Oedemera",0.02789,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",33,6
 "Oediceroides",3.605,"Brose_etal_2018",306,2
 "Oedipina",59.6,"Cai_etal_2025",1,1
 "Oedistoma",8.39,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",19,4
@@ -6991,7 +6992,7 @@
 "Onychostoma",584.5,"Cai_etal_2025; fishbase",9,9
 "Onychostruthus",41.25,"Cai_etal_2025; Tobias_2022",2,2
 "Onychoteuthis",69.43,"Barnes_2008",2,1
-"Onykia",438.4,"Raymond_2011",6,1
+"Onykia",438.4,"Raymond_2011",1,1
 "Onymacris",0.6262,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008; Herberstein_etal_2022",20,6
 "Oocatochus",2.1,"Cai_etal_2025; Feldman_etal_2016",2,1
 "Oodes",0.02527,"Brocher_etal_2025; Brose_etal_2018",29,2
@@ -7119,13 +7120,13 @@
 "Orraya",21.9,"Feldman_etal_2016; Meiri_2018",2,1
 "Ortalis",562.1,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; AnAge",98,31
 "Orthadenella",1.11e-05,"Brose_etal_2018",157,1
-"Orthetrum",0.2302,"Brose_2005; Studier_1992; Brose_etal_2018",60,2
+"Orthetrum",0.2302,"Brose_2005; Studier_1992; Brose_etal_2018",31,2
 "Orthione",0.2458,"Brose_etal_2018; Hechinger_etal_2011",10,1
 "Orthocephalus",0.005559,"Brocher_etal_2025",2,2
 "Orthochaetes",0.00132,"Brocher_etal_2025",1,1
 "Orthocladius",0.0003458,"Brose_etal_2018",81,1
 "Orthoconchoecia",0.002462,"Ikeda_2014; Kiorboe_2013",3,1
-"Orthocyclops",2.097e-05,"Brose_2005; Brose_etal_2018; DeLong_etal_2018",87,2
+"Orthocyclops",2.097e-05,"Brose_2005; Brose_etal_2018; DeLong_etal_2018",46,2
 "Orthodon",632.9,"Makarieva_2008; Uyeda_etal_2017",2,2
 "Orthogeomys",470.2,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Ernest_2003; Tsuboi_etal_2018; vertnet-traits-sept2016",65,21
 "Orthogonys",39,"Tobias_2022",1,1
@@ -7141,6 +7142,7 @@
 "Orthorhynchus",3.2,"vertnet-aves-sept2016",1,1
 "Orthorhyncus",2.915,"Herberstein_etal_2022; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-traits-sept2016",10,4
 "Orthospinus",16,"fishbase",1,1
+"Orthostigma",0.000183,"Brose_2005",1,1
 "Orthotomus",8.486,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",91,23
 "Orthotylus",0.004106,"Brocher_etal_2025",2,2
 "Ortygornis",411.6,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Herberstein_etal_2022; Lislevand_etal_2007; Tsuboi_etal_2018; vertnet-aves-sept2016",22,7
@@ -7192,7 +7194,7 @@
 "Ototylomys",90.98,"Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-traits-sept2016",9,6
 "Otus",109,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; AnAge; Herberstein_etal_2022; Cai_etal_2025",183,88
 "Oudemansia",0.0001429,"Hishi_etal_2019; Studier_1992",4,2
-"Oulema",0.004245,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",47,5
+"Oulema",0.004245,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",26,5
 "Oulimnius",0.0003014,"Brose_etal_2018",122,1
 "Ourebia",15830,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Hirt_etal_2017; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",17,4
 "Ouroborus",58.4,"Feldman_etal_2016; Meiri_2018",2,1
@@ -7203,7 +7205,7 @@
 "Oxuderces",3.1,"Cai_etal_2025",1,1
 "Oxybelis",735.1,"Feldman_etal_2016; Myhrvold_2015",6,6
 "Oxycephalus",0.07356,"Ikeda_2014; Kiorboe_2013",4,1
-"Oxychilus",0.1168,"Brose_2005; Brey_2010; Brose_etal_2018",16,2
+"Oxychilus",0.1168,"Brose_2005; Brey_2010; Brose_etal_2018",9,2
 "Oxydia",0.2621,"Brose_etal_2018",81,1
 "Oxydoras",8450,"fishbase",6,2
 "Oxyeleotris",1171,"Cai_etal_2025",1,1
@@ -7211,7 +7213,7 @@
 "Oxyjulis",124.1,"Froese_2025; Froese_2014",1,1
 "Oxylabes",22.41,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,2
 "Oxylebius",30.1,"GuoBailly_2024",1,1
-"Oxyloma",0.2365,"Brose_2005; Brey_2010; Brose_etal_2018",110,2
+"Oxyloma",0.2365,"Brose_2005; Brey_2010; Brose_etal_2018",56,2
 "Oxymonacanthus",29.5,"Cai_etal_2025",1,1
 "Oxymycterus",64.77,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Wilman_etal_2014; Soria_etal_2021; Herberstein_etal_2022; Hoehler_etal_2023; Uyeda_etal_2017; Ernest_2003",83,25
 "Oxynoemacheilus",5.155,"fishbase",31,28
@@ -7266,7 +7268,7 @@
 "Pachyuromys",39.12,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",9,4
 "Pachyurus",1152,"fishbase",5,4
 "Pacifastacus",175,"sealifebase",1,1
-"Paederus",0.004897,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",522,4
+"Paederus",0.004897,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",263,4
 "Paedocypris",0.1,"Cai_etal_2025",3,3
 "Paenibacillus",9e-13,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",6,2
 "Pagellus",1168,"Cai_etal_2025; fishbase; AnAge; Brose_etal_2018; Tsuboi_etal_2018",88,8
@@ -7358,7 +7360,7 @@
 "Paracentropyge",42.5,"Cai_etal_2025",1,1
 "Paracentrotus",0.2673,"Brose_etal_2018",48,1
 "Paraceradocus",6.4,"Brose_etal_2018",151,1
-"Parachaenichthys",143.6,"Raymond_2011",2,1
+"Parachaenichthys",143.6,"Raymond_2011",1,1
 "Parachaeturichthys",16.77,"fishbase",1,1
 "Parachanna",1134,"Cai_etal_2025",1,1
 "Parachauliodes",0.2993,"Hayashi_1999",2,2
@@ -7380,12 +7382,12 @@
 "Paracrassibucca",1.219e-06,"Ghaderi_2026",1,1
 "Paracrinia",1.95,"AmphiBIO",1,1
 "Paracrocidura",12.92,"Faurby_etal_2018; Soria_etal_2021; Myhrvold_2015; Jones_2009; Smith_2003; Wilman_etal_2014",11,6
-"Paractinolaimus",1.434e-05,"Brose_2005",4,1
+"Paractinolaimus",1.434e-05,"Brose_2005",1,1
 "Paractora",0.01448,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008; Mercer_etal_2001",9,3
 "Paracynictis",1711,"Ernest_2003; Faurby_etal_2018; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",10,4
 "Paradelma",12.9,"Feldman_etal_2016; Meiri_2018",2,1
 "Paradigalla",163.5,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",7,3
-"Paradiplospinus",404.8,"Cai_etal_2025; Raymond_2011",3,2
+"Paradiplospinus",404.8,"Cai_etal_2025; Raymond_2011",2,2
 "Paradipus",129.7,"Faurby_etal_2018; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",5,3
 "Paradisaea",202.6,"AnAge; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",30,15
 "Paradoxornis",26.18,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Cai_etal_2025",5,3
@@ -7446,7 +7448,7 @@
 "Paranaitis",0.01538,"Brose_etal_2018",35,1
 "Parandania",0.4049,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Makarieva_2008; Pata_2025",4,3
 "Paranemachilus",3.7,"Cai_etal_2025",1,1
-"Paranotothenia",129.9,"Makarieva_2008; Raymond_2011",6,2
+"Paranotothenia",129.9,"Makarieva_2008; Raymond_2011",2,2
 "Paranotropis",2.207,"fishbase",2,1
 "Parantechinus",65.25,"AnAge; Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",13,5
 "Parantheopsis",10,"Brose_etal_2018",96,1
@@ -7498,7 +7500,7 @@
 "Paratya",0.02277,"Lagrue_etal_2015",2,1
 "Paratylenchus",7.989e-08,"Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",275,7
 "Parauronema",3.64e-09,"DeLong_etal_2010",1,1
-"Paravespula",0.04219,"Brose_2005; Studier_1992; Brose_etal_2018",60,2
+"Paravespula",0.04219,"Brose_2005; Studier_1992; Brose_etal_2018",31,2
 "Paraxenylla",0.0001634,"Hishi_etal_2019; Studier_1992",1,1
 "Paraxerus",286.4,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-mammalia-sept2016; AnAge; Ernest_2003; Hoehler_etal_2023; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; Quaardvark",78,25
 "Parazacco",13.3,"Cai_etal_2025",1,1
@@ -7508,7 +7510,7 @@
 "Pardalotus",10.28,"Cai_etal_2025; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",42,15
 "Pardipicus",45,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",51,7
 "Pardirallus",191.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",17,5
-"Pardosa",0.02859,"Brocher_etal_2025; Ehnes_etal_2011; Hirt_etal_2017; DeLong_etal_2018; Brose_etal_2018; Herberstein_etal_2022; Pekar_etal_2021; Brose_2005; Brey_2010",340,27
+"Pardosa",0.02859,"Brocher_etal_2025; Ehnes_etal_2011; Hirt_etal_2017; DeLong_etal_2018; Brose_etal_2018; Herberstein_etal_2022; Pekar_etal_2021; Brose_2005; Brey_2010",289,27
 "Pareas",64.5,"Feldman_etal_2016; Myhrvold_2015",14,14
 "Pareiorhaphis",30.8,"fishbase",1,1
 "Pareiorhina",3,"fishbase",1,1
@@ -7548,7 +7550,7 @@
 "Parvilacerta",6.148,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024",7,5
 "Parvilux",2.83,"CalCOFI_2026",1,1
 "Parvoscincus",2.97,"Feldman_etal_2016; Meiri_2018",46,29
-"Pasiphaea",1.526,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Makarieva_2008; Pata_2025; Gonzalez_2025; Raymond_2011; Vanni_2017",30,12
+"Pasiphaea",1.526,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Makarieva_2008; Pata_2025; Gonzalez_2025; Raymond_2011; Vanni_2017",29,12
 "Pasiphila",0.01,"Kinsella_etal_2020; Studier_1992",1,1
 "Passaloecus",0.003058,"Brocher_etal_2025",1,1
 "Passer",24.33,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Baach_2026; Brown_etal_2018; Cai_etal_2025; Gillooly_etal_2016; Herberstein_etal_2022; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Quaardvark; Tsuboi_etal_2018; Wisnionski_2026",4302,82
@@ -7558,7 +7560,7 @@
 "Pastor",71.04,"Hoehler_etal_2023; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",12,4
 "Patagioenas",261.9,"Tobias_2022; vertnet-aves-sept2016; vertnet-traits-sept2016; Myhrvold_2015; Wilman_etal_2014; Tsuboi_etal_2018; AnAge; Cai_etal_2025; Lislevand_etal_2007; McCoy_2008; Quaardvark",248,48
 "Patagona",19.95,"Herberstein_etal_2022; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",57,5
-"Patagonotothen",40.37,"Raymond_2011",3,1
+"Patagonotothen",40.37,"Raymond_2011",1,1
 "Patella",1.6,"Abele_2010",1,1
 "Pattonomys",277,"Soria_etal_2021; Cai_etal_2025; Faurby_etal_2018",6,6
 "Paulamys",123,"Faurby_etal_2018; Soria_etal_2021; Wilman_etal_2014",3,1
@@ -7589,7 +7591,7 @@
 "Pelargopsis",211.6,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016",16,5
 "Pelasgus",5.348,"fishbase",1,1
 "Pelea",23600,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",11,6
-"Pelecanoides",150.1,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Castro_2025; Herberstein_etal_2022; Hoehler_etal_2023; Raymond_2011; Tsuboi_etal_2018; sealifebase; Quaardvark; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Lislevand_etal_2007; Makarieva_2008; Verberk_2020",95,22
+"Pelecanoides",150.1,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Castro_2025; Herberstein_etal_2022; Hoehler_etal_2023; Raymond_2011; Tsuboi_etal_2018; sealifebase; Quaardvark; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Lislevand_etal_2007; Makarieva_2008; Verberk_2020",65,22
 "Pelecanus",5741,"Cai_etal_2025; Herberstein_etal_2022; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; sealifebase; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Lislevand_etal_2007; McCoy_2008; Hechinger_etal_2011; Hoehler_etal_2023; Verberk_2020; Hirt_etal_2017; Brose_etal_2018",136,40
 "Pelecopsis",0.0007109,"Gonzalez_2025; Studier_1992; Brocher_etal_2025; Brose_etal_2018",270,3
 "Pelecus",1392,"AnAge; Cai_etal_2025; fishbase",4,3
@@ -7600,9 +7602,9 @@
 "Pellonula",13.7,"Cai_etal_2025",1,1
 "Pellonyssus",2.71e-06,"Brose_etal_2018",33,1
 "Pellorneum",28.54,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022",78,15
-"Pelmatolapia",38.77,"Brose_2005; Olopade_2018",10,2
+"Pelmatolapia",38.77,"Brose_2005; Olopade_2018",2,2
 "Pelobates",27.72,"AmphiBIO; Cai_etal_2025; Trochet_2014",6,5
-"Pelochares",0.001615,"Brose_2005; Studier_1992; Brose_etal_2018",60,2
+"Pelochares",0.001615,"Brose_2005; Studier_1992; Brose_etal_2018",31,2
 "Pelochelys",75000,"Cai_etal_2025",1,1
 "Pelodiscus",2164,"Cai_etal_2025; Myhrvold_2015",2,2
 "Pelodytes",3.728,"AmphiBIO; Trochet_2014",4,3
@@ -7682,7 +7684,7 @@
 "Perissocephalus",320.6,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",9,4
 "Perissodus",18.4,"Tsuboi_etal_2018; Vanni_2017",18,2
 "Perithemis",0.061,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008",6,1
-"Perknaster",6.208,"Brose_2005; Brose_etal_2018",23,4
+"Perknaster",6.208,"Brose_2005; Brose_etal_2018",19,4
 "Perna",7.28,"Vanni_2017; Brey_2010; McCoy_2008",47,2
 "Pernis",798,"AnAge; Baach_2026; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014",20,8
 "Perochirus",20.94,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",8,5
@@ -7791,7 +7793,7 @@
 "Pheosia",0.2783,"Kinsella_etal_2020; Studier_1992",1,1
 "Pherallodiscus",0.1,"GuoBailly_2024",1,1
 "Pherbellia",0.0007973,"Brose_etal_2018",13,1
-"Pherbina",0.01364,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025",83,3
+"Pherbina",0.01364,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025",43,3
 "Pherusa",0.1482,"Brose_etal_2018",36,1
 "Phestilla",1.25,"Quaardvark",1,1
 "Pheucticus",54.72,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Lislevand_etal_2007; McCoy_2008; Quaardvark; Cai_etal_2025",476,24
@@ -7799,7 +7801,7 @@
 "Phibalura",46.81,"Tobias_2022; Myhrvold_2015; Wilman_etal_2014",4,3
 "Phidippus",0.2688,"Ehnes_etal_2011; Herberstein_etal_2022; Pekar_etal_2021",11,7
 "Phigys",77.08,"AnAge; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016",6,5
-"Philaenus",0.006253,"Baach_2026; Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008",68,4
+"Philaenus",0.006253,"Baach_2026; Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018; Chown_etal_2007; Ehnes_etal_2011; Hoehler_etal_2023; Makarieva_2008",38,4
 "Philander",327.5,"AnAge; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Cai_etal_2025; Quaardvark; Fisher_2001; Herberstein_etal_2022; Hoehler_etal_2023; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; vertnet-mammalia-sept2016; vertnet-traits-sept2016",46,21
 "Philantomba",6974,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-mammalia-sept2016; Herberstein_etal_2022; Hoehler_etal_2023; McCoy_2008",32,15
 "Philautus",0.6848,"vertnet-traits-sept2016; vertnet-amphibia-sept2016",5,2
@@ -7906,7 +7908,7 @@
 "Phyllomedusa",40.22,"Pareja-Mejia_2023; AmphiBIO; Makarieva_2008; Uyeda_etal_2017",7,6
 "Phyllomyias",8.927,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016; vertnet-aves-sept2016",56,22
 "Phyllomys",277.4,"Cai_etal_2025; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",59,19
-"Phylloneta",0.007064,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",97,3
+"Phylloneta",0.007064,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",50,3
 "Phyllonycteris",19.06,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014",8,4
 "Phyllopezus",27.89,"Meiri_2024; Feldman_etal_2016; Meiri_2018; Myhrvold_2015",10,7
 "Phyllops",17.08,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014",4,3
@@ -7970,7 +7972,7 @@
 "Pionus",245.4,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Tsuboi_etal_2018",67,17
 "Pipa",200,"AmphiBIO",1,1
 "Pipile",1315,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Cai_etal_2025; vertnet-aves-sept2016",16,8
-"Pipilo",39.87,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018; Cai_etal_2025",1402,14
+"Pipilo",39.87,"AnAge; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018; Cai_etal_2025",1401,14
 "Pipistrellus",5.796,"Cai_etal_2025; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016; Smith_2003; Tsuboi_etal_2018; AnAge; Baach_2026; AyalaBerdon_2025; Gillooly_etal_2016; Hoehler_etal_2023; Quaardvark; vertnet-mammalia-sept2016",159,74
 "Pipiza",0.017,"Kendall_etal_2019; Studier_1992",3,3
 "Pipra",17.08,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Tsuboi_etal_2018; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",309,27
@@ -7978,10 +7980,10 @@
 "Pipreola",52.98,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",82,20
 "Piprites",15.85,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",12,4
 "Piranga",30.61,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Herberstein_etal_2022; McCoy_2008; Quaardvark; Tsuboi_etal_2018",623,40
-"Pirata",0.02625,"Brose_2005; Brey_2010; Brose_etal_2018; Brown_etal_2018; Hirt_etal_2017",541,9
-"Piratula",0.01426,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Ehnes_etal_2011",76,5
+"Pirata",0.02625,"Brose_2005; Brey_2010; Brose_etal_2018; Brown_etal_2018; Hirt_etal_2017",361,9
+"Piratula",0.01426,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Ehnes_etal_2011",56,5
 "Pisaster",729,"Wolfson_1979; Rogers_2013",2,2
-"Pisaura",0.07893,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Ehnes_etal_2011",326,4
+"Pisaura",0.07893,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Ehnes_etal_2011",182,4
 "Piscicola",0.02847,"Brose_etal_2018; Brey_2010",16,1
 "Pisidium",0.0008485,"Brose_etal_2018; Brey_2010",177,1
 "Pista",0.24,"Brose_etal_2018",66,1
@@ -8017,7 +8019,7 @@
 "Planigale",8.395,"AnAge; Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; Quaardvark",58,28
 "Planiliza",2160,"Cai_etal_2025; fishbase",2,2
 "Planococcus",0.0013,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",4,1
-"Planorbis",0.1636,"Brose_2005; Brey_2010; Brose_etal_2018",32,3
+"Planorbis",0.1636,"Brose_2005; Brey_2010; Brose_etal_2018",19,3
 "Plasmodium",6.133e-11,"DeLong_etal_2010; Makarieva_2008",6,3
 "Platacanthomys",104.3,"AnAge; Faurby_etal_2018; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,3
 "Platalea",1554,"AnAge; Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018; Herberstein_etal_2022; Cai_etal_2025; McCoy_2008; vertnet-traits-sept2016",47,23
@@ -8061,7 +8063,7 @@
 "Platysmurus",144.6,"Tobias_2022; Wascher_2025; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016",9,3
 "Platyspiza",34.79,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",36,2
 "Platysteira",12.91,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Lislevand_etal_2007; vertnet-aves-sept2016; Cai_etal_2025; vertnet-traits-sept2016; Tsuboi_etal_2018",110,25
-"Platystethus",0.0005536,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",47,5
+"Platystethus",0.0005536,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",26,5
 "Platytroctes",73.5,"Cai_etal_2025",1,1
 "Plecodus",19.3,"Tsuboi_etal_2018",1,1
 "Plecotus",8.162,"AnAge; AyalaBerdon_2025; Baach_2026; Cai_etal_2025; Castro_2025; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",47,26
@@ -8172,7 +8174,7 @@
 "Polititapes",3.957,"McCoy_2008; Brey_2010",2,1
 "Pollimyrus",3.688,"Froese_2025; Froese_2014; AnAge",2,2
 "Polyartemia",0.00769,"Hoehler_etal_2023; Makarieva_2008",2,1
-"Polyarthra",6.381e-07,"Brose_etal_2018; Brose_2005",524,5
+"Polyarthra",6.381e-07,"Brose_etal_2018; Brose_2005",505,5
 "Polyboroides",619.1,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",8,3
 "Polycelis",0.005422,"DeLong_etal_2010; Brose_etal_2018",54,2
 "Polycentropus",0.001031,"Brose_etal_2018",255,1
@@ -8233,7 +8235,7 @@
 "Porania",41.4,"Jennings_2002",1,1
 "Porcellio",0.02727,"Brose_etal_2018; Ehnes_etal_2011; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Brocher_etal_2025; Brey_2010",186,10
 "Porcellionides",0.03501,"Brocher_etal_2025; Ehnes_etal_2011",9,2
-"Porcellium",0.01223,"Brose_2005; Brey_2010; Brose_etal_2018",237,2
+"Porcellium",0.01223,"Brose_2005; Brey_2010; Brose_etal_2018",227,2
 "Porichthys",66.02,"fishbase; GuoBailly_2024; Hechinger_etal_2011; Reum_2012; Reum_2013",8,7
 "Porobelba",1.49e-05,"Brose_etal_2018",20,1
 "Poroclinus",10,"GuoBailly_2024",1,1
@@ -8256,7 +8258,7 @@
 "Potamochoerus",79000,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",12,2
 "Potamogale",678.8,"Ernest_2003; Faurby_etal_2018; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",11,6
 "Potamophylax",0.02689,"Brose_etal_2018",33,1
-"Potamopyrgus",0.005727,"Brose_2005; Brey_2010; Brose_etal_2018; DeLong_etal_2018; Eklof_etal_2017; Hrycik_2024; Lagrue_etal_2015; Vanni_2017",191,7
+"Potamopyrgus",0.005727,"Brose_2005; Brey_2010; Brose_etal_2018; DeLong_etal_2018; Eklof_etal_2017; Hrycik_2024; Lagrue_etal_2015; Vanni_2017",182,7
 "Potamothrix",0.0007188,"Hrycik_2024",3,3
 "Potamotrygon",45400,"fishbase; Froese_2025; Froese_2014; Quaardvark",11,8
 "Potorous",1341,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014; AnAge; Cai_etal_2025; Fisher_2001; Quaardvark; Smith_2003; Tucker_etal_2014b; Castro_2025; Herberstein_etal_2022; Hirt_etal_2017; Hoehler_etal_2023; Uyeda_etal_2017",35,18
@@ -8286,7 +8288,7 @@
 "Prionailurus",5249,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014",40,20
 "Prionchulellus",1.878e-06,"Ghaderi_2026",1,1
 "Prionchuloides",6.344e-06,"Ghaderi_2026",1,1
-"Prionchulus",9.813e-06,"Ghaderi_2026; Brose_2005",82,31
+"Prionchulus",9.813e-06,"Ghaderi_2026; Brose_2005",66,31
 "Prioniturus",120.2,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",27,10
 "Prionobrama",311.5,"Bojsen_2005",1,1
 "Prionochilus",8.676,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",76,11
@@ -8298,7 +8300,7 @@
 "Prionotus",216.2,"fishbase; vertnet-fishes-sept2016; GuoBailly_2024; Brose_etal_2018",13,12
 "Prionurus",1585,"Cai_etal_2025; GuoBailly_2024",3,3
 "Priotelus",63.25,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",7,3
-"Prismatolaimus",1.195e-07,"Mulder_2011; Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",53,5
+"Prismatolaimus",1.195e-07,"Mulder_2011; Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",44,5
 "Pristella",1.2,"Cai_etal_2025",1,1
 "Pristicon",65.2,"fishbase",1,1
 "Pristidactylus",27.65,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; vertnet-reptilia-sept2016; Meiri_2024; vertnet-traits-sept2016",30,17
@@ -8334,7 +8336,7 @@
 "Prochaetoderma",0.001092,"McCoy_2008",1,1
 "Prochilodus",2025,"Cai_etal_2025; fishbase; Vanni_2017",28,8
 "Procladius",0.000427,"Brose_etal_2018",93,1
-"Procloeon",0.003484,"Brose_2005; Studier_1992; Brose_etal_2018",28,2
+"Procloeon",0.003484,"Brose_2005; Studier_1992; Brose_etal_2018",15,2
 "Procnias",189,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",18,9
 "Procottus",81.5,"Cai_etal_2025",1,1
 "Proctodrilus",0.2,"Mathieu_2014",2,2
@@ -8344,7 +8346,7 @@
 "Procypris",1000,"Cai_etal_2025",1,1
 "Prodiamesa",0.001754,"Brose_etal_2018",207,1
 "Prodoris",3.4,"Brose_etal_2018",46,1
-"Prodorylaimus",3.284e-06,"Mulder_2011; Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",50,4
+"Prodorylaimus",3.284e-06,"Mulder_2011; Brose_2005; Brose_etal_2018; Brey_2010; Cohen_2014",47,4
 "Prodotiscus",14.85,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",24,10
 "Proechimys",286.8,"AnAge; Cai_etal_2025; Faurby_etal_2018; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Ernest_2003; Hoehler_etal_2023; McCoy_2008; Uyeda_etal_2017",235,66
 "Proedromys",87.33,"Soria_etal_2021; Cai_etal_2025; Faurby_etal_2018",4,3
@@ -8371,7 +8373,7 @@
 "Propeleda",0.012,"Brose_etal_2018",25,1
 "Propithecus",4289,"Faurby_etal_2018; GalanAcedo_etal_2026; Quaardvark; Soria_etal_2021; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Wilman_etal_2014; Cai_etal_2025; Tsuboi_etal_2018; AnAge; Ernest_2003; Smith_2003; Hoehler_etal_2023",66,32
 "Propolydesmus",0.03715,"Brocher_etal_2025",1,1
-"Propylaea",0.003817,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",65,3
+"Propylaea",0.003817,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",34,3
 "Propyrrhula",43,"vertnet-aves-sept2016",1,1
 "Prosapia",0.033,"DeLong_etal_2018",1,1
 "Proscelotes",4.067,"Feldman_etal_2016; Meiri_2018",6,3
@@ -8401,7 +8403,7 @@
 "Protodinychus",1.774e-05,"Cohen_2014",1,1
 "Protohermes",0.2273,"Nakagawa_2014",1,1
 "Protomeliturga",0.02215,"Kendall_etal_2019; Studier_1992",8,1
-"Protomyctophum",2.735,"Raymond_2011; Froese_2025; Froese_2014",28,7
+"Protomyctophum",2.735,"Raymond_2011; Froese_2025; Froese_2014",7,7
 "Protonibea",21980,"Cai_etal_2025; McCoy_2008",2,2
 "Protonotaria",14.26,"AnAge; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Uyeda_etal_2017; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",27,5
 "Protoperidinium",8.847e-08,"Kiorboe_2013; Kiorboe_2014; MendenDeuer_2000; DeLong_etal_2018; Brose_etal_2018",22,13
@@ -8415,7 +8417,7 @@
 "Prozercon",5.563e-06,"Brose_etal_2018; Cohen_2014",353,3
 "Prunella",21.36,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018; Cai_etal_2025; AnAge; Baach_2026; Castro_2025; Hoehler_etal_2023; Makarieva_2008",131,38
 "Przewalskium",140600,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",10,3
-"Psacadina",0.006012,"Brose_2005; Studier_1992; Brose_etal_2018",64,2
+"Psacadina",0.006012,"Brose_2005; Studier_1992; Brose_etal_2018",33,2
 "Psalidoprocne",11.07,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",51,15
 "Psaltriparus",5.308,"vertnet-aves-sept2016; vertnet-traits-sept2016; AnAge; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014",411,6
 "Psammechinus",9.3,"Jennings_2002",1,1
@@ -8546,7 +8548,7 @@
 "Pseudomonacanthus",698.3,"Cai_etal_2025",1,1
 "Pseudomonas",1.051e-12,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",45,9
 "Pseudomonilicaryon",3.49e-06,"Castro_2025",1,1
-"Pseudomugil",0.6526,"Brose_2005",3,1
+"Pseudomugil",0.6526,"Brose_2005",1,1
 "Pseudomyicola",0.0001439,"Brose_etal_2018",25,1
 "Pseudomyrmex",0.01625,"Brose_etal_2018",83,1
 "Pseudomys",34.33,"Ernest_2003; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; AnAge; Hirt_etal_2017; Tsuboi_etal_2018; Cai_etal_2025; Tucker_etal_2014b; Uyeda_etal_2017; Quaardvark; Castro_2025",162,64
@@ -8563,7 +8565,7 @@
 "Pseudoplatystoma",27650,"Cai_etal_2025; fishbase",8,6
 "Pseudoplectrurus",40.5,"Feldman_etal_2016",1,1
 "Pseudopleuronectes",2439,"Froese_2025; fishbase; Cai_etal_2025",8,5
-"Pseudopodoces",46.08,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,2
+"Pseudopodoces",45.4,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",5,1
 "Pseudopoecilia",0.61,"fishbase",1,1
 "Pseudoprotapion",0.0008766,"Brocher_etal_2025",1,1
 "Pseudopungtungia",10.35,"Cai_etal_2025",2,2
@@ -8600,7 +8602,7 @@
 "Pseudoxiphophorus",2,"vertnet-fishes-sept2016",1,1
 "Pseudoxyrhopus",73.32,"Feldman_etal_2016; vertnet-traits-sept2016",12,12
 "Pseudupeneus",237.8,"fishbase; Brose_etal_2018; Mahe_2023; McCoy_2008",440,5
-"Psilaster",30.59,"Robinson_2010; Brose_2005",5,2
+"Psilaster",30.59,"Robinson_2010; Brose_2005",2,2
 "Psilenchus",2.174e-07,"Mulder_2011",13,1
 "Psilochorus",0.00186,"Herberstein_etal_2022; Pekar_etal_2021",2,1
 "Psilopogon",86.21,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",135,51
@@ -8643,11 +8645,11 @@
 "Pterodroma",315.1,"AnAge; McCoy_2008; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; sealifebase; vertnet-traits-sept2016; Herberstein_etal_2022; Tsuboi_etal_2018; Lislevand_etal_2007; Wisnionski_2026; Hoehler_etal_2023; Makarieva_2008",279,80
 "Pteroglossus",187.7,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; Cai_etal_2025; vertnet-traits-sept2016; Quaardvark",101,39
 "Pterois",637.9,"GuoBailly_2024; Cai_etal_2025; fishbase; Mahe_2023",454,5
-"Pteromicra",0.002206,"Brose_2005; Studier_1992; Brose_etal_2018",24,2
+"Pteromicra",0.002206,"Brose_2005; Studier_1992; Brose_etal_2018",13,2
 "Pteromys",135.6,"Faurby_etal_2018; Soria_etal_2021; AnAge; Cai_etal_2025; Ernest_2003; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014",15,6
 "Pteromyscus",301,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",8,4
 "Pteronemacheilus",5.4,"fishbase",1,1
-"Pteronemobius",0.003351,"Brose_2005; Studier_1992; Brose_etal_2018",28,2
+"Pteronemobius",0.003351,"Brose_2005; Studier_1992; Brose_etal_2018",15,2
 "Pteronetta",814.1,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016",5,4
 "Pteronotus",14.34,"Faurby_etal_2018; Herberstein_etal_2022; Hoehler_etal_2023; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Cai_etal_2025",95,28
 "Pteronura",27560,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Wilman_etal_2014",12,4
@@ -8658,7 +8660,7 @@
 "Pteroptochos",138.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",25,6
 "Pteropus",417,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; AnAge; Cai_etal_2025; Hoehler_etal_2023; Quaardvark; Tsuboi_etal_2018; vertnet-mammalia-sept2016; Uyeda_etal_2017; vertnet-traits-sept2016; Herberstein_etal_2022",429,150
 "Pterorhinus",78.93,"Tobias_2022; Cai_etal_2025",3,3
-"Pterostichus",0.1239,"Brose_etal_2018; Studier_1992; DeLong_etal_2018; Ball_2015; Brose_2005; Brocher_etal_2025; Ehnes_etal_2011",458,19
+"Pterostichus",0.1239,"Brose_etal_2018; Studier_1992; DeLong_etal_2018; Ball_2015; Brose_2005; Brocher_etal_2025; Ehnes_etal_2011",427,19
 "Pterostoma",0.1814,"Kinsella_etal_2020; Studier_1992",1,1
 "Pterothrissus",1640,"Cai_etal_2025",1,1
 "Pterotrachea",1.481,"Ikeda_2014; Brey_2010",3,2
@@ -8736,7 +8738,7 @@
 "Pygoplites",186.2,"Cai_etal_2025",1,1
 "Pygopristis",237.7,"Freitas_2014; Froese_2025; Froese_2014",2,2
 "Pygopus",15.06,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015",12,7
-"Pygoscelis",3790,"Brose_2005; Brose_etal_2018; Cai_etal_2025; Castro_2025; Herberstein_etal_2022; Hirt_etal_2017; Hoehler_etal_2023; Hudson_2013; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Verberk_2020; Wilman_etal_2014; Wisnionski_2026; vertnet-aves-sept2016; vertnet-traits-sept2016",130,22
+"Pygoscelis",3790,"Brose_2005; Brose_etal_2018; Cai_etal_2025; Castro_2025; Herberstein_etal_2022; Hirt_etal_2017; Hoehler_etal_2023; Hudson_2013; Lislevand_etal_2007; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Verberk_2020; Wilman_etal_2014; Wisnionski_2026; vertnet-aves-sept2016; vertnet-traits-sept2016",122,22
 "Pygospio",0.0004167,"Brose_etal_2018",11,1
 "Pyrenestes",17.35,"Tobias_2022; Smith_1990; Lislevand_etal_2007; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016",10,4
 "Pyrgilauda",26.96,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",13,6
@@ -8783,7 +8785,7 @@
 "Radulinus",17.05,"GuoBailly_2024; Reum_2012",3,3
 "Rafetus",85000,"Cai_etal_2025",1,1
 "Raiamas",165.7,"Cai_etal_2025",2,2
-"Raja",2558,"AnAge; fishbase; Barnes_2008; Brose_2005; Brose_etal_2018; Quaardvark; vertnet-fishes-sept2016; Froese_2025; Froese_2014; Reum_2012; Reum_2013",147,22
+"Raja",2558,"AnAge; fishbase; Barnes_2008; Brose_2005; Brose_etal_2018; Quaardvark; vertnet-fishes-sept2016; Froese_2025; Froese_2014; Reum_2012; Reum_2013",136,22
 "Rajella",1743,"Froese_2025; Froese_2014",1,1
 "Rallina",109.9,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007",35,12
 "Rallus",172.8,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; AnAge; Baach_2026; Cai_etal_2025; Lislevand_etal_2007; Tsuboi_etal_2018; vertnet-aves-sept2016; Quaardvark; vertnet-traits-sept2016; Hechinger_etal_2011; McCoy_2008",253,35
@@ -8820,7 +8822,7 @@
 "Rauenia",32.9,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",60,4
 "Rectoris",45.15,"Cai_etal_2025; fishbase",2,2
 "Recurvirostra",291.9,"AnAge; Brose_etal_2018; Hechinger_etal_2011; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Herberstein_etal_2022",197,17
-"Redigobius",0.758,"Brose_2005; Cai_etal_2025",10,2
+"Redigobius",0.758,"Brose_2005; Cai_etal_2025",2,2
 "Redunca",42800,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; McCoy_2008",40,11
 "Reesa",0.002115,"Brocher_etal_2025",1,1
 "Regalecus",272000,"Cai_etal_2025",1,1
@@ -8846,7 +8848,7 @@
 "Rexea",6167,"Cai_etal_2025; AnAge; fishbase",4,4
 "Rexithaerus",26.07,"Brose_etal_2018; Hechinger_etal_2011",67,1
 "Rhabditis",9.099e-07,"Cohen_2014",1,1
-"Rhabdolaimus",4.8e-08,"Brose_2005",6,1
+"Rhabdolaimus",4.8e-08,"Brose_2005",1,1
 "Rhabdomys",35.16,"Myhrvold_2015; Soria_etal_2021; AnAge; Ernest_2003; Faurby_etal_2018; Hoehler_etal_2023; Jones_2009; Smith_2003; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-traits-sept2016",20,9
 "Rhabdophis",175.2,"Feldman_etal_2016; Myhrvold_2015; vertnet-reptilia-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Meiri_2024",41,33
 "Rhabdops",47.2,"Oskyrko_2024; Feldman_etal_2016",2,2
@@ -9033,7 +9035,7 @@
 "Rita",6905,"fishbase",5,2
 "Rivacindela",0.08355,"Hirt_etal_2017",6,6
 "Rivula",0.008353,"Kinsella_etal_2020; Studier_1992",3,1
-"Robertus",0.003175,"Brose_2005; Brey_2010; Brose_etal_2018; Brocher_etal_2025",2103,6
+"Robertus",0.003175,"Brose_2005; Brey_2010; Brose_etal_2018; Brocher_etal_2025",1975,6
 "Robinsia",9.5,"Cai_etal_2025",1,1
 "Robsonius",62.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",8,4
 "Robustosergia",1.783,"Ikeda_2014; Kiorboe_2013; Pata_2025",2,2
@@ -9160,7 +9162,7 @@
 "Sarcops",134,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",23,3
 "Sarcoramphus",3595,"AnAge; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016",6,3
 "Sarda",8164,"Froese_2025; fishbase; AnAge; Cai_etal_2025",12,6
-"Sardina",103.9,"Barnes_2008; Brose_2005; Brose_etal_2018; Cai_etal_2025; fishbase",238,5
+"Sardina",103.9,"Barnes_2008; Brose_2005; Brose_etal_2018; Cai_etal_2025; fishbase",231,5
 "Sardinella",115.1,"fishbase; AnAge; Cai_etal_2025; McCoy_2008",24,21
 "Sardinops",388.1,"AnAge; Cai_etal_2025; McCoy_2008; Raymond_2011",6,4
 "Sargocentron",764.9,"fishbase; Brose_etal_2018; Froese_2025; Froese_2014; Cai_etal_2025",47,7
@@ -9219,7 +9221,7 @@
 "Scatophagus",1356,"Cai_etal_2025; fishbase",4,2
 "Scelarcis",3.965,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015",3,2
 "Sceloglaux",600,"Cai_etal_2025; Myhrvold_2015",2,1
-"Sceloporus",18.42,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024; Hirt_etal_2017; vertnet-reptilia-sept2016; Castro_2025; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; vertnet-traits-sept2016; Cai_etal_2025; Herberstein_etal_2022; Wisnionski_2026; Quaardvark",668,230
+"Sceloporus",18.42,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024; Hirt_etal_2017; vertnet-reptilia-sept2016; Castro_2025; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; vertnet-traits-sept2016; Cai_etal_2025; Herberstein_etal_2022; Wisnionski_2026; Quaardvark",667,230
 "Scelorchilus",49,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",33,6
 "Scelotes",5.086,"Feldman_etal_2016; Meiri_2018; Makarieva_2008; Myhrvold_2015; Uyeda_etal_2017; Meiri_2024",50,28
 "Scenopoeetes",158.5,"Herberstein_etal_2022; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",12,4
@@ -9261,7 +9263,7 @@
 "Scincella",4.003,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024; Cai_etal_2025; Hirt_etal_2017; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017",81,44
 "Scincopus",165.8,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015",3,2
 "Scincus",38.81,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015; Makarieva_2008; Uyeda_etal_2017; Tsuboi_etal_2018",18,13
-"Sciocoris",0.003902,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",25,3
+"Sciocoris",0.003902,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",14,3
 "Sciodrepoides",0.0018,"Brocher_etal_2025",1,1
 "Scissirostrum",47.99,"Tobias_2022; Tsuboi_etal_2018; vertnet-aves-sept2016",5,3
 "Sciurillus",37.47,"Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",7,4
@@ -9369,7 +9371,7 @@
 "Semnornis",70.91,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018; vertnet-traits-sept2016",20,6
 "Semotilus",1600,"Froese_2025",1,1
 "Senticolis",569.8,"Feldman_etal_2016; Myhrvold_2015",2,2
-"Sepedon",0.011,"Brose_2005; Studier_1992; Brose_etal_2018",160,4
+"Sepedon",0.011,"Brose_2005; Studier_1992; Brose_etal_2018",82,4
 "Sepedophilus",0.001215,"Brocher_etal_2025; Brose_etal_2018",64,3
 "Sephanoides",7.458,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; vertnet-aves-sept2016; vertnet-traits-sept2016",17,7
 "Sepiella",800,"sealifebase",1,1
@@ -9502,9 +9504,9 @@
 "Sitta",18.18,"Myhrvold_2015; Tobias_2022; AnAge; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Quaardvark; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025; Baach_2026",970,68
 "Sittasomus",13.11,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",62,5
 "Skeneopsis",3e-04,"Brose_etal_2018",10,1
-"Skistodiaptomus",3.29e-05,"Brose_2005; Brose_etal_2018; Hebert_etal_2016; Kiorboe_2013",45,2
+"Skistodiaptomus",3.29e-05,"Brose_2005; Brose_etal_2018; Hebert_etal_2016; Kiorboe_2013",24,2
 "Slavina",0.0001667,"Hrycik_2024",1,1
-"Slosarczykovia",3.458,"Raymond_2011",2,1
+"Slosarczykovia",3.458,"Raymond_2011",1,1
 "Smaragdina",0.008197,"Brocher_etal_2025",1,1
 "Smaug",89.91,"Feldman_etal_2016; Meiri_2018; Cai_etal_2025",15,10
 "Smeringurus",3.5,"Yokota_1984",1,1
@@ -9533,7 +9535,7 @@
 "Solmundella",3.3,"Brose_etal_2018",8,1
 "Solomys",582.2,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",17,5
 "Somateria",1559,"AnAge; Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Brose_etal_2018; Cai_etal_2025; Hirt_etal_2017; McCoy_2008; Verberk_2020; Wisnionski_2026; sealifebase",201,22
-"Somatochlora",0.1947,"Brose_2005; Studier_1992; Brose_etal_2018",286,2
+"Somatochlora",0.1947,"Brose_2005; Studier_1992; Brose_etal_2018",144,2
 "Sommeromys",32.5,"Faurby_etal_2018; Soria_etal_2021",2,1
 "Somniosus",558900,"Froese_2025; vertnet-fishes-sept2016",5,2
 "Sonora",12.06,"Feldman_etal_2016; Myhrvold_2015; vertnet-reptilia-sept2016",20,14
@@ -9645,7 +9647,7 @@
 "Sporopipes",13.67,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",22,7
 "Sporosarcina",3.8e-12,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",3,2
 "Spratelloides",4.348,"Cai_etal_2025; fishbase",3,3
-"Sprattus",16.38,"Barnes_2008; Brose_2005; Brose_etal_2018; Cai_etal_2025; McCoy_2008; fishbase",152,6
+"Sprattus",16.38,"Barnes_2008; Brose_2005; Brose_etal_2018; Cai_etal_2025; McCoy_2008; fishbase",148,6
 "Spreo",62.45,"vertnet-aves-sept2016",2,1
 "Squalidus",29.54,"Cai_etal_2025; fishbase",14,11
 "Squaliforma",7.498,"Gonzalez_2025; Brey_2010",7,1
@@ -9653,7 +9655,7 @@
 "Squaliolus",4.702,"Mull_etal_2022",2,1
 "Squalius",352.5,"fishbase",6,6
 "Squalogadus",176.1,"Cai_etal_2025",1,1
-"Squalus",3216,"AnAge; Barnes_2008; Brose_2005; Brose_etal_2018; Castro_2025; Makarieva_2008; Mull_etal_2022; Quaardvark; Reum_2012; fishbase; Tsuboi_etal_2018; Reum_2013",3095,14
+"Squalus",3216,"AnAge; Barnes_2008; Brose_2005; Brose_etal_2018; Castro_2025; Makarieva_2008; Mull_etal_2022; Quaardvark; Reum_2012; fishbase; Tsuboi_etal_2018; Reum_2013",3087,14
 "Squamapion",0.0006529,"Brocher_etal_2025",1,1
 "Squatina",19440,"fishbase; Quaardvark; Brose_etal_2018; vertnet-fishes-sept2016",92,6
 "Squilla",36.49,"Brose_etal_2018; sealifebase",37,2
@@ -9661,9 +9663,9 @@
 "Stachyridopsis",9.612,"Myhrvold_2015; Wilman_etal_2014; Tobias_2022; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",46,13
 "Stachyris",769.6,"vertnet-aves-sept2016; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-traits-sept2016; Herberstein_etal_2022",105,21
 "Stactolaema",51.55,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",20,9
-"Stagnicola",0.1759,"Brose_2005; Brey_2010; Brose_etal_2018",30,2
+"Stagnicola",0.1759,"Brose_2005; Brey_2010; Brose_etal_2018",16,2
 "Stagonopleura",15.63,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; Quaardvark; Tsuboi_etal_2018; vertnet-aves-sept2016; vertnet-traits-sept2016",21,10
-"Staphylinus",0.08631,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",70,4
+"Staphylinus",0.08631,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",37,4
 "Staphylococcus",4.057e-13,"DeLong_etal_2010; Hoehler_etal_2023; Makarieva_2008",10,4
 "Starnoenas",219,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Staurocucumis",19,"Brose_etal_2018",16,1
@@ -9701,7 +9703,7 @@
 "Stenocercus",25.09,"Feldman_etal_2016; Meiri_2018; Myhrvold_2015; Meiri_2024",143,78
 "Stenocranus",0.007723,"Brocher_etal_2025",2,2
 "Stenodactylus",5.55,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015; Cai_etal_2025",33,24
-"Stenodema",0.01372,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",38,4
+"Stenodema",0.01372,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",21,4
 "Stenoderma",20.65,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014",6,1
 "Stenodus",26630,"AnAge; Cai_etal_2025; fishbase",5,3
 "Stenolepis",1.35,"Feldman_etal_2016; Meiri_2018; Meiri_2024",3,2
@@ -9731,13 +9733,13 @@
 "Stereomastis",16.76,"Makarieva_2008",1,1
 "Stereomyxa",8.57e-10,"DeLong_etal_2010",1,1
 "Stereotydeus",1.877e-05,"Ehnes_etal_2011",9,1
-"Sterna",129.5,"AnAge; Herberstein_etal_2022; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Hechinger_etal_2011; Quaardvark; Brose_etal_2018; Cai_etal_2025; Castro_2025; Hoehler_etal_2023; Hudson_2013; Lislevand_etal_2007; Wisnionski_2026; sealifebase; Brose_2005",372,50
+"Sterna",129.5,"AnAge; Herberstein_etal_2022; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Hechinger_etal_2011; Quaardvark; Brose_etal_2018; Cai_etal_2025; Castro_2025; Hoehler_etal_2023; Hudson_2013; Lislevand_etal_2007; Wisnionski_2026; sealifebase; Brose_2005",371,50
 "Sternoclyta",8,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",4,2
 "Sternoptyx",5.414,"Froese_2025; Froese_2014",2,2
 "Sternotherus",228.5,"Cai_etal_2025; Myhrvold_2015; Oskyrko_2024; Vanni_2017",57,7
 "Sternula",59.35,"AnAge; Cai_etal_2025; Herberstein_etal_2022; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; sealifebase; vertnet-aves-sept2016; vertnet-traits-sept2016; Hechinger_etal_2011",98,19
 "Sterrhoptilus",14.36,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Cai_etal_2025",34,8
-"Stethophyma",0.3126,"Brose_2005; Studier_1992; Brose_etal_2018",14,2
+"Stethophyma",0.3126,"Brose_2005; Studier_1992; Brose_etal_2018",8,2
 "Sthenelais",0.12,"Brown_etal_2018",1,1
 "Sthenoteuthis",987.5,"Hoehler_etal_2023; Makarieva_2008; sealifebase",5,3
 "Stichaeus",450.2,"Cai_etal_2025; Elliott_2008",2,2
@@ -9829,7 +9831,7 @@
 "Submyotodon",5.3,"Soria_etal_2021",1,1
 "Subsessor",997.5,"Feldman_etal_2016; Myhrvold_2015",2,2
 "Subulina",0.05354,"Lemoine_2026",7,1
-"Succinea",0.1791,"Brose_2005; Brey_2010; Brose_etal_2018",58,2
+"Succinea",0.1791,"Brose_2005; Brey_2010; Brose_etal_2018",30,2
 "Suctobelba",7.22e-06,"Brose_etal_2018",51,1
 "Suctobelbella",1.51e-06,"Cohen_2014",1,1
 "Suezichthys",21.82,"fishbase",1,1
@@ -9854,7 +9856,7 @@
 "Sus",80360,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; AnAge; Cai_etal_2025; Ernest_2003; Jones_2009; Quaardvark; Smith_2003; Wilman_etal_2014; AndersonGillooly_2017; Hirt_etal_2017; Hoehler_etal_2023; McCoy_2008; Tsuboi_etal_2018; Tucker_etal_2014b; Wisnionski_2026; vertnet-mammalia-sept2016; vertnet-traits-sept2016",109,40
 "Suta",64.42,"Feldman_etal_2016; Myhrvold_2015",11,11
 "Suthora",6.115,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",34,7
-"Swammerdamella",0.0001379,"Brose_2005; Studier_1992; Brose_etal_2018",114,2
+"Swammerdamella",0.0001379,"Brose_2005; Studier_1992; Brose_etal_2018",58,2
 "Swynnertonia",15.92,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",9,2
 "Syacium",519.1,"fishbase; Brose_etal_2018",154,3
 "Syconycteris",2337,"Castro_2025; Faurby_etal_2018; Hoehler_etal_2023; Hudson_2013; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",46,12
@@ -9869,8 +9871,8 @@
 "Sylvisorex",8.965,"Faurby_etal_2018; Soria_etal_2021; Wilman_etal_2014; Smith_2003; Jones_2009; Myhrvold_2015; Herberstein_etal_2022",48,19
 "Syma",60.46,"Myhrvold_2015; Tobias_2022; vertnet-traits-sept2016; Herberstein_etal_2022; Lislevand_etal_2007; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016",12,9
 "Symbolophorus",11.18,"CalCOFI_2026; fishbase; Barnes_2008; vertnet-fishes-sept2016",154,5
-"Sympecma",0.0241,"Brose_2005; Studier_1992; Brose_etal_2018",70,2
-"Sympetrum",1.55,"Brose_2005; Studier_1992; Brose_etal_2018; Quaardvark",911,7
+"Sympecma",0.0241,"Brose_2005; Studier_1992; Brose_etal_2018",36,2
+"Sympetrum",1.55,"Brose_2005; Studier_1992; Brose_etal_2018; Quaardvark",459,7
 "Symphalangus",10810,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; GalanAcedo_etal_2026; Herberstein_etal_2022; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",27,6
 "Symphimus",77.95,"Feldman_etal_2016",2,2
 "Symphodus",23.18,"Vanni_2017; Tsuboi_etal_2018; fishbase",26,3
@@ -9971,13 +9973,13 @@
 "Tamoya",350.6,"sealifebase",1,1
 "Tanakia",7.263,"Cai_etal_2025; fishbase",9,8
 "Tanaocerus",0.1025,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",5,1
-"Tandanus",2077,"Brose_2005; fishbase",6,2
+"Tandanus",2077,"Brose_2005; fishbase",2,2
 "Tandonia",0.4355,"Baach_2026",1,1
 "Tanganicodus",2.119,"Tsuboi_etal_2018",4,1
 "Tangara",20.06,"Tobias_2022; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Tsuboi_etal_2018",261,58
 "Tangia",0.008,"Brose_etal_2018",46,1
 "Tanichthys",0.5,"Cai_etal_2025",1,1
-"Taningia",585.2,"Raymond_2011",5,1
+"Taningia",585.2,"Raymond_2011",1,1
 "Tantalophis",50.2,"Feldman_etal_2016",1,1
 "Tantilla",11.65,"Feldman_etal_2016; Myhrvold_2015; vertnet-reptilia-sept2016",78,76
 "Tantillita",1.433,"Feldman_etal_2016",3,3
@@ -9987,7 +9989,7 @@
 "Tanytarsus",0.0017,"AndersonGillooly_2017",1,1
 "Tanyuromys",71,"Soria_etal_2021",1,1
 "Taoniscus",43,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
-"Taonius",100.1,"Raymond_2011",8,2
+"Taonius",100.1,"Raymond_2011",2,2
 "Tapecomys",66.92,"Faurby_etal_2018; Soria_etal_2021; Wilman_etal_2014",3,2
 "Tapera",51.16,"Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",23,3
 "Taphozous",27.8,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Smith_2003; Tsuboi_etal_2018; Wilman_etal_2014; Jones_2009; vertnet-mammalia-sept2016; Quaardvark; vertnet-traits-sept2016",140,32
@@ -10080,14 +10082,14 @@
 "Tessarabrachion",0.05535,"Ikeda_2014; Kiorboe_2013; Pata_2025",3,2
 "Testudinalia",0.325,"Brose_etal_2018",145,1
 "Testudo",1539,"Cai_etal_2025; Gillooly_etal_2016; Herberstein_etal_2022; Myhrvold_2015; Tsuboi_etal_2018; Quaardvark",16,12
-"Tetanocera",0.01064,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025",35,3
-"Tetartopeus",0.00239,"Brose_2005; Studier_1992; Brose_etal_2018",120,2
+"Tetanocera",0.01064,"Brose_2005; Studier_1992; Brose_etal_2018; Gonzalez_2025",19,3
+"Tetartopeus",0.00239,"Brose_2005; Studier_1992; Brose_etal_2018",61,2
 "Tetracanthella",5.857e-05,"Hishi_etal_2019; Studier_1992",1,1
 "Tetracerus",19500,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Wilman_etal_2014",11,2
 "Tetracheilostoma",0.6333,"Feldman_etal_2016",3,3
 "Tetradactylus",2.877,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",16,10
 "Tetraechma",0.005577,"Anunciacao_etal_2025",1,1
-"Tetragnatha",0.02718,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Brown_etal_2018",225,10
+"Tetragnatha",0.02718,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Brown_etal_2018",167,10
 "Tetragonopterus",44.77,"fishbase",3,3
 "Tetragonula",0.005334,"Kendall_etal_2019; Studier_1992",39,2
 "Tetragonurus",1215,"Cai_etal_2025",2,2
@@ -10106,7 +10108,7 @@
 "Tetrastes",313.4,"AnAge; Baach_2026; Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",21,6
 "Tetrax",833.4,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Tetraxanthus",0.02776,"Vanni_2017; Kiorboe_2013",1,1
-"Tetrix",0.03422,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",16,4
+"Tetrix",0.03422,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",10,4
 "Tetrodontophora",0.0052,"Ehnes_etal_2011",4,1
 "Tetronarce",12120,"Barnes_2008; Froese_2025; Froese_2014",3,2
 "Tetrorchis",0.4546,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Lucas_2011; Makarieva_2008",3,2
@@ -10114,7 +10116,7 @@
 "Tettigonia",0.5866,"Brocher_etal_2025",1,1
 "Teuchestes",0.1231,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",6,2
 "Teuchophorus",0.0002658,"Brose_etal_2018",38,1
-"Teuthowenia",42.66,"Raymond_2011",2,1
+"Teuthowenia",42.66,"Raymond_2011",1,1
 "Textularia",1.24e-06,"DeLong_etal_2010",1,1
 "Thainycteris",10.4,"Faurby_etal_2018; Soria_etal_2021",4,2
 "Thalamita",66.5,"sealifebase",1,1
@@ -10142,7 +10144,7 @@
 "Thamnornis",14.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Thamnosophis",77.84,"Feldman_etal_2016; vertnet-reptilia-sept2016; vertnet-traits-sept2016",10,9
 "Thanatophilus",0.03893,"Brocher_etal_2025",2,2
-"Thanatus",0.00304,"Brose_2005; Brey_2010; Brose_etal_2018",52,2
+"Thanatus",0.00304,"Brose_2005; Brey_2010; Brose_etal_2018",27,2
 "Thapsinillas",40.5,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",11,3
 "Thaptomys",22.95,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016",7,2
 "Tharpyna",0.005,"Pekar_etal_2021",1,1
@@ -10156,10 +10158,10 @@
 "Thelotornis",681.6,"Feldman_etal_2016; Myhrvold_2015",7,7
 "Themira",0.002286,"Gonzalez_2025; Studier_1992",1,1
 "Themisto",0.01328,"Brose_etal_2018; DeLong_etal_2010; Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Makarieva_2008; Castro_2025; Gonzalez_2025; Kiorboe_2014; Pata_2025; Vanni_2017",93,14
-"Theodoxus",0.02427,"Brose_2005; Brey_2010; Brose_etal_2018; Eklof_etal_2017; Quaardvark",69,4
+"Theodoxus",0.02427,"Brose_2005; Brey_2010; Brose_etal_2018; Eklof_etal_2017; Quaardvark",62,4
 "Theora",0.01769,"McCoy_2008; Brey_2010",1,1
 "Thereva",0.01371,"Gonzalez_2025; Studier_1992",1,1
-"Theridion",0.002875,"Brose_2005; Brey_2010; Brose_etal_2018",315,3
+"Theridion",0.002875,"Brose_2005; Brey_2010; Brose_etal_2018",260,3
 "Theridiosoma",0.0007542,"Brocher_etal_2025",1,1
 "Theristicus",1563,"AnAge; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",20,6
 "Theristus",8e-07,"Mulder_2011",1,1
@@ -10222,7 +10224,7 @@
 "Thysanoteuthis",24490,"sealifebase",2,1
 "Tiarina",3.14e-08,"Castro_2025; DeLong_etal_2018; Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000; Lukic_2022; Weisse_2024",11,3
 "Tiaris",9.311,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",54,4
-"Tibellus",0.02942,"Brose_2005; Brey_2010; Brose_etal_2018; Brocher_etal_2025; Pekar_etal_2021",226,4
+"Tibellus",0.02942,"Brose_2005; Brey_2010; Brose_etal_2018; Brocher_etal_2025; Pekar_etal_2021",115,4
 "Tichodroma",16.16,"Cai_etal_2025; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016",7,4
 "Tickellia",4.5,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Tigriopus",5.88e-05,"Brose_etal_2018",20,1
@@ -10290,7 +10292,7 @@
 "Toxostoma",66,"AnAge; McCoy_2008; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Tsuboi_etal_2018; Wisnionski_2026; Cai_etal_2025; Quaardvark",468,27
 "Toxotes",378,"fishbase",1,1
 "Traccatichthys",13.94,"fishbase",1,1
-"Trachelipus",0.03856,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Ehnes_etal_2011",189,6
+"Trachelipus",0.03856,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018; Ehnes_etal_2011",159,6
 "Tracheloptychus",16.12,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015",6,4
 "Tracheloraphis",5.1e-07,"Castro_2025",1,1
 "Trachelyopterus",416,"Froese_2025; fishbase",2,2
@@ -10333,7 +10335,7 @@
 "Tregellasia",14.66,"Cai_etal_2025; Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",46,10
 "Tremarctos",117200,"AnAge; Cai_etal_2025; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014",11,6
 "Trematocara",10.52,"Tsuboi_etal_2018",17,3
-"Trematomus",232.2,"Kim_2023; Brose_etal_2018; Cai_etal_2025; Raymond_2011; fishbase; Makarieva_2008",1615,25
+"Trematomus",232.2,"Kim_2023; Brose_etal_2018; Cai_etal_2025; Raymond_2011; fishbase; Makarieva_2008",732,25
 "Tremoctopus",800,"sealifebase",1,1
 "Treron",213.3,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Lislevand_etal_2007; Tsuboi_etal_2018",108,43
 "Tresus",2268,"sealifebase",1,1
@@ -10356,7 +10358,7 @@
 "Trichiurus",146.5,"Viana_2016",1,1
 "Trichixos",28.13,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",6,2
 "Trichobatrachus",141,"Cai_etal_2025",1,1
-"Trichocerca",5.858e-07,"Brose_2005; Brose_etal_2018",333,7
+"Trichocerca",5.858e-07,"Brose_2005; Brose_etal_2018",295,7
 "Trichodere",16.01,"Herberstein_etal_2022; Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014",9,4
 "Trichodorus",6.111e-07,"Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",98,5
 "Trichogaster",21.75,"fishbase; Cai_etal_2025",2,2
@@ -10369,7 +10371,7 @@
 "Trichoniscus",0.000752,"Brocher_etal_2025; Brose_etal_2018; Ehnes_etal_2011; Herberstein_etal_2022",1051,5
 "Trichopodus",145.8,"Cai_etal_2025; fishbase",3,3
 "Trichopsetta",59.6,"fishbase",1,1
-"Trichopternoides",0.001624,"Brose_2005; Brey_2010; Brose_etal_2018",32,2
+"Trichopternoides",0.001624,"Brose_2005; Brey_2010; Brose_etal_2018",17,2
 "Trichoribates",6.338e-05,"Brose_etal_2018; Cohen_2014",7,2
 "Trichosirocalus",0.001258,"Brocher_etal_2025",1,1
 "Trichosurus",2672,"AnAge; Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Brose_2005; Hoehler_etal_2023; Tucker_etal_2014a; Tucker_etal_2014b; Uyeda_etal_2017; vertnet-mammalia-sept2016; vertnet-traits-sept2016",97,23
@@ -10391,7 +10393,7 @@
 "Trigonoceps",3848,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,3
 "Trigonodactylus",1.374,"Feldman_etal_2016; Meiri_2018",4,4
 "Trigonognathus",568.7,"Mull_etal_2022; fishbase",4,2
-"Trigonometopus",0.001599,"Brose_2005; Studier_1992; Brose_etal_2018",34,2
+"Trigonometopus",0.001599,"Brose_2005; Studier_1992; Brose_etal_2018",18,2
 "Trigonopoma",1.9,"Cai_etal_2025",1,1
 "Trigonostigma",1.3,"Cai_etal_2025",2,2
 "Trigonotylus",0.006715,"Brocher_etal_2025; DeLong_etal_2018",2,2
@@ -10419,7 +10421,7 @@
 "Tripyla",1.897e-06,"Mulder_2011; Brose_etal_2018; Brey_2010; Cohen_2014",125,4
 "Trischidias",0.0025,"Brose_etal_2018",68,1
 "Triso",4357,"Cai_etal_2025",1,1
-"Trisopterus",19.84,"Barnes_2008; Brose_2005; McCoy_2008",71,3
+"Trisopterus",19.84,"Barnes_2008; Brose_2005; McCoy_2008",61,3
 "Tritaeta",0.006166,"Brose_etal_2018",16,1
 "Tritegeus",0.0001354,"Brose_etal_2018",31,1
 "Tritogonia",1120,"Quaardvark",1,1
@@ -10433,8 +10435,8 @@
 "Trochia",0.6,"Wickens_1984",1,1
 "Trochilus",4.508,"Lislevand_etal_2007; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022",19,8
 "Trochocercus",10.59,"Tobias_2022; Lislevand_etal_2007; Myhrvold_2015; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",25,5
-"Trochosa",0.07574,"Brocher_etal_2025; Ehnes_etal_2011; Brose_2005; Brey_2010; Brose_etal_2018",72,5
-"Trochulus",0.1094,"Brose_2005; Brey_2010; Brose_etal_2018",90,3
+"Trochosa",0.07574,"Brocher_etal_2025; Ehnes_etal_2011; Brose_2005; Brey_2010; Brose_etal_2018",39,5
+"Trochulus",0.1094,"Brose_2005; Brey_2010; Brose_etal_2018",51,3
 "Trogloderus",0.02987,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Herberstein_etal_2022; Makarieva_2008",5,1
 "Troglodytes",11.44,"AnAge; Castro_2025; Hoehler_etal_2023; Lislevand_etal_2007; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Baach_2026; Makarieva_2008",920,38
 "Trogoderma",0.001954,"Brocher_etal_2025",1,1
@@ -10460,7 +10462,7 @@
 "Tropidurus",34.51,"Meiri_2024; Feldman_etal_2016; Meiri_2018; Myhrvold_2015",68,48
 "Tropiocolotes",0.7487,"Feldman_etal_2016; Meiri_2018; Meiri_2024; Myhrvold_2015; Cai_etal_2025",27,22
 "Tropistethus",0.001145,"Brocher_etal_2025",1,1
-"Tropocyclops",7.314e-06,"Brose_2005; Brose_etal_2018",781,2
+"Tropocyclops",7.314e-06,"Brose_2005; Brose_etal_2018",740,2
 "Trox",0.01245,"Brocher_etal_2025",1,1
 "Troxochrus",0.0009285,"Brocher_etal_2025",1,1
 "Trugon",400,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,1
@@ -10472,7 +10474,7 @@
 "Trypetoptera",0.004171,"Gonzalez_2025; Studier_1992",1,1
 "Tryphomys",104.9,"Myhrvold_2015; Soria_etal_2021",2,1
 "Tryphosella",0.0003484,"Brose_etal_2018",16,1
-"Trypoxylon",0.01835,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",103,8
+"Trypoxylon",0.01835,"Brocher_etal_2025; Brose_2005; Studier_1992; Brose_etal_2018",78,8
 "Tubicolixa",0.8,"Brose_etal_2018",28,1
 "Tubifex",0.001483,"Hrycik_2024",1,1
 "Tubificoides",0.01111,"Brose_etal_2018",5,1
@@ -10507,7 +10509,7 @@
 "Tylenchorhynchus",5.693e-07,"Brose_etal_2018; Brey_2010; Mulder_2011; Cohen_2014",892,6
 "Tylenchus",1.431e-06,"Mulder_2011; Cohen_2014",2,2
 "Tylerius",66.1,"Cai_etal_2025",1,1
-"Tylocephalus",6.9e-08,"Brose_2005",6,1
+"Tylocephalus",6.9e-08,"Brose_2005",1,1
 "Tylolaimophorus",3.664e-07,"Mulder_2011",18,1
 "Tylomys",216,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; AnAge; Ernest_2003; vertnet-traits-sept2016",36,11
 "Tylonycteris",5.433,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",21,9
@@ -10628,8 +10630,8 @@
 "Valencia",3.281,"Froese_2025; Froese_2014",1,1
 "Valgus",0.02092,"Brocher_etal_2025",1,1
 "Vallentinia",0.03095,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Lucas_2011; Makarieva_2008",3,2
-"Vallonia",0.02537,"Brose_2005; Brey_2010; Brose_etal_2018",40,4
-"Valvata",0.007193,"Hrycik_2024; Brose_2005; Brey_2010; Brose_etal_2018",56,6
+"Vallonia",0.02537,"Brose_2005; Brey_2010; Brose_etal_2018",22,4
+"Valvata",0.007193,"Hrycik_2024; Brose_2005; Brey_2010; Brose_etal_2018",38,6
 "Vampyressa",9.948,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; Hoehler_etal_2023; Tsuboi_etal_2018; vertnet-traits-sept2016",26,9
 "Vampyriscus",24.47,"Faurby_etal_2018; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Wilman_etal_2014; vertnet-traits-sept2016",22,8
 "Vampyrocrossota",0.3585,"Hoehler_etal_2023; Ikeda_2014; Kiorboe_2013; Lucas_2011; Makarieva_2008",3,2
@@ -10664,7 +10666,7 @@
 "Vernaya",24.85,"Faurby_etal_2018; Smith_2003; Soria_etal_2021; Wilman_etal_2014",4,1
 "Verruca",0.003159,"Brose_etal_2018",9,1
 "Vertagopus",0.0001094,"Cohen_2014",1,1
-"Vertigo",0.03175,"Brose_2005; Brey_2010; Brose_etal_2018",162,6
+"Vertigo",0.03175,"Brose_2005; Brey_2010; Brose_etal_2018",84,6
 "Vespadelus",4.998,"Faurby_etal_2018; Myhrvold_2015; Soria_etal_2021; Wilman_etal_2014; Jones_2009; Smith_2003; Tsuboi_etal_2018; vertnet-mammalia-sept2016",47,20
 "Vespertilio",21.32,"AnAge; Baach_2026; Cai_etal_2025; Faurby_etal_2018; Herberstein_etal_2022; Jones_2009; Myhrvold_2015; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-mammalia-sept2016; vertnet-traits-sept2016",27,6
 "Vespula",0.143,"Brocher_etal_2025",1,1
@@ -10701,7 +10703,7 @@
 "Vorticella",1.864e-07,"Castro_2025; Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000; DeLong_etal_2010",10,10
 "Vosea",48,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014",3,1
 "Vulgarogamasus",7.12e-05,"Brose_etal_2018",445,2
-"Vulpes",2974,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Castro_2025; Hoehler_etal_2023; Hudson_2013; McCoy_2008; Tucker_etal_2014a; Cai_etal_2025; Brose_etal_2018; Gillooly_etal_2016; Herberstein_etal_2022; Tucker_etal_2014b; Uyeda_etal_2017; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Baach_2026; Brose_2005; Hirt_etal_2017; Wisnionski_2026",620,99
+"Vulpes",2974,"AnAge; Ernest_2003; Faurby_etal_2018; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Wilman_etal_2014; Castro_2025; Hoehler_etal_2023; Hudson_2013; McCoy_2008; Tucker_etal_2014a; Cai_etal_2025; Brose_etal_2018; Gillooly_etal_2016; Herberstein_etal_2022; Tucker_etal_2014b; Uyeda_etal_2017; vertnet-mammalia-sept2016; vertnet-traits-sept2016; Baach_2026; Brose_2005; Hirt_etal_2017; Wisnionski_2026",546,99
 "Vultur",10710,"AnAge; Hoehler_etal_2023; Makarieva_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Wilman_etal_2014",7,4
 "Walckenaeria",0.002921,"Brocher_etal_2025; Brose_etal_2018; Gonzalez_2025; Studier_1992",1100,15
 "Wallabia",14010,"AnAge; Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Jones_2009; McCoy_2008; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014a; Tucker_etal_2014b; Wilman_etal_2014; Wisnionski_2026; vertnet-traits-sept2016",19,7
@@ -10714,7 +10716,7 @@
 "Willemia",1.156e-05,"Hishi_etal_2019; Studier_1992; Cohen_2014",3,3
 "Willisornis",17.8,"Myhrvold_2015; Tobias_2022; Tsuboi_etal_2018; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",53,4
 "Willowsia",9.191e-05,"Hishi_etal_2019; Studier_1992",3,3
-"Wilsonema",4.881e-08,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010",35,3
+"Wilsonema",4.881e-08,"Brose_2005; Mulder_2011; Brose_etal_2018; Brey_2010",30,3
 "Wilsonosaura",12.8,"Feldman_etal_2016; Meiri_2018",2,1
 "Woodfordia",29.8,"Tobias_2022",1,1
 "Woodruffides",1.18e-07,"AndersonGillooly_2017",1,1
@@ -10795,7 +10797,7 @@
 "Xiphocaris",0.7973,"Gonzalez_2025; Brey_2010; Vanni_2017",180,2
 "Xiphocolaptes",122,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",27,7
 "Xipholena",61.81,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",11,4
-"Xiphophorus",2.692,"Brose_2005; Cai_etal_2025",5,3
+"Xiphophorus",2.692,"Brose_2005; Cai_etal_2025",3,3
 "Xiphorhynchus",41.39,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Herberstein_etal_2022; Hoehler_etal_2023; Makarieva_2008; Tsuboi_etal_2018",266,33
 "Xolmis",43.03,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018",50,13
 "Xyelodontophis",457.7,"Feldman_etal_2016",1,1
@@ -10870,7 +10872,7 @@
 "Zoarces",1995,"AnAge; Killen_etal_2016",2,2
 "Zodarion",0.003888,"Pekar_etal_2021; Brocher_etal_2025; DeLong_etal_2018",85,3
 "Zoea",8.32e-05,"Castro_2025",1,1
-"Zonitoides",0.1599,"Brose_2005; Brey_2010; Brose_etal_2018",16,2
+"Zonitoides",0.1599,"Brose_2005; Brey_2010; Brose_etal_2018",9,2
 "Zonosagitta",0.0069,"Ikeda_2014; Brey_2010; Kiorboe_2013; Pata_2025",5,3
 "Zonosaurus",66.06,"Feldman_etal_2016; Meiri_2018; vertnet-traits-sept2016; Meiri_2024; Myhrvold_2015; Tsuboi_etal_2018",42,23
 "Zonotrichia",26.29,"AnAge; Cai_etal_2025; Herberstein_etal_2022; Hoehler_etal_2023; Lislevand_etal_2007; Makarieva_2008; McCoy_2008; Myhrvold_2015; Quaardvark; Tobias_2022; Tsuboi_etal_2018; Uyeda_etal_2017; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Wisnionski_2026; Castro_2025",1576,34
@@ -10880,7 +10882,7 @@
 "Zootoca",3.874,"Meiri_2024; Cai_etal_2025; Feldman_etal_2016; Hirt_etal_2017; Hoehler_etal_2023; Makarieva_2008; Meiri_2018; Myhrvold_2015; Quaardvark; Tsuboi_etal_2018; Uyeda_etal_2017; Wisnionski_2026",13,11
 "Zophoscolex",2.1,"Mathieu_2014",1,1
 "Zophosis",0.103,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008",4,1
-"Zora",0.009514,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",134,4
+"Zora",0.009514,"Brocher_etal_2025; Brose_2005; Brey_2010; Brose_etal_2018",111,4
 "Zosis",0.0337,"Herberstein_etal_2022; Pekar_etal_2021",40,1
 "Zosterops",11.31,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Herberstein_etal_2022; Tsuboi_etal_2018; vertnet-traits-sept2016; AnAge; McCoy_2008; Castro_2025; Hoehler_etal_2023; Makarieva_2008; Uyeda_etal_2017; Lislevand_etal_2007; Quaardvark",538,137
 "Zosterornis",23.53,"vertnet-traits-sept2016; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; Tsuboi_etal_2018",38,10

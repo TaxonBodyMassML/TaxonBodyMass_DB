@@ -1,28 +1,28 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 16:19:50
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 16:17:03
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
 ## Summary
 
-1,356 distinct raw names (60,067 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
+1,143 distinct raw names (50,570 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
 
 | class | names | rows | records dropped | sources |
 |---|---:|---:|---:|---|
 | life_stage | 17 | 127 | 127 | Verberk_2020 (10), DeLong_etal_2010 (5), Hrycik_2024 (2) |
-| placeholder | 731 | 38,903 | 0 | Brose_etal_2018 (271), Makarieva_2008 (98), Brose_2005 (93), Herberstein_etal_2022 (85), DeLong_etal_2010 (57), Kendall_etal_2019 (49), Baach_2026 (46), Hrycik_2024 (44), DeLong_etal_2018 (27), Raymond_2011 (26), Barnes_2008 (20), Brown_etal_2018 (19), Kinsella_etal_2020 (13), vertnet-traits-sept2016 (12), Eklof_etal_2017 (7), Hirt_etal_2017 (7), vertnet-aves-sept2016 (5), Castro_2025 (2), Chown_etal_2007 (2), Ehnes_etal_2011 (2), Killen_etal_2016 (2), McCoy_2008 (2), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Gillooly_etal_2016 (1), Hechinger_etal_2011 (1), Lane_2019 (1), Smith_2003 (1) |
+| placeholder | 683 | 36,262 | 0 | Brose_etal_2018 (270), Makarieva_2008 (98), Herberstein_etal_2022 (85), DeLong_etal_2010 (57), Kendall_etal_2019 (49), Baach_2026 (46), Hrycik_2024 (44), DeLong_etal_2018 (27), Barnes_2008 (20), Brown_etal_2018 (19), Kinsella_etal_2020 (13), vertnet-traits-sept2016 (12), Eklof_etal_2017 (7), Hirt_etal_2017 (7), vertnet-aves-sept2016 (5), Castro_2025 (2), Chown_etal_2007 (2), Ehnes_etal_2011 (2), Killen_etal_2016 (2), McCoy_2008 (2), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Gillooly_etal_2016 (1), Hechinger_etal_2011 (1), Lane_2019 (1), Smith_2003 (1) |
 | qualifier | 32 | 3,522 | 0 | Brose_etal_2018 (25), DeLong_etal_2018 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2), Vanni_2017 (1) |
 | hybrid | 41 | 144 | 0 | vertnet-aves-sept2016 (27), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
 | ambiguous | 32 | 387 | 0 | vertnet-aves-sept2016 (16), vertnet-traits-sept2016 (14), Hrycik_2024 (4), Brose_etal_2018 (3), DeLong_etal_2018 (3), Brown_etal_2018 (2) |
 | subgenus | 18 | 39 | 0 | Makarieva_2008 (5), Verberk_2020 (5), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Brose_etal_2018 (1), Lemoine_2026 (1), Pata_2025 (1), vertnet-aves-sept2016 (1) |
 | sex | 38 | 659 | 0 | Verberk_2020 (35), Brose_etal_2018 (1), DeLong_etal_2010 (1), Makarieva_2008 (1) |
-| form_strain_region | 11 | 64 | 0 | DeLong_etal_2010 (3), Makarieva_2008 (3), Brose_2005 (2), Brose_etal_2018 (2), Verberk_2020 (2), Kiorboe_2014 (1) |
+| form_strain_region | 13 | 48 | 0 | DeLong_etal_2010 (3), Makarieva_2008 (3), Brose_2005 (2), Brose_etal_2018 (2), Verberk_2020 (2), Kiorboe_2014 (1) |
 | size_class | 25 | 6,021 | 1,255 | Brose_etal_2018 (25) |
 | species_group | 7 | 53 | 0 | Hrycik_2024 (5), Kendall_etal_2019 (2) |
 | synonym | 10 | 35 | 0 | Makarieva_2008 (4), DeLong_etal_2018 (2), Verberk_2020 (2), vertnet-aves-sept2016 (2) |
-| authority | 166 | 6,765 | 0 | Brose_2005 (164), Makarieva_2008 (2), Brose_etal_2018 (1) |
-| trinomial | 163 | 2,834 | 0 | Cai_etal_2025 (41), Makarieva_2008 (34), Brose_etal_2018 (30), McCoy_2008 (14), Quaardvark (11), Hirt_etal_2017 (10), Lislevand_etal_2007 (9), Brose_2005 (7), Herberstein_etal_2022 (5), AndersonGillooly_2017 (2), Baach_2026 (2), Verberk_2020 (2), Brown_etal_2018 (1), Hrycik_2024 (1), Kendall_etal_2019 (1), sealifebase (1), Smith_2003 (1), Tucker_etal_2014b (1) |
+| authority | 3 | 15 | 0 | Makarieva_2008 (2), Brose_etal_2018 (1) |
+| trinomial | 160 | 2,745 | 0 | Cai_etal_2025 (41), Makarieva_2008 (34), Brose_etal_2018 (31), McCoy_2008 (14), Quaardvark (11), Hirt_etal_2017 (10), Herberstein_etal_2022 (5), Lislevand_etal_2007 (5), AndersonGillooly_2017 (2), Baach_2026 (2), Verberk_2020 (2), Brown_etal_2018 (1), Hrycik_2024 (1), Kendall_etal_2019 (1), sealifebase (1), Smith_2003 (1), Tucker_etal_2014b (1) |
 | encoding | 2 | 101 | 0 | Brose_etal_2018 (1), Makarieva_2008 (1) |
-| symbols | 63 | 413 | 0 | Makarieva_2008 (31), Mahe_2023 (15), Brose_etal_2018 (6), vertnet-traits-sept2016 (3), Hechinger_etal_2011 (2), Brose_2005 (1), DeLong_etal_2010 (1), Herberstein_etal_2022 (1), Kinsella_etal_2020 (1), Pekar_etal_2021 (1), Tucker_etal_2014b (1), vertnet-aves-sept2016 (1), vertnet-fishes-sept2016 (1), vertnet-mammalia-sept2016 (1) |
+| symbols | 62 | 412 | 0 | Makarieva_2008 (31), Mahe_2023 (15), Brose_etal_2018 (6), vertnet-traits-sept2016 (3), Hechinger_etal_2011 (2), DeLong_etal_2010 (1), Herberstein_etal_2022 (1), Kinsella_etal_2020 (1), Pekar_etal_2021 (1), Tucker_etal_2014b (1), vertnet-aves-sept2016 (1), vertnet-fishes-sept2016 (1), vertnet-mammalia-sept2016 (1) |
 
 ## life_stage (17 names, 127 rows)
 
@@ -50,13 +50,13 @@ By source: Verberk_2020 (10 names, 107 rows); Hrycik_2024 (2 names, 15 rows); De
 | `Erignathus barbatus Juveniles` | (dropped) | life_stage | 1 | Verberk_2020 |
 | `Phoca sibirica Juveniles` | (dropped) | life_stage | 1 | Verberk_2020 |
 
-## placeholder (731 names, 38,903 rows)
+## placeholder (683 names, 36,262 rows)
 
 No species-level identification (sp., spp., spec., indet., ssp., undefinable, undetermined, morphospecies codes, 'species A', 'Unidentified'): the record leaves FixFormatting() as the marker Genus_sp (or Genus_spp, Genus_spec, Genus_indet, Genus_unk, Genus_type as written) and RemoveNonTaxa() removes it (the rules that renamed the six Brose_etal_2018 'Genus spec.' markers and 'Gomphonema type D' to bare genera, making genus-level records of them, were removed under #43).
 
-By source: Brose_etal_2018 (271 names, 32,511 rows); Barnes_2008 (20 names, 2,601 rows); Brose_2005 (93 names, 2,491 rows); Kendall_etal_2019 (49 names, 300 rows); Eklof_etal_2017 (7 names, 194 rows); Makarieva_2008 (98 names, 144 rows); Herberstein_etal_2022 (85 names, 137 rows); Baach_2026 (46 names, 99 rows); Raymond_2011 (26 names, 98 rows); DeLong_etal_2010 (57 names, 62 rows); DeLong_etal_2018 (27 names, 61 rows); Hrycik_2024 (44 names, 54 rows); Ehnes_etal_2011 (2 names, 49 rows); Brown_etal_2018 (19 names, 19 rows); vertnet-traits-sept2016 (12 names, 18 rows); Kinsella_etal_2020 (13 names, 13 rows); Chown_etal_2007 (2 names, 11 rows); Hirt_etal_2017 (7 names, 9 rows); Castro_2025 (2 names, 7 rows); vertnet-aves-sept2016 (5 names, 6 rows); vertnet-fishes-sept2016 (2 names, 5 rows); Hechinger_etal_2011 (1 names, 3 rows); vertnet-mammalia-sept2016 (2 names, 3 rows); Killen_etal_2016 (2 names, 2 rows); Lane_2019 (1 names, 2 rows); McCoy_2008 (2 names, 2 rows); Gillooly_etal_2016 (1 names, 1 rows); Smith_2003 (1 names, 1 rows).
+By source: Brose_etal_2018 (270 names, 32,459 rows); Barnes_2008 (20 names, 2,601 rows); Kendall_etal_2019 (49 names, 300 rows); Eklof_etal_2017 (7 names, 194 rows); Makarieva_2008 (98 names, 144 rows); Herberstein_etal_2022 (85 names, 137 rows); Baach_2026 (46 names, 99 rows); DeLong_etal_2010 (57 names, 62 rows); DeLong_etal_2018 (27 names, 61 rows); Hrycik_2024 (44 names, 54 rows); Ehnes_etal_2011 (2 names, 49 rows); Brown_etal_2018 (19 names, 19 rows); vertnet-traits-sept2016 (12 names, 18 rows); Kinsella_etal_2020 (13 names, 13 rows); Chown_etal_2007 (2 names, 11 rows); Hirt_etal_2017 (7 names, 9 rows); Castro_2025 (2 names, 7 rows); vertnet-aves-sept2016 (5 names, 6 rows); vertnet-fishes-sept2016 (2 names, 5 rows); Hechinger_etal_2011 (1 names, 3 rows); vertnet-mammalia-sept2016 (2 names, 3 rows); Killen_etal_2016 (2 names, 2 rows); Lane_2019 (1 names, 2 rows); McCoy_2008 (2 names, 2 rows); Gillooly_etal_2016 (1 names, 1 rows); Smith_2003 (1 names, 1 rows).
 
-The 60 names with most records (of 897):
+The 60 names with most records (of 777):
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -86,9 +86,7 @@ The 60 names with most records (of 897):
 | `Acrotrichis sp.` | `Acrotrichis_sp` | placeholder | 260 | Brose_etal_2018 |
 | `Scydmaenidae sp2` | `Scydmaenidae_sp` | placeholder | 257 | Brose_etal_2018 |
 | `Sympetrum sp` | `Sympetrum_sp` | placeholder | 250 | Brose_etal_2018 |
-| `Sympetrum sp` | `Sympetrum_sp` | placeholder | 250 | Brose_2005 |
 | `Somatochlora sp` | `Somatochlora_sp` | placeholder | 236 | Brose_etal_2018 |
-| `Somatochlora sp` | `Somatochlora_sp` | placeholder | 236 | Brose_2005 |
 | `Glomeris sp.` | `Glomeris_sp` | placeholder | 233 | Brose_etal_2018 |
 | `Cylisticus sp.` | `Cylisticus_sp` | placeholder | 229 | Brose_etal_2018 |
 | `Brachychthoniidae spp.` | `Brachychthoniidae_spp` | placeholder | 228 | Brose_etal_2018 |
@@ -103,9 +101,7 @@ The 60 names with most records (of 897):
 | `Brachyderinae sp.` | `Brachyderinae_sp` | placeholder | 174 | Brose_etal_2018 |
 | `Lithobius sp1 {l}` | `Lithobius_sp` | placeholder | 170 | Brose_etal_2018 |
 | `Tibellus sp` | `Tibellus_sp` | placeholder | 159 | Brose_etal_2018 |
-| `Tibellus sp` | `Tibellus_sp` | placeholder | 159 | Brose_2005 |
 | `Coenagrion sp` | `Coenagrion_sp` | placeholder | 150 | Brose_etal_2018 |
-| `Coenagrion sp` | `Coenagrion_sp` | placeholder | 150 | Brose_2005 |
 | `Nitidulidae sp.` | `Nitidulidae_sp` | placeholder | 132 | Brose_etal_2018 |
 | `Oocyctis sp.` | `Oocyctis_sp` | placeholder | 129 | Brose_etal_2018 |
 | `Curculionidae sp.` | `Curculionidae_sp` | placeholder | 128 | Brose_etal_2018 |
@@ -118,8 +114,12 @@ The 60 names with most records (of 897):
 | `Synchaeta sp.` | `Synchaeta_sp` | placeholder | 114 | Brose_etal_2018 |
 | `Ptiliidae sp.` | `Ptiliidae_sp` | placeholder | 110 | Brose_etal_2018 |
 | `Formica sp` | `Formica_sp` | placeholder | 109 | Brose_etal_2018 |
-| `Formica sp` | `Formica_sp` | placeholder | 109 | Brose_2005 |
 | `anthotoe spp.` | `Anthotoe_spp` | placeholder | 96 | Brose_etal_2018 |
+| `bunodactis spp.` | `Bunodactis_spp` | placeholder | 96 | Brose_etal_2018 |
+| `isolauctis spp.` | `Isolauctis_spp` | placeholder | 96 | Brose_etal_2018 |
+| `Otiorhynchus sp.` | `Otiorhynchus_sp` | placeholder | 96 | Brose_etal_2018 |
+| `Brachysomus sp.` | `Brachysomus_sp` | placeholder | 89 | Brose_etal_2018 |
+| `Ctenocalanus sp.` | `Ctenocalanus_sp` | placeholder | 89 | Barnes_2008 |
 
 ## qualifier (32 names, 3,522 rows)
 
@@ -340,24 +340,24 @@ By source: Verberk_2020 (35 names, 402 rows); Brose_etal_2018 (1 names, 254 rows
 | `Orcinus orca Females` | `Orcinus_orca` | sex | 1 | Verberk_2020 |
 | `Physeter macrocephalus Females` | `Physeter_macrocephalus` | sex | 1 | Verberk_2020 |
 
-## form_strain_region (11 names, 64 rows)
+## form_strain_region (13 names, 48 rows)
 
 A form, strain, culture or population annotation is removed; the record is kept (a form written in place of the epithet, Conochilus_colonial, folds to the genus-level record Conochilus, #48).
 
-By source: Makarieva_2008 (3 names, 19 rows); Brose_2005 (2 names, 18 rows); Brose_etal_2018 (2 names, 18 rows); Verberk_2020 (2 names, 4 rows); DeLong_etal_2010 (3 names, 3 rows); Kiorboe_2014 (1 names, 2 rows).
+By source: Makarieva_2008 (3 names, 19 rows); Brose_etal_2018 (2 names, 18 rows); Verberk_2020 (2 names, 4 rows); DeLong_etal_2010 (3 names, 3 rows); Brose_2005 (2 names, 2 rows); Kiorboe_2014 (1 names, 2 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
 | `Anacystis nidulans PCC (Synechococcus` | `Anacystis_nidulans` | synonym+form_strain_region | 11 | Makarieva_2008 |
 | `Conochilus (solitary)` | `Conochilus` | form_strain_region | 11 | Brose_etal_2018 |
-| `Conochilus (solitary)` | `Conochilus` | form_strain_region | 11 | Brose_2005 |
 | `Conochilus (colonial)` | `Conochilus` | form_strain_region | 7 | Brose_etal_2018 |
-| `Conochilus (colonial)` | `Conochilus` | form_strain_region | 7 | Brose_2005 |
 | `Spirulina platensis 1968-3786` | `Spirulina_platensis` | form_strain_region | 4 | Makarieva_2008 |
 | `Spirulina platensis P` | `Spirulina_platensis` | form_strain_region | 4 | Makarieva_2008 |
 | `Ilybius chalconatus Bulgaria` | `Ilybius_chalconatus` | form_strain_region | 2 | Verberk_2020 |
 | `Ilybius chalconatus Spain` | `Ilybius_chalconatus` | form_strain_region | 2 | Verberk_2020 |
 | `Salpa maxima. Agg` | `Salpa_maxima` | form_strain_region | 2 | Kiorboe_2014 |
+| `Conochilus_colonial` | `Conochilus` | form_strain_region | 1 | Brose_2005 |
+| `Conochilus_solitary` | `Conochilus` | form_strain_region | 1 | Brose_2005 |
 | `Mycoplasma pulmonis UAB CTIP` | `Mycoplasma_pulmonis` | form_strain_region | 1 | DeLong_etal_2010 |
 | `Paraphysomonas imperforata (arctic)*` | `Paraphysomonas_imperforata` | form_strain_region+symbols | 1 | DeLong_etal_2010 |
 | `Paraphysomonas imperforata (newfoundland)*` | `Paraphysomonas_imperforata` | form_strain_region+symbols | 1 | DeLong_etal_2010 |
@@ -431,84 +431,25 @@ By source: Verberk_2020 (2 names, 25 rows); Makarieva_2008 (4 names, 4 rows); De
 | `Myadestes obscurus (occidentalis)` | `Myadestes_obscurus` | synonym | 1 | vertnet-aves-sept2016 |
 | `Tetrahymena geleii (pyriformis)` | `Tetrahymena_geleii` | synonym | 1 | Makarieva_2008 |
 
-## authority (166 names, 6,765 rows)
+## authority (3 names, 15 rows)
 
 An author or author-and-year citation is removed.
 
-By source: Brose_2005 (164 names, 6,750 rows); Brose_etal_2018 (1 names, 8 rows); Makarieva_2008 (2 names, 7 rows).
-
-The 60 names with most records (of 167):
+By source: Brose_etal_2018 (1 names, 8 rows); Makarieva_2008 (2 names, 7 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
-| `Paederus riparius (L.)` | `Paederus_riparius` | authority | 260 | Brose_2005 |
-| `Sympetrum vulgatum (L.)` | `Sympetrum_vulgatum` | authority | 199 | Brose_2005 |
-| `Conocephalus dorsalis (Latr.)` | `Conocephalus_dorsalis` | authority | 191 | Brose_2005 |
-| `Sympetrum sanguineum (Müller)` | `Sympetrum_sanguineum` | encoding+authority | 162 | Brose_2005 |
-| `Chartoscirta cincta (Herrich-Schäffer)` | `Chartoscirta_cincta` | encoding+authority | 157 | Brose_2005 |
-| `Pisaura mirabilis (Clerck, 1757)` | `Pisaura_mirabilis` | authority | 145 | Brose_2005 |
-| `Somatochlora flavomaculata (Van der Linden)` | `Somatochlora_flavomaculata` | authority | 143 | Brose_2005 |
-| `Robertus insignis O. P.-Cambridge, 1907` | `Robertus_insignis` | authority | 129 | Brose_2005 |
-| `Larinioides cornutus (Clerck, 1757)` | `Larinioides_cornutus` | authority | 120 | Brose_2005 |
-| `Tibellus maritimus (Menge, 1875)` | `Tibellus_maritimus` | authority | 112 | Brose_2005 |
-| `Dolichopus nubilius Meigen, 1924` | `Dolichopus_nubilius` | authority | 108 | Brose_2005 |
-| `Marpissa radiata (Grube, 1859)` | `Marpissa_radiata` | authority | 103 | Brose_2005 |
-| `Edaphus blühweissi (Scheerp.)` | `Edaphus_bluhweissi` | encoding+authority | 100 | Brose_2005 |
-| `Hebrus pusillus (Fallen)` | `Hebrus_pusillus` | authority | 96 | Brose_2005 |
-| `Neoscona adianta (Walckenaer, 1802)` | `Neoscona_adianta` | authority | 95 | Brose_2005 |
-| `Evarcha arcuata (Clerck, 1757)` | `Evarcha_arcuata` | authority | 94 | Brose_2005 |
-| `Sympetrum striolatum (Charpentier)` | `Sympetrum_striolatum` | authority | 94 | Brose_2005 |
-| `Dolomedes fimbriatus (Clerck, 1757)` | `Dolomedes_fimbriatus` | authority | 93 | Brose_2005 |
-| `Lesteva sicula (Er.)` | `Lesteva_sicula` | authority | 90 | Brose_2005 |
-| `Limnia paludicola (Elberg)` | `Limnia_paludicola` | authority | 86 | Brose_2005 |
-| `Pirata piraticus (Clerck, 1757)` | `Pirata_piraticus` | authority | 85 | Brose_2005 |
-| `Coenagrion pulchellum (Vander Linden)` | `Coenagrion_pulchellum` | authority | 80 | Brose_2005 |
-| `Limnobaris dolorosa (Goeze, 1777)` | `Limnobaris_dolorosa` | authority | 79 | Brose_2005 |
-| `Pirata tenuitarsis Simon, 1876` | `Pirata_tenuitarsis` | authority | 78 | Brose_2005 |
-| `Antistea elegans (Blackwall, 1841)` | `Antistea_elegans` | authority | 70 | Brose_2005 |
-| `Sepedon spinipes (Scopoli)` | `Sepedon_spinipes` | authority | 67 | Brose_2005 |
-| `Euaesthetus ruficapillus (Boisd.)` | `Euaesthetus_ruficapillus` | authority | 66 | Brose_2005 |
-| `Sitticus caricis (Westring, 1861)` | `Sitticus_caricis` | authority | 66 | Brose_2005 |
-| `Gabrius fermoralis (Hochh.)` | `Gabrius_fermoralis` | authority | 64 | Brose_2005 |
-| `Herina frondescentiae (L.)` | `Herina_frondescentiae` | authority | 64 | Brose_2005 |
-| `Ischnura elegans (Vander Linden)` | `Ischnura_elegans` | authority | 64 | Brose_2005 |
-| `Libellula quadrimaculata (L.)` | `Libellula_quadrimaculata` | authority | 64 | Brose_2005 |
-| `Lathrobium fovalum (Steph.)` | `Lathrobium_fovalum` | authority | 63 | Brose_2005 |
-| `Tetartopeus terminatum (Grav.)` | `Tetartopeus_terminatum` | authority | 60 | Brose_2005 |
-| `Herina parva (Loew)` | `Herina_parva` | authority | 58 | Brose_2005 |
-| `Ilione lineata (Fallén)` | `Ilione_lineata` | encoding+authority | 57 | Brose_2005 |
-| `Swammerdamella brevicornis (Meigen, 1830)` | `Swammerdamella_brevicornis` | authority | 57 | Brose_2005 |
-| `Theridion pictum (Walckenaer, 1802)` | `Theridion_pictum` | authority | 56 | Brose_2005 |
-| `Ilione albiseta (Scopoli)` | `Ilione_albiseta` | authority | 55 | Brose_2005 |
-| `Oxyloma elegans (Risso)` | `Oxyloma_elegans` | authority | 55 | Brose_2005 |
-| `Pardosa prativaga (L. Koch, 1870)` | `Pardosa_prativaga` | authority | 52 | Brose_2005 |
-| `Hercostomus assimilis (Staeger, 1842)` | `Hercostomus_assimilis` | authority | 50 | Brose_2005 |
-| `Gnathonarium dentatum (Wider, 1834)` | `Gnathonarium_dentatum` | authority | 49 | Brose_2005 |
-| `Myllaena dubia (Grav.)` | `Myllaena_dubia` | authority | 48 | Brose_2005 |
-| `Theridion impressum L. Koch, 1881` | `Theridion_impressum` | authority | 48 | Brose_2005 |
-| `Hebrus ruficeps (Thomson)` | `Hebrus_ruficeps` | authority | 47 | Brose_2005 |
-| `Clubiona stagnatilis Kulczynski, 1897` | `Clubiona_stagnatilis` | authority | 46 | Brose_2005 |
-| `Stalia boops (Schioedte)` | `Stalia_boops` | authority | 46 | Brose_2005 |
-| `Cloeon simile (Eaton)` | `Cloeon_simile` | authority | 44 | Brose_2005 |
-| `Tetragnatha extensa (L., 1758)` | `Tetragnatha_extensa` | authority | 43 | Brose_2005 |
-| `Dolichopus nitidus Fallén, 1823` | `Dolichopus_nitidus` | encoding+authority | 42 | Brose_2005 |
-| `Anelosimus vittatus (C. L. Koch, 1836)` | `Anelosimus_vittatus` | authority | 41 | Brose_2005 |
-| `Pherbina coryleti (Fallén)` | `Pherbina_coryleti` | encoding+authority | 41 | Brose_2005 |
-| `Trichia sericea (Draparnaud)` | `Trichia_sericea` | authority | 40 | Brose_2005 |
-| `Vertigo antivertigo (Draparnaud)` | `Vertigo_antivertigo` | authority | 40 | Brose_2005 |
-| `Dolichovespula sylvestris (Scopoli)` | `Dolichovespula_sylvestris` | authority | 39 | Brose_2005 |
-| `Hemistenus flavipes (Steph.)` | `Hemistenus_flavipes` | authority | 39 | Brose_2005 |
-| `Cicadella viridis (L.)` | `Cicadella_viridis` | authority | 38 | Brose_2005 |
-| `Conocephalus discolor (Thunbg.)` | `Conocephalus_discolor` | authority | 38 | Brose_2005 |
-| `Nestus mendicus (Er.)` | `Nestus_mendicus` | authority | 38 | Brose_2005 |
+| `Apis mellifera L.` | `Apis_mellifera` | authority | 8 | Brose_etal_2018 |
+| `Phormidium autumnale Gom.` | `Phormidium_autumnale` | authority | 5 | Makarieva_2008 |
+| `Nostoc muscorum G.` | `Nostoc_muscorum` | authority | 2 | Makarieva_2008 |
 
-## trinomial (163 names, 2,834 rows)
+## trinomial (160 names, 2,745 rows)
 
 A third, lowercase token (a subspecies or variety epithet, with or without a rank marker such as var. or ssp.) folds into the species.
 
-By source: Brose_etal_2018 (30 names, 2,534 rows); Brose_2005 (7 names, 137 rows); Cai_etal_2025 (41 names, 41 rows); Makarieva_2008 (34 names, 34 rows); AndersonGillooly_2017 (2 names, 15 rows); McCoy_2008 (14 names, 15 rows); Hirt_etal_2017 (10 names, 11 rows); Quaardvark (11 names, 11 rows); Hrycik_2024 (1 names, 9 rows); Lislevand_etal_2007 (9 names, 9 rows); Herberstein_etal_2022 (5 names, 5 rows); Verberk_2020 (2 names, 4 rows); Kendall_etal_2019 (1 names, 3 rows); Baach_2026 (2 names, 2 rows); Brown_etal_2018 (1 names, 1 rows); sealifebase (1 names, 1 rows); Smith_2003 (1 names, 1 rows); Tucker_etal_2014b (1 names, 1 rows).
+By source: Brose_etal_2018 (31 names, 2,586 rows); Cai_etal_2025 (41 names, 41 rows); Makarieva_2008 (34 names, 34 rows); AndersonGillooly_2017 (2 names, 15 rows); McCoy_2008 (14 names, 15 rows); Hirt_etal_2017 (10 names, 11 rows); Quaardvark (11 names, 11 rows); Hrycik_2024 (1 names, 9 rows); Herberstein_etal_2022 (5 names, 5 rows); Lislevand_etal_2007 (5 names, 5 rows); Verberk_2020 (2 names, 4 rows); Kendall_etal_2019 (1 names, 3 rows); Baach_2026 (2 names, 2 rows); Brown_etal_2018 (1 names, 1 rows); sealifebase (1 names, 1 rows); Smith_2003 (1 names, 1 rows); Tucker_etal_2014b (1 names, 1 rows).
 
-The 60 names with most records (of 173):
+The 60 names with most records (of 163):
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -518,17 +459,14 @@ The 60 names with most records (of 173):
 | `Thalassiosira gracilis expecta` | `Thalassiosira_gracilis` | trinomial | 81 | Brose_etal_2018 |
 | `Porania antarctica glabra` | `Porania_antarctica` | trinomial | 72 | Brose_etal_2018 |
 | `Limacina helicina antarctica` | `Limacina_helicina` | trinomial | 62 | Brose_etal_2018 |
+| `Formica s.str. sp` | `Formica_sstr` | trinomial+symbols | 52 | Brose_etal_2018 |
 | `Cyclops varians rubellus` | `Cyclops_varians` | trinomial | 43 | Brose_etal_2018 |
-| `Cyclops varians rubellus` | `Cyclops_varians` | trinomial | 43 | Brose_2005 |
 | `Tectocepheus velatus alatus` | `Tectocepheus_velatus` | trinomial | 42 | Brose_etal_2018 |
 | `Frustulia rhomboides saxonica` | `Frustulia_rhomboides` | trinomial | 35 | Brose_etal_2018 |
 | `Fragilaria capucina var. capucina` | `Fragilaria_capucina` | trinomial | 31 | Brose_etal_2018 |
 | `Hyla arborea arborea` | `Hyla_arborea` | trinomial | 26 | Brose_etal_2018 |
-| `Hyla arborea arborea` | `Hyla_arborea` | trinomial | 26 | Brose_2005 |
 | `Diatoma hyemale quadratum` | `Diatoma_hyemale` | trinomial | 25 | Brose_etal_2018 |
-| `Melanotaenia splendida splendida` | `Melanotaenia_splendida` | trinomial | 25 | Brose_2005 |
 | `Rana temporaria temporaria` | `Rana_temporaria` | trinomial | 25 | Brose_etal_2018 |
-| `Rana temporaria temporaria` | `Rana_temporaria` | trinomial | 25 | Brose_2005 |
 | `Cocconeis placentula var. euglypta` | `Cocconeis_placentula` | trinomial | 24 | Brose_etal_2018 |
 | `Tylosurus acus acus` | `Tylosurus_acus` | trinomial | 19 | Brose_etal_2018 |
 | `Tectocepheus velatus sarekensis` | `Tectocepheus_velatus` | trinomial | 17 | Brose_etal_2018 |
@@ -538,7 +476,6 @@ The 60 names with most records (of 173):
 | `Lagopus lagopus scoticus` | `Lagopus_lagopus` | trinomial | 14 | AndersonGillooly_2017 |
 | `Diplodus argenteus caudimacula` | `Diplodus_argenteus` | trinomial | 13 | Brose_etal_2018 |
 | `Tylosurus crocodilus crocodilus` | `Tylosurus_crocodilus` | trinomial | 13 | Brose_etal_2018 |
-| `Canis familiaris dingo` | `Canis_familiaris` | trinomial | 12 | Brose_2005 |
 | `Pteraster affinis aculeatus` | `Pteraster_affinis` | trinomial | 12 | Brose_etal_2018 |
 | `Perknaster fuscus antarcticus` | `Perknaster_fuscus` | trinomial | 10 | Brose_etal_2018 |
 | `Dreissena rostriformis bugensis` | `Dreissena_rostriformis` | trinomial | 9 | Hrycik_2024 |
@@ -547,7 +484,6 @@ The 60 names with most records (of 173):
 | `Cycethra verrucosa mawsoni` | `Cycethra_verrucosa` | trinomial | 7 | Brose_etal_2018 |
 | `Cadulus dalli antarcticum` | `Cadulus_dalli` | trinomial | 6 | Brose_etal_2018 |
 | `Frustulia rhomboides viridula` | `Frustulia_rhomboides` | trinomial | 5 | Brose_etal_2018 |
-| `Perknaster fuscus antarcticus` | `Perknaster_fuscus` | trinomial | 5 | Brose_2005 |
 | `Canis lupus arctos` | `Canis_lupus` | trinomial | 4 | Brose_etal_2018 |
 | `Augochloropsis metallica fulgida` | `Augochloropsis_metallica` | trinomial | 3 | Kendall_etal_2019 |
 | `Chrysemys picta bellii` | `Chrysemys_picta` | trinomial | 3 | Verberk_2020 |
@@ -572,6 +508,11 @@ The 60 names with most records (of 173):
 | `Ardea intermedia intermedia` | `Ardea_intermedia` | trinomial | 1 | Herberstein_etal_2022 |
 | `Auxis_rochei_rochei` | `Auxis_rochei` | trinomial | 1 | Cai_etal_2025 |
 | `Basileuterus rufifrons delatri` | `Basileuterus_rufifrons` | trinomial | 1 | Lislevand_etal_2007 |
+| `Branta bernicla hrota` | `Branta_bernicla` | trinomial | 1 | McCoy_2008 |
+| `Branta bernicla nigricans` | `Branta_bernicla` | trinomial | 1 | McCoy_2008 |
+| `Butastur indicus indicus` | `Butastur_indicus` | trinomial | 1 | McCoy_2008 |
+| `Buteo buteo buteo` | `Buteo_buteo` | trinomial | 1 | McCoy_2008 |
+| `Calidris canutus rufa` | `Calidris_canutus` | trinomial | 1 | Quaardvark |
 
 ## encoding (2 names, 101 rows)
 
@@ -584,13 +525,13 @@ By source: Brose_etal_2018 (1 names, 100 rows); Makarieva_2008 (1 names, 1 rows)
 | `Edaphus blŸhweissi` | `Edaphus_blYhweissi` | encoding | 100 | Brose_etal_2018 |
 | `Nausithoë rubra` | `Nausithoe_rubra` | encoding | 1 | Makarieva_2008 |
 
-## symbols (63 names, 413 rows)
+## symbols (62 names, 412 rows)
 
 Characters that cannot occur in a Latin name (punctuation, quotes, asterisks, question marks, hyphens, digits) removed.
 
-By source: Brose_etal_2018 (6 names, 336 rows); Makarieva_2008 (31 names, 41 rows); Mahe_2023 (15 names, 15 rows); vertnet-traits-sept2016 (3 names, 5 rows); Hechinger_etal_2011 (2 names, 3 rows); vertnet-aves-sept2016 (1 names, 3 rows); Herberstein_etal_2022 (1 names, 2 rows); Pekar_etal_2021 (1 names, 2 rows); Brose_2005 (1 names, 1 rows); DeLong_etal_2010 (1 names, 1 rows); Kinsella_etal_2020 (1 names, 1 rows); Tucker_etal_2014b (1 names, 1 rows); vertnet-fishes-sept2016 (1 names, 1 rows); vertnet-mammalia-sept2016 (1 names, 1 rows).
+By source: Brose_etal_2018 (6 names, 336 rows); Makarieva_2008 (31 names, 41 rows); Mahe_2023 (15 names, 15 rows); vertnet-traits-sept2016 (3 names, 5 rows); Hechinger_etal_2011 (2 names, 3 rows); vertnet-aves-sept2016 (1 names, 3 rows); Herberstein_etal_2022 (1 names, 2 rows); Pekar_etal_2021 (1 names, 2 rows); DeLong_etal_2010 (1 names, 1 rows); Kinsella_etal_2020 (1 names, 1 rows); Tucker_etal_2014b (1 names, 1 rows); vertnet-fishes-sept2016 (1 names, 1 rows); vertnet-mammalia-sept2016 (1 names, 1 rows).
 
-The 60 names with most records (of 66):
+The 60 names with most records (of 65):
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -624,7 +565,6 @@ The 60 names with most records (of 66):
 | `Clepticus parrae*` | `Clepticus_parrae` | symbols | 1 | Mahe_2023 |
 | `Daubentonia_madagascariensi
 s` | `Daubentonia_madagascariensis` | symbols | 1 | Tucker_etal_2014b |
-| `Dorylaimus stagnalis -` | `Dorylaimus_stagnalis` | symbols | 1 | Brose_2005 |
 | `Epinephelus guttatus*` | `Epinephelus_guttatus` | symbols | 1 | Mahe_2023 |
 | `Epinephelus striatus*` | `Epinephelus_striatus` | symbols | 1 | Mahe_2023 |
 | `Euborellia annulipes*` | `Euborellia_annulipes` | symbols | 1 | Makarieva_2008 |
@@ -655,3 +595,4 @@ s` | `Daubentonia_madagascariensis` | symbols | 1 | Tucker_etal_2014b |
 | `Sparisoma aurofrenatum*` | `Sparisoma_aurofrenatum` | symbols | 1 | Mahe_2023 |
 | `Sparisoma rubripinne*` | `Sparisoma_rubripinne` | symbols | 1 | Mahe_2023 |
 | `Sparisoma viride*` | `Sparisoma_viride` | symbols | 1 | Mahe_2023 |
+| `Sphodromantis gastrica*` | `Sphodromantis_gastrica` | symbols | 1 | Makarieva_2008 |

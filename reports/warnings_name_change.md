@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-05 16:21:25
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-05 16:18:39
 
 
-## Species name changed during enrichment (5714 rows)
+## Species name changed during enrichment (5718 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -5599,6 +5599,8 @@ Planiliza klunzingeri -> Liza klunzingeri [GBIF]
 
 Lobella uozumi -> Lobella uozumii [GBIF]
 
+Lobella decipiens -> Lobellina decipiens [manual]
+
 Lobella mizunasiana -> Lobellina mizunasiana [GBIF]
 
 Lobianchia gemellari -> Lobianchia gemellarii [GBIF]
@@ -8633,6 +8635,8 @@ Pseudomys fieldi; Pseudomys praeconis -> Pseudomys fieldi [GBIF]
 
 Plectrurus canaricus -> Pseudoplectrurus canaricus [GBIF]
 
+Pseudopodoces humilis; Parus humilis -> Pseudopodoces humilis [GBIF; manual]
+
 Orchomenella plebs -> Pseudorchomene plebs [GBIF]
 
 Pseudorectes ferrugineus; Pitohui ferrugineus -> Pseudorectes ferrugineus [GBIF]
@@ -10286,6 +10290,10 @@ Suthora nipalensis; Paradoxornis nipalensis -> Suthora nipalensis [GBIF]
 Suthora verreauxi; Paradoxornis verreauxi -> Suthora verreauxi [GBIF]
 
 Swynnertonia swynnertoni; Pogonocichla swynnertoni -> Swynnertonia swynnertoni [GBIF; NCBI]
+
+Alcippe abyssinica -> Sylvia abyssinica [manual]
+
+Alcippe atriceps -> Sylvia atriceps [manual]
 
 Curruca crassirostris; Sylvia crassirostris -> Sylvia crassirostris [GBIF]
 
