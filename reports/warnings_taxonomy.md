@@ -1,13 +1,13 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 21:06:52
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 21:39:51
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 161 rows
+- Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 425 names, 4239 rows
+- Names unresolved after all enrichment stages: 419 names, 4239 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -51,7 +51,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (161 rows)
+## Low GBIF confidence (75-89) (160 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -273,8 +273,6 @@ Pardos_astrigera [conf=85]
 
 Pareledone_charcoti [conf=80]
 
-Parkellus_parkus [conf=85]
-
 Parvicorbucula_socialis [conf=85]
 
 Pelecanoides_urinatrix [conf=80]
@@ -383,7 +381,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (425 names, 4239 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (419 names, 4239 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -537,6 +535,8 @@ Tydeus_tilbrooki | Ehnes_etal_2011 | 5 rows
 
 Adesmia_baccata | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
 
+Anepsius_brunneus | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
+
 Anous_albus | vertnet-aves-sept2016, vertnet-traits-sept2016 | 4 rows
 
 Apetaloides_firmiana | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
@@ -544,6 +544,8 @@ Apetaloides_firmiana | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, 
 Brasilanus_batus | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
 
 Cacomantis_pyrrophanus | vertnet-aves-sept2016, vertnet-traits-sept2016 | 4 rows
+
+Centrioptera_muricata | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
 
 Dirphea_agis | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
 
@@ -575,23 +577,31 @@ Rhabdoderma_gorksii | Brose_etal_2018 | 4 rows
 
 Rhytinota_praelonga | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
 
+Sphaeriontis_dilatata | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
+
 Taeinotes_scalaris | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
 
 Thripophaga_modesta | vertnet-aves-sept2016, vertnet-traits-sept2016 | 4 rows
 
-Anepsius_brunneus | Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 3 rows
+Agrypnus_bocandei | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
 Caloramphus_parvirostris | vertnet-aves-sept2016 | 3 rows
 
+Campalita_chlorostictum | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
+
 Cardiosis_fairmarei | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
-Centrioptera_muricata | Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 3 rows
-
 Centropages_marinus | Kiorboe_2013 | 3 rows
+
+Chelaner_rothsteini | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
 Cryptoglossa_verrucosa | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
 Cyanocompsa_cyanea | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
+
+Helius_waiti | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
+
+Hipporhinus_tenuegranosus | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
 Meliphaga_flaviventer | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
 
@@ -613,23 +623,15 @@ Scarabaeus_striatum | Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 3 rows
 
 Seisura_inquieta | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
 
-Sphaeriontis_dilatata | Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 3 rows
-
 Trichastoma_poliothorax | vertnet-aves-sept2016 | 3 rows
 
 Aegithina_riphia | vertnet-aves-sept2016, vertnet-traits-sept2016 | 2 rows
-
-Agrypnus_bocandei | Ehnes_etal_2011, Makarieva_2008 | 2 rows
-
-Anatonchus_francolombertii | Ghaderi_2025 | 2 rows
 
 Anthreptes_olivacea | vertnet-aves-sept2016 | 2 rows
 
 Arctinula_groenlandica | Brose_etal_2018 | 2 rows
 
 Athya_affinis | Hechinger_etal_2011 | 2 rows
-
-Campalita_chlorostictum | Ehnes_etal_2011, Makarieva_2008 | 2 rows
 
 Carassius_leucas | Hirt_etal_2017 | 2 rows
 
@@ -640,8 +642,6 @@ Certhiaxis_erythrops | vertnet-aves-sept2016 | 2 rows
 Cettia_whiteheadi | vertnet-aves-sept2016 | 2 rows
 
 Cheilopogon_xenopterusgroup | vertnet-fishes-sept2016, vertnet-traits-sept2016 | 2 rows
-
-Chelaner_rothsteini | Ehnes_etal_2011, Makarieva_2008 | 2 rows
 
 Cissilopha_melanocyanea | Herberstein_etal_2022, vertnet-aves-sept2016 | 2 rows
 
@@ -669,11 +669,7 @@ Falco_peregrinusxmexicanus | vertnet-aves-sept2016 | 2 rows
 
 Geositta_excelsior | vertnet-aves-sept2016 | 2 rows
 
-Helius_waiti | Ehnes_etal_2011, Makarieva_2008 | 2 rows
-
 Hemilepistus_elegans | Makarieva_2008 | 2 rows
-
-Hipporhinus_tenuegranosus | Ehnes_etal_2011, Makarieva_2008 | 2 rows
 
 Hypergerus_lepidus | vertnet-aves-sept2016 | 2 rows
 
@@ -699,8 +695,6 @@ Phragmaticola_pallida | vertnet-aves-sept2016 | 2 rows
 
 Poliopsar_cineraceus | vertnet-aves-sept2016 | 2 rows
 
-Prionchulus_muscoroum | Ghaderi_2025 | 2 rows
-
 Purpuriecephalus_varius | Tsuboi_etal_2018 | 2 rows
 
 Rynchocyclus_olivaceus | vertnet-aves-sept2016, vertnet-traits-sept2016 | 2 rows
@@ -722,8 +716,6 @@ Trachymyrmex_coniktzi | Herberstein_etal_2022 | 2 rows
 Trichastoma_sepiarium | vertnet-aves-sept2016 | 2 rows
 
 Achromobacter_viscosus | DeLong_etal_2010 | 1 row
-
-Actus_shamimi | Ghaderi_2025 | 1 row
 
 Aegithalos_cocinnus | vertnet-traits-sept2016 | 1 row
 
@@ -1022,12 +1014,6 @@ Molossus_major | Herberstein_etal_2022 | 1 row
 Molothrus_aenus | vertnet-traits-sept2016 | 1 row
 
 Murexechinus_san | Smith_2003 | 1 row
-
-Mylonchulus_armus | Ghaderi_2025 | 1 row
-
-Mylonchulus_sinensis | Ghaderi_2025 | 1 row
-
-Mylonchulus_truncatus | Ghaderi_2025 | 1 row
 
 Neanura_abietis | Hishi_etal_2019 | 1 row
 

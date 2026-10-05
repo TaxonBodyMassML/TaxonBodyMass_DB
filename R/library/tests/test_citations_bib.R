@@ -56,6 +56,18 @@ Expect(identical(sb$key, c('Alpha:2001aa', 'Beta:1999aa', 'Gamma:2000aa')) && id
 Expect(nrow(ReadBibEntries(tempfile())) == 0 && identical(names(ReadBibEntries(tempfile())), c('key', 'type', 'doi')), 'a missing bib reads as no entries')
 
 # ---- keys -----------------------------------------------------------------------------------------
+cat('NormaliseSurname(), CrossrefFirstSurname()\n')
+Expect(identical(NormaliseSurname(c('MULDER', 'A. Piechnik', 'McLaughlin', "O'Gorman", 'van der Meer', 'DE GOEDE', 'Kiørboe')),
+                 c('Mulder', 'Piechnik', 'McLaughlin', "O'Gorman", 'van der Meer', 'De Goede', 'Kiørboe')),
+       'leading initials dropped, all-capitals surnames title-cased, mixed case untouched')
+Expect(identical(FoldSurnameForKey(c('MULDER', 'A. Piechnik')), c('Mulder', 'Piechnik')) &&
+         identical(FoldSurnameForCiteID(c('MULDER', 'A. Piechnik')), c('Mulder', 'Piechnik')),
+       'both folders apply NormaliseSurname()')
+Expect(CrossrefFirstSurname(list(author = list(list(sequence = 'first'), list(family = 'Cattin Blandenier', given = 'Marie-France')))) == 'Cattin Blandenier' &&
+         CrossrefFirstSurname(list(author = list(list(name = 'Some Institute')))) == 'Some Institute' &&
+         is.na(CrossrefFirstSurname(list(author = list(list(sequence = 'first'))))) && is.na(CrossrefFirstSurname(list())),
+       'the first author with a name is used for the key; NA when none has one')
+
 cat('FoldSurnameForKey(), BibKeyFor()\n')
 Expect(identical(FoldSurnameForKey(c('Kiørboe', 'van der Meer', "O'Brien", 'Menden-Deuer', ' Falk‐Petersen ', 'Hárdstedt-Roméo')),
                  c('Kiorboe', 'van-der-Meer', 'OBrien', 'Menden-Deuer', 'Falk-Petersen', 'Hardstedt-Romeo')),
