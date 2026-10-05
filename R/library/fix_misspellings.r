@@ -187,6 +187,7 @@ FixMisspellings <- function(dat) {
     "Neosclerocalyptus_paskoenis"     = "Neosclerocalyptus_paskoensis",   # missing s in -ensis
     "Ningaui_timealyi"                = "Ningaui_timealeyi",              # missing e
     "Ningaui_yvonnae"                 = "Ningaui_yvonneae",               # female genitive requires -ae
+    "Nyctalus_geoffroyi"              = "Nyctophilus_geoffroyi",          # AyalaBerdon_2025 ESM table; its two cited papers (Dixon & Rose 2003, Hosken & Withers 1999) concern Nyctophilus geoffroyi; no Nyctalus geoffroyi exists (#71)
 
     # O
     "Oithona_similus"                 = "Oithona_similis",                # Latin 3rd decl similis; similus not valid
@@ -210,6 +211,7 @@ FixMisspellings <- function(dat) {
     "Phyllotis_bonaeriensis"          = "Phyllotis_bonariensis",          # spurious e (bonariensis from Bonaria)
     "Phrynosoma_douglassi"            = "Phrynosoma_douglasii",           # spurious double s
     "Pipistrellus_anchietae"          = "Pipistrellus_anchietai",         # male patronym takes -i not -ae
+    "Pipistrellus_pipitrellus"        = "Pipistrellus_pipistrellus",      # AyalaBerdon_2025 ESM table; missing s (the cited Speakman et al. 1989 is on P. pipistrellus) (#71)
     "Pipra_cornuta"                   = "Pipra_coronata",                 # Blue-crowned Manakin; cornuta not recognized
     "Piranga_olivicea"                = "Piranga_olivacea",               # Scarlet Tanager; spurious i
     "Pituophis_melanolecus"           = "Pituophis_melanoleucus",         # Pine Snake; missing u
@@ -254,7 +256,9 @@ FixMisspellings <- function(dat) {
     "Tenebrio_mollitor"               = "Tenebrio_molitor",               # Mealworm Beetle; single-l correct
     "Tetrahymena_pyraformis"          = "Tetrahymena_pyriformis",         # pear-shaped from pyrus; pyra- wrong
     "Thalassarche_melanophrys"        = "Thalassarche_melanophris",       # IOC/BirdLife accepted form
+    "Thallasarche_melanophris"        = "Thalassarche_melanophris",       # Black-browed Albatross; transposed l/s in Wisnionski_2026 (#79)
     "Thomasomys_ischyrus"             = "Thomasomys_ischyurus",           # Greek ischys + oura; missing u
+    "Thryesphilus_rufalbus"           = "Thryophilus_rufalbus",           # Rufous-and-white Wren; misspelt genus in Wisnionski_2026 (#79)
     "Thunnus_alaunga"                 = "Thunnus_alalunga",               # Albacore; dropped l
     "Thunnus_macoyi"                  = "Thunnus_maccoyii",               # Southern Bluefin; missing c and i
     "Torgos_tracheliotus"             = "Torgos_tracheliotos",            # Lappet-faced Vulture; IOC form

@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-04 22:29:23
+# Genus-only records -- 2026-10-04 23:59:03
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -6,30 +6,30 @@ Input records identified to genus only (a cleaned name without an underscore; th
 
 | quantity | value |
 | --- | ---: |
-| genus-only rows | 23657 |
-| distinct bare names | 848 |
-| names resolved to an accepted genus | 679 |
-| ... rows | 14367 |
-| distinct accepted genera | 675 |
-| names resolved above genus | 167 |
-| ... rows | 9249 |
+| genus-only rows | 23697 |
+| distinct bare names | 859 |
+| names resolved to an accepted genus | 680 |
+| ... rows | 14392 |
+| distinct accepted genera | 676 |
+| names resolved above genus | 177 |
+| ... rows | 9264 |
 | names unresolved | 2 |
 | ... rows | 41 |
 | autotroph genera removed | 18 |
 | ... rows | 313 |
-| genus x source values (after the autotroph filter) | 724 |
+| genus x source values (after the autotroph filter) | 725 |
 | values collapsed as copies | 2 |
-| genus-only records (pseudo-taxa) | 657 |
+| genus-only records (pseudo-taxa) | 658 |
 | records more than 1 log10 from the genus's species mean | 47 |
 
 ## Resolution by stage
 
 | match_type | outcome | names | rows |
 | --- | --- | ---: | ---: |
-| cache | genus | 469 | 7418 |
+| cache | genus | 470 | 7443 |
 | EXACT | genus | 209 | 6948 |
-| EXACT | above genus | 123 | 6558 |
-| checklists | above genus | 39 | 2038 |
+| EXACT | above genus | 132 | 6572 |
+| checklists | above genus | 40 | 2039 |
 | curated | above genus | 2 | 411 |
 | suffix | above genus | 3 | 242 |
 | NONE | unresolved | 2 | 41 |
@@ -44,7 +44,7 @@ Input records identified to genus only (a cleaned name without an underscore; th
 | Tanytarsini | TRIBE | checklists | Animalia | Insecta | 327 | Brose_etal_2018 | 9.86e-05 |
 | Anisoptera | SUBORDER | curated |  |  | 253 | Brose_2005, Brose_etal_2018 | 0.185 |
 | Araneae | ORDER | EXACT | Animalia | Arachnida | 246 | Brose_2005, Brose_etal_2018 | 0.0109 |
-| Staphylinidae | FAMILY | EXACT | Animalia | Insecta | 203 | Brose_2005, Brose_etal_2018 | 0.0111 |
+| Staphylinidae | FAMILY | EXACT | Animalia | Insecta | 204 | Baach_2026, Brose_2005, Brose_etal_2018 | 0.0108 |
 | Tydeidae | FAMILY | EXACT | Animalia | Arachnida | 192 | Brose_etal_2018 | 1.57e-05 |
 | Dinoflagellata | PHYLUM | checklists | Chromista |  | 184 | Brose_etal_2018 | 2.53e-09 |
 | Chironomidae | FAMILY | EXACT | Animalia | Insecta | 180 | Brose_2005, Brose_etal_2018 | 0.000538 |
@@ -178,7 +178,9 @@ Input records identified to genus only (a cleaned name without an underscore; th
 | Theridiidae | FAMILY | EXACT | Animalia | Arachnida | 4 | Brose_etal_2018 | 0.000462 |
 | Acarina | ORDER | checklists | Animalia | Arachnida | 3 | Brose_etal_2018 | 4.35e-05 |
 | Araneidae | FAMILY | EXACT | Animalia | Arachnida | 3 | Brose_etal_2018 | 0.00014 |
+| Lepismatidae | FAMILY | EXACT | Animalia | Insecta | 3 | Baach_2026 | 0.0222 |
 | Liocranidae | FAMILY | EXACT | Animalia | Arachnida | 3 | Brose_etal_2018 | 0.000463 |
+| Miridae | FAMILY | EXACT | Animalia | Insecta | 3 | Baach_2026 | 0.00191 |
 | Sphaeriidae | FAMILY | EXACT | Animalia | Bivalvia | 3 | Hrycik_2024 | 0.00236 |
 | Hesionidae | FAMILY | checklists | Animalia | Polychaeta | 2 | Brose_etal_2018 | 0.0187 |
 | Scomberesocidae | FAMILY | EXACT | Animalia |  | 2 | Castro_2025 | 0.0416 |
@@ -188,9 +190,12 @@ Input records identified to genus only (a cleaned name without an underscore; th
 | Aeschnidae | FAMILY | EXACT | Animalia | Insecta | 1 | Brose_2005 | 0.381 |
 | Arthropoda | PHYLUM | checklists | Animalia |  | 1 | Castro_2025 | 9.6e-05 |
 | Astigmata | ORDER | checklists | Animalia | Arachnida | 1 | Cohen_2014 | 6.9e-07 |
+| Braconidae | FAMILY | EXACT | Animalia | Insecta | 1 | Baach_2026 | 0.0017 |
+| Chalcidoidea | SUPERFAMILY | checklists | Animalia | Insecta | 1 | Baach_2026 | 0.00016 |
 | Channichthyidae | FAMILY | EXACT | Animalia |  | 1 | Raymond_2011 |   42 |
 | Ciliophora | PHYLUM | EXACT | Chromista |  | 1 | Brose_2005 | 5.95e-10 |
 | Copepoda | CLASS | EXACT | Animalia | Copepoda | 1 | Raymond_2011 | 0.00241 |
+| Coreidae | FAMILY | EXACT | Animalia | Insecta | 1 | Baach_2026 | 0.0667 |
 | Cranchiidae | FAMILY | EXACT | Animalia | Cephalopoda | 1 | Raymond_2011 |   62 |
 | Crustacea | CLASS | checklists | Animalia | Crustacea | 1 | Raymond_2011 | 14.3 |
 | Euphausiacea | ORDER | EXACT | Animalia | Malacostraca | 1 | Brose_etal_2018 |    1 |
@@ -198,12 +203,17 @@ Input records identified to genus only (a cleaned name without an underscore; th
 | Gyrinidae | FAMILY | EXACT | Animalia | Insecta | 1 | Brose_etal_2018 | 0.00376 |
 | Linyphiidae | FAMILY | EXACT | Animalia | Arachnida | 1 | Brose_etal_2018 | 0.000497 |
 | Macrouridae | FAMILY | EXACT | Animalia |  | 1 | Raymond_2011 |   31 |
+| Meinertellidae | FAMILY | EXACT | Animalia | Insecta | 1 | Baach_2026 | 0.0128 |
 | Myctophidae | FAMILY | EXACT | Animalia |  | 1 | Raymond_2011 |  8.8 |
+| Nabidae | FAMILY | EXACT | Animalia | Insecta | 1 | Baach_2026 | 0.00189 |
+| Naididae | FAMILY | EXACT | Animalia | Clitellata | 1 | Baach_2026 | 0.00095 |
 | Nemertea | PHYLUM | EXACT | Animalia |  | 1 | Hrycik_2024 | 0.00295 |
 | Nototheniidae | FAMILY | EXACT | Animalia |  | 1 | Raymond_2011 |  2.2 |
 | Octopodidae | FAMILY | EXACT | Animalia | Cephalopoda | 1 | Raymond_2011 |  181 |
+| Pompilidae | FAMILY | EXACT | Animalia | Insecta | 1 | Baach_2026 | 0.0141 |
 | Prayidae | FAMILY | EXACT | Animalia | Hydrozoa | 1 | Pata_2025 | 0.554 |
 | Prostigmata | ORDER | checklists | Animalia | Arachnida | 1 | Cohen_2014 | 1.23e-06 |
+| Psyllidae | FAMILY | EXACT | Animalia | Insecta | 1 | Baach_2026 | 0.00016 |
 | Teuthida | ORDER | checklists | Animalia | Cephalopoda | 1 | Raymond_2011 | 20.1 |
 | Turbellaria | CLASS | EXACT | Animalia | Turbellaria | 1 | Hrycik_2024 | 0.000556 |
 
@@ -335,11 +345,12 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Tylenchus | 2.81e-06 | 5e-08 | 1 | 1.75 | Cohen_2014 |
 | Galago |    4 |  218 | 4 | -1.74 | vertnet-mammalia-sept2016 |
 | Dorylaimus | 2.94e-07 | 1.5e-05 | 1 | -1.71 | Cohen_2014 |
+| Mononchus | 3.26e-07 | 1.64e-05 | 23 | -1.7 | Brose_etal_2018; Cohen_2014 |
 | Trimeresurus | 14.1 |  459 | 42 | -1.51 | vertnet-reptilia-sept2016 |
 | Dendrocygna |   26 |  774 | 7 | -1.47 | vertnet-aves-sept2016 |
 | Phthiracarus | 5.74e-06 | 0.00017 | 12 | -1.47 | Cohen_2014 |
 | Steganacarus | 8.3e-06 | 0.000211 | 3 | -1.41 | Cohen_2014 |
-| Lumbricus | 0.199 |    5 | 8 | -1.4 | Cohen_2014 |
+| Lumbricus | 0.199 | 4.97 | 8 | -1.4 | Cohen_2014 |
 | Rana |    1 | 21.5 | 26 | -1.33 | vertnet-traits-sept2016 |
 | Neodolichorhynchus | 3.88e-08 | 8.24e-07 | 1 | -1.33 | Brose_etal_2018 |
 | Lygosoma | 1.34 | 27.7 | 14 | -1.32 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
@@ -347,15 +358,14 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Dolomedes | 0.03 | 0.573 | 4 | -1.28 | Brose_etal_2018 |
 | Chiromantis | 0.548 | 10.3 | 3 | -1.27 | vertnet-amphibia-sept2016 |
 | Eupodes | 3.44e-05 | 2e-06 | 1 | 1.24 | Brose_etal_2018; Cohen_2014 |
-| Lagopus | 31.5 |  514 | 2 | -1.21 | vertnet-traits-sept2016 |
+| Lagopus | 31.5 |  510 | 2 | -1.21 | vertnet-traits-sept2016 |
 | Tyrophagus | 1.73e-05 | 1.17e-06 | 1 | 1.17 | Brose_etal_2018; Cohen_2014 |
 | Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 |
 | Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
 | Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 |
-| Mononchus | 3.26e-07 | 3.96e-06 | 2 | -1.08 | Brose_etal_2018; Cohen_2014 |
 | Strongylura |   37 |  421 | 4 | -1.06 | vertnet-fishes-sept2016 |
 | Bufo | 7.96 | 85.5 | 4 | -1.03 | vertnet-amphibia-sept2016 |
 | Veigaia | 0.000408 | 3.81e-05 | 5 | 1.03 | Brose_etal_2018; Cohen_2014 |
-| Mustela | 55.5 |  577 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
+| Mustela | 55.5 |  578 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
 | Sphenomorphus | 1.24 | 12.5 | 107 | -1 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
 

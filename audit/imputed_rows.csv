@@ -1,5 +1,7 @@
 "source","reason","n_dropped","n_taxa","n_kept"
 "AnAge","metabolic-rate body mass only, no adult weight",0,0,2946
+"Baach_2026","average of a published range (notes ""average from range""; Snow et al. 2025 visually estimated wild-pig masses): not a measured value",1,1,1091
+"Baach_2026","order/family-level records of Norberg (1978), an energy-content study whose mass type (dry or fresh) the sheet does not state: unverifiable units",22,3,1069
 "Barnes_2008","length-mass conversion quality 4 (general shape) or 5 (unsatisfactory)",1596,17,25261
 "Brose_2005","group-level placeholder: mass value shared by >= 5 taxa within Cattin Blandenier (2004) (#14)",2269,68,16906
 "Brose_etal_2018","group-level placeholder: mass value shared by >= 5 taxa within Cattin Blandenier (2004) (#14)",803,26,350007
@@ -21,11 +23,7 @@
 "DeLong_etal_2010","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",5,5,523
 "DeLong_etal_2018","mass source code: alternate taxon, % adult mass or genus/order average",1097,285,876
 "Faurby_etal_2018","Mass.Method Imputed or As relative of suggested similar size",204,204,5273
-"Gonzalez_2024","freshwater Odonata/Trichoptera nymphs and larvae and the bromeliad mosquito larvae of Gonzalez et al. 2018: non-adult records (no life-stage column)",183,8,4358
-"Gonzalez_2024","unpublished - Roussel: salmonids at 0.18-0.32 mg dry mass, below an egg: unverifiable units",212,2,4146
-"Gonzalez_2024","unpublished - Harrower: ant workers at 0.4-6.7 ug dry mass beside one at 0.4 mg: unverifiable units",36,7,4110
-"Gonzalez_2024","Amphibia: larval salamanders, tadpoles and metamorphs (every species x source value 1.5-4 log10 below the adult value): non-adult records",534,9,3576
-"Gonzalez_2024","fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)",809,73,2767
+"Ghaderi_2025","juvenile life stage (J1-J4): not adult records",14,5,559
 "Hoehler_etal_2023","genus-level cell size (Comments)",7,5,4413
 "Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
 "Hudson_2013","nestling/chick study (Appendix S6 title): not adult records",63,4,1435
@@ -38,8 +36,14 @@
 "McCoy_2008","lab zooplankton rows of mixed dry/dry-quarter units (ref 4)",43,11,1685
 "McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1679
 "McCoy_2008","deep-sea rows with undefined mass basis",6,5,1673
+"Oskyrko_2024","body mass cited to a length-mass allometry compilation (Slavenko et al. 2019, Zimin et al. 2022, Meiri et al. 2021, Feldman & Meiri 2013, Feldman et al. 2015, Feldman 2015): estimated from maximum length",9765,9765,704
+"Oskyrko_2024","value identical to the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the same allometric estimate under another citation",619,619,85
+"Oskyrko_2024","value within 0.0105 log10 of the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the re-rounded allometric estimate",29,29,56
+"Oskyrko_2024","species present in Feldman et al. 2016 / Meiri 2018 at accepted-name level (raw name, gender ending or listed synonym): its maximum is already an SVL estimate in the database (owner decision 2026-10-04, A2)",25,25,31
 "Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617
+"Wascher_2025","AVONET value flagged Inferred (Body Mass) or EltonTraits_Model in AVONET1_BirdLife: not species-specific",5,5,124
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116
 "Wilman_etal_2014","PrimScale: value scaled by EltonTraits from congeners (BodyMass-Source PrimScale)",484,484,8632
 "Wilman_etal_2014","Ref_2/Ref_3 Genus Average or Family Average (BodyMass-SpecLevel 0)",812,812,4588
 "Wilman_etal_2014","Ref_178 phylogenetically imputed value (BodyMass-SpecLevel 2)",547,547,4041
+"Wisnionski_2026","juvenile or young-of-year record (Life Stage; Table S1 ^ mark): not an adult mass",5,5,157

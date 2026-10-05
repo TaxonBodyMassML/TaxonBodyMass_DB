@@ -233,6 +233,38 @@ ParseNatureStyle <- function(s) {
        volume = m[2], pages = if (nzchar(m[6])) paste0(m[4], '-', m[6]) else if (nzchar(m[4])) m[4] else NA_character_)
 }
 
+# The author block and the body of an entry whose year closes it in brackets
+# (the Nature / Scientific Data reference style, "Authors. Title. Container
+# vol(issue), pages, (year)."; ReptTraits, Oskyrko_2024): there is no year
+# marker between the authors and the title, so the author block ends at the
+# first capitalised word of the title, the first token that carries no comma,
+# is not an initial ('J.', 'J.-P.', 'B.,'), a connector ('and', '&', 'et',
+# 'al.') or a name particle, and is not followed by an initial (a given name
+# written out, 'Christine P. B.', is followed by one). NA body when no such
+# token is found.
+author_connectors <- c('and', '&', 'et', 'al.', 'al', 'de', 'da', 'del', 'der', 'den', 'di',
+                       'du', 'la', 'le', 'van', 'von', 'y', 'jr.', 'jr.,', 'jr', 'sr.', '(eds.)',
+                       '(ed.)', 'eds.', 'ed.')
+SplitAuthorsFromTitle <- function(head) {
+  toks <- strsplit(trimws(head), '\\s+', perl = TRUE)[[1]]
+  # dotted initials ('J.', 'J.-P.', 'J.B.,'), bare capitals with a comma ('P,',
+  # 'TK,') or two to three bare capitals ('TK'); a lone 'A' is a title word
+  is_initial <- grepl('^([A-Z]\\.-?){1,3}[A-Z]?,?$|^[A-Z]{1,3},$|^[A-Z]{2,3}$', toks, perl = TRUE)
+  is_conn    <- tolower(toks) %in% author_connectors
+  has_comma  <- grepl(',$', toks)
+  is_cap     <- grepl('^["\'(]?[A-Z0-9]', toks, perl = TRUE)
+  start <- NA_integer_
+  for (j in seq_along(toks)) {
+    if (!is_cap[j] || has_comma[j] || is_initial[j] || is_conn[j]) next
+    if (j < length(toks) && is_initial[j + 1]) next
+    start <- j; break
+  }
+  if (is.na(start) || start == 1L)
+    return(list(authors = head, body = NA_character_))
+  list(authors = sub('[\\s.,;:]+$', '', paste(toks[seq_len(start - 1L)], collapse = ' '), perl = TRUE),
+       body    = paste(toks[start:length(toks)], collapse = ' '))
+}
+
 # Parse one citation string per element into a data frame of query fields:
 # parsed_author1, parsed_year, parsed_title, parsed_container, parsed_volume,
 # parsed_pages, parsed_doi. Robust to the common styles ("Author, A. B., and
@@ -269,7 +301,21 @@ ParseCitationString <- function(x) {
       out$parsed_pages[i]     <- nat$pages
       next
     }
-    if (pos > 0) {
+    # a bracketed year closing the entry with a comma before it or no volume
+    # ("71 (12), 2448-61, (1993).", "University of Chicago Press, (2018).":
+    # the Scientific Data style of ReptTraits, Oskyrko_2024), which
+    # ParseNatureStyle() does not cover
+    tail <- regexpr('\\(\\s*(1[6-9][0-9]{2}|20[0-9]{2})[a-z]?\\s*\\)\\s*[.,;:]?\\s*$', s, perl = TRUE)
+    if (tail > 0) {
+      # the year closes the entry in brackets (Nature / Scientific Data style):
+      # a year earlier in the string is part of the title or the volume
+      ym <- regmatches(s, tail)
+      out$parsed_year[i] <- as.integer(regmatches(ym, regexpr('[0-9]{4}', ym)))
+      head <- sub('[\\s,;:]+$', '', trimws(substr(s, 1, tail - 1)), perl = TRUE)
+      split <- SplitAuthorsFromTitle(head)
+      out$parsed_author1[i] <- FirstSurname(split$authors)
+      rest <- if (is.na(split$body)) '' else split$body
+    } else if (pos > 0) {
       ym <- regmatches(s, pos)
       out$parsed_year[i]    <- as.integer(substr(ym, 1, 4))
       out$parsed_author1[i] <- FirstSurname(AuthorBlock(s))

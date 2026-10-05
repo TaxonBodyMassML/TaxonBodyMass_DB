@@ -249,6 +249,9 @@ reflist_specs <- list(
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
                       compiler = 'Hudson'),
+  Oskyrko_2024 = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ',',
+                      compiler = 'Oskyrko'),
   Wilman_etal_2014 = list(format = 'csv', file = 'references.csv',
                           key_col = 'key', citation_col = 'citation', sep = ',',
                           compiler = 'Wilman'),
@@ -273,7 +276,20 @@ reflist_specs <- list(
                        sep = ';', compiler = 'Gonzalez'),
   Leahy_2025   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Leahy')
+                      compiler = 'Leahy'),
+  Wascher_2025 = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Wascher'),
+  Wisnionski_2026 = list(format = 'csv', file = 'references.csv',
+                         key_col = 'key', citation_col = 'citation', sep = ';',
+                         compiler = 'Wisnionski'),
+  AyalaBerdon_2025 = list(format = 'csv', file = 'references.csv',
+                          key_col = 'key', citation_col = 'citation', sep = ';',
+                          compiler = 'Ayala-Berdon',
+                          compilation_doi = '10.1007/s00360-025-01630-3'),  # no CiteID row yet (#71)
+  Baach_2026   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi', sep = ';',
+                      compiler = 'Baach')
 )
 
 ReflistSpec <- function(source_label) {
