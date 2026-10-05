@@ -252,7 +252,9 @@ FixMisspellings <- function(dat) {
     "Tenebrio_mollitor"               = "Tenebrio_molitor",               # Mealworm Beetle; single-l correct
     "Tetrahymena_pyraformis"          = "Tetrahymena_pyriformis",         # pear-shaped from pyrus; pyra- wrong
     "Thalassarche_melanophrys"        = "Thalassarche_melanophris",       # IOC/BirdLife accepted form
+    "Thallasarche_melanophris"        = "Thalassarche_melanophris",       # Black-browed Albatross; transposed l/s in Wisnionski_2026 (#79)
     "Thomasomys_ischyrus"             = "Thomasomys_ischyurus",           # Greek ischys + oura; missing u
+    "Thryesphilus_rufalbus"           = "Thryophilus_rufalbus",           # Rufous-and-white Wren; misspelt genus in Wisnionski_2026 (#79)
     "Thunnus_alaunga"                 = "Thunnus_alalunga",               # Albacore; dropped l
     "Thunnus_macoyi"                  = "Thunnus_maccoyii",               # Southern Bluefin; missing c and i
     "Torgos_tracheliotus"             = "Torgos_tracheliotos",            # Lappet-faced Vulture; IOC form
