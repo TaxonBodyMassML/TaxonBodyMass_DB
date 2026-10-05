@@ -77,6 +77,12 @@ Methods, with their dates and severity rules:
   `log10_pred` log10 of the PrimScale estimate the species lost); `CRITICAL`
   where the value is impossible (*Uratelornis chimaera* 5 g), `SUSPICIOUS`
   otherwise. Pending the owner's decision on whether any is dropped.
+  One further row (2026-10-04, issue #71): *Pipistrellus kuhlii*, whose
+  VertNet value (`vertnet-mammalia-sept2016`, 26,872 g, the geometric mean of
+  two records of 1,752,674 g and 412 g) sits 3.65 orders of magnitude above the
+  median of the nine other sources (6.0 g; `log10_pred`), hence `CRITICAL`;
+  the species falls to the `log10_range > 1` filter. Found while ingesting
+  AyalaBerdon_2025. Owner decision of 2026-10-04: value kept, registered here.
 
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.

@@ -1,14 +1,9 @@
-# Citations of AyalaBerdon_2025 -- 2026-10-04 21:05:34 (tbmcite 0.1.0)
+# Citations of AyalaBerdon_2025 -- 2026-10-04 22:01:39 (tbmcite 0.1.0)
 
-Steps: --init --verify --queue
+Steps: --verify
 
-- --init: 154 records, 154 with ref_keys (0.0% NA); 22 native keys -> primary_references.csv
-- --init: 1 key(s) not in the reference list: McNab 1989
-- --init: 2 reference(s) of the list cited by no record: Hosken and Withers 1997, McNab 1980
-- --init: 2 self reference(s): This study, Ayala-Berdon et al. unpublished data
 - --verify: compilation DOI 10.1007/s00360-025-01630-3; 60 deposited references (45 with DOI)
-- status counts: certain 17, not_found 2, self 2, unverified 1
-- --queue: 2 open queue row(s) for AyalaBerdon_2025 in pending_citations.csv (58 rows in the file)
+- status counts: certain 18, not_found 2, self 2
 
 ## References
 
@@ -32,7 +27,7 @@ Steps: --init --verify --queue
 | Skåra et al. 2021 | 1 | measurement | certain | doi_resolves | 10.1242/bio.058640 | 1.000 |  |  |
 | Speakman et al. 1989 | 1 | measurement | certain | doi_resolves | 10.1007/bf00610999 | 1.000 |  |  |
 | Sørås et al. 2022 | 1 | measurement | certain | doi_resolves | 10.1007/s00360-022-01451-8 | 1.000 |  |  |
-| Speakman et al. 2003 | 1 | measurement | not_found | below_threshold | 10.1007/978-1-4613-3421-7_1 | 0.527 |  |  |
+| Speakman et al. 2003 | 1 | measurement | not_found | below_threshold | 10.2307/1309764 | 0.452 |  |  |
 | This study | 39 | self | self | self |  |  |  |  |
 | Ayala-Berdon et al. unpublished data | 30 | self | self | self |  |  |  |  |
-| McNab 1989 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |
+| McNab 1989 | 1 | measurement | certain | doi_resolves | 10.1016/0010-406x(69)91651-x | 1.000 |  |  |
