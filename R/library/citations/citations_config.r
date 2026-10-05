@@ -289,7 +289,10 @@ reflist_specs <- list(
                           compilation_doi = '10.1007/s00360-025-01630-3'),  # no CiteID row yet (#71)
   Baach_2026   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', doi_col = 'doi', sep = ';',
-                      compiler = 'Baach')
+                      compiler = 'Baach'),
+  Vanni_2017   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', type_col = 'note', sep = ';',
+                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792')   # #99; Metadata S1 list via build_references.py
 )
 
 ReflistSpec <- function(source_label) {
