@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-04 22:00:40
+# Citation and provenance warnings -- 2026-10-04 22:09:24
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -8,12 +8,15 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Problems
 
-- 1 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Lemoine_2026
+- 2 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026
 - 2 source label(s) without a Bibcite: Hudson_2013, Lemoine_2026
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-(none)
+- BM_primary_citations: DunningJr_2007 -> Dunning-Jr:2007aa
+- BM_primary_citations: delHoyo_2009 -> del-Hoyo:2009aa
+- BM_primary_citations: Sekercioglu_2025 -> Sekercioglu:2025aa
+- BM_primary_citations: Atwood_1980 -> Atwood:1980aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
