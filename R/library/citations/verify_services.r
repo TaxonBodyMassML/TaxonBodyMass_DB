@@ -59,6 +59,33 @@ WriteCachedResponse <- function(url, status, body, cache_dir, fetched_at) {
 # The time of the last request sent to each host, for the rate limit below.
 .citations_last_request <- new.env(parent = emptyenv())
 
+# A service that refused the session with a long Retry-After (OpenAlex's free
+# daily budget is shared by every keyless client on one network IP and resets at
+# midnight UTC; its 429 carries a Retry-After of up to a day; 2026-10-04, #64).
+# Recorded per host so that the run goes on with the other service instead of
+# waiting or failing request by request: OpenAlexGET() returns NULL for the rest
+# of the run and DecideMatch() leaves every decision that needed OpenAlex
+# `pending / service_unavailable` (re-verified by the next --verify). An
+# OPENALEX_API_KEY in the environment (free key, own budget) is sent as a
+# Bearer token and avoids the shared budget.
+.citations_service_down <- new.env(parent = emptyenv())
+ServiceDown     <- function(host) !is.null(.citations_service_down[[host]])
+MarkServiceDown <- function(host, msg) assign(host, msg, envir = .citations_service_down)
+ServiceDownMessage <- function(host) .citations_service_down[[host]]
+ServicesAvailable  <- function() paste(c('crossref', if (!ServiceDown('api.openalex.org')) 'openalex'), collapse = ';')
+
+# 429 and 5xx are retried with backoff, but a 429 whose Retry-After exceeds
+# cfg$network$max_retry_after_s (a daily budget, not a burst) is returned at
+# once so that CachedGET() can raise it as a `citations_rate_limited` condition.
+IsTransient <- function(resp, cfg) {
+  st <- httr2::resp_status(resp)
+  if (st == 429L) {
+    ra <- suppressWarnings(as.numeric(httr2::resp_header(resp, 'Retry-After')))
+    return(is.na(ra) || ra <= cfg$network$max_retry_after_s)
+  }
+  st %in% cfg$network$transient_status
+}
+
 # Wait until at least 1 / rate_per_s seconds have passed since the last request
 # to `host`. httr2's req_throttle() alone lets the first requests of a session
 # through as a burst (token bucket), so the spacing is enforced here as well,
@@ -90,14 +117,27 @@ CachedGET <- function(url, cfg) {
   req <- httr2::req_user_agent(req, cfg$user_agent)
   req <- httr2::req_headers(req, Accept = 'application/json')
   req <- httr2::req_throttle(req, rate = cfg$network$rate_per_s, realm = host)
-  req <- httr2::req_retry(req, max_tries = cfg$network$max_tries,
-                          is_transient = function(resp) httr2::resp_status(resp) %in% cfg$network$transient_status,
+  # a connection the server drops without answering otherwise hangs the run
+  # (seen with OpenAlex on 2026-10-04, #64): time out and retry like a 5xx
+  req <- httr2::req_timeout(req, cfg$network$timeout_s)
+  api_key <- Sys.getenv('OPENALEX_API_KEY', unset = '')
+  if (host == 'api.openalex.org' && nzchar(api_key))
+    req <- httr2::req_headers(req, Authorization = paste('Bearer', api_key), .redact = 'Authorization')
+  req <- httr2::req_retry(req, max_tries = cfg$network$max_tries, retry_on_failure = TRUE,
+                          is_transient = function(resp) IsTransient(resp, cfg),
                           backoff = function(i) 2^i)
   req <- httr2::req_error(req, is_error = function(resp) FALSE)
   resp <- httr2::req_perform(req)
   status <- httr2::resp_status(resp)
   body <- httr2::resp_body_string(resp)
   fetched_at <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
+  if (status == 429L) {
+    ra <- httr2::resp_header(resp, 'Retry-After')
+    stop(structure(class = c('citations_rate_limited', 'error', 'condition'),
+                   list(message = sprintf('HTTP 429 from %s (Retry-After %s s): %s', host,
+                                          if (is.null(ra)) '?' else ra, gsub('\\s+', ' ', substr(body, 1, 400))),
+                        call = NULL, host = host)))
+  }
   if (status >= 200 && status < 300 || status == 404L)
     WriteCachedResponse(url, status, body, cfg$cache_dir, fetched_at)
   else
@@ -264,12 +304,27 @@ OpenAlexQueryURL <- function(title, year, cfg, per_page = cfg$network$openalex_p
           as.integer(per_page), Enc(cfg$mailto))
 }
 
+# An OpenAlex GET: the cache first; nothing once the service has refused the
+# session (ServiceDown()); a budget 429 marks it down and returns NULL.
+OpenAlexGET <- function(url, cfg) {
+  hit <- ReadCachedResponse(url, cfg$cache_dir)
+  if (!is.null(hit)) return(hit)
+  host <- 'api.openalex.org'
+  if (ServiceDown(host)) return(NULL)
+  tryCatch(CachedGET(url, cfg), citations_rate_limited = function(e) {
+    MarkServiceDown(e$host, conditionMessage(e))
+    message('OpenAlex refused the session; the remaining decisions rest on Crossref alone and stay ',
+            'pending / service_unavailable until the next --verify: ', conditionMessage(e))
+    NULL
+  })
+}
+
 # Title search within a year window (or a full-text `search` of the whole
 # citation when no title was parsed).
 OpenAlexQuery <- function(title, year, cfg, search = NULL) {
   if (is.null(search) && (is.na(title) || !nzchar(OpenAlexSearchText(title)))) return(EmptyCandidates())
-  r <- CachedGET(OpenAlexQueryURL(title, year, cfg, search = search), cfg)
-  if (r$status != 200L) return(EmptyCandidates())
+  r <- OpenAlexGET(OpenAlexQueryURL(title, year, cfg, search = search), cfg)
+  if (is.null(r) || r$status != 200L) return(EmptyCandidates())
   res <- ParseJSON(r$body)$results
   if (length(res) == 0) return(EmptyCandidates())
   do.call(rbind, lapply(res, NormaliseOpenAlexItem))
@@ -282,8 +337,8 @@ OpenAlexWorkURL <- function(doi, cfg)
 # openalex_id), or NULL when OpenAlex has none.
 OpenAlexWork <- function(doi, cfg) {
   if (is.na(doi) || !nzchar(doi)) return(NULL)
-  r <- CachedGET(OpenAlexWorkURL(doi, cfg), cfg)
-  if (r$status != 200L) return(NULL)
+  r <- OpenAlexGET(OpenAlexWorkURL(doi, cfg), cfg)
+  if (is.null(r) || r$status != 200L) return(NULL)
   NormaliseOpenAlexItem(ParseJSON(r$body))
 }
 

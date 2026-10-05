@@ -42,8 +42,9 @@ if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = 
 
 cfg  <- CitationsConfig(wd_root, offline = Flag('--offline'))
 spec <- tryCatch(ReflistSpec(src), error = function(e) NULL)
-folder <- if (!is.null(spec$folder)) spec$folder else src
-prim_path <- PrimaryReferencesPath(cfg$wd_db, folder)
+folder <- if (!is.null(spec$folder)) spec$folder else src     # the source folder under sources/databases
+frame  <- if (!is.null(spec$frame)) spec$frame else folder     # the cached frame BodyMass_<frame>.Rdata
+prim_path <- PrimaryReferencesPathForLabel(cfg$wd_db, src)
 dir.create(cfg$reports_dir, showWarnings = FALSE)
 dir.create(file.path(wd_root, 'tmp'), showWarnings = FALSE)
 cat(sprintf('run_citations: %s (%s)\n', src, citations_tool_version))
@@ -61,16 +62,20 @@ LoadFrame <- function(folder) {
 # ---- --init ----
 if (Flag('--init')) {
   if (is.null(spec)) ReflistSpec(src)          # stops with the message
-  frame <- LoadFrame(folder)
+  frame <- LoadFrame(frame)
   frame <- frame[SourceLabel(frame$source_mass) == src, , drop = FALSE]
   if (!'ref_keys' %in% names(frame))
     stop('the parse script of ', src, ' does not keep ref_keys yet (SplitRefKeys() in BodyMass_', folder, '.r)')
+  if (all(is.na(frame$ref_keys)))
+    stop('no record of ', src, ' in the cached frame carries ref_keys (a live-download frame is rebuilt only ',
+         'with its download flag on; see the source README)')
   reflist <- switch(spec$format,
     csv = ParseRefListCSV(file.path(cfg$wd_db, folder, spec$file), key_col = spec$key_col,
                           citation_col = spec$citation_col, doi_col = spec$doi_col,
                           citation_cols = spec$citation_cols, type_col = spec$type_col,
                           csv_sep = if (is.null(spec$csv_sep)) ',' else spec$csv_sep,
-                          file_encoding = if (is.null(spec$file_encoding)) 'UTF-8' else spec$file_encoding),
+                          file_encoding = if (is.null(spec$file_encoding)) 'UTF-8' else spec$file_encoding,
+                          review_col = spec$review_col),
     inrow = {
       raw <- read.csv(file.path(cfg$wd_db, folder, spec$file), stringsAsFactors = FALSE, check.names = FALSE,
                       colClasses = 'character', encoding = 'UTF-8')
@@ -88,6 +93,7 @@ if (Flag('--init')) {
   unused <- setdiff(reflist$native_key, prim$native_key)
   if (length(unused) > 0) Note('--init: %d reference(s) of the list cited by no record: %s', length(unused), paste(unused, collapse = ', '))
   if (any(prim$role == 'self')) Note('--init: %d self reference(s): %s', sum(prim$role == 'self'), paste(prim$native_key[prim$role == 'self'], collapse = ', '))
+  if (any(!is.na(prim$owner_review))) Note('--init: %d reference(s) marked for the owner\'s review: %s', sum(!is.na(prim$owner_review)), paste(prim$native_key[!is.na(prim$owner_review)], collapse = ', '))
 }
 
 prim <- ReadPrimaryReferences(prim_path)
@@ -119,6 +125,9 @@ if (Flag('--verify') || Flag('--queue')) {
   WritePrimaryReferences(prim, prim_path)
   tab <- table(factor(prim$match_status, levels = c(match_statuses, NA)), useNA = 'ifany')
   Note('status counts: %s', paste(sprintf('%s %d', ifelse(is.na(names(tab)), 'unverified', names(tab)), tab)[tab > 0], collapse = ', '))
+  if (ServiceDown('api.openalex.org'))
+    Note('OpenAlex refused the session (%s); %d reference(s) are pending / service_unavailable and are not queued: re-run --verify after the budget resets (midnight UTC) or with OPENALEX_API_KEY set',
+         ServiceDownMessage('api.openalex.org'), sum(prim$match_reason %in% 'service_unavailable'))
 }
 if (Flag('--queue')) {
   queue <- WritePendingQueue(prim, candidates, cfg$pending_csv)
@@ -187,7 +196,7 @@ if (Flag('--bib')) {
   # write back every source's bibcite / cite_id
   for (l in unique(all_prim$source_label)) {
     p <- all_prim[all_prim$source_label == l, ]
-    WritePrimaryReferences(p, PrimaryReferencesPath(cfg$wd_db, l))
+    WritePrimaryReferences(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))
   }
   prim <- all_prim[all_prim$source_label == src, ]
   Note('--bib: %d entries written to %s (%d reuse a curated key); RefManageR parsed %s; %s: %d rows with bibcite',

@@ -78,9 +78,11 @@ CitationsUserAgent <- function(mailto) {
 }
 
 # Requests per second to each service (polite pools allow more; one per second
-# keeps a whole source's verification well under any limit) and the retry policy
-# for 429 and 5xx responses.
-citations_network <- list(rate_per_s = 1, max_tries = 4L,
+# keeps a whole source's verification well under any limit), the per-request
+# timeout in seconds (a dropped connection is retried like a 5xx) and the retry
+# policy for 429 and 5xx responses; a 429 whose Retry-After exceeds
+# max_retry_after_s is a refused budget, not a burst (verify_services.r).
+citations_network <- list(rate_per_s = 1, max_tries = 4L, timeout_s = 60, max_retry_after_s = 120,
                           transient_status = c(429L, 500L, 502L, 503L, 504L),
                           crossref_rows = 5L, openalex_per_page = 5L,
                           crossref_api = 'https://api.crossref.org/works',
@@ -115,7 +117,8 @@ match_statuses   <- c('certain', 'pending', 'approved', 'nodoi_approved', 'rejec
                       'not_found', 'self')
 match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', 'closed_world',
                       'single_service', 'ambiguous', 'grey_literature', 'retracted',
-                      'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'self',
+                      'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'service_unavailable',
+                      'owner_review', 'self',
                       'owner_candidate', 'owner_doi', 'manual_bib', 'owner_nodoi',
                       'owner_self', 'owner_drop', 'key_not_in_reflist')
 reference_roles  <- c('measurement', 'compilation', 'equation', 'conversion', 'database', 'self')
@@ -153,10 +156,18 @@ primary_reference_columns <- c(
   'match_status', 'match_reason', 'services',
   'title_sim', 'author_match', 'year_match', 'container_match', 'volume_match', 'pages_match',
   'openalex_id', 'is_retracted', 'editorial_notice', 'verified_at', 'tool_version',
-  'decided_by', 'decided_at', 'year_override', 'notes')
+  'decided_by', 'decided_at', 'year_override', 'notes', 'owner_review')
 # the columns the owner may edit by hand (everything else is written by the tool)
 primary_reference_owner_columns <- c('role', 'parsed_author1', 'parsed_year', 'parsed_title',
-                                     'parsed_container', 'parsed_volume', 'parsed_pages', 'notes')
+                                     'parsed_container', 'parsed_volume', 'parsed_pages', 'notes', 'owner_review')
+# `owner_review` (added 2026-10-04, #64; optional in files written before it): a
+# reason, from the reference list's `review_col` or the owner, why the reference
+# must be decided in the review queue whatever the services say (a known alias
+# such as a web cited under another paper, a thesis, a book chapter, a work that
+# reports no body sizes). A verified row with a reason is forced to pending /
+# owner_review and queued with its candidates; the standing rule that theses,
+# books and near-misses always queue (owner, 2026-10-04) is applied through it.
+primary_reference_optional_columns <- c('owner_review')
 # For a `nodoi` entry parsed_author1 may hold the full author list in BibTeX
 # form ('Ikeda and Hirakawa and Imamura') when the owner approved it; the
 # field is a query input only until then.
@@ -209,6 +220,12 @@ sheet_primary_columns <- c('CiteID', 'Bibcite', 'Citation', 'DOI', 'Role', 'Adde
 # the regular expression the parse script passed to SplitRefKeys(). The
 # compilation's own DOI (for CandidatesFromCompilationReflist()) is read from the
 # curated bib through the label's Bibcite unless `compilation_doi` is given.
+# `review_col` names a column of the list whose text marks a reference for the
+# owner's review whatever the services say (primary_references `owner_review`).
+# `folder` names the source folder when it differs from the label, `frame` the
+# cached frame (BodyMass_<frame>.Rdata) when several labels share one, and
+# `prim_file` the label's primary_references file in a shared folder
+# ('primary_references_<Label>.csv'; LoadPrimaryReferences() reads both names).
 reflist_specs <- list(
   Kiorboe_2013 = list(format = 'csv', file = 'Kiorboe2013_TableA1_references.csv',
                       key_col = 'Reference', citation_col = 'Citation', sep = ';',
@@ -225,7 +242,17 @@ reflist_specs <- list(
   Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda'),
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Hudson')
+                      compiler = 'Hudson'),
+  # web-level attribution (issue #64): one key per work cited for a food web
+  Brose_etal_2018 = list(format = 'csv', file = 'references.csv',
+                         key_col = 'key', citation_col = 'citation', doi_col = 'doi', type_col = 'note',
+                         review_col = 'owner_review', sep = ';', compiler = 'Brose',
+                         compilation_doi = '10.1038/s41559-019-0899-x'),
+  Brose_2005   = list(format = 'csv', file = 'brose2005_references.csv', folder = 'DataRetriever',
+                      frame = 'DataRetrieverAll', prim_file = 'primary_references_Brose_2005.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi', type_col = 'note',
+                      review_col = 'owner_review', sep = ';', compiler = 'Brose',
+                      compilation_doi = '10.1890/05-0379')
 )
 
 ReflistSpec <- function(source_label) {

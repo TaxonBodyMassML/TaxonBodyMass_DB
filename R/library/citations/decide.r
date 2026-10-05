@@ -108,6 +108,22 @@ CollapseByDOI <- function(scored) {
 # compilation's reference list; `scite` the rows of ReadSciteChecks().
 DecideMatch <- function(ref, doi_cands = NULL, open_cands = NULL, closed_cands = NULL, scite = NULL,
                         th = citations_thresholds, services = 'crossref;openalex') {
+  d <- DecideMatchWith(ref, doi_cands, open_cands, closed_cands, scite, th, services)
+  # Without OpenAlex (its daily budget refused the session, verify_services.r)
+  # a decision that rests on the services' agreement or on their joint
+  # retraction flags is provisional: it stays pending with the Crossref
+  # candidates attached, is not queued for the owner, and is re-verified by
+  # the next --verify. Owner matters (a disagreeing source DOI, grey
+  # literature, a notice, a self reference) are decided as usual.
+  provisional <- c('doi_resolves', 'two_service_agreement', 'closed_world', 'single_service',
+                   'ambiguous', 'weak_match', 'below_threshold', 'no_candidates')
+  if (!'openalex' %in% strsplit(services, ';', fixed = TRUE)[[1]] && d$match_reason %in% provisional) {
+    d$match_status <- 'pending'; d$match_reason <- 'service_unavailable'
+  }
+  d
+}
+
+DecideMatchWith <- function(ref, doi_cands, open_cands, closed_cands, scite, th, services) {
   ref <- as.list(ref)
   if (identical(ref$role, 'self'))
     return(Decision('self', 'self', services = ''))
@@ -161,7 +177,8 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
     w  <- CrossrefWork(ref$raw_doi, cfg)
     cr <- if (is.null(w)) EmptyCandidates() else NormaliseCrossrefItem(w)
     oa <- OpenAlexWork(ref$raw_doi, cfg)
-    return(DecideMatch(ref, doi_cands = rbind(cr, if (is.null(oa)) EmptyCandidates() else oa), scite = scite))
+    return(DecideMatch(ref, doi_cands = rbind(cr, if (is.null(oa)) EmptyCandidates() else oa), scite = scite,
+                       services = ServicesAvailable()))
   }
   query <- if (!is.na(ref$parsed_title)) paste(na.omit(c(ref$parsed_author1, ref$parsed_year, ref$parsed_title,
                                                            ref$parsed_container, ref$parsed_volume, ref$parsed_pages)), collapse = ' ')
@@ -183,7 +200,7 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
       if (!'crossref' %in% have) { w <- CrossrefWork(top, cfg); if (!is.null(w)) cr <- rbind(cr, NormaliseCrossrefItem(w)) }
     }
   }
-  DecideMatch(ref, open_cands = rbind(cr, oa), closed_cands = closed, scite = scite)
+  DecideMatch(ref, open_cands = rbind(cr, oa), closed_cands = closed, scite = scite, services = ServicesAvailable())
 }
 
 # Decision fields into a primary_references row.
@@ -210,6 +227,11 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   cands <- list()
   for (i in which(todo)) {
     d <- VerifyReference(prim[i, ], cfg, reflist, scite)
+    # a reference the list (or the owner) marked for review is never
+    # auto-accepted: it is queued with its candidates (citations_config.r)
+    if (!is.na(prim$owner_review[i]) && (d$match_status == 'certain' || d$match_reason %in% 'service_unavailable')) {
+      d$match_status <- 'pending'; d$match_reason <- 'owner_review'
+    }
     prim <- ApplyDecisionToRow(prim, i, d, verified_at)
     cands[[prim$native_key[i]]] <- d$candidates
     if (progress) cat(sprintf('  %s: %s (%s)\n', prim$native_key[i], d$match_status, d$match_reason))
@@ -298,11 +320,14 @@ QueueRow <- function(ref, cands, queued_at) {
 
 # Append the pending / not_found rows of `prim` that are not already queued
 # without a decision (keyed on source_label + native_key) to the queue file;
-# existing rows are never rewritten. Returns the queue.
+# existing rows are never rewritten. Rows pending only because a service was
+# unavailable (service_unavailable) are not owner decisions and are not queued.
+# Returns the queue.
 WritePendingQueue <- function(prim, candidates, path, queued_at = format(Sys.Date())) {
   queue <- ReadPendingQueue(path)
   open <- paste(queue$source_label, queue$native_key)[is.na(queue$decision) | !nzchar(queue$decision)]
-  todo <- prim$match_status %in% c('pending', 'not_found') & !paste(prim$source_label, prim$native_key) %in% open
+  todo <- prim$match_status %in% c('pending', 'not_found') & !prim$match_reason %in% 'service_unavailable' &
+          !paste(prim$source_label, prim$native_key) %in% open
   new <- lapply(which(todo), function(i) QueueRow(prim[i, ], candidates[[prim$native_key[i]]], queued_at))
   if (length(new) > 0) queue <- rbind(queue, do.call(rbind, new))
   rownames(queue) <- NULL

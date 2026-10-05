@@ -170,7 +170,7 @@ Expect(is.na(prim$raw_citation[4]) && prim$notes[4] == 'key not in reference lis
 Expect(prim$parsed_author1[2] == 'Ikeda' && prim$parsed_year[2] == 1986L, 'the same-author expansion is applied in list order (entry 6 -> Ikeda)')
 Expect(all(prim$role == 'measurement') && all(is.na(prim$match_status)) && all(prim$tool_version == citations_tool_version),
        'roles default to measurement, nothing verified yet, tool_version stamped')
-self_list <- rbind(rl[1, ], data.frame(native_key = 'S', raw_citation = 'This study', raw_doi = NA, note = NA, stringsAsFactors = FALSE))
+self_list <- rbind(rl[1, ], data.frame(native_key = 'S', raw_citation = 'This study', raw_doi = NA, note = NA, owner_review = NA, stringsAsFactors = FALSE))
 ps <- InitPrimaryReferences('X', self_list, c('1', 'S', 'S'))
 Expect(ps$role[ps$native_key == 'S'] == 'self' && ps$match_status[ps$native_key == 'S'] == 'self' && ps$n_records[ps$native_key == 'S'] == 2L,
        'a self reference gets role and status self')
@@ -202,6 +202,22 @@ Expect(Has(ErrorOf(ParseRefListPDF('x.pdf')), 'not implemented yet') && Has(Erro
        'the later-tier parsers stop with a clear message')
 Expect(Has(ErrorOf(ReflistSpec('NoSuchSource')), 'No reference-list specification') && ReflistSpec('Kiorboe_2013')$format == 'csv',
        'ReflistSpec() names the missing specification')
+
+cat('owner_review: review_col, the skeleton, optional on read\n')
+rl <- tempfile(fileext = '.csv')
+writeLines(c('key,citation,doi,owner_review', 'A,"Doe, J. 2001. A study. J Things 5: 1-10.",,alias: cited under another paper', 'B,"Roe, R. 1999. Another study. J Things 3: 1-2.",,'), rl)
+r <- ParseRefListCSV(rl, key_col = 'key', citation_col = 'citation', doi_col = 'doi', review_col = 'owner_review')
+Expect(identical(r$owner_review, c('alias: cited under another paper', NA_character_)), 'ParseRefListCSV() reads review_col, empty cells as NA')
+sk <- InitPrimaryReferences('Src', r, c('A', 'B', 'A'))
+Expect('owner_review' %in% names(sk) && sk$owner_review[sk$native_key == 'A'] == 'alias: cited under another paper' && is.na(sk$owner_review[sk$native_key == 'B']),
+       'the skeleton carries owner_review from the list')
+old_file <- tempfile(fileext = '.csv')
+write.csv(sk[, setdiff(primary_reference_columns, 'owner_review')], old_file, row.names = FALSE, na = '')
+rd <- ReadPrimaryReferences(old_file)
+Expect(identical(names(rd), primary_reference_columns) && all(is.na(rd$owner_review)), 'a file written before owner_review reads with the column filled NA')
+sk2 <- sk; sk2$owner_review[sk2$native_key == 'B'] <- 'new flag'; rd$owner_review <- NA_character_
+mg <- MergePrimaryReferences(rd, sk2)
+Expect(mg$owner_review[mg$native_key == 'B'] == 'new flag' && mg$owner_review[mg$native_key == 'A'] == 'alias: cited under another paper', 'the review flag follows the reference list on re-init')
 
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }
