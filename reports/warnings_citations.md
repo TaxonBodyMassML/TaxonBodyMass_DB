@@ -1,14 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 21:03:20
+# Citation and provenance warnings -- 2026-10-04 21:10:28
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 122039 (38576 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 14; unverified references: 0
+- provenance rows: 122039 (38576 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 18; unverified references: 0
 
 ## Problems
 
 - 2 source label(s) without a Bibcite: Baach_2026, Hudson_2013
+- 4 accepted reference(s) without a bib entry (run --bib): Baach_2026 AVONET, Baach_2026 EltonTraits, Baach_2026 Chown_S.L. et al. 2007, Baach_2026 Rendon_D. et al. 2019
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -106,7 +107,7 @@ One row per source label: species and record links (species x source x reference
 | AnAge | database | 2518 | 2524 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AndersonGillooly_2017 | compilation | 93 | 296 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Baach_2026 | compilation | 529 | 964 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 964 |
+| Baach_2026 | compilation | 529 | 964 | 55.1 | 8 | 4 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 289 | 290 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
