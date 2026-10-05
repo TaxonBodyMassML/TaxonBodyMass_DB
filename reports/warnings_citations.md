@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-04 17:50:33
+# Citation and provenance warnings -- 2026-10-04 18:48:30
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121100 (38566 species); distinct primary CiteIDs: 30; unresolved references (pending / not_found): 2; unverified references: 0
+- provenance rows: 121428 (38566 species); distinct primary CiteIDs: 30; unresolved references (pending / not_found): 38; unverified references: 0
 
 ## Problems
 
@@ -12,7 +12,44 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-(none)
+- BM_primary_citations: Lynch_1980 -> Lynch:1980aa
+- BM_primary_citations: Dumont_1975 -> Dumont:1975aa
+- BM_primary_citations: Vuille_1991 -> Vuille:1991aa
+- BM_primary_citations: Green_1977 -> Green:1977aa
+- BM_primary_citations: Comita_1968 -> Comita:1968aa
+- BM_primary_citations: Kibby_1971 -> Kibby:1971aa
+- BM_primary_citations: Richman_1964 -> Richman:1964aa
+- BM_primary_citations: Roff_1973 -> Roff:1973aa
+- BM_primary_citations: Laybourn-Parry_1980 -> Laybourn-Parry:1980aa
+- BM_primary_citations: GOPHEN_1976 -> GOPHEN:1976aa
+- BM_primary_citations: Obreshkove_1930 -> Obreshkove:1930aa
+- BM_primary_citations: Goss_1980 -> Goss:1980aa
+- BM_primary_citations: Richman_1958 -> Richman:1958aa
+- BM_primary_citations: Kersting_1976 -> Kersting:1976aa
+- BM_primary_citations: Schindler_1968 -> Schindler:1968aa
+- BM_primary_citations: Lehman_1980 -> Lehman:1980aa
+- BM_primary_citations: Peters_1973 -> Peters:1973aa
+- BM_primary_citations: Rigler_1961 -> Rigler:1961aa
+- BM_primary_citations: Bowers_1986 -> Bowers:1986aa
+- BM_primary_citations: Gardner_1981 -> Gardner:1981aa
+- BM_primary_citations: Jacobsen_1976 -> Jacobsen:1976aa
+- BM_primary_citations: GANF_1974 -> GANF:1974aa
+- BM_primary_citations: Walve_1999 -> Walve:1999aa
+- BM_primary_citations: Whittaker_1961 -> Whittaker:1961aa
+- BM_primary_citations: Ikeda_1982b -> Ikeda:1982ab
+- BM_primary_citations: Ikeda_1982 -> Ikeda:1982aa
+- BM_primary_citations: Ikeda_2001 -> Ikeda:2001aa
+- BM_primary_citations: Ikeda_2006 -> Ikeda:2006aa
+- BM_primary_citations: Quetin_1980 -> Quetin:1980aa
+- BM_primary_citations: Bamstedt_1984 -> Bamstedt:1984aa
+- BM_primary_citations: Bamstedt_1977 -> Bamstedt:1977aa
+- BM_primary_citations: Gaudy_1983 -> Gaudy:1983aa
+- BM_primary_citations: Ikeda_1977 -> Ikeda:1977aa
+- BM_primary_citations: Anraku_1964 -> Anraku:1964aa
+- BM_primary_citations: Conover_1968 -> Conover:1968aa
+- BM_primary_citations: Dagg_1982 -> Dagg:1982aa
+- BM_primary_citations: Mayzaud_1976 -> Mayzaud:1976aa
+- BM_primary_citations: Cass_2011 -> Cass:2011aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
@@ -30,8 +67,8 @@ One row per source label: species and record links (species x source x reference
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_2005 | compilation | 289 | 290 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_etal_2018 | compilation | 1753 | 144172 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brose_2005 | compilation | 289 | 290 | 0 | 12 | 0 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brose_etal_2018 | compilation | 1753 | 168179 | 0 | 24 | 0 | 24 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
