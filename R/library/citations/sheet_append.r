@@ -113,9 +113,14 @@ FormatCitationTextNoDOI <- function(row) {
 
 # The BM_primary_citations rows for the accepted references of a
 # primary_references frame: `works` is a list of Crossref work records keyed by
-# DOI (from the cache). Rows need bibcite and cite_id (set by --bib).
+# DOI (from the cache). Rows need bibcite and cite_id (set by --bib). A
+# `manual_bib` row cites a curated bib key (an owner's `manual:<Key>` decision,
+# such as Vanni_2017's 'Ikeda database' -> Ikeda:2014aa): its Sheet row is the
+# owner's (BM_citations) and the curated entry may carry no DOI, so no row is
+# built for it (issue #99).
 BuildSheetRows <- function(prim, works, added = format(Sys.Date()), added_by = citations_tool_version) {
-  ok <- prim$match_status %in% c('certain', 'approved', 'nodoi_approved') & !is.na(prim$bibcite) & !is.na(prim$cite_id)
+  ok <- prim$match_status %in% c('certain', 'approved', 'nodoi_approved') & !is.na(prim$bibcite) & !is.na(prim$cite_id) &
+    !(prim$match_reason %in% 'manual_bib')
   rows <- lapply(which(ok), function(i) {
     r <- prim[i, ]
     cit <- if (!is.na(r$doi) && !is.null(works[[r$doi]])) FormatCitationText(works[[r$doi]], r$year_override)
