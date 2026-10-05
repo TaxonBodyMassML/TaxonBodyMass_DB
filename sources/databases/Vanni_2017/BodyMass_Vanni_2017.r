@@ -80,15 +80,11 @@ adat <- DropImputed(adat, adat$Class %in% 'Insecta', 'Vanni_2017',
 #     records;
 adat <- DropImputed(adat, adat$Class %in% 'Amphibia', 'Vanni_2017',
                     'Amphibia: tadpoles, metamorphs and larval salamanders (species x study values 1.6-1.9 log10 below the adult values): non-adult records')
-#  4. Osteichthyes: excretion studies incubate the small individuals of their
-#     species (species x study geometric means a median 0.8 log10 below the
-#     database's values over 60 pairs, 0.3-1.9 by study; README.md, Filters),
-#     so the fishes are excluded as non-adult records, as the fishes of the
-#     Vanni-database sub-sources of Gonzalez_2025 were (owner decision
-#     2026-10-04). Option (b) of issue #99; comment this one call out to
-#     ingest every fish record (option a).
-adat <- DropImputed(adat, adat$Class %in% 'Osteichthyes', 'Vanni_2017',
-                    'Osteichthyes: small individuals of their species sampled for excretion (median 0.8 log10 below the database values): non-adult records (issue #99, option b)')
+# The fishes (3,642 rows of 137 species; species x study geometric means a
+# median 0.8 log10 below the database's values over 60 pairs, README.md,
+# Filters) are kept as the field means they are: owner decision 2026-10-05
+# (issue #99, option a); the Vanni-database fishes of Gonzalez_2025 stay
+# dropped there as copies of these records.
 
 # Conversion group of every record (dry -> wet; README.md, Mass type), by the
 # file's Class and Ecosystem Type / Habitat columns.

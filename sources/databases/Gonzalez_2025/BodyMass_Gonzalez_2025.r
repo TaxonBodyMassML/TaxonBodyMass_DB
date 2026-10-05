@@ -64,6 +64,13 @@ adat <- DropImputed(adat, adat$class_revised %in% 'Amphibia', 'Gonzalez_2025',
 #    of these sub-sources (Sterrett et al. 2015 turtles, a copepod, a snail) stay.
 adat <- DropImputed(adat, adat$data.type %in% 'Vanni_database' & adat$class_revised %in% 'Actinopterygii', 'Gonzalez_2025',
                     'fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)')
+#  - the remaining Vanni-database rows (the Sterrett et al. 2015 turtles, one
+#    Johnson et al. 2010 copepod, five 'McIntyre, PB, unpub' snails) are
+#    verbatim copies of subsets of the record sets of Vanni_2017, a source of
+#    this database since issue #99, and leave as copies (owner decision
+#    2026-10-05).
+adat <- DropImputed(adat, adat$data.type %in% 'Vanni_database', 'Gonzalez_2025',
+                    'remaining Vanni-database rows (Sterrett et al. 2015 turtles, a copepod, a snail): copies of Vanni_2017 record subsets, now a source (owner decision 2026-10-05)')
 
 # Conversion group of every record (dry -> wet), by the compilers' revised
 # class / phylum and the habitat column (README.md, Mass type).
