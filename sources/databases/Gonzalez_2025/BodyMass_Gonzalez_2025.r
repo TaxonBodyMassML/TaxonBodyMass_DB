@@ -79,7 +79,9 @@ grp <- rep(NA_character_, nrow(adat))
 grp[cls %in% c('Insecta', 'Arachnida', 'Chilopoda', 'Diplopoda', 'Collembola', 'Diplura',
                'Symphyla', 'Pauropoda')] <- 'insect'            # terrestrial arthropods (Studier & Sevick 1992; non-insects by analogy, as Hishi_etal_2019)
 grp[cls %in% c('Actinopterygii', 'Chondrichthyes', 'Elasmobranchii')] <- 'fish'
-grp[cls %in% c('Amphibia', 'Reptilia', 'Aves', 'Mammalia')] <- 'vertebrate'   # generic factor, no conversion CiteID
+grp[cls %in% 'Aves'] <- 'bird'                                   # Horn & de la Vega 2016 (the Wadden Sea birds of this very source)
+grp[cls %in% 'Mammalia'] <- 'mammal'                             # Rizzuto et al. 2019 (the snowshoe hares of this very source)
+grp[cls %in% c('Amphibia', 'Reptilia')] <- 'vertebrate'           # generic factor, no conversion CiteID (issue #86)
 grp[cls %in% c('Copepoda', 'Ostracoda', 'Branchiopoda', 'Hexanauplia')] <- 'crustacean_zooplankton'
 grp[cls %in% 'Malacostraca' & hab %in% 'marine'] <- 'crustacean_zooplankton'  # pelagic euphausiids, hyperiids, mysids, decapods (Ikeda database)
 grp[cls %in% 'Malacostraca' & !hab %in% 'marine'] <- 'invertebrate'            # freshwater shrimps and crayfish
