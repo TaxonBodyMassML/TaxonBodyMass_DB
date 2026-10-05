@@ -1,15 +1,14 @@
-# Citation and provenance warnings -- 2026-10-04 20:34:57
+# Citation and provenance warnings -- 2026-10-04 20:55:40
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121363 (38566 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 40; unverified references: 0
+- provenance rows: 121364 (38566 species); distinct primary CiteIDs: 313; unresolved references (pending / not_found): 12; unverified references: 0
 
 ## Problems
 
 - 1 source label(s) without a Bibcite: Hudson_2013
-- 87 accepted reference(s) without a bib entry (run --bib): Chown_etal_2007 1, Chown_etal_2007 2, Chown_etal_2007 3, Chown_etal_2007 4, Chown_etal_2007 5, Chown_etal_2007 6, Chown_etal_2007 7, Chown_etal_2007 10, Chown_etal_2007 11, Chown_etal_2007 12, Chown_etal_2007 13, Chown_etal_2007 15, Chown_etal_2007 20, Chown_etal_2007 21, Chown_etal_2007 22, Chown_etal_2007 23, Chown_etal_2007 24, Chown_etal_2007 25, Chown_etal_2007 26, Chown_etal_2007 28, Chown_etal_2007 29, Chown_etal_2007 31, Chown_etal_2007 32, Chown_etal_2007 33, Chown_etal_2007 34, Chown_etal_2007 35, Chown_etal_2007 37, Chown_etal_2007 40, Chown_etal_2007 42, Chown_etal_2007 43, Chown_etal_2007 44, Chown_etal_2007 45, Chown_etal_2007 46, Chown_etal_2007 47, Chown_etal_2007 48, Chown_etal_2007 50, Chown_etal_2007 51, Chown_etal_2007 53, Chown_etal_2007 54, Chown_etal_2007 55, Chown_etal_2007 56, Chown_etal_2007 57, Chown_etal_2007 58, Chown_etal_2007 60, Chown_etal_2007 61, Chown_etal_2007 62, Chown_etal_2007 66, Chown_etal_2007 67, Chown_etal_2007 68, Chown_etal_2007 69, Chown_etal_2007 70, Chown_etal_2007 71, Chown_etal_2007 72, Chown_etal_2007 73, Chown_etal_2007 74, Chown_etal_2007 75, Chown_etal_2007 76, Chown_etal_2007 77, Chown_etal_2007 78, Chown_etal_2007 81, Chown_etal_2007 82, Chown_etal_2007 83, Chown_etal_2007 85, Chown_etal_2007 86, Chown_etal_2007 87, Chown_etal_2007 88, Chown_etal_2007 89, Chown_etal_2007 90, Chown_etal_2007 91, Chown_etal_2007 92, Chown_etal_2007 93, Chown_etal_2007 94, Chown_etal_2007 97, Chown_etal_2007 98, Chown_etal_2007 99, Chown_etal_2007 102, Chown_etal_2007 104, Chown_etal_2007 105, Chown_etal_2007 106, Chown_etal_2007 107, Chown_etal_2007 108, Chown_etal_2007 109, Chown_etal_2007 110, Chown_etal_2007 111, Chown_etal_2007 112, Chown_etal_2007 113, Chown_etal_2007 114
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -36,7 +35,7 @@ One row per source label: species and record links (species x source x reference
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Chown_etal_2007 | compilation | 295 | 537 | 0 | 115 | 87 | 22 | 4 | 2 | 0 | 0 | 0 | 0 |
+| Chown_etal_2007 | compilation | 295 | 537 | 53.3 | 115 | 113 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 310 | 386 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2018 | compilation | 135 | 439 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 442 | 2246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -50,7 +49,7 @@ One row per source label: species and record links (species x source x reference
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 5 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 128 | 247 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Herberstein_etal_2022 | compilation | 1525 | 2435 | 97.6 | 193 | 191 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Herberstein_etal_2022 | compilation | 1525 | 2460 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 342 | 454 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hishi_etal_2019 | derived | 314 | 318 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1671 | 3768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
