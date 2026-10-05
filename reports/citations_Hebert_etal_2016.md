@@ -1,8 +1,8 @@
-# Citations of Hebert_etal_2016 -- 2026-10-04 18:14:17 (tbmcite 0.1.0)
+# Citations of Hebert_etal_2016 -- 2026-10-04 19:34:38 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
-- --sheet: 42 row(s) for Hebert_etal_2016, 38 new, tab had 15 rows; BM_citations snapshotted (430 rows)
+- --apply-queue: 1 decision(s) applied: 71 -> rejected
 
 ## References
 
@@ -39,7 +39,7 @@ Steps: --sheet --no-dry-run
 | 65 | 1 | measurement | approved | owner_candidate | 10.2307/1950753 | 0.814 | Whittaker:1961aa | Whittaker_1961 |
 | 69 | 95 | measurement | pending | grey_literature | 10.12982/cmujns.2022.009 | 0.352 |  |  |
 | 70 | 331 | measurement | approved | owner_candidate | 10.1071/mf9820055 | 0.445 | Ikeda:1982ab | Ikeda_1982b |
-| 71 | 40 | measurement | not_found | below_threshold | 10.1071/mf9810921 | 0.483 |  |  |
+| 71 | 40 | measurement | rejected | owner_drop | 10.1071/mf9810921 | 0.483 |  |  |
 | 72 | 36 | measurement | approved | owner_candidate | 10.1007/bf00391956 | 0.843 | Ikeda:1989aa | Ikeda_1989 |
 | 73 | 45 | measurement | approved | owner_candidate | 10.1007/bf00397045 | 1.000 | Ikeda:1982aa | Ikeda_1982 |
 | 74 | 31 | measurement | nodoi_approved | owner_nodoi |  | 0.578 | Ikeda:1998aa | Ikeda_1998 |

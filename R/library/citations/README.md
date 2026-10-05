@@ -14,13 +14,13 @@ everything that talks to a service or to the Google Sheet runs by hand through
 | --- | --- |
 | `citations_config.r` | paths, the column schemas of the tracked files, the controlled vocabularies, the decision thresholds, the polite-pool identity (`CROSSREF_MAILTO` / `OPENALEX_MAILTO`, else git `user.email`), the per-source reference-list specifications `reflist_specs` |
 | `normalise_citation.r` | `NormaliseCitationString()`, `ParseCitationString()` (regex parse into `parsed_*` query fields), `TitleSimilarity()` (mean of Jaro-Winkler and token-set Jaccard), the author / container / volume / pages comparisons |
-| `parse_reflists.r` | `SplitRefKeys()` for the parse scripts, `ExplodeRefKeys()`, `ParseRefListCSV()` (`csv_sep`, `file_encoding` for a latin1 list such as Hebert's, split author/year/title/journal columns pasted into one citation), `ParseInRowCitations()`, `ExpandSameAuthorMarkers()`, `InitPrimaryReferences()`, `MergePrimaryReferences()`; the other formats (xlsx, bib, docx, pdf, html, EndNote) stop until their tier is reached |
-| `verify_services.r` | `CachedGET()` (httr2, User-Agent with mailto, one request per second per host enforced by `PaceRequest()` on top of `req_throttle()`, retries on 429/5xx, every raw response cached under `sources/citations_cache/` keyed by sha1 of the URL without the mailto), `CrossrefQuery()`, `CrossrefWork()` (with `reference[]`, `update-to`, `updated-by`), `CandidatesFromCompilationReflist()`, `OpenAlexQuery()`, `OpenAlexWork()` (`is_retracted`), `ReadSciteChecks()` |
+| `parse_reflists.r` | `SplitRefKeys()` for the parse scripts, `ExplodeRefKeys()`, `ParseRefListCSV()` (`csv_sep`, `file_encoding` for a latin1 list such as Hebert's, split author/year/title/journal columns pasted into one citation), `ParseInRowCitations()` (full-text citations carried by the records themselves: the native key is `h:<sha1-8>` of the normalised string, a DOI embedded in the text is `raw_doi`, the record's short in-text form is kept as the reference's `note`), `ExpandSameAuthorMarkers()`, `InitPrimaryReferences()`, `MergePrimaryReferences()`; the other formats (xlsx, bib, docx, pdf, html, EndNote) stop until their tier is reached |
+| `verify_services.r` | `CachedGET()` (httr2, User-Agent with mailto, one request per second per host enforced by `PaceRequest()` on top of `req_throttle()`, bounded retries on 429/5xx, every raw response cached under `sources/citations_cache/` keyed by sha1 of the URL without the mailto and api_key parameters; a spent quota, HTTP 429 after the retries, raises the classed condition `citations_quota` of `QuotaCondition()` and flags the host for the session), `CrossrefQuery()`, `CrossrefWork()` (with `reference[]`, `update-to`, `updated-by`), `CandidatesFromCompilationReflist()`, `OpenAlexQuery()`, `OpenAlexWork()` (`is_retracted`; `OpenAlexAuth()` appends `OPENALEX_API_KEY` when set), `ReadSciteChecks()` |
 | `decide.r` | `ScoreCandidate()`, `DecideMatch()` (the rules below), `VerifyReference()`, `VerifyPrimaryReferences()`, `ApplySciteChecks()`, `WritePendingQueue()`, `ApplyQueueDecisions()` |
 | `build_bib.r` | `ReadBibEntries()`, `BibKeyFor()`, `BuildBibEntry()` (Crossref record only), `BuildBibEntryNoDOI()`, `WritePrimaryBib()`, `CheckBibKeysUnique()`, `CheckBibSyntax()` |
 | `cite_ids.r` | `CiteIDFor()` |
 | `sheet_append.r` | `ReadSheetTab()`, `FormatCitationText()`, `BuildSheetRows()`, `AppendPrimaryCitations()` (dry run by default, idempotent on Bibcite, append-only, snapshots before and after, `BM_primary_citations` only) |
-| `provenance.r` | `LoadPrimaryReferences()`, `LoadProvenanceClasses()`, `SplitSourceMass()`, `BuildProvenance()`, `CheckCitations()`, `WriteCitationsReport()` (sourced by RunMe.r) |
+| `provenance.r` | `LoadPrimaryReferences()`, `LoadProvenanceClasses()`, `SplitSourceMass()`, `BuildProvenance()` (with the hop-2 helpers `MatchIntermediateLabel()` and `IntermediateReferences()`), `CheckCitations()`, `WriteCitationsReport()` (sourced by RunMe.r) |
 | `run_citations.r` | the command line |
 | `tests/fixtures/cache/` | recorded Crossref and OpenAlex responses for the unit tests in `R/library/tests/test_citations_*.R` (no network in tests) |
 
@@ -33,6 +33,18 @@ everything that talks to a service or to the Google Sheet runs by hand through
 - `Bib/TaxonBodyMass_PrimaryCitations.bib`: generated (`%% GENERATED … do not edit`), rebuilt by `--bib` from every source's accepted references and the response cache, keys in byte order; a key present in the curated `Bib/TaxonBodyMass_Citations.bib` as well fails the pipeline.
 - `Bib/BM_primary_citations_snapshot.csv`, `Bib/BM_citations_snapshot.csv`: the two Sheet tabs as last read (the offline fallback for section 8 of RunMe.r and the record of every append).
 - `TaxonBodyMass_Provenance.csv.gz`: species x source label x reference (see the main README, Outputs). Its `match_status` is the reference's, or `unmatched_key` (a key the source's reference list lacks) or `uningested` (the source keeps `ref_keys` but has no `primary_references.csv` yet).
+
+## Hop 2: a reference that is itself a database source
+
+`BuildProvenance()` recognises a resolved reference (`certain`, `approved`, `nodoi_approved`) that stands for another source label of the database: its `cite_id` is a registered label, or its `bibcite` or `doi` is that of the label's curated bib entry (`MatchIntermediateLabel()`; the DOI route needs the label's entry to carry a `doi` field, which `Chown:2007aa` gained for the Herberstein_etal_2022 pilot). Such a reference is an intermediate compilation, and the record is attributed through it (`IntermediateReferences()` reads the intermediate's own records of the same species and their accepted or self references):
+
+| the intermediate's record of the species | row written | hop | `provenance_type` | `via_cite_id` | `primary_*` |
+| --- | --- | --- | --- | --- | --- |
+| resolves to a primary reference (one row per reference) | through the intermediate | 2 | `compiled_via_compilation` | the intermediate's CiteID | the intermediate's reference (`match_status` that reference's) |
+| is the intermediate's own measurement (role `self`) | the intermediate is the measurement | 1 | `compiled_from` | NA | the intermediate |
+| none, keyless, pending, or the intermediate has no `primary_references.csv` yet | the intermediate is the terminal citation (owner decision 2026-10-04) | 1 | `compilation_terminal` | NA | the intermediate (`ref_role = compilation`) |
+
+No third hop is attempted: a reference of the intermediate that is itself a label stays as that label. A record-level `prov_type` override is never changed. The terminal rows become hop-2 (or `compiled_from`) rows by themselves once the intermediate's reference list is ingested; nothing in the source's `primary_references.csv` changes, so `role` stays `measurement` there and the owner may set it to `compilation` if wanted (the hop-2 rule does not depend on it). Herberstein_etal_2022 -> Chown_etal_2007 is the first case: 244 ant records cite Chown et al. 2007, whose Appendix S1 holds the authors' own measurements of those eight species, so they will read `compiled_from` citing Chown once `Chown_etal_2007` is ingested (its S1 keys are `self`); until then they are `compilation_terminal` at Chown.
 
 ## Workflow for one source
 
@@ -47,6 +59,8 @@ Rscript R/library/citations/run_citations.r --source Kiorboe_2013 --sheet --no-d
 ```
 
 Every step writes `reports/citations_<Src>.md`. `--offline` forbids network access (cached responses only); `--force` re-verifies `certain` rows.
+
+Service quotas. Crossref's polite pool is generous; OpenAlex allows 1,000 requests a day without an API key (since 2025; the `x-ratelimit-*` headers count them per day) and answers the rest with 429 and a Retry-After of up to a day. `CachedGET()` does not wait for that: the reference that hit the quota and every later one needing that service are left unverified (status NA, named in the report line `--verify: n reference(s) left unverified`), the decisions taken so far are written, and the next `--verify` (after the reset, or with `OPENALEX_API_KEY` set in the environment) finishes the rest from the cache plus the missing calls. Found on the Herberstein_etal_2022 pilot (2026-10-04), when two pilots ran on one day. A reference needs OpenAlex for the retraction flag of a DOI it carries and for the second service of an open search.
 
 ## Decision rules (issue #1, section 2.3)
 

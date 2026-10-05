@@ -71,12 +71,24 @@ CitationHashKey <- function(x) {
 }
 
 # A DOI embedded in free text (with or without the resolver prefix), lowercase,
-# trailing punctuation removed; NA when none.
+# trailing punctuation removed; NA when none. Parentheses are part of many
+# older DOIs ('10.1016/0300-9629(77)90123-4'), so a closing bracket is only
+# dropped when the DOI has no opening one for it (the citation's own bracket);
+# angle brackets belong to SICI DOIs ('10.1644/1545-1542(2000)081<0578:TBAMOT>2.0.CO;2'),
+# so the match stops only at whitespace, a quote or a square bracket.
 ExtractDOI <- function(x) {
-  m <- regmatches(x, regexpr('10\\.[0-9]{4,9}/[^\\s"<>\\]\\)]+', x, perl = TRUE))
+  x <- as.character(x)
+  pos <- regexpr('10\\.[0-9]{4,9}/[^\\s"\\]]+', x, perl = TRUE)
   out <- rep(NA_character_, length(x))
-  out[regexpr('10\\.[0-9]{4,9}/[^\\s"<>\\]\\)]+', x, perl = TRUE) > 0] <- m
-  out <- sub('[.,;:]+$', '', out)
+  hit <- !is.na(pos) & pos > 0
+  if (any(hit)) out[hit] <- substring(x[hit], pos[hit], pos[hit] + attr(pos, 'match.length')[hit] - 1L)
+  repeat {
+    out <- sub('[.,;:]+$', '', out)
+    unbalanced <- !is.na(out) & grepl('\\)$', out) &
+      nchar(gsub('[^(]', '', out)) < nchar(gsub('[^)]', '', out))
+    if (!any(unbalanced)) break
+    out[unbalanced] <- sub('\\)$', '', out[unbalanced])
+  }
   tolower(out)
 }
 
