@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-04 17:33:23
+# Citation and provenance warnings -- 2026-10-04 17:50:33
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 120978 (38566 species); distinct primary CiteIDs: 30; unresolved references (pending / not_found): 2; unverified references: 0
+- provenance rows: 121100 (38566 species); distinct primary CiteIDs: 30; unresolved references (pending / not_found): 2; unverified references: 0
 
 ## Problems
 
-(none)
+- 1 source label(s) without a Bibcite: Hudson_2013
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -16,7 +16,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
-(none)
+- Hudson_2013 (100 rows)
 
 ## Per-source coverage
 
@@ -54,6 +54,7 @@ One row per source label: species and record links (species x source x reference
 | Hishi_etal_2019 | derived | 314 | 318 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1671 | 3768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hudson_2013 | compilation | 100 | 1163 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1163 |
 | Ikeda_2014 | compilation | 298 | 591 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 591 |
 | Jennings_2002 | primary | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3286 | 3304 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
