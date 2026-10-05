@@ -1,16 +1,16 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 08:00:34
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 13:33:55
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
 ## Summary
 
-1,142 distinct raw names (50,569 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
+1,143 distinct raw names (50,570 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
 
 | class | names | rows | records dropped | sources |
 |---|---:|---:|---:|---|
 | life_stage | 17 | 127 | 127 | Verberk_2020 (10), DeLong_etal_2010 (5), Hrycik_2024 (2) |
 | placeholder | 683 | 36,262 | 0 | Brose_etal_2018 (270), Makarieva_2008 (98), Herberstein_etal_2022 (85), DeLong_etal_2010 (57), Kendall_etal_2019 (49), Baach_2026 (46), Hrycik_2024 (44), DeLong_etal_2018 (27), Barnes_2008 (20), Brown_etal_2018 (19), Kinsella_etal_2020 (13), vertnet-traits-sept2016 (12), Eklof_etal_2017 (7), Hirt_etal_2017 (7), vertnet-aves-sept2016 (5), Castro_2025 (2), Chown_etal_2007 (2), Ehnes_etal_2011 (2), Killen_etal_2016 (2), McCoy_2008 (2), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Gillooly_etal_2016 (1), Hechinger_etal_2011 (1), Lane_2019 (1), Smith_2003 (1) |
-| qualifier | 31 | 3,521 | 0 | Brose_etal_2018 (25), DeLong_etal_2018 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2) |
+| qualifier | 32 | 3,522 | 0 | Brose_etal_2018 (25), DeLong_etal_2018 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2), Vanni_2017 (1) |
 | hybrid | 41 | 144 | 0 | vertnet-aves-sept2016 (27), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
 | ambiguous | 32 | 387 | 0 | vertnet-aves-sept2016 (16), vertnet-traits-sept2016 (14), Hrycik_2024 (4), Brose_etal_2018 (3), DeLong_etal_2018 (3), Brown_etal_2018 (2) |
 | subgenus | 18 | 39 | 0 | Makarieva_2008 (5), Verberk_2020 (5), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Brose_etal_2018 (1), Lemoine_2026 (1), Pata_2025 (1), vertnet-aves-sept2016 (1) |
@@ -121,11 +121,11 @@ The 60 names with most records (of 777):
 | `Brachysomus sp.` | `Brachysomus_sp` | placeholder | 89 | Brose_etal_2018 |
 | `Ctenocalanus sp.` | `Ctenocalanus_sp` | placeholder | 89 | Barnes_2008 |
 
-## qualifier (31 names, 3,521 rows)
+## qualifier (32 names, 3,522 rows)
 
 An identification qualifier before the epithet (cf., aff., nr.): the record leaves FixFormatting() as the marker Genus_cf (or Genus_nr, Genus_aff as written) and RemoveNonTaxa() removes it. A bare genus with its epithet in brackets (VertNet) folds to the binomial instead.
 
-By source: Brose_etal_2018 (25 names, 3,510 rows); vertnet-aves-sept2016 (2 names, 7 rows); DeLong_etal_2018 (2 names, 2 rows); Makarieva_2008 (2 names, 2 rows).
+By source: Brose_etal_2018 (25 names, 3,510 rows); vertnet-aves-sept2016 (2 names, 7 rows); DeLong_etal_2018 (2 names, 2 rows); Makarieva_2008 (2 names, 2 rows); Vanni_2017 (1 names, 1 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
@@ -157,6 +157,7 @@ By source: Brose_etal_2018 (25 names, 3,510 rows); vertnet-aves-sept2016 (2 name
 | `Empidonax [traillii]` | `Empidonax_traillii` | qualifier | 6 | vertnet-aves-sept2016 |
 | `Arietellus cf.` | `Arietellus_cf` | qualifier | 1 | Makarieva_2008 |
 | `Buteo (rufofuscus)` | `Buteo_rufofuscus` | qualifier | 1 | vertnet-aves-sept2016 |
+| `Leporinus cf` | `Leporinus_cf` | qualifier | 1 | Vanni_2017 |
 | `Procapritermes nr. sandakanensis` | `Procapritermes_nr` | qualifier | 1 | Makarieva_2008 |
 | `Protoperidinium cf. divergens` | `Protoperidinium_cf` | qualifier | 1 | DeLong_etal_2018 |
 | `Pseudobodo c.f. tremulans` | `Pseudobodo_cf` | qualifier | 1 | DeLong_etal_2018 |
