@@ -1,14 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 22:11:19
+# Citation and provenance warnings -- 2026-10-04 22:08:32
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125139 (38423 species); distinct primary CiteIDs: 380; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 125124 (38524 species); distinct primary CiteIDs: 378; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
-- 2 source label(s) without a Bibcite: Hudson_2013, Wascher_2025
+- 2 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Lemoine_2026, Leahy_2025
+- 3 source label(s) without a Bibcite: Hudson_2013, Lemoine_2026, Leahy_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -16,8 +17,9 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
-- Wascher_2025 (123 rows)
 - Hudson_2013 (100 rows)
+- Lemoine_2026 (55 rows)
+- Leahy_2025 (53 rows)
 
 ## Per-source coverage
 
@@ -66,6 +68,8 @@ One row per source label: species and record links (species x source x reference
 | Kiorboe_2014 | compilation | 186 | 1254 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lagrue_etal_2015 | primary | 18 | 103 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lane_2019 | primary | 9 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Leahy_2025 | primary | 53 | 1439 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| Lemoine_2026 | primary | 55 | 800 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lislevand_etal_2007 | compilation | 3063 | 4319 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 41 | 192 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mahe_2023 | primary | 53 | 12609 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -94,7 +98,6 @@ One row per source label: species and record links (species x source x reference
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 194 | 984 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 12218 | 12287 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | fishbase | live | 2069 | 2899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

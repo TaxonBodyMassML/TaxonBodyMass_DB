@@ -25,6 +25,10 @@
 "Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
 "Hudson_2013","nestling/chick study (Appendix S6 title): not adult records",63,4,1435
 "Ikeda_2014","Table S3 O:N rows duplicate the S1/S2 specimens (owner decision, #11)",196,153,792
+"Leahy_2025","duplicate rows of one individual (individ.code 4123): kept once",3,1,2802
+"Lemoine_2026","identification qualified by cf. (Olios cf. sanctivincenti, Spherarmadillo cf. nebulosus): not a species-level record",22,2,1129
+"Lemoine_2026","morphospecies code or genus-/family-level placeholder (Genus sp, sp1, sp_<order>, Larve_coleo, Cloporte Blanc, ...): not identified to species",271,36,858
+"Lemoine_2026","larval or nymphal stage (larve = TRUE): not adult records",58,9,800
 "McCoy_2008","mesopelagic fish rows of undeterminable unit (ref 6)",4,4,1728
 "McCoy_2008","lab zooplankton rows of mixed dry/dry-quarter units (ref 4)",43,11,1685
 "McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1679

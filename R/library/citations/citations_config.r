@@ -268,6 +268,9 @@ reflist_specs <- list(
   Chown_etal_2007 = list(format = 'csv', file = 'references.csv',
                          key_col = 'key', citation_col = 'raw_citation', sep = ';',
                          compiler = 'Chown'),
+  Leahy_2025   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Leahy'),
   Wascher_2025 = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
                       compiler = 'Wascher')
