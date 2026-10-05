@@ -189,7 +189,25 @@ RemoveNonTaxa <- function(dat) {
     "Xaymaca_fulvopulvis",         # extinct Jamaican spiny rat (Echimyidae); no extant mass data (outlier_report_2)
     "Xenorhinotherium_bahiense",   # extinct South American litoptern (Macraucheniidae); no extant mass data (outlier_report_2)
     "Rhinobrycon_negrensis",        # monotypic characid max 3.9 cm SL; no published mass data; ERRONEOUS_MASS with no recoverable value (AmphiBIO / outlier_report_2)
-    "Gaussia_princeps"             # mesopelagic copepod; excluded from dataset
+    "Gaussia_princeps",            # mesopelagic copepod; excluded from dataset
+    # Unresolved names of reports/warnings_taxonomy.md that are not names (#85, 2026-10-05)
+    "Thomisidae_misumenops",       # Gonzalez_2025, 1 row: family + genus ('Thomisidae.Misumenops' in the source, Woods et al. 2004)
+    "Megachile_megbid",            # Kendall_etal_2019, 4 rows: a morphospecies code in the epithet position
+    "Murexechinus_san",            # Smith_2003, 1 row: truncated placeholder epithet of the dasyurid genus; not a name
+    # The genus repeated as the epithet: an identification to genus only, written
+    # 'Genus genus' (VertNet dumps, Gonzalez_2025, Hishi_etal_2019, Myhrvold_2015).
+    # Treated as the placeholder epithets are (option B of #43: dropped, not
+    # turned into a genus-level record); none is a valid tautonym.
+    "Philorea_philorea",           # Gonzalez_2025, 29 rows ('Philorea.philorea'; CoL lists nine Philorea species, none tautonymous)
+    "Pavo_pavo",                   # vertnet-aves-sept2016, 1 row
+    "Lobella_lobella",             # Hishi_etal_2019, 1 row
+    "Peromyscus_peromyscus",       # vertnet-mammalia-sept2016, 8 rows
+    "Reithrodontomys_reithrodontomys", # vertnet-mammalia-sept2016, 6 rows
+    "Nyctomys_nyctomys",           # vertnet-mammalia-sept2016, 2 rows
+    "Oryzomys_oryzomys",           # vertnet-mammalia-sept2016, 2 rows
+    "Sturnira_sturnira",           # vertnet-mammalia-sept2016, 2 rows
+    "Carollia_carollia",           # vertnet-mammalia-sept2016, 1 row
+    "Heteromys_heteromys"          # vertnet-mammalia-sept2016, 1 row
   )
 
   # Primarily autotrophic taxa erroneously included in heterotroph-focused databases.
@@ -218,6 +236,8 @@ RemoveNonTaxa <- function(dat) {
     "Diatoms",                     # Brose_etal_2018, 261 rows
     "Eubactaria",                  # DeLong_etal_2018, 1 row; misspelt 'Eubacteria', a domain label
     "Flagellates",                 # Brose_etal_2018, 568 rows
+    "Flagellatae",                 # Brose_etal_2018, 11 rows; the same group label in its Latin form (#85)
+    "Silicioflagellata",           # Brose_etal_2018, 30 rows; the silicoflagellates as a group (GBIF knows only the order Silicoflagellata, fuzzy 79), not a species (#85)
     "Fungi",                       # Brose_etal_2018, 87 rows (Florida island and Iceland stream webs); kingdom label used as a resource group
     "Microfauna",                  # Brose_etal_2018, 106 rows (Caribbean reef web, Opitz 1996)
     "Microphytobenthos",           # Brose_etal_2018, 38 rows (Lough Hyne web, Jacob et al. 2015)

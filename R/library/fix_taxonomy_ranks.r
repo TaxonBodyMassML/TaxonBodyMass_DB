@@ -299,7 +299,51 @@ FixTaxonomyRanks <- function(dat) {
     # Bernieria madagascariensis: species column contains author citation string from source data;
     # strip to canonical binomial so downstream checks and API re-queries work correctly.
     'Bernieria_madagascariensis' = c(species = 'Bernieria madagascariensis',
-                                     taxonomy_source = 'manual')
+                                     taxonomy_source = 'manual'),
+    # Valid species the GBIF backbone lacks (#85, 2026-10-05): GBIF matches the
+    # genus only (matchType HIGHERRANK) and no other stage knows the name, so the
+    # record was dropped as unresolved. Ranks from the Catalogue of Life
+    # (ChecklistBank dataset 3LR, match/nameusage: status accepted) unless stated.
+    # Philorea aracniformis and P. maritima Vidal & Flores 2000 (Physogasterini;
+    # Gonzalez_2025, 28 and 13 rows of Gonzalez et al. 2011): the CoL checklist
+    # lists aracniformis; maritima is in the ChileFauna catalogue of Chilean
+    # Tenebrionidae from the same description; GBIF has the genus (4725706) only.
+    'Philorea_aracniformis'    = c(species = 'Philorea aracniformis', genus = 'Philorea',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Coleoptera',
+                                   family = 'Tenebrionidae', taxonomy_source = 'manual'),
+    'Philorea_maritima'        = c(species = 'Philorea maritima', genus = 'Philorea',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Coleoptera',
+                                   family = 'Tenebrionidae', taxonomy_source = 'manual'),
+    # Zonateres lanei Bailey, Thomas & da Silva 2005 (Oskyrko_2024, 1 row): CoL accepted.
+    'Zonateres_lanei'          = c(species = 'Zonateres lanei', genus = 'Zonateres',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Colubridae', taxonomy_source = 'manual'),
+    # Caribicus anelpistus (Schwartz, Graham & Duval 1979) (Feldman_etal_2016, Meiri_2018):
+    # the target of the Celestus_anelpistus rule of fix_misspellings.r; GBIF has the
+    # genus only (11344845, PROVISIONALLY_ACCEPTED), so the record was lost; CoL accepted.
+    'Caribicus_anelpistus'     = c(species = 'Caribicus anelpistus', genus = 'Caribicus',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Diploglossidae', taxonomy_source = 'manual'),
+    # Ancylodactylus gigas (Perret 1986) (Meiri_2024, 1 row): CoL accepted.
+    'Ancylodactylus_gigas'     = c(species = 'Ancylodactylus gigas', genus = 'Ancylodactylus',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Gekkonidae', taxonomy_source = 'manual'),
+    # Urostrophus grilli (Boulenger 1891) (Meiri_2024, 1 row): CoL accepted.
+    'Urostrophus_grilli'       = c(species = 'Urostrophus grilli', genus = 'Urostrophus',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Leiosauridae', taxonomy_source = 'manual'),
+    # Dichotomius opacus (Blanchard 1845) (Anunciacao_etal_2025, 9 rows): CoL accepted as
+    # Dichotomius (Selenocopris) opacus; GBIF has the genus only (1092917).
+    'Dichotomius_opacus'       = c(species = 'Dichotomius opacus', genus = 'Dichotomius',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Coleoptera',
+                                   family = 'Scarabaeidae', taxonomy_source = 'manual')
   )
   if ('taxon' %in% names(dat)) {
     for (tx in names(taxon_overwrites)) {
