@@ -292,7 +292,12 @@ reflist_specs <- list(
                       compiler = 'Baach'),
   Vanni_2017   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = ';',
-                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792')   # #99; Metadata S1 list via build_references.py
+                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792'),  # #99; Metadata S1 list via build_references.py
+  # AVONET (Stage 2 of #1): the Mass_Sources sheet (42 Citation keys) plus the
+  # four Mass.Source code words of the Metadata sheet the parser keeps as keys
+  Tobias_2022  = list(format = 'csv', file = 'references.csv', folder = 'Tobias_etal_2022',
+                      frame = 'Tobias_2022', key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Tobias')
 )
 
 ReflistSpec <- function(source_label) {
