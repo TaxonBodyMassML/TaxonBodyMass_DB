@@ -1,0 +1,60 @@
+/* DATA DESCRIPTION:
+Citation:	Horn, Sabine; de la Vega, Camille (2018): Assessment of wet mass, dry mass, ash mass, ash free dry mass, carbon content and nitrogen content of selected coastal bird species [dataset]. Alfred Wegener Institute - Wadden Sea Station Sylt, PANGAEA, https://doi.org/10.1594/PANGAEA.894380, 
+	In supplement to: Horn, S; de la Vega, C (2016): Relationships between fresh weight, dry weight, ash free dry weight, carbon and nitrogen content for selected vertebrates. Journal of Experimental Marine Biology and Ecology, 481, 41-48, https://doi.org/10.1016/j.jembe.2016.04.010
+Coverage:	MEDIAN LATITUDE: 54.546314 * MEDIAN LONGITUDE: 8.673608 * SOUTH-BOUND LATITUDE: 54.134620 * WEST-BOUND LONGITUDE: 8.333600 * NORTH-BOUND LATITUDE: 54.694520 * EAST-BOUND LONGITUDE: 8.924660
+	DATE/TIME START: 2002-01-15T00:00:00 * DATE/TIME END: 2014-09-21T00:00:00
+Event(s):	Amrum_BIO * LATITUDE: 54.663720 * LONGITUDE: 8.333600 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Büsum_BIO * LATITUDE: 54.134620 * LONGITUDE: 8.858600 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Hamburger_Hallig_BIO * LATITUDE: 54.600000 * LONGITUDE: 8.819990 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Hauke_Haien_Koog_BIO * LATITUDE: 54.694520 * LONGITUDE: 8.778880 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Hooge_BIO * LATITUDE: 54.565450 * LONGITUDE: 8.553630 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Langeness_BIO * LATITUDE: 54.640830 * LONGITUDE: 8.619650 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Nordstrand_BIO * LATITUDE: 54.510880 * LONGITUDE: 8.924660 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Pellworm_BIO * LATITUDE: 54.530480 * LONGITUDE: 8.656560 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Westerwarft_BIO * LATITUDE: 54.576330 * LONGITUDE: 8.516900 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+Parameter(s):	Species (Species) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Identification (ID) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	DATE/TIME (Date/Time) * GEOCODE * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Location (Location) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Latitude of event (Latitude) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Longitude of event (Longitude) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	UTM Zone, Universal Transverse Mercator (UTM Zone) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	UTM Easting, Universal Transverse Mercator [m] (UTM east) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	UTM Northing, Universal Transverse Mercator [m] (UTM north) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Wet mass [g] (Wet m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of bird
+	Wet mass [g] (Wet m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 1
+	Dry mass [g] (Dry m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 1
+	Ash mass [g] (Ash m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 1
+	Ash free dry mass [g] (afdm) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 1
+	Wet mass [g] (Wet m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 2
+	Dry mass [g] (Dry m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 2
+	Ash mass [g] (Ash m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 2
+	Ash free dry mass [g] (afdm) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 2
+	Wet mass [g] (Wet m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 3
+	Dry mass [g] (Dry m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 3
+	Ash mass [g] (Ash m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 3
+	Ash free dry mass [g] (afdm) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of subsample 3
+	Sample mass [mg] (Samp m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: for C:N sample
+	Carbon, total [%] (TC) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: dry mass
+	Nitrogen, total [%] (TN) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: dry mass
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	374 data points
+*/
+Species	ID	Date/Time	Location	Latitude	Longitude	UTM Zone	UTM east [m]	UTM north [m]	Wet m [g] (of bird)	Wet m [g] (of subsample 1)	Dry m [g] (of subsample 1)	Ash m [g] (of subsample 1)	afdm [g] (of subsample 1)	Wet m [g] (of subsample 2)	Dry m [g] (of subsample 2)	Ash m [g] (of subsample 2)	afdm [g] (of subsample 2)	Wet m [g] (of subsample 3)	Dry m [g] (of subsample 3)	Ash m [g] (of subsample 3)	afdm [g] (of subsample 3)	Samp m [mg] (for C:N sample)	TC [%] (dry mass)	TN [%] (dry mass)
+Anas penelope	1	2002-01-15	Hooge	54.5654	8.5536	32	471139	6046528	777.5	20.8983	8.1100	1.7583	6.3517	16.2918	6.6997	1.4738	5.2259	19.5224	7.0341	1.3593	5.6748	1.00	0.40	0.08
+Anas penelope	2	2007-11-11	Hooge	54.5654	8.5536	32	471139	6046528	795.7	12.5793	4.9119	0.5992	4.3127	14.4700	5.3260	0.5804	4.7456	16.3561	6.2662	0.9443	5.3219	1.32	0.47	0.09
+Calidris canutus	1	2014-04-04	Langeness	54.6408	8.6197	32	475453	6054891	114.8	4.1063	1.9621	0.1989	1.7632	4.5712	1.8006	0.2875	1.5131	5.0079	1.9513	0.2795	1.6718	1.24	0.39	0.11
+Calidris canutus	2	2014-09-21	Büsum	54.1346	8.8586	32	490761	5998509	119.5	6.4976	2.4753	0.4617	2.0136	7.9711	2.9176	0.4683	2.4493	10.4102	3.7876	0.5976	3.1900	1.07	0.45	0.12
+Calidris canutus	3	2014-07-07	Langeness	54.6408	8.6197	32	475453	6054891	108.6	7.1267	2.8603	0.5238	2.3365	5.6423	2.1333	0.3008	1.8325	6.9225	2.7741	0.4492	2.3249	1.24	0.41	0.11
+Chroicocephalus ridibundus	1	2013-09-27	Pellworm	54.5305	8.6566	32	477775	6042600	231.7	9.6572	3.4706	0.4876	2.9830	8.9783	3.4417	0.7158	2.7259	8.1696	3.2161	0.6878	2.5283	0.98	0.44	0.13
+Chroicocephalus ridibundus	2	2013-09-13	Nordstrand	54.5109	8.9247	32	495122	6040368	198.5	6.9314	2.5631	0.4621	2.1010	7.1687	2.6841	0.4670	2.2171	6.8207	2.4724	0.3762	2.0962	1.07	0.41	0.13
+Chroicocephalus ridibundus	3	2012-06-03	Pellworm	54.5305	8.6566	32	477775	6042600	150.1	5.6943	2.3860	0.3557	2.0303	7.7465	3.2041	0.5527	2.6514	5.9761	2.4865	0.4246	2.0619	1.16	0.42	0.13
+Haematopus ostralegus	1	2014-06-02	Hooge	54.5654	8.5536	32	471139	6046528	464.7	14.9065	6.3832	0.7190	5.6642	9.2944	4.2102	0.5124	3.6978	14.0922	6.4454	0.8873	5.5581	0.96	0.50	0.10
+Haematopus ostralegus	2	2014-03-27	Hamburger Hallig	54.6000	8.8200	32	488371	6050296	371.7	12.8933	5.7944	0.6721	5.1223	16.1122	7.6168	0.9541	6.6627	15.8676	7.1632	0.7434	6.4198	1.09	0.52	0.09
+Haematopus ostralegus	3	2009-04-27	Pellworm	54.5305	8.6566	32	477775	6042600	501.3	16.4407	6.3780	0.8269	5.5511	16.2593	6.6498	1.0444	5.6054	11.8992	4.7499	0.6155	4.1344	1.33	0.46	0.10
+Larus canus	1	2013-05-06	Westerwarft	54.5763	8.5169	32	468772	6047755	521.1	9.4114	3.0971	0.3774	2.7197	9.0600	2.9952	0.2011	2.7941	16.6388	6.0800	0.9544	5.1256	1.18	0.46	0.09
+Larus canus	2	2014-07-04	Amrum	54.6637	8.3336	32	457016	6057575	332.4	9.3423	3.3817	0.5414	2.8403	7.7501	3.0869	0.6350	2.4519	8.9994	3.2348	0.4954	2.7394	1.01	0.40	0.11
+Larus canus	3	2006-11-17	Hauke Haien Koog	54.6945	8.7789	32	485748	6060821	442.0	7.9986	3.3755	0.3387	3.0368	8.0343	3.3183	0.3839	2.9344	8.8350	3.8259	0.5495	3.2764	1.27	0.47	0.09
+Limosa lapponica	1	2004-04-02	Westerwarft	54.5763	8.5169	32	468772	6047755	246.2	11.6899	5.3114	0.4388	4.8726	12.0259	5.2032	0.4837	4.7195	9.2356	4.1260	0.4078	3.7182	1.24	0.53	0.09
+Limosa lapponica	2	2007-03-20	Westerwarft	54.5763	8.5169	32	468772	6047755	270.5	7.5179	3.2440	0.4100	2.8340	11.7362	4.6475	0.4125	4.2350	9.0096	3.7147	0.3426	3.3721	1.22	0.49	0.10
+Limosa lapponica	3	2007-01-25	Westerwarft	54.5763	8.5169	32	468772	6047755	299.2	8.0959	3.4418	0.3587	3.0831	9.5539	4.1187	0.4286	3.6901	12.7394	5.4699	0.5600	4.9099	1.08	0.54	0.09

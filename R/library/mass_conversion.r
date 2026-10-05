@@ -69,47 +69,75 @@
 #                   as whole wet mass as well; 'barnacle' holds the gastropod ratio by
 #                   analogy because the data bank's 27 Cirripedia records carry no
 #                   WM / (WM+Shell) value (verified = FALSE).
+#  Horn:2016aa      Horn S. & de la Vega C. (2016) Relationships between fresh weight,
+#                   dry weight, ash free dry weight, carbon and nitrogen content for
+#                   selected vertebrates. J. Exp. Mar. Biol. Ecol. 481:41-48. The
+#                   authors' PANGAEA deposit 894380 (17 Wadden Sea birds of 6 species,
+#                   whole-bird wet mass and three subsamples each with wet, dry and
+#                   ash-free dry mass and %C; CC BY 3.0, stored in
+#                   sources/conversion_factors/Horn_2016, downloaded 2026-10-05) gives
+#                   species-level medians computed by summarise_pangaea.py: DW/WW 0.3906
+#                   (species means 0.3805-0.4340), AFDW/DW 0.8527, C/WW 0.1677 (the
+#                   abstract's "0.16 to 0.22"). The seal deposit (894400) holds tissue
+#                   samples only, so no seal group is derived.
+#  Rizzuto:2019aa   Rizzuto M. et al. (2019) Patterns and potential drivers of
+#                   intraspecific variability in the body C, N, and P composition of a
+#                   terrestrial consumer, the snowshoe hare (Lepus americanus). Ecol.
+#                   Evol. 9:14453-14464. The authors' figshare deposit (50 hares: whole
+#                   wet mass and the wet and dry mass of the carcass homogenate, %C of
+#                   dry mass; CC BY 4.0, stored in sources/conversion_factors/Rizzuto_2019)
+#                   gives, by summarise_hares.py, DW/WW median 0.2925 (mean 0.2899,
+#                   range 0.222-0.357) and C/WW median 0.1290. 'mammal' rests on this
+#                   one species (the only mammal source converted, Gonzalez_2025, holds
+#                   these very hares); other mammals would use it by analogy.
 #  unverified       'helminth' reuses the Brey non-gelatinous invertebrate medians by
-#                   analogy (the data bank holds 1 nematode and no flatworm species);
-#                   'vertebrate' (non-fish) keeps conventional values (Peters 1983,
-#                   The Ecological Implications of Body Size). Neither is used by any
-#                   current source.
+#                   analogy (the data bank holds 1 nematode and no flatworm species;
+#                   Gonzalez_2025). 'vertebrate' keeps conventional values (Peters 1983,
+#                   The Ecological Implications of Body Size) and carries no CiteID: it
+#                   serves the reptiles of Gonzalez_2025, for which no citable factor has
+#                   been verified, and the fishes and turtles of Vanni_2017, whose dry
+#                   masses the compilers derived as DM = 0.25 WM, so that 0.25 is the
+#                   exact inverse of their own factor.
 
-# The first twelve groups convert dry, ash-free dry and carbon mass; the eleven
+# The first fourteen groups convert dry, ash-free dry and carbon mass; the eleven
 # energy groups (bivalve ... aquatic_insect) convert energy content (kJ per
 # individual) only and have no dry/AFDW/carbon factors; 'barnacle' carries only a
 # shell ratio for ToWetMass(whole = TRUE).
 MassConversionFactors <- data.frame(
   group = c('gelatinous_zooplankton', 'crustacean_zooplankton', 'insect', 'protist',
             'fish', 'invertebrate', 'mollusc', 'annelid', 'chaetognath', 'echinoderm',
-            'helminth', 'vertebrate',
+            'helminth', 'vertebrate', 'bird', 'mammal',
             'bivalve', 'gastropod', 'polyplacophoran', 'echinoid', 'ophiuroid', 'holothurian',
             'decapod', 'amphipod', 'isopod', 'polychaete', 'aquatic_insect', 'barnacle'),
   # dry mass as a fraction of wet mass
   dw_per_ww   = c(0.039, 0.214, 0.35, NA,   0.2415, 0.2144, 0.1972, 0.1769, 0.0785, 0.2250, 0.2144, 0.25,
+                  0.3906, 0.2925,
                   rep(NA, 12)),
-  # ash-free dry mass as a fraction of dry mass
+  # ash-free dry mass as a fraction of dry mass (none measured for the hares)
   afdw_per_dw = c(0.70,  0.85, 0.90, NA,   0.8646, 0.8293, 0.8578, 0.8420, 0.8333, 0.4510, 0.8293, 0.85,
+                  0.8527, NA,
                   rep(NA, 12)),
   # carbon mass as a fraction of wet mass (used directly for carbon -> wet);
   # gelatinous 0.004 sits between Kiørboe A1 (0.0029), Brey Cnidaria (0.0037) and
   # Lucas 2011 (0.0046-0.0059)
   c_per_ww    = c(0.004, 0.101, 0.175, 0.149, 0.0834, 0.0946, 0.0624, 0.0504, 0.0268, 0.0471, 0.0946, 0.11,
+                  0.1677, 0.1290,
                   rep(NA, 12)),
   # energy density, kJ per g wet mass (Conversion04 'J / mgWM'; shell-free for
   # molluscs), for sources that report energy content per individual (from = 'energy')
-  kj_per_g_ww = c(rep(NA, 12),
+  kj_per_g_ww = c(rep(NA, 14),
                   3.0574, 3.9211, 3.8817, 1.1609, 2.0276, 1.7935, 3.8962, 3.769, 2.2817, 3.1341, 4.5745, NA),
   # wet mass as a fraction of whole wet mass including the shell (Conversion04
   # 'WM / (WM+Shell)'); 1 where there is no shell. Applied in the energy branch,
   # whose output is always whole-animal wet mass, and in the dry/afdw/carbon
   # branches only when whole = TRUE (their factors refer to shell-free tissue).
-  ww_per_whole = c(rep(NA, 12),
+  ww_per_whole = c(rep(NA, 14),
                    0.44, 0.40, 0.40, 1, 1, 1, 1, 1, 1, 1, 1, 0.40),
   citation = c('Kiorboe:2013aa; Lucas:2011aa', 'Kiorboe:2013aa',
                'Studier:1992aa (dw_per_ww); generic (others)', 'Kiorboe:2013aa; Menden-Deuer:2000aa',
                'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa',
                'Brey:2010aa (non-gelatinous invertebrates, by analogy)', 'generic',
+               'Horn:2016aa', 'Rizzuto:2019aa (snowshoe hare carcass homogenate; other mammals by analogy)',
                'Brey:2010aa', 'Brey:2010aa',
                'Brey:2010aa (Mollusca pooled energy density and gastropod shell ratio, by analogy)',
                'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa', 'Brey:2010aa',
@@ -119,9 +147,9 @@ MassConversionFactors <- data.frame(
   # ConversionCiteIDs); empty where only generic, uncited factors are used.
   cite_id = c('Kiorboe_2013; Lucas_2011', 'Kiorboe_2013', 'Studier_1992', 'Kiorboe_2013; MendenDeuer_2000',
               'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010', 'Brey_2010',
-              'Brey_2010', '',
+              'Brey_2010', '', 'Horn_2016', 'Rizzuto_2019',
               rep('Brey_2010', 12)),
-  verified = c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE,
+  verified = c(TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE, FALSE, TRUE, TRUE,
                TRUE, TRUE, FALSE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, FALSE),
   stringsAsFactors = FALSE
 )
