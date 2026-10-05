@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-04 19:42:39
+# Source de-duplication summary -- 2026-10-04 21:29:40
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,20 +6,20 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 119573 |
-| accepted species | 39726 |
+| species x source values (Pass-1 rows) | 119729 |
+| accepted species | 39727 |
 | multi-source species | 25320 |
-| within-species value pairs | 252354 |
-| pairs identical (|dlog10| <= 1e-06) | 39500 |
-| pairs related by the registry and within its tolerance | 60361 |
-| pairs identical to >= 3 significant digits (blind rule) | 34346 |
-| values collapsed (total) | 41056 |
-| values collapsed by a registry edge | 39784 |
+| within-species value pairs | 253924 |
+| pairs identical (|dlog10| <= 1e-06) | 39601 |
+| pairs related by the registry and within its tolerance | 60572 |
+| pairs identical to >= 3 significant digits (blind rule) | 34414 |
+| values collapsed (total) | 41156 |
+| values collapsed by a registry edge | 39884 |
 | values collapsed by the blind rule only | 1272 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
-| species with at least one collapsed value | 20342 |
-| multi-source species left with one independent value | 6949 |
+| species with at least one collapsed value | 20345 |
+| multi-source species left with one independent value | 6948 |
 
 ## Registry edges with the parent in the database
 
@@ -31,7 +31,7 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Hoehler_etal_2023 | Makarieva_2008 | copies | confirmed | 0.000001 | 933 | 722 | 722 | 0.77 | 610 | 1025 |
 | DeLong_etal_2010 | Makarieva_2008 | copies | confirmed | 0.000001 | 107 | 55 | 55 | 0.51 | 57 | 129 |
 | Ehnes_etal_2011 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 268 | 268 | 1 | 268 | 305 |
-| Makarieva_2008 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 256 | 256 | 0.95 | 256 | 268 |
+| Makarieva_2008 | Chown_etal_2007 | copies | confirmed | 0.000001 | 269 | 256 | 256 | 0.95 | 256 | 269 |
 | Ehnes_etal_2011 | Makarieva_2008 | shared_primary | confirmed | 0.000001 | 300 | 281 | 281 | 0.94 | 28 | 305 |
 | Hoehler_etal_2023 | Hudson_2013 | copies | confirmed | 0.000001 | 127 | 36 | 36 | 0.28 | 37 | 1025 |
 | Herberstein_etal_2022 | Chown_etal_2007 | shared_primary | confirmed | 0.000001 | 152 | 84 | 84 | 0.55 | 87 | 352 |
@@ -42,12 +42,12 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Myhrvold_2015 | Lislevand_etal_2007 | copies | suspected | 0.000001 | 3114 | 174 | 174 | 0.06 | 200 | 8583 |
 | Myhrvold_2015 | Ernest_2003 | copies | suspected | 0.000001 | 1311 | 310 | 310 | 0.24 | 102 | 8583 |
 | Myhrvold_2015 | Jones_2009 | via | confirmed | 0.0105 | 3457 | 1559 | 1978 | 0.45 | 710 | 8583 |
-| Myhrvold_2015 | AnAge | copies | suspected | 0.000001 | 2452 | 650 | 650 | 0.27 | 918 | 8583 |
+| Myhrvold_2015 | AnAge | copies | suspected | 0.000001 | 2452 | 650 | 650 | 0.27 | 919 | 8583 |
 | Faurby_etal_2018 | Smith_2003 | copies | confirmed | 0.0105 | 3640 | 2082 | 3323 | 0.57 | 3328 | 3478 |
-| Soria_etal_2021 | Myhrvold_2015 | copies | confirmed | 0.0105 | 4408 | 4320 | 4352 | 0.98 | 1976 | 4960 |
-| Soria_etal_2021 | Faurby_etal_2018 | copies | confirmed | 0.000001 | 5160 | 989 | 989 | 0.19 | 404 | 4960 |
-| Soria_etal_2021 | Smith_2003 | copies | confirmed | 0.000001 | 3643 | 593 | 593 | 0.16 | 1466 | 4960 |
-| Soria_etal_2021 | Jones_2009 | copies | confirmed | 0.000001 | 3405 | 1532 | 1532 | 0.45 | 700 | 4960 |
+| Soria_etal_2021 | Myhrvold_2015 | copies | confirmed | 0.0105 | 4408 | 4320 | 4352 | 0.98 | 1976 | 4961 |
+| Soria_etal_2021 | Faurby_etal_2018 | copies | confirmed | 0.000001 | 5160 | 989 | 989 | 0.19 | 405 | 4961 |
+| Soria_etal_2021 | Smith_2003 | copies | confirmed | 0.000001 | 3643 | 593 | 593 | 0.16 | 1466 | 4961 |
+| Soria_etal_2021 | Jones_2009 | copies | confirmed | 0.000001 | 3405 | 1532 | 1532 | 0.45 | 700 | 4961 |
 | Jones_2009 | Smith_2003 | copies | confirmed | 0.000001 | 3287 | 629 | 629 | 0.19 | 1708 | 1852 |
 | Cai_etal_2025 | Jones_2009 | via | confirmed | 0.0105 | 994 | 410 | 939 | 0.41 | 527 | 2373 |
 | Cai_etal_2025 | Smith_2003 | copies | confirmed | 0.000001 | 1029 | 159 | 159 | 0.15 | 416 | 2373 |
@@ -55,11 +55,12 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Cai_etal_2025 | Quaardvark | copies | confirmed | 0.000001 | 1021 | 56 | 56 | 0.05 | 27 | 2373 |
 | AnAge | Smith_2003 | copies | confirmed | 0.000001 | 1258 | 178 | 178 | 0.14 | 366 | 570 |
 | AnAge | Fisher_2001 | copies | confirmed | 0.000001 | 124 | 49 | 49 | 0.4 | 40 | 570 |
-| McCoy_2008 | Smith_2003 | copies | confirmed | 0.001 | 301 | 68 | 166 | 0.23 | 180 | 526 |
+| McCoy_2008 | Smith_2003 | copies | confirmed | 0.001 | 301 | 68 | 166 | 0.23 | 180 | 527 |
 | Tucker_etal_2014b | Jones_2009 | via | confirmed | 0.0105 | 444 | 1 | 232 | 0 | 138 | 302 |
 | Pata_2025 | Kiorboe_2013 | copies | confirmed | 0.000001 | 54 | 20 | 20 | 0.37 | 18 | 21 |
 | Brose_etal_2018 | Hechinger_etal_2011 | copies | confirmed | 0.000001 | 93 | 64 | 64 | 0.69 | 62 | 85 |
 | Brose_etal_2018 | Brose_2005 | copies | confirmed | 0.000001 | 251 | 19 | 19 | 0.08 | 19 | 85 |
+| Wisnionski_2026 | AnAge | copies | confirmed | 0.0105 | 103 | 31 | 41 | 0.3 | 36 | 95 |
 
 ## Siblings sharing an external parent
 
@@ -69,20 +70,28 @@ Pairs of sources that the registry traces to the same compilation outside the da
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | White_2006 | Hoehler_etal_2023 - Makarieva_2008 | 0.000001 | 933 | 722 | 722 | 0.77 | 610 |
 | White_2006 | Hoehler_etal_2023 - Uyeda_etal_2017 | 0.000001 | 704 | 347 | 347 | 0.49 | 182 |
+| White_2006 | Hoehler_etal_2023 - Wisnionski_2026 | 0.000001 | 81 | 2 | 2 | 0.02 | 1 |
 | White_2006 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
+| White_2006 | Makarieva_2008 - Wisnionski_2026 | 0.000001 | 44 | 4 | 4 | 0.09 | 3 |
+| White_2006 | Uyeda_etal_2017 - Wisnionski_2026 | 0.000001 | 37 | 2 | 2 | 0.05 | 1 |
 | McKechnie_2004 | Makarieva_2008 - Uyeda_etal_2017 | 0.000001 | 356 | 208 | 208 | 0.58 | 209 |
 | Nagy_1999 | Castro_2025 - Hoehler_etal_2023 | 0.000001 | 295 | 43 | 43 | 0.15 | 42 |
-| Dunning_2008 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 148 |
-| Dunning_2008 | AnAge - Myhrvold_2015 | 0.0105 | 2452 | 650 | 1156 | 0.27 | 918 |
-| Dunning_2008 | AnAge - Tobias_2022 | 0.000001 | 1134 | 280 | 280 | 0.25 | 636 |
-| Dunning_2008 | AnAge - Wilman_etal_2014 | 0.000001 | 1149 | 284 | 284 | 0.25 | 519 |
+| Dunning_2008 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 149 |
+| Dunning_2008 | AnAge - Myhrvold_2015 | 0.0105 | 2452 | 650 | 1156 | 0.27 | 919 |
+| Dunning_2008 | AnAge - Tobias_2022 | 0.000001 | 1134 | 280 | 280 | 0.25 | 638 |
+| Dunning_2008 | AnAge - Wilman_etal_2014 | 0.000001 | 1149 | 284 | 284 | 0.25 | 521 |
+| Dunning_2008 | AnAge - Wisnionski_2026 | 0.0105 | 103 | 31 | 41 | 0.3 | 36 |
 | Dunning_2008 | McCoy_2008 - Myhrvold_2015 | 0.0105 | 848 | 76 | 326 | 0.09 | 60 |
 | Dunning_2008 | McCoy_2008 - Tobias_2022 | 0.001 | 540 | 74 | 128 | 0.14 | 116 |
 | Dunning_2008 | McCoy_2008 - Wilman_etal_2014 | 0.001 | 544 | 77 | 131 | 0.14 | 3 |
-| Dunning_2008 | Myhrvold_2015 - Tobias_2022 | 0.0105 | 8890 | 2066 | 5858 | 0.23 | 5204 |
+| Dunning_2008 | McCoy_2008 - Wisnionski_2026 | 0.0105 | 70 | 9 | 28 | 0.13 | 11 |
+| Dunning_2008 | Myhrvold_2015 - Tobias_2022 | 0.0105 | 8890 | 2066 | 5858 | 0.23 | 5203 |
 | Dunning_2008 | Myhrvold_2015 - Wilman_etal_2014 | 0.0105 | 8636 | 2058 | 5797 | 0.24 | 106 |
-| Dunning_2008 | Tobias_2022 - Wilman_etal_2014 | 0.000001 | 8656 | 8415 | 8415 | 0.97 | 7766 |
-| CareyJudge_2000 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 148 |
+| Dunning_2008 | Myhrvold_2015 - Wisnionski_2026 | 0.0105 | 155 | 18 | 47 | 0.12 | 18 |
+| Dunning_2008 | Tobias_2022 - Wilman_etal_2014 | 0.000001 | 8656 | 8415 | 8415 | 0.97 | 7764 |
+| Dunning_2008 | Tobias_2022 - Wisnionski_2026 | 0.0105 | 80 | 3 | 26 | 0.04 | 14 |
+| Dunning_2008 | Wilman_etal_2014 - Wisnionski_2026 | 0.0105 | 79 | 3 | 24 | 0.04 | 0 |
+| CareyJudge_2000 | AnAge - McCoy_2008 | 0.001 | 887 | 88 | 117 | 0.1 | 149 |
 
 ## Provenance-only edges (no tolerance-based collapse)
 
@@ -98,11 +107,11 @@ A provenance_only edge documents a relation whose values generally differ and ta
 
 ## Multi-source species left with one independent value
 
-6949 multi-source species rest on a single independent value after de-duplication, by number of sources:
+6948 multi-source species rest on a single independent value after de-duplication, by number of sources:
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4376 |
+| 2 | 4375 |
 | 3 | 1670 |
 | 4 | 296 |
 | 5 | 469 |

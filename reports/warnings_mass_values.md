@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 19:42:50
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 21:29:49
 
 ## Summary
 
@@ -72,7 +72,7 @@
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (1)
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Viana_2016 (1)
-- Moderate mass disagreement (log10 range 1-2): 803 species
+- Moderate mass disagreement (log10 range 1-2): 804 species
 - Suspicious sources (log10 1-2, by frequency):
   - Cai_etal_2025 (143)
   - Myhrvold_2015 (109)
@@ -133,12 +133,12 @@
   - Ikeda_2014; Kiorboe_2013 (4)
   - Jones_2009 (4)
   - Soria_etal_2021 (4)
+  - Verberk_2020 (4)
   - AndersonGillooly_2017 (3)
   - Brown_etal_2018 (3)
   - Jennings_2002 (3)
   - Lagrue_etal_2015 (3)
   - Tucker_etal_2014b (3)
-  - Verberk_2020 (3)
   - Brose_etal_2018; Brey_2010 (2)
   - Eklof_etal_2017; Brey_2010 (2)
   - Ikeda_2014; Brey_2010 (2)
@@ -161,6 +161,7 @@
   - Watson_2007 (1)
   - Weisse_2024 (1)
   - Wilman_etal_2014 (1)
+  - Wisnionski_2026 (1)
 ## log10(max/min mass) > 2 after dedup (357 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
@@ -1235,7 +1236,7 @@ Caranx ruber [range=2.00]
         Min_source: Viana_2016 81.9
         Max_source: Froese_2025 8200
 
-## Moderate mass disagreement (log10 range 1-2) (803 species)
+## Moderate mass disagreement (log10 range 1-2) (804 species)
 
 Balaenoptera musculus [range=2.00]
         Min_source: Brose_etal_2018 1.9e+06
@@ -3034,6 +3035,9 @@ Mus mattheyi [range=1.15]
 Cyclura rileyi [range=1.15]
         Min_source: Meiri_2024 185
         Max_source: Feldman_etal_2016 2625
+Crocodylus johnsoni [range=1.15]
+        Min_source: Verberk_2020 9998
+        Max_source: Wisnionski_2026 1.418e+05
 Lepidobatrachus llanensis [range=1.15]
         Min_source: Hoehler_etal_2023 6.25
         Max_source: Makarieva_2008 88.5
