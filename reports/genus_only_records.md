@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-04 22:17:23
+# Genus-only records -- 2026-10-04 22:25:34
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -335,6 +335,7 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Tylenchus | 2.81e-06 | 5e-08 | 1 | 1.75 | Cohen_2014 |
 | Galago |    4 |  218 | 4 | -1.74 | vertnet-mammalia-sept2016 |
 | Dorylaimus | 2.94e-07 | 1.5e-05 | 1 | -1.71 | Cohen_2014 |
+| Mononchus | 3.26e-07 | 1.64e-05 | 23 | -1.7 | Brose_etal_2018; Cohen_2014 |
 | Trimeresurus | 14.1 |  459 | 42 | -1.51 | vertnet-reptilia-sept2016 |
 | Dendrocygna |   26 |  774 | 7 | -1.47 | vertnet-aves-sept2016 |
 | Phthiracarus | 5.74e-06 | 0.00017 | 12 | -1.47 | Cohen_2014 |
@@ -352,7 +353,6 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 |
 | Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
 | Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 |
-| Mononchus | 3.26e-07 | 3.96e-06 | 2 | -1.08 | Brose_etal_2018; Cohen_2014 |
 | Strongylura |   37 |  421 | 4 | -1.06 | vertnet-fishes-sept2016 |
 | Bufo | 7.96 | 85.5 | 4 | -1.03 | vertnet-amphibia-sept2016 |
 | Veigaia | 0.000408 | 3.81e-05 | 5 | 1.03 | Brose_etal_2018; Cohen_2014 |
