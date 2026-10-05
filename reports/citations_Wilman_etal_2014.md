@@ -1,8 +1,8 @@
-# Citations of Wilman_etal_2014 -- 2026-10-04 21:37:42 (tbmcite 0.1.0)
+# Citations of Wilman_etal_2014 -- 2026-10-04 22:07:06 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --bib
 
-- --sheet: 42 row(s) for Wilman_etal_2014, 42 new, tab had 349 rows; BM_citations snapshotted (430 rows)
+- --bib: 387 entries written to TaxonBodyMass_PrimaryCitations.bib (4 reuse a curated key); RefManageR parsed 387; Wilman_etal_2014: 42 rows with bibcite
 
 ## References
 
@@ -67,7 +67,7 @@ Steps: --sheet --no-dry-run
 | Ref_175 | 1 | measurement | certain | two_service_agreement | 10.1016/s0006-3207(02)00344-0 | 1.000 | Brito:2003aa | Brito_2003 |
 | Ref_176 | 1 | measurement | not_found | below_threshold | 10.25633/etn.2020.03.03 | 0.538 |  |  |
 | Ref_177 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.title.156831 | 0.604 |  |  |
-| Dunning08 | 8620 | compilation | approved | owner_candidate | 10.1201/9781420064452 | 0.831 | Dunning-Jr:2007aa | DunningJr_2007 |
+| Dunning08 | 8620 | compilation | approved | owner_candidate | 10.1201/9781420064452 | 0.831 | Dunning:2008aa | Dunning_2008 |
 | HBW8 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.274 | del-Hoyo:2003aa | delHoyo_2003 |
 | HBW10 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.274 | del-Hoyo:2005aa | delHoyo_2005 |
 | HBW11 | 4 | compilation | nodoi_approved | owner_nodoi |  | 0.274 | del-Hoyo:2006aa | delHoyo_2006 |
