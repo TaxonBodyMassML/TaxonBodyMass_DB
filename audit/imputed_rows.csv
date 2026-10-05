@@ -35,6 +35,7 @@
 "McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1679
 "McCoy_2008","deep-sea rows with undefined mass basis",6,5,1673
 "Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617
+"Wascher_2025","AVONET value flagged Inferred (Body Mass) or EltonTraits_Model in AVONET1_BirdLife: not species-specific",5,5,124
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116
 "Wilman_etal_2014","PrimScale: value scaled by EltonTraits from congeners (BodyMass-Source PrimScale)",484,484,8632
 "Wilman_etal_2014","Ref_2/Ref_3 Genus Average or Family Average (BodyMass-SpecLevel 0)",812,812,4588
