@@ -1,14 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 19:53:49
+# Citation and provenance warnings -- 2026-10-04 20:21:53
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121656 (38566 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 50; unverified references: 0
+- provenance rows: 121656 (38566 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 36; unverified references: 0
 
 ## Problems
 
 - 1 source label(s) without a Bibcite: Hudson_2013
+- 14 accepted reference(s) without a bib entry (run --bib): Brose_etal_2018 Cohen_2009, Brose_etal_2018 Digel_2014, Brose_etal_2018 Ekloef_2013, Brose_etal_2018 Gray_2015, Brose_etal_2018 Jonsson_2005, Brose_etal_2018 Kefi_2015, Brose_etal_2018 Lafferty_2006, Brose_etal_2018 Legagneux_2014, Brose_etal_2018 McLaughlin_2010, Brose_etal_2018 Mulder_2009, Brose_etal_2018 OGorman_2012, Brose_etal_2018 Piechnik_2008, Brose_etal_2018 Havens_1992, Brose_2005 Pinnegar_2003
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -30,8 +31,8 @@ One row per source label: species and record links (species x source x reference
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_2005 | compilation | 289 | 290 | 0 | 12 | 0 | 12 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_etal_2018 | compilation | 1753 | 168179 | 0 | 24 | 0 | 24 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brose_2005 | compilation | 289 | 290 | 0 | 12 | 1 | 8 | 3 | 0 | 0 | 0 | 0 | 0 |
+| Brose_etal_2018 | compilation | 1753 | 168179 | 0 | 24 | 13 | 8 | 3 | 0 | 0 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
