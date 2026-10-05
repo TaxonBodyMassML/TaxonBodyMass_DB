@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-04 17:33:19
+# Genus-only records -- 2026-10-04 17:50:29
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
