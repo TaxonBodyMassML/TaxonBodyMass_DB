@@ -129,6 +129,7 @@ FixMisspellings <- function(dat) {
     "Chalcophaps_inidica"             = "Chalcophaps_indica",             # simple transposition
     "Chaos_carolinensis"              = "Chaos_carolinense",              # Chaos is neuter; -ense not -ensis
     "Chlamydomonas_reinhadri"         = "Chlamydomonas_reinhardii",       # honors Reinhard; missing d + garbled genitive
+    "Chodromorpha_xanthotricha"       = "Chondromorpha_xanthotricha",     # Lemoine_2026, 4 rows: the source writes Chondromorpha (Paradoxosomatidae) on its five dry-only rows of the same species; missing n (#76)
     "Cinclosoma_castanotus"           = "Cinclosoma_castanotum",          # -soma is Greek neuter; -um required
     "Circus_macroarus"                = "Circus_macrourus",               # Pallid Harrier; macroarus omits u
     "Clupea_pallassii"                = "Clupea_pallasii",                # honors Pallas; spurious double s
@@ -238,6 +239,7 @@ FixMisspellings <- function(dat) {
     # S
     "Sagitta_elegana"                 = "Sagitta_elegans",                # ns dropped
     "Scarus_iserti"                   = "Scarus_iseri",                   # Striped Parrotfish Bloch 1789; spurious t
+    "Scolopocryptos_ferrugineus"      = "Scolopocryptops_ferrugineus",    # Lemoine_2026, 8 rows: Scolopocryptops Newport, 1844 (family Scolopocryptopidae in the same row); missing p (#76)
     "Sceloporus_utiformis"            = "Sceloporus_uniformis",           # n dropped
     "Sebastes_paucipinis"             = "Sebastes_paucispinis",           # Bocaccio; missing s
     "Sebastes_paucispinus"            = "Sebastes_paucispinis",           # -us→-is termination error
@@ -254,7 +256,9 @@ FixMisspellings <- function(dat) {
     "Tenebrio_mollitor"               = "Tenebrio_molitor",               # Mealworm Beetle; single-l correct
     "Tetrahymena_pyraformis"          = "Tetrahymena_pyriformis",         # pear-shaped from pyrus; pyra- wrong
     "Thalassarche_melanophrys"        = "Thalassarche_melanophris",       # IOC/BirdLife accepted form
+    "Thallasarche_melanophris"        = "Thalassarche_melanophris",       # Black-browed Albatross; transposed l/s in Wisnionski_2026 (#79)
     "Thomasomys_ischyrus"             = "Thomasomys_ischyurus",           # Greek ischys + oura; missing u
+    "Thryesphilus_rufalbus"           = "Thryophilus_rufalbus",           # Rufous-and-white Wren; misspelt genus in Wisnionski_2026 (#79)
     "Thunnus_alaunga"                 = "Thunnus_alalunga",               # Albacore; dropped l
     "Thunnus_macoyi"                  = "Thunnus_maccoyii",               # Southern Bluefin; missing c and i
     "Torgos_tracheliotus"             = "Torgos_tracheliotos",            # Lappet-faced Vulture; IOC form

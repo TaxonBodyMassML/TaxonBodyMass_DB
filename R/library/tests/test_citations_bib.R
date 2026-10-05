@@ -219,9 +219,9 @@ Expect(CiteIDFor(NA, NA) == 'Anon_nd' && CiteIDFor('van der Meer', 1994L) == 'va
          CiteIDFor('Smith', 2003L, known = known[, c('CiteID', 'Bibcite')]) == 'Smith_2003',
        'missing parts -> Anon / nd; hyphens kept; a known table without a doi column works')
 ids <- read.csv(cfg$citeids_csv, stringsAsFactors = FALSE, colClasses = 'character')
-Expect(identical(names(ids)[1:2], c('Bibcite', 'CiteID')) && !anyDuplicated(ids$CiteID) && CiteIDFor('Kiorboe', 2013L, bibcite = 'Kiorboe:2013aa', known = ids) == 'Kiorboe_2013' &&
+Expect(identical(names(ids)[1:2], c('Bibcite', 'CiteID')) && !anyDuplicated(ids$CiteID[!is.na(ids$CiteID) & nzchar(ids$CiteID)]) && CiteIDFor('Kiorboe', 2013L, bibcite = 'Kiorboe:2013aa', known = ids) == 'Kiorboe_2013' &&
          CiteIDFor('Kiorboe', 2013L, known = ids) == 'Kiorboe_2013b',
-       'the tracked CiteIDs CSV: Bibcite and CiteID first, unique ids, Kiorboe:2013aa reuses Kiorboe_2013, a new Kiorboe 2013 work gets Kiorboe_2013b')
+       'the tracked CiteIDs CSV: Bibcite and CiteID first, unique ids (curated entries awaiting their Sheet row have none), Kiorboe:2013aa reuses Kiorboe_2013, a new Kiorboe 2013 work gets Kiorboe_2013b')
 
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }
