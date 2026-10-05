@@ -106,6 +106,31 @@ Expect(p$parsed_title[16] == paste('Ecological Investigations on the zooplankton
          p$parsed_container[16] == 'J. Exp. Mar. Biol. Ecol', 'entry 16: bracketed authority ends the title')
 Expect(all(is.na(p$parsed_doi)), 'no DOI in the Kiorboe list')
 
+cat('ParseCitationString() on the Nature / Scientific Data style (year in brackets at the end)\n')
+r <- ParseCitationString(c(
+  "O'Shea, M. The Book of Snakes: A life-size guide to six hundred species from around the world. University of Chicago Press, (2018).",
+  'Iverson, J. B., Christine P. B., Kathy K. B. and Lyddan, K. K.  Latitudinal Variation in Egg and Clutch Size in Turtles (Supplement). Canadian Journal of Zoology 71 (12), 2448-61, (1993).',
+  'Shine, R., Branch, W. R., Harlow, P. S., Webb, J. K., Shine, T. Biology of burrowing Asps (Atractaspididae) from Southern Africa. Copeia 2006, 103-115, (2006a).',
+  'De Magalhaes, J. P., and Costa, J. A Database of Vertebrate Longevity Records and Their Relation to Other Life-History Traits. Journal of Evolutionary Biology 22 (8), 1770-74, (2009).',
+  'Meiri, S. et al. Different solutions lead to similar life history traits across the great divides of the amniote tree of life. J of Biol Res-Thessaloniki 28, 3, (2021).'))
+Expect(r$parsed_author1[1] == "O'Shea" && r$parsed_year[1] == 2018L &&
+         r$parsed_title[1] == 'The Book of Snakes: A life-size guide to six hundred species from around the world' &&
+         r$parsed_container[1] == 'University of Chicago Press' && is.na(r$parsed_volume[1]),
+       'a book: the author block ends at the first title word, the year is the bracketed tail')
+Expect(r$parsed_author1[2] == 'Iverson' && r$parsed_year[2] == 1993L &&
+         r$parsed_title[2] == 'Latitudinal Variation in Egg and Clutch Size in Turtles (Supplement)' &&
+         r$parsed_container[2] == 'Canadian Journal of Zoology' && r$parsed_volume[2] == '71' && r$parsed_pages[2] == '2448-61',
+       'given names written out in the author block do not start the title; volume and pages')
+Expect(r$parsed_author1[3] == 'Shine' && r$parsed_year[3] == 2006L && r$parsed_volume[3] == '2006' && r$parsed_pages[3] == '103-115' &&
+         r$parsed_title[3] == 'Biology of burrowing Asps (Atractaspididae) from Southern Africa',
+       'a year-numbered volume before the bracketed year with a letter suffix')
+Expect(r$parsed_author1[4] == 'De Magalhaes' && r$parsed_year[4] == 2009L && r$parsed_volume[4] == '22' &&
+         r$parsed_title[4] == 'A Database of Vertebrate Longevity Records and Their Relation to Other Life-History Traits',
+       'a page number that looks like a year (1770) is not the year; a one-letter title start')
+Expect(r$parsed_author1[5] == 'Meiri' && r$parsed_year[5] == 2021L &&
+         r$parsed_title[5] == 'Different solutions lead to similar life history traits across the great divides of the amniote tree of life',
+       "'et al.' ends the author block")
+
 cat('ParseCitationString() on other styles\n')
 q <- ParseCitationString(c(
   'Taylor, G. M., Nol, E., & Boire, D. (1995). Brain regions and encephalization in anurans: adaptation or stability? Brain, behavior and evolution, 45(2), 96-109. doi:10.1159/000113543',
