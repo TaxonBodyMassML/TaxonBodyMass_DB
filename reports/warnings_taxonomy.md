@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 21:11:16
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 21:39:51
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 422 names, 4344 rows
+- Names unresolved after all enrichment stages: 419 names, 4239 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -381,7 +381,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (422 names, 4344 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (419 names, 4239 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -408,8 +408,6 @@ Scleroderma_macrogaster | Brose_etal_2018 | 126 rows
 Euchaetomera_antarcticus | Brose_etal_2018 | 105 rows
 
 Oiketicus_abbottii | Brose_etal_2018 | 90 rows
-
-Chelaner_cinctum | Leahy_2025 | 89 rows
 
 Lysigamasus_cornutus | Brose_etal_2018 | 87 rows
 
@@ -485,8 +483,6 @@ Flagellatae | Brose_etal_2018 | 11 rows
 
 Crocodylus_africanus | Brose_etal_2018 | 10 rows
 
-Ochetellus_clarithorax | Leahy_2025 | 10 rows
-
 Peridinium_pulsillum | Brose_2005, Brose_etal_2018 | 10 rows
 
 Anthodiaeta_collaris | vertnet-aves-sept2016 | 9 rows
@@ -522,8 +518,6 @@ Peromyscus_pirrensis | Herberstein_etal_2022 | 6 rows
 Pogoniulus_duchaillui | vertnet-aves-sept2016 | 6 rows
 
 Reithrodontomys_reithrodontomys | vertnet-mammalia-sept2016 | 6 rows
-
-Technomyrmex_nitida | Leahy_2025 | 6 rows
 
 Trachyhampus_serratus | Tsuboi_etal_2018 | 6 rows
 

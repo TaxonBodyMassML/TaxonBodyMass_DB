@@ -280,5 +280,27 @@ Expect(Has(ErrorOf(ApplyQueueDecisions(Q('9', 'nodoi:year=1976'), base)), 'a yea
        'a year override on nodoi / self / drop stops')
 Expect(identical(ApplyQueueDecisions(Q('6', NA), base), base) && identical(ApplyQueueDecisions(Q('6', '  '), base), base), 'rows without a decision change nothing')
 
+cat('DecideMatch() without OpenAlex (service_unavailable), WritePendingQueue() skip\n')
+d <- DecideMatch(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable' && d$doi == '10.1/thing' && d$services == 'crossref',
+       'a resolving source DOI without OpenAlex: pending / service_unavailable, the Crossref candidate kept')
+d <- DecideMatch(Ref(), open_cands = Cand(), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable', 'a strong single-service match without OpenAlex: service_unavailable, not single_service')
+d <- DecideMatch(Ref(), open_cands = Cand(title = 'Completely different title'), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable', 'below threshold without OpenAlex: service_unavailable, not not_found')
+d <- DecideMatch(Ref(), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable', 'no candidates without OpenAlex: service_unavailable')
+d <- DecideMatch(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(title = 'Completely different title', author1 = 'Roe'), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'doi_mismatch', 'a disagreeing source DOI is still doi_mismatch without OpenAlex (owner matter)')
+d <- DecideMatch(Ref(raw_citation = 'Doe, J. 2001. Unpublished thesis.'), open_cands = Cand(title = 'Completely different title'), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'grey_literature', 'grey literature is still grey_literature without OpenAlex (owner matter)')
+Expect(DecideMatch(Ref(role = 'self'), services = 'crossref')$match_status == 'self', 'a self reference is self without OpenAlex')
+p2 <- EmptyPrimaryReferences()
+p2[1:2, 'native_key'] <- c('u', 'g'); p2$source_label <- 'SrcU'; p2$raw_citation <- c('Doe 2001', 'Roe 1999 thesis'); p2$n_records <- 1L
+p2$match_status <- 'pending'; p2$match_reason <- c('service_unavailable', 'grey_literature'); p2$editorial_notice <- NA_character_
+qf2 <- tempfile(fileext = '.csv')
+q2 <- WritePendingQueue(p2, list(), qf2, queued_at = '2026-10-05')
+Expect(nrow(q2) == 1 && q2$native_key == 'g' && q2$reason == 'grey_literature', 'WritePendingQueue() queues the grey-literature row but not the service_unavailable row')
+
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }
