@@ -232,7 +232,10 @@ reflist_specs <- list(
   Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda'),
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Hudson')
+                      compiler = 'Hudson'),
+  Leahy_2025   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Leahy')
 )
 
 ReflistSpec <- function(source_label) {
