@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-05 08:03:12
+# Citation and provenance warnings -- 2026-10-05 12:06:18
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -8,15 +8,15 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Problems
 
-- 1 source label(s) without a Bibcite: Hudson_2013
+(none)
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_citations: Hudson_2013 -> Hudson:2013aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
-- Hudson_2013 (100 rows)
+(none)
 
 ## Per-source coverage
 
