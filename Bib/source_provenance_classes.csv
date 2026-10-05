@@ -22,6 +22,7 @@ Feldman_etal_2016,derived,derived_allometry,Feldman:2016aa,tier E; mass from len
 Fisher_2001,compilation,unknown,,tier A2; Source (female mass) short keys -> appendixA_references.bib (576)
 GalanAcedo_etal_2026,compilation,unknown,,"tier C; Refs1 integers -> Zenodo References.docx (1,216 entries)"
 Gillooly_etal_2016,compilation,unknown,,tier A2; negative-number codes -> article References / Appendix 1 (pdf)
+Gonzalez_2024,compilation,unknown,,"#74; data.source1 keys per row (paper / template / database sub-sources) -> references.csv built from the Dryad sheet References (build_references.r); 'unpublished - <contributor>' template rows are self (first published in StoichLife)"
 GuoBailly_2024,primary,measured_in_source,,"tier F; FCRR 32(4) chapter, primary (label renamed from Pauly_2024 under #3)"
 Hebert_etal_2016,compilation,unknown,,tier A0 pilot; Ref.dm codes -> references.csv (198 refs)
 Hechinger_etal_2011,primary,measured_in_source,,tier F; mixed: BodySizeEstimation per row to become prov_type
