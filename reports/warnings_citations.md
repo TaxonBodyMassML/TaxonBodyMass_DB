@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-04 21:39:55
+# Citation and provenance warnings -- 2026-10-04 22:04:26
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125016 (38422 species); distinct primary CiteIDs: 376; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 125371 (38638 species); distinct primary CiteIDs: 376; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
-- 1 source label(s) without a Bibcite: Hudson_2013
+- 2 source label(s) without a Bibcite: Hudson_2013, Ghaderi_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -16,6 +16,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
+- Ghaderi_2025 (221 rows)
 - Hudson_2013 (100 rows)
 
 ## Per-source coverage
@@ -45,6 +46,7 @@ One row per source label: species and record links (species x source x reference
 | Feldman_etal_2016 | derived | 9474 | 9592 | 100 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 136 | 138 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | compilation | 410 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Ghaderi_2025 | derived | 221 | 551 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 551 |
 | Gillooly_etal_2016 | compilation | 71 | 75 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 5 | 0 | 1 | 0 | 0 | 0 |
