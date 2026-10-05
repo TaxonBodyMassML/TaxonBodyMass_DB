@@ -27,13 +27,29 @@ adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon), ]
 adat <- DropImputed(adat,
                     !is.na(adat$Comments) & grepl('genus', adat$Comments, ignore.case = TRUE),
                     'Hoehler_etal_2023', 'genus-level cell size (Comments)')
+# The 1,497 rows coded 'Hudson et al. (2013)' in `Reference Code` copy Hudson,
+# Isaac & Reuman (2013) Appendix S5 row by row (604 mammals, 893 birds), which
+# enters the database directly as Hudson_2013 with a per-row study key (#59),
+# and 262 of the bird copies carry another species' mass (#66: every one of
+# them occurs in Appendix S5 under a different species). All Hudson-coded rows
+# are dropped and logged; the species keep their Hudson_2013 records.
+adat <- DropImputed(adat, adat$`Reference Code` %in% 'Hudson et al. (2013)',
+                    'Hoehler_etal_2023',
+                    'copied from Hudson_2013 (Reference Code Hudson et al. (2013)), which enters directly; 262 bird masses sit under the wrong species (#66)')
+# The compilation each row was taken from (`Reference Code`, resolved verbatim
+# in references.csv from the workbook's Refs sheet) is kept as `ref_keys` for
+# the primary-source attribution of issue #1 (SplitRefKeys(),
+# R/library/citations/parse_reflists.r); the codes contain no ';'.
+adat$ref_keys <- SplitRefKeys(adat$`Reference Code`, ';')
+if (anyNA(adat$ref_keys)) warning('Hoehler_etal_2023: ', sum(is.na(adat$ref_keys)), ' record(s) without a Reference Code')
 out <- data.frame(taxon = adat$taxon, mass_g = adat$mass_g,
                   kingdom = adat$Kingdom, phylum = adat$Phylum, class = adat$Class,
-                  order = adat$Order, family = adat$Family, stringsAsFactors = FALSE)
+                  order = adat$Order, family = adat$Family, ref_keys = adat$ref_keys,
+                  stringsAsFactors = FALSE)
 for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
   out[[col]] <- iconv(as.character(out[[col]]), to = 'ASCII//TRANSLIT')
 out$n <- 1
 out$source_mass <- 'Hoehler_etal_2023'
-HOE <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
+HOE <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys', 'kingdom', 'phylum', 'class',
                'order', 'family')]
 save(HOE, file = file.path(wd_rdata, 'BodyMass_Hoehler_etal_2023.Rdata'))
