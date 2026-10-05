@@ -129,6 +129,7 @@ FixMisspellings <- function(dat) {
     "Chalcophaps_inidica"             = "Chalcophaps_indica",             # simple transposition
     "Chaos_carolinensis"              = "Chaos_carolinense",              # Chaos is neuter; -ense not -ensis
     "Chlamydomonas_reinhadri"         = "Chlamydomonas_reinhardii",       # honors Reinhard; missing d + garbled genitive
+    "Chodromorpha_xanthotricha"       = "Chondromorpha_xanthotricha",     # Lemoine_2026, 4 rows: the source writes Chondromorpha (Paradoxosomatidae) on its five dry-only rows of the same species; missing n (#76)
     "Cinclosoma_castanotus"           = "Cinclosoma_castanotum",          # -soma is Greek neuter; -um required
     "Circus_macroarus"                = "Circus_macrourus",               # Pallid Harrier; macroarus omits u
     "Clupea_pallassii"                = "Clupea_pallasii",                # honors Pallas; spurious double s
@@ -236,6 +237,7 @@ FixMisspellings <- function(dat) {
     # S
     "Sagitta_elegana"                 = "Sagitta_elegans",                # ns dropped
     "Scarus_iserti"                   = "Scarus_iseri",                   # Striped Parrotfish Bloch 1789; spurious t
+    "Scolopocryptos_ferrugineus"      = "Scolopocryptops_ferrugineus",    # Lemoine_2026, 8 rows: Scolopocryptops Newport, 1844 (family Scolopocryptopidae in the same row); missing p (#76)
     "Sceloporus_utiformis"            = "Sceloporus_uniformis",           # n dropped
     "Sebastes_paucipinis"             = "Sebastes_paucispinis",           # Bocaccio; missing s
     "Sebastes_paucispinus"            = "Sebastes_paucispinis",           # -us→-is termination error

@@ -1,0 +1,43 @@
+maven,"MAVEn number, 1-8"
+trial,"Trial session (mutiple sets of assays over 8-10 day long period), 1-8"
+day,"Day of assay within trial session, 1-10"
+chamber,"Individual chamber housing ant within MAVEn, 1-10"
+trail.code,"concatenation of MAVEn, Trial, Day"
+individ.code,"concatenation of MAVEn, Trial, Day, chamber"
+colony.code,Unique code per ant colony collected from field
+location,Full name of geographic location where ant was collected
+location2,Abbreviation of above
+site.pcat,"Sites within locations, where HP = high phosphorus, LP = low phosphorus"
+pcat,phosphorus category
+plot,Individual plot number within sites/locations where ants were collected. NA represents not applicable for the location NT as this location did not have individual plots - see methods.
+lat,Latitude of site
+long,Longitude of site
+climate.ecotype,Descriptive value giving general ecotype
+aridity.class,Based on moisture index calculated for each location and zoning from Zomer et al. 2022 (see supp material references)
+subfamily,Ant subfamily
+genus,Ant genus
+species,Ant species
+sp.phylo,"site-species names, matched to phylogenetic tree soft polytomy tips"
+filename,relating back to folder of original trace data (not relevant for analysis)
+date.trialled,Date of assay
+Tstart,Start time of assay
+Tend,End time of assay
+wet.mass,Individual ant wet mass (mg)
+dry.mass,"Individual ant dry mass (mg), in a number of limited cases, a few individual ants per their colony had missing dry mass values due to destruction in the drying process, these individuals have been given that colonies average dry mass "
+min.vco2,Minimum VCO2 taken as the average of the lowest one minute of VCO2 during an individual trace (microL/h-1)
+mr.microw,Minimum VCO2 converted to microwatts (microW)
+slope.ADS,"Infrared activity data during measurement of trace, nearest neighbour smoothed, then absolute difference sum transformed (giving Slope ADS) (unitless)"
+ADS.activity.total,"Infrared activity data of individual over whole assay (unitless), NA represents data not available"
+DGC,"Discontinuous gas-exchange cycle, binary yes = 1, no = 0"
+Cont,"Continuous gas-exchange cycle, binary yes = 1, no = 0"
+Cyc,"Cyclical gas-exchange cycle, binary yes = 1, no = 1"
+vent.frequency.min,"For individuals with yes = 1 for DGC column. NA = not applicable as not engaging in discontinuous gas exchange cycles. Number of complete closed and open phases in an individual's VCO2 trace multiplied by six giving vent frequency in cycles per hour, this value is the minimum value for the two traces per individual ant (cycles/hour)"
+soil.p,Soil phosphorus measured as average value from all plots at each site in parts per million (ppm)
+mat.micro,Mean annual microclimate temperature per site (¡C)
+mavpd.micro,Mean annual vapor pressure deficit per site in (kPa)
+wqmat.micro,Warmest quarter microclimate temperature per site (¡C)
+wqvpd.micro,Warmest quarter microclimate vapor pressure deficit (proxy for aridity) (kPa)
+mat,Mean annual macroclimate temperature (Worldclim 2.1) (¡C)
+map,Mean annual macroclimate precipitation (Worldclim 2.1) (mm)
+baseline.noise,"The standard deviation of the baseline taken before and after the VCO2 measurement, averaged to give a single baseline noise value per VCO2 value, corrected for dry-air equivalent"
+signal.to.noise,Signal to noise ratio = min.vco2/baseline.noise
