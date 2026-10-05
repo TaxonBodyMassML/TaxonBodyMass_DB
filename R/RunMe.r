@@ -483,6 +483,28 @@ unresolved_names <- adat_enriched %>%
             .groups = 'drop') %>% as.data.frame()
 message(sprintf('%d cleaned names (%d rows) unresolved after all enrichment stages; listed in reports/warnings_taxonomy.md',
                 nrow(unresolved_names), sum(unresolved_names$rows)))
+# Names whose authority kingdom was a plant, alga or fungus over animal ranks
+# (an exact homonym in two kingdoms, or a GBIF fuzzy match into the other
+# kingdom), corrected by Part 2b of fix_taxonomy_ranks.r (#81), with their
+# sources and row counts for the taxonomy report. Taken before
+# FilterAutotrophs(), which dropped such rows on the kingdom alone and
+# unreported until #81; a name whose species was cleared is unresolved and is
+# also in unresolved_names.
+kingdom_conflicts <- NULL
+if ('kingdom_conflict' %in% names(unique_taxa)) {
+  kingdom_conflicts <- unique_taxa[!is.na(unique_taxa$kingdom_conflict),
+                                   c('taxon', 'kingdom_conflict', 'kingdom', 'phylum', 'class',
+                                     'order', 'family', 'species', 'taxonomy_source')]
+  kc_rows <- adat_enriched %>%
+    filter(taxon %in% kingdom_conflicts$taxon) %>%
+    group_by(taxon) %>%
+    summarise(rows    = n(),
+              sources = paste(sort(unique(SourceLabel(source_mass))), collapse = ', '),
+              .groups = 'drop') %>% as.data.frame()
+  kingdom_conflicts <- merge(kingdom_conflicts, kc_rows, by = 'taxon')
+  message(sprintf('%d cleaned names (%d rows) had a plant, alga or fungus kingdom over animal ranks; corrected (#81) and listed in reports/warnings_taxonomy.md',
+                  nrow(kingdom_conflicts), sum(kingdom_conflicts$rows)))
+}
 n_resolved_pre_autotroph <- n_distinct(adat_enriched$taxon[!is.na(adat_enriched$species)])
 adat_enriched <- FilterAutotrophs(adat_enriched)
 n_names_autotroph <- n_resolved_pre_autotroph -
@@ -682,7 +704,8 @@ message(sprintf('  %d genus x source values, %d collapsed as copies; %d genus-on
 # QC reports name the extreme sources among the independent values, the ones
 # log10_range is computed from.
 check_enriched(enriched, within_source[within_source$independent, ],
-               remove_flagged = RemoveHighMaxMinRatio, unresolved = unresolved_names)
+               remove_flagged = RemoveHighMaxMinRatio, kingdom_conflicts = kingdom_conflicts,
+               unresolved = unresolved_names)
 
 n_species_after_filter <- nrow(enriched)   # accepted species before the range filter
 # De-duplication counts (#5), taken like nSpeciesAfterFilter before the range filter

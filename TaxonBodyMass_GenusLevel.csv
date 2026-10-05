@@ -5501,7 +5501,7 @@
 "Lixus",0.2313,"Baach_2026; Chown_etal_2007; Ehnes_etal_2011; Makarieva_2008; Brocher_etal_2025",5,2
 "Liza",105.6,"Cai_etal_2025; fishbase",3,2
 "Lobella",0.0006243,"Hishi_etal_2019; Studier_1992",3,3
-"Lobellina",0.0005066,"Hishi_etal_2019; Studier_1992",1,1
+"Lobellina",0.0003724,"Hishi_etal_2019; Studier_1992",2,2
 "Lobianchia",3.433,"fishbase; Barnes_2008",8,2
 "Lobocheilos",69.3,"Cai_etal_2025",1,1
 "Lobochilotes",32.65,"Tsuboi_etal_2018",14,1
@@ -6417,7 +6417,7 @@
 "Myripristis",245.6,"fishbase; Cai_etal_2025; Brose_etal_2018; Mahe_2023; GuoBailly_2024",121,7
 "Myrmarachne",0.01632,"Brocher_etal_2025",1,1
 "Myrmechixenus",0.0002921,"Brocher_etal_2025",1,1
-"Myrmecia",0.04292,"Herberstein_etal_2022; Leahy_2025",274,13
+"Myrmecia",0.04374,"Herberstein_etal_2022; Leahy_2025",305,15
 "Myrmeciza",27.36,"Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016; Tsuboi_etal_2018; Hoehler_etal_2023",114,37
 "Myrmecobius",466.8,"AnAge; Cai_etal_2025; Faurby_etal_2018; Fisher_2001; Herberstein_etal_2022; Hirt_etal_2017; Hoehler_etal_2023; Hudson_2013; Jones_2009; Myhrvold_2015; Quaardvark; Smith_2003; Soria_etal_2021; Tsuboi_etal_2018; Tucker_etal_2014b; Uyeda_etal_2017; Wilman_etal_2014",28,9
 "Myrmecocichla",44.55,"Lislevand_etal_2007; Myhrvold_2015; Tobias_2022; Wilman_etal_2014; vertnet-aves-sept2016; vertnet-traits-sept2016",30,11
@@ -8565,7 +8565,7 @@
 "Pseudoplatystoma",27650,"Cai_etal_2025; fishbase",8,6
 "Pseudoplectrurus",40.5,"Feldman_etal_2016",1,1
 "Pseudopleuronectes",2439,"Froese_2025; fishbase; Cai_etal_2025",8,5
-"Pseudopodoces",46.08,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",4,2
+"Pseudopodoces",45.4,"Cai_etal_2025; Myhrvold_2015; Tobias_2022; Wilman_etal_2014",5,1
 "Pseudopoecilia",0.61,"fishbase",1,1
 "Pseudoprotapion",0.0008766,"Brocher_etal_2025",1,1
 "Pseudopungtungia",10.35,"Cai_etal_2025",2,2
