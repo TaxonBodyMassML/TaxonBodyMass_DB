@@ -97,8 +97,9 @@ Expect(!inherits(served, 'citations_quota') && isTRUE(served$cached), 'cached re
 ResetQuotaFlags()
 Expect(length(ls(.citations_quota_hit)) == 0, 'ResetQuotaFlags() clears the flags')
 cfg_key <- cfg; cfg_key$openalex_api_key <- 'k1'
-Expect(OpenAlexAuth(cfg) == '' && OpenAlexAuth(cfg_key) == '&api_key=k1' && grepl('&api_key=k1$', OpenAlexWorkURL('10.1/x', cfg_key)) &&
-         grepl('&api_key=k1$', OpenAlexQueryURL('a title', 2000L, cfg_key)) && !grepl('api_key', OpenAlexWorkURL('10.1/x', cfg)),
+cfg_nokey <- cfg; cfg_nokey$openalex_api_key <- ''          # independent of an OPENALEX_API_KEY in the environment
+Expect(OpenAlexAuth(cfg_nokey) == '' && OpenAlexAuth(cfg_key) == '&api_key=k1' && grepl('&api_key=k1$', OpenAlexWorkURL('10.1/x', cfg_key)) &&
+         grepl('&api_key=k1$', OpenAlexQueryURL('a title', 2000L, cfg_key)) && !grepl('api_key', OpenAlexWorkURL('10.1/x', cfg_nokey)),
        'OPENALEX_API_KEY is appended to the OpenAlex URLs only when set')
 
 cat('CrossrefQuery(), NormaliseCrossrefItem(), CrossrefWork()\n')

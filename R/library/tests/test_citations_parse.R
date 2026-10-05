@@ -41,6 +41,8 @@ Expect(identical(ExtractDOI(c('Brain 45(2), 96-109. doi:10.1159/000113543', 'no 
 Expect(identical(ExtractDOI(c('Physiology, 56(1), 1-5. doi:10.1016/0300-9629(77)90123-4.', '(see 10.1016/0306-4565(92)90025-B))', NA, 'none')),
                  c('10.1016/0300-9629(77)90123-4', '10.1016/0306-4565(92)90025-b', NA, NA)) && identical(ExtractDOI(c(NA, 'none')), c(NA_character_, NA_character_)),
        'ExtractDOI keeps the parentheses of older DOIs, drops only unbalanced closing brackets, and survives a vector without any DOI')
+Expect(identical(ExtractDOI('Journal of Mammalogy, 81(2), 578-585. doi:10.1644/1545-1542(2000)081<0578:TBAMOT>2.0.CO;2'), '10.1644/1545-1542(2000)081<0578:tbamot>2.0.co;2'),
+       'ExtractDOI keeps the angle brackets and the trailing ;2 of a SICI DOI')
 h <- CitationHashKey(c('Taylor, G. M., Nol, E., & Boire, D. (1995). Brain regions', 'taylor g m nol e boire d 1995 brain regions', NA))
 Expect(grepl('^h:[0-9a-f]{8}$', h[1]) && h[1] == h[2] && is.na(h[3]), 'the hash key depends on the normalised string only')
 

@@ -63,9 +63,12 @@ ReadCachedResponse <- function(url, cache_dir) {
        fetched_at = m$fetched_at, cached = TRUE)
 }
 
+# The URL is stored without its api_key parameter: the cache is git-ignored,
+# but a secret never goes to disk.
 WriteCachedResponse <- function(url, status, body, cache_dir, fetched_at) {
   dir.create(cache_dir, showWarnings = FALSE, recursive = TRUE)
   key <- CacheKey(url)
+  url <- sub('[?&]api_key=[^&]*', '', url)
   writeLines(body, file.path(cache_dir, paste0(key, '.json')), useBytes = TRUE)
   writeLines(jsonlite::toJSON(list(url = url, status = status, fetched_at = fetched_at,
                                    tool_version = citations_tool_version), auto_unbox = TRUE, pretty = TRUE),
