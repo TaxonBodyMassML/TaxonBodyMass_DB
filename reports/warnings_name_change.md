@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 22:37:25
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 22:59:52
 
 
-## Species name changed during enrichment (5660 rows)
+## Species name changed during enrichment (5661 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -1010,6 +1010,8 @@ Aspidoscelis stictogramma; Aspidoscelis stictogrammus -> Aspidoscelis stictogram
 Aspidoscelis tesselata; Aspidoscelis tesselatus -> Aspidoscelis tesselatus [GBIF]
 
 Cnemidophorus tigris; Aspidoscelis tigris; Aspidoscelis bacatus -> Aspidoscelis tigris [GBIF]
+
+Aspidoscelis uniparens; Cnemidophorus uniparens -> Aspidoscelis uniparens [GBIF]
 
 Aspidoscelis xanthonota; Aspidoscelis xanthonotus -> Aspidoscelis xanthonotus [GBIF]
 
@@ -3997,7 +3999,7 @@ Gallirallus sylvestris; Hypotaenidia sylvestris -> Gallirallus sylvestris [GBIF]
 
 Gallirallus torquatus; Hypotaenidia torquata; Rallus torquatus -> Gallirallus torquatus [GBIF]
 
-Gallus gallus; Gallus bankiva -> Gallus gallus [GBIF]
+Gallus gallus; Gallus bankiva; Gallus domesticus -> Gallus gallus [GBIF]
 
 Gallus lafayetii -> Gallus lafayettii [GBIF]
 

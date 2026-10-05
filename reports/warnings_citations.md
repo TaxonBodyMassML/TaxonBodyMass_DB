@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 22:37:36
+# Citation and provenance warnings -- 2026-10-04 22:59:59
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125602 (38741 species); distinct primary CiteIDs: 382; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 125730 (38741 species); distinct primary CiteIDs: 426; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
 - 3 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026, Leahy_2025
-- 5 source label(s) without a Bibcite: Hudson_2013, Lemoine_2026, Ghaderi_2025, Leahy_2025, Wascher_2025
+- 6 source label(s) without a Bibcite: Wisnionski_2026, Hudson_2013, Lemoine_2026, Ghaderi_2025, Leahy_2025, Wascher_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -18,6 +18,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
 - Ghaderi_2025 (221 rows)
+- Wisnionski_2026 (131 rows)
 - Wascher_2025 (123 rows)
 - Hudson_2013 (100 rows)
 - Lemoine_2026 (55 rows)
@@ -38,7 +39,7 @@ One row per source label: species and record links (species x source x reference
 | Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
 | Brose_etal_2018 | compilation | 1753 | 168179 | 90.4 | 24 | 22 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Cai_etal_2025 | compilation | 4768 | 4776 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 295 | 537 | 53.3 | 115 | 113 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 310 | 386 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -84,7 +85,7 @@ One row per source label: species and record links (species x source x reference
 | Mercer_etal_2001 | primary | 50 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Myhrvold_2015 | compilation | 15861 | 16063 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Myhrvold_2015 | compilation | 15860 | 16062 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pata_2025 | compilation | 99 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 97 | 359 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Quaardvark | database | 2172 | 2190 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -100,10 +101,11 @@ One row per source label: species and record links (species x source x reference
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Verberk_2020 | compilation | 194 | 984 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 12218 | 12287 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
+| Wisnionski_2026 | compilation | 131 | 131 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2069 | 2899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 298 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 124 | 729 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
