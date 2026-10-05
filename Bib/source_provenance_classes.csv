@@ -44,7 +44,7 @@ Kiorboe_2013,compilation,unknown,,tier A0 pilot; numeric Reference -> Kiorboe201
 Kiorboe_2014,compilation,unknown,,tier A2; short keys + PANGAEA DOI per row -> Source: header blocks; Acuna rows -> PANGAEA 832241 hop 2
 Lagrue_etal_2015,primary,measured_in_source,,tier F
 Lane_2019,primary,measured_in_source,,tier F
-Lislevand_etal_2007,compilation,unknown,,tier A1; ;-numeric refs -> metadata.htm section F (~117); also a DataRetriever label
+Lislevand_etal_2007,compilation,unknown,,"tier A1; ;-numeric refs (References column, 1-87) -> metadata.htm section F (87 entries) -> references.csv via build_references.py; also a DataRetriever label (bird-size, m_mass only, no ref_keys)"
 Lukic_2022,compilation,unknown,,tier A2; study -> References.xlsx (57)
 Mahe_2023,primary,measured_in_source,,tier F
 Makarieva_2008,compilation,unknown,,"tier C; SI mirror pdf per dataset; S5 = White 2006, S6a = McKechnie & Wolf 2004 second hop"

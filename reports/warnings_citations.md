@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-05 13:35:41
+# Citation and provenance warnings -- 2026-10-05 14:01:03
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127209 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 130304 (38955 species); distinct primary CiteIDs: 521; unresolved references (pending / not_found): 82; unverified references: 3
 
 ## Problems
 
-(none)
+- 7 accepted reference(s) without a bib entry (run --bib): Lislevand_etal_2007 3, Lislevand_etal_2007 30, Lislevand_etal_2007 32, Lislevand_etal_2007 52, Lislevand_etal_2007 68, Lislevand_etal_2007 73, Lislevand_etal_2007 84
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -71,7 +71,7 @@ One row per source label: species and record links (species x source x reference
 | Lane_2019 | primary | 9 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Leahy_2025 | primary | 53 | 1439 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Lemoine_2026 | primary | 55 | 800 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Lislevand_etal_2007 | compilation | 3063 | 4319 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Lislevand_etal_2007 | compilation | 3063 | 6171 | 0 | 60 | 7 | 30 | 21 | 2 | 0 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 41 | 192 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mahe_2023 | primary | 53 | 12609 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Makarieva_2008 | compilation | 1250 | 1802 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
