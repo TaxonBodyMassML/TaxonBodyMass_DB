@@ -187,6 +187,7 @@ FixMisspellings <- function(dat) {
     "Neosclerocalyptus_paskoenis"     = "Neosclerocalyptus_paskoensis",   # missing s in -ensis
     "Ningaui_timealyi"                = "Ningaui_timealeyi",              # missing e
     "Ningaui_yvonnae"                 = "Ningaui_yvonneae",               # female genitive requires -ae
+    "Nyctalus_geoffroyi"              = "Nyctophilus_geoffroyi",          # AyalaBerdon_2025 ESM table; its two cited papers (Dixon & Rose 2003, Hosken & Withers 1999) concern Nyctophilus geoffroyi; no Nyctalus geoffroyi exists (#71)
 
     # O
     "Oithona_similus"                 = "Oithona_similis",                # Latin 3rd decl similis; similus not valid
@@ -210,6 +211,7 @@ FixMisspellings <- function(dat) {
     "Phyllotis_bonaeriensis"          = "Phyllotis_bonariensis",          # spurious e (bonariensis from Bonaria)
     "Phrynosoma_douglassi"            = "Phrynosoma_douglasii",           # spurious double s
     "Pipistrellus_anchietae"          = "Pipistrellus_anchietai",         # male patronym takes -i not -ae
+    "Pipistrellus_pipitrellus"        = "Pipistrellus_pipistrellus",      # AyalaBerdon_2025 ESM table; missing s (the cited Speakman et al. 1989 is on P. pipistrellus) (#71)
     "Pipra_cornuta"                   = "Pipra_coronata",                 # Blue-crowned Manakin; cornuta not recognized
     "Piranga_olivicea"                = "Piranga_olivacea",               # Scarlet Tanager; spurious i
     "Pituophis_melanolecus"           = "Pituophis_melanoleucus",         # Pine Snake; missing u
