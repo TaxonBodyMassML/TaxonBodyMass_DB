@@ -1,8 +1,8 @@
-# Citations of Herberstein_etal_2022 -- 2026-10-04 19:40:59 (tbmcite 0.1.0)
+# Citations of Herberstein_etal_2022 -- 2026-10-04 20:53:23 (tbmcite 0.1.0)
 
 Steps: --sheet --no-dry-run
 
-- --sheet: 191 row(s) for Herberstein_etal_2022, 191 new, tab had 53 rows; BM_citations snapshotted (430 rows)
+- --sheet: 193 row(s) for Herberstein_etal_2022, 1 new, tab had 321 rows; BM_citations snapshotted (430 rows)
 
 ## References
 
@@ -53,7 +53,7 @@ Steps: --sheet --no-dry-run
 | h:37b8cfe3 | 4 | measurement | certain | doi_resolves | 10.2307/1368232 | 1.000 | Weathers:1990aa | Weathers_1990 |
 | h:3b1919df | 45 | measurement | certain | doi_resolves | 10.1111/j.1365-2311.1981.tb00634.x | 1.000 | MISPAGEL:1981aa | MISPAGEL_1981 |
 | h:3cf6c3b2 | 1 | measurement | certain | doi_resolves | 10.1016/0306-4565(76)90013-9 | 1.000 | Louw:1976aa | Louw_1976 |
-| h:3cfad141 | 15 | measurement | pending | doi_mismatch |  |  |  |  |
+| h:3cfad141 | 15 | measurement | approved | owner_doi | 10.1016/0022-1910(86)90131-9 | 1.000 | Nielsen:1986aa | Nielsen_1986 |
 | h:3d47b851 | 1 | measurement | certain | doi_resolves | 10.1002/jcp.1030650313 | 1.000 | Tucker:1965aa | Tucker_1965 |
 | h:3d73059d | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(81)92992-3 | 1.000 | Maclean:1981aa | Maclean_1981 |
 | h:3d737c07 | 1 | measurement | certain | doi_resolves | 10.1111/j.1469-7998.1982.tb02076.x | 1.000 | Maloiy:1982aa | Maloiy_1982 |
@@ -196,7 +196,7 @@ Steps: --sheet --no-dry-run
 | h:f57b0433 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(77)90368-1 | 1.000 | Rfinking:1977aa | Rfinking_1977 |
 | h:f8c55205 | 1 | measurement | certain | doi_resolves | 10.1016/0306-4565(92)90056-l | 1.000 | Duxbury:1992aa | Duxbury_1992 |
 | h:faca11a6 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jinsphys.2004.04.010 | 1.000 | Terblanche:2004ab | Terblanche_2004b |
-| h:fc0ce1f8 | 1 | measurement | pending | doi_mismatch |  |  |  |  |
+| h:fc0ce1f8 | 1 | measurement | approved | owner_doi | 10.1644/1545-1542(2000)081<0578:tbamot>2.0.co;2 | 1.000 | Campbell:2000aa | Campbell_2000 |
 | h:fc91575a | 1 | measurement | certain | doi_resolves | 10.1007/bf00693550 | 1.000 | Baudinette:1972aa | Baudinette_1972 |
 | h:fcc4d2b5 | 2 | measurement | certain | doi_resolves | 10.1007/bf00691052 | 1.000 | Bennett:1975aa | Bennett_1975 |
 | h:fd1aaacf | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(83)90715-6 | 1.000 | Grant:1983aa | Grant_1983 |

@@ -192,6 +192,47 @@ SplitBody <- function(body) {
   list(title = title, container = container, volume = volume, pages = pages)
 }
 
+# The Nature reference style, "May, M. L. Energy metabolism of dragonflies
+# (Odonata: Anisoptera) at rest and during endothermic warm-up. Journal of
+# Experimental Biology 83, 79-94 (1979).": the entry ends with "volume, pages
+# (year)" and the author block is a run of "Surname, I. I." items joined by
+# commas and '&' / 'and'; the pages may be absent ("Experimental Biology
+# Online 3 (1998)."). Returns NULL when the string does not end that way;
+# otherwise the fields, with the title and the container separated at the
+# last sentence boundary of the text between the authors and the volume (the
+# journal name is taken to hold no sentence boundary; an abbreviated journal
+# such as "Palaeogeogr. Palaeoclimatol. Palaeoecol." keeps only its last
+# token, which ContainerMatch() still accepts as a prefix match).
+nature_author_block <- '^(?:[A-Z][^,.]*?,\\s(?:[A-Z]\\.-?\\s?)+(?:,\\s|&\\s|and\\s|et al\\.\\s)?)+'
+ParseNatureStyle <- function(s) {
+  tail_re <- '\\s(\\d+[A-Za-z]?)\\s*(\\([^)]*\\))?(?:,\\s*(e?\\d+[A-Za-z]?)(\\s*[-]+\\s*(e?\\d+[A-Za-z]?))?)?\\s*\\(((1[6-9]|20)\\d{2})[a-z]?\\)\\.?\\s*$'
+  tp <- regexpr(tail_re, s, perl = TRUE)
+  if (tp <= 0) return(NULL)
+  m <- regmatches(s, regexec(tail_re, s, perl = TRUE))[[1]]
+  head <- trimws(substr(s, 1, tp - 1))
+  # the author block: "Surname, I. I.[, Surname, I.][ & Surname, I.]"
+  ab <- regexpr(nature_author_block, head, perl = TRUE)
+  if (ab <= 0) return(NULL)
+  authors <- trimws(regmatches(head, ab))
+  body <- trimws(substr(head, ab + attr(ab, 'match.length'), nchar(head)))
+  if (!nzchar(body)) return(NULL)
+  sb <- gregexpr('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', body, perl = TRUE)[[1]]
+  if (sb[1] > 0) {
+    last <- sb[length(sb)]
+    title <- trimws(substr(body, 1, last - 1))
+    if (substr(body, last, last) %in% c('?', '!')) title <- paste0(title, substr(body, last, last))
+    container <- trimws(substr(body, last + 1, nchar(body)))
+  } else {
+    title <- body; container <- NA_character_
+  }
+  title <- sub('[.,;:]+$', '', title)
+  if (!is.na(container)) container <- sub('[.,;:]+\\s*$', '', container)
+  if (!is.na(container) && !nzchar(container)) container <- NA_character_
+  list(tail_start = tp, year = as.integer(m[7]), author1 = FirstSurname(authors),
+       title = if (nzchar(title)) title else NA_character_, container = container,
+       volume = m[2], pages = if (nzchar(m[6])) paste0(m[4], '-', m[6]) else if (nzchar(m[4])) m[4] else NA_character_)
+}
+
 # Parse one citation string per element into a data frame of query fields:
 # parsed_author1, parsed_year, parsed_title, parsed_container, parsed_volume,
 # parsed_pages, parsed_doi. Robust to the common styles ("Author, A. B., and
@@ -214,6 +255,20 @@ ParseCitationString <- function(x) {
     s <- sub('\\s*(doi:?\\s*|https?://(dx\\.)?doi\\.org/)10\\.[0-9]{4,9}/\\S+\\s*$', '', s, ignore.case = TRUE, perl = TRUE)
     s <- sub('\\s*https?://\\S+\\s*$', '', s, perl = TRUE)
     pos <- regexpr(year_regex, s, perl = TRUE)
+    nat <- ParseNatureStyle(s)
+    if (!is.null(nat)) {
+      # "Authors. Title. Journal volume, pages (year)." (Nature style): the year
+      # stands at the end, so the generic path below would read everything
+      # before it as the author block (or stop at a year inside the title,
+      # "Atta sexdens rubropilosa (Forel, 1908)")
+      out$parsed_year[i]      <- nat$year
+      out$parsed_author1[i]   <- nat$author1
+      out$parsed_title[i]     <- nat$title
+      out$parsed_container[i] <- nat$container
+      out$parsed_volume[i]    <- nat$volume
+      out$parsed_pages[i]     <- nat$pages
+      next
+    }
     if (pos > 0) {
       ym <- regmatches(s, pos)
       out$parsed_year[i]    <- as.integer(substr(ym, 1, 4))
@@ -223,6 +278,13 @@ ParseCitationString <- function(x) {
     } else {
       rest <- s
       out$parsed_author1[i] <- FirstSurname(sub('[.:].*$', '', s))
+      # an undated entry in the Nature style ("Klok, C. J. & Chown, S. L. Title.
+      # Journal (in press).") still opens with the author block
+      ab <- regexpr(nature_author_block, s, perl = TRUE)
+      if (ab > 0 && attr(ab, 'match.length') < nchar(s)) {
+        out$parsed_author1[i] <- FirstSurname(regmatches(s, ab))
+        rest <- trimws(substr(s, ab + attr(ab, 'match.length'), nchar(s)))
+      }
     }
     sp <- SplitBody(rest)
     out$parsed_title[i]     <- sp$title
