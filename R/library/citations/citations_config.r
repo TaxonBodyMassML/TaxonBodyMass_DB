@@ -280,7 +280,10 @@ reflist_specs <- list(
   AyalaBerdon_2025 = list(format = 'csv', file = 'references.csv',
                           key_col = 'key', citation_col = 'citation', sep = ';',
                           compiler = 'Ayala-Berdon',
-                          compilation_doi = '10.1007/s00360-025-01630-3')  # no CiteID row yet (#71)
+                          compilation_doi = '10.1007/s00360-025-01630-3'),  # no CiteID row yet (#71)
+  Baach_2026   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi', sep = ';',
+                      compiler = 'Baach')
 )
 
 ReflistSpec <- function(source_label) {
