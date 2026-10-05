@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-05 13:35:41
+# Citation and provenance warnings -- 2026-10-05 14:02:04
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127209 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 127236 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 34; unverified references: 3
 
 ## Problems
 
-(none)
+- 33 accepted reference(s) without a bib entry (run --bib): Ikeda_2014 Ikeda et al. (2007), Ikeda_2014 Ikeda and McKinnon (2012), Ikeda_2014 Ikeda (2013a), Ikeda_2014 Ikeda (2013b), Ikeda_2014 Ikeda (2013d), Ikeda_2014 Ikeda (2013c), Ikeda_2014 Ikeda (2012), Ikeda_2014 Kaeriyama and Ikeda (2004), Ikeda_2014 Ikeda (1990), Ikeda_2014 Torres et al. (1994), Ikeda_2014 Childress (1975), Ikeda_2014 Ikeda (1988), Ikeda_2014 Ikeda and Takahashi (2012), Ikeda_2014 Ikeda (2014a), Ikeda_2014 Ikeda (2014b), Ikeda_2014 Ikeda and Mitchell (1982), Ikeda_2014 Ikeda and Bruce (1986), Ikeda_2014 Iguchi and Ikeda (2004), Ikeda_2014 Köster et al. (2010), Ikeda_2014 Nival et al. (1972), Ikeda_2014 Mayzaud and Dallot (1973), Ikeda_2014 Cetta et al. (1986), Ikeda_2014 Biggs (1977), Ikeda_2014 Gorsky et al. (1987), Ikeda_2014 Lombard et al. (2005), Ikeda_2014 Donnelly et al. (2004), Ikeda_2014 Thuesen and Childress (1993), Ikeda_2014 Ikeda et al. (2001), Ikeda_2014 Reeve et al. (1970), Ikeda_2014 Szyper (1981), Ikeda_2014 Ikeda and Skjoldal (1989), Ikeda_2014 Ikeda and Kirkwood (1989), Ikeda_2014 Madin and Purcell (1992)
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -59,7 +59,7 @@ One row per source label: species and record links (species x source x reference
 | Hoehler_etal_2023 | compilation | 1670 | 3767 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 69 | 90 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 100 | 1163 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1163 |
-| Ikeda_2014 | compilation | 297 | 585 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 585 |
+| Ikeda_2014 | compilation | 297 | 585 | 0 | 37 | 33 | 1 | 2 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3286 | 3304 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kendall_etal_2019 | primary | 422 | 4031 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -99,7 +99,7 @@ One row per source label: species and record links (species x source x reference
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Vanni_2017 | compilation | 173 | 3591 | 95.5 | 73 | 67 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
+| Vanni_2017 | compilation | 173 | 4045 | 65.4 | 73 | 67 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

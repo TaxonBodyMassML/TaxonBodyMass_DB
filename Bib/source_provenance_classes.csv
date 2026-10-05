@@ -34,7 +34,7 @@ Hishi_etal_2019,derived,derived_allometry,,"tier E; family-level length-weight e
 Hoehler_etal_2023,compilation,unknown,,tier A1; Reference Code -> xlsx Refs sheet (21 compilation codes); hop 2 via Hudson 2013 / Makarieva 2008 later
 Hrycik_2024,primary,measured_in_source,,tier F
 Hudson_2013,compilation,unknown,,tier A2; per-row Study author-year keys (126) -> references.csv transcribed from Appendix S6 (#59); Hoehler_etal_2023 copies its rows
-Ikeda_2014,compilation,unknown,,"tier B; ref_keys = author-year keys of the ESM; Crossref reference[] of 10.1007/s00227-014-2540-5 (101 refs, 89 DOIs)"
+Ikeda_2014,compilation,unknown,,"tier B; ref_keys = author-year keys of the ESM (SplitRefKeys, one per record); reference list = Crossref reference[] of 10.1007/s00227-014-2540-5 (101 refs, 89 DOIs; format crossref_reflist, keys joined on author block + year + suffix) -> primary_references.csv (round 2026-10-05: 33 certain by deposited DOI, 1 self, 1 pending Bamstedt 1979 chapter, 2 not_found Ikeda 1974 Memoirs / Roger 1988); intermediate of Vanni_2017's Ikeda-database rows (hop 2)"
 Jennings_2002,primary,measured_in_source,,tier F
 Jones_2009,compilation,unknown,,tier A1; DataRetriever (PanTHERIA); References ids
 Kendall_etal_2019,primary,measured_in_source,,tier F
