@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-04 22:00:25
+# Source de-duplication summary -- 2026-10-04 22:12:38
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,10 +6,10 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 123140 |
-| accepted species | 39633 |
-| multi-source species | 25158 |
-| within-species value pairs | 281436 |
+| species x source values (Pass-1 rows) | 123361 |
+| accepted species | 39849 |
+| multi-source species | 25163 |
+| within-species value pairs | 281441 |
 | pairs identical (|dlog10| <= 1e-06) | 48110 |
 | pairs related by the registry and within its tolerance | 72544 |
 | pairs identical to >= 3 significant digits (blind rule) | 41144 |
