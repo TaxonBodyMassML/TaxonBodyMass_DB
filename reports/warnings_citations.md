@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-04 19:42:54
+# Citation and provenance warnings -- 2026-10-04 19:57:42
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121328 (38566 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 14; unverified references: 0
+- provenance rows: 121361 (38566 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 14; unverified references: 113
 
 ## Problems
 
@@ -35,7 +35,7 @@ One row per source label: species and record links (species x source x reference
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Chown_etal_2007 | compilation | 268 | 510 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Chown_etal_2007 | compilation | 295 | 537 | 0 | 115 | 0 | 0 | 0 | 2 | 0 | 113 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 310 | 386 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2018 | compilation | 135 | 439 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 442 | 2246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
