@@ -152,6 +152,17 @@ Expect(identical(Cleaned(c('Apis mellifera L.', 'Phormidium autumnale Gom.', 'Ga
                  c('Apis_mellifera', 'Phormidium_autumnale', 'Gadus_morhua', 'Nausithoe_rubra')),
        'author abbreviations and author-year citations, bracketed or trailing, are removed')
 Expect(identical(LogOf('Apis mellifera L.')$class, 'authority'), 'logged as class authority')
+Expect(identical(Cleaned(c('Agonum thoreyi (Dejean)', 'Lithobius piceus (L. Koch)', 'Porcellium conspersum (C.L.Koch)',
+                           'Vallonia costata (O. F. M\u00fcller)', 'Chartoscirta cincta (Herrich-Sch\u00e4ffer)',
+                           'Coenagrion pulchellum (Vander Linden)', 'Somatochlora flavomaculata (Van der Linden)',
+                           'Callitula ferrierei Boucek', 'Pteromicra leucopeza (?) (Meigen)')),
+                 c('Agonum_thoreyi', 'Lithobius_piceus', 'Porcellium_conspersum', 'Vallonia_costata', 'Chartoscirta_cincta',
+                   'Coenagrion_pulchellum', 'Somatochlora_flavomaculata', 'Callitula_ferrierei', 'Pteromicra_leucopeza')),
+       'the Brose_2005 authors without a year, bracketed or trailing, are removed (#69)')
+Expect(identical(LogOf('Agonum thoreyi (Dejean)')$class, 'authority') && identical(LogOf('Callitula ferrierei Boucek')$class, 'authority'),
+       'logged as class authority')
+Expect(identical(LogOf('Agonum thoreyi (Gould)')$class, 'error') && isTRUE(LogOf('Agonum thoreyi (Gould)')$error),
+       'an author not listed by name is still reported as class error, not assumed')
 
 # ---- trinomial --------------------------------------------------------------------
 cat('trinomial: folded to the species\n')

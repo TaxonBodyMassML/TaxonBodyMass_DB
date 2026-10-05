@@ -224,7 +224,10 @@ only for `DataRetrieverAll`, as information. The file is not edited by hand
 except to seed it: its one row, `Brose_2005`, was transcribed on 2026-10-04
 from the `imputed_rows.csv` written by the `DataRetrieve = TRUE` run of PR #32
 (commit 11dd2f5), hence `written` 2026-10-03, and `frame_md5` is that of the
-`BodyMass_DataRetrieverAll.Rdata` that run saved (`1443be65...`). Exercised
+`BodyMass_DataRetrieverAll.Rdata` that run saved (`1443be65...`). The row was
+rewritten by the `DataRetrieve = TRUE` run of 2026-10-05 (#69): `written`
+2026-10-05, `frame_md5` `8070b598...`, the regenerated frame that holds raw
+records (`sources/databases/DataRetriever/README.md`, Regeneration). Exercised
 without network access by `Rscript R/library/tests/test_imputed_live.R`.
 
 ## Other files
