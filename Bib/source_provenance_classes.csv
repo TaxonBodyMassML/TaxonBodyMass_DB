@@ -30,6 +30,7 @@ Hirt_etal_2017,compilation,unknown,,tier A2; mass.ref -> MOESM1 ESM pdf
 Hishi_etal_2019,derived,derived_allometry,,"tier E; family-level length-weight equations (Tanaka 1970, Petersen 1975); no per-record reference. TODO (owner decision 2026-10-04): verify the two equation references like primary references with role equation in a later round and fill equation_bibcite"
 Hoehler_etal_2023,compilation,unknown,,tier A1; Reference Code -> xlsx Refs sheet (21 compilation codes); hop 2 via Hudson 2013 / Makarieva 2008 later
 Hrycik_2024,primary,measured_in_source,,tier F
+Hudson_2013,compilation,unknown,,tier A2; per-row Study author-year keys (126) -> references.csv transcribed from Appendix S6 (#59); Hoehler_etal_2023 copies its rows
 Ikeda_2014,compilation,unknown,,"tier B; ref_keys = author-year keys of the ESM; Crossref reference[] of 10.1007/s00227-014-2540-5 (101 refs, 89 DOIs)"
 Jennings_2002,primary,measured_in_source,,tier F
 Jones_2009,compilation,unknown,,tier A1; DataRetriever (PanTHERIA); References ids
@@ -45,7 +46,7 @@ Lukic_2022,compilation,unknown,,tier A2; study -> References.xlsx (57)
 Mahe_2023,primary,measured_in_source,,tier F
 Makarieva_2008,compilation,unknown,,"tier C; SI mirror pdf per dataset; S5 = White 2006, S6a = McKechnie & Wolf 2004 second hop"
 Mathieu_2014,compilation,unknown,,tier D; all rows -> Bouche 1972 (reference not row-linked)
-McCoy_2008,compilation,unknown,,added under #7; numeric Ref codes (;-joined) -> appendixS1_references.csv (29 refs); ref 25 Brey data bank energy rows
+McCoy_2008,compilation,unknown,,added under #7; numeric Ref codes (;-joined) -> appendixS1_references.csv (30 refs; erratum version since #61); ref 25 Brey data bank energy rows
 Meiri_2018,derived,derived_allometry,Feldman:2016aa,tier A1; SVL reference columns -> appendixs3.txt; mass from SVL through the Feldman et al. 2016 equations
 Meiri_2024,compilation,unknown,,"tier C; Sources (general) -> Supplementary Table S2 (species-level, no mass-specific field)"
 Mercer_etal_2001,primary,measured_in_source,,tier F

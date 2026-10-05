@@ -56,6 +56,29 @@ FirstOfAuthorList <- function(author) {
   if (is.na(a)) NA_character_ else sub(',.*$', '', a)
 }
 
+# The DOI-less entry another source's `nodoi` decision already produced for the
+# same work: among `prim` rows (every source's primary_references) with
+# match_status nodoi_approved and a bibcite, the one whose first surname
+# (FirstOfAuthorList, folded), year and normalised title equal `row`'s. A
+# DOI-less work cited by two compilations thus keeps one key and one CiteID
+# (owner decision 2026-10-04, Hebert_etal_2016 key 74 -> Kiorboe_2013 key 7).
+# Returns that row as a list, or NULL.
+MatchingNoDOIEntry <- function(row, prim) {
+  row <- as.list(row)
+  if (is.null(prim) || nrow(prim) == 0 || is.na(row$parsed_title) || is.na(row$parsed_year)) return(NULL)
+  Key <- function(author1, year, title)
+    paste(tolower(FoldASCII(vapply(as.character(author1), FirstOfAuthorList, character(1), USE.NAMES = FALSE))),
+          as.character(year), NormaliseCitationString(title), sep = '\r')
+  cand <- prim$match_status %in% 'nodoi_approved' & !is.na(prim$bibcite) & nzchar(prim$bibcite) &
+          !(prim$source_label == row$source_label & prim$native_key == row$native_key) &
+          !is.na(prim$parsed_title) & !is.na(prim$parsed_year) & !is.na(prim$parsed_author1)
+  if (!any(cand)) return(NULL)
+  hit <- which(cand)[Key(prim$parsed_author1[cand], prim$parsed_year[cand], prim$parsed_title[cand]) ==
+                     Key(row$parsed_author1, row$parsed_year, row$parsed_title)]
+  if (length(hit) == 0) return(NULL)
+  as.list(prim[hit[1], ])
+}
+
 TwoLetterSuffixes <- function() {
   l <- letters
   as.vector(t(outer(l, l, paste0)))    # aa, ab, ..., az, ba, ...

@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 17:33:18
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 18:47:43
 
 
-## Species name changed during enrichment (5653 rows)
+## Species name changed during enrichment (5652 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -8239,7 +8239,7 @@ Poecile atricapillus; Parus atricapillus; Poecile atricapilla -> Poecile atricap
 
 Poecile carolinensis; Parus carolinensis -> Poecile carolinensis [GBIF]
 
-Poecile cinctus; Parus cinctus; Poecile cincta -> Poecile cinctus [GBIF]
+Poecile cinctus; Poecile cincta; Parus cinctus -> Poecile cinctus [GBIF]
 
 Poecile davidi; Parus davidi -> Poecile davidi [GBIF]
 
@@ -9546,8 +9546,6 @@ Scotozous dormeri; Pipistrellus dormeri -> Scotozous dormeri [GBIF]
 Scyliorhinus caniculata; Scyliorhinus canicula -> Scyliorhinus canicula [GBIF]
 
 Sebastes dalli -> Sebastes dallii [GBIF]
-
-Sebastes jorani -> Sebastes jordani [GBIF]
 
 Sebastes marinus; Sebastes norvegicus -> Sebastes norvegicus [GBIF]
 

@@ -171,8 +171,14 @@ if (Flag('--bib')) {
       all_prim$cite_id[i] <- CiteIDFor(fam, yr, r$doi, key, known_ids)
     } else if (r$match_status == 'nodoi_approved') {
       surname <- FirstOfAuthorList(r$parsed_author1)
-      key <- if (!is.na(r$bibcite)) r$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
-      if (!key %in% curated$key) entries[key] <- BuildBibEntryNoDOI(r, key, r$decided_by, r$decided_at)
+      # the same DOI-less work approved for another source keeps its key; the
+      # entry is built from the row that owns the key
+      twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
+      key <- if (!is.na(r$bibcite)) r$bibcite else if (!is.null(twin)) twin$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
+      if (!key %in% curated$key && !key %in% names(entries)) {
+        own <- if (!is.null(twin)) twin else r
+        entries[key] <- BuildBibEntryNoDOI(own, key, own$decided_by, own$decided_at)
+      }
       known_keys <- union(known_keys, key)
       all_prim$bibcite[i] <- key
       all_prim$cite_id[i] <- CiteIDFor(surname, r$parsed_year, NA, key, known_ids)

@@ -229,7 +229,10 @@ reflist_specs <- list(
   Herberstein_etal_2022 = list(format = 'inrow', file = 'observations.csv',
                                citation_col = 'fullReference', intext_col = 'inTextReference',
                                compiler = 'Herberstein'),
-  Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda')
+  Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda'),
+  Hudson_2013  = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Hudson')
 )
 
 ReflistSpec <- function(source_label) {

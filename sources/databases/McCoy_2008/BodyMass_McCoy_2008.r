@@ -1,12 +1,18 @@
-# McCoy & Gillooly (2008) Ecology Letters 11:710-716, Appendix S1 (Wiley
-# supplementary file ELE_1190_sm_AppendixS1, 'Temperature, Body Mass, and
-# Mortality data with Sources'): 2,117 rows of Group | Species | Dry mass (g) |
+# McCoy & Gillooly (2008) Ecology Letters 11:710-716, Appendix S1 in the version
+# corrected by the erratum (McCoy & Gillooly 2009, Ecology Letters 12:731-733,
+# Wiley supplementary file ele_1338_sm_appendixs1; 'Temperature, Body Mass, and
+# Mortality data with Sources'): 2,116 rows of Group | Species | Dry mass (g) |
 # Temp. C | *Mortality (y-1) | Ref. for birds (779), fish (234), invertebrates
-# (198), mammals (524), multicellular plants (348) and phytoplankton (34), each
-# row keyed to one or more of the 29 numbered data references listed at the end
-# of the appendix. The appendix is parsed by parse_mcg_appendixS1.py (pdftotext
-# -layout) into McCoy_2008_appendixS1.csv, which is read here; the publisher's
-# file itself is not redistributed (README.md gives the download link).
+# (197), mammals (524), multicellular plants (348) and phytoplankton (34), each
+# row keyed to one or more of the 30 numbered data references listed at the end
+# of the appendix. Against the 2008 file (ELE_1190_sm_AppendixS1, 2,117 rows, 29
+# references) the erratum changes no dry mass: it corrects 138 mortality rates,
+# cites Siliqua patula to a new ref 30 (Taylor 1959) instead of ref 4, replaces
+# ref 8 (Froese & Palomares 2000 for Hissmann et al. 1998), respells 'Sebastes
+# jorani' as jordani and deletes the second (ref 16) Lamellibranchia row (#61).
+# The appendix is parsed by parse_mcg_appendixS1.py (pdftotext -layout) into
+# McCoy_2008_appendixS1.csv, which is read here; the publisher's file itself is
+# not redistributed (README.md gives the download links).
 # Brown, Hall & Sibly (2018, Nature Ecology & Evolution 2:262-268) Supplementary
 # Table 1 reproduces this appendix row for row but without the reference column
 # (2,021 of its 2,041 rows match the parse on group, genus, epithet, dry mass and
@@ -61,21 +67,23 @@
 #     below (the taxonomy cache is not available at parse time). Nucella lapillus
 #     is dropped: the appendix prints 2.060E+01 where Brown et al. have 2.06,
 #     and the two publications cannot be reconciled.
-#  3. Invertebrate, ref 4 (Gillooly et al. 2001, 59 rows): Gammarus fossarum,
-#     Gammarus roeseli and Siliqua patula are wet / 4 and are kept as value / 0.25;
-#     the laboratory zooplankton (Daphnia, Acanthocyclops, Cyclops, Eucyclops,
-#     Mesocyclops, Keratella, Filinia, Notholca) mix dry and dry/4 units and are
-#     excluded (DropImputed).
+#  3. Invertebrate, ref 4 (Gillooly et al. 2001, 49 rows): Gammarus fossarum and
+#     Gammarus roeseli are wet / 4 and are kept as value / 0.25; the laboratory
+#     zooplankton (Daphnia, Acanthocyclops, Cyclops, Eucyclops, Mesocyclops,
+#     Keratella, Filinia, Notholca) mix dry and dry/4 units and are excluded
+#     (DropImputed). Siliqua patula (10 rows, ref 4 in the 2008 appendix, ref 30
+#     Taylor 1959 in the erratum; values unchanged) keeps the same value / 0.25
+#     treatment under either code until the owner rules on the new reference (#61).
 #  4. Invertebrate, ref 6 alone (Mauchline 1988: Boreomysis microps,
 #     Gnathophausia zoea, Gennadas elegans): value / 0.25.
 #  5. Invertebrate, refs 6,26 (Mauchline euphausiids, 6 rows): units cannot be
 #     verified; excluded (DropImputed).
 #  6. Invertebrate deep-sea references: value / 0.25 for ref 18 (Prochaetoderma
 #     yongei), 20 (Tindaria callistiformis), 22 Ophiocten hastatum, 23 (Echinus
-#     acutus, E. elegans) and 9,27 (Ophiocten gracilis); excluded for refs 15 and
-#     16 (Lamellibranchia, genus only), 17 (Reticulammina labyrinthica), 19
-#     (Vesicomyid sp.), 21 (Mytilid sp.), 24 and 22 Calyptogena magnifica, whose
-#     mass basis is undefined (DropImputed).
+#     acutus, E. elegans) and 9,27 (Ophiocten gracilis); excluded for ref 15
+#     (Lamellibranchia, genus only; the erratum deleted the duplicate ref-16 row),
+#     17 (Reticulammina labyrinthica), 19 (Vesicomyid sp.), 21 (Mytilid sp.), 24
+#     and 22 Calyptogena magnifica, whose mass basis is undefined (DropImputed).
 #  7. Multicellular plant and Phytoplankton rows are autotrophs and are dropped
 #     first, without logging (filter_autotrophs.r would remove them anyway).
 #  8. ref_keys carries the printed Ref code(s) with commas turned into '; '
@@ -123,7 +131,8 @@ rule[!inv] <- 'quarter'                                                        #
 rule[fish & adat$ref == '9,10,11'] <- 'asis'                                    # 1b
 rule[fish & adat$ref == '6'] <- 'drop_fish6'                                    # 1c
 rule[inv & adat$ref == '25'] <- 'energy'                                        # 2
-rule[inv & adat$ref == '4' & genus %in% c('Gammarus', 'Siliqua')] <- 'quarter'  # 3
+rule[inv & adat$ref == '4' & genus == 'Gammarus'] <- 'quarter'                 # 3
+rule[inv & adat$ref %in% c('4', '30') & genus == 'Siliqua'] <- 'quarter'        # 3 (ref 30 since the erratum)
 rule[inv & adat$ref == '4' & genus %in% zooplankton] <- 'drop_zooplankton'      # 3
 rule[inv & adat$ref == '6'] <- 'quarter'                                        # 4
 rule[inv & adat$ref == '6,26'] <- 'drop_euphausiid'                             # 5
