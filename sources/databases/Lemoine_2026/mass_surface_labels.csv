@@ -1,0 +1,42 @@
+column names;variable description
+mass_fresh_mg;fresh mass expressed in mg
+mass_dry_mg;dry mass expressed in mg
+species;species name (or a code for morphotype)
+class;taxonomic class
+order;taxonomic order
+family;taxonomic family
+larve;a logical vector indicating  if the organism is at a larval stage (TRUE) or not (FALSE)
+id_morphotype;a unique code for indification of each individual
+Area;surface area, measured on the scanned image with imageJ (mm²)
+Perim;Perimeter, measured on the scanned image with imageJ (mm)
+Mean;Average gray value within the selection, measured on the scanned image with imageJ 
+StdDev;Standard deviation of the gray values used to generate the mean gray value, measured on the scanned image with imageJ 
+Mode;Most frequently occurring gray value within the selection, measured on the scanned image with imageJ 
+Min;Minimum gray values within the selection, measured on the scanned image with imageJ 
+Max;Maximum gray values within the selection, measured on the scanned image with imageJ 
+X;Centroid - The center point of the selection. This is the average of the x and y coordinates of all of the pixels in the image or selection. Uses the X and Y Results table headings. Measured on the scanned image with imageJ 
+Y;Centroid - The center point of the selection. This is the average of the x and y coordinates of all of the pixels in the image or selection. Uses the X and Y Results table headings. Measured on the scanned image with imageJ 
+XM;Center of Mass - This is the brightness-weighted average of the x and y coordinates all pixels in the image or selection. Uses the XM and YM headings. These coordinates are the first order spatial moments. measured on the scanned image with imageJ 
+YM;Center of Mass - This is the brightness-weighted average of the x and y coordinates all pixels in the image or selection. Uses the XM and YM headings. These coordinates are the first order spatial moments. measured on the scanned image with imageJ 
+BX;Bounding Rectangle - The smallest rectangle enclosing the selection. Uses the headings BX, BY, Width and Height, where BX and BY are the coordinates of the upper left corner of the rectangle. Measured on the scanned image with imageJ 
+BY;Bounding Rectangle - The smallest rectangle enclosing the selection. Uses the headings BX, BY, Width and Height, where BX and BY are the coordinates of the upper left corner of the rectangle. Measured on the scanned image with imageJ 
+Width;Bounding Rectangle - The smallest rectangle enclosing the selection. Uses the headings BX, BY, Width and Height, where BX and BY are the coordinates of the upper left corner of the rectangle. Measured on the scanned image with imageJ 
+Height;Bounding Rectangle - The smallest rectangle enclosing the selection. Uses the headings BX, BY, Width and Height, where BX and BY are the coordinates of the upper left corner of the rectangle. Measured on the scanned image with imageJ 
+Major;Fit Ellipse - Fit an ellipse to the selection. Uses the headings Major, Minor and Angle. Major and Minor are the primary and seconday axis of the best fitting ellipse. Angle (0-180 degrees) is the angle between the primary axis and a line parallel to the x-axis of the image. The coordinates of the center of the ellipse are displayed as X and Y if Centroid is checked. measured on the scanned image with imageJ 
+Minor;Fit Ellipse - Fit an ellipse to the selection. Uses the headings Major, Minor and Angle. Major and Minor are the primary and seconday axis of the best fitting ellipse. Angle (0-180 degrees) is the angle between the primary axis and a line parallel to the x-axis of the image. The coordinates of the center of the ellipse are displayed as X and Y if Centroid is checked. measured on the scanned image with imageJ 
+Angle;Fit Ellipse - Fit an ellipse to the selection. Uses the headings Major, Minor and Angle. Major and Minor are the primary and seconday axis of the best fitting ellipse. Angle (0-180 degrees) is the angle between the primary axis and a line parallel to the x-axis of the image. The coordinates of the center of the ellipse are displayed as X and Y if Centroid is checked. measured on the scanned image with imageJ 
+Circ.;Circ. (circularity): 4?*area/perimeter^2. A value of 1.0 indicates a perfect circle. As the value approaches 0.0, it indicates an increasingly elongated shape. Values may not be valid for very small particles. measured on the scanned image with imageJ 
+Feret;Feret's Diameter - The longest distance between any two points along the selection boundary, also known as maximum caliper. Uses the Feret heading. FeretAngle (0-180 degrees) is the angle between the Feret's diameter and a line parallel to the x-axis of the image. MinFeret is the minimum caliper diameter. The starting coordinates of the Feret's diameter (FeretX and FeretY) are also displayed. measured on the scanned image with imageJ 
+IntDen;"Integrated Density - Calculates and displays two values: ""IntDen"" (the product of Area and Mean Gray Value) and ""RawIntDen"" (the sum of the values of the pixels in the image or selection). Measured on the scanned image with imageJ "
+Median;The median value of the pixels in the image or selection. measured on the scanned image with imageJ 
+Skew;The third order moment about the mean. measured on the scanned image with imageJ 
+Kurt;The fourth order moment about the mean. measured on the scanned image with imageJ 
+RawIntDen;"Integrated Density - Calculates and displays two values: ""IntDen"" (the product of Area and Mean Gray Value) and ""RawIntDen"" (the sum of the values of the pixels in the image or selection). Measured on the scanned image with imageJ "
+Slice;surface area measured on the scanned image with imageJ 
+FeretX;Feret's Diameter - The longest distance between any two points along the selection boundary, also known as maximum caliper. Uses the Feret heading. FeretAngle (0-180 degrees) is the angle between the Feret's diameter and a line parallel to the x-axis of the image. MinFeret is the minimum caliper diameter. The starting coordinates of the Feret's diameter (FeretX and FeretY) are also displayed. measured on the scanned image with imageJ 
+FeretY;Feret's Diameter - The longest distance between any two points along the selection boundary, also known as maximum caliper. Uses the Feret heading. FeretAngle (0-180 degrees) is the angle between the Feret's diameter and a line parallel to the x-axis of the image. MinFeret is the minimum caliper diameter. The starting coordinates of the Feret's diameter (FeretX and FeretY) are also displayed. measured on the scanned image with imageJ 
+FeretAngle;Feret's Diameter - The longest distance between any two points along the selection boundary, also known as maximum caliper. Uses the Feret heading. FeretAngle (0-180 degrees) is the angle between the Feret's diameter and a line parallel to the x-axis of the image. MinFeret is the minimum caliper diameter. The starting coordinates of the Feret's diameter (FeretX and FeretY) are also displayed. measured on the scanned image with imageJ 
+MinFeret;Feret's Diameter - The longest distance between any two points along the selection boundary, also known as maximum caliper. Uses the Feret heading. FeretAngle (0-180 degrees) is the angle between the Feret's diameter and a line parallel to the x-axis of the image. MinFeret is the minimum caliper diameter. The starting coordinates of the Feret's diameter (FeretX and FeretY) are also displayed. measured on the scanned image with imageJ 
+AR;"AR (aspect ratio): major_axis/minor_axis. Enable ""Fit Ellipse"" in Analyze>Set Measurements to have the major and minor axis displayed. Measured on the scanned image with imageJ "
+Round;Round (roundness): 4*area/(?*major_axis^2), or the inverse of the aspect ratio. Measured on the scanned image with imageJ 
+Solidity;Solidity: area/convex area. The Edit>Selection>Convex Hull command makes an area selection convex. Measured on the scanned image with imageJ 
