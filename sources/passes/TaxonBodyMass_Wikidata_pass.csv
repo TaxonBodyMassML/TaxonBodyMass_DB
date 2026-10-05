@@ -1,2 +1,4 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Pica_serica","Animalia","Chordata","Aves","Passeriformes","Corvidae","Pica serica",FALSE,"GBIF","Pica","Pica serica",99,"ACCEPTED","Corvidae","Passeriformes","10704098"
+"Cnemidophorus_uniparens","Animalia","Chordata","Squamata",NA,"Teiidae","Cnemidophorus uniparens",TRUE,"GBIF","Aspidoscelis","Aspidoscelis uniparens",98,"SYNONYM","Teiidae",NA,"5227544"
+"Crotalus_helleri","Animalia","Chordata","Squamata",NA,"Viperidae","Crotalus helleri",FALSE,"GBIF","Crotalus","Crotalus helleri",99,"ACCEPTED","Viperidae",NA,"2444453"
+"Gallus_domesticus","Animalia","Chordata","Aves","Galliformes","Phasianidae","Gallus domesticus",TRUE,"GBIF","Gallus","Gallus gallus",98,"SYNONYM","Phasianidae","Galliformes","11004366"

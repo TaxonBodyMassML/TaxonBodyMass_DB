@@ -71,6 +71,7 @@ Uyeda_etal_2017,compilation,compilation_terminal,,tier E; White 2006 and McKechn
 Verberk_2020,compilation,unknown,,tier B; Literature.source in-row (478 refs)
 Weisse_2024,compilation,unknown,,"tier A2; [n] -> References.xlsx (48, with DOI)"
 Wilman_etal_2014,compilation,unknown,,"tier A1; mammals (MamFuncDat.txt, #65): per-row Ref_ codes in BodyMass-Source -> references.csv transcribed from MamFuncDatSources.txt (176 entries; Ref_117 Smith_2003 and Ref_58 Jones_2009 are DB sources, hop 2 later); birds: the BodyMass-Source word as key (Dunning08 compilation_terminal, HBW volumes, PrimScale allometry, Other)"
+Wisnionski_2026,compilation,unknown,,"tier A2; per-row mass reference numbers of Table S1 (supplement pdf parsed by parse_wisnionski_supmat.py; 53 keys on the kept records) -> references.csv (132 entries); masses mostly AnAge / Dunning 1993 / Bokony et al. 2009 (#79)"
 fishbase,live,database_record,,tier G; PopCharRefNo / SourceRef -> refrens via rfishbase::references() (Phase 3)
 sealifebase,live,database_record,,tier G; as fishbase (Phase 3)
 vertnet-amphibia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)

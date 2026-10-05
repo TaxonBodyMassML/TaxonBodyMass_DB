@@ -273,7 +273,10 @@ reflist_specs <- list(
                       compiler = 'Leahy'),
   Wascher_2025 = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Wascher')
+                      compiler = 'Wascher'),
+  Wisnionski_2026 = list(format = 'csv', file = 'references.csv',
+                         key_col = 'key', citation_col = 'citation', sep = ';',
+                         compiler = 'Wisnionski')
 )
 
 ReflistSpec <- function(source_label) {

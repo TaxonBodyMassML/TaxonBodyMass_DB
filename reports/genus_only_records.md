@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-04 22:37:26
+# Genus-only records -- 2026-10-04 22:59:53
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -330,7 +330,7 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Hirundichthys | 0.963 | 84.5 | 5 | -1.94 | vertnet-fishes-sept2016+vertnet-traits-sept2016 |
 | Tomocerus | 1.15e-05 | 0.000774 | 12 | -1.83 | Cohen_2014 |
 | Salpa | 22.6 | 0.342 | 2 | 1.82 | Pata_2025 |
-| Canis |  236 | 1.39e+04 | 6 | -1.77 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
+| Canis |  236 | 1.4e+04 | 6 | -1.77 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
 | Scytodes | 4.75 | 0.082 | 1 | 1.76 | Brose_etal_2018 |
 | Tylenchus | 2.81e-06 | 5e-08 | 1 | 1.75 | Cohen_2014 |
 | Galago |    4 |  218 | 4 | -1.74 | vertnet-mammalia-sept2016 |
@@ -348,7 +348,7 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Dolomedes | 0.03 | 0.573 | 4 | -1.28 | Brose_etal_2018 |
 | Chiromantis | 0.548 | 10.3 | 3 | -1.27 | vertnet-amphibia-sept2016 |
 | Eupodes | 3.44e-05 | 2e-06 | 1 | 1.24 | Brose_etal_2018; Cohen_2014 |
-| Lagopus | 31.5 |  514 | 2 | -1.21 | vertnet-traits-sept2016 |
+| Lagopus | 31.5 |  510 | 2 | -1.21 | vertnet-traits-sept2016 |
 | Tyrophagus | 1.73e-05 | 1.17e-06 | 1 | 1.17 | Brose_etal_2018; Cohen_2014 |
 | Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 |
 | Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
@@ -356,6 +356,6 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Strongylura |   37 |  421 | 4 | -1.06 | vertnet-fishes-sept2016 |
 | Bufo | 7.96 | 85.5 | 4 | -1.03 | vertnet-amphibia-sept2016 |
 | Veigaia | 0.000408 | 3.81e-05 | 5 | 1.03 | Brose_etal_2018; Cohen_2014 |
-| Mustela | 55.5 |  577 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
+| Mustela | 55.5 |  578 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
 | Sphenomorphus | 1.24 | 12.5 | 107 | -1 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
 
