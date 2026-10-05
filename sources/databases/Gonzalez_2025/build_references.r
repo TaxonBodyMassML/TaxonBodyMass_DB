@@ -1,7 +1,7 @@
-# Builds references.csv (the reference list of Gonzalez_2024 for the citation
+# Builds references.csv (the reference list of Gonzalez_2025 for the citation
 # tooling, R/library/citations/README.md) from the Dryad sheet 'References'
 # exported as datapaper_2025_02_11_references.csv, which is kept verbatim.
-# Run from anywhere: Rscript sources/databases/Gonzalez_2024/build_references.r
+# Run from anywhere: Rscript sources/databases/Gonzalez_2025/build_references.r
 #
 # The records' native key is `data.source1`. The upstream list keys its rows
 # the same way for the 'paper' and 'template' rows, but

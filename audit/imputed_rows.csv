@@ -23,12 +23,12 @@
 "DeLong_etal_2010","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",5,5,523
 "DeLong_etal_2018","mass source code: alternate taxon, % adult mass or genus/order average",1097,285,876
 "Faurby_etal_2018","Mass.Method Imputed or As relative of suggested similar size",204,204,5273
-"Ghaderi_2025","juvenile life stage (J1-J4): not adult records",14,5,559
-"Gonzalez_2024","freshwater Odonata/Trichoptera nymphs and larvae and the bromeliad mosquito larvae of Gonzalez et al. 2018: non-adult records (no life-stage column)",183,8,4358
-"Gonzalez_2024","unpublished - Roussel: salmonids at 0.18-0.32 mg dry mass, below an egg: unverifiable units",212,2,4146
-"Gonzalez_2024","unpublished - Harrower: ant workers at 0.4-6.7 ug dry mass beside one at 0.4 mg: unverifiable units",36,7,4110
-"Gonzalez_2024","Amphibia: larval salamanders, tadpoles and metamorphs (every species x source value 1.5-4 log10 below the adult value): non-adult records",534,9,3576
-"Gonzalez_2024","fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)",809,73,2767
+"Ghaderi_2026","juvenile life stage (J1-J4): not adult records",14,5,559
+"Gonzalez_2025","freshwater Odonata/Trichoptera nymphs and larvae and the bromeliad mosquito larvae of Gonzalez et al. 2018: non-adult records (no life-stage column)",183,8,4358
+"Gonzalez_2025","unpublished - Roussel: salmonids at 0.18-0.32 mg dry mass, below an egg: unverifiable units",212,2,4146
+"Gonzalez_2025","unpublished - Harrower: ant workers at 0.4-6.7 ug dry mass beside one at 0.4 mg: unverifiable units",36,7,4110
+"Gonzalez_2025","Amphibia: larval salamanders, tadpoles and metamorphs (every species x source value 1.5-4 log10 below the adult value): non-adult records",534,9,3576
+"Gonzalez_2025","fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)",809,73,2767
 "Hoehler_etal_2023","genus-level cell size (Comments)",7,5,4413
 "Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
 "Hudson_2013","nestling/chick study (Appendix S6 title): not adult records",63,4,1435

@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-05 00:17:57
+# Citation and provenance warnings -- 2026-10-05 08:03:12
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -8,25 +8,15 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Problems
 
-- 5 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Gonzalez_2024, Lemoine_2026, AyalaBerdon_2025, Leahy_2025
-- 10 source label(s) without a Bibcite: Gonzalez_2024, Baach_2026, Wisnionski_2026, Oskyrko_2024, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
+- 1 source label(s) without a Bibcite: Hudson_2013
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: DunningJr_2007 -> Dunning-Jr:2007aa
+- BM_citations: Hudson_2013 -> Hudson:2013aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
-- Baach_2026 (529 rows)
-- Gonzalez_2024 (225 rows)
-- Ghaderi_2025 (221 rows)
-- Wisnionski_2026 (131 rows)
-- Wascher_2025 (123 rows)
 - Hudson_2013 (100 rows)
-- Lemoine_2026 (55 rows)
-- Leahy_2025 (53 rows)
-- AyalaBerdon_2025 (36 rows)
-- Oskyrko_2024 (29 rows)
 
 ## Per-source coverage
 
@@ -57,9 +47,9 @@ One row per source label: species and record links (species x source x reference
 | Feldman_etal_2016 | derived | 9474 | 9592 | 100 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 136 | 138 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | compilation | 410 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Ghaderi_2025 | derived | 221 | 551 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 551 |
+| Ghaderi_2026 | derived | 221 | 551 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 551 |
 | Gillooly_etal_2016 | compilation | 71 | 75 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Gonzalez_2024 | compilation | 225 | 1662 | 72.4 | 50 | 25 | 0 | 10 | 13 | 2 | 0 | 0 | 0 |
+| Gonzalez_2025 | compilation | 225 | 1662 | 72.4 | 50 | 25 | 0 | 10 | 13 | 2 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 5 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 128 | 247 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
