@@ -17,8 +17,9 @@
 #  - the 'unpublished - <contributor>' template rows cite the StoichLife paper
 #    itself; the key is prepended to that citation so that the entry reads as
 #    unpublished data of the compilers (role `self` in the tooling, which looks
-#    for 'unpubl' and the compiler's name); 'unpublished - Jackson' is listed
-#    twice upstream and once here; 'unpublished - Rosanova' is cited by the
+#    for 'unpubl' and the compiler's name); 'unpublished - Jackson' and
+#    'unpublished - Potapov' (one row with a trailing blank) are listed twice
+#    upstream and once here; 'unpublished - Rosanova' is cited by the
 #    records but absent from the list (the list has 'unpublished - Rosanova /
 #    Tiunov') and is added as a template row with a note.
 # Columns: key, citation, doi, note (the upstream data.type, with the
@@ -32,6 +33,8 @@ dat <- read.csv(file.path(src_dir, 'datapaper_2025_02_11_data.csv'), check.names
                 stringsAsFactors = FALSE, na.strings = c('', 'NA', '#N/A'), fileEncoding = 'UTF-8-BOM')
 dat <- dat[dat$kingdom_revised %in% 'Animalia' & !is.na(dat$body.weight.gr), ]
 up$reference <- trimws(up$reference)
+up$data.source1 <- trimws(up$data.source1)      # one 'unpublished - Potapov' row carries a trailing blank
+dat$data.source1 <- trimws(dat$data.source1)
 up <- up[!duplicated(up[, c('data.source1', 'data.type', 'reference')]), ]
 
 out <- list()
