@@ -75,8 +75,18 @@ cells <- apply(adat[, svl_cols], 1, function(r) {
 })
 raw <- SplitRefKeys(cells, '[,;]')
 ex  <- ExplodeRefKeys(raw)
-pairs <- unique(data.frame(taxon = adat$taxon[ex$record], genus = adat$Genus[ex$record],
-                           family = adat$Family[ex$record], raw_key = ex$native_key, stringsAsFactors = FALSE))
+# the previous token of the same cell (for a bare year), from the same split
+prev_of <- unlist(lapply(cells, function(s) {
+  if (is.na(s)) return(character(0))
+  toks <- trimws(strsplit(s, '[,;]', perl = TRUE)[[1]])
+  toks <- toks[nzchar(toks) & !toupper(toks) %in% c('NA', 'N/A', '-', '--', '?')]
+  toks <- toks[!duplicated(toks)]
+  c(NA_character_, toks[-length(toks)])[seq_along(toks)]
+}))
+stopifnot(length(prev_of) == nrow(ex))
+pairs <- data.frame(taxon = adat$taxon[ex$record], genus = adat$Genus[ex$record],
+                    family = adat$Family[ex$record], raw_key = ex$native_key, prev = prev_of, stringsAsFactors = FALSE)
+pairs <- pairs[!duplicated(paste(pairs$taxon, pairs$raw_key, sep = '\r')), ]
 cat(sprintf('Appendix S1: %d records with a mass, %d with an SVL reference, %d record x key links, %d distinct raw keys\n',
             nrow(adat), sum(!is.na(raw)), nrow(ex), length(unique(ex$native_key))))
 
@@ -86,32 +96,56 @@ norm_s3 <- Norm(s3$s3_key)
 genera  <- unique(adat$Genus)
 Specific <- function(tokens)   # Taxa tokens that name a family, a genus of the table or a binomial
   grepl('(idae|inae)$', tokens) | grepl(' ', tokens) | tokens %in% genera
-Resolve <- function(raw_key, taxon, genus, family) {
-  cand <- which(s3$s3_key == raw_key); how <- 'exact'
-  if (length(cand) == 0 && grepl('[0-9]{4}[a-z]$', raw_key)) {
-    cand <- which(s3$s3_key == sub('([0-9]{4})[a-z]$', '\\1', raw_key)); how <- 'letter'
+owner_rules <- c('Boulenger 1885' = 'Boulenger 1885 [1]', 'Boulenger 1885b' = 'Boulenger 1885 [2]',
+                 'Boulenger 1887' = 'Boulenger 1887 [2]')
+Candidates <- function(key) {
+  cand <- which(s3$s3_key == key); how <- 'exact'
+  if (length(cand) == 0 && grepl('[0-9]{4}[a-z]$', key)) {
+    cand <- which(s3$s3_key == sub('([0-9]{4})[a-z]$', '\\1', key)); how <- 'letter'
   }
-  if (length(cand) == 0) { cand <- which(norm_s3 == Norm(raw_key)); how <- 'normalised' }
+  if (length(cand) == 0) { cand <- which(norm_s3 == Norm(key)); how <- 'normalised' }
+  list(cand = cand, how = how)
+}
+# the cleaned forms of a token, tried in order after the token itself
+Cleaned <- function(tok, prev) {
+  out <- character(0)
+  if (grepl('^[0-9]{4}[a-z]?$', tok) && !is.na(prev) && grepl('[0-9]{4}', prev))
+    out <- c(out, paste(trimws(sub(' ?[0-9]{4}[a-z]?.*$', '', prev)), tok))
+  if (grepl('^[0-9.]+ \\(', tok)) out <- c(out, sub('\\)?$', '', sub('^[0-9.]+ \\(', '', tok)))
+  if (grepl('[0-9]{4}[a-z]? \\(.*\\)?$', tok)) out <- c(out, sub(' \\(.*$', '', tok))
+  out <- sub('^(see also|also) ', '', out, ignore.case = TRUE)
+  unique(out[nzchar(out)])
+}
+Resolve <- function(raw_key, taxon, genus, family, prev) {
+  cc <- Candidates(raw_key); how <- cc$how
+  if (length(cc$cand) == 0) {
+    for (ck in Cleaned(raw_key, prev)) {
+      cc <- Candidates(ck)
+      if (length(cc$cand) > 0) { how <- paste0('cleaned:', cc$how); break }
+    }
+  }
+  cand <- cc$cand
   if (length(cand) == 0) return(c(raw_key, 'not_in_list'))
   if (length(cand) == 1) return(c(s3$key[cand], how))
-  toks <- lapply(strsplit(s3$taxa[cand], ',', fixed = TRUE), function(t) t[nzchar(t)])
-  toks <- lapply(toks, trimws)
+  toks <- lapply(strsplit(s3$taxa[cand], ',', fixed = TRUE), function(t) trimws(t[nzchar(t)]))
   tier <- list(species = vapply(toks, function(t) any(t == taxon | grepl(paste0('\\b', taxon, '\\b'), t)), logical(1)),
                genus   = vapply(toks, function(t) any(t == genus | grepl(paste0('\\b', genus, '\\b'), t)), logical(1)),
                family  = vapply(toks, function(t) any(t == family), logical(1)),
                generic = vapply(toks, function(t) length(t) == 0 || !any(Specific(t)), logical(1)))
   for (nm in names(tier)) if (sum(tier[[nm]]) == 1) return(c(s3$key[cand[tier[[nm]]]], paste0('taxa:', nm))) else if (sum(tier[[nm]]) > 1) break
+  if (raw_key %in% names(owner_rules)) return(c(unname(owner_rules[raw_key]), 'owner_rule'))
   c(raw_key, 'ambiguous')
 }
-res <- t(mapply(Resolve, pairs$raw_key, pairs$taxon, pairs$genus, pairs$family, USE.NAMES = FALSE))
+res <- t(mapply(Resolve, pairs$raw_key, pairs$taxon, pairs$genus, pairs$family, pairs$prev, USE.NAMES = FALSE))
 pairs$key <- res[, 1]; pairs$method <- res[, 2]
-links <- as.integer(table(paste(ex$native_key, adat$taxon[ex$record]))[paste(pairs$raw_key, pairs$taxon)])
-cat('resolution of the record x key pairs (pairs / record links):\n')
-print(cbind(pairs = table(pairs$method), links = tapply(links, pairs$method, sum)))
+stopifnot(all(pairs$key[!pairs$method %in% c('ambiguous', 'not_in_list')] %in% s3$key))
+cat('resolution of the record x key pairs:\n')
+print(table(pairs$method))
 km <- pairs[pairs$method != 'exact' | pairs$key != pairs$raw_key, c('taxon', 'raw_key', 'key', 'method')]
 km <- km[order(km$taxon, km$raw_key, method = 'radix'), ]
 write.csv(km, file.path(wd, 'key_map.csv'), row.names = FALSE, na = '', fileEncoding = 'UTF-8')
-cat(sprintf('key_map.csv: %d (taxon, raw key) pairs written (the %d exact unique matches are not)\n', nrow(km), sum(!(pairs$method != 'exact' | pairs$key != pairs$raw_key))))
-cat(sprintf('distinct references.csv keys cited by the records: %d; distinct raw keys left unresolved: %d\n',
+cat(sprintf('key_map.csv: %d (taxon, raw key) pairs written (the %d exact unique matches are not)\n', nrow(km), nrow(pairs) - nrow(km)))
+cat(sprintf('distinct references.csv keys cited by the records: %d; distinct raw keys left unresolved: %d; links resolved: %d of %d (%.1f%%)\n',
             length(unique(pairs$key[!pairs$method %in% c('ambiguous', 'not_in_list')])),
-            length(unique(pairs$raw_key[pairs$method %in% c('ambiguous', 'not_in_list')]))))
+            length(unique(pairs$raw_key[pairs$method %in% c('ambiguous', 'not_in_list')])),
+            sum(!pairs$method %in% c('ambiguous', 'not_in_list')), nrow(pairs), 100 * mean(!pairs$method %in% c('ambiguous', 'not_in_list'))))

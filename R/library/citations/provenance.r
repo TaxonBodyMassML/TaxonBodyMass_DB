@@ -230,9 +230,11 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
       # a derived source (registry default derived_allometry; Meiri_2018): its
       # measurement references are the length sources of the computed value,
       # so their rows are derived_allometry too, and the equation row is
-      # written beside them (below). A pending or unmatched key keeps the
-      # generic treatment (no primary citation; 'unknown' for an unmatched key).
-      derived <- unname(type_of[g$source_label]) %in% 'derived_allometry' & role %in% 'measurement' & !ov
+      # written beside them (below); a self reference (the compiler's own
+      # length measurements) is derived_allometry citing the source itself. A
+      # pending or unmatched key keeps the generic treatment (no primary
+      # citation; 'unknown' for an unmatched key).
+      derived <- unname(type_of[g$source_label]) %in% 'derived_allometry' & role %in% c('measurement', 'self') & !ov
       type[derived] <- 'derived_allometry'
       status <- prim$match_status[pi]
       status[is.na(pi)] <- ifelse(g$source_label[is.na(pi)] %in% prim$source_label, 'unmatched_key', 'uningested')

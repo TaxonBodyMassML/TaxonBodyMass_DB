@@ -196,13 +196,16 @@ Expect(nrow(brey) == 1 && brey$hop == 0L && brey$ref_role == 'conversion' && bre
 # sources are measurement rows typed derived_allometry, the equation row is
 # written beside them per species, an unmatched key stays unknown, a pending
 # key has no primary citation, and a prov_type override gets no equation row
-prim_d <- rbind(prim, P('Deriv', c('L1', 'L2', 'L3'), status = c('certain', 'pending', 'certain'), doi = c('10.1/l1', NA, '10.1/doyle'),
-                        bibcite = c('L1:2001aa', NA, 'Doyle:2007aa'), cite_id = c('L1_2001', NA, 'Doyle_2007'),
-                        role = 'measurement', reason = c('two_service_agreement', 'weak_match', 'two_service_agreement')))
-rec_d <- rbind(R('Mm', 'nn', 'Deriv', ref_keys = 'L1; L2'), R('Mm', 'nn', 'Deriv', ref_keys = 'L1; 99'),
+prim_d <- rbind(prim, P('Deriv', c('L1', 'L2', 'L3', 'OWN'), status = c('certain', 'pending', 'certain', 'self'), doi = c('10.1/l1', NA, '10.1/doyle', NA),
+                        bibcite = c('L1:2001aa', NA, 'Doyle:2007aa', NA), cite_id = c('L1_2001', NA, 'Doyle_2007', NA),
+                        role = c('measurement', 'measurement', 'measurement', 'self'), reason = c('two_service_agreement', 'weak_match', 'two_service_agreement', 'owner_self')))
+rec_d <- rbind(R('Mm', 'nn', 'Deriv', ref_keys = 'L1; L2'), R('Mm', 'nn', 'Deriv', ref_keys = 'L1; 99'), R('Uu', 'vv', 'Deriv', ref_keys = 'OWN'),
                R('Oo', 'pp', 'Deriv', ref_keys = 'L3'), R('Qq', 'rr', 'Deriv', ref_keys = 'L1', prov_type = 'compiled_from'),
                R('Ss', 'tt', 'NoEq', ref_keys = 'L1'))
-prov_d <- BuildProvenance(rec_d, prim_d, classes, citeids, Reg(genus = c('Mm', 'Oo', 'Qq', 'Ss'), species = c('nn', 'pp', 'rr', 'tt')))
+prov_d <- BuildProvenance(rec_d, prim_d, classes, citeids, Reg(genus = c('Mm', 'Oo', 'Qq', 'Ss', 'Uu'), species = c('nn', 'pp', 'rr', 'tt', 'vv')))
+du <- prov_d[prov_d$genus == 'Uu', ]
+Expect(nrow(du) == 2 && all(du$provenance_type == 'derived_allometry') && du$primary_cite_id[du$ref_role == 'self'] == 'Deriv' && du$match_status[du$ref_role == 'self'] == 'self' && du$hop[du$ref_role == 'self'] == 1L && sum(du$ref_role == 'equation') == 1,
+       "a self reference of a derived source: derived_allometry citing the source itself, beside the equation row")
 dm <- prov_d[prov_d$genus == 'Mm', ]
 Expect(nrow(dm) == 4 && sum(dm$ref_role %in% 'equation') == 1 && sum(dm$ref_role %in% 'measurement') == 2 && sum(dm$match_status %in% 'unmatched_key') == 1,
        'a derived source with keys: two measurement rows, one unmatched key, one equation row per species')
