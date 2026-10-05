@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 22:20:47
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 22:17:22
 
 
-## Species name changed during enrichment (5645 rows)
+## Species name changed during enrichment (5638 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -110,8 +110,6 @@ Acrocephalus luscinius; Acrocephalus luscinia -> Acrocephalus luscinius [GBIF]
 Acrocephalus palustris; Acrcocephalus palustris -> Acrocephalus palustris [GBIF]
 
 Acrocephalus rimitarae; Acrocephalus rimatarae -> Acrocephalus rimitarae [GBIF]
-
-Acrocera orbiculus -> Acrocera orbicula [GBIF]
 
 Acrocodia indica; Tapirus indicus -> Acrocodia indica [GBIF]
 
@@ -748,8 +746,6 @@ Apaloderma vittatum; Apaloderma vittatus -> Apaloderma vittatum [GBIF]
 Listriomastax litorea -> Apetaenus enderleini [GBIF]
 
 Aphanius fasciatus; Aphinius fasciatus -> Aphanius fasciatus [GBIF]
-
-Aphanoturulus unicolor -> Aphanotorulus unicolor [GBIF]
 
 Aphelopus holomelas -> Aphelopus atratus [GBIF]
 
@@ -1781,7 +1777,7 @@ Cellvibrio gilvus -> Cellulomonas gilvus [NCBI]
 
 Geochelone sulcata -> Centrochelys sulcata [GBIF]
 
-Centromerus brevivulvatus; Centromerus brevipalpus -> Centromerus brevipalpus [GBIF]
+Centromerus brevivulvatus -> Centromerus brevipalpus [GBIF]
 
 Centromerus sylvaticus; Centomerus sylvaticus -> Centromerus sylvaticus [GBIF]
 
@@ -2214,8 +2210,6 @@ Chrysophlegma flavinucha; Picus flavinucha -> Chrysophlegma flavinucha [GBIF]
 Chrysophlegma mentale; Picus mentalis -> Chrysophlegma mentale [GBIF]
 
 Chrysophlegma miniaceum; Picus mineaceus; Picus miniaceus -> Chrysophlegma miniaceum [GBIF]
-
-Chrysopilus auratus -> Chrysopilus cristatus [GBIF]
 
 Chrysotoxum bicinctum -> Chrysotoxum bicincta [GBIF]
 
@@ -3815,7 +3809,7 @@ Falco rusticolus; Falco rusticolis -> Falco rusticolus [GBIF]
 
 Falco sparverius; Falco sparerius -> Falco sparverius [GBIF]
 
-Orconectes propinquus; Faxonius propinquus -> Faxonius propinquus [GBIF]
+Orconectes propinquus -> Faxonius propinquus [GBIF]
 
 Fejervarya cancrivora; Rana cancrivora -> Fejervarya cancrivora [GBIF]
 
@@ -4181,7 +4175,7 @@ Catla catla; Labeo catla -> Gibelion catla [GBIF]
 
 Gigantocypris agassizii -> Gigantocypris agassizi [GBIF]
 
-Gigantocypris muelleri; Gigantocypris mulleri -> Gigantocypris muelleri [GBIF]
+Gigantocypris mulleri -> Gigantocypris muelleri [GBIF]
 
 Dugesia tigrina; Girardia tigrina -> Girardia tigrina [GBIF]
 
@@ -6475,8 +6469,6 @@ Neovison vison; Mustela vison -> Mustela vison [GBIF]
 
 Benthoctopus thielei -> Muusoctopus thielei [GBIF]
 
-Mallota florea; Myathropa florea -> Myathropa florea [GBIF]
-
 Mycale contareni -> Mycale contarenii [GBIF]
 
 Mycerobas icterioides; Coccothraustes icterioides -> Mycerobas icterioides [GBIF; NCBI]
@@ -7191,8 +7183,6 @@ Orthopsittaca manilatus; Orthopsittaca manilata; Ara manilata -> Orthopsittaca m
 
 Orthotomus sutorius; Orthotomus sutorous -> Orthotomus sutorius [GBIF]
 
-Actinonaias ligamentina -> Ortmanniana ligamentina [GBIF]
-
 Francolinus gularis -> Ortygornis gularis [GBIF]
 
 Francolinus pondicerianus -> Ortygornis pondicerianus [GBIF]
@@ -7212,8 +7202,6 @@ Handleyomys rostratus; Oryzomys rostratus -> Oryzomys rostratus [GBIF]
 Handleyomys saturatior; Oryzomys saturatior -> Oryzomys saturatior [GBIF]
 
 Oryzorictes hova; Oryzoryctes hova -> Oryzorictes hova [GBIF]
-
-Osmia rufa; Osmia bicornis -> Osmia bicornis [GBIF]
 
 Moolgarda cunnesius -> Osteomugil cunnesius [GBIF]
 
@@ -8896,8 +8884,6 @@ Pyura tunicata -> Pyura tunica [GBIF]
 Melita formosa -> Quasimelita formosa [GBIF]
 
 Quasipaa boulengeri; Paa boulengeri -> Quasipaa boulengeri [GBIF]
-
-Quedius nitipennis; Quedius nitidipennis -> Quedius nitipennis [GBIF]
 
 Quietula ycauda -> Quietula y-cauda [GBIF]
 
@@ -11165,7 +11151,7 @@ Xolmis rubetra; Xolmis salinarum; Neoxolmis rubetra -> Xolmis rubetra [GBIF]
 
 Xylota semulatra -> Xylota abiens [GBIF]
 
-Xylota jakutorum; Xylota coeruleiventris -> Xylota jakutorum [GBIF]
+Xylota coeruleiventris -> Xylota jakutorum [GBIF]
 
 Arthrosaura guianensis -> Yanomamia guianensis [GBIF]
 
