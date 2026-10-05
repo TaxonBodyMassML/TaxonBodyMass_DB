@@ -249,6 +249,9 @@ reflist_specs <- list(
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
                       compiler = 'Hudson'),
+  Wilman_etal_2014 = list(format = 'csv', file = 'references.csv',
+                          key_col = 'key', citation_col = 'citation', sep = ',',
+                          compiler = 'Wilman'),
   # web-level attribution (issue #64): one key per work cited for a food web
   Brose_etal_2018 = list(format = 'csv', file = 'references.csv',
                          key_col = 'key', citation_col = 'citation', doi_col = 'doi', type_col = 'note',
