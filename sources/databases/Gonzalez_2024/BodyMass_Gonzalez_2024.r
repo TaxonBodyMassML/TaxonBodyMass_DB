@@ -55,6 +55,15 @@ adat <- DropImputed(adat, adat$data.source1 %in% 'unpublished - Harrower', 'Gonz
 #    adult values (README.md). Non-adult records; the class is dropped.
 adat <- DropImputed(adat, adat$class_revised %in% 'Amphibia', 'Gonzalez_2024',
                     'Amphibia: larval salamanders, tadpoles and metamorphs (every species x source value 1.5-4 log10 below the adult value): non-adult records')
+#  - the fishes of the Vanni excretion-database sub-sources (data.type
+#    Vanni_database: McIntyre et al. 2008, Torres & Vanni 2007, Small et al.
+#    2011, Vanni et al. 2002, ...) are the small individuals of large species
+#    that excretion studies sample (Lepomis macrochirus at 2.4 g wet, Hoplias
+#    malabaricus at 13 g; per-source medians 0.7-1.6 log10 below the database's
+#    values): non-adult records (owner decision 2026-10-04). The non-fish rows
+#    of these sub-sources (Sterrett et al. 2015 turtles, a copepod, a snail) stay.
+adat <- DropImputed(adat, adat$data.type %in% 'Vanni_database' & adat$class_revised %in% 'Actinopterygii', 'Gonzalez_2024',
+                    'fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)')
 
 # Conversion group of every record (dry -> wet), by the compilers' revised
 # class / phylum and the habitat column (README.md, Mass type).
