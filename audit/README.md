@@ -91,6 +91,24 @@ Methods, with their dates and severity rules:
   other sources' Pass-1 median on the 2026-10-04 frames. Owner decision of
   2026-10-04: both values kept, registered here.
 
+- `source_conflict_2026-10-05` (31 rows): 26 rows of the Vanni_2017
+  ingestion (issue #99: StoichLife/Vanni copies of one study 100x apart,
+  GATEWAy and lab-Sheet values against Vanni's, and the Vanni values of
+  incubated small fishes that the range filter removes; `log10_pred` log10 of
+  the other sources' value on main fba0f59; `CRITICAL` where the conflicting
+  value is impossible, `SUSPICIOUS` otherwise) and five rows of the name fills
+  of issue #85 (2026-10-05): records whose raw name was unresolved until
+  `fix_misspellings.r` renamed it and which, once merged with the species they
+  belong to, fail the `log10_range > 1` filter and take the species out of the
+  output (*Aequiyoldia eightsii*, Brose_etal_2018 0.023 g; *Elaphodus
+  cephalophus*, vertnet-mammalia 461 g; *Eremalauda dunni*, vertnet-aves
+  742 g; *Peregriana peregra*, Brose_2005 0.010 g; *Thamnophis cyrtopsis*,
+  vertnet-reptilia 23.5 g). `taxon` is the cleaned name after the rename, the
+  raw spelling is in the note, `mass_g` the Pass-1 value of the wrong record,
+  `n` its record count, `log10_pred` log10 of the species' cross-source mean on
+  main f9f16ac; all five `CRITICAL` by owner instruction (the renames are kept,
+  the species are left to #34).
+
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.
 
