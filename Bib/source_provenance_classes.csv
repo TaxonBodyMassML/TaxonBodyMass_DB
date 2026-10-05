@@ -46,7 +46,7 @@ Lukic_2022,compilation,unknown,,tier A2; study -> References.xlsx (57)
 Mahe_2023,primary,measured_in_source,,tier F
 Makarieva_2008,compilation,unknown,,"tier C; SI mirror pdf per dataset; S5 = White 2006, S6a = McKechnie & Wolf 2004 second hop"
 Mathieu_2014,compilation,unknown,,tier D; all rows -> Bouche 1972 (reference not row-linked)
-McCoy_2008,compilation,unknown,,added under #7; numeric Ref codes (;-joined) -> appendixS1_references.csv (29 refs); ref 25 Brey data bank energy rows
+McCoy_2008,compilation,unknown,,added under #7; numeric Ref codes (;-joined) -> appendixS1_references.csv (30 refs; erratum version since #61); ref 25 Brey data bank energy rows
 Meiri_2018,derived,derived_allometry,Feldman:2016aa,tier A1; SVL reference columns -> appendixs3.txt; mass from SVL through the Feldman et al. 2016 equations
 Meiri_2024,compilation,unknown,,"tier C; Sources (general) -> Supplementary Table S2 (species-level, no mass-specific field)"
 Mercer_etal_2001,primary,measured_in_source,,tier F
