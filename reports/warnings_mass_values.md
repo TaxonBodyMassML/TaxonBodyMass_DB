@@ -1,11 +1,11 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 21:10:20
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 21:39:51
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
-- High mass disagreement (log10 range > 2): 358 species
+- High mass disagreement (log10 range > 2): 357 species
 - Suspicious sources (log10 > 2, by frequency):
-  - Cai_etal_2025 (78)
+  - Cai_etal_2025 (79)
   - vertnet-mammalia-sept2016 (56)
   - Brose_etal_2018 (42)
   - fishbase (39)
@@ -15,7 +15,7 @@
   - Castro_2025 (30)
   - Quaardvark (29)
   - vertnet-fishes-sept2016 (28)
-  - Myhrvold_2015 (25)
+  - Myhrvold_2015 (26)
   - Smith_2003 (20)
   - Tobias_2022 (19)
   - vertnet-reptilia-sept2016 (19)
@@ -38,8 +38,8 @@
   - Meiri_2024 (5)
   - Pata_2025 (5)
   - sealifebase (5)
-  - DeLong_etal_2010 (4)
   - Ernest_2003 (4)
+  - DeLong_etal_2010 (3)
   - Faurby_etal_2018 (3)
   - Froese_2025 (3)
   - Herberstein_etal_2022 (3)
@@ -55,8 +55,6 @@
   - Soria_etal_2021 (2)
   - Uyeda_etal_2017 (2)
   - Verberk_2020 (2)
-  - Wilman_etal_2014 (2)
-  - Baach_2026 (1)
   - Brose_2005; Brey_2010 (1)
   - Brown_etal_2018 (1)
   - Chomsky_2004 (1)
@@ -73,15 +71,15 @@
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (1)
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Viana_2016 (1)
-- Moderate mass disagreement (log10 range 1-2): 803 species
+- Moderate mass disagreement (log10 range 1-2): 802 species
 - Suspicious sources (log10 1-2, by frequency):
   - Cai_etal_2025 (143)
   - Myhrvold_2015 (109)
   - Feldman_etal_2016 (108)
   - Brose_etal_2018 (104)
   - fishbase (85)
-  - vertnet-aves-sept2016 (69)
   - Makarieva_2008 (68)
+  - vertnet-aves-sept2016 (68)
   - Tsuboi_etal_2018 (54)
   - Quaardvark (53)
   - Meiri_2024 (49)
@@ -90,7 +88,7 @@
   - Castro_2025 (39)
   - Tobias_2022 (39)
   - AnAge (37)
-  - Smith_2003 (34)
+  - Smith_2003 (35)
   - vertnet-traits-sept2016 (27)
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (25)
   - Brose_2005 (21)
@@ -146,7 +144,6 @@
   - Kiorboe_2013; Brey_2010 (2)
   - Pekar_etal_2021 (2)
   - vertnet-amphibia-sept2016 (2)
-  - Baach_2026 (1)
   - Bekova_2020 (1)
   - Brose_2005; Brey_2010 (1)
   - Brose_etal_2018; Studier_1992 (1)
@@ -162,8 +159,7 @@
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Watson_2007 (1)
   - Weisse_2024 (1)
-  - Wilman_etal_2014 (1)
-## log10(max/min mass) > 2 after dedup (358 species) -- likely misresolution or unit error
+## log10(max/min mass) > 2 after dedup (357 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
         Min_source: DeLong_etal_2010 4.2e-08
@@ -223,7 +219,7 @@ Hexanchus griseus [range=5.40]
         Min_source: vertnet-fishes-sept2016 2
         Max_source: Quaardvark 5e+05
 Psittirostra psittacea [range=5.36]
-        Min_source: Wilman_etal_2014 28.62
+        Min_source: Cai_etal_2025 28.6
         Max_source: vertnet-aves-sept2016 6.483e+06
 Lobodon carcinophaga [range=5.27]
         Min_source: vertnet-mammalia-sept2016 4
@@ -873,9 +869,6 @@ Drymarchon couperi [range=2.47]
 Homarus gammarus [range=2.47]
         Min_source: Brose_etal_2018 18.66
         Max_source: sealifebase 5455
-Helix pomatia [range=2.46]
-        Min_source: DeLong_etal_2010 0.1
-        Max_source: Baach_2026 29.02
 Scardinius erythrophthalmus [range=2.46]
         Min_source: DeLong_etal_2018 9.653
         Max_source: fishbase 2774
@@ -1102,7 +1095,7 @@ Varanus salvator [range=2.15]
         Min_source: vertnet-reptilia-sept2016; vertnet-traits-sept2016 300
         Max_source: Feldman_etal_2016 4.213e+04
 Ramphocelus icteronotus [range=2.15]
-        Min_source: Wilman_etal_2014 33
+        Min_source: Myhrvold_2015 33
         Max_source: vertnet-aves-sept2016 4623
 Thamnophis sirtalis [range=2.14]
         Min_source: vertnet-reptilia-sept2016 6.223
@@ -1240,7 +1233,7 @@ Caranx ruber [range=2.00]
         Min_source: Viana_2016 81.9
         Max_source: Froese_2025 8200
 
-## Moderate mass disagreement (log10 range 1-2) (803 species)
+## Moderate mass disagreement (log10 range 1-2) (802 species)
 
 Balaenoptera musculus [range=2.00]
         Min_source: Brose_etal_2018 1.9e+06
@@ -1296,9 +1289,6 @@ Trisopterus luscus [range=1.96]
 Ocythoe tuberculata [range=1.96]
         Min_source: Makarieva_2008 1.21
         Max_source: Barnes_2008 110
-Eptesicus nilssonii [range=1.96]
-        Min_source: Baach_2026 10
-        Max_source: vertnet-mammalia-sept2016 905
 Pomatomus saltatrix [range=1.96]
         Min_source: Killen_etal_2016 221.1
         Max_source: Cai_etal_2025 1.998e+04
@@ -1317,6 +1307,9 @@ Pagrus auratus [range=1.95]
 Lepidotrigla cavillone [range=1.95]
         Min_source: Barnes_2008 0.6708
         Max_source: fishbase 59.33
+Eptesicus nilssonii [range=1.94]
+        Min_source: Smith_2003 10.42
+        Max_source: vertnet-mammalia-sept2016 905
 Salvelinus alpinus [range=1.93]
         Min_source: Killen_etal_2016 210
         Max_source: fishbase 1.8e+04
@@ -1716,9 +1709,6 @@ Netta rufina [range=1.66]
 Poralia rufescens [range=1.66]
         Min_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 7.377
         Max_source: Pata_2025 333.8
-Uratelornis chimaera [range=1.66]
-        Min_source: vertnet-aves-sept2016 5
-        Max_source: Wilman_etal_2014 226
 Capromys pilorides [range=1.65]
         Min_source: Herberstein_etal_2022 155
         Max_source: Quaardvark 7000
