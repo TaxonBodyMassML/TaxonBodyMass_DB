@@ -45,6 +45,10 @@
 "Oskyrko_2024","value identical to the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the same allometric estimate under another citation",619,619,85
 "Oskyrko_2024","value within 0.0105 log10 of the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the re-rounded allometric estimate",29,29,56
 "Oskyrko_2024","species present in Feldman et al. 2016 / Meiri 2018 at accepted-name level (raw name, gender ending or listed synonym): its maximum is already an SVL estimate in the database (owner decision 2026-10-04, A2)",25,25,31
+"Vanni_2017","larval and juvenile stages named in the taxon (euphausiid calyptopis/furcilia, megalopa, nauplii, veliger, insect larvae) and the 1.7 mg Ranzania laevis larva: non-adult records",205,21,10329
+"Vanni_2017","Insecta: aquatic larvae and nymphs (chironomids, Chaoborus, mayflies, caddisflies): non-adult records",111,11,7757
+"Vanni_2017","Amphibia: tadpoles, metamorphs and larval salamanders (species x study values 1.6-1.9 log10 below the adult values): non-adult records",417,8,7340
+"Vanni_2017","Osteichthyes: small individuals of their species sampled for excretion (median 0.8 log10 below the database values): non-adult records (issue #99, option b)",3642,137,3698
 "Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617
 "Wascher_2025","AVONET value flagged Inferred (Body Mass) or EltonTraits_Model in AVONET1_BirdLife: not species-specific",5,5,124
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116

@@ -1,12 +1,13 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 08:03:04
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 12:51:04
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 162 rows
+- Low GBIF confidence (75-89): 168 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
+- Non-Animalia kingdom with an Animalia order/family: 1 rows
 - Names unresolved after all enrichment stages: 439 names, 4462 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
@@ -51,7 +52,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (162 rows)
+## Low GBIF confidence (75-89) (168 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -105,7 +106,7 @@ Caligavis_obscura [conf=84]
 
 Callipepla_gambelii [conf=85]
 
-Cardiapoda_placenta [conf=85]
+Cardiapoda_placenta [conf=84]
 
 Centromerus_sylvaticus [conf=85]
 
@@ -131,6 +132,8 @@ Cichlopsis_leucogenys [conf=85]
 
 Clytorhynchus_vitiensis [conf=85]
 
+Caelatura_mossambicensis [conf=85]
+
 Coelosis_biloba [conf=85]
 
 Colletheca_mutabilis [conf=85]
@@ -148,6 +151,8 @@ Corvus_ruficollis [conf=85]
 Coryphaennoides_acrolepis [conf=85]
 
 Cranioleuca_albicapilla [conf=85]
+
+Creseis_clava [conf=85]
 
 Cyanocitta_cristata [conf=85]
 
@@ -227,6 +232,8 @@ Megarynchus_pitangua [conf=85]
 
 Menemeruns_bivittatus [conf=85]
 
+Mercenaria_mercenaria [conf=85]
+
 Micanurida_forsslundi [conf=85]
 
 Misumenoides_formosipes [conf=85]
@@ -255,6 +262,8 @@ Nothobalanus_flosculus [conf=85]
 
 Nothochthamalus_scabrosus [conf=85]
 
+Oikopleura_dioica [conf=83]
+
 Ophionepthys_limicola [conf=85]
 
 Orius_similis [conf=82]
@@ -265,11 +274,15 @@ Ornitnonyssus_bursa [conf=85]
 
 Oryzorictes_hova [conf=85]
 
+Palaemon_serratus [conf=85]
+
 Mastigodryas_bifossatus [conf=84]
 
 Gallicolumba_jobiensis [conf=84]
 
 Panagaeus_bipustulatus [conf=85]
+
+Paraprionospio_pinnata [conf=85]
 
 Pardos_astrigera [conf=85]
 
@@ -384,6 +397,10 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 ## Source order != GBIF order (1 rows -- review for misresolution)
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
+
+## Non-Animalia kingdom with an Animalia order/family (1 rows -- likely cross-kingdom misresolution)
+
+Trypanosoma_lewisi | kingdom=Protozoa | order=Trypanosomatida | family=Pleuroceridae [manual]
 
 ## Names unresolved after all enrichment stages (439 names, 4462 rows -- dropped from the output)
 
