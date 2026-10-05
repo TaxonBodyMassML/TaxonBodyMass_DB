@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-05 16:18:29
+# Source de-duplication summary -- 2026-10-05 16:25:24
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,10 +6,10 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 124827 |
+| species x source values (Pass-1 rows) | 124829 |
 | accepted species | 40150 |
-| multi-source species | 25274 |
-| within-species value pairs | 289260 |
+| multi-source species | 25276 |
+| within-species value pairs | 289262 |
 | pairs identical (|dlog10| <= 1e-06) | 49744 |
 | pairs related by the registry and within its tolerance | 74609 |
 | pairs identical to >= 3 significant digits (blind rule) | 42413 |
@@ -61,7 +61,7 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Tucker_etal_2014b | Jones_2009 | via | confirmed | 0.0105 | 444 | 1 | 232 | 0 | 138 | 302 |
 | Pata_2025 | Kiorboe_2013 | copies | confirmed | 0.000001 | 54 | 20 | 20 | 0.37 | 18 | 21 |
 | Brose_etal_2018 | Hechinger_etal_2011 | copies | confirmed | 0.000001 | 93 | 64 | 64 | 0.69 | 62 | 85 |
-| Brose_etal_2018 | Brose_2005 | copies | confirmed | 0.000001 | 251 | 19 | 19 | 0.08 | 19 | 85 |
+| Brose_etal_2018 | Brose_2005 | copies | confirmed | 0.000001 | 253 | 19 | 19 | 0.08 | 19 | 85 |
 | Baach_2026 | Chown_etal_2007 | copies | confirmed | 0.000001 | 285 | 285 | 285 | 1 | 285 | 442 |
 | Baach_2026 | Wilman_etal_2014 | copies | confirmed | 0.000001 | 239 | 66 | 66 | 0.28 | 9 | 442 |
 | Baach_2026 | Tobias_2022 | copies | confirmed | 0.0105 | 153 | 37 | 83 | 0.24 | 89 | 442 |

@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 16:18:39
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 16:25:34
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 171 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 444 names, 4491 rows
+- Names unresolved after all enrichment stages: 443 names, 4620 rows
 - Kingdom conflicts corrected before the autotroph filter: 5 names, 38 rows (2 unresolved)
 
 ## Missing `class` after all enrichment stages (14 rows)
@@ -404,7 +404,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (444 names, 4491 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (443 names, 4620 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -438,7 +438,11 @@ Lysigamasus_cornutus | Brose_etal_2018 | 87 rows
 
 Phalacrocorax_dilophus | Brose_etal_2018 | 86 rows
 
+Hemistenus_flavipes | Brose_2005, Brose_etal_2018 | 78 rows
+
 Tholeria_reversalis | Brose_etal_2018 | 77 rows
+
+Nestus_mendicus | Brose_2005, Brose_etal_2018 | 76 rows
 
 Cinclodes_nifrofumanus | Brose_etal_2018 | 69 rows
 
@@ -458,10 +462,6 @@ Nestus_ruralis | Brose_etal_2018 | 41 rows
 
 Paracryptocerus_varians | Brose_etal_2018 | 41 rows
 
-Hemistenus_flavipes | Brose_2005, Brose_etal_2018 | 40 rows
-
-Nestus_mendicus | Brose_2005, Brose_etal_2018 | 39 rows
-
 Yolida_eightsi | Brose_etal_2018 | 37 rows
 
 Amphidinium_hadai | Brose_etal_2018 | 35 rows
@@ -471,6 +471,8 @@ Alcippe_schaefferi | vertnet-aves-sept2016, vertnet-traits-sept2016 | 34 rows
 Apanteles_hemileucae | Brose_etal_2018 | 33 rows
 
 Crychus_caraboides | Brose_etal_2018 | 33 rows
+
+Polyhydrus_lineatus | Brose_2005, Brose_etal_2018 | 32 rows
 
 Silicioflagellata | Brose_etal_2018 | 30 rows
 
@@ -488,15 +490,19 @@ Anocha_lyolepis | Brose_etal_2018 | 23 rows
 
 Erithacus_aequatorialis | vertnet-aves-sept2016 | 22 rows
 
+Lymnea_peregra | Brose_2005 | 22 rows
+
 Trichastoma_albipectus | vertnet-aves-sept2016 | 22 rows
 
 Erithacus_erythrothorax | vertnet-aves-sept2016 | 21 rows
 
 Eciton_rufa | Herberstein_etal_2022 | 20 rows
 
+Filinia_longispina | Brose_2005, Brose_etal_2018 | 20 rows
+
 Thalestris_rufovalescans | Brose_etal_2018 | 20 rows
 
-Polyhydrus_lineatus | Brose_2005, Brose_etal_2018 | 17 rows
+Peridinium_pulsillum | Brose_2005, Brose_etal_2018 | 18 rows
 
 Fulva_dominica | vertnet-aves-sept2016, vertnet-traits-sept2016 | 16 rows
 
@@ -508,8 +514,6 @@ Philorea_maritima | Gonzalez_2025 | 13 rows
 
 Trichastoma_pyrrhopterum | vertnet-aves-sept2016 | 12 rows
 
-Filinia_longispina | Brose_2005, Brose_etal_2018 | 11 rows
-
 Flagellatae | Brose_etal_2018 | 11 rows
 
 Agelenopsis_castaneus | Gonzalez_2025 | 10 rows
@@ -517,8 +521,6 @@ Agelenopsis_castaneus | Gonzalez_2025 | 10 rows
 Crocodylus_africanus | Brose_etal_2018 | 10 rows
 
 Ochetellus_clarithorax | Leahy_2025 | 10 rows
-
-Peridinium_pulsillum | Brose_2005, Brose_etal_2018 | 10 rows
 
 Anthodiaeta_collaris | vertnet-aves-sept2016 | 9 rows
 
@@ -653,6 +655,8 @@ Caloramphus_parvirostris | vertnet-aves-sept2016 | 3 rows
 Centropages_marinus | Kiorboe_2013 | 3 rows
 
 Cyanocompsa_cyanea | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
+
+Leognathus_equulus | Brose_2005 | 3 rows
 
 Meliphaga_flaviventer | vertnet-aves-sept2016, vertnet-traits-sept2016 | 3 rows
 
@@ -914,8 +918,6 @@ Dixiphia_chloromeros | Myhrvold_2015 | 1 row
 
 Dixiphia_erythrocephala | Myhrvold_2015 | 1 row
 
-Edaphus_blAhweissi | Brose_2005 | 1 row
-
 Elaenia_viridicata | vertnet-aves-sept2016 | 1 row
 
 Elaphodus_michianus | vertnet-mammalia-sept2016 | 1 row
@@ -994,8 +996,6 @@ Lampropeltis_miliaris | Makarieva_2008 | 1 row
 
 Lasioglossum_qudrinotatum | Kendall_etal_2019 | 1 row
 
-Leognathus_equulus | Brose_2005 | 1 row
-
 Leucoptera_myricki | AndersonGillooly_2017 | 1 row
 
 Lichenostomus_chysops | vertnet-aves-sept2016 | 1 row
@@ -1033,8 +1033,6 @@ Luscinia_chrysaea | vertnet-aves-sept2016 | 1 row
 Lycaria_scatopsoides | Gonzalez_2025 | 1 row
 
 Lycenchelys_turneri | vertnet-fishes-sept2016 | 1 row
-
-Lymnea_peregra | Brose_2005 | 1 row
 
 Macrochelys_lacertina | Herberstein_etal_2022 | 1 row
 
