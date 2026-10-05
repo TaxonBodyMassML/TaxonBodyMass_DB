@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-04 21:07:17
+# Citation and provenance warnings -- 2026-10-04 22:00:40
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121383 (38618 species); distinct primary CiteIDs: 240; unresolved references (pending / not_found): 14; unverified references: 0
+- provenance rows: 125071 (38474 species); distinct primary CiteIDs: 377; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
@@ -13,84 +13,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: Jeeva_1999 -> Jeeva:1999aa
-- BM_primary_citations: McComie_1990 -> McComie:1990aa
-- BM_primary_citations: GUNN_1935 -> GUNN:1935aa
-- BM_primary_citations: Slater_1927 -> Slater:1927aa
-- BM_primary_citations: Harvey_1951 -> Harvey:1951aa
-- BM_primary_citations: Reichle_1968 -> Reichle:1968aa
-- BM_primary_citations: Zachariassen_1988 -> Zachariassen:1988aa
-- BM_primary_citations: VanHook_1971 -> Van-Hook:1971aa
-- BM_primary_citations: Kavanagh_1987 -> Kavanagh:1987aa
-- BM_primary_citations: Stevens_1977 -> Stevens:1977aa
-- BM_primary_citations: Loveridge_1975 -> Loveridge:1975aa
-- BM_primary_citations: Harrison_1991 -> Harrison:1991aa
-- BM_primary_citations: Quinlan_1993 -> Quinlan:1993aa
-- BM_primary_citations: Massion_1983 -> Massion:1983aa
-- BM_primary_citations: Duke_1975 -> Duke:1975aa
-- BM_primary_citations: Ashby_1997 -> Ashby:1997aa
-- BM_primary_citations: Keister_1964 -> Keister:1964aa
-- BM_primary_citations: Hinton_1971 -> Hinton:1971aa
-- BM_primary_citations: Wiegert_1964 -> Wiegert:1964aa
-- BM_primary_citations: Nally_1982 -> Nally:1982aa
-- BM_primary_citations: Brown_1978 -> Brown:1978aa
-- BM_primary_citations: HOLTER_1997 -> HOLTER:1997aa
-- BM_primary_citations: Bosch_2000 -> Bosch:2000aa
-- BM_primary_citations: Chown_2003 -> Chown:2003aa
-- BM_primary_citations: Davis_2000 -> Davis:2000aa
-- BM_primary_citations: Morgan_1987 -> Morgan:1987aa
-- BM_primary_citations: STRoMME_1986 -> STRoMME:1986aa
-- BM_primary_citations: Birch_1947 -> Birch:1947aa
-- BM_primary_citations: Acar_2001 -> Acar:2001aa
-- BM_primary_citations: Smme_1989 -> Smme:1989aa
-- BM_primary_citations: Heatwole_1986 -> Heatwole:1986aa
-- BM_primary_citations: LIGHTON_1991 -> LIGHTON:1991aa
-- BM_primary_citations: Edwards_1958 -> Edwards:1958aa
-- BM_primary_citations: Cooper_1993 -> Cooper:1993aa
-- BM_primary_citations: Duncan_2002 -> Duncan:2002aa
-- BM_primary_citations: Chappell_2000 -> Chappell:2000aa
-- BM_primary_citations: Gromadzka_1968 -> Gromadzka:1968aa
-- BM_primary_citations: Klok_2005 -> Klok:2005aa
-- BM_primary_citations: Gehrken_1985 -> Gehrken:1985aa
-- BM_primary_citations: Campbell_1976 -> Campbell:1976aa
-- BM_primary_citations: Sibul_2004 -> Sibul:2004aa
-- BM_primary_citations: Chown_1997b -> Chown:1997ab
-- BM_primary_citations: Tombes_1964 -> Tombes:1964aa
-- BM_primary_citations: Lighton_1985 -> Lighton:1985aa
-- BM_primary_citations: Schultz_1992 -> Schultz:1992aa
-- BM_primary_citations: Chown_1997 -> Chown:1997aa
-- BM_primary_citations: CHADWICK_1947 -> CHADWICK:1947aa
-- BM_primary_citations: Chadwick_1940 -> Chadwick:1940aa
-- BM_primary_citations: Rajagopal_1966 -> Rajagopal:1966aa
-- BM_primary_citations: Guerra_1970 -> Guerra:1970aa
-- BM_primary_citations: Montooth_2003 -> Montooth:2003aa
-- BM_primary_citations: BUCK_1949 -> BUCK:1949aa
-- BM_primary_citations: Berrigan_1994 -> Berrigan:1994aa
-- BM_primary_citations: Morgan_1985 -> Morgan:1985aa
-- BM_primary_citations: Hocking_1953 -> Hocking:1953aa
-- BM_primary_citations: Penttinen_1995 -> Penttinen:1995aa
-- BM_primary_citations: Gray_2003 -> Gray:2003aa
-- BM_primary_citations: Fielden_2004 -> Fielden:2004aa
-- BM_primary_citations: Bailey_1977 -> Bailey:1977aa
-- BM_primary_citations: BURKETT_1962 -> BURKETT:1962aa
-- BM_primary_citations: Lighton_1990b -> Lighton:1990ab
-- BM_primary_citations: Beekman_1999 -> Beekman:1999aa
-- BM_primary_citations: Gade_1998 -> Gade:1998aa
-- BM_primary_citations: DUNCAN_1997 -> DUNCAN:1997aa
-- BM_primary_citations: Nielsen_1986 -> Nielsen:1986aa
-- BM_primary_citations: Martin_1991 -> Martin:1991aa
-- BM_primary_citations: HeblingBeraldo_1982 -> Hebling-Beraldo:1982aa
-- BM_primary_citations: Jose_1992 -> Jose:1992aa
-- BM_primary_citations: Quinlan_1999 -> Quinlan:1999aa
-- BM_primary_citations: Ettershank_1973 -> Ettershank:1973aa
-- BM_primary_citations: NIELSEN_1990 -> NIELSEN:1990aa
-- BM_primary_citations: Lighton_1995c -> Lighton:1995ac
-- BM_primary_citations: Davison_1987 -> Davison:1987aa
-- BM_primary_citations: Lighton_1990 -> Lighton:1990aa
-- BM_primary_citations: Lighton_1989 -> Lighton:1989aa
-- BM_primary_citations: Lighton_1993 -> Lighton:1993aa
-- BM_primary_citations: Bartholomew_1988 -> Bartholomew:1988aa
-- BM_primary_citations: Campbell_2000 -> Campbell:2000aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
@@ -109,12 +32,12 @@ One row per source label: species and record links (species x source x reference
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_2005 | compilation | 289 | 290 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_etal_2018 | compilation | 1753 | 144172 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
+| Brose_etal_2018 | compilation | 1753 | 168179 | 90.4 | 24 | 22 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Chown_etal_2007 | compilation | 268 | 510 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Chown_etal_2007 | compilation | 295 | 537 | 53.3 | 115 | 113 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 310 | 386 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2018 | compilation | 135 | 439 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 442 | 2246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -128,7 +51,7 @@ One row per source label: species and record links (species x source x reference
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 5 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 128 | 247 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Herberstein_etal_2022 | compilation | 1525 | 2390 | 99.4 | 193 | 191 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Herberstein_etal_2022 | compilation | 1525 | 2460 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 342 | 454 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hishi_etal_2019 | derived | 314 | 318 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1671 | 3768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -174,11 +97,11 @@ One row per source label: species and record links (species x source x reference
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 194 | 984 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 8905 | 8964 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12218 | 12287 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | fishbase | live | 2069 | 2899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 298 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 124 | 729 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-aves-sept2016 | live | 5646 | 79442 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-aves-sept2016 | live | 5647 | 79443 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-fishes-sept2016 | live | 108 | 246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-mammalia-sept2016 | live | 707 | 9059 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-reptilia-sept2016 | live | 243 | 1334 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
