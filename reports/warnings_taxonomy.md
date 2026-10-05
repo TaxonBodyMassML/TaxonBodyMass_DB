@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 00:17:50
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 08:03:04
 
 ## Summary
 
@@ -455,9 +455,9 @@ Crychus_caraboides | Brose_etal_2018 | 33 rows
 
 Silicioflagellata | Brose_etal_2018 | 30 rows
 
-Philorea_philorea | Gonzalez_2024 | 29 rows
+Philorea_philorea | Gonzalez_2025 | 29 rows
 
-Philorea_aracniformis | Gonzalez_2024 | 28 rows
+Philorea_aracniformis | Gonzalez_2025 | 28 rows
 
 Rhithropanopeus_hermandii | Brose_etal_2018 | 28 rows
 
@@ -485,7 +485,7 @@ Phaeoptyx_maculatus | Brose_etal_2018 | 16 rows
 
 Turbularia_indivisa | Brose_etal_2018 | 15 rows
 
-Philorea_maritima | Gonzalez_2024 | 13 rows
+Philorea_maritima | Gonzalez_2025 | 13 rows
 
 Trichastoma_pyrrhopterum | vertnet-aves-sept2016 | 12 rows
 
@@ -493,7 +493,7 @@ Filinia_longispina | Brose_2005, Brose_etal_2018 | 11 rows
 
 Flagellatae | Brose_etal_2018 | 11 rows
 
-Agelenopsis_castaneus | Gonzalez_2024 | 10 rows
+Agelenopsis_castaneus | Gonzalez_2025 | 10 rows
 
 Crocodylus_africanus | Brose_etal_2018 | 10 rows
 
@@ -645,7 +645,7 @@ Trichastoma_poliothorax | vertnet-aves-sept2016 | 3 rows
 
 Aegithina_riphia | vertnet-aves-sept2016, vertnet-traits-sept2016 | 2 rows
 
-Anatonchus_francolombertii | Ghaderi_2025 | 2 rows
+Anatonchus_francolombertii | Ghaderi_2026 | 2 rows
 
 Anthreptes_olivacea | vertnet-aves-sept2016 | 2 rows
 
@@ -715,7 +715,7 @@ Phragmaticola_pallida | vertnet-aves-sept2016 | 2 rows
 
 Poliopsar_cineraceus | vertnet-aves-sept2016 | 2 rows
 
-Prionchulus_muscoroum | Ghaderi_2025 | 2 rows
+Prionchulus_muscoroum | Ghaderi_2026 | 2 rows
 
 Purpuriecephalus_varius | Tsuboi_etal_2018 | 2 rows
 
@@ -739,7 +739,7 @@ Trichastoma_sepiarium | vertnet-aves-sept2016 | 2 rows
 
 Achromobacter_viscosus | DeLong_etal_2010 | 1 row
 
-Actus_shamimi | Ghaderi_2025 | 1 row
+Actus_shamimi | Ghaderi_2026 | 1 row
 
 Aegithalos_cocinnus | vertnet-traits-sept2016 | 1 row
 
@@ -793,7 +793,7 @@ Bucco_pulmentum | vertnet-aves-sept2016 | 1 row
 
 Buteo_borealis | vertnet-aves-sept2016 | 1 row
 
-Caenia_fumosa | Gonzalez_2024 | 1 row
+Caenia_fumosa | Gonzalez_2025 | 1 row
 
 Calandrella_dunni | vertnet-aves-sept2016 | 1 row
 
@@ -973,7 +973,7 @@ Leucoptera_myricki | AndersonGillooly_2017 | 1 row
 
 Lichenostomus_chysops | vertnet-aves-sept2016 | 1 row
 
-Limonia_quadrionotula | Gonzalez_2024 | 1 row
+Limonia_quadrionotula | Gonzalez_2025 | 1 row
 
 Liocranchia_pacificus | Makarieva_2008 | 1 row
 
@@ -1003,7 +1003,7 @@ Lugubria_strigata | fishbase | 1 row
 
 Luscinia_chrysaea | vertnet-aves-sept2016 | 1 row
 
-Lycaria_scatopsoides | Gonzalez_2024 | 1 row
+Lycaria_scatopsoides | Gonzalez_2025 | 1 row
 
 Lycenchelys_turneri | vertnet-fishes-sept2016 | 1 row
 
@@ -1045,11 +1045,11 @@ Molothrus_aenus | vertnet-traits-sept2016 | 1 row
 
 Murexechinus_san | Smith_2003 | 1 row
 
-Mylonchulus_armus | Ghaderi_2025 | 1 row
+Mylonchulus_armus | Ghaderi_2026 | 1 row
 
-Mylonchulus_sinensis | Ghaderi_2025 | 1 row
+Mylonchulus_sinensis | Ghaderi_2026 | 1 row
 
-Mylonchulus_truncatus | Ghaderi_2025 | 1 row
+Mylonchulus_truncatus | Ghaderi_2026 | 1 row
 
 Neanura_abietis | Hishi_etal_2019 | 1 row
 
@@ -1089,7 +1089,7 @@ Oreochelidon_murina | vertnet-aves-sept2016 | 1 row
 
 Orodillo_maculatus | Ehnes_etal_2011 | 1 row
 
-Orthellia_caesarion | Gonzalez_2024 | 1 row
+Orthellia_caesarion | Gonzalez_2025 | 1 row
 
 Pachyramphus_alglaiae | vertnet-traits-sept2016 | 1 row
 
@@ -1237,7 +1237,7 @@ Tchagra_cruenta | vertnet-aves-sept2016 | 1 row
 
 Thamnophis_collaris | vertnet-reptilia-sept2016 | 1 row
 
-Thomisidae_misumenops | Gonzalez_2024 | 1 row
+Thomisidae_misumenops | Gonzalez_2025 | 1 row
 
 Thripophaga_flammulata | vertnet-aves-sept2016 | 1 row
 
