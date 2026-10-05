@@ -16,6 +16,7 @@
 #                                       adult-or-unspecified life-stage filter
 #   DropPlaceholders()                   drop group-level placeholder values
 #   ApplyUnitActions()                   drop webs or convert dry mass per table
+#   WebReferenceKeys()                   the reference key(s) of a web's citation (#64)
 # Nothing here is specific to RunMe.r; the analysis scripts reuse the same
 # functions so that evidence and parser see identical rows.
 
@@ -170,6 +171,31 @@ MassGroupFromRanks <- function(phylum, class, family = NA_character_, order = NA
              whole       = !is.na(shell),
              shell_group = ifelse(is.na(shell), group, shell),
              stringsAsFactors = FALSE)
+}
+
+# Web-level primary references (issue #64): the records of a food web cite the
+# web's own citation (GATEWAy link.citation, Brose 2005 Link reference), since
+# the web's authors measured, regressed or compiled the masses of their web.
+# `refs` is the source's references table (Brose_etal_2018/references.csv,
+# DataRetriever/brose2005_references.csv): one row per cited work with its
+# `key` (first author's surname and year, 'Kroll_unpublished' for an
+# unpublished contribution) and the citation string of the data file in
+# `citation_col`; a string naming two works ('Gray et al. (2015), Thompson et
+# al. (2017)') has two rows and gives both keys, so that every web of a citation
+# shares the same key(s). Every string in `x` must be in the table. Returns the
+# '; '-joined keys of SplitRefKeys() (R/library/citations/parse_reflists.r).
+WebReferenceKeys <- function(x, refs, citation_col, label) {
+  for (col in c('key', citation_col))
+    if (col %!in% names(refs)) stop(label, ': references table lacks column ', col)
+  cit    <- trimws(as.character(x))
+  keymap <- tapply(refs$key, trimws(refs[[citation_col]]), paste, collapse = ';')
+  miss   <- setdiff(unique(cit), names(keymap))
+  if (length(miss) > 0)
+    stop(label, ': ', length(miss), ' citation(s) without a reference key in the references table: ',
+         paste(head(miss, 5), collapse = ' | '))
+  keys <- SplitRefKeys(keymap, ';')
+  names(keys) <- names(keymap)
+  unname(keys[cit])
 }
 
 # Apply the per-web (or per-study) actions of a units table to stacked rows.
