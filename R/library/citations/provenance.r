@@ -1,8 +1,10 @@
 # Citation tooling (issue #1): the offline part RunMe.r sources (after
 # citations_config.r).
 #
-#   LoadPrimaryReferences(wd_db)         every sources/databases/*/primary_references.csv,
-#                                        unique on (source_label, native_key)
+#   LoadPrimaryReferences(wd_db)         every sources/databases/*/primary_references.csv
+#                                        (or primary_references_<Label>.csv in a folder
+#                                        several labels share), unique on (source_label,
+#                                        native_key)
 #   LoadProvenanceClasses(path, labels)  Bib/source_provenance_classes.csv; stops on a
 #                                        source label the registry does not know
 #   SplitSourceMass(source_mass)         label (first token) and the conversion CiteIDs
@@ -24,7 +26,7 @@
 
 # ---- loaders -----------------------------------------------------------------------------
 LoadPrimaryReferences <- function(wd_db) {
-  files <- list.files(wd_db, pattern = '^primary_references\\.csv$', recursive = TRUE, full.names = TRUE)
+  files <- list.files(wd_db, pattern = '^primary_references(_[A-Za-z0-9_-]+)?\\.csv$', recursive = TRUE, full.names = TRUE)
   if (length(files) == 0) return(EmptyPrimaryReferences())
   prim <- do.call(rbind, lapply(files, function(f) {
     d <- ReadPrimaryReferences(f)

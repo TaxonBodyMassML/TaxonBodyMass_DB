@@ -117,7 +117,11 @@ CachedGET <- function(url, cfg) {
   # a 429 whose Retry-After exceeds max_retry_seconds (OpenAlex's day-long one
   # when its daily quota is spent) is not transient: httr2 would otherwise sleep
   # for the whole Retry-After, whatever max_seconds says
+  # a connection the server drops without answering otherwise hangs the run
+  # (seen with OpenAlex on 2026-10-04, #64): time out and retry like a 5xx
+  req <- httr2::req_timeout(req, cfg$network$timeout_s)
   req <- httr2::req_retry(req, max_tries = cfg$network$max_tries, max_seconds = cfg$network$max_retry_seconds,
+                          retry_on_failure = TRUE,
                           is_transient = function(resp) {
                             if (!httr2::resp_status(resp) %in% cfg$network$transient_status) return(FALSE)
                             ra <- suppressWarnings(as.numeric(httr2::resp_header(resp, 'retry-after')))

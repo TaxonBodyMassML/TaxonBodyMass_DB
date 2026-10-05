@@ -15,15 +15,21 @@
 #     taxon groups of foodweb_units_groups.csv (ToWetMass(from = 'dry'), shelled
 #     molluscs as whole wet mass) and carry the conversion CiteIDs in
 #     source_mass (ApplyUnitActions()). All other webs are kept as reported.
+#  4. Every record cites its web's citation (link.citation) as its primary
+#     reference, one key per cited work from references.csv (web-level
+#     attribution, issue #64; WebReferenceKeys(), R/library/foodweb_units.r).
 adat   <- read.csv(file.path(wd_source, '283_2_FoodWebDataBase_2018_12_10.csv'), header = TRUE)
 units  <- read.csv(file.path(wd_source, 'foodweb_units.csv'),
                    stringsAsFactors = FALSE, na.strings = c('', 'NA'))
 groups <- read.csv(file.path(wd_source, 'foodweb_units_groups.csv'),
                    stringsAsFactors = FALSE, na.strings = c('', 'NA'))
+refs   <- read.csv(file.path(wd_source, 'references.csv'),
+                   stringsAsFactors = FALSE, na.strings = c('', 'NA'), encoding = 'UTF-8')
 
 adat <- StackGateway(adat)
 adat <- DropPlaceholders(adat, 'link.citation', 'Brose_etal_2018')
 adat <- ApplyUnitActions(adat, units, key = 'foodweb.name', groups = groups,
                          group_key = 'link.citation', label = 'Brose_etal_2018')
-BRO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
+adat$ref_keys <- WebReferenceKeys(adat$link.citation, refs, 'link_citation', 'Brose_etal_2018')
+BRO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(BRO, file = file.path(wd_rdata, 'BodyMass_Brose_etal_2018.Rdata'))

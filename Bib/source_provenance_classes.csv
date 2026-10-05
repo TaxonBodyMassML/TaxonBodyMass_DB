@@ -5,8 +5,8 @@ AndersonGillooly_2017,compilation,unknown,,"tier C; RefM -> Wayback appendix pdf
 Anunciacao_etal_2025,compilation,unknown,,tier B; DOI URLs in-row
 Barnes_2008,compilation,unknown,,tier A2; Reference short keys (+ per-row length-mass conversion refs) -> metadata.htm Literature Cited
 Brocher_etal_2025,derived,derived_allometry,,tier A2; numeric Reference -> S1_references.docx; mass from body length with the Sohlstrom et al. 2018 equations. TODO (owner decision 2026-10-04): verify the equation reference like a primary reference with role equation in a later round and fill equation_bibcite
-Brose_2005,compilation,unknown,,tier A2; DataRetriever; Body size reference column
-Brose_etal_2018,compilation,unknown,,"tier B; link.citation keys -> NEE SI Table 1 (23 keys, 18 DOIs)"
+Brose_2005,compilation,unknown,,"tier A2; DataRetriever; web-level attribution (#64, owner decision 2026-10-04): ref_keys = key(s) of the record's study (Link reference; brose2005_references.csv, 20 studies -> 21 keys), role measurement -> compiled_from at hop 1; a record is the population mean of the study's web (#29); the Body size reference column (11 keys, mostly the same studies) is not used"
+Brose_etal_2018,compilation,unknown,,"tier B; web-level attribution (#64, owner decision 2026-10-04): ref_keys = key(s) of the record's food web citation (link.citation; references.csv, 23 citation strings -> 26 keys), role measurement -> compiled_from at hop 1; a record is the population mean of the web (#29), measured, regressed or compiled by the web's authors; the con/res.size.citation column (15 distinct, 19.5% of rows) is not used"
 Brown_etal_2018,compilation,compilation_terminal,,"tier E; Table 1 from McCoy & Gillooly 2008 Appendix S1 (now the source McCoy_2008), Table 2 untraceable"
 Cai_etal_2025,compilation,unknown,,"tier B; 106 Ref.BodyMass values, hand-built lookup; FishBase rows compilation_terminal"
 Castro_2025,compilation,unknown,,tier B; author-year keys -> Zenodo refs / Crossref reference[] of 10.1038/s41597-025-...
@@ -71,7 +71,7 @@ Tucker_etal_2014b,compilation,unknown,,tier A2; short keys -> Appendix S1 pdf
 Uyeda_etal_2017,compilation,compilation_terminal,,tier E; White 2006 and McKechnie & Wolf 2004 terminal; optional hop 2 via the White ESM pdf
 Verberk_2020,compilation,unknown,,tier B; Literature.source in-row (478 refs)
 Weisse_2024,compilation,unknown,,"tier A2; [n] -> References.xlsx (48, with DOI)"
-Wilman_etal_2014,compilation,unknown,,tier A1; BodyMass-Source codes -> BirdFuncDatSources.txt; Dunning08 compilation_terminal
+Wilman_etal_2014,compilation,unknown,,"tier A1; mammals (MamFuncDat.txt, #65): per-row Ref_ codes in BodyMass-Source -> references.csv transcribed from MamFuncDatSources.txt (176 entries; Ref_117 Smith_2003 and Ref_58 Jones_2009 are DB sources, hop 2 later); birds: the BodyMass-Source word as key (Dunning08 compilation_terminal, HBW volumes, PrimScale allometry, Other)"
 fishbase,live,database_record,,tier G; PopCharRefNo / SourceRef -> refrens via rfishbase::references() (Phase 3)
 sealifebase,live,database_record,,tier G; as fishbase (Phase 3)
 vertnet-amphibia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
