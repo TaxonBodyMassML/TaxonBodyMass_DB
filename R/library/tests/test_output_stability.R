@@ -129,7 +129,7 @@ Expect(inherits(try(OrderForPass1(recs[, setdiff(names(recs), 'source_label')]),
 cat('RunMe.r section 7: write-time rounding\n')
 runme <- readLines(file.path(repo, 'R', 'RunMe.r'))
 from  <- grep('^# 7\\. Write outputs', runme)
-to    <- grep('^# 8\\. Write citations CSV', runme) - 1L
+to    <- grep('^# 8\\. Citations and provenance', runme) - 1L
 stopifnot(length(from) == 1, length(to) == 1, from < to)
 section <- parse(text = runme[from:to])
 wd_root <- file.path(tempdir(), 'issue53_outputs')
@@ -165,7 +165,7 @@ Expect(round(1.0000004, 6) <= 1,
 
 # ---- 5. wiring in RunMe.r ---------------------------------------------------------
 cat('R/RunMe.r wiring\n')
-i_group <- grep('^adat_enriched\\$source_group <- SourceGroup\\(adat_enriched\\$source_label\\)', runme)
+i_group <- grep('^adat_enriched\\$source_group\\s*<- SourceGroup\\(adat_enriched\\$source_label\\)', runme)
 i_order <- grep('^adat_enriched <- OrderForPass1\\(adat_enriched\\)', runme)
 i_pass1 <- grep('^within_source <- adat_enriched %>%', runme)
 Expect(length(i_group) == 1 && length(i_order) == 1 && length(i_pass1) == 1 &&
