@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 23:15:37
+# Citation and provenance warnings -- 2026-10-04 23:36:48
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125784 (38742 species); distinct primary CiteIDs: 442; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 126498 (38752 species); distinct primary CiteIDs: 446; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
 - 4 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026, AyalaBerdon_2025, Leahy_2025
-- 7 source label(s) without a Bibcite: Wisnionski_2026, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
+- 8 source label(s) without a Bibcite: Baach_2026, Wisnionski_2026, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -17,6 +17,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
+- Baach_2026 (529 rows)
 - Ghaderi_2025 (221 rows)
 - Wisnionski_2026 (131 rows)
 - Wascher_2025 (123 rows)
@@ -36,6 +37,7 @@ One row per source label: species and record links (species x source x reference
 | AndersonGillooly_2017 | compilation | 93 | 296 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AyalaBerdon_2025 | compilation | 36 | 151 | 54.3 | 22 | 20 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| Baach_2026 | compilation | 529 | 1037 | 99.2 | 8 | 7 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
@@ -44,7 +46,7 @@ One row per source label: species and record links (species x source x reference
 | Cai_etal_2025 | compilation | 4768 | 4776 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 295 | 537 | 53.3 | 115 | 113 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| DeLong_etal_2010 | compilation | 310 | 386 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| DeLong_etal_2010 | compilation | 309 | 385 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2018 | compilation | 135 | 439 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 442 | 2246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Eklof_etal_2017 | primary | 5 | 103 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

@@ -1,9 +1,9 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 23:15:32
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 23:36:41
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
-- High mass disagreement (log10 range > 2): 357 species
+- High mass disagreement (log10 range > 2): 358 species
 - Suspicious sources (log10 > 2, by frequency):
   - Cai_etal_2025 (79)
   - vertnet-mammalia-sept2016 (56)
@@ -38,8 +38,8 @@
   - Meiri_2024 (5)
   - Pata_2025 (5)
   - sealifebase (5)
+  - DeLong_etal_2010 (4)
   - Ernest_2003 (4)
-  - DeLong_etal_2010 (3)
   - Faurby_etal_2018 (3)
   - Froese_2025 (3)
   - Herberstein_etal_2022 (3)
@@ -55,6 +55,7 @@
   - Soria_etal_2021 (2)
   - Uyeda_etal_2017 (2)
   - Verberk_2020 (2)
+  - Baach_2026 (1)
   - Brose_2005; Brey_2010 (1)
   - Brown_etal_2018 (1)
   - Chomsky_2004 (1)
@@ -88,7 +89,7 @@
   - Castro_2025 (39)
   - Tobias_2022 (39)
   - AnAge (37)
-  - Smith_2003 (35)
+  - Smith_2003 (34)
   - vertnet-traits-sept2016 (27)
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (25)
   - Brose_2005 (21)
@@ -144,6 +145,7 @@
   - Kiorboe_2013; Brey_2010 (2)
   - Pekar_etal_2021 (2)
   - vertnet-amphibia-sept2016 (2)
+  - Baach_2026 (1)
   - Bekova_2020 (1)
   - Brose_2005; Brey_2010 (1)
   - Brose_etal_2018; Studier_1992 (1)
@@ -160,7 +162,7 @@
   - Watson_2007 (1)
   - Weisse_2024 (1)
   - Wisnionski_2026 (1)
-## log10(max/min mass) > 2 after dedup (357 species) -- likely misresolution or unit error
+## log10(max/min mass) > 2 after dedup (358 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
         Min_source: DeLong_etal_2010 4.2e-08
@@ -870,6 +872,9 @@ Drymarchon couperi [range=2.47]
 Homarus gammarus [range=2.47]
         Min_source: Brose_etal_2018 18.66
         Max_source: sealifebase 5455
+Helix pomatia [range=2.46]
+        Min_source: DeLong_etal_2010 0.1
+        Max_source: Baach_2026 29.02
 Scardinius erythrophthalmus [range=2.46]
         Min_source: DeLong_etal_2018 9.653
         Max_source: fishbase 2774
@@ -1290,6 +1295,9 @@ Trisopterus luscus [range=1.96]
 Ocythoe tuberculata [range=1.96]
         Min_source: Makarieva_2008 1.21
         Max_source: Barnes_2008 110
+Eptesicus nilssonii [range=1.96]
+        Min_source: Baach_2026 10
+        Max_source: vertnet-mammalia-sept2016 905
 Pomatomus saltatrix [range=1.96]
         Min_source: Killen_etal_2016 221.1
         Max_source: Cai_etal_2025 1.998e+04
@@ -1308,9 +1316,6 @@ Pagrus auratus [range=1.95]
 Lepidotrigla cavillone [range=1.95]
         Min_source: Barnes_2008 0.6708
         Max_source: fishbase 59.33
-Eptesicus nilssonii [range=1.94]
-        Min_source: Smith_2003 10.42
-        Max_source: vertnet-mammalia-sept2016 905
 Salvelinus alpinus [range=1.93]
         Min_source: Killen_etal_2016 210
         Max_source: fishbase 1.8e+04

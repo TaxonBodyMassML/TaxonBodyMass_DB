@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 23:15:32
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 23:36:41
 
 
-## Species name changed during enrichment (5661 rows)
+## Species name changed during enrichment (5666 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -277,7 +277,7 @@ Corycaeus typicus -> Agetus typicus [GBIF]
 
 Aglaeactis cupripennis; Agleactis cupripennis -> Aglaeactis cupripennis [GBIF]
 
-Aglais io; Vanessa io -> Aglais io [GBIF]
+Vanessa io; Aglais io -> Aglais io [GBIF]
 
 Diaptomus leptopus -> Aglaodiaptomus leptopus [GBIF]
 
@@ -1169,6 +1169,8 @@ Incisilabeo behri -> Bangana behri [GBIF]
 
 Chlorospingus flavovirens; Bangsia flavovirens -> Bangsia flavovirens [GBIF]
 
+Barbastella barbastellus; Barbastella barbastella -> Barbastella barbastellus [GBIF]
+
 Puntius binotatus -> Barbodes binotatus [GBIF]
 
 Puntius semifasciolatus; Barbodes semifasciolatus -> Barbodes semifasciolatus [GBIF]
@@ -1241,7 +1243,7 @@ Neodon juldaschi -> Blanfordimys juldaschi [GBIF]
 
 Blanus cinereus; Blanus mariae -> Blanus cinereus [GBIF]
 
-Blattela germanica; Blatella germanica; Blattella germanica -> Blattella germanica [GBIF]
+Blattella germanica; Blattela germanica; Blatella germanica -> Blattella germanica [GBIF]
 
 Bleda canicapilla; Bleda canicapillus -> Bleda canicapillus [GBIF]
 
@@ -1445,7 +1447,7 @@ Ceratogymna fistulator; Bycanistes fistulator; Bycanistes sharpii -> Bycanistes 
 
 Bylgides groenlandica -> Bylgides groenlandicus [GBIF]
 
-Byrsotria fumagata -> Byrsotria fumigata [GBIF]
+Byrsotria fumigata; Byrsotria fumagata -> Byrsotria fumigata [GBIF]
 
 Halaelurus dawsoni -> Bythaelurus dawsoni [GBIF]
 
@@ -1863,9 +1865,9 @@ Cervus elaphus; Cervus canadensis -> Cervus elaphus [GBIF]
 
 Cettia castaneocoronata; Tesia castaneocoronata -> Cettia castaneocoronata [GBIF]
 
-Ceuthophilis fossor; Ceuthophilus fossor -> Ceuthophilus fossor [GBIF]
+Ceuthophilus fossor; Ceuthophilis fossor -> Ceuthophilus fossor [GBIF]
 
-Ceuthophilis gracilipes -> Ceuthophilus gracilipes [GBIF]
+Ceuthophilus gracilipes; Ceuthophilis gracilipes -> Ceuthophilus gracilipes [GBIF]
 
 Ceutorhynchus floralis; Ceutorhynchus typhae -> Ceutorhynchus typhae [GBIF]
 
@@ -2443,7 +2445,7 @@ Coeligena violifer; Coeligena dichroura; Coeligena osculans -> Coeligena violife
 
 Coelops frithii; Coelops frithi -> Coelops frithii [GBIF]
 
-Coeloesis biloba -> Coelosis biloba [GBIF]
+Coelosis biloba; Coeloesis biloba -> Coelosis biloba [GBIF]
 
 Colaptes auratus; Colaptes cafer -> Colaptes auratus [GBIF]
 
@@ -3059,7 +3061,7 @@ Deconychura stictolaema; Certhiasomus stictolaemus -> Deconychura stictolaema [G
 
 Sepia australis -> Decorisepia australis [NCBI]
 
-Deilephila porcellus; Metopsilus porcellus -> Deilephila porcellus [GBIF]
+Metopsilus porcellus; Deilephila porcellus -> Deilephila porcellus [GBIF]
 
 Asianopis subrufa -> Deinopis subrufa [GBIF]
 
@@ -3344,6 +3346,8 @@ Drepanornis bruijnii; Epimachus bruijnii -> Drepanornis bruijnii [GBIF]
 Drepanosiphum platanoides -> Drepanosiphum platanoidis [GBIF]
 
 Nectarinia thomensis; Dreptes thomensis -> Dreptes thomensis [GBIF]
+
+Chilostoma banaticum -> Drobacia banatica [GBIF]
 
 Drosophila nikananu; Drosophila nikkananu -> Drosophila nikananu [GBIF]
 
@@ -3914,6 +3918,8 @@ Frederickena unduliger; Frederickena unduligera -> Frederickena unduliger [GBIF]
 Froggattella kirbyi -> Froggattella kirbii [GBIF]
 
 Frontinella communis; Frontinella pyramitela -> Frontinella pyramitela [GBIF]
+
+Bradybaena fruticum -> Fruticicola fruticum [GBIF]
 
 Fukomys mechowi; Fukomys mechowii -> Fukomys mechowii [GBIF]
 
@@ -4711,7 +4717,7 @@ Rana celebensis -> Hylarana celebensis [GBIF]
 
 Rana erythraea; Hylarana erythraea -> Hylarana erythraea [GBIF]
 
-Hyles euphorbiae; Deilephila euphorbiae -> Hyles euphorbiae [GBIF]
+Deilephila euphorbiae; Hyles euphorbiae -> Hyles euphorbiae [GBIF]
 
 Corticarina minuta; Hylesinus varius -> Hylesinus varius [GBIF]
 
@@ -5293,7 +5299,7 @@ Leptopelis hyloides; Leptopelis viridis -> Leptopelis viridis [GBIF]
 
 Leptopterna dolobrata -> Leptopterna dolabrata [GBIF]
 
-Leptothorax acerovorum -> Leptothorax acervorum [GBIF]
+Leptothorax acervorum; Leptothorax acerovorum -> Leptothorax acervorum [GBIF]
 
 Leptotila cassinii; Leptotila cassini -> Leptotila cassinii [GBIF]
 
@@ -5455,7 +5461,7 @@ Rana magna -> Limnonectes magnus [GBIF]
 
 Limnoctites rectirostris -> Limnornis rectirostris [GBIF]
 
-Carduelis cannabina; Linaria cannabina; Acanthis cannabina -> Linaria cannabina [GBIF]
+Carduelis cannabina; Acanthis cannabina; Linaria cannabina -> Linaria cannabina [GBIF]
 
 Carduelis flavirostris; Linaria flavirostris; Acanthis flavirostris -> Linaria flavirostris [GBIF]
 
@@ -5841,7 +5847,7 @@ Lemuriatyphlops microcephalus -> Madatyphlops microcephalus [GBIF]
 
 Lemuriatyphlops reuteri -> Madatyphlops reuteri [GBIF]
 
-Madoryx oeclus -> Madoryx oiclus [GBIF]
+Madoryx oiclus; Madoryx oeclus -> Madoryx oiclus [GBIF]
 
 Cremnomys blanfordi; Madromys blanfordi -> Madromys blanfordi [GBIF]
 
@@ -6283,6 +6289,8 @@ Microtus pinetorum; Pitymys pinetorum -> Microtus pinetorum [GBIF]
 
 Microtus richardsoni; Arvicola richardsoni -> Microtus richardsoni [GBIF]
 
+Microtus subterraneus; Pitymys subterraneus -> Microtus subterraneus [GBIF]
+
 Microtus townsendii; Microtus townsendi -> Microtus townsendii [GBIF]
 
 Microtus transcaspicus; Microtus kermanensis -> Microtus transcaspicus [GBIF]
@@ -6384,6 +6392,8 @@ Molossus ate -> Molossus ater [ITIS]
 Molossus coibensis; Molossus barnesi -> Molossus coibensis [GBIF]
 
 Molothrus oryzivorus; Molothrus oryzivora; Scaphidura oryzivora -> Molothrus oryzivorus [GBIF]
+
+Perforatella vicinus -> Monachoides vicinus [GBIF]
 
 Monarcha castaneiventris; Monarcha ugiensis -> Monarcha castaneiventris [GBIF]
 
@@ -9053,7 +9063,7 @@ Thraupis bonariensis; Pipraeidea bonariensis; Pipraeidea darwinii -> Rauenia bon
 
 Rediogobius bikolanus; Redigobius bikolanus -> Redigobius bikolanus [GBIF]
 
-Regulus ignicapillus; Regulus ignicapilla -> Regulus ignicapilla [GBIF]
+Regulus ignicapilla; Regulus ignicapillus -> Regulus ignicapilla [GBIF]
 
 Reinwardtipicus validus; Chrysocolaptes validus -> Reinwardtipicus validus [GBIF]
 
@@ -9249,7 +9259,7 @@ Rhyticeros subruficollis; Aceros subruficollis -> Rhyticeros subruficollis [GBIF
 
 Rhyticeros undulatus; Aceros undulatus -> Rhyticeros undulatus [GBIF]
 
-Rhizopertha dominica -> Rhyzopertha dominica [GBIF]
+Rhyzopertha dominica; Rhizopertha dominica -> Rhyzopertha dominica [GBIF]
 
 Ribautodelphax collina -> Ribautodelphax collinus [GBIF]
 
@@ -10345,7 +10355,7 @@ Acheilognathus signifer -> Tanakia signifer [GBIF]
 
 Acheilognathus somjinensis -> Tanakia somjinensis [GBIF]
 
-Tanaocerus koebeli -> Tanaocerus koebelei [GBIF]
+Tanaocerus koebelei; Tanaocerus koebeli -> Tanaocerus koebelei [GBIF]
 
 Tangara arthus; Tangara aurulenta -> Tangara arthus [GBIF]
 
@@ -10685,7 +10695,7 @@ Treron bicinctus; Treron bicincta -> Treron bicinctus [GBIF]
 
 Treron calva; Treron calvus; Treron delalandii -> Treron calvus [GBIF]
 
-Triaenogeius scupturatus; Triaenogenius sculpturatus -> Triaenogenius sculpturatus [GBIF]
+Triaenogenius sculpturatus; Triaenogeius scupturatus -> Triaenogenius sculpturatus [GBIF]
 
 Triaenops persicus; Triaenops rufus -> Triaenops persicus [GBIF]
 
