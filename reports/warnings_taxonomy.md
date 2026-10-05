@@ -1,13 +1,13 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 22:12:48
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 22:08:27
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 161 rows
+- Low GBIF confidence (75-89): 160 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 425 names, 4247 rows
+- Names unresolved after all enrichment stages: 422 names, 4344 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -51,7 +51,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (161 rows)
+## Low GBIF confidence (75-89) (160 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -273,8 +273,6 @@ Pardos_astrigera [conf=85]
 
 Pareledone_charcoti [conf=80]
 
-Parkellus_parkus [conf=85]
-
 Parvicorbucula_socialis [conf=85]
 
 Pelecanoides_urinatrix [conf=80]
@@ -383,7 +381,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (425 names, 4247 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (422 names, 4344 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -410,6 +408,8 @@ Scleroderma_macrogaster | Brose_etal_2018 | 126 rows
 Euchaetomera_antarcticus | Brose_etal_2018 | 105 rows
 
 Oiketicus_abbottii | Brose_etal_2018 | 90 rows
+
+Chelaner_cinctum | Leahy_2025 | 89 rows
 
 Lysigamasus_cornutus | Brose_etal_2018 | 87 rows
 
@@ -485,6 +485,8 @@ Flagellatae | Brose_etal_2018 | 11 rows
 
 Crocodylus_africanus | Brose_etal_2018 | 10 rows
 
+Ochetellus_clarithorax | Leahy_2025 | 10 rows
+
 Peridinium_pulsillum | Brose_2005, Brose_etal_2018 | 10 rows
 
 Anthodiaeta_collaris | vertnet-aves-sept2016 | 9 rows
@@ -520,6 +522,8 @@ Peromyscus_pirrensis | Herberstein_etal_2022 | 6 rows
 Pogoniulus_duchaillui | vertnet-aves-sept2016 | 6 rows
 
 Reithrodontomys_reithrodontomys | vertnet-mammalia-sept2016 | 6 rows
+
+Technomyrmex_nitida | Leahy_2025 | 6 rows
 
 Trachyhampus_serratus | Tsuboi_etal_2018 | 6 rows
 
@@ -629,8 +633,6 @@ Trichastoma_poliothorax | vertnet-aves-sept2016 | 3 rows
 
 Aegithina_riphia | vertnet-aves-sept2016, vertnet-traits-sept2016 | 2 rows
 
-Anatonchus_francolombertii | Ghaderi_2025 | 2 rows
-
 Anthreptes_olivacea | vertnet-aves-sept2016 | 2 rows
 
 Arctinula_groenlandica | Brose_etal_2018 | 2 rows
@@ -699,8 +701,6 @@ Phragmaticola_pallida | vertnet-aves-sept2016 | 2 rows
 
 Poliopsar_cineraceus | vertnet-aves-sept2016 | 2 rows
 
-Prionchulus_muscoroum | Ghaderi_2025 | 2 rows
-
 Purpuriecephalus_varius | Tsuboi_etal_2018 | 2 rows
 
 Rynchocyclus_olivaceus | vertnet-aves-sept2016, vertnet-traits-sept2016 | 2 rows
@@ -722,8 +722,6 @@ Trachymyrmex_coniktzi | Herberstein_etal_2022 | 2 rows
 Trichastoma_sepiarium | vertnet-aves-sept2016 | 2 rows
 
 Achromobacter_viscosus | DeLong_etal_2010 | 1 row
-
-Actus_shamimi | Ghaderi_2025 | 1 row
 
 Aegithalos_cocinnus | vertnet-traits-sept2016 | 1 row
 
@@ -1022,12 +1020,6 @@ Molossus_major | Herberstein_etal_2022 | 1 row
 Molothrus_aenus | vertnet-traits-sept2016 | 1 row
 
 Murexechinus_san | Smith_2003 | 1 row
-
-Mylonchulus_armus | Ghaderi_2025 | 1 row
-
-Mylonchulus_sinensis | Ghaderi_2025 | 1 row
-
-Mylonchulus_truncatus | Ghaderi_2025 | 1 row
 
 Neanura_abietis | Hishi_etal_2019 | 1 row
 

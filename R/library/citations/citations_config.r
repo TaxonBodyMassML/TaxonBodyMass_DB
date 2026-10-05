@@ -267,7 +267,10 @@ reflist_specs <- list(
   # parse_chown_supmat.py from the supplement PDF
   Chown_etal_2007 = list(format = 'csv', file = 'references.csv',
                          key_col = 'key', citation_col = 'raw_citation', sep = ';',
-                         compiler = 'Chown')
+                         compiler = 'Chown'),
+  Leahy_2025   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Leahy')
 )
 
 ReflistSpec <- function(source_label) {
