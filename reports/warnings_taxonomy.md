@@ -1,14 +1,14 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 14:20:51
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 16:18:39
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 172 rows
+- Low GBIF confidence (75-89): 171 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Non-Animalia kingdom with an Animalia order/family: 1 rows
-- Names unresolved after all enrichment stages: 442 names, 4486 rows
+- Names unresolved after all enrichment stages: 444 names, 4491 rows
+- Kingdom conflicts corrected before the autotroph filter: 5 names, 38 rows (2 unresolved)
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -52,7 +52,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (172 rows)
+## Low GBIF confidence (75-89) (171 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -380,8 +380,6 @@ Trachylepis_albilabris [conf=84]
 
 Triaenogenius_sculpturatus [conf=80]
 
-Trypanosoma_lewisi [conf=84]
-
 Tympanuchus_cupido [conf=85]
 
 Undinula_vulgaris [conf=85]
@@ -406,11 +404,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Non-Animalia kingdom with an Animalia order/family (1 rows -- likely cross-kingdom misresolution)
-
-Trypanosoma_lewisi | kingdom=Protozoa | order=Trypanosomatida | family=Pleuroceridae [manual]
-
-## Names unresolved after all enrichment stages (442 names, 4486 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (444 names, 4491 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -621,6 +615,8 @@ Chelaner_rothsteini | Baach_2026, Chown_etal_2007, Ehnes_etal_2011, Makarieva_20
 Cryptoglossa_verrucosa | Baach_2026, Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 4 rows
 
 Dirphea_agis | Chown_etal_2007, Ehnes_etal_2011, Herberstein_etal_2022, Makarieva_2008 | 4 rows
+
+Erodius_nanus | Baach_2026, Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 4 rows
 
 Helius_waiti | Baach_2026, Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 4 rows
 
@@ -1214,6 +1210,8 @@ Rincalanus_gigas | Ikeda_2014 | 1 row
 
 Ripponesia_splendens | Kendall_etal_2019 | 1 row
 
+Rusa_nana | Smith_2003 | 1 row
+
 Scelopterus_undulatus | Brown_etal_2018 | 1 row
 
 Seosergestes_corniculum | Ikeda_2014 | 1 row
@@ -1295,3 +1293,15 @@ Zenaida_leucoptera | vertnet-aves-sept2016 | 1 row
 Zonateres_lanei | Oskyrko_2024 | 1 row
 
 Zophosis_congesta | Herberstein_etal_2022 | 1 row
+
+## Kingdom conflicts corrected before the autotroph filter (5 names, 38 rows -- an authority's plant, alga or fungus kingdom over animal ranks; #81)
+
+Erodius_nanus | Plantae -> Animalia | - / - / Coleoptera / Tenebrionidae | species=unresolved [-] | Baach_2026, Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 4 rows
+
+Lobella_decipiens | Plantae -> Animalia | Arthropoda / Collembola / Poduromorpha / Neanuridae | species=Lobellina decipiens [manual] | Hishi_etal_2019 | 1 row
+
+Myrmecia_pyriformis | Viridiplantae -> Animalia | Arthropoda / Insecta / Hymenoptera / Formicidae | species=Myrmecia pyriformis [manual] | Herberstein_etal_2022, Leahy_2025 | 31 rows
+
+Parus_humilis | Plantae -> Animalia | Chordata / Aves / Passeriformes / Paridae | species=Pseudopodoces humilis [manual] | Myhrvold_2015 | 1 row
+
+Rusa_nana | Plantae -> Animalia | - / - / Artiodactyla / Cervidae | species=unresolved [-] | Smith_2003 | 1 row
