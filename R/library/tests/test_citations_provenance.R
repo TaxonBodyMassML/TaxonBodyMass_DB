@@ -46,8 +46,8 @@ msgs <- MessagesOf(reg <- LoadProvenanceClasses(reg_path, raw$source_label))
 Expect(nrow(reg) == 83 && identical(names(reg), provenance_class_columns) && !anyDuplicated(reg$source_label),
        'the tracked registry loads: 83 labels, the schema columns, unique labels')
 tab <- table(reg$class)
-Expect(tab[['compilation']] == 51 && tab[['primary']] == 18 && tab[['live']] == 8 && tab[['derived']] == 4 && tab[['database']] == 2 && all(names(tab) %in% provenance_classes),
-       'class counts: compilation 51, primary 18, live 8, derived 4, database 2')
+Expect(tab[['compilation']] == 51 && tab[['primary']] == 18 && tab[['live']] == 8 && tab[['derived']] == 5 && tab[['database']] == 2 && all(names(tab) %in% provenance_classes),
+       'class counts: compilation 51, primary 18, live 8, derived 5, database 2')
 Expect(all(reg$default_provenance_type %in% provenance_types) &&
          all(reg$default_provenance_type[reg$class == 'primary'] == 'measured_in_source') &&
          all(reg$default_provenance_type[reg$class == 'derived'] == 'derived_allometry') &&
