@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-05 13:35:37
+# Genus-only records -- 2026-10-05 14:09:32
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -358,8 +358,8 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Dolomedes | 0.03 | 0.573 | 4 | -1.28 | Brose_etal_2018 |
 | Chiromantis | 0.548 | 10.3 | 3 | -1.27 | vertnet-amphibia-sept2016 |
 | Eupodes | 3.44e-05 | 2e-06 | 1 | 1.24 | Brose_etal_2018; Cohen_2014 |
-| Lagopus | 31.5 |  510 | 2 | -1.21 | vertnet-traits-sept2016 |
 | Tyrophagus | 1.73e-05 | 1.17e-06 | 1 | 1.17 | Brose_etal_2018; Cohen_2014 |
+| Lagopus | 31.5 |  449 | 3 | -1.15 | vertnet-traits-sept2016 |
 | Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 |
 | Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
 | Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 |
