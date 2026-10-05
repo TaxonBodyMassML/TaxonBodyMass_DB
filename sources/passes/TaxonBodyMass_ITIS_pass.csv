@@ -1,6 +1,6 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Cnemidophorus_uniparens","Animalia","Chordata","Squamata",NA,"Teiidae","Cnemidophorus uniparens",TRUE,"GBIF","Aspidoscelis","Aspidoscelis uniparens",98,"SYNONYM","Teiidae",NA,"5227544"
-"Crotalus_helleri","Animalia","Chordata","Squamata",NA,"Viperidae","Crotalus helleri",FALSE,"GBIF","Crotalus","Crotalus helleri",99,"ACCEPTED","Viperidae",NA,"2444453"
-"Gallus_domesticus","Animalia","Chordata","Aves","Galliformes","Phasianidae","Gallus domesticus",TRUE,"GBIF","Gallus","Gallus gallus",98,"SYNONYM","Phasianidae","Galliformes","11004366"
-"Thallasarche_melanophris",NA,NA,"Aves",NA,NA,"Thallasarche melanophris",FALSE,NA,NA,NA,100,NA,NA,NA,NA
-"Thryesphilus_rufalbus",NA,NA,"Aves",NA,NA,"Thryesphilus rufalbus",FALSE,NA,NA,NA,100,NA,NA,NA,NA
+"Callithrix_saterei","Animalia","Chordata","Mammalia","Primates","Callitrichidae","Callithrix saterei",TRUE,"GBIF","Mico","Mico saterei",98,"SYNONYM","Callitrichidae","Primates","5707296"
+"Leimacomys_buttneri","Animalia","Chordata","Mammalia","Rodentia","Muridae","Leimacomys buttneri",TRUE,"GBIF","Leimacomys","Leimacomys buettneri",98,"SYNONYM","Muridae","Rodentia","4264854"
+"Orthogeomys_matagalpae","Animalia","Chordata","Mammalia","Rodentia","Geomyidae","Orthogeomys matagalpae",FALSE,"GBIF","Orthogeomys","Orthogeomys matagalpae",99,"ACCEPTED","Geomyidae","Rodentia","2439405"
+"Orthogeomys_thaeleri","Animalia","Chordata","Mammalia","Rodentia","Geomyidae","Orthogeomys thaeleri",FALSE,"GBIF","Orthogeomys","Orthogeomys thaeleri",99,"ACCEPTED","Geomyidae","Rodentia","2439409"
+"Pygeretmus_shitkovi","Animalia","Chordata","Mammalia","Rodentia","Dipodidae","Pygeretmus shitkovi",FALSE,"GBIF","Pygeretmus","Pygeretmus shitkovi",99,"ACCEPTED","Dipodidae","Rodentia","2439435"

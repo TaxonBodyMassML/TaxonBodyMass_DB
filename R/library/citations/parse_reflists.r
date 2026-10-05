@@ -58,19 +58,20 @@ ExplodeRefKeys <- function(ref_keys) {
 # columns pasted with '. ' after trimming each field's trailing period, when
 # the list is split into author/year/title/journal fields, as Hebert_etal_2016's
 # references.csv), `doi_col` an optional DOI column and `type_col` an optional
-# publication type kept in `notes`. `file_encoding` names the file's encoding
-# when it is not UTF-8 (Hebert's list is latin1).
-# Returns native_key, raw_citation, raw_doi, note (all character).
+# publication type kept in `notes`, `review_col` an optional column whose text
+# marks the reference for the owner's review (`owner_review`). `file_encoding`
+# names the file's encoding when it is not UTF-8 (Hebert's list is latin1).
+# Returns native_key, raw_citation, raw_doi, note, owner_review (all character).
 ParseRefListCSV <- function(path, key_col, citation_col = NULL, doi_col = NULL,
                             citation_cols = NULL, type_col = NULL, csv_sep = ',',
-                            file_encoding = 'UTF-8') {
+                            file_encoding = 'UTF-8', review_col = NULL) {
   if (!file.exists(path)) stop('reference list not found: ', path, call. = FALSE)
   d <- read.table(path, header = TRUE, sep = csv_sep, quote = '"', stringsAsFactors = FALSE,
                   check.names = FALSE, colClasses = 'character', na.strings = c('', 'NA'),
                   encoding = 'UTF-8', fileEncoding = file_encoding, comment.char = '', fill = TRUE,
                   strip.white = TRUE)
   for (col in names(d)) d[[col]] <- enc2utf8(d[[col]])
-  need <- c(key_col, citation_col, doi_col, citation_cols, type_col)
+  need <- c(key_col, citation_col, doi_col, citation_cols, type_col, review_col)
   miss <- setdiff(need, names(d))
   if (length(miss) > 0)
     stop(basename(path), ' lacks column(s) ', paste(miss, collapse = ', '), call. = FALSE)
@@ -85,7 +86,9 @@ ParseRefListCSV <- function(path, key_col, citation_col = NULL, doi_col = NULL,
                     raw_citation = trimws(enc2utf8(cit)),
                     raw_doi      = if (is.null(doi_col)) NA_character_ else CleanDOI(d[[doi_col]]),
                     note         = if (is.null(type_col)) NA_character_ else trimws(d[[type_col]]),
+                    owner_review = if (is.null(review_col)) NA_character_ else trimws(d[[review_col]]),
                     stringsAsFactors = FALSE)
+  out$owner_review[!is.na(out$owner_review) & !nzchar(out$owner_review)] <- NA_character_
   out <- out[!is.na(out$native_key) & nzchar(out$native_key), ]
   dup <- duplicated(out$native_key)
   if (any(dup))
@@ -200,6 +203,7 @@ InitPrimaryReferences <- function(source_label, reflist, ref_keys, compiler = NA
   stopifnot(is.data.frame(reflist), all(c('native_key', 'raw_citation') %in% names(reflist)))
   if (!'raw_doi' %in% names(reflist)) reflist$raw_doi <- NA_character_
   if (!'note' %in% names(reflist)) reflist$note <- NA_character_
+  if (!'owner_review' %in% names(reflist)) reflist$owner_review <- NA_character_
   ex <- ExplodeRefKeys(ref_keys[!is.na(ref_keys)])
   counts <- table(ex$native_key)
   keys <- as.character(names(counts))
@@ -217,6 +221,7 @@ InitPrimaryReferences <- function(source_label, reflist, ref_keys, compiler = NA
   out$raw_doi       <- CleanDOI(reflist$raw_doi[idx])
   out$n_records     <- as.integer(counts[keys])
   out$notes         <- reflist$note[idx]
+  out$owner_review  <- reflist$owner_review[idx]
   out$notes[is.na(idx)] <- 'key not in reference list'
   out$match_reason[is.na(idx)] <- 'key_not_in_reflist'
   # the same-author markers refer to the previous entry of the list, so the
@@ -258,18 +263,32 @@ MergePrimaryReferences <- function(existing, skeleton) {
   existing$n_records[!is.na(i)] <- skeleton$n_records[i[!is.na(i)]]
   fill_doi <- !is.na(i) & is.na(existing$raw_doi)
   existing$raw_doi[fill_doi] <- skeleton$raw_doi[i[fill_doi]]
+  # the review flag follows the reference list (the owner may also set it in the file)
+  has_flag <- !is.na(i) & !is.na(skeleton$owner_review[i])
+  existing$owner_review[has_flag] <- skeleton$owner_review[i[has_flag]]
   new <- skeleton[!key_s %in% key_e, , drop = FALSE]
   out <- rbind(existing, new)
   rownames(out) <- NULL
   out
 }
 
-PrimaryReferencesPath <- function(wd_db, source_label) file.path(wd_db, source_label, 'primary_references.csv')
+PrimaryReferencesPath <- function(wd_db, folder, file = 'primary_references.csv') file.path(wd_db, folder, file)
+
+# The file of a source label: its reflist_specs entry (citations_config.r) may
+# place it in another folder (`folder`) or under another name (`prim_file`,
+# 'primary_references_<Label>.csv' in a folder several labels share, such as
+# DataRetriever); otherwise <label>/primary_references.csv.
+PrimaryReferencesPathForLabel <- function(wd_db, source_label) {
+  spec <- if (exists('reflist_specs')) reflist_specs[[source_label]] else NULL
+  PrimaryReferencesPath(wd_db, if (!is.null(spec$folder)) spec$folder else source_label,
+                        if (!is.null(spec$prim_file)) spec$prim_file else 'primary_references.csv')
+}
 
 ReadPrimaryReferences <- function(path) {
   if (!file.exists(path)) return(NULL)
   d <- read.csv(path, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'),
                 check.names = FALSE, encoding = 'UTF-8', fileEncoding = 'UTF-8')
+  for (col in setdiff(primary_reference_optional_columns, names(d))) d[[col]] <- NA_character_
   miss <- setdiff(primary_reference_columns, names(d))
   if (length(miss) > 0)
     stop(path, ' lacks column(s) ', paste(miss, collapse = ', '), call. = FALSE)

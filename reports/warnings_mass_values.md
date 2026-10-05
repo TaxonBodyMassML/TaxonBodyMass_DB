@@ -1,11 +1,11 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 21:29:49
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 21:39:51
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
 - High mass disagreement (log10 range > 2): 357 species
 - Suspicious sources (log10 > 2, by frequency):
-  - Cai_etal_2025 (78)
+  - Cai_etal_2025 (79)
   - vertnet-mammalia-sept2016 (56)
   - Brose_etal_2018 (42)
   - fishbase (39)
@@ -15,7 +15,7 @@
   - Castro_2025 (30)
   - Quaardvark (29)
   - vertnet-fishes-sept2016 (28)
-  - Myhrvold_2015 (25)
+  - Myhrvold_2015 (26)
   - Smith_2003 (20)
   - Tobias_2022 (19)
   - vertnet-reptilia-sept2016 (19)
@@ -55,7 +55,6 @@
   - Soria_etal_2021 (2)
   - Uyeda_etal_2017 (2)
   - Verberk_2020 (2)
-  - Wilman_etal_2014 (2)
   - Brose_2005; Brey_2010 (1)
   - Brown_etal_2018 (1)
   - Chomsky_2004 (1)
@@ -72,15 +71,15 @@
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (1)
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Viana_2016 (1)
-- Moderate mass disagreement (log10 range 1-2): 804 species
+- Moderate mass disagreement (log10 range 1-2): 802 species
 - Suspicious sources (log10 1-2, by frequency):
   - Cai_etal_2025 (143)
   - Myhrvold_2015 (109)
   - Feldman_etal_2016 (108)
   - Brose_etal_2018 (104)
   - fishbase (85)
-  - vertnet-aves-sept2016 (69)
   - Makarieva_2008 (68)
+  - vertnet-aves-sept2016 (68)
   - Tsuboi_etal_2018 (54)
   - Quaardvark (53)
   - Meiri_2024 (49)
@@ -133,12 +132,12 @@
   - Ikeda_2014; Kiorboe_2013 (4)
   - Jones_2009 (4)
   - Soria_etal_2021 (4)
-  - Verberk_2020 (4)
   - AndersonGillooly_2017 (3)
   - Brown_etal_2018 (3)
   - Jennings_2002 (3)
   - Lagrue_etal_2015 (3)
   - Tucker_etal_2014b (3)
+  - Verberk_2020 (3)
   - Brose_etal_2018; Brey_2010 (2)
   - Eklof_etal_2017; Brey_2010 (2)
   - Ikeda_2014; Brey_2010 (2)
@@ -160,8 +159,6 @@
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Watson_2007 (1)
   - Weisse_2024 (1)
-  - Wilman_etal_2014 (1)
-  - Wisnionski_2026 (1)
 ## log10(max/min mass) > 2 after dedup (357 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
@@ -222,7 +219,7 @@ Hexanchus griseus [range=5.40]
         Min_source: vertnet-fishes-sept2016 2
         Max_source: Quaardvark 5e+05
 Psittirostra psittacea [range=5.36]
-        Min_source: Wilman_etal_2014 28.62
+        Min_source: Cai_etal_2025 28.6
         Max_source: vertnet-aves-sept2016 6.483e+06
 Lobodon carcinophaga [range=5.27]
         Min_source: vertnet-mammalia-sept2016 4
@@ -1098,7 +1095,7 @@ Varanus salvator [range=2.15]
         Min_source: vertnet-reptilia-sept2016; vertnet-traits-sept2016 300
         Max_source: Feldman_etal_2016 4.213e+04
 Ramphocelus icteronotus [range=2.15]
-        Min_source: Wilman_etal_2014 33
+        Min_source: Myhrvold_2015 33
         Max_source: vertnet-aves-sept2016 4623
 Thamnophis sirtalis [range=2.14]
         Min_source: vertnet-reptilia-sept2016 6.223
@@ -1236,7 +1233,7 @@ Caranx ruber [range=2.00]
         Min_source: Viana_2016 81.9
         Max_source: Froese_2025 8200
 
-## Moderate mass disagreement (log10 range 1-2) (804 species)
+## Moderate mass disagreement (log10 range 1-2) (802 species)
 
 Balaenoptera musculus [range=2.00]
         Min_source: Brose_etal_2018 1.9e+06
@@ -1712,9 +1709,6 @@ Netta rufina [range=1.66]
 Poralia rufescens [range=1.66]
         Min_source: Ikeda_2014; Kiorboe_2013; Lucas_2011 7.377
         Max_source: Pata_2025 333.8
-Uratelornis chimaera [range=1.66]
-        Min_source: vertnet-aves-sept2016 5
-        Max_source: Wilman_etal_2014 226
 Capromys pilorides [range=1.65]
         Min_source: Herberstein_etal_2022 155
         Max_source: Quaardvark 7000
@@ -3035,9 +3029,6 @@ Mus mattheyi [range=1.15]
 Cyclura rileyi [range=1.15]
         Min_source: Meiri_2024 185
         Max_source: Feldman_etal_2016 2625
-Crocodylus johnsoni [range=1.15]
-        Min_source: Verberk_2020 9998
-        Max_source: Wisnionski_2026 1.418e+05
 Lepidobatrachus llanensis [range=1.15]
         Min_source: Hoehler_etal_2023 6.25
         Max_source: Makarieva_2008 88.5

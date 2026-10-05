@@ -9,7 +9,7 @@
 # Offline.
 
 FoldSurnameForCiteID <- function(surname) {
-  s <- FoldASCII(trimws(surname))
+  s <- FoldASCII(NormaliseSurname(surname))     # build_bib.r: initials dropped, capitals folded
   s <- gsub('[^A-Za-z0-9-]', '', s)      # blanks and apostrophes removed, hyphens kept
   s
 }
