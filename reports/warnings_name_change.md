@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 18:48:26
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 18:47:43
 
 
-## Species name changed during enrichment (5653 rows)
+## Species name changed during enrichment (5652 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -9546,8 +9546,6 @@ Scotozous dormeri; Pipistrellus dormeri -> Scotozous dormeri [GBIF]
 Scyliorhinus caniculata; Scyliorhinus canicula -> Scyliorhinus canicula [GBIF]
 
 Sebastes dalli -> Sebastes dallii [GBIF]
-
-Sebastes jorani -> Sebastes jordani [GBIF]
 
 Sebastes marinus; Sebastes norvegicus -> Sebastes norvegicus [GBIF]
 
