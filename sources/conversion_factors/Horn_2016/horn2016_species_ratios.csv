@@ -1,0 +1,8 @@
+species,n_birds,wet_mass_min_g,wet_mass_max_g,dw_ww,afdw_dw,c_ww,n_ww
+Anas penelope,2,777.5,795.7,0.3827,0.8306,0.1664,0.0325
+Calidris canutus,3,108.6,119.5,0.3937,0.8452,0.1635,0.0445
+Chroicocephalus ridibundus,3,150.1,231.7,0.3876,0.8264,0.1641,0.0504
+Haematopus ostralegus,3,371.7,501.3,0.434,0.8735,0.2148,0.0419
+Larus canus,3,332.4,521.1,0.3805,0.8603,0.169,0.0367
+Limosa lapponica,3,246.2,299.2,0.4279,0.9018,0.2227,0.0399
+BIRDS_MEDIAN,17,,,0.3906,0.8527,0.1677,0.0409
