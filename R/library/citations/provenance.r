@@ -12,8 +12,10 @@
 #                                        provenance_type, primary_*; match_status
 #                                        'unmatched_key' for a key the reference list
 #                                        lacks, 'uningested' for a source without a
-#                                        primary_references.csv), conversion-factor
-#                                        rows and lab-Sheet rows
+#                                        primary_references.csv), hop-2 rows through a
+#                                        reference that is itself a database source
+#                                        (MatchIntermediateLabel(), IntermediateReferences()),
+#                                        conversion-factor rows and lab-Sheet rows
 #   CheckCitations(...)                  every primary_bibcite has a bib entry, every CiteID
 #                                        a Sheet row, every accepted row a DOI or an
 #                                        approval; per-source coverage
@@ -112,6 +114,47 @@ KnownConversionCiteIDs <- function() {
   unique(trimws(unlist(strsplit(MassConversionFactors$cite_id, ';', fixed = TRUE))))
 }
 
+# ---- hop 2: references that are themselves database sources ---------------------------------
+# The source label a resolved reference stands for, or NA: its CiteID is a
+# registered label, or its bib key / DOI is that of a label's curated entry
+# (`labels`, `label_bib`, `label_doi`: the registry's labels with their Bibcite
+# and DOI from the CiteIDs frame). Matching by DOI needs the label's curated
+# bib entry to carry its `doi` field.
+MatchIntermediateLabel <- function(cite_id, bibcite, doi, labels, label_bib, label_doi) {
+  out <- rep(NA_character_, length(cite_id))
+  m <- match(cite_id, labels); ok <- !is.na(cite_id) & !is.na(m); out[ok] <- labels[m[ok]]
+  m <- match(bibcite, label_bib); ok <- is.na(out) & !is.na(bibcite) & !is.na(m); out[ok] <- labels[m[ok]]
+  m <- match(tolower(doi), tolower(label_doi)); ok <- is.na(out) & !is.na(doi) & !is.na(m); out[ok] <- labels[m[ok]]
+  out
+}
+
+# The resolved references of the intermediate labels' own records, one row per
+# species x label x reference (`i_*`: the reference's role, status, CiteID,
+# bib key and DOI), from the pipeline records (`pipe`: the same frame
+# BuildProvenance() works on) and the primary references. Only accepted
+# statuses and self references count; a pending or unmatched key of the
+# intermediate gives no row (the record is then terminal at the intermediate).
+IntermediateReferences <- function(pipe, prim, labels) {
+  empty <- data.frame(genus = character(), species = character(), label = character(), i_role = character(),
+                      i_status = character(), i_cite_id = character(), i_bibcite = character(), i_doi = character(),
+                      stringsAsFactors = FALSE)
+  ip <- pipe[pipe$source_label %in% labels & !is.na(pipe$ref_keys), , drop = FALSE]
+  if (nrow(ip) == 0) return(empty)
+  ex <- ExplodeRefKeys(ip$ref_keys)
+  il <- unique(data.frame(genus = ip$genus[ex$record], species = ip$species[ex$record], label = ip$source_label[ex$record],
+                          native_key = ex$native_key, stringsAsFactors = FALSE))
+  pj <- match(paste(il$label, il$native_key), paste(prim$source_label, prim$native_key))
+  keep <- !is.na(pj) & prim$match_status[pj] %in% c('certain', 'approved', 'nodoi_approved', 'self')
+  il <- il[keep, , drop = FALSE]; pj <- pj[keep]
+  if (nrow(il) == 0) return(empty)
+  out <- data.frame(genus = il$genus, species = il$species, label = il$label, i_role = prim$role[pj],
+                    i_status = prim$match_status[pj], i_cite_id = prim$cite_id[pj], i_bibcite = prim$bibcite[pj],
+                    i_doi = prim$doi[pj], stringsAsFactors = FALSE)
+  out <- unique(out)
+  rownames(out) <- NULL
+  out
+}
+
 # ---- the provenance table ------------------------------------------------------------------
 EmptyProvenance <- function() {
   out <- as.data.frame(setNames(rep(list(character()), length(provenance_columns)), provenance_columns), stringsAsFactors = FALSE)
@@ -140,6 +183,9 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
   cls_of  <- setNames(classes$class, classes$source_label)
   type_of <- setNames(classes$default_provenance_type, classes$source_label)
   eq_of   <- setNames(classes$equation_bibcite, classes$source_label)
+  labels  <- classes$source_label
+  IntermediateLabel <- function(cite_id, bibcite, doi)
+    MatchIntermediateLabel(cite_id, bibcite, doi, labels, Bib(labels), Doi(labels))
   Row <- function(g, type, n, ref_role = NA_character_, primary_cite_id = NA_character_, primary_bibcite = NA_character_,
                   primary_doi = NA_character_, match_status = NA_character_, hop = NULL, via = NA_character_) {
     data.frame(genus = g$genus, species = g$species, taxon = g$taxon, source_mass = g$source_label,
@@ -180,19 +226,57 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
       status <- prim$match_status[pi]
       status[is.na(pi)] <- ifelse(g$source_label[is.na(pi)] %in% prim$source_label, 'unmatched_key', 'uningested')
       resolved <- !is.na(pi) & prim$match_status[pi] %in% c('certain', 'approved', 'nodoi_approved')
-      out$keyed <- Row(g, type, n, ref_role = role,
-                       primary_cite_id = ifelse(resolved, prim$cite_id[pi], NA_character_),
-                       primary_bibcite = ifelse(resolved, prim$bibcite[pi], NA_character_),
-                       primary_doi     = ifelse(resolved, prim$doi[pi], NA_character_),
-                       match_status = status)
+      keyed <- Row(g, type, n, ref_role = role,
+                   primary_cite_id = ifelse(resolved, prim$cite_id[pi], NA_character_),
+                   primary_bibcite = ifelse(resolved, prim$bibcite[pi], NA_character_),
+                   primary_doi     = ifelse(resolved, prim$doi[pi], NA_character_),
+                   match_status = status)
       # a self reference is the source itself
       self <- !is.na(pi) & prim$role[pi] %in% 'self'
       if (any(self)) {
-        out$keyed$primary_cite_id[self] <- g$source_label[self]
-        out$keyed$primary_bibcite[self] <- Bib(g$source_label[self])
-        out$keyed$primary_doi[self]     <- Doi(g$source_label[self])
-        out$keyed$match_status[self]    <- 'self'
+        keyed$primary_cite_id[self] <- g$source_label[self]
+        keyed$primary_bibcite[self] <- Bib(g$source_label[self])
+        keyed$primary_doi[self]     <- Doi(g$source_label[self])
+        keyed$match_status[self]    <- 'self'
       }
+      # hop 2 (issue #1, 1.3): a resolved reference that is itself a source
+      # label of the database (matched by CiteID, bib key or DOI; Herberstein
+      # -> Chown_etal_2007) is an intermediate compilation. Where the
+      # intermediate's own records of the same species resolve to primary
+      # references, the record is attributed through it: one row per such
+      # reference, hop 2, compiled_via_compilation, via_cite_id the
+      # intermediate's CiteID, primary_* the intermediate's reference (no third
+      # hop: a reference of the intermediate that is itself a label stays as it
+      # is). An intermediate record that is its own measurement (role self)
+      # gives compiled_from citing the intermediate at hop 1. Without a
+      # resolved intermediate reference for the species (the intermediate has
+      # no primary_references.csv yet, or its record is keyless or pending) the
+      # intermediate is the terminal citation: compilation_terminal at hop 1
+      # (owner decision 2026-10-04); such rows turn into hop-2 rows by
+      # themselves once the intermediate is ingested. A record-level prov_type
+      # override is left alone.
+      inter <- IntermediateLabel(ifelse(resolved, prim$cite_id[pi], NA), ifelse(resolved, prim$bibcite[pi], NA),
+                                 ifelse(resolved, prim$doi[pi], NA))
+      inter[!is.na(inter) & (inter == g$source_label | ov)] <- NA_character_
+      h2 <- which(!is.na(inter))
+      if (length(h2) > 0) {
+        il <- IntermediateReferences(pipe, prim, unique(inter[h2]))
+        cand <- data.frame(k = h2, genus = g$genus[h2], species = g$species[h2], inter = inter[h2], stringsAsFactors = FALSE)
+        m <- merge(cand, il, by.x = c('genus', 'species', 'inter'), by.y = c('genus', 'species', 'label'), all.x = TRUE, sort = FALSE)
+        found <- !is.na(m$i_status)
+        i_self <- found & m$i_role %in% 'self'
+        via_type <- ifelse(!found, 'compilation_terminal', ifelse(i_self, 'compiled_from', 'compiled_via_compilation'))
+        gm <- g[m$k, , drop = FALSE]
+        hop2 <- Row(gm, via_type, n[m$k],
+                    ref_role = ifelse(!found, 'compilation', ifelse(i_self, 'measurement', m$i_role)),
+                    primary_cite_id = ifelse(found & !i_self, m$i_cite_id, m$inter),
+                    primary_bibcite = ifelse(found & !i_self, m$i_bibcite, Bib(m$inter)),
+                    primary_doi     = ifelse(found & !i_self, m$i_doi, Doi(m$inter)),
+                    match_status    = ifelse(found & !i_self, m$i_status, keyed$match_status[m$k]),
+                    via = ifelse(found & !i_self, m$inter, NA_character_))
+        keyed <- rbind(keyed[-h2, , drop = FALSE], hop2)
+      }
+      out$keyed <- keyed
     }
     # (b) records without a key: the registry's default for the label's class
     none <- pipe[!has, , drop = FALSE]

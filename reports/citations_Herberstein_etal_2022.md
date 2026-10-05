@@ -1,0 +1,203 @@
+# Citations of Herberstein_etal_2022 -- 2026-10-04 19:40:59 (tbmcite 0.1.0)
+
+Steps: --sheet --no-dry-run
+
+- --sheet: 191 row(s) for Herberstein_etal_2022, 191 new, tab had 53 rows; BM_citations snapshotted (430 rows)
+
+## References
+
+| native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
+| --- | ---: | --- | --- | --- | --- | --- | --- | --- |
+| h:0017b502 | 9 | measurement | certain | doi_resolves | 10.1111/j.1365-3032.1993.tb00610.x | 1.000 | DUNCAN:1993aa | DUNCAN_1993 |
+| h:00d71a7c | 1 | measurement | approved | owner_candidate | 10.1017/s0952836998001125 | 1.000 | Seymour:1998aa | Seymour_1998 |
+| h:01582582 | 6 | measurement | certain | doi_resolves | 10.2307/1367864 | 1.000 | Vleck:1979aa | Vleck_1979 |
+| h:024d8773 | 1 | measurement | certain | doi_resolves | 10.1086/physzool.56.4.30155880 | 1.000 | Withers:1983aa | Withers_1983 |
+| h:0411fb75 | 13 | measurement | certain | doi_resolves | 10.1016/j.asd.2011.07.002 | 1.000 | Quesada:2011aa | Quesada_2011 |
+| h:076bc266 | 3 | measurement | certain | doi_resolves | 10.1071/zo9790511 | 1.000 | Dawson:1979aa | Dawson_1979 |
+| h:0993ba83 | 6 | measurement | certain | doi_resolves | 10.1016/0300-9629(79)90452-3 | 0.887 | Casey:1979aa | Casey_1979 |
+| h:09d560d4 | 2 | measurement | certain | doi_resolves | 10.2307/1940387 | 1.000 | Goldstein:1985aa | Goldstein_1985 |
+| h:09e1d455 | 1 | measurement | certain | doi_resolves | 10.1016/0010-406x(67)90115-6 | 1.000 | Leitner:1967aa | Leitner_1967 |
+| h:0a222652 | 3 | measurement | certain | doi_resolves | 10.1002/dev.420020208 | 1.000 | Rosenzweig:1969aa | Rosenzweig_1969 |
+| h:0af12421 | 47 | measurement | approved | owner_candidate | 10.1111/ele.13464 | 1.000 | Boyce:2020aa | Boyce_2020 |
+| h:0b6a8709 | 1 | measurement | approved | owner_candidate | 10.1242/jeb.178.1.21 | 0.897 | Bailey:1993aa | Bailey_1993 |
+| h:0c17e12e | 6 | measurement | certain | doi_resolves | 10.1016/0022-1910(71)90093-x | 1.000 | Lewis:1971aa | Lewis_1971 |
+| h:0c7f2d21 | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(89)90538-0 | 1.000 | Du-Plessis:1989aa | DuPlessis_1989 |
+| h:0cff271c | 13 | measurement | certain | doi_resolves | 10.1016/0300-9629(89)90581-1 | 1.000 | Prinzinger:1989aa | Prinzinger_1989 |
+| h:116353ab | 1 | measurement | certain | doi_resolves | 10.2307/1443864 | 1.000 | Bennett:1979aa | Bennett_1979 |
+| h:161ca374 | 2 | measurement | certain | doi_resolves | 10.1007/bf00692676 | 0.927 | Al-Sadoon:1989aa | Al-Sadoon_1989 |
+| h:16b1bfc6 | 1 | measurement | certain | doi_resolves | 10.1007/bf00302113 | 1.000 | Saarela:1993aa | Saarela_1993 |
+| h:1747a2ac | 3 | measurement | certain | doi_resolves | 10.1007/bf00328175 | 1.000 | Bozinovic:1990aa | Bozinovic_1990 |
+| h:17705f14 | 2 | measurement | approved | owner_candidate | 10.1016/0300-9629(82)90376-0 | 0.899 | Putnam:1982aa | Putnam_1982 |
+| h:1992d17b | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(84)90018-5 | 1.000 | Fusari:1984aa | Fusari_1984 |
+| h:1aa0a494 | 1 | measurement | certain | doi_resolves | 10.1016/s0300-9629(75)80122-8 | 1.000 | Bradley:1975aa | Bradley_1975 |
+| h:1c3db4a1 | 1 | measurement | certain | doi_resolves | 10.1016/s0022-1910(99)00036-0 | 1.000 | Vogt:1999aa | Vogt_1999 |
+| h:1c6eee4a | 244 | measurement | certain | doi_resolves | 10.1111/j.1365-2435.2007.01245.x | 1.000 | Chown:2007aa | Chown_etal_2007 |
+| h:1dfdd288 | 1 | measurement | certain | doi_resolves | 10.1016/0010-406x(70)90609-2 | 1.000 | Francis:1970aa | Francis_1970 |
+| h:1fdfdde5 | 60 | measurement | certain | doi_resolves | 10.1515/mamm.1966.30.1.160 | 1.000 | BAUCHOT:1966aa | BAUCHOT_1966 |
+| h:25f3f4a4 | 100 | measurement | certain | two_service_agreement | 10.1002/cne.24617 | 1.000 | Sheehan:2019aa | Sheehan_2019 |
+| h:264531bc | 3 | measurement | certain | doi_resolves | 10.1016/0306-4565(91)90033-x | 1.000 | Zari:1991aa | Zari_1991 |
+| h:27b9fec7 | 3 | measurement | certain | two_service_agreement | 10.1242/jeb.150.1.233 | 1.000 | Full:1990aa | Full_1990 |
+| h:283e6e72 | 35 | measurement | certain | two_service_agreement | 10.1111/j.1420-9101.2012.02491.x | 1.000 | BODDY:2012aa | BODDY_2012 |
+| h:28f447fd | 1 | measurement | certain | doi_resolves | 10.1111/j.1365-3032.1997.tb01176.x | 1.000 | HACK:1997aa | HACK_1997 |
+| h:294388d2 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(71)90098-3 | 1.000 | Lawrence-Chia-Huang-Wang:1971aa | LawrenceChia-HuangWang_1971 |
+| h:2af008b0 | 15 | measurement | certain | two_service_agreement | 10.1016/0300-9629(78)90020-8 | 1.000 | Calder:1978aa | Calder_1978 |
+| h:2d8a568d | 1 | measurement | certain | doi_resolves | 10.1016/0306-4565(94)90004-3 | 1.000 | Roxburgh:1994aa | Roxburgh_1994 |
+| h:2de6bf2c | 3 | measurement | certain | doi_resolves | 10.1071/zo9960445 | 1.000 | Weathers:1996aa | Weathers_1996 |
+| h:2f2749c1 | 1 | measurement | certain | doi_resolves | 10.1086/367953 | 0.833 | Bradley:2003aa | Bradley_2003 |
+| h:32007c19 | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(78)90238-4 | 1.000 | El-Nouty:1978aa | El-Nouty_1978 |
+| h:3299ec11 | 40 | measurement | certain | doi_resolves | 10.1016/0306-4565(77)90026-2 | 1.000 | Bartholomew:1977aa | Bartholomew_1977 |
+| h:346450e6 | 145 | measurement | nodoi_approved | owner_nodoi |  | 0.439 | Warnke:1908aa | Warnke_1908 |
+| h:34b48127 | 1 | measurement | certain | doi_resolves | 10.2307/1380410 | 1.000 | Worthen:1981aa | Worthen_1981 |
+| h:373d5fe4 | 2 | measurement | certain | doi_resolves | 10.1007/s00360-015-0914-8 | 1.000 | Schmitz:2015aa | Schmitz_2015 |
+| h:376e1df6 | 1 | measurement | certain | doi_resolves | 10.1016/0010-406x(70)90941-2 | 1.000 | Chia-Huang-Wang:1970aa | Chia-HuangWang_1970 |
+| h:37b8cfe3 | 4 | measurement | certain | doi_resolves | 10.2307/1368232 | 1.000 | Weathers:1990aa | Weathers_1990 |
+| h:3b1919df | 45 | measurement | certain | doi_resolves | 10.1111/j.1365-2311.1981.tb00634.x | 1.000 | MISPAGEL:1981aa | MISPAGEL_1981 |
+| h:3cf6c3b2 | 1 | measurement | certain | doi_resolves | 10.1016/0306-4565(76)90013-9 | 1.000 | Louw:1976aa | Louw_1976 |
+| h:3cfad141 | 15 | measurement | pending | doi_mismatch |  |  |  |  |
+| h:3d47b851 | 1 | measurement | certain | doi_resolves | 10.1002/jcp.1030650313 | 1.000 | Tucker:1965aa | Tucker_1965 |
+| h:3d73059d | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(81)92992-3 | 1.000 | Maclean:1981aa | Maclean_1981 |
+| h:3d737c07 | 1 | measurement | certain | doi_resolves | 10.1111/j.1469-7998.1982.tb02076.x | 1.000 | Maloiy:1982aa | Maloiy_1982 |
+| h:3dc41852 | 1 | measurement | certain | doi_resolves | 10.1016/0010-406x(67)90447-1 | 1.000 | Chew:1967aa | Chew_1967 |
+| h:3f984416 | 23 | measurement | certain | doi_resolves | 10.1016/0300-9629(87)90515-9 | 1.000 | Zachariassen:1987aa | Zachariassen_1987 |
+| h:4107a127 | 6 | measurement | certain | doi_resolves | 10.1086/physzool.68.1.30163917 | 1.000 | Lighton:1995aa | Lighton_1995 |
+| h:41c21419 | 1 | measurement | certain | doi_resolves | 10.1007/bf00691031 | 1.000 | Bartholomew:1986aa | Bartholomew_1986 |
+| h:41fdfbf4 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.159.1.269 | 0.937 | HADLEY:1991aa | HADLEY_1991 |
+| h:4451224f | 1 | measurement | certain | doi_resolves | 10.1016/s1095-6433(99)00065-3 | 1.000 | Campbell:1999aa | Campbell_1999 |
+| h:44ba55ea | 1 | measurement | certain | doi_resolves | 10.1016/s0300-9629(75)80146-0 | 1.000 | Layne:1975aa | Layne_1975 |
+| h:45d10c90 | 6 | measurement | certain | doi_resolves | 10.1016/0306-4565(76)90029-2 | 1.000 | Hill:1976aa | Hill_1976 |
+| h:4662e1d5 | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(90)90177-t | 1.000 | Genoud:1990aa | Genoud_1990 |
+| h:468027f7 | 3 | measurement | certain | doi_resolves | 10.1007/bf00691124 | 0.811 | Jones:1976aa | Jones_1976 |
+| h:46a5c319 | 199 | measurement | certain | two_service_agreement | 10.1159/000114406 | 1.000 | Ashwell:2008aa | Ashwell_2008 |
+| h:47a29c34 | 30 | measurement | certain | doi_resolves | 10.1016/j.jinsphys.2011.01.001 | 1.000 | Kawamoto:2011aa | Kawamoto_2011 |
+| h:48622378 | 1 | measurement | certain | doi_resolves | 10.1086/physzool.59.1.30156093 | 1.000 | Bickler:1986aa | Bickler_1986 |
+| h:4f5777f6 | 2 | measurement | certain | two_service_agreement | 10.1016/j.jinsphys.2004.02.009 | 1.000 | Terblanche:2004aa | Terblanche_2004 |
+| h:51b86183 | 9 | measurement | certain | doi_resolves | 10.1016/0300-9629(84)90030-6 | 1.000 | Adams:1984aa | Adams_1984 |
+| h:52d8f330 | 1 | measurement | certain | doi_resolves | 10.1007/bf00389805 | 0.889 | Marhold:1995aa | Marhold_1995 |
+| h:5353f127 | 2 | measurement | certain | doi_resolves | 10.1016/s0022-1910(00)00111-6 | 1.000 | Shelton:2001aa | Shelton_2001 |
+| h:537f430c | 47 | measurement | certain | doi_resolves | 10.2307/1936843 | 1.000 | Greenstone:1980aa | Greenstone_1980 |
+| h:54b15906 | 10 | measurement | certain | doi_resolves | 10.1071/zo98019 | 1.000 | Bedford:1999aa | Bedford_1999 |
+| h:5658e105 | 27 | measurement | certain | doi_resolves | 10.1111/j.1442-9993.2012.02441.x | 1.000 | GUAY:2012aa | GUAY_2012 |
+| h:57096de1 | 4 | measurement | certain | doi_resolves | 10.1007/bf00347595 | 1.000 | MacMillen:1981aa | MacMillen_1981 |
+| h:57524115 | 1 | measurement | certain | doi_resolves | 10.1046/j.1365-2435.1997.00078.x | 1.000 | RICHTER:1997aa | RICHTER_1997 |
+| h:5a22ff6c | 5 | measurement | certain | doi_resolves | 10.1111/j.1365-3032.1986.tb00403.x | 1.000 | MAY:1986aa | MAY_1986 |
+| h:5ab14dd0 | 14 | measurement | certain | doi_resolves | 10.1159/000478738 | 1.000 | Hoops:2017aa | Hoops_2017 |
+| h:5dbf2220 | 3 | measurement | certain | doi_resolves | 10.1242/jeb.00687 | 1.000 | Nespolo:2003aa | Nespolo_2003 |
+| h:5dd0a8b2 | 24 | measurement | certain | doi_resolves | 10.1007/bf01969600 | 1.000 | Prinzinger:1980aa | Prinzinger_1980 |
+| h:5ddc219a | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(74)90606-9 | 1.000 | Gatten:1974aa | Gatten_1974 |
+| h:61598230 | 2 | measurement | certain | doi_resolves | 10.1086/physzool.56.3.30152596 | 1.000 | Hennemann:1983aa | Hennemann_1983 |
+| h:677e9af6 | 2 | measurement | certain | doi_resolves | 10.1016/0010-406x(65)90141-6 | 1.000 | Brush:1965aa | Brush_1965 |
+| h:680b909e | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | MacMillen:1977aa | MacMillen_1977 |
+| h:69689a64 | 9 | measurement | certain | doi_resolves | 10.1007/bf00378556 | 1.000 | Du-Toit:1985aa | DuToit_1985 |
+| h:69aa6ea5 | 12 | measurement | certain | doi_resolves | 10.1002/ajpa.1330080207 | 0.796 | Hrdlicka:1925aa | Hrdlicka_1925 |
+| h:69ad229a | 4 | measurement | certain | doi_resolves | 10.2307/1936869 | 1.000 | McNab:1979aa | McNab_1979 |
+| h:6cff90dc | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(78)90116-0 | 1.000 | Gatten:1978aa | Gatten_1978 |
+| h:6d0fdd45 | 3 | measurement | certain | doi_resolves | 10.1139/z68-008 | 0.771 | Farrell:1968aa | Farrell_1968 |
+| h:6d2e390d | 3 | measurement | certain | doi_resolves | 10.1016/0306-4565(95)00003-f | 1.000 | Downs:1995ab | Downs_1995b |
+| h:70563c4d | 3 | measurement | certain | doi_resolves | 10.1086/physzool.54.2.30155827 | 1.000 | Dunson:1981aa | Dunson_1981 |
+| h:71b64cbb | 8 | measurement | certain | doi_resolves | 10.1007/bf00685208 | 1.000 | Bartholomew:1985aa | Bartholomew_1985 |
+| h:74851217 | 2 | measurement | certain | doi_resolves | 10.2307/1446195 | 1.000 | Thompson:1992aa | Thompson_1992 |
+| h:77f626ab | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(94)90245-3 | 1.000 | Cortes:1994aa | Cortes_1994 |
+| h:7860525c | 24 | measurement | certain | doi_resolves | 10.1002/ajpa.1330560109 | 1.000 | Bronson:1981aa | Bronson_1981 |
+| h:7af7e1b3 | 1 | measurement | certain | doi_resolves | 10.2307/3544180 | 1.000 | Young:1980aa | Young_1980 |
+| h:7dc5535e | 15 | measurement | certain | doi_resolves | 10.1111/j.1469-7998.1984.tb02345.x | 1.000 | McNab:1984aa | McNab_1984 |
+| h:7e20f979 | 48 | measurement | certain | two_service_agreement | 10.1139/z70-075 | 1.000 | Pirlot:1970aa | Pirlot_1970 |
+| h:7fa4296e | 5 | measurement | certain | doi_resolves | 10.1007/s004420050966 | 1.000 | Duncan:2000aa | Duncan_2000 |
+| h:82754ee7 | 1 | measurement | certain | doi_resolves | 10.1007/bf02515153 | 1.000 | Stahel:1984aa | Stahel_1984 |
+| h:838be189 | 5 | measurement | certain | doi_resolves | 10.1016/0022-1910(84)90097-0 | 1.000 | Herreid:1984aa | Herreid_1984 |
+| h:8820d2fa | 2 | measurement | certain | two_service_agreement | 10.1093/auk/101.1.25 | 1.000 | Bryant:1984aa | Bryant_1984 |
+| h:89c47794 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.506 | Mlikovsky:1990aa | Mlikovsky_1990 |
+| h:8a46e592 | 11 | measurement | certain | doi_resolves | 10.1016/s1095-6433(01)00371-3 | 1.000 | Arends:2001aa | Arends_2001 |
+| h:8a797f0f | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(79)90010-0 | 0.770 | Maskrey:1979aa | Maskrey_1979 |
+| h:8aa04e8f | 18 | measurement | certain | doi_resolves | 10.2307/1367889 | 1.000 | Hails:1983aa | Hails_1983 |
+| h:8ac26c7b | 3 | measurement | certain | doi_resolves | 10.1007/s003600000121 | 1.000 | Baudinette:2000aa | Baudinette_2000 |
+| h:8e855f7e | 5 | measurement | certain | doi_resolves | 10.1016/0300-9629(83)90363-8 | 1.000 | Ricklefs:1983aa | Ricklefs_1983 |
+| h:90135efc | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(88)90856-0 | 1.000 | Knight:1988aa | Knight_1988 |
+| h:92c79f30 | 285 | measurement | nodoi_approved | owner_nodoi |  | 0.517 | Crile:1940aa | Crile_1940 |
+| h:9343a0dd | 2 | measurement | certain | doi_resolves | 10.2307/2390087 | 1.000 | Chown:1995aa | Chown_1995 |
+| h:93c9b147 | 33 | measurement | certain | doi_resolves | 10.1007/s00360-016-0964-6 | 1.000 | Bech:2016aa | Bech_2016 |
+| h:960f8599 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.94.1.189 | 1.000 | Herreid:1981aa | Herreid_1981 |
+| h:961ae096 | 1 | measurement | certain | doi_resolves | 10.1007/bf00687467 | 0.825 | Bucher:1985aa | Bucher_1985 |
+| h:961c6cc8 | 1 | measurement | certain | doi_resolves | 10.2307/1379582 | 1.000 | Whittow:1977ab | Whittow_1977b |
+| h:9636e034 | 3 | measurement | certain | doi_resolves | 10.1111/j.1365-3032.1989.tb00949.x | 1.000 | LIGHTON:1989aa | LIGHTON_1989 |
+| h:96981eb3 | 2 | measurement | certain | doi_resolves | 10.1159/000155068 | 1.000 | Morrison:1967aa | Morrison_1967 |
+| h:96a8db76 | 2 | measurement | approved | owner_candidate | 10.1007/s10164-017-0530-z | 1.000 | Pasquet:2017aa | Pasquet_2017 |
+| h:980ec0d3 | 19 | measurement | certain | doi_resolves | 10.1111/j.1469-7998.1992.tb04417.x | 1.000 | McNab:1992aa | McNab_1992 |
+| h:9873ee8a | 1 | measurement | certain | doi_resolves | 10.2307/1365995 | 1.000 | Goldstein:1974aa | Goldstein_1974 |
+| h:98a1af16 | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(77)90436-4 | 1.000 | Whittow:1977aa | Whittow_1977 |
+| h:9a6f2f88 | 70 | measurement | certain | doi_resolves | 10.1159/000322530 | 1.000 | Seid:2011aa | Seid_2011 |
+| h:9accb9a0 | 2 | measurement | certain | doi_resolves | 10.1016/0306-4565(81)90057-7 | 1.000 | Pauls:1981aa | Pauls_1981 |
+| h:9b3042d8 | 43 | measurement | nodoi_approved | owner_nodoi |  | 0.466 | Mlikovsky:2003aa | Mlikovsky_2003 |
+| h:a3ad39d0 | 1 | measurement | certain | doi_resolves | 10.1139/z73-125 | 1.000 | Wang:1973aa | Wang_1973 |
+| h:a555ffc5 | 1 | measurement | certain | doi_resolves | 10.2307/1380332 | 1.000 | Hennemann:1980aa | Hennemann_1980 |
+| h:a6eecd9a | 106 | measurement | certain | two_service_agreement | 10.1242/jeb.76.1.11 | 1.000 | Bartholomew:1978aa | Bartholomew_1978 |
+| h:aa38eea1 | 5 | measurement | certain | doi_resolves | 10.1007/bf01924150 | 1.000 | Nevo:1974aa | Nevo_1974 |
+| h:aa38effa | 3 | measurement | certain | doi_resolves | 10.1086/physzool.55.1.30158445 | 1.000 | Anderson:1982aa | Anderson_1982 |
+| h:acaf4116 | 1 | measurement | certain | doi_resolves | 10.1071/zo96043 | 1.000 | Hosken:1997aa | Hosken_1997 |
+| h:b1cfc6ce | 3 | measurement | certain | doi_resolves | 10.1071/zo99023 | 1.000 | Vitali:1999aa | Vitali_1999 |
+| h:b2ee8d67 | 2 | measurement | certain | doi_resolves | 10.1007/s003600000139 | 0.703 | Lovegrove:2001aa | Lovegrove_2001 |
+| h:b33f9bae | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.120.1.443 | 1.000 | Louw:1986aa | Louw_1986 |
+| h:b4008957 | 6 | measurement | certain | doi_resolves | 10.1098/rspb.1998.0560 | 1.000 | Kotiaho:1998aa | Kotiaho_1998 |
+| h:b5c06273 | 2 | measurement | certain | doi_resolves | 10.1152/ajpregu.1981.240.1.r3 | 1.000 | Else:1981aa | Else_1981 |
+| h:b8629b62 | 4 | measurement | certain | two_service_agreement | 10.1242/jeb.203.10.1613 | 1.000 | Lehmann:2000aa | Lehmann_2000 |
+| h:b8e42a8d | 3 | measurement | certain | doi_resolves | 10.1016/s0306-4565(00)00029-2 | 1.000 | Rezende:2001aa | Rezende_2001 |
+| h:ba9a2986 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Hadley:1981aa | Hadley_1981 |
+| h:bc80e881 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(95)00055-c | 1.000 | Thompson:1995aa | Thompson_1995 |
+| h:bd7628e5 | 9 | measurement | nodoi_approved | owner_nodoi |  | 0.248 | Jensen:1975aa | Jensen_1975 |
+| h:bdb285e5 | 1 | measurement | certain | doi_resolves | 10.1111/j.1469-7998.1996.tb05287.x | 1.000 | Genoud:1996aa | Genoud_1996 |
+| h:c04766d6 | 1 | measurement | certain | doi_resolves | 10.1016/s0300-9629(76)80117-x | 1.000 | Ebisu:1976aa | Ebisu_1976 |
+| h:c1a2fe9a | 4 | measurement | certain | doi_resolves | 10.1007/s00360-004-0440-6 | 1.000 | Schmitz:2004aa | Schmitz_2004 |
+| h:c34a2305 | 1 | measurement | certain | doi_resolves | 10.1007/bf00323153 | 1.000 | Bennett:1994aa | Bennett_1994 |
+| h:c48f28f2 | 2 | measurement | certain | doi_resolves | 10.1159/000085047 | 1.000 | Mares:2005aa | Mares_2005 |
+| h:c66705fa | 2 | measurement | certain | doi_resolves | 10.1007/bf00323786 | 1.000 | Kurta:1991aa | Kurta_1991 |
+| h:c6879101 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.198.7.1613 | 1.000 | Lighton:1995ab | Lighton_1995b |
+| h:c6bff63a | 9 | measurement | certain | doi_resolves | 10.1159/000113543 | 1.000 | Taylor:2008aa | Taylor_2008 |
+| h:c723598e | 5 | measurement | certain | doi_resolves | 10.1071/zo9940185 | 1.000 | Christian:1994aa | Christian_1994 |
+| h:c8086cd5 | 1 | measurement | certain | doi_resolves | 10.1071/zo99073 | 1.000 | Withers:2000aa | Withers_2000 |
+| h:ca47f09b | 1 | measurement | certain | doi_resolves | 10.1139/z73-014 | 1.000 | Bailey:1973aa | Bailey_1973 |
+| h:ca7dad75 | 8 | measurement | certain | doi_resolves | 10.2307/4086838 | 1.000 | Pettit:1985aa | Pettit_1985 |
+| h:cdc9fbfc | 44 | measurement | certain | doi_resolves | 10.1098/rspb.2016.1857 | 1.000 | Stankowich:2017aa | Stankowich_2017 |
+| h:ce39c3a4 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.456 | Chaplin:1982aa | Chaplin_1982 |
+| h:cf14007f | 3 | measurement | certain | doi_resolves | 10.1111/j.1469-7998.1986.tb03604.x | 1.000 | Hailey:1986aa | Hailey_1986 |
+| h:cf54f571 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(89)90598-7 | 1.000 | Coelho:1989aa | Coelho_1989 |
+| h:d0a2105e | 2 | measurement | certain | doi_resolves | 10.1016/j.cbpa.2005.09.010 | 1.000 | Shillington:2005aa | Shillington_2005 |
+| h:d1b6a92b | 1 | measurement | certain | two_service_agreement | 10.1152/ajplegacy.1954.178.3.515 | 1.000 | Krog:1954aa | Krog_1954 |
+| h:d2391f9d | 2 | measurement | certain | doi_resolves | 10.1007/bf00346269 | 0.764 | Thurling:1980aa | Thurling_1980 |
+| h:d316ed77 | 1 | measurement | certain | doi_resolves | 10.1002/jcp.1030600206 | 1.000 | Morrison:1962aa | Morrison_1962 |
+| h:d43fcc97 | 1 | measurement | approved | owner_candidate | 10.1007/bf00714589 | 0.777 | Krl:1994aa | Krl_1994 |
+| h:d528b6ec | 26 | measurement | certain | doi_resolves | 10.2307/3544200 | 1.000 | Meyer:1983aa | Meyer_1983 |
+| h:d5f0a012 | 5 | measurement | certain | doi_resolves | 10.1002/ar.1090240408 | 1.000 | Naccarati:1922aa | Naccarati_1922 |
+| h:d6e155c9 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(79)90180-4 | 1.000 | Wunder:1979aa | Wunder_1979 |
+| h:d8cb6eac | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(94)00147-l | 1.000 | Downs:1995aa | Downs_1995 |
+| h:d91e2711 | 24 | measurement | certain | two_service_agreement | 10.1242/jeb.83.1.79 | 1.000 | May:1979aa | May_1979 |
+| h:db0a7f37 | 19 | measurement | certain | doi_resolves | 10.1007/s004420100772 | 1.000 | Duncan:2001aa | Duncan_2001 |
+| h:deeb05dc | 1 | measurement | certain | two_service_agreement | 10.1086/physzool.52.4.30155950 | 1.000 | Kamau:1979aa | Kamau_1979 |
+| h:e047bc44 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(83)90726-0 | 1.000 | Marder:1983aa | Marder_1983 |
+| h:e06f9324 | 7 | measurement | certain | doi_resolves | 10.2307/3544488 | 1.000 | Holter:1982aa | Holter_1982 |
+| h:e1052da1 | 4 | measurement | certain | doi_resolves | 10.1086/physzool.56.3.30152607 | 1.000 | Kamel:1983aa | Kamel_1983 |
+| h:e1c8ee98 | 2 | measurement | certain | doi_resolves | 10.1016/0306-4565(91)90036-2 | 1.000 | Haim:1991aa | Haim_1991 |
+| h:e337855a | 4 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Anderson:1996aa | Anderson_1996 |
+| h:e3c934d9 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.203.2.397 | 1.000 | Chown:2000aa | Chown_2000 |
+| h:e8cf399a | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.118.1.449 | 1.000 | Bartholomew:1985ab | Bartholomew_1985b |
+| h:e93a7446 | 2 | measurement | certain | doi_resolves | 10.1071/zo9860025 | 1.000 | Roberts:1986aa | Roberts_1986 |
+| h:e93b7603 | 2 | measurement | certain | doi_resolves | 10.1139/z04-033 | 1.000 | Lardies:2004aa | Lardies_2004 |
+| h:eb370840 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.111.1.131 | 1.000 | Bartholomew:1984aa | Bartholomew_1984 |
+| h:ee67b885 | 8 | measurement | certain | doi_resolves | 10.1016/0300-9629(88)91616-7 | 1.000 | Bozinovic:1988aa | Bozinovic_1988 |
+| h:efe8de4f | 1 | measurement | certain | doi_resolves | 10.1007/bf00410361 | 1.000 | Lovegrove:1986aa | Lovegrove_1986 |
+| h:f00ef039 | 1 | measurement | certain | doi_resolves | 10.1007/bf00330003 | 1.000 | Fewell:1996aa | Fewell_1996 |
+| h:f09ec6a0 | 2 | measurement | certain | doi_resolves | 10.1007/bf00379087 | 1.000 | Haim:1984aa | Haim_1984 |
+| h:f0cc0346 | 3 | measurement | certain | doi_resolves | 10.1016/0300-9629(71)90254-4 | 1.000 | Drent:1971aa | Drent_1971 |
+| h:f0cd2a4e | 2 | measurement | certain | doi_resolves | 10.1007/bf00798176 | 0.827 | Gleeson:1979aa | Gleeson_1979 |
+| h:f0e2b351 | 1 | measurement | certain | two_service_agreement | 10.1086/physzool.54.3.30159943 | 1.000 | Dawson:1981aa | Dawson_1981 |
+| h:f0f85599 | 1 | measurement | certain | two_service_agreement | 10.4098/at.arch.74-4 | 1.000 | Bienkowski:1974aa | Bienkowski_1974 |
+| h:f15b62f6 | 10 | measurement | certain | two_service_agreement | 10.2307/1366368 | 1.000 | Lasiewski:1967aa | Lasiewski_1967 |
+| h:f283a52f | 1 | measurement | certain | doi_resolves | 10.1007/bf00689621 | 1.000 | Rbsamen:1983aa | Rbsamen_1983 |
+| h:f2d410db | 11 | measurement | certain | doi_resolves | 10.1086/physzool.52.2.30152560 | 1.000 | Casey:1979ab | Casey_1979b |
+| h:f3f5ee14 | 503 | measurement | certain | doi_resolves | 10.1071/mu13034 | 1.000 | Franklin:2014aa | Franklin_2014 |
+| h:f57b0433 | 1 | measurement | certain | doi_resolves | 10.1016/0300-9629(77)90368-1 | 1.000 | Rfinking:1977aa | Rfinking_1977 |
+| h:f8c55205 | 1 | measurement | certain | doi_resolves | 10.1016/0306-4565(92)90056-l | 1.000 | Duxbury:1992aa | Duxbury_1992 |
+| h:faca11a6 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jinsphys.2004.04.010 | 1.000 | Terblanche:2004ab | Terblanche_2004b |
+| h:fc0ce1f8 | 1 | measurement | pending | doi_mismatch |  |  |  |  |
+| h:fc91575a | 1 | measurement | certain | doi_resolves | 10.1007/bf00693550 | 1.000 | Baudinette:1972aa | Baudinette_1972 |
+| h:fcc4d2b5 | 2 | measurement | certain | doi_resolves | 10.1007/bf00691052 | 1.000 | Bennett:1975aa | Bennett_1975 |
+| h:fd1aaacf | 2 | measurement | certain | doi_resolves | 10.1016/0300-9629(83)90715-6 | 1.000 | Grant:1983aa | Grant_1983 |
+| h:ffbfc707 | 21 | measurement | certain | two_service_agreement | 10.1016/0300-9629(82)90275-4 | 1.000 | Kruger:1982aa | Kruger_1982 |

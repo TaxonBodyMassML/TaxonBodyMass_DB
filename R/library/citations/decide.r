@@ -199,8 +199,11 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # Verify every row of `prim` whose status is not final (NA, pending, not_found;
 # certain is re-verified only with force = TRUE; approved, nodoi_approved,
 # rejected and self are never touched). Rows without a raw_citation (a key the
-# reference list lacks) are skipped. Returns list(prim, candidates), the latter
-# a list of scored candidate frames keyed by native_key for WritePendingQueue().
+# reference list lacks) are skipped. Returns list(prim, candidates, skipped,
+# quota): the candidates are scored candidate frames keyed by native_key for
+# WritePendingQueue(); `skipped` names the references a spent service quota
+# (CachedGET()'s 'citations_quota' condition) left unverified and `quota` the
+# condition's message.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
                                     progress = interactive()) {
@@ -208,8 +211,17 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
           (force & prim$match_status == 'certain')
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
   cands <- list()
+  skipped <- character(0); quota <- NULL
   for (i in which(todo)) {
-    d <- VerifyReference(prim[i, ], cfg, reflist, scite)
+    d <- tryCatch(VerifyReference(prim[i, ], cfg, reflist, scite), citations_quota = function(e) e)
+    if (inherits(d, 'citations_quota')) {
+      # a service's quota is spent: the row keeps its previous status (NA for a
+      # new reference) and is reported; the cached responses of the other
+      # service are kept for the re-run
+      skipped <- c(skipped, prim$native_key[i]); quota <- conditionMessage(d)
+      if (progress) cat(sprintf('  %s: left unverified (quota of %s)\n', prim$native_key[i], d$host))
+      next
+    }
     prim <- ApplyDecisionToRow(prim, i, d, verified_at)
     cands[[prim$native_key[i]]] <- d$candidates
     if (progress) cat(sprintf('  %s: %s (%s)\n', prim$native_key[i], d$match_status, d$match_reason))
@@ -217,7 +229,7 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota)
 }
 
 # The screening file is applied to every row with a DOI whatever its status:
