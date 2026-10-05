@@ -79,3 +79,4 @@ vertnet-fishes-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot
 vertnet-mammalia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
 vertnet-reptilia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
 vertnet-traits-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+Wascher_2025,compilation,unknown,,"added under #78; per-row bodymass_ref (4 references) -> references.csv; 117 of 124 kept rows cite AVONET (Tobias_2022, hop 2 through the registered label), 4 HBW vol. 14, 2 BIRDBASE, 1 Atwood 1980"
