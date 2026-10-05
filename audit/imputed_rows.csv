@@ -32,6 +32,7 @@
 "Oskyrko_2024","body mass cited to a length-mass allometry compilation (Slavenko et al. 2019, Zimin et al. 2022, Meiri et al. 2021, Feldman & Meiri 2013, Feldman et al. 2015, Feldman 2015): estimated from maximum length",9765,9765,704
 "Oskyrko_2024","value identical to the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the same allometric estimate under another citation",619,619,85
 "Oskyrko_2024","value within 0.0105 log10 of the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the re-rounded allometric estimate",29,29,56
+"Oskyrko_2024","species present in Feldman et al. 2016 / Meiri 2018 at accepted-name level (raw name, gender ending or listed synonym): its maximum is already an SVL estimate in the database (owner decision 2026-10-04, A2)",25,25,31
 "Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116
 "Wilman_etal_2014","PrimScale: value scaled by EltonTraits from congeners (BodyMass-Source PrimScale)",484,484,8632

@@ -1,14 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 21:39:55
+# Citation and provenance warnings -- 2026-10-04 22:05:18
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125016 (38422 species); distinct primary CiteIDs: 376; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 125049 (38439 species); distinct primary CiteIDs: 376; unresolved references (pending / not_found): 41; unverified references: 3
 
 ## Problems
 
-- 1 source label(s) without a Bibcite: Hudson_2013
+- 2 source label(s) without a Bibcite: Oskyrko_2024, Hudson_2013
+- 9 accepted reference(s) without a bib entry (run --bib): Oskyrko_2024 De Magalhaes and Costa 2009, Oskyrko_2024 Señaris & Rojas-Runjaic 2020, Oskyrko_2024 Franca et al. 2008, Oskyrko_2024 Moon & Candy 1997, Oskyrko_2024 Fritts 1984, Oskyrko_2024 Kraus 2017a, Oskyrko_2024 Secor 2009, Oskyrko_2024 Shine et al. 2006, Oskyrko_2024 Tanaka & Ota 2002
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -17,6 +18,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
 - Hudson_2013 (100 rows)
+- Oskyrko_2024 (29 rows)
 
 ## Per-source coverage
 
@@ -77,6 +79,7 @@ One row per source label: species and record links (species x source x reference
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Myhrvold_2015 | compilation | 15861 | 16063 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Oskyrko_2024 | compilation | 29 | 33 | 0 | 22 | 9 | 7 | 3 | 0 | 0 | 3 | 0 | 0 |
 | Pata_2025 | compilation | 99 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 97 | 359 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Quaardvark | database | 2172 | 2190 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
