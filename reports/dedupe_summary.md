@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-04 23:36:16
+# Source de-duplication summary -- 2026-10-04 23:58:50
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,20 +6,20 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 124275 |
-| accepted species | 39913 |
-| multi-source species | 25188 |
-| within-species value pairs | 287939 |
-| pairs identical (|dlog10| <= 1e-06) | 49709 |
+| species x source values (Pass-1 rows) | 124305 |
+| accepted species | 39930 |
+| multi-source species | 25196 |
+| within-species value pairs | 287968 |
+| pairs identical (|dlog10| <= 1e-06) | 49716 |
 | pairs related by the registry and within its tolerance | 74596 |
-| pairs identical to >= 3 significant digits (blind rule) | 42378 |
-| values collapsed (total) | 45533 |
+| pairs identical to >= 3 significant digits (blind rule) | 42385 |
+| values collapsed (total) | 45540 |
 | values collapsed by a registry edge | 44278 |
-| values collapsed by the blind rule only | 1255 |
+| values collapsed by the blind rule only | 1262 |
 | ... of which blind-identical to a provenance_only partner (blind (provenance_only edge)) | 2 |
 | ... of which joined to a provenance_only partner through a third source (blind (via third source)) | 4 |
-| species with at least one collapsed value | 20352 |
-| multi-source species left with one independent value | 6938 |
+| species with at least one collapsed value | 20357 |
+| multi-source species left with one independent value | 6941 |
 
 ## Registry edges with the parent in the database
 
@@ -67,6 +67,8 @@ collapsed_into_parent = child values collapsed into this parent; child_collapsed
 | Baach_2026 | Tobias_2022 | copies | confirmed | 0.0105 | 153 | 37 | 83 | 0.24 | 89 | 442 |
 | Wascher_2025 | Tobias_2022 | copies | confirmed | 0.000001 | 119 | 116 | 116 | 0.97 | 116 | 120 |
 | Wisnionski_2026 | AnAge | copies | confirmed | 0.0105 | 103 | 31 | 41 | 0.3 | 36 | 96 |
+| Oskyrko_2024 | Feldman_etal_2016 | copies | confirmed | 0.001 | 0 | 0 | 0 |  | 0 | 7 |
+| Oskyrko_2024 | Meiri_2018 | derived_same_input | confirmed | 0.001 | 0 | 0 | 0 |  | 0 | 7 |
 
 ## Siblings sharing an external parent
 
@@ -113,11 +115,11 @@ A provenance_only edge documents a relation whose values generally differ and ta
 
 ## Multi-source species left with one independent value
 
-6938 multi-source species rest on a single independent value after de-duplication, by number of sources:
+6941 multi-source species rest on a single independent value after de-duplication, by number of sources:
 
 | n_sources | species |
 | ---: | ---: |
-| 2 | 4341 |
+| 2 | 4344 |
 | 3 | 1500 |
 | 4 | 367 |
 | 5 | 137 |

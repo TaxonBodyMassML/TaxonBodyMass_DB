@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 23:36:48
+# Citation and provenance warnings -- 2026-10-04 23:59:11
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 126498 (38752 species); distinct primary CiteIDs: 446; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 126531 (38769 species); distinct primary CiteIDs: 460; unresolved references (pending / not_found): 31; unverified references: 3
 
 ## Problems
 
 - 4 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026, AyalaBerdon_2025, Leahy_2025
-- 8 source label(s) without a Bibcite: Baach_2026, Wisnionski_2026, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
+- 9 source label(s) without a Bibcite: Baach_2026, Wisnionski_2026, Oskyrko_2024, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -25,6 +25,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 - Lemoine_2026 (55 rows)
 - Leahy_2025 (53 rows)
 - AyalaBerdon_2025 (36 rows)
+- Oskyrko_2024 (29 rows)
 
 ## Per-source coverage
 
@@ -90,6 +91,7 @@ One row per source label: species and record links (species x source x reference
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Myhrvold_2015 | compilation | 15860 | 16062 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Oskyrko_2024 | compilation | 29 | 33 | 90.9 | 22 | 19 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | Pata_2025 | compilation | 99 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 97 | 359 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Quaardvark | database | 2172 | 2190 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

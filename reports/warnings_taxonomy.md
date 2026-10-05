@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 23:36:41
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 23:59:03
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 161 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 429 names, 4376 rows
+- Names unresolved after all enrichment stages: 430 names, 4377 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -383,7 +383,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (429 names, 4376 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (430 names, 4377 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -1240,5 +1240,7 @@ Urostrophus_grilli | Meiri_2024 | 1 row
 Vermivora_rubricapilla | vertnet-aves-sept2016 | 1 row
 
 Zenaida_leucoptera | vertnet-aves-sept2016 | 1 row
+
+Zonateres_lanei | Oskyrko_2024 | 1 row
 
 Zophosis_congesta | Herberstein_etal_2022 | 1 row
