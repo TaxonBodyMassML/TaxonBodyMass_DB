@@ -1,14 +1,14 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 12:51:04
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 13:08:09
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 168 rows
+- Low GBIF confidence (75-89): 172 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 - Non-Animalia kingdom with an Animalia order/family: 1 rows
-- Names unresolved after all enrichment stages: 439 names, 4462 rows
+- Names unresolved after all enrichment stages: 442 names, 4486 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -52,7 +52,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (168 rows)
+## Low GBIF confidence (75-89) (172 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -99,6 +99,8 @@ Aporrectodea_rosea [conf=85]
 Blattella_germanica [conf=85]
 
 Beockella_delicata [conf=85]
+
+Brachyrhaphis_parismina [conf=85]
 
 Caecosagitta_macrocephala [conf=85]
 
@@ -153,6 +155,8 @@ Coryphaennoides_acrolepis [conf=85]
 Cranioleuca_albicapilla [conf=85]
 
 Creseis_clava [conf=85]
+
+Amphilophus_alfari [conf=84]
 
 Cyanocitta_cristata [conf=85]
 
@@ -308,6 +312,8 @@ Piliocolobus_preussi [conf=85]
 
 Pogonomyrmex_maricopa [conf=82]
 
+Priapicthys_annectens [conf=85]
+
 Pseudoautomeris_salmonea [conf=85]
 
 Pseudochirops_cupreus [conf=85]
@@ -337,6 +343,8 @@ Rothschildea_orizaba [conf=85]
 Scincus_mitranus [conf=85]
 
 Lumbrineris_fragilis [conf=84]
+
+Serrasalmus_rhombeus [conf=85]
 
 Dendroica_pinus [conf=84]
 
@@ -402,7 +410,7 @@ Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
 Trypanosoma_lewisi | kingdom=Protozoa | order=Trypanosomatida | family=Pleuroceridae [manual]
 
-## Names unresolved after all enrichment stages (439 names, 4462 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (442 names, 4486 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -528,9 +536,15 @@ Thripophaga_pyrrholeuca | vertnet-aves-sept2016 | 9 rows
 
 Trichastoma_rufipenne | vertnet-aves-sept2016 | 9 rows
 
+Cetopsorhamdia_rosei | Vanni_2017 | 8 rows
+
+Lamprichthys_tanganyikae | Vanni_2017 | 8 rows
+
 Lophoproctinus_bartachi | Brose_etal_2018 | 8 rows
 
 Peromyscus_peromyscus | vertnet-mammalia-sept2016 | 8 rows
+
+Petrochromis_kazumbe | Vanni_2017 | 8 rows
 
 Phloeoceastes_guatemalensis | vertnet-aves-sept2016, vertnet-traits-sept2016 | 8 rows
 
