@@ -1,8 +1,8 @@
-# Citations of Wilman_etal_2014 -- 2026-10-04 22:07:06 (tbmcite 0.1.0)
+# Citations of Wilman_etal_2014 -- 2026-10-05 12:01:56 (tbmcite 0.1.0)
 
 Steps: --bib
 
-- --bib: 387 entries written to TaxonBodyMass_PrimaryCitations.bib (4 reuse a curated key); RefManageR parsed 387; Wilman_etal_2014: 42 rows with bibcite
+- --bib: 507 entries written to TaxonBodyMass_PrimaryCitations.bib (8 reuse a curated key); RefManageR parsed 507; Wilman_etal_2014: 42 rows with bibcite
 
 ## References
 
