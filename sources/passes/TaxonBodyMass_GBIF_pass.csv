@@ -1,2 +1,2 @@
-"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_family","gbif_order","gbif_usageKey"
-"Lepidostoma",NA,NA,NA,NA,NA,"Lepidostoma",FALSE,NA,NA,NA,100,NA,NA,NA
+"taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
+"Lasiurus_frantzii","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Lasiurus frantzii",FALSE,"GBIF","Lasiurus","Lasiurus frantzii",99,"ACCEPTED","Vespertilionidae","Chiroptera","11202631"

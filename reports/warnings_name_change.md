@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 20:55:36
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 21:11:44
 
 
 ## Species name changed during enrichment (5652 rows)
@@ -6579,7 +6579,7 @@ Myotis brandti; Myotis brandtii -> Myotis brandtii [GBIF]
 
 Myotis aelleni; Myotis chiloensis -> Myotis chiloensis [GBIF]
 
-Myotis ciliolabrum; Myotis melanorhinus -> Myotis ciliolabrum [GBIF]
+Myotis melanorhinus; Myotis ciliolabrum -> Myotis ciliolabrum [GBIF]
 
 Myotis daubentoni; Myotis daubentonii -> Myotis daubentonii [GBIF]
 
