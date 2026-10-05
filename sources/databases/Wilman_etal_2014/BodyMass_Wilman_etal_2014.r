@@ -25,15 +25,18 @@ colnames(adat)[1:2] <- c('taxon', 'mass_g')
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 # Genus/family typical values (BodyMass-Source 'GenAvg', BodyMass-SpecLevel 0)
-# and values copied from another species are not species-specific. 'PrimScale'
-# masses (a measured length of the species through a family-level mass-length
-# relationship) are kept as allometry-derived values; records flagged
-# 'DataFromSplit' in Record-Comment are kept pending issue #5.
+# and values copied from another species are not species-specific; records
+# flagged 'DataFromSplit' in Record-Comment are kept pending issue #5.
 adat <- DropImputed(adat,
                     adat$BodyMass.Source == 'GenAvg' | adat$BodyMass.SpecLevel %in% 0 |
                       grepl('^Copied', adat$BodyMass.Comment),
                     'Wilman_etal_2014',
                     'GenAvg genus/family average or value copied from another species')
+# 'PrimScale' values are EltonTraits' own estimates, scaled from a length
+# through a family-level mass-length relationship fitted to congeners, not
+# measured masses of the species (owner decision 2026-10-04, #65).
+adat <- DropImputed(adat, adat$BodyMass.Source == 'PrimScale', 'Wilman_etal_2014',
+                    'PrimScale: value scaled by EltonTraits from congeners (BodyMass-Source PrimScale)')
 # The source word is the native key of the bird half (one word per row; the
 # HBW volume number is part of the word).
 adat$ref_keys <- SplitRefKeys(adat$BodyMass.Source, ',')
@@ -66,6 +69,12 @@ mdat <- DropImputed(mdat,
                       grepl('\\bRef_178\\b', mdat$BodyMass.Source, perl = TRUE),
                     'Wilman_etal_2014',
                     'Ref_178 phylogenetically imputed value (BodyMass-SpecLevel 2)')
+# The two Ref_165 rows (Fooden 1963, Lagothrix lugens 6.0 and L. cana 6.4) are
+# kilograms entered as grams (woolly monkeys weigh 5-10 kg; the Ref_117 row of
+# L. lagotricha reads 6,299.99 g): converted to grams for that reference only
+# (owner decision 2026-10-04, #65; README.md).
+ref165 <- grepl('\\bRef_165\\b', mdat$BodyMass.Source, perl = TRUE)
+mdat$mass_g[ref165] <- mdat$mass_g[ref165] * 1000
 # The Ref_ codes (comma-separated when a value rests on two works) are the
 # native keys of MamFuncDatSources.txt (references.csv).
 mdat$ref_keys <- SplitRefKeys(mdat$BodyMass.Source, ',')
