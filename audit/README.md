@@ -71,6 +71,12 @@ Methods, with their dates and severity rules:
   values on the 2026-10-04 frames (listed in the note); `severity` is
   `CRITICAL` when `abs_residual >= 2`, `SUSPICIOUS` otherwise. Owner decision
   of 2026-10-04: the values are kept; the register records the conflict.
+  The same label covers 29 further rows (2026-10-04): birds whose only
+  remaining value, once EltonTraits' PrimScale estimates were dropped (#65),
+  is a VertNet record (`mass_g` the VertNet value, `n` its record count,
+  `log10_pred` log10 of the PrimScale estimate the species lost); `CRITICAL`
+  where the value is impossible (*Uratelornis chimaera* 5 g), `SUSPICIOUS`
+  otherwise. Pending the owner's decision on whether any is dropped.
 
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.

@@ -1,78 +1,79 @@
-# Citations of Wilman_etal_2014 -- 2026-10-04 19:50:21 (tbmcite 0.1.0)
+# Citations of Wilman_etal_2014 -- 2026-10-04 20:20:18 (tbmcite 0.1.0)
 
-Steps: --init --offline
+Steps: --verify --queue
 
-- --init: 12673 records, 12673 with ref_keys (0.0% NA); 67 native keys -> primary_references.csv
-- --init: 118 reference(s) of the list cited by no record: Ref_1, Ref_2, Ref_3, Ref_4, Ref_5, Ref_6, Ref_7, Ref_8, Ref_9, Ref_10, Ref_11, Ref_12, Ref_13, Ref_14, Ref_15, Ref_16, Ref_17, Ref_18, Ref_19, Ref_20, Ref_21, Ref_22, Ref_23, Ref_24, Ref_25, Ref_26, Ref_27, Ref_28, Ref_29, Ref_30, Ref_31, Ref_32, Ref_33, Ref_34, Ref_35, Ref_36, Ref_37, Ref_38, Ref_39, Ref_40, Ref_41, Ref_42, Ref_43, Ref_44, Ref_45, Ref_46, Ref_47, Ref_48, Ref_49, Ref_50, Ref_51, Ref_52, Ref_53, Ref_54, Ref_55, Ref_56, Ref_57, Ref_59, Ref_60, Ref_61, Ref_62, Ref_63, Ref_64, Ref_65, Ref_66, Ref_67, Ref_68, Ref_69, Ref_70, Ref_71, Ref_72, Ref_73, Ref_74, Ref_75, Ref_76, Ref_77, Ref_78, Ref_79, Ref_80, Ref_81, Ref_82, Ref_83, Ref_84, Ref_85, Ref_86, Ref_87, Ref_88, Ref_89, Ref_90, Ref_91, Ref_92, Ref_93, Ref_94, Ref_95, Ref_96, Ref_97, Ref_98, Ref_99, Ref_100, Ref_101, Ref_102, Ref_103, Ref_104, Ref_105, Ref_106, Ref_107, Ref_108, Ref_109, Ref_110, Ref_111, Ref_112, Ref_113, Ref_114, Ref_115, Ref_116, Ref_124, Ref_178, PrimScale
+- --verify: compilation DOI none; 0 deposited references (0 with DOI)
+- status counts: certain 11, pending 8, not_found 48
+- --queue: 56 open queue row(s) for Wilman_etal_2014 in pending_citations.csv (112 rows in the file)
 
 ## References
 
 | native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| Ref_58 | 486 | compilation |  |  |  |  |  |  |
-| Ref_117 | 3415 | compilation |  |  |  |  |  |  |
-| Ref_118 | 7 | measurement |  |  |  |  |  |  |
-| Ref_119 | 1 | measurement |  |  |  |  |  |  |
-| Ref_120 | 1 | measurement |  |  |  |  |  |  |
-| Ref_121 | 1 | measurement |  |  |  |  |  |  |
-| Ref_122 | 1 | measurement |  |  |  |  |  |  |
-| Ref_123 | 2 | measurement |  |  |  |  |  |  |
-| Ref_125 | 1 | measurement |  |  |  |  |  |  |
-| Ref_126 | 2 | measurement |  |  |  |  |  |  |
-| Ref_127 | 6 | measurement |  |  |  |  |  |  |
-| Ref_128 | 14 | measurement |  |  |  |  |  |  |
-| Ref_129 | 11 | measurement |  |  |  |  |  |  |
-| Ref_130 | 12 | measurement |  |  |  |  |  |  |
-| Ref_131 | 1 | measurement |  |  |  |  |  |  |
-| Ref_132 | 1 | measurement |  |  |  |  |  |  |
-| Ref_134 | 9 | measurement |  |  |  |  |  |  |
-| Ref_135 | 1 | measurement |  |  |  |  |  |  |
-| Ref_136 | 4 | measurement |  |  |  |  |  |  |
-| Ref_137 | 1 | measurement |  |  |  |  |  |  |
-| Ref_138 | 1 | measurement |  |  |  |  |  |  |
-| Ref_139 | 2 | measurement |  |  |  |  |  |  |
-| Ref_140 | 2 | measurement |  |  |  |  |  |  |
-| Ref_141 | 2 | measurement |  |  |  |  |  |  |
-| Ref_142 | 3 | measurement |  |  |  |  |  |  |
-| Ref_143 | 3 | measurement |  |  |  |  |  |  |
-| Ref_144 | 4 | measurement |  |  |  |  |  |  |
-| Ref_145 | 1 | measurement |  |  |  |  |  |  |
-| Ref_146 | 12 | measurement |  |  |  |  |  |  |
-| Ref_147 | 2 | measurement |  |  |  |  |  |  |
-| Ref_148 | 1 | measurement |  |  |  |  |  |  |
-| Ref_149 | 1 | measurement |  |  |  |  |  |  |
-| Ref_150 | 1 | measurement |  |  |  |  |  |  |
-| Ref_151 | 1 | measurement |  |  |  |  |  |  |
-| Ref_152 | 1 | measurement |  |  |  |  |  |  |
-| Ref_153 | 1 | measurement |  |  |  |  |  |  |
-| Ref_154 | 1 | measurement |  |  |  |  |  |  |
-| Ref_155 | 1 | measurement |  |  |  |  |  |  |
-| Ref_156 | 1 | measurement |  |  |  |  |  |  |
-| Ref_157 | 1 | measurement |  |  |  |  |  |  |
-| Ref_158 | 1 | measurement |  |  |  |  |  |  |
-| Ref_159 | 1 | measurement |  |  |  |  |  |  |
-| Ref_160 | 3 | measurement |  |  |  |  |  |  |
-| Ref_161 | 1 | measurement |  |  |  |  |  |  |
-| Ref_163 | 2 | measurement |  |  |  |  |  |  |
-| Ref_164 | 1 | measurement |  |  |  |  |  |  |
-| Ref_165 | 2 | measurement |  |  |  |  |  |  |
-| Ref_166 | 1 | measurement |  |  |  |  |  |  |
-| Ref_167 | 1 | measurement |  |  |  |  |  |  |
-| Ref_168 | 1 | measurement |  |  |  |  |  |  |
-| Ref_169 | 1 | measurement |  |  |  |  |  |  |
-| Ref_170 | 1 | measurement |  |  |  |  |  |  |
-| Ref_171 | 1 | measurement |  |  |  |  |  |  |
-| Ref_172 | 1 | measurement |  |  |  |  |  |  |
-| Ref_173 | 1 | measurement |  |  |  |  |  |  |
-| Ref_174 | 1 | measurement |  |  |  |  |  |  |
-| Ref_175 | 1 | measurement |  |  |  |  |  |  |
-| Ref_176 | 1 | measurement |  |  |  |  |  |  |
-| Ref_177 | 1 | measurement |  |  |  |  |  |  |
-| Dunning08 | 8620 | compilation |  |  |  |  |  |  |
-| HBW8 | 1 | compilation |  |  |  |  |  |  |
-| HBW10 | 1 | compilation |  |  |  |  |  |  |
-| HBW11 | 4 | compilation |  |  |  |  |  |  |
-| HBW12 | 1 | compilation |  |  |  |  |  |  |
-| HBW13 | 1 | compilation |  |  |  |  |  |  |
-| HBW15 | 1 | compilation |  |  |  |  |  |  |
-| Other | 3 | measurement |  |  |  |  |  |  |
+| Ref_58 | 486 | compilation | certain | two_service_agreement | 10.1890/08-1494.1 | 1.000 |  |  |
+| Ref_117 | 3415 | compilation | certain | two_service_agreement | 10.1890/02-9003 | 1.000 |  |  |
+| Ref_118 | 7 | measurement | not_found | below_threshold | 10.1515/9783038211204.220 | 0.612 |  |  |
+| Ref_119 | 1 | measurement | not_found | below_threshold | 10.1515/9783038211204.220 | 0.612 |  |  |
+| Ref_120 | 1 | measurement | not_found | below_threshold | 10.1006/anbe.1994.1056 | 0.434 |  |  |
+| Ref_121 | 1 | measurement | not_found | below_threshold | 10.1262/jrd1955.19.78 | 0.428 |  |  |
+| Ref_122 | 1 | measurement | not_found | below_threshold | 10.2307/0.674.1 | 0.605 |  |  |
+| Ref_123 | 2 | measurement | not_found | below_threshold | 10.3390/ani13091497 | 0.489 |  |  |
+| Ref_125 | 1 | measurement | not_found | below_threshold | 10.3106/mammalstudy.22.81 | 0.406 |  |  |
+| Ref_126 | 2 | measurement | not_found | no_candidates |  |  |  |  |
+| Ref_127 | 6 | measurement | not_found | below_threshold | 10.5962/bhl.title.2843 | 0.000 |  |  |
+| Ref_128 | 14 | measurement | pending | weak_match | 10.1093/oso/9780195343229.001.0001 | 0.797 |  |  |
+| Ref_129 | 11 | measurement | not_found | below_threshold | 10.2173/tbna.389.p | 0.332 |  |  |
+| Ref_130 | 12 | measurement | not_found | below_threshold | 10.1093/ml/gci189 | 0.414 |  |  |
+| Ref_131 | 1 | measurement | certain | two_service_agreement | 10.1515/mamm.1998.62.3.367 | 0.942 |  |  |
+| Ref_132 | 1 | measurement | certain | two_service_agreement | 10.1206/0003-0082(2004)466<0001:aitmmd>2.0.co;2 | 1.000 |  |  |
+| Ref_134 | 9 | measurement | not_found | below_threshold | 10.1515/9783038211204.220 | 0.612 |  |  |
+| Ref_135 | 1 | measurement | not_found | below_threshold | 10.3106/1348-6160(2007)32[155:asosmf]2.0.co;2 | 0.562 |  |  |
+| Ref_136 | 4 | measurement | not_found | below_threshold | 10.5771/0506-7286-1997-1-97 | 0.520 |  |  |
+| Ref_137 | 1 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1995.tb02461.x | 0.000 |  |  |
+| Ref_138 | 1 | measurement | not_found | below_threshold | 10.1057/9780230522770 | 0.208 |  |  |
+| Ref_139 | 2 | measurement | not_found | below_threshold | 10.11646/zootaxa.1199.1.4 | 0.000 |  |  |
+| Ref_140 | 2 | measurement | not_found | below_threshold | 10.1644/1545-1542(2002)083<0421:robmma>2.0.co;2 | 0.000 |  |  |
+| Ref_141 | 2 | measurement | not_found | below_threshold | 10.1177/004947558601600218 | 0.329 |  |  |
+| Ref_142 | 3 | measurement | not_found | below_threshold | 10.1515/mamm.2004.019 | 0.000 |  |  |
+| Ref_143 | 3 | measurement | pending | grey_literature | 10.5962/bhl.title.3370 | 0.000 |  |  |
+| Ref_144 | 4 | measurement | not_found | below_threshold | 10.1515/9783112565162-005 | 0.000 |  |  |
+| Ref_145 | 1 | measurement | not_found | below_threshold | 10.1201/9781482279054-38 | 0.694 |  |  |
+| Ref_146 | 12 | measurement | not_found | below_threshold | 10.3176/lu.1995.2.13 | 0.383 |  |  |
+| Ref_147 | 2 | measurement | not_found | below_threshold | 10.20944/preprints202303.0299.v1 | 0.301 |  |  |
+| Ref_148 | 1 | measurement | not_found | below_threshold | 10.58809/rzad2902 | 0.487 |  |  |
+| Ref_149 | 1 | measurement | not_found | below_threshold | 10.1590/s0101-81752003000200021 | 0.000 |  |  |
+| Ref_150 | 1 | measurement | not_found | below_threshold | 10.1044/leader.miw.12032007.18 | 0.421 |  |  |
+| Ref_151 | 1 | measurement | not_found | below_threshold | 10.1206/0003-0082(2005)478[0001:ansoor]2.0.co;2 | 0.000 |  |  |
+| Ref_152 | 1 | measurement | not_found | below_threshold | 10.25633/etn.2020.03.03 | 0.538 |  |  |
+| Ref_153 | 1 | measurement | not_found | below_threshold | 10.5007/2175-7925.2013v26n1p1 | 0.508 |  |  |
+| Ref_154 | 1 | measurement | not_found | below_threshold | 10.11606/0031-1049.1983.36.p103-110 | 0.453 |  |  |
+| Ref_155 | 1 | measurement | not_found | below_threshold | 10.1515/9783038211204.220 | 0.612 |  |  |
+| Ref_156 | 1 | measurement | certain | two_service_agreement | 10.1007/bf03194149 | 1.000 |  |  |
+| Ref_157 | 1 | measurement | not_found | below_threshold | 10.1644/brp-112 | 0.500 |  |  |
+| Ref_158 | 1 | measurement | certain | two_service_agreement | 10.1644/brp-112 | 1.000 |  |  |
+| Ref_159 | 1 | measurement | not_found | no_candidates |  |  |  |  |
+| Ref_160 | 3 | measurement | pending | ambiguous | 10.5281/zenodo.4545052 | 0.850 |  |  |
+| Ref_161 | 1 | measurement | not_found | below_threshold | 10.1206/691.1 | 0.628 |  |  |
+| Ref_163 | 2 | measurement | pending | weak_match | 10.1046/j.1365-3008.2000.00104.x | 0.926 |  |  |
+| Ref_164 | 1 | measurement | pending | weak_match | 10.2307/3565572 | 0.924 |  |  |
+| Ref_165 | 2 | measurement | certain | two_service_agreement | 10.2307/1377454 | 1.000 |  |  |
+| Ref_166 | 1 | measurement | pending | ambiguous | 10.1093/jmammal/81.3.758 | 1.000 |  |  |
+| Ref_167 | 1 | measurement | not_found | below_threshold | 10.1071/am84010 | 0.270 |  |  |
+| Ref_168 | 1 | measurement | certain | two_service_agreement | 10.1016/j.mambio.2005.08.004 | 1.000 |  |  |
+| Ref_169 | 1 | measurement | not_found | below_threshold | 10.3897/zookeys.973.53185 | 0.492 |  |  |
+| Ref_170 | 1 | measurement | not_found | below_threshold | 10.15560/12.2.1850 | 0.525 |  |  |
+| Ref_171 | 1 | measurement | certain | two_service_agreement | 10.2307/1382359 | 1.000 |  |  |
+| Ref_172 | 1 | measurement | not_found | below_threshold | 10.1016/j.mambio.2009.09.005 | 0.584 |  |  |
+| Ref_173 | 1 | measurement | pending | weak_match | 10.2307/1382414 | 0.749 |  |  |
+| Ref_174 | 1 | measurement | certain | two_service_agreement | 10.2307/1378474 | 1.000 |  |  |
+| Ref_175 | 1 | measurement | certain | two_service_agreement | 10.1016/s0006-3207(02)00344-0 | 1.000 |  |  |
+| Ref_176 | 1 | measurement | not_found | below_threshold | 10.25633/etn.2020.03.03 | 0.538 |  |  |
+| Ref_177 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.title.156831 | 0.604 |  |  |
+| Dunning08 | 8620 | compilation | pending | weak_match | 10.1201/9781420064452 | 0.831 |  |  |
+| HBW8 | 1 | compilation | not_found | below_threshold | 10.1525/auk.2011.128.4.801 | 0.274 |  |  |
+| HBW10 | 1 | compilation | not_found | below_threshold | 10.1525/auk.2011.128.4.801 | 0.274 |  |  |
+| HBW11 | 4 | compilation | not_found | below_threshold | 10.1525/auk.2011.128.4.801 | 0.274 |  |  |
+| HBW12 | 1 | compilation | not_found | below_threshold | 10.1525/auk.2011.128.4.801 | 0.274 |  |  |
+| HBW13 | 1 | compilation | not_found | below_threshold | 10.1525/auk.2011.128.4.801 | 0.274 |  |  |
+| HBW15 | 1 | compilation | not_found | below_threshold | 10.1525/auk.2011.128.4.801 | 0.274 |  |  |
+| Other | 3 | measurement | not_found | below_threshold | 10.2307/j.ctt1ffjhfq.44 | 0.452 |  |  |
