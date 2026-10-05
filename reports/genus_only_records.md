@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-04 22:08:28
+# Genus-only records -- 2026-10-04 22:20:47
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -339,7 +339,7 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Dendrocygna |   26 |  774 | 7 | -1.47 | vertnet-aves-sept2016 |
 | Phthiracarus | 5.74e-06 | 0.00017 | 12 | -1.47 | Cohen_2014 |
 | Steganacarus | 8.3e-06 | 0.000211 | 3 | -1.41 | Cohen_2014 |
-| Lumbricus | 0.199 | 4.97 | 8 | -1.4 | Cohen_2014 |
+| Lumbricus | 0.199 |    5 | 8 | -1.4 | Cohen_2014 |
 | Rana |    1 | 21.5 | 26 | -1.33 | vertnet-traits-sept2016 |
 | Neodolichorhynchus | 3.88e-08 | 8.24e-07 | 1 | -1.33 | Brose_etal_2018 |
 | Lygosoma | 1.34 | 27.7 | 14 | -1.32 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
