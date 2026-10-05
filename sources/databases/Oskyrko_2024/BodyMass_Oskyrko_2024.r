@@ -7,9 +7,10 @@
 # mass Feldman et al. (2016) and Meiri (2018) computed from the maximum
 # snout-vent length with clade-specific allometric equations, re-cited to the
 # works that supplied the length (README.md, Data and Record set): such values
-# are estimates, not measurements, and leave through DropImputed() in two
-# steps, by citation and by value. What remains is kept with the citation of
-# every row as ref_keys (issue #1).
+# are estimates, not measurements, and leave through DropImputed() in three
+# steps, by citation, by value and by the species' presence in those two
+# sources (owner decision 2026-10-04). What remains is kept with the citation
+# of every row as ref_keys (issue #1).
 dat  <- read.csv(file.path(wd_source, 'ReptTraits dataset v1-2_data.csv'), header = TRUE,
                  check.names = FALSE, stringsAsFactors = FALSE, na.strings = c('', 'NA'),
                  fileEncoding = 'UTF-8-BOM')
@@ -75,6 +76,38 @@ adat <- DropImputed(adat, dist_est < 1e-6, 'Oskyrko_2024',
 dist_est  <- pmin(LogDist(fe_mass), LogDist(me_mass))
 adat <- DropImputed(adat, dist_est < 0.0105, 'Oskyrko_2024',
                     'value within 0.0105 log10 of the Feldman et al. 2016 / Meiri 2018 SVL-derived mass of the species: the re-rounded allometric estimate')
+
+# (3) By presence (owner decision 2026-10-04, option A2 of issue #77): a kept
+# row whose species has a Feldman_etal_2016 or Meiri_2018 value at
+# accepted-name level is dropped whatever its value (the species' maximum is
+# already an SVL estimate in the database, and the remaining differences are
+# other lengths through the same equations). The accepted name is matched
+# three ways, since the parser cannot run the enrichment: the raw binomial;
+# the same genus with the epithet's gender ending removed (bilineatus /
+# bilineata, lorentzii / lorentzi, calligaster / calligastra); and the genus
+# transfers the enrichment of the first run (2026-10-04) resolved between the
+# two files, listed here (ReptTraits name = the Feldman / Meiri name).
+fm_names <- unique(c(names(fe_mass)[!is.na(fe_mass)], names(me_mass)[!is.na(me_mass)]))
+StemKey <- function(x) {
+  p <- strsplit(x, ' ', fixed = TRUE)
+  paste(vapply(p, `[`, '', 1), sub('(ii|i|us|um|a|is|e|er|ra)$', '', vapply(p, `[`, '', 2)))
+}
+fm_synonyms <- c('Elaphe taeniura'            = 'Orthriophis taeniurus',
+                 'Leiopython fredparkeri'     = 'Bothrochilus fredparkeri',
+                 'Letheobia zenkeri'          = 'Typhlops zenkeri',
+                 'Mastigodryas pleii'         = 'Mastigodryas pleei',
+                 'Metlapilcoatlus nummifer'   = 'Atropoides nummifer',
+                 'Phrynonax sexcarinatus'     = 'Pseustes sexcarinatus',
+                 'Rhadinella stadelmani'      = 'Rhadinaea stadelmani',
+                 'Rhinotyphlops leucocephalus' = 'Madatyphlops leucocephalus',
+                 'Sonora straminea'           = 'Chilomeniscus stramineus',
+                 'Suta dwyeri'                = 'Parasuta dwyeri',
+                 'Suta spectabilis'           = 'Parasuta spectabilis')
+in_fm <- adat$taxon %in% fm_names |
+  StemKey(adat$taxon) %in% StemKey(fm_names) |
+  unname(fm_synonyms[adat$taxon]) %in% fm_names
+adat <- DropImputed(adat, in_fm, 'Oskyrko_2024',
+                    'species present in Feldman et al. 2016 / Meiri 2018 at accepted-name level (raw name, gender ending or listed synonym): its maximum is already an SVL estimate in the database (owner decision 2026-10-04, A2)')
 
 adat$n <- 1
 adat$source_mass <- 'Oskyrko_2024'
