@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 21:58:29
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-04 21:58:56
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
 ## Summary
 
-1,133 distinct raw names (50,462 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
+1,134 distinct raw names (50,468 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
 
 | class | names | rows | records dropped | sources |
 |---|---:|---:|---:|---|
@@ -13,7 +13,7 @@ Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) chang
 | qualifier | 31 | 3,521 | 0 | Brose_etal_2018 (25), DeLong_etal_2018 (2), Makarieva_2008 (2), vertnet-aves-sept2016 (2) |
 | hybrid | 41 | 144 | 0 | vertnet-aves-sept2016 (27), vertnet-traits-sept2016 (14), Tsuboi_etal_2018 (2), vertnet-reptilia-sept2016 (1) |
 | ambiguous | 32 | 387 | 0 | vertnet-aves-sept2016 (16), vertnet-traits-sept2016 (14), Hrycik_2024 (4), Brose_etal_2018 (3), DeLong_etal_2018 (3), Brown_etal_2018 (2) |
-| subgenus | 17 | 33 | 0 | Makarieva_2008 (5), Verberk_2020 (5), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Brose_etal_2018 (1), Pata_2025 (1), vertnet-aves-sept2016 (1) |
+| subgenus | 18 | 39 | 0 | Makarieva_2008 (5), Verberk_2020 (5), vertnet-fishes-sept2016 (2), vertnet-mammalia-sept2016 (2), Brose_etal_2018 (1), Lemoine_2026 (1), Pata_2025 (1), vertnet-aves-sept2016 (1) |
 | sex | 38 | 659 | 0 | Verberk_2020 (35), Brose_etal_2018 (1), DeLong_etal_2010 (1), Makarieva_2008 (1) |
 | form_strain_region | 13 | 48 | 0 | DeLong_etal_2010 (3), Makarieva_2008 (3), Brose_2005 (2), Brose_etal_2018 (2), Verberk_2020 (2), Kiorboe_2014 (1) |
 | size_class | 25 | 6,021 | 1,255 | Brose_etal_2018 (25) |
@@ -265,15 +265,16 @@ By source: Brose_etal_2018 (3 names, 136 rows); vertnet-aves-sept2016 (16 names,
 | `Valvata sincera/piscinalis` | `Valvata_sincera` | ambiguous | 1 | Hrycik_2024 |
 | `Vireo gilvus,  olivaceus` | `Vireo_gilvus` | ambiguous | 1 | vertnet-traits-sept2016 |
 
-## subgenus (17 names, 33 rows)
+## subgenus (18 names, 39 rows)
 
 A subgenus in brackets between the genus and the epithet, or the genus written twice, is removed; the binomial is kept.
 
-By source: Brose_etal_2018 (1 names, 10 rows); Verberk_2020 (5 names, 10 rows); Makarieva_2008 (5 names, 5 rows); vertnet-fishes-sept2016 (2 names, 3 rows); vertnet-aves-sept2016 (1 names, 2 rows); vertnet-mammalia-sept2016 (2 names, 2 rows); Pata_2025 (1 names, 1 rows).
+By source: Brose_etal_2018 (1 names, 10 rows); Verberk_2020 (5 names, 10 rows); Lemoine_2026 (1 names, 6 rows); Makarieva_2008 (5 names, 5 rows); vertnet-fishes-sept2016 (2 names, 3 rows); vertnet-aves-sept2016 (1 names, 2 rows); vertnet-mammalia-sept2016 (2 names, 2 rows); Pata_2025 (1 names, 1 rows).
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
 | `Jaera (Jaera) albifrons` | `Jaera_albifrons` | subgenus | 10 | Brose_etal_2018 |
+| `Clivina (Paraclivina) tuberculata` | `Clivina_tuberculata` | subgenus | 6 | Lemoine_2026 |
 | `Podilymbus (Podiceps) podiceps` | `Podilymbus_podiceps` | subgenus | 5 | Verberk_2020 |
 | `Falcipennis Falcipennis canadensis` | `Falcipennis_canadensis` | subgenus | 2 | vertnet-aves-sept2016 |
 | `Noturus Noturus flavus` | `Noturus_flavus` | subgenus | 2 | vertnet-fishes-sept2016 |
