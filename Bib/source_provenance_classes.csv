@@ -3,6 +3,7 @@ AmphiBIO,compilation,unknown,,tier A2; species-level Reference keys -> AmphiBIO_
 AnAge,database,database_record,,"tier A2; HAGR BIBLIO ids (biblio.php, all traits of a record); database_record per id"
 AndersonGillooly_2017,compilation,unknown,,"tier C; RefM -> Wayback appendix pdf (238 entries, mostly compilations)"
 Anunciacao_etal_2025,compilation,unknown,,tier B; DOI URLs in-row
+Baach_2026,compilation,unknown,,"added under #72; per-row ref keys (9 of the 22 names of the Abundance Richness References sheet, ASCII-transliterated) -> references.csv; the EltonTraits, AVONET and Chown rows copy Wilman_etal_2014, Tobias_2022 and Chown_etal_2007 (hop 2 once their bib entries carry DOIs)"
 Barnes_2008,compilation,unknown,,tier A2; Reference short keys (+ per-row length-mass conversion refs) -> metadata.htm Literature Cited
 Brocher_etal_2025,derived,derived_allometry,,tier A2; numeric Reference -> S1_references.docx; mass from body length with the Sohlstrom et al. 2018 equations. TODO (owner decision 2026-10-04): verify the equation reference like a primary reference with role equation in a later round and fill equation_bibcite
 Brose_2005,compilation,unknown,,tier A2; DataRetriever; Body size reference column
