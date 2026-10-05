@@ -17,6 +17,8 @@
 #                                        primary_references.csv), hop-2 rows through a
 #                                        reference that is itself a database source
 #                                        (MatchIntermediateLabel(), IntermediateReferences()),
+#                                        the length-source (measurement) and equation rows
+#                                        of a derived source's keyed records,
 #                                        conversion-factor rows and lab-Sheet rows
 #   CheckCitations(...)                  every primary_bibcite has a bib entry, every CiteID
 #                                        a Sheet row, every accepted row a DOI or an
@@ -225,6 +227,13 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
       type[is.na(pi)] <- 'unknown'
       ov <- !is.na(g$prov_type) & g$prov_type %in% provenance_types
       type[ov] <- g$prov_type[ov]
+      # a derived source (registry default derived_allometry; Meiri_2018): its
+      # measurement references are the length sources of the computed value,
+      # so their rows are derived_allometry too, and the equation row is
+      # written beside them (below). A pending or unmatched key keeps the
+      # generic treatment (no primary citation; 'unknown' for an unmatched key).
+      derived <- unname(type_of[g$source_label]) %in% 'derived_allometry' & role %in% 'measurement' & !ov
+      type[derived] <- 'derived_allometry'
       status <- prim$match_status[pi]
       status[is.na(pi)] <- ifelse(g$source_label[is.na(pi)] %in% prim$source_label, 'unmatched_key', 'uningested')
       resolved <- !is.na(pi) & prim$match_status[pi] %in% c('certain', 'approved', 'nodoi_approved')
@@ -259,7 +268,7 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
       # override is left alone.
       inter <- IntermediateLabel(ifelse(resolved, prim$cite_id[pi], NA), ifelse(resolved, prim$bibcite[pi], NA),
                                  ifelse(resolved, prim$doi[pi], NA))
-      inter[!is.na(inter) & (inter == g$source_label | ov)] <- NA_character_
+      inter[!is.na(inter) & (inter == g$source_label | ov | derived)] <- NA_character_
       h2 <- which(!is.na(inter))
       if (length(h2) > 0) {
         il <- IntermediateReferences(pipe, prim, unique(inter[h2]))
@@ -279,6 +288,22 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
         keyed <- rbind(keyed[-h2, , drop = FALSE], hop2)
       }
       out$keyed <- keyed
+      # the equation row of a derived source's keyed records (issue #1, Stage
+      # 2): one row per species x label beside the measurement rows, role
+      # equation, the registry's equation_bibcite, counting the records; a
+      # record with a prov_type override gets none (as in (b))
+      eqk <- unname(eq_of[pipe$source_label[has]])
+      is_eqk <- unname(type_of[pipe$source_label[has]]) %in% 'derived_allometry' & !is.na(eqk) &
+        !(!is.na(pipe$prov_type[has]) & pipe$prov_type[has] %in% provenance_types)
+      if (any(is_eqk)) {
+        kg <- grp[has][is_eqk]
+        ge <- pipe[which(has)[is_eqk][!duplicated(kg)], c('genus', 'species', 'taxon', 'source_label', 'origin')]
+        ne <- as.integer(table(kg)[kg[!duplicated(kg)]])
+        eqb <- eqk[is_eqk][!duplicated(kg)]
+        out$equation <- Row(ge, 'derived_allometry', ne, ref_role = 'equation',
+                            primary_cite_id = unname(ifelse(eqb %in% names(cite_of_bib), cite_of_bib[eqb], NA_character_)),
+                            primary_bibcite = eqb)
+      }
     }
     # (b) records without a key: the registry's default for the label's class
     none <- pipe[!has, , drop = FALSE]

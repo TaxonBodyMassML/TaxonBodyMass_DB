@@ -292,7 +292,13 @@ reflist_specs <- list(
                       compiler = 'Baach'),
   Vanni_2017   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = ';',
-                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792')   # #99; Metadata S1 list via build_references.py
+                      compiler = 'Vanni', compilation_doi = '10.1002/ecy.1792'),  # #99; Metadata S1 list via build_references.py
+  # derived source (Stage 2): the Appendix S3 key table via build_references.r
+  # (a key the table holds for several papers is '<key> [n]'; `note` carries the
+  # entry's Taxa text); the records' SVL reference cells split at ',' or ';'
+  Meiri_2018   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '[,;]',
+                      compiler = 'Meiri', compilation_doi = '10.1111/geb.12773')
 )
 
 ReflistSpec <- function(source_label) {

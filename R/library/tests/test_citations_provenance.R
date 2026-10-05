@@ -192,6 +192,40 @@ brey <- cv[cv$primary_cite_id %in% 'Brey_2010', ]
 Expect(nrow(brey) == 1 && brey$hop == 0L && brey$ref_role == 'conversion' && brey$primary_bibcite == 'Brey:2010aa' && brey$primary_doi == '10.1/brey' && brey$n_records == 2L &&
          cv$n_records[cv$primary_cite_id %in% 'Lucas_2011'] == 1L && is.na(cv$primary_bibcite[cv$primary_cite_id %in% 'Lucas_2011']),
        'a conversion row: hop 0, role conversion, the CiteID resolved to its bibcite and DOI, records counted per CiteID')
+# a derived source with keyed records (Meiri_2018, Stage 2): the length
+# sources are measurement rows typed derived_allometry, the equation row is
+# written beside them per species, an unmatched key stays unknown, a pending
+# key has no primary citation, and a prov_type override gets no equation row
+prim_d <- rbind(prim, P('Deriv', c('L1', 'L2', 'L3'), status = c('certain', 'pending', 'certain'), doi = c('10.1/l1', NA, '10.1/doyle'),
+                        bibcite = c('L1:2001aa', NA, 'Doyle:2007aa'), cite_id = c('L1_2001', NA, 'Doyle_2007'),
+                        role = 'measurement', reason = c('two_service_agreement', 'weak_match', 'two_service_agreement')))
+rec_d <- rbind(R('Mm', 'nn', 'Deriv', ref_keys = 'L1; L2'), R('Mm', 'nn', 'Deriv', ref_keys = 'L1; 99'),
+               R('Oo', 'pp', 'Deriv', ref_keys = 'L3'), R('Qq', 'rr', 'Deriv', ref_keys = 'L1', prov_type = 'compiled_from'),
+               R('Ss', 'tt', 'NoEq', ref_keys = 'L1'))
+prov_d <- BuildProvenance(rec_d, prim_d, classes, citeids, Reg(genus = c('Mm', 'Oo', 'Qq', 'Ss'), species = c('nn', 'pp', 'rr', 'tt')))
+dm <- prov_d[prov_d$genus == 'Mm', ]
+Expect(nrow(dm) == 4 && sum(dm$ref_role %in% 'equation') == 1 && sum(dm$ref_role %in% 'measurement') == 2 && sum(dm$match_status %in% 'unmatched_key') == 1,
+       'a derived source with keys: two measurement rows, one unmatched key, one equation row per species')
+de <- dm[dm$ref_role %in% 'equation', ]
+Expect(de$provenance_type == 'derived_allometry' && de$primary_bibcite == 'Eq:2016aa' && de$primary_cite_id == 'Eq_2016' && de$n_records == 2L && de$hop == 1L && is.na(de$match_status),
+       'the equation row counts the two records and cites the registered equation')
+d1 <- dm[dm$primary_cite_id %in% 'L1_2001', ]
+Expect(nrow(d1) == 1 && d1$provenance_type == 'derived_allometry' && d1$ref_role == 'measurement' && d1$match_status == 'certain' && d1$primary_doi == '10.1/l1' && d1$n_records == 2L,
+       'a resolved length source: derived_allometry, role measurement, the primary citation, two records')
+d2 <- dm[dm$match_status %in% 'pending', ]
+Expect(nrow(d2) == 1 && d2$provenance_type == 'derived_allometry' && d2$ref_role == 'measurement' && is.na(d2$primary_cite_id) && d2$n_records == 1L,
+       'a pending length source keeps the derived type and role without a primary citation')
+Expect(dm$provenance_type[dm$match_status %in% 'unmatched_key'] == 'unknown' && is.na(dm$ref_role[dm$match_status %in% 'unmatched_key']),
+       'an unmatched key of a derived source stays unknown')
+do <- prov_d[prov_d$genus == 'Oo', ]
+Expect(nrow(do) == 2 && all(do$provenance_type == 'derived_allometry') && !any(do$provenance_type %in% c('compiled_via_compilation', 'compilation_terminal')) && do$primary_cite_id[do$ref_role == 'measurement'] == 'Doyle_2007',
+       'a length source that resolves to a database label is not followed to a second hop under a derived source')
+dq <- prov_d[prov_d$genus == 'Qq', ]
+Expect(nrow(dq) == 1 && dq$provenance_type == 'compiled_from' && dq$ref_role == 'measurement' && dq$primary_cite_id == 'L1_2001',
+       'a record-level prov_type override on a derived source: the override, no equation row')
+ds <- prov_d[prov_d$genus == 'Ss', ]
+Expect(nrow(ds) == 1 && ds$provenance_type == 'unknown' && ds$match_status == 'uningested',
+       'a derived source without an equation_bibcite and without a reference list: no equation row, the key uningested')
 Expect(nrow(BuildProvenance(records, prim, classes, citeids, accepted[0, ])) == 0 && identical(names(BuildProvenance(records, prim, classes, citeids, accepted[0, ])), provenance_columns),
        'no accepted species: the empty table')
 Expect(Has(ErrorOf(BuildProvenance(records[, -5], prim, classes, citeids, accepted)), 'records lack column'), 'records without origin stop')
