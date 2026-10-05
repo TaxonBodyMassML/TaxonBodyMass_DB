@@ -1,0 +1,35 @@
+﻿Species Name ,Common Name,Sex,n,Season,Life Stage,Lifespan,Body Mass,MSMR,Basal CC,Basal Cortisol,Elevated CC,Time Range,Assay,Dominant,Environment ,Stressor 
+Aotus trivirgatus,Night monkey,,7,,,30.1,800,2.73,12,300,,,RIA,ND,Captive,
+Bos taurus,Domestic cow,,7,,,20,347000,0.88,0.7,3.1,7.60,,RIA,ND,Captive,ACTH
+Callospermophilus saturatus,Cascade golden-mantled ground squirrel,B,54,,Adult,,275,3.31,9.6,16.8,,,RIA,ND,Field,
+Canis lupus dingo,Dingo,B,6,Non-breeding,Adult,20.6,26625,,3.3,19,16.00,<3,DIDA,ND,Captive,ACTH
+Castor fiber,Eurasian beaver,B,34,Breeding,Adult,20.6,19100,,9.6,22.2,,>3,RIA,ND,Field,
+Cavia porcellus,Guinea pig,M,,,,12,728,3.33,19.4,190.3,,<3,RIA,ND,Captive,
+Ctenomys talarum,Tuco-tuco,M,6,Breeding,Adult,,170,5.05,2.3,20.1,3.13,<3,RIA,ND,Field,Restraint
+Dasyurus geoffroii,Western quoll,B,4,Non-breeding,Adult,6.2,890,2.25,1.5,18,,<3,DIDA,ND,Captive,
+Dasyurus maculatus,Tiger quoll,B,1,Non-breeding,Adult,6.8,5500,1.76,3.9,29,,<3,DIDA,ND,Captive,
+Elephas maximus,Asian elephant,F,5,Breeding,Adult,79.6,3672000,0.64,4.8,9.1,,,EIA,ND,Captive,
+Macaca fascicularis,Long-tailed macaque,,9,,,39,6363,2.73,13.8,210,,,RIA,ND,Captive,
+Macaca mulatta,Rhesus macaque,,9,,,40,8235,2.43,8.8,245,,,RIA,ND,Captive,
+Macropus giganteus,Eastern grey kangaroo,B,7,Non-breeding,Adult,25,49500,,2.2,18,,<3,DIDA,ND,Captive,
+Macropus rufogriseus,Red-necked wallaby,,,,,15.2,16200,,1.5,17,,<3,DIDA,ND,Captive,
+Mus musculus,House mouse,F,6,Breeding,Adult,4,33,8.2,93.6,12.72,1183.00,,RIA,D,Captive,Restraint
+Mustela putorius furo,Domestic ferret,B,8,,,11.1,1140,,2.5,26.6,25.80,,RIA,ND,Captive,ACTH
+Odocoileus virginianus,White-tailed deer,,,,,23,87000,1.99,2.6,56,,,RIA,ND,Field,
+Orcinus orca,Killer whale,M,14,,Adult,70,3987500,0.57,2.8,18.9,,,EIA,ND,Captive,
+Oryctolagus cuniculus,European rabbit,,,,,9,3000,3.41,11,31.5,,,EIA,ND,Captive,
+Ovis aries,Domestic sheep,,,Non-breeding,Adult,22.8,80000,,0.9,5.2,,<3,DIDA,ND,Captive,
+Psammomys obesus,Fat sand rat,M,,,Adult,3.2,212,,5.3,166.5,,<3,RIA,ND,Field,
+Saimiri sciureus,Common squirrel monkey,,14,,,30.2,925,5.29,20.5,1990,,,RIA,ND,Captive,
+Setonix brachyurus,Quokka,B,7,Non-breeding,Adult,13.8,3500,1.74,5.9,12,,<3,DIDA,ND,Captive,
+Sus scrofa,Wild boar,,10,Breeding,Adult,27,105000,0.77,11.1,17.3,12.05,,RIA,ND,Captive,Other
+Tamias amoenus,Yellow-pine chipmunk,F,20,Breeding,Adult,,48,9.42,30.2,658.29,59.03,<3,RIA,ND,Field,Restraint
+Urocitellus beldingi,Belding's ground squirrel,B,14,,Adult,,290,2.71,16.3,37.7,,<3,RIA,ND,Field,
+Urocitellus parryii,Arctic ground squirrel,M,27,,,,650,4.47,8.1,66.2,,>3,RIA,ND,Field,Restraint
+Vombatus ursinus,Common wombat,,,,,30,25500,,1.3,2.3,,<3,DIDA,ND,Captive,
+Vulpes vulpes,Red fox,,,Non-breeding,Adult,21.3,4132,3,5.9,23,,<3,DIDA,ND,Captive,
+Wallabia bicolor,Swamp wallaby,B,3,Non-breeding,Adult,16.8,14625,,1.2,11,,<3,DIDA,ND,Captive,
+Mesocricetus auratus,Golden hamster,M,,,Adult,3.9,105,8.4,80,2.5,284.02,,EIA,D,Captive,Other
+Microtus ochrogaster,Prairie vole,,,,Adult,5.3,40,8.51,631,,,<3,RIA,D,Captive,
+Microtus pennsylvanicus,Meadow vole,B,77,,,,49,10.75,390.3,,,<3,RIA,D,Field,
+Tachyglossus aculeatus,Short-beaked echidna,F,1,Non-breeding,Adult,49.5,3500,0.88,3.5,1.8,,<3,DIDA,D,Captive,

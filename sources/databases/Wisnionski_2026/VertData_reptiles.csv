@@ -1,0 +1,49 @@
+﻿Species Name,Common Name,Sex,n,Season,Life Stage,Lifespan,Temp,Body Mass_g,MSMR,Basal CC,Basal Cortisol,Elevated CC,Time Range,Assay,Environment,Stressor 
+Agkistrodon piscivorus,Cottonmouth,B,32,,Adult,24.6,,421.31,,8.77,,56.97,>3,EIA,Field,Restraint
+Alligator mississippiensis,American alligator,,10,,Juvenile,85,,792.8,0.000142632,2.46,,17.35,,RIA,Captive,Restraint
+Amblyrhynchus cristatus,Marine iguana,,98,,,28,20.5,2227,,4.61,,11.02,<3,RIA,Field ,Restraint
+Anolis carolinensis,Green anole,F,42,,Adult,11,20.0,2.75,0.000949167,12.83,,,<3,RIA,Captive,
+Anolis sagrei,Brown anole,M,114,,Adult,8,,4.9,0.002203423,9.86,,,>3,RIA,Field ,
+Antaresia childreni,Children's python,F,16,Non-reproductive,,30,29.6,384,0.00050744,6.02,,14.78,,RIA,Captive,Restraint
+Boa constrictor,Boa constrictor,B,15,,Adult,40.4,,3950,0.000101614,3.31,,,,EIA,Captive,
+Boaedon fuliginosus,African brown house snake ,B,24,,Adult,,27.0,182.185,0.000211687,72.44,,79.43,>3,ELISA,Captive,Other
+Caiman latirostris,Broad-snouted caiman,,24,,3 months,22,31.4,160.95,,22.50,,,,RIA,Captive,
+Caretta caretta,Loggerhead sea turtle,,46,,Adult,76,28.1,156500,,1.19,,7.59,,RIA,Field ,Restraint
+Chelonia mydas,Green sea turtle,B,20,,Adult,75,,160000,7.09606E-05,2.04,1.78,,,ELISA,Field ,
+Chelonoidis niger,Galápagos tortoise,B,16,,Adult,177,,118535,,0.81,,,>3,RIA,Captive,
+Cnemidophorus sexlineatus,Six-lined racerunner,B,35,,Adult,,32.0,7.9,,13.13,,41.85,>3,RIA,Captive,Restraint
+Cnemidophorus uniparens,Desert grassland whiptail lizard,,17,,Adult,,32.0,7.1,,8.04,,17.26,>3,RIA,Captive,Restraint
+Crocodylus johnstoni,Freshwater crocodile,B,44,,,20,,141831.7734,0.000126511,4.024,,40.02,>3,RIA,Field ,Restraint
+Crocodylus niloticus,Nile crocodile,,5,,20 months,80,30.0,540,,5.00,,11.10,,RIA,Captive,Other
+Crotalus atrox,Western diamondback rattlesnake,M,12,,Adult,27,,480.45,,32.87,,140.00,<3,RIA,Captive,Restraint
+Crotalus helleri,Southern pacific rattlesnake,M,30,,Adult,31,,800,,28.44,,39.01,>3,RIA,Field ,Other
+Egernia whitii,White's skink,M,14,Non-reproductive,Adult,,20.0,,,5.30,,24.80,>3,RIA,Field ,Restraint
+Elgaria coerulea,Northern alligator lizard,B,15,,Adult,8,23.5,19.7,,12.77,,65.46,<3,RIA,Captive,ACTH
+Elgaria multicarinata,Southern alligator lizard,B,15,,Adult,15,23.5,24.17,0.000419048,28.80,,561.60,<3,RIA,Captive,ACTH
+Gopherus agassizii,Desert tortoise,B,11,,Adult,100,,2784,,5.60,,20.72,,RIA,Captive,ACTH
+Heloderma horridum,Mexican beaded lizard,M,7,,Adult,34.4,30.0,585.714,,4.06,,7.85,<3,ELISA,Captive,Restraint
+Heloderma suspectum,Gila monster,B,8,,Adult,48,30,553.41,0.000135212,3.25,,3.10,<3,ELISA,Captive,Restraint
+Hoplodactylus duvaucelii,Duvaucel's gecko,B,16,Non-reproductive,Adult,50,18.3,118,,5.11,,,>3,RIA,Captive,
+Lacerta vivipara,Viviparous lizard,F,17,Non-reproductive,,12,24.5,4,0.001399183,14.40,,50.80,>3,RIA,Captive,Restraint
+Lepidochelys kempii,Kemp's Ridley sea turtle,,18,,Juvenile,50,25.2,4300,,4.41,,19.02,>3,RIA,Captive,Other
+Malayopython reticulatus,Reticulated python,B,11,,,29.4,28.5,21750,0.000123193,7.20,,13.20,<3,ELISA,Field,Other
+Natrix tessellata,Dice snake,B,75,Reproductive,Adult,14,,302.94,,13.30,,69.78,>3,RIA,Field ,Restraint
+Nerodia rhombifer,Diamond-backed water snake,B,12,Non-reproductive,Adult,10,,238,0.000530417,15.16,,86.10,>3,ELISA,Field ,Restraint
+Nerodia sipedon,Northern water snake,B,25,Non-reproductive,Adult,21,,1306,,22.99,,119.86,>3,ELISA,Field ,Restraint
+Phrynocephalus vlangalii,Qinghai toad-headed agama,B,11,,Adult,6,17.7,,,10.02,,19.03,<3,EIA,Captive,Other
+Pituophis catenifer affinis,Sonoran gopher snake,,4,,Adult,33.8,30.0,456.75,0.000223333,18.24,,93.04,<3,ELISA,Captive,Restraint
+Podarcis sicula,Italian wall lizard,M,20,Non-reproductive,Adult,13,,9,0.000303981,14.06,,64.46,>3,RIA,Field ,Restraint
+Python bivittatus,Burmese python,,,Reproductive,Adult,28.3,,19050,,24.16,,73.20,>3,EIA,Field ,Restraint
+Python regius,Ball python,,4,,Adult,50,29,1085.7,0.000191083,37.60,,56.20,,RIA,Captive,Restraint
+Regina septemvittata,Queen snake,B,15,Non-reproductive,Adult,19.3,,298,,43.05,,204.50,>3,ELISA,Field ,Restraint
+Sceloporus occidentalis,Western fence lizard,,13,,Adult,7,30.0,10.105,0.027355847,29.53,,,<3,RIA,Captive,
+Sceloporus undulatus,Eastern fence lizard,B,41,,,4,,6.04,0.001884375,21.52,,48.78,<3,EIA,Captive,Restraint
+Sphenodon punctatus,Tuatara,M,5,,Adult,100,,644.8,0.000173083,18.78,,,,RIA,Field ,
+Thamnophis elegans vagrans,Wandering gartersnake,M,51,,,17.8,,400,,18.89,,108.67,<3,RIA,Field ,ACTH
+Thamnophis sirtalis parietalis,Red-sided garter snake,M ,10,,Adult ,20,,37,,62.50,,,,RIA,Field ,
+Tiliqua scincoides,Blue-tongued skink,M,3,,Adult,30,29.0,302.7,0.0005025,8.50,,9.71,,RIA,Captive,Restraint
+Urosaurus ornatus,Ornate tree lizard,B,41,,Adult,3,,3.69,,6.61,,18.81,>3,RIA,Field ,Restraint
+Uta stansburiana,Side-blotched lizard,F,173,,Adult,4.8,,3.625,0.015956782,30.20,,56.50,<3,RIA,Field ,Restraint
+Varanus salvator,Water Monitor,B,10,Breeding,,15.8,28.5,7400,0.000243266,3.10,,11.70,<3,ELISA,Field,Other
+Varanus varius,Lace Monitor,,12,,Adult,22,,4300,0.000279167,9.59,,22.87,>3,RIA,Field,Restraint
+Vipera aspis,Asp Viper,B,33,Non-reproductive,Adult,25,24.0,105.7,,11.35,,34.70,>3,RIA,Captive,Other
