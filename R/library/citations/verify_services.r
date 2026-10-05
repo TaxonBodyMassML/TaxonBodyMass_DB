@@ -1,10 +1,12 @@
 # Citation tooling (issue #1): the Crossref and OpenAlex clients.
 #
 #   CachedGET(url, cfg)                 GET through httr2 with a polite User-Agent, one
-#                                       request per second, retries on 429/5xx, and the raw
-#                                       body cached under sources/citations_cache/ keyed by
-#                                       sha1(url), so that every re-run (and every test, on
-#                                       the recorded fixtures) is offline
+#                                       request per second, retries on 429/5xx (bounded), and
+#                                       the raw body cached under sources/citations_cache/
+#                                       keyed by sha1(url), so that every re-run (and every
+#                                       test, on the recorded fixtures) is offline; an
+#                                       exhausted quota (429 after the retries) raises the
+#                                       classed condition 'citations_quota' (QuotaCondition())
 #   CrossrefQuery(query, cfg)           /works?query.bibliographic=... -> candidates
 #   CrossrefWork(doi, cfg)              /works/<doi> -> the full message (reference[],
 #                                       update-to, updated-by) or NULL on 404
@@ -24,12 +26,30 @@ CitationsConfig <- function(wd_root, offline = FALSE, mailto = NULL) {
   if (is.null(mailto))
     mailto <- if (offline) 'offline@invalid' else CitationsMailto('crossref', wd_root)
   c(paths, list(mailto = mailto, user_agent = CitationsUserAgent(mailto), offline = offline,
+                openalex_api_key = trimws(Sys.getenv('OPENALEX_API_KEY', unset = '')),
                 network = citations_network, thresholds = citations_thresholds))
 }
 
-# The cache key is the sha1 of the URL without its mailto parameter, so that the
-# cache and the recorded test fixtures do not depend on who ran the tool.
-CacheKey <- function(url) digest::digest(sub('[?&]mailto=[^&]*', '', url), algo = 'sha1', serialize = FALSE)
+# The cache key is the sha1 of the URL without its mailto and api_key
+# parameters, so that the cache and the recorded test fixtures do not depend on
+# who ran the tool.
+CacheKey <- function(url) digest::digest(gsub('[?&](mailto|api_key)=[^&]*', '', url), algo = 'sha1', serialize = FALSE)
+
+# A service's request quota (HTTP 429 after the retries; OpenAlex allows 1,000
+# requests a day without an API key and answers the rest with 429 and a
+# Retry-After of up to a day) is a classed condition, so that the verification
+# driver can leave the remaining references unverified instead of waiting or
+# failing the run; the host is remembered for the session and every further
+# uncached request to it raises the same condition without a network call.
+.citations_quota_hit <- new.env(parent = emptyenv())
+QuotaCondition <- function(host, reset = NA_real_) {
+  msg <- sprintf('%s: request quota exhausted (HTTP 429%s); references that need this service are left unverified, re-run --verify later%s',
+                 host, if (is.na(reset)) '' else sprintf(', resets in about %.1f h', reset / 3600),
+                 if (grepl('openalex', host)) ' (or set OPENALEX_API_KEY)' else '')
+  structure(class = c('citations_quota', 'error', 'condition'),
+            list(message = msg, call = NULL, host = host, reset = reset))
+}
+ResetQuotaFlags <- function() rm(list = ls(.citations_quota_hit), envir = .citations_quota_hit)
 
 # The cached response of `url` as list(url, status, body, fetched_at, cached), or
 # NULL when the cache has none.
@@ -85,17 +105,32 @@ CachedGET <- function(url, cfg) {
   if (isTRUE(cfg$offline))
     stop('offline: no cached response for ', url, call. = FALSE)
   host <- sub('^https?://([^/]+)/.*$', '\\1', url)
+  if (!is.null(.citations_quota_hit[[host]])) stop(.citations_quota_hit[[host]])
   PaceRequest(host, cfg$network$rate_per_s)
   req <- httr2::request(url)
   req <- httr2::req_user_agent(req, cfg$user_agent)
   req <- httr2::req_headers(req, Accept = 'application/json')
   req <- httr2::req_throttle(req, rate = cfg$network$rate_per_s, realm = host)
-  req <- httr2::req_retry(req, max_tries = cfg$network$max_tries,
-                          is_transient = function(resp) httr2::resp_status(resp) %in% cfg$network$transient_status,
+  # a 429 whose Retry-After exceeds max_retry_seconds (OpenAlex's day-long one
+  # when its daily quota is spent) is not transient: httr2 would otherwise sleep
+  # for the whole Retry-After, whatever max_seconds says
+  req <- httr2::req_retry(req, max_tries = cfg$network$max_tries, max_seconds = cfg$network$max_retry_seconds,
+                          is_transient = function(resp) {
+                            if (!httr2::resp_status(resp) %in% cfg$network$transient_status) return(FALSE)
+                            ra <- suppressWarnings(as.numeric(httr2::resp_header(resp, 'retry-after')))
+                            !(length(ra) == 1 && !is.na(ra) && ra > cfg$network$max_retry_seconds)
+                          },
                           backoff = function(i) 2^i)
   req <- httr2::req_error(req, is_error = function(resp) FALSE)
   resp <- httr2::req_perform(req)
   status <- httr2::resp_status(resp)
+  if (status == 429L) {
+    reset <- suppressWarnings(as.numeric(c(httr2::resp_header(resp, 'x-ratelimit-reset'),
+                                           httr2::resp_header(resp, 'retry-after'), NA)[1]))
+    cond <- QuotaCondition(host, reset)
+    assign(host, cond, envir = .citations_quota_hit)
+    stop(cond)
+  }
   body <- httr2::resp_body_string(resp)
   fetched_at <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
   if (status >= 200 && status < 300 || status == 404L)
@@ -252,16 +287,22 @@ OpenAlexSearchText <- function(x) {
   trimws(gsub('\\s+', ' ', x, perl = TRUE))
 }
 
+# OPENALEX_API_KEY (CitationsConfig()), when set, is appended to every OpenAlex
+# URL (the cache key ignores it); without a key OpenAlex allows 1,000 requests
+# a day.
+OpenAlexAuth <- function(cfg)
+  if (!is.null(cfg$openalex_api_key) && nzchar(cfg$openalex_api_key)) paste0('&api_key=', Enc(cfg$openalex_api_key)) else ''
+
 OpenAlexQueryURL <- function(title, year, cfg, per_page = cfg$network$openalex_per_page, search = NULL) {
   if (!is.null(search))
-    return(sprintf('%s?search=%s&per-page=%d&mailto=%s', cfg$network$openalex_api,
-                   Enc(OpenAlexSearchText(search)), as.integer(per_page), Enc(cfg$mailto)))
+    return(sprintf('%s?search=%s&per-page=%d&mailto=%s%s', cfg$network$openalex_api,
+                   Enc(OpenAlexSearchText(search)), as.integer(per_page), Enc(cfg$mailto), OpenAlexAuth(cfg)))
   filt <- paste0('title.search:', OpenAlexSearchText(title))
   if (!is.na(year))
     filt <- paste0(filt, sprintf(',publication_year:%d-%d', year - cfg$thresholds$year_window,
                                  year + cfg$thresholds$year_window))
-  sprintf('%s?filter=%s&per-page=%d&mailto=%s', cfg$network$openalex_api, Enc(filt),
-          as.integer(per_page), Enc(cfg$mailto))
+  sprintf('%s?filter=%s&per-page=%d&mailto=%s%s', cfg$network$openalex_api, Enc(filt),
+          as.integer(per_page), Enc(cfg$mailto), OpenAlexAuth(cfg))
 }
 
 # Title search within a year window (or a full-text `search` of the whole
@@ -276,7 +317,7 @@ OpenAlexQuery <- function(title, year, cfg, search = NULL) {
 }
 
 OpenAlexWorkURL <- function(doi, cfg)
-  sprintf('%s/https://doi.org/%s?mailto=%s', cfg$network$openalex_api, CleanDOI(doi), Enc(cfg$mailto))
+  sprintf('%s/https://doi.org/%s?mailto=%s%s', cfg$network$openalex_api, CleanDOI(doi), Enc(cfg$mailto), OpenAlexAuth(cfg))
 
 # The OpenAlex record of a DOI as a candidate row (is_retracted, type,
 # openalex_id), or NULL when OpenAlex has none.

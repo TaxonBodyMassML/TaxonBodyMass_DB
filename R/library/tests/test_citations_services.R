@@ -54,7 +54,8 @@ u1 <- 'https://api.crossref.org/works?query.bibliographic=x&rows=5&mailto=a%40b.
 u2 <- 'https://api.crossref.org/works?query.bibliographic=x&rows=5&mailto=c%40d.org'
 u3 <- 'https://api.crossref.org/works?query.bibliographic=y&rows=5&mailto=a%40b.org'
 Expect(CacheKey(u1) == CacheKey(u2) && CacheKey(u1) != CacheKey(u3) && grepl('^[0-9a-f]{40}$', CacheKey(u1)) &&
-         CacheKey('https://api.crossref.org/works/10.1/x?mailto=a') == CacheKey('https://api.crossref.org/works/10.1/x'),
+         CacheKey('https://api.crossref.org/works/10.1/x?mailto=a') == CacheKey('https://api.crossref.org/works/10.1/x') &&
+         CacheKey('https://api.openalex.org/works/10.1/x?mailto=a&api_key=k') == CacheKey('https://api.openalex.org/works/10.1/x'),
        'the cache key is the sha1 of the URL without its mailto parameter')
 query1 <- 'Doyle 2007 The energy density of jellyfish: Estimates from bomb-calorimetry and proximate-composition J. Exp. Mar. Biol. Ecol 343 239-252'
 hit <- ReadCachedResponse(CrossrefQueryURL(query1, cfg), fixtures)
@@ -80,6 +81,26 @@ meta <- jsonlite::fromJSON(file.path(tmpc, paste0(key, '.meta.json')))
 Expect(meta$tool_version == citations_tool_version && meta$url == 'https://example.org/w?a=1&mailto=x', 'the meta file records the tool version and the URL')
 
 # ---- Crossref -----------------------------------------------------------------------------
+cat('QuotaCondition(), the per-host quota flag of CachedGET(), OpenAlexAuth()\n')
+qc <- QuotaCondition('api.openalex.org', 82961)
+Expect(inherits(qc, 'citations_quota') && inherits(qc, 'error') && grepl('quota exhausted', conditionMessage(qc), fixed = TRUE) &&
+         grepl('23.0 h', conditionMessage(qc), fixed = TRUE) && grepl('OPENALEX_API_KEY', conditionMessage(qc), fixed = TRUE) && qc$host == 'api.openalex.org',
+       'an exhausted quota is a classed error naming the host, the reset time and the API-key remedy')
+assign('api.crossref.org', QuotaCondition('api.crossref.org'), envir = .citations_quota_hit)
+cfg_net <- cfg; cfg_net$offline <- FALSE
+caught <- tryCatch(CachedGET('https://api.crossref.org/works/10.1/none?mailto=offline%40invalid', cfg_net), citations_quota = function(e) e)
+Expect(inherits(caught, 'citations_quota') && caught$host == 'api.crossref.org',
+       'once a host has answered 429 every further uncached request to it raises the condition without a network call')
+query1 <- 'Doyle 2007 The energy density of jellyfish: Estimates from bomb-calorimetry and proximate-composition J. Exp. Mar. Biol. Ecol 343 239-252'
+served <- tryCatch(CachedGET(CrossrefQueryURL(query1, cfg_net), cfg_net), citations_quota = function(e) e)
+Expect(!inherits(served, 'citations_quota') && isTRUE(served$cached), 'cached responses are still served for a flagged host')
+ResetQuotaFlags()
+Expect(length(ls(.citations_quota_hit)) == 0, 'ResetQuotaFlags() clears the flags')
+cfg_key <- cfg; cfg_key$openalex_api_key <- 'k1'
+Expect(OpenAlexAuth(cfg) == '' && OpenAlexAuth(cfg_key) == '&api_key=k1' && grepl('&api_key=k1$', OpenAlexWorkURL('10.1/x', cfg_key)) &&
+         grepl('&api_key=k1$', OpenAlexQueryURL('a title', 2000L, cfg_key)) && !grepl('api_key', OpenAlexWorkURL('10.1/x', cfg)),
+       'OPENALEX_API_KEY is appended to the OpenAlex URLs only when set')
+
 cat('CrossrefQuery(), NormaliseCrossrefItem(), CrossrefWork()\n')
 cr <- CrossrefQuery(query1, cfg)
 Expect(identical(names(cr), names(EmptyCandidates())) && nrow(cr) == 5 && all(cr$service == 'crossref'),
