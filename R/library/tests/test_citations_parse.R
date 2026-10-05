@@ -150,6 +150,25 @@ Expect(q$parsed_author1[4] == 'Arudpragasam' && q$parsed_year[4] == 1964L && q$p
        'ALL CAPS entry: surname title-cased, volume and pages found')
 Expect(is.na(q$parsed_year[5]) && q$parsed_title[5] == 'This study' && all(is.na(q$parsed_author1[6:7])), 'no year: title only; NA and empty strings parse to NA')
 
+cat('ParseCitationString() on the Nature style (Chown_etal_2007 reference list)\n')
+nat <- ParseCitationString(c(
+  'Loveridge, J. P. & Bursell, E. Studies on the water relations of adult locusts (Orthoptera, Acrididae) I. Respiration and the production of metabolic water. Bulletin of Entomological Research 65, 13-20 (1975).',
+  'Hebling, M. J. A., Penteado, C. H. S. & Mendes, E. G. Respiratory regulation in workers of the leaf cutting ant Atta sexdens rubropilosa (Forel, 1908). Comparative Biochemistry and Physiology A 101, 319-322 (1992).',
+  'Gäde, G. & Auerswald, L. Flight metabolism in carpenter bees and primary structure of their hypertrehalosaemic peptide. Experimental Biology Online 3 (1998).',
+  'Klok, C. J. & Chown, S. L. Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications. Journal of Insect Physiology (in press).'))
+Expect(nat$parsed_author1[1] == 'Loveridge' && nat$parsed_year[1] == 1975L && nat$parsed_container[1] == 'Bulletin of Entomological Research' &&
+         nat$parsed_volume[1] == '65' && nat$parsed_pages[1] == '13-20' &&
+         nat$parsed_title[1] == 'Studies on the water relations of adult locusts (Orthoptera, Acrididae) I. Respiration and the production of metabolic water',
+       'Nature style: year at the end, "&" author block, "I." kept inside the title')
+Expect(nat$parsed_author1[2] == 'Hebling' && nat$parsed_year[2] == 1992L && nat$parsed_volume[2] == '101' &&
+         nat$parsed_title[2] == 'Respiratory regulation in workers of the leaf cutting ant Atta sexdens rubropilosa (Forel, 1908)',
+       'Nature style: a year inside the title does not end the author block')
+Expect(nat$parsed_author1[3] == 'Gade' && nat$parsed_year[3] == 1998L && nat$parsed_container[3] == 'Experimental Biology Online' &&
+         nat$parsed_volume[3] == '3' && is.na(nat$parsed_pages[3]), 'Nature style without pages')
+Expect(nat$parsed_author1[4] == 'Klok' && is.na(nat$parsed_year[4]) && nat$parsed_container[4] == 'Journal of Insect Physiology (in press)' &&
+         nat$parsed_title[4] == 'Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications',
+       'undated Nature-style entry: author block stripped from the title')
+
 cat('TitleSimilarity() and the agreement helpers\n')
 Expect(TitleSimilarity('The energy density of jellyfish: Estimates from bomb-calorimetry', 'The energy density of jellyfish: estimates from bomb-calorimetry') == 1,
        'case and punctuation do not matter')
@@ -205,7 +224,7 @@ Expect(is.na(prim$raw_citation[4]) && prim$notes[4] == 'key not in reference lis
 Expect(prim$parsed_author1[2] == 'Ikeda' && prim$parsed_year[2] == 1986L, 'the same-author expansion is applied in list order (entry 6 -> Ikeda)')
 Expect(all(prim$role == 'measurement') && all(is.na(prim$match_status)) && all(prim$tool_version == citations_tool_version),
        'roles default to measurement, nothing verified yet, tool_version stamped')
-self_list <- rbind(rl[1, ], data.frame(native_key = 'S', raw_citation = 'This study', raw_doi = NA, note = NA, stringsAsFactors = FALSE))
+self_list <- rbind(rl[1, ], data.frame(native_key = 'S', raw_citation = 'This study', raw_doi = NA, note = NA, owner_review = NA, stringsAsFactors = FALSE))
 ps <- InitPrimaryReferences('X', self_list, c('1', 'S', 'S'))
 Expect(ps$role[ps$native_key == 'S'] == 'self' && ps$match_status[ps$native_key == 'S'] == 'self' && ps$n_records[ps$native_key == 'S'] == 2L,
        'a self reference gets role and status self')
@@ -237,6 +256,22 @@ Expect(Has(ErrorOf(ParseRefListPDF('x.pdf')), 'not implemented yet') && Has(Erro
        'the later-tier parsers stop with a clear message')
 Expect(Has(ErrorOf(ReflistSpec('NoSuchSource')), 'No reference-list specification') && ReflistSpec('Kiorboe_2013')$format == 'csv',
        'ReflistSpec() names the missing specification')
+
+cat('owner_review: review_col, the skeleton, optional on read\n')
+rl <- tempfile(fileext = '.csv')
+writeLines(c('key,citation,doi,owner_review', 'A,"Doe, J. 2001. A study. J Things 5: 1-10.",,alias: cited under another paper', 'B,"Roe, R. 1999. Another study. J Things 3: 1-2.",,'), rl)
+r <- ParseRefListCSV(rl, key_col = 'key', citation_col = 'citation', doi_col = 'doi', review_col = 'owner_review')
+Expect(identical(r$owner_review, c('alias: cited under another paper', NA_character_)), 'ParseRefListCSV() reads review_col, empty cells as NA')
+sk <- InitPrimaryReferences('Src', r, c('A', 'B', 'A'))
+Expect('owner_review' %in% names(sk) && sk$owner_review[sk$native_key == 'A'] == 'alias: cited under another paper' && is.na(sk$owner_review[sk$native_key == 'B']),
+       'the skeleton carries owner_review from the list')
+old_file <- tempfile(fileext = '.csv')
+write.csv(sk[, setdiff(primary_reference_columns, 'owner_review')], old_file, row.names = FALSE, na = '')
+rd <- ReadPrimaryReferences(old_file)
+Expect(identical(names(rd), primary_reference_columns) && all(is.na(rd$owner_review)), 'a file written before owner_review reads with the column filled NA')
+sk2 <- sk; sk2$owner_review[sk2$native_key == 'B'] <- 'new flag'; rd$owner_review <- NA_character_
+mg <- MergePrimaryReferences(rd, sk2)
+Expect(mg$owner_review[mg$native_key == 'B'] == 'new flag' && mg$owner_review[mg$native_key == 'A'] == 'alias: cited under another paper', 'the review flag follows the reference list on re-init')
 
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }

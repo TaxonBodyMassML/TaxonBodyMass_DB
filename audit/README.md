@@ -61,6 +61,23 @@ Methods, with their dates and severity rules:
   by the lab Sheet, so their GATEWAy record never reaches the output (said in
   the note).
 
+- `source_conflict_2026-10-04` (4 rows): EltonTraits (`Wilman_etal_2014`,
+  issue #65) mammal values that conflict with the other sources by half an
+  order of magnitude or more: *Mustela itatsi* (57 g from an Animal Diversity
+  Web page on *M. sibirica*, against 300-565 g) and the three *Sicista* birch
+  mice of `Ref_146` (6.4-7.2 g, agreeing with PHYLACINE against COMBINE's
+  61.8 g, so the other source is the one to doubt). `mass_g` is the EltonTraits
+  value (`n` 1), `log10_pred` log10 of the median of the other sources' Pass-1
+  values on the 2026-10-04 frames (listed in the note); `severity` is
+  `CRITICAL` when `abs_residual >= 2`, `SUSPICIOUS` otherwise. Owner decision
+  of 2026-10-04: the values are kept; the register records the conflict.
+  The same label covers 29 further rows (2026-10-04): birds whose only
+  remaining value, once EltonTraits' PrimScale estimates were dropped (#65),
+  is a VertNet record (`mass_g` the VertNet value, `n` its record count,
+  `log10_pred` log10 of the PrimScale estimate the species lost); `CRITICAL`
+  where the value is impossible (*Uratelornis chimaera* 5 g), `SUSPICIOUS`
+  otherwise. Pending the owner's decision on whether any is dropped.
+
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.
 
