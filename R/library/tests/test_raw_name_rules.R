@@ -163,6 +163,10 @@ Expect(identical(LogOf('Agonum thoreyi (Dejean)')$class, 'authority') && identic
        'logged as class authority')
 Expect(identical(LogOf('Agonum thoreyi (Gould)')$class, 'error') && isTRUE(LogOf('Agonum thoreyi (Gould)')$error),
        'an author not listed by name is still reported as class error, not assumed')
+Expect(identical(Cleaned(c('Formica s.str. sp', 'Formica sensu stricto sp', 'Lasius s.l. sp')),
+                 c('Formica_sp', 'Formica_cf', 'Lasius_cf')) &&
+         identical(LogOf('Formica s.str. sp')$class, 'placeholder'),
+       "'s.str.' in the epithet position is a placeholder marker Genus_sp (#69); 'sensu' and 's.l.' stay with the qualifier row (Genus_cf)")
 
 # ---- trinomial --------------------------------------------------------------------
 cat('trinomial: folded to the species\n')
@@ -411,7 +415,7 @@ pinned <- rbind(
   c("Oligochaeta indet.", "Oligochaeta_indet"),
   c("Zercon cf gurensis", "Zercon_cf"),
   c("Lithobius cf. mutabilis", "Lithobius_cf"),
-  c("Formica s.str. sp", "Formica_sstr"),
+  c("Formica s.str. sp", "Formica_sp"),           # Formica_sstr until #69 (owner decision 2026-10-05: placeholder marker)
   c("Encoptolophus s. costalis", "Encoptolophus_s"),
   c("Eumops_bo riensis", "Eumops_bo"),
   c("Acanthiza pusilla apicalis", "Acanthiza_pusilla"),

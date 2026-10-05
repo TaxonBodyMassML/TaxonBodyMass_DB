@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-05 14:06:53
+# Genus-only records -- 2026-10-05 16:18:16
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -6,20 +6,20 @@ Input records identified to genus only (a cleaned name without an underscore; th
 
 | quantity | value |
 | --- | ---: |
-| genus-only rows | 27501 |
-| distinct bare names | 857 |
-| names resolved to an accepted genus | 678 |
-| ... rows | 14496 |
-| distinct accepted genera | 674 |
+| genus-only rows | 27397 |
+| distinct bare names | 856 |
+| names resolved to an accepted genus | 677 |
+| ... rows | 14392 |
+| distinct accepted genera | 673 |
 | names resolved above genus | 177 |
 | ... rows | 12964 |
 | names unresolved | 2 |
 | ... rows | 41 |
 | autotroph genera removed | 18 |
 | ... rows | 313 |
-| genus x source values (after the autotroph filter) | 723 |
+| genus x source values (after the autotroph filter) | 721 |
 | values collapsed as copies | 3 |
-| genus-only records (pseudo-taxa) | 656 |
+| genus-only records (pseudo-taxa) | 655 |
 | records more than 1 log10 from the genus's species mean | 47 |
 
 ## Resolution by stage
@@ -27,7 +27,7 @@ Input records identified to genus only (a cleaned name without an underscore; th
 | match_type | outcome | names | rows |
 | --- | --- | ---: | ---: |
 | EXACT | above genus | 132 | 9085 |
-| cache | genus | 470 | 7549 |
+| cache | genus | 469 | 7445 |
 | EXACT | genus | 207 | 6946 |
 | checklists | above genus | 40 | 2975 |
 | curated | above genus | 2 | 662 |
