@@ -1,14 +1,14 @@
-# Citation and provenance warnings -- 2026-10-05 13:35:41
+# Citation and provenance warnings -- 2026-10-05 14:01:20
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127209 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 127504 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 64; unverified references: 3
 
 ## Problems
 
-(none)
+- 11 accepted reference(s) without a bib entry (run --bib): Tobias_2022 Alstrom et al. (2015), Tobias_2022 Boesman & Collar (2019), Tobias_2022 Cook et al. (2017), Tobias_2022 Dunning (2008), Tobias_2022 Earhart & Johnson (1970), Tobias_2022 Melo et al. (2017), Tobias_2022 Rheindt et al. (2020), Tobias_2022 Rodrigues et al. (2019), Tobias_2022 Tietza et al. (2015), Tobias_2022 Vernia (2018), Tobias_2022 EltonTraits_Other
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -29,7 +29,7 @@ One row per source label: species and record links (species x source x reference
 | AndersonGillooly_2017 | compilation | 93 | 296 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AyalaBerdon_2025 | compilation | 36 | 151 | 54.3 | 22 | 20 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| Baach_2026 | compilation | 529 | 1037 | 99.2 | 8 | 7 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
+| Baach_2026 | compilation | 529 | 1037 | 91.8 | 8 | 7 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1338 | 1343 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
@@ -93,7 +93,7 @@ One row per source label: species and record links (species x source x reference
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Smith_2003 | compilation | 3515 | 4305 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5362 | 5459 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Tobias_2022 | compilation | 9659 | 10032 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Tobias_2022 | compilation | 9659 | 10033 | 0.1 | 46 | 11 | 18 | 15 | 2 | 0 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 47 | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tsuboi_etal_2018 | compilation | 3429 | 15899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -101,7 +101,7 @@ One row per source label: species and record links (species x source x reference
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Vanni_2017 | compilation | 173 | 3591 | 95.5 | 73 | 67 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Wascher_2025 | compilation | 123 | 123 | 30.1 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 12218 | 12287 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 131 | 131 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
