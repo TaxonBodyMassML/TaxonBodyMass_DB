@@ -1,9 +1,9 @@
-# Citations of Chown_etal_2007 -- 2026-10-04 18:19:21 (tbmcite 0.1.0)
+# Citations of Chown_etal_2007 -- 2026-10-04 19:26:42 (tbmcite 0.1.0)
 
 Steps: --init
 
-- --init: 545 records, 301 with ref_keys (44.8% NA); 111 native keys -> primary_references.csv
-- --init: 5 reference(s) of the list cited by no record: 14, 30, 39, 57, 106
+- --init: 581 records, 581 with ref_keys (0.0% NA); 115 native keys -> primary_references.csv
+- --init: 2 reference(s) of the list cited by no record: 14, 39
 - --init: 1 self reference(s): *
 
 ## References
@@ -15,20 +15,20 @@ Steps: --init
 | 3 | 20 | measurement |  |  |  |  |  |  |
 | 4 | 1 | measurement |  |  |  |  |  |  |
 | 5 | 1 | measurement |  |  |  |  |  |  |
-| 6 | 3 | measurement |  |  |  |  |  |  |
+| 6 | 4 | measurement |  |  |  |  |  |  |
 | 7 | 3 | measurement |  |  |  |  |  |  |
 | 8 | 1 | measurement |  |  |  |  |  |  |
 | 9 | 1 | measurement |  |  |  |  |  |  |
 | 10 | 1 | measurement |  |  |  |  |  |  |
-| 11 | 3 | measurement |  |  |  |  |  |  |
+| 11 | 4 | measurement |  |  |  |  |  |  |
 | 12 | 1 | measurement |  |  |  |  |  |  |
-| 13 | 1 | measurement |  |  |  |  |  |  |
+| 13 | 2 | measurement |  |  |  |  |  |  |
 | 15 | 3 | measurement |  |  |  |  |  |  |
-| 16 | 1 | measurement |  |  |  |  |  |  |
+| 16 | 8 | measurement |  |  |  |  |  |  |
 | 17 | 1 | measurement |  |  |  |  |  |  |
-| 18 | 1 | measurement |  |  |  |  |  |  |
+| 18 | 2 | measurement |  |  |  |  |  |  |
 | 19 | 1 | measurement |  |  |  |  |  |  |
-| 20 | 27 | measurement |  |  |  |  |  |  |
+| 20 | 34 | measurement |  |  |  |  |  |  |
 | 21 | 1 | measurement |  |  |  |  |  |  |
 | 22 | 2 | measurement |  |  |  |  |  |  |
 | 23 | 1 | measurement |  |  |  |  |  |  |
@@ -38,6 +38,7 @@ Steps: --init
 | 27 | 2 | measurement |  |  |  |  |  |  |
 | 28 | 1 | measurement |  |  |  |  |  |  |
 | 29 | 1 | measurement |  |  |  |  |  |  |
+| 30 | 12 | measurement |  |  |  |  |  |  |
 | 31 | 1 | measurement |  |  |  |  |  |  |
 | 32 | 1 | measurement |  |  |  |  |  |  |
 | 33 | 1 | measurement |  |  |  |  |  |  |
@@ -56,13 +57,14 @@ Steps: --init
 | 47 | 5 | measurement |  |  |  |  |  |  |
 | 48 | 1 | measurement |  |  |  |  |  |  |
 | 49 | 3 | measurement |  |  |  |  |  |  |
-| 50 | 1 | measurement |  |  |  |  |  |  |
+| 50 | 2 | measurement |  |  |  |  |  |  |
 | 51 | 1 | measurement |  |  |  |  |  |  |
 | 52 | 2 | measurement |  |  |  |  |  |  |
-| 53 | 16 | measurement |  |  |  |  |  |  |
+| 53 | 18 | measurement |  |  |  |  |  |  |
 | 54 | 4 | measurement |  |  |  |  |  |  |
 | 55 | 1 | measurement |  |  |  |  |  |  |
-| 56 | 8 | measurement |  |  |  |  |  |  |
+| 56 | 9 | measurement |  |  |  |  |  |  |
+| 57 | 1 | measurement |  |  |  |  |  |  |
 | 58 | 1 | measurement |  |  |  |  |  |  |
 | 59 | 2 | measurement |  |  |  |  |  |  |
 | 60 | 1 | measurement |  |  |  |  |  |  |
@@ -111,6 +113,7 @@ Steps: --init
 | 103 | 1 | measurement |  |  |  |  |  |  |
 | 104 | 1 | measurement |  |  |  |  |  |  |
 | 105 | 2 | measurement |  |  |  |  |  |  |
+| 106 | 1 | measurement |  |  |  |  |  |  |
 | 107 | 1 | measurement |  |  |  |  |  |  |
 | 108 | 1 | measurement |  |  |  |  |  |  |
 | 109 | 1 | measurement |  |  |  |  |  |  |
@@ -121,3 +124,4 @@ Steps: --init
 | 114 | 1 | measurement |  |  |  |  |  |  |
 | 115 | 1 | measurement |  |  |  |  |  |  |
 | * | 8 | self | self | self |  |  |  |  |
+| S1 | 244 | measurement |  |  |  |  |  |  |

@@ -36,7 +36,9 @@ Output (next to this script):
                                      MetabolicRate_uW, ref_keys ('; '-joined reference
                                      numbers, '*' for the unpublished Chown-lab rows)
   references.csv                     key, raw_citation (the 115 numbered entries, then key '*'
-                                     with the footnote text of the unpublished rows)
+                                     with the footnote text of the unpublished rows and key
+                                     'S1' with the heading and footnote of Appendix S1, whose
+                                     ant records carry no mark in the table)
 Values are kept as printed (whitespace normalised; the species text without its
 superscript, the asterisk kept as printed). Counts and every anomaly go to
 stderr; the script exits non-zero if a row cannot be assembled, a reference
@@ -174,14 +176,18 @@ def split_sup(sup):
 
 
 def parse_s1(pages, errors):
-    rows_out, skipped = [], []
+    """S1 rows, plus the appendix heading and footnote (the text of reference key S1)."""
+    rows_out, skipped, heading = [], [], []
     for pno, page in pages:
         for row in group_rows(page_cells(page)):
             cells = [c for c in row if not c.blank]
             if not cells or is_page_number(row):
                 continue
             texts = [c.text for c in cells]
-            if texts[0].startswith(S1_TITLE) or texts[0] == 'Species':
+            if texts[0].startswith(S1_TITLE):
+                heading.append(' '.join(texts))
+                continue
+            if texts[0] == 'Species':
                 continue
             nums = [t.replace(' ', '') for t in texts[1:]]
             if len(cells) == 4 and all(NUM_RE.match(t) for t in nums):
@@ -195,7 +201,13 @@ def parse_s1(pages, errors):
                 skipped.append((pno, ' | '.join(texts)))
     for pno, t in skipped:
         log(f'  S1 page {pno}: non-data line: {t}')
-    return rows_out
+    # the footnote under the table ("Temperature refers to ... flow-through respirometry.")
+    note = ''
+    for _, t in skipped:
+        note = (note + t) if note.endswith('-') else (note + ' ' + t if note else t)
+    if not heading:
+        errors.append('S1: appendix heading not found')
+    return rows_out, norm(' '.join(heading) + (' ' + note if note else ''))
 
 
 def parse_s2(pages, errors):
@@ -332,20 +344,21 @@ def main(argv):
     log(f'{os.path.basename(pdf)}: {len(doc)} pages; S1 from page {starts["s1"] + 1}, '
         f'S2 from page {starts["s2"] + 1}, references from page {starts["refs"] + 1}')
 
-    s1 = parse_s1(pages[starts['s1']:starts['s2']], errors)
+    s1, s1_text = parse_s1(pages[starts['s1']:starts['s2']], errors)
     s2, footnotes = parse_s2(pages[starts['s2']:starts['refs']], errors)
     refs = parse_references(pages[starts['refs']:], errors)
     n_numbered = len(refs)
     if '*' in footnotes:                  # the unpublished rows' key, after the numbered list
         refs.append({'key': '*', 'raw_citation': footnotes['*']})
+    refs.append({'key': 'S1', 'raw_citation': s1_text})   # the Appendix S1 ants (no marks in the table)
 
     # cross-checks between the table and the reference list
-    ref_keys = {r['key'] for r in refs}
+    ref_keys = {r['key'] for r in refs}        # includes '*' and 'S1'
     cited = Counter(k for r in s2 for k in r['ref_keys'].split('; ') if k)
     unknown = sorted((k for k in cited if k != '*' and k not in ref_keys), key=int)
     if unknown:
         errors.append(f'S2 cites reference number(s) without an entry: {unknown}')
-    unused = sorted((k for k in ref_keys if k not in cited), key=int)
+    unused = sorted((k for k in ref_keys if k.isdigit() and k not in cited), key=int)
     first_seen, order_ok = [], True
     for r in s2:
         for k in r['ref_keys'].split('; '):
@@ -362,7 +375,7 @@ def main(argv):
         f'{sum(1 for r in s2 if len(r["ref_keys"].split("; ")) > 1)} rows with more than one mark')
     log(f'S2 orders: ' + ', '.join(f'{o} {n}' for o, n in Counter(r['Order'] for r in s2).most_common()))
     log(f'References: {n_numbered} numbered entries (1-{refs[n_numbered - 1]["key"] if n_numbered else "?"})'
-        f' + {len(refs) - n_numbered} footnote key(s) {sorted(footnotes)}; '
+        f' + {len(refs) - n_numbered} extra key(s) {sorted(footnotes) + ["S1"]}; '
         f'{len(cited) - (1 if "*" in cited else 0)} distinct numbers cited; unused: {unused or "none"}; '
         f'first citations in numerical order: {order_ok}')
     for e in errors:
