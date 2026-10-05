@@ -268,9 +268,15 @@ reflist_specs <- list(
   Chown_etal_2007 = list(format = 'csv', file = 'references.csv',
                          key_col = 'key', citation_col = 'raw_citation', sep = ';',
                          compiler = 'Chown'),
+<<<<<<< HEAD
   Gonzalez_2024 = list(format = 'csv', file = 'references.csv',
                        key_col = 'key', citation_col = 'citation', doi_col = 'doi', type_col = 'note',
                        sep = ';', compiler = 'Gonzalez')
+=======
+  Leahy_2025   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Leahy')
+>>>>>>> origin/main
 )
 
 ReflistSpec <- function(source_label) {

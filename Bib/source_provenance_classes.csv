@@ -81,3 +81,4 @@ vertnet-mammalia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapsh
 vertnet-reptilia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
 vertnet-traits-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
 Lemoine_2026,primary,measured_in_source,,"tier F; own measurements (#76): individual fresh masses of soil macroinvertebrates weighed alive in Martinique for the image-allometry calibration of Lemoine et al. 2026; CIRAD Dataverse doi:10.18167/DVN1/SCH4AV"
+Leahy_2025,primary,measured_in_source,,"tier F; own measurements (#75): 2,805 worker ants weighed after their metabolic assays, 57 binomials kept; references.csv holds the one self entry so that a compilation citing this paper resolves to compiled_from at hop 2"
