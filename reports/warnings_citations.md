@@ -1,21 +1,62 @@
-# Citation and provenance warnings -- 2026-10-04 21:13:40
+# Citation and provenance warnings -- 2026-10-04 21:38:25
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121692 (38566 species); distinct primary CiteIDs: 334; unresolved references (pending / not_found): 12; unverified references: 0
+- provenance rows: 121815 (38567 species); distinct primary CiteIDs: 334; unresolved references (pending / not_found): 14; unverified references: 0
 
 ## Problems
 
-- 1 source label(s) without a Bibcite: Hudson_2013
+- 2 source label(s) without a Bibcite: Hudson_2013, Wascher_2025
+- 2 accepted reference(s) without a bib entry (run --bib): Wascher_2025 Tobias_2022, Wascher_2025 Sekercioglu_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-(none)
+- BM_primary_citations: Kennedy_1999 -> Kennedy:1999aa
+- BM_primary_citations: Kreutzer_2003 -> Kreutzer:2003aa
+- BM_primary_citations: Hakkinen_2001 -> Hakkinen:2001aa
+- BM_primary_citations: Schlimme_2003 -> Schlimme:2003aa
+- BM_primary_citations: Wheeler_2004 -> Wheeler:2004aa
+- BM_primary_citations: Hershkovitz_1990 -> Hershkovitz:1990aa
+- BM_primary_citations: Reid_2009 -> Reid:2009aa
+- BM_primary_citations: Garbutt_1999 -> Garbutt:1999aa
+- BM_primary_citations: Menkhorst_2004 -> Menkhorst:2004aa
+- BM_primary_citations: Flannery_1998 -> Flannery:1998aa
+- BM_primary_citations: Voss_2004 -> Voss:2004aa
+- BM_primary_citations: Lunde_2003 -> Lunde:2003aa
+- BM_primary_citations: Bonaccorso_1998 -> Bonaccorso:1998aa
+- BM_primary_citations: Ruedi_1995 -> Ruedi:1995aa
+- BM_primary_citations: Vilela_2006 -> Vilela:2006aa
+- BM_primary_citations: Rickart_2002 -> Rickart:2002aa
+- BM_primary_citations: Mullin_2004 -> Mullin:2004aa
+- BM_primary_citations: Hershkovitz_1998 -> Hershkovitz:1998aa
+- BM_primary_citations: Bonvicino_2003 -> Bonvicino:2003aa
+- BM_primary_citations: Nechvatal_2000 -> Nechvatal:2000aa
+- BM_primary_citations: Emmons_1999 -> Emmons:1999aa
+- BM_primary_citations: deOliveira_2002 -> de-Oliveira:2002aa
+- BM_primary_citations: Rickart_2003 -> Rickart:2003aa
+- BM_primary_citations: Simmons_1998 -> Simmons:1998aa
+- BM_primary_citations: Dowler_2000 -> Dowler:2000aa
+- BM_primary_citations: Wolff_1985 -> Wolff:1985aa
+- BM_primary_citations: Fooden_1963 -> Fooden:1963aa
+- BM_primary_citations: Breed_2000 -> Breed:2000aa
+- BM_primary_citations: DElia_2006 -> DElia:2006aa
+- BM_primary_citations: Braun_1995 -> Braun:1995aa
+- BM_primary_citations: Musser_1992 -> Musser:1992aa
+- BM_primary_citations: Davis_1970 -> Davis:1970aa
+- BM_primary_citations: Brito_2003 -> Brito:2003aa
+- BM_primary_citations: DunningJr_2007 -> Dunning-Jr:2007aa
+- BM_primary_citations: delHoyo_2003 -> del-Hoyo:2003aa
+- BM_primary_citations: delHoyo_2005 -> del-Hoyo:2005aa
+- BM_primary_citations: delHoyo_2006 -> del-Hoyo:2006aa
+- BM_primary_citations: delHoyo_2007 -> del-Hoyo:2007aa
+- BM_primary_citations: delHoyo_2008 -> del-Hoyo:2008aa
+- BM_primary_citations: delHoyo_2010 -> del-Hoyo:2010aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
+- Wascher_2025 (123 rows)
 - Hudson_2013 (100 rows)
 
 ## Per-source coverage
@@ -93,6 +134,7 @@ One row per source label: species and record links (species x source x reference
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 194 | 984 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Wascher_2025 | compilation | 123 | 123 | 0 | 4 | 2 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 8905 | 8964 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2069 | 2899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
