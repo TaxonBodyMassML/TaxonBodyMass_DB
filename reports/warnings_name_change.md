@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 17:33:18
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 17:50:28
 
 
 ## Species name changed during enrichment (5653 rows)
@@ -8239,7 +8239,7 @@ Poecile atricapillus; Parus atricapillus; Poecile atricapilla -> Poecile atricap
 
 Poecile carolinensis; Parus carolinensis -> Poecile carolinensis [GBIF]
 
-Poecile cinctus; Parus cinctus; Poecile cincta -> Poecile cinctus [GBIF]
+Poecile cinctus; Poecile cincta; Parus cinctus -> Poecile cinctus [GBIF]
 
 Poecile davidi; Parus davidi -> Poecile davidi [GBIF]
 
