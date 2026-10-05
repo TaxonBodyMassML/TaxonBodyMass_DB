@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 22:59:59
+# Citation and provenance warnings -- 2026-10-04 23:15:37
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 125730 (38741 species); distinct primary CiteIDs: 426; unresolved references (pending / not_found): 31; unverified references: 0
+- provenance rows: 125784 (38742 species); distinct primary CiteIDs: 442; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
-- 3 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026, Leahy_2025
-- 6 source label(s) without a Bibcite: Wisnionski_2026, Hudson_2013, Lemoine_2026, Ghaderi_2025, Leahy_2025, Wascher_2025
+- 4 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026, AyalaBerdon_2025, Leahy_2025
+- 7 source label(s) without a Bibcite: Wisnionski_2026, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -23,6 +23,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 - Hudson_2013 (100 rows)
 - Lemoine_2026 (55 rows)
 - Leahy_2025 (53 rows)
+- AyalaBerdon_2025 (36 rows)
 
 ## Per-source coverage
 
@@ -34,6 +35,7 @@ One row per source label: species and record links (species x source x reference
 | AnAge | database | 2518 | 2524 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AndersonGillooly_2017 | compilation | 93 | 296 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| AyalaBerdon_2025 | compilation | 36 | 151 | 54.3 | 22 | 20 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
