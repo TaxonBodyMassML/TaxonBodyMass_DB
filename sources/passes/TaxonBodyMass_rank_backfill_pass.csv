@@ -99,11 +99,6 @@
 "Liophis_miliaris","Animalia","Chordata","Reptilia",NA,"Colubridae","Liophis miliaris",TRUE,"GBIF","Erythrolamprus","Erythrolamprus miliaris",98,"SYNONYM","Colubridae",NA,"8800580",NA
 "Waglerophis_merremi","Animalia","Chordata","Reptilia",NA,"Colubridae","Waglerophis merremi",TRUE,"GBIF","Xenodon","Xenodon merremii",98,"SYNONYM","Colubridae",NA,"2457416",NA
 "Altolamprologus_fasciatus","Animalia","Chordata",NA,"Perciformes","Cichlidae","Altolamprologus fasciatus",TRUE,"GBIF","Neolamprologus","Neolamprologus fasciatus",98,"SYNONYM","Cichlidae","Perciformes","12361416",NA
-"Anchoa_lyolepis","Animalia","Chordata",NA,"Clupeiformes","Engraulidae","Anchoa lyolepis",FALSE,"GBIF","Anchoa","Anchoa lyolepis",99,"ACCEPTED","Engraulidae","Clupeiformes","2413866",NA
 "Capoeta_erhani","Animalia","Chordata",NA,"Cypriniformes","Cyprinidae","Capoeta erhani",FALSE,"GBIF","Capoeta","Capoeta erhani",99,"ACCEPTED","Cyprinidae","Cypriniformes","2360428",NA
 "Capoeta_mandica","Animalia","Chordata",NA,"Cypriniformes","Cyprinidae","Capoeta mandica",FALSE,"GBIF","Capoeta","Capoeta mandica",99,"ACCEPTED","Cyprinidae","Cypriniformes","6166682",NA
-"Cetengraulis_mysticetus","Animalia","Chordata",NA,"Clupeiformes","Engraulidae","Cetengraulis mysticetus",FALSE,"GBIF","Cetengraulis","Cetengraulis mysticetus",99,"ACCEPTED","Engraulidae","Clupeiformes","2414048",NA
-"Corydoras_lacrimostigmata","Animalia","Chordata",NA,"Siluriformes","Callichthyidae","Corydoras lacrimostigmata",FALSE,"GBIF","Corydoras","Corydoras lacrimostigmata",99,"ACCEPTED","Callichthyidae","Siluriformes","8161736",NA
-"Corydoras_lymnades","Animalia","Chordata",NA,"Siluriformes","Callichthyidae","Corydoras lymnades",FALSE,"GBIF","Corydoras","Corydoras lymnades",99,"ACCEPTED","Callichthyidae","Siluriformes","8092588",NA
 "Hemigrammus_ocellifer","Animalia","Chordata",NA,"Characiformes","Characidae","Hemigrammus ocellifer",FALSE,"GBIF","Hemigrammus","Hemigrammus ocellifer",99,"ACCEPTED","Characidae","Characiformes","2354330",NA
-"Leiognathus_equulus","Animalia","Chordata",NA,"Perciformes","Leiognathidae","Leiognathus equulus",FALSE,"GBIF","Leiognathus","Leiognathus equulus",99,"ACCEPTED","Leiognathidae","Perciformes","5211415",NA
