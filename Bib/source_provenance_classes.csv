@@ -10,7 +10,7 @@ Brose_etal_2018,compilation,unknown,,"tier B; web-level attribution (#64, owner 
 Brown_etal_2018,compilation,compilation_terminal,,"tier E; Table 1 from McCoy & Gillooly 2008 Appendix S1 (now the source McCoy_2008), Table 2 untraceable"
 Cai_etal_2025,compilation,unknown,,"tier B; 106 Ref.BodyMass values, hand-built lookup; FishBase rows compilation_terminal"
 Castro_2025,compilation,unknown,,tier B; author-year keys -> Zenodo refs / Crossref reference[] of 10.1038/s41597-025-...
-Chown_etal_2007,compilation,unknown,,"tier A2; EndNote fields in fec1245_supmat.doc, numbered list 1-115"
+Chown_etal_2007,compilation,unknown,,"tier A2; Appendix S2 superscript numbers 1-115 and * (Chown lab, unpublished; self) -> references.csv parsed from fec1245_supmat.pdf (issue #63); Appendix S1 ants keyed S1 (self, owner decision 2026-10-04)"
 Cohen_2014,primary,measured_in_source,,tier F; own measurements
 DeLong_etal_2010,compilation,compilation_terminal,,tier D; group-level references to terminal compilations (Makarieva 2005/2008 for prokaryotes and protists)
 DeLong_etal_2018,compilation,unknown,,tier B; Source = FirstAuthor year JOURNAL -> bioRxiv JATS reflist; mass provenance only for Original rows
