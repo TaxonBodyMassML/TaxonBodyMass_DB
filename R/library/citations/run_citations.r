@@ -159,6 +159,7 @@ if (Flag('--bib')) {
   known_dois <- setNames(curated$doi, curated$key)
   known_ids  <- ids[, intersect(c('CiteID', 'Bibcite', 'doi'), names(ids))]
   entries <- character()
+  authorless <- character()
   acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
   # deterministic order: by DOI then source/key, so that keys do not depend on the run
   acc <- acc[order(is.na(all_prim$doi[acc]), all_prim$doi[acc], all_prim$source_label[acc], all_prim$native_key[acc], method = 'radix')]
@@ -167,7 +168,15 @@ if (Flag('--bib')) {
     if (!is.na(r$doi)) {
       w <- CrossrefWork(r$doi, cfg)
       if (is.null(w)) stop('no Crossref record for accepted DOI ', r$doi, ' (', r$source_label, ' ', r$native_key, ')')
-      fam <- if (length(w$author) > 0 && !is.null(w$author[[1]]$family)) w$author[[1]]$family else if (length(w$author) > 0) w$author[[1]]$name else 'Anon'
+      fam <- CrossrefFirstSurname(w)
+      # a record without any author name: the key is minted from the
+      # reference's parsed surname (a key, not bib text) and the author-less
+      # entry is reported for the owner (#64)
+      if (is.na(fam) || !nzchar(fam)) {
+        fam <- FirstOfAuthorList(r$parsed_author1)
+        if (is.na(fam) || !nzchar(fam)) fam <- 'Anon'
+        authorless <- c(authorless, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi))
+      }
       yr <- CrossrefYear(w)
       key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
              else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]))
@@ -205,6 +214,9 @@ if (Flag('--bib')) {
     WritePrimaryReferences(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))
   }
   prim <- all_prim[all_prim$source_label == src, ]
+  if (length(authorless) > 0)
+    Note('--bib: %d accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): %s',
+         length(authorless), paste(authorless, collapse = '; '))
   Note('--bib: %d entries written to %s (%d reuse a curated key); RefManageR parsed %s; %s: %d rows with bibcite',
        length(entries), basename(cfg$primary_bib),
        sum(all_prim$bibcite[acc] %in% curated$key), if (is.na(n_parsed)) 'n/a' else n_parsed, src, sum(!is.na(prim$bibcite)))
