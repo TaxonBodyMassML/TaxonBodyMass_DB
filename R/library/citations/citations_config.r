@@ -223,8 +223,12 @@ reflist_specs <- list(
   Herberstein_etal_2022 = list(format = 'inrow', file = 'observations.csv',
                                citation_col = 'fullReference', compiler = 'Herberstein'),
   Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda'),
-  # Appendix S2 superscript numbers 1-115 and the asterisk of the unpublished rows,
-  # resolved in references.csv written by parse_chown_supmat.py from the supplement PDF
+  Hudson_2013  = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Hudson'),
+  # Appendix S2 superscript numbers 1-115, the asterisk of the unpublished rows and
+  # the key S1 of the Appendix S1 ants, resolved in references.csv written by
+  # parse_chown_supmat.py from the supplement PDF
   Chown_etal_2007 = list(format = 'csv', file = 'references.csv',
                          key_col = 'key', citation_col = 'raw_citation', sep = ';',
                          compiler = 'Chown')

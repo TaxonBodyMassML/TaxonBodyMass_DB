@@ -138,6 +138,27 @@ Expect(Field(al, 'author') == 'Ikeda and Hirakawa and Imamura' && startsWith(al,
 Expect(FirstOfAuthorList('Ikeda and Hirakawa and Imamura') == 'Ikeda' && FirstOfAuthorList('Kremer') == 'Kremer' && FirstOfAuthorList('Doe, J. and Roe, R.') == 'Doe' && is.na(FirstOfAuthorList(NA)),
        'FirstOfAuthorList() gives the first surname of an author field for keys and CiteIDs')
 
+cat('MatchingNoDOIEntry()\n')
+NoDOIRow <- function(source_label, native_key, author1, year, title, bibcite = NA_character_, status = 'nodoi_approved')
+  data.frame(source_label = source_label, native_key = native_key, parsed_author1 = author1, parsed_year = year,
+             parsed_title = title, bibcite = bibcite, match_status = status, decided_by = 'owner', decided_at = '2026-10-04',
+             parsed_container = 'Plankton Biology and Ecology', parsed_volume = '45', parsed_pages = '31-44', stringsAsFactors = FALSE)
+pri <- rbind(NoDOIRow('Kiorboe_2013', '7', 'Ikeda and Hirakawa and Imamura', 1998L,
+                      'Metabolism and body composition of zooplankton in the cold mesopelagic zone of the southern Japan Sea', 'Ikeda:1998aa'),
+             NoDOIRow('Kiorboe_2013', '9', 'Kremer', 1976L, 'The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay', 'Kremer:1976aa'),
+             NoDOIRow('Hebert_etal_2016', '74', 'Ikeda', 1998L,
+                      'Metabolism and body composition of zooplankton in the cold mesopelagic zone of the southern Japan Sea.'))
+tw <- MatchingNoDOIEntry(pri[3, ], pri)
+Expect(!is.null(tw) && tw$bibcite == 'Ikeda:1998aa' && tw$source_label == 'Kiorboe_2013',
+       'the same first surname, year and normalised title (author list vs surname, trailing period) reuses the other source\'s key')
+Expect(is.null(MatchingNoDOIEntry(NoDOIRow('Hebert_etal_2016', '69', 'Ikeda', 1974L, 'Nutritional ecology of marine zooplankton'), pri)),
+       'a different title gets no match (a new key is minted)')
+Expect(is.null(MatchingNoDOIEntry(NoDOIRow('Hebert_etal_2016', '74', 'Ikeda', 1999L, pri$parsed_title[1]), pri)),
+       'a different year gets no match')
+Expect(is.null(MatchingNoDOIEntry(pri[1, ], pri)), 'a row never matches itself')
+pri2 <- pri; pri2$match_status[1] <- 'pending'; pri2$bibcite[1] <- NA
+Expect(is.null(MatchingNoDOIEntry(pri2[3, ], pri2)), 'only nodoi_approved rows with a bibcite are reused')
+
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')
 pb <- tempfile(fileext = '.bib')

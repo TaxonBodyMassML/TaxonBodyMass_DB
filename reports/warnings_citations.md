@@ -1,59 +1,22 @@
-# Citation and provenance warnings -- 2026-10-04 18:21:15
+# Citation and provenance warnings -- 2026-10-04 18:47:47
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 120984 (38566 species); distinct primary CiteIDs: 31; unresolved references (pending / not_found): 2; unverified references: 110
+- provenance rows: 121160 (38566 species); distinct primary CiteIDs: 58; unresolved references (pending / not_found): 13; unverified references: 0
 
 ## Problems
 
-(none)
+- 1 source label(s) without a Bibcite: Hudson_2013
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: Lynch_1980 -> Lynch:1980aa
-- BM_primary_citations: Dumont_1975 -> Dumont:1975aa
-- BM_primary_citations: Vuille_1991 -> Vuille:1991aa
-- BM_primary_citations: Green_1977 -> Green:1977aa
-- BM_primary_citations: Comita_1968 -> Comita:1968aa
-- BM_primary_citations: Kibby_1971 -> Kibby:1971aa
-- BM_primary_citations: Richman_1964 -> Richman:1964aa
-- BM_primary_citations: Roff_1973 -> Roff:1973aa
-- BM_primary_citations: Laybourn-Parry_1980 -> Laybourn-Parry:1980aa
-- BM_primary_citations: GOPHEN_1976 -> GOPHEN:1976aa
-- BM_primary_citations: Obreshkove_1930 -> Obreshkove:1930aa
-- BM_primary_citations: Goss_1980 -> Goss:1980aa
-- BM_primary_citations: Richman_1958 -> Richman:1958aa
-- BM_primary_citations: Kersting_1976 -> Kersting:1976aa
-- BM_primary_citations: Schindler_1968 -> Schindler:1968aa
-- BM_primary_citations: Lehman_1980 -> Lehman:1980aa
-- BM_primary_citations: Peters_1973 -> Peters:1973aa
-- BM_primary_citations: Rigler_1961 -> Rigler:1961aa
-- BM_primary_citations: Bowers_1986 -> Bowers:1986aa
-- BM_primary_citations: Gardner_1981 -> Gardner:1981aa
-- BM_primary_citations: Jacobsen_1976 -> Jacobsen:1976aa
-- BM_primary_citations: GANF_1974 -> GANF:1974aa
-- BM_primary_citations: Walve_1999 -> Walve:1999aa
-- BM_primary_citations: Whittaker_1961 -> Whittaker:1961aa
-- BM_primary_citations: Ikeda_1982b -> Ikeda:1982ab
-- BM_primary_citations: Ikeda_1982 -> Ikeda:1982aa
-- BM_primary_citations: Ikeda_2001 -> Ikeda:2001aa
-- BM_primary_citations: Ikeda_2006 -> Ikeda:2006aa
-- BM_primary_citations: Quetin_1980 -> Quetin:1980aa
-- BM_primary_citations: Bamstedt_1984 -> Bamstedt:1984aa
-- BM_primary_citations: Bamstedt_1977 -> Bamstedt:1977aa
-- BM_primary_citations: Gaudy_1983 -> Gaudy:1983aa
-- BM_primary_citations: Ikeda_1977 -> Ikeda:1977aa
-- BM_primary_citations: Anraku_1964 -> Anraku:1964aa
-- BM_primary_citations: Conover_1968 -> Conover:1968aa
-- BM_primary_citations: Dagg_1982 -> Dagg:1982aa
-- BM_primary_citations: Mayzaud_1976 -> Mayzaud:1976aa
-- BM_primary_citations: Cass_2011 -> Cass:2011aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
-(none)
+- Hudson_2013 (100 rows)
 
 ## Per-source coverage
 
@@ -72,7 +35,7 @@ One row per source label: species and record links (species x source x reference
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Chown_etal_2007 | compilation | 268 | 510 | 0 | 111 | 0 | 0 | 0 | 1 | 0 | 110 | 0 | 0 |
+| Chown_etal_2007 | compilation | 268 | 510 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 310 | 386 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2018 | compilation | 135 | 439 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 442 | 2246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -84,13 +47,14 @@ One row per source label: species and record links (species x source x reference
 | GalanAcedo_etal_2026 | compilation | 410 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Gillooly_etal_2016 | compilation | 71 | 75 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hebert_etal_2016 | compilation | 133 | 594 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 6 | 0 | 0 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 128 | 247 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Herberstein_etal_2022 | compilation | 1525 | 2390 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 342 | 454 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hishi_etal_2019 | derived | 314 | 318 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1671 | 3768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hudson_2013 | compilation | 100 | 1163 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1163 |
 | Ikeda_2014 | compilation | 298 | 591 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 591 |
 | Jennings_2002 | primary | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3286 | 3304 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
