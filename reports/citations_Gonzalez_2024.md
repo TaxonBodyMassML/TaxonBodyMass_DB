@@ -1,10 +1,7 @@
-# Citations of Gonzalez_2024 -- 2026-10-04 21:10:17 (tbmcite 0.1.0)
+# Citations of Gonzalez_2024 -- 2026-10-04 21:15:43 (tbmcite 0.1.0)
 
-Steps: --init --verify
+Steps: --verify
 
-- --init: 3576 records, 3576 with ref_keys (0.0% NA); 50 native keys -> primary_references.csv
-- --init: 61 reference(s) of the list cited by no record: Borer_database, Cross et al. 2003, DAAC_ORNL_database, Dierenfeld et al. 2015, Drescher et al. 2016, El-Sabawi et al. 2012, El-Sabawi et al. 2016, Elser_database, Frost et al. 2003, Gong et al. 2018, Gonzalez et al. 2018, Huang et al. 2012, Ikeda_database, Jochum et al. 2016, Klarner et al. 2014, Klarner et al. 2017, Korotkevich et al. 2018, Lessard-Pilon, S, PB McIntyre, AS Flecker & SA Thomas, unpubl, Li et al. 2020, Milanovich & Hopton 2014, and unpubl, Milanovich, JR & JC Maerz, unpubl, Milanovitch_2007, Milanovitch_2008, Moody et al. 2017, Mozsar et al. 2019, PANGEA_database, Pollierer et al. 2009, Potapov et al. 2016, Prater et al. 2019, Rugenski 2013, Scheunemann et al. 2010, Scheunemann et al. 2015, Scheunemann et al. 2016, Seeber et al. 2005, Seeber et al. 2009, Small & Pringle 2010, Sulivan et al. 2014, Urabe 1993, Vanni, MJ unpubl, Vanni_database, Zhang & Han 2010, unpublished - Alfaro, unpublished - Doi, unpublished - Fariña, unpublished - Farjalla, unpublished - Harrower, unpublished - Hood, unpublished - Jackson, unpublished - Korotkevich / Tiunov, unpublished - Kratina, unpublished - Potapov, unpublished - Potapov / Scheu, unpublished - Romero, unpublished - Rosanova, unpublished - Rosanova / Tiunov, unpublished - Roussel, unpublished - Rugenski, unpublished - Scheunemann / Potapov, unpublished - Susanti / Potapov, unpublished - Vanyavina / Potapov XIV Congress Russian Entomo Society, unpublished - Zandona
-- --init: 13 self reference(s): unpublished - Filipiak, unpublished - González, unpublished - Leroux, unpublished - Lutz / González, unpublished - Moody, unpublished - Paseka, unpublished - Paseka / Grunberg, unpublished - Semenina / Tiunov, unpublished - Semenyuk, Abstract book by Tajovsky, unpublished - Thomisch / Eisenhauer / Scheu, bachelor thesis, unpublished - Tiunov, unpublished - Zenkova / Rosanova / Tiunov, unpublished - Zryanin / Tiunov
 - --verify: compilation DOI none; 0 deposited references (0 with DOI)
 - status counts: certain 22, pending 3, not_found 12, self 13
 
