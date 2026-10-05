@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-04 19:42:54
+# Citation and provenance warnings -- 2026-10-04 19:52:24
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121328 (38566 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 14; unverified references: 0
+- provenance rows: 124652 (38422 species); distinct primary CiteIDs: 239; unresolved references (pending / not_found): 14; unverified references: 67
 
 ## Problems
 
@@ -94,11 +94,11 @@ One row per source label: species and record links (species x source x reference
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 194 | 984 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 8905 | 8964 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12218 | 12287 | 0 | 67 | 0 | 0 | 0 | 0 | 0 | 67 | 0 | 0 |
 | fishbase | live | 2069 | 2899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 298 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 124 | 729 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-aves-sept2016 | live | 5646 | 79442 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-aves-sept2016 | live | 5647 | 79443 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-fishes-sept2016 | live | 108 | 246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-mammalia-sept2016 | live | 707 | 9059 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-reptilia-sept2016 | live | 243 | 1334 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

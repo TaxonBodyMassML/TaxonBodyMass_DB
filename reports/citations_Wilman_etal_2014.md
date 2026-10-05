@@ -1,6 +1,6 @@
-# Citations of Wilman_etal_2014 -- 2026-10-04 19:32:51 (tbmcite 0.1.0)
+# Citations of Wilman_etal_2014 -- 2026-10-04 19:50:21 (tbmcite 0.1.0)
 
-Steps: --init
+Steps: --init --offline
 
 - --init: 12673 records, 12673 with ref_keys (0.0% NA); 67 native keys -> primary_references.csv
 - --init: 118 reference(s) of the list cited by no record: Ref_1, Ref_2, Ref_3, Ref_4, Ref_5, Ref_6, Ref_7, Ref_8, Ref_9, Ref_10, Ref_11, Ref_12, Ref_13, Ref_14, Ref_15, Ref_16, Ref_17, Ref_18, Ref_19, Ref_20, Ref_21, Ref_22, Ref_23, Ref_24, Ref_25, Ref_26, Ref_27, Ref_28, Ref_29, Ref_30, Ref_31, Ref_32, Ref_33, Ref_34, Ref_35, Ref_36, Ref_37, Ref_38, Ref_39, Ref_40, Ref_41, Ref_42, Ref_43, Ref_44, Ref_45, Ref_46, Ref_47, Ref_48, Ref_49, Ref_50, Ref_51, Ref_52, Ref_53, Ref_54, Ref_55, Ref_56, Ref_57, Ref_59, Ref_60, Ref_61, Ref_62, Ref_63, Ref_64, Ref_65, Ref_66, Ref_67, Ref_68, Ref_69, Ref_70, Ref_71, Ref_72, Ref_73, Ref_74, Ref_75, Ref_76, Ref_77, Ref_78, Ref_79, Ref_80, Ref_81, Ref_82, Ref_83, Ref_84, Ref_85, Ref_86, Ref_87, Ref_88, Ref_89, Ref_90, Ref_91, Ref_92, Ref_93, Ref_94, Ref_95, Ref_96, Ref_97, Ref_98, Ref_99, Ref_100, Ref_101, Ref_102, Ref_103, Ref_104, Ref_105, Ref_106, Ref_107, Ref_108, Ref_109, Ref_110, Ref_111, Ref_112, Ref_113, Ref_114, Ref_115, Ref_116, Ref_124, Ref_178, PrimScale
@@ -9,8 +9,8 @@ Steps: --init
 
 | native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| Ref_58 | 486 | measurement |  |  |  |  |  |  |
-| Ref_117 | 3415 | measurement |  |  |  |  |  |  |
+| Ref_58 | 486 | compilation |  |  |  |  |  |  |
+| Ref_117 | 3415 | compilation |  |  |  |  |  |  |
 | Ref_118 | 7 | measurement |  |  |  |  |  |  |
 | Ref_119 | 1 | measurement |  |  |  |  |  |  |
 | Ref_120 | 1 | measurement |  |  |  |  |  |  |
@@ -68,11 +68,11 @@ Steps: --init
 | Ref_175 | 1 | measurement |  |  |  |  |  |  |
 | Ref_176 | 1 | measurement |  |  |  |  |  |  |
 | Ref_177 | 1 | measurement |  |  |  |  |  |  |
-| Dunning08 | 8620 | measurement |  |  |  |  |  |  |
-| HBW8 | 1 | measurement |  |  |  |  |  |  |
-| HBW10 | 1 | measurement |  |  |  |  |  |  |
-| HBW11 | 4 | measurement |  |  |  |  |  |  |
-| HBW12 | 1 | measurement |  |  |  |  |  |  |
-| HBW13 | 1 | measurement |  |  |  |  |  |  |
-| HBW15 | 1 | measurement |  |  |  |  |  |  |
+| Dunning08 | 8620 | compilation |  |  |  |  |  |  |
+| HBW8 | 1 | compilation |  |  |  |  |  |  |
+| HBW10 | 1 | compilation |  |  |  |  |  |  |
+| HBW11 | 4 | compilation |  |  |  |  |  |  |
+| HBW12 | 1 | compilation |  |  |  |  |  |  |
+| HBW13 | 1 | compilation |  |  |  |  |  |  |
+| HBW15 | 1 | compilation |  |  |  |  |  |  |
 | Other | 3 | measurement |  |  |  |  |  |  |
