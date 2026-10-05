@@ -109,12 +109,13 @@ CollapseByDOI <- function(scored) {
 DecideMatch <- function(ref, doi_cands = NULL, open_cands = NULL, closed_cands = NULL, scite = NULL,
                         th = citations_thresholds, services = 'crossref;openalex') {
   d <- DecideMatchWith(ref, doi_cands, open_cands, closed_cands, scite, th, services)
-  # Without OpenAlex (its daily budget refused the session, verify_services.r)
-  # a decision that rests on the services' agreement or on their joint
-  # retraction flags is provisional: it stays pending with the Crossref
-  # candidates attached, is not queued for the owner, and is re-verified by
-  # the next --verify. Owner matters (a disagreeing source DOI, grey
-  # literature, a notice, a self reference) are decided as usual.
+  # A decision reached while OpenAlex was known to be unavailable (`services`
+  # without it; an exhausted quota normally leaves the reference unverified
+  # instead, VerifyPrimaryReferences()) is provisional when it rests on the
+  # services' agreement or their joint retraction flags: it stays pending with
+  # the Crossref candidates attached, is not queued for the owner, and is
+  # re-verified by the next --verify. Owner matters (a disagreeing source DOI,
+  # grey literature, a notice, a self reference) are decided as usual.
   provisional <- c('doi_resolves', 'two_service_agreement', 'closed_world', 'single_service',
                    'ambiguous', 'weak_match', 'below_threshold', 'no_candidates')
   if (!'openalex' %in% strsplit(services, ';', fixed = TRUE)[[1]] && d$match_reason %in% provisional) {
@@ -177,8 +178,7 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
     w  <- CrossrefWork(ref$raw_doi, cfg)
     cr <- if (is.null(w)) EmptyCandidates() else NormaliseCrossrefItem(w)
     oa <- OpenAlexWork(ref$raw_doi, cfg)
-    return(DecideMatch(ref, doi_cands = rbind(cr, if (is.null(oa)) EmptyCandidates() else oa), scite = scite,
-                       services = ServicesAvailable()))
+    return(DecideMatch(ref, doi_cands = rbind(cr, if (is.null(oa)) EmptyCandidates() else oa), scite = scite))
   }
   query <- if (!is.na(ref$parsed_title)) paste(na.omit(c(ref$parsed_author1, ref$parsed_year, ref$parsed_title,
                                                            ref$parsed_container, ref$parsed_volume, ref$parsed_pages)), collapse = ' ')
@@ -200,7 +200,7 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
       if (!'crossref' %in% have) { w <- CrossrefWork(top, cfg); if (!is.null(w)) cr <- rbind(cr, NormaliseCrossrefItem(w)) }
     }
   }
-  DecideMatch(ref, open_cands = rbind(cr, oa), closed_cands = closed, scite = scite, services = ServicesAvailable())
+  DecideMatch(ref, open_cands = rbind(cr, oa), closed_cands = closed, scite = scite)
 }
 
 # Decision fields into a primary_references row.
@@ -216,8 +216,11 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # Verify every row of `prim` whose status is not final (NA, pending, not_found;
 # certain is re-verified only with force = TRUE; approved, nodoi_approved,
 # rejected and self are never touched). Rows without a raw_citation (a key the
-# reference list lacks) are skipped. Returns list(prim, candidates), the latter
-# a list of scored candidate frames keyed by native_key for WritePendingQueue().
+# reference list lacks) are skipped. Returns list(prim, candidates, skipped,
+# quota): the candidates are scored candidate frames keyed by native_key for
+# WritePendingQueue(); `skipped` names the references a spent service quota
+# (CachedGET()'s 'citations_quota' condition) left unverified and `quota` the
+# condition's message.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
                                     progress = interactive()) {
@@ -225,8 +228,17 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
           (force & prim$match_status == 'certain')
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
   cands <- list()
+  skipped <- character(0); quota <- NULL
   for (i in which(todo)) {
-    d <- VerifyReference(prim[i, ], cfg, reflist, scite)
+    d <- tryCatch(VerifyReference(prim[i, ], cfg, reflist, scite), citations_quota = function(e) e)
+    if (inherits(d, 'citations_quota')) {
+      # a service's quota is spent: the row keeps its previous status (NA for a
+      # new reference) and is reported; the cached responses of the other
+      # service are kept for the re-run
+      skipped <- c(skipped, prim$native_key[i]); quota <- conditionMessage(d)
+      if (progress) cat(sprintf('  %s: left unverified (quota of %s)\n', prim$native_key[i], d$host))
+      next
+    }
     # a reference the list (or the owner) marked for review is never
     # auto-accepted: it is queued with its candidates (citations_config.r)
     if (!is.na(prim$owner_review[i]) && (d$match_status == 'certain' || d$match_reason %in% 'service_unavailable')) {
@@ -239,7 +251,7 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota)
 }
 
 # The screening file is applied to every row with a DOI whatever its status:

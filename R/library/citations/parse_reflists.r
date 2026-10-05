@@ -128,9 +128,13 @@ ExpandSameAuthorMarkers <- function(citations) {
 # Full-text citations carried by every record (Herberstein, Faurby, Pekar, ...):
 # the distinct strings become references keyed by 'h:<sha1-8>' of the normalised
 # string; `dois` (optional, same length) supplies raw_doi, else a DOI embedded in
-# the text is used. Returns native_key, raw_citation, raw_doi, n_records and the
-# per-record key vector (`keys`) for the parse script.
-ParseInRowCitations <- function(citations, dois = NULL) {
+# the text is used; `labels` (optional, same length) is the record's short
+# in-text form of the citation ('Chown et al., 2007'), kept as the reference's
+# `note` ('in-text: ...') so that the hash key stays readable in
+# primary_references.csv (owner decision 2026-10-04). Returns native_key,
+# raw_citation, raw_doi, n_records[, note] and the per-record key vector
+# (`keys`) for the parse script.
+ParseInRowCitations <- function(citations, dois = NULL, labels = NULL) {
   citations <- trimws(as.character(citations))
   citations[!is.na(citations) & !nzchar(citations)] <- NA_character_
   keys <- CitationHashKey(citations)
@@ -142,6 +146,11 @@ ParseInRowCitations <- function(citations, dois = NULL) {
   refs <- data.frame(native_key = keys[first], raw_citation = citations[first],
                      raw_doi = dois[first], n_records = as.integer(tab[keys[first]]),
                      stringsAsFactors = FALSE)
+  if (!is.null(labels)) {
+    stopifnot(length(labels) == length(citations))
+    lab <- trimws(as.character(labels))[first]
+    refs$note <- ifelse(is.na(lab) | !nzchar(lab), NA_character_, paste0('in-text: ', lab))
+  }
   refs <- refs[order(refs$native_key, method = 'radix'), ]
   rownames(refs) <- NULL
   list(references = refs, keys = keys)

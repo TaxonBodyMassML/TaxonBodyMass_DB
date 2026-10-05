@@ -79,7 +79,8 @@ if (Flag('--init')) {
     inrow = {
       raw <- read.csv(file.path(cfg$wd_db, folder, spec$file), stringsAsFactors = FALSE, check.names = FALSE,
                       colClasses = 'character', encoding = 'UTF-8')
-      ParseInRowCitations(raw[[spec$citation_col]], if (is.null(spec$doi_col)) NULL else raw[[spec$doi_col]])$references
+      ParseInRowCitations(raw[[spec$citation_col]], if (is.null(spec$doi_col)) NULL else raw[[spec$doi_col]],
+                          labels = if (is.null(spec$intext_col)) NULL else raw[[spec$intext_col]])$references
     },
     stop('--init for format ', spec$format, ' is not implemented yet'))
   skeleton <- InitPrimaryReferences(src, reflist, frame$ref_keys, compiler = spec$compiler)
@@ -123,11 +124,10 @@ if (Flag('--verify') || Flag('--queue')) {
   res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE)
   prim <- res$prim; candidates <- res$candidates
   WritePrimaryReferences(prim, prim_path)
+  if (length(res$skipped) > 0)
+    Note('--verify: %d reference(s) left unverified -- %s: %s', length(res$skipped), res$quota, paste(res$skipped, collapse = ', '))
   tab <- table(factor(prim$match_status, levels = c(match_statuses, NA)), useNA = 'ifany')
   Note('status counts: %s', paste(sprintf('%s %d', ifelse(is.na(names(tab)), 'unverified', names(tab)), tab)[tab > 0], collapse = ', '))
-  if (ServiceDown('api.openalex.org'))
-    Note('OpenAlex refused the session (%s); %d reference(s) are pending / service_unavailable and are not queued: re-run --verify after the budget resets (midnight UTC) or with OPENALEX_API_KEY set',
-         ServiceDownMessage('api.openalex.org'), sum(prim$match_reason %in% 'service_unavailable'))
 }
 if (Flag('--queue')) {
   queue <- WritePendingQueue(prim, candidates, cfg$pending_csv)

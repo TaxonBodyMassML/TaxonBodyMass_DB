@@ -55,7 +55,8 @@ sheet_tab_primary    <- 'BM_primary_citations'
 # address: CROSSREF_MAILTO / OPENALEX_MAILTO from the environment, falling back
 # to the git user.email of the repository (the main checkout and its worktrees
 # share one config). Stops when neither is set, so that no anonymous request
-# is ever sent.
+# is ever sent. OPENALEX_API_KEY, when set, is sent with every OpenAlex request
+# (CitationsConfig(); the free pool is 1,000 requests a day without one).
 CitationsMailto <- function(service = c('crossref', 'openalex'), wd_root = NULL) {
   service <- match.arg(service)
   var  <- if (service == 'crossref') 'CROSSREF_MAILTO' else 'OPENALEX_MAILTO'
@@ -78,11 +79,13 @@ CitationsUserAgent <- function(mailto) {
 }
 
 # Requests per second to each service (polite pools allow more; one per second
-# keeps a whole source's verification well under any limit), the per-request
-# timeout in seconds (a dropped connection is retried like a 5xx) and the retry
-# policy for 429 and 5xx responses; a 429 whose Retry-After exceeds
-# max_retry_after_s is a refused budget, not a burst (verify_services.r).
-citations_network <- list(rate_per_s = 1, max_tries = 4L, timeout_s = 60, max_retry_after_s = 120,
+# keeps a whole source's verification well under any limit) and the retry policy
+# for 429 and 5xx responses: at most `max_tries` attempts within
+# `max_retry_seconds` (a Retry-After beyond that, OpenAlex's day-long one when
+# its 1,000-requests-a-day quota is spent, is not waited for: the response is
+# treated as an exhausted quota, verify_services.r QuotaCondition()); a request
+# times out after `timeout_s` seconds and a dropped connection is retried like a 5xx.
+citations_network <- list(rate_per_s = 1, max_tries = 4L, max_retry_seconds = 30, timeout_s = 60,
                           transient_status = c(429L, 500L, 502L, 503L, 504L),
                           crossref_rows = 5L, openalex_per_page = 5L,
                           crossref_api = 'https://api.crossref.org/works',
@@ -215,8 +218,10 @@ sheet_primary_columns <- c('CiteID', 'Bibcite', 'Citation', 'DOI', 'Role', 'Adde
 # ---- per-source reference lists ------------------------------------------------
 # Where a source's reference list is and how its native keys join the records'
 # `ref_keys` (parse_reflists.r). `format` selects the parser: csv (a two-column
-# key/citation file), inrow (the citation text sits in every record), or one of
-# the formats of later tiers (xlsx, bib, docx, pdf, html, endnote_doc). `sep` is
+# key/citation file), inrow (the citation text sits in every record:
+# `citation_col`, an optional `doi_col`, and `intext_col`, the short in-text
+# form kept as the reference's note), or one of the formats of later tiers
+# (xlsx, bib, docx, pdf, html, endnote_doc). `sep` is
 # the regular expression the parse script passed to SplitRefKeys(). The
 # compilation's own DOI (for CandidatesFromCompilationReflist()) is read from the
 # curated bib through the label's Bibcite unless `compilation_doi` is given.
@@ -238,7 +243,8 @@ reflist_specs <- list(
                           citation_cols = c('Authors', 'Year', 'Title', 'Journal.Book'),
                           type_col = 'Pub.type', sep = ',', compiler = 'Hebert'),
   Herberstein_etal_2022 = list(format = 'inrow', file = 'observations.csv',
-                               citation_col = 'fullReference', compiler = 'Herberstein'),
+                               citation_col = 'fullReference', intext_col = 'inTextReference',
+                               compiler = 'Herberstein'),
   Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda'),
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',

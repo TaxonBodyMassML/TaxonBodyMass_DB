@@ -280,7 +280,7 @@ Expect(Has(ErrorOf(ApplyQueueDecisions(Q('9', 'nodoi:year=1976'), base)), 'a yea
        'a year override on nodoi / self / drop stops')
 Expect(identical(ApplyQueueDecisions(Q('6', NA), base), base) && identical(ApplyQueueDecisions(Q('6', '  '), base), base), 'rows without a decision change nothing')
 
-cat('DecideMatch() without OpenAlex (service_unavailable), ServicesAvailable(), WritePendingQueue() skip\n')
+cat('DecideMatch() without OpenAlex (service_unavailable), WritePendingQueue() skip\n')
 d <- DecideMatch(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(), services = 'crossref')
 Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable' && d$doi == '10.1/thing' && d$services == 'crossref',
        'a resolving source DOI without OpenAlex: pending / service_unavailable, the Crossref candidate kept')
@@ -295,13 +295,6 @@ Expect(d$match_status == 'pending' && d$match_reason == 'doi_mismatch', 'a disag
 d <- DecideMatch(Ref(raw_citation = 'Doe, J. 2001. Unpublished thesis.'), open_cands = Cand(title = 'Completely different title'), services = 'crossref')
 Expect(d$match_status == 'pending' && d$match_reason == 'grey_literature', 'grey literature is still grey_literature without OpenAlex (owner matter)')
 Expect(DecideMatch(Ref(role = 'self'), services = 'crossref')$match_status == 'self', 'a self reference is self without OpenAlex')
-Expect(ServicesAvailable() == 'crossref;openalex', 'both services available before any refusal')
-MarkServiceDown('api.openalex.org', 'HTTP 429 (test)')
-Expect(ServiceDown('api.openalex.org') && ServicesAvailable() == 'crossref' && is.null(OpenAlexWork('10.9999/not-cached', cfg)) &&
-         nrow(OpenAlexQuery('Some title nobody cached', 2001L, cfg)) == 0,
-       'once OpenAlex refused the session: ServicesAvailable() is crossref, OpenAlexWork() NULL and OpenAlexQuery() empty without a network call')
-rm('api.openalex.org', envir = .citations_service_down)
-Expect(!ServiceDown('api.openalex.org'), 'the service-down mark can be cleared')
 p2 <- EmptyPrimaryReferences()
 p2[1:2, 'native_key'] <- c('u', 'g'); p2$source_label <- 'SrcU'; p2$raw_citation <- c('Doe 2001', 'Roe 1999 thesis'); p2$n_records <- 1L
 p2$match_status <- 'pending'; p2$match_reason <- c('service_unavailable', 'grey_literature'); p2$editorial_notice <- NA_character_
