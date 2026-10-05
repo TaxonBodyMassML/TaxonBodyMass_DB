@@ -1,8 +1,8 @@
-# Citations of Wascher_2025 -- 2026-10-04 22:09:06 (tbmcite 0.1.0)
+# Citations of Wascher_2025 -- 2026-10-04 22:23:46 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --bib
 
-- --sheet: 4 row(s) for Wascher_2025, 4 new, tab had 391 rows; BM_citations snapshotted (430 rows)
+- --bib: 390 entries written to TaxonBodyMass_PrimaryCitations.bib (5 reuse a curated key); RefManageR parsed 390; Wascher_2025: 4 rows with bibcite
 
 ## References
 
