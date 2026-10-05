@@ -42,8 +42,31 @@ ReadBibEntries <- function(path) {
 # ---- keys -------------------------------------------------------------------------------
 # The surname part of a key: diacritics folded, blanks to '-', anything but
 # letters, digits and '-' removed ('Menden-Deuer', 'van-der-Meer', 'Kiorboe').
+# A surname as the services deliver it, made fit for a key: leading initials
+# that a publisher folded into the family name ('A. Piechnik' -> 'Piechnik') are
+# dropped and an all-capitals surname ('MULDER') is written in title case; mixed
+# case ('McLaughlin', "O'Gorman", 'van der Meer') is left alone (#64).
+NormaliseSurname <- function(surname) {
+  s <- trimws(as.character(surname))
+  s <- sub('^(?:[A-Z]\\.\\s*)+(?=\\S)', '', s, perl = TRUE)
+  caps <- !is.na(s) & nchar(s) > 1 & s == toupper(s) & grepl('[A-Z]', s)
+  s[caps] <- gsub('(^|[\\s-])([A-Z])([A-Z]*)', '\\1\\2\\L\\3', s[caps], perl = TRUE)
+  s
+}
+
+# The first author of a Crossref record that carries a name (a university
+# thesis record may list a nameless contributor first), as the surname for key
+# minting; NA when no author has one.
+CrossrefFirstSurname <- function(work) {
+  for (a in work[['author']]) {
+    if (!is.null(a[['family']]) && nzchar(a[['family']])) return(a[['family']])
+    if (!is.null(a[['name']]) && nzchar(a[['name']])) return(a[['name']])
+  }
+  NA_character_
+}
+
 FoldSurnameForKey <- function(surname) {
-  s <- FoldASCII(trimws(surname))
+  s <- FoldASCII(NormaliseSurname(surname))
   s <- gsub('\\s+', '-', s)
   s <- gsub('[^A-Za-z0-9-]', '', s)
   s

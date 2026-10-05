@@ -1,2 +1,6 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Lasiurus_frantzii","Animalia","Chordata","Mammalia","Chiroptera","Vespertilionidae","Lasiurus frantzii",FALSE,"GBIF","Lasiurus","Lasiurus frantzii",99,"ACCEPTED","Vespertilionidae","Chiroptera","11202631"
+"Callithrix_saterei","Animalia","Chordata","Mammalia","Primates","Callitrichidae","Callithrix saterei",TRUE,"GBIF","Mico","Mico saterei",98,"SYNONYM","Callitrichidae","Primates","5707296"
+"Leimacomys_buttneri","Animalia","Chordata","Mammalia","Rodentia","Muridae","Leimacomys buttneri",TRUE,"GBIF","Leimacomys","Leimacomys buettneri",98,"SYNONYM","Muridae","Rodentia","4264854"
+"Orthogeomys_matagalpae","Animalia","Chordata","Mammalia","Rodentia","Geomyidae","Orthogeomys matagalpae",FALSE,"GBIF","Orthogeomys","Orthogeomys matagalpae",99,"ACCEPTED","Geomyidae","Rodentia","2439405"
+"Orthogeomys_thaeleri","Animalia","Chordata","Mammalia","Rodentia","Geomyidae","Orthogeomys thaeleri",FALSE,"GBIF","Orthogeomys","Orthogeomys thaeleri",99,"ACCEPTED","Geomyidae","Rodentia","2439409"
+"Pygeretmus_shitkovi","Animalia","Chordata","Mammalia","Rodentia","Dipodidae","Pygeretmus shitkovi",FALSE,"GBIF","Pygeretmus","Pygeretmus shitkovi",99,"ACCEPTED","Dipodidae","Rodentia","2439435"

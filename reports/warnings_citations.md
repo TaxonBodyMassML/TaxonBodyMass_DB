@@ -1,51 +1,22 @@
-# Citation and provenance warnings -- 2026-10-04 21:11:49
+# Citation and provenance warnings -- 2026-10-04 21:39:55
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 121418 (38567 species); distinct primary CiteIDs: 314; unresolved references (pending / not_found): 14; unverified references: 1
+- provenance rows: 125016 (38422 species); distinct primary CiteIDs: 376; unresolved references (pending / not_found): 31; unverified references: 0
 
 ## Problems
 
-- 1 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): AyalaBerdon_2025
-- 2 source label(s) without a Bibcite: Hudson_2013, AyalaBerdon_2025
-- 17 accepted reference(s) without a bib entry (run --bib): AyalaBerdon_2025 Ayala-Berdon and Medina-Bello 2024, AyalaBerdon_2025 Ayala-Berdon et al. 2025, AyalaBerdon_2025 Baudinette et al. 2000, AyalaBerdon_2025 Becker et al. 2013, AyalaBerdon_2025 Currie et al. 2015, AyalaBerdon_2025 Dixon and Rose 2003, AyalaBerdon_2025 Geiser and Brigham 2000, AyalaBerdon_2025 Genoud 1990, AyalaBerdon_2025 Genoud 1993, AyalaBerdon_2025 Hosken and Withers 1999, AyalaBerdon_2025 Kurta and Kunz 1988, AyalaBerdon_2025 Licht and Leitner 1967, AyalaBerdon_2025 McNab 1969, AyalaBerdon_2025 Muñoz-García et al. 2012, AyalaBerdon_2025 Skåra et al. 2021, AyalaBerdon_2025 Speakman et al. 1989, AyalaBerdon_2025 Sørås et al. 2022
+- 1 source label(s) without a Bibcite: Hudson_2013
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: CattinBlandenier_2004 -> Cattin-Blandenier:2004aa
-- BM_primary_citations: Cohen_2009 -> Cohen:2009aa
-- BM_primary_citations: Digel_2014 -> Digel:2014aa
-- BM_primary_citations: Eklof_2013 -> Eklof:2013aa
-- BM_primary_citations: Gray_2015 -> Gray:2015aa
-- BM_primary_citations: Thompson_2017 -> Thompson:2017aa
-- BM_primary_citations: Jacob_2011 -> Jacob:2011aa
-- BM_primary_citations: Jacob_2015 -> Jacob:2015aa
-- BM_primary_citations: Jonsson_2005 -> Jonsson:2005aa
-- BM_primary_citations: Kefi_2015 -> Kefi:2015aa
-- BM_primary_citations: Lafferty_2006 -> Lafferty:2006aa
-- BM_primary_citations: Layer_2010 -> Layer:2010aa
-- BM_primary_citations: Legagneux_2014 -> Legagneux:2014aa
-- BM_primary_citations: McLaughlin_2010 -> McLaughlin:2010aa
-- BM_primary_citations: Mendonca_2018 -> Mendonca:2018aa
-- BM_primary_citations: Mulder_2009 -> Mulder:2009aa
-- BM_primary_citations: Nsiku_1999 -> Nsiku:1999aa
-- BM_primary_citations: OGorman_2012 -> OGorman:2012aa
-- BM_primary_citations: Opitz_1996 -> Opitz:1996aa
-- BM_primary_citations: Piechnik_2008 -> Piechnik:2008aa
-- BM_primary_citations: Sutherland_1989 -> Sutherland:1989aa
-- BM_primary_citations: Havens_1992 -> Havens:1992aa
-- BM_primary_citations: Pinnegar_2003 -> Pinnegar:2003aa
-- BM_primary_citations: Ulrich_1999 -> Ulrich:1999aa
-- BM_primary_citations: Woodward_2002 -> Woodward:2002aa
-- BM_primary_citations: Woodward_2005 -> Woodward:2005aa
-- BM_primary_citations: Ulrich_2001 -> Ulrich:2001aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
 - Hudson_2013 (100 rows)
-- AyalaBerdon_2025 (36 rows)
 
 ## Per-source coverage
 
@@ -57,11 +28,10 @@ One row per source label: species and record links (species x source x reference
 | AnAge | database | 2518 | 2524 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AndersonGillooly_2017 | compilation | 93 | 296 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 99 | 610 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| AyalaBerdon_2025 | compilation | 36 | 151 | 0 | 22 | 17 | 0 | 2 | 2 | 0 | 1 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_2005 | compilation | 289 | 290 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brose_etal_2018 | compilation | 1753 | 144172 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
+| Brose_etal_2018 | compilation | 1753 | 168179 | 90.4 | 24 | 22 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 4769 | 4777 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -124,11 +94,11 @@ One row per source label: species and record links (species x source x reference
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 194 | 984 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 8905 | 8964 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12218 | 12287 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | fishbase | live | 2069 | 2899 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 298 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 124 | 729 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-aves-sept2016 | live | 5646 | 79442 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-aves-sept2016 | live | 5647 | 79443 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-fishes-sept2016 | live | 108 | 246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-mammalia-sept2016 | live | 707 | 9059 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-reptilia-sept2016 | live | 243 | 1334 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
