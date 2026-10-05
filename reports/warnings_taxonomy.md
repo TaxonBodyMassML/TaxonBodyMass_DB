@@ -1,13 +1,13 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-04 23:59:03
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 00:17:50
 
 ## Summary
 
 - Missing `class` after all enrichment stages: 14 rows
 - genus column does not match species prefix: 5 rows
-- Low GBIF confidence (75-89): 161 rows
+- Low GBIF confidence (75-89): 162 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 430 names, 4377 rows
+- Names unresolved after all enrichment stages: 439 names, 4462 rows
 
 ## Missing `class` after all enrichment stages (14 rows)
 
@@ -51,7 +51,7 @@ Nannospalax_xanthodon | genus=Spalax | species=Nannospalax xanthodon
 
 Trachylaemus_goffinii | genus=Trachyphonus | species=Trachylaemus goffinii
 
-## Low GBIF confidence (75-89) (161 rows)
+## Low GBIF confidence (75-89) (162 rows)
 
 Acipenser_fulvescens [conf=85]
 
@@ -86,6 +86,8 @@ Anthus_pratensis [conf=85]
 Anurogryllus_arboreus [conf=85]
 
 Aphanius_fasciatus [conf=80]
+
+Aphanoturulus_unicolor [conf=85]
 
 Aporrectodea_caliginosa [conf=85]
 
@@ -383,7 +385,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (430 names, 4377 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (439 names, 4462 rows -- dropped from the output)
 
 Plectophoreus_fischeri | Brose_etal_2018 | 345 rows
 
@@ -453,6 +455,10 @@ Crychus_caraboides | Brose_etal_2018 | 33 rows
 
 Silicioflagellata | Brose_etal_2018 | 30 rows
 
+Philorea_philorea | Gonzalez_2024 | 29 rows
+
+Philorea_aracniformis | Gonzalez_2024 | 28 rows
+
 Rhithropanopeus_hermandii | Brose_etal_2018 | 28 rows
 
 Trichastoma_fulvescens | vertnet-aves-sept2016 | 26 rows
@@ -479,11 +485,15 @@ Phaeoptyx_maculatus | Brose_etal_2018 | 16 rows
 
 Turbularia_indivisa | Brose_etal_2018 | 15 rows
 
+Philorea_maritima | Gonzalez_2024 | 13 rows
+
 Trichastoma_pyrrhopterum | vertnet-aves-sept2016 | 12 rows
 
 Filinia_longispina | Brose_2005, Brose_etal_2018 | 11 rows
 
 Flagellatae | Brose_etal_2018 | 11 rows
+
+Agelenopsis_castaneus | Gonzalez_2024 | 10 rows
 
 Crocodylus_africanus | Brose_etal_2018 | 10 rows
 
@@ -783,6 +793,8 @@ Bucco_pulmentum | vertnet-aves-sept2016 | 1 row
 
 Buteo_borealis | vertnet-aves-sept2016 | 1 row
 
+Caenia_fumosa | Gonzalez_2024 | 1 row
+
 Calandrella_dunni | vertnet-aves-sept2016 | 1 row
 
 Calandrella_fremantlii | vertnet-aves-sept2016 | 1 row
@@ -961,6 +973,8 @@ Leucoptera_myricki | AndersonGillooly_2017 | 1 row
 
 Lichenostomus_chysops | vertnet-aves-sept2016 | 1 row
 
+Limonia_quadrionotula | Gonzalez_2024 | 1 row
+
 Liocranchia_pacificus | Makarieva_2008 | 1 row
 
 Lobella_cavicola | Hishi_etal_2019 | 1 row
@@ -988,6 +1002,8 @@ Loxosceles_unicolor | Herberstein_etal_2022 | 1 row
 Lugubria_strigata | fishbase | 1 row
 
 Luscinia_chrysaea | vertnet-aves-sept2016 | 1 row
+
+Lycaria_scatopsoides | Gonzalez_2024 | 1 row
 
 Lycenchelys_turneri | vertnet-fishes-sept2016 | 1 row
 
@@ -1072,6 +1088,8 @@ Ochotona_dalli | McCoy_2008 | 1 row
 Oreochelidon_murina | vertnet-aves-sept2016 | 1 row
 
 Orodillo_maculatus | Ehnes_etal_2011 | 1 row
+
+Orthellia_caesarion | Gonzalez_2024 | 1 row
 
 Pachyramphus_alglaiae | vertnet-traits-sept2016 | 1 row
 
@@ -1218,6 +1236,8 @@ Taonius_cymoctypus | Raymond_2011 | 1 row
 Tchagra_cruenta | vertnet-aves-sept2016 | 1 row
 
 Thamnophis_collaris | vertnet-reptilia-sept2016 | 1 row
+
+Thomisidae_misumenops | Gonzalez_2024 | 1 row
 
 Thripophaga_flammulata | vertnet-aves-sept2016 | 1 row
 

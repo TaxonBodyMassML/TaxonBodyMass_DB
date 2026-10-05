@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-04 23:59:11
+# Citation and provenance warnings -- 2026-10-05 00:17:57
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 126531 (38769 species); distinct primary CiteIDs: 460; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 126962 (38923 species); distinct primary CiteIDs: 477; unresolved references (pending / not_found): 41; unverified references: 3
 
 ## Problems
 
-- 4 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Lemoine_2026, AyalaBerdon_2025, Leahy_2025
-- 9 source label(s) without a Bibcite: Baach_2026, Wisnionski_2026, Oskyrko_2024, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
+- 5 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Dunning_2008, Gonzalez_2024, Lemoine_2026, AyalaBerdon_2025, Leahy_2025
+- 10 source label(s) without a Bibcite: Gonzalez_2024, Baach_2026, Wisnionski_2026, Oskyrko_2024, Hudson_2013, Lemoine_2026, Ghaderi_2025, AyalaBerdon_2025, Leahy_2025, Wascher_2025
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -18,6 +18,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
 - Baach_2026 (529 rows)
+- Gonzalez_2024 (225 rows)
 - Ghaderi_2025 (221 rows)
 - Wisnionski_2026 (131 rows)
 - Wascher_2025 (123 rows)
@@ -40,14 +41,14 @@ One row per source label: species and record links (species x source x reference
 | AyalaBerdon_2025 | compilation | 36 | 151 | 54.3 | 22 | 20 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | Baach_2026 | compilation | 529 | 1037 | 99.2 | 8 | 7 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 52 | 9404 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brocher_etal_2025 | derived | 1340 | 1345 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brocher_etal_2025 | derived | 1338 | 1343 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 289 | 290 | 0 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
-| Brose_etal_2018 | compilation | 1753 | 168179 | 90.4 | 24 | 22 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
+| Brose_etal_2018 | compilation | 1751 | 168088 | 90.4 | 24 | 22 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 26 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Cai_etal_2025 | compilation | 4768 | 4776 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Castro_2025 | compilation | 427 | 1221 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Cai_etal_2025 | compilation | 4767 | 4775 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Castro_2025 | compilation | 426 | 1220 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 295 | 537 | 53.3 | 115 | 113 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| DeLong_etal_2010 | compilation | 309 | 385 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| DeLong_etal_2010 | compilation | 308 | 384 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2018 | compilation | 135 | 439 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 442 | 2246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Eklof_etal_2017 | primary | 5 | 103 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -58,6 +59,7 @@ One row per source label: species and record links (species x source x reference
 | GalanAcedo_etal_2026 | compilation | 410 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ghaderi_2025 | derived | 221 | 551 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 551 |
 | Gillooly_etal_2016 | compilation | 71 | 75 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Gonzalez_2024 | compilation | 225 | 1662 | 72.4 | 50 | 25 | 0 | 10 | 13 | 2 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 281 | 281 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 133 | 629 | 76.8 | 53 | 42 | 5 | 5 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 128 | 247 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -67,13 +69,13 @@ One row per source label: species and record links (species x source x reference
 | Hoehler_etal_2023 | compilation | 1671 | 3768 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 100 | 1163 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1163 |
-| Ikeda_2014 | compilation | 298 | 591 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 591 |
+| Ikeda_2014 | compilation | 297 | 585 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 585 |
 | Jennings_2002 | primary | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3286 | 3304 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kendall_etal_2019 | primary | 422 | 4031 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Killen_etal_2016 | compilation | 18 | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kinsella_etal_2020 | primary | 92 | 572 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Kiorboe_2013 | compilation | 100 | 224 | 47.3 | 17 | 15 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Kiorboe_2013 | compilation | 99 | 222 | 47.3 | 17 | 15 | 2 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kiorboe_2014 | compilation | 186 | 1254 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lagrue_etal_2015 | primary | 18 | 103 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lane_2019 | primary | 9 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
