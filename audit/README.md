@@ -1,7 +1,8 @@
 # audit/
 
-Review documents of the body-mass audits, the register of flagged records, and
-four pipeline files (owner decision of 2026-10-04: review inputs live here,
+Review documents of the body-mass audits, the register of flagged records, the
+log of the primary-source attribution rounds (`provenance_rounds.md`, issue
+#1; dated, append-only, read by no code), and four pipeline files (owner decision of 2026-10-04: review inputs live here,
 run outputs under `reports/`): the extinct-taxa list the pipeline reads
 (`extinct_taxa.csv`), the vocabulary of raw-name rules it reads
 (`raw_name_patterns.csv`, issue #38), the log of imputed rows it writes

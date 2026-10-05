@@ -1,0 +1,6 @@
+{
+  "url": "https://api.openalex.org/works?filter=title.search%3AThe%20ecology%20of%20the%20ctenophore%20Mnemiopsis%20leidyi%20in%20Narragansett%20Bay%2Cpublication_year%3A1975-1977&per-page=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-04T22:19:33Z",
+  "tool_version": "tbmcite 0.1.0"
+}

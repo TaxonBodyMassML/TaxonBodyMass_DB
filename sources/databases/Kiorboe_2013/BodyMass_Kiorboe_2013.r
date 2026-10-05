@@ -48,5 +48,10 @@ lab <- ifelse(from == 'wet', 'Kiorboe_2013', LabelWithConversion('Kiorboe_2013',
 lab <- vapply(strsplit(lab, ';', fixed = TRUE), function(t) paste(unique(trimws(t)), collapse = '; '), '')
 adat$n <- 1
 adat$source_mass <- lab
-KIO13 <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
+# The per-record reference number (1-18) of Table A1, resolved in
+# Kiorboe2013_TableA1_references.csv, is kept as `ref_keys` for the
+# primary-source attribution of issue #1 (SplitRefKeys(), R/library/citations/).
+adat$ref_keys <- SplitRefKeys(adat$Reference, ';')
+if (anyNA(adat$ref_keys)) warning('Kiorboe_2013: ', sum(is.na(adat$ref_keys)), ' record(s) without a reference number')
+KIO13 <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(KIO13, file = file.path(wd_rdata, 'BodyMass_Kiorboe_2013.Rdata'))

@@ -1,0 +1,6 @@
+{
+  "url": "https://api.openalex.org/works?filter=title.search%3AThe%20energy%20density%20of%20jellyfish%20Estimates%20from%20bomb-calorimetry%20and%20proximate-composition%2Cpublication_year%3A2006-2008&per-page=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-04T22:19:32Z",
+  "tool_version": "tbmcite 0.1.0"
+}

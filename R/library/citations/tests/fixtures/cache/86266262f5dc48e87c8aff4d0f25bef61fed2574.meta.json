@@ -1,0 +1,6 @@
+{
+  "url": "https://api.crossref.org/works?query.bibliographic=Ikeda%201986%20Metabolic%20activity%20and%20elemental%20composition%20of%20krill%20and%20other%20zooplankton%20from%20Prydz%20Bay%2C%20Antarctica%2C%20during%20early%20summer%20%28November-December%29%20Mar.%20Biol%2092%20545-555&rows=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-04T22:19:32Z",
+  "tool_version": "tbmcite 0.1.0"
+}

@@ -409,8 +409,8 @@ Expect(identical(gt$taxon, sort(gt$taxon, method = 'radix')) && gt$taxon[1] == '
        'rows ordered by genus in the C locale')
 lg <- gt[gt$taxon == 'Lagopus', ]
 Expect(abs(lg$mass_g - mean(c(514, 500, exp_mass))) < 1e-9 && lg$n == 22 && lg$n_independent == 9 &&
-         lg$source_mass == paste('Tobias_2022; AnAge', 'Tobias_2022', lr$source_mass, sep = '-'),
-       'Lagopus: the mean of two species values and one genus-only record (weight of one species); n and n_independent summed; sources joined by -')
+         lg$source_mass == paste(unique(trimws(unlist(strsplit(c('Tobias_2022; AnAge', 'Tobias_2022', lr$source_mass), ';', fixed = TRUE)))), collapse = '; '),
+       'Lagopus: the mean of two species values and one genus-only record (weight of one species); n and n_independent summed; distinct sources joined by ; (#1)')
 Expect(gt$mass_g[gt$taxon == 'Zz'] == 1 && gt$n_independent[gt$taxon == 'Zz'] == 1, 'a genus with species values only is unchanged')
 Expect(abs(gt$mass_g[gt$taxon == 'Stercorarius'] - sqrt(298 * 391)) < 1e-9 && gt$n_independent[gt$taxon == 'Stercorarius'] == 1,
        'a genus with a genus-only record only enters with that record')

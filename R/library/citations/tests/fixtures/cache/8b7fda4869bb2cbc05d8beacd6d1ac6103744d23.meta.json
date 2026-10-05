@@ -1,0 +1,6 @@
+{
+  "url": "https://api.crossref.org/works?query.bibliographic=Doyle%202007%20The%20energy%20density%20of%20jellyfish%3A%20Estimates%20from%20bomb-calorimetry%20and%20proximate-composition%20J.%20Exp.%20Mar.%20Biol.%20Ecol%20343%20239-252&rows=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-04T22:19:31Z",
+  "tool_version": "tbmcite 0.1.0"
+}
