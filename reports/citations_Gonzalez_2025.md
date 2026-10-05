@@ -1,8 +1,8 @@
-# Citations of Gonzalez_2024 -- 2026-10-05 00:14:26 (tbmcite 0.1.0)
+# Citations of Gonzalez_2025 -- 2026-10-05 00:14:26 (tbmcite 0.1.0)
 
 Steps: --sheet --no-dry-run
 
-- --sheet: 25 row(s) for Gonzalez_2024, 23 new, tab had 490 rows; BM_citations snapshotted (430 rows)
+- --sheet: 25 row(s) for Gonzalez_2025, 23 new, tab had 490 rows; BM_citations snapshotted (430 rows)
 
 ## References
 

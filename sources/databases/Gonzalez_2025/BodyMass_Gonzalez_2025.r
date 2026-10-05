@@ -17,7 +17,7 @@ adat <- adat[adat$kingdom_revised %in% 'Animalia' & !is.na(adat$body.weight.gr),
 adat$taxon <- trimws(adat$sp.morphosp_revised)
 adat <- adat[adat$species.level %in% 'y', ]
 if (!all(grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon)))
-  stop('Gonzalez_2024: species-level name that is not a clean binomial: ',
+  stop('Gonzalez_2025: species-level name that is not a clean binomial: ',
        paste(head(unique(adat$taxon[!grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon)])), collapse = '; '))
 adat$mass_g <- suppressWarnings(as.numeric(adat$body.weight.gr))
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
@@ -41,11 +41,11 @@ immature_orders <- c('Odonata', 'Trichoptera', 'Ephemeroptera', 'Plecoptera', 'M
 immature <- adat$class_revised %in% 'Insecta' & adat$habitat %in% 'freshwater' &
   (adat$order_revised %in% immature_orders |
      (adat$order_revised %in% 'Diptera' & adat$data.source1 %in% 'Gonzalez et al. 2018'))
-adat <- DropImputed(adat, immature, 'Gonzalez_2024',
+adat <- DropImputed(adat, immature, 'Gonzalez_2025',
                     'freshwater Odonata/Trichoptera nymphs and larvae and the bromeliad mosquito larvae of Gonzalez et al. 2018: non-adult records (no life-stage column)')
-adat <- DropImputed(adat, adat$data.source1 %in% 'unpublished - Roussel', 'Gonzalez_2024',
+adat <- DropImputed(adat, adat$data.source1 %in% 'unpublished - Roussel', 'Gonzalez_2025',
                     'unpublished - Roussel: salmonids at 0.18-0.32 mg dry mass, below an egg: unverifiable units')
-adat <- DropImputed(adat, adat$data.source1 %in% 'unpublished - Harrower', 'Gonzalez_2024',
+adat <- DropImputed(adat, adat$data.source1 %in% 'unpublished - Harrower', 'Gonzalez_2025',
                     'unpublished - Harrower: ant workers at 0.4-6.7 ug dry mass beside one at 0.4 mg: unverifiable units')
 #  - Amphibia: the stream-salamander rows (Milanovich 2007, 2008, Milanovich &
 #    Hopton 2014, Milanovich & Maerz) are larvae and the anuran rows (Rugenski
@@ -53,7 +53,7 @@ adat <- DropImputed(adat, adat$data.source1 %in% 'unpublished - Harrower', 'Gonz
 #    Rhinella marina at 3 mg dry, Desmognathus quadramaculatus at 0.05-0.1 g
 #    dry; all 13 species x source values sit 1.5-4 log10 below the database's
 #    adult values (README.md). Non-adult records; the class is dropped.
-adat <- DropImputed(adat, adat$class_revised %in% 'Amphibia', 'Gonzalez_2024',
+adat <- DropImputed(adat, adat$class_revised %in% 'Amphibia', 'Gonzalez_2025',
                     'Amphibia: larval salamanders, tadpoles and metamorphs (every species x source value 1.5-4 log10 below the adult value): non-adult records')
 #  - the fishes of the Vanni excretion-database sub-sources (data.type
 #    Vanni_database: McIntyre et al. 2008, Torres & Vanni 2007, Small et al.
@@ -62,7 +62,7 @@ adat <- DropImputed(adat, adat$class_revised %in% 'Amphibia', 'Gonzalez_2024',
 #    malabaricus at 13 g; per-source medians 0.7-1.6 log10 below the database's
 #    values): non-adult records (owner decision 2026-10-04). The non-fish rows
 #    of these sub-sources (Sterrett et al. 2015 turtles, a copepod, a snail) stay.
-adat <- DropImputed(adat, adat$data.type %in% 'Vanni_database' & adat$class_revised %in% 'Actinopterygii', 'Gonzalez_2024',
+adat <- DropImputed(adat, adat$data.type %in% 'Vanni_database' & adat$class_revised %in% 'Actinopterygii', 'Gonzalez_2025',
                     'fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)')
 
 # Conversion group of every record (dry -> wet), by the compilers' revised
@@ -82,7 +82,7 @@ grp[phy %in% 'Chaetognatha'] <- 'chaetognath'
 grp[phy %in% c('Cnidaria', 'Ctenophora') | cls %in% c('Thaliacea', 'Appendicularia')] <- 'gelatinous_zooplankton'
 grp[phy %in% c('Platyhelminthes', 'Nematoda', 'Acanthocephala')] <- 'helminth'
 if (anyNA(grp))
-  stop('Gonzalez_2024: no conversion group for class/phylum: ',
+  stop('Gonzalez_2025: no conversion group for class/phylum: ',
        paste(unique(paste(phy[is.na(grp)], cls[is.na(grp)], sep = '/')), collapse = '; '))
 # Stoichiometric analyses of shelled molluscs are made on the soft tissue, so
 # the dry mass of bivalves and of the freshwater snail is tissue mass and is
@@ -94,7 +94,7 @@ whole <- cls %in% 'Bivalvia' | (cls %in% 'Gastropoda' & !hab %in% 'marine')
 shell <- ifelse(cls %in% 'Bivalvia', 'bivalve', 'gastropod')
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = grp, whole = whole, shell_group = shell)
 adat$n <- 1
-adat$source_mass <- LabelWithConversion('Gonzalez_2024', grp)
+adat$source_mass <- LabelWithConversion('Gonzalez_2025', grp)
 
 # The per-record reference key (`data.source1`: an author-year key, an
 # 'unpublished - contributor' template label, or a sub-source of the Vanni /
@@ -105,7 +105,7 @@ adat$source_mass <- LabelWithConversion('Gonzalez_2024', grp)
 # slashes join the contributors of one template dataset and are kept.
 adat$ref_keys <- SplitRefKeys(sub('^Jochum et al. 2016 / Drescher et al. 2016$',
                                   'Jochum et al. 2016; Drescher et al. 2016', adat$data.source1), ';')
-if (anyNA(adat$ref_keys)) warning('Gonzalez_2024: ', sum(is.na(adat$ref_keys)), ' record(s) without a data.source1 key')
+if (anyNA(adat$ref_keys)) warning('Gonzalez_2025: ', sum(is.na(adat$ref_keys)), ' record(s) without a data.source1 key')
 
 for (col in c('phylum_revised', 'class_revised', 'order_revised', 'family_revised'))
   adat[[col]] <- iconv(as.character(adat[[col]]), to = 'ASCII//TRANSLIT')
@@ -114,4 +114,4 @@ GON <- data.frame(taxon = adat$taxon, mass_g = adat$mass_g, n = adat$n,
                   phylum = adat$phylum_revised, class = adat$class_revised,
                   order = adat$order_revised, family = adat$family_revised,
                   stringsAsFactors = FALSE)
-save(GON, file = file.path(wd_rdata, 'BodyMass_Gonzalez_2024.Rdata'))
+save(GON, file = file.path(wd_rdata, 'BodyMass_Gonzalez_2025.Rdata'))
