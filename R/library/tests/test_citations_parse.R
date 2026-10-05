@@ -120,6 +120,25 @@ Expect(q$parsed_author1[4] == 'Arudpragasam' && q$parsed_year[4] == 1964L && q$p
        'ALL CAPS entry: surname title-cased, volume and pages found')
 Expect(is.na(q$parsed_year[5]) && q$parsed_title[5] == 'This study' && all(is.na(q$parsed_author1[6:7])), 'no year: title only; NA and empty strings parse to NA')
 
+cat('ParseCitationString() on the Nature style (Chown_etal_2007 reference list)\n')
+nat <- ParseCitationString(c(
+  'Loveridge, J. P. & Bursell, E. Studies on the water relations of adult locusts (Orthoptera, Acrididae) I. Respiration and the production of metabolic water. Bulletin of Entomological Research 65, 13-20 (1975).',
+  'Hebling, M. J. A., Penteado, C. H. S. & Mendes, E. G. Respiratory regulation in workers of the leaf cutting ant Atta sexdens rubropilosa (Forel, 1908). Comparative Biochemistry and Physiology A 101, 319-322 (1992).',
+  'Gäde, G. & Auerswald, L. Flight metabolism in carpenter bees and primary structure of their hypertrehalosaemic peptide. Experimental Biology Online 3 (1998).',
+  'Klok, C. J. & Chown, S. L. Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications. Journal of Insect Physiology (in press).'))
+Expect(nat$parsed_author1[1] == 'Loveridge' && nat$parsed_year[1] == 1975L && nat$parsed_container[1] == 'Bulletin of Entomological Research' &&
+         nat$parsed_volume[1] == '65' && nat$parsed_pages[1] == '13-20' &&
+         nat$parsed_title[1] == 'Studies on the water relations of adult locusts (Orthoptera, Acrididae) I. Respiration and the production of metabolic water',
+       'Nature style: year at the end, "&" author block, "I." kept inside the title')
+Expect(nat$parsed_author1[2] == 'Hebling' && nat$parsed_year[2] == 1992L && nat$parsed_volume[2] == '101' &&
+         nat$parsed_title[2] == 'Respiratory regulation in workers of the leaf cutting ant Atta sexdens rubropilosa (Forel, 1908)',
+       'Nature style: a year inside the title does not end the author block')
+Expect(nat$parsed_author1[3] == 'Gade' && nat$parsed_year[3] == 1998L && nat$parsed_container[3] == 'Experimental Biology Online' &&
+         nat$parsed_volume[3] == '3' && is.na(nat$parsed_pages[3]), 'Nature style without pages')
+Expect(nat$parsed_author1[4] == 'Klok' && is.na(nat$parsed_year[4]) && nat$parsed_container[4] == 'Journal of Insect Physiology (in press)' &&
+         nat$parsed_title[4] == 'Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications',
+       'undated Nature-style entry: author block stripped from the title')
+
 cat('TitleSimilarity() and the agreement helpers\n')
 Expect(TitleSimilarity('The energy density of jellyfish: Estimates from bomb-calorimetry', 'The energy density of jellyfish: estimates from bomb-calorimetry') == 1,
        'case and punctuation do not matter')
