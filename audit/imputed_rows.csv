@@ -25,10 +25,10 @@
 "Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
 "Hudson_2013","nestling/chick study (Appendix S6 title): not adult records",63,4,1435
 "Ikeda_2014","Table S3 O:N rows duplicate the S1/S2 specimens (owner decision, #11)",196,153,792
-"McCoy_2008","mesopelagic fish rows of undeterminable unit (ref 6)",4,4,1729
-"McCoy_2008","lab zooplankton rows of mixed dry/dry-quarter units (ref 4)",43,11,1686
-"McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1680
-"McCoy_2008","deep-sea rows with undefined mass basis",7,5,1673
+"McCoy_2008","mesopelagic fish rows of undeterminable unit (ref 6)",4,4,1728
+"McCoy_2008","lab zooplankton rows of mixed dry/dry-quarter units (ref 4)",43,11,1685
+"McCoy_2008","euphausiid rows with unverifiable units (refs 6,26)",6,6,1679
+"McCoy_2008","deep-sea rows with undefined mass basis",6,5,1673
 "Verberk_2020","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",107,10,1617
 "Wilman_etal_2014","GenAvg genus/family average or value copied from another species",877,877,9116
 "Wilman_etal_2014","Ref_2/Ref_3 Genus Average or Family Average (BodyMass-SpecLevel 0)",812,812,4588

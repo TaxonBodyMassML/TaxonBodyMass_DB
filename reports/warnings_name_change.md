@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 18:11:42
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-04 18:47:43
 
 
-## Species name changed during enrichment (5655 rows)
+## Species name changed during enrichment (5652 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -5135,8 +5135,6 @@ Oppiella acuminata -> Lauroppia maritima [GBIF]
 
 Monostyla lunaris -> Lecane lunaris [GBIF]
 
-Leimacomys buttneri -> Leimacomys buettneri [GBIF]
-
 Tetraodon cutcutia -> Leiodon cutcutia [GBIF]
 
 Leiognathus equula -> Leiognathus equulus [GBIF]
@@ -6168,8 +6166,6 @@ Mico mauesi; Callithrix mauesi -> Mico mauesi [GBIF]
 Mico melanurus; Callithrix melanura -> Mico melanurus [GBIF]
 
 Mico nigriceps; Callithrix nigriceps -> Mico nigriceps [GBIF]
-
-Mico saterei; Callithrix saterei -> Mico saterei [GBIF]
 
 Marmosa alstoni; Micoureus alstoni -> Micoureus alstoni [GBIF]
 
@@ -8873,7 +8869,7 @@ Pycnonotus urostictus; Poliolophus urostictus -> Pycnonotus urostictus [GBIF]
 
 Anodonta grandis -> Pyganodon grandis [GBIF]
 
-Pygeretmus zhitkovi; Pygeretmus shitkovi -> Pygeretmus shitkovi [GBIF]
+Pygeretmus zhitkovi -> Pygeretmus shitkovi [GBIF]
 
 Arrhopalites alticolus -> Pygmarrhopalites alticolus [GBIF]
 
@@ -9550,8 +9546,6 @@ Scotozous dormeri; Pipistrellus dormeri -> Scotozous dormeri [GBIF]
 Scyliorhinus caniculata; Scyliorhinus canicula -> Scyliorhinus canicula [GBIF]
 
 Sebastes dalli -> Sebastes dallii [GBIF]
-
-Sebastes jorani -> Sebastes jordani [GBIF]
 
 Sebastes marinus; Sebastes norvegicus -> Sebastes norvegicus [GBIF]
 

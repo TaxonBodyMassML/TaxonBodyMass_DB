@@ -1,16 +1,16 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 18:11:42
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-04 18:47:43
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
-- High mass disagreement (log10 range > 2): 358 species
+- High mass disagreement (log10 range > 2): 357 species
 - Suspicious sources (log10 > 2, by frequency):
   - Cai_etal_2025 (78)
   - vertnet-mammalia-sept2016 (56)
   - Brose_etal_2018 (42)
   - fishbase (39)
   - Makarieva_2008 (34)
-  - AnAge (32)
+  - AnAge (31)
   - vertnet-aves-sept2016 (31)
   - Castro_2025 (30)
   - Quaardvark (29)
@@ -47,7 +47,6 @@
   - Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000 (3)
   - vertnet-mammalia-sept2016; vertnet-traits-sept2016 (3)
   - vertnet-reptilia-sept2016; vertnet-traits-sept2016 (3)
-  - Wilman_etal_2014 (3)
   - AmphiBIO (2)
   - Ikeda_2014; Kiorboe_2013 (2)
   - Jennings_2002 (2)
@@ -56,6 +55,7 @@
   - Soria_etal_2021 (2)
   - Uyeda_etal_2017 (2)
   - Verberk_2020 (2)
+  - Wilman_etal_2014 (2)
   - Brose_2005; Brey_2010 (1)
   - Brown_etal_2018 (1)
   - Chomsky_2004 (1)
@@ -85,10 +85,10 @@
   - Quaardvark (53)
   - Meiri_2024 (49)
   - vertnet-mammalia-sept2016 (48)
-  - Tobias_2022 (40)
   - vertnet-reptilia-sept2016 (40)
   - Castro_2025 (39)
-  - AnAge (36)
+  - Tobias_2022 (39)
+  - AnAge (37)
   - Smith_2003 (35)
   - vertnet-traits-sept2016 (27)
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (25)
@@ -161,7 +161,7 @@
   - Watson_2007 (1)
   - Weisse_2024 (1)
   - Wilman_etal_2014 (1)
-## log10(max/min mass) > 2 after dedup (358 species) -- likely misresolution or unit error
+## log10(max/min mass) > 2 after dedup (357 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
         Min_source: DeLong_etal_2010 4.2e-08
@@ -1141,9 +1141,6 @@ Lipophrys pholis [range=2.10]
 Trachemys scripta [range=2.09]
         Min_source: vertnet-reptilia-sept2016 25.82
         Max_source: Cai_etal_2025 3200
-Lagothrix lagothricha [range=2.09]
-        Min_source: Wilman_etal_2014 62.31
-        Max_source: AnAge 7650
 Cephalopachus bancanus [range=2.09]
         Min_source: Herberstein_etal_2022 77.6
         Max_source: vertnet-mammalia-sept2016 9441
@@ -3448,6 +3445,9 @@ Trachylepis quinquetaeniata [range=1.05]
 Lasiorhinus krefftii [range=1.05]
         Min_source: Smith_2003 2900
         Max_source: Quaardvark 3.25e+04
+Falco berigora [range=1.05]
+        Min_source: vertnet-aves-sept2016; vertnet-traits-sept2016 53.01
+        Max_source: AnAge 593.5
 Euphausia pacifica [range=1.05]
         Min_source: Kiorboe_2014; Kiorboe_2013 0.0136
         Max_source: DeLong_etal_2010 0.152
@@ -3466,9 +3466,6 @@ Araniella cucurbitina [range=1.05]
 Bothrops ammodytoides [range=1.04]
         Min_source: Myhrvold_2015 47
         Max_source: Feldman_etal_2016 521.2
-Falco berigora [range=1.04]
-        Min_source: vertnet-aves-sept2016; vertnet-traits-sept2016 53.01
-        Max_source: Tobias_2022 587
 Ptyodactylus puiseuxi [range=1.04]
         Min_source: Meiri_2024 1.7
         Max_source: Feldman_etal_2016 18.8
