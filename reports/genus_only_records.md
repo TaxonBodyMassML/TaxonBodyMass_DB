@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-05 13:35:37
+# Genus-only records -- 2026-10-05 14:47:28
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -6,33 +6,32 @@ Input records identified to genus only (a cleaned name without an underscore; th
 
 | quantity | value |
 | --- | ---: |
-| genus-only rows | 23697 |
-| distinct bare names | 859 |
-| names resolved to an accepted genus | 680 |
-| ... rows | 14392 |
-| distinct accepted genera | 676 |
+| genus-only rows | 23659 |
+| distinct bare names | 858 |
+| names resolved to an accepted genus | 681 |
+| ... rows | 14395 |
+| distinct accepted genera | 677 |
 | names resolved above genus | 177 |
 | ... rows | 9264 |
-| names unresolved | 2 |
-| ... rows | 41 |
+| names unresolved | 0 |
+| ... rows | 0 |
 | autotroph genera removed | 18 |
 | ... rows | 313 |
-| genus x source values (after the autotroph filter) | 725 |
+| genus x source values (after the autotroph filter) | 726 |
 | values collapsed as copies | 2 |
-| genus-only records (pseudo-taxa) | 658 |
-| records more than 1 log10 from the genus's species mean | 47 |
+| genus-only records (pseudo-taxa) | 659 |
+| records more than 1 log10 from the genus's species mean | 48 |
 
 ## Resolution by stage
 
 | match_type | outcome | names | rows |
 | --- | --- | ---: | ---: |
-| cache | genus | 470 | 7443 |
+| cache | genus | 471 | 7446 |
 | EXACT | genus | 209 | 6948 |
 | EXACT | above genus | 132 | 6572 |
 | checklists | above genus | 40 | 2039 |
 | curated | above genus | 2 | 411 |
 | suffix | above genus | 3 | 242 |
-| NONE | unresolved | 2 | 41 |
 | FUZZY | genus | 1 | 1 |
 
 ## Names resolved above genus (excluded from the genus table)
@@ -301,10 +300,7 @@ The name is an accepted genus (kept as such) but most checklists use it for a gr
 
 ## Names unresolved (dropped; also in warnings_taxonomy.md)
 
-| taxon | rows | sources | note |
-| --- | ---: | --- | --- |
-| Silicioflagellata | 30 | Brose_etal_2018 | no GBIF usage of this name at any rank and no acceptable fuzzy genus match |
-| Flagellatae | 11 | Brose_etal_2018 | no GBIF usage of this name at any rank and no acceptable fuzzy genus match |
+(none)
 
 ## De-duplication of the genus x source values
 
@@ -364,6 +360,7 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
 | Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 |
 | Strongylura |   37 |  421 | 4 | -1.06 | vertnet-fishes-sept2016 |
+| Conochilus | 5.4e-07 | 6.12e-06 | 3 | -1.05 | Brose_2005; Brose_etal_2018 |
 | Bufo | 7.96 | 85.5 | 4 | -1.03 | vertnet-amphibia-sept2016 |
 | Veigaia | 0.000408 | 3.81e-05 | 5 | 1.03 | Brose_etal_2018; Cohen_2014 |
 | Mustela | 55.5 |  578 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
