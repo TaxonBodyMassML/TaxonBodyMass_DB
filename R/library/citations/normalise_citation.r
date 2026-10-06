@@ -175,9 +175,19 @@ SplitBody <- function(body) {
       body <- sub('[,;:.]\\s*$', '', body)
     }
   }
-  # the first sentence boundary separates title and container
-  sb <- regexpr('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', body, perl = TRUE)
-  if (sb > 0) {
+  # a quoted title (the Chicago author-date style of the Myhrvold_2015 list,
+  # '"Title." Journal 281 (2): 218-26.' or '"Title". University of Tasmania.'
+  # once the curly quotes are folded): the closing quote separates title and
+  # container, whatever periods the title holds
+  qt <- regexec('^"(.+?)([.?!])?"[.,]?\\s*(.*)$', body, perl = TRUE)[[1]]
+  # otherwise the first sentence boundary separates title and container
+  sb <- if (qt[1] > 0) -1L else regexpr('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', body, perl = TRUE)
+  if (qt[1] > 0) {
+    parts     <- regmatches(body, list(qt))[[1]]
+    title     <- trimws(parts[2])
+    if (parts[3] %in% c('?', '!')) title <- paste0(title, parts[3])
+    container <- trimws(parts[4])
+  } else if (sb > 0) {
     title     <- trimws(substr(body, 1, sb - 1))
     container <- trimws(substr(body, sb + 1, nchar(body)))
     # a title ending in '?' or '!' keeps its mark

@@ -350,9 +350,14 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # with their outcome. A row whose DOI changes under a new decision loses its
 # bibcite / cite_id, as under a queue decision, so that --bib mints or reuses
 # a key for the new DOI.
+# `min_records`: verify only the keys cited by at least that many records
+# (`n_records`); the others keep their status (NA for a new reference, reported
+# as unverified, named in `below_min_records`) for a later run -- the owner's
+# rule for a large list on one OpenAlex day (Jones_2009, 2026-10-06). The
+# default 1 means every key.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
-                                    progress = interactive(), crossref_only = FALSE) {
+                                    progress = interactive(), crossref_only = FALSE, min_records = 1L) {
   if (is.null(prim$verification_mode)) prim$verification_mode <- rep(NA_character_, nrow(prim))
   certain <- prim$match_status %in% 'certain'
   if (isTRUE(crossref_only)) {
@@ -365,6 +370,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
     todo <- is.na(prim$match_status) | prim$match_status %in% c('pending', 'not_found') | (force & certain) | recheck
   }
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
+  below <- todo & (is.na(prim$n_records) | prim$n_records < min_records)
+  todo  <- todo & !below
   cands <- list()
   skipped <- character(0); quota <- NULL; rechecked <- character(0)
   for (i in which(todo)) {
@@ -402,7 +409,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked,
+       below_min_records = prim$native_key[below])
 }
 
 # The screening file is applied to every row with a DOI whatever its status
