@@ -174,6 +174,19 @@ Expect(identical(res2$prim$verified_at[res2$prim$native_key %in% c('1', '6', '12
        'a re-run leaves certain rows alone and re-verifies pending rows')
 res3 <- VerifyPrimaryReferences(p, cfg, force = TRUE, verified_at = '2026-10-07T00:00:00Z', progress = FALSE)
 Expect(all(res3$prim$verified_at == '2026-10-07T00:00:00Z'), 'force = TRUE re-verifies certain rows too')
+mr <- prim; mr$n_records[match(c('1', '6', '9', '12'), mr$native_key)] <- c(5L, 1L, 2L, 1L)
+res_mr <- VerifyPrimaryReferences(mr, cfg, verified_at = '2026-10-08T00:00:00Z', progress = FALSE, min_records = 2L)
+Expect(identical(sort(res_mr$below_min_records), c('12', '6')) &&
+         all(is.na(res_mr$prim$match_status[res_mr$prim$native_key %in% c('6', '12')])) &&
+         all(is.na(res_mr$prim$verified_at[res_mr$prim$native_key %in% c('6', '12')])) &&
+         identical(res_mr$prim$match_status[match(c('1', '9'), res_mr$prim$native_key)], c('certain', 'pending')) &&
+         identical(sort(names(res_mr$candidates)), c('1', '9')),
+       'min_records = 2 verifies the keys on two or more records only; the singletons stay unverified and are named')
+res_mr2 <- VerifyPrimaryReferences(res_mr$prim, cfg, verified_at = '2026-10-09T00:00:00Z', progress = FALSE)
+Expect(identical(res_mr2$prim$match_status[match(c('6', '12'), res_mr2$prim$native_key)], c('certain', 'certain')) &&
+         length(res_mr2$below_min_records) == 0 &&
+         identical(res_mr2$prim$verified_at[res_mr2$prim$native_key == '1'], '2026-10-08T00:00:00Z'),
+       'a later run without the option verifies the singletons and leaves the earlier decisions alone')
 skip <- prim; skip$raw_citation[skip$native_key == '9'] <- NA; skip$role[skip$native_key == '12'] <- 'self'
 res4 <- VerifyPrimaryReferences(skip, cfg, progress = FALSE)
 Expect(is.na(res4$prim$match_status[res4$prim$native_key == '9']) && res4$prim$match_status[res4$prim$native_key == '12'] == 'self' &&

@@ -2,7 +2,7 @@
 #
 #   Rscript R/library/citations/run_citations.r --source <Src> \
 #       [--init] [--verify] [--queue] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
-#       [--screening-list] [--force] [--offline]
+#       [--screening-list] [--force] [--offline] [--min-records N]
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -27,6 +27,9 @@
 #                  to reports/dedupe_queue_<date>.md; no network, no source file touched
 #   --force        re-verify `certain` rows as well
 #   --offline      never touch the network (cached responses only)
+#   --min-records N  --verify only the keys cited by N or more records (n_records);
+#                  the others stay unverified for a later run (a large list on one
+#                  OpenAlex day; owner's rule for Jones_2009, 2026-10-06)
 # Every step writes reports/citations_<Src>.md. RunMe.r never calls this file.
 
 this_file <- sub('^--file=', '', grep('^--file=', commandArgs(), value = TRUE))
@@ -48,7 +51,11 @@ src_i <- which(args == '--source')
 maintenance_only <- identical(args[args %in% steps], '--dedupe-queue')
 if ((length(src_i) != 1 || src_i == length(args)) && !maintenance_only) stop('--source <Src> is required')
 src <- if (length(src_i) == 1 && src_i < length(args)) args[src_i + 1] else NA_character_
-known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline')
+mr_i <- which(args == '--min-records')
+if (length(mr_i) > 1 || (length(mr_i) == 1 && mr_i == length(args))) stop('--min-records needs one value N')
+min_records <- if (length(mr_i) == 1) suppressWarnings(as.integer(args[mr_i + 1])) else 1L
+if (is.na(min_records) || min_records < 1) stop('--min-records N: N must be a positive integer')
+known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--min-records', if (length(mr_i) == 1) args[mr_i + 1])
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
 
@@ -174,7 +181,11 @@ if (Flag('--verify') || Flag('--queue')) {
        if (is.na(comp_doi)) 'none' else comp_doi,
        if (is.null(reflist)) 0L else nrow(reflist), if (is.null(reflist)) 0L else sum(!is.na(reflist$doi)))
   scite <- ReadSciteChecks(cfg$scite_csv)
-  res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE)
+  res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE,
+                                 min_records = min_records)
+  if (min_records > 1)
+    Note('--min-records %d: %d key(s) cited by fewer records left unverified for a later run', min_records,
+         length(res$below_min_records))
   prim <- res$prim; candidates <- res$candidates
   WritePrimaryReferences(prim, prim_path)
   if (length(res$skipped) > 0)

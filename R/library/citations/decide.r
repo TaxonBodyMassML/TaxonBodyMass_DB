@@ -229,12 +229,19 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # WritePendingQueue(); `skipped` names the references a spent service quota
 # (CachedGET()'s 'citations_quota' condition) left unverified and `quota` the
 # condition's message.
+# `min_records`: verify only the keys cited by at least that many records
+# (`n_records`); the others keep their status (NA for a new reference, reported
+# as unverified) for a later run -- the owner's rule for a large list such as
+# PanTHERIA's 3,066 keys on one OpenAlex day (2026-10-06). The default 1 means
+# every key.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
-                                    progress = interactive()) {
+                                    progress = interactive(), min_records = 1L) {
   todo <- is.na(prim$match_status) | prim$match_status %in% c('pending', 'not_found') |
           (force & prim$match_status == 'certain')
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
+  below <- todo & (is.na(prim$n_records) | prim$n_records < min_records)
+  todo  <- todo & !below
   cands <- list()
   skipped <- character(0); quota <- NULL
   for (i in which(todo)) {
@@ -259,7 +266,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands, skipped = skipped, quota = quota)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota,
+       below_min_records = prim$native_key[below])
 }
 
 # The screening file is applied to every row with a DOI whatever its status
