@@ -2,7 +2,7 @@
 # E088-096), avian_ssd_jan07.txt: body mass (g) of males (M_mass), females
 # (F_mass) and unsexed birds (unsexed_mass), -999 for missing; the record's
 # mass is the mean of the values given.
-adat <- read.table(file.path(wd_source, 'avian_ssd_jan07.txt'), sep = '\t', header = TRUE)
+adat <- read.table(file.path(wd_source, 'avian_ssd_jan07.txt'), sep = '\t', header = TRUE, quote = '')
 taxon_tax <- adat[, c('Species_name', 'Family')]
 taxon_tax <- taxon_tax[!duplicated(taxon_tax$Species_name), ]
 taxon_tax$family <- iconv(as.character(taxon_tax$Family), to = 'ASCII//TRANSLIT')

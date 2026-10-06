@@ -78,17 +78,12 @@ mlh$n <- 1
 mlh$source_mass <- 'Ernest_2003'
 
 
-# bird-size: family column is an integer code, not a name — drop it
-# Terje Lislevand, Jordi Figuerola, and Tam´as Sz´ekely. 
-# Avian body sizes in relation to fecundity, mating
-# system, display behavior, and resource sharing: Ecological archives 
-# e088-096. Ecology, 88(6):1605–1605,  2007.
-bir <- rdataretriever::fetch('bird-size')[[1]]
-bir <- bir[, c('species_name', 'm_mass')]
-colnames(bir) <- c('taxon', 'mass_g')
-bir <- bir[which(!is.na(bir$mass_g) & bir$mass_g > 0), ]
-bir$n <- 1
-bir$source_mass <- 'Lislevand_etal_2007'
+# bird-size (Lislevand et al. 2007, Ecological Archives E088-096) is no longer
+# fetched here (issue #102, 2026-10-05): the same data file is parsed by
+# sources/databases/Lislevand_etal_2007/BodyMass_Lislevand_etal_2007.r, which
+# averages the male, female and unsexed masses and keeps the per-record
+# reference numbers as ref_keys; the retriever copy (male mass only, no
+# references) duplicated it under the same label.
 
 # predator-prey-body-ratio: no taxonomy beyond binomial
 # Brose U, Cushing L, Berlow EL, Jonsson T, Banasek-Richter C, Bersier LF, 
@@ -181,7 +176,7 @@ sdd$source_mass <- 'Raymond_2011'
 # lost to the pre-#37 encoding step, and the frame kept Aspilota and
 # Orthostigma as genus-level records after #43 had decided that
 # morphospecies codes drop (#69).
-adat <- bind_rows(mlh, bir, ppb, pan, amn, sdd)
+adat <- bind_rows(mlh, ppb, pan, amn, sdd)
 adat <- adat[which(!is.na(adat$mass_g) & adat$mass_g > 0), ]
 adat$taxon <- as.character(adat$taxon)
 for (col in c('class', 'order', 'family'))
