@@ -2,6 +2,7 @@
 
 Source: DeLong, J. P., & Uiterwaal, S. F. (2018) The FoRAGE (Functional Responses from Around the Globe in all Ecosystems) database: a compilation of functional responses for consumers and parasitoids. Knowledge Network for Biocomplexity. https://doi.org/10.5063/F17H1GTQ
 Data: `FoRAGE_db_12_19_18_data_set.csv` (data set version 2018-12-19; 2,682 functional-response data sets, one row each; latin1-encoded, read with `fileEncoding = 'latin1'`). In the repository since its import from FracFeed_DB (2026-08-20).
+Licence: unknown; owner to check https://doi.org/10.5063/F17H1GTQ (not stated in the csv, the README or the bib; the 2026-10-02 audit read CC0 in the KNB EML). The csv is tracked; see sources/LICENSES.md.
 
 Columns used: `Predator scientific name`, `Predator type`, `Predator mass (mg)`, `Predator mass source code`; `Prey scientific name`, `Prey type`, `Prey mass (mg)`, `Prey mass source code`. Predator and prey rows are stacked as separate records.
 Filters: predator and prey rows whose type is adult, female, male or unspecified (juvenile and larval stages dropped). Rows whose mass source code begins 'alternate'/'alternative' (mass, length or volume taken from another species, genus, family, order or a generic zooplankter), '%' (a fraction of adult or predator mass) or 'average genus'/'average order' (taxon averages) are dropped. Codes beginning 'original' (the study's own mass, or its own measured length, volume or carbon content through a regression) and 'average species' are kept; the length-derived values are allometry-derived.
