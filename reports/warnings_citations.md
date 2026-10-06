@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 21:32:27
+# Citation and provenance warnings -- 2026-10-06 07:46:11
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 172589 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5044
+- provenance rows: 173068 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5384
 
 ## Problems
 
@@ -74,7 +74,7 @@ One row per source label: species and record links (species x source x reference
 | Lislevand_etal_2007 | compilation | 3359 | 7258 | 67.8 | 84 | 81 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 41 | 192 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mahe_2023 | primary | 53 | 12609 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Makarieva_2008 | compilation | 1267 | 1827 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Makarieva_2008 | compilation | 1267 | 2698 | 0 | 340 | 0 | 0 | 0 | 0 | 0 | 340 | 0 | 0 |
 | Mathieu_2014 | compilation | 94 | 95 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | McCoy_2008 | compilation | 984 | 2613 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2612 |
 | Meiri_2018 | derived | 6515 | 45591 | 34.6 | 6233 | 1140 | 7 | 3 | 9 | 33 | 5041 | 0 | 0 |

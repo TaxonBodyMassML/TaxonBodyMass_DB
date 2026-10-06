@@ -353,6 +353,12 @@ reflist_specs <- list(
   Smith_2003   = list(format = 'csv', file = 'references.csv', folder = 'Smith_etal_2003', frame = 'Smith_2003',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '_[[:space:]]+',
                       compiler = 'Smith'),
+  # the SI's per-table reference lists (S1a, S2a, S3 = Chown's numbered list, S4,
+  # S6b, S7) and the whole-table sources of its notes, read from pnas08SI.pdf by
+  # parse_makarieva_si.py into references.csv; keys '<table>:<author-year>' (Stage 2 of #1)
+  Makarieva_2008 = list(format = 'csv', file = 'references.csv', folder = 'Makarieva_etal_2008',
+                        frame = 'Makarieva_2008', key_col = 'key', citation_col = 'citation',
+                        type_col = 'note', review_col = 'owner_review', sep = ';', compiler = 'Makarieva'),
   # derived source (Stage 2): the Appendix S3 key table via build_references.r
   # (a key the table holds for several papers is '<key> [n]'; `note` carries the
   # entry's Taxa text); the records' SVL reference cells split at ',' or ';'

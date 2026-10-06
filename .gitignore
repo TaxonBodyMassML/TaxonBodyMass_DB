@@ -12,3 +12,6 @@ verifications_*.csv
 residuals_full.csv
 
 tmp/
+
+# the publisher SI of Makarieva_2008 (PNAS licence): fetched to the folder, never committed
+sources/databases/Makarieva_etal_2008/pnas08SI.pdf
