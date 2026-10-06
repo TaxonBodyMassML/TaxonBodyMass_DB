@@ -125,7 +125,7 @@ citations_grey_pattern <- paste0('\\b(thesis|dissertation|report|unpublished|unp
 # ---- controlled vocabularies ---------------------------------------------------
 match_statuses   <- c('certain', 'pending', 'approved', 'nodoi_approved', 'rejected',
                       'not_found', 'self')
-match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', 'closed_world',
+match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', 'closed_world', 'container_volume_page',
                       'single_service', 'ambiguous', 'grey_literature', 'retracted',
                       'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'service_unavailable',   # unscreened: historical (rows and queue entries before 2026-10-05)
                       'owner_review', 'self',
@@ -391,6 +391,12 @@ reflist_specs <- list(
   Meiri_2018   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '[,;]',
                       compiler = 'Meiri', compilation_doi = '10.1111/geb.12773'),
+  # PHYLACINE 1.2 (Stage 2): the Mass.Source cell of Trait_data.csv is the full
+  # citation (or a bare 'Journal volume: pages (year)' string) of the work the
+  # mass was taken from; hashed to 'h:<sha1-8>' keys by the parser as for
+  # Herberstein; 'Smith, F. A., et al. 2003 ...' on most rows (hop 2 to Smith_2003)
+  Faurby_etal_2018 = list(format = 'inrow', file = 'Trait_data.csv', citation_col = 'Mass.Source',
+                          compiler = 'Faurby', compilation_doi = '10.1002/ecy.2443'),
   # the two retriever compilations of the DataRetrieverAll frame (Stage 2 of #1;
   # R/library/data_retrieve.r keeps their keys, so a DataRetrieve = TRUE run is
   # needed before --init): Amniote per-cell source names -> the keys of

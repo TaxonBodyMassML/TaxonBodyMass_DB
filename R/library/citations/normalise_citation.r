@@ -285,6 +285,41 @@ SplitTitleContainer <- function(body) {
   list(title = if (nzchar(title)) title else NA_character_, container = if (nzchar(container)) container else NA_character_)
 }
 
+# A title-less citation, "Journal volume: pages (year)": the form the
+# Mass.Source cells of Faurby_etal_2018 (PHYLACINE) take on most rows, 'Journal
+# of Mammalogy 83: 1-19 (2002)', 'Annals and Magazine of Natural History 8 12:
+# 395-403 (1912)' (series and volume), 'Bonner zoologische Beitrage 56 151-157
+# (2009)' (no colon), 'Bulletin of the British Museum. Zoology 63: 123-128(1997)',
+# 'Proceedings of the Zoological Society of London 1906 859-864 (1906)' (a
+# year-numbered volume), 'Fieldiana Zoology 112: 1-63 (2006) (listed as ...)' (a
+# trailing note). The text before the numbers is the container, a series number
+# before the volume is dropped, the first page range is the pages, the
+# bracketed year closing the entry is the year; author and title stay NA (the
+# decision rule container_volume_page of decide.r accepts such a reference on
+# the agreement of those fields alone; owner decision 2026-10-06). Returns NULL
+# when the string does not end that way, carries a year before the numbers, or
+# opens with an author block ('Doe JA, Roe B. A study. J Things 5: 1-10 (2001)'
+# belongs to the generic parse).
+journal_only_tail <- paste0(
+  '^(.*?[^\\s\\d,:])',                                   # 1 the container
+  '[\\s,:]+',
+  '(?:(\\d{1,2})[,\\s]\\s*)?',                           # 2 an optional series number
+  '(\\d{1,4}(?:\\s*-\\s*\\d{1,4})?)\\b',                 # 3 the volume ('11-12' a double volume)
+  '\\s*[:,]?\\s*',
+  '(e?\\d+[A-Za-z]?)(?:\\s*-\\s*(e?\\d+[A-Za-z]?))?',    # 4, 5 the first page range
+  '(?:[,\\s]+\\d+\\s*-\\s*\\d+)*',                       # further ranges
+  '\\.?\\s*\\(\\s*((?:1[6-9]|20)\\d{2})(?:\\s*-\\s*\\d{2,4})?\\s*\\)',   # 6 the year, '(1948-1949)' allowed
+  '\\.?(?:\\s*\\([^()]*\\))?\\s*$')                      # a trailing note in brackets
+author_block_pattern <- '\\b[A-Z][A-Za-z\'-]+,? [A-Z]{1,3}[.,]|\\b[A-Z][A-Za-z\'-]+, [A-Z]\\.'
+ParseJournalOnlyStyle <- function(s) {
+  m <- regmatches(s, regexec(journal_only_tail, s, perl = TRUE))[[1]]
+  if (length(m) == 0) return(NULL)
+  head <- sub('[\\s.,;:]+$', '', trimws(m[2]), perl = TRUE)
+  if (!nzchar(head) || grepl(year_regex, head, perl = TRUE) || grepl(author_block_pattern, head, perl = TRUE)) return(NULL)
+  list(container = head, volume = gsub('\\s+', '', m[4]),
+       pages = if (nzchar(m[6])) paste0(m[5], '-', m[6]) else m[5], year = as.integer(m[7]))
+}
+
 # The author block and the body of an entry whose year closes it in brackets
 # (the Nature / Scientific Data reference style, "Authors. Title. Container
 # vol(issue), pages, (year)."; ReptTraits, Oskyrko_2024): there is no year
@@ -300,11 +335,13 @@ author_connectors <- c('and', '&', 'et', 'al.', 'al', 'de', 'da', 'del', 'der', 
 SplitAuthorsFromTitle <- function(head) {
   toks <- strsplit(trimws(head), '\\s+', perl = TRUE)[[1]]
   # dotted initials ('J.', 'J.-P.', 'J.B.,'), bare capitals with a comma ('P,',
-  # 'TK,') or two to three bare capitals ('TK'); a lone 'A' is a title word
-  is_initial <- grepl('^([A-Z]\\.-?){1,3}[A-Z]?,?$|^[A-Z]{1,3},$|^[A-Z]{2,3}$', toks, perl = TRUE)
+  # 'TK,'), two to three bare capitals ('TK') or two to three capitals closed by
+  # a period ('WD.', the last author of 'Smith AT, ..., Wozencraft WD. A Guide
+  # to the Mammals of China (2008)'); a lone 'A' is a title word
+  is_initial <- grepl('^([A-Z]\\.-?){1,3}[A-Z]?,?$|^[A-Z]{1,3},$|^[A-Z]{2,3}\\.?,?$', toks, perl = TRUE)
   is_conn    <- tolower(toks) %in% author_connectors
   has_comma  <- grepl(',$', toks)
-  is_cap     <- grepl('^["\'(]?[A-Z0-9]', toks, perl = TRUE)
+  is_cap     <- grepl('^["\'(\\[]?[A-Z0-9]', toks, perl = TRUE)
   start <- NA_integer_
   for (j in seq_along(toks)) {
     if (!is_cap[j] || has_comma[j] || is_initial[j] || is_conn[j]) next
@@ -391,6 +428,9 @@ ParseCitationString <- function(x) {
     # remove a DOI / URL tail so it does not pollute pages or container
     s <- sub('\\s*(doi:?\\s*|https?://(dx\\.)?doi\\.org/)10\\.[0-9]{4,9}/\\S+\\s*$', '', s, ignore.case = TRUE, perl = TRUE)
     s <- sub('\\s*https?://\\S+\\s*$', '', s, perl = TRUE)
+    # a note in brackets after the bracketed year ("... Volume 3 (2013) (as S.
+    # hypoleucus southern form)", the PHYLACINE cells) is not part of the entry
+    s <- sub('(\\(\\s*(1[6-9]|20)[0-9]{2}[a-z]?\\s*\\))\\s*\\([^()]*\\)\\s*$', '\\1', s, perl = TRUE)
     pos <- regexpr(year_regex, s, perl = TRUE)
     nat <- ParseNatureStyle(s)
     if (!is.null(nat)) {
@@ -404,6 +444,16 @@ ParseCitationString <- function(x) {
       out$parsed_container[i] <- nat$container
       out$parsed_volume[i]    <- nat$volume
       out$parsed_pages[i]     <- nat$pages
+      next
+    }
+    jo <- ParseJournalOnlyStyle(s)
+    if (!is.null(jo)) {
+      # "Journal volume: pages (year)" without author or title (the PHYLACINE
+      # Mass.Source cells): container, volume, pages and year only
+      out$parsed_year[i]      <- jo$year
+      out$parsed_container[i] <- jo$container
+      out$parsed_volume[i]    <- jo$volume
+      out$parsed_pages[i]     <- jo$pages
       next
     }
     cs <- ParseCommaStyle(s)

@@ -126,6 +126,43 @@ Expect(all(c('certain', 'pending', 'not_found', 'self') %in% match_statuses) &&
                'grey_literature', 'retracted', 'doi_resolves', 'doi_mismatch') %in% match_reasons),
        'every status and reason code the rules emit is in the vocabularies')
 
+cat('DecideMatch(): title-less citations, the container_volume_page rule (owner decision 2026-10-06)\n')
+TL <- function(raw_citation = 'Journal of Mammalogy 83: 1-19 (2002)', ...)
+  Ref(raw_citation = raw_citation, author1 = NA_character_, year = 2002L, title = NA_character_,
+      container = 'Journal of Mammalogy', volume = '83', pages = '1-19', ...)
+JM <- function(service = 'crossref', doi = '10.1/jm83', container = 'Journal of Mammalogy', volume = '83', pages = '1-19', year = 2002L, ...)
+  Cand(service = service, doi = doi, title = 'Systematics of Abrocoma', author1 = 'Braun', year = year,
+       container = container, volume = volume, pages = pages, ...)
+d <- DecideMatch(TL(), open_cands = rbind(JM(), JM('openalex')))
+Expect(d$match_status == 'certain' && d$match_reason == 'container_volume_page' && d$doi == '10.1/jm83' && d$title_sim == 0 &&
+         d$container_match && d$volume_match && d$pages_match && d$year_match && d$services == 'crossref;openalex',
+       'no title; container, volume, first page and year agree at both services: certain / container_volume_page')
+d <- DecideMatch(TL(), open_cands = JM())
+Expect(d$match_status == 'pending' && d$match_reason == 'single_service' && d$doi == '10.1/jm83', 'the agreeing candidate from one service: pending / single_service')
+d <- DecideMatch(TL(), open_cands = rbind(JM(), JM('openalex'), JM(doi = '10.1/twin'), JM('openalex', doi = '10.1/twin')))
+Expect(d$match_status == 'pending' && d$match_reason == 'ambiguous' && nrow(d$candidates) == 2, 'two DOIs agreeing on all four fields: pending / ambiguous')
+d <- DecideMatch(TL(), open_cands = rbind(JM(pages = '20-31'), JM('openalex', pages = '20-31')))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold' && d$doi == '10.1/jm83', 'a different first page: not_found / below_threshold (the best candidate kept for the queue)')
+d <- DecideMatch(TL(), open_cands = rbind(JM(year = 2004L), JM('openalex', year = 2004L)))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', 'the year two off: no agreement')
+d <- DecideMatch(TL(), open_cands = rbind(JM(year = 2003L), JM('openalex', year = 2003L)))
+Expect(d$match_status == 'certain' && d$match_reason == 'container_volume_page', 'the year one off is inside the window')
+d <- DecideMatch(TL(), open_cands = rbind(JM(container = 'J. Mammal.'), JM('openalex', container = 'J. Mammal.')))
+Expect(d$match_status == 'certain' && d$match_reason == 'container_volume_page', 'the container is compared abbreviation-aware')
+d <- DecideMatch(TL(), open_cands = rbind(JM(container = 'Journal of Zoology'), JM('openalex', container = 'Journal of Zoology')))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', 'another journal with the same volume and pages: no agreement')
+d <- DecideMatch(TL(), open_cands = rbind(JM(pages = '1'), JM('openalex', pages = '1')))
+Expect(d$match_status == 'certain', 'the first page alone agrees with the page range')
+d <- DecideMatch(TL(), open_cands = rbind(JM(), JM('openalex', is_retracted = TRUE)))
+Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && d$is_retracted, 'an agreeing candidate with a retraction flag: pending / retracted')
+d <- DecideMatch(TL(), open_cands = JM(), services = 'crossref')
+Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable', 'decided without OpenAlex: provisional, service_unavailable')
+d <- DecideMatch(TL(raw_citation = 'Bulletin of the British Museum. Zoology 63: 123-128(1997)'), open_cands = rbind(JM(pages = '20-31'), JM('openalex', pages = '20-31')))
+Expect(d$match_status == 'pending' && d$match_reason == 'grey_literature', 'no agreement and a bulletin: pending / grey_literature as for any failed search')
+d <- DecideMatch(TL(), open_cands = EmptyCandidates())
+Expect(d$match_status == 'not_found' && d$match_reason == 'no_candidates', 'no candidate at all: no_candidates')
+Expect('container_volume_page' %in% match_reasons, 'container_volume_page is in the reason vocabulary')
+
 cat('DecideMatch() with the screening file\n')
 scite <- data.frame(doi = c('10.1/thing', '10.1/gap', '10.1/cons'), is_retracted = c('FALSE', NA, NA), notice_type = c('erratum', NA, 'unchecked'),
                     notice_doi = NA, checked_at = '2026-10-05', checked_by = c('scite-mcp', 'none', 'consensus-mcp'), stringsAsFactors = FALSE)

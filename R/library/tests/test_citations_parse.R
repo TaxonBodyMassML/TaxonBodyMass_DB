@@ -131,6 +131,67 @@ Expect(r$parsed_author1[5] == 'Meiri' && r$parsed_year[5] == 2021L &&
          r$parsed_title[5] == 'Different solutions lead to similar life history traits across the great divides of the amniote tree of life',
        "'et al.' ends the author block")
 
+cat('ParseCitationString() on title-less citations (the Faurby_etal_2018 Mass.Source cells)\n')
+j <- ParseCitationString(c(
+  'Journal of Mammalogy 83: 1-19 (2002)',
+  'Annals and Magazine of Natural History 8 12: 395-403 (1912)',
+  'Bonner zoologische Beiträge 56 151-157 (2009)',
+  'Bulletin of the British Museum. Zoology 63: 123-128(1997)',
+  'Proceedings of the Zoological Society of London 118: 765-816(1948-1949)',
+  'Fieldiana Zoology 112: 1-63 (2006) (listed as Cynopterus_brachyotis)',
+  'Annals and Magazine of Natural History  8 16: 66-79 124-146, 357-380, 506-514 (1915)',
+  'Proceedings of the Zoological Society of London 1906 859-864 (1906)',
+  'Senckenbergiana Biologica: 80 233-239 (2000)',
+  'Plecotus et al 11-12: 3-13 (2009)',
+  'Occasional Papers of the Museum of Texas Tech University 231: 1-12. (2004)',
+  'Philosophical Transactions fo the Royal Society of London Series B 366: 2564-2576 (2011)',
+  'Journal of Mammalogy 81:758-768',
+  'Doe, J. 2001. A study of things. J Things 5: 1-10.',
+  'Doe JA, Roe B. A study of things. J Things 5: 1-10 (2001)'))
+Expect(all(is.na(j$parsed_author1[1:12])) && all(is.na(j$parsed_title[1:12])), 'title-less citations: author and title stay NA')
+Expect(j$parsed_container[1] == 'Journal of Mammalogy' && j$parsed_volume[1] == '83' && j$parsed_pages[1] == '1-19' && j$parsed_year[1] == 2002L,
+       "'Journal volume: pages (year)': container, volume, pages, year")
+Expect(j$parsed_container[2] == 'Annals and Magazine of Natural History' && j$parsed_volume[2] == '12' && j$parsed_pages[2] == '395-403' && j$parsed_year[2] == 1912L,
+       'a series number before the volume is dropped')
+Expect(j$parsed_container[3] == 'Bonner zoologische Beitrage' && j$parsed_volume[3] == '56' && j$parsed_pages[3] == '151-157' && j$parsed_year[3] == 2009L,
+       'no colon between volume and pages; diacritics folded')
+Expect(j$parsed_container[4] == 'Bulletin of the British Museum. Zoology' && j$parsed_volume[4] == '63' && j$parsed_pages[4] == '123-128' && j$parsed_year[4] == 1997L,
+       'a period inside the journal name; no blank before the year')
+Expect(j$parsed_volume[5] == '118' && j$parsed_pages[5] == '765-816' && j$parsed_year[5] == 1948L, 'a year range takes its first year')
+Expect(j$parsed_container[6] == 'Fieldiana Zoology' && j$parsed_volume[6] == '112' && j$parsed_pages[6] == '1-63' && j$parsed_year[6] == 2006L,
+       'a trailing note in brackets is ignored')
+Expect(j$parsed_volume[7] == '16' && j$parsed_pages[7] == '66-79' && j$parsed_year[7] == 1915L, 'several page ranges: the first is the pages')
+Expect(j$parsed_container[8] == 'Proceedings of the Zoological Society of London' && j$parsed_volume[8] == '1906' && j$parsed_pages[8] == '859-864' && j$parsed_year[8] == 1906L,
+       'a year-numbered volume before the bracketed year')
+Expect(j$parsed_container[9] == 'Senckenbergiana Biologica' && j$parsed_volume[9] == '80' && j$parsed_pages[9] == '233-239', 'a colon after the journal name')
+Expect(j$parsed_volume[10] == '11-12' && j$parsed_pages[10] == '3-13' && j$parsed_container[10] == 'Plecotus et al', 'a double volume')
+Expect(j$parsed_volume[11] == '231' && j$parsed_pages[11] == '1-12' && j$parsed_year[11] == 2004L, 'a period after the pages')
+Expect(j$parsed_container[12] == 'Philosophical Transactions fo the Royal Society of London Series B' && j$parsed_volume[12] == '366' && j$parsed_pages[12] == '2564-2576',
+       "a one-letter series name ('Series B') is not an author initial")
+Expect(is.na(j$parsed_year[13]) && j$parsed_volume[13] == '81' && j$parsed_pages[13] == '758-768', 'without a bracketed year the generic parse applies')
+Expect(j$parsed_author1[14] == 'Doe' && j$parsed_title[14] == 'A study of things' && j$parsed_container[14] == 'J Things' && j$parsed_volume[14] == '5',
+       'an author-year citation ending in volume: pages is not title-less (a year before the numbers)')
+Expect(j$parsed_author1[15] == 'Doe' && j$parsed_title[15] == 'A study of things' && j$parsed_container[15] == 'J Things' && j$parsed_year[15] == 2001L,
+       'an author block before the title keeps the generic parse although the year closes the entry')
+Expect(is.null(ParseJournalOnlyStyle('Garbutt N. Mammals of Madagascar a Complete Guide (2007)')) &&
+         is.null(ParseJournalOnlyStyle('Acta Oecologica 41-49 (2012)')),
+       'ParseJournalOnlyStyle(): NULL for a book and for pages without a volume')
+
+cat('ParseCitationString() on the book form of the Faurby_etal_2018 cells\n')
+b <- ParseCitationString(c(
+  'Smith AT, Xie Y, Hoffmann RS, Lunde D, MacKinnon J, Wilson DE, Wozencraft WD. A Guide to the Mammals of China (2008)',
+  'Ohdachi SD, Ishibashi I, Iwasa MA, Saitih T. The Wild Mammals of Japan. (2009)',
+  'Garbutt N. Mammals of Madagascar a Complete Guide (2007)',
+  'Gromov IM, Erbajeva MA [The mammals of Russia and adjacent territories Lagomorphs and Rodents) (1995)',
+  'Mittermeier RA, Rylands AB,  Wilson DE Handbook of the Mammals of the World - Volume 3 (2013) (as S. hypoleucus southern form)'))
+Expect(b$parsed_author1[1] == 'Smith' && b$parsed_title[1] == 'A Guide to the Mammals of China' && is.na(b$parsed_container[1]) && b$parsed_year[1] == 2008L,
+       "the last author's initials closed by a period ('Wozencraft WD.') end the author block")
+Expect(b$parsed_author1[2] == 'Ohdachi' && b$parsed_title[2] == 'The Wild Mammals of Japan' && b$parsed_year[2] == 2009L, 'four authors with bare initials, a period after the title')
+Expect(b$parsed_author1[3] == 'Garbutt' && b$parsed_title[3] == 'Mammals of Madagascar a Complete Guide' && is.na(b$parsed_volume[3]), 'one author, bare initial')
+Expect(b$parsed_author1[4] == 'Gromov' && startsWith(b$parsed_title[4], '[The mammals of Russia'), 'a title opening with a square bracket starts the title')
+Expect(b$parsed_author1[5] == 'Mittermeier' && b$parsed_title[5] == 'Handbook of the Mammals of the World - Volume 3' && b$parsed_year[5] == 2013L,
+       'a note in brackets after the bracketed year is dropped')
+
 cat('ParseCitationString() on other styles\n')
 q <- ParseCitationString(c(
   'Taylor, G. M., Nol, E., & Boire, D. (1995). Brain regions and encephalization in anurans: adaptation or stability? Brain, behavior and evolution, 45(2), 96-109. doi:10.1159/000113543',
