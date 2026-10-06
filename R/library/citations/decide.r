@@ -11,6 +11,8 @@
 #                                  Bib/pending_citations.csv (append-only, idempotent)
 #   ApplyQueueDecisions(...)       validates the owner's `decision` and applies it
 #                                  (1|2|3, doi:..., manual:<Key>, nodoi, self, drop)
+#   ScreeningCandidates(...)       the DOIs of a source an agent should screen with Scite
+#                                  (selective screening policy, owner decision 2026-10-05)
 # Only VerifyReference() / ApplyQueueDecisions() with a doi: decision touch the
 # services, through verify_services.r (cached). Everything else is offline.
 
@@ -51,7 +53,10 @@ IsGreyLiterature <- function(raw_citation)
 
 # A retraction or editorial notice on a DOI from any of the three sources:
 # OpenAlex is_retracted, Crossref update-to / updated-by, Scite. Returns
-# list(flag, notice, is_retracted).
+# list(flag, notice, is_retracted, ...). A DOI without a screening row, or
+# whose latest row is 'none', carries no notice: under the selective
+# screening policy (owner decision 2026-10-05) the Crossref and OpenAlex
+# fields alone decide, and a screen is never required for certain.
 NoticeFor <- function(doi, scored, scite) {
   rows <- scored[!is.na(scored$doi) & scored$doi == doi, , drop = FALSE]
   retracted <- any(rows$is_retracted, na.rm = TRUE)
@@ -65,7 +70,6 @@ NoticeFor <- function(doi, scored, scite) {
   sv <- SciteVerdict(doi, scite)
   if (sv$is_retracted) { retracted <- TRUE; notices <- c(notices, paste0(sv$service, ':retraction')) }
   if (!is.na(sv$notice)) notices <- c(notices, sv$notice)
-  if (sv$gap) notices <- c(notices, 'screening:none (no service answered; stays pending)')
   list(flag = length(notices) > 0, is_retracted = retracted,
        notice = if (length(notices) > 0) paste(unique(notices), collapse = '; ') else NA_character_,
        scite_checked = sv$checked, screening_service = sv$service, gap = sv$gap)
@@ -138,7 +142,7 @@ DecideMatchWith <- function(ref, doi_cands, open_cands, closed_cands, scite, th,
     if (!agree) return(Decision('pending', 'doi_mismatch', best, sc, services))
     nt <- NoticeFor(best$doi, sc, scite)
     svc <- ServicesWith(services, nt)
-    if (nt$flag) return(Decision('pending', if (nt$gap && !nt$is_retracted) 'unscreened' else 'retracted', best, sc, svc, nt))
+    if (nt$flag) return(Decision('pending', 'retracted', best, sc, svc, nt))
     return(Decision('certain', 'doi_resolves', best, sc, svc, nt))
   }
   # 2. open search and closed world
@@ -153,7 +157,7 @@ DecideMatchWith <- function(ref, doi_cands, open_cands, closed_cands, scite, th,
   }
   nt <- NoticeFor(best$doi, sc, scite)
   svc <- ServicesWith(services, nt)
-  if (nt$flag) return(Decision('pending', if (nt$gap && !nt$is_retracted) 'unscreened' else 'retracted', best, by_doi, svc, nt))
+  if (nt$flag) return(Decision('pending', 'retracted', best, by_doi, svc, nt))
   if (nrow(by_doi) > 1 && by_doi$title_sim[2] >= best$title_sim - th$ambiguous_delta)
     return(Decision('pending', 'ambiguous', best, by_doi, svc, nt))
   strong <- best$title_sim >= th$certain_title_sim && isTRUE(best$author_match) && isTRUE(best$year_match) &&
@@ -254,10 +258,16 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   list(prim = prim, candidates = cands, skipped = skipped, quota = quota)
 }
 
-# The screening file is applied to every row with a DOI whatever its status:
-# the screening service joins `services`; a notice, a retraction or a 'none'
-# row turns a certain / approved row back to pending (reason retracted /
-# unscreened) so that it is queued and never auto-accepted (issue #1, F5).
+# The screening file is applied to every row with a DOI whatever its status
+# (selective screening policy, owner decision 2026-10-05): a row screened by a
+# service gains that service in `services`; a notice or a retraction turns a
+# certain / approved row back to pending (reason retracted) so that it is
+# queued and never auto-accepted (issue #1, F5). A DOI with no screening row,
+# or whose latest row is 'none', keeps its status: the Crossref update-to and
+# OpenAlex is_retracted fields consulted at --verify are the screen of record,
+# and the gap of a 'none' row is only recorded (its stale ';none' suffix and
+# 'screening:none' note of the earlier rule are removed). An 'owner-waiver'
+# row is kept valid for history (SciteVerdict()) though no longer needed.
 ApplySciteChecks <- function(prim, scite, verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')) {
   if (is.null(scite) || nrow(scite) == 0) return(prim)
   for (i in which(!is.na(prim$doi))) {
@@ -265,20 +275,143 @@ ApplySciteChecks <- function(prim, scite, verified_at = format(Sys.time(), '%Y-%
     if (!sv$checked && !sv$gap) next
     svc <- strsplit(if (is.na(prim$services[i])) '' else prim$services[i], ';', fixed = TRUE)[[1]]
     svc <- svc[nzchar(svc) & !svc %in% screening_services]
+    prim$editorial_notice[i] <- DropGapNote(prim$editorial_notice[i])
+    if (sv$gap) { prim$services[i] <- paste(svc, collapse = ';'); next }
     prim$services[i] <- paste(c(svc, sv$service), collapse = ';')
-    notice <- c(if (sv$is_retracted) paste0(sv$service, ':retraction'), if (!is.na(sv$notice)) sv$notice,
-                if (sv$gap) 'screening:none (no service answered; stays pending)')
+    notice <- c(if (sv$is_retracted) paste0(sv$service, ':retraction'), if (!is.na(sv$notice)) sv$notice)
     if (length(notice) > 0) {
       prim$editorial_notice[i] <- paste(unique(notice), collapse = '; ')
       if (sv$is_retracted) prim$is_retracted[i] <- TRUE
       if (prim$match_status[i] %in% c('certain', 'approved')) {
         prim$match_status[i] <- 'pending'
-        prim$match_reason[i] <- if (sv$gap && !sv$is_retracted) 'unscreened' else 'retracted'
+        prim$match_reason[i] <- 'retracted'
         prim$verified_at[i]  <- verified_at
       }
     }
   }
   prim
+}
+
+# The 'screening:none (...)' note the earlier rule wrote on a gap is removed
+# from an editorial_notice (NA when nothing else remains).
+DropGapNote <- function(notice) {
+  if (is.na(notice)) return(NA_character_)
+  parts <- trimws(strsplit(notice, ';', fixed = TRUE)[[1]])
+  keep <- parts[nzchar(parts) & !grepl('^screening:none', parts)]
+  # the gap note itself holds a ';' ("no service answered; stays pending"): drop its tail too
+  keep <- keep[!grepl('^stays pending\\)?$', keep)]
+  if (length(keep) == 0) NA_character_ else paste(keep, collapse = '; ')
+}
+
+# ---- the screening list ------------------------------------------------------------------
+# The DOIs of one source an agent should screen with Scite (Consensus as the
+# fallback) under the selective screening policy (owner decision 2026-10-05):
+# a reference is certain on Crossref + OpenAlex alone, and the screen is
+# called for (a) a DOI whose services carry a retraction or correction notice
+# (to read the notice type), (b) rows where the two services disagree or only
+# one answered (single_service, ambiguous), (c) doubtful identities (grey
+# literature, a DOI shared by several keys, a mismatching source DOI, an old
+# journal: parsed_year before `old_year`), and (d) a random audit sample of the
+# newly certain DOIs (certain rows not yet screened by scite-mcp or
+# consensus-mcp): `sample_frac` of them, at least `min_sample`, drawn with a
+# seed derived from the source label and `date` (sha1, so that the draw of a
+# round can be repeated and the README can say how it was taken). A DOI
+# already screened by scite-mcp is listed only when it carries a notice (a
+# consensus-mcp row cannot read a notice type, so it does not close a notice
+# case). Rows without a DOI, self and rejected rows are never listed. Returns
+# one row per native key: source_label, native_key, n_records, match_status,
+# match_reason, doi, category (notice / disagreement / doubtful /
+# audit_sample), reason (the codes of the list, ';'-joined), screened_by (the
+# latest screening row of the DOI, '' when none), parsed_year, raw_citation;
+# attributes `seed`, `date`, `n_new_certain`, `n_sample`. No network.
+ScreeningCandidates <- function(prim, scite = NULL, sample_frac = citations_screening$sample_frac,
+                                min_sample = citations_screening$min_sample, old_year = citations_screening$old_year,
+                                date = Sys.Date(), seed = NULL) {
+  prim <- prim[!is.na(prim$doi) & !prim$match_status %in% c('self', 'rejected') & !prim$role %in% 'self', , drop = FALSE]
+  src <- if (nrow(prim) > 0) prim$source_label[1] else NA_character_
+  if (is.null(seed)) seed <- ScreeningSeed(src, date)
+  Out <- function(d, category, reason) {
+    data.frame(source_label = d$source_label, native_key = d$native_key, n_records = d$n_records,
+               match_status = d$match_status, match_reason = d$match_reason, doi = d$doi,
+               category = rep(category, nrow(d)), reason = rep(reason, nrow(d)),
+               screened_by = vapply(d$doi, function(x) LatestScreen(x, scite), character(1), USE.NAMES = FALSE),
+               parsed_year = d$parsed_year, raw_citation = d$raw_citation, stringsAsFactors = FALSE)
+  }
+  empty <- Out(prim[0, , drop = FALSE], character(0), character(0))
+  if (nrow(prim) == 0) return(structure(empty, seed = seed, date = format(date), n_new_certain = 0L, n_sample = 0L))
+  screened <- vapply(prim$doi, function(x) LatestScreen(x, scite), character(1), USE.NAMES = FALSE)
+  by_scite <- screened == 'scite-mcp'
+  # (a) a notice from Crossref / OpenAlex (or an earlier screen)
+  notice <- prim$match_reason %in% 'retracted' | prim$is_retracted %in% TRUE |
+            (!is.na(prim$editorial_notice) & !grepl('^screening:none', prim$editorial_notice))
+  # (b) the services disagree or only one answered
+  one_service <- vapply(prim$services, function(x) {
+    sv <- if (is.na(x)) character(0) else strsplit(x, ';', fixed = TRUE)[[1]]
+    !all(c('crossref', 'openalex') %in% sv) }, logical(1), USE.NAMES = FALSE)
+  disagree <- prim$match_reason %in% c('single_service', 'ambiguous') |
+              (one_service & prim$match_status %in% c('certain', 'approved', 'pending'))
+  # (c) doubtful identities
+  grey <- prim$match_reason %in% 'grey_literature' |
+          vapply(prim$raw_citation, IsGreyLiterature, logical(1), USE.NAMES = FALSE)
+  dup  <- prim$doi %in% prim$doi[duplicated(prim$doi)]
+  mism <- prim$match_reason %in% 'doi_mismatch'
+  old  <- !is.na(prim$parsed_year) & prim$parsed_year < old_year
+  rows <- list()
+  Add <- function(sel, category, reason) {
+    sel <- sel & !(by_scite & category != 'notice')
+    if (any(sel)) rows[[length(rows) + 1]] <<- Out(prim[sel, , drop = FALSE], category, reason)
+  }
+  Add(notice, 'notice', 'retracted')
+  Add(disagree & prim$match_reason %in% 'ambiguous', 'disagreement', 'ambiguous')
+  Add(disagree & !prim$match_reason %in% 'ambiguous', 'disagreement', 'single_service')
+  Add(grey, 'doubtful', 'grey_literature')
+  Add(dup, 'doubtful', 'duplicate_doi')
+  Add(mism, 'doubtful', 'doi_mismatch')
+  Add(old, 'doubtful', 'old_journal')
+  listed <- if (length(rows) > 0) do.call(rbind, rows) else empty
+  # (d) the audit sample of the newly certain DOIs not listed for another reason
+  new_certain <- prim$match_status %in% 'certain' & !screened %in% c('scite-mcp', 'consensus-mcp') &
+                 !prim$native_key %in% listed$native_key
+  pool <- sort(unique(prim$doi[new_certain]))
+  n_sample <- if (length(pool) == 0) 0L else as.integer(min(length(pool), max(min_sample, ceiling(sample_frac * length(pool)))))
+  if (n_sample > 0) {
+    drawn <- WithSeed(seed, function() pool[sample.int(length(pool), n_sample)])
+    sel <- new_certain & prim$doi %in% drawn
+    rows[[length(rows) + 1]] <- Out(prim[sel, , drop = FALSE], 'audit_sample', 'audit_sample')
+  }
+  out <- if (length(rows) > 0) do.call(rbind, rows) else empty
+  # one row per key, the categories in priority order, the reasons joined
+  if (nrow(out) > 0) {
+    out <- out[order(match(out$category, screening_categories), out$native_key, method = 'radix'), , drop = FALSE]
+    reasons <- tapply(out$reason, out$native_key, function(r) paste(unique(r), collapse = ';'))
+    out <- out[!duplicated(out$native_key), , drop = FALSE]
+    out$reason <- unname(reasons[out$native_key])
+    out <- out[order(match(out$category, screening_categories), -out$n_records, out$native_key, method = 'radix'), , drop = FALSE]
+    rownames(out) <- NULL
+  }
+  structure(out, seed = seed, date = format(date), n_new_certain = length(pool), n_sample = n_sample)
+}
+
+# The checked_by of the DOI's latest screening row ('' when none; the service
+# of record of SciteVerdict(), 'none' for an unanswered gap).
+LatestScreen <- function(doi, scite) {
+  sv <- SciteVerdict(doi, scite)
+  if (sv$checked) sv$service else if (sv$gap) 'none' else ''
+}
+
+# A seed from the source label and the date of the draw (first seven hex digits
+# of their sha1), so that the audit sample of a round can be reproduced.
+ScreeningSeed <- function(source_label, date)
+  strtoi(substr(digest::digest(paste(source_label, format(date)), algo = 'sha1', serialize = FALSE), 1, 7), 16L)
+
+# Evaluate f() under `seed` and restore the caller's random state.
+WithSeed <- function(seed, f) {
+  had <- exists('.Random.seed', envir = globalenv(), inherits = FALSE)
+  old <- if (had) get('.Random.seed', envir = globalenv()) else NULL
+  on.exit(if (had) assign('.Random.seed', old, envir = globalenv()) else
+            if (exists('.Random.seed', envir = globalenv(), inherits = FALSE)) rm('.Random.seed', envir = globalenv()))
+  set.seed(seed)
+  f()
 }
 
 # ---- the review queue ------------------------------------------------------------------

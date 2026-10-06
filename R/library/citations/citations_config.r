@@ -120,7 +120,7 @@ match_statuses   <- c('certain', 'pending', 'approved', 'nodoi_approved', 'rejec
                       'not_found', 'self')
 match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', 'closed_world',
                       'single_service', 'ambiguous', 'grey_literature', 'retracted',
-                      'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'service_unavailable',
+                      'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'service_unavailable',   # unscreened: historical (rows and queue entries before 2026-10-05)
                       'owner_review', 'self',
                       'owner_candidate', 'owner_doi', 'manual_bib', 'owner_nodoi',
                       'owner_self', 'owner_drop', 'key_not_in_reflist')
@@ -185,26 +185,42 @@ pending_queue_columns <- c(
   paste0('c3_', pending_candidate_fields),
   'scite_note', 'decision', 'decided_by', 'decided_at')
 
-# Bib/scite_checks.csv (issue #1, 1.7; owner amendment 2026-10-04): one row per
-# DOI screened for retractions and corrections in a Claude Code session. The
+# Bib/scite_checks.csv (issue #1, 1.7; owner amendments 2026-10-04 and
+# 2026-10-05): one row per DOI screened for retractions and corrections in a
+# Claude Code session. Selective screening policy (owner decision 2026-10-05):
+# a reference is certain on Crossref + OpenAlex agreement with clean Crossref
+# update-to and OpenAlex is_retracted fields alone; a screening row is not
+# required, and a missing row or a 'none' row never changes a status. Scite
+# (Consensus as its fallback) is called for the DOIs ScreeningCandidates()
+# lists: a notice-bearing DOI (to read the notice type), rows where the two
+# services disagree or only one answered, doubtful identities, and a random
+# audit sample of the newly certain DOIs (`citations_screening`). The
 # screening service is recorded in `checked_by`: 'scite-mcp' (editorialNotices
-# read), 'consensus-mcp' (the fallback when Scite is unavailable, returns nothing
-# or fails on quota; Consensus has no retraction field, so such a row carries
-# notice_type 'unchecked' and the DOI relies on the Crossref update-to and
-# OpenAlex is_retracted flags that verify_services.r consults for every DOI), or
-# 'none' (neither service answered: the row records the gap and the reference
-# stays pending), or 'owner-waiver' (owner decision 2026-10-05: a DOI that no
-# service indexes -- the JSTOR-era Mammalian Species accounts of Smith_2003 --
-# is waived by the owner; the row carries notice_type 'waived', counts as a
-# screen without notice, so that it never turns a status to pending /
-# unscreened, and is superseded by any later scite-mcp or consensus-mcp row;
-# the Scite re-screen is due after 2026-11-01). `services` of a verified
-# reference lists the services behind the decision: 'crossref;openalex' plus
-# ';scite-mcp', ';consensus-mcp' or ';owner-waiver' when a screening row
-# exists for its DOI.
+# read), 'consensus-mcp' (the fallback when Scite is unavailable, returns
+# nothing or fails on quota; Consensus has no retraction field, so such a row
+# carries notice_type 'unchecked'), 'none' (neither service answered: the row
+# records the gap), or 'owner-waiver' (owner decision 2026-10-05 for the
+# JSTOR-era Mammalian Species accounts of Smith_2003, before the selective
+# policy: notice_type 'waived', a screen without notice; no longer needed,
+# kept valid for history and superseded by any later scite-mcp or
+# consensus-mcp row). A row reporting a retraction or a correction still turns
+# a certain / approved row to pending (reason retracted). `services` of a
+# verified reference lists the services behind the decision: 'crossref;openalex'
+# plus ';scite-mcp', ';consensus-mcp' or ';owner-waiver' when a screening row
+# that answered exists for its DOI (never ';none').
 scite_check_columns <- c('doi', 'is_retracted', 'notice_type', 'notice_doi', 'checked_at', 'checked_by')
 screening_services  <- c('scite-mcp', 'consensus-mcp', 'owner-waiver', 'none')
 screening_notice_none <- c('none', 'unchecked', 'waived')     # notice_type values that are not a notice
+
+# The screening list of a source (ScreeningCandidates(), `--screening-list`,
+# reports/screening_<Src>.md): the share of the newly certain DOIs drawn for
+# the audit sample, the minimum draw, and the year before which a reference
+# counts as an old journal (a doubtful identity). The categories in the order
+# a key is assigned to when it qualifies for several.
+citations_screening <- list(sample_frac = 0.05, min_sample = 3L, old_year = 1960L)
+screening_categories <- c('notice', 'disagreement', 'doubtful', 'audit_sample')
+screening_list_reasons <- c('retracted', 'ambiguous', 'single_service', 'grey_literature', 'duplicate_doi',
+                            'doi_mismatch', 'old_journal', 'audit_sample')
 
 # Bib/source_provenance_classes.csv (issue #1, 1.6)
 provenance_class_columns <- c('source_label', 'class', 'default_provenance_type', 'equation_bibcite', 'notes')

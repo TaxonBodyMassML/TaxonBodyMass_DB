@@ -5,7 +5,8 @@
 # whose Crossref and OpenAlex responses are recorded in
 # R/library/citations/tests/fixtures/cache/; the review queue
 # (WritePendingQueue(), ApplyQueueDecisions()) and the screening overlay
-# (ApplySciteChecks()) run on temporary files. No network access.
+# (ApplySciteChecks()) run on temporary files; the screening list of the
+# selective policy (ScreeningCandidates()) on a synthetic frame. No network access.
 #
 #   Rscript R/library/tests/test_citations_decide.R      (from any directory)
 #
@@ -129,8 +130,10 @@ d <- DecideMatch(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex')), 
 Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && d$services == 'crossref;openalex;scite-mcp' && Has(d$editorial_notice, 'scite-mcp:erratum'),
        'a Scite notice on the best DOI: pending / retracted and the screening service joins services')
 d <- DecideMatch(Ref(), open_cands = rbind(Cand(doi = '10.1/gap'), Cand(service = 'openalex', doi = '10.1/gap')), scite = scite)
-Expect(d$match_status == 'pending' && d$match_reason == 'unscreened' && d$services == 'crossref;openalex' && Has(d$editorial_notice, 'screening:none'),
-       "a 'none' screening row (no service answered): pending / unscreened")
+Expect(d$match_status == 'certain' && d$match_reason == 'two_service_agreement' && d$services == 'crossref;openalex' && is.na(d$editorial_notice),
+       "a 'none' screening row (no service answered) is no notice: certain stands, no ';none' in services (selective policy, 2026-10-05)")
+d <- DecideMatch(Ref(), open_cands = rbind(Cand(doi = '10.1/new'), Cand(service = 'openalex', doi = '10.1/new')), scite = scite)
+Expect(d$match_status == 'certain' && d$services == 'crossref;openalex', 'a DOI without any screening row: certain on Crossref + OpenAlex alone')
 d <- DecideMatch(Ref(), open_cands = rbind(Cand(doi = '10.1/cons'), Cand(service = 'openalex', doi = '10.1/cons')), scite = scite)
 Expect(d$match_status == 'certain' && d$services == 'crossref;openalex;consensus-mcp' && is.na(d$editorial_notice),
        'a consensus-mcp row (unchecked) adds the service but is no notice: certain stands')
@@ -186,12 +189,24 @@ r1 <- q[q$native_key == '1', ]; r12 <- q[q$native_key == '12', ]; r9 <- q[q$nati
 Expect(r1$match_status == 'pending' && r1$match_reason == 'retracted' && r1$services == 'crossref;openalex;scite-mcp' && Has(r1$editorial_notice, 'scite-mcp:correction') &&
          r1$verified_at == '2026-10-08T00:00:00Z',
        'a correction notice turns a certain row back to pending / retracted')
-Expect(r12$match_status == 'pending' && r12$match_reason == 'unscreened' && r12$services == 'crossref;openalex;none' && Has(r12$editorial_notice, 'screening:none'),
-       "a 'none' row turns a certain row to pending / unscreened")
+Expect(r12$match_status == 'certain' && r12$match_reason == 'two_service_agreement' && r12$services == 'crossref;openalex' && is.na(r12$editorial_notice) &&
+         r12$verified_at == '2026-10-05T00:00:00Z',
+       "a 'none' row leaves a certain row certain, untouched (selective policy)")
+stale <- p; j <- which(stale$native_key == '12'); stale$services[j] <- 'crossref;openalex;none'
+stale$editorial_notice[j] <- 'screening:none (no service answered; stays pending)'
+stale$editorial_notice[stale$native_key == '6'] <- 'crossref:updated-by:erratum; screening:none (no service answered; stays pending)'
+qs <- ApplySciteChecks(stale, rbind(sc2, data.frame(doi = '10.1007/bf00392514', is_retracted = NA, notice_type = NA, notice_doi = NA, checked_at = '2026-10-05', checked_by = 'none')))
+Expect(qs$services[qs$native_key == '12'] == 'crossref;openalex' && is.na(qs$editorial_notice[qs$native_key == '12']) &&
+         qs$editorial_notice[qs$native_key == '6'] == 'crossref:updated-by:erratum' && qs$match_status[qs$native_key == '6'] == 'certain',
+       "the stale ';none' suffix and 'screening:none' note of the earlier rule are removed; other notices are kept")
+Expect(is.na(DropGapNote(NA)) && is.na(DropGapNote('screening:none (no service answered; stays pending)')) &&
+         DropGapNote('scite-mcp:erratum; screening:none (no service answered; stays pending)') == 'scite-mcp:erratum' &&
+         DropGapNote('scite-mcp:erratum') == 'scite-mcp:erratum',
+       'DropGapNote() removes only the gap note')
 Expect(r9$match_status == 'pending' && r9$match_reason == 'weak_match' && r9$services == 'crossref;openalex;consensus-mcp' && is.na(r9$editorial_notice),
        'a consensus-mcp row only records the service on a pending row')
 Expect(r6$services == 'crossref;openalex' && identical(ApplySciteChecks(p, NULL), p) && identical(ApplySciteChecks(p, sc2[0, ]), p),
-       'unscreened DOIs and an empty screening file leave rows unchanged')
+       'DOIs without a screening row and an empty screening file leave rows unchanged')
 sc4 <- rbind(sc2[2, ], data.frame(doi = '10.1007/bf00355587', is_retracted = NA, notice_type = 'waived', notice_doi = NA, checked_at = '2026-10-05',
                                   checked_by = 'owner-waiver', stringsAsFactors = FALSE))
 q4 <- ApplySciteChecks(p, sc4, verified_at = '2026-10-08T00:00:00Z')
@@ -202,6 +217,67 @@ sc3 <- data.frame(doi = '10.1016/j.jembe.2006.12.010', is_retracted = 'TRUE', no
 q3 <- ApplySciteChecks(q, sc3)
 Expect(q3$is_retracted[q3$native_key == '1'] && q3$services[q3$native_key == '1'] == 'crossref;openalex;scite-mcp' && Has(q3$editorial_notice[q3$native_key == '1'], 'scite-mcp:retraction'),
        'a retraction sets is_retracted; the screening service is not duplicated in services')
+
+# ---- the screening list -------------------------------------------------------------------------
+cat('ScreeningCandidates(), ScreeningSeed(), LatestScreen()\n')
+SRow <- function(key, doi, status = 'certain', reason = 'two_service_agreement', services = 'crossref;openalex', year = 2001L,
+                 citation = 'Doe, J. 2001. A study of things. J Things 5: 1-10.', notice = NA_character_, retracted = FALSE, role = 'measurement', n = 2L)
+  data.frame(source_label = 'Src', native_key = key, n_records = n, role = role, raw_citation = citation, parsed_year = year, doi = doi,
+             match_status = status, match_reason = reason, services = services, is_retracted = retracted, editorial_notice = notice, stringsAsFactors = FALSE)
+sp <- rbind(SRow('n1', '10.1/notice', 'pending', 'retracted', notice = 'crossref:updated-by:erratum'),
+            SRow('n2', '10.1/oaret', 'pending', 'retracted', retracted = TRUE),
+            SRow('s1', '10.1/single', 'pending', 'single_service', services = 'crossref'),
+            SRow('s2', '10.1/onesvc', 'approved', 'owner_doi', services = 'crossref'),
+            SRow('a1', '10.1/amb', 'pending', 'ambiguous'),
+            SRow('g1', '10.1/grey', 'pending', 'grey_literature', citation = 'Doe, J. 2001. A study. Ph.D. thesis, Some University.'),
+            SRow('g2', '10.1/thesis', 'approved', 'owner_candidate', citation = 'Roe, R. 1999. Things. Technical report 12.'),
+            SRow('d1', '10.1/dup'), SRow('d2', '10.1/dup'),
+            SRow('m1', '10.1/mism', 'pending', 'doi_mismatch'),
+            SRow('o1', '10.1/old', year = 1931L),
+            SRow('x1', '10.1/self', 'self', 'self', role = 'self'), SRow('x2', '10.1/drop', 'rejected', 'owner_drop'),
+            SRow('x3', NA_character_, 'nodoi_approved', 'owner_nodoi'),
+            SRow('z1', '10.1/scited', 'certain', 'two_service_agreement'),
+            SRow('z2', '10.1/scitednotice', 'pending', 'retracted', notice = 'scite-mcp:erratum'),
+            do.call(rbind, lapply(1:40, function(k) SRow(sprintf('c%02d', k), sprintf('10.1/c%02d', k)))))
+ssc <- data.frame(doi = c('10.1/scited', '10.1/scitednotice', '10.1/c01', '10.1/c02', '10.1/c03'), is_retracted = c('FALSE', 'FALSE', NA, NA, NA),
+                  notice_type = c('none', 'erratum', 'unchecked', 'unchecked', NA), notice_doi = NA, checked_at = '2026-10-05',
+                  checked_by = c('scite-mcp', 'scite-mcp', 'consensus-mcp', 'consensus-mcp', 'none'), stringsAsFactors = FALSE)
+cl <- ScreeningCandidates(sp, ssc, date = as.Date('2026-10-05'))
+Get <- function(k) cl[cl$native_key == k, ]
+Expect(Get('n1')$category == 'notice' && Get('n1')$reason == 'retracted' && Get('n2')$category == 'notice',
+       'a DOI with a Crossref notice or the OpenAlex retraction flag is listed under notice')
+Expect(Get('s1')$category == 'disagreement' && Get('s1')$reason == 'single_service' && Get('s2')$reason == 'single_service' &&
+         Get('a1')$reason == 'ambiguous' && Get('a1')$category == 'disagreement',
+       'single_service and ambiguous rows, and an accepted row one service answered, are listed under disagreement')
+Expect(Get('g1')$reason == 'grey_literature' && Get('g2')$reason == 'grey_literature' && Get('d1')$reason == 'duplicate_doi' && Get('d2')$reason == 'duplicate_doi' &&
+         Get('m1')$reason == 'doi_mismatch' && Get('o1')$reason == 'old_journal' && all(cl$category[cl$native_key %in% c('g1', 'g2', 'd1', 'd2', 'm1', 'o1')] == 'doubtful'),
+       'grey literature (by reason or by the citation text), a DOI shared by two keys, a mismatching source DOI and an old journal are doubtful')
+Expect(!any(c('x1', 'x2', 'x3', 'z1') %in% cl$native_key) && Get('z2')$category == 'notice' && Get('z2')$screened_by == 'scite-mcp',
+       'self, rejected and DOI-less rows are never listed; a DOI screened by scite-mcp only when it carries a notice')
+samp <- cl[cl$category == 'audit_sample', ]
+Expect(attr(cl, 'n_new_certain') == 38 && attr(cl, 'n_sample') == 3 && nrow(samp) == 3 && all(grepl('^c', samp$native_key)) &&
+         !any(samp$native_key %in% c('c01', 'c02')) && all(samp$match_status == 'certain') && all(samp$reason == 'audit_sample'),
+       'the audit sample: 5% of the 38 newly certain DOIs (the two Consensus-screened and the Scite-screened ones excluded, the none-screened one and the listed ones not in the pool) is below the floor of 3, so 3 are drawn')
+big <- rbind(sp, do.call(rbind, lapply(41:120, function(k) SRow(sprintf('c%03d', k), sprintf('10.1/c%03d', k)))))
+clb <- ScreeningCandidates(big, ssc, date = as.Date('2026-10-05'))
+Expect(attr(clb, 'n_new_certain') == 118 && attr(clb, 'n_sample') == 6 && sum(clb$category == 'audit_sample') == 6 &&
+         attr(ScreeningCandidates(big, ssc, sample_frac = 0.10, date = as.Date('2026-10-05')), 'n_sample') == 12 &&
+         attr(ScreeningCandidates(big, ssc, min_sample = 10L, date = as.Date('2026-10-05')), 'n_sample') == 10,
+       'with 118 newly certain DOIs the 5% sample is 6 (ceiling); sample_frac and min_sample are honoured')
+cl2 <- ScreeningCandidates(sp, ssc, date = as.Date('2026-10-05'))
+cl3 <- ScreeningCandidates(sp, ssc, date = as.Date('2026-10-06'))
+Expect(identical(cl, cl2) && attr(cl, 'seed') == ScreeningSeed('Src', as.Date('2026-10-05')) && attr(cl, 'date') == '2026-10-05' &&
+         attr(cl3, 'seed') != attr(cl, 'seed') && identical(ScreeningCandidates(sp, ssc, seed = attr(cl, 'seed'))$native_key, cl$native_key),
+       'the draw is deterministic: the same source and date give the same list, another date another seed, and the seed can be passed back')
+set.seed(1); before <- runif(1); set.seed(1); invisible(ScreeningCandidates(sp, ssc, date = as.Date('2026-10-05'))); after <- runif(1)
+Expect(identical(before, after), 'the draw restores the random state of the session')
+Expect(!anyDuplicated(cl$native_key) && identical(cl$category, cl$category[order(match(cl$category, screening_categories))]) &&
+         all(cl$reason %in% unlist(lapply(strsplit(cl$reason, ';'), identity))) && all(unlist(strsplit(cl$reason, ';')) %in% screening_list_reasons) &&
+         nrow(ScreeningCandidates(sp[sp$match_status == 'self', ], ssc)) == 0 && nrow(ScreeningCandidates(sp, NULL, date = as.Date('2026-10-05'))) >= nrow(cl) - 0,
+       'one row per key in category order, every reason code in the vocabulary, an empty frame gives an empty list, no screening file is allowed')
+Expect(LatestScreen('10.1/scited', ssc) == 'scite-mcp' && LatestScreen('10.1/c01', ssc) == 'consensus-mcp' && LatestScreen('10.1/c03', ssc) == 'none' &&
+         LatestScreen('10.1/c04', ssc) == '' && LatestScreen('10.1/c04', NULL) == '',
+       'LatestScreen(): the service of record, none for a gap, empty without a row')
 
 # ---- the queue --------------------------------------------------------------------------------
 cat('WritePendingQueue(), ReadPendingQueue()\n')
