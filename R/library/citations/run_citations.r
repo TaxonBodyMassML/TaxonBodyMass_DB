@@ -59,6 +59,18 @@ LoadFrame <- function(folder) {
   e <- new.env(); load(f, envir = e); get(ls(e)[1], envir = e)
 }
 
+# The compilation's own DOI, for the closed-world candidates of --verify and the
+# deposited reference list of a crossref_reflist --init.
+CompilationDOI <- function() {
+  if (!is.null(spec$compilation_doi)) return(spec$compilation_doi)
+  ids <- read.csv(cfg$citeids_csv, stringsAsFactors = FALSE, colClasses = 'character')
+  bk <- ids$Bibcite[!is.na(ids$CiteID) & ids$CiteID == src]
+  if (length(bk) == 0) return(NA_character_)
+  bib <- ReadBibEntries(cfg$curated_bib)
+  d <- bib$doi[bib$key == bk[1]]
+  if (length(d) == 0) NA_character_ else d[1]
+}
+
 # ---- --init ----
 if (Flag('--init')) {
   if (is.null(spec)) ReflistSpec(src)          # stops with the message
@@ -82,6 +94,24 @@ if (Flag('--init')) {
       ParseInRowCitations(raw[[spec$citation_col]], if (is.null(spec$doi_col)) NULL else raw[[spec$doi_col]],
                           labels = if (is.null(spec$intext_col)) NULL else raw[[spec$intext_col]])$references
     },
+    crossref_reflist = {
+      # the paper's reference list as deposited at Crossref, joined to the
+      # author-year keys of its tables (parse_reflists.r)
+      comp_doi <- CompilationDOI()
+      if (is.na(comp_doi))
+        stop('--init for format crossref_reflist needs the compilation DOI: give compilation_doi in reflist_specs ',
+             'or a doi field in the label\'s curated bib entry')
+      deposited <- CandidatesFromCompilationReflist(comp_doi, cfg)
+      if (nrow(deposited) == 0) stop('the Crossref record of ', comp_doi, ' deposits no references')
+      native <- unique(ExplodeRefKeys(frame$ref_keys)$native_key)
+      rl <- ReflistFromCrossrefReferences(deposited, native)
+      un <- attr(rl, 'unresolved')
+      Note('--init: compilation DOI %s deposits %d references (%d with DOI); %d of %d native keys joined to one deposited reference (%d with DOI), %d kept as the compiler\'s unpublished data, %d unresolved',
+           comp_doi, nrow(deposited), sum(!is.na(deposited$doi)), sum(!grepl('^unpublished', rl$note)), length(native),
+           sum(!is.na(rl$raw_doi)), sum(grepl('^unpublished', rl$note)), nrow(un))
+      if (nrow(un) > 0) Note('--init: unresolved key(s): %s', paste(sprintf('%s (%s)', un$key, un$reason), collapse = '; '))
+      rl
+    },
     stop('--init for format ', spec$format, ' is not implemented yet'))
   skeleton <- InitPrimaryReferences(src, reflist, frame$ref_keys, compiler = spec$compiler)
   existing <- ReadPrimaryReferences(prim_path)
@@ -99,17 +129,6 @@ if (Flag('--init')) {
 
 prim <- ReadPrimaryReferences(prim_path)
 if (is.null(prim)) stop('no ', basename(prim_path), ' for ', src, ': run --init first')
-
-# The compilation's own DOI, for the closed-world candidates.
-CompilationDOI <- function() {
-  if (!is.null(spec$compilation_doi)) return(spec$compilation_doi)
-  ids <- read.csv(cfg$citeids_csv, stringsAsFactors = FALSE, colClasses = 'character')
-  bk <- ids$Bibcite[!is.na(ids$CiteID) & ids$CiteID == src]
-  if (length(bk) == 0) return(NA_character_)
-  bib <- ReadBibEntries(cfg$curated_bib)
-  d <- bib$doi[bib$key == bk[1]]
-  if (length(d) == 0) NA_character_ else d[1]
-}
 
 candidates <- list()
 # ---- --verify / --queue ----
