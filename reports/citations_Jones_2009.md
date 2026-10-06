@@ -1,3077 +1,3080 @@
-# Citations of Jones_2009 -- 2026-10-06 07:28:06 (tbmcite 0.1.0)
+# Citations of Jones_2009 -- 2026-10-06 10:27:05 (tbmcite 0.1.0)
 
-Steps: --init --offline
+Steps: --verify --crossref-only --offline
 
-- --init: 3542 records, 3542 with ref_keys (0.0% NA); 3066 native keys -> primary_references.csv
-- --init: 77 reference(s) of the list cited by no record: 14, 39, 53, 62, 63, 98, 228, 233, 269, 270, 280, 307, 315, 549, 666, 695, 790, 942, 961, 988, 1107, 1190, 1242, 1292, 1335, 1336, 1368, 1387, 1431, 1543, 1659, 1662, 1688, 1712, 1719, 1725, 1761, 1808, 1854, 1882, 1961, 1965, 2036, 2055, 2089, 2129, 2213, 2237, 2305, 2360, 2381, 2385, 2386, 2387, 2490, 2497, 2544, 2547, 2640, 2666, 2671, 2758, 2768, 2793, 2839, 2840, 2845, 2871, 2872, 2874, 2992, 3042, 3056, 3087, 3104, 3106, 3113
+Verification mode: crossref_only (owner decision 2026-10-06: OpenAlex not called, Crossref alone accepts; the accepted rows carry verification_mode crossref_only and are re-checked in full by a later --verify without the flag); 1651 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
+
+- --verify: compilation DOI 10.1890/08-1494.1; 0 deposited references (0 with DOI); Crossref-only mode (owner decision 2026-10-06): OpenAlex not called, Crossref alone accepts (certain / crossref_only)
+- --verify --crossref-only: 0 row(s) decided on Crossref alone this run, 0 of them certain / crossref_only (1651 such rows now in the file, to be re-checked in full by a later --verify without the flag)
+- status counts: certain 1651, pending 739, not_found 676 (certain / crossref_only: 1651)
 
 ## References
 
-| native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
-| --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 1 | measurement |  |  |  |  |  |  |
-| 2 | 3 | measurement |  |  |  |  |  |  |
-| 3 | 1 | measurement |  |  |  |  |  |  |
-| 4 | 1 | measurement |  |  |  |  |  |  |
-| 5 | 4 | measurement |  |  |  |  |  |  |
-| 6 | 1 | measurement |  |  |  |  |  |  |
-| 7 | 1 | measurement |  |  |  |  |  |  |
-| 8 | 1 | measurement |  |  |  |  |  |  |
-| 9 | 1 | measurement |  |  |  |  |  |  |
-| 10 | 1 | measurement |  |  |  |  |  |  |
-| 11 | 1 | measurement |  |  |  |  |  |  |
-| 12 | 1 | measurement |  |  |  |  |  |  |
-| 13 | 1 | measurement |  |  |  |  |  |  |
-| 15 | 1 | measurement |  |  |  |  |  |  |
-| 16 | 1 | measurement |  |  |  |  |  |  |
-| 17 | 1 | measurement |  |  |  |  |  |  |
-| 18 | 1 | measurement |  |  |  |  |  |  |
-| 19 | 1 | measurement |  |  |  |  |  |  |
-| 20 | 1 | measurement |  |  |  |  |  |  |
-| 21 | 1 | measurement |  |  |  |  |  |  |
-| 22 | 1 | measurement |  |  |  |  |  |  |
-| 23 | 1 | measurement |  |  |  |  |  |  |
-| 24 | 2 | measurement |  |  |  |  |  |  |
-| 25 | 2 | measurement |  |  |  |  |  |  |
-| 26 | 1 | measurement |  |  |  |  |  |  |
-| 27 | 1 | measurement |  |  |  |  |  |  |
-| 28 | 1 | measurement |  |  |  |  |  |  |
-| 29 | 4 | measurement |  |  |  |  |  |  |
-| 30 | 1 | measurement |  |  |  |  |  |  |
-| 31 | 7 | measurement |  |  |  |  |  |  |
-| 32 | 39 | measurement |  |  |  |  |  |  |
-| 33 | 1 | measurement |  |  |  |  |  |  |
-| 34 | 20 | measurement |  |  |  |  |  |  |
-| 35 | 6 | measurement |  |  |  |  |  |  |
-| 36 | 1 | measurement |  |  |  |  |  |  |
-| 37 | 1 | measurement |  |  |  |  |  |  |
-| 38 | 1 | measurement |  |  |  |  |  |  |
-| 40 | 2 | measurement |  |  |  |  |  |  |
-| 41 | 1 | measurement |  |  |  |  |  |  |
-| 42 | 1 | measurement |  |  |  |  |  |  |
-| 43 | 2 | measurement |  |  |  |  |  |  |
-| 44 | 25 | measurement |  |  |  |  |  |  |
-| 45 | 1 | measurement |  |  |  |  |  |  |
-| 46 | 1 | measurement |  |  |  |  |  |  |
-| 47 | 1 | measurement |  |  |  |  |  |  |
-| 48 | 1 | measurement |  |  |  |  |  |  |
-| 49 | 1 | measurement |  |  |  |  |  |  |
-| 50 | 1 | measurement |  |  |  |  |  |  |
-| 51 | 2 | measurement |  |  |  |  |  |  |
-| 52 | 1 | measurement |  |  |  |  |  |  |
-| 54 | 1 | measurement |  |  |  |  |  |  |
-| 55 | 1 | measurement |  |  |  |  |  |  |
-| 56 | 8 | measurement |  |  |  |  |  |  |
-| 57 | 1 | measurement |  |  |  |  |  |  |
-| 58 | 1 | measurement |  |  |  |  |  |  |
-| 59 | 1 | measurement |  |  |  |  |  |  |
-| 60 | 1 | measurement |  |  |  |  |  |  |
-| 61 | 1 | measurement |  |  |  |  |  |  |
-| 64 | 1 | measurement |  |  |  |  |  |  |
-| 65 | 1 | measurement |  |  |  |  |  |  |
-| 66 | 1 | measurement |  |  |  |  |  |  |
-| 67 | 1 | measurement |  |  |  |  |  |  |
-| 68 | 1 | measurement |  |  |  |  |  |  |
-| 69 | 1 | measurement |  |  |  |  |  |  |
-| 70 | 1 | measurement |  |  |  |  |  |  |
-| 71 | 2 | measurement |  |  |  |  |  |  |
-| 72 | 1 | measurement |  |  |  |  |  |  |
-| 73 | 1 | measurement |  |  |  |  |  |  |
-| 74 | 1 | measurement |  |  |  |  |  |  |
-| 75 | 4 | measurement |  |  |  |  |  |  |
-| 76 | 10 | measurement |  |  |  |  |  |  |
-| 77 | 8 | measurement |  |  |  |  |  |  |
-| 78 | 7 | measurement |  |  |  |  |  |  |
-| 79 | 2 | measurement |  |  |  |  |  |  |
-| 80 | 9 | measurement |  |  |  |  |  |  |
-| 81 | 8 | measurement |  |  |  |  |  |  |
-| 82 | 1 | measurement |  |  |  |  |  |  |
-| 83 | 11 | measurement |  |  |  |  |  |  |
-| 84 | 2 | measurement |  |  |  |  |  |  |
-| 85 | 1 | measurement |  |  |  |  |  |  |
-| 86 | 1 | measurement |  |  |  |  |  |  |
-| 87 | 1 | measurement |  |  |  |  |  |  |
-| 88 | 1 | measurement |  |  |  |  |  |  |
-| 89 | 1 | measurement |  |  |  |  |  |  |
-| 90 | 1 | measurement |  |  |  |  |  |  |
-| 91 | 1 | measurement |  |  |  |  |  |  |
-| 92 | 1 | measurement |  |  |  |  |  |  |
-| 93 | 3 | measurement |  |  |  |  |  |  |
-| 94 | 1 | measurement |  |  |  |  |  |  |
-| 95 | 31 | measurement |  |  |  |  |  |  |
-| 96 | 1 | measurement |  |  |  |  |  |  |
-| 97 | 1 | measurement |  |  |  |  |  |  |
-| 99 | 1 | measurement |  |  |  |  |  |  |
-| 100 | 1 | measurement |  |  |  |  |  |  |
-| 101 | 1 | measurement |  |  |  |  |  |  |
-| 102 | 2 | measurement |  |  |  |  |  |  |
-| 103 | 1 | measurement |  |  |  |  |  |  |
-| 104 | 1 | measurement |  |  |  |  |  |  |
-| 105 | 1 | measurement |  |  |  |  |  |  |
-| 106 | 3 | measurement |  |  |  |  |  |  |
-| 107 | 5 | measurement |  |  |  |  |  |  |
-| 108 | 43 | measurement |  |  |  |  |  |  |
-| 109 | 2 | measurement |  |  |  |  |  |  |
-| 110 | 1 | measurement |  |  |  |  |  |  |
-| 111 | 1 | measurement |  |  |  |  |  |  |
-| 112 | 1 | measurement |  |  |  |  |  |  |
-| 113 | 1 | measurement |  |  |  |  |  |  |
-| 114 | 1 | measurement |  |  |  |  |  |  |
-| 115 | 1 | measurement |  |  |  |  |  |  |
-| 116 | 6 | measurement |  |  |  |  |  |  |
-| 117 | 1 | measurement |  |  |  |  |  |  |
-| 118 | 1 | measurement |  |  |  |  |  |  |
-| 119 | 2 | measurement |  |  |  |  |  |  |
-| 120 | 1 | measurement |  |  |  |  |  |  |
-| 121 | 1 | measurement |  |  |  |  |  |  |
-| 122 | 1 | measurement |  |  |  |  |  |  |
-| 123 | 2 | measurement |  |  |  |  |  |  |
-| 124 | 1 | measurement |  |  |  |  |  |  |
-| 125 | 1 | measurement |  |  |  |  |  |  |
-| 126 | 1 | measurement |  |  |  |  |  |  |
-| 127 | 6 | measurement |  |  |  |  |  |  |
-| 128 | 1 | measurement |  |  |  |  |  |  |
-| 129 | 1 | measurement |  |  |  |  |  |  |
-| 130 | 1 | measurement |  |  |  |  |  |  |
-| 131 | 1 | measurement |  |  |  |  |  |  |
-| 132 | 1 | measurement |  |  |  |  |  |  |
-| 133 | 1 | measurement |  |  |  |  |  |  |
-| 134 | 1 | measurement |  |  |  |  |  |  |
-| 135 | 1 | measurement |  |  |  |  |  |  |
-| 136 | 1 | measurement |  |  |  |  |  |  |
-| 137 | 1 | measurement |  |  |  |  |  |  |
-| 138 | 2 | measurement |  |  |  |  |  |  |
-| 139 | 6 | measurement |  |  |  |  |  |  |
-| 140 | 1 | measurement |  |  |  |  |  |  |
-| 141 | 2 | measurement |  |  |  |  |  |  |
-| 142 | 1 | measurement |  |  |  |  |  |  |
-| 143 | 1 | measurement |  |  |  |  |  |  |
-| 144 | 3 | measurement |  |  |  |  |  |  |
-| 145 | 1 | measurement |  |  |  |  |  |  |
-| 146 | 1 | measurement |  |  |  |  |  |  |
-| 147 | 1 | measurement |  |  |  |  |  |  |
-| 148 | 1 | measurement |  |  |  |  |  |  |
-| 149 | 1 | measurement |  |  |  |  |  |  |
-| 150 | 2 | measurement |  |  |  |  |  |  |
-| 151 | 1 | measurement |  |  |  |  |  |  |
-| 152 | 5 | measurement |  |  |  |  |  |  |
-| 153 | 1 | measurement |  |  |  |  |  |  |
-| 154 | 1 | measurement |  |  |  |  |  |  |
-| 155 | 1 | measurement |  |  |  |  |  |  |
-| 156 | 1 | measurement |  |  |  |  |  |  |
-| 157 | 1 | measurement |  |  |  |  |  |  |
-| 158 | 1 | measurement |  |  |  |  |  |  |
-| 159 | 1 | measurement |  |  |  |  |  |  |
-| 160 | 1 | measurement |  |  |  |  |  |  |
-| 161 | 1 | measurement |  |  |  |  |  |  |
-| 162 | 1 | measurement |  |  |  |  |  |  |
-| 163 | 1 | measurement |  |  |  |  |  |  |
-| 164 | 1 | measurement |  |  |  |  |  |  |
-| 165 | 2 | measurement |  |  |  |  |  |  |
-| 166 | 1 | measurement |  |  |  |  |  |  |
-| 167 | 1 | measurement |  |  |  |  |  |  |
-| 168 | 1 | measurement |  |  |  |  |  |  |
-| 169 | 5 | measurement |  |  |  |  |  |  |
-| 170 | 7 | measurement |  |  |  |  |  |  |
-| 171 | 2 | measurement |  |  |  |  |  |  |
-| 172 | 16 | measurement |  |  |  |  |  |  |
-| 173 | 1 | measurement |  |  |  |  |  |  |
-| 174 | 1 | measurement |  |  |  |  |  |  |
-| 175 | 1 | measurement |  |  |  |  |  |  |
-| 176 | 14 | measurement |  |  |  |  |  |  |
-| 177 | 1 | measurement |  |  |  |  |  |  |
-| 178 | 1 | measurement |  |  |  |  |  |  |
-| 179 | 1 | measurement |  |  |  |  |  |  |
-| 180 | 1 | measurement |  |  |  |  |  |  |
-| 181 | 1 | measurement |  |  |  |  |  |  |
-| 182 | 1 | measurement |  |  |  |  |  |  |
-| 183 | 1 | measurement |  |  |  |  |  |  |
-| 184 | 1 | measurement |  |  |  |  |  |  |
-| 185 | 21 | measurement |  |  |  |  |  |  |
-| 186 | 3 | measurement |  |  |  |  |  |  |
-| 187 | 1 | measurement |  |  |  |  |  |  |
-| 188 | 1 | measurement |  |  |  |  |  |  |
-| 189 | 1 | measurement |  |  |  |  |  |  |
-| 190 | 1 | measurement |  |  |  |  |  |  |
-| 191 | 1 | measurement |  |  |  |  |  |  |
-| 192 | 1 | measurement |  |  |  |  |  |  |
-| 193 | 1 | measurement |  |  |  |  |  |  |
-| 194 | 3 | measurement |  |  |  |  |  |  |
-| 195 | 1 | measurement |  |  |  |  |  |  |
-| 196 | 298 | measurement |  |  |  |  |  |  |
-| 197 | 3 | measurement |  |  |  |  |  |  |
-| 198 | 1 | measurement |  |  |  |  |  |  |
-| 199 | 3 | measurement |  |  |  |  |  |  |
-| 200 | 14 | measurement |  |  |  |  |  |  |
-| 201 | 1 | measurement |  |  |  |  |  |  |
-| 202 | 1 | measurement |  |  |  |  |  |  |
-| 203 | 1 | measurement |  |  |  |  |  |  |
-| 204 | 1 | measurement |  |  |  |  |  |  |
-| 205 | 1 | measurement |  |  |  |  |  |  |
-| 206 | 3 | measurement |  |  |  |  |  |  |
-| 207 | 1 | measurement |  |  |  |  |  |  |
-| 208 | 118 | measurement |  |  |  |  |  |  |
-| 209 | 1 | measurement |  |  |  |  |  |  |
-| 210 | 1 | measurement |  |  |  |  |  |  |
-| 211 | 4 | measurement |  |  |  |  |  |  |
-| 212 | 7 | measurement |  |  |  |  |  |  |
-| 213 | 1 | measurement |  |  |  |  |  |  |
-| 214 | 1 | measurement |  |  |  |  |  |  |
-| 215 | 1 | measurement |  |  |  |  |  |  |
-| 216 | 1 | measurement |  |  |  |  |  |  |
-| 217 | 1 | measurement |  |  |  |  |  |  |
-| 218 | 4 | measurement |  |  |  |  |  |  |
-| 219 | 1 | measurement |  |  |  |  |  |  |
-| 220 | 1 | measurement |  |  |  |  |  |  |
-| 221 | 1 | measurement |  |  |  |  |  |  |
-| 222 | 1 | measurement |  |  |  |  |  |  |
-| 223 | 17 | measurement |  |  |  |  |  |  |
-| 224 | 2 | measurement |  |  |  |  |  |  |
-| 225 | 1 | measurement |  |  |  |  |  |  |
-| 226 | 2 | measurement |  |  |  |  |  |  |
-| 227 | 1 | measurement |  |  |  |  |  |  |
-| 229 | 1 | measurement |  |  |  |  |  |  |
-| 230 | 13 | measurement |  |  |  |  |  |  |
-| 231 | 8 | measurement |  |  |  |  |  |  |
-| 232 | 1 | measurement |  |  |  |  |  |  |
-| 234 | 1 | measurement |  |  |  |  |  |  |
-| 235 | 1 | measurement |  |  |  |  |  |  |
-| 236 | 1 | measurement |  |  |  |  |  |  |
-| 237 | 1 | measurement |  |  |  |  |  |  |
-| 238 | 1 | measurement |  |  |  |  |  |  |
-| 239 | 1 | measurement |  |  |  |  |  |  |
-| 240 | 1 | measurement |  |  |  |  |  |  |
-| 241 | 1 | measurement |  |  |  |  |  |  |
-| 242 | 5 | measurement |  |  |  |  |  |  |
-| 243 | 1 | measurement |  |  |  |  |  |  |
-| 244 | 5 | measurement |  |  |  |  |  |  |
-| 245 | 9 | measurement |  |  |  |  |  |  |
-| 246 | 1 | measurement |  |  |  |  |  |  |
-| 247 | 12 | measurement |  |  |  |  |  |  |
-| 248 | 3 | measurement |  |  |  |  |  |  |
-| 249 | 1 | measurement |  |  |  |  |  |  |
-| 250 | 6 | measurement |  |  |  |  |  |  |
-| 251 | 1 | measurement |  |  |  |  |  |  |
-| 252 | 1 | measurement |  |  |  |  |  |  |
-| 253 | 1 | measurement |  |  |  |  |  |  |
-| 254 | 2 | measurement |  |  |  |  |  |  |
-| 255 | 1 | measurement |  |  |  |  |  |  |
-| 256 | 8 | measurement |  |  |  |  |  |  |
-| 257 | 1 | measurement |  |  |  |  |  |  |
-| 258 | 11 | measurement |  |  |  |  |  |  |
-| 259 | 7 | measurement |  |  |  |  |  |  |
-| 260 | 2 | measurement |  |  |  |  |  |  |
-| 261 | 1 | measurement |  |  |  |  |  |  |
-| 262 | 1 | measurement |  |  |  |  |  |  |
-| 263 | 1 | measurement |  |  |  |  |  |  |
-| 264 | 1 | measurement |  |  |  |  |  |  |
-| 265 | 1 | measurement |  |  |  |  |  |  |
-| 266 | 12 | measurement |  |  |  |  |  |  |
-| 267 | 1 | measurement |  |  |  |  |  |  |
-| 268 | 3 | measurement |  |  |  |  |  |  |
-| 271 | 11 | measurement |  |  |  |  |  |  |
-| 272 | 2 | measurement |  |  |  |  |  |  |
-| 273 | 1 | measurement |  |  |  |  |  |  |
-| 274 | 2 | measurement |  |  |  |  |  |  |
-| 275 | 5 | measurement |  |  |  |  |  |  |
-| 276 | 2 | measurement |  |  |  |  |  |  |
-| 277 | 2 | measurement |  |  |  |  |  |  |
-| 278 | 1 | measurement |  |  |  |  |  |  |
-| 279 | 1 | measurement |  |  |  |  |  |  |
-| 281 | 1 | measurement |  |  |  |  |  |  |
-| 282 | 1 | measurement |  |  |  |  |  |  |
-| 283 | 5 | measurement |  |  |  |  |  |  |
-| 284 | 1 | measurement |  |  |  |  |  |  |
-| 285 | 3 | measurement |  |  |  |  |  |  |
-| 286 | 1 | measurement |  |  |  |  |  |  |
-| 287 | 2 | measurement |  |  |  |  |  |  |
-| 288 | 1 | measurement |  |  |  |  |  |  |
-| 289 | 1 | measurement |  |  |  |  |  |  |
-| 290 | 1 | measurement |  |  |  |  |  |  |
-| 291 | 1 | measurement |  |  |  |  |  |  |
-| 292 | 2 | measurement |  |  |  |  |  |  |
-| 293 | 1 | measurement |  |  |  |  |  |  |
-| 294 | 1 | measurement |  |  |  |  |  |  |
-| 295 | 1 | measurement |  |  |  |  |  |  |
-| 296 | 3 | measurement |  |  |  |  |  |  |
-| 297 | 1 | measurement |  |  |  |  |  |  |
-| 298 | 1 | measurement |  |  |  |  |  |  |
-| 299 | 1 | measurement |  |  |  |  |  |  |
-| 300 | 1 | measurement |  |  |  |  |  |  |
-| 301 | 1 | measurement |  |  |  |  |  |  |
-| 302 | 1 | measurement |  |  |  |  |  |  |
-| 303 | 1 | measurement |  |  |  |  |  |  |
-| 304 | 1 | measurement |  |  |  |  |  |  |
-| 305 | 1 | measurement |  |  |  |  |  |  |
-| 306 | 1 | measurement |  |  |  |  |  |  |
-| 308 | 1 | measurement |  |  |  |  |  |  |
-| 309 | 1 | measurement |  |  |  |  |  |  |
-| 310 | 1 | measurement |  |  |  |  |  |  |
-| 311 | 1 | measurement |  |  |  |  |  |  |
-| 312 | 1 | measurement |  |  |  |  |  |  |
-| 313 | 1 | measurement |  |  |  |  |  |  |
-| 314 | 1 | measurement |  |  |  |  |  |  |
-| 316 | 1 | measurement |  |  |  |  |  |  |
-| 317 | 1 | measurement |  |  |  |  |  |  |
-| 318 | 1 | measurement |  |  |  |  |  |  |
-| 319 | 1 | measurement |  |  |  |  |  |  |
-| 320 | 1 | measurement |  |  |  |  |  |  |
-| 321 | 1 | measurement |  |  |  |  |  |  |
-| 322 | 1 | measurement |  |  |  |  |  |  |
-| 323 | 1 | measurement |  |  |  |  |  |  |
-| 324 | 1 | measurement |  |  |  |  |  |  |
-| 325 | 1 | measurement |  |  |  |  |  |  |
-| 326 | 1 | measurement |  |  |  |  |  |  |
-| 327 | 1 | measurement |  |  |  |  |  |  |
-| 328 | 1 | measurement |  |  |  |  |  |  |
-| 329 | 1 | measurement |  |  |  |  |  |  |
-| 330 | 1 | measurement |  |  |  |  |  |  |
-| 331 | 1 | measurement |  |  |  |  |  |  |
-| 332 | 1 | measurement |  |  |  |  |  |  |
-| 333 | 1 | measurement |  |  |  |  |  |  |
-| 334 | 1 | measurement |  |  |  |  |  |  |
-| 335 | 1 | measurement |  |  |  |  |  |  |
-| 336 | 1 | measurement |  |  |  |  |  |  |
-| 337 | 1 | measurement |  |  |  |  |  |  |
-| 338 | 1 | measurement |  |  |  |  |  |  |
-| 339 | 1 | measurement |  |  |  |  |  |  |
-| 340 | 1 | measurement |  |  |  |  |  |  |
-| 341 | 1 | measurement |  |  |  |  |  |  |
-| 342 | 1 | measurement |  |  |  |  |  |  |
-| 343 | 1 | measurement |  |  |  |  |  |  |
-| 344 | 1 | measurement |  |  |  |  |  |  |
-| 345 | 1 | measurement |  |  |  |  |  |  |
-| 346 | 1 | measurement |  |  |  |  |  |  |
-| 347 | 1 | measurement |  |  |  |  |  |  |
-| 348 | 1 | measurement |  |  |  |  |  |  |
-| 349 | 1 | measurement |  |  |  |  |  |  |
-| 350 | 1 | measurement |  |  |  |  |  |  |
-| 351 | 1 | measurement |  |  |  |  |  |  |
-| 352 | 1 | measurement |  |  |  |  |  |  |
-| 353 | 1 | measurement |  |  |  |  |  |  |
-| 354 | 1 | measurement |  |  |  |  |  |  |
-| 355 | 1 | measurement |  |  |  |  |  |  |
-| 356 | 1 | measurement |  |  |  |  |  |  |
-| 357 | 1 | measurement |  |  |  |  |  |  |
-| 358 | 1 | measurement |  |  |  |  |  |  |
-| 359 | 1 | measurement |  |  |  |  |  |  |
-| 360 | 34 | measurement |  |  |  |  |  |  |
-| 361 | 1 | measurement |  |  |  |  |  |  |
-| 362 | 1 | measurement |  |  |  |  |  |  |
-| 363 | 1 | measurement |  |  |  |  |  |  |
-| 364 | 1 | measurement |  |  |  |  |  |  |
-| 365 | 1 | measurement |  |  |  |  |  |  |
-| 366 | 1 | measurement |  |  |  |  |  |  |
-| 367 | 88 | measurement |  |  |  |  |  |  |
-| 368 | 1 | measurement |  |  |  |  |  |  |
-| 369 | 1 | measurement |  |  |  |  |  |  |
-| 370 | 2 | measurement |  |  |  |  |  |  |
-| 371 | 1 | measurement |  |  |  |  |  |  |
-| 372 | 1 | measurement |  |  |  |  |  |  |
-| 373 | 1 | measurement |  |  |  |  |  |  |
-| 374 | 1 | measurement |  |  |  |  |  |  |
-| 375 | 1 | measurement |  |  |  |  |  |  |
-| 376 | 1 | measurement |  |  |  |  |  |  |
-| 377 | 7 | measurement |  |  |  |  |  |  |
-| 378 | 1 | measurement |  |  |  |  |  |  |
-| 379 | 5 | measurement |  |  |  |  |  |  |
-| 380 | 1 | measurement |  |  |  |  |  |  |
-| 381 | 1 | measurement |  |  |  |  |  |  |
-| 382 | 1 | measurement |  |  |  |  |  |  |
-| 383 | 1 | measurement |  |  |  |  |  |  |
-| 384 | 1 | measurement |  |  |  |  |  |  |
-| 385 | 1 | measurement |  |  |  |  |  |  |
-| 386 | 1 | measurement |  |  |  |  |  |  |
-| 387 | 1 | measurement |  |  |  |  |  |  |
-| 388 | 1 | measurement |  |  |  |  |  |  |
-| 389 | 1 | measurement |  |  |  |  |  |  |
-| 390 | 1 | measurement |  |  |  |  |  |  |
-| 391 | 1 | measurement |  |  |  |  |  |  |
-| 392 | 1 | measurement |  |  |  |  |  |  |
-| 393 | 1 | measurement |  |  |  |  |  |  |
-| 394 | 1 | measurement |  |  |  |  |  |  |
-| 395 | 1 | measurement |  |  |  |  |  |  |
-| 396 | 1 | measurement |  |  |  |  |  |  |
-| 397 | 1 | measurement |  |  |  |  |  |  |
-| 398 | 1 | measurement |  |  |  |  |  |  |
-| 399 | 1 | measurement |  |  |  |  |  |  |
-| 400 | 1 | measurement |  |  |  |  |  |  |
-| 401 | 8 | measurement |  |  |  |  |  |  |
-| 402 | 1 | measurement |  |  |  |  |  |  |
-| 403 | 1 | measurement |  |  |  |  |  |  |
-| 404 | 4 | measurement |  |  |  |  |  |  |
-| 405 | 1 | measurement |  |  |  |  |  |  |
-| 406 | 27 | measurement |  |  |  |  |  |  |
-| 407 | 1 | measurement |  |  |  |  |  |  |
-| 408 | 1 | measurement |  |  |  |  |  |  |
-| 409 | 2 | measurement |  |  |  |  |  |  |
-| 410 | 1 | measurement |  |  |  |  |  |  |
-| 411 | 1 | measurement |  |  |  |  |  |  |
-| 412 | 4 | measurement |  |  |  |  |  |  |
-| 413 | 1 | measurement |  |  |  |  |  |  |
-| 414 | 1 | measurement |  |  |  |  |  |  |
-| 415 | 1 | measurement |  |  |  |  |  |  |
-| 416 | 1 | measurement |  |  |  |  |  |  |
-| 417 | 1 | measurement |  |  |  |  |  |  |
-| 418 | 2 | measurement |  |  |  |  |  |  |
-| 419 | 5 | measurement |  |  |  |  |  |  |
-| 420 | 1 | measurement |  |  |  |  |  |  |
-| 421 | 1 | measurement |  |  |  |  |  |  |
-| 422 | 1 | measurement |  |  |  |  |  |  |
-| 423 | 1 | measurement |  |  |  |  |  |  |
-| 424 | 11 | measurement |  |  |  |  |  |  |
-| 425 | 2 | measurement |  |  |  |  |  |  |
-| 426 | 5 | measurement |  |  |  |  |  |  |
-| 427 | 1 | measurement |  |  |  |  |  |  |
-| 428 | 10 | measurement |  |  |  |  |  |  |
-| 429 | 3 | measurement |  |  |  |  |  |  |
-| 430 | 1 | measurement |  |  |  |  |  |  |
-| 431 | 1 | measurement |  |  |  |  |  |  |
-| 432 | 1 | measurement |  |  |  |  |  |  |
-| 433 | 1 | measurement |  |  |  |  |  |  |
-| 434 | 1 | measurement |  |  |  |  |  |  |
-| 435 | 1 | measurement |  |  |  |  |  |  |
-| 436 | 1 | measurement |  |  |  |  |  |  |
-| 437 | 1 | measurement |  |  |  |  |  |  |
-| 438 | 1 | measurement |  |  |  |  |  |  |
-| 439 | 1 | measurement |  |  |  |  |  |  |
-| 440 | 1 | measurement |  |  |  |  |  |  |
-| 441 | 1 | measurement |  |  |  |  |  |  |
-| 442 | 1 | measurement |  |  |  |  |  |  |
-| 443 | 1 | measurement |  |  |  |  |  |  |
-| 444 | 1 | measurement |  |  |  |  |  |  |
-| 445 | 1 | measurement |  |  |  |  |  |  |
-| 446 | 1 | measurement |  |  |  |  |  |  |
-| 447 | 1 | measurement |  |  |  |  |  |  |
-| 448 | 2 | measurement |  |  |  |  |  |  |
-| 449 | 1 | measurement |  |  |  |  |  |  |
-| 450 | 1 | measurement |  |  |  |  |  |  |
-| 451 | 1 | measurement |  |  |  |  |  |  |
-| 452 | 1 | measurement |  |  |  |  |  |  |
-| 453 | 5 | measurement |  |  |  |  |  |  |
-| 454 | 1 | measurement |  |  |  |  |  |  |
-| 455 | 1 | measurement |  |  |  |  |  |  |
-| 456 | 96 | measurement |  |  |  |  |  |  |
-| 457 | 1 | measurement |  |  |  |  |  |  |
-| 458 | 1 | measurement |  |  |  |  |  |  |
-| 459 | 1 | measurement |  |  |  |  |  |  |
-| 460 | 1 | measurement |  |  |  |  |  |  |
-| 461 | 1 | measurement |  |  |  |  |  |  |
-| 462 | 1 | measurement |  |  |  |  |  |  |
-| 463 | 2 | measurement |  |  |  |  |  |  |
-| 464 | 2 | measurement |  |  |  |  |  |  |
-| 465 | 1 | measurement |  |  |  |  |  |  |
-| 466 | 2 | measurement |  |  |  |  |  |  |
-| 467 | 1 | measurement |  |  |  |  |  |  |
-| 468 | 2 | measurement |  |  |  |  |  |  |
-| 469 | 1 | measurement |  |  |  |  |  |  |
-| 470 | 1 | measurement |  |  |  |  |  |  |
-| 471 | 1 | measurement |  |  |  |  |  |  |
-| 472 | 1 | measurement |  |  |  |  |  |  |
-| 473 | 1 | measurement |  |  |  |  |  |  |
-| 474 | 1 | measurement |  |  |  |  |  |  |
-| 475 | 1 | measurement |  |  |  |  |  |  |
-| 476 | 3 | measurement |  |  |  |  |  |  |
-| 477 | 2 | measurement |  |  |  |  |  |  |
-| 478 | 1 | measurement |  |  |  |  |  |  |
-| 479 | 1 | measurement |  |  |  |  |  |  |
-| 480 | 1 | measurement |  |  |  |  |  |  |
-| 481 | 1 | measurement |  |  |  |  |  |  |
-| 482 | 1 | measurement |  |  |  |  |  |  |
-| 483 | 1 | measurement |  |  |  |  |  |  |
-| 484 | 1 | measurement |  |  |  |  |  |  |
-| 485 | 1 | measurement |  |  |  |  |  |  |
-| 486 | 1 | measurement |  |  |  |  |  |  |
-| 487 | 1 | measurement |  |  |  |  |  |  |
-| 488 | 1 | measurement |  |  |  |  |  |  |
-| 489 | 1 | measurement |  |  |  |  |  |  |
-| 490 | 1 | measurement |  |  |  |  |  |  |
-| 491 | 1 | measurement |  |  |  |  |  |  |
-| 492 | 2 | measurement |  |  |  |  |  |  |
-| 493 | 2 | measurement |  |  |  |  |  |  |
-| 494 | 2 | measurement |  |  |  |  |  |  |
-| 495 | 1 | measurement |  |  |  |  |  |  |
-| 496 | 1 | measurement |  |  |  |  |  |  |
-| 497 | 5 | measurement |  |  |  |  |  |  |
-| 498 | 1 | measurement |  |  |  |  |  |  |
-| 499 | 1 | measurement |  |  |  |  |  |  |
-| 500 | 2 | measurement |  |  |  |  |  |  |
-| 501 | 1 | measurement |  |  |  |  |  |  |
-| 502 | 1 | measurement |  |  |  |  |  |  |
-| 503 | 1 | measurement |  |  |  |  |  |  |
-| 504 | 1 | measurement |  |  |  |  |  |  |
-| 505 | 4 | measurement |  |  |  |  |  |  |
-| 506 | 1 | measurement |  |  |  |  |  |  |
-| 507 | 1 | measurement |  |  |  |  |  |  |
-| 508 | 1 | measurement |  |  |  |  |  |  |
-| 509 | 1 | measurement |  |  |  |  |  |  |
-| 510 | 1 | measurement |  |  |  |  |  |  |
-| 511 | 174 | measurement |  |  |  |  |  |  |
-| 512 | 1 | measurement |  |  |  |  |  |  |
-| 513 | 1 | measurement |  |  |  |  |  |  |
-| 514 | 1 | measurement |  |  |  |  |  |  |
-| 515 | 1 | measurement |  |  |  |  |  |  |
-| 516 | 1 | measurement |  |  |  |  |  |  |
-| 517 | 1 | measurement |  |  |  |  |  |  |
-| 518 | 1 | measurement |  |  |  |  |  |  |
-| 519 | 1 | measurement |  |  |  |  |  |  |
-| 520 | 1 | measurement |  |  |  |  |  |  |
-| 521 | 1 | measurement |  |  |  |  |  |  |
-| 522 | 1 | measurement |  |  |  |  |  |  |
-| 523 | 1 | measurement |  |  |  |  |  |  |
-| 524 | 2 | measurement |  |  |  |  |  |  |
-| 525 | 2 | measurement |  |  |  |  |  |  |
-| 526 | 2 | measurement |  |  |  |  |  |  |
-| 527 | 1 | measurement |  |  |  |  |  |  |
-| 528 | 1 | measurement |  |  |  |  |  |  |
-| 529 | 2 | measurement |  |  |  |  |  |  |
-| 530 | 1 | measurement |  |  |  |  |  |  |
-| 531 | 1 | measurement |  |  |  |  |  |  |
-| 532 | 1 | measurement |  |  |  |  |  |  |
-| 533 | 3 | measurement |  |  |  |  |  |  |
-| 534 | 1 | measurement |  |  |  |  |  |  |
-| 535 | 1 | measurement |  |  |  |  |  |  |
-| 536 | 4 | measurement |  |  |  |  |  |  |
-| 537 | 1 | measurement |  |  |  |  |  |  |
-| 538 | 1 | measurement |  |  |  |  |  |  |
-| 539 | 1 | measurement |  |  |  |  |  |  |
-| 540 | 5 | measurement |  |  |  |  |  |  |
-| 541 | 3 | measurement |  |  |  |  |  |  |
-| 542 | 36 | measurement |  |  |  |  |  |  |
-| 543 | 779 | measurement |  |  |  |  |  |  |
-| 544 | 3 | measurement |  |  |  |  |  |  |
-| 545 | 1 | measurement |  |  |  |  |  |  |
-| 546 | 1 | measurement |  |  |  |  |  |  |
-| 547 | 2 | measurement |  |  |  |  |  |  |
-| 548 | 1 | measurement |  |  |  |  |  |  |
-| 550 | 1 | measurement |  |  |  |  |  |  |
-| 551 | 1 | measurement |  |  |  |  |  |  |
-| 552 | 1 | measurement |  |  |  |  |  |  |
-| 553 | 1 | measurement |  |  |  |  |  |  |
-| 554 | 1 | measurement |  |  |  |  |  |  |
-| 555 | 1 | measurement |  |  |  |  |  |  |
-| 556 | 1 | measurement |  |  |  |  |  |  |
-| 557 | 1 | measurement |  |  |  |  |  |  |
-| 558 | 1 | measurement |  |  |  |  |  |  |
-| 559 | 1 | measurement |  |  |  |  |  |  |
-| 560 | 1 | measurement |  |  |  |  |  |  |
-| 561 | 2 | measurement |  |  |  |  |  |  |
-| 562 | 4 | measurement |  |  |  |  |  |  |
-| 563 | 1 | measurement |  |  |  |  |  |  |
-| 564 | 1 | measurement |  |  |  |  |  |  |
-| 565 | 2 | measurement |  |  |  |  |  |  |
-| 566 | 1 | measurement |  |  |  |  |  |  |
-| 567 | 1 | measurement |  |  |  |  |  |  |
-| 568 | 7 | measurement |  |  |  |  |  |  |
-| 569 | 4 | measurement |  |  |  |  |  |  |
-| 570 | 1 | measurement |  |  |  |  |  |  |
-| 571 | 1 | measurement |  |  |  |  |  |  |
-| 572 | 1 | measurement |  |  |  |  |  |  |
-| 573 | 1 | measurement |  |  |  |  |  |  |
-| 574 | 1 | measurement |  |  |  |  |  |  |
-| 575 | 1 | measurement |  |  |  |  |  |  |
-| 576 | 1 | measurement |  |  |  |  |  |  |
-| 577 | 1 | measurement |  |  |  |  |  |  |
-| 578 | 1 | measurement |  |  |  |  |  |  |
-| 579 | 1 | measurement |  |  |  |  |  |  |
-| 580 | 1 | measurement |  |  |  |  |  |  |
-| 581 | 2 | measurement |  |  |  |  |  |  |
-| 582 | 1 | measurement |  |  |  |  |  |  |
-| 583 | 2 | measurement |  |  |  |  |  |  |
-| 584 | 1 | measurement |  |  |  |  |  |  |
-| 585 | 1 | measurement |  |  |  |  |  |  |
-| 586 | 1 | measurement |  |  |  |  |  |  |
-| 587 | 1 | measurement |  |  |  |  |  |  |
-| 588 | 1 | measurement |  |  |  |  |  |  |
-| 589 | 1 | measurement |  |  |  |  |  |  |
-| 590 | 1 | measurement |  |  |  |  |  |  |
-| 591 | 1 | measurement |  |  |  |  |  |  |
-| 592 | 1 | measurement |  |  |  |  |  |  |
-| 593 | 1 | measurement |  |  |  |  |  |  |
-| 594 | 1 | measurement |  |  |  |  |  |  |
-| 595 | 6 | measurement |  |  |  |  |  |  |
-| 596 | 9 | measurement |  |  |  |  |  |  |
-| 597 | 1 | measurement |  |  |  |  |  |  |
-| 598 | 1 | measurement |  |  |  |  |  |  |
-| 599 | 3 | measurement |  |  |  |  |  |  |
-| 600 | 1 | measurement |  |  |  |  |  |  |
-| 601 | 1 | measurement |  |  |  |  |  |  |
-| 602 | 2 | measurement |  |  |  |  |  |  |
-| 603 | 1 | measurement |  |  |  |  |  |  |
-| 604 | 1 | measurement |  |  |  |  |  |  |
-| 605 | 1 | measurement |  |  |  |  |  |  |
-| 606 | 3 | measurement |  |  |  |  |  |  |
-| 607 | 1 | measurement |  |  |  |  |  |  |
-| 608 | 1 | measurement |  |  |  |  |  |  |
-| 609 | 1 | measurement |  |  |  |  |  |  |
-| 610 | 8 | measurement |  |  |  |  |  |  |
-| 611 | 1 | measurement |  |  |  |  |  |  |
-| 612 | 1 | measurement |  |  |  |  |  |  |
-| 613 | 2 | measurement |  |  |  |  |  |  |
-| 614 | 1 | measurement |  |  |  |  |  |  |
-| 615 | 1 | measurement |  |  |  |  |  |  |
-| 616 | 1 | measurement |  |  |  |  |  |  |
-| 617 | 1 | measurement |  |  |  |  |  |  |
-| 618 | 2 | measurement |  |  |  |  |  |  |
-| 619 | 1 | measurement |  |  |  |  |  |  |
-| 620 | 3 | measurement |  |  |  |  |  |  |
-| 621 | 1 | measurement |  |  |  |  |  |  |
-| 622 | 2 | measurement |  |  |  |  |  |  |
-| 623 | 3 | measurement |  |  |  |  |  |  |
-| 624 | 1 | measurement |  |  |  |  |  |  |
-| 625 | 1 | measurement |  |  |  |  |  |  |
-| 626 | 39 | measurement |  |  |  |  |  |  |
-| 627 | 2 | measurement |  |  |  |  |  |  |
-| 628 | 1 | measurement |  |  |  |  |  |  |
-| 629 | 9 | measurement |  |  |  |  |  |  |
-| 630 | 9 | measurement |  |  |  |  |  |  |
-| 631 | 1 | measurement |  |  |  |  |  |  |
-| 632 | 8 | measurement |  |  |  |  |  |  |
-| 633 | 1 | measurement |  |  |  |  |  |  |
-| 634 | 2 | measurement |  |  |  |  |  |  |
-| 635 | 5 | measurement |  |  |  |  |  |  |
-| 636 | 1 | measurement |  |  |  |  |  |  |
-| 637 | 1 | measurement |  |  |  |  |  |  |
-| 638 | 1 | measurement |  |  |  |  |  |  |
-| 639 | 1 | measurement |  |  |  |  |  |  |
-| 640 | 2 | measurement |  |  |  |  |  |  |
-| 641 | 1 | measurement |  |  |  |  |  |  |
-| 642 | 1 | measurement |  |  |  |  |  |  |
-| 643 | 1 | measurement |  |  |  |  |  |  |
-| 644 | 1 | measurement |  |  |  |  |  |  |
-| 645 | 13 | measurement |  |  |  |  |  |  |
-| 646 | 1 | measurement |  |  |  |  |  |  |
-| 647 | 1 | measurement |  |  |  |  |  |  |
-| 648 | 1 | measurement |  |  |  |  |  |  |
-| 649 | 1 | measurement |  |  |  |  |  |  |
-| 650 | 1 | measurement |  |  |  |  |  |  |
-| 651 | 1 | measurement |  |  |  |  |  |  |
-| 652 | 1 | measurement |  |  |  |  |  |  |
-| 653 | 24 | measurement |  |  |  |  |  |  |
-| 654 | 1 | measurement |  |  |  |  |  |  |
-| 655 | 1 | measurement |  |  |  |  |  |  |
-| 656 | 1 | measurement |  |  |  |  |  |  |
-| 657 | 17 | measurement |  |  |  |  |  |  |
-| 658 | 2 | measurement |  |  |  |  |  |  |
-| 659 | 1 | measurement |  |  |  |  |  |  |
-| 660 | 1 | measurement |  |  |  |  |  |  |
-| 661 | 27 | measurement |  |  |  |  |  |  |
-| 662 | 2 | measurement |  |  |  |  |  |  |
-| 663 | 1 | measurement |  |  |  |  |  |  |
-| 664 | 1 | measurement |  |  |  |  |  |  |
-| 665 | 1 | measurement |  |  |  |  |  |  |
-| 667 | 1 | measurement |  |  |  |  |  |  |
-| 668 | 1 | measurement |  |  |  |  |  |  |
-| 669 | 1 | measurement |  |  |  |  |  |  |
-| 670 | 1 | measurement |  |  |  |  |  |  |
-| 671 | 1 | measurement |  |  |  |  |  |  |
-| 672 | 1 | measurement |  |  |  |  |  |  |
-| 673 | 1 | measurement |  |  |  |  |  |  |
-| 674 | 2 | measurement |  |  |  |  |  |  |
-| 675 | 1 | measurement |  |  |  |  |  |  |
-| 676 | 1 | measurement |  |  |  |  |  |  |
-| 677 | 1 | measurement |  |  |  |  |  |  |
-| 678 | 12 | measurement |  |  |  |  |  |  |
-| 679 | 115 | measurement |  |  |  |  |  |  |
-| 680 | 1 | measurement |  |  |  |  |  |  |
-| 681 | 10 | measurement |  |  |  |  |  |  |
-| 682 | 1 | measurement |  |  |  |  |  |  |
-| 683 | 1 | measurement |  |  |  |  |  |  |
-| 684 | 1 | measurement |  |  |  |  |  |  |
-| 685 | 1 | measurement |  |  |  |  |  |  |
-| 686 | 1 | measurement |  |  |  |  |  |  |
-| 687 | 1 | measurement |  |  |  |  |  |  |
-| 688 | 1 | measurement |  |  |  |  |  |  |
-| 689 | 1 | measurement |  |  |  |  |  |  |
-| 690 | 1 | measurement |  |  |  |  |  |  |
-| 691 | 1 | measurement |  |  |  |  |  |  |
-| 692 | 1 | measurement |  |  |  |  |  |  |
-| 693 | 6 | measurement |  |  |  |  |  |  |
-| 694 | 1 | measurement |  |  |  |  |  |  |
-| 696 | 1 | measurement |  |  |  |  |  |  |
-| 697 | 1 | measurement |  |  |  |  |  |  |
-| 698 | 1 | measurement |  |  |  |  |  |  |
-| 699 | 4 | measurement |  |  |  |  |  |  |
-| 700 | 1 | measurement |  |  |  |  |  |  |
-| 701 | 1 | measurement |  |  |  |  |  |  |
-| 702 | 4 | measurement |  |  |  |  |  |  |
-| 703 | 2 | measurement |  |  |  |  |  |  |
-| 704 | 2 | measurement |  |  |  |  |  |  |
-| 705 | 1 | measurement |  |  |  |  |  |  |
-| 706 | 4 | measurement |  |  |  |  |  |  |
-| 707 | 2 | measurement |  |  |  |  |  |  |
-| 708 | 1 | measurement |  |  |  |  |  |  |
-| 709 | 1 | measurement |  |  |  |  |  |  |
-| 710 | 1 | measurement |  |  |  |  |  |  |
-| 711 | 1 | measurement |  |  |  |  |  |  |
-| 712 | 1 | measurement |  |  |  |  |  |  |
-| 713 | 1 | measurement |  |  |  |  |  |  |
-| 714 | 1 | measurement |  |  |  |  |  |  |
-| 715 | 1 | measurement |  |  |  |  |  |  |
-| 716 | 1 | measurement |  |  |  |  |  |  |
-| 717 | 1 | measurement |  |  |  |  |  |  |
-| 718 | 1 | measurement |  |  |  |  |  |  |
-| 719 | 2 | measurement |  |  |  |  |  |  |
-| 720 | 1 | measurement |  |  |  |  |  |  |
-| 721 | 1 | measurement |  |  |  |  |  |  |
-| 722 | 1 | measurement |  |  |  |  |  |  |
-| 723 | 1 | measurement |  |  |  |  |  |  |
-| 724 | 1 | measurement |  |  |  |  |  |  |
-| 725 | 1 | measurement |  |  |  |  |  |  |
-| 726 | 1 | measurement |  |  |  |  |  |  |
-| 727 | 1 | measurement |  |  |  |  |  |  |
-| 728 | 2 | measurement |  |  |  |  |  |  |
-| 729 | 1 | measurement |  |  |  |  |  |  |
-| 730 | 556 | measurement |  |  |  |  |  |  |
-| 731 | 2 | measurement |  |  |  |  |  |  |
-| 732 | 9 | measurement |  |  |  |  |  |  |
-| 733 | 2 | measurement |  |  |  |  |  |  |
-| 734 | 1 | measurement |  |  |  |  |  |  |
-| 735 | 1 | measurement |  |  |  |  |  |  |
-| 736 | 1 | measurement |  |  |  |  |  |  |
-| 737 | 1 | measurement |  |  |  |  |  |  |
-| 738 | 1 | measurement |  |  |  |  |  |  |
-| 739 | 1 | measurement |  |  |  |  |  |  |
-| 740 | 13 | measurement |  |  |  |  |  |  |
-| 741 | 27 | measurement |  |  |  |  |  |  |
-| 742 | 1 | measurement |  |  |  |  |  |  |
-| 743 | 1 | measurement |  |  |  |  |  |  |
-| 744 | 1 | measurement |  |  |  |  |  |  |
-| 745 | 1 | measurement |  |  |  |  |  |  |
-| 746 | 1 | measurement |  |  |  |  |  |  |
-| 747 | 1 | measurement |  |  |  |  |  |  |
-| 748 | 5 | measurement |  |  |  |  |  |  |
-| 749 | 1 | measurement |  |  |  |  |  |  |
-| 750 | 1 | measurement |  |  |  |  |  |  |
-| 751 | 1 | measurement |  |  |  |  |  |  |
-| 752 | 2 | measurement |  |  |  |  |  |  |
-| 753 | 1 | measurement |  |  |  |  |  |  |
-| 754 | 1 | measurement |  |  |  |  |  |  |
-| 755 | 1 | measurement |  |  |  |  |  |  |
-| 756 | 1 | measurement |  |  |  |  |  |  |
-| 757 | 1 | measurement |  |  |  |  |  |  |
-| 758 | 1 | measurement |  |  |  |  |  |  |
-| 759 | 2 | measurement |  |  |  |  |  |  |
-| 760 | 3 | measurement |  |  |  |  |  |  |
-| 761 | 1 | measurement |  |  |  |  |  |  |
-| 762 | 1 | measurement |  |  |  |  |  |  |
-| 763 | 1 | measurement |  |  |  |  |  |  |
-| 764 | 8 | measurement |  |  |  |  |  |  |
-| 765 | 1 | measurement |  |  |  |  |  |  |
-| 766 | 1 | measurement |  |  |  |  |  |  |
-| 767 | 1 | measurement |  |  |  |  |  |  |
-| 768 | 1 | measurement |  |  |  |  |  |  |
-| 769 | 1 | measurement |  |  |  |  |  |  |
-| 770 | 2 | measurement |  |  |  |  |  |  |
-| 771 | 2 | measurement |  |  |  |  |  |  |
-| 772 | 1 | measurement |  |  |  |  |  |  |
-| 773 | 4 | measurement |  |  |  |  |  |  |
-| 774 | 2 | measurement |  |  |  |  |  |  |
-| 775 | 3 | measurement |  |  |  |  |  |  |
-| 776 | 1 | measurement |  |  |  |  |  |  |
-| 777 | 1 | measurement |  |  |  |  |  |  |
-| 778 | 1 | measurement |  |  |  |  |  |  |
-| 779 | 1 | measurement |  |  |  |  |  |  |
-| 780 | 1 | measurement |  |  |  |  |  |  |
-| 781 | 1 | measurement |  |  |  |  |  |  |
-| 782 | 1 | measurement |  |  |  |  |  |  |
-| 783 | 1 | measurement |  |  |  |  |  |  |
-| 784 | 1 | measurement |  |  |  |  |  |  |
-| 785 | 1 | measurement |  |  |  |  |  |  |
-| 786 | 12 | measurement |  |  |  |  |  |  |
-| 787 | 1 | measurement |  |  |  |  |  |  |
-| 788 | 1 | measurement |  |  |  |  |  |  |
-| 789 | 5 | measurement |  |  |  |  |  |  |
-| 791 | 2 | measurement |  |  |  |  |  |  |
-| 792 | 1 | measurement |  |  |  |  |  |  |
-| 793 | 1 | measurement |  |  |  |  |  |  |
-| 794 | 1 | measurement |  |  |  |  |  |  |
-| 795 | 1 | measurement |  |  |  |  |  |  |
-| 796 | 4 | measurement |  |  |  |  |  |  |
-| 797 | 1 | measurement |  |  |  |  |  |  |
-| 798 | 1 | measurement |  |  |  |  |  |  |
-| 799 | 1 | measurement |  |  |  |  |  |  |
-| 800 | 2 | measurement |  |  |  |  |  |  |
-| 801 | 3 | measurement |  |  |  |  |  |  |
-| 802 | 4 | measurement |  |  |  |  |  |  |
-| 803 | 1 | measurement |  |  |  |  |  |  |
-| 804 | 2 | measurement |  |  |  |  |  |  |
-| 805 | 2 | measurement |  |  |  |  |  |  |
-| 806 | 1 | measurement |  |  |  |  |  |  |
-| 807 | 1 | measurement |  |  |  |  |  |  |
-| 808 | 17 | measurement |  |  |  |  |  |  |
-| 809 | 1 | measurement |  |  |  |  |  |  |
-| 810 | 1 | measurement |  |  |  |  |  |  |
-| 811 | 1 | measurement |  |  |  |  |  |  |
-| 812 | 1 | measurement |  |  |  |  |  |  |
-| 813 | 5 | measurement |  |  |  |  |  |  |
-| 814 | 1 | measurement |  |  |  |  |  |  |
-| 815 | 1 | measurement |  |  |  |  |  |  |
-| 816 | 1 | measurement |  |  |  |  |  |  |
-| 817 | 2 | measurement |  |  |  |  |  |  |
-| 818 | 4 | measurement |  |  |  |  |  |  |
-| 819 | 1 | measurement |  |  |  |  |  |  |
-| 820 | 1 | measurement |  |  |  |  |  |  |
-| 821 | 1 | measurement |  |  |  |  |  |  |
-| 822 | 1 | measurement |  |  |  |  |  |  |
-| 823 | 1 | measurement |  |  |  |  |  |  |
-| 824 | 1 | measurement |  |  |  |  |  |  |
-| 825 | 1 | measurement |  |  |  |  |  |  |
-| 826 | 1 | measurement |  |  |  |  |  |  |
-| 827 | 1 | measurement |  |  |  |  |  |  |
-| 828 | 1 | measurement |  |  |  |  |  |  |
-| 829 | 1 | measurement |  |  |  |  |  |  |
-| 830 | 1 | measurement |  |  |  |  |  |  |
-| 831 | 1 | measurement |  |  |  |  |  |  |
-| 832 | 1 | measurement |  |  |  |  |  |  |
-| 833 | 1 | measurement |  |  |  |  |  |  |
-| 834 | 1 | measurement |  |  |  |  |  |  |
-| 835 | 10 | measurement |  |  |  |  |  |  |
-| 836 | 1 | measurement |  |  |  |  |  |  |
-| 837 | 2 | measurement |  |  |  |  |  |  |
-| 838 | 1 | measurement |  |  |  |  |  |  |
-| 839 | 2 | measurement |  |  |  |  |  |  |
-| 840 | 1 | measurement |  |  |  |  |  |  |
-| 841 | 1 | measurement |  |  |  |  |  |  |
-| 842 | 1 | measurement |  |  |  |  |  |  |
-| 843 | 1 | measurement |  |  |  |  |  |  |
-| 844 | 1 | measurement |  |  |  |  |  |  |
-| 845 | 2 | measurement |  |  |  |  |  |  |
-| 846 | 1 | measurement |  |  |  |  |  |  |
-| 847 | 1 | measurement |  |  |  |  |  |  |
-| 848 | 1 | measurement |  |  |  |  |  |  |
-| 849 | 1 | measurement |  |  |  |  |  |  |
-| 850 | 4 | measurement |  |  |  |  |  |  |
-| 851 | 1 | measurement |  |  |  |  |  |  |
-| 852 | 2 | measurement |  |  |  |  |  |  |
-| 853 | 1 | measurement |  |  |  |  |  |  |
-| 854 | 9 | measurement |  |  |  |  |  |  |
-| 855 | 1 | measurement |  |  |  |  |  |  |
-| 856 | 1 | measurement |  |  |  |  |  |  |
-| 857 | 1 | measurement |  |  |  |  |  |  |
-| 858 | 1 | measurement |  |  |  |  |  |  |
-| 859 | 1 | measurement |  |  |  |  |  |  |
-| 860 | 1 | measurement |  |  |  |  |  |  |
-| 861 | 1 | measurement |  |  |  |  |  |  |
-| 862 | 1 | measurement |  |  |  |  |  |  |
-| 863 | 2 | measurement |  |  |  |  |  |  |
-| 864 | 1 | measurement |  |  |  |  |  |  |
-| 865 | 6 | measurement |  |  |  |  |  |  |
-| 866 | 1 | measurement |  |  |  |  |  |  |
-| 867 | 1 | measurement |  |  |  |  |  |  |
-| 868 | 2 | measurement |  |  |  |  |  |  |
-| 869 | 60 | measurement |  |  |  |  |  |  |
-| 870 | 1 | measurement |  |  |  |  |  |  |
-| 871 | 2 | measurement |  |  |  |  |  |  |
-| 872 | 1 | measurement |  |  |  |  |  |  |
-| 873 | 1 | measurement |  |  |  |  |  |  |
-| 874 | 1 | measurement |  |  |  |  |  |  |
-| 875 | 1 | measurement |  |  |  |  |  |  |
-| 876 | 1 | measurement |  |  |  |  |  |  |
-| 877 | 1 | measurement |  |  |  |  |  |  |
-| 878 | 1 | measurement |  |  |  |  |  |  |
-| 879 | 1 | measurement |  |  |  |  |  |  |
-| 880 | 1 | measurement |  |  |  |  |  |  |
-| 881 | 1 | measurement |  |  |  |  |  |  |
-| 882 | 1 | measurement |  |  |  |  |  |  |
-| 883 | 1 | measurement |  |  |  |  |  |  |
-| 884 | 7 | measurement |  |  |  |  |  |  |
-| 885 | 2 | measurement |  |  |  |  |  |  |
-| 886 | 9 | measurement |  |  |  |  |  |  |
-| 887 | 2 | measurement |  |  |  |  |  |  |
-| 888 | 1 | measurement |  |  |  |  |  |  |
-| 889 | 194 | measurement |  |  |  |  |  |  |
-| 890 | 336 | measurement |  |  |  |  |  |  |
-| 891 | 2 | measurement |  |  |  |  |  |  |
-| 892 | 30 | measurement |  |  |  |  |  |  |
-| 893 | 1 | measurement |  |  |  |  |  |  |
-| 894 | 1 | measurement |  |  |  |  |  |  |
-| 895 | 1 | measurement |  |  |  |  |  |  |
-| 896 | 5 | measurement |  |  |  |  |  |  |
-| 897 | 1 | measurement |  |  |  |  |  |  |
-| 898 | 2 | measurement |  |  |  |  |  |  |
-| 899 | 217 | measurement |  |  |  |  |  |  |
-| 900 | 8 | measurement |  |  |  |  |  |  |
-| 901 | 9 | measurement |  |  |  |  |  |  |
-| 902 | 2 | measurement |  |  |  |  |  |  |
-| 903 | 1 | measurement |  |  |  |  |  |  |
-| 904 | 64 | measurement |  |  |  |  |  |  |
-| 905 | 189 | measurement |  |  |  |  |  |  |
-| 906 | 1 | measurement |  |  |  |  |  |  |
-| 907 | 1 | measurement |  |  |  |  |  |  |
-| 908 | 1 | measurement |  |  |  |  |  |  |
-| 909 | 1 | measurement |  |  |  |  |  |  |
-| 910 | 1 | measurement |  |  |  |  |  |  |
-| 911 | 1 | measurement |  |  |  |  |  |  |
-| 912 | 1 | measurement |  |  |  |  |  |  |
-| 913 | 1 | measurement |  |  |  |  |  |  |
-| 914 | 1 | measurement |  |  |  |  |  |  |
-| 915 | 1 | measurement |  |  |  |  |  |  |
-| 916 | 1 | measurement |  |  |  |  |  |  |
-| 917 | 19 | measurement |  |  |  |  |  |  |
-| 918 | 1 | measurement |  |  |  |  |  |  |
-| 919 | 1 | measurement |  |  |  |  |  |  |
-| 920 | 1 | measurement |  |  |  |  |  |  |
-| 921 | 2 | measurement |  |  |  |  |  |  |
-| 922 | 1 | measurement |  |  |  |  |  |  |
-| 923 | 1 | measurement |  |  |  |  |  |  |
-| 924 | 3 | measurement |  |  |  |  |  |  |
-| 925 | 7 | measurement |  |  |  |  |  |  |
-| 926 | 4 | measurement |  |  |  |  |  |  |
-| 927 | 3 | measurement |  |  |  |  |  |  |
-| 928 | 1 | measurement |  |  |  |  |  |  |
-| 929 | 1 | measurement |  |  |  |  |  |  |
-| 930 | 7 | measurement |  |  |  |  |  |  |
-| 931 | 2 | measurement |  |  |  |  |  |  |
-| 932 | 1 | measurement |  |  |  |  |  |  |
-| 933 | 1 | measurement |  |  |  |  |  |  |
-| 934 | 1 | measurement |  |  |  |  |  |  |
-| 935 | 1 | measurement |  |  |  |  |  |  |
-| 936 | 1 | measurement |  |  |  |  |  |  |
-| 937 | 1 | measurement |  |  |  |  |  |  |
-| 938 | 1 | measurement |  |  |  |  |  |  |
-| 939 | 1 | measurement |  |  |  |  |  |  |
-| 940 | 1 | measurement |  |  |  |  |  |  |
-| 941 | 1 | measurement |  |  |  |  |  |  |
-| 943 | 1 | measurement |  |  |  |  |  |  |
-| 944 | 1 | measurement |  |  |  |  |  |  |
-| 945 | 2 | measurement |  |  |  |  |  |  |
-| 946 | 1 | measurement |  |  |  |  |  |  |
-| 947 | 1 | measurement |  |  |  |  |  |  |
-| 948 | 5 | measurement |  |  |  |  |  |  |
-| 949 | 5 | measurement |  |  |  |  |  |  |
-| 950 | 2 | measurement |  |  |  |  |  |  |
-| 951 | 1 | measurement |  |  |  |  |  |  |
-| 952 | 3 | measurement |  |  |  |  |  |  |
-| 953 | 1 | measurement |  |  |  |  |  |  |
-| 954 | 2 | measurement |  |  |  |  |  |  |
-| 955 | 158 | measurement |  |  |  |  |  |  |
-| 956 | 2 | measurement |  |  |  |  |  |  |
-| 957 | 2 | measurement |  |  |  |  |  |  |
-| 958 | 1 | measurement |  |  |  |  |  |  |
-| 959 | 2 | measurement |  |  |  |  |  |  |
-| 960 | 1 | measurement |  |  |  |  |  |  |
-| 962 | 1 | measurement |  |  |  |  |  |  |
-| 963 | 1 | measurement |  |  |  |  |  |  |
-| 964 | 1 | measurement |  |  |  |  |  |  |
-| 965 | 2 | measurement |  |  |  |  |  |  |
-| 966 | 25 | measurement |  |  |  |  |  |  |
-| 967 | 1 | measurement |  |  |  |  |  |  |
-| 968 | 1 | measurement |  |  |  |  |  |  |
-| 969 | 2 | measurement |  |  |  |  |  |  |
-| 970 | 1 | measurement |  |  |  |  |  |  |
-| 971 | 2 | measurement |  |  |  |  |  |  |
-| 972 | 1 | measurement |  |  |  |  |  |  |
-| 973 | 1 | measurement |  |  |  |  |  |  |
-| 974 | 1 | measurement |  |  |  |  |  |  |
-| 975 | 25 | measurement |  |  |  |  |  |  |
-| 976 | 1 | measurement |  |  |  |  |  |  |
-| 977 | 117 | measurement |  |  |  |  |  |  |
-| 978 | 33 | measurement |  |  |  |  |  |  |
-| 979 | 4 | measurement |  |  |  |  |  |  |
-| 980 | 1 | measurement |  |  |  |  |  |  |
-| 981 | 2 | measurement |  |  |  |  |  |  |
-| 982 | 9 | measurement |  |  |  |  |  |  |
-| 983 | 1 | measurement |  |  |  |  |  |  |
-| 984 | 5 | measurement |  |  |  |  |  |  |
-| 985 | 4 | measurement |  |  |  |  |  |  |
-| 986 | 1 | measurement |  |  |  |  |  |  |
-| 987 | 1 | measurement |  |  |  |  |  |  |
-| 989 | 24 | measurement |  |  |  |  |  |  |
-| 990 | 1 | measurement |  |  |  |  |  |  |
-| 991 | 1 | measurement |  |  |  |  |  |  |
-| 992 | 2 | measurement |  |  |  |  |  |  |
-| 993 | 1 | measurement |  |  |  |  |  |  |
-| 994 | 1 | measurement |  |  |  |  |  |  |
-| 995 | 1 | measurement |  |  |  |  |  |  |
-| 996 | 2 | measurement |  |  |  |  |  |  |
-| 997 | 5 | measurement |  |  |  |  |  |  |
-| 998 | 1 | measurement |  |  |  |  |  |  |
-| 999 | 1 | measurement |  |  |  |  |  |  |
-| 1000 | 1 | measurement |  |  |  |  |  |  |
-| 1001 | 1 | measurement |  |  |  |  |  |  |
-| 1002 | 1 | measurement |  |  |  |  |  |  |
-| 1003 | 1 | measurement |  |  |  |  |  |  |
-| 1004 | 26 | measurement |  |  |  |  |  |  |
-| 1005 | 1 | measurement |  |  |  |  |  |  |
-| 1006 | 4 | measurement |  |  |  |  |  |  |
-| 1007 | 1 | measurement |  |  |  |  |  |  |
-| 1008 | 7 | measurement |  |  |  |  |  |  |
-| 1009 | 3 | measurement |  |  |  |  |  |  |
-| 1010 | 2 | measurement |  |  |  |  |  |  |
-| 1011 | 1 | measurement |  |  |  |  |  |  |
-| 1012 | 1 | measurement |  |  |  |  |  |  |
-| 1013 | 2 | measurement |  |  |  |  |  |  |
-| 1014 | 1 | measurement |  |  |  |  |  |  |
-| 1015 | 100 | measurement |  |  |  |  |  |  |
-| 1016 | 1 | measurement |  |  |  |  |  |  |
-| 1017 | 5 | measurement |  |  |  |  |  |  |
-| 1018 | 1 | measurement |  |  |  |  |  |  |
-| 1019 | 1 | measurement |  |  |  |  |  |  |
-| 1020 | 10 | measurement |  |  |  |  |  |  |
-| 1021 | 1 | measurement |  |  |  |  |  |  |
-| 1022 | 3 | measurement |  |  |  |  |  |  |
-| 1023 | 1 | measurement |  |  |  |  |  |  |
-| 1024 | 2 | measurement |  |  |  |  |  |  |
-| 1025 | 1 | measurement |  |  |  |  |  |  |
-| 1026 | 1 | measurement |  |  |  |  |  |  |
-| 1027 | 3 | measurement |  |  |  |  |  |  |
-| 1028 | 1 | measurement |  |  |  |  |  |  |
-| 1029 | 1 | measurement |  |  |  |  |  |  |
-| 1030 | 1 | measurement |  |  |  |  |  |  |
-| 1031 | 1 | measurement |  |  |  |  |  |  |
-| 1032 | 1 | measurement |  |  |  |  |  |  |
-| 1033 | 1 | measurement |  |  |  |  |  |  |
-| 1034 | 1 | measurement |  |  |  |  |  |  |
-| 1035 | 1 | measurement |  |  |  |  |  |  |
-| 1036 | 1 | measurement |  |  |  |  |  |  |
-| 1037 | 1 | measurement |  |  |  |  |  |  |
-| 1038 | 1 | measurement |  |  |  |  |  |  |
-| 1039 | 1 | measurement |  |  |  |  |  |  |
-| 1040 | 1 | measurement |  |  |  |  |  |  |
-| 1041 | 1 | measurement |  |  |  |  |  |  |
-| 1042 | 1 | measurement |  |  |  |  |  |  |
-| 1043 | 1 | measurement |  |  |  |  |  |  |
-| 1044 | 1 | measurement |  |  |  |  |  |  |
-| 1045 | 18 | measurement |  |  |  |  |  |  |
-| 1046 | 23 | measurement |  |  |  |  |  |  |
-| 1047 | 1 | measurement |  |  |  |  |  |  |
-| 1048 | 60 | measurement |  |  |  |  |  |  |
-| 1049 | 1 | measurement |  |  |  |  |  |  |
-| 1050 | 2 | measurement |  |  |  |  |  |  |
-| 1051 | 1 | measurement |  |  |  |  |  |  |
-| 1052 | 26 | measurement |  |  |  |  |  |  |
-| 1053 | 1 | measurement |  |  |  |  |  |  |
-| 1054 | 1 | measurement |  |  |  |  |  |  |
-| 1055 | 1 | measurement |  |  |  |  |  |  |
-| 1056 | 1 | measurement |  |  |  |  |  |  |
-| 1057 | 1 | measurement |  |  |  |  |  |  |
-| 1058 | 1 | measurement |  |  |  |  |  |  |
-| 1059 | 1 | measurement |  |  |  |  |  |  |
-| 1060 | 1 | measurement |  |  |  |  |  |  |
-| 1061 | 2 | measurement |  |  |  |  |  |  |
-| 1062 | 4 | measurement |  |  |  |  |  |  |
-| 1063 | 1 | measurement |  |  |  |  |  |  |
-| 1064 | 2 | measurement |  |  |  |  |  |  |
-| 1065 | 1 | measurement |  |  |  |  |  |  |
-| 1066 | 1 | measurement |  |  |  |  |  |  |
-| 1067 | 1 | measurement |  |  |  |  |  |  |
-| 1068 | 6 | measurement |  |  |  |  |  |  |
-| 1069 | 2 | measurement |  |  |  |  |  |  |
-| 1070 | 3 | measurement |  |  |  |  |  |  |
-| 1071 | 1 | measurement |  |  |  |  |  |  |
-| 1072 | 5 | measurement |  |  |  |  |  |  |
-| 1073 | 1 | measurement |  |  |  |  |  |  |
-| 1074 | 1 | measurement |  |  |  |  |  |  |
-| 1075 | 1 | measurement |  |  |  |  |  |  |
-| 1076 | 1 | measurement |  |  |  |  |  |  |
-| 1077 | 1 | measurement |  |  |  |  |  |  |
-| 1078 | 2 | measurement |  |  |  |  |  |  |
-| 1079 | 1 | measurement |  |  |  |  |  |  |
-| 1080 | 1 | measurement |  |  |  |  |  |  |
-| 1081 | 15 | measurement |  |  |  |  |  |  |
-| 1082 | 2 | measurement |  |  |  |  |  |  |
-| 1083 | 2 | measurement |  |  |  |  |  |  |
-| 1084 | 2 | measurement |  |  |  |  |  |  |
-| 1085 | 5 | measurement |  |  |  |  |  |  |
-| 1086 | 1 | measurement |  |  |  |  |  |  |
-| 1087 | 1 | measurement |  |  |  |  |  |  |
-| 1088 | 1 | measurement |  |  |  |  |  |  |
-| 1089 | 3 | measurement |  |  |  |  |  |  |
-| 1090 | 1 | measurement |  |  |  |  |  |  |
-| 1091 | 2 | measurement |  |  |  |  |  |  |
-| 1092 | 1 | measurement |  |  |  |  |  |  |
-| 1093 | 4 | measurement |  |  |  |  |  |  |
-| 1094 | 1 | measurement |  |  |  |  |  |  |
-| 1095 | 2 | measurement |  |  |  |  |  |  |
-| 1096 | 2 | measurement |  |  |  |  |  |  |
-| 1097 | 1 | measurement |  |  |  |  |  |  |
-| 1098 | 1 | measurement |  |  |  |  |  |  |
-| 1099 | 1 | measurement |  |  |  |  |  |  |
-| 1100 | 1 | measurement |  |  |  |  |  |  |
-| 1101 | 1 | measurement |  |  |  |  |  |  |
-| 1102 | 1 | measurement |  |  |  |  |  |  |
-| 1103 | 1 | measurement |  |  |  |  |  |  |
-| 1104 | 1 | measurement |  |  |  |  |  |  |
-| 1105 | 1 | measurement |  |  |  |  |  |  |
-| 1106 | 1 | measurement |  |  |  |  |  |  |
-| 1108 | 1 | measurement |  |  |  |  |  |  |
-| 1109 | 1 | measurement |  |  |  |  |  |  |
-| 1110 | 1 | measurement |  |  |  |  |  |  |
-| 1111 | 1 | measurement |  |  |  |  |  |  |
-| 1112 | 1 | measurement |  |  |  |  |  |  |
-| 1113 | 213 | measurement |  |  |  |  |  |  |
-| 1114 | 2 | measurement |  |  |  |  |  |  |
-| 1115 | 1 | measurement |  |  |  |  |  |  |
-| 1116 | 10 | measurement |  |  |  |  |  |  |
-| 1117 | 1 | measurement |  |  |  |  |  |  |
-| 1118 | 1 | measurement |  |  |  |  |  |  |
-| 1119 | 1 | measurement |  |  |  |  |  |  |
-| 1120 | 1 | measurement |  |  |  |  |  |  |
-| 1121 | 1 | measurement |  |  |  |  |  |  |
-| 1122 | 1 | measurement |  |  |  |  |  |  |
-| 1123 | 1 | measurement |  |  |  |  |  |  |
-| 1124 | 1 | measurement |  |  |  |  |  |  |
-| 1125 | 10 | measurement |  |  |  |  |  |  |
-| 1126 | 1 | measurement |  |  |  |  |  |  |
-| 1127 | 1 | measurement |  |  |  |  |  |  |
-| 1128 | 2 | measurement |  |  |  |  |  |  |
-| 1129 | 2 | measurement |  |  |  |  |  |  |
-| 1130 | 2 | measurement |  |  |  |  |  |  |
-| 1131 | 1 | measurement |  |  |  |  |  |  |
-| 1132 | 3 | measurement |  |  |  |  |  |  |
-| 1133 | 1 | measurement |  |  |  |  |  |  |
-| 1134 | 1 | measurement |  |  |  |  |  |  |
-| 1135 | 1 | measurement |  |  |  |  |  |  |
-| 1136 | 2 | measurement |  |  |  |  |  |  |
-| 1137 | 1 | measurement |  |  |  |  |  |  |
-| 1138 | 1 | measurement |  |  |  |  |  |  |
-| 1139 | 2 | measurement |  |  |  |  |  |  |
-| 1140 | 1 | measurement |  |  |  |  |  |  |
-| 1141 | 1 | measurement |  |  |  |  |  |  |
-| 1142 | 1 | measurement |  |  |  |  |  |  |
-| 1143 | 2 | measurement |  |  |  |  |  |  |
-| 1144 | 1 | measurement |  |  |  |  |  |  |
-| 1145 | 1 | measurement |  |  |  |  |  |  |
-| 1146 | 1 | measurement |  |  |  |  |  |  |
-| 1147 | 1 | measurement |  |  |  |  |  |  |
-| 1148 | 1 | measurement |  |  |  |  |  |  |
-| 1149 | 3 | measurement |  |  |  |  |  |  |
-| 1150 | 1 | measurement |  |  |  |  |  |  |
-| 1151 | 1 | measurement |  |  |  |  |  |  |
-| 1152 | 1 | measurement |  |  |  |  |  |  |
-| 1153 | 1 | measurement |  |  |  |  |  |  |
-| 1154 | 3 | measurement |  |  |  |  |  |  |
-| 1155 | 1 | measurement |  |  |  |  |  |  |
-| 1156 | 1 | measurement |  |  |  |  |  |  |
-| 1157 | 1 | measurement |  |  |  |  |  |  |
-| 1158 | 1 | measurement |  |  |  |  |  |  |
-| 1159 | 1 | measurement |  |  |  |  |  |  |
-| 1160 | 3 | measurement |  |  |  |  |  |  |
-| 1161 | 6 | measurement |  |  |  |  |  |  |
-| 1162 | 1 | measurement |  |  |  |  |  |  |
-| 1163 | 1 | measurement |  |  |  |  |  |  |
-| 1164 | 1 | measurement |  |  |  |  |  |  |
-| 1165 | 1 | measurement |  |  |  |  |  |  |
-| 1166 | 4 | measurement |  |  |  |  |  |  |
-| 1167 | 18 | measurement |  |  |  |  |  |  |
-| 1168 | 1 | measurement |  |  |  |  |  |  |
-| 1169 | 1 | measurement |  |  |  |  |  |  |
-| 1170 | 1 | measurement |  |  |  |  |  |  |
-| 1171 | 2 | measurement |  |  |  |  |  |  |
-| 1172 | 2 | measurement |  |  |  |  |  |  |
-| 1173 | 1 | measurement |  |  |  |  |  |  |
-| 1174 | 1 | measurement |  |  |  |  |  |  |
-| 1175 | 1 | measurement |  |  |  |  |  |  |
-| 1176 | 2 | measurement |  |  |  |  |  |  |
-| 1177 | 1 | measurement |  |  |  |  |  |  |
-| 1178 | 1 | measurement |  |  |  |  |  |  |
-| 1179 | 3 | measurement |  |  |  |  |  |  |
-| 1180 | 1 | measurement |  |  |  |  |  |  |
-| 1181 | 1 | measurement |  |  |  |  |  |  |
-| 1182 | 1 | measurement |  |  |  |  |  |  |
-| 1183 | 1 | measurement |  |  |  |  |  |  |
-| 1184 | 1 | measurement |  |  |  |  |  |  |
-| 1185 | 3 | measurement |  |  |  |  |  |  |
-| 1186 | 1 | measurement |  |  |  |  |  |  |
-| 1187 | 1 | measurement |  |  |  |  |  |  |
-| 1188 | 1 | measurement |  |  |  |  |  |  |
-| 1189 | 1 | measurement |  |  |  |  |  |  |
-| 1191 | 1 | measurement |  |  |  |  |  |  |
-| 1192 | 1 | measurement |  |  |  |  |  |  |
-| 1193 | 1 | measurement |  |  |  |  |  |  |
-| 1194 | 1 | measurement |  |  |  |  |  |  |
-| 1195 | 1 | measurement |  |  |  |  |  |  |
-| 1196 | 1 | measurement |  |  |  |  |  |  |
-| 1197 | 1 | measurement |  |  |  |  |  |  |
-| 1198 | 1 | measurement |  |  |  |  |  |  |
-| 1199 | 1 | measurement |  |  |  |  |  |  |
-| 1200 | 1 | measurement |  |  |  |  |  |  |
-| 1201 | 6 | measurement |  |  |  |  |  |  |
-| 1202 | 1 | measurement |  |  |  |  |  |  |
-| 1203 | 2 | measurement |  |  |  |  |  |  |
-| 1204 | 1 | measurement |  |  |  |  |  |  |
-| 1205 | 1 | measurement |  |  |  |  |  |  |
-| 1206 | 2 | measurement |  |  |  |  |  |  |
-| 1207 | 1 | measurement |  |  |  |  |  |  |
-| 1208 | 3 | measurement |  |  |  |  |  |  |
-| 1209 | 3 | measurement |  |  |  |  |  |  |
-| 1210 | 1 | measurement |  |  |  |  |  |  |
-| 1211 | 3 | measurement |  |  |  |  |  |  |
-| 1212 | 1 | measurement |  |  |  |  |  |  |
-| 1213 | 1 | measurement |  |  |  |  |  |  |
-| 1214 | 1 | measurement |  |  |  |  |  |  |
-| 1215 | 33 | measurement |  |  |  |  |  |  |
-| 1216 | 1 | measurement |  |  |  |  |  |  |
-| 1217 | 26 | measurement |  |  |  |  |  |  |
-| 1218 | 1 | measurement |  |  |  |  |  |  |
-| 1219 | 3 | measurement |  |  |  |  |  |  |
-| 1220 | 1 | measurement |  |  |  |  |  |  |
-| 1221 | 1 | measurement |  |  |  |  |  |  |
-| 1222 | 2 | measurement |  |  |  |  |  |  |
-| 1223 | 1 | measurement |  |  |  |  |  |  |
-| 1224 | 1 | measurement |  |  |  |  |  |  |
-| 1225 | 1 | measurement |  |  |  |  |  |  |
-| 1226 | 1 | measurement |  |  |  |  |  |  |
-| 1227 | 1 | measurement |  |  |  |  |  |  |
-| 1228 | 1 | measurement |  |  |  |  |  |  |
-| 1229 | 1 | measurement |  |  |  |  |  |  |
-| 1230 | 1 | measurement |  |  |  |  |  |  |
-| 1231 | 1 | measurement |  |  |  |  |  |  |
-| 1232 | 1 | measurement |  |  |  |  |  |  |
-| 1233 | 1 | measurement |  |  |  |  |  |  |
-| 1234 | 1 | measurement |  |  |  |  |  |  |
-| 1235 | 1 | measurement |  |  |  |  |  |  |
-| 1236 | 1 | measurement |  |  |  |  |  |  |
-| 1237 | 5 | measurement |  |  |  |  |  |  |
-| 1238 | 1 | measurement |  |  |  |  |  |  |
-| 1239 | 1 | measurement |  |  |  |  |  |  |
-| 1240 | 1 | measurement |  |  |  |  |  |  |
-| 1241 | 1 | measurement |  |  |  |  |  |  |
-| 1243 | 1 | measurement |  |  |  |  |  |  |
-| 1244 | 11 | measurement |  |  |  |  |  |  |
-| 1245 | 1 | measurement |  |  |  |  |  |  |
-| 1246 | 1 | measurement |  |  |  |  |  |  |
-| 1247 | 1 | measurement |  |  |  |  |  |  |
-| 1248 | 5 | measurement |  |  |  |  |  |  |
-| 1249 | 1 | measurement |  |  |  |  |  |  |
-| 1250 | 3 | measurement |  |  |  |  |  |  |
-| 1251 | 1 | measurement |  |  |  |  |  |  |
-| 1252 | 1 | measurement |  |  |  |  |  |  |
-| 1253 | 1 | measurement |  |  |  |  |  |  |
-| 1254 | 8 | measurement |  |  |  |  |  |  |
-| 1255 | 2 | measurement |  |  |  |  |  |  |
-| 1256 | 6 | measurement |  |  |  |  |  |  |
-| 1257 | 31 | measurement |  |  |  |  |  |  |
-| 1258 | 2 | measurement |  |  |  |  |  |  |
-| 1259 | 1 | measurement |  |  |  |  |  |  |
-| 1260 | 1 | measurement |  |  |  |  |  |  |
-| 1261 | 29 | measurement |  |  |  |  |  |  |
-| 1262 | 2 | measurement |  |  |  |  |  |  |
-| 1263 | 1 | measurement |  |  |  |  |  |  |
-| 1264 | 1 | measurement |  |  |  |  |  |  |
-| 1265 | 1 | measurement |  |  |  |  |  |  |
-| 1266 | 1 | measurement |  |  |  |  |  |  |
-| 1267 | 1 | measurement |  |  |  |  |  |  |
-| 1268 | 2 | measurement |  |  |  |  |  |  |
-| 1269 | 1 | measurement |  |  |  |  |  |  |
-| 1270 | 1 | measurement |  |  |  |  |  |  |
-| 1271 | 7 | measurement |  |  |  |  |  |  |
-| 1272 | 1 | measurement |  |  |  |  |  |  |
-| 1273 | 1 | measurement |  |  |  |  |  |  |
-| 1274 | 1 | measurement |  |  |  |  |  |  |
-| 1275 | 1 | measurement |  |  |  |  |  |  |
-| 1276 | 1 | measurement |  |  |  |  |  |  |
-| 1277 | 2 | measurement |  |  |  |  |  |  |
-| 1278 | 1 | measurement |  |  |  |  |  |  |
-| 1279 | 1 | measurement |  |  |  |  |  |  |
-| 1280 | 3 | measurement |  |  |  |  |  |  |
-| 1281 | 1 | measurement |  |  |  |  |  |  |
-| 1282 | 1 | measurement |  |  |  |  |  |  |
-| 1283 | 1 | measurement |  |  |  |  |  |  |
-| 1284 | 2 | measurement |  |  |  |  |  |  |
-| 1285 | 1 | measurement |  |  |  |  |  |  |
-| 1286 | 1 | measurement |  |  |  |  |  |  |
-| 1287 | 1 | measurement |  |  |  |  |  |  |
-| 1288 | 1 | measurement |  |  |  |  |  |  |
-| 1289 | 2 | measurement |  |  |  |  |  |  |
-| 1290 | 1 | measurement |  |  |  |  |  |  |
-| 1291 | 1 | measurement |  |  |  |  |  |  |
-| 1293 | 1 | measurement |  |  |  |  |  |  |
-| 1294 | 1 | measurement |  |  |  |  |  |  |
-| 1295 | 1 | measurement |  |  |  |  |  |  |
-| 1296 | 1 | measurement |  |  |  |  |  |  |
-| 1297 | 1961 | measurement |  |  |  |  |  |  |
-| 1298 | 1 | measurement |  |  |  |  |  |  |
-| 1299 | 1 | measurement |  |  |  |  |  |  |
-| 1300 | 2 | measurement |  |  |  |  |  |  |
-| 1301 | 1 | measurement |  |  |  |  |  |  |
-| 1302 | 1 | measurement |  |  |  |  |  |  |
-| 1303 | 1 | measurement |  |  |  |  |  |  |
-| 1304 | 1 | measurement |  |  |  |  |  |  |
-| 1305 | 1 | measurement |  |  |  |  |  |  |
-| 1306 | 5 | measurement |  |  |  |  |  |  |
-| 1307 | 1 | measurement |  |  |  |  |  |  |
-| 1308 | 1 | measurement |  |  |  |  |  |  |
-| 1309 | 14 | measurement |  |  |  |  |  |  |
-| 1310 | 1 | measurement |  |  |  |  |  |  |
-| 1311 | 1 | measurement |  |  |  |  |  |  |
-| 1312 | 1 | measurement |  |  |  |  |  |  |
-| 1313 | 1 | measurement |  |  |  |  |  |  |
-| 1314 | 4 | measurement |  |  |  |  |  |  |
-| 1315 | 9 | measurement |  |  |  |  |  |  |
-| 1316 | 8 | measurement |  |  |  |  |  |  |
-| 1317 | 1 | measurement |  |  |  |  |  |  |
-| 1318 | 1 | measurement |  |  |  |  |  |  |
-| 1319 | 1 | measurement |  |  |  |  |  |  |
-| 1320 | 1 | measurement |  |  |  |  |  |  |
-| 1321 | 1 | measurement |  |  |  |  |  |  |
-| 1322 | 2 | measurement |  |  |  |  |  |  |
-| 1323 | 1 | measurement |  |  |  |  |  |  |
-| 1324 | 1 | measurement |  |  |  |  |  |  |
-| 1325 | 10 | measurement |  |  |  |  |  |  |
-| 1326 | 1 | measurement |  |  |  |  |  |  |
-| 1327 | 1 | measurement |  |  |  |  |  |  |
-| 1328 | 1 | measurement |  |  |  |  |  |  |
-| 1329 | 1 | measurement |  |  |  |  |  |  |
-| 1330 | 1 | measurement |  |  |  |  |  |  |
-| 1331 | 1 | measurement |  |  |  |  |  |  |
-| 1332 | 15 | measurement |  |  |  |  |  |  |
-| 1333 | 1 | measurement |  |  |  |  |  |  |
-| 1334 | 6 | measurement |  |  |  |  |  |  |
-| 1337 | 1 | measurement |  |  |  |  |  |  |
-| 1338 | 6 | measurement |  |  |  |  |  |  |
-| 1339 | 8 | measurement |  |  |  |  |  |  |
-| 1340 | 1 | measurement |  |  |  |  |  |  |
-| 1341 | 1 | measurement |  |  |  |  |  |  |
-| 1342 | 1 | measurement |  |  |  |  |  |  |
-| 1343 | 6 | measurement |  |  |  |  |  |  |
-| 1344 | 1 | measurement |  |  |  |  |  |  |
-| 1345 | 1 | measurement |  |  |  |  |  |  |
-| 1346 | 2 | measurement |  |  |  |  |  |  |
-| 1347 | 38 | measurement |  |  |  |  |  |  |
-| 1348 | 1 | measurement |  |  |  |  |  |  |
-| 1349 | 1 | measurement |  |  |  |  |  |  |
-| 1350 | 1 | measurement |  |  |  |  |  |  |
-| 1351 | 1 | measurement |  |  |  |  |  |  |
-| 1352 | 1 | measurement |  |  |  |  |  |  |
-| 1353 | 3 | measurement |  |  |  |  |  |  |
-| 1354 | 1 | measurement |  |  |  |  |  |  |
-| 1355 | 2 | measurement |  |  |  |  |  |  |
-| 1356 | 2 | measurement |  |  |  |  |  |  |
-| 1357 | 1 | measurement |  |  |  |  |  |  |
-| 1358 | 1 | measurement |  |  |  |  |  |  |
-| 1359 | 1 | measurement |  |  |  |  |  |  |
-| 1360 | 1 | measurement |  |  |  |  |  |  |
-| 1361 | 1 | measurement |  |  |  |  |  |  |
-| 1362 | 1 | measurement |  |  |  |  |  |  |
-| 1363 | 1 | measurement |  |  |  |  |  |  |
-| 1364 | 1 | measurement |  |  |  |  |  |  |
-| 1365 | 1 | measurement |  |  |  |  |  |  |
-| 1366 | 1 | measurement |  |  |  |  |  |  |
-| 1367 | 1 | measurement |  |  |  |  |  |  |
-| 1369 | 1 | measurement |  |  |  |  |  |  |
-| 1370 | 1 | measurement |  |  |  |  |  |  |
-| 1371 | 1 | measurement |  |  |  |  |  |  |
-| 1372 | 1 | measurement |  |  |  |  |  |  |
-| 1373 | 1 | measurement |  |  |  |  |  |  |
-| 1374 | 3 | measurement |  |  |  |  |  |  |
-| 1375 | 2 | measurement |  |  |  |  |  |  |
-| 1376 | 2 | measurement |  |  |  |  |  |  |
-| 1377 | 1 | measurement |  |  |  |  |  |  |
-| 1378 | 1 | measurement |  |  |  |  |  |  |
-| 1379 | 1 | measurement |  |  |  |  |  |  |
-| 1380 | 1 | measurement |  |  |  |  |  |  |
-| 1381 | 1 | measurement |  |  |  |  |  |  |
-| 1382 | 1 | measurement |  |  |  |  |  |  |
-| 1383 | 1 | measurement |  |  |  |  |  |  |
-| 1384 | 28 | measurement |  |  |  |  |  |  |
-| 1385 | 1 | measurement |  |  |  |  |  |  |
-| 1386 | 18 | measurement |  |  |  |  |  |  |
-| 1388 | 50 | measurement |  |  |  |  |  |  |
-| 1389 | 1 | measurement |  |  |  |  |  |  |
-| 1390 | 1 | measurement |  |  |  |  |  |  |
-| 1391 | 1 | measurement |  |  |  |  |  |  |
-| 1392 | 4 | measurement |  |  |  |  |  |  |
-| 1393 | 1 | measurement |  |  |  |  |  |  |
-| 1394 | 1 | measurement |  |  |  |  |  |  |
-| 1395 | 1 | measurement |  |  |  |  |  |  |
-| 1396 | 1 | measurement |  |  |  |  |  |  |
-| 1397 | 1 | measurement |  |  |  |  |  |  |
-| 1398 | 1 | measurement |  |  |  |  |  |  |
-| 1399 | 4 | measurement |  |  |  |  |  |  |
-| 1400 | 4 | measurement |  |  |  |  |  |  |
-| 1401 | 2 | measurement |  |  |  |  |  |  |
-| 1402 | 1 | measurement |  |  |  |  |  |  |
-| 1403 | 1 | measurement |  |  |  |  |  |  |
-| 1404 | 9 | measurement |  |  |  |  |  |  |
-| 1405 | 1 | measurement |  |  |  |  |  |  |
-| 1406 | 1 | measurement |  |  |  |  |  |  |
-| 1407 | 1 | measurement |  |  |  |  |  |  |
-| 1408 | 1 | measurement |  |  |  |  |  |  |
-| 1409 | 1 | measurement |  |  |  |  |  |  |
-| 1410 | 1 | measurement |  |  |  |  |  |  |
-| 1411 | 1 | measurement |  |  |  |  |  |  |
-| 1412 | 66 | measurement |  |  |  |  |  |  |
-| 1413 | 3 | measurement |  |  |  |  |  |  |
-| 1414 | 1 | measurement |  |  |  |  |  |  |
-| 1415 | 1 | measurement |  |  |  |  |  |  |
-| 1416 | 1 | measurement |  |  |  |  |  |  |
-| 1417 | 2 | measurement |  |  |  |  |  |  |
-| 1418 | 1 | measurement |  |  |  |  |  |  |
-| 1419 | 1 | measurement |  |  |  |  |  |  |
-| 1420 | 1 | measurement |  |  |  |  |  |  |
-| 1421 | 1 | measurement |  |  |  |  |  |  |
-| 1422 | 1 | measurement |  |  |  |  |  |  |
-| 1423 | 1 | measurement |  |  |  |  |  |  |
-| 1424 | 1 | measurement |  |  |  |  |  |  |
-| 1425 | 1 | measurement |  |  |  |  |  |  |
-| 1426 | 1 | measurement |  |  |  |  |  |  |
-| 1427 | 1 | measurement |  |  |  |  |  |  |
-| 1428 | 1 | measurement |  |  |  |  |  |  |
-| 1429 | 3 | measurement |  |  |  |  |  |  |
-| 1430 | 5 | measurement |  |  |  |  |  |  |
-| 1432 | 8 | measurement |  |  |  |  |  |  |
-| 1433 | 1 | measurement |  |  |  |  |  |  |
-| 1434 | 1 | measurement |  |  |  |  |  |  |
-| 1435 | 1 | measurement |  |  |  |  |  |  |
-| 1436 | 1 | measurement |  |  |  |  |  |  |
-| 1437 | 1 | measurement |  |  |  |  |  |  |
-| 1438 | 1 | measurement |  |  |  |  |  |  |
-| 1439 | 51 | measurement |  |  |  |  |  |  |
-| 1440 | 1 | measurement |  |  |  |  |  |  |
-| 1441 | 1 | measurement |  |  |  |  |  |  |
-| 1442 | 1 | measurement |  |  |  |  |  |  |
-| 1443 | 1 | measurement |  |  |  |  |  |  |
-| 1444 | 10 | measurement |  |  |  |  |  |  |
-| 1445 | 38 | measurement |  |  |  |  |  |  |
-| 1446 | 1 | measurement |  |  |  |  |  |  |
-| 1447 | 1 | measurement |  |  |  |  |  |  |
-| 1448 | 1 | measurement |  |  |  |  |  |  |
-| 1449 | 6 | measurement |  |  |  |  |  |  |
-| 1450 | 1 | measurement |  |  |  |  |  |  |
-| 1451 | 5 | measurement |  |  |  |  |  |  |
-| 1452 | 1 | measurement |  |  |  |  |  |  |
-| 1453 | 3 | measurement |  |  |  |  |  |  |
-| 1454 | 3 | measurement |  |  |  |  |  |  |
-| 1455 | 5 | measurement |  |  |  |  |  |  |
-| 1456 | 23 | measurement |  |  |  |  |  |  |
-| 1457 | 1 | measurement |  |  |  |  |  |  |
-| 1458 | 1 | measurement |  |  |  |  |  |  |
-| 1459 | 1 | measurement |  |  |  |  |  |  |
-| 1460 | 1 | measurement |  |  |  |  |  |  |
-| 1461 | 5 | measurement |  |  |  |  |  |  |
-| 1462 | 1 | measurement |  |  |  |  |  |  |
-| 1463 | 1 | measurement |  |  |  |  |  |  |
-| 1464 | 4 | measurement |  |  |  |  |  |  |
-| 1465 | 1 | measurement |  |  |  |  |  |  |
-| 1466 | 11 | measurement |  |  |  |  |  |  |
-| 1467 | 1 | measurement |  |  |  |  |  |  |
-| 1468 | 1 | measurement |  |  |  |  |  |  |
-| 1469 | 1 | measurement |  |  |  |  |  |  |
-| 1470 | 1 | measurement |  |  |  |  |  |  |
-| 1471 | 1 | measurement |  |  |  |  |  |  |
-| 1472 | 1 | measurement |  |  |  |  |  |  |
-| 1473 | 9 | measurement |  |  |  |  |  |  |
-| 1474 | 1 | measurement |  |  |  |  |  |  |
-| 1475 | 1 | measurement |  |  |  |  |  |  |
-| 1476 | 1 | measurement |  |  |  |  |  |  |
-| 1477 | 1 | measurement |  |  |  |  |  |  |
-| 1478 | 2 | measurement |  |  |  |  |  |  |
-| 1479 | 1 | measurement |  |  |  |  |  |  |
-| 1480 | 1 | measurement |  |  |  |  |  |  |
-| 1481 | 1 | measurement |  |  |  |  |  |  |
-| 1482 | 1 | measurement |  |  |  |  |  |  |
-| 1483 | 1 | measurement |  |  |  |  |  |  |
-| 1484 | 1 | measurement |  |  |  |  |  |  |
-| 1485 | 4 | measurement |  |  |  |  |  |  |
-| 1486 | 1 | measurement |  |  |  |  |  |  |
-| 1487 | 1 | measurement |  |  |  |  |  |  |
-| 1488 | 1 | measurement |  |  |  |  |  |  |
-| 1489 | 1 | measurement |  |  |  |  |  |  |
-| 1490 | 1 | measurement |  |  |  |  |  |  |
-| 1491 | 1 | measurement |  |  |  |  |  |  |
-| 1492 | 7 | measurement |  |  |  |  |  |  |
-| 1493 | 1 | measurement |  |  |  |  |  |  |
-| 1494 | 1 | measurement |  |  |  |  |  |  |
-| 1495 | 1 | measurement |  |  |  |  |  |  |
-| 1496 | 1 | measurement |  |  |  |  |  |  |
-| 1497 | 1 | measurement |  |  |  |  |  |  |
-| 1498 | 1 | measurement |  |  |  |  |  |  |
-| 1499 | 1 | measurement |  |  |  |  |  |  |
-| 1500 | 1 | measurement |  |  |  |  |  |  |
-| 1501 | 5 | measurement |  |  |  |  |  |  |
-| 1502 | 1 | measurement |  |  |  |  |  |  |
-| 1503 | 1 | measurement |  |  |  |  |  |  |
-| 1504 | 1 | measurement |  |  |  |  |  |  |
-| 1505 | 1 | measurement |  |  |  |  |  |  |
-| 1506 | 1 | measurement |  |  |  |  |  |  |
-| 1507 | 2 | measurement |  |  |  |  |  |  |
-| 1508 | 1 | measurement |  |  |  |  |  |  |
-| 1509 | 1 | measurement |  |  |  |  |  |  |
-| 1510 | 3 | measurement |  |  |  |  |  |  |
-| 1511 | 1 | measurement |  |  |  |  |  |  |
-| 1512 | 1 | measurement |  |  |  |  |  |  |
-| 1513 | 1 | measurement |  |  |  |  |  |  |
-| 1514 | 25 | measurement |  |  |  |  |  |  |
-| 1515 | 1 | measurement |  |  |  |  |  |  |
-| 1516 | 1 | measurement |  |  |  |  |  |  |
-| 1517 | 1 | measurement |  |  |  |  |  |  |
-| 1518 | 1 | measurement |  |  |  |  |  |  |
-| 1519 | 1 | measurement |  |  |  |  |  |  |
-| 1520 | 1 | measurement |  |  |  |  |  |  |
-| 1521 | 2 | measurement |  |  |  |  |  |  |
-| 1522 | 1 | measurement |  |  |  |  |  |  |
-| 1523 | 1 | measurement |  |  |  |  |  |  |
-| 1524 | 3 | measurement |  |  |  |  |  |  |
-| 1525 | 111 | measurement |  |  |  |  |  |  |
-| 1526 | 1 | measurement |  |  |  |  |  |  |
-| 1527 | 1 | measurement |  |  |  |  |  |  |
-| 1528 | 10 | measurement |  |  |  |  |  |  |
-| 1529 | 3 | measurement |  |  |  |  |  |  |
-| 1530 | 1 | measurement |  |  |  |  |  |  |
-| 1531 | 1 | measurement |  |  |  |  |  |  |
-| 1532 | 1 | measurement |  |  |  |  |  |  |
-| 1533 | 1 | measurement |  |  |  |  |  |  |
-| 1534 | 2 | measurement |  |  |  |  |  |  |
-| 1535 | 5 | measurement |  |  |  |  |  |  |
-| 1536 | 10 | measurement |  |  |  |  |  |  |
-| 1537 | 1 | measurement |  |  |  |  |  |  |
-| 1538 | 1 | measurement |  |  |  |  |  |  |
-| 1539 | 2 | measurement |  |  |  |  |  |  |
-| 1540 | 2 | measurement |  |  |  |  |  |  |
-| 1541 | 1 | measurement |  |  |  |  |  |  |
-| 1542 | 2 | measurement |  |  |  |  |  |  |
-| 1544 | 217 | measurement |  |  |  |  |  |  |
-| 1545 | 12 | measurement |  |  |  |  |  |  |
-| 1546 | 18 | measurement |  |  |  |  |  |  |
-| 1547 | 228 | measurement |  |  |  |  |  |  |
-| 1548 | 1 | measurement |  |  |  |  |  |  |
-| 1549 | 1 | measurement |  |  |  |  |  |  |
-| 1550 | 1 | measurement |  |  |  |  |  |  |
-| 1551 | 1 | measurement |  |  |  |  |  |  |
-| 1552 | 1 | measurement |  |  |  |  |  |  |
-| 1553 | 1 | measurement |  |  |  |  |  |  |
-| 1554 | 3 | measurement |  |  |  |  |  |  |
-| 1555 | 1 | measurement |  |  |  |  |  |  |
-| 1556 | 1 | measurement |  |  |  |  |  |  |
-| 1557 | 1 | measurement |  |  |  |  |  |  |
-| 1558 | 1 | measurement |  |  |  |  |  |  |
-| 1559 | 3 | measurement |  |  |  |  |  |  |
-| 1560 | 1 | measurement |  |  |  |  |  |  |
-| 1561 | 1 | measurement |  |  |  |  |  |  |
-| 1562 | 1 | measurement |  |  |  |  |  |  |
-| 1563 | 1 | measurement |  |  |  |  |  |  |
-| 1564 | 1 | measurement |  |  |  |  |  |  |
-| 1565 | 1 | measurement |  |  |  |  |  |  |
-| 1566 | 1 | measurement |  |  |  |  |  |  |
-| 1567 | 1 | measurement |  |  |  |  |  |  |
-| 1568 | 1 | measurement |  |  |  |  |  |  |
-| 1569 | 1 | measurement |  |  |  |  |  |  |
-| 1570 | 1 | measurement |  |  |  |  |  |  |
-| 1571 | 1 | measurement |  |  |  |  |  |  |
-| 1572 | 1 | measurement |  |  |  |  |  |  |
-| 1573 | 273 | measurement |  |  |  |  |  |  |
-| 1574 | 1 | measurement |  |  |  |  |  |  |
-| 1575 | 3 | measurement |  |  |  |  |  |  |
-| 1576 | 2 | measurement |  |  |  |  |  |  |
-| 1577 | 121 | measurement |  |  |  |  |  |  |
-| 1578 | 3 | measurement |  |  |  |  |  |  |
-| 1579 | 1 | measurement |  |  |  |  |  |  |
-| 1580 | 1 | measurement |  |  |  |  |  |  |
-| 1581 | 1 | measurement |  |  |  |  |  |  |
-| 1582 | 2 | measurement |  |  |  |  |  |  |
-| 1583 | 1 | measurement |  |  |  |  |  |  |
-| 1584 | 9 | measurement |  |  |  |  |  |  |
-| 1585 | 7 | measurement |  |  |  |  |  |  |
-| 1586 | 1 | measurement |  |  |  |  |  |  |
-| 1587 | 1 | measurement |  |  |  |  |  |  |
-| 1588 | 1 | measurement |  |  |  |  |  |  |
-| 1589 | 1 | measurement |  |  |  |  |  |  |
-| 1590 | 1 | measurement |  |  |  |  |  |  |
-| 1591 | 1 | measurement |  |  |  |  |  |  |
-| 1592 | 1 | measurement |  |  |  |  |  |  |
-| 1593 | 1 | measurement |  |  |  |  |  |  |
-| 1594 | 47 | measurement |  |  |  |  |  |  |
-| 1595 | 2 | measurement |  |  |  |  |  |  |
-| 1596 | 1 | measurement |  |  |  |  |  |  |
-| 1597 | 1 | measurement |  |  |  |  |  |  |
-| 1598 | 1 | measurement |  |  |  |  |  |  |
-| 1599 | 12 | measurement |  |  |  |  |  |  |
-| 1600 | 4 | measurement |  |  |  |  |  |  |
-| 1601 | 12 | measurement |  |  |  |  |  |  |
-| 1602 | 1 | measurement |  |  |  |  |  |  |
-| 1603 | 1 | measurement |  |  |  |  |  |  |
-| 1604 | 1 | measurement |  |  |  |  |  |  |
-| 1605 | 13 | measurement |  |  |  |  |  |  |
-| 1606 | 2 | measurement |  |  |  |  |  |  |
-| 1607 | 1 | measurement |  |  |  |  |  |  |
-| 1608 | 1 | measurement |  |  |  |  |  |  |
-| 1609 | 1 | measurement |  |  |  |  |  |  |
-| 1610 | 4 | measurement |  |  |  |  |  |  |
-| 1611 | 31 | measurement |  |  |  |  |  |  |
-| 1612 | 3 | measurement |  |  |  |  |  |  |
-| 1613 | 1 | measurement |  |  |  |  |  |  |
-| 1614 | 1 | measurement |  |  |  |  |  |  |
-| 1615 | 2 | measurement |  |  |  |  |  |  |
-| 1616 | 1 | measurement |  |  |  |  |  |  |
-| 1617 | 2 | measurement |  |  |  |  |  |  |
-| 1618 | 2 | measurement |  |  |  |  |  |  |
-| 1619 | 2 | measurement |  |  |  |  |  |  |
-| 1620 | 1 | measurement |  |  |  |  |  |  |
-| 1621 | 35 | measurement |  |  |  |  |  |  |
-| 1622 | 1 | measurement |  |  |  |  |  |  |
-| 1623 | 1 | measurement |  |  |  |  |  |  |
-| 1624 | 3 | measurement |  |  |  |  |  |  |
-| 1625 | 1 | measurement |  |  |  |  |  |  |
-| 1626 | 1 | measurement |  |  |  |  |  |  |
-| 1627 | 12 | measurement |  |  |  |  |  |  |
-| 1628 | 1 | measurement |  |  |  |  |  |  |
-| 1629 | 4 | measurement |  |  |  |  |  |  |
-| 1630 | 1 | measurement |  |  |  |  |  |  |
-| 1631 | 2 | measurement |  |  |  |  |  |  |
-| 1632 | 1 | measurement |  |  |  |  |  |  |
-| 1633 | 10 | measurement |  |  |  |  |  |  |
-| 1634 | 1 | measurement |  |  |  |  |  |  |
-| 1635 | 1 | measurement |  |  |  |  |  |  |
-| 1636 | 1 | measurement |  |  |  |  |  |  |
-| 1637 | 1 | measurement |  |  |  |  |  |  |
-| 1638 | 1 | measurement |  |  |  |  |  |  |
-| 1639 | 1 | measurement |  |  |  |  |  |  |
-| 1640 | 1 | measurement |  |  |  |  |  |  |
-| 1641 | 1 | measurement |  |  |  |  |  |  |
-| 1642 | 1 | measurement |  |  |  |  |  |  |
-| 1643 | 1 | measurement |  |  |  |  |  |  |
-| 1644 | 1 | measurement |  |  |  |  |  |  |
-| 1645 | 5 | measurement |  |  |  |  |  |  |
-| 1646 | 1 | measurement |  |  |  |  |  |  |
-| 1647 | 1 | measurement |  |  |  |  |  |  |
-| 1648 | 1 | measurement |  |  |  |  |  |  |
-| 1649 | 1 | measurement |  |  |  |  |  |  |
-| 1650 | 1 | measurement |  |  |  |  |  |  |
-| 1651 | 1 | measurement |  |  |  |  |  |  |
-| 1652 | 3 | measurement |  |  |  |  |  |  |
-| 1653 | 1 | measurement |  |  |  |  |  |  |
-| 1654 | 1 | measurement |  |  |  |  |  |  |
-| 1655 | 2 | measurement |  |  |  |  |  |  |
-| 1656 | 1 | measurement |  |  |  |  |  |  |
-| 1657 | 1 | measurement |  |  |  |  |  |  |
-| 1658 | 637 | measurement |  |  |  |  |  |  |
-| 1660 | 2 | measurement |  |  |  |  |  |  |
-| 1661 | 1 | measurement |  |  |  |  |  |  |
-| 1663 | 1 | measurement |  |  |  |  |  |  |
-| 1664 | 1 | measurement |  |  |  |  |  |  |
-| 1665 | 1 | measurement |  |  |  |  |  |  |
-| 1666 | 1 | measurement |  |  |  |  |  |  |
-| 1667 | 1 | measurement |  |  |  |  |  |  |
-| 1668 | 8 | measurement |  |  |  |  |  |  |
-| 1669 | 1 | measurement |  |  |  |  |  |  |
-| 1670 | 1 | measurement |  |  |  |  |  |  |
-| 1671 | 1 | measurement |  |  |  |  |  |  |
-| 1672 | 2 | measurement |  |  |  |  |  |  |
-| 1673 | 1 | measurement |  |  |  |  |  |  |
-| 1674 | 1 | measurement |  |  |  |  |  |  |
-| 1675 | 1 | measurement |  |  |  |  |  |  |
-| 1676 | 4 | measurement |  |  |  |  |  |  |
-| 1677 | 3 | measurement |  |  |  |  |  |  |
-| 1678 | 1 | measurement |  |  |  |  |  |  |
-| 1679 | 1 | measurement |  |  |  |  |  |  |
-| 1680 | 3 | measurement |  |  |  |  |  |  |
-| 1681 | 1 | measurement |  |  |  |  |  |  |
-| 1682 | 1 | measurement |  |  |  |  |  |  |
-| 1683 | 1 | measurement |  |  |  |  |  |  |
-| 1684 | 1 | measurement |  |  |  |  |  |  |
-| 1685 | 10 | measurement |  |  |  |  |  |  |
-| 1686 | 1 | measurement |  |  |  |  |  |  |
-| 1687 | 1 | measurement |  |  |  |  |  |  |
-| 1689 | 1 | measurement |  |  |  |  |  |  |
-| 1690 | 1 | measurement |  |  |  |  |  |  |
-| 1691 | 1 | measurement |  |  |  |  |  |  |
-| 1692 | 1 | measurement |  |  |  |  |  |  |
-| 1693 | 5 | measurement |  |  |  |  |  |  |
-| 1694 | 1 | measurement |  |  |  |  |  |  |
-| 1695 | 1 | measurement |  |  |  |  |  |  |
-| 1696 | 1 | measurement |  |  |  |  |  |  |
-| 1697 | 1 | measurement |  |  |  |  |  |  |
-| 1698 | 1 | measurement |  |  |  |  |  |  |
-| 1699 | 1 | measurement |  |  |  |  |  |  |
-| 1700 | 1 | measurement |  |  |  |  |  |  |
-| 1701 | 1 | measurement |  |  |  |  |  |  |
-| 1702 | 1 | measurement |  |  |  |  |  |  |
-| 1703 | 1 | measurement |  |  |  |  |  |  |
-| 1704 | 17 | measurement |  |  |  |  |  |  |
-| 1705 | 53 | measurement |  |  |  |  |  |  |
-| 1706 | 1 | measurement |  |  |  |  |  |  |
-| 1707 | 2 | measurement |  |  |  |  |  |  |
-| 1708 | 1 | measurement |  |  |  |  |  |  |
-| 1709 | 2 | measurement |  |  |  |  |  |  |
-| 1710 | 2 | measurement |  |  |  |  |  |  |
-| 1711 | 1 | measurement |  |  |  |  |  |  |
-| 1713 | 1 | measurement |  |  |  |  |  |  |
-| 1714 | 1 | measurement |  |  |  |  |  |  |
-| 1715 | 1 | measurement |  |  |  |  |  |  |
-| 1716 | 1 | measurement |  |  |  |  |  |  |
-| 1717 | 1 | measurement |  |  |  |  |  |  |
-| 1718 | 2 | measurement |  |  |  |  |  |  |
-| 1720 | 1 | measurement |  |  |  |  |  |  |
-| 1721 | 1 | measurement |  |  |  |  |  |  |
-| 1722 | 1 | measurement |  |  |  |  |  |  |
-| 1723 | 1 | measurement |  |  |  |  |  |  |
-| 1724 | 1 | measurement |  |  |  |  |  |  |
-| 1726 | 1 | measurement |  |  |  |  |  |  |
-| 1727 | 1 | measurement |  |  |  |  |  |  |
-| 1728 | 2 | measurement |  |  |  |  |  |  |
-| 1729 | 1 | measurement |  |  |  |  |  |  |
-| 1730 | 1 | measurement |  |  |  |  |  |  |
-| 1731 | 1 | measurement |  |  |  |  |  |  |
-| 1732 | 1 | measurement |  |  |  |  |  |  |
-| 1733 | 1 | measurement |  |  |  |  |  |  |
-| 1734 | 1 | measurement |  |  |  |  |  |  |
-| 1735 | 1 | measurement |  |  |  |  |  |  |
-| 1736 | 2 | measurement |  |  |  |  |  |  |
-| 1737 | 1 | measurement |  |  |  |  |  |  |
-| 1738 | 3 | measurement |  |  |  |  |  |  |
-| 1739 | 1 | measurement |  |  |  |  |  |  |
-| 1740 | 6 | measurement |  |  |  |  |  |  |
-| 1741 | 1 | measurement |  |  |  |  |  |  |
-| 1742 | 1 | measurement |  |  |  |  |  |  |
-| 1743 | 7 | measurement |  |  |  |  |  |  |
-| 1744 | 1 | measurement |  |  |  |  |  |  |
-| 1745 | 1 | measurement |  |  |  |  |  |  |
-| 1746 | 1 | measurement |  |  |  |  |  |  |
-| 1747 | 1 | measurement |  |  |  |  |  |  |
-| 1748 | 1 | measurement |  |  |  |  |  |  |
-| 1749 | 5 | measurement |  |  |  |  |  |  |
-| 1750 | 2 | measurement |  |  |  |  |  |  |
-| 1751 | 1 | measurement |  |  |  |  |  |  |
-| 1752 | 3 | measurement |  |  |  |  |  |  |
-| 1753 | 1 | measurement |  |  |  |  |  |  |
-| 1754 | 1 | measurement |  |  |  |  |  |  |
-| 1755 | 4 | measurement |  |  |  |  |  |  |
-| 1756 | 4 | measurement |  |  |  |  |  |  |
-| 1757 | 1 | measurement |  |  |  |  |  |  |
-| 1758 | 1 | measurement |  |  |  |  |  |  |
-| 1759 | 1 | measurement |  |  |  |  |  |  |
-| 1760 | 223 | measurement |  |  |  |  |  |  |
-| 1762 | 5 | measurement |  |  |  |  |  |  |
-| 1763 | 85 | measurement |  |  |  |  |  |  |
-| 1764 | 1 | measurement |  |  |  |  |  |  |
-| 1765 | 1 | measurement |  |  |  |  |  |  |
-| 1766 | 3 | measurement |  |  |  |  |  |  |
-| 1767 | 40 | measurement |  |  |  |  |  |  |
-| 1768 | 22 | measurement |  |  |  |  |  |  |
-| 1769 | 1 | measurement |  |  |  |  |  |  |
-| 1770 | 1 | measurement |  |  |  |  |  |  |
-| 1771 | 2 | measurement |  |  |  |  |  |  |
-| 1772 | 1 | measurement |  |  |  |  |  |  |
-| 1773 | 6 | measurement |  |  |  |  |  |  |
-| 1774 | 1 | measurement |  |  |  |  |  |  |
-| 1775 | 1 | measurement |  |  |  |  |  |  |
-| 1776 | 1 | measurement |  |  |  |  |  |  |
-| 1777 | 1 | measurement |  |  |  |  |  |  |
-| 1778 | 1 | measurement |  |  |  |  |  |  |
-| 1779 | 12 | measurement |  |  |  |  |  |  |
-| 1780 | 1 | measurement |  |  |  |  |  |  |
-| 1781 | 23 | measurement |  |  |  |  |  |  |
-| 1782 | 1 | measurement |  |  |  |  |  |  |
-| 1783 | 1 | measurement |  |  |  |  |  |  |
-| 1784 | 32 | measurement |  |  |  |  |  |  |
-| 1785 | 1 | measurement |  |  |  |  |  |  |
-| 1786 | 2 | measurement |  |  |  |  |  |  |
-| 1787 | 1 | measurement |  |  |  |  |  |  |
-| 1788 | 1 | measurement |  |  |  |  |  |  |
-| 1789 | 7 | measurement |  |  |  |  |  |  |
-| 1790 | 1 | measurement |  |  |  |  |  |  |
-| 1791 | 2 | measurement |  |  |  |  |  |  |
-| 1792 | 1 | measurement |  |  |  |  |  |  |
-| 1793 | 1 | measurement |  |  |  |  |  |  |
-| 1794 | 1 | measurement |  |  |  |  |  |  |
-| 1795 | 1 | measurement |  |  |  |  |  |  |
-| 1796 | 1 | measurement |  |  |  |  |  |  |
-| 1797 | 1 | measurement |  |  |  |  |  |  |
-| 1798 | 14 | measurement |  |  |  |  |  |  |
-| 1799 | 2 | measurement |  |  |  |  |  |  |
-| 1800 | 3 | measurement |  |  |  |  |  |  |
-| 1801 | 1 | measurement |  |  |  |  |  |  |
-| 1802 | 1 | measurement |  |  |  |  |  |  |
-| 1803 | 1 | measurement |  |  |  |  |  |  |
-| 1804 | 1 | measurement |  |  |  |  |  |  |
-| 1805 | 2 | measurement |  |  |  |  |  |  |
-| 1806 | 1 | measurement |  |  |  |  |  |  |
-| 1807 | 1 | measurement |  |  |  |  |  |  |
-| 1809 | 1 | measurement |  |  |  |  |  |  |
-| 1810 | 5 | measurement |  |  |  |  |  |  |
-| 1811 | 3 | measurement |  |  |  |  |  |  |
-| 1812 | 1 | measurement |  |  |  |  |  |  |
-| 1813 | 1 | measurement |  |  |  |  |  |  |
-| 1814 | 1 | measurement |  |  |  |  |  |  |
-| 1815 | 1 | measurement |  |  |  |  |  |  |
-| 1816 | 2 | measurement |  |  |  |  |  |  |
-| 1817 | 1 | measurement |  |  |  |  |  |  |
-| 1818 | 1 | measurement |  |  |  |  |  |  |
-| 1819 | 1 | measurement |  |  |  |  |  |  |
-| 1820 | 1 | measurement |  |  |  |  |  |  |
-| 1821 | 1 | measurement |  |  |  |  |  |  |
-| 1822 | 470 | measurement |  |  |  |  |  |  |
-| 1823 | 1 | measurement |  |  |  |  |  |  |
-| 1824 | 2 | measurement |  |  |  |  |  |  |
-| 1825 | 1 | measurement |  |  |  |  |  |  |
-| 1826 | 1 | measurement |  |  |  |  |  |  |
-| 1827 | 1 | measurement |  |  |  |  |  |  |
-| 1828 | 1 | measurement |  |  |  |  |  |  |
-| 1829 | 1 | measurement |  |  |  |  |  |  |
-| 1830 | 1 | measurement |  |  |  |  |  |  |
-| 1831 | 7 | measurement |  |  |  |  |  |  |
-| 1832 | 1 | measurement |  |  |  |  |  |  |
-| 1833 | 1 | measurement |  |  |  |  |  |  |
-| 1834 | 1 | measurement |  |  |  |  |  |  |
-| 1835 | 8 | measurement |  |  |  |  |  |  |
-| 1836 | 1 | measurement |  |  |  |  |  |  |
-| 1837 | 2 | measurement |  |  |  |  |  |  |
-| 1838 | 1 | measurement |  |  |  |  |  |  |
-| 1839 | 1 | measurement |  |  |  |  |  |  |
-| 1840 | 1 | measurement |  |  |  |  |  |  |
-| 1841 | 1 | measurement |  |  |  |  |  |  |
-| 1842 | 2 | measurement |  |  |  |  |  |  |
-| 1843 | 11 | measurement |  |  |  |  |  |  |
-| 1844 | 1 | measurement |  |  |  |  |  |  |
-| 1845 | 1 | measurement |  |  |  |  |  |  |
-| 1846 | 1 | measurement |  |  |  |  |  |  |
-| 1847 | 1 | measurement |  |  |  |  |  |  |
-| 1848 | 453 | measurement |  |  |  |  |  |  |
-| 1849 | 133 | measurement |  |  |  |  |  |  |
-| 1850 | 1 | measurement |  |  |  |  |  |  |
-| 1851 | 1 | measurement |  |  |  |  |  |  |
-| 1852 | 2 | measurement |  |  |  |  |  |  |
-| 1853 | 1 | measurement |  |  |  |  |  |  |
-| 1855 | 1 | measurement |  |  |  |  |  |  |
-| 1856 | 1 | measurement |  |  |  |  |  |  |
-| 1857 | 1 | measurement |  |  |  |  |  |  |
-| 1858 | 1 | measurement |  |  |  |  |  |  |
-| 1859 | 1 | measurement |  |  |  |  |  |  |
-| 1860 | 13 | measurement |  |  |  |  |  |  |
-| 1861 | 1 | measurement |  |  |  |  |  |  |
-| 1862 | 1 | measurement |  |  |  |  |  |  |
-| 1863 | 1 | measurement |  |  |  |  |  |  |
-| 1864 | 1 | measurement |  |  |  |  |  |  |
-| 1865 | 1 | measurement |  |  |  |  |  |  |
-| 1866 | 1 | measurement |  |  |  |  |  |  |
-| 1867 | 1 | measurement |  |  |  |  |  |  |
-| 1868 | 2 | measurement |  |  |  |  |  |  |
-| 1869 | 1 | measurement |  |  |  |  |  |  |
-| 1870 | 1 | measurement |  |  |  |  |  |  |
-| 1871 | 1 | measurement |  |  |  |  |  |  |
-| 1872 | 1 | measurement |  |  |  |  |  |  |
-| 1873 | 1 | measurement |  |  |  |  |  |  |
-| 1874 | 1 | measurement |  |  |  |  |  |  |
-| 1875 | 1 | measurement |  |  |  |  |  |  |
-| 1876 | 6 | measurement |  |  |  |  |  |  |
-| 1877 | 2 | measurement |  |  |  |  |  |  |
-| 1878 | 1 | measurement |  |  |  |  |  |  |
-| 1879 | 1 | measurement |  |  |  |  |  |  |
-| 1880 | 1 | measurement |  |  |  |  |  |  |
-| 1881 | 1 | measurement |  |  |  |  |  |  |
-| 1883 | 1 | measurement |  |  |  |  |  |  |
-| 1884 | 1 | measurement |  |  |  |  |  |  |
-| 1885 | 1 | measurement |  |  |  |  |  |  |
-| 1886 | 1 | measurement |  |  |  |  |  |  |
-| 1887 | 2 | measurement |  |  |  |  |  |  |
-| 1888 | 1 | measurement |  |  |  |  |  |  |
-| 1889 | 1 | measurement |  |  |  |  |  |  |
-| 1890 | 1 | measurement |  |  |  |  |  |  |
-| 1891 | 2 | measurement |  |  |  |  |  |  |
-| 1892 | 1 | measurement |  |  |  |  |  |  |
-| 1893 | 1 | measurement |  |  |  |  |  |  |
-| 1894 | 1 | measurement |  |  |  |  |  |  |
-| 1895 | 1 | measurement |  |  |  |  |  |  |
-| 1896 | 1 | measurement |  |  |  |  |  |  |
-| 1897 | 1 | measurement |  |  |  |  |  |  |
-| 1898 | 1 | measurement |  |  |  |  |  |  |
-| 1899 | 1 | measurement |  |  |  |  |  |  |
-| 1900 | 1 | measurement |  |  |  |  |  |  |
-| 1901 | 1 | measurement |  |  |  |  |  |  |
-| 1902 | 2 | measurement |  |  |  |  |  |  |
-| 1903 | 1 | measurement |  |  |  |  |  |  |
-| 1904 | 1 | measurement |  |  |  |  |  |  |
-| 1905 | 1 | measurement |  |  |  |  |  |  |
-| 1906 | 1 | measurement |  |  |  |  |  |  |
-| 1907 | 1 | measurement |  |  |  |  |  |  |
-| 1908 | 1 | measurement |  |  |  |  |  |  |
-| 1909 | 1 | measurement |  |  |  |  |  |  |
-| 1910 | 1 | measurement |  |  |  |  |  |  |
-| 1911 | 1 | measurement |  |  |  |  |  |  |
-| 1912 | 1 | measurement |  |  |  |  |  |  |
-| 1913 | 1 | measurement |  |  |  |  |  |  |
-| 1914 | 1 | measurement |  |  |  |  |  |  |
-| 1915 | 1 | measurement |  |  |  |  |  |  |
-| 1916 | 1 | measurement |  |  |  |  |  |  |
-| 1917 | 1 | measurement |  |  |  |  |  |  |
-| 1918 | 2 | measurement |  |  |  |  |  |  |
-| 1919 | 1 | measurement |  |  |  |  |  |  |
-| 1920 | 3 | measurement |  |  |  |  |  |  |
-| 1921 | 1 | measurement |  |  |  |  |  |  |
-| 1922 | 1 | measurement |  |  |  |  |  |  |
-| 1923 | 1 | measurement |  |  |  |  |  |  |
-| 1924 | 1 | measurement |  |  |  |  |  |  |
-| 1925 | 1 | measurement |  |  |  |  |  |  |
-| 1926 | 5 | measurement |  |  |  |  |  |  |
-| 1927 | 1 | measurement |  |  |  |  |  |  |
-| 1928 | 1 | measurement |  |  |  |  |  |  |
-| 1929 | 1 | measurement |  |  |  |  |  |  |
-| 1930 | 1 | measurement |  |  |  |  |  |  |
-| 1931 | 1 | measurement |  |  |  |  |  |  |
-| 1932 | 1 | measurement |  |  |  |  |  |  |
-| 1933 | 1 | measurement |  |  |  |  |  |  |
-| 1934 | 2 | measurement |  |  |  |  |  |  |
-| 1935 | 1 | measurement |  |  |  |  |  |  |
-| 1936 | 1 | measurement |  |  |  |  |  |  |
-| 1937 | 1 | measurement |  |  |  |  |  |  |
-| 1938 | 14 | measurement |  |  |  |  |  |  |
-| 1939 | 1 | measurement |  |  |  |  |  |  |
-| 1940 | 1 | measurement |  |  |  |  |  |  |
-| 1941 | 1 | measurement |  |  |  |  |  |  |
-| 1942 | 1 | measurement |  |  |  |  |  |  |
-| 1943 | 5 | measurement |  |  |  |  |  |  |
-| 1944 | 6 | measurement |  |  |  |  |  |  |
-| 1945 | 1 | measurement |  |  |  |  |  |  |
-| 1946 | 22 | measurement |  |  |  |  |  |  |
-| 1947 | 19 | measurement |  |  |  |  |  |  |
-| 1948 | 39 | measurement |  |  |  |  |  |  |
-| 1949 | 25 | measurement |  |  |  |  |  |  |
-| 1950 | 14 | measurement |  |  |  |  |  |  |
-| 1951 | 1 | measurement |  |  |  |  |  |  |
-| 1952 | 1 | measurement |  |  |  |  |  |  |
-| 1953 | 1 | measurement |  |  |  |  |  |  |
-| 1954 | 4 | measurement |  |  |  |  |  |  |
-| 1955 | 1 | measurement |  |  |  |  |  |  |
-| 1956 | 1 | measurement |  |  |  |  |  |  |
-| 1957 | 1 | measurement |  |  |  |  |  |  |
-| 1958 | 1 | measurement |  |  |  |  |  |  |
-| 1959 | 1 | measurement |  |  |  |  |  |  |
-| 1960 | 1 | measurement |  |  |  |  |  |  |
-| 1962 | 1 | measurement |  |  |  |  |  |  |
-| 1963 | 2 | measurement |  |  |  |  |  |  |
-| 1964 | 1 | measurement |  |  |  |  |  |  |
-| 1966 | 1 | measurement |  |  |  |  |  |  |
-| 1967 | 1 | measurement |  |  |  |  |  |  |
-| 1968 | 2 | measurement |  |  |  |  |  |  |
-| 1969 | 1 | measurement |  |  |  |  |  |  |
-| 1970 | 1 | measurement |  |  |  |  |  |  |
-| 1971 | 19 | measurement |  |  |  |  |  |  |
-| 1972 | 2 | measurement |  |  |  |  |  |  |
-| 1973 | 4 | measurement |  |  |  |  |  |  |
-| 1974 | 1 | measurement |  |  |  |  |  |  |
-| 1975 | 5 | measurement |  |  |  |  |  |  |
-| 1976 | 1 | measurement |  |  |  |  |  |  |
-| 1977 | 31 | measurement |  |  |  |  |  |  |
-| 1978 | 1 | measurement |  |  |  |  |  |  |
-| 1979 | 11 | measurement |  |  |  |  |  |  |
-| 1980 | 1 | measurement |  |  |  |  |  |  |
-| 1981 | 1 | measurement |  |  |  |  |  |  |
-| 1982 | 3 | measurement |  |  |  |  |  |  |
-| 1983 | 1 | measurement |  |  |  |  |  |  |
-| 1984 | 1 | measurement |  |  |  |  |  |  |
-| 1985 | 1 | measurement |  |  |  |  |  |  |
-| 1986 | 1 | measurement |  |  |  |  |  |  |
-| 1987 | 1 | measurement |  |  |  |  |  |  |
-| 1988 | 2 | measurement |  |  |  |  |  |  |
-| 1989 | 1 | measurement |  |  |  |  |  |  |
-| 1990 | 3 | measurement |  |  |  |  |  |  |
-| 1991 | 49 | measurement |  |  |  |  |  |  |
-| 1992 | 1 | measurement |  |  |  |  |  |  |
-| 1993 | 1 | measurement |  |  |  |  |  |  |
-| 1994 | 1 | measurement |  |  |  |  |  |  |
-| 1995 | 2 | measurement |  |  |  |  |  |  |
-| 1996 | 1 | measurement |  |  |  |  |  |  |
-| 1997 | 1 | measurement |  |  |  |  |  |  |
-| 1998 | 3 | measurement |  |  |  |  |  |  |
-| 1999 | 1 | measurement |  |  |  |  |  |  |
-| 2000 | 1 | measurement |  |  |  |  |  |  |
-| 2001 | 1 | measurement |  |  |  |  |  |  |
-| 2002 | 1 | measurement |  |  |  |  |  |  |
-| 2003 | 1 | measurement |  |  |  |  |  |  |
-| 2004 | 1 | measurement |  |  |  |  |  |  |
-| 2005 | 1 | measurement |  |  |  |  |  |  |
-| 2006 | 2 | measurement |  |  |  |  |  |  |
-| 2007 | 1 | measurement |  |  |  |  |  |  |
-| 2008 | 8 | measurement |  |  |  |  |  |  |
-| 2009 | 1 | measurement |  |  |  |  |  |  |
-| 2010 | 2 | measurement |  |  |  |  |  |  |
-| 2011 | 1 | measurement |  |  |  |  |  |  |
-| 2012 | 1 | measurement |  |  |  |  |  |  |
-| 2013 | 4 | measurement |  |  |  |  |  |  |
-| 2014 | 1 | measurement |  |  |  |  |  |  |
-| 2015 | 1 | measurement |  |  |  |  |  |  |
-| 2016 | 1 | measurement |  |  |  |  |  |  |
-| 2017 | 62 | measurement |  |  |  |  |  |  |
-| 2018 | 1 | measurement |  |  |  |  |  |  |
-| 2019 | 1 | measurement |  |  |  |  |  |  |
-| 2020 | 3 | measurement |  |  |  |  |  |  |
-| 2021 | 1 | measurement |  |  |  |  |  |  |
-| 2022 | 1 | measurement |  |  |  |  |  |  |
-| 2023 | 1 | measurement |  |  |  |  |  |  |
-| 2024 | 1 | measurement |  |  |  |  |  |  |
-| 2025 | 2 | measurement |  |  |  |  |  |  |
-| 2026 | 1 | measurement |  |  |  |  |  |  |
-| 2027 | 1 | measurement |  |  |  |  |  |  |
-| 2028 | 1 | measurement |  |  |  |  |  |  |
-| 2029 | 1 | measurement |  |  |  |  |  |  |
-| 2030 | 1 | measurement |  |  |  |  |  |  |
-| 2031 | 4 | measurement |  |  |  |  |  |  |
-| 2032 | 1 | measurement |  |  |  |  |  |  |
-| 2033 | 1 | measurement |  |  |  |  |  |  |
-| 2034 | 6 | measurement |  |  |  |  |  |  |
-| 2035 | 1 | measurement |  |  |  |  |  |  |
-| 2037 | 1 | measurement |  |  |  |  |  |  |
-| 2038 | 1 | measurement |  |  |  |  |  |  |
-| 2039 | 1 | measurement |  |  |  |  |  |  |
-| 2040 | 1 | measurement |  |  |  |  |  |  |
-| 2041 | 10 | measurement |  |  |  |  |  |  |
-| 2042 | 1 | measurement |  |  |  |  |  |  |
-| 2043 | 1 | measurement |  |  |  |  |  |  |
-| 2044 | 1 | measurement |  |  |  |  |  |  |
-| 2045 | 1 | measurement |  |  |  |  |  |  |
-| 2046 | 1 | measurement |  |  |  |  |  |  |
-| 2047 | 1 | measurement |  |  |  |  |  |  |
-| 2048 | 1 | measurement |  |  |  |  |  |  |
-| 2049 | 1 | measurement |  |  |  |  |  |  |
-| 2050 | 1 | measurement |  |  |  |  |  |  |
-| 2051 | 4 | measurement |  |  |  |  |  |  |
-| 2052 | 1 | measurement |  |  |  |  |  |  |
-| 2053 | 1 | measurement |  |  |  |  |  |  |
-| 2054 | 1 | measurement |  |  |  |  |  |  |
-| 2056 | 1 | measurement |  |  |  |  |  |  |
-| 2057 | 1 | measurement |  |  |  |  |  |  |
-| 2058 | 1 | measurement |  |  |  |  |  |  |
-| 2059 | 1 | measurement |  |  |  |  |  |  |
-| 2060 | 2 | measurement |  |  |  |  |  |  |
-| 2061 | 1 | measurement |  |  |  |  |  |  |
-| 2062 | 1 | measurement |  |  |  |  |  |  |
-| 2063 | 1 | measurement |  |  |  |  |  |  |
-| 2064 | 1 | measurement |  |  |  |  |  |  |
-| 2065 | 1 | measurement |  |  |  |  |  |  |
-| 2066 | 1 | measurement |  |  |  |  |  |  |
-| 2067 | 2 | measurement |  |  |  |  |  |  |
-| 2068 | 1 | measurement |  |  |  |  |  |  |
-| 2069 | 1 | measurement |  |  |  |  |  |  |
-| 2070 | 1 | measurement |  |  |  |  |  |  |
-| 2071 | 1 | measurement |  |  |  |  |  |  |
-| 2072 | 1 | measurement |  |  |  |  |  |  |
-| 2073 | 4 | measurement |  |  |  |  |  |  |
-| 2074 | 1 | measurement |  |  |  |  |  |  |
-| 2075 | 1 | measurement |  |  |  |  |  |  |
-| 2076 | 1 | measurement |  |  |  |  |  |  |
-| 2077 | 1 | measurement |  |  |  |  |  |  |
-| 2078 | 2 | measurement |  |  |  |  |  |  |
-| 2079 | 1 | measurement |  |  |  |  |  |  |
-| 2080 | 15 | measurement |  |  |  |  |  |  |
-| 2081 | 1 | measurement |  |  |  |  |  |  |
-| 2082 | 10 | measurement |  |  |  |  |  |  |
-| 2083 | 1 | measurement |  |  |  |  |  |  |
-| 2084 | 1 | measurement |  |  |  |  |  |  |
-| 2085 | 1 | measurement |  |  |  |  |  |  |
-| 2086 | 1 | measurement |  |  |  |  |  |  |
-| 2087 | 1 | measurement |  |  |  |  |  |  |
-| 2088 | 2 | measurement |  |  |  |  |  |  |
-| 2090 | 1 | measurement |  |  |  |  |  |  |
-| 2091 | 1 | measurement |  |  |  |  |  |  |
-| 2092 | 1 | measurement |  |  |  |  |  |  |
-| 2093 | 1 | measurement |  |  |  |  |  |  |
-| 2094 | 2 | measurement |  |  |  |  |  |  |
-| 2095 | 1 | measurement |  |  |  |  |  |  |
-| 2096 | 1 | measurement |  |  |  |  |  |  |
-| 2097 | 1 | measurement |  |  |  |  |  |  |
-| 2098 | 2 | measurement |  |  |  |  |  |  |
-| 2099 | 1 | measurement |  |  |  |  |  |  |
-| 2100 | 3 | measurement |  |  |  |  |  |  |
-| 2101 | 1 | measurement |  |  |  |  |  |  |
-| 2102 | 1 | measurement |  |  |  |  |  |  |
-| 2103 | 1 | measurement |  |  |  |  |  |  |
-| 2104 | 1 | measurement |  |  |  |  |  |  |
-| 2105 | 1 | measurement |  |  |  |  |  |  |
-| 2106 | 1 | measurement |  |  |  |  |  |  |
-| 2107 | 1 | measurement |  |  |  |  |  |  |
-| 2108 | 1 | measurement |  |  |  |  |  |  |
-| 2109 | 1 | measurement |  |  |  |  |  |  |
-| 2110 | 1 | measurement |  |  |  |  |  |  |
-| 2111 | 2 | measurement |  |  |  |  |  |  |
-| 2112 | 5 | measurement |  |  |  |  |  |  |
-| 2113 | 6 | measurement |  |  |  |  |  |  |
-| 2114 | 1 | measurement |  |  |  |  |  |  |
-| 2115 | 6 | measurement |  |  |  |  |  |  |
-| 2116 | 1 | measurement |  |  |  |  |  |  |
-| 2117 | 1 | measurement |  |  |  |  |  |  |
-| 2118 | 1 | measurement |  |  |  |  |  |  |
-| 2119 | 1 | measurement |  |  |  |  |  |  |
-| 2120 | 1 | measurement |  |  |  |  |  |  |
-| 2121 | 8 | measurement |  |  |  |  |  |  |
-| 2122 | 1 | measurement |  |  |  |  |  |  |
-| 2123 | 1 | measurement |  |  |  |  |  |  |
-| 2124 | 20 | measurement |  |  |  |  |  |  |
-| 2125 | 1 | measurement |  |  |  |  |  |  |
-| 2126 | 2 | measurement |  |  |  |  |  |  |
-| 2127 | 1 | measurement |  |  |  |  |  |  |
-| 2128 | 4 | measurement |  |  |  |  |  |  |
-| 2130 | 1 | measurement |  |  |  |  |  |  |
-| 2131 | 30 | measurement |  |  |  |  |  |  |
-| 2132 | 1 | measurement |  |  |  |  |  |  |
-| 2133 | 1 | measurement |  |  |  |  |  |  |
-| 2134 | 3 | measurement |  |  |  |  |  |  |
-| 2135 | 1 | measurement |  |  |  |  |  |  |
-| 2136 | 1 | measurement |  |  |  |  |  |  |
-| 2137 | 3 | measurement |  |  |  |  |  |  |
-| 2138 | 2 | measurement |  |  |  |  |  |  |
-| 2139 | 2 | measurement |  |  |  |  |  |  |
-| 2140 | 1 | measurement |  |  |  |  |  |  |
-| 2141 | 1 | measurement |  |  |  |  |  |  |
-| 2142 | 1 | measurement |  |  |  |  |  |  |
-| 2143 | 229 | measurement |  |  |  |  |  |  |
-| 2144 | 13 | measurement |  |  |  |  |  |  |
-| 2145 | 7 | measurement |  |  |  |  |  |  |
-| 2146 | 1 | measurement |  |  |  |  |  |  |
-| 2147 | 1 | measurement |  |  |  |  |  |  |
-| 2148 | 2 | measurement |  |  |  |  |  |  |
-| 2149 | 1 | measurement |  |  |  |  |  |  |
-| 2150 | 6 | measurement |  |  |  |  |  |  |
-| 2151 | 1331 | measurement |  |  |  |  |  |  |
-| 2152 | 216 | measurement |  |  |  |  |  |  |
-| 2153 | 1 | measurement |  |  |  |  |  |  |
-| 2154 | 1 | measurement |  |  |  |  |  |  |
-| 2155 | 4 | measurement |  |  |  |  |  |  |
-| 2156 | 1 | measurement |  |  |  |  |  |  |
-| 2157 | 1 | measurement |  |  |  |  |  |  |
-| 2158 | 1 | measurement |  |  |  |  |  |  |
-| 2159 | 13 | measurement |  |  |  |  |  |  |
-| 2160 | 1 | measurement |  |  |  |  |  |  |
-| 2161 | 3 | measurement |  |  |  |  |  |  |
-| 2162 | 1 | measurement |  |  |  |  |  |  |
-| 2163 | 1 | measurement |  |  |  |  |  |  |
-| 2164 | 2 | measurement |  |  |  |  |  |  |
-| 2165 | 1 | measurement |  |  |  |  |  |  |
-| 2166 | 5 | measurement |  |  |  |  |  |  |
-| 2167 | 1 | measurement |  |  |  |  |  |  |
-| 2168 | 1 | measurement |  |  |  |  |  |  |
-| 2169 | 3 | measurement |  |  |  |  |  |  |
-| 2170 | 10 | measurement |  |  |  |  |  |  |
-| 2171 | 1 | measurement |  |  |  |  |  |  |
-| 2172 | 3 | measurement |  |  |  |  |  |  |
-| 2173 | 1 | measurement |  |  |  |  |  |  |
-| 2174 | 1 | measurement |  |  |  |  |  |  |
-| 2175 | 1 | measurement |  |  |  |  |  |  |
-| 2176 | 3 | measurement |  |  |  |  |  |  |
-| 2177 | 1 | measurement |  |  |  |  |  |  |
-| 2178 | 2 | measurement |  |  |  |  |  |  |
-| 2179 | 1 | measurement |  |  |  |  |  |  |
-| 2180 | 16 | measurement |  |  |  |  |  |  |
-| 2181 | 1 | measurement |  |  |  |  |  |  |
-| 2182 | 2 | measurement |  |  |  |  |  |  |
-| 2183 | 1 | measurement |  |  |  |  |  |  |
-| 2184 | 1 | measurement |  |  |  |  |  |  |
-| 2185 | 1 | measurement |  |  |  |  |  |  |
-| 2186 | 7 | measurement |  |  |  |  |  |  |
-| 2187 | 1 | measurement |  |  |  |  |  |  |
-| 2188 | 1 | measurement |  |  |  |  |  |  |
-| 2189 | 1 | measurement |  |  |  |  |  |  |
-| 2190 | 1 | measurement |  |  |  |  |  |  |
-| 2191 | 1 | measurement |  |  |  |  |  |  |
-| 2192 | 1 | measurement |  |  |  |  |  |  |
-| 2193 | 2 | measurement |  |  |  |  |  |  |
-| 2194 | 1 | measurement |  |  |  |  |  |  |
-| 2195 | 2 | measurement |  |  |  |  |  |  |
-| 2196 | 1 | measurement |  |  |  |  |  |  |
-| 2197 | 2 | measurement |  |  |  |  |  |  |
-| 2198 | 2 | measurement |  |  |  |  |  |  |
-| 2199 | 1 | measurement |  |  |  |  |  |  |
-| 2200 | 1 | measurement |  |  |  |  |  |  |
-| 2201 | 1 | measurement |  |  |  |  |  |  |
-| 2202 | 1 | measurement |  |  |  |  |  |  |
-| 2203 | 1 | measurement |  |  |  |  |  |  |
-| 2204 | 1 | measurement |  |  |  |  |  |  |
-| 2205 | 1 | measurement |  |  |  |  |  |  |
-| 2206 | 1 | measurement |  |  |  |  |  |  |
-| 2207 | 1 | measurement |  |  |  |  |  |  |
-| 2208 | 1 | measurement |  |  |  |  |  |  |
-| 2209 | 1 | measurement |  |  |  |  |  |  |
-| 2210 | 3 | measurement |  |  |  |  |  |  |
-| 2211 | 1 | measurement |  |  |  |  |  |  |
-| 2212 | 1 | measurement |  |  |  |  |  |  |
-| 2214 | 1 | measurement |  |  |  |  |  |  |
-| 2215 | 15 | measurement |  |  |  |  |  |  |
-| 2216 | 1 | measurement |  |  |  |  |  |  |
-| 2217 | 2 | measurement |  |  |  |  |  |  |
-| 2218 | 1 | measurement |  |  |  |  |  |  |
-| 2219 | 1 | measurement |  |  |  |  |  |  |
-| 2220 | 1 | measurement |  |  |  |  |  |  |
-| 2221 | 1 | measurement |  |  |  |  |  |  |
-| 2222 | 1 | measurement |  |  |  |  |  |  |
-| 2223 | 1 | measurement |  |  |  |  |  |  |
-| 2224 | 1 | measurement |  |  |  |  |  |  |
-| 2225 | 7 | measurement |  |  |  |  |  |  |
-| 2226 | 1 | measurement |  |  |  |  |  |  |
-| 2227 | 1 | measurement |  |  |  |  |  |  |
-| 2228 | 1 | measurement |  |  |  |  |  |  |
-| 2229 | 3 | measurement |  |  |  |  |  |  |
-| 2230 | 1 | measurement |  |  |  |  |  |  |
-| 2231 | 1 | measurement |  |  |  |  |  |  |
-| 2232 | 1 | measurement |  |  |  |  |  |  |
-| 2233 | 1 | measurement |  |  |  |  |  |  |
-| 2234 | 1 | measurement |  |  |  |  |  |  |
-| 2235 | 1 | measurement |  |  |  |  |  |  |
-| 2236 | 1 | measurement |  |  |  |  |  |  |
-| 2238 | 1 | measurement |  |  |  |  |  |  |
-| 2239 | 1 | measurement |  |  |  |  |  |  |
-| 2240 | 1 | measurement |  |  |  |  |  |  |
-| 2241 | 1 | measurement |  |  |  |  |  |  |
-| 2242 | 8 | measurement |  |  |  |  |  |  |
-| 2243 | 1 | measurement |  |  |  |  |  |  |
-| 2244 | 1 | measurement |  |  |  |  |  |  |
-| 2245 | 1 | measurement |  |  |  |  |  |  |
-| 2246 | 1 | measurement |  |  |  |  |  |  |
-| 2247 | 1 | measurement |  |  |  |  |  |  |
-| 2248 | 1 | measurement |  |  |  |  |  |  |
-| 2249 | 10 | measurement |  |  |  |  |  |  |
-| 2250 | 1 | measurement |  |  |  |  |  |  |
-| 2251 | 18 | measurement |  |  |  |  |  |  |
-| 2252 | 1 | measurement |  |  |  |  |  |  |
-| 2253 | 2 | measurement |  |  |  |  |  |  |
-| 2254 | 1 | measurement |  |  |  |  |  |  |
-| 2255 | 3 | measurement |  |  |  |  |  |  |
-| 2256 | 1 | measurement |  |  |  |  |  |  |
-| 2257 | 2 | measurement |  |  |  |  |  |  |
-| 2258 | 2 | measurement |  |  |  |  |  |  |
-| 2259 | 6 | measurement |  |  |  |  |  |  |
-| 2260 | 1 | measurement |  |  |  |  |  |  |
-| 2261 | 1 | measurement |  |  |  |  |  |  |
-| 2262 | 1 | measurement |  |  |  |  |  |  |
-| 2263 | 1 | measurement |  |  |  |  |  |  |
-| 2264 | 1 | measurement |  |  |  |  |  |  |
-| 2265 | 1 | measurement |  |  |  |  |  |  |
-| 2266 | 1 | measurement |  |  |  |  |  |  |
-| 2267 | 1 | measurement |  |  |  |  |  |  |
-| 2268 | 1 | measurement |  |  |  |  |  |  |
-| 2269 | 1 | measurement |  |  |  |  |  |  |
-| 2270 | 2 | measurement |  |  |  |  |  |  |
-| 2271 | 1 | measurement |  |  |  |  |  |  |
-| 2272 | 3 | measurement |  |  |  |  |  |  |
-| 2273 | 1 | measurement |  |  |  |  |  |  |
-| 2274 | 1 | measurement |  |  |  |  |  |  |
-| 2275 | 1 | measurement |  |  |  |  |  |  |
-| 2276 | 1 | measurement |  |  |  |  |  |  |
-| 2277 | 1 | measurement |  |  |  |  |  |  |
-| 2278 | 1 | measurement |  |  |  |  |  |  |
-| 2279 | 1 | measurement |  |  |  |  |  |  |
-| 2280 | 13 | measurement |  |  |  |  |  |  |
-| 2281 | 1 | measurement |  |  |  |  |  |  |
-| 2282 | 1 | measurement |  |  |  |  |  |  |
-| 2283 | 1 | measurement |  |  |  |  |  |  |
-| 2284 | 1 | measurement |  |  |  |  |  |  |
-| 2285 | 4 | measurement |  |  |  |  |  |  |
-| 2286 | 2 | measurement |  |  |  |  |  |  |
-| 2287 | 1 | measurement |  |  |  |  |  |  |
-| 2288 | 1 | measurement |  |  |  |  |  |  |
-| 2289 | 1 | measurement |  |  |  |  |  |  |
-| 2290 | 2 | measurement |  |  |  |  |  |  |
-| 2291 | 3 | measurement |  |  |  |  |  |  |
-| 2292 | 1 | measurement |  |  |  |  |  |  |
-| 2293 | 1 | measurement |  |  |  |  |  |  |
-| 2294 | 1 | measurement |  |  |  |  |  |  |
-| 2295 | 39 | measurement |  |  |  |  |  |  |
-| 2296 | 1 | measurement |  |  |  |  |  |  |
-| 2297 | 1 | measurement |  |  |  |  |  |  |
-| 2298 | 1 | measurement |  |  |  |  |  |  |
-| 2299 | 1 | measurement |  |  |  |  |  |  |
-| 2300 | 1 | measurement |  |  |  |  |  |  |
-| 2301 | 1 | measurement |  |  |  |  |  |  |
-| 2302 | 1 | measurement |  |  |  |  |  |  |
-| 2303 | 1 | measurement |  |  |  |  |  |  |
-| 2304 | 2 | measurement |  |  |  |  |  |  |
-| 2306 | 1 | measurement |  |  |  |  |  |  |
-| 2307 | 1 | measurement |  |  |  |  |  |  |
-| 2308 | 5 | measurement |  |  |  |  |  |  |
-| 2309 | 1 | measurement |  |  |  |  |  |  |
-| 2310 | 1 | measurement |  |  |  |  |  |  |
-| 2311 | 1 | measurement |  |  |  |  |  |  |
-| 2312 | 2 | measurement |  |  |  |  |  |  |
-| 2313 | 1 | measurement |  |  |  |  |  |  |
-| 2314 | 9 | measurement |  |  |  |  |  |  |
-| 2315 | 2 | measurement |  |  |  |  |  |  |
-| 2316 | 1 | measurement |  |  |  |  |  |  |
-| 2317 | 1 | measurement |  |  |  |  |  |  |
-| 2318 | 1 | measurement |  |  |  |  |  |  |
-| 2319 | 1 | measurement |  |  |  |  |  |  |
-| 2320 | 1 | measurement |  |  |  |  |  |  |
-| 2321 | 1 | measurement |  |  |  |  |  |  |
-| 2322 | 2 | measurement |  |  |  |  |  |  |
-| 2323 | 1 | measurement |  |  |  |  |  |  |
-| 2324 | 1 | measurement |  |  |  |  |  |  |
-| 2325 | 1 | measurement |  |  |  |  |  |  |
-| 2326 | 1 | measurement |  |  |  |  |  |  |
-| 2327 | 1 | measurement |  |  |  |  |  |  |
-| 2328 | 3 | measurement |  |  |  |  |  |  |
-| 2329 | 7 | measurement |  |  |  |  |  |  |
-| 2330 | 1 | measurement |  |  |  |  |  |  |
-| 2331 | 1 | measurement |  |  |  |  |  |  |
-| 2332 | 1 | measurement |  |  |  |  |  |  |
-| 2333 | 18 | measurement |  |  |  |  |  |  |
-| 2334 | 1 | measurement |  |  |  |  |  |  |
-| 2335 | 5 | measurement |  |  |  |  |  |  |
-| 2336 | 1 | measurement |  |  |  |  |  |  |
-| 2337 | 1 | measurement |  |  |  |  |  |  |
-| 2338 | 47 | measurement |  |  |  |  |  |  |
-| 2339 | 1 | measurement |  |  |  |  |  |  |
-| 2340 | 1 | measurement |  |  |  |  |  |  |
-| 2341 | 1 | measurement |  |  |  |  |  |  |
-| 2342 | 1 | measurement |  |  |  |  |  |  |
-| 2343 | 1 | measurement |  |  |  |  |  |  |
-| 2344 | 194 | measurement |  |  |  |  |  |  |
-| 2345 | 1 | measurement |  |  |  |  |  |  |
-| 2346 | 2 | measurement |  |  |  |  |  |  |
-| 2347 | 1 | measurement |  |  |  |  |  |  |
-| 2348 | 1 | measurement |  |  |  |  |  |  |
-| 2349 | 1 | measurement |  |  |  |  |  |  |
-| 2350 | 5 | measurement |  |  |  |  |  |  |
-| 2351 | 1 | measurement |  |  |  |  |  |  |
-| 2352 | 9 | measurement |  |  |  |  |  |  |
-| 2353 | 1 | measurement |  |  |  |  |  |  |
-| 2354 | 1 | measurement |  |  |  |  |  |  |
-| 2355 | 1 | measurement |  |  |  |  |  |  |
-| 2356 | 1 | measurement |  |  |  |  |  |  |
-| 2357 | 1 | measurement |  |  |  |  |  |  |
-| 2358 | 1 | measurement |  |  |  |  |  |  |
-| 2359 | 1 | measurement |  |  |  |  |  |  |
-| 2361 | 13 | measurement |  |  |  |  |  |  |
-| 2362 | 1 | measurement |  |  |  |  |  |  |
-| 2363 | 1 | measurement |  |  |  |  |  |  |
-| 2364 | 1 | measurement |  |  |  |  |  |  |
-| 2365 | 1 | measurement |  |  |  |  |  |  |
-| 2366 | 1 | measurement |  |  |  |  |  |  |
-| 2367 | 2 | measurement |  |  |  |  |  |  |
-| 2368 | 1 | measurement |  |  |  |  |  |  |
-| 2369 | 1 | measurement |  |  |  |  |  |  |
-| 2370 | 1 | measurement |  |  |  |  |  |  |
-| 2371 | 2 | measurement |  |  |  |  |  |  |
-| 2372 | 1 | measurement |  |  |  |  |  |  |
-| 2373 | 1 | measurement |  |  |  |  |  |  |
-| 2374 | 1 | measurement |  |  |  |  |  |  |
-| 2375 | 1 | measurement |  |  |  |  |  |  |
-| 2376 | 1 | measurement |  |  |  |  |  |  |
-| 2377 | 1 | measurement |  |  |  |  |  |  |
-| 2378 | 2 | measurement |  |  |  |  |  |  |
-| 2379 | 1 | measurement |  |  |  |  |  |  |
-| 2380 | 1 | measurement |  |  |  |  |  |  |
-| 2382 | 1 | measurement |  |  |  |  |  |  |
-| 2383 | 5 | measurement |  |  |  |  |  |  |
-| 2384 | 1 | measurement |  |  |  |  |  |  |
-| 2388 | 3 | measurement |  |  |  |  |  |  |
-| 2389 | 1 | measurement |  |  |  |  |  |  |
-| 2390 | 8 | measurement |  |  |  |  |  |  |
-| 2391 | 10 | measurement |  |  |  |  |  |  |
-| 2392 | 1 | measurement |  |  |  |  |  |  |
-| 2393 | 1 | measurement |  |  |  |  |  |  |
-| 2394 | 1 | measurement |  |  |  |  |  |  |
-| 2395 | 2 | measurement |  |  |  |  |  |  |
-| 2396 | 5 | measurement |  |  |  |  |  |  |
-| 2397 | 1 | measurement |  |  |  |  |  |  |
-| 2398 | 1 | measurement |  |  |  |  |  |  |
-| 2399 | 29 | measurement |  |  |  |  |  |  |
-| 2400 | 1 | measurement |  |  |  |  |  |  |
-| 2401 | 4 | measurement |  |  |  |  |  |  |
-| 2402 | 3 | measurement |  |  |  |  |  |  |
-| 2403 | 1 | measurement |  |  |  |  |  |  |
-| 2404 | 1 | measurement |  |  |  |  |  |  |
-| 2405 | 1 | measurement |  |  |  |  |  |  |
-| 2406 | 3 | measurement |  |  |  |  |  |  |
-| 2407 | 1 | measurement |  |  |  |  |  |  |
-| 2408 | 10 | measurement |  |  |  |  |  |  |
-| 2409 | 8 | measurement |  |  |  |  |  |  |
-| 2410 | 1 | measurement |  |  |  |  |  |  |
-| 2411 | 3 | measurement |  |  |  |  |  |  |
-| 2412 | 1 | measurement |  |  |  |  |  |  |
-| 2413 | 3 | measurement |  |  |  |  |  |  |
-| 2414 | 2 | measurement |  |  |  |  |  |  |
-| 2415 | 2 | measurement |  |  |  |  |  |  |
-| 2416 | 1 | measurement |  |  |  |  |  |  |
-| 2417 | 1 | measurement |  |  |  |  |  |  |
-| 2418 | 1 | measurement |  |  |  |  |  |  |
-| 2419 | 1 | measurement |  |  |  |  |  |  |
-| 2420 | 1 | measurement |  |  |  |  |  |  |
-| 2421 | 1 | measurement |  |  |  |  |  |  |
-| 2422 | 1 | measurement |  |  |  |  |  |  |
-| 2423 | 1 | measurement |  |  |  |  |  |  |
-| 2424 | 2 | measurement |  |  |  |  |  |  |
-| 2425 | 2 | measurement |  |  |  |  |  |  |
-| 2426 | 2 | measurement |  |  |  |  |  |  |
-| 2427 | 1 | measurement |  |  |  |  |  |  |
-| 2428 | 12 | measurement |  |  |  |  |  |  |
-| 2429 | 1 | measurement |  |  |  |  |  |  |
-| 2430 | 3 | measurement |  |  |  |  |  |  |
-| 2431 | 37 | measurement |  |  |  |  |  |  |
-| 2432 | 1 | measurement |  |  |  |  |  |  |
-| 2433 | 1 | measurement |  |  |  |  |  |  |
-| 2434 | 1 | measurement |  |  |  |  |  |  |
-| 2435 | 1 | measurement |  |  |  |  |  |  |
-| 2436 | 2 | measurement |  |  |  |  |  |  |
-| 2437 | 1 | measurement |  |  |  |  |  |  |
-| 2438 | 1 | measurement |  |  |  |  |  |  |
-| 2439 | 1 | measurement |  |  |  |  |  |  |
-| 2440 | 1 | measurement |  |  |  |  |  |  |
-| 2441 | 2 | measurement |  |  |  |  |  |  |
-| 2442 | 5 | measurement |  |  |  |  |  |  |
-| 2443 | 1 | measurement |  |  |  |  |  |  |
-| 2444 | 1 | measurement |  |  |  |  |  |  |
-| 2445 | 2 | measurement |  |  |  |  |  |  |
-| 2446 | 7 | measurement |  |  |  |  |  |  |
-| 2447 | 1 | measurement |  |  |  |  |  |  |
-| 2448 | 1 | measurement |  |  |  |  |  |  |
-| 2449 | 1 | measurement |  |  |  |  |  |  |
-| 2450 | 2 | measurement |  |  |  |  |  |  |
-| 2451 | 1 | measurement |  |  |  |  |  |  |
-| 2452 | 1 | measurement |  |  |  |  |  |  |
-| 2453 | 8 | measurement |  |  |  |  |  |  |
-| 2454 | 1 | measurement |  |  |  |  |  |  |
-| 2455 | 1 | measurement |  |  |  |  |  |  |
-| 2456 | 5 | measurement |  |  |  |  |  |  |
-| 2457 | 2 | measurement |  |  |  |  |  |  |
-| 2458 | 5 | measurement |  |  |  |  |  |  |
-| 2459 | 1 | measurement |  |  |  |  |  |  |
-| 2460 | 1 | measurement |  |  |  |  |  |  |
-| 2461 | 1 | measurement |  |  |  |  |  |  |
-| 2462 | 1 | measurement |  |  |  |  |  |  |
-| 2463 | 18 | measurement |  |  |  |  |  |  |
-| 2464 | 8 | measurement |  |  |  |  |  |  |
-| 2465 | 2 | measurement |  |  |  |  |  |  |
-| 2466 | 1 | measurement |  |  |  |  |  |  |
-| 2467 | 1 | measurement |  |  |  |  |  |  |
-| 2468 | 1 | measurement |  |  |  |  |  |  |
-| 2469 | 4 | measurement |  |  |  |  |  |  |
-| 2470 | 9 | measurement |  |  |  |  |  |  |
-| 2471 | 1 | measurement |  |  |  |  |  |  |
-| 2472 | 1 | measurement |  |  |  |  |  |  |
-| 2473 | 12 | measurement |  |  |  |  |  |  |
-| 2474 | 1 | measurement |  |  |  |  |  |  |
-| 2475 | 3 | measurement |  |  |  |  |  |  |
-| 2476 | 1 | measurement |  |  |  |  |  |  |
-| 2477 | 8 | measurement |  |  |  |  |  |  |
-| 2478 | 1 | measurement |  |  |  |  |  |  |
-| 2479 | 3 | measurement |  |  |  |  |  |  |
-| 2480 | 1 | measurement |  |  |  |  |  |  |
-| 2481 | 1 | measurement |  |  |  |  |  |  |
-| 2482 | 1 | measurement |  |  |  |  |  |  |
-| 2483 | 12 | measurement |  |  |  |  |  |  |
-| 2484 | 43 | measurement |  |  |  |  |  |  |
-| 2485 | 1 | measurement |  |  |  |  |  |  |
-| 2486 | 1 | measurement |  |  |  |  |  |  |
-| 2487 | 1 | measurement |  |  |  |  |  |  |
-| 2488 | 6 | measurement |  |  |  |  |  |  |
-| 2489 | 57 | measurement |  |  |  |  |  |  |
-| 2491 | 1 | measurement |  |  |  |  |  |  |
-| 2492 | 1 | measurement |  |  |  |  |  |  |
-| 2493 | 99 | measurement |  |  |  |  |  |  |
-| 2494 | 2 | measurement |  |  |  |  |  |  |
-| 2495 | 18 | measurement |  |  |  |  |  |  |
-| 2496 | 1 | measurement |  |  |  |  |  |  |
-| 2498 | 1 | measurement |  |  |  |  |  |  |
-| 2499 | 1 | measurement |  |  |  |  |  |  |
-| 2500 | 1 | measurement |  |  |  |  |  |  |
-| 2501 | 3 | measurement |  |  |  |  |  |  |
-| 2502 | 1 | measurement |  |  |  |  |  |  |
-| 2503 | 1 | measurement |  |  |  |  |  |  |
-| 2504 | 1 | measurement |  |  |  |  |  |  |
-| 2505 | 2 | measurement |  |  |  |  |  |  |
-| 2506 | 2 | measurement |  |  |  |  |  |  |
-| 2507 | 1 | measurement |  |  |  |  |  |  |
-| 2508 | 1 | measurement |  |  |  |  |  |  |
-| 2509 | 1 | measurement |  |  |  |  |  |  |
-| 2510 | 1 | measurement |  |  |  |  |  |  |
-| 2511 | 21 | measurement |  |  |  |  |  |  |
-| 2512 | 1 | measurement |  |  |  |  |  |  |
-| 2513 | 1 | measurement |  |  |  |  |  |  |
-| 2514 | 1 | measurement |  |  |  |  |  |  |
-| 2515 | 1 | measurement |  |  |  |  |  |  |
-| 2516 | 3 | measurement |  |  |  |  |  |  |
-| 2517 | 1 | measurement |  |  |  |  |  |  |
-| 2518 | 1 | measurement |  |  |  |  |  |  |
-| 2519 | 1 | measurement |  |  |  |  |  |  |
-| 2520 | 12 | measurement |  |  |  |  |  |  |
-| 2521 | 1 | measurement |  |  |  |  |  |  |
-| 2522 | 1 | measurement |  |  |  |  |  |  |
-| 2523 | 1 | measurement |  |  |  |  |  |  |
-| 2524 | 1 | measurement |  |  |  |  |  |  |
-| 2525 | 20 | measurement |  |  |  |  |  |  |
-| 2526 | 1 | measurement |  |  |  |  |  |  |
-| 2527 | 1 | measurement |  |  |  |  |  |  |
-| 2528 | 2 | measurement |  |  |  |  |  |  |
-| 2529 | 2 | measurement |  |  |  |  |  |  |
-| 2530 | 4 | measurement |  |  |  |  |  |  |
-| 2531 | 1 | measurement |  |  |  |  |  |  |
-| 2532 | 3 | measurement |  |  |  |  |  |  |
-| 2533 | 1 | measurement |  |  |  |  |  |  |
-| 2534 | 1 | measurement |  |  |  |  |  |  |
-| 2535 | 1 | measurement |  |  |  |  |  |  |
-| 2536 | 2 | measurement |  |  |  |  |  |  |
-| 2537 | 3 | measurement |  |  |  |  |  |  |
-| 2538 | 1 | measurement |  |  |  |  |  |  |
-| 2539 | 1 | measurement |  |  |  |  |  |  |
-| 2540 | 1 | measurement |  |  |  |  |  |  |
-| 2541 | 1 | measurement |  |  |  |  |  |  |
-| 2542 | 1 | measurement |  |  |  |  |  |  |
-| 2543 | 1 | measurement |  |  |  |  |  |  |
-| 2545 | 2 | measurement |  |  |  |  |  |  |
-| 2546 | 1 | measurement |  |  |  |  |  |  |
-| 2548 | 1 | measurement |  |  |  |  |  |  |
-| 2549 | 1 | measurement |  |  |  |  |  |  |
-| 2550 | 1 | measurement |  |  |  |  |  |  |
-| 2551 | 4 | measurement |  |  |  |  |  |  |
-| 2552 | 1 | measurement |  |  |  |  |  |  |
-| 2553 | 1 | measurement |  |  |  |  |  |  |
-| 2554 | 1 | measurement |  |  |  |  |  |  |
-| 2555 | 26 | measurement |  |  |  |  |  |  |
-| 2556 | 1 | measurement |  |  |  |  |  |  |
-| 2557 | 5 | measurement |  |  |  |  |  |  |
-| 2558 | 2 | measurement |  |  |  |  |  |  |
-| 2559 | 1 | measurement |  |  |  |  |  |  |
-| 2560 | 1 | measurement |  |  |  |  |  |  |
-| 2561 | 2 | measurement |  |  |  |  |  |  |
-| 2562 | 1 | measurement |  |  |  |  |  |  |
-| 2563 | 1 | measurement |  |  |  |  |  |  |
-| 2564 | 1 | measurement |  |  |  |  |  |  |
-| 2565 | 1 | measurement |  |  |  |  |  |  |
-| 2566 | 3 | measurement |  |  |  |  |  |  |
-| 2567 | 3 | measurement |  |  |  |  |  |  |
-| 2568 | 1 | measurement |  |  |  |  |  |  |
-| 2569 | 1 | measurement |  |  |  |  |  |  |
-| 2570 | 1 | measurement |  |  |  |  |  |  |
-| 2571 | 1 | measurement |  |  |  |  |  |  |
-| 2572 | 2 | measurement |  |  |  |  |  |  |
-| 2573 | 1 | measurement |  |  |  |  |  |  |
-| 2574 | 2 | measurement |  |  |  |  |  |  |
-| 2575 | 1 | measurement |  |  |  |  |  |  |
-| 2576 | 1 | measurement |  |  |  |  |  |  |
-| 2577 | 1 | measurement |  |  |  |  |  |  |
-| 2578 | 1 | measurement |  |  |  |  |  |  |
-| 2579 | 1 | measurement |  |  |  |  |  |  |
-| 2580 | 1 | measurement |  |  |  |  |  |  |
-| 2581 | 1 | measurement |  |  |  |  |  |  |
-| 2582 | 1 | measurement |  |  |  |  |  |  |
-| 2583 | 2 | measurement |  |  |  |  |  |  |
-| 2584 | 1 | measurement |  |  |  |  |  |  |
-| 2585 | 1 | measurement |  |  |  |  |  |  |
-| 2586 | 1 | measurement |  |  |  |  |  |  |
-| 2587 | 1 | measurement |  |  |  |  |  |  |
-| 2588 | 1 | measurement |  |  |  |  |  |  |
-| 2589 | 1 | measurement |  |  |  |  |  |  |
-| 2590 | 1 | measurement |  |  |  |  |  |  |
-| 2591 | 2 | measurement |  |  |  |  |  |  |
-| 2592 | 1 | measurement |  |  |  |  |  |  |
-| 2593 | 2 | measurement |  |  |  |  |  |  |
-| 2594 | 1 | measurement |  |  |  |  |  |  |
-| 2595 | 1 | measurement |  |  |  |  |  |  |
-| 2596 | 1 | measurement |  |  |  |  |  |  |
-| 2597 | 9 | measurement |  |  |  |  |  |  |
-| 2598 | 1 | measurement |  |  |  |  |  |  |
-| 2599 | 2 | measurement |  |  |  |  |  |  |
-| 2600 | 3 | measurement |  |  |  |  |  |  |
-| 2601 | 2 | measurement |  |  |  |  |  |  |
-| 2602 | 1 | measurement |  |  |  |  |  |  |
-| 2603 | 1 | measurement |  |  |  |  |  |  |
-| 2604 | 1 | measurement |  |  |  |  |  |  |
-| 2605 | 1 | measurement |  |  |  |  |  |  |
-| 2606 | 1 | measurement |  |  |  |  |  |  |
-| 2607 | 1 | measurement |  |  |  |  |  |  |
-| 2608 | 2 | measurement |  |  |  |  |  |  |
-| 2609 | 1 | measurement |  |  |  |  |  |  |
-| 2610 | 1 | measurement |  |  |  |  |  |  |
-| 2611 | 1 | measurement |  |  |  |  |  |  |
-| 2612 | 1 | measurement |  |  |  |  |  |  |
-| 2613 | 1 | measurement |  |  |  |  |  |  |
-| 2614 | 1 | measurement |  |  |  |  |  |  |
-| 2615 | 1 | measurement |  |  |  |  |  |  |
-| 2616 | 1 | measurement |  |  |  |  |  |  |
-| 2617 | 1 | measurement |  |  |  |  |  |  |
-| 2618 | 2 | measurement |  |  |  |  |  |  |
-| 2619 | 4 | measurement |  |  |  |  |  |  |
-| 2620 | 44 | measurement |  |  |  |  |  |  |
-| 2621 | 1 | measurement |  |  |  |  |  |  |
-| 2622 | 370 | measurement |  |  |  |  |  |  |
-| 2623 | 2 | measurement |  |  |  |  |  |  |
-| 2624 | 1 | measurement |  |  |  |  |  |  |
-| 2625 | 1 | measurement |  |  |  |  |  |  |
-| 2626 | 4 | measurement |  |  |  |  |  |  |
-| 2627 | 1 | measurement |  |  |  |  |  |  |
-| 2628 | 1 | measurement |  |  |  |  |  |  |
-| 2629 | 94 | measurement |  |  |  |  |  |  |
-| 2630 | 1 | measurement |  |  |  |  |  |  |
-| 2631 | 1 | measurement |  |  |  |  |  |  |
-| 2632 | 1 | measurement |  |  |  |  |  |  |
-| 2633 | 2 | measurement |  |  |  |  |  |  |
-| 2634 | 2 | measurement |  |  |  |  |  |  |
-| 2635 | 1 | measurement |  |  |  |  |  |  |
-| 2636 | 1 | measurement |  |  |  |  |  |  |
-| 2637 | 1 | measurement |  |  |  |  |  |  |
-| 2638 | 1 | measurement |  |  |  |  |  |  |
-| 2639 | 2 | measurement |  |  |  |  |  |  |
-| 2641 | 1 | measurement |  |  |  |  |  |  |
-| 2642 | 1 | measurement |  |  |  |  |  |  |
-| 2643 | 1 | measurement |  |  |  |  |  |  |
-| 2644 | 19 | measurement |  |  |  |  |  |  |
-| 2645 | 1 | measurement |  |  |  |  |  |  |
-| 2646 | 9 | measurement |  |  |  |  |  |  |
-| 2647 | 11 | measurement |  |  |  |  |  |  |
-| 2648 | 1 | measurement |  |  |  |  |  |  |
-| 2649 | 3 | measurement |  |  |  |  |  |  |
-| 2650 | 1 | measurement |  |  |  |  |  |  |
-| 2651 | 1 | measurement |  |  |  |  |  |  |
-| 2652 | 1 | measurement |  |  |  |  |  |  |
-| 2653 | 1 | measurement |  |  |  |  |  |  |
-| 2654 | 2 | measurement |  |  |  |  |  |  |
-| 2655 | 3263 | measurement |  |  |  |  |  |  |
-| 2656 | 3 | measurement |  |  |  |  |  |  |
-| 2657 | 1 | measurement |  |  |  |  |  |  |
-| 2658 | 1 | measurement |  |  |  |  |  |  |
-| 2659 | 1 | measurement |  |  |  |  |  |  |
-| 2660 | 133 | measurement |  |  |  |  |  |  |
-| 2661 | 1 | measurement |  |  |  |  |  |  |
-| 2662 | 2 | measurement |  |  |  |  |  |  |
-| 2663 | 12 | measurement |  |  |  |  |  |  |
-| 2664 | 1 | measurement |  |  |  |  |  |  |
-| 2665 | 1 | measurement |  |  |  |  |  |  |
-| 2667 | 1 | measurement |  |  |  |  |  |  |
-| 2668 | 1 | measurement |  |  |  |  |  |  |
-| 2669 | 1 | measurement |  |  |  |  |  |  |
-| 2670 | 2 | measurement |  |  |  |  |  |  |
-| 2672 | 1 | measurement |  |  |  |  |  |  |
-| 2673 | 1 | measurement |  |  |  |  |  |  |
-| 2674 | 1 | measurement |  |  |  |  |  |  |
-| 2675 | 1 | measurement |  |  |  |  |  |  |
-| 2676 | 1 | measurement |  |  |  |  |  |  |
-| 2677 | 1 | measurement |  |  |  |  |  |  |
-| 2678 | 9 | measurement |  |  |  |  |  |  |
-| 2679 | 1 | measurement |  |  |  |  |  |  |
-| 2680 | 1 | measurement |  |  |  |  |  |  |
-| 2681 | 2 | measurement |  |  |  |  |  |  |
-| 2682 | 3 | measurement |  |  |  |  |  |  |
-| 2683 | 1 | measurement |  |  |  |  |  |  |
-| 2684 | 1 | measurement |  |  |  |  |  |  |
-| 2685 | 1 | measurement |  |  |  |  |  |  |
-| 2686 | 3 | measurement |  |  |  |  |  |  |
-| 2687 | 1 | measurement |  |  |  |  |  |  |
-| 2688 | 1 | measurement |  |  |  |  |  |  |
-| 2689 | 1 | measurement |  |  |  |  |  |  |
-| 2690 | 1 | measurement |  |  |  |  |  |  |
-| 2691 | 1 | measurement |  |  |  |  |  |  |
-| 2692 | 1 | measurement |  |  |  |  |  |  |
-| 2693 | 73 | measurement |  |  |  |  |  |  |
-| 2694 | 1 | measurement |  |  |  |  |  |  |
-| 2695 | 1 | measurement |  |  |  |  |  |  |
-| 2696 | 1 | measurement |  |  |  |  |  |  |
-| 2697 | 1 | measurement |  |  |  |  |  |  |
-| 2698 | 1 | measurement |  |  |  |  |  |  |
-| 2699 | 1 | measurement |  |  |  |  |  |  |
-| 2700 | 5 | measurement |  |  |  |  |  |  |
-| 2701 | 2 | measurement |  |  |  |  |  |  |
-| 2702 | 1 | measurement |  |  |  |  |  |  |
-| 2703 | 1 | measurement |  |  |  |  |  |  |
-| 2704 | 1 | measurement |  |  |  |  |  |  |
-| 2705 | 1 | measurement |  |  |  |  |  |  |
-| 2706 | 2 | measurement |  |  |  |  |  |  |
-| 2707 | 4 | measurement |  |  |  |  |  |  |
-| 2708 | 5 | measurement |  |  |  |  |  |  |
-| 2709 | 1 | measurement |  |  |  |  |  |  |
-| 2710 | 1 | measurement |  |  |  |  |  |  |
-| 2711 | 1 | measurement |  |  |  |  |  |  |
-| 2712 | 2 | measurement |  |  |  |  |  |  |
-| 2713 | 1 | measurement |  |  |  |  |  |  |
-| 2714 | 1 | measurement |  |  |  |  |  |  |
-| 2715 | 1 | measurement |  |  |  |  |  |  |
-| 2716 | 1 | measurement |  |  |  |  |  |  |
-| 2717 | 1 | measurement |  |  |  |  |  |  |
-| 2718 | 9 | measurement |  |  |  |  |  |  |
-| 2719 | 166 | measurement |  |  |  |  |  |  |
-| 2720 | 8 | measurement |  |  |  |  |  |  |
-| 2721 | 1 | measurement |  |  |  |  |  |  |
-| 2722 | 1 | measurement |  |  |  |  |  |  |
-| 2723 | 8 | measurement |  |  |  |  |  |  |
-| 2724 | 1 | measurement |  |  |  |  |  |  |
-| 2725 | 9 | measurement |  |  |  |  |  |  |
-| 2726 | 1 | measurement |  |  |  |  |  |  |
-| 2727 | 3 | measurement |  |  |  |  |  |  |
-| 2728 | 1 | measurement |  |  |  |  |  |  |
-| 2729 | 1 | measurement |  |  |  |  |  |  |
-| 2730 | 9 | measurement |  |  |  |  |  |  |
-| 2731 | 1 | measurement |  |  |  |  |  |  |
-| 2732 | 1 | measurement |  |  |  |  |  |  |
-| 2733 | 1 | measurement |  |  |  |  |  |  |
-| 2734 | 1 | measurement |  |  |  |  |  |  |
-| 2735 | 1 | measurement |  |  |  |  |  |  |
-| 2736 | 2 | measurement |  |  |  |  |  |  |
-| 2737 | 2 | measurement |  |  |  |  |  |  |
-| 2738 | 1 | measurement |  |  |  |  |  |  |
-| 2739 | 1 | measurement |  |  |  |  |  |  |
-| 2740 | 2 | measurement |  |  |  |  |  |  |
-| 2741 | 13 | measurement |  |  |  |  |  |  |
-| 2742 | 1 | measurement |  |  |  |  |  |  |
-| 2743 | 1 | measurement |  |  |  |  |  |  |
-| 2744 | 8 | measurement |  |  |  |  |  |  |
-| 2745 | 1 | measurement |  |  |  |  |  |  |
-| 2746 | 2 | measurement |  |  |  |  |  |  |
-| 2747 | 2 | measurement |  |  |  |  |  |  |
-| 2748 | 7 | measurement |  |  |  |  |  |  |
-| 2749 | 1 | measurement |  |  |  |  |  |  |
-| 2750 | 6 | measurement |  |  |  |  |  |  |
-| 2751 | 23 | measurement |  |  |  |  |  |  |
-| 2752 | 3 | measurement |  |  |  |  |  |  |
-| 2753 | 2 | measurement |  |  |  |  |  |  |
-| 2754 | 1 | measurement |  |  |  |  |  |  |
-| 2755 | 1 | measurement |  |  |  |  |  |  |
-| 2756 | 1 | measurement |  |  |  |  |  |  |
-| 2757 | 1 | measurement |  |  |  |  |  |  |
-| 2759 | 1 | measurement |  |  |  |  |  |  |
-| 2760 | 1 | measurement |  |  |  |  |  |  |
-| 2761 | 1 | measurement |  |  |  |  |  |  |
-| 2762 | 2 | measurement |  |  |  |  |  |  |
-| 2763 | 5 | measurement |  |  |  |  |  |  |
-| 2764 | 1 | measurement |  |  |  |  |  |  |
-| 2765 | 1 | measurement |  |  |  |  |  |  |
-| 2766 | 2 | measurement |  |  |  |  |  |  |
-| 2767 | 1 | measurement |  |  |  |  |  |  |
-| 2769 | 1 | measurement |  |  |  |  |  |  |
-| 2770 | 1 | measurement |  |  |  |  |  |  |
-| 2771 | 1 | measurement |  |  |  |  |  |  |
-| 2772 | 1 | measurement |  |  |  |  |  |  |
-| 2773 | 1 | measurement |  |  |  |  |  |  |
-| 2774 | 1 | measurement |  |  |  |  |  |  |
-| 2775 | 1 | measurement |  |  |  |  |  |  |
-| 2776 | 1 | measurement |  |  |  |  |  |  |
-| 2777 | 1 | measurement |  |  |  |  |  |  |
-| 2778 | 1 | measurement |  |  |  |  |  |  |
-| 2779 | 1 | measurement |  |  |  |  |  |  |
-| 2780 | 1 | measurement |  |  |  |  |  |  |
-| 2781 | 1 | measurement |  |  |  |  |  |  |
-| 2782 | 1 | measurement |  |  |  |  |  |  |
-| 2783 | 1 | measurement |  |  |  |  |  |  |
-| 2784 | 1 | measurement |  |  |  |  |  |  |
-| 2785 | 1 | measurement |  |  |  |  |  |  |
-| 2786 | 50 | measurement |  |  |  |  |  |  |
-| 2787 | 1 | measurement |  |  |  |  |  |  |
-| 2788 | 1 | measurement |  |  |  |  |  |  |
-| 2789 | 1 | measurement |  |  |  |  |  |  |
-| 2790 | 3 | measurement |  |  |  |  |  |  |
-| 2791 | 1 | measurement |  |  |  |  |  |  |
-| 2792 | 1 | measurement |  |  |  |  |  |  |
-| 2794 | 1 | measurement |  |  |  |  |  |  |
-| 2795 | 1 | measurement |  |  |  |  |  |  |
-| 2796 | 1 | measurement |  |  |  |  |  |  |
-| 2797 | 3 | measurement |  |  |  |  |  |  |
-| 2798 | 1 | measurement |  |  |  |  |  |  |
-| 2799 | 6 | measurement |  |  |  |  |  |  |
-| 2800 | 1 | measurement |  |  |  |  |  |  |
-| 2801 | 1 | measurement |  |  |  |  |  |  |
-| 2802 | 1 | measurement |  |  |  |  |  |  |
-| 2803 | 97 | measurement |  |  |  |  |  |  |
-| 2804 | 2 | measurement |  |  |  |  |  |  |
-| 2805 | 3 | measurement |  |  |  |  |  |  |
-| 2806 | 1 | measurement |  |  |  |  |  |  |
-| 2807 | 1 | measurement |  |  |  |  |  |  |
-| 2808 | 2 | measurement |  |  |  |  |  |  |
-| 2809 | 1 | measurement |  |  |  |  |  |  |
-| 2810 | 1 | measurement |  |  |  |  |  |  |
-| 2811 | 2 | measurement |  |  |  |  |  |  |
-| 2812 | 1 | measurement |  |  |  |  |  |  |
-| 2813 | 1 | measurement |  |  |  |  |  |  |
-| 2814 | 2 | measurement |  |  |  |  |  |  |
-| 2815 | 4 | measurement |  |  |  |  |  |  |
-| 2816 | 1 | measurement |  |  |  |  |  |  |
-| 2817 | 1 | measurement |  |  |  |  |  |  |
-| 2818 | 1 | measurement |  |  |  |  |  |  |
-| 2819 | 14 | measurement |  |  |  |  |  |  |
-| 2820 | 1 | measurement |  |  |  |  |  |  |
-| 2821 | 2 | measurement |  |  |  |  |  |  |
-| 2822 | 1 | measurement |  |  |  |  |  |  |
-| 2823 | 1 | measurement |  |  |  |  |  |  |
-| 2824 | 1 | measurement |  |  |  |  |  |  |
-| 2825 | 1 | measurement |  |  |  |  |  |  |
-| 2826 | 1 | measurement |  |  |  |  |  |  |
-| 2827 | 2 | measurement |  |  |  |  |  |  |
-| 2828 | 2 | measurement |  |  |  |  |  |  |
-| 2829 | 1 | measurement |  |  |  |  |  |  |
-| 2830 | 1 | measurement |  |  |  |  |  |  |
-| 2831 | 4 | measurement |  |  |  |  |  |  |
-| 2832 | 1 | measurement |  |  |  |  |  |  |
-| 2833 | 1 | measurement |  |  |  |  |  |  |
-| 2834 | 1 | measurement |  |  |  |  |  |  |
-| 2835 | 1 | measurement |  |  |  |  |  |  |
-| 2836 | 2 | measurement |  |  |  |  |  |  |
-| 2837 | 1 | measurement |  |  |  |  |  |  |
-| 2838 | 1 | measurement |  |  |  |  |  |  |
-| 2841 | 1 | measurement |  |  |  |  |  |  |
-| 2842 | 1 | measurement |  |  |  |  |  |  |
-| 2843 | 1 | measurement |  |  |  |  |  |  |
-| 2844 | 26 | measurement |  |  |  |  |  |  |
-| 2846 | 3 | measurement |  |  |  |  |  |  |
-| 2847 | 1 | measurement |  |  |  |  |  |  |
-| 2848 | 2 | measurement |  |  |  |  |  |  |
-| 2849 | 2 | measurement |  |  |  |  |  |  |
-| 2850 | 1 | measurement |  |  |  |  |  |  |
-| 2851 | 1 | measurement |  |  |  |  |  |  |
-| 2852 | 1 | measurement |  |  |  |  |  |  |
-| 2853 | 1 | measurement |  |  |  |  |  |  |
-| 2854 | 1 | measurement |  |  |  |  |  |  |
-| 2855 | 1 | measurement |  |  |  |  |  |  |
-| 2856 | 1 | measurement |  |  |  |  |  |  |
-| 2857 | 1 | measurement |  |  |  |  |  |  |
-| 2858 | 1 | measurement |  |  |  |  |  |  |
-| 2859 | 1 | measurement |  |  |  |  |  |  |
-| 2860 | 1 | measurement |  |  |  |  |  |  |
-| 2861 | 1 | measurement |  |  |  |  |  |  |
-| 2862 | 1 | measurement |  |  |  |  |  |  |
-| 2863 | 1 | measurement |  |  |  |  |  |  |
-| 2864 | 1 | measurement |  |  |  |  |  |  |
-| 2865 | 1 | measurement |  |  |  |  |  |  |
-| 2866 | 1 | measurement |  |  |  |  |  |  |
-| 2867 | 1 | measurement |  |  |  |  |  |  |
-| 2868 | 1 | measurement |  |  |  |  |  |  |
-| 2869 | 1 | measurement |  |  |  |  |  |  |
-| 2870 | 2 | measurement |  |  |  |  |  |  |
-| 2873 | 1 | measurement |  |  |  |  |  |  |
-| 2875 | 1 | measurement |  |  |  |  |  |  |
-| 2876 | 1 | measurement |  |  |  |  |  |  |
-| 2877 | 1 | measurement |  |  |  |  |  |  |
-| 2878 | 8 | measurement |  |  |  |  |  |  |
-| 2879 | 2 | measurement |  |  |  |  |  |  |
-| 2880 | 11 | measurement |  |  |  |  |  |  |
-| 2881 | 1 | measurement |  |  |  |  |  |  |
-| 2882 | 1 | measurement |  |  |  |  |  |  |
-| 2883 | 1 | measurement |  |  |  |  |  |  |
-| 2884 | 1 | measurement |  |  |  |  |  |  |
-| 2885 | 9 | measurement |  |  |  |  |  |  |
-| 2886 | 1 | measurement |  |  |  |  |  |  |
-| 2887 | 1 | measurement |  |  |  |  |  |  |
-| 2888 | 9 | measurement |  |  |  |  |  |  |
-| 2889 | 2 | measurement |  |  |  |  |  |  |
-| 2890 | 1 | measurement |  |  |  |  |  |  |
-| 2891 | 1 | measurement |  |  |  |  |  |  |
-| 2892 | 1 | measurement |  |  |  |  |  |  |
-| 2893 | 1 | measurement |  |  |  |  |  |  |
-| 2894 | 2 | measurement |  |  |  |  |  |  |
-| 2895 | 1 | measurement |  |  |  |  |  |  |
-| 2896 | 3 | measurement |  |  |  |  |  |  |
-| 2897 | 1 | measurement |  |  |  |  |  |  |
-| 2898 | 1 | measurement |  |  |  |  |  |  |
-| 2899 | 1 | measurement |  |  |  |  |  |  |
-| 2900 | 25 | measurement |  |  |  |  |  |  |
-| 2901 | 2 | measurement |  |  |  |  |  |  |
-| 2902 | 1 | measurement |  |  |  |  |  |  |
-| 2903 | 1 | measurement |  |  |  |  |  |  |
-| 2904 | 1 | measurement |  |  |  |  |  |  |
-| 2905 | 1 | measurement |  |  |  |  |  |  |
-| 2906 | 1 | measurement |  |  |  |  |  |  |
-| 2907 | 1 | measurement |  |  |  |  |  |  |
-| 2908 | 1 | measurement |  |  |  |  |  |  |
-| 2909 | 1 | measurement |  |  |  |  |  |  |
-| 2910 | 7 | measurement |  |  |  |  |  |  |
-| 2911 | 2 | measurement |  |  |  |  |  |  |
-| 2912 | 4 | measurement |  |  |  |  |  |  |
-| 2913 | 1 | measurement |  |  |  |  |  |  |
-| 2914 | 1 | measurement |  |  |  |  |  |  |
-| 2915 | 1 | measurement |  |  |  |  |  |  |
-| 2916 | 2 | measurement |  |  |  |  |  |  |
-| 2917 | 2 | measurement |  |  |  |  |  |  |
-| 2918 | 1 | measurement |  |  |  |  |  |  |
-| 2919 | 1 | measurement |  |  |  |  |  |  |
-| 2920 | 4 | measurement |  |  |  |  |  |  |
-| 2921 | 2 | measurement |  |  |  |  |  |  |
-| 2922 | 1 | measurement |  |  |  |  |  |  |
-| 2923 | 1 | measurement |  |  |  |  |  |  |
-| 2924 | 8 | measurement |  |  |  |  |  |  |
-| 2925 | 1 | measurement |  |  |  |  |  |  |
-| 2926 | 3 | measurement |  |  |  |  |  |  |
-| 2927 | 1 | measurement |  |  |  |  |  |  |
-| 2928 | 1 | measurement |  |  |  |  |  |  |
-| 2929 | 1 | measurement |  |  |  |  |  |  |
-| 2930 | 1 | measurement |  |  |  |  |  |  |
-| 2931 | 1 | measurement |  |  |  |  |  |  |
-| 2932 | 3 | measurement |  |  |  |  |  |  |
-| 2933 | 2 | measurement |  |  |  |  |  |  |
-| 2934 | 1 | measurement |  |  |  |  |  |  |
-| 2935 | 1 | measurement |  |  |  |  |  |  |
-| 2936 | 1 | measurement |  |  |  |  |  |  |
-| 2937 | 1 | measurement |  |  |  |  |  |  |
-| 2938 | 1 | measurement |  |  |  |  |  |  |
-| 2939 | 1 | measurement |  |  |  |  |  |  |
-| 2940 | 1 | measurement |  |  |  |  |  |  |
-| 2941 | 1 | measurement |  |  |  |  |  |  |
-| 2942 | 1 | measurement |  |  |  |  |  |  |
-| 2943 | 3 | measurement |  |  |  |  |  |  |
-| 2944 | 3 | measurement |  |  |  |  |  |  |
-| 2945 | 1 | measurement |  |  |  |  |  |  |
-| 2946 | 1 | measurement |  |  |  |  |  |  |
-| 2947 | 8 | measurement |  |  |  |  |  |  |
-| 2948 | 6 | measurement |  |  |  |  |  |  |
-| 2949 | 1 | measurement |  |  |  |  |  |  |
-| 2950 | 1 | measurement |  |  |  |  |  |  |
-| 2951 | 1 | measurement |  |  |  |  |  |  |
-| 2952 | 2 | measurement |  |  |  |  |  |  |
-| 2953 | 1 | measurement |  |  |  |  |  |  |
-| 2954 | 3 | measurement |  |  |  |  |  |  |
-| 2955 | 1 | measurement |  |  |  |  |  |  |
-| 2956 | 1 | measurement |  |  |  |  |  |  |
-| 2957 | 1 | measurement |  |  |  |  |  |  |
-| 2958 | 1 | measurement |  |  |  |  |  |  |
-| 2959 | 1 | measurement |  |  |  |  |  |  |
-| 2960 | 1 | measurement |  |  |  |  |  |  |
-| 2961 | 1 | measurement |  |  |  |  |  |  |
-| 2962 | 1 | measurement |  |  |  |  |  |  |
-| 2963 | 2 | measurement |  |  |  |  |  |  |
-| 2964 | 1 | measurement |  |  |  |  |  |  |
-| 2965 | 1 | measurement |  |  |  |  |  |  |
-| 2966 | 1 | measurement |  |  |  |  |  |  |
-| 2967 | 3 | measurement |  |  |  |  |  |  |
-| 2968 | 1 | measurement |  |  |  |  |  |  |
-| 2969 | 8 | measurement |  |  |  |  |  |  |
-| 2970 | 1 | measurement |  |  |  |  |  |  |
-| 2971 | 1 | measurement |  |  |  |  |  |  |
-| 2972 | 2 | measurement |  |  |  |  |  |  |
-| 2973 | 6 | measurement |  |  |  |  |  |  |
-| 2974 | 25 | measurement |  |  |  |  |  |  |
-| 2975 | 3 | measurement |  |  |  |  |  |  |
-| 2976 | 1 | measurement |  |  |  |  |  |  |
-| 2977 | 2 | measurement |  |  |  |  |  |  |
-| 2978 | 37 | measurement |  |  |  |  |  |  |
-| 2979 | 1 | measurement |  |  |  |  |  |  |
-| 2980 | 1 | measurement |  |  |  |  |  |  |
-| 2981 | 2 | measurement |  |  |  |  |  |  |
-| 2982 | 1 | measurement |  |  |  |  |  |  |
-| 2983 | 1 | measurement |  |  |  |  |  |  |
-| 2984 | 1 | measurement |  |  |  |  |  |  |
-| 2985 | 1 | measurement |  |  |  |  |  |  |
-| 2986 | 285 | measurement |  |  |  |  |  |  |
-| 2987 | 1 | measurement |  |  |  |  |  |  |
-| 2988 | 3 | measurement |  |  |  |  |  |  |
-| 2989 | 1 | measurement |  |  |  |  |  |  |
-| 2990 | 1 | measurement |  |  |  |  |  |  |
-| 2991 | 1 | measurement |  |  |  |  |  |  |
-| 2993 | 2 | measurement |  |  |  |  |  |  |
-| 2994 | 1 | measurement |  |  |  |  |  |  |
-| 2995 | 1 | measurement |  |  |  |  |  |  |
-| 2996 | 1 | measurement |  |  |  |  |  |  |
-| 2997 | 1 | measurement |  |  |  |  |  |  |
-| 2998 | 3 | measurement |  |  |  |  |  |  |
-| 2999 | 1 | measurement |  |  |  |  |  |  |
-| 3000 | 1 | measurement |  |  |  |  |  |  |
-| 3001 | 2 | measurement |  |  |  |  |  |  |
-| 3002 | 1 | measurement |  |  |  |  |  |  |
-| 3003 | 1 | measurement |  |  |  |  |  |  |
-| 3004 | 1 | measurement |  |  |  |  |  |  |
-| 3005 | 1 | measurement |  |  |  |  |  |  |
-| 3006 | 1 | measurement |  |  |  |  |  |  |
-| 3007 | 2 | measurement |  |  |  |  |  |  |
-| 3008 | 1 | measurement |  |  |  |  |  |  |
-| 3009 | 12 | measurement |  |  |  |  |  |  |
-| 3010 | 40 | measurement |  |  |  |  |  |  |
-| 3011 | 1 | measurement |  |  |  |  |  |  |
-| 3012 | 2 | measurement |  |  |  |  |  |  |
-| 3013 | 3 | measurement |  |  |  |  |  |  |
-| 3014 | 6 | measurement |  |  |  |  |  |  |
-| 3015 | 1 | measurement |  |  |  |  |  |  |
-| 3016 | 1 | measurement |  |  |  |  |  |  |
-| 3017 | 1 | measurement |  |  |  |  |  |  |
-| 3018 | 1 | measurement |  |  |  |  |  |  |
-| 3019 | 2 | measurement |  |  |  |  |  |  |
-| 3020 | 1 | measurement |  |  |  |  |  |  |
-| 3021 | 1 | measurement |  |  |  |  |  |  |
-| 3022 | 2 | measurement |  |  |  |  |  |  |
-| 3023 | 95 | measurement |  |  |  |  |  |  |
-| 3024 | 1 | measurement |  |  |  |  |  |  |
-| 3025 | 1 | measurement |  |  |  |  |  |  |
-| 3026 | 1 | measurement |  |  |  |  |  |  |
-| 3027 | 1 | measurement |  |  |  |  |  |  |
-| 3028 | 1 | measurement |  |  |  |  |  |  |
-| 3029 | 1 | measurement |  |  |  |  |  |  |
-| 3030 | 1 | measurement |  |  |  |  |  |  |
-| 3031 | 1 | measurement |  |  |  |  |  |  |
-| 3032 | 1 | measurement |  |  |  |  |  |  |
-| 3033 | 1 | measurement |  |  |  |  |  |  |
-| 3034 | 1 | measurement |  |  |  |  |  |  |
-| 3035 | 5 | measurement |  |  |  |  |  |  |
-| 3036 | 1 | measurement |  |  |  |  |  |  |
-| 3037 | 12 | measurement |  |  |  |  |  |  |
-| 3038 | 11 | measurement |  |  |  |  |  |  |
-| 3039 | 1 | measurement |  |  |  |  |  |  |
-| 3040 | 1 | measurement |  |  |  |  |  |  |
-| 3041 | 1 | measurement |  |  |  |  |  |  |
-| 3043 | 3 | measurement |  |  |  |  |  |  |
-| 3044 | 2 | measurement |  |  |  |  |  |  |
-| 3045 | 1 | measurement |  |  |  |  |  |  |
-| 3046 | 16 | measurement |  |  |  |  |  |  |
-| 3047 | 5 | measurement |  |  |  |  |  |  |
-| 3048 | 1 | measurement |  |  |  |  |  |  |
-| 3049 | 1 | measurement |  |  |  |  |  |  |
-| 3050 | 1 | measurement |  |  |  |  |  |  |
-| 3051 | 1 | measurement |  |  |  |  |  |  |
-| 3052 | 1 | measurement |  |  |  |  |  |  |
-| 3053 | 1 | measurement |  |  |  |  |  |  |
-| 3054 | 11 | measurement |  |  |  |  |  |  |
-| 3055 | 1 | measurement |  |  |  |  |  |  |
-| 3057 | 8 | measurement |  |  |  |  |  |  |
-| 3058 | 1 | measurement |  |  |  |  |  |  |
-| 3059 | 1 | measurement |  |  |  |  |  |  |
-| 3060 | 1 | measurement |  |  |  |  |  |  |
-| 3061 | 1 | measurement |  |  |  |  |  |  |
-| 3062 | 1 | measurement |  |  |  |  |  |  |
-| 3063 | 1 | measurement |  |  |  |  |  |  |
-| 3064 | 1 | measurement |  |  |  |  |  |  |
-| 3065 | 1 | measurement |  |  |  |  |  |  |
-| 3066 | 2 | measurement |  |  |  |  |  |  |
-| 3067 | 2 | measurement |  |  |  |  |  |  |
-| 3068 | 1 | measurement |  |  |  |  |  |  |
-| 3069 | 1 | measurement |  |  |  |  |  |  |
-| 3070 | 1 | measurement |  |  |  |  |  |  |
-| 3071 | 9 | measurement |  |  |  |  |  |  |
-| 3072 | 1 | measurement |  |  |  |  |  |  |
-| 3073 | 1 | measurement |  |  |  |  |  |  |
-| 3074 | 2 | measurement |  |  |  |  |  |  |
-| 3075 | 7 | measurement |  |  |  |  |  |  |
-| 3076 | 1 | measurement |  |  |  |  |  |  |
-| 3077 | 1 | measurement |  |  |  |  |  |  |
-| 3078 | 1 | measurement |  |  |  |  |  |  |
-| 3079 | 1 | measurement |  |  |  |  |  |  |
-| 3080 | 1 | measurement |  |  |  |  |  |  |
-| 3081 | 1 | measurement |  |  |  |  |  |  |
-| 3082 | 1 | measurement |  |  |  |  |  |  |
-| 3083 | 2 | measurement |  |  |  |  |  |  |
-| 3084 | 1 | measurement |  |  |  |  |  |  |
-| 3085 | 1 | measurement |  |  |  |  |  |  |
-| 3086 | 17 | measurement |  |  |  |  |  |  |
-| 3088 | 1 | measurement |  |  |  |  |  |  |
-| 3089 | 2 | measurement |  |  |  |  |  |  |
-| 3090 | 1 | measurement |  |  |  |  |  |  |
-| 3091 | 1 | measurement |  |  |  |  |  |  |
-| 3092 | 1 | measurement |  |  |  |  |  |  |
-| 3093 | 1 | measurement |  |  |  |  |  |  |
-| 3094 | 3 | measurement |  |  |  |  |  |  |
-| 3095 | 1 | measurement |  |  |  |  |  |  |
-| 3096 | 1 | measurement |  |  |  |  |  |  |
-| 3097 | 1 | measurement |  |  |  |  |  |  |
-| 3098 | 1 | measurement |  |  |  |  |  |  |
-| 3099 | 1 | measurement |  |  |  |  |  |  |
-| 3100 | 1 | measurement |  |  |  |  |  |  |
-| 3101 | 1 | measurement |  |  |  |  |  |  |
-| 3102 | 5 | measurement |  |  |  |  |  |  |
-| 3103 | 1 | measurement |  |  |  |  |  |  |
-| 3105 | 5 | measurement |  |  |  |  |  |  |
-| 3107 | 3 | measurement |  |  |  |  |  |  |
-| 3108 | 1 | measurement |  |  |  |  |  |  |
-| 3109 | 1 | measurement |  |  |  |  |  |  |
-| 3110 | 14 | measurement |  |  |  |  |  |  |
-| 3111 | 1 | measurement |  |  |  |  |  |  |
-| 3112 | 8 | measurement |  |  |  |  |  |  |
-| 3114 | 1 | measurement |  |  |  |  |  |  |
-| 3115 | 1 | measurement |  |  |  |  |  |  |
-| 3116 | 1 | measurement |  |  |  |  |  |  |
-| 3117 | 1 | measurement |  |  |  |  |  |  |
-| 3118 | 1 | measurement |  |  |  |  |  |  |
-| 3119 | 1 | measurement |  |  |  |  |  |  |
-| 3120 | 3 | measurement |  |  |  |  |  |  |
-| 3121 | 9 | measurement |  |  |  |  |  |  |
-| 3122 | 1 | measurement |  |  |  |  |  |  |
-| 3123 | 1 | measurement |  |  |  |  |  |  |
-| 3124 | 1 | measurement |  |  |  |  |  |  |
-| 3125 | 1 | measurement |  |  |  |  |  |  |
-| 3126 | 1 | measurement |  |  |  |  |  |  |
-| 3127 | 2 | measurement |  |  |  |  |  |  |
-| 3128 | 2 | measurement |  |  |  |  |  |  |
-| 3129 | 1 | measurement |  |  |  |  |  |  |
-| 3130 | 1 | measurement |  |  |  |  |  |  |
-| 3131 | 2 | measurement |  |  |  |  |  |  |
-| 3132 | 1 | measurement |  |  |  |  |  |  |
-| 3133 | 1 | measurement |  |  |  |  |  |  |
-| 3134 | 1 | measurement |  |  |  |  |  |  |
-| 3135 | 1 | measurement |  |  |  |  |  |  |
-| 3136 | 3 | measurement |  |  |  |  |  |  |
-| 3137 | 1 | measurement |  |  |  |  |  |  |
-| 3138 | 1 | measurement |  |  |  |  |  |  |
-| 3139 | 1 | measurement |  |  |  |  |  |  |
-| 3140 | 1 | measurement |  |  |  |  |  |  |
-| 3141 | 1 | measurement |  |  |  |  |  |  |
-| 3142 | 1 | measurement |  |  |  |  |  |  |
-| 3143 | 1 | measurement |  |  |  |  |  |  |
+| native_key | n_records | role | match_status | match_reason | services | verification_mode | doi | title_sim | bibcite | cite_id |
+| --- | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb06033.x | 1.000 |  |  |
+| 2 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3940/rina.iccas.2013.08 | 0.377 |  |  |
+| 3 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb03830.x | 0.938 |  |  |
+| 4 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb03837.x | 0.960 |  |  |
+| 5 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4067/s0717-71782007000200002 | 0.612 |  |  |
+| 6 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383246 | 1.000 |  |  |
+| 7 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.o3423.5247-55 | 0.533 |  |  |
+| 8 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504083 | 1.000 |  |  |
+| 9 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504132 | 1.000 |  |  |
+| 10 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.2000.tb01225.x | 0.641 |  |  |
+| 11 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504418 | 1.000 |  |  |
+| 12 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504332 | 1.000 |  |  |
+| 13 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5070/v420110197 | 0.618 |  |  |
+| 15 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504116 | 1.000 |  |  |
+| 16 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1016/j.mambio.2006.10.008 | 0.587 |  |  |
+| 17 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.36759/svj.2021.128 | 0.486 |  |  |
+| 18 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05498.x | 1.000 |  |  |
+| 19 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.2000.64.2.145 | 0.865 |  |  |
+| 20 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900001047 | 1.000 |  |  |
+| 21 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1971.35.2.283 | 0.479 |  |  |
+| 22 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.part.144771 | 0.870 |  |  |
+| 23 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18054/pb.v125i1-2.24858 | 0.311 |  |  |
+| 24 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382276 | 0.995 |  |  |
+| 25 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.26515/rzsi/v22/i3/1921/163506 | 0.523 |  |  |
+| 26 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mammalia-2019-0109 | 0.656 |  |  |
+| 27 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z87-040 | 1.000 |  |  |
+| 28 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z91-199 | 1.000 |  |  |
+| 29 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.47536/jcrm.v1i1.264 | 1.000 |  |  |
+| 30 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.47536/jcrm.v2i1.485 | 1.000 |  |  |
+| 31 | 7 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383295 | 1.000 |  |  |
+| 32 | 39 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381563 | 1.000 |  |  |
+| 33 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0301-6226(89)90053-5 | 0.506 |  |  |
+| 34 | 20 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1987.tb00045.x | 1.000 |  |  |
+| 35 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1987.tb00046.x | 1.000 |  |  |
+| 36 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1975.39.3.343 | 1.000 |  |  |
+| 37 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb01914.x | 0.968 |  |  |
+| 38 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05428.x | 1.000 |  |  |
+| 40 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382707 | 1.000 |  |  |
+| 41 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374972 | 0.873 |  |  |
+| 42 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374307 | 1.000 |  |  |
+| 43 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z86-280 | 1.000 |  |  |
+| 44 | 25 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/4947 | 0.632 |  |  |
+| 45 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504252 | 1.000 |  |  |
+| 46 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504312 | 1.000 |  |  |
+| 47 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/ej.9789004168190.i-462.113 | 0.638 |  |  |
+| 48 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1986.50.4.447 | 1.000 |  |  |
+| 49 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3354/esr01041 | 0.599 |  |  |
+| 50 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381749 | 1.000 |  |  |
+| 51 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381484 | 0.922 |  |  |
+| 52 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1782855 | 0.391 |  |  |
+| 54 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1530/rep.0.1230445 | 0.841 |  |  |
+| 55 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/an.1993.34.9.38.6 | 0.456 |  |  |
+| 56 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0198-0254(87)90283-4 | 1.000 |  |  |
+| 57 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1978.tb00436.x | 1.000 |  |  |
+| 58 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/1381149 | 0.573 |  |  |
+| 59 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504268 | 1.000 |  |  |
+| 60 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7589/0090-3558-13.3.262 | 0.508 |  |  |
+| 61 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504270 | 1.000 |  |  |
+| 64 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504345 | 1.000 |  |  |
+| 65 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)658<0001:ps>2.0.co;2 | 1.000 |  |  |
+| 66 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504146 | 1.000 |  |  |
+| 67 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1159/000156876 | 0.548 |  |  |
+| 68 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.21203/rs.3.rs-3440779/v1 | 0.504 |  |  |
+| 69 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-7692.1992.tb00373.x | 1.000 |  |  |
+| 70 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z93-153 | 1.000 |  |  |
+| 71 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382233 | 1.000 |  |  |
+| 72 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423987 | 1.000 |  |  |
+| 73 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1976.40.2.175 | 0.743 |  |  |
+| 74 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1965.tb04639.x | 1.000 |  |  |
+| 75 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379843 | 1.000 |  |  |
+| 76 | 10 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/03745484109442708 | 0.277 |  |  |
+| 77 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00222930709487282 | 0.802 |  |  |
+| 78 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00222930808692495 | 0.688 |  |  |
+| 79 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00222930908692540 | 0.800 |  |  |
+| 80 | 9 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00222930908692712 | 0.815 |  |  |
+| 81 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00222931008692896 | 0.795 |  |  |
+| 82 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1038/089449b0 | 1.000 |  |  |
+| 83 | 11 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00222931808562380 | 0.839 |  |  |
+| 84 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1206/631.1 | 0.414 |  |  |
+| 85 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.76-40 | 0.899 |  |  |
+| 86 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379727 | 1.000 |  |  |
+| 87 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4612-9824-3_46 | 0.483 |  |  |
+| 88 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503775 | 1.000 |  |  |
+| 89 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504024 | 1.000 |  |  |
+| 90 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381754 | 1.000 |  |  |
+| 91 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/ajpa.1330380274 | 0.514 |  |  |
+| 92 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1998.62.3.409 | 0.719 |  |  |
+| 93 | 3 | measurement | pending | grey_literature | crossref | crossref_only | 10.1515/9780824885830-039 | 0.521 |  |  |
+| 94 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504302 | 1.000 |  |  |
+| 95 | 31 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1177/019263658506948224 | 0.278 |  |  |
+| 96 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/bhl.title.61398 | 0.420 |  |  |
+| 97 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z92-205 | 1.000 |  |  |
+| 99 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1964.tb05158.x | 0.651 |  |  |
+| 100 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1086/physzool.24.3.30152118 | 0.886 |  |  |
+| 101 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0269-7491(97)00105-x | 1.000 |  |  |
+| 102 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.67387/pngjaff.v13i2.397 | 0.544 |  |  |
+| 103 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3106/041.034.0106 | 0.570 |  |  |
+| 104 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504476 | 1.000 |  |  |
+| 105 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504078 | 1.000 |  |  |
+| 106 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382765 | 1.000 |  |  |
+| 107 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0300-9629(87)90061-2 | 1.000 |  |  |
+| 108 | 43 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381314 | 1.000 |  |  |
+| 109 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3406/polit.1989.3874 | 0.427 |  |  |
+| 110 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1991.55.1.113 | 0.479 |  |  |
+| 111 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382757 | 0.895 |  |  |
+| 112 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1935452 | 0.819 |  |  |
+| 113 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3543506 | 0.821 |  |  |
+| 114 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424566 | 1.000 |  |  |
+| 115 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382969 | 1.000 |  |  |
+| 116 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383202 | 1.000 |  |  |
+| 117 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504061 | 1.000 |  |  |
+| 118 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503846 | 1.000 |  |  |
+| 119 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504060 | 1.000 |  |  |
+| 120 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0301-6226(94)90274-7 | 0.741 |  |  |
+| 121 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z89-001 | 0.839 |  |  |
+| 122 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s00300-010-0884-y | 0.435 |  |  |
+| 123 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1017/s0952836902000225 | 1.000 |  |  |
+| 124 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503823 | 1.000 |  |  |
+| 125 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504205 | 1.000 |  |  |
+| 126 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504133 | 1.000 |  |  |
+| 127 | 6 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605303240667 | 0.394 |  |  |
+| 128 | 1 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1126/science.148.3671.826 | 0.511 |  |  |
+| 129 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381930 | 0.489 |  |  |
+| 130 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0006-3207(74)90039-1 | 1.000 |  |  |
+| 131 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am82027 | 1.000 |  |  |
+| 132 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3809638 | 0.573 |  |  |
+| 133 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382614 | 1.000 |  |  |
+| 134 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3796144 | 1.000 |  |  |
+| 135 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02665.x | 1.000 |  |  |
+| 136 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381283 | 0.699 |  |  |
+| 137 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/an.1995.36.1.45.3 | 0.295 |  |  |
+| 138 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm-1992-0212 | 0.858 |  |  |
+| 139 | 6 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/c2009-0-02373-3 | 1.000 |  |  |
+| 140 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb06019.x | 0.775 |  |  |
+| 141 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1006/jare.2000.0714 | 0.882 |  |  |
+| 142 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.338674 | 0.884 |  |  |
+| 143 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/18.4.514-b | 1.000 |  |  |
+| 144 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00319024 | 0.926 |  |  |
+| 145 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.357186 | 1.000 |  |  |
+| 146 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.357187 | 0.882 |  |  |
+| 147 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/jj.40271743.10 | 0.595 |  |  |
+| 148 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/jj.40271743.10 | 0.586 |  |  |
+| 149 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/beheco/7.4.408 | 1.000 |  |  |
+| 150 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1139/z00-155 | 1.000 |  |  |
+| 151 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.363865 | 1.000 |  |  |
+| 152 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1936.tb01681.x | 1.000 |  |  |
+| 153 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374713 | 1.000 |  |  |
+| 154 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.part.6495 | 0.626 |  |  |
+| 155 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503875 | 1.000 |  |  |
+| 156 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503861 | 1.000 |  |  |
+| 157 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503788 | 1.000 |  |  |
+| 158 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/2407839 | 1.000 |  |  |
+| 159 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z84-282 | 0.872 |  |  |
+| 160 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3503922 | 1.000 |  |  |
+| 161 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s1755267213000213 | 0.555 |  |  |
+| 162 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1111/j.1748-7692.1985.tb00018.x | 0.646 |  |  |
+| 163 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/oxfordjournals.jhered.a111394 | 1.000 |  |  |
+| 164 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/03014223.1999.9517594 | 1.000 |  |  |
+| 165 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-7692.2001.tb00999.x | 1.000 |  |  |
+| 166 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381290 | 1.000 |  |  |
+| 167 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1999.63.2.149 | 0.504 |  |  |
+| 168 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0003-3472(05)80961-3 | 1.000 |  |  |
+| 169 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf01730636 | 0.568 |  |  |
+| 170 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.3369 | 0.469 |  |  |
+| 171 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-7692.1992.tb00408.x | 1.000 |  |  |
+| 172 | 16 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.v3i2.892 | 1.000 |  |  |
+| 173 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1163/156853992x00598 | 1.000 |  |  |
+| 174 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380706 | 1.000 |  |  |
+| 175 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4612-9826-7_11 | 0.565 |  |  |
+| 176 | 14 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300013922 | 0.529 |  |  |
+| 177 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.20315/evmc.2025.149 | 0.496 |  |  |
+| 178 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.273 | 1.000 |  |  |
+| 179 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.47536/jcrm.vi3.325 | 0.547 |  |  |
+| 180 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1365-2028.1978.tb00422.x | 0.808 |  |  |
+| 181 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-030-44029-9_80 | 0.596 |  |  |
+| 182 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1016/0003-3472(73)90002-x | 1.000 |  |  |
+| 183 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0003-3472(74)80077-1 | 1.000 |  |  |
+| 184 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375807 | 1.000 |  |  |
+| 185 | 21 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/oso/9780198549451.003.0016 | 0.859 |  |  |
+| 186 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/jj.30297277.53 | 0.678 |  |  |
+| 187 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377501 | 1.000 |  |  |
+| 188 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/jj.30297277.56 | 0.808 |  |  |
+| 189 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378183 | 1.000 |  |  |
+| 190 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3798852 | 0.847 |  |  |
+| 191 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379384 | 0.898 |  |  |
+| 192 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381173 | 1.000 |  |  |
+| 193 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s10914-017-9417-6 | 0.455 |  |  |
+| 194 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1992.56.4.587 | 1.000 |  |  |
+| 195 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1992.56.4.587 | 0.755 |  |  |
+| 196 | 298 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1126/science.273.5275.609a | 0.662 |  |  |
+| 197 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381653 | 1.000 |  |  |
+| 198 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382181 | 1.000 |  |  |
+| 199 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380985 | 1.000 |  |  |
+| 200 | 14 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0378-1127(96)03803-0 | 0.406 |  |  |
+| 201 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375054 | 1.000 |  |  |
+| 202 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2000)645<0001:hb>2.0.co;2 | 1.000 |  |  |
+| 203 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04295.x | 0.906 |  |  |
+| 204 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504114 | 1.000 |  |  |
+| 205 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/s003600050141 | 1.000 |  |  |
+| 206 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1086/physzool.37.2.30152330 | 0.790 |  |  |
+| 207 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504249 | 1.000 |  |  |
+| 208 | 118 | compilation | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.010 | 1.000 |  |  |
+| 209 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4615-6424-9_6 | 0.645 |  |  |
+| 210 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375391 | 1.000 |  |  |
+| 211 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.17087/jbnhs/2022/v119/170342 | 0.517 |  |  |
+| 212 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.15407/pts2018.16.085 | 0.430 |  |  |
+| 213 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378438 | 1.000 |  |  |
+| 214 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1890/0012-9615(2001)071[0245:tiohqo]2.0.co;2 | 0.578 |  |  |
+| 215 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382425 | 1.000 |  |  |
+| 216 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3985169 | 0.336 |  |  |
+| 217 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1994.58.3.415 | 0.889 |  |  |
+| 218 | 4 | measurement | pending | grey_literature | crossref | crossref_only | 10.1007/978-1-4939-3456-0_4 | 0.574 |  |  |
+| 219 | 1 | measurement | pending | weak_match | crossref;owner-waiver | crossref_only | 10.2307/3504093 | 1.000 |  |  |
+| 220 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-1090.1995.tb00680.x | 1.000 |  |  |
+| 221 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.80-3 | 0.708 |  |  |
+| 222 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382788 | 1.000 |  |  |
+| 223 | 17 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/ajpa.1330750316 | 0.330 |  |  |
+| 224 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3161/1733-5329(2005)7[51:raacot]2.0.co;2 | 0.660 |  |  |
+| 225 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.63916 | 1.000 |  |  |
+| 226 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376827 | 1.000 |  |  |
+| 227 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4615-6430-0_16 | 0.539 |  |  |
+| 229 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383221 | 1.000 |  |  |
+| 230 | 13 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900005070 | 1.000 |  |  |
+| 231 | 8 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/83.1.153 | 1.000 |  |  |
+| 232 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/00288330.2001.9516998 | 1.000 |  |  |
+| 234 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1038/scientificamerican0596-74 | 0.764 |  |  |
+| 235 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381623 | 1.000 |  |  |
+| 236 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504191 | 1.000 |  |  |
+| 237 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381463 | 1.000 |  |  |
+| 238 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503968 | 1.000 |  |  |
+| 239 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.76-38 | 1.000 |  |  |
+| 240 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/3-540-33291-x_12 | 0.565 |  |  |
+| 241 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000156261 | 1.000 |  |  |
+| 242 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb04989.x | 1.000 |  |  |
+| 243 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381379 | 1.000 |  |  |
+| 244 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02564.x | 1.000 |  |  |
+| 245 | 9 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb03798.x | 0.864 |  |  |
+| 246 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04446.x | 1.000 |  |  |
+| 247 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb01910.x | 0.932 |  |  |
+| 248 | 3 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1994.tb04861.x | 1.000 |  |  |
+| 249 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb05369.x | 0.884 |  |  |
+| 250 | 6 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05433.x | 0.909 |  |  |
+| 251 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504442 | 1.000 |  |  |
+| 252 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1980.44.2.143 | 1.000 |  |  |
+| 253 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000619 | 1.000 |  |  |
+| 254 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375722 | 1.000 |  |  |
+| 255 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/11250009409355887 | 0.534 |  |  |
+| 256 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb00003.x | 1.000 |  |  |
+| 257 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382548 | 1.000 |  |  |
+| 258 | 11 | measurement | pending | grey_literature | crossref | crossref_only | 10.3161/001.006.0205 | 0.424 |  |  |
+| 259 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.12608 | 0.477 |  |  |
+| 260 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379020 | 0.366 |  |  |
+| 261 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1127/pala/2022/0120 | 0.578 |  |  |
+| 262 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.12608 | 0.468 |  |  |
+| 263 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/00222937800770511 | 1.000 |  |  |
+| 264 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/mmng.20010040114 | 0.421 |  |  |
+| 265 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/26660644-04802006 | 0.515 |  |  |
+| 266 | 12 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/26660644-04802006 | 0.840 |  |  |
+| 267 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.12608 | 1.000 |  |  |
+| 268 | 3 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/bhl.part.17102 | 0.490 |  |  |
+| 271 | 11 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/26660644-04802006 | 0.484 |  |  |
+| 272 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/26660644-04802006 | 0.528 |  |  |
+| 273 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/26660644-04802006 | 0.528 |  |  |
+| 274 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3564871 | 1.000 |  |  |
+| 275 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381774 | 0.874 |  |  |
+| 276 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/02541858.1981.11447754 | 0.450 |  |  |
+| 277 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3161/001.004.0106 | 0.550 |  |  |
+| 278 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1982.11447784 | 1.000 |  |  |
+| 279 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3957/0379-4369-38.1.42 | 0.473 |  |  |
+| 281 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1985.11447925 | 1.000 |  |  |
+| 282 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/09397140.2024.2420380 | 0.544 |  |  |
+| 283 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1988.11448077 | 1.000 |  |  |
+| 284 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0930031 | 0.948 |  |  |
+| 285 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/15627020.2004.11407284 | 0.743 |  |  |
+| 286 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01589.x | 0.922 |  |  |
+| 287 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05506.x | 0.648 |  |  |
+| 288 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/02541858.1995.11448366 | 0.884 |  |  |
+| 289 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05376.x | 0.810 |  |  |
+| 290 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1578/am.43.6.2017.594 | 0.565 |  |  |
+| 291 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3544096 | 0.445 |  |  |
+| 292 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03705.x | 1.000 |  |  |
+| 293 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.3.683 | 0.836 |  |  |
+| 294 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.3406/revec.1978.4995 | 0.865 |  |  |
+| 295 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000474 | 1.000 |  |  |
+| 296 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1934193 | 0.870 |  |  |
+| 297 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503935 | 1.000 |  |  |
+| 298 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380807 | 1.000 |  |  |
+| 299 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1986.50.2.173 | 0.902 |  |  |
+| 300 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503832 | 1.000 |  |  |
+| 301 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504112 | 1.000 |  |  |
+| 302 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504199 | 1.000 |  |  |
+| 303 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504260 | 1.000 |  |  |
+| 304 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/mspecies/365.1 | 1.000 |  |  |
+| 305 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504155 | 1.000 |  |  |
+| 306 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504314 | 1.000 |  |  |
+| 308 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504113 | 1.000 |  |  |
+| 309 | 1 | measurement | pending | weak_match | crossref;owner-waiver | crossref_only | 10.1093/mspecies/374.1 | 1.000 |  |  |
+| 310 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504211 | 1.000 |  |  |
+| 311 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504315 | 1.000 |  |  |
+| 312 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04458.x | 1.000 |  |  |
+| 313 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504139 | 1.000 |  |  |
+| 314 | 1 | measurement | pending | weak_match | crossref;owner-waiver | crossref_only | 10.2307/0.411.1 | 1.000 |  |  |
+| 316 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.420.1 | 1.000 |  |  |
+| 317 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504245 | 1.000 |  |  |
+| 318 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504216 | 1.000 |  |  |
+| 319 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504175 | 1.000 |  |  |
+| 320 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504266 | 1.000 |  |  |
+| 321 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504152 | 1.000 |  |  |
+| 322 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504126 | 1.000 |  |  |
+| 323 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504234 | 1.000 |  |  |
+| 324 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504150 | 1.000 |  |  |
+| 325 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504088 | 1.000 |  |  |
+| 326 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504196 | 1.000 |  |  |
+| 327 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504142 | 1.000 |  |  |
+| 328 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504123 | 1.000 |  |  |
+| 329 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504259 | 1.000 |  |  |
+| 330 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504203 | 1.000 |  |  |
+| 331 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504179 | 1.000 |  |  |
+| 332 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504251 | 1.000 |  |  |
+| 333 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504305 | 1.000 |  |  |
+| 334 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504273 | 1.000 |  |  |
+| 335 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.466.1 | 1.000 |  |  |
+| 336 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.501.1 | 1.000 |  |  |
+| 337 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504250 | 1.000 |  |  |
+| 338 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504282 | 1.000 |  |  |
+| 339 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504147 | 1.000 |  |  |
+| 340 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504219 | 1.000 |  |  |
+| 341 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.507.1 | 1.000 |  |  |
+| 342 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1644/0.496.1 | 1.000 |  |  |
+| 343 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504310 | 1.000 |  |  |
+| 344 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504122 | 1.000 |  |  |
+| 345 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504262 | 1.000 |  |  |
+| 346 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.508.1 | 1.000 |  |  |
+| 347 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504158 | 1.000 |  |  |
+| 348 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504151 | 1.000 |  |  |
+| 349 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1525/california/9780520248847.003.0024 | 0.408 |  |  |
+| 350 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.296 | 1.000 |  |  |
+| 351 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.3354/meps220277 | 1.000 |  |  |
+| 352 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.293 | 1.000 |  |  |
+| 353 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.271 | 1.000 |  |  |
+| 354 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1896/1413-4411.6.1.37 | 0.649 |  |  |
+| 355 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.2496.8.11.9371-9374 | 0.545 |  |  |
+| 356 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1980.44.3.343 | 1.000 |  |  |
+| 357 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1984.48.4.573 | 1.000 |  |  |
+| 358 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380158 | 1.000 |  |  |
+| 359 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1978.42.3.359 | 1.000 |  |  |
+| 360 | 34 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1001/jama.1940.02810420082033 | 0.495 |  |  |
+| 361 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.2496.8.11.9371-9374 | 0.667 |  |  |
+| 362 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z61-012 | 1.000 |  |  |
+| 363 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1998.tb00027.x | 1.000 |  |  |
+| 364 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1542(2000)081<0676:roevts>2.3.co;2 | 1.000 |  |  |
+| 365 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379476 | 1.000 |  |  |
+| 366 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1258/002367778780953143 | 0.542 |  |  |
+| 367 | 88 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1186/1471-2148-7-216 | 0.419 |  |  |
+| 368 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377836 | 1.000 |  |  |
+| 369 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503816 | 1.000 |  |  |
+| 370 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1963.tb06098.x | 1.000 |  |  |
+| 371 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378562 | 1.000 |  |  |
+| 372 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.31390/opmns.007 | 0.421 |  |  |
+| 373 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2420931 | 1.000 |  |  |
+| 374 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2485271 | 0.906 |  |  |
+| 375 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374930 | 1.000 |  |  |
+| 376 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/23.3.342 | 1.000 |  |  |
+| 377 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2420769 | 0.652 |  |  |
+| 378 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.31274/etd-180810-661 | 0.525 |  |  |
+| 379 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381352 | 1.000 |  |  |
+| 380 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1991.tb02369.x | 0.861 |  |  |
+| 381 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.2.595 | 1.000 |  |  |
+| 382 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0025315401005057 | 1.000 |  |  |
+| 383 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1969.tb01688.x | 1.000 |  |  |
+| 384 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1380496 | 1.000 |  |  |
+| 385 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.3390/d15010021 | 0.615 |  |  |
+| 386 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504015 | 1.000 |  |  |
+| 387 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.15760/etd.5812 | 0.488 |  |  |
+| 388 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1023/a:1018848204382 | 0.596 |  |  |
+| 389 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-12-804327-1.00072-8 | 0.603 |  |  |
+| 390 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383095 | 1.000 |  |  |
+| 391 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.part.10352 | 0.501 |  |  |
+| 392 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1990.tb04034.x | 1.000 |  |  |
+| 393 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0006-3207(94)90005-1 | 1.000 |  |  |
+| 394 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s12686-009-9009-8 | 0.446 |  |  |
+| 395 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504153 | 1.000 |  |  |
+| 396 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1978.42.4.427 | 0.600 |  |  |
+| 397 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-1090.1998.tb02904.x | 1.000 |  |  |
+| 398 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382363 | 1.000 |  |  |
+| 399 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379055 | 1.000 |  |  |
+| 400 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504215 | 0.661 |  |  |
+| 401 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1905.tb08334.x | 1.000 |  |  |
+| 402 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.jveb.2025.04.011 | 0.519 |  |  |
+| 403 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382612 | 0.867 |  |  |
+| 404 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382071 | 1.000 |  |  |
+| 405 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383050 | 1.000 |  |  |
+| 406 | 27 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7882/fs.2011.014 | 0.456 |  |  |
+| 407 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383174 | 1.000 |  |  |
+| 408 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378555 | 1.000 |  |  |
+| 409 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3798095 | 0.741 |  |  |
+| 410 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3798434 | 1.000 |  |  |
+| 411 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3644 | 1.000 |  |  |
+| 412 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381924 | 1.000 |  |  |
+| 413 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-7692.2003.tb01091.x | 1.000 |  |  |
+| 414 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.63269/sjl5378 | 0.511 |  |  |
+| 415 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504318 | 0.662 |  |  |
+| 416 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.3406/revec.1948.3479 | 1.000 |  |  |
+| 417 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.14264/365806 | 0.390 |  |  |
+| 418 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380432 | 1.000 |  |  |
+| 419 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3671536 | 1.000 |  |  |
+| 420 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504164 | 1.000 |  |  |
+| 421 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1959.tb05552.x | 0.525 |  |  |
+| 422 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03742.x | 1.000 |  |  |
+| 423 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0168-1591(91)90256-w | 0.856 |  |  |
+| 424 | 11 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382072 | 1.000 |  |  |
+| 425 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1439-0310.1974.tb02130.x | 1.000 |  |  |
+| 426 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00299399 | 0.886 |  |  |
+| 427 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1977.tb02120.x | 0.855 |  |  |
+| 428 | 10 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf00299284 | 0.474 |  |  |
+| 429 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00299284 | 0.754 |  |  |
+| 430 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3669112 | 1.000 |  |  |
+| 431 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377723 | 1.000 |  |  |
+| 432 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378584 | 0.869 |  |  |
+| 433 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380711 | 1.000 |  |  |
+| 434 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380603 | 1.000 |  |  |
+| 435 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381630 | 1.000 |  |  |
+| 436 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05745.x | 1.000 |  |  |
+| 437 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb04849.x | 1.000 |  |  |
+| 438 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1126/science.136.3516.645 | 1.000 |  |  |
+| 439 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1098/rstb.1935.0005 | 0.761 |  |  |
+| 440 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1134/s1067413620020046 | 0.455 |  |  |
+| 441 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1939.tb03358.x | 1.000 |  |  |
+| 442 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1941.tb00038.x | 0.962 |  |  |
+| 443 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02649.x | 0.803 |  |  |
+| 444 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381901 | 1.000 |  |  |
+| 445 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382427 | 1.000 |  |  |
+| 446 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01580.x | 0.933 |  |  |
+| 447 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378208 | 1.000 |  |  |
+| 448 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2000)081<1053:nrotss>2.0.co;2 | 1.000 |  |  |
+| 449 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380950 | 1.000 |  |  |
+| 450 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504233 | 1.000 |  |  |
+| 451 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1983.47.2.205 | 1.000 |  |  |
+| 452 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377448 | 1.000 |  |  |
+| 453 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2989/10220110209485770 | 1.000 |  |  |
+| 454 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7589/0090-3558-25.3.364 | 0.565 |  |  |
+| 455 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380380 | 1.000 |  |  |
+| 456 | 96 | compilation | pending | ambiguous | crossref;consensus-mcp | crossref_only | 10.1093/jmammal/81.3.758 | 1.000 |  |  |
+| 457 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3798790 | 1.000 |  |  |
+| 458 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381278 | 0.839 |  |  |
+| 459 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2425674 | 1.000 |  |  |
+| 460 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04778.x | 0.798 |  |  |
+| 461 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04797.x | 0.888 |  |  |
+| 462 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb07502.x | 0.880 |  |  |
+| 463 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/cbo9781139871822.015 | 0.474 |  |  |
+| 464 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.3998/mpub.12948056 | 1.000 |  |  |
+| 465 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377049 | 1.000 |  |  |
+| 466 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423457 | 1.000 |  |  |
+| 467 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378481 | 0.872 |  |  |
+| 468 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.306.1 | 1.000 |  |  |
+| 469 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504185 | 1.000 |  |  |
+| 470 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4102/koedoe.v35i2.405 | 0.842 |  |  |
+| 471 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376964 | 1.000 |  |  |
+| 472 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.86-12 | 0.444 |  |  |
+| 473 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.22215/etd/1982-00721 | 0.589 |  |  |
+| 474 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb03771.x | 1.000 |  |  |
+| 475 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/00445096.1972.11447432 | 1.000 |  |  |
+| 476 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1850 | 1.000 |  |  |
+| 477 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926913.part-0035 | 0.518 |  |  |
+| 478 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377417 | 1.000 |  |  |
+| 479 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423241 | 1.000 |  |  |
+| 480 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2485243 | 1.000 |  |  |
+| 481 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377755 | 1.000 |  |  |
+| 482 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378780 | 1.000 |  |  |
+| 483 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378291 | 1.000 |  |  |
+| 484 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379669 | 1.000 |  |  |
+| 485 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379370 | 0.899 |  |  |
+| 486 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3669824 | 1.000 |  |  |
+| 487 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00299676 | 0.875 |  |  |
+| 488 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3671742 | 1.000 |  |  |
+| 489 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0300-9629(94)90023-x | 1.000 |  |  |
+| 490 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1098/rspb.1995.0034 | 1.000 |  |  |
+| 491 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1163/156853995x00676 | 1.000 |  |  |
+| 492 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.284 | 1.000 |  |  |
+| 493 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382316 | 1.000 |  |  |
+| 494 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.270 | 1.000 |  |  |
+| 495 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2193/2008-296 | 0.313 |  |  |
+| 496 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.70-10 | 0.878 |  |  |
+| 497 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1896/044.021.0101 | 0.450 |  |  |
+| 498 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504011 | 1.000 |  |  |
+| 499 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00569202 | 1.000 |  |  |
+| 500 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378114 | 1.000 |  |  |
+| 501 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378350 | 1.000 |  |  |
+| 502 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379651 | 0.992 |  |  |
+| 503 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.156678 | 0.521 |  |  |
+| 504 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05736.x | 1.000 |  |  |
+| 505 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.272 | 1.000 |  |  |
+| 506 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0003356100019036 | 1.000 |  |  |
+| 507 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378498 | 1.000 |  |  |
+| 508 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0016-6480(72)90079-2 | 0.924 |  |  |
+| 509 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374417 | 1.000 |  |  |
+| 510 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504294 | 1.000 |  |  |
+| 511 | 174 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1093/ww/9780199540884.013.11568 | 0.465 |  |  |
+| 512 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381691 | 1.000 |  |  |
+| 513 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1590/s1984-46702013000300001 | 0.532 |  |  |
+| 514 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380566 | 0.897 |  |  |
+| 515 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb08588.x | 1.000 |  |  |
+| 516 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb03457.x | 0.908 |  |  |
+| 517 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377057 | 1.000 |  |  |
+| 518 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1979.tb03960.x | 1.000 |  |  |
+| 519 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0022046900060450 | 0.403 |  |  |
+| 520 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374740 | 1.000 |  |  |
+| 521 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf02382575 | 0.485 |  |  |
+| 522 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.25225/fozo.v59.i1.a3.2010 | 0.472 |  |  |
+| 523 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/cwr9640123 | 1.000 |  |  |
+| 524 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380709 | 0.859 |  |  |
+| 525 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380516 | 0.942 |  |  |
+| 526 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1159/000155943 | 1.000 |  |  |
+| 527 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423130 | 0.798 |  |  |
+| 528 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05308.x | 1.000 |  |  |
+| 529 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z97-078 | 0.921 |  |  |
+| 530 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1377799 | 1.000 |  |  |
+| 531 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379133 | 1.000 |  |  |
+| 532 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504057 | 1.000 |  |  |
+| 533 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380522 | 1.000 |  |  |
+| 534 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381621 | 0.833 |  |  |
+| 535 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/s00265-002-0556-1 | 0.899 |  |  |
+| 536 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2388798 | 1.000 |  |  |
+| 537 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.356653 | 1.000 |  |  |
+| 538 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1578/am.35.4.2009.511 | 0.590 |  |  |
+| 539 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)652<0001:dp>2.0.co;2 | 1.000 |  |  |
+| 540 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.2.189 | 1.000 |  |  |
+| 541 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1006/anbe.1993.1116 | 1.000 |  |  |
+| 542 | 36 | measurement | certain | crossref_only | crossref | crossref_only | 10.1126/science.1067994 | 1.000 |  |  |
+| 543 | 779 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1201/b15200-2 | 0.609 |  |  |
+| 544 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1086/physzool.42.3.30155492 | 1.000 |  |  |
+| 545 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504065 | 1.000 |  |  |
+| 546 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503854 | 1.000 |  |  |
+| 547 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504130 | 1.000 |  |  |
+| 548 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504108 | 0.662 |  |  |
+| 550 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504188 | 1.000 |  |  |
+| 551 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504097 | 1.000 |  |  |
+| 552 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-7692.1998.tb00755.x | 1.000 |  |  |
+| 553 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503931 | 1.000 |  |  |
+| 554 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1017/s0030605303000619 | 0.540 |  |  |
+| 555 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.14430/arctic1754 | 0.826 |  |  |
+| 556 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1748-1090.1988.tb03198.x | 0.895 |  |  |
+| 557 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1515/mamm-1988-0302 | 1.000 |  |  |
+| 558 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503987 | 1.000 |  |  |
+| 559 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503943 | 1.000 |  |  |
+| 560 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/156854295x00393 | 1.000 |  |  |
+| 561 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.95-12 | 1.000 |  |  |
+| 562 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.99-1 | 1.000 |  |  |
+| 563 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2000)638<0001:po>2.0.co;2 | 1.000 |  |  |
+| 564 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1890/1051-0761(1998)008[1226:hpafau]2.0.co;2 | 1.000 |  |  |
+| 565 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1997.61.2.231 | 0.644 |  |  |
+| 566 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503981 | 1.000 |  |  |
+| 567 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504140 | 1.000 |  |  |
+| 568 | 7 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1382182 | 1.000 |  |  |
+| 569 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1993.57.4.507 | 0.833 |  |  |
+| 570 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380413 | 0.910 |  |  |
+| 571 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504131 | 1.000 |  |  |
+| 572 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504074 | 1.000 |  |  |
+| 573 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382203 | 0.886 |  |  |
+| 574 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504162 | 1.000 |  |  |
+| 575 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504288 | 1.000 |  |  |
+| 576 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504381 | 1.000 |  |  |
+| 577 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1966.tb02971.x | 0.679 |  |  |
+| 578 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-030-44029-9_77 | 0.669 |  |  |
+| 579 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb04951.x | 0.868 |  |  |
+| 580 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.1.59 | 0.848 |  |  |
+| 581 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0376-6357(85)90063-4 | 0.529 |  |  |
+| 582 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4612-9826-7_5 | 0.568 |  |  |
+| 583 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1177/1940082918788450 | 0.557 |  |  |
+| 584 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1959.tb05548.x | 1.000 |  |  |
+| 585 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378692 | 1.000 |  |  |
+| 586 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378916 | 1.000 |  |  |
+| 587 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3799435 | 1.000 |  |  |
+| 588 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503777 | 1.000 |  |  |
+| 589 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.76-36 | 0.324 |  |  |
+| 590 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3503902 | 0.662 |  |  |
+| 591 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.55.1 | 1.000 |  |  |
+| 592 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.106.1 | 1.000 |  |  |
+| 593 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504055 | 1.000 |  |  |
+| 594 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504012 | 1.000 |  |  |
+| 595 | 6 | compilation | not_found | below_threshold | crossref | crossref_only | 10.2307/1380777 | 0.456 |  |  |
+| 596 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4000/lhomme.2054 | 0.283 |  |  |
+| 597 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382000 | 1.000 |  |  |
+| 598 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0034-5687(90)90120-n | 1.000 |  |  |
+| 599 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1981.45.2.205 | 1.000 |  |  |
+| 600 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1590/1984-3143-ar2021-0087 | 0.394 |  |  |
+| 601 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb06052.x | 1.000 |  |  |
+| 602 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376984 | 0.935 |  |  |
+| 603 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1997.61.1.29 | 1.000 |  |  |
+| 604 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998009029 | 1.000 |  |  |
+| 605 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998009017 | 1.000 |  |  |
+| 606 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1980.11447682 | 1.000 |  |  |
+| 607 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7882/az.1997.013 | 0.534 |  |  |
+| 608 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000577 | 1.000 |  |  |
+| 609 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1098/rstb.1952.0009 | 0.823 |  |  |
+| 610 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1525/aa.1986.88.4.02a00600 | 0.436 |  |  |
+| 611 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.28.1 | 1.000 |  |  |
+| 612 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.44.1 | 1.000 |  |  |
+| 613 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1079/9781800625068.0008 | 0.426 |  |  |
+| 614 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1940583 | 1.000 |  |  |
+| 615 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1002/ajp.1350200106 | 0.519 |  |  |
+| 616 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2422322 | 1.000 |  |  |
+| 617 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379209 | 0.850 |  |  |
+| 618 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.3.838 | 1.000 |  |  |
+| 619 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504222 | 1.000 |  |  |
+| 620 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb05767.x | 1.000 |  |  |
+| 621 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/4307 | 0.941 |  |  |
+| 622 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1984.tb02372.x | 1.000 |  |  |
+| 623 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1984.tb02371.x | 1.000 |  |  |
+| 624 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00381.x | 1.000 |  |  |
+| 625 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03740.x | 1.000 |  |  |
+| 626 | 39 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3808883 | 1.000 |  |  |
+| 627 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198540670.003.0012 | 1.000 |  |  |
+| 628 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.95-7 | 1.000 |  |  |
+| 629 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05499.x | 1.000 |  |  |
+| 630 | 9 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1017/cbo9780511721830.005 | 1.000 |  |  |
+| 631 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9940115 | 0.790 |  |  |
+| 632 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9950687 | 0.889 |  |  |
+| 633 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423662 | 1.000 |  |  |
+| 634 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1382126 | 1.000 |  |  |
+| 635 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374620 | 1.000 |  |  |
+| 636 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378798 | 1.000 |  |  |
+| 637 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3668934 | 0.715 |  |  |
+| 638 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2424016 | 0.817 |  |  |
+| 639 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503914 | 1.000 |  |  |
+| 640 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3133/i2031 | 0.588 |  |  |
+| 641 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/4283 | 1.000 |  |  |
+| 642 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1097/01.brs.0000462809.93521.3e | 0.597 |  |  |
+| 643 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504285 | 1.000 |  |  |
+| 644 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.469.1 | 1.000 |  |  |
+| 645 | 13 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383165 | 0.865 |  |  |
+| 646 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375879 | 1.000 |  |  |
+| 647 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378809 | 1.000 |  |  |
+| 648 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422844 | 1.000 |  |  |
+| 649 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2423545 | 0.455 |  |  |
+| 650 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379215 | 1.000 |  |  |
+| 651 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504157 | 1.000 |  |  |
+| 652 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.3.746 | 0.800 |  |  |
+| 653 | 24 | compilation | not_found | below_threshold | crossref | crossref_only | 10.2307/2757143 | 0.294 |  |  |
+| 654 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/40025030 | 1.000 |  |  |
+| 655 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377251 | 1.000 |  |  |
+| 656 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1377424 | 1.000 |  |  |
+| 657 | 17 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/40021772 | 1.000 |  |  |
+| 658 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1962.tb05335.x | 1.000 |  |  |
+| 659 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1967.tb00774.x | 1.000 |  |  |
+| 660 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-94-011-7831-0 | 1.000 |  |  |
+| 661 | 27 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/bhl.part.14765 | 0.444 |  |  |
+| 662 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/jmammal/30.1.80 | 0.547 |  |  |
+| 663 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-1090.1972.tb02287.x | 1.000 |  |  |
+| 664 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376576 | 1.000 |  |  |
+| 665 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376787 | 1.000 |  |  |
+| 667 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375964 | 1.000 |  |  |
+| 668 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1645/ge-1717.1 | 0.671 |  |  |
+| 669 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504429 | 1.000 |  |  |
+| 670 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378064 | 1.000 |  |  |
+| 671 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-319-38953-0_9 | 0.564 |  |  |
+| 672 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/4708 | 0.484 |  |  |
+| 673 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380247 | 1.000 |  |  |
+| 674 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0006-3207(89)90094-3 | 1.000 |  |  |
+| 675 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04798.x | 1.000 |  |  |
+| 676 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.297 | 1.000 |  |  |
+| 677 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1964.tb03875.x | 1.000 |  |  |
+| 678 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1988.tb00082.x | 1.000 |  |  |
+| 679 | 115 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300009224 | 0.417 |  |  |
+| 680 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/bt9580220 | 0.518 |  |  |
+| 681 | 10 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.240.4855.1076-a | 0.309 |  |  |
+| 682 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04325.x | 1.000 |  |  |
+| 683 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380898 | 1.000 |  |  |
+| 684 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504054 | 1.000 |  |  |
+| 685 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504129 | 1.000 |  |  |
+| 686 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504115 | 1.000 |  |  |
+| 687 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)663<0001:na>2.0.co;2 | 1.000 |  |  |
+| 688 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)659<0001:pd>2.0.co;2 | 1.000 |  |  |
+| 689 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)657<0001:nm>2.0.co;2 | 1.000 |  |  |
+| 690 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1993.57.4.565 | 0.812 |  |  |
+| 691 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2388875 | 1.000 |  |  |
+| 692 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1989.tb00938.x | 1.000 |  |  |
+| 693 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374342 | 1.000 |  |  |
+| 694 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z54-019 | 1.000 |  |  |
+| 696 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5322/jesi.2014.23.12.2083 | 0.610 |  |  |
+| 697 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379573 | 0.869 |  |  |
+| 698 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3389/fvets.2021.640339 | 0.507 |  |  |
+| 699 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9690785 | 1.000 |  |  |
+| 700 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1001780408 | 1.000 |  |  |
+| 701 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.340088 | 1.000 |  |  |
+| 702 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381780 | 0.292 |  |  |
+| 703 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/036551666x00084 | 0.849 |  |  |
+| 704 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02737113 | 0.766 |  |  |
+| 705 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1590/s1984-46702013000400007 | 0.495 |  |  |
+| 706 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/0471221538.ch11 | 0.684 |  |  |
+| 707 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504163 | 1.000 |  |  |
+| 708 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381731 | 0.805 |  |  |
+| 709 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375426 | 1.000 |  |  |
+| 710 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02545.x | 0.798 |  |  |
+| 711 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0820401 | 1.000 |  |  |
+| 712 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-12-440280-5.50005-6 | 0.480 |  |  |
+| 713 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375011 | 1.000 |  |  |
+| 714 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504276 | 1.000 |  |  |
+| 715 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.2042-3306.1990.tb04247.x | 1.000 |  |  |
+| 716 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379546 | 0.421 |  |  |
+| 717 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926944.part-0025 | 0.504 |  |  |
+| 718 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.194.4268.933.a | 0.359 |  |  |
+| 719 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.214.4521.653 | 0.297 |  |  |
+| 720 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.56899/155.02.13 | 0.487 |  |  |
+| 721 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.19103/as.2022.0119.12 | 0.299 |  |  |
+| 722 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3853/j.0067-1975.51.1999.1303 | 0.628 |  |  |
+| 723 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2420349 | 0.888 |  |  |
+| 724 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2421007 | 1.000 |  |  |
+| 725 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375142 | 1.000 |  |  |
+| 726 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18475/cjos.v43i2.a1 | 0.450 |  |  |
+| 727 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1975.tb00882.x | 0.738 |  |  |
+| 728 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381177 | 0.921 |  |  |
+| 729 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380878 | 1.000 |  |  |
+| 730 | 556 | compilation | certain | crossref_only | crossref | crossref_only | 10.1038/365748a0 | 1.000 |  |  |
+| 731 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/03014223.1979.10428375 | 1.000 |  |  |
+| 732 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380841 | 1.000 |  |  |
+| 733 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504125 | 1.000 |  |  |
+| 734 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377976 | 1.000 |  |  |
+| 735 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.zpj.1137.1629 | 0.488 |  |  |
+| 736 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2305/odhg9675 | 0.521 |  |  |
+| 737 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377298 | 0.922 |  |  |
+| 738 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504322 | 1.000 |  |  |
+| 739 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00445096.1972.11447434 | 0.873 |  |  |
+| 740 | 13 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03570.x | 0.931 |  |  |
+| 741 | 27 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/5861 | 1.000 |  |  |
+| 742 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/28.2.181-a | 1.000 |  |  |
+| 743 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1376286 | 1.000 |  |  |
+| 744 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1942378 | 1.000 |  |  |
+| 745 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377679 | 1.000 |  |  |
+| 746 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377726 | 0.770 |  |  |
+| 747 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378249 | 1.000 |  |  |
+| 748 | 5 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3669537 | 0.819 |  |  |
+| 749 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378546 | 1.000 |  |  |
+| 750 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3670354 | 1.000 |  |  |
+| 751 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379634 | 1.000 |  |  |
+| 752 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.156526 | 1.000 |  |  |
+| 753 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381239 | 0.929 |  |  |
+| 754 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/jj.30297277.49 | 0.450 |  |  |
+| 755 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/jmammal/34.1.122-a | 0.676 |  |  |
+| 756 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1126/science.124.3220.485 | 1.000 |  |  |
+| 757 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb05130.x | 0.838 |  |  |
+| 758 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf02381483 | 0.636 |  |  |
+| 759 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18195/issn.0312-3162.27(1).2012.068-084 | 0.487 |  |  |
+| 760 | 3 | measurement | pending | ambiguous | crossref | crossref_only | 10.2982/0012-8317(1999)88[25:teotgf]2.0.co;2 | 0.762 |  |  |
+| 761 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1969.tb01711.x | 1.000 |  |  |
+| 762 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1986.50.2.243 | 1.000 |  |  |
+| 763 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.341860 | 1.000 |  |  |
+| 764 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1998.tb02907.x | 1.000 |  |  |
+| 765 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1983.tb05080.x | 1.000 |  |  |
+| 766 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb05667.x | 0.859 |  |  |
+| 767 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1096-3642.1939.tb00047.x | 1.000 |  |  |
+| 768 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504084 | 1.000 |  |  |
+| 769 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504095 | 1.000 |  |  |
+| 770 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04755.x | 0.905 |  |  |
+| 771 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381883 | 0.887 |  |  |
+| 772 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1960.tb05856.x | 1.000 |  |  |
+| 773 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1971.tb02177.x | 0.980 |  |  |
+| 774 | 2 | measurement | pending | grey_literature | crossref | crossref_only | 10.2992/0145-9058(2004)36[211:tpsoee]2.0.co;2 | 0.394 |  |  |
+| 775 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/jzo.12613 | 0.682 |  |  |
+| 776 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504394 | 1.000 |  |  |
+| 777 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504512 | 1.000 |  |  |
+| 778 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504189 | 1.000 |  |  |
+| 779 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.90-4 | 1.000 |  |  |
+| 780 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376247 | 1.000 |  |  |
+| 781 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381747 | 1.000 |  |  |
+| 782 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381424 | 1.000 |  |  |
+| 783 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382912 | 1.000 |  |  |
+| 784 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381444 | 1.000 |  |  |
+| 785 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb00002.x | 1.000 |  |  |
+| 786 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379975 | 1.000 |  |  |
+| 787 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381648 | 1.000 |  |  |
+| 788 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382197 | 1.000 |  |  |
+| 789 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3126/ejon.v26i2.73250 | 0.663 |  |  |
+| 791 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383248 | 1.000 |  |  |
+| 792 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1659/0276-4741(2001)021[0302:tphamd]2.0.co;2 | 0.675 |  |  |
+| 793 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2000)646<0001:tb>2.0.co;2 | 1.000 |  |  |
+| 794 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.00-2 | 1.000 |  |  |
+| 795 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1980.tb04251.x | 0.882 |  |  |
+| 796 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb03555.x | 1.000 |  |  |
+| 797 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03746.x | 1.000 |  |  |
+| 798 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/4989 | 0.775 |  |  |
+| 799 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb04881.x | 1.000 |  |  |
+| 800 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381875 | 1.000 |  |  |
+| 801 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb02777.x | 1.000 |  |  |
+| 802 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.5479/si.00810282.297 | 1.000 |  |  |
+| 803 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.2011.042 | 0.637 |  |  |
+| 804 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381264 | 0.802 |  |  |
+| 805 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2388574 | 1.000 |  |  |
+| 806 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1382127 | 0.567 |  |  |
+| 807 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382127 | 1.000 |  |  |
+| 808 | 17 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381631 | 1.000 |  |  |
+| 809 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381012 | 1.000 |  |  |
+| 810 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381677 | 1.000 |  |  |
+| 811 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3798435 | 1.000 |  |  |
+| 812 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-94-011-8030-6_6 | 0.811 |  |  |
+| 813 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5735/086.059.0111 | 0.352 |  |  |
+| 814 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_2 | 1.000 |  |  |
+| 815 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504026 | 1.000 |  |  |
+| 816 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3800396 | 1.000 |  |  |
+| 817 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1023/b:coge.0000031137.50239.d3 | 0.465 |  |  |
+| 818 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1970.34.1.81 | 0.599 |  |  |
+| 819 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374028 | 0.843 |  |  |
+| 820 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02484.x | 1.000 |  |  |
+| 821 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1046/j.1365-2656.2001.00471.x | 1.000 |  |  |
+| 822 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1995.tb00672.x | 0.848 |  |  |
+| 823 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.311780 | 0.894 |  |  |
+| 824 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.311676 | 1.000 |  |  |
+| 825 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.345399 | 1.000 |  |  |
+| 826 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03301210 | 0.503 |  |  |
+| 827 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503813 | 1.000 |  |  |
+| 828 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0030605300021384 | 1.000 |  |  |
+| 829 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.jnc.2022.126130 | 0.495 |  |  |
+| 830 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000796 | 1.000 |  |  |
+| 831 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2424034 | 0.910 |  |  |
+| 832 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381396 | 1.000 |  |  |
+| 833 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04824.x | 0.899 |  |  |
+| 834 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378859 | 1.000 |  |  |
+| 835 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379147 | 1.000 |  |  |
+| 836 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380859 | 1.000 |  |  |
+| 837 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381611 | 0.886 |  |  |
+| 838 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504437 | 1.000 |  |  |
+| 839 | 2 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/3669003 | 0.537 |  |  |
+| 840 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1377727 | 1.000 |  |  |
+| 841 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/jrf.0.0230493 | 0.432 |  |  |
+| 842 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1038/s41598-025-30435-1 | 0.547 |  |  |
+| 843 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1038/s41598-025-30435-1 | 0.548 |  |  |
+| 844 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/jj.33382240.6 | 0.530 |  |  |
+| 845 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb04990.x | 1.000 |  |  |
+| 846 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3957/056.040.0208 | 0.459 |  |  |
+| 847 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9940459 | 0.879 |  |  |
+| 848 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422691 | 1.000 |  |  |
+| 849 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423154 | 1.000 |  |  |
+| 850 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04300.x | 1.000 |  |  |
+| 851 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0003-3472(95)80107-3 | 0.824 |  |  |
+| 852 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1971.tb01302.x | 1.000 |  |  |
+| 853 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379008 | 1.000 |  |  |
+| 854 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04862.x | 1.000 |  |  |
+| 855 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1748-1090.1979.tb00561.x | 0.498 |  |  |
+| 856 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998008012 | 0.701 |  |  |
+| 857 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.63-22 | 0.481 |  |  |
+| 858 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.21275/sr21106202247 | 0.495 |  |  |
+| 859 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1523-1739.2000.tb00001.x | 0.434 |  |  |
+| 860 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9630219 | 0.756 |  |  |
+| 861 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1377908 | 1.000 |  |  |
+| 862 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.418048 | 0.670 |  |  |
+| 863 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9680049 | 0.969 |  |  |
+| 864 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378506 | 1.000 |  |  |
+| 865 | 6 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9750033 | 0.846 |  |  |
+| 866 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1975.39.1.113 | 1.000 |  |  |
+| 867 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.339919 | 1.000 |  |  |
+| 868 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379848 | 1.000 |  |  |
+| 869 | 60 | compilation | not_found | no_candidates | crossref | crossref_only |  |  |  |  |
+| 870 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377936 | 1.000 |  |  |
+| 871 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423744 | 1.000 |  |  |
+| 872 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378704 | 1.000 |  |  |
+| 873 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900009912 | 1.000 |  |  |
+| 874 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1071/wr9910547 | 1.000 |  |  |
+| 875 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373865 | 1.000 |  |  |
+| 876 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375228 | 1.000 |  |  |
+| 877 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.52084 | 1.000 |  |  |
+| 878 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376400 | 1.000 |  |  |
+| 879 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376939 | 1.000 |  |  |
+| 880 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377411 | 1.000 |  |  |
+| 881 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.part.17259 | 0.472 |  |  |
+| 882 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379165 | 0.887 |  |  |
+| 883 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1966.30.1.142 | 0.863 |  |  |
+| 884 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377168 | 1.000 |  |  |
+| 885 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.203281 | 0.708 |  |  |
+| 886 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-1090.1975.tb01345.x | 1.000 |  |  |
+| 887 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3278605 | 0.592 |  |  |
+| 888 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.203281 | 0.385 |  |  |
+| 889 | 194 | compilation | not_found | below_threshold | crossref | crossref_only | 10.5406/illinois/9780252038501.003.0003 | 0.428 |  |  |
+| 890 | 336 | compilation | not_found | below_threshold | crossref | crossref_only | 10.5406/illinois/9780252038501.003.0003 | 0.428 |  |  |
+| 891 | 2 | measurement | not_found | no_candidates | crossref | crossref_only |  |  |  |  |
+| 892 | 30 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf02091948 | 0.493 |  |  |
+| 893 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1980.tb04223.x | 1.000 |  |  |
+| 894 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504178 | 1.000 |  |  |
+| 895 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.7882/az.1989.006 | 1.000 |  |  |
+| 896 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383012 | 1.000 |  |  |
+| 897 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02655.x | 0.941 |  |  |
+| 898 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1046/j.1365-2818.1999.00605.x | 0.284 |  |  |
+| 899 | 217 | compilation | pending | ambiguous | crossref | crossref_only | 10.1007/0-306-48380-7_1395 | 0.719 |  |  |
+| 900 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2388040 | 0.958 |  |  |
+| 901 | 9 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2937245 | 0.795 |  |  |
+| 902 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380493 | 1.000 |  |  |
+| 903 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1983.47.2.183 | 1.000 |  |  |
+| 904 | 64 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1983.tb02091.x | 0.849 |  |  |
+| 905 | 189 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1093/jmammal/81.1.284 | 0.322 |  |  |
+| 906 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374048 | 1.000 |  |  |
+| 907 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503941 | 1.000 |  |  |
+| 908 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380715 | 1.000 |  |  |
+| 909 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381799 | 1.000 |  |  |
+| 910 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503779 | 1.000 |  |  |
+| 911 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/mspecies/274.1 | 1.000 |  |  |
+| 912 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3797774 | 1.000 |  |  |
+| 913 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1992.56.1.57 | 1.000 |  |  |
+| 914 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503776 | 1.000 |  |  |
+| 915 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2000)637<0001:sa>2.0.co;2 | 1.000 |  |  |
+| 916 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2425151 | 1.000 |  |  |
+| 917 | 19 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1525/9780520352377 | 0.433 |  |  |
+| 918 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374808 | 1.000 |  |  |
+| 919 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375792 | 1.000 |  |  |
+| 920 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3403 | 1.000 |  |  |
+| 921 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379082 | 0.899 |  |  |
+| 922 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1439-0310.1967.tb01228.x | 1.000 |  |  |
+| 923 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-12-816962-9.00017-x | 0.495 |  |  |
+| 924 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0010-406x(70)90658-4 | 1.000 |  |  |
+| 925 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb03996.x | 0.573 |  |  |
+| 926 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05461.x | 1.000 |  |  |
+| 927 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/5687 | 1.000 |  |  |
+| 928 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381622 | 1.000 |  |  |
+| 929 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1995.59.1.3 | 1.000 |  |  |
+| 930 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1988.52.1.57 | 1.000 |  |  |
+| 931 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1989.53.2.203 | 0.935 |  |  |
+| 932 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379016 | 0.831 |  |  |
+| 933 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1994.58.1.119 | 1.000 |  |  |
+| 934 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0006-3207(01)00051-9 | 1.000 |  |  |
+| 935 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504044 | 1.000 |  |  |
+| 936 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504141 | 1.000 |  |  |
+| 937 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.52060 | 1.000 |  |  |
+| 938 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503792 | 1.000 |  |  |
+| 939 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380920 | 1.000 |  |  |
+| 940 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1987.tb04481.x | 1.000 |  |  |
+| 941 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2388713 | 1.000 |  |  |
+| 943 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1006/anbe.1994.1207 | 1.000 |  |  |
+| 944 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05473.x | 1.000 |  |  |
+| 945 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504092 | 0.636 |  |  |
+| 946 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.345336 | 1.000 |  |  |
+| 947 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999005026 | 1.000 |  |  |
+| 948 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04313.x | 1.000 |  |  |
+| 949 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04396.x | 0.936 |  |  |
+| 950 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375979 | 1.000 |  |  |
+| 951 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377252 | 1.000 |  |  |
+| 952 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3796911 | 0.815 |  |  |
+| 953 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/an.1995.36.8.43.2 | 0.434 |  |  |
+| 954 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02382532 | 0.904 |  |  |
+| 955 | 158 | compilation | pending | ambiguous | crossref | crossref_only | 10.1890/0012-9658(2001)082[3531:tebolh]2.0.co;2 | 1.000 |  |  |
+| 956 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2411396 | 0.848 |  |  |
+| 957 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378913 | 0.873 |  |  |
+| 958 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/2421524 | 1.000 |  |  |
+| 959 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375277 | 1.000 |  |  |
+| 960 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1095/biolreprod33.3.596 | 0.566 |  |  |
+| 962 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504035 | 1.000 |  |  |
+| 963 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424208 | 1.000 |  |  |
+| 964 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0006-3207(94)90361-1 | 1.000 |  |  |
+| 965 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1995.tb00434.x | 1.000 |  |  |
+| 966 | 25 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02937.x | 0.861 |  |  |
+| 967 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1969.33.4.598 | 0.916 |  |  |
+| 968 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am85009 | 1.000 |  |  |
+| 969 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am87011 | 0.990 |  |  |
+| 970 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.3853/j.0067-1975.40.1988.159 | 1.000 |  |  |
+| 971 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.3853/j.0067-1975.41.1989.137 | 1.000 |  |  |
+| 972 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s11686-023-00706-w | 0.484 |  |  |
+| 973 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.3853/j.0067-1975.43.1991.44 | 1.000 |  |  |
+| 974 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.1.19 | 1.000 |  |  |
+| 975 | 25 | measurement | not_found | below_threshold | crossref | crossref_only | 10.25291/vr/1994-2-vr-232 | 0.367 |  |  |
+| 976 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1995.59.1.65 | 1.000 |  |  |
+| 977 | 117 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1086/419593 | 0.662 |  |  |
+| 978 | 33 | measurement | pending | weak_match | crossref | crossref_only | 10.5860/choice.33-2131 | 1.000 |  |  |
+| 979 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1935142 | 0.579 |  |  |
+| 980 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1126/science.171.3969.402 | 1.000 |  |  |
+| 981 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1935142 | 1.000 |  |  |
+| 982 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424718 | 1.000 |  |  |
+| 983 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1983.tb04277.x | 0.921 |  |  |
+| 984 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3809061 | 0.981 |  |  |
+| 985 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382132 | 1.000 |  |  |
+| 986 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.1365-3008.1999.00077.x | 1.000 |  |  |
+| 987 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-319-41674-8_7 | 0.552 |  |  |
+| 989 | 24 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1038/npg.els.0001567 | 0.434 |  |  |
+| 990 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.8113.15.2.22746-22748 | 0.472 |  |  |
+| 991 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3797645 | 1.000 |  |  |
+| 992 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1744-7429.2002.tb00556.x | 0.952 |  |  |
+| 993 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380592 | 1.000 |  |  |
+| 994 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381355 | 1.000 |  |  |
+| 995 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1973.37.2.288 | 0.901 |  |  |
+| 996 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.62015/np.1994.v2.196 | 0.299 |  |  |
+| 997 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.15447/sfews.2025v23iss3art3 | 0.290 |  |  |
+| 998 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378108 | 0.962 |  |  |
+| 999 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423087 | 1.000 |  |  |
+| 1000 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379173 | 1.000 |  |  |
+| 1001 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503855 | 1.000 |  |  |
+| 1002 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2424271 | 0.742 |  |  |
+| 1003 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379441 | 0.899 |  |  |
+| 1004 | 26 | measurement | pending | weak_match | crossref | crossref_only | 10.5860/choice.37-5102 | 1.000 |  |  |
+| 1005 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376828 | 1.000 |  |  |
+| 1006 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379913 | 0.892 |  |  |
+| 1007 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2388616 | 0.865 |  |  |
+| 1008 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-323-82852-9.00113-1 | 0.594 |  |  |
+| 1009 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380977 | 1.000 |  |  |
+| 1010 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z89-408 | 1.000 |  |  |
+| 1011 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1439-0310.1956.tb01681.x | 0.477 |  |  |
+| 1012 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382059 | 1.000 |  |  |
+| 1013 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503876 | 1.000 |  |  |
+| 1014 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503965 | 1.000 |  |  |
+| 1015 | 100 | compilation | pending | weak_match | crossref | crossref_only | 10.1007/0-306-48380-7_1395 | 0.719 |  |  |
+| 1016 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1940312 | 1.000 |  |  |
+| 1017 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4419-8770-9_16 | 0.506 |  |  |
+| 1018 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3798626 | 1.000 |  |  |
+| 1019 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377576 | 1.000 |  |  |
+| 1020 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1942251 | 1.000 |  |  |
+| 1021 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503870 | 1.000 |  |  |
+| 1022 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.94.2450.565.c | 0.352 |  |  |
+| 1023 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504072 | 1.000 |  |  |
+| 1024 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503988 | 1.000 |  |  |
+| 1025 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.142959 | 0.796 |  |  |
+| 1026 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18805/ijare.v0iof.11006 | 0.492 |  |  |
+| 1027 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.14430/arctic3191 | 1.000 |  |  |
+| 1028 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z75-100 | 0.834 |  |  |
+| 1029 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z77-056 | 1.000 |  |  |
+| 1030 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1982.tb03512.x | 0.538 |  |  |
+| 1031 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/jrf.0.0710119 | 0.618 |  |  |
+| 1032 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02684.x | 0.787 |  |  |
+| 1033 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.79-34 | 0.835 |  |  |
+| 1034 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.2008.00425.x | 0.491 |  |  |
+| 1035 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05281.x | 1.000 |  |  |
+| 1036 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/26660644-03601003 | 0.706 |  |  |
+| 1037 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1163/26660644-03601003 | 1.000 |  |  |
+| 1038 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02740195 | 0.807 |  |  |
+| 1039 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1994.58.1.111 | 1.000 |  |  |
+| 1040 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504296 | 1.000 |  |  |
+| 1041 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504237 | 1.000 |  |  |
+| 1042 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504118 | 1.000 |  |  |
+| 1043 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504301 | 1.000 |  |  |
+| 1044 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1997.61.1.3 | 1.000 |  |  |
+| 1045 | 18 | measurement | pending | grey_literature | crossref | crossref_only | 10.1017/s1367943003003196 | 0.446 |  |  |
+| 1046 | 23 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb04845.x | 1.000 |  |  |
+| 1047 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900007135 | 1.000 |  |  |
+| 1048 | 60 | measurement | pending | weak_match | crossref | crossref_only | 10.5040/9781472991652.0005 | 0.934 |  |  |
+| 1049 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504323 | 1.000 |  |  |
+| 1050 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.31390/opmns.038 | 0.898 |  |  |
+| 1051 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am95071 | 1.000 |  |  |
+| 1052 | 26 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02856.x | 1.000 |  |  |
+| 1053 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.0962-1083.2001.01338.x | 1.000 |  |  |
+| 1054 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381375 | 1.000 |  |  |
+| 1055 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504290 | 1.000 |  |  |
+| 1056 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3809513 | 1.000 |  |  |
+| 1057 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379045 | 0.826 |  |  |
+| 1058 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377954 | 1.000 |  |  |
+| 1059 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/18.1.97 | 1.000 |  |  |
+| 1060 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000851 | 1.000 |  |  |
+| 1061 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381381 | 1.000 |  |  |
+| 1062 | 4 | compilation | pending | weak_match | crossref | crossref_only | 10.2307/5148 | 1.000 |  |  |
+| 1063 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1382654 | 1.000 |  |  |
+| 1064 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.66-11 | 1.000 |  |  |
+| 1065 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999001119 | 0.861 |  |  |
+| 1066 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04390.x | 1.000 |  |  |
+| 1067 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05944.x | 1.000 |  |  |
+| 1068 | 6 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300011339 | 0.591 |  |  |
+| 1069 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-94-011-8030-6_1 | 1.000 |  |  |
+| 1070 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9860199 | 0.882 |  |  |
+| 1071 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9870433 | 1.000 |  |  |
+| 1072 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/am89012 | 0.479 |  |  |
+| 1073 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9930141 | 1.000 |  |  |
+| 1074 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo99024 | 0.875 |  |  |
+| 1075 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377935 | 1.000 |  |  |
+| 1076 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1972.36.4.543 | 0.937 |  |  |
+| 1077 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.5040/9781472926937.0249 | 0.411 |  |  |
+| 1078 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1979.43.3.275 | 0.908 |  |  |
+| 1079 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/156853999501829 | 0.482 |  |  |
+| 1080 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb04916.x | 0.884 |  |  |
+| 1081 | 15 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1988.tb00083.x | 1.000 |  |  |
+| 1082 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04293.x | 1.000 |  |  |
+| 1083 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.5962/bhl.part.79726 | 1.000 |  |  |
+| 1084 | 2 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1016/0300-9629(90)90177-t | 1.000 |  |  |
+| 1085 | 5 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1016/0300-9629(93)90324-w | 1.000 |  |  |
+| 1086 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1996.tb05287.x | 1.000 |  |  |
+| 1087 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.156500 | 1.000 |  |  |
+| 1088 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503960 | 1.000 |  |  |
+| 1089 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.330602 | 0.719 |  |  |
+| 1090 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781978734135.ch9 | 0.396 |  |  |
+| 1091 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1982.46.3.375 | 0.812 |  |  |
+| 1092 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/mspecies/261.1 | 1.000 |  |  |
+| 1093 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.361523 | 0.436 |  |  |
+| 1094 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504159 | 1.000 |  |  |
+| 1095 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s11686-023-00706-w | 0.369 |  |  |
+| 1096 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.25225/fozo.v60.i1.a4.2011 | 0.523 |  |  |
+| 1097 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1986.50.1.35 | 0.466 |  |  |
+| 1098 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381202 | 1.000 |  |  |
+| 1099 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1948433 | 0.404 |  |  |
+| 1100 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377237 | 0.855 |  |  |
+| 1101 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381669 | 0.945 |  |  |
+| 1102 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381904 | 1.000 |  |  |
+| 1103 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3546501 | 1.000 |  |  |
+| 1104 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504193 | 1.000 |  |  |
+| 1105 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504298 | 1.000 |  |  |
+| 1106 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2174/9781608054855113010012 | 0.488 |  |  |
+| 1108 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381843 | 1.000 |  |  |
+| 1109 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04753.x | 1.000 |  |  |
+| 1110 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383263 | 1.000 |  |  |
+| 1111 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.47603/mano.v7n1.192 | 0.505 |  |  |
+| 1112 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1525/aa.1986.88.4.02a00600 | 0.459 |  |  |
+| 1113 | 213 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02932.x | 0.435 |  |  |
+| 1114 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381090 | 0.849 |  |  |
+| 1115 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381350 | 1.000 |  |  |
+| 1116 | 10 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380789 | 0.867 |  |  |
+| 1117 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/1383258 | 0.515 |  |  |
+| 1118 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1939.tb03358.x | 0.535 |  |  |
+| 1119 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1096-3642.1957.tb00269.x | 1.000 |  |  |
+| 1120 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1958.tb00694.x | 0.527 |  |  |
+| 1121 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1979.tb03985.x | 1.000 |  |  |
+| 1122 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378536 | 1.000 |  |  |
+| 1123 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423681 | 1.000 |  |  |
+| 1124 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374805 | 0.886 |  |  |
+| 1125 | 10 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/ajp.1350150109 | 0.311 |  |  |
+| 1126 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1985.tb02556.x | 0.851 |  |  |
+| 1127 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02501.x | 0.739 |  |  |
+| 1128 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1383071 | 1.000 |  |  |
+| 1129 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf03193570 | 0.787 |  |  |
+| 1130 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381527 | 1.000 |  |  |
+| 1131 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.2000.64.3.271 | 1.000 |  |  |
+| 1132 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm-1996-0316 | 1.000 |  |  |
+| 1133 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00306525.2000.9639941 | 0.514 |  |  |
+| 1134 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376068 | 1.000 |  |  |
+| 1135 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382852 | 1.000 |  |  |
+| 1136 | 2 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/bhl.title.2251 | 0.611 |  |  |
+| 1137 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377822 | 1.000 |  |  |
+| 1138 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf03051808 | 1.000 |  |  |
+| 1139 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/bchm3.1988.369.1.47 | 0.575 |  |  |
+| 1140 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.21013/jas.v3.n2.p1 | 0.541 |  |  |
+| 1141 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s43388-024-00182-4 | 0.519 |  |  |
+| 1142 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/s0376-6357(98)00032-1 | 0.786 |  |  |
+| 1143 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.413594 | 0.447 |  |  |
+| 1144 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.413594 | 0.429 |  |  |
+| 1145 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.413594 | 0.447 |  |  |
+| 1146 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1991.55.2.275 | 0.508 |  |  |
+| 1147 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03186294 | 0.485 |  |  |
+| 1148 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/cbo9780511541872.007 | 0.496 |  |  |
+| 1149 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03186398 | 0.453 |  |  |
+| 1150 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/j.ctv2ks6tbb.265 | 0.463 |  |  |
+| 1151 | 1 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1002/fedr.4911001106 | 0.276 |  |  |
+| 1152 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/am24048 | 0.372 |  |  |
+| 1153 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02643.x | 1.000 |  |  |
+| 1154 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1980.tb04250.x | 1.000 |  |  |
+| 1155 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1980.tb01478.x | 0.826 |  |  |
+| 1156 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/jj.30297277.36 | 0.752 |  |  |
+| 1157 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb03749.x | 1.000 |  |  |
+| 1158 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04857.x | 0.867 |  |  |
+| 1159 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.83-27 | 1.000 |  |  |
+| 1160 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377896 | 1.000 |  |  |
+| 1161 | 6 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.347039 | 0.441 |  |  |
+| 1162 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2388101 | 0.848 |  |  |
+| 1163 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381001 | 1.000 |  |  |
+| 1164 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2139/ssrn.3007088 | 0.517 |  |  |
+| 1165 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1520/jfs10927j | 0.396 |  |  |
+| 1166 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380943 | 1.000 |  |  |
+| 1167 | 18 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00168642 | 1.000 |  |  |
+| 1168 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504009 | 1.000 |  |  |
+| 1169 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998009947 | 1.000 |  |  |
+| 1170 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380058 | 1.000 |  |  |
+| 1171 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380059 | 1.000 |  |  |
+| 1172 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1380058 | 0.583 |  |  |
+| 1173 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/oso/9780195154726.003.0016 | 0.516 |  |  |
+| 1174 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.312886 | 0.464 |  |  |
+| 1175 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.26749/qpno1695 | 0.428 |  |  |
+| 1176 | 2 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/1383223 | 0.486 |  |  |
+| 1177 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.53005/20767390_2005_1_341 | 0.486 |  |  |
+| 1178 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503856 | 1.000 |  |  |
+| 1179 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1987.tb00752.x | 0.488 |  |  |
+| 1180 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04399.x | 1.000 |  |  |
+| 1181 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378008 | 0.823 |  |  |
+| 1182 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3503895 | 1.000 |  |  |
+| 1183 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2407518 | 0.552 |  |  |
+| 1184 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1976.tb00162.x | 1.000 |  |  |
+| 1185 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381732 | 1.000 |  |  |
+| 1186 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am88017 | 0.827 |  |  |
+| 1187 | 1 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300034621 | 0.273 |  |  |
+| 1188 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422956 | 1.000 |  |  |
+| 1189 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb05146.x | 1.000 |  |  |
+| 1191 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374134 | 1.000 |  |  |
+| 1192 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422068 | 1.000 |  |  |
+| 1193 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1963.27.4.497 | 0.485 |  |  |
+| 1194 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3800721 | 0.649 |  |  |
+| 1195 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503852 | 1.000 |  |  |
+| 1196 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503966 | 1.000 |  |  |
+| 1197 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503818 | 1.000 |  |  |
+| 1198 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926951.part-0076 | 0.368 |  |  |
+| 1199 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503962 | 1.000 |  |  |
+| 1200 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381649 | 1.000 |  |  |
+| 1201 | 6 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb05365.x | 0.884 |  |  |
+| 1202 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000052713 | 0.935 |  |  |
+| 1203 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1896/052.023.0106 | 0.489 |  |  |
+| 1204 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1159/000021729 | 1.000 |  |  |
+| 1205 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836902000444 | 1.000 |  |  |
+| 1206 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381031 | 1.000 |  |  |
+| 1207 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf01338568 | 0.667 |  |  |
+| 1208 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0006-3207(91)90046-c | 0.518 |  |  |
+| 1209 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382177 | 0.907 |  |  |
+| 1210 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376354 | 1.000 |  |  |
+| 1211 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382177 | 1.000 |  |  |
+| 1212 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1380749 | 1.000 |  |  |
+| 1213 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1038/181649b0 | 1.000 |  |  |
+| 1214 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374115 | 1.000 |  |  |
+| 1215 | 33 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.104.2708.494.a | 0.471 |  |  |
+| 1216 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2737/feis-species-review-myso | 0.561 |  |  |
+| 1217 | 26 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1380295 | 0.352 |  |  |
+| 1218 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9830467 | 1.000 |  |  |
+| 1219 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0003-9969(72)90027-1 | 0.553 |  |  |
+| 1220 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382146 | 1.000 |  |  |
+| 1221 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/9780691234618-009 | 0.390 |  |  |
+| 1222 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1029/ft175p0007 | 0.553 |  |  |
+| 1223 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382318 | 1.000 |  |  |
+| 1224 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3503954 | 1.000 |  |  |
+| 1225 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00445096.1971.11447415 | 0.883 |  |  |
+| 1226 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503954 | 1.000 |  |  |
+| 1227 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1515/mamm.1988.52.2.225 | 1.000 |  |  |
+| 1228 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1380572 | 1.000 |  |  |
+| 1229 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373834 | 1.000 |  |  |
+| 1230 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1086/280735 | 1.000 |  |  |
+| 1231 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374610 | 1.000 |  |  |
+| 1232 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374254 | 0.812 |  |  |
+| 1233 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/bhl.title.12370 | 0.302 |  |  |
+| 1234 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374950 | 1.000 |  |  |
+| 1235 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2421466 | 1.000 |  |  |
+| 1236 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376912 | 1.000 |  |  |
+| 1237 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3795553 | 1.000 |  |  |
+| 1238 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/an.1995.36.9.13.2 | 0.443 |  |  |
+| 1239 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9960755 | 1.000 |  |  |
+| 1240 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm-1992-0207 | 1.000 |  |  |
+| 1241 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383255 | 1.000 |  |  |
+| 1243 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377406 | 1.000 |  |  |
+| 1244 | 11 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1965.tb05224.x | 1.000 |  |  |
+| 1245 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377490 | 1.000 |  |  |
+| 1246 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1932058 | 1.000 |  |  |
+| 1247 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424430 | 0.977 |  |  |
+| 1248 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.123721 | 0.341 |  |  |
+| 1249 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.3.798 | 1.000 |  |  |
+| 1250 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.69-11 | 1.000 |  |  |
+| 1251 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1469-7998.1967.tb02114.x | 0.874 |  |  |
+| 1252 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00222936700770281 | 0.696 |  |  |
+| 1253 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1968.32.1.44 | 0.874 |  |  |
+| 1254 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2028.1988.tb00970.x | 0.595 |  |  |
+| 1255 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-94-010-1944-6_13 | 0.605 |  |  |
+| 1256 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.3406/revec.1977.4974 | 1.000 |  |  |
+| 1257 | 31 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02400.x | 0.908 |  |  |
+| 1258 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0850133 | 0.947 |  |  |
+| 1259 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb03460.x | 1.000 |  |  |
+| 1260 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03648.x | 0.791 |  |  |
+| 1261 | 29 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.45264 | 0.878 |  |  |
+| 1262 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04395.x | 0.857 |  |  |
+| 1263 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3668963 | 1.000 |  |  |
+| 1264 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382083 | 1.000 |  |  |
+| 1265 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.81-46 | 1.000 |  |  |
+| 1266 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382443 | 1.000 |  |  |
+| 1267 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1038/143643a0 | 1.000 |  |  |
+| 1268 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1955.tb00609.x | 1.000 |  |  |
+| 1269 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376743 | 1.000 |  |  |
+| 1270 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.6708.14.5.21117-21121 | 0.543 |  |  |
+| 1271 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1969.tb00724.x | 0.512 |  |  |
+| 1272 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1937.tb00339.x | 0.685 |  |  |
+| 1273 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504238 | 1.000 |  |  |
+| 1274 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.61092/iaea.w6bj-zpvf | 0.294 |  |  |
+| 1275 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504000 | 1.000 |  |  |
+| 1276 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.93-26 | 1.000 |  |  |
+| 1277 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb02750.x | 1.000 |  |  |
+| 1278 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377624 | 1.000 |  |  |
+| 1279 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/2424406 | 1.000 |  |  |
+| 1280 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3106/mammalstudy.26.35 | 0.630 |  |  |
+| 1281 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375454 | 1.000 |  |  |
+| 1282 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z75-092 | 0.865 |  |  |
+| 1283 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1379327 | 1.000 |  |  |
+| 1284 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374634 | 1.000 |  |  |
+| 1285 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374833 | 1.000 |  |  |
+| 1286 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0010-406x(67)90764-5 | 0.608 |  |  |
+| 1287 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376193 | 1.000 |  |  |
+| 1288 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-94-010-1944-6_13 | 0.605 |  |  |
+| 1289 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1379334 | 1.000 |  |  |
+| 1290 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.149073 | 0.305 |  |  |
+| 1291 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1095/biolreprod66.3.610 | 0.935 |  |  |
+| 1293 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377682 | 1.000 |  |  |
+| 1294 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504149 | 1.000 |  |  |
+| 1295 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382978 | 1.000 |  |  |
+| 1296 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504107 | 1.000 |  |  |
+| 1297 | 1961 | compilation | pending | ambiguous | crossref | crossref_only | 10.7591/9781501734960 | 1.000 |  |  |
+| 1298 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377047 | 1.000 |  |  |
+| 1299 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0378-4320(96)01531-x | 0.495 |  |  |
+| 1300 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/zoo.1430060102 | 1.000 |  |  |
+| 1301 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/zoo.1430070402 | 1.000 |  |  |
+| 1302 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504143 | 1.000 |  |  |
+| 1303 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504220 | 1.000 |  |  |
+| 1304 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504173 | 1.000 |  |  |
+| 1305 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377861 | 1.000 |  |  |
+| 1306 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381575 | 1.000 |  |  |
+| 1307 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02396.x | 0.916 |  |  |
+| 1308 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0850363 | 1.000 |  |  |
+| 1309 | 14 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb04999.x | 1.000 |  |  |
+| 1310 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1590/s1519-69842010000500013 | 0.462 |  |  |
+| 1311 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0960765 | 1.000 |  |  |
+| 1312 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382380 | 1.000 |  |  |
+| 1313 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382282 | 1.000 |  |  |
+| 1314 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198549451.003.0010 | 1.000 |  |  |
+| 1315 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.32800/abc.2016.39.0241 | 0.292 |  |  |
+| 1316 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380809 | 1.000 |  |  |
+| 1317 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/jrf.0.0450469 | 0.594 |  |  |
+| 1318 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/jrf.0.0450469 | 0.621 |  |  |
+| 1319 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379470 | 1.000 |  |  |
+| 1320 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4419-0293-1_2 | 0.309 |  |  |
+| 1321 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s003224740001576x | 0.305 |  |  |
+| 1322 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1744-7429.2000.tb00480.x | 0.941 |  |  |
+| 1323 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504229 | 1.000 |  |  |
+| 1324 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3503910 | 0.662 |  |  |
+| 1325 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380932 | 1.000 |  |  |
+| 1326 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3671837 | 1.000 |  |  |
+| 1327 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04610.x | 1.000 |  |  |
+| 1328 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380498 | 1.000 |  |  |
+| 1329 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1086/407485 | 0.500 |  |  |
+| 1330 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.3259 | 0.833 |  |  |
+| 1331 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4102/koedoe.v21i1.965 | 0.856 |  |  |
+| 1332 | 15 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381789 | 1.000 |  |  |
+| 1333 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382748 | 1.000 |  |  |
+| 1334 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1242/jeb.160.1.25 | 1.000 |  |  |
+| 1337 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382068 | 1.000 |  |  |
+| 1338 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1984.48.4.505 | 1.000 |  |  |
+| 1339 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/oso/9780198575726.003.0009 | 0.436 |  |  |
+| 1340 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900005094 | 1.000 |  |  |
+| 1341 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/c2013-0-06302-5 | 0.452 |  |  |
+| 1342 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/15.3.244 | 0.796 |  |  |
+| 1343 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1961.tb05897.x | 1.000 |  |  |
+| 1344 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3503984 | 1.000 |  |  |
+| 1345 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380747 | 1.000 |  |  |
+| 1346 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.3.401 | 1.000 |  |  |
+| 1347 | 38 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1998.tb00119.x | 1.000 |  |  |
+| 1348 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.28920/dhm50.1.24-27 | 0.310 |  |  |
+| 1349 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504292 | 1.000 |  |  |
+| 1350 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03731.x | 1.000 |  |  |
+| 1351 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1382029 | 1.000 |  |  |
+| 1352 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504235 | 1.000 |  |  |
+| 1353 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379726 | 0.795 |  |  |
+| 1354 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380757 | 0.919 |  |  |
+| 1355 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1982.tb00338.x | 0.910 |  |  |
+| 1356 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503983 | 1.000 |  |  |
+| 1357 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423067 | 1.000 |  |  |
+| 1358 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503851 | 1.000 |  |  |
+| 1359 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381679 | 1.000 |  |  |
+| 1360 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376232 | 1.000 |  |  |
+| 1361 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836902000328 | 1.000 |  |  |
+| 1362 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380640 | 1.000 |  |  |
+| 1363 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3798396 | 1.000 |  |  |
+| 1364 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380192 | 0.874 |  |  |
+| 1365 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900000133 | 1.000 |  |  |
+| 1366 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382114 | 1.000 |  |  |
+| 1367 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503897 | 1.000 |  |  |
+| 1369 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381194 | 0.771 |  |  |
+| 1370 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504202 | 1.000 |  |  |
+| 1371 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382650 | 1.000 |  |  |
+| 1372 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383096 | 1.000 |  |  |
+| 1373 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383224 | 0.775 |  |  |
+| 1374 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2001)082<0917:btgsau>2.0.co;2 | 1.000 |  |  |
+| 1375 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1965.tb02008.x | 1.000 |  |  |
+| 1376 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.47886/9781934874462.ch22 | 0.341 |  |  |
+| 1377 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926944.part-0034 | 0.469 |  |  |
+| 1378 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2478/s11686-007-0021-4 | 0.588 |  |  |
+| 1379 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504214 | 1.000 |  |  |
+| 1380 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)672<0001:gk>2.0.co;2 | 1.000 |  |  |
+| 1381 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373529 | 1.000 |  |  |
+| 1382 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378210 | 1.000 |  |  |
+| 1383 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3800217 | 0.669 |  |  |
+| 1384 | 28 | measurement | certain | crossref_only | crossref | crossref_only | 10.1098/rspb.1997.0055 | 1.000 |  |  |
+| 1385 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/s003600050049 | 1.000 |  |  |
+| 1386 | 18 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/s002650050529 | 1.000 |  |  |
+| 1388 | 50 | measurement | pending | ambiguous | crossref | crossref_only | 10.1007/s002650100389 | 1.000 |  |  |
+| 1389 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382236 | 1.000 |  |  |
+| 1390 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am89002 | 1.000 |  |  |
+| 1391 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3996/nafa.48.0001 | 0.602 |  |  |
+| 1392 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376031 | 1.000 |  |  |
+| 1393 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1984.tb00677.x | 1.000 |  |  |
+| 1394 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/31.4.454 | 0.729 |  |  |
+| 1395 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/33.3.388-a | 1.000 |  |  |
+| 1396 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504181 | 1.000 |  |  |
+| 1397 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00445096.1970.11447395 | 0.814 |  |  |
+| 1398 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00445096.1970.11447394 | 0.886 |  |  |
+| 1399 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00445096.1972.11447454 | 0.914 |  |  |
+| 1400 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1975.39.1.57 | 1.000 |  |  |
+| 1401 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0300-9629(73)90009-1 | 1.000 |  |  |
+| 1402 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379547 | 0.913 |  |  |
+| 1403 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503920 | 1.000 |  |  |
+| 1404 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2028.1986.tb00350.x | 0.406 |  |  |
+| 1405 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/6.3.196-a | 0.821 |  |  |
+| 1406 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1242/jeb.157.1.183 | 0.480 |  |  |
+| 1407 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02607.x | 1.000 |  |  |
+| 1408 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.19087/jveteriner.2021.22.4.562 | 0.453 |  |  |
+| 1409 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02705.x | 0.873 |  |  |
+| 1410 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb04494.x | 1.000 |  |  |
+| 1411 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0006-3207(00)00006-9 | 0.495 |  |  |
+| 1412 | 66 | compilation | pending | ambiguous | crossref | crossref_only | 10.1071/pc99240a | 0.799 |  |  |
+| 1413 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379364 | 0.853 |  |  |
+| 1414 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379724 | 1.000 |  |  |
+| 1415 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379332 | 1.000 |  |  |
+| 1416 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379332 | 0.667 |  |  |
+| 1417 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381344 | 1.000 |  |  |
+| 1418 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3809270 | 0.327 |  |  |
+| 1419 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376118 | 1.000 |  |  |
+| 1420 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381550 | 1.000 |  |  |
+| 1421 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503928 | 1.000 |  |  |
+| 1422 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504040 | 1.000 |  |  |
+| 1423 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503790 | 1.000 |  |  |
+| 1424 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504027 | 1.000 |  |  |
+| 1425 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm-1992-0217 | 0.767 |  |  |
+| 1426 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/9789004626652 | 1.000 |  |  |
+| 1427 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/0.44.1 | 0.459 |  |  |
+| 1428 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1983.47.2.221 | 0.813 |  |  |
+| 1429 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00386.x | 1.000 |  |  |
+| 1430 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1986.50.4.521 | 0.798 |  |  |
+| 1432 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381694 | 1.000 |  |  |
+| 1433 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1961.25.1.117 | 0.533 |  |  |
+| 1434 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0016-6480(88)90028-7 | 0.933 |  |  |
+| 1435 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381317 | 1.000 |  |  |
+| 1436 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1601-5223.1969.tb02244.x | 0.531 |  |  |
+| 1437 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4615-6436-2_10 | 0.529 |  |  |
+| 1438 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.25225/fozo.v66.i3.a1.2017 | 0.495 |  |  |
+| 1439 | 51 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.3504 | 0.680 |  |  |
+| 1440 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3534625 | 1.000 |  |  |
+| 1441 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1931254 | 0.847 |  |  |
+| 1442 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1931797 | 1.000 |  |  |
+| 1443 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1293521 | 0.775 |  |  |
+| 1444 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381602 | 1.000 |  |  |
+| 1445 | 38 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.140345 | 0.324 |  |  |
+| 1446 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503830 | 1.000 |  |  |
+| 1447 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.91-22 | 1.000 |  |  |
+| 1448 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504231 | 1.000 |  |  |
+| 1449 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381671 | 1.000 |  |  |
+| 1450 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1382721 | 0.640 |  |  |
+| 1451 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mammalia-2013-0140 | 0.554 |  |  |
+| 1452 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf02381149 | 1.000 |  |  |
+| 1453 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382721 | 1.000 |  |  |
+| 1454 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_19 | 1.000 |  |  |
+| 1455 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.22237/elephant/1521731732 | 0.392 |  |  |
+| 1456 | 23 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2305/qwvh2717 | 0.496 |  |  |
+| 1457 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.5962/p.343551 | 1.000 |  |  |
+| 1458 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0140-1963(18)30927-3 | 1.000 |  |  |
+| 1459 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504043 | 1.000 |  |  |
+| 1460 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.mambio.2007.08.006 | 0.585 |  |  |
+| 1461 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3897/phytokeys.19.4098 | 0.510 |  |  |
+| 1462 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504168 | 1.000 |  |  |
+| 1463 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999003040 | 1.000 |  |  |
+| 1464 | 4 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900008013 | 1.000 |  |  |
+| 1465 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0006-3207(99)00135-4 | 1.000 |  |  |
+| 1466 | 11 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000012 | 1.000 |  |  |
+| 1467 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836902000304 | 1.000 |  |  |
+| 1468 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900007159 | 1.000 |  |  |
+| 1469 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4102/koedoe.v21i1.965 | 0.524 |  |  |
+| 1470 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2028.1997.101-89101.x | 0.534 |  |  |
+| 1471 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382867 | 0.920 |  |  |
+| 1472 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1970.34.3.415 | 1.000 |  |  |
+| 1473 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380529 | 1.000 |  |  |
+| 1474 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375943 | 1.000 |  |  |
+| 1475 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375675 | 1.000 |  |  |
+| 1476 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380202 | 0.993 |  |  |
+| 1477 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1991.55.2.169 | 0.884 |  |  |
+| 1478 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1971.tb04544.x | 1.000 |  |  |
+| 1479 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1973.tb07512.x | 0.785 |  |  |
+| 1480 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1365-2028.1974.tb01034.x | 1.000 |  |  |
+| 1481 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/p.228589 | 0.378 |  |  |
+| 1482 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503787 | 1.000 |  |  |
+| 1483 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.58837/tnh.12.1.102995 | 0.531 |  |  |
+| 1484 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503911 | 1.000 |  |  |
+| 1485 | 4 | measurement | pending | grey_literature | crossref | crossref_only | 10.5962/p.13276 | 0.517 |  |  |
+| 1486 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)682<0001:pt>2.0.co;2 | 1.000 |  |  |
+| 1487 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1382676 | 0.596 |  |  |
+| 1488 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.22456/1679-9216.123280 | 0.436 |  |  |
+| 1489 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02574835 | 0.861 |  |  |
+| 1490 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381772 | 1.000 |  |  |
+| 1491 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.90-18 | 1.000 |  |  |
+| 1492 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382070 | 1.000 |  |  |
+| 1493 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.69649/pachyderm.v37i1.1198 | 0.602 |  |  |
+| 1494 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378038 | 1.000 |  |  |
+| 1495 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503915 | 1.000 |  |  |
+| 1496 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381607 | 1.000 |  |  |
+| 1497 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381665 | 1.000 |  |  |
+| 1498 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02487.x | 1.000 |  |  |
+| 1499 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb03831.x | 1.000 |  |  |
+| 1500 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04328.x | 1.000 |  |  |
+| 1501 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.26749/usxd2161 | 0.440 |  |  |
+| 1502 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9940553 | 1.000 |  |  |
+| 1503 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376305 | 1.000 |  |  |
+| 1504 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0810205 | 0.942 |  |  |
+| 1505 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am88010 | 0.918 |  |  |
+| 1506 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9900065 | 0.883 |  |  |
+| 1507 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1038/156365b0 | 1.000 |  |  |
+| 1508 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375339 | 1.000 |  |  |
+| 1509 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378165 | 1.000 |  |  |
+| 1510 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1972.tb03118.x | 1.000 |  |  |
+| 1511 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504007 | 1.000 |  |  |
+| 1512 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.112.1 | 1.000 |  |  |
+| 1513 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-08-092372-7.50002-9 | 0.245 |  |  |
+| 1514 | 25 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380964 | 1.000 |  |  |
+| 1515 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504134 | 1.000 |  |  |
+| 1516 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504306 | 0.662 |  |  |
+| 1517 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381666 | 0.842 |  |  |
+| 1518 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504308 | 1.000 |  |  |
+| 1519 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381950 | 1.000 |  |  |
+| 1520 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3671952 | 0.857 |  |  |
+| 1521 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb03824.x | 1.000 |  |  |
+| 1522 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb03802.x | 0.950 |  |  |
+| 1523 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504239 | 1.000 |  |  |
+| 1524 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02691.x | 1.000 |  |  |
+| 1525 | 111 | compilation | pending | ambiguous | crossref | crossref_only | 10.1111/j.1748-1090.1993.tb03529.x | 1.000 |  |  |
+| 1526 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198549451.003.0020 | 1.000 |  |  |
+| 1527 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504299 | 1.000 |  |  |
+| 1528 | 10 | measurement | not_found | below_threshold | crossref | crossref_only | 10.26034/cm.jostrans.2004.730 | 0.312 |  |  |
+| 1529 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.009 | 0.981 |  |  |
+| 1530 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1542(2000)081<0434:ndasad>2.0.co;2 | 1.000 |  |  |
+| 1531 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)677<0001:dv>2.0.co;2 | 1.000 |  |  |
+| 1532 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)676<0001:dm>2.0.co;2 | 1.000 |  |  |
+| 1533 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382659 | 1.000 |  |  |
+| 1534 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999001077 | 1.000 |  |  |
+| 1535 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1998.62.1.9 | 1.000 |  |  |
+| 1536 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0300-9629(87)90498-1 | 1.000 |  |  |
+| 1537 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382428 | 1.000 |  |  |
+| 1538 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.66-19 | 0.789 |  |  |
+| 1539 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7589/0090-3558-29.2.273 | 0.487 |  |  |
+| 1540 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2002)083<0614:posfat>2.0.co;2 | 1.000 |  |  |
+| 1541 | 1 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1515/9783110545388-061 | 0.359 |  |  |
+| 1542 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb05352.x | 0.925 |  |  |
+| 1544 | 217 | compilation | pending | ambiguous | crossref | crossref_only | 10.1006/bijl.1996.0067 | 1.000 |  |  |
+| 1545 | 12 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0006323196004999 | 1.000 |  |  |
+| 1546 | 18 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.014 | 1.000 |  |  |
+| 1547 | 228 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1086/428222 | 0.470 |  |  |
+| 1548 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/09397140.2017.1292646 | 0.679 |  |  |
+| 1549 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf03050647 | 1.000 |  |  |
+| 1550 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03050647 | 0.519 |  |  |
+| 1551 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1971.35.2.283 | 0.533 |  |  |
+| 1552 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1980.44.4.571 | 0.706 |  |  |
+| 1553 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/rd9890255 | 1.000 |  |  |
+| 1554 | 3 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1748-1090.1983.tb01479.x | 0.751 |  |  |
+| 1555 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3801540 | 0.383 |  |  |
+| 1556 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.2042-3306.1997.tb03121.x | 1.000 |  |  |
+| 1557 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1294/jes.12.1 | 0.802 |  |  |
+| 1558 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.241149 | 0.513 |  |  |
+| 1559 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381466 | 1.000 |  |  |
+| 1560 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382678 | 1.000 |  |  |
+| 1561 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1152/ajpregu.1992.263.4.r852 | 0.427 |  |  |
+| 1562 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1984.tb00698.x | 1.000 |  |  |
+| 1563 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377028 | 1.000 |  |  |
+| 1564 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000450 | 1.000 |  |  |
+| 1565 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3668879 | 1.000 |  |  |
+| 1566 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383176 | 1.000 |  |  |
+| 1567 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1935266 | 1.000 |  |  |
+| 1568 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1071/cwr9680045 | 1.000 |  |  |
+| 1569 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504171 | 1.000 |  |  |
+| 1570 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504267 | 1.000 |  |  |
+| 1571 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381695 | 0.885 |  |  |
+| 1572 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504106 | 1.000 |  |  |
+| 1573 | 273 | compilation | certain | crossref_only | crossref | crossref_only | 10.1086/320621 | 1.000 |  |  |
+| 1574 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1933969 | 0.913 |  |  |
+| 1575 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9800385 | 1.000 |  |  |
+| 1576 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1934184 | 1.000 |  |  |
+| 1577 | 121 | compilation | certain | crossref_only | crossref | crossref_only | 10.2307/1380997 | 1.000 |  |  |
+| 1578 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381378 | 0.872 |  |  |
+| 1579 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/jrf.0.1040063 | 0.488 |  |  |
+| 1580 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.287 | 1.000 |  |  |
+| 1581 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.283 | 1.000 |  |  |
+| 1582 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1998.tb00002.x | 0.838 |  |  |
+| 1583 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1984.48.3.317 | 0.831 |  |  |
+| 1584 | 9 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb07499.x | 0.836 |  |  |
+| 1585 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1995.tb00436.x | 1.000 |  |  |
+| 1586 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383100 | 1.000 |  |  |
+| 1587 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998276096 | 1.000 |  |  |
+| 1588 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/jrf.0.0460481 | 0.481 |  |  |
+| 1589 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1292/jvms.60.643 | 1.000 |  |  |
+| 1590 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1970.34.4.622 | 0.521 |  |  |
+| 1591 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1383231 | 0.408 |  |  |
+| 1592 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.82-7 | 0.529 |  |  |
+| 1593 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423864 | 1.000 |  |  |
+| 1594 | 47 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380270 | 1.000 |  |  |
+| 1595 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380631 | 1.000 |  |  |
+| 1596 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.137931 | 0.508 |  |  |
+| 1597 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/1376191 | 0.758 |  |  |
+| 1598 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9920643 | 0.922 |  |  |
+| 1599 | 12 | compilation | not_found | below_threshold | crossref | crossref_only | 10.2307/4084 | 0.561 |  |  |
+| 1600 | 4 | compilation | not_found | below_threshold | crossref | crossref_only | 10.5406/illinois/9780252038501.003.0003 | 0.437 |  |  |
+| 1601 | 12 | compilation | not_found | below_threshold | crossref | crossref_only | 10.5134/143347 | 0.681 |  |  |
+| 1602 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504241 | 1.000 |  |  |
+| 1603 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504145 | 1.000 |  |  |
+| 1604 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504510 | 1.000 |  |  |
+| 1605 | 13 | measurement | not_found | below_threshold | crossref | crossref_only | 10.62015/np.2020.v26.74 | 0.422 |  |  |
+| 1606 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503803 | 1.000 |  |  |
+| 1607 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503842 | 1.000 |  |  |
+| 1608 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504217 | 1.000 |  |  |
+| 1609 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1976.40.1.55 | 0.692 |  |  |
+| 1610 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0006-3207(94)00039-s | 0.780 |  |  |
+| 1611 | 31 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb05617.x | 1.000 |  |  |
+| 1612 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379811 | 0.811 |  |  |
+| 1613 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504257 | 1.000 |  |  |
+| 1614 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_7 | 1.000 |  |  |
+| 1615 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382200 | 0.851 |  |  |
+| 1616 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/zo9730375 | 0.644 |  |  |
+| 1617 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9730375 | 1.000 |  |  |
+| 1618 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9780257 | 1.000 |  |  |
+| 1619 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3853/j.0067-1975.32.1979.202 | 0.338 |  |  |
+| 1620 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9820001 | 0.882 |  |  |
+| 1621 | 35 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18195/issn.0313-122x.63.2001.091-098 | 0.352 |  |  |
+| 1622 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1989.tb00923.x | 1.000 |  |  |
+| 1623 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1989.tb01024.x | 1.000 |  |  |
+| 1624 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1969.tb01697.x | 1.000 |  |  |
+| 1625 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03590.x | 0.575 |  |  |
+| 1626 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0230055 | 1.000 |  |  |
+| 1627 | 12 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/279676 | 0.371 |  |  |
+| 1628 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504018 | 1.000 |  |  |
+| 1629 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300017877 | 0.426 |  |  |
+| 1630 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05823.x | 1.000 |  |  |
+| 1631 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1378217 | 0.444 |  |  |
+| 1632 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381517 | 1.000 |  |  |
+| 1633 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000156877 | 1.000 |  |  |
+| 1634 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.288 | 1.000 |  |  |
+| 1635 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.part.14575 | 1.000 |  |  |
+| 1636 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.156678 | 0.561 |  |  |
+| 1637 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503890 | 1.000 |  |  |
+| 1638 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503859 | 1.000 |  |  |
+| 1639 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503975 | 1.000 |  |  |
+| 1640 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.156514 | 1.000 |  |  |
+| 1641 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504025 | 1.000 |  |  |
+| 1642 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3503774 | 1.000 |  |  |
+| 1643 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503867 | 1.000 |  |  |
+| 1644 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504283 | 1.000 |  |  |
+| 1645 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.143265 | 1.000 |  |  |
+| 1646 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3838/jjo1915.14.67_28 | 0.500 |  |  |
+| 1647 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1655/herpetologica-d-14-00075 | 0.598 |  |  |
+| 1648 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z88-290 | 0.869 |  |  |
+| 1649 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02778.x | 1.000 |  |  |
+| 1650 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504037 | 1.000 |  |  |
+| 1651 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380637 | 1.000 |  |  |
+| 1652 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/jmammal/46.3.507 | 0.433 |  |  |
+| 1653 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1994.tb00581.x | 1.000 |  |  |
+| 1654 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504297 | 1.000 |  |  |
+| 1655 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.4098/at.arch.95-21 | 1.000 |  |  |
+| 1656 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3354/esr00196 | 0.390 |  |  |
+| 1657 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503972 | 1.000 |  |  |
+| 1658 | 637 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1080/03946975.1994.10539242 | 0.377 |  |  |
+| 1660 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382108 | 1.000 |  |  |
+| 1661 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504224 | 1.000 |  |  |
+| 1663 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01566.x | 1.000 |  |  |
+| 1664 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/15627020.2004.11407284 | 0.554 |  |  |
+| 1665 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.76-37 | 0.958 |  |  |
+| 1666 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5735/086.046.0401 | 0.460 |  |  |
+| 1667 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0300-9629(87)90447-6 | 1.000 |  |  |
+| 1668 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.25225/fozo.v62.i2.a4.2013 | 0.419 |  |  |
+| 1669 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504375 | 1.000 |  |  |
+| 1670 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/82.2.535 | 1.000 |  |  |
+| 1671 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.285 | 1.000 |  |  |
+| 1672 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1575/1912/2453 | 0.691 |  |  |
+| 1673 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2388592 | 1.000 |  |  |
+| 1674 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03050914 | 0.658 |  |  |
+| 1675 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1095/biolreprod27.2.351 | 1.000 |  |  |
+| 1676 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.82-7 | 1.000 |  |  |
+| 1677 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0003-3472(84)80273-0 | 0.471 |  |  |
+| 1678 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.zpj.1137.1629 | 0.607 |  |  |
+| 1679 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb05635.x | 0.866 |  |  |
+| 1680 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.17087/jbnhs/2014/v111i3/82461 | 0.539 |  |  |
+| 1681 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3535231 | 1.000 |  |  |
+| 1682 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380475 | 1.000 |  |  |
+| 1683 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0300-9629(72)90132-6 | 0.854 |  |  |
+| 1684 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1001430203 | 1.000 |  |  |
+| 1685 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb04919.x | 1.000 |  |  |
+| 1686 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9920533 | 1.000 |  |  |
+| 1687 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3503919 | 1.000 |  |  |
+| 1689 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000147289 | 1.000 |  |  |
+| 1690 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504119 | 1.000 |  |  |
+| 1691 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.3.691 | 1.000 |  |  |
+| 1692 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s095283690000409x | 1.000 |  |  |
+| 1693 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423638 | 0.843 |  |  |
+| 1694 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.part.2987 | 0.898 |  |  |
+| 1695 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379252 | 1.000 |  |  |
+| 1696 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504029 | 1.000 |  |  |
+| 1697 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380667 | 1.000 |  |  |
+| 1698 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503998 | 1.000 |  |  |
+| 1699 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504221 | 1.000 |  |  |
+| 1700 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf01464350 | 0.973 |  |  |
+| 1701 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04622.x | 0.853 |  |  |
+| 1702 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2388908 | 0.767 |  |  |
+| 1703 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382746 | 1.000 |  |  |
+| 1704 | 17 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198549451.003.0008 | 1.000 |  |  |
+| 1705 | 53 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/oso/9780198549451.003.0008 | 0.513 |  |  |
+| 1706 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381365 | 1.000 |  |  |
+| 1707 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z89-348 | 1.000 |  |  |
+| 1708 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504258 | 1.000 |  |  |
+| 1709 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.356462 | 1.000 |  |  |
+| 1710 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381316 | 1.000 |  |  |
+| 1711 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504278 | 1.000 |  |  |
+| 1713 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00379.x | 0.787 |  |  |
+| 1714 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00379.x | 1.000 |  |  |
+| 1715 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504364 | 1.000 |  |  |
+| 1716 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1086/physzool.48.2.30155652 | 1.000 |  |  |
+| 1717 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383106 | 1.000 |  |  |
+| 1718 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.228596 | 0.786 |  |  |
+| 1720 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377586 | 1.000 |  |  |
+| 1721 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379436 | 1.000 |  |  |
+| 1722 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503904 | 1.000 |  |  |
+| 1723 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504248 | 1.000 |  |  |
+| 1724 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504204 | 1.000 |  |  |
+| 1726 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504127 | 1.000 |  |  |
+| 1727 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2426606 | 1.000 |  |  |
+| 1728 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mammalia-1997-610302 | 1.000 |  |  |
+| 1729 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380818 | 1.000 |  |  |
+| 1730 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0010-7824(94)90101-5 | 0.585 |  |  |
+| 1731 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901000462 | 1.000 |  |  |
+| 1732 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/jmammal/gyw004 | 0.528 |  |  |
+| 1733 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1159/000156679 | 1.000 |  |  |
+| 1734 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0034-5687(85)90135-5 | 0.467 |  |  |
+| 1735 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504110 | 1.000 |  |  |
+| 1736 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/jzo.1982.197.3.323 | 1.000 |  |  |
+| 1737 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.part.79643 | 0.563 |  |  |
+| 1738 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.88-23 | 1.000 |  |  |
+| 1739 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381265 | 1.000 |  |  |
+| 1740 | 6 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1979.tb00561.x | 0.891 |  |  |
+| 1741 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb06027.x | 0.799 |  |  |
+| 1742 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504274 | 1.000 |  |  |
+| 1743 | 7 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1515/mamm.1996.60.1.69 | 1.000 |  |  |
+| 1744 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504002 | 1.000 |  |  |
+| 1745 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503889 | 1.000 |  |  |
+| 1746 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1139/z91-256 | 0.471 |  |  |
+| 1747 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1086/physzool.65.3.30157974 | 1.000 |  |  |
+| 1748 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04795.x | 1.000 |  |  |
+| 1749 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380890 | 1.000 |  |  |
+| 1750 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379436 | 0.657 |  |  |
+| 1751 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3503849 | 1.000 |  |  |
+| 1752 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3853/j.0067-1975.43.1991.44 | 0.454 |  |  |
+| 1753 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1948465 | 1.000 |  |  |
+| 1754 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.58782/flmnh.cogj4895 | 1.000 |  |  |
+| 1755 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.165.3895.782 | 0.275 |  |  |
+| 1756 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3272885 | 0.511 |  |  |
+| 1757 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7589/0090-3558-25.3.364 | 0.581 |  |  |
+| 1758 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb02718.x | 1.000 |  |  |
+| 1759 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1380590 | 1.000 |  |  |
+| 1760 | 223 | compilation | pending | weak_match | crossref | crossref_only | 10.1017/cbo9780511661693 | 0.924 |  |  |
+| 1762 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/9780643098183 | 0.317 |  |  |
+| 1763 | 85 | compilation | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb03804.x | 1.000 |  |  |
+| 1764 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382437 | 1.000 |  |  |
+| 1765 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504355 | 1.000 |  |  |
+| 1766 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1017/cbo9780511542466 | 1.000 |  |  |
+| 1767 | 40 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.008 | 1.000 |  |  |
+| 1768 | 22 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2672030 | 0.271 |  |  |
+| 1769 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.2001.65.2.131 | 1.000 |  |  |
+| 1770 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/82.3.700 | 1.000 |  |  |
+| 1771 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm-1992-0224 | 0.755 |  |  |
+| 1772 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1995.tb00437.x | 1.000 |  |  |
+| 1773 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb00980.x | 1.000 |  |  |
+| 1774 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379827 | 0.489 |  |  |
+| 1775 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504280 | 1.000 |  |  |
+| 1776 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)685<0001:cn>2.0.co;2 | 1.000 |  |  |
+| 1777 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380858 | 1.000 |  |  |
+| 1778 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1425 | 1.000 |  |  |
+| 1779 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381728 | 1.000 |  |  |
+| 1780 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/wr96043 | 0.654 |  |  |
+| 1781 | 23 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382163 | 1.000 |  |  |
+| 1782 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503881 | 1.000 |  |  |
+| 1783 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382020 | 0.896 |  |  |
+| 1784 | 32 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382357 | 0.824 |  |  |
+| 1785 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.56028/aetr.3.1.683 | 0.512 |  |  |
+| 1786 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1967.tb00391.x | 0.878 |  |  |
+| 1787 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3277511 | 1.000 |  |  |
+| 1788 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504001 | 1.000 |  |  |
+| 1789 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383054 | 1.000 |  |  |
+| 1790 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380843 | 1.000 |  |  |
+| 1791 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380588 | 1.000 |  |  |
+| 1792 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.7560/747067 | 1.000 |  |  |
+| 1793 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377777 | 1.000 |  |  |
+| 1794 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423181 | 1.000 |  |  |
+| 1795 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378545 | 0.790 |  |  |
+| 1796 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503860 | 1.000 |  |  |
+| 1797 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504063 | 1.000 |  |  |
+| 1798 | 14 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05760.x | 0.906 |  |  |
+| 1799 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.2000.tb01225.x | 1.000 |  |  |
+| 1800 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.1365-2699.2002.00654.x | 1.000 |  |  |
+| 1801 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00300187 | 1.000 |  |  |
+| 1802 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s00580-005-0553-7 | 0.428 |  |  |
+| 1803 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/wr17040 | 0.475 |  |  |
+| 1804 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380445 | 1.000 |  |  |
+| 1805 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381601 | 1.000 |  |  |
+| 1806 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.343553 | 0.871 |  |  |
+| 1807 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503979 | 0.965 |  |  |
+| 1809 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504264 | 1.000 |  |  |
+| 1810 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374714 | 1.000 |  |  |
+| 1811 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381551 | 1.000 |  |  |
+| 1812 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422845 | 1.000 |  |  |
+| 1813 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0006-3207(95)00095-x | 0.910 |  |  |
+| 1814 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1051/parasite/2013047 | 0.476 |  |  |
+| 1815 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1378457 | 0.479 |  |  |
+| 1816 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.part.79788 | 0.644 |  |  |
+| 1817 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.21005/aapz2021.60.4.01 | 0.522 |  |  |
+| 1818 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.15406/jdvar.2017.05.00143 | 0.425 |  |  |
+| 1819 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378070 | 1.000 |  |  |
+| 1820 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382150 | 1.000 |  |  |
+| 1821 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02437.x | 0.928 |  |  |
+| 1822 | 470 | compilation | pending | ambiguous | crossref | crossref_only | 10.1086/303383 | 1.000 |  |  |
+| 1823 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379004 | 1.000 |  |  |
+| 1824 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376617 | 1.000 |  |  |
+| 1825 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00184423 | 1.000 |  |  |
+| 1826 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03002974 | 0.660 |  |  |
+| 1827 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/11250009409355887 | 1.000 |  |  |
+| 1828 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382577 | 1.000 |  |  |
+| 1829 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504275 | 1.000 |  |  |
+| 1830 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504069 | 1.000 |  |  |
+| 1831 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381345 | 1.000 |  |  |
+| 1832 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.2.600 | 0.868 |  |  |
+| 1833 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503848 | 1.000 |  |  |
+| 1834 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381007 | 1.000 |  |  |
+| 1835 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9950217 | 0.826 |  |  |
+| 1836 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2002)083<0834:ansotm>2.0.co;2 | 1.000 |  |  |
+| 1837 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.3106/mammalstudy.27.137 | 1.000 |  |  |
+| 1838 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am85031 | 0.893 |  |  |
+| 1839 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1442-9993.1995.tb00572.x | 1.000 |  |  |
+| 1840 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1748-1090.1987.tb03169.x | 0.508 |  |  |
+| 1841 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900006038 | 1.000 |  |  |
+| 1842 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11646/zootaxa.2209.1.1 | 0.346 |  |  |
+| 1843 | 11 | measurement | not_found | below_threshold | crossref | crossref_only | 10.46357/bcnaturais.v18i3.893 | 0.495 |  |  |
+| 1844 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1980.tb00980.x | 1.000 |  |  |
+| 1845 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb04588.x | 0.874 |  |  |
+| 1846 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503971 | 1.000 |  |  |
+| 1847 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/s004420050062 | 1.000 |  |  |
+| 1848 | 453 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0307472200012517 | 0.422 |  |  |
+| 1849 | 133 | compilation | pending | weak_match | crossref | crossref_only | 10.1007/978-94-009-5772-5 | 0.750 |  |  |
+| 1850 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504165 | 1.000 |  |  |
+| 1851 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380689 | 0.834 |  |  |
+| 1852 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s10344-004-0065-9 | 0.389 |  |  |
+| 1853 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379554 | 1.000 |  |  |
+| 1855 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1985.11447950 | 1.000 |  |  |
+| 1856 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/9780691263496-014 | 0.473 |  |  |
+| 1857 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1971.35.2.283 | 1.000 |  |  |
+| 1858 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03050647 | 0.489 |  |  |
+| 1859 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1971.35.2.283 | 0.504 |  |  |
+| 1860 | 13 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.jcz.2016.10.001 | 0.356 |  |  |
+| 1861 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1979.tb00249.x | 1.000 |  |  |
+| 1862 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_9 | 1.000 |  |  |
+| 1863 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1365-2028.1994.tb00566.x | 0.909 |  |  |
+| 1864 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.95-1 | 0.816 |  |  |
+| 1865 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1991.55.2.293 | 1.000 |  |  |
+| 1866 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb03849.x | 1.000 |  |  |
+| 1867 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998004075 | 1.000 |  |  |
+| 1868 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.26615/978-954-452-092-2_053 | 0.375 |  |  |
+| 1869 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383264 | 1.000 |  |  |
+| 1870 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504144 | 1.000 |  |  |
+| 1871 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504325 | 0.719 |  |  |
+| 1872 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376113 | 1.000 |  |  |
+| 1873 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5324/fn.v11i0.6065 | 0.603 |  |  |
+| 1874 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/aje.12695 | 0.702 |  |  |
+| 1875 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381647 | 1.000 |  |  |
+| 1876 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382745 | 1.000 |  |  |
+| 1877 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382775 | 1.000 |  |  |
+| 1878 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.48665 | 0.625 |  |  |
+| 1879 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379135 | 1.000 |  |  |
+| 1880 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381912 | 1.000 |  |  |
+| 1881 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s00114-012-0971-8 | 0.534 |  |  |
+| 1883 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1095-8312.1947.tb00484.x | 1.000 |  |  |
+| 1884 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1677/joe.0.0090042 | 0.783 |  |  |
+| 1885 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1959.tb05539.x | 0.747 |  |  |
+| 1886 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503903 | 1.000 |  |  |
+| 1887 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.109.1 | 1.000 |  |  |
+| 1888 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504051 | 1.000 |  |  |
+| 1889 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504067 | 1.000 |  |  |
+| 1890 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503877 | 1.000 |  |  |
+| 1891 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504327 | 1.000 |  |  |
+| 1892 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.156570 | 0.517 |  |  |
+| 1893 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1378920 | 1.000 |  |  |
+| 1894 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5070/lr3.1477 | 0.350 |  |  |
+| 1895 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.14709/barbj.11.1.2018.11 | 0.490 |  |  |
+| 1896 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1127/lr/12/2001/517 | 0.430 |  |  |
+| 1897 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-662-04162-8_9 | 0.488 |  |  |
+| 1898 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.36679/ljs.v7i3.14 | 0.438 |  |  |
+| 1899 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605305250184 | 0.417 |  |  |
+| 1900 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503793 | 1.000 |  |  |
+| 1901 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1984.48.4.593 | 1.000 |  |  |
+| 1902 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1998.62.1.77 | 1.000 |  |  |
+| 1903 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02381286 | 0.908 |  |  |
+| 1904 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1937.tb00339.x | 0.643 |  |  |
+| 1905 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375841 | 0.964 |  |  |
+| 1906 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1375841 | 0.530 |  |  |
+| 1907 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503829 | 1.000 |  |  |
+| 1908 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503865 | 1.000 |  |  |
+| 1909 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.286 | 1.000 |  |  |
+| 1910 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/ahe.12310 | 0.564 |  |  |
+| 1911 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.72-36 | 0.805 |  |  |
+| 1912 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04330.x | 1.000 |  |  |
+| 1913 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504242 | 1.000 |  |  |
+| 1914 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503864 | 1.000 |  |  |
+| 1915 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0940-9602(96)80110-5 | 0.530 |  |  |
+| 1916 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375577 | 1.000 |  |  |
+| 1917 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1375067 | 0.576 |  |  |
+| 1918 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422513 | 1.000 |  |  |
+| 1919 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378126 | 0.871 |  |  |
+| 1920 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.31611/ch.51 | 0.533 |  |  |
+| 1921 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504304 | 1.000 |  |  |
+| 1922 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503863 | 1.000 |  |  |
+| 1923 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503934 | 1.000 |  |  |
+| 1924 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)673<0001:bc>2.0.co;2 | 1.000 |  |  |
+| 1925 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504468 | 1.000 |  |  |
+| 1926 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.70880/001c.129684 | 0.523 |  |  |
+| 1927 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00302840 | 0.832 |  |  |
+| 1928 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382953 | 1.000 |  |  |
+| 1929 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504048 | 1.000 |  |  |
+| 1930 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380883 | 1.000 |  |  |
+| 1931 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382942 | 1.000 |  |  |
+| 1932 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383009 | 1.000 |  |  |
+| 1933 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/82.3.690 | 1.000 |  |  |
+| 1934 | 2 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300034621 | 0.322 |  |  |
+| 1935 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.311443 | 0.807 |  |  |
+| 1936 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.295641 | 0.620 |  |  |
+| 1937 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2937069 | 1.000 |  |  |
+| 1938 | 14 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1206/3905.1 | 0.362 |  |  |
+| 1939 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378926 | 0.834 |  |  |
+| 1940 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423560 | 0.899 |  |  |
+| 1941 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503783 | 1.000 |  |  |
+| 1942 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382805 | 1.000 |  |  |
+| 1943 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1948477 | 1.000 |  |  |
+| 1944 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1934259 | 1.000 |  |  |
+| 1945 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378876 | 0.961 |  |  |
+| 1946 | 22 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380307 | 1.000 |  |  |
+| 1947 | 19 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1984.tb02345.x | 1.000 |  |  |
+| 1948 | 39 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381678 | 1.000 |  |  |
+| 1949 | 25 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1992.tb04417.x | 1.000 |  |  |
+| 1950 | 14 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198549451.003.0007 | 1.000 |  |  |
+| 1951 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9600170 | 0.859 |  |  |
+| 1952 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mammalia-2017-0064 | 0.447 |  |  |
+| 1953 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/j.ctv17hmb2c.11 | 0.334 |  |  |
+| 1954 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9880091 | 1.000 |  |  |
+| 1955 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381676 | 1.000 |  |  |
+| 1956 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03738.x | 0.922 |  |  |
+| 1957 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03700.x | 1.000 |  |  |
+| 1958 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02419.x | 1.000 |  |  |
+| 1959 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504167 | 1.000 |  |  |
+| 1960 | 1 | measurement | pending | weak_match | crossref;owner-waiver | crossref_only | 10.2307/0.624.1 | 1.000 |  |  |
+| 1962 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/mspecies/266.1 | 1.000 |  |  |
+| 1963 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1954.tb07804.x | 1.000 |  |  |
+| 1964 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1007/978-94-011-8030-6_12 | 1.000 |  |  |
+| 1966 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381644 | 1.000 |  |  |
+| 1967 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504232 | 1.000 |  |  |
+| 1968 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504111 | 1.000 |  |  |
+| 1969 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378166 | 1.000 |  |  |
+| 1970 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03179267 | 0.480 |  |  |
+| 1971 | 19 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3346 | 1.000 |  |  |
+| 1972 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1972.tb00772.x | 1.000 |  |  |
+| 1973 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300032191 | 0.679 |  |  |
+| 1974 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376216 | 1.000 |  |  |
+| 1975 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378296 | 0.879 |  |  |
+| 1976 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb03754.x | 1.000 |  |  |
+| 1977 | 31 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380520 | 1.000 |  |  |
+| 1978 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382283 | 1.000 |  |  |
+| 1979 | 11 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381780 | 0.319 |  |  |
+| 1980 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1976.tb00204.x | 1.000 |  |  |
+| 1981 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1983.tb00313.x | 0.961 |  |  |
+| 1982 | 3 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/1380371 | 0.660 |  |  |
+| 1983 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381249 | 0.884 |  |  |
+| 1984 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1748-1090.1965.tb01599.x | 0.626 |  |  |
+| 1985 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.490.1 | 1.000 |  |  |
+| 1986 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382103 | 1.000 |  |  |
+| 1987 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/wr97055 | 0.621 |  |  |
+| 1988 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379087 | 1.000 |  |  |
+| 1989 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/wr9890179 | 0.378 |  |  |
+| 1990 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381754 | 0.387 |  |  |
+| 1991 | 49 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1086/417857 | 0.685 |  |  |
+| 1992 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb05769.x | 0.951 |  |  |
+| 1993 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05407.x | 1.000 |  |  |
+| 1994 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4615-6428-7_10 | 0.686 |  |  |
+| 1995 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.330852 | 0.590 |  |  |
+| 1996 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-3-031-27771-9_4-1 | 0.763 |  |  |
+| 1997 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379442 | 0.472 |  |  |
+| 1998 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1969.33.1.1 | 0.839 |  |  |
+| 1999 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503909 | 1.000 |  |  |
+| 2000 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503900 | 1.000 |  |  |
+| 2001 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381276 | 1.000 |  |  |
+| 2002 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382596 | 1.000 |  |  |
+| 2003 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/82.1.51 | 1.000 |  |  |
+| 2004 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380578 | 1.000 |  |  |
+| 2005 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423634 | 0.871 |  |  |
+| 2006 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380707 | 0.864 |  |  |
+| 2007 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380568 | 0.858 |  |  |
+| 2008 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381627 | 1.000 |  |  |
+| 2009 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.83-1 | 0.908 |  |  |
+| 2010 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z77-091 | 0.919 |  |  |
+| 2011 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379847 | 1.000 |  |  |
+| 2012 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381200 | 0.936 |  |  |
+| 2013 | 4 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381240 | 0.924 |  |  |
+| 2014 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503990 | 1.000 |  |  |
+| 2015 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382838 | 1.000 |  |  |
+| 2016 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/156854291x00054 | 0.899 |  |  |
+| 2017 | 62 | compilation | pending | weak_match | crossref | crossref_only | 10.2305/iucn.ch.1992.ssc-ap.6.en | 0.720 |  |  |
+| 2018 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1987.51.2.225 | 0.478 |  |  |
+| 2019 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504316 | 0.650 |  |  |
+| 2020 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.16.416.986 | 0.238 |  |  |
+| 2021 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z75-112 | 1.000 |  |  |
+| 2022 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381692 | 1.000 |  |  |
+| 2023 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382075 | 1.000 |  |  |
+| 2024 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am97127 | 0.816 |  |  |
+| 2025 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/jmor.1050640205 | 1.000 |  |  |
+| 2026 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375341 | 1.000 |  |  |
+| 2027 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376016 | 1.000 |  |  |
+| 2028 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1933839 | 1.000 |  |  |
+| 2029 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378256 | 0.857 |  |  |
+| 2030 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z93-122 | 1.000 |  |  |
+| 2031 | 4 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999007050 | 1.000 |  |  |
+| 2032 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380060 | 1.000 |  |  |
+| 2033 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382210 | 1.000 |  |  |
+| 2034 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382017 | 1.000 |  |  |
+| 2035 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504187 | 1.000 |  |  |
+| 2037 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/ahe.12310 | 0.661 |  |  |
+| 2038 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0003-3472(05)80876-0 | 1.000 |  |  |
+| 2039 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376114 | 1.000 |  |  |
+| 2040 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2307/3669271 | 0.692 |  |  |
+| 2041 | 10 | measurement | pending | weak_match | crossref | crossref_only | 10.4314/mcd.v1i1.44043 | 0.766 |  |  |
+| 2042 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1007/978-94-011-8030-6_17 | 1.000 |  |  |
+| 2043 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3671056 | 0.453 |  |  |
+| 2044 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1139/z94-234 | 0.928 |  |  |
+| 2045 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1951.tb00765.x | 1.000 |  |  |
+| 2046 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504017 | 1.000 |  |  |
+| 2047 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03566.x | 1.000 |  |  |
+| 2048 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503784 | 1.000 |  |  |
+| 2049 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504180 | 1.000 |  |  |
+| 2050 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3800232 | 1.000 |  |  |
+| 2051 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2907.1989.tb00402.x | 0.399 |  |  |
+| 2052 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998010085 | 1.000 |  |  |
+| 2053 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/18.3.368 | 1.000 |  |  |
+| 2054 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04022.x | 0.854 |  |  |
+| 2056 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.15393/j1.art.2012.1401 | 0.522 |  |  |
+| 2057 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm-1988-0310 | 1.000 |  |  |
+| 2058 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504186 | 1.000 |  |  |
+| 2059 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1210/endo-124-2-1056 | 0.458 |  |  |
+| 2060 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1961.tb06173.x | 1.000 |  |  |
+| 2061 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-12-816962-9.00016-8 | 0.507 |  |  |
+| 2062 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1977.tb04150.x | 1.000 |  |  |
+| 2063 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00383.x | 0.552 |  |  |
+| 2064 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb03751.x | 1.000 |  |  |
+| 2065 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04468.x | 1.000 |  |  |
+| 2066 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1242/jeb.197.1.309 | 1.000 |  |  |
+| 2067 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375962 | 1.000 |  |  |
+| 2068 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378942 | 0.970 |  |  |
+| 2069 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1086/665653 | 0.480 |  |  |
+| 2070 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0300-9629(76)80104-1 | 0.574 |  |  |
+| 2071 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am87009 | 1.000 |  |  |
+| 2072 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1377956 | 0.534 |  |  |
+| 2073 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2002)083<0458:aabrtc>2.0.co;2 | 1.000 |  |  |
+| 2074 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381949 | 1.000 |  |  |
+| 2075 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/38.2.260 | 1.000 |  |  |
+| 2076 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377547 | 1.000 |  |  |
+| 2077 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376885 | 1.000 |  |  |
+| 2078 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1378549 | 0.388 |  |  |
+| 2079 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379055 | 0.565 |  |  |
+| 2080 | 15 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1463-6395.2007.00298.x | 0.503 |  |  |
+| 2081 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424457 | 0.949 |  |  |
+| 2082 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380044 | 1.000 |  |  |
+| 2083 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380440 | 1.000 |  |  |
+| 2084 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383006 | 1.000 |  |  |
+| 2085 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1951.tb00765.x | 0.565 |  |  |
+| 2086 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0376-6357(98)00032-1 | 0.533 |  |  |
+| 2087 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1645/ge-585r1.1 | 0.495 |  |  |
+| 2088 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379834 | 1.000 |  |  |
+| 2090 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1967.tb04058.x | 0.882 |  |  |
+| 2091 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-030-44029-9_80 | 0.519 |  |  |
+| 2092 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1967.tb04058.x | 0.589 |  |  |
+| 2093 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1973.tb07517.x | 0.744 |  |  |
+| 2094 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2028.1973.tb00092.x | 1.000 |  |  |
+| 2095 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.345037 | 0.620 |  |  |
+| 2096 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378636 | 0.874 |  |  |
+| 2097 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0003-3472(70)90064-3 | 1.000 |  |  |
+| 2098 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379007 | 1.000 |  |  |
+| 2099 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423807 | 1.000 |  |  |
+| 2100 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1977.41.4.517 | 0.495 |  |  |
+| 2101 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380746 | 0.808 |  |  |
+| 2102 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381241 | 1.000 |  |  |
+| 2103 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/0.626.1 | 0.656 |  |  |
+| 2104 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504506 | 1.000 |  |  |
+| 2105 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503862 | 1.000 |  |  |
+| 2106 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379840 | 1.000 |  |  |
+| 2107 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9910299 | 1.000 |  |  |
+| 2108 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382755 | 1.000 |  |  |
+| 2109 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503958 | 1.000 |  |  |
+| 2110 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3503798 | 1.000 |  |  |
+| 2111 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377839 | 1.000 |  |  |
+| 2112 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/ww/9780199540884.013.u224000 | 0.248 |  |  |
+| 2113 | 6 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1984.48.4.593 | 0.555 |  |  |
+| 2114 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1078/1616-5047-00067 | 0.588 |  |  |
+| 2115 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1995.tb00438.x | 0.943 |  |  |
+| 2116 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503907 | 1.000 |  |  |
+| 2117 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378253 | 1.000 |  |  |
+| 2118 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1377578 | 0.521 |  |  |
+| 2119 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377630 | 0.810 |  |  |
+| 2120 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379333 | 1.000 |  |  |
+| 2121 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2989/025776102784528402 | 0.500 |  |  |
+| 2122 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.364122 | 1.000 |  |  |
+| 2123 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1977.41.4.403 | 0.858 |  |  |
+| 2124 | 20 | measurement | pending | weak_match | crossref | crossref_only | 10.3996/nafa.29.0001 | 1.000 |  |  |
+| 2125 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0003-3472(65)90118-1 | 0.791 |  |  |
+| 2126 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9650053 | 1.000 |  |  |
+| 2127 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.29173/bluejay2837 | 1.000 |  |  |
+| 2128 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.62015/np.1999.v7.425 | 0.453 |  |  |
+| 2130 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380443 | 1.000 |  |  |
+| 2131 | 30 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198575726.001.0001 | 1.000 |  |  |
+| 2132 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3724/sp.j.1004.2012.00591 | 0.520 |  |  |
+| 2133 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0964-7775(92)90071-c | 0.269 |  |  |
+| 2134 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.dendro.2017.06.007 | 0.449 |  |  |
+| 2135 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1380439 | 1.000 |  |  |
+| 2136 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/jzo.1982.197.3.421 | 0.899 |  |  |
+| 2137 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-0-12-222150-7.50019-2 | 0.379 |  |  |
+| 2138 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1086/414376 | 0.704 |  |  |
+| 2139 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000156534 | 1.000 |  |  |
+| 2140 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf02380959 | 0.507 |  |  |
+| 2141 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0300-9629(79)90632-7 | 1.000 |  |  |
+| 2142 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.1439-0388.2002.00347.x | 1.000 |  |  |
+| 2143 | 229 | compilation | certain | crossref_only | crossref | crossref_only | 10.1098/rstb.1987.0030 | 1.000 |  |  |
+| 2144 | 13 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1095-8312.1988.tb00451.x | 1.000 |  |  |
+| 2145 | 7 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-1-4419-8770-9 | 1.000 |  |  |
+| 2146 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1972.tb03098.x | 1.000 |  |  |
+| 2147 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3504488 | 1.000 |  |  |
+| 2148 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00345244 | 0.938 |  |  |
+| 2149 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.23846/srs0002 | 0.303 |  |  |
+| 2150 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377502 | 1.000 |  |  |
+| 2151 | 1331 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0954102003241729 | 0.477 |  |  |
+| 2152 | 216 | compilation | not_found | below_threshold | crossref | crossref_only | 10.2307/1381927 | 0.352 |  |  |
+| 2153 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382686 | 1.000 |  |  |
+| 2154 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383014 | 1.000 |  |  |
+| 2155 | 4 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1542(2000)081<0512:llcosm>2.0.co;2 | 1.000 |  |  |
+| 2156 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503949 | 1.000 |  |  |
+| 2157 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381721 | 1.000 |  |  |
+| 2158 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504031 | 1.000 |  |  |
+| 2159 | 13 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381425 | 1.000 |  |  |
+| 2160 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377626 | 1.000 |  |  |
+| 2161 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1934371 | 1.000 |  |  |
+| 2162 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504039 | 1.000 |  |  |
+| 2163 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503794 | 1.000 |  |  |
+| 2164 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424169 | 1.000 |  |  |
+| 2165 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1942329 | 1.000 |  |  |
+| 2166 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.2592 | 0.443 |  |  |
+| 2167 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504049 | 1.000 |  |  |
+| 2168 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1965.tb02011.x | 0.762 |  |  |
+| 2169 | 3 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.2307/1382084 | 0.848 |  |  |
+| 2170 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.92-10 | 1.000 |  |  |
+| 2171 | 1 | measurement | not_found | below_threshold | crossref;consensus-mcp | crossref_only | 10.2307/1382084 | 0.561 |  |  |
+| 2172 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3106/mammalstudy.22.11 | 0.528 |  |  |
+| 2173 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379020 | 0.934 |  |  |
+| 2174 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1530/jrf.0.0370027 | 0.907 |  |  |
+| 2175 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1976.tb04662.x | 1.000 |  |  |
+| 2176 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381058 | 1.000 |  |  |
+| 2177 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1463-6395.1977.tb00242.x | 0.984 |  |  |
+| 2178 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1973.tb02123.x | 0.761 |  |  |
+| 2179 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503802 | 1.000 |  |  |
+| 2180 | 16 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/9781316941232.028 | 0.489 |  |  |
+| 2181 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.3.325 | 1.000 |  |  |
+| 2182 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11646/zootaxa.1638.1.4 | 0.566 |  |  |
+| 2183 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378222 | 1.000 |  |  |
+| 2184 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9820039 | 1.000 |  |  |
+| 2185 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1965.29.4.489 | 1.000 |  |  |
+| 2186 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1442-9993.1989.tb01005.x | 1.000 |  |  |
+| 2187 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.51856/0130-4623_2020_39_88 | 0.346 |  |  |
+| 2188 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382164 | 1.000 |  |  |
+| 2189 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381959 | 1.000 |  |  |
+| 2190 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375942 | 1.000 |  |  |
+| 2191 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1980.tb01048.x | 0.811 |  |  |
+| 2192 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381020 | 1.000 |  |  |
+| 2193 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381792 | 1.000 |  |  |
+| 2194 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504277 | 1.000 |  |  |
+| 2195 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5935/0305-7518.19530022 | 0.482 |  |  |
+| 2196 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381130 | 1.000 |  |  |
+| 2197 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381788 | 1.000 |  |  |
+| 2198 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2992/0097-4463-77.3.321 | 0.492 |  |  |
+| 2199 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504070 | 1.000 |  |  |
+| 2200 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504058 | 1.000 |  |  |
+| 2201 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381673 | 1.000 |  |  |
+| 2202 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1975.tb02010.x | 0.883 |  |  |
+| 2203 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0003-3472(77)90085-9 | 0.798 |  |  |
+| 2204 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00222933.2018.1510995 | 0.608 |  |  |
+| 2205 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382634 | 1.000 |  |  |
+| 2206 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3797975 | 0.855 |  |  |
+| 2207 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503780 | 1.000 |  |  |
+| 2208 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504109 | 1.000 |  |  |
+| 2209 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3669931 | 1.000 |  |  |
+| 2210 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1967.31.2.246 | 0.751 |  |  |
+| 2211 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504445 | 1.000 |  |  |
+| 2212 | 1 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3503939 | 1.000 |  |  |
+| 2214 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998007080 | 1.000 |  |  |
+| 2215 | 15 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423387 | 1.000 |  |  |
+| 2216 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)664<0001:ra>2.0.co;2 | 1.000 |  |  |
+| 2217 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.344363 | 1.000 |  |  |
+| 2218 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.345322 | 0.920 |  |  |
+| 2219 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/03014223.1975.9517887 | 0.936 |  |  |
+| 2220 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am87016 | 1.000 |  |  |
+| 2221 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9910111 | 1.000 |  |  |
+| 2222 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9920331 | 0.805 |  |  |
+| 2223 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381297 | 1.000 |  |  |
+| 2224 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504433 | 1.000 |  |  |
+| 2225 | 7 | measurement | pending | weak_match | crossref | crossref_only | 10.1017/s0266467403003559 | 0.728 |  |  |
+| 2226 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1590/s0101-81751999000600022 | 0.300 |  |  |
+| 2227 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.274 | 1.000 |  |  |
+| 2228 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9950643 | 0.849 |  |  |
+| 2229 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379839 | 1.000 |  |  |
+| 2230 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503866 | 1.000 |  |  |
+| 2231 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503886 | 1.000 |  |  |
+| 2232 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1002/(sici)1098-2361(1999)18:2<111::aid-zoo3>3.0.co;2-0 | 0.721 |  |  |
+| 2233 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503891 | 1.000 |  |  |
+| 2234 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504075 | 1.000 |  |  |
+| 2235 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3504089 | 0.492 |  |  |
+| 2236 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/24.1.97 | 1.000 |  |  |
+| 2238 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375125 | 1.000 |  |  |
+| 2239 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1000840105 | 0.966 |  |  |
+| 2240 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376018 | 0.940 |  |  |
+| 2241 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375769 | 1.000 |  |  |
+| 2242 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380360 | 1.000 |  |  |
+| 2243 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-94-011-8030-6_15 | 0.898 |  |  |
+| 2244 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382595 | 1.000 |  |  |
+| 2245 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382691 | 1.000 |  |  |
+| 2246 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504008 | 1.000 |  |  |
+| 2247 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504156 | 1.000 |  |  |
+| 2248 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0168-1591(91)90255-v | 1.000 |  |  |
+| 2249 | 10 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2002)083<0467:tohieg>2.0.co;2 | 1.000 |  |  |
+| 2250 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.1365-3008.1999.00038.x | 1.000 |  |  |
+| 2251 | 18 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000156735 | 1.000 |  |  |
+| 2252 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504102 | 1.000 |  |  |
+| 2253 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0300-7073(05)70230-9 | 0.376 |  |  |
+| 2254 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1973.37.2.241 | 0.866 |  |  |
+| 2255 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.77-25 | 1.000 |  |  |
+| 2256 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383001 | 1.000 |  |  |
+| 2257 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383180 | 0.916 |  |  |
+| 2258 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00445096.1970.11447377 | 0.519 |  |  |
+| 2259 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2907.1995.tb00439.x | 1.000 |  |  |
+| 2260 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504369 | 1.000 |  |  |
+| 2261 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504356 | 1.000 |  |  |
+| 2262 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504430 | 1.000 |  |  |
+| 2263 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/cbo9781139087407.010 | 0.514 |  |  |
+| 2264 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504279 | 1.000 |  |  |
+| 2265 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504307 | 1.000 |  |  |
+| 2266 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503812 | 1.000 |  |  |
+| 2267 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377943 | 1.000 |  |  |
+| 2268 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.60687 | 1.000 |  |  |
+| 2269 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.60725 | 1.000 |  |  |
+| 2270 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.60746 | 1.000 |  |  |
+| 2271 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z71-045 | 1.000 |  |  |
+| 2272 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.title.60686 | 1.000 |  |  |
+| 2273 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z82-321 | 0.986 |  |  |
+| 2274 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1955.19.3.391 | 1.000 |  |  |
+| 2275 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z70-061 | 0.967 |  |  |
+| 2276 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/zoo.1430140405 | 1.000 |  |  |
+| 2277 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377224 | 1.000 |  |  |
+| 2278 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00222932308632968 | 0.426 |  |  |
+| 2279 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423489 | 1.000 |  |  |
+| 2280 | 13 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/00222937100770411 | 0.620 |  |  |
+| 2281 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378433 | 1.000 |  |  |
+| 2282 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9850111 | 0.848 |  |  |
+| 2283 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02661.x | 1.000 |  |  |
+| 2284 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05946.x | 1.000 |  |  |
+| 2285 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836901001017 | 1.000 |  |  |
+| 2286 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504311 | 1.000 |  |  |
+| 2287 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.1.43 | 1.000 |  |  |
+| 2288 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378594 | 1.000 |  |  |
+| 2289 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1139/z81-107 | 0.500 |  |  |
+| 2290 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1979.43.3.339 | 1.000 |  |  |
+| 2291 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1981.45.1.55 | 1.000 |  |  |
+| 2292 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1984.48.2.239 | 1.000 |  |  |
+| 2293 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/an.1995.36.9.13.2 | 0.443 |  |  |
+| 2294 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378473 | 0.875 |  |  |
+| 2295 | 39 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z70-075 | 1.000 |  |  |
+| 2296 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503995 | 1.000 |  |  |
+| 2297 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2424207 | 0.817 |  |  |
+| 2298 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503977 | 1.000 |  |  |
+| 2299 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5735/086.049.0110 | 0.430 |  |  |
+| 2300 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504230 | 1.000 |  |  |
+| 2301 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379490 | 1.000 |  |  |
+| 2302 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381434 | 0.547 |  |  |
+| 2303 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4102/koedoe.v35i2.405 | 0.617 |  |  |
+| 2304 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-662-24755-6_1 | 0.329 |  |  |
+| 2306 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_16 | 1.000 |  |  |
+| 2307 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03564.x | 1.000 |  |  |
+| 2308 | 5 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999002071 | 1.000 |  |  |
+| 2309 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605303000619 | 0.520 |  |  |
+| 2310 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/13.4.365 | 1.000 |  |  |
+| 2311 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374753 | 1.000 |  |  |
+| 2312 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504005 | 1.000 |  |  |
+| 2313 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18697/ajfand.84.blfb1017 | 0.284 |  |  |
+| 2314 | 9 | measurement | pending | grey_literature | crossref | crossref_only | 10.1111/j.1748-1090.1986.tb02233.x | 0.550 |  |  |
+| 2315 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1979.tb00301.x | 0.899 |  |  |
+| 2316 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380559 | 0.721 |  |  |
+| 2317 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382850 | 1.000 |  |  |
+| 2318 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1972.36.4.579 | 0.757 |  |  |
+| 2319 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2992/0145-9058(2004)36[159:eodrim]2.0.co;2 | 0.442 |  |  |
+| 2320 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380417 | 1.000 |  |  |
+| 2321 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3799763 | 1.000 |  |  |
+| 2322 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1962.26.3.311 | 0.843 |  |  |
+| 2323 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1963.27.3.342 | 1.000 |  |  |
+| 2324 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1968.32.4.603 | 1.000 |  |  |
+| 2325 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1965.29.1.35 | 0.675 |  |  |
+| 2326 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1969.33.1.102 | 1.000 |  |  |
+| 2327 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0140-1963(18)31465-4 | 0.517 |  |  |
+| 2328 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1971.35.4.614 | 1.000 |  |  |
+| 2329 | 7 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/978-94-010-1944-6 | 1.000 |  |  |
+| 2330 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1463-6395.1956.tb00042.x | 1.000 |  |  |
+| 2331 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1966.30.4.538 | 0.663 |  |  |
+| 2332 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382325 | 1.000 |  |  |
+| 2333 | 18 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1038/scientificamerican1198-94 | 0.332 |  |  |
+| 2334 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1953.tb00190.x | 1.000 |  |  |
+| 2335 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.28920/dhm50.4.356-362 | 0.289 |  |  |
+| 2336 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382474 | 1.000 |  |  |
+| 2337 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380888 | 0.827 |  |  |
+| 2338 | 47 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04316.x | 1.000 |  |  |
+| 2339 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1971.35.1.25 | 0.915 |  |  |
+| 2340 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/znc-1976-3-409 | 0.449 |  |  |
+| 2341 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382985 | 1.000 |  |  |
+| 2342 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1998.62.2.191 | 1.000 |  |  |
+| 2343 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1966.30.4.538 | 1.000 |  |  |
+| 2344 | 194 | compilation | certain | crossref_only | crossref | crossref_only | 10.1098/rspb.2000.1234 | 1.000 |  |  |
+| 2345 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423868 | 1.000 |  |  |
+| 2346 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0006-3207(96)90060-9 | 0.647 |  |  |
+| 2347 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1948646 | 0.874 |  |  |
+| 2348 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1998.62.1.37 | 1.000 |  |  |
+| 2349 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503821 | 1.000 |  |  |
+| 2350 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1258/002367770781071635 | 1.000 |  |  |
+| 2351 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1970.tb01280.x | 0.895 |  |  |
+| 2352 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1974.tb03136.x | 1.000 |  |  |
+| 2353 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/4631 | 1.000 |  |  |
+| 2354 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383023 | 1.000 |  |  |
+| 2355 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.1365-2028.1999.00175.x | 1.000 |  |  |
+| 2356 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02330163 | 0.749 |  |  |
+| 2357 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382211 | 1.000 |  |  |
+| 2358 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2425624 | 1.000 |  |  |
+| 2359 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1962.26.1.1 | 0.876 |  |  |
+| 2361 | 13 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.part.75919 | 0.841 |  |  |
+| 2362 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1376345 | 1.000 |  |  |
+| 2363 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/zo9790945 | 0.571 |  |  |
+| 2364 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2753/rup1061-1940250363 | 0.512 |  |  |
+| 2365 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.31.1 | 1.000 |  |  |
+| 2366 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503808 | 1.000 |  |  |
+| 2367 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1375293 | 0.424 |  |  |
+| 2368 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03050899 | 0.561 |  |  |
+| 2369 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf03050899 | 0.556 |  |  |
+| 2370 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1999.63.2.149 | 0.526 |  |  |
+| 2371 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf02380959 | 0.507 |  |  |
+| 2372 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3836 | 1.000 |  |  |
+| 2373 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382100 | 1.000 |  |  |
+| 2374 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/ej.9789004168190.i-462.18 | 0.451 |  |  |
+| 2375 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/00445096.1965.11447300 | 1.000 |  |  |
+| 2376 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-030-44029-9_38 | 0.555 |  |  |
+| 2377 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1095-8312.1989.tb01564.x | 0.903 |  |  |
+| 2378 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382905 | 1.000 |  |  |
+| 2379 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1282 | 1.000 |  |  |
+| 2380 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1941.tb08472.x | 0.798 |  |  |
+| 2382 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379126 | 0.911 |  |  |
+| 2383 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1590/1678-4766e2016010 | 0.476 |  |  |
+| 2384 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1095/biolreprod27.3.681 | 0.914 |  |  |
+| 2388 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/993 | 1.000 |  |  |
+| 2389 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1111/j.1365-2028.1973.tb00102.x | 0.614 |  |  |
+| 2390 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503789 | 1.000 |  |  |
+| 2391 | 10 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0376-6357(81)90040-1 | 1.000 |  |  |
+| 2392 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1748-1090.1981.tb01977.x | 1.000 |  |  |
+| 2393 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3668859 | 1.000 |  |  |
+| 2394 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s42991-024-00473-9 | 0.417 |  |  |
+| 2395 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2988/18-00007 | 0.406 |  |  |
+| 2396 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.330530 | 0.719 |  |  |
+| 2397 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382069 | 0.829 |  |  |
+| 2398 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s0952836902000808 | 1.000 |  |  |
+| 2399 | 29 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1998.tb00041.x | 1.000 |  |  |
+| 2400 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb05110.x | 0.840 |  |  |
+| 2401 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1046/j.1365-3008.1999.00064.x | 1.000 |  |  |
+| 2402 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1994.58.3.397 | 0.914 |  |  |
+| 2403 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503786 | 1.000 |  |  |
+| 2404 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb03544.x | 1.000 |  |  |
+| 2405 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2981/0909-6396(2008)14[350:riasho]2.0.co;2 | 0.532 |  |  |
+| 2406 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376149 | 1.000 |  |  |
+| 2407 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376075 | 1.000 |  |  |
+| 2408 | 10 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/5841 | 1.000 |  |  |
+| 2409 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.2305/iucn.ch.2003.ssc-ap.2.en | 1.000 |  |  |
+| 2410 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503976 | 1.000 |  |  |
+| 2411 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424272 | 1.000 |  |  |
+| 2412 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380790 | 1.000 |  |  |
+| 2413 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381710 | 0.857 |  |  |
+| 2414 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378398 | 0.866 |  |  |
+| 2415 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375263 | 1.000 |  |  |
+| 2416 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1942205 | 1.000 |  |  |
+| 2417 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376517 | 1.000 |  |  |
+| 2418 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379229 | 1.000 |  |  |
+| 2419 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1981.45.4.431 | 0.920 |  |  |
+| 2420 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382384 | 1.000 |  |  |
+| 2421 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb05368.x | 1.000 |  |  |
+| 2422 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504289 | 1.000 |  |  |
+| 2423 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382984 | 1.000 |  |  |
+| 2424 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9950657 | 1.000 |  |  |
+| 2425 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383101 | 1.000 |  |  |
+| 2426 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/83.1.260 | 1.000 |  |  |
+| 2427 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376471 | 1.000 |  |  |
+| 2428 | 12 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.240.4855.1076.b | 0.282 |  |  |
+| 2429 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0952836902000468 | 0.569 |  |  |
+| 2430 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2818.1922.tb01144.x | 0.554 |  |  |
+| 2431 | 37 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb01005.x | 1.000 |  |  |
+| 2432 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/am97127 | 0.612 |  |  |
+| 2433 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am87017 | 1.000 |  |  |
+| 2434 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.7882/az.1990.003 | 0.326 |  |  |
+| 2435 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374795 | 1.000 |  |  |
+| 2436 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1977.tb04193.x | 0.816 |  |  |
+| 2437 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb01515.x | 1.000 |  |  |
+| 2438 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.31030/2852921 | 0.422 |  |  |
+| 2439 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4615-6428-7_19 | 0.694 |  |  |
+| 2440 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05508.x | 0.916 |  |  |
+| 2441 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.part.2987 | 0.454 |  |  |
+| 2442 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380418 | 1.000 |  |  |
+| 2443 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503831 | 1.000 |  |  |
+| 2444 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380901 | 1.000 |  |  |
+| 2445 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.268.1 | 1.000 |  |  |
+| 2446 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382128 | 1.000 |  |  |
+| 2447 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504272 | 1.000 |  |  |
+| 2448 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504030 | 1.000 |  |  |
+| 2449 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.28920/dhm50.1.24-27 | 0.326 |  |  |
+| 2450 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381990 | 1.000 |  |  |
+| 2451 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/29.2.179 | 1.000 |  |  |
+| 2452 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.1.1 | 1.000 |  |  |
+| 2453 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381780 | 0.290 |  |  |
+| 2454 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf02382671 | 1.000 |  |  |
+| 2455 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379090 | 1.000 |  |  |
+| 2456 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1984.48.2.253 | 1.000 |  |  |
+| 2457 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380922 | 1.000 |  |  |
+| 2458 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381346 | 1.000 |  |  |
+| 2459 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.596.1 | 1.000 |  |  |
+| 2460 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)669<0001:ps>2.0.co;2 | 0.700 |  |  |
+| 2461 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503857 | 1.000 |  |  |
+| 2462 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z54-026 | 1.000 |  |  |
+| 2463 | 18 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381780 | 0.318 |  |  |
+| 2464 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.240.4855.1076-a | 0.313 |  |  |
+| 2465 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.pnsc.2007.12.005 | 0.532 |  |  |
+| 2466 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm-1962-0408 | 0.797 |  |  |
+| 2467 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1984.48.3.327 | 1.000 |  |  |
+| 2468 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504218 | 1.000 |  |  |
+| 2469 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0300-9629(94)00174-r | 1.000 |  |  |
+| 2470 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-3-319-65038-8_50-1 | 0.383 |  |  |
+| 2471 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504120 | 1.000 |  |  |
+| 2472 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504313 | 1.000 |  |  |
+| 2473 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382106 | 1.000 |  |  |
+| 2474 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382558 | 1.000 |  |  |
+| 2475 | 3 | measurement | pending | grey_literature | crossref | crossref_only | 10.7755/tmspo.75 | 0.356 |  |  |
+| 2476 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377818 | 0.877 |  |  |
+| 2477 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1963.27.2.186 | 0.744 |  |  |
+| 2478 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423954 | 0.848 |  |  |
+| 2479 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0066-1856(72)80002-5 | 1.000 |  |  |
+| 2480 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1992.56.4.567 | 1.000 |  |  |
+| 2481 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380335 | 1.000 |  |  |
+| 2482 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb05114.x | 1.000 |  |  |
+| 2483 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02521.x | 1.000 |  |  |
+| 2484 | 43 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02798.x | 1.000 |  |  |
+| 2485 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504399 | 1.000 |  |  |
+| 2486 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1002/(sici)1098-2345(1998)44:2<89::aid-ajp1>3.0.co;2-s | 1.000 |  |  |
+| 2487 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.47536/jcrm.vi.291 | 1.000 |  |  |
+| 2488 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0047-2484(89)90102-4 | 0.971 |  |  |
+| 2489 | 57 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb04717.x | 1.000 |  |  |
+| 2491 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504253 | 1.000 |  |  |
+| 2492 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.595.1 | 1.000 |  |  |
+| 2493 | 99 | compilation | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.007 | 1.000 |  |  |
+| 2494 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf00382057 | 0.450 |  |  |
+| 2495 | 18 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380690 | 1.000 |  |  |
+| 2496 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380999 | 1.000 |  |  |
+| 2498 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1748-1090.1974.tb00834.x | 1.000 |  |  |
+| 2499 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.47536/jcrm.vi.298 | 1.000 |  |  |
+| 2500 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.70675/d7cf1fa0z7ad0z42cfzabb8z86357d235fe0 | 0.449 |  |  |
+| 2501 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/26660644-05202007 | 0.602 |  |  |
+| 2502 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/j.ctt7zvwgq.17 | 0.538 |  |  |
+| 2503 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00610231 | 0.921 |  |  |
+| 2504 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00610874 | 0.751 |  |  |
+| 2505 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375674 | 1.000 |  |  |
+| 2506 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377929 | 1.000 |  |  |
+| 2507 | 1 | measurement | not_found | below_threshold | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1996.tb05287.x | 0.464 |  |  |
+| 2508 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1939338 | 0.452 |  |  |
+| 2509 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01565.x | 0.707 |  |  |
+| 2510 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/an.1995.36.9.13.2 | 0.443 |  |  |
+| 2511 | 21 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05801.x | 1.000 |  |  |
+| 2512 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1086/shad25010167 | 0.283 |  |  |
+| 2513 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377707 | 1.000 |  |  |
+| 2514 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900009092 | 1.000 |  |  |
+| 2515 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1966.tb02945.x | 0.856 |  |  |
+| 2516 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1086/394172 | 0.544 |  |  |
+| 2517 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504128 | 1.000 |  |  |
+| 2518 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382411 | 1.000 |  |  |
+| 2519 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504265 | 1.000 |  |  |
+| 2520 | 12 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03652.x | 0.888 |  |  |
+| 2521 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04437.x | 1.000 |  |  |
+| 2522 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.70-15 | 1.000 |  |  |
+| 2523 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5735/086.047.0202 | 0.420 |  |  |
+| 2524 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1139/z74-016 | 0.884 |  |  |
+| 2525 | 20 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/zoo.21007 | 0.281 |  |  |
+| 2526 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999005105 | 1.000 |  |  |
+| 2527 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0006-3207(94)90663-7 | 0.584 |  |  |
+| 2528 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s10267-008-0407-7 | 0.449 |  |  |
+| 2529 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3106/041.041.0105 | 0.424 |  |  |
+| 2530 | 4 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1744-7429.2001.tb00186.x | 0.956 |  |  |
+| 2531 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380577 | 1.000 |  |  |
+| 2532 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z96-159 | 1.000 |  |  |
+| 2533 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382512 | 1.000 |  |  |
+| 2534 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02486.x | 0.855 |  |  |
+| 2535 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382399 | 1.000 |  |  |
+| 2536 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.143315 | 0.489 |  |  |
+| 2537 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.3225 | 0.749 |  |  |
+| 2538 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3671837 | 0.916 |  |  |
+| 2539 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381609 | 1.000 |  |  |
+| 2540 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.mambio.2010.06.004 | 0.545 |  |  |
+| 2541 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1127/0003-9136/2004/0159-0137 | 0.431 |  |  |
+| 2542 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.zool.2005.02.002 | 0.543 |  |  |
+| 2543 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.mambio.2007.02.006 | 0.520 |  |  |
+| 2545 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1995.59.4.511 | 1.000 |  |  |
+| 2546 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.413594 | 0.435 |  |  |
+| 2548 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/p.413594 | 0.431 |  |  |
+| 2549 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.55362/10.55362/ije/2025/4483 | 0.502 |  |  |
+| 2550 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3797497 | 0.396 |  |  |
+| 2551 | 4 | compilation | pending | weak_match | crossref | crossref_only | 10.1093/oed/4030399863 | 0.815 |  |  |
+| 2552 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02736250 | 0.822 |  |  |
+| 2553 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0006-3207(96)83239-3 | 0.524 |  |  |
+| 2554 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380204 | 1.000 |  |  |
+| 2555 | 26 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3800675 | 0.598 |  |  |
+| 2556 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1999.63.2.217 | 1.000 |  |  |
+| 2557 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1542(2001)082<1003:nhotgm>2.0.co;2 | 1.000 |  |  |
+| 2558 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374952 | 0.873 |  |  |
+| 2559 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504052 | 1.000 |  |  |
+| 2560 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383244 | 0.910 |  |  |
+| 2561 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.49.1 | 1.000 |  |  |
+| 2562 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1439-0310.1977.tb02025.x | 0.476 |  |  |
+| 2563 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1078/1616-5047-00011 | 0.643 |  |  |
+| 2564 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504227 | 1.000 |  |  |
+| 2565 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02510.x | 1.000 |  |  |
+| 2566 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1985.49.3.339 | 1.000 |  |  |
+| 2567 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z78-049 | 1.000 |  |  |
+| 2568 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.5962/p.346951 | 1.000 |  |  |
+| 2569 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382107 | 1.000 |  |  |
+| 2570 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374932 | 1.000 |  |  |
+| 2571 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5479/si.00963801.124-3635.1 | 0.922 |  |  |
+| 2572 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379478 | 0.959 |  |  |
+| 2573 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3801015 | 0.300 |  |  |
+| 2574 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381287 | 1.000 |  |  |
+| 2575 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.29173/bluejay4531 | 1.000 |  |  |
+| 2576 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383258 | 1.000 |  |  |
+| 2577 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)654<0001:pg>2.0.co;2 | 1.000 |  |  |
+| 2578 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1989.53.3.377 | 0.664 |  |  |
+| 2579 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504309 | 1.000 |  |  |
+| 2580 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02586.x | 1.000 |  |  |
+| 2581 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01563.x | 1.000 |  |  |
+| 2582 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/zoo.10056 | 1.000 |  |  |
+| 2583 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/02541858.1979.11447643 | 0.433 |  |  |
+| 2584 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381796 | 1.000 |  |  |
+| 2585 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1991.55.2.187 | 1.000 |  |  |
+| 2586 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375469 | 1.000 |  |  |
+| 2587 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504034 | 1.000 |  |  |
+| 2588 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373971 | 1.000 |  |  |
+| 2589 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374741 | 1.000 |  |  |
+| 2590 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/32.2.219-b | 1.000 |  |  |
+| 2591 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377173 | 1.000 |  |  |
+| 2592 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375314 | 1.000 |  |  |
+| 2593 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1644/1545-1542(2000)081<1046:pbasro>2.0.co;2 | 0.845 |  |  |
+| 2594 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4612-9826-7_10 | 0.547 |  |  |
+| 2595 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373385 | 1.000 |  |  |
+| 2596 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s00436-012-3036-1 | 0.588 |  |  |
+| 2597 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5735/086.045.0404 | 0.503 |  |  |
+| 2598 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503874 | 1.000 |  |  |
+| 2599 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378204 | 1.000 |  |  |
+| 2600 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z69-104 | 1.000 |  |  |
+| 2601 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379181 | 0.821 |  |  |
+| 2602 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373974 | 1.000 |  |  |
+| 2603 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1375693 | 0.606 |  |  |
+| 2604 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1383241 | 0.891 |  |  |
+| 2605 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1963.tb01856.x | 0.897 |  |  |
+| 2606 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3669328 | 1.000 |  |  |
+| 2607 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1981.45.2.177 | 0.831 |  |  |
+| 2608 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300038126 | 0.563 |  |  |
+| 2609 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1744-7348.1955.tb02498.x | 0.837 |  |  |
+| 2610 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504045 | 1.000 |  |  |
+| 2611 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3503996 | 1.000 |  |  |
+| 2612 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.15298/rusjtheriol.14.2.03 | 0.570 |  |  |
+| 2613 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/s00265-002-0506-y | 1.000 |  |  |
+| 2614 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/138214 | 1.000 |  |  |
+| 2615 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503869 | 1.000 |  |  |
+| 2616 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503925 | 1.000 |  |  |
+| 2617 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503843 | 1.000 |  |  |
+| 2618 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503878 | 1.000 |  |  |
+| 2619 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/11956860.1997.11682390 | 1.000 |  |  |
+| 2620 | 44 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb05751.x | 1.000 |  |  |
+| 2621 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382346 | 1.000 |  |  |
+| 2622 | 370 | compilation | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1201/9781420064452 | 0.800 |  |  |
+| 2623 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381804 | 1.000 |  |  |
+| 2624 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3670261 | 0.483 |  |  |
+| 2625 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504100 | 1.000 |  |  |
+| 2626 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1997.61.1.17 | 1.000 |  |  |
+| 2627 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11609/jott.2496.8.11.9371-9374 | 0.566 |  |  |
+| 2628 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/9789004691544_054 | 0.510 |  |  |
+| 2629 | 94 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300019888 | 0.537 |  |  |
+| 2630 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379277 | 1.000 |  |  |
+| 2631 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1940350 | 0.851 |  |  |
+| 2632 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382806 | 1.000 |  |  |
+| 2633 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1530/acta.0.0090258 | 0.498 |  |  |
+| 2634 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1163/26660644-03601003 | 0.558 |  |  |
+| 2635 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/036551666x00011 | 1.000 |  |  |
+| 2636 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02615.x | 0.557 |  |  |
+| 2637 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375574 | 1.000 |  |  |
+| 2638 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1971.tb01835.x | 0.836 |  |  |
+| 2639 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am72001 | 1.000 |  |  |
+| 2641 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3503785 | 0.655 |  |  |
+| 2642 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2992/0145-9058(2007)39[165:acmotm]2.0.co;2 | 0.464 |  |  |
+| 2643 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am82023 | 1.000 |  |  |
+| 2644 | 19 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/9780643097971.ch12 | 0.429 |  |  |
+| 2645 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am86019 | 0.901 |  |  |
+| 2646 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s11406-012-9371-8 | 0.333 |  |  |
+| 2647 | 11 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/9781400846887.166 | 0.339 |  |  |
+| 2648 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504319 | 1.000 |  |  |
+| 2649 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1990.tb04027.x | 0.885 |  |  |
+| 2650 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504281 | 1.000 |  |  |
+| 2651 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504177 | 1.000 |  |  |
+| 2652 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504384 | 1.000 |  |  |
+| 2653 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998001058 | 1.000 |  |  |
+| 2654 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836900007056 | 1.000 |  |  |
+| 2655 | 3263 | compilation | pending | weak_match | crossref | crossref_only | 10.1126/science.aao5987 | 0.776 |  |  |
+| 2656 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300010474 | 0.468 |  |  |
+| 2657 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380043 | 1.000 |  |  |
+| 2658 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/mspecies/147.1 | 1.000 |  |  |
+| 2659 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503956 | 1.000 |  |  |
+| 2660 | 133 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1126/science.240.4855.1076-a | 0.441 |  |  |
+| 2661 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2486 | 1.000 |  |  |
+| 2662 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2717 | 1.000 |  |  |
+| 2663 | 12 | measurement | not_found | below_threshold | crossref | crossref_only | 10.62015/np.1993.v1.188 | 0.424 |  |  |
+| 2664 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377026 | 1.000 |  |  |
+| 2665 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1933378 | 1.000 |  |  |
+| 2667 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382349 | 0.907 |  |  |
+| 2668 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1159/000156066 | 0.504 |  |  |
+| 2669 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503906 | 1.000 |  |  |
+| 2670 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3504329 | 1.000 |  |  |
+| 2672 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb01961.x | 1.000 |  |  |
+| 2673 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1377857 | 0.673 |  |  |
+| 2674 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1998.62.2.175 | 1.000 |  |  |
+| 2675 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3798931 | 1.000 |  |  |
+| 2676 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1984.48.2.239 | 0.500 |  |  |
+| 2677 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504032 | 1.000 |  |  |
+| 2678 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300002878 | 0.510 |  |  |
+| 2679 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1086/338282 | 0.633 |  |  |
+| 2680 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381930 | 0.473 |  |  |
+| 2681 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9960647 | 1.000 |  |  |
+| 2682 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr99104 | 1.000 |  |  |
+| 2683 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1987.51.2.211 | 1.000 |  |  |
+| 2684 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375239 | 1.000 |  |  |
+| 2685 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376315 | 1.000 |  |  |
+| 2686 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5860/choice.34-6276 | 0.697 |  |  |
+| 2687 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.26686/wgtn.17019254 | 0.525 |  |  |
+| 2688 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb03653.x | 1.000 |  |  |
+| 2689 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb05350.x | 1.000 |  |  |
+| 2690 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503795 | 1.000 |  |  |
+| 2691 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/wr9890413 | 0.925 |  |  |
+| 2692 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378007 | 0.774 |  |  |
+| 2693 | 73 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300027216 | 0.514 |  |  |
+| 2694 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999006032 | 1.000 |  |  |
+| 2695 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999010031 | 1.000 |  |  |
+| 2696 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.14720/abs.39.3.29236 | 0.436 |  |  |
+| 2697 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380411 | 1.000 |  |  |
+| 2698 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379108 | 1.000 |  |  |
+| 2699 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379269 | 0.897 |  |  |
+| 2700 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2408799 | 0.336 |  |  |
+| 2701 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379973 | 1.000 |  |  |
+| 2702 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377859 | 1.000 |  |  |
+| 2703 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504103 | 1.000 |  |  |
+| 2704 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504466 | 1.000 |  |  |
+| 2705 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1002/ajp.1350360306 | 0.873 |  |  |
+| 2706 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1365-2028.1996.007-89007.x | 1.000 |  |  |
+| 2707 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382216 | 1.000 |  |  |
+| 2708 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.203292 | 1.000 |  |  |
+| 2709 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.61507/smj22-2007-q31r-10 | 0.488 |  |  |
+| 2710 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.61507/smj22-2016-my5g-08 | 0.361 |  |  |
+| 2711 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1968.tb03042.x | 1.000 |  |  |
+| 2712 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1968.tb04372.x | 1.000 |  |  |
+| 2713 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1970.tb02045.x | 0.858 |  |  |
+| 2714 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.14430/arctic2963 | 0.888 |  |  |
+| 2715 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504443 | 1.000 |  |  |
+| 2716 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504475 | 1.000 |  |  |
+| 2717 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1373965 | 0.801 |  |  |
+| 2718 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.115663 | 0.336 |  |  |
+| 2719 | 166 | compilation | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0469.1981.tb00239.x | 1.000 |  |  |
+| 2720 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.4.553 | 1.000 |  |  |
+| 2721 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1993.57.4.553 | 0.499 |  |  |
+| 2722 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.94-11 | 1.000 |  |  |
+| 2723 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.95-39 | 1.000 |  |  |
+| 2724 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380702 | 1.000 |  |  |
+| 2725 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4419-0293-1_2 | 0.467 |  |  |
+| 2726 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0300-9629(94)90382-4 | 1.000 |  |  |
+| 2727 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/3668982 | 0.291 |  |  |
+| 2728 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1098/rspb.1993.0143 | 1.000 |  |  |
+| 2729 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1420-9101.2009.01729.x | 0.521 |  |  |
+| 2730 | 9 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926944.part-0013 | 0.356 |  |  |
+| 2731 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381765 | 1.000 |  |  |
+| 2732 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2979 | 1.000 |  |  |
+| 2733 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3257 | 1.000 |  |  |
+| 2734 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04615.x | 1.000 |  |  |
+| 2735 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb05119.x | 0.587 |  |  |
+| 2736 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00385.x | 0.907 |  |  |
+| 2737 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00385.x | 0.887 |  |  |
+| 2738 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03680.x | 1.000 |  |  |
+| 2739 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb05119.x | 1.000 |  |  |
+| 2740 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1038/233538a0 | 0.362 |  |  |
+| 2741 | 13 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2305/iucn.ch.1996.ssc-ap.4.en | 0.593 |  |  |
+| 2742 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/11.2.235 | 1.000 |  |  |
+| 2743 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3799490 | 1.000 |  |  |
+| 2744 | 8 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1071/978064309840406.146.159.2007.6 | 0.365 |  |  |
+| 2745 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375926 | 1.000 |  |  |
+| 2746 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504003 | 1.000 |  |  |
+| 2747 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380682 | 0.902 |  |  |
+| 2748 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.240.4855.1076.b | 0.286 |  |  |
+| 2749 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374084 | 1.000 |  |  |
+| 2750 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0010-406x(70)90087-3 | 1.000 |  |  |
+| 2751 | 23 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380357 | 1.000 |  |  |
+| 2752 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382515 | 1.000 |  |  |
+| 2753 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382312 | 0.884 |  |  |
+| 2754 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4102/koedoe.v16i1.890 | 0.841 |  |  |
+| 2755 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1982.tb02036.x | 0.868 |  |  |
+| 2756 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/cbo9780511608483.003 | 0.483 |  |  |
+| 2757 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9840049 | 1.000 |  |  |
+| 2759 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1002/zoo.1430100507 | 0.408 |  |  |
+| 2760 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504317 | 1.000 |  |  |
+| 2761 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381069 | 1.000 |  |  |
+| 2762 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04872.x | 1.000 |  |  |
+| 2763 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.dib.2018.04.088 | 0.424 |  |  |
+| 2764 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504206 | 1.000 |  |  |
+| 2765 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504166 | 1.000 |  |  |
+| 2766 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.2.299 | 0.934 |  |  |
+| 2767 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1934412 | 0.831 |  |  |
+| 2769 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/10.4.352-a | 0.802 |  |  |
+| 2770 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373914 | 1.000 |  |  |
+| 2771 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374016 | 1.000 |  |  |
+| 2772 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374355 | 0.874 |  |  |
+| 2773 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374118 | 1.000 |  |  |
+| 2774 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1373871 | 1.000 |  |  |
+| 2775 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1373981 | 0.852 |  |  |
+| 2776 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/17.2.172 | 1.000 |  |  |
+| 2777 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1748-1090.1992.tb02475.x | 0.666 |  |  |
+| 2778 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503901 | 1.000 |  |  |
+| 2779 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503872 | 1.000 |  |  |
+| 2780 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb00992.x | 1.000 |  |  |
+| 2781 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381921 | 1.000 |  |  |
+| 2782 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1998.tb00021.x | 1.000 |  |  |
+| 2783 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381718 | 1.000 |  |  |
+| 2784 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382032 | 1.000 |  |  |
+| 2785 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/83.1.252 | 1.000 |  |  |
+| 2786 | 50 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb00768.x | 1.000 |  |  |
+| 2787 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm-1988-0314 | 1.000 |  |  |
+| 2788 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04404.x | 1.000 |  |  |
+| 2789 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.11606/issn.2526-3358.bolzoo.1976.121587 | 1.000 |  |  |
+| 2790 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1999.63.2.167 | 1.000 |  |  |
+| 2791 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382240 | 1.000 |  |  |
+| 2792 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379041 | 1.000 |  |  |
+| 2794 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1038/198104a0 | 1.000 |  |  |
+| 2795 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1038/198104a0 | 0.658 |  |  |
+| 2796 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378153 | 1.000 |  |  |
+| 2797 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378119 | 1.000 |  |  |
+| 2798 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503899 | 1.000 |  |  |
+| 2799 | 6 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381382 | 0.899 |  |  |
+| 2800 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/am87009 | 0.539 |  |  |
+| 2801 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374908 | 1.000 |  |  |
+| 2802 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1601-5223.1970.tb02340.x | 0.491 |  |  |
+| 2803 | 97 | compilation | pending | grey_literature | crossref | crossref_only | 10.5962/bhl.title.141251 | 0.513 |  |  |
+| 2804 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.60746 | 0.498 |  |  |
+| 2805 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb08591.x | 1.000 |  |  |
+| 2806 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb01036.x | 1.000 |  |  |
+| 2807 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1442-2026.1995.tb00221.x | 0.444 |  |  |
+| 2808 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/zo9730437 | 0.545 |  |  |
+| 2809 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1096-3642.1952.tb00783.x | 0.426 |  |  |
+| 2810 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1377988 | 0.774 |  |  |
+| 2811 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1378526 | 1.000 |  |  |
+| 2812 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9700171 | 1.000 |  |  |
+| 2813 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/cwr9710001 | 1.000 |  |  |
+| 2814 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9730437 | 0.853 |  |  |
+| 2815 | 4 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1976.tb04683.x | 1.000 |  |  |
+| 2816 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/3503837 | 1.000 |  |  |
+| 2817 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503929 | 1.000 |  |  |
+| 2818 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4102/koedoe.v33i2.435 | 0.784 |  |  |
+| 2819 | 14 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1365-2907.1988.tb00083.x | 0.533 |  |  |
+| 2820 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1994.58.4.527 | 1.000 |  |  |
+| 2821 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9850625 | 0.858 |  |  |
+| 2822 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1381930 | 0.484 |  |  |
+| 2823 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380042 | 0.904 |  |  |
+| 2824 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381104 | 1.000 |  |  |
+| 2825 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381205 | 1.000 |  |  |
+| 2826 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382289 | 1.000 |  |  |
+| 2827 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2387906 | 1.000 |  |  |
+| 2828 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378568 | 1.000 |  |  |
+| 2829 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378567 | 1.000 |  |  |
+| 2830 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4615-6434-8_24 | 0.483 |  |  |
+| 2831 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422299 | 1.000 |  |  |
+| 2832 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.2000.64.4.447 | 1.000 |  |  |
+| 2833 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1376372 | 1.000 |  |  |
+| 2834 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1080/00222939009460820 | 0.810 |  |  |
+| 2835 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379413 | 1.000 |  |  |
+| 2836 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1984.tb05954.x | 0.854 |  |  |
+| 2837 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381342 | 1.000 |  |  |
+| 2838 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/s00580-005-0553-7 | 0.432 |  |  |
+| 2841 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504013 | 1.000 |  |  |
+| 2842 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1038/321690a0 | 1.000 |  |  |
+| 2843 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0959270900002458 | 0.657 |  |  |
+| 2844 | 26 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380481 | 1.000 |  |  |
+| 2846 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9810119 | 1.000 |  |  |
+| 2847 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9930021 | 1.000 |  |  |
+| 2848 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm-1990-0207 | 0.749 |  |  |
+| 2849 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423393 | 0.902 |  |  |
+| 2850 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503942 | 1.000 |  |  |
+| 2851 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504062 | 1.000 |  |  |
+| 2852 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.37833/cord.v23i2.166 | 0.481 |  |  |
+| 2853 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/82.2.545 | 1.000 |  |  |
+| 2854 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1744-7429.2002.tb00563.x | 0.967 |  |  |
+| 2855 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)648<0001:ma>2.0.co;2 | 1.000 |  |  |
+| 2856 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422801 | 1.000 |  |  |
+| 2857 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1853.tb07171.x | 0.615 |  |  |
+| 2858 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/0042-6989(72)90053-3 | 0.542 |  |  |
+| 2859 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504535 | 1.000 |  |  |
+| 2860 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382901 | 1.000 |  |  |
+| 2861 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381442 | 1.000 |  |  |
+| 2862 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am85025 | 0.913 |  |  |
+| 2863 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375861 | 1.000 |  |  |
+| 2864 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1126/science.134.3491.1696 | 0.639 |  |  |
+| 2865 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1093/jmammal/30.4.433 | 0.906 |  |  |
+| 2866 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3800877 | 1.000 |  |  |
+| 2867 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423637 | 0.792 |  |  |
+| 2868 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb04497.x | 0.807 |  |  |
+| 2869 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.2.586 | 1.000 |  |  |
+| 2870 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381245 | 0.927 |  |  |
+| 2873 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1933771 | 1.000 |  |  |
+| 2875 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1999.63.4.437 | 0.916 |  |  |
+| 2876 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424236 | 1.000 |  |  |
+| 2877 | 1 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300034621 | 0.289 |  |  |
+| 2878 | 8 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1046/j.1523-1739.1997.96211.x | 0.584 |  |  |
+| 2879 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375680 | 1.000 |  |  |
+| 2880 | 11 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/9780643097971.ch12 | 0.552 |  |  |
+| 2881 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1121/1.4877198 | 0.577 |  |  |
+| 2882 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1748-1090.1983.tb01490.x | 0.863 |  |  |
+| 2883 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376716 | 1.000 |  |  |
+| 2884 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.17306/978-83-67112-62-8/7-8 | 0.493 |  |  |
+| 2885 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198549451.003.0004 | 1.000 |  |  |
+| 2886 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1002/zoo.1430110205 | 0.868 |  |  |
+| 2887 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1748-1090.1993.tb03509.x | 1.000 |  |  |
+| 2888 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382353 | 1.000 |  |  |
+| 2889 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01586.x | 1.000 |  |  |
+| 2890 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-1-4612-1918-7_10 | 0.382 |  |  |
+| 2891 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.86-11 | 0.468 |  |  |
+| 2892 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1979.11447643 | 1.000 |  |  |
+| 2893 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/02541858.1985.11447918 | 0.550 |  |  |
+| 2894 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1986.11447955 | 1.000 |  |  |
+| 2895 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0770355 | 1.000 |  |  |
+| 2896 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/02541858.1999.11448490 | 0.404 |  |  |
+| 2897 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03707.x | 0.927 |  |  |
+| 2898 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0810041 | 0.932 |  |  |
+| 2899 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1080/02541858.1988.11448120 | 0.614 |  |  |
+| 2900 | 25 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1990.11448213 | 1.000 |  |  |
+| 2901 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0890537 | 1.000 |  |  |
+| 2902 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02797.x | 0.536 |  |  |
+| 2903 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.2001.65.4.495 | 0.734 |  |  |
+| 2904 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0305-0491(83)90355-3 | 1.000 |  |  |
+| 2905 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1016/0300-9629(88)91015-8 | 0.767 |  |  |
+| 2906 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am86016 | 1.000 |  |  |
+| 2907 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/am88018 | 1.000 |  |  |
+| 2908 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1146/annurev-animal-111523-102158 | 0.604 |  |  |
+| 2909 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382983 | 1.000 |  |  |
+| 2910 | 7 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1550-7408.1968.tb02180.x | 0.472 |  |  |
+| 2911 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/cbo9781139034210.028 | 0.690 |  |  |
+| 2912 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf02197062 | 0.412 |  |  |
+| 2913 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03694.x | 1.000 |  |  |
+| 2914 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1515/mamm.1989.53.1.25 | 1.000 |  |  |
+| 2915 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb03557.x | 1.000 |  |  |
+| 2916 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1163/26660644-05301006 | 1.000 |  |  |
+| 2917 | 2 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836998003124 | 1.000 |  |  |
+| 2918 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376874 | 1.000 |  |  |
+| 2919 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379407 | 1.000 |  |  |
+| 2920 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1977.41.4.517 | 1.000 |  |  |
+| 2921 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1380041 | 0.798 |  |  |
+| 2922 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1379966 | 0.866 |  |  |
+| 2923 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380671 | 1.000 |  |  |
+| 2924 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380917 | 1.000 |  |  |
+| 2925 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381460 | 1.000 |  |  |
+| 2926 | 3 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/81.1.77 | 1.000 |  |  |
+| 2927 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)649<0001:pa>2.0.co;2 | 1.000 |  |  |
+| 2928 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503858 | 1.000 |  |  |
+| 2929 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1382525 | 0.874 |  |  |
+| 2930 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1995.59.4.517 | 1.000 |  |  |
+| 2931 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9950699 | 1.000 |  |  |
+| 2932 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.99-36 | 1.000 |  |  |
+| 2933 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381211 | 1.000 |  |  |
+| 2934 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503887 | 1.000 |  |  |
+| 2935 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504014 | 1.000 |  |  |
+| 2936 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504324 | 1.000 |  |  |
+| 2937 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504172 | 1.000 |  |  |
+| 2938 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504451 | 1.000 |  |  |
+| 2939 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2000)641<0001:tm>2.0.co;2 | 1.000 |  |  |
+| 2940 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1379172 | 0.589 |  |  |
+| 2941 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1644/1545-1410(2001)653<0001:tm>2.0.co;2 | 1.000 |  |  |
+| 2942 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1990.54.1.61 | 1.000 |  |  |
+| 2943 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380484 | 1.000 |  |  |
+| 2944 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1997.61.2.245 | 1.000 |  |  |
+| 2945 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.1080/00445096.1977.11447561 | 0.656 |  |  |
+| 2946 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926937.0013 | 0.463 |  |  |
+| 2947 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380963 | 1.000 |  |  |
+| 2948 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1986.50.3.293 | 1.000 |  |  |
+| 2949 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02561.x | 1.000 |  |  |
+| 2950 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02779.x | 1.000 |  |  |
+| 2951 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3750/aip1991.21.1.06 | 0.540 |  |  |
+| 2952 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.76-18 | 1.000 |  |  |
+| 2953 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5040/9781472926913.0015 | 0.492 |  |  |
+| 2954 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511721830.004 | 1.000 |  |  |
+| 2955 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.78-43 | 0.449 |  |  |
+| 2956 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.50.1 | 1.000 |  |  |
+| 2957 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380570 | 1.000 |  |  |
+| 2958 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1373322 | 0.915 |  |  |
+| 2959 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378341 | 0.805 |  |  |
+| 2960 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.363987 | 1.000 |  |  |
+| 2961 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s095283699800106x | 1.000 |  |  |
+| 2962 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0006-3207(00)00219-6 | 1.000 |  |  |
+| 2963 | 2 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3503993 | 1.000 |  |  |
+| 2964 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382232 | 1.000 |  |  |
+| 2965 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/wr9800079 | 0.545 |  |  |
+| 2966 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1988.tb02427.x | 1.000 |  |  |
+| 2967 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02428.x | 1.000 |  |  |
+| 2968 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9900423 | 1.000 |  |  |
+| 2969 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383108 | 1.000 |  |  |
+| 2970 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503940 | 1.000 |  |  |
+| 2971 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374405 | 1.000 |  |  |
+| 2972 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb01963.x | 1.000 |  |  |
+| 2973 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02790.x | 1.000 |  |  |
+| 2974 | 25 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382715 | 1.000 |  |  |
+| 2975 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2772 | 1.000 |  |  |
+| 2976 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04345.x | 0.887 |  |  |
+| 2977 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb05267.x | 0.834 |  |  |
+| 2978 | 37 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05423.x | 1.000 |  |  |
+| 2979 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380595 | 1.000 |  |  |
+| 2980 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504020 | 1.000 |  |  |
+| 2981 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503879 | 1.000 |  |  |
+| 2982 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503992 | 1.000 |  |  |
+| 2983 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503811 | 1.000 |  |  |
+| 2984 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/bhl.title.142870 | 0.833 |  |  |
+| 2985 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504303 | 1.000 |  |  |
+| 2986 | 285 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1382840 | 1.000 |  |  |
+| 2987 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18805/ijar.bf-1991 | 0.437 |  |  |
+| 2988 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.31857/s1026347022040102 | 0.606 |  |  |
+| 2989 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0240193 | 1.000 |  |  |
+| 2990 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0250355 | 1.000 |  |  |
+| 2991 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503926 | 1.000 |  |  |
+| 2993 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1971.tb01870.x | 0.916 |  |  |
+| 2994 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380679 | 1.000 |  |  |
+| 2995 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1748-1090.1987.tb01515.x | 0.590 |  |  |
+| 2996 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0840505 | 1.000 |  |  |
+| 2997 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1093/jmammal/83.1.81 | 1.000 |  |  |
+| 2998 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.228582 | 0.882 |  |  |
+| 2999 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375292 | 1.000 |  |  |
+| 3000 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1748-1090.1987.tb03170.x | 0.491 |  |  |
+| 3001 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2423942 | 0.496 |  |  |
+| 3002 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/2423942 | 0.532 |  |  |
+| 3003 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422825 | 1.000 |  |  |
+| 3004 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503916 | 1.000 |  |  |
+| 3005 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504066 | 1.000 |  |  |
+| 3006 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504033 | 1.000 |  |  |
+| 3007 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1438467 | 0.678 |  |  |
+| 3008 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504284 | 1.000 |  |  |
+| 3009 | 12 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300011315 | 0.574 |  |  |
+| 3010 | 40 | compilation | not_found | below_threshold | crossref | crossref_only | 10.3366/edinburgh/9781474429566.003.0002 | 0.453 |  |  |
+| 3011 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/j.tvjl.2010.05.017 | 0.531 |  |  |
+| 3012 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1935606 | 1.000 |  |  |
+| 3013 | 3 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb03453.x | 0.868 |  |  |
+| 3014 | 6 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1206/0003-0082(2001)352<0001:caitic>2.0.co;2 | 0.446 |  |  |
+| 3015 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373783 | 1.000 |  |  |
+| 3016 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am87019 | 1.000 |  |  |
+| 3017 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1523-1739.1989.tb00226.x | 0.573 |  |  |
+| 3018 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-012442710-5.50034-4 | 0.000 |  |  |
+| 3019 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503989 | 1.000 |  |  |
+| 3020 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503969 | 1.000 |  |  |
+| 3021 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504023 | 1.000 |  |  |
+| 3022 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504148 | 1.000 |  |  |
+| 3023 | 95 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1086/423087 | 0.373 |  |  |
+| 3024 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423325 | 1.000 |  |  |
+| 3025 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503970 | 1.000 |  |  |
+| 3026 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.62142/6j33yt20 | 0.502 |  |  |
+| 3027 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3807985 | 0.866 |  |  |
+| 3028 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503838 | 1.000 |  |  |
+| 3029 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.12933/therya-16-345 | 0.542 |  |  |
+| 3030 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503917 | 1.000 |  |  |
+| 3031 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504073 | 1.000 |  |  |
+| 3032 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504176 | 1.000 |  |  |
+| 3033 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.016 | 1.000 |  |  |
+| 3034 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380788 | 1.000 |  |  |
+| 3035 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380793 | 1.000 |  |  |
+| 3036 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503953 | 1.000 |  |  |
+| 3037 | 12 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1381514 | 0.854 |  |  |
+| 3038 | 11 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381910 | 1.000 |  |  |
+| 3039 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504016 | 1.000 |  |  |
+| 3040 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3504287 | 1.000 |  |  |
+| 3041 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378570 | 1.000 |  |  |
+| 3043 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.18054/pb.2016.118.2.3845 | 0.346 |  |  |
+| 3044 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/4050454 | 0.283 |  |  |
+| 3045 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5479/si.00810282.511 | 0.529 |  |  |
+| 3046 | 16 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/9783110337358-152 | 0.504 |  |  |
+| 3047 | 5 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1375029 | 0.883 |  |  |
+| 3048 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1000910304 | 1.000 |  |  |
+| 3049 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1378862 | 1.000 |  |  |
+| 3050 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1001590208 | 1.000 |  |  |
+| 3051 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376515 | 1.000 |  |  |
+| 3052 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/zo9860199 | 0.444 |  |  |
+| 3053 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1046/j.1365-294x.2000.00871.x | 0.498 |  |  |
+| 3054 | 11 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02638.x | 1.000 |  |  |
+| 3055 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1439-0310.1967.tb00583.x | 0.683 |  |  |
+| 3057 | 8 | measurement | pending | weak_match | crossref | crossref_only | 10.1163/156853983x00327 | 0.864 |  |  |
+| 3058 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383020 | 1.000 |  |  |
+| 3059 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377798 | 1.000 |  |  |
+| 3060 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382217 | 1.000 |  |  |
+| 3061 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s0006-3207(01)00145-8 | 0.588 |  |  |
+| 3062 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.70-5 | 1.000 |  |  |
+| 3063 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503898 | 1.000 |  |  |
+| 3064 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380591 | 1.000 |  |  |
+| 3065 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/3503921 | 1.000 |  |  |
+| 3066 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380812 | 1.000 |  |  |
+| 3067 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380900 | 1.000 |  |  |
+| 3068 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382469 | 1.000 |  |  |
+| 3069 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1439-0310.1976.tb00941.x | 1.000 |  |  |
+| 3070 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.4098/at.arch.85-8 | 0.888 |  |  |
+| 3071 | 9 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1982.46.4.419 | 0.796 |  |  |
+| 3072 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1374354 | 0.871 |  |  |
+| 3073 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375195 | 1.000 |  |  |
+| 3074 | 2 | measurement | pending | weak_match | crossref | crossref_only | 10.1071/zo9710371 | 0.908 |  |  |
+| 3075 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1987.51.4.537 | 1.000 |  |  |
+| 3076 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02482.x | 1.000 |  |  |
+| 3077 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504036 | 1.000 |  |  |
+| 3078 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503820 | 1.000 |  |  |
+| 3079 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504182 | 1.000 |  |  |
+| 3080 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb03464.x | 1.000 |  |  |
+| 3081 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb07491.x | 1.000 |  |  |
+| 3082 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1017/s0952836999007013 | 1.000 |  |  |
+| 3083 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb05010.x | 1.000 |  |  |
+| 3084 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9910661 | 1.000 |  |  |
+| 3085 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1071/am01063 | 0.479 |  |  |
+| 3086 | 17 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf00173778 | 0.904 |  |  |
+| 3088 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.62015/np.1993.v1.186 | 0.533 |  |  |
+| 3089 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1002/evan.1360010108 | 1.000 |  |  |
+| 3090 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1007/bf02735722 | 0.858 |  |  |
+| 3091 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.5962/p.344318 | 0.798 |  |  |
+| 3092 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381482 | 1.000 |  |  |
+| 3093 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1017/s0266467400009421 | 1.000 |  |  |
+| 3094 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380350 | 1.000 |  |  |
+| 3095 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.76-39 | 1.000 |  |  |
+| 3096 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503827 | 1.000 |  |  |
+| 3097 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.4098/at.arch.86-12 | 0.434 |  |  |
+| 3098 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1463-6395.1983.tb00637.x | 0.311 |  |  |
+| 3099 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1469-7998.1965.tb05163.x | 1.000 |  |  |
+| 3100 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/0.105.1 | 1.000 |  |  |
+| 3101 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf02739363 | 1.000 |  |  |
+| 3102 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf02557727 | 1.000 |  |  |
+| 3103 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504405 | 1.000 |  |  |
+| 3105 | 5 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1017/s0030605300008358 | 0.554 |  |  |
+| 3107 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.3106/041.036.0304 | 0.403 |  |  |
+| 3108 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1979.tb07715.x | 1.000 |  |  |
+| 3109 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb01525.x | 1.000 |  |  |
+| 3110 | 14 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1078/1616-5047-00053 | 0.577 |  |  |
+| 3111 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504254 | 1.000 |  |  |
+| 3112 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382941 | 1.000 |  |  |
+| 3114 | 1 | measurement | pending | grey_literature | crossref | crossref_only | 10.2108/zsj.18.733 | 0.547 |  |  |
+| 3115 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1515/mamm.1975.39.1.75 | 0.916 |  |  |
+| 3116 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1515/mamm.1989.53.3.395 | 0.564 |  |  |
+| 3117 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503778 | 1.000 |  |  |
+| 3118 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503978 | 1.000 |  |  |
+| 3119 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503973 | 1.000 |  |  |
+| 3120 | 3 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/tandt/2.2.29 | 0.458 |  |  |
+| 3121 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb01928.x | 1.000 |  |  |
+| 3122 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.71424/azb75.4.002589 | 0.539 |  |  |
+| 3123 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.53846/goediss-8432 | 0.356 |  |  |
+| 3124 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380791 | 1.000 |  |  |
+| 3125 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.1111/j.1748-1090.1973.tb02128.x | 0.903 |  |  |
+| 3126 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503955 | 1.000 |  |  |
+| 3127 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1093/9780191949142.003.0005 | 0.538 |  |  |
+| 3128 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.3406/revec.1965.4434 | 1.000 |  |  |
+| 3129 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_18 | 1.000 |  |  |
+| 3130 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/s1875-2780(08)60064-4 | 0.475 |  |  |
+| 3131 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.11646/zootaxa.4926.1.2 | 0.529 |  |  |
+| 3132 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/2423564 | 1.000 |  |  |
+| 3133 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377664 | 1.000 |  |  |
+| 3134 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2460/ajvr.1990.51.03.408 | 0.978 |  |  |
+| 3135 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1380857 | 0.529 |  |  |
+| 3136 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z02-183 | 1.000 |  |  |
+| 3137 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383292 | 1.000 |  |  |
+| 3138 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503822 | 1.000 |  |  |
+| 3139 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.5962/bhl.title.69084 | 0.602 |  |  |
+| 3140 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05490.x | 1.000 |  |  |
+| 3141 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379417 | 1.000 |  |  |
+| 3142 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.75-8 | 0.970 |  |  |
+| 3143 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1439-0310.1951.tb00181.x | 0.499 |  |  |
