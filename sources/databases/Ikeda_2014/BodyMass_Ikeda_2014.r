@@ -15,8 +15,11 @@
 # (Kiorboe 2013 for crustacean and gelatinous groups; Brey et al. 2010 data-bank
 # medians for chaetognaths, molluscs and polychaetes). The parser also carries the
 # ESM's per-record Reference column (author-year key of the primary study, filled
-# down from the first record of each run) as `ref`; it is kept as `ref_keys`, one
-# key per record, so that the records can be attributed to their primary studies.
+# down from the first record of each run) as `ref`; it is kept as `ref_keys`
+# through SplitRefKeys() with the ';' separator of the convention (one key per
+# record here, in the ESM's own form: 'Ikeda (2013a)', 'Ikeda and Mitchell
+# (1982)', 'Ikeda et al. (2007)', 'Ikeda (unpublished data)'), so that the
+# records can be attributed to their primary studies (issue #1).
 adat <- read.csv(file.path(wd_source, 'ikeda2014_esm_parsed.csv'), stringsAsFactors = FALSE)
 adat$stage <- trimws(adat$stage)
 juv <- grepl('^C[1-5]|\\bC[1-5]\\b|\\bJ\\b|juv|larva|nauplii|zoea|furcilia|calyptopis', adat$stage, ignore.case = TRUE) |
@@ -31,7 +34,7 @@ adat <- DropImputed(adat, adat$table == 'S3', 'Ikeda_2014',
                     'Table S3 O:N rows duplicate the S1/S2 specimens (owner decision, #11)')
 adat$mass_g <- suppressWarnings(as.numeric(adat$dw_mg)) / 1000           # mg dry -> g dry
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
-adat$ref_keys <- ifelse(nzchar(trimws(adat$ref)), trimws(adat$ref), NA_character_)
+adat$ref_keys <- SplitRefKeys(adat$ref, ';')
 if (anyNA(adat$ref_keys)) warning('Ikeda_2014: ', sum(is.na(adat$ref_keys)), ' record(s) without a reference key')
 group_map <- c(COPE = 'crustacean_zooplankton', EUPH = 'crustacean_zooplankton',
                AMPH = 'crustacean_zooplankton', DECA = 'crustacean_zooplankton',

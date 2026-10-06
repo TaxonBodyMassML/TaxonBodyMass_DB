@@ -157,6 +157,22 @@ Expect(nrow(CandidatesFromCompilationReflist('10.1007/bf00392514', cfg)) == 28, 
 Expect(nrow(CandidatesFromCompilationReflist(NA, cfg)) == 0 && nrow(CandidatesFromCompilationReflist('10.9999/this-doi-does-not-exist', cfg)) == 0,
        'no DOI or an unknown DOI: an empty list')
 
+cat('ReflistFromCrossrefReferences() on the deposited list of Ikeda 2014\n')
+ikeda_keys <- c('Ikeda et al. (2007)', 'Ikeda (2014a)', 'Ikeda (2014b)', 'Ikeda (2013a)', 'Ikeda et al. (2001)', 'Ikeda (2013b)',
+                'Ikeda (2013d)', 'Ikeda (2013c)', 'Ikeda (1974)', 'Ikeda and Takahashi (2012)', 'Cetta et al. (1986)', 'Biggs (1977)',
+                'Ikeda and McKinnon (2012)', 'Ikeda (1988)', 'Ikeda (unpublished data)', 'Ikeda and Mitchell (1982)', 'Gorsky et al. (1987)',
+                'Roger (1988)', 'Thuesen and Childress (1993)', 'Ikeda (2012)', 'Kaeriyama and Ikeda (2004)', 'Iguchi and Ikeda (2004)',
+                'Ikeda and Bruce (1986)', 'Bamstedt (1979)', 'Donnelly et al. (2004)', 'Ikeda (1990)', 'Ikeda and Kirkwood (1989)',
+                'Mayzaud and Dallot (1973)', 'Nival et al. (1972)', 'Childress (1975)', 'Ikeda and Skjoldal (1989)', 'Köster et al. (2010)',
+                'Lombard et al. (2005)', 'Madin and Purcell (1992)', 'Reeve et al. (1970)', 'Szyper (1981)', 'Torres et al. (1994)')
+irl <- ReflistFromCrossrefReferences(CandidatesFromCompilationReflist('10.1007/s00227-014-2540-5', cfg), ikeda_keys)
+Expect(nrow(irl) == 37 && nrow(attr(irl, 'unresolved')) == 0 && sum(!is.na(irl$raw_doi)) == 34,
+       'the 37 ESM keys of Ikeda_2014 each join one deposited reference (34 with DOI; Ikeda 1974, Roger 1988 and the unpublished data without)')
+Expect(irl$raw_doi[irl$native_key == 'Ikeda (2013a)'] == '10.1007/s00227-012-2150-z' && irl$raw_doi[irl$native_key == 'Ikeda (2013d)'] == '10.1007/s10872-013-0200-x' &&
+         irl$raw_doi[irl$native_key == 'Ikeda (2012)'] == '10.1007/s10872-012-0124-x' && irl$raw_doi[irl$native_key == 'Ikeda and McKinnon (2012)'] == '10.3800/pbr.7.8' &&
+         irl$raw_doi[irl$native_key == 'Ikeda et al. (2001)'] == '10.1007/s002270100608' && irl$raw_doi[irl$native_key == 'Bamstedt (1979)'] == '10.1016/b978-0-08-023217-1.50041-2',
+       'the 2013a-d suffixes, the three Ikeda 2012 forms and the diacritic surname land on the right DOIs')
+
 cat('ClosedWorldCandidates()\n')
 parsed <- list(parsed_author1 = 'Ikeda', parsed_year = 1986L, parsed_title = 'Metabolic activity and elemental composition of krill')
 reflist <- data.frame(key = c('r1', 'r2', 'r3', 'r4'),

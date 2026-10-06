@@ -1,10 +1,13 @@
 # Fetch body mass data from rdataretriever datasets and save to Rdata.
 # Requires Python + retriever package (see README Prerequisites).
 # Called from RunMe.r when DataRetrieve = TRUE.
-# Depends on: wd_root, wd_rdata, wd_db, FixFormatting(), FixMisspellings(), RemoveNonTaxa(),
-# StackBrose2005(), DropPlaceholders(), ApplyUnitActions(), WebReferenceKeys()
-# (R/library/foodweb_units.r), JoinRefKeys() (R/library/citations/parse_reflists.r),
-# imputed_log, ImputedEntriesSince(), SaveImputedLive() (R/library/helpers.r)
+# Depends on: wd_root, wd_rdata, wd_db, StackBrose2005(), DropPlaceholders(),
+# ApplyUnitActions(), WebReferenceKeys() (R/library/foodweb_units.r), imputed_log,
+# ImputedEntriesSince(), SaveImputedLive() (R/library/helpers.r).
+# The frame holds every record as the source wrote it (issue #69): the name
+# cleaning (FixFormatting(), FixMisspellings(), RemoveNonTaxa()) and the
+# per-species pooling are section 2b and Pass 1 of RunMe.r, as for every
+# parse-script frame.
 
 # Patch rdataretriever::fetch for retriever 2.x compatibility.
 # In retriever 2.x, dataset_names() returns a flat character vector, but the
@@ -75,17 +78,12 @@ mlh$n <- 1
 mlh$source_mass <- 'Ernest_2003'
 
 
-# bird-size: family column is an integer code, not a name — drop it
-# Terje Lislevand, Jordi Figuerola, and Tam´as Sz´ekely. 
-# Avian body sizes in relation to fecundity, mating
-# system, display behavior, and resource sharing: Ecological archives 
-# e088-096. Ecology, 88(6):1605–1605,  2007.
-bir <- rdataretriever::fetch('bird-size')[[1]]
-bir <- bir[, c('species_name', 'm_mass')]
-colnames(bir) <- c('taxon', 'mass_g')
-bir <- bir[which(!is.na(bir$mass_g) & bir$mass_g > 0), ]
-bir$n <- 1
-bir$source_mass <- 'Lislevand_etal_2007'
+# bird-size (Lislevand et al. 2007, Ecological Archives E088-096) is no longer
+# fetched here (issue #102, 2026-10-05): the same data file is parsed by
+# sources/databases/Lislevand_etal_2007/BodyMass_Lislevand_etal_2007.r, which
+# averages the male, female and unsexed masses and keeps the per-record
+# reference numbers as ref_keys; the retriever copy (male mass only, no
+# references) duplicated it under the same label.
 
 # predator-prey-body-ratio: no taxonomy beyond binomial
 # Brose U, Cushing L, Berlow EL, Jonsson T, Banasek-Richter C, Bersier LF, 
@@ -102,8 +100,8 @@ bir$source_mass <- 'Lislevand_etal_2007'
 # every other study is kept as reported (issue #14, owner decisions 2026-10-03).
 # Every row then cites its study (the Link reference) as its primary reference,
 # one key per cited work from brose2005_references.csv (study-level
-# attribution, issue #64; WebReferenceKeys()); the keys are kept as `ref_keys`,
-# collapsed per taxon with JoinRefKeys() in the geometric mean below.
+# attribution, issue #64; WebReferenceKeys()); the keys are kept per row as
+# `ref_keys` (Pass 1 of RunMe.r collapses them per species with JoinRefKeys()).
 ppb <- rdataretriever::fetch('predator-prey-body-ratio')[[1]]
 ppb <- StackBrose2005(ppb)
 ppb <- DropPlaceholders(ppb, 'study', 'Brose_2005')
@@ -164,27 +162,27 @@ sdd$n <- 1
 sdd$source_mass <- 'Raymond_2011'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-adat <- bind_rows(mlh, bir, ppb, pan, amn, sdd)
-
-adat <- FixFormatting(adat)
-adat <- FixMisspellings(adat)
-adat <- RemoveNonTaxa(adat)
+# Every record is one frame row, named as the source wrote it (issue #69):
+# no name cleaning and no per-taxon collapse happen here, so that the raw-name
+# rules of audit/raw_name_patterns.csv, fix_misspellings.r and fix_nontaxa.r
+# are applied by section 2b of RunMe.r at every run (recompile = TRUE
+# re-cleans a live frame like any parse-script frame, and CheckRawNames()
+# sees its raw names) and Pass 1 pools the records per cleaned species and
+# source. Until 2026-10-05 the download applied FixFormatting(),
+# FixMisspellings() and RemoveNonTaxa() and saved one geometric mean per
+# cleaned taxon, which froze the cleaning rules of the download date in the
+# cache: 60 Brose_2005 authorities without a year would have stopped section
+# 2b as unclassified bracket groups, 157 records of Chartoscirta cincta were
+# lost to the pre-#37 encoding step, and the frame kept Aspilota and
+# Orthostigma as genus-level records after #43 had decided that
+# morphospecies codes drop (#69).
+adat <- bind_rows(mlh, ppb, pan, amn, sdd)
 adat <- adat[which(!is.na(adat$mass_g) & adat$mass_g > 0), ]
-
-# Calculate geometric mean for each taxon within each dataset; the native
-# reference keys of the rows (Brose_2005 only) are collapsed to their distinct
-# set (issue #1, 1.2)
-adat <- adat %>%
-  group_by(taxon, source_mass) %>%
-  mutate(mass_g = 10^mean(log10(mass_g), na.rm = TRUE), n = n(),
-         ref_keys = JoinRefKeys(ref_keys)) %>%
-  slice(1) %>%
-  ungroup()
-
+adat$taxon <- as.character(adat$taxon)
 for (col in c('class', 'order', 'family'))
   if (!col %in% names(adat)) adat[[col]] <- NA_character_
-DR <- adat[adat$taxon != 0, ]
+# a missing or empty name (the Brose table writes '0' once) is no record
+DR <- adat[!is.na(adat$taxon) & !adat$taxon %in% c('', '0'), ]
 
 save(DR, file = file.path(wd_rdata, 'BodyMass_DataRetrieverAll.Rdata'))
 SaveImputedLive('DataRetrieverAll', ImputedEntriesSince(n_log_before),

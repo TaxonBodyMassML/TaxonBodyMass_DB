@@ -31,6 +31,7 @@
 "Gonzalez_2025","fishes of the Vanni excretion-database sub-sources: small individuals of large species, non-adult records (owner decision 2026-10-04)",809,73,2767
 "Gonzalez_2025","remaining Vanni-database rows (Sterrett et al. 2015 turtles, a copepod, a snail): copies of Vanni_2017 record subsets, now a source (owner decision 2026-10-05)",38,6,2729
 "Hoehler_etal_2023","genus-level cell size (Comments)",7,5,4413
+"Hoehler_etal_2023","copied from Hudson_2013 (Reference Code Hudson et al. (2013)), which enters directly; 262 bird masses sit under the wrong species (#66)",1497,132,2916
 "Hrycik_2024","life-stage annotation in the raw name: not an adult record (audit/raw_name_patterns.csv, #8, #38)",15,2,185
 "Hudson_2013","nestling/chick study (Appendix S6 title): not adult records",63,4,1435
 "Ikeda_2014","Table S3 O:N rows duplicate the S1/S2 specimens (owner decision, #11)",196,153,792
