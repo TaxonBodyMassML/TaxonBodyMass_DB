@@ -37,18 +37,25 @@ CitationsPaths <- function(wd_root) {
     classes_csv        = file.path(wd_root, 'Bib', 'source_provenance_classes.csv'),
     snapshot_primary   = file.path(wd_root, 'Bib', 'BM_primary_citations_snapshot.csv'),
     snapshot_citations = file.path(wd_root, 'Bib', 'BM_citations_snapshot.csv'),
+    snapshot_data      = file.path(wd_root, 'sources', 'BM_data_snapshot.csv'),
     provenance_csv     = file.path(wd_root, 'TaxonBodyMass_Provenance.csv.gz'),
     warnings_md        = file.path(wd_root, 'reports', 'warnings_citations.md')
   )
 }
 
-# The lab Google Sheet (the same document RunMe.r reads for BM_data and
-# BM_citations) and the names of its citation tabs. Only `sheet_tab_primary` is
-# ever written by this tooling (sheet_append.r).
+# The lab Google Sheet and the names of the three tabs RunMe.r reads (the mass
+# overrides and the two citation maps), each with a tracked copy (the
+# snapshot_* paths above; R/library/sheet_snapshots.r, #118). Only
+# `sheet_tab_primary` is ever written by this tooling (sheet_append.r).
 citations_sheet_url  <- paste0('https://docs.google.com/spreadsheets/d/',
                                '1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing')
+sheet_tab_data       <- 'BM_data'
 sheet_tab_citations  <- 'BM_citations'
 sheet_tab_primary    <- 'BM_primary_citations'
+# How BM_data is read (read_sheet() col_types): Taxon.group, taxon, mass_g,
+# source_mass, a, b, Length; the numbers as the cells' values, which the
+# character read would give as formatted text. RunMe.r keeps columns 1-4.
+sheet_data_col_types <- 'ccncnnn'
 
 # ---- network identity ---------------------------------------------------------
 # Crossref's polite pool and OpenAlex's polite pool both ask for a contact

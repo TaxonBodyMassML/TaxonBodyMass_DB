@@ -17,6 +17,7 @@ if (length(this_file) == 0)
 repo <- normalizePath(file.path(dirname(this_file), '..', '..', '..'))
 lib  <- file.path(repo, 'R', 'library')
 source(file.path(lib, 'helpers.r'))
+source(file.path(lib, 'sheet_snapshots.r'))      # SheetAuth(), ReadSheetTab(), SnapshotSheetTab() (#118)
 for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'verify_services.r', 'build_bib.r', 'sheet_append.r'))
   source(file.path(lib, 'citations', f))
 
@@ -141,9 +142,14 @@ Expect(Has(ErrorOf(suppressMessages(AppendPrimaryCitations(rows, 'url', sheet_ta
        'the re-read after the append must show every new Bibcite')
 Expect(identical(names(SheetIO()), c('read', 'exists', 'create', 'append')), 'the default io has the four operations the fake implements')
 pre <- FakeSheet(list(BM_primary_citations = rows[1, ]))
-res4 <- suppressMessages(AppendPrimaryCitations(rows, 'url', sheet_tab_primary, dry_run = TRUE, io = pre$io))
+snap_dry <- tempfile(fileext = '.csv')
+res4 <- suppressMessages(AppendPrimaryCitations(rows, 'url', sheet_tab_primary, dry_run = TRUE, snapshot_path = snap_dry, io = pre$io))
 Expect(nrow(res4$new) == 1 && res4$new$CiteID == 'Kremer_1976' && res4$n_before == 1 && !any(grepl('^(create|append)', pre$env$log)),
        'dry run on an existing tab: the diff is the rows not yet present and nothing is written')
+dry_snap <- read.csv(snap_dry, stringsAsFactors = FALSE, colClasses = 'character')
+Expect(file.exists(snap_dry) && nrow(dry_snap) == 1 && identical(names(dry_snap), sheet_primary_columns) && dry_snap$Bibcite == rows$Bibcite[1] &&
+         nrow(pre$env$tabs[[sheet_tab_primary]]) == 1,
+       'a dry run on an existing tab still snapshots the tab as it is (read-only; #114 item 6)')
 
 cat('SnapshotSheetTab()\n')
 sf <- tempfile(fileext = '.csv')

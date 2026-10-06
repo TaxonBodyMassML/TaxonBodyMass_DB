@@ -1,7 +1,5 @@
 # Citation tooling (issue #1): the lab Google Sheet.
 #
-#   ReadSheetTab(url, tab)              one tab as a character data frame (cached gargle token)
-#   SnapshotSheetTab(df, path)          a tab to a tracked CSV (Bib/*_snapshot.csv)
 #   FormatCitationText(work)            the Citation cell from a Crossref work record only
 #   FormatCitationTextNoDOI(row, ...)   the Citation cell of an owner-approved DOI-less entry
 #   BuildSheetRows(prim, works)         the rows of BM_primary_citations for a source
@@ -10,19 +8,9 @@
 #                                       BM_primary_citations only; dry run by default
 # The Sheet is only ever appended to, and only its BM_primary_citations tab; the
 # tab is created (headers only) when it does not exist. Every network action
-# goes through the `io` list so that the tests run on fakes.
-
-SheetAuth <- function() {
-  options(gargle_oauth_email = TRUE)        # the cached token, no browser prompt
-  if (!googlesheets4::gs4_has_token()) googlesheets4::gs4_auth()
-  invisible(TRUE)
-}
-
-ReadSheetTab <- function(url, tab) {
-  SheetAuth()
-  d <- googlesheets4::read_sheet(url, sheet = tab, col_types = 'c')
-  as.data.frame(d, stringsAsFactors = FALSE)
-}
+# goes through the `io` list so that the tests run on fakes. SheetAuth(),
+# ReadSheetTab() and SnapshotSheetTab() live in R/library/sheet_snapshots.r
+# (#118; shared with RunMe.r), which the callers of this file source first.
 
 SheetTabExists <- function(url, tab) { SheetAuth(); tab %in% googlesheets4::sheet_names(url) }
 
@@ -38,13 +26,6 @@ AppendSheetRows <- function(url, tab, rows) { SheetAuth(); googlesheets4::sheet_
 
 # The default I/O: googlesheets4. Tests pass a list with the same four names.
 SheetIO <- function() list(read = ReadSheetTab, exists = SheetTabExists, create = CreateSheetTab, append = AppendSheetRows)
-
-SnapshotSheetTab <- function(df, path) {
-  df <- as.data.frame(df, stringsAsFactors = FALSE)
-  for (col in names(df)) df[[col]] <- as.character(df[[col]])
-  write.csv(df, path, row.names = FALSE, na = '', fileEncoding = 'UTF-8')
-  invisible(path)
-}
 
 # ---- citation text -----------------------------------------------------------------------
 Initials <- function(given) {
@@ -142,8 +123,10 @@ BuildSheetRows <- function(prim, works, added = format(Sys.Date()), added_by = c
 # Append `rows` (BuildSheetRows()) to `tab`: the rows whose Bibcite is already in
 # the tab are skipped (idempotent), the difference is printed, and with
 # dry_run = FALSE the tab is snapshotted to `snapshot_path` before and after the
-# append (the committed file is the after state). A missing tab is created
-# with headers only. Returns list(new, n_before, n_after, dry_run).
+# append (the committed file is the after state). A dry run, or a run with
+# nothing to append, snapshots the existing tab as it is (read-only; #114).
+# A missing tab is created with headers only. Returns list(new, n_before,
+# n_after, dry_run).
 AppendPrimaryCitations <- function(rows, url = citations_sheet_url, tab = sheet_tab_primary, dry_run = TRUE,
                                    snapshot_path = NULL, io = SheetIO()) {
   if (tab != sheet_tab_primary) stop('AppendPrimaryCitations(): writes go to ', sheet_tab_primary, ' only', call. = FALSE)
@@ -173,7 +156,7 @@ AppendPrimaryCitations <- function(rows, url = citations_sheet_url, tab = sheet_
     if (!is.null(snapshot_path)) SnapshotSheetTab(after, snapshot_path)
     missing_after <- new$Bibcite[!new$Bibcite %in% after$Bibcite]
     if (length(missing_after) > 0) stop('after the append the tab lacks ', paste(missing_after, collapse = ', '), call. = FALSE)
-  } else if (!dry_run && !is.null(snapshot_path) && exists) {
+  } else if (!is.null(snapshot_path) && exists) {
     SnapshotSheetTab(existing, snapshot_path)
   }
   invisible(list(new = new, n_before = nrow(existing), n_after = n_after, dry_run = dry_run))
