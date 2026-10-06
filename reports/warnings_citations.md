@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 18:53:03
+# Citation and provenance warnings -- 2026-10-05 19:33:26
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 133610 (39024 species); distinct primary CiteIDs: 925; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 172590 (39024 species); distinct primary CiteIDs: 1997; unresolved references (pending / not_found): 90; unverified references: 5046
 
 ## Problems
 
@@ -77,7 +77,7 @@ One row per source label: species and record links (species x source x reference
 | Makarieva_2008 | compilation | 1267 | 1827 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mathieu_2014 | compilation | 94 | 95 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | McCoy_2008 | compilation | 984 | 2613 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2612 |
-| Meiri_2018 | derived | 6515 | 6554 | 100 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Meiri_2018 | derived | 6515 | 45591 | 33.8 | 6233 | 1089 | 56 | 3 | 9 | 33 | 5043 | 0 | 0 |
 | Meiri_2024 | compilation | 1087 | 1087 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mercer_etal_2001 | primary | 50 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
