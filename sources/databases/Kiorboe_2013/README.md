@@ -2,6 +2,7 @@
 
 Source: Kiørboe, T. (2013) Zooplankton body composition. Limnology and Oceanography 58:1843-1850. https://doi.org/10.4319/lo.2013.58.5.1843
 Data: Web Appendix Table A1, parsed copy in `Kiorboe2013_TableA1.csv` (725 records; wet, dry, ash, C and N mass in mg per record; 223 taxon strings). The parsed CSV, its references file (`Kiorboe2013_TableA1_references.csv`) and the raw supplement HTML (`1843a_TableA1_raw.html`) are stored here; a duplicate copy sits under `sources/conversion_factors/Kiorboe_2013/` for the conversion-factor derivation.
+Licence: publisher file (Citation.bib note; https://doi.org/10.4319/lo.2013.58.5.1843). `1843a_TableA1_raw.html` is the Wiley web-appendix file (a second copy is in `sources/conversion_factors/Kiorboe_2013/`), copyright of the publisher, tracked for reproducibility and not covered by the repository licence; `Kiorboe2013_TableA1.csv` and its references file are our parse of it (facts). See sources/LICENSES.md.
 
 Columns used: `Group`, `Species`, `Wet mass (mg)`, `Dry mass (mg)`, `C (mg)`.
 Filters: juvenile stages (copepodite CI-CV, Roman-numeral stages below VI, larvae, juv, mysis) dropped; adult/sex/salp-form markers stripped from names; genus-level names dropped; capitalisation fixed ('sagitta elegans', 'Salpa Thompsoni').

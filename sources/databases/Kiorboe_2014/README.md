@@ -2,6 +2,7 @@
 
 Source: Kiorboe, T. & Hirst, A. G. (2014) Shifts in mass scaling of respiration, feeding, and growth rates across life-form transitions in marine pelagic organisms. American Naturalist 183:E118-E130. https://doi.org/10.1086/675241
 Data: PANGAEA 10.1594/PANGAEA.819850 (respiration), 819855 (growth), 819856 (feeding), CC BY 3.0, downloaded 2026-09-27 as tab-delimited text (`?format=textfile`).
+Licence: CC BY 3.0 (in-file: the PANGAEA headers of the three txt files, "License: Creative Commons Attribution 3.0 Unported"; https://doi.org/10.1594/PANGAEA.819850). The three files are tracked; `taxon_groups.csv` is ours.
 
 Columns used: `Taxa`, `Biom C/ind [ug/#]` (carbon mass per individual).
 Filters: fish records (larval stages, micrograms of carbon) are excluded; copepod nauplius/copepodite stage rows are dropped; names flagged '?' or identified only to genus, larval-stage labels (Brachyuran megalopa/zoea, Macruran mysis) and abbreviated names are dropped. 'Sytrombidium conicum' is corrected to Strombidium conicum.

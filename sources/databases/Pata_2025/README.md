@@ -1,3 +1,14 @@
+# Pata & Hunt (2025) global zooplankton trait database, level 2
+
+Source: Pata, P. R., & Hunt, B. P. V. (2025) Harmonizing marine zooplankton trait data toward a mechanistic understanding of ecosystem functioning. Limnology and Oceanography. https://doi.org/10.1002/lno.12478 (bib key `Pata:2025aa`, `Citation.bib`).
+Data: `data_input/Trait_dataset_level2/trait_dataset_level2-2023-09-14.csv` (the level-2 species-level trait table) and `License.txt` (the CC BY-SA 4.0 legal code shipped with the database); the database's own README follows below the rule.
+Licence: CC BY-SA 4.0 (in-file: `License.txt` is the CC BY-SA 4.0 legal code shipped with the database; https://doi.org/10.1002/lno.12478). The level-2 csv is tracked as a share-alike carve-out, marked as such and not relicensed under the repository licence; the query to Pata & Hunt about the declared CC BY 4.0 of the article is pending. See sources/LICENSES.md.
+Source label: `Pata_2025`.
+
+Columns used, Filters, Mass type and Imputed rows: the parse script `BodyMass_Pata_2025.r` documents the columns read and the filters applied; the full README in the convention of the other source folders is pending (issue #6, 2026-10-06).
+
+---
+
 # Zooplankton_trait_database
 The global zooplankton trait database developed by Pata and Hunt. This repository also contains scripts for generating figures summarizing and analyzing the contents of the database, and a template for subsetting trait information from the database and estimating missing trait values.
 

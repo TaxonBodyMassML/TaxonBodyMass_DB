@@ -4,3 +4,14 @@ Copyright (c) 2026 Mark Novak and contributors
 
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/
+
+Scope: this licence covers the material written by the lab, namely the pipeline
+code, the per-source parse scripts and READMEs, the parsed and transcribed
+tables, the compiled outputs (TaxonBodyMass.csv, TaxonBodyMass_GenusLevel.csv,
+TaxonBodyMass_Provenance.csv.gz) and the bibliographies, to the extent the lab
+holds rights in them. It does not relicense any third-party file: the raw source
+files under sources/databases/ and sources/conversion_factors/ remain under the
+terms of their licensors, which are listed per file in sources/source_files.csv
+and per source in sources/LICENSES.md and in the Licence: line of each folder
+README (non-commercial, share-alike, publisher-copyright and unpublished files
+are marked there and are not covered by this licence).

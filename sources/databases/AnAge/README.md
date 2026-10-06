@@ -2,6 +2,7 @@
 
 Source: AnAge, the Animal Ageing and Longevity Database of the Human Ageing Genomic Resources (HAGR), https://genomics.senescence.info/species/. de Magalhães, J. P., & Costa, J. (2009) A database of vertebrate longevity records and their relation to other life-history traits. Journal of Evolutionary Biology 22:1770-1774. https://doi.org/10.1111/j.1420-9101.2009.01783.x (the entry in `Citation.bib`); the build's release notes ask for Tacutu, R., Craig, T., Budovsky, A., Wuttke, D., Lehmann, G., Taranukha, D., Costa, J., Fraifeld, V. E., & de Magalhães, J. P. (2013) Human Ageing Genomic Resources: Integrated databases and tools for the biology and genetics of ageing. Nucleic Acids Research 41:D1027-D1033. https://doi.org/10.1093/nar/gks1155
 Data: `AnAge_data.csv`, the AnAge Build 13 dataset export (4,212 species rows, 31 columns, one row per species; `release.html` holds the Build 13 release notes of 2014-01-13, which quote 4,237 entries at release). In the repository since its import from FracFeed_DB (2026-08-20).
+Licence: unknown; owner to check https://genomics.senescence.info/species/ (HAGR legal/terms page; `release.html` is silent; the 2026-10-02 audit read CC BY 3.0). The export is tracked; see sources/LICENSES.md.
 
 Columns used: `Genus`, `Species`, `Adult weight (g)`, `Body mass (g)` (only to log the rows excluded below), `Kingdom`, `Phylum`, `Class`, `Order`, `Family`.
 Filters: rows without an `Adult weight (g)` are dropped (1,266 of the 4,212 rows carry neither mass column), leaving 2,946 species.
