@@ -60,6 +60,12 @@ cat('NormaliseSurname(), CrossrefFirstSurname()\n')
 Expect(identical(NormaliseSurname(c('MULDER', 'A. Piechnik', 'McLaughlin', "O'Gorman", 'van der Meer', 'DE GOEDE', 'Kiørboe')),
                  c('Mulder', 'Piechnik', 'McLaughlin', "O'Gorman", 'van der Meer', 'De Goede', 'Kiørboe')),
        'leading initials dropped, all-capitals surnames title-cased, mixed case untouched')
+Expect(identical(NormaliseSurname(c('Evans-WHITE', 'VillEGER', 'MacDONALD', 'DeLong', "O'GORMAN", 'LE GALL', 'Smith-Jones', 'X', NA)),
+                 c('Evans-White', 'Villeger', 'Macdonald', 'DeLong', "O'Gorman", 'Le Gall', 'Smith-Jones', 'X', NA)),
+       'token by token: an all-capitals token and a run of capitals after a lowercase letter are repaired; ordinary mixed case stays (#114 item 8)')
+Expect(identical(FoldSurnameForKey(c('Evans-WHITE', 'VillEGER', 'Båmstedt', 'Bmstedt', 'Sma', 'Schönheit')), c('Evans-White', 'Villeger', 'Bamstedt', 'Bmstedt', 'Sma', 'Schonheit')) &&
+         identical(FoldSurnameForCiteID(c('Evans-WHITE', 'VillEGER')), c('Evans-White', 'Villeger')),
+       "keys fold diacritics and repair the case; a letter the record lost ('Bmstedt', 'Sma') cannot be restored by code")
 Expect(identical(FoldSurnameForKey(c('MULDER', 'A. Piechnik')), c('Mulder', 'Piechnik')) &&
          identical(FoldSurnameForCiteID(c('MULDER', 'A. Piechnik')), c('Mulder', 'Piechnik')),
        'both folders apply NormaliseSurname()')
@@ -86,6 +92,13 @@ Expect(length(TwoLetterSuffixes()) == 676 && TwoLetterSuffixes()[1] == 'aa' && T
        '676 distinct suffixes in BibDesk order')
 
 # ---- entries from Crossref ------------------------------------------------------------------------
+cat('CrossrefYears(), KeyYear()\n')
+two <- list(DOI = '10.1/two', author = list(list(family = 'VillEGER', given = 'S.')), title = list('T'),
+            issued = list(`date-parts` = list(list(2012L, 11L))), `published-online` = list(`date-parts` = list(list(2012L, 11L))), `published-print` = list(`date-parts` = list(list(2013L, 3L))))
+Expect(identical(CrossrefYears(two), c(2012L, 2013L)) && CrossrefYear(two) == 2012L && KeyYear(two, NA, 2013L) == 2013L && KeyYear(two, NA, 2012L) == 2012L &&
+         KeyYear(two, NA, 2011L) == 2012L && KeyYear(two, NA, NA) == 2012L && KeyYear(two, 1976L, 2013L) == 1976L && identical(CrossrefYears(list()), integer()),
+       "the citation's year wins over the online-first year when the record carries it; a year the record lacks is ignored; the override wins over both")
+
 cat('EscapeLaTeX(), CrossrefAuthors(), CrossrefYear(), BuildBibEntry()\n')
 Expect(EscapeLaTeX('Fish &amp; chips at 100% of <i>Salpa</i> {thompsoni}_1 #2 $3 ~ ^') == 'Fish \\& chips at 100\\% of Salpa \\{thompsoni\\}\\_1 \\#2 \\$3 \\textasciitilde{} \\textasciicircum{}',
        'HTML is stripped and the LaTeX specials are escaped')
@@ -150,6 +163,72 @@ Expect(Field(al, 'author') == 'Ikeda and Hirakawa and Imamura' && startsWith(al,
 Expect(FirstOfAuthorList('Ikeda and Hirakawa and Imamura') == 'Ikeda' && FirstOfAuthorList('Kremer') == 'Kremer' && FirstOfAuthorList('Doe, J. and Roe, R.') == 'Doe' && is.na(FirstOfAuthorList(NA)),
        'FirstOfAuthorList() gives the first surname of an author field for keys and CiteIDs')
 
+cat('BuildBibEntryNoDOI(): the conventions of #114 item 1 (theses, chapters, corporate authors, URLs)\n')
+ms <- BuildBibEntryNoDOI(Row(container = 'MSc thesis, University of British Columbia'), 'Nsiku:1999aa', 'MN', '2026-10-06')
+Expect(startsWith(ms, '@mastersthesis{') && Field(ms, 'school') == 'University of British Columbia', "an 'MSc thesis' container: @mastersthesis with the school")
+Expect(startsWith(BuildBibEntryNoDOI(Row(container = 'M.S. thesis, Middle Tennessee State University'), 'B:2015aa', 'MN', '2026-10-06'), '@mastersthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'MSc. Thesis, Ben Gurion University of the Negev'), 'B:2003aa', 'MN', '2026-10-06'), '@mastersthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = "Master's thesis, Some College"), 'B:2003ab', 'MN', '2026-10-06'), '@mastersthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'Ph.D. Thesis, Stanford University'), 'A:1966aa', 'MN', '2026-10-06'), '@phdthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'Unpublished PhD dissertation, University of Massachusetts'), 'A:1966ab', 'MN', '2026-10-06'), '@phdthesis{'),
+       "M.S., MSc., Master's are masters theses; Ph.D. and a dissertation stay @phdthesis (Massachusetts is not an M.S.)")
+Expect(ThesisSchool('University of Oslo, PhD thesis') == 'University of Oslo' && ThesisSchool('Ph.D. thesis, Univ. of Rhode Island') == 'Univ. of Rhode Island' &&
+         is.na(ThesisSchool('PhD thesis')),
+       'ThesisSchool() takes the text after the thesis word, or before it when nothing follows')
+ch1 <- BuildBibEntryNoDOI(Row(author1 = 'Speakman, J. R. and Thomas, D. W.', year = 2003L, title = 'Physiological ecology and energetics of bats',
+                              container = 'Bat Ecology (Kunz TH, Fenton MB, eds), University of Chicago Press, Chicago', pages = '430-490'), 'Speakman:2003aa', 'owner', '2026-10-04')
+Expect(startsWith(ch1, '@incollection{Speakman:2003aa,') && Field(ch1, 'editor') == 'Kunz TH, Fenton MB' && Field(ch1, 'booktitle') == 'Bat Ecology' &&
+         Field(ch1, 'publisher') == 'University of Chicago Press, Chicago' && Field(ch1, 'pages') == '430--490' && is.na(Field(ch1, 'journal')),
+       "form B 'Book title (Editors, eds), Publisher, Place': @incollection with editor, booktitle, publisher and pages")
+ch2 <- BuildBibEntryNoDOI(Row(author1 = 'Keister and Buck', year = 1964L, container = 'Physiology of Insecta, Volume 3 (ed. Rockstein, M.), Academic Press, New York', volume = '3', pages = '617-658'),
+                          'Keister:1964aa', 'owner', '2026-10-04')
+Expect(startsWith(ch2, '@incollection{') && Field(ch2, 'editor') == 'Rockstein, M.' && Field(ch2, 'booktitle') == 'Physiology of Insecta, Volume 3' &&
+         Field(ch2, 'publisher') == 'Academic Press, New York' && Field(ch2, 'volume') == '3' && Field(ch2, 'pages') == '617--658',
+       "'(ed. Name)' marks the editor; the volume of the series is kept")
+ch3 <- BuildBibEntryNoDOI(Row(container = 'In: Burghardt, G. M. and Rand, A. S. (eds.), Iguanas of the world: their behavior, ecology and conservation. Noyes Publications, Park Ridge, New Jersey', pages = '84-116'),
+                          'Auffenberg:1982aa', 'owner', '2026-10-05')
+Expect(startsWith(ch3, '@incollection{') && Field(ch3, 'editor') == 'Burghardt, G. M. and Rand, A. S.' && Field(ch3, 'booktitle') == 'Iguanas of the world: their behavior, ecology and conservation' &&
+         Field(ch3, 'publisher') == 'Noyes Publications, Park Ridge, New Jersey' && Field(ch3, 'pages') == '84--116',
+       "form A 'In: Editors (eds.), Book title. Publisher, Place': the booktitle ends at the first sentence end after the marker")
+ch4 <- BuildBibEntryNoDOI(Row(container = 'Pages 9-28 In: Bennett, D. (Ed.), Wildlife of Polillo Island Philippines. University of Oxford'), 'Bennett:2000aa', 'owner', '2026-10-05')
+Expect(startsWith(ch4, '@incollection{') && Field(ch4, 'editor') == 'Bennett, D.' && Field(ch4, 'booktitle') == 'Wildlife of Polillo Island Philippines' &&
+         Field(ch4, 'publisher') == 'University of Oxford' && Field(ch4, 'pages') == '9--28',
+       'a leading pages clause before In: fills the pages when parsed_pages is empty')
+ch5 <- BuildBibEntryNoDOI(Row(container = 'Biology of Reptilia, Vol. 5, p. 127-223. Gans, C., Dawson, W. R., Editors, London, Academic Press'), 'Bennett:1976aa', 'owner', '2026-10-05')
+Expect(startsWith(ch5, '@incollection{') && Field(ch5, 'editor') == 'Gans, C., Dawson, W. R.' && Field(ch5, 'booktitle') == 'Biology of Reptilia, Vol. 5' &&
+         Field(ch5, 'publisher') == 'London, Academic Press' && Field(ch5, 'pages') == '127--223',
+       "'Editors' outside brackets: the sentence before it names the editors, 'p. 127-223' gives the pages")
+ch6 <- ParseChapterContainer('A. Alon (editor) Encyclopedia of plants and animals of the land of Israel. Ministry of Defense Press, Tel-Aviv. (in Hebrew)')
+Expect(ch6$editor == 'A. Alon' && ch6$booktitle == 'Encyclopedia of plants and animals of the land of Israel' && ch6$publisher == 'Ministry of Defense Press, Tel-Aviv. (in Hebrew)',
+       "'<Editors> (editor) <Book title>. <Publisher>': initials before a marker-only bracket name the editors")
+Expect(is.null(ParseChapterContainer('Handbook of birds, 2nd ed. Oxford University Press')) && is.null(ParseChapterContainer('John Wiley & Sons')) &&
+         is.null(ParseChapterContainer(NA)) && is.null(ParseChapterContainer('Mammals in the Seas')) &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'Handbook of birds, 2nd ed. Oxford University Press'), 'H:2000aa', 'MN', '2026-10-06'), '@book{'),
+       "a singular 'ed.' is an edition, not an editor marker: @book as before; Lockyer's 'Mammals in the Seas 3, 379-487' stays @article")
+Expect(startsWith(BuildBibEntryNoDOI(Row(container = 'Mammals in the Seas', volume = '3', pages = '379-487'), 'Lockyer:1981aa', 'MN', '2026-10-06'), '@article{'), 'a container with volume and pages and no marker: @article')
+corp <- BuildBibEntryNoDOI(Row(author1 = '{Birdcare Avicultural}', year = 2021L, title = 'Birdcare Avicultural data',
+                               container = 'Birdcare Avicultural, www.birdcare.com.au (accessed 24/08/2021)'), 'Birdcare-Avicultural:2021aa', 'owner', '2026-10-05')
+Expect(startsWith(corp, '@misc{') && grepl('\n\tauthor = {{Birdcare Avicultural}},\n', corp, fixed = TRUE) &&
+         Field(corp, 'howpublished') == 'Birdcare Avicultural, www.birdcare.com.au (accessed 24/08/2021)' && Field(corp, 'url') == 'www.birdcare.com.au' && is.na(Field(corp, 'publisher')),
+       'a corporate author in braces is written {{...}} (not escaped); a URL in the container makes a database-style @misc with howpublished and url')
+Expect(NoDOIAuthorField('{FAO & WHO} and Doe, J.') == '{FAO \\& WHO} and Doe, J.' && NoDOIAuthorField('Ikeda and Hirakawa') == 'Ikeda and Hirakawa' && is.na(NoDOIAuthorField(NA)) &&
+         FirstOfAuthorList('{Birdcare Avicultural}') == 'Birdcare Avicultural' && FirstOfAuthorList('{World Parrot Trust} and Doe') == 'World Parrot Trust',
+       'NoDOIAuthorField() escapes inside the braces; FirstOfAuthorList() drops them for keys and CiteIDs')
+web <- BuildBibEntryNoDOI(c(Row(author1 = '{World Parrot Trust}', year = 2021L, container = 'World Parrot Trust'), notes = 'web page (ADW precedent): https://www.parrots.org/encyclopedia/x. Owner 2026-10-05'),
+                          'World-Parrot-Trust:2021aa', 'owner', '2026-10-05')
+Expect(startsWith(web, '@misc{') && Field(web, 'url') == 'https://www.parrots.org/encyclopedia/x' && Field(web, 'howpublished') == 'World Parrot Trust',
+       "a URL in notes is used when the notes or container say web / database; a trailing period is not part of it")
+bk2 <- BuildBibEntryNoDOI(c(Row(container = 'Some Publisher'), notes = 'no Crossref DOI, only a review at https://example.org/review'), 'X:2000aa', 'MN', '2026-10-06')
+Expect(startsWith(bk2, '@book{') && is.na(Field(bk2, 'url')), 'a URL in the notes of an ordinary book is not taken (no database / web word)')
+pu <- BuildBibEntryNoDOI(c(Row(container = 'Online database'), parsed_url = 'https://animaldiversity.org/accounts/Mus_musculus/'), 'ADW:2020aa', 'MN', '2026-10-06')
+Expect(startsWith(pu, '@misc{') && Field(pu, 'url') == 'https://animaldiversity.org/accounts/Mus_musculus/' && Field(pu, 'howpublished') == 'Online database',
+       'the optional parsed_url column is the url field (underscores not escaped in a URL)')
+pu2 <- BuildBibEntryNoDOI(c(Row(container = 'Mar. Biol.', volume = '3', pages = '4-10'), parsed_url = 'https://example.org/paper'), 'K:1976ad', 'MN', '2026-10-06')
+Expect(startsWith(pu2, '@article{') && Field(pu2, 'url') == 'https://example.org/paper', 'parsed_url adds a url field to any type without changing the type')
+Expect('parsed_url' %in% primary_reference_columns && 'parsed_url' %in% primary_reference_optional_columns && 'parsed_url' %in% primary_reference_owner_columns &&
+         identical(tail(primary_reference_columns, 2), c('owner_review', 'parsed_url')),
+       'parsed_url is an optional, owner-editable column at the end of the schema (older files read with it NA)')
+
 cat('MatchingNoDOIEntry()\n')
 NoDOIRow <- function(source_label, native_key, author1, year, title, bibcite = NA_character_, status = 'nodoi_approved')
   data.frame(source_label = source_label, native_key = native_key, parsed_author1 = author1, parsed_year = year,
@@ -171,25 +250,99 @@ Expect(is.null(MatchingNoDOIEntry(pri[1, ], pri)), 'a row never matches itself')
 pri2 <- pri; pri2$match_status[1] <- 'pending'; pri2$bibcite[1] <- NA
 Expect(is.null(MatchingNoDOIEntry(pri2[3, ], pri2)), 'only nodoi_approved rows with a bibcite are reused')
 
+# ---- the --bib step -------------------------------------------------------------------------------------
+cat('AssignPrimaryKeys()\n')
+PRow <- function(source_label, native_key, status, doi = NA_character_, bibcite = NA_character_, cite_id = NA_character_, reason = NA_character_,
+                 author1 = 'Kremer', year = 1976L, title = 'The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay',
+                 container = 'Ph.D. thesis, Univ. of Rhode Island', year_override = NA_integer_) {
+  r <- EmptyPrimaryReferences()[rep(1L, 0), ]
+  r[1, 'native_key'] <- native_key
+  r$source_label <- source_label; r$match_status <- status; r$match_reason <- reason; r$doi <- doi; r$bibcite <- bibcite; r$cite_id <- cite_id
+  r$parsed_author1 <- author1; r$parsed_year <- year; r$parsed_title <- title; r$parsed_container <- container
+  r$decided_by <- 'owner'; r$decided_at <- '2026-10-04'; r$year_override <- year_override; r$n_records <- 1L; r$role <- 'measurement'
+  r
+}
+ap <- rbind(PRow('Kiorboe_2013', '6', 'certain', doi = '10.1007/bf00392514'),
+            PRow('Hebert_etal_2016', '12', 'approved', doi = '10.1007/BF00392514', reason = 'owner_candidate'),
+            PRow('Kiorboe_2013', '9', 'nodoi_approved', reason = 'owner_nodoi'),
+            PRow('Kiorboe_2013', '12', 'approved', bibcite = 'Omori:1969aa', reason = 'manual_bib'),
+            PRow('Lislevand_etal_2007', '24', 'approved', doi = '10.9999/this-doi-does-not-exist', reason = 'owner_candidate'),
+            PRow('Kiorboe_2013', '1', 'pending', doi = '10.1/pending'))
+ids0 <- data.frame(Bibcite = c('Omori:1969aa', 'Kiorboe:2013aa'), CiteID = c('Omori_1969', 'Kiorboe_2013'), doi = c(NA, '10.4319/lo.2013.58.5.1843'), stringsAsFactors = FALSE)
+cur_syn <- data.frame(key = c('Omori:1969aa', 'Kiorboe:2013aa'), type = 'article', doi = c(NA, '10.4319/lo.2013.58.5.1843'), stringsAsFactors = FALSE)
+res <- AssignPrimaryKeys(ap, cfg, cur_syn, ids0)
+K <- function(src, key, col) res$prim[[col]][res$prim$source_label == src & res$prim$native_key == key]
+Expect(identical(sort(names(res$entries)), c('Ikeda:1986aa', 'Kremer:1976aa')) && startsWith(res$entries[['Ikeda:1986aa']], '@article{Ikeda:1986aa,') &&
+         startsWith(res$entries[['Kremer:1976aa']], '@phdthesis{Kremer:1976aa,'),
+       'one entry per key: the Crossref record of the DOI rows, the owner-approved fields of the nodoi row; no entry for the curated manual key')
+Expect(K('Kiorboe_2013', '6', 'bibcite') == 'Ikeda:1986aa' && K('Hebert_etal_2016', '12', 'bibcite') == 'Ikeda:1986aa' &&
+         K('Kiorboe_2013', '6', 'cite_id') == 'Ikeda_1986' && K('Hebert_etal_2016', '12', 'cite_id') == 'Ikeda_1986',
+       'two sources citing one DOI (case apart) share the key and the CiteID')
+Expect(K('Kiorboe_2013', '9', 'bibcite') == 'Kremer:1976aa' && K('Kiorboe_2013', '9', 'cite_id') == 'Kremer_1976' &&
+         K('Kiorboe_2013', '12', 'cite_id') == 'Omori_1969' && K('Kiorboe_2013', '12', 'bibcite') == 'Omori:1969aa',
+       'the nodoi row gets a key and a CiteID; the manual_bib row keeps the curated key and takes its CiteID from the table')
+Expect(identical(res$no_record, 'Lislevand_etal_2007 24 (10.9999/this-doi-does-not-exist)') && is.na(K('Lislevand_etal_2007', '24', 'bibcite')) &&
+         is.na(K('Lislevand_etal_2007', '24', 'cite_id')) && length(res$authorless) == 0,
+       'an accepted DOI without a Crossref record is reported in no_record, not fatal; the row stays without a key (#114 item 3)')
+Expect(is.na(K('Kiorboe_2013', '1', 'bibcite')) && nrow(res$prim) == nrow(ap) && identical(names(res$prim), names(ap)), 'a pending row is untouched; the frame keeps its shape')
+res2 <- AssignPrimaryKeys(res$prim, cfg, cur_syn, ids0)
+Expect(identical(res2$prim, res$prim) && identical(res2$entries, res$entries), 'a second pass over the keyed frame reproduces it (idempotent)')
+Expect(Has(ErrorOf(AssignPrimaryKeys(PRow('X', 'm', 'approved', bibcite = 'Nope:2000aa', reason = 'manual_bib'), cfg, cur_syn, ids0)), 'is not in'),
+       'a manual bibcite the curated bib lacks stops')
+stale <- rbind(ids0, data.frame(Bibcite = 'Ikeda:1986aa', CiteID = 'IkedaJr_1985', doi = '10.1007/bf00392514', stringsAsFactors = FALSE))   # a stale Sheet row for the same Bibcite and DOI
+keep <- AssignPrimaryKeys(PRow('Wilman_etal_2014', 'Dunning08', 'approved', doi = '10.1007/bf00392514', bibcite = 'Ikeda:1986aa', cite_id = 'Ikeda_1986', reason = 'owner_candidate'), cfg, cur_syn, stale)
+fresh <- AssignPrimaryKeys(PRow('Wilman_etal_2014', 'Dunning08', 'approved', doi = '10.1007/bf00392514', reason = 'owner_candidate'), cfg, cur_syn, stale)
+Expect(keep$prim$cite_id == 'Ikeda_1986' && keep$prim$bibcite == 'Ikeda:1986aa' && fresh$prim$cite_id == 'IkedaJr_1985' && fresh$prim$bibcite == 'Ikeda:1986ab',
+       'a row that keeps its key keeps its CiteID over a Sheet row for the same Bibcite and DOI; a keyless row takes the table\'s id by DOI (#114 item 7)')
+nk <- AssignPrimaryKeys(PRow('Kiorboe_2013', '9', 'nodoi_approved', bibcite = 'Kremer:1976aa', cite_id = 'Kremer_1976x', reason = 'owner_nodoi'), cfg, cur_syn, ids0)
+Expect(nk$prim$cite_id == 'Kremer_1976x', 'the same for a nodoi row')
+cat('AssignPrimaryKeys(): key minting with the normalised surname and the citation year; existing keys untouched (#114 item 8)\n')
+Two <- function(doi) two
+mint <- AssignPrimaryKeys(rbind(PRow('SrcA', 'n', 'certain', doi = '10.1/two', author1 = 'Villeger', year = 2013L),
+                                PRow('SrcB', 'o', 'certain', doi = '10.1/two', author1 = 'Villeger', year = 2013L, bibcite = 'VillEGER:2012aa', cite_id = 'VillEGER_2012'),
+                                PRow('SrcC', 'p', 'certain', doi = '10.1/three', author1 = 'Villeger', year = 2011L)),
+                          cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Kp <- function(src, col) mint$prim[[col]][mint$prim$source_label == src]
+Expect(Kp('SrcA', 'bibcite') == 'VillEGER:2012aa' && Kp('SrcA', 'cite_id') == 'VillEGER_2012' && Kp('SrcB', 'bibcite') == 'VillEGER:2012aa' && Kp('SrcB', 'cite_id') == 'VillEGER_2012',
+       'a DOI already keyed by another row (its record-spelt key) keeps that key for every row: existing keys are reproduced, not renamed')
+Expect(Kp('SrcC', 'bibcite') == 'Villeger:2012aa' && Kp('SrcC', 'cite_id') == 'Villeger_2012' && startsWith(mint$entries[['Villeger:2012aa']], '@misc{Villeger:2012aa,') &&
+         grepl('\n\tyear = {2012}', mint$entries[['Villeger:2012aa']], fixed = TRUE),
+       "a new key takes the normalised surname; the citation's 2011 is not among the record's years, so the record's 2012 stands")
+mint2 <- AssignPrimaryKeys(PRow('SrcD', 'q', 'certain', doi = '10.1/four', author1 = 'Villeger', year = 2013L), cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Expect(mint2$prim$bibcite == 'Villeger:2013aa' && mint2$prim$cite_id == 'Villeger_2013' && grepl('\n\tyear = {2012}', mint2$entries[[1]], fixed = TRUE),
+       "a new key takes the citation's 2013 (the record's print year) over the online-first 2012; the entry's year field stays the record's")
+mint3 <- AssignPrimaryKeys(PRow('SrcD', 'q', 'certain', doi = '10.1/four', author1 = 'Villeger', year = 2013L, year_override = 2011L), cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Expect(mint3$prim$bibcite == 'Villeger:2011aa' && grepl('\n\tyear = {2011}', mint3$entries[[1]], fixed = TRUE) && grepl('Year 2011 by owner decision', mint3$entries[[1]], fixed = TRUE),
+       'a year override is applied at mint time and in the entry')
+source(file.path(lib, 'citations', 'provenance.r'))
+tracked <- LoadPrimaryReferences(cfg$wd_db)
+acc_t <- tracked[tracked$match_status %in% c('certain', 'approved', 'nodoi_approved'), ]
+pkeys <- ReadBibEntries(cfg$primary_bib)$key
+Expect(nrow(acc_t) > 2000 && all(!is.na(acc_t$bibcite)) && all(!is.na(acc_t$cite_id)) && setequal(pkeys, setdiff(unique(acc_t$bibcite), cur$key)),
+       sprintf('every one of the %d accepted tracked rows carries a bibcite and a cite_id, and the %d primary bib keys are exactly those bibcites: the keep-existing-key rule covers every existing key', nrow(acc_t), length(pkeys)))
+odd <- unique(acc_t$bibcite[grepl('^[A-Za-z-]*[a-z][A-Z]{2,}|^[A-Z]{2,}[:-]|-[A-Z]{2,}:', acc_t$bibcite)])
+Expect(all(c('Evans-WHITE:2005aa', 'VillEGER:2012aa') %in% odd), sprintf('the record-spelt keys the owner may rename are still in the tracked files (%s)', paste(odd, collapse = ', ')))
+
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')
 pb <- tempfile(fileext = '.bib')
-WritePrimaryBib(c('Ikeda:1986aa' = e, 'Doe:2010aa' = ch, 'Kremer:1976aa' = nd, 'anon:2000aa' = mi), pb)
+WritePrimaryBib(c('Ikeda:1986aa' = e, 'Doe:2010aa' = ch, 'Kremer:1976aa' = nd, 'anon:2000aa' = mi, 'Nsiku:1999aa' = ms, 'Speakman:2003aa' = ch1, 'Birdcare-Avicultural:2021aa' = corp), pb)
 lines <- readLines(pb, encoding = 'UTF-8')
 Expect(startsWith(lines[1], '%% GENERATED by R/library/citations/build_bib.r') && any(grepl(citations_tool_version, lines, fixed = TRUE)) && lines[7] == '',
        'the header says GENERATED and names the tool version')
 rb <- ReadBibEntries(pb)
-Expect(identical(rb$key, c('Doe:2010aa', 'Ikeda:1986aa', 'Kremer:1976aa', 'anon:2000aa')) && identical(rb$type, c('incollection', 'article', 'phdthesis', 'misc')) &&
-         identical(rb$doi, c('10.1/t', '10.1007/bf00392514', NA, NA)),
+Expect(identical(rb$key, c('Birdcare-Avicultural:2021aa', 'Doe:2010aa', 'Ikeda:1986aa', 'Kremer:1976aa', 'Nsiku:1999aa', 'Speakman:2003aa', 'anon:2000aa')) &&
+         identical(rb$type, c('misc', 'incollection', 'article', 'phdthesis', 'mastersthesis', 'incollection', 'misc')) &&
+         identical(rb$doi, c(NA, '10.1/t', '10.1007/bf00392514', NA, NA, NA, NA)),
        'entries are written in byte order of the keys (upper case before lower) and read back')
 Expect(Has(ErrorOf(WritePrimaryBib(c('A:1aa' = e, 'A:1aa' = ch), tempfile())), 'duplicated key'), 'duplicated keys stop the write')
 empty <- tempfile(fileext = '.bib'); WritePrimaryBib(character(), empty)
 Expect(nrow(ReadBibEntries(empty)) == 0 && startsWith(readLines(empty)[1], '%% GENERATED'), 'an empty entry set writes the header only')
 n <- CheckBibSyntax(pb)
-Expect(is.na(n) || n == 4L, sprintf('RefManageR parses every generated entry (%s)', if (is.na(n)) 'RefManageR not installed, skipped' else n))
+Expect(is.na(n) || n == 7L, sprintf('RefManageR parses every generated entry, the @mastersthesis and the {{corporate}} author included (%s)', if (is.na(n)) 'RefManageR not installed, skipped' else n))
 if (!is.na(n)) {
   bad <- tempfile(fileext = '.bib'); writeLines(c(readLines(pb), '@article{Broken:2000aa,', '\tauthor = {Unclosed'), bad)
-  Expect(!is.null(ErrorOf(CheckBibSyntax(bad))) || isTRUE(suppressWarnings(CheckBibSyntax(bad)) < 5), 'a broken entry is not counted as parsed')
+  Expect(!is.null(ErrorOf(CheckBibSyntax(bad))) || isTRUE(suppressWarnings(CheckBibSyntax(bad)) < 8), 'a broken entry is not counted as parsed')
 }
 cb <- tempfile(fileext = '.bib'); writeLines(c('@article{Doe:2010aa,', '\ttitle = {X}}', '@book{Only:2000aa,', '\ttitle = {Y}}'), cb)
 Expect(Has(ErrorOf(CheckBibKeysUnique(cb, pb)), 'present in both') && Has(ErrorOf(CheckBibKeysUnique(cb, pb)), 'Doe:2010aa'),
@@ -198,7 +351,7 @@ cb2 <- tempfile(fileext = '.bib'); writeLines(c('@book{Only:2000aa,', '\ttitle =
 Expect(Has(ErrorOf(CheckBibKeysUnique(cb2, pb)), 'duplicated bib key'), 'a key twice in one file stops too')
 cb3 <- tempfile(fileext = '.bib'); writeLines(c('@book{Only:2000aa,', '\ttitle = {Y}}'), cb3)
 ok <- CheckBibKeysUnique(cb3, pb)
-Expect(is.list(ok) && nrow(ok$curated) == 1 && nrow(ok$primary) == 4, 'disjoint files pass and return both entry tables')
+Expect(is.list(ok) && nrow(ok$curated) == 1 && nrow(ok$primary) == 7, 'disjoint files pass and return both entry tables')
 Expect(is.null(ErrorOf(CheckBibKeysUnique(cfg$curated_bib, tempfile()))), 'the curated bib alone has unique keys')
 
 # ---- CiteIDs ----------------------------------------------------------------------------------------------
