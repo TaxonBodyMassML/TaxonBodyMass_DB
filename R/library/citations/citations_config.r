@@ -283,9 +283,14 @@ reflist_specs <- list(
   # entry has no doi field, so the DOI is given here
   Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda',
                       compilation_doi = '10.1007/s00227-014-2540-5'),
+  # the per-row Study key of Appendix S5 ('Nagy et al 1990a', 'Costa & Gales 2000',
+  # 'Ballance 1995'; one key per row) -> references.csv, the 126 entries of
+  # Appendix S6 transcribed by parse_hudson_s6.py from the supplement PDF (its
+  # comma style is parsed by ParseCommaStyle(); the three chapter / proceedings
+  # entries carry owner_review)
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
-                      key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Hudson'),
+                      key_col = 'key', citation_col = 'citation', review_col = 'owner_review', sep = ';',
+                      compiler = 'Hudson', compilation_doi = '10.1111/1365-2656.12086'),
   Oskyrko_2024 = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ',',
                       compiler = 'Oskyrko'),
