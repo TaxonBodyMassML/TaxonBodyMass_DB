@@ -191,6 +191,25 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
           sprintf("- Excluded values by source:\n%s", paste(sprintf("  - %s (%d)", names(src_tab), as.integer(src_tab)), collapse = "\n")),
           "",
           paste(lines_ex, collapse = "\n"))
+        # 9b. the rescued species that rest on a single kept value (owner
+        #     decision 2026-10-06: flagged SUSPICIOUS in the register; the kept
+        #     value has no second source behind it)
+        sv <- ie[ie$single_value_rescue, , drop = FALSE]
+        sv_key <- paste(sv$genus, sv$species)
+        sv1 <- sv[!duplicated(sv_key), , drop = FALSE]
+        if (nrow(sv1) > 0) {
+          lines_sv <- sprintf("%s: kept %s | excluded %s [%s]", sv1$species, sv1$kept_values,
+            vapply(paste(sv1$genus, sv1$species), function(k) paste(sprintf("%s %.4g g (n %d, T%d)", sv$source_mass[sv_key == k], sv$mass_g[sv_key == k], sv$n[sv_key == k], sv$value_tier[sv_key == k]), collapse = "; "), character(1)),
+            sv1$rule)
+          excl_block <- c(excl_block, "",
+            sprintf("### Rescued species resting on a single kept value (%d species; single_value_rescue in reports/excluded_records.csv, SUSPICIOUS rows in audit/flagged_species.csv)", nrow(sv1)),
+            "",
+            paste("The exclusion left one value in the mean; the kept value has no second source behind it and the tiers, not the data, decided which side was wrong.",
+                  "Owner decision 2026-10-06: kept, flagged for review."),
+            "",
+            paste(lines_sv, collapse = "\n"))
+          mass_summary <- c(mass_summary, sprintf("- Rescued species resting on a single kept value (flagged SUSPICIOUS): %d", nrow(sv1)))
+        }
       }
     }
 

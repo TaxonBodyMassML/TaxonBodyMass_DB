@@ -138,13 +138,16 @@ Expect(all(v$record_status[v$excluded] == paste0('excluded_', v$exclusion_rule[v
          all(v$record_status %in% record_statuses),
        'record_status is kept or excluded_<rule>')
 Expect(identical(names(ex), c('genus', 'species', 'taxon', 'source_label', 'source_mass', 'mass_g', 'n', 'value_tier', 'rule', 'distance_log10',
-                              'copy_of', 'n_kept', 'kept_mass_g', 'kept_values')) &&
+                              'copy_of', 'n_kept', 'single_value_rescue', 'kept_mass_g', 'kept_values')) &&
          nrow(ex) == 12 && sum(is.na(ex$copy_of)) == 11 &&
          ex$n_kept[ex$species == 'Pip kuh'] == 4 && abs(ex$kept_mass_g[ex$species == 'Pip kuh'] - mean(c(5.5, 5.9, 6.3, 6.9))) < 1e-12 &&
          ex$kept_values[ex$species == 'Pip kuh'] == 'Hand1 5.5 g (n 1, T1); Hand2 5.9 g (n 1, T1); Hand3 6.3 g (n 1, T1); Spec1 6.9 g (n 1, T3)',
        'the exclusion table: 12 rows (11 independent values, 1 copy), the kept values beside each with the new mean')
 Expect(identical(ex$species, sort(ex$species, method = 'radix')) && all(diff(order(ex$genus, ex$species, method = 'radix')) >= 0),
        'the exclusion table is ordered by genus and species in byte order')
+Expect(is.logical(ex$single_value_rescue) && setequal(unique(ex$species[ex$single_value_rescue]), c('Ker tes', 'Hel pom', 'Cin asi', 'Con ver', 'Edge ok')) &&
+         !any(ex$single_value_rescue[ex$species %in% c('Pip kuh', 'Cop par', 'Tie tier')]) && res$counts$species_single_value == 5,
+       'single_value_rescue marks the species left with one kept value (the two-value rescues and the Keratella group case), counted in the counts')
 Expect(res$counts$species_flagged == 15 && res$counts$species_rescued == 10 && res$counts$species_unresolved == 5 &&
          res$counts$values_excluded_independent == 11 && res$counts$values_excluded_copies == 1 &&
          identical(as.integer(res$counts$by_rule[c('loo_unique', 'tier_tiebreak', 'distance_tiebreak', 'two_value_tier')]), c(2L, 1L, 2L, 6L)) &&
@@ -217,7 +220,8 @@ f <- tempfile(fileext = '.csv')
 WriteExcludedRecords(f, res, gr)
 csv <- read.csv(f, stringsAsFactors = FALSE)
 Expect(identical(names(csv), c('level', 'genus', 'species', 'taxon', 'source_label', 'source_mass', 'mass_g', 'n', 'value_tier', 'rule', 'distance_log10',
-                               'copy_of', 'n_kept', 'kept_mass_g', 'kept_values')) &&
+                               'copy_of', 'n_kept', 'single_value_rescue', 'kept_mass_g', 'kept_values')) &&
+         sum(csv$single_value_rescue & csv$level == 'species') == 6 && sum(csv$single_value_rescue & csv$level == 'genus') == 2 &&
          sum(csv$level == 'species') == 12 && sum(csv$level == 'genus') == 3 && all(csv$rule %in% exclusion_rules),
        'reports/excluded_records.csv: the species rows then the genus rows, one per excluded value')
 f2 <- tempfile(fileext = '.csv'); WriteExcludedRecords(f2, res, gr)
@@ -234,6 +238,15 @@ Expect(nrow(rows) == 11 && identical(names(rows), c('taxon', 'mass_g', 'source_m
          grepl('Collapsed copies excluded with it: Max2', rows$note[rows$taxon == 'Cop_par'], fixed = TRUE) &&
          grepl('converted', rows$note[rows$taxon == 'Con_ver'], fixed = TRUE),
        'the register rows: one per independent excluded value, the register columns, severity by distance, copies and conversions in the note')
+sv <- SingleValueRescueRows(ex, taxa, 'range_rule_2026-10-06')
+Expect(nrow(sv) == 5 && identical(names(sv), names(rows)) && all(sv$severity == 'SUSPICIOUS') && all(sv$method == 'range_rule_2026-10-06') &&
+         sv$source_mass[sv$taxon == 'Ker_tes'] == 'Hand1' && sv$mass_g[sv$taxon == 'Ker_tes'] == 1.98e-6 && sv$n[sv$taxon == 'Ker_tes'] == 1 &&
+         abs(sv$log10_pred[sv$taxon == 'Ker_tes'] - log10(1.07e-8)) < 1e-12 &&
+         all(startsWith(sv$note, 'Record-level range rule (#34): rescued species rests on one kept value; review.')) &&
+         grepl('Web1 1.07e-08 g (n 63, T3); Web2 1.23e-08 g (n 20, T3)', sv$note[sv$taxon == 'Ker_tes'], fixed = TRUE) &&
+         sv$source_mass[sv$taxon == 'Hel_pom'] == 'Hand1' && abs(sv$residual[sv$taxon == 'Hel_pom'] - log10(29 / 0.1)) < 1e-12,
+       'the single-value rows: one per such species, the kept value and label as the record, log10_pred the excluded value, both excluded values of a group in the note')
+Expect(is.null(SingleValueRescueRows(ex[!ex$single_value_rescue, ], taxa, 'x')), 'no single-value rescues: NULL')
 
 # ---- wiring in RunMe.r ------------------------------------------------------------------------
 cat('R/RunMe.r wiring\n')

@@ -176,8 +176,11 @@ DecideSpecies <- function(d, threshold) {
 #   exclusions  one row per excluded Pass-1 value (copies included, copy_of
 #               naming the parent): genus, species, taxon, source_label,
 #               source_mass, mass_g, n, value_tier, rule, distance_log10,
-#               copy_of, n_kept, kept_mass_g (the arithmetic mean of the kept
-#               values), kept_values ('label value g (n N, T#)' joined by '; ')
+#               copy_of, n_kept, single_value_rescue (TRUE when the species
+#               rests on one kept value after the exclusion; owner decision
+#               2026-10-06: such species are flagged SUSPICIOUS for review),
+#               kept_mass_g (the arithmetic mean of the kept values),
+#               kept_values ('label value g (n N, T#)' joined by '; ')
 #   unresolved  the species left to the species filter: genus, species, taxon,
 #               n_independent, n_groups, log10_range, reason, values
 #   counts      species rescued, values excluded (independent / copies), by rule
@@ -234,7 +237,7 @@ ExcludeDiscordantValues <- function(within_source, related, classes, threshold =
       mass_g = ws$mass_g[er], n = ws$n[er], value_tier = ws$value_tier[er], rule = r$rule,
       distance_log10 = ws$exclusion_distance[er],
       copy_of = c(rep(NA_character_, length(out_rows)), ws$collapsed_into[cp]),
-      n_kept = nrow(kept), kept_mass_g = mean(10^kept$lg), kept_values = FmtValues(kept),
+      n_kept = nrow(kept), single_value_rescue = nrow(kept) == 1L, kept_mass_g = mean(10^kept$lg), kept_values = FmtValues(kept),
       stringsAsFactors = FALSE)
   }
   Bind <- function(l, template) {
@@ -245,7 +248,8 @@ ExcludeDiscordantValues <- function(within_source, related, classes, threshold =
                                       source_label = character(), source_mass = character(), mass_g = numeric(),
                                       n = integer(), value_tier = integer(), rule = character(),
                                       distance_log10 = numeric(), copy_of = character(), n_kept = integer(),
-                                      kept_mass_g = numeric(), kept_values = character(), stringsAsFactors = FALSE))
+                                      single_value_rescue = logical(), kept_mass_g = numeric(), kept_values = character(),
+                                      stringsAsFactors = FALSE))
   unresolved <- Bind(unres, data.frame(genus = character(), species = character(), taxon = character(),
                                        n_independent = integer(), n_groups = integer(), log10_range = numeric(),
                                        reason = character(), values = character(), stringsAsFactors = FALSE))
@@ -263,6 +267,7 @@ ExcludeDiscordantValues <- function(within_source, related, classes, threshold =
                  values_excluded = nrow(exclusions),
                  values_excluded_independent = nrow(indep_excl),
                  values_excluded_copies = sum(!is.na(exclusions$copy_of)),
+                 species_single_value = length(unique(paste(indep_excl$genus, indep_excl$species)[indep_excl$single_value_rescue])),
                  by_rule = table(factor(indep_excl$rule, levels = exclusion_rules)),
                  species_by_rule = table(factor(indep_excl$rule[!duplicated(paste(indep_excl$genus, indep_excl$species))], levels = exclusion_rules)),
                  unresolved_by_reason = table(factor(unresolved$reason, levels = unresolved_reasons)))
@@ -352,22 +357,23 @@ ExcludeDiscordantGenusRecords <- function(records, values, enriched, species_tie
 # ---- outputs ---------------------------------------------------------------------------
 # reports/excluded_records.csv: the species-level exclusions (one row per
 # excluded Pass-1 value, copies included) and the genus-only ones, with a
-# `level` column; no timestamp, so two runs write the same file.
+# `level` column (single_value_rescue marks the rows whose species, or genus,
+# rests on one kept value); no timestamp, so two runs write the same file.
 WriteExcludedRecords <- function(path, species_excl, genus_excl = NULL) {
   Num <- function(x) ifelse(is.na(x), NA_character_, trimws(formatC(x, digits = 6, format = 'g')))
   sp <- species_excl$exclusions
   out <- data.frame(level = rep('species', nrow(sp)), genus = sp$genus, species = sp$species, taxon = sp$taxon,
                     source_label = sp$source_label, source_mass = sp$source_mass, mass_g = Num(sp$mass_g), n = sp$n,
                     value_tier = sp$value_tier, rule = sp$rule, distance_log10 = round(sp$distance_log10, 4),
-                    copy_of = sp$copy_of, n_kept = sp$n_kept, kept_mass_g = Num(sp$kept_mass_g),
-                    kept_values = sp$kept_values, stringsAsFactors = FALSE)
+                    copy_of = sp$copy_of, n_kept = sp$n_kept, single_value_rescue = sp$single_value_rescue,
+                    kept_mass_g = Num(sp$kept_mass_g), kept_values = sp$kept_values, stringsAsFactors = FALSE)
   if (!is.null(genus_excl) && nrow(genus_excl$exclusions) > 0) {
     ge <- genus_excl$exclusions
     out <- rbind(out, data.frame(level = rep('genus', nrow(ge)), genus = ge$genus, species = NA_character_, taxon = ge$genus,
                                  source_label = ge$source_label, source_mass = ge$source_mass, mass_g = Num(ge$mass_g), n = ge$n,
                                  value_tier = ge$value_tier, rule = ge$rule, distance_log10 = round(ge$distance_log10, 4),
-                                 copy_of = NA_character_, n_kept = ge$n_species, kept_mass_g = Num(ge$species_median_g),
-                                 kept_values = ge$species_values, stringsAsFactors = FALSE))
+                                 copy_of = NA_character_, n_kept = ge$n_species, single_value_rescue = ge$n_species == 1L,
+                                 kept_mass_g = Num(ge$species_median_g), kept_values = ge$species_values, stringsAsFactors = FALSE))
   }
   write.csv(out, path, row.names = FALSE, na = '')
   invisible(out)
@@ -403,5 +409,35 @@ ExclusionRegisterRows <- function(exclusions, taxa, method, kept_mass = NULL) {
                           '(tier T%d%s; %.2f log10 %s the median of the kept values). Kept values: %s; species kept at %.4g g (n_independent %d).%s'),
                    ex$rule, ex$value_tier, ifelse(conv, ', converted', ''), abs(ex$distance_log10),
                    ifelse(ex$distance_log10 > 0, 'above', 'below'), ex$kept_values, signif(ex$kept_mass_g, 4), ex$n_kept, copies),
+    stringsAsFactors = FALSE)
+}
+
+# The register rows of the rescued species that rest on a single kept value
+# (owner decision 2026-10-06: flagged SUSPICIOUS for review): one row per such
+# species, mass_g and source_mass the kept value and its label, n its records,
+# log10_pred log10 of the excluded value (the only other evidence; the first
+# excluded value where a group was excluded), the note naming both sides.
+SingleValueRescueRows <- function(exclusions, taxa, method) {
+  ex <- exclusions[is.na(exclusions$copy_of) & exclusions$single_value_rescue, , drop = FALSE]
+  if (nrow(ex) == 0) return(NULL)
+  key <- paste(ex$genus, ex$species)
+  first <- ex[!duplicated(key), , drop = FALSE]
+  excluded_all <- vapply(paste(first$genus, first$species), function(k)
+    paste(sprintf('%s %.4g g (n %d, T%d)', ex$source_label[key == k], ex$mass_g[key == k], ex$n[key == k], ex$value_tier[key == k]), collapse = '; '),
+    character(1))
+  m <- match(paste(first$genus, first$species), paste(taxa$genus, taxa$species))
+  kept_label <- sub(' .*$', '', first$kept_values)
+  kept_n     <- as.integer(sub('^.*\\(n ([0-9]+),.*$', '\\1', first$kept_values))
+  lg_kept <- log10(first$kept_mass_g)
+  lg_excl <- log10(first$mass_g)
+  data.frame(
+    taxon = first$taxon, mass_g = signif(first$kept_mass_g, 4), source_mass = kept_label, n = kept_n,
+    kingdom = taxa$kingdom[m], phylum = taxa$phylum[m], taxon_class = taxa$class[m], order = taxa$order[m],
+    family = taxa$family[m], genus = first$genus, species = first$species, confidence = taxa$gbif_confidence[m],
+    form = NA, subspecies = NA, variety = NA, log10_mass = lg_kept, log10_pred = lg_excl, residual = lg_kept - lg_excl,
+    abs_residual = abs(lg_kept - lg_excl), class_outlier = NA, severity = 'SUSPICIOUS', method = method,
+    note = sprintf(paste0('Record-level range rule (#34): rescued species rests on one kept value; review. Kept: %s. ',
+                          'Excluded by rule %s: %s. log10_pred is log10 of the excluded value.'),
+                   first$kept_values, first$rule, excluded_all),
     stringsAsFactors = FALSE)
 }
