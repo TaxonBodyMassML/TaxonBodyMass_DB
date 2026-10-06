@@ -2,7 +2,7 @@
 #
 #   Rscript R/library/citations/run_citations.r --source <Src> \
 #       [--init] [--verify] [--queue] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
-#       [--screening-list] [--force] [--offline]
+#       [--screening-list] [--force] [--offline] [--crossref-only]
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -19,8 +19,21 @@
 #                  screening policy (notices, disagreements, doubtful identities, an
 #                  audit sample of the newly certain DOIs); printed and written to
 #                  reports/screening_<Src>.md; no network, nothing else written
+#   --dedupe-queue maintenance: remove the duplicate rows of Bib/pending_citations.csv
+#                  (an open row re-appended for a key already queued or decided, a
+#                  decision recorded twice) and of Bib/scite_checks.csv (exact
+#                  duplicates, an older row per DOI + service, a `none` gap row for a
+#                  DOI another row answers); the removed rows are printed and written
+#                  to reports/dedupe_queue_<date>.md; no network, no source file touched
 #   --force        re-verify `certain` rows as well
 #   --offline      never touch the network (cached responses only)
+#   --crossref-only  with --verify (or --queue): Crossref-only mode (owner decision
+#                  2026-10-06, the backlog while the OpenAlex key's daily budget is about
+#                  1,000 lookups): OpenAlex is not called; Crossref alone accepts under
+#                  the rules of DecideMatchCrossrefOnly() (certain / crossref_only,
+#                  verification_mode crossref_only); only unverified, service_unavailable
+#                  and single_service rows are decided (--force: every row, as usual);
+#                  a later --verify without the flag re-checks the accepted rows in full
 # Every step writes reports/citations_<Src>.md. RunMe.r never calls this file.
 
 this_file <- sub('^--file=', '', grep('^--file=', commandArgs(), value = TRUE))
@@ -37,20 +50,45 @@ for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'v
 
 args <- commandArgs(trailingOnly = TRUE)
 Flag <- function(f) f %in% args
+steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet', '--screening-list', '--dedupe-queue')
 src_i <- which(args == '--source')
-if (length(src_i) != 1 || src_i == length(args)) stop('--source <Src> is required')
-src <- args[src_i + 1]
-steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet', '--screening-list')
-known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline')
+maintenance_only <- identical(args[args %in% steps], '--dedupe-queue')
+if ((length(src_i) != 1 || src_i == length(args)) && !maintenance_only) stop('--source <Src> is required')
+src <- if (length(src_i) == 1 && src_i < length(args)) args[src_i + 1] else NA_character_
+known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--crossref-only')
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
+crossref_only <- Flag('--crossref-only')
+if (crossref_only && !(Flag('--verify') || Flag('--queue'))) stop('--crossref-only needs --verify (or --queue)')
 
 cfg  <- CitationsConfig(wd_root, offline = Flag('--offline'))
+dir.create(cfg$reports_dir, showWarnings = FALSE)
+
+# ---- --dedupe-queue (maintenance over the two shared files; no source needed) ----
+if (Flag('--dedupe-queue')) {
+  dq <- DedupeQueue(ReadPendingQueue(cfg$pending_csv))
+  ds <- DedupeSciteChecks(ReadSciteChecks(cfg$scite_csv))
+  if (nrow(dq$removed) > 0) WritePendingQueueFile(dq$queue, cfg$pending_csv)
+  if (nrow(ds$removed) > 0) DropSciteCheckRows(cfg$scite_csv, ds$removed$row)
+  cat(sprintf('--dedupe-queue: %d duplicate row(s) removed from %s (%d kept), %d from %s (%d kept)\n',
+              nrow(dq$removed), basename(cfg$pending_csv), nrow(dq$queue), nrow(ds$removed), basename(cfg$scite_csv), nrow(ds$scite)))
+  qt <- dq$removed[, c('row', 'why', 'queued_at', 'source_label', 'native_key', 'reason', 'c1_doi', 'decision', 'decided_at')]
+  st <- ds$removed[, c('row', 'why', 'doi', 'notice_type', 'checked_at', 'checked_by')]
+  for (i in seq_len(nrow(qt))) cat(sprintf('  queue row %s (%s): %s %s, %s, decision %s\n', qt$row[i], qt$why[i], qt$source_label[i], qt$native_key[i], qt$reason[i], if (is.na(qt$decision[i])) '(open)' else qt$decision[i]))
+  for (i in seq_len(nrow(st))) cat(sprintf('  scite row %s (%s): %s %s %s\n', st$row[i], st$why[i], st$doi[i], st$checked_by[i], st$notice_type[i]))
+  md <- file.path(cfg$reports_dir, sprintf('dedupe_queue_%s.md', format(Sys.Date())))
+  writeLines(c(sprintf('# Duplicate queue and screening rows removed -- %s (%s)', format(Sys.Date()), citations_tool_version), '',
+               sprintf('%s: %d row(s) removed, %d kept. %s: %d row(s) removed, %d kept.', basename(cfg$pending_csv), nrow(dq$removed), nrow(dq$queue),
+                       basename(cfg$scite_csv), nrow(ds$removed), nrow(ds$scite)), '',
+               '## pending_citations.csv', '', if (nrow(qt) > 0) MarkdownTable(qt) else 'none', '',
+               '## scite_checks.csv', '', if (nrow(st) > 0) MarkdownTable(st) else 'none'), md)
+  cat('  report:', md, '\n')
+  if (identical(args[args %in% steps], '--dedupe-queue')) quit(save = 'no', status = 0)
+}
 spec <- tryCatch(ReflistSpec(src), error = function(e) NULL)
 folder <- if (!is.null(spec$folder)) spec$folder else src     # the source folder under sources/databases
 frame  <- if (!is.null(spec$frame)) spec$frame else folder     # the cached frame BodyMass_<frame>.Rdata
 prim_path <- PrimaryReferencesPathForLabel(cfg$wd_db, src)
-dir.create(cfg$reports_dir, showWarnings = FALSE)
 dir.create(file.path(wd_root, 'tmp'), showWarnings = FALSE)
 cat(sprintf('run_citations: %s (%s)\n', src, citations_tool_version))
 
@@ -140,23 +178,36 @@ candidates <- list()
 if (Flag('--verify') || Flag('--queue')) {
   comp_doi <- CompilationDOI()
   reflist <- if (is.na(comp_doi)) NULL else CandidatesFromCompilationReflist(comp_doi, cfg)
-  Note('%s: compilation DOI %s; %d deposited references (%d with DOI)',
+  Note('%s: compilation DOI %s; %d deposited references (%d with DOI)%s',
        if (Flag('--verify')) '--verify' else '--queue (re-scoring pending rows from the cache)',
        if (is.na(comp_doi)) 'none' else comp_doi,
-       if (is.null(reflist)) 0L else nrow(reflist), if (is.null(reflist)) 0L else sum(!is.na(reflist$doi)))
+       if (is.null(reflist)) 0L else nrow(reflist), if (is.null(reflist)) 0L else sum(!is.na(reflist$doi)),
+       if (crossref_only) '; Crossref-only mode (owner decision 2026-10-06): OpenAlex not called, Crossref alone accepts (certain / crossref_only)' else '')
   scite <- ReadSciteChecks(cfg$scite_csv)
-  res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE)
+  run_at <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
+  res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE, crossref_only = crossref_only,
+                                 verified_at = run_at)
   prim <- res$prim; candidates <- res$candidates
   WritePrimaryReferences(prim, prim_path)
   if (length(res$skipped) > 0)
     Note('--verify: %d reference(s) left unverified -- %s: %s', length(res$skipped), res$quota, paste(res$skipped, collapse = ', '))
+  xo <- prim$match_status %in% 'certain' & prim$verification_mode %in% 'crossref_only'
+  if (crossref_only)
+    Note('--verify --crossref-only: %d row(s) decided on Crossref alone this run, %d of them certain / crossref_only (%d such rows now in the file, to be re-checked in full by a later --verify without the flag)',
+         sum(prim$verified_at %in% run_at & prim$verification_mode %in% 'crossref_only'), sum(prim$verified_at %in% run_at & xo), sum(xo))
+  if (length(res$rechecked) > 0)
+    Note('--verify: %d certain / crossref_only row(s) re-checked with OpenAlex: %s', length(res$rechecked),
+         paste(sprintf('%s %s', names(res$rechecked), res$rechecked), collapse = ', '))
   tab <- table(factor(prim$match_status, levels = c(match_statuses, NA)), useNA = 'ifany')
-  Note('status counts: %s', paste(sprintf('%s %d', ifelse(is.na(names(tab)), 'unverified', names(tab)), tab)[tab > 0], collapse = ', '))
+  Note('status counts: %s%s', paste(sprintf('%s %d', ifelse(is.na(names(tab)), 'unverified', names(tab)), tab)[tab > 0], collapse = ', '),
+       if (any(xo)) sprintf(' (certain / crossref_only: %d)', sum(xo)) else '')
 }
 if (Flag('--queue')) {
   queue <- WritePendingQueue(prim, candidates, cfg$pending_csv)
   open <- queue[queue$source_label == src & (is.na(queue$decision) | !nzchar(queue$decision)), ]
   Note('--queue: %d open queue row(s) for %s in %s (%d rows in the file)', nrow(open), src, basename(cfg$pending_csv), nrow(queue))
+  held <- attr(queue, 'skipped_decided')
+  if (length(held) > 0) Note('--queue: %d key(s) not re-queued, their recorded decision awaits --apply-queue: %s', length(held), paste(held, collapse = ', '))
 }
 
 # ---- --apply-queue ----
@@ -179,65 +230,24 @@ if (Flag('--bib')) {
   # this source's rows are taken from memory (they may have just changed)
   all_prim <- rbind(all_prim[all_prim$source_label != src, ], prim)
   ids <- read.csv(cfg$citeids_csv, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'))
-  known_keys <- c(curated$key, ids$Bibcite)
-  known_dois <- setNames(curated$doi, curated$key)
-  known_ids  <- ids[, intersect(c('CiteID', 'Bibcite', 'doi'), names(ids))]
-  entries <- character()
-  authorless <- character()
+  res <- AssignPrimaryKeys(all_prim, cfg, curated, ids)
+  all_prim <- res$prim; entries <- res$entries; authorless <- res$authorless
   acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
-  # deterministic order: by DOI then source/key, so that keys do not depend on the run
-  acc <- acc[order(is.na(all_prim$doi[acc]), all_prim$doi[acc], all_prim$source_label[acc], all_prim$native_key[acc], method = 'radix')]
-  for (i in acc) {
-    r <- all_prim[i, ]
-    if (!is.na(r$doi)) {
-      w <- CrossrefWork(r$doi, cfg)
-      if (is.null(w)) stop('no Crossref record for accepted DOI ', r$doi, ' (', r$source_label, ' ', r$native_key, ')')
-      fam <- CrossrefFirstSurname(w)
-      # a record without any author name: the key is minted from the
-      # reference's parsed surname (a key, not bib text) and the author-less
-      # entry is reported for the owner (#64)
-      if (is.na(fam) || !nzchar(fam)) {
-        fam <- FirstOfAuthorList(r$parsed_author1)
-        if (is.na(fam) || !nzchar(fam)) fam <- 'Anon'
-        authorless <- c(authorless, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi))
-      }
-      yr <- CrossrefYear(w)
-      key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
-             else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]))
-      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, r$year_override)
-      known_keys <- union(known_keys, key)
-      all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(fam, yr, r$doi, key, known_ids)
-    } else if (r$match_status == 'nodoi_approved') {
-      surname <- FirstOfAuthorList(r$parsed_author1)
-      # the same DOI-less work approved for another source keeps its key; the
-      # entry is built from the row that owns the key
-      twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
-      key <- if (!is.na(r$bibcite)) r$bibcite else if (!is.null(twin)) twin$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
-      if (!key %in% curated$key && !key %in% names(entries)) {
-        own <- if (!is.null(twin)) twin else r
-        entries[key] <- BuildBibEntryNoDOI(own, key, own$decided_by, own$decided_at)
-      }
-      known_keys <- union(known_keys, key)
-      all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(surname, r$parsed_year, NA, key, known_ids)
-    } else if (r$match_reason %in% 'manual_bib') {
-      if (!r$bibcite %in% curated$key) stop('manual bibcite ', r$bibcite, ' (', r$source_label, ' ', r$native_key, ') is not in ', basename(cfg$curated_bib))
-      all_prim$cite_id[i] <- CiteIDFor(sub(':.*$', '', r$bibcite), sub('^.*:(\\d{4}).*$', '\\1', r$bibcite), NA, r$bibcite, known_ids)
-    }
-    if (!is.na(all_prim$cite_id[i]) && !all_prim$cite_id[i] %in% known_ids$CiteID)
-      known_ids <- rbind(known_ids, data.frame(CiteID = all_prim$cite_id[i], Bibcite = all_prim$bibcite[i],
-                                               doi = if ('doi' %in% names(known_ids)) r$doi else NULL, stringsAsFactors = FALSE)[, names(known_ids)])
-  }
   WritePrimaryBib(entries, cfg$primary_bib)
   CheckBibKeysUnique(cfg$curated_bib, cfg$primary_bib)
   n_parsed <- CheckBibSyntax(cfg$primary_bib)
-  # write back every source's bibcite / cite_id
+  # write back every source's bibcite / cite_id -- only the files whose values
+  # changed (#114 item 7: an added optional column or quoting alone is no change)
+  written <- character()
   for (l in unique(all_prim$source_label)) {
     p <- all_prim[all_prim$source_label == l, ]
-    WritePrimaryReferences(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))
+    if (WritePrimaryReferencesIfChanged(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))) written <- c(written, l)
   }
   prim <- all_prim[all_prim$source_label == src, ]
+  Note('--bib: primary_references written for %d source(s)%s', length(written), if (length(written) == 0) '' else paste0(': ', paste(written, collapse = ', ')))
+  if (length(res$no_record) > 0)
+    Note('--bib: %d accepted DOI(s) have no Crossref record, so no entry was built and the row keeps its bibcite / cite_id as they were (an OpenAlex-only candidate approved before #114 item 3: withdraw the decision and give doi:<DOI> once it resolves at Crossref, or nodoi): %s',
+         length(res$no_record), paste(res$no_record, collapse = '; '))
   if (length(authorless) > 0)
     Note('--bib: %d accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): %s',
          length(authorless), paste(authorless, collapse = '; '))
@@ -297,9 +307,14 @@ if (Flag('--screening-list')) {
 # record of the verifying steps)
 md <- file.path(cfg$reports_dir, sprintf('citations_%s.md', src))
 if (identical(args[args %in% steps], '--screening-list')) quit(save = 'no', status = 0)
-tab <- prim[, c('native_key', 'n_records', 'role', 'match_status', 'match_reason', 'doi', 'title_sim', 'bibcite', 'cite_id')]
+tab <- prim[, c('native_key', 'n_records', 'role', 'match_status', 'match_reason', 'services', 'verification_mode', 'doi', 'title_sim', 'bibcite', 'cite_id')]
 tab$title_sim <- ifelse(is.na(tab$title_sim), '', formatC(tab$title_sim, digits = 3, format = 'f'))
+n_xo <- sum(prim$match_status %in% 'certain' & prim$verification_mode %in% 'crossref_only')
 writeLines(c(sprintf('# Citations of %s -- %s (%s)', src, format(Sys.time(), '%Y-%m-%d %H:%M:%S'), citations_tool_version), '',
-             sprintf('Steps: %s', paste(args[args %in% c(steps, '--no-dry-run', '--force', '--offline')], collapse = ' ')), '',
+             sprintf('Steps: %s', paste(args[args %in% c(steps, '--no-dry-run', '--force', '--offline', '--crossref-only')], collapse = ' ')), '',
+             sprintf('Verification mode: %s%s',
+                     if (crossref_only) 'crossref_only (owner decision 2026-10-06: OpenAlex not called, Crossref alone accepts; the accepted rows carry verification_mode crossref_only and are re-checked in full by a later --verify without the flag)'
+                     else 'full (Crossref + OpenAlex)',
+                     if (n_xo > 0) sprintf('; %d certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)', n_xo) else ''), '',
              paste0('- ', unlist(report)), '', '## References', '', MarkdownTable(tab)), md)
 cat('  report:', md, '\n')

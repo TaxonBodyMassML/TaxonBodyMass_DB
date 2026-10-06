@@ -8,11 +8,21 @@
 #   VerifyReference(ref, cfg, ...) the service calls for one reference and the decision
 #   VerifyPrimaryReferences(...)   over a primary_references frame (skips decided rows)
 #   WritePendingQueue(...)         appends the undecided pending/not_found rows to
-#                                  Bib/pending_citations.csv (append-only, idempotent)
+#                                  Bib/pending_citations.csv (append-only, idempotent;
+#                                  a key with an unapplied decision is not re-queued)
+#   DedupeQueue(queue)             the duplicate rows of the queue (--dedupe-queue)
+#   DedupeSciteChecks(scite)       the duplicate rows of Bib/scite_checks.csv (removed by
+#                                  line through DropSciteCheckRows())
 #   ApplyQueueDecisions(...)       validates the owner's `decision` and applies it
 #                                  (1|2|3, doi:..., manual:<Key>, nodoi, self, drop)
 #   ScreeningCandidates(...)       the DOIs of a source an agent should screen with Scite
 #                                  (selective screening policy, owner decision 2026-10-05)
+#   DecideMatchCrossrefOnly(...)   the Crossref-only mode of --verify --crossref-only (owner
+#                                  decision 2026-10-06, the backlog while OpenAlex's daily
+#                                  budget is small): OpenAlex is never asked, Crossref alone
+#                                  accepts under the rules below (reason crossref_only)
+#   RecheckCrossrefOnly(row, d)    the full re-check of such a row by a later --verify
+#                                  without the flag: upgrade, demote or keep
 # Only VerifyReference() / ApplyQueueDecisions() with a doi: decision touch the
 # services, through verify_services.r (cached). Everything else is offline.
 
@@ -79,7 +89,7 @@ ServicesWith <- function(services, nt)
   if (isTRUE(nt$scite_checked) && !is.na(nt$screening_service)) paste0(services, ';', nt$screening_service) else services
 
 # Fields of a decision for one reference, with the top candidates for the queue.
-Decision <- function(status, reason, best = NULL, scored = NULL, services, notice = NULL) {
+Decision <- function(status, reason, best = NULL, scored = NULL, services, notice = NULL, verification_mode = NA_character_) {
   Fld <- function(col, default) if (is.null(best) || nrow(best) == 0 || is.null(best[[col]])) default else best[[col]][1]
   list(match_status = status, match_reason = reason,
        doi = Fld('doi', NA_character_), title_sim = Fld('title_sim', NA_real_),
@@ -88,7 +98,8 @@ Decision <- function(status, reason, best = NULL, scored = NULL, services, notic
        pages_match = Fld('pages_match', NA), openalex_id = Fld('openalex_id', NA_character_),
        is_retracted = if (is.null(notice)) Fld('is_retracted', FALSE) else notice$is_retracted,
        editorial_notice = if (is.null(notice)) NA_character_ else notice$notice,
-       services = services, candidates = if (is.null(scored)) EmptyCandidates() else scored)
+       services = services, verification_mode = verification_mode,
+       candidates = if (is.null(scored)) EmptyCandidates() else scored)
 }
 
 # The best row per distinct DOI (first in the scored order), with the services
@@ -111,8 +122,11 @@ CollapseByDOI <- function(scored) {
 # the open-search rows of both services, `closed_cands` the rows from the
 # compilation's reference list; `scite` the rows of ReadSciteChecks().
 DecideMatch <- function(ref, doi_cands = NULL, open_cands = NULL, closed_cands = NULL, scite = NULL,
-                        th = citations_thresholds, services = 'crossref;openalex') {
+                        th = citations_thresholds, services = 'crossref;openalex', crossref_only = FALSE) {
+  # Crossref-only mode (owner decision 2026-10-06): its own acceptance rules, below
+  if (isTRUE(crossref_only)) return(DecideMatchCrossrefOnly(ref, doi_cands, open_cands, closed_cands, scite, th))
   d <- DecideMatchWith(ref, doi_cands, open_cands, closed_cands, scite, th, services)
+  if (!identical(d$match_status, 'self')) d$verification_mode <- 'full'
   # A decision reached while OpenAlex was known to be unavailable (`services`
   # without it; an exhausted quota normally leaves the reference unverified
   # instead, VerifyPrimaryReferences()) is provisional when it rests on the
@@ -170,17 +184,112 @@ DecideMatchWith <- function(ref, doi_cands, open_cands, closed_cands, scite, th,
   Decision('pending', 'single_service', best, by_doi, svc, nt)
 }
 
+# ---- Crossref-only mode (owner decision 2026-10-06) ----------------------------------------
+# The backlog mode of --verify --crossref-only: OpenAlex is not consulted at
+# all (its daily budget under the API key is about 1,000 lookups against some
+# 6,300 waiting references), and Crossref alone accepts a reference as
+# `certain` / `crossref_only` with `services` 'crossref' and the marker
+# `verification_mode` 'crossref_only', under the rules of DecideMatchWith()
+# applied to the Crossref candidates alone:
+#  (a) a source DOI that resolves at Crossref with author + year agreeing or
+#      title_sim >= doi_title_sim (the doi_resolves rule without OpenAlex);
+#  (b) a strong best candidate (title_sim >= certain_title_sim, author, year
+#      within the window, and one of container / volume / pages) -- what the
+#      two-service rule would call single_service, there being one service;
+#  (c) a title-less citation whose candidate agrees on container, volume,
+#      first page and year (the container_volume_page rule on Crossref alone);
+#  (d) a closed-world candidate with title_sim >= closed_world_sim, which stays
+#      `certain` / `closed_world` as now.
+# Everything else is as in the two-service rules: a runner-up within
+# ambiguous_delta under another DOI is `pending` / `ambiguous`, a Crossref
+# update-to / updated-by notice (or a screening row) is `pending` /
+# `retracted`, a disagreeing or unresolvable source DOI `doi_mismatch`, grey
+# literature and the thresholds unchanged; `single_service` and
+# `service_unavailable` never arise. OpenAlex rows handed in by mistake are
+# dropped before scoring. Rule (c) is applied here so that it holds whether or
+# not DecideMatchWith() carries the title-less rule itself (a title-less
+# citation it decides single_service on one agreeing DOI is accepted through
+# (b); one it leaves below_threshold is re-read for the four-field agreement).
+DecideMatchCrossrefOnly <- function(ref, doi_cands = NULL, open_cands = NULL, closed_cands = NULL, scite = NULL,
+                                    th = citations_thresholds) {
+  OnlyCrossref <- function(x) if (is.null(x) || nrow(x) == 0) x else x[x$service %in% 'crossref', , drop = FALSE]
+  d <- DecideMatchWith(ref, OnlyCrossref(doi_cands), OnlyCrossref(open_cands), OnlyCrossref(closed_cands), scite, th, 'crossref')
+  if (identical(d$match_status, 'self')) return(d)
+  d$verification_mode <- 'crossref_only'
+  # (a), (b) and the title-less rule of DecideMatchWith() when it has one: the
+  # one service agreed as far as it can
+  if (d$match_reason %in% c('doi_resolves', 'single_service')) {
+    d$match_status <- 'certain'; d$match_reason <- 'crossref_only'
+    return(d)
+  }
+  # (c) a title-less citation left below the title thresholds: container,
+  # volume, first page and year of the Crossref candidates decide
+  ref <- as.list(ref)
+  titleless <- is.null(ref$parsed_title) || is.na(ref$parsed_title) || !nzchar(ref$parsed_title)
+  if (titleless && d$match_reason %in% c('below_threshold', 'grey_literature') && nrow(d$candidates) > 0) {
+    by_doi <- d$candidates
+    agree <- by_doi$container_match & by_doi$volume_match & by_doi$pages_match & by_doi$year_match
+    agree[is.na(agree)] <- FALSE
+    if (any(agree)) {
+      hits <- by_doi[agree, , drop = FALSE]
+      best <- hits[1, , drop = FALSE]
+      nt <- NoticeFor(best$doi, by_doi, scite)
+      svc <- ServicesWith('crossref', nt)
+      if (nt$flag) return(Decision('pending', 'retracted', best, by_doi, svc, nt, 'crossref_only'))
+      if (nrow(hits) > 1) return(Decision('pending', 'ambiguous', best, by_doi, svc, nt, 'crossref_only'))
+      return(Decision('certain', 'crossref_only', best, by_doi, svc, nt, 'crossref_only'))
+    }
+  }
+  d
+}
+
+# The full re-check (Crossref + OpenAlex) of a row accepted in Crossref-only
+# mode, by a later --verify without the flag: `row` is the row as it stands
+# (certain, verification_mode crossref_only, DOI X), `d` the decision of the
+# two-service rules on the same reference. Returns the decision to apply, or
+# NULL to keep the row as it is (verified_at stamped):
+#  * d certain (two_service_agreement, doi_resolves, closed_world): the
+#    upgrade -- OpenAlex agrees (or, on a source DOI, is clean);
+#  * d pending / retracted: a notice, applied as always;
+#  * OpenAlex returned X too but the rules end pending (an ambiguous twin):
+#    the two-service decision stands;
+#  * OpenAlex disagrees -- it returned no row for X but a plausible candidate
+#    (title_sim >= not_found_sim) under another DOI: `pending` / `doi_mismatch`
+#    with both services' candidates attached, for the owner;
+#  * OpenAlex is silent on X and offers nothing plausible: the Crossref-only
+#    acceptance stands (NULL), and the row is re-checked again next time (the
+#    cached responses make that free).
+RecheckCrossrefOnly <- function(row, d, th = citations_thresholds) {
+  row <- as.list(row)
+  if (d$match_status %in% 'certain' || d$match_reason %in% 'retracted') return(d)
+  cands <- d$candidates
+  if (is.null(cands) || nrow(cands) == 0) return(NULL)
+  svc <- if ('services_for_doi' %in% names(cands)) cands$services_for_doi else cands$service
+  from_oa <- grepl('openalex', svc, fixed = TRUE)
+  same <- !is.na(cands$doi) & !is.na(row$doi) & cands$doi == row$doi
+  if (any(from_oa & same)) return(d)
+  if (any(from_oa & !same & !is.na(cands$title_sim) & cands$title_sim >= th$not_found_sim)) {
+    d$match_status <- 'pending'; d$match_reason <- 'doi_mismatch'
+    return(d)
+  }
+  NULL
+}
+
 # ---- the driver --------------------------------------------------------------------------
 # The service calls for one reference (cached; offline when cfg$offline and
 # everything is cached) and the decision. `reflist` is the compilation's
 # deposited reference list (CandidatesFromCompilationReflist()), `scite` the
-# rows of ReadSciteChecks(). Returns the decision list (DecideMatch()).
-VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
+# rows of ReadSciteChecks(). Returns the decision list (DecideMatch()). With
+# `crossref_only` (the mode of --crossref-only, DecideMatchCrossrefOnly()) no
+# OpenAlex request is made: the Crossref work or query and the closed-world
+# candidates are the whole evidence.
+VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL, crossref_only = FALSE) {
   ref <- as.list(ref)
   if (identical(ref$role, 'self')) return(DecideMatch(ref))
   if (!is.na(ref$raw_doi) && nzchar(ref$raw_doi)) {
     w  <- CrossrefWork(ref$raw_doi, cfg)
     cr <- if (is.null(w)) EmptyCandidates() else NormaliseCrossrefItem(w)
+    if (isTRUE(crossref_only)) return(DecideMatch(ref, doi_cands = cr, scite = scite, crossref_only = TRUE))
     oa <- OpenAlexWork(ref$raw_doi, cfg)
     return(DecideMatch(ref, doi_cands = rbind(cr, if (is.null(oa)) EmptyCandidates() else oa), scite = scite))
   }
@@ -188,9 +297,10 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
                                                            ref$parsed_container, ref$parsed_volume, ref$parsed_pages)), collapse = ' ')
            else ref$raw_citation
   cr <- CrossrefQuery(query, cfg)
+  closed <- ClosedWorldCandidates(ref, reflist, cfg)
+  if (isTRUE(crossref_only)) return(DecideMatch(ref, open_cands = cr, closed_cands = closed, scite = scite, crossref_only = TRUE))
   oa <- if (!is.na(ref$parsed_title)) OpenAlexQuery(ref$parsed_title, ref$parsed_year, cfg)
         else OpenAlexQuery(NA, NA, cfg, search = ref$raw_citation)
-  closed <- ClosedWorldCandidates(ref, reflist, cfg)
   # the DOI of a strong candidate is looked up in the other service when that
   # service's own search missed it, so that two_service_agreement can be reached
   # for titles OpenAlex's title.search or Crossref's bibliographic query rank low
@@ -210,8 +320,9 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL) {
 # Decision fields into a primary_references row.
 ApplyDecisionToRow <- function(prim, i, d, verified_at) {
   for (col in c('match_status', 'match_reason', 'doi', 'services', 'title_sim', 'author_match', 'year_match',
-                'container_match', 'volume_match', 'pages_match', 'openalex_id', 'is_retracted', 'editorial_notice'))
-    prim[[col]][i] <- d[[col]]
+                'container_match', 'volume_match', 'pages_match', 'openalex_id', 'is_retracted', 'editorial_notice',
+                'verification_mode'))
+    prim[[col]][i] <- if (is.null(d[[col]])) NA else d[[col]]
   prim$verified_at[i]  <- verified_at
   prim$tool_version[i] <- citations_tool_version
   prim
@@ -221,20 +332,43 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # certain is re-verified only with force = TRUE; approved, nodoi_approved,
 # rejected and self are never touched). Rows without a raw_citation (a key the
 # reference list lacks) are skipped. Returns list(prim, candidates, skipped,
-# quota): the candidates are scored candidate frames keyed by native_key for
-# WritePendingQueue(); `skipped` names the references a spent service quota
-# (CachedGET()'s 'citations_quota' condition) left unverified and `quota` the
-# condition's message.
+# quota, rechecked): the candidates are scored candidate frames keyed by
+# native_key for WritePendingQueue(); `skipped` names the references a spent
+# service quota (CachedGET()'s 'citations_quota' condition) left unverified
+# and `quota` the condition's message.
+#
+# Crossref-only mode (`crossref_only = TRUE`, --crossref-only; owner decision
+# 2026-10-06): OpenAlex is never asked, DecideMatchCrossrefOnly() decides, and
+# only the rows no two-service decision has reached are taken -- unverified
+# (NA), pending / service_unavailable and pending / single_service; every
+# other pending or not_found row was decided with OpenAlex and is left as it
+# is. With `force` every row the normal run would take, and the certain rows,
+# are re-decided in Crossref-only form (a two_service_agreement row becomes
+# crossref_only). Without the flag a certain row whose verification_mode is
+# 'crossref_only' is re-checked in full (RecheckCrossrefOnly(): upgraded,
+# demoted to pending / doi_mismatch, or kept); `rechecked` names those rows
+# with their outcome. A row whose DOI changes under a new decision loses its
+# bibcite / cite_id, as under a queue decision, so that --bib mints or reuses
+# a key for the new DOI.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
-                                    progress = interactive()) {
-  todo <- is.na(prim$match_status) | prim$match_status %in% c('pending', 'not_found') |
-          (force & prim$match_status == 'certain')
+                                    progress = interactive(), crossref_only = FALSE) {
+  if (is.null(prim$verification_mode)) prim$verification_mode <- rep(NA_character_, nrow(prim))
+  certain <- prim$match_status %in% 'certain'
+  if (isTRUE(crossref_only)) {
+    todo <- is.na(prim$match_status) |
+            (prim$match_status %in% 'pending' & prim$match_reason %in% c('service_unavailable', 'single_service')) |
+            (force & (prim$match_status %in% c('pending', 'not_found') | certain))
+    recheck <- rep(FALSE, nrow(prim))
+  } else {
+    recheck <- certain & prim$verification_mode %in% 'crossref_only'
+    todo <- is.na(prim$match_status) | prim$match_status %in% c('pending', 'not_found') | (force & certain) | recheck
+  }
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
   cands <- list()
-  skipped <- character(0); quota <- NULL
+  skipped <- character(0); quota <- NULL; rechecked <- character(0)
   for (i in which(todo)) {
-    d <- tryCatch(VerifyReference(prim[i, ], cfg, reflist, scite), citations_quota = function(e) e)
+    d <- tryCatch(VerifyReference(prim[i, ], cfg, reflist, scite, crossref_only = isTRUE(crossref_only)), citations_quota = function(e) e)
     if (inherits(d, 'citations_quota')) {
       # a service's quota is spent: the row keeps its previous status (NA for a
       # new reference) and is reported; the cached responses of the other
@@ -243,19 +377,32 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
       if (progress) cat(sprintf('  %s: left unverified (quota of %s)\n', prim$native_key[i], d$host))
       next
     }
+    if (recheck[i] && !force) {
+      d <- RecheckCrossrefOnly(prim[i, ], d, cfg$thresholds)
+      if (is.null(d)) {
+        # OpenAlex silent: the Crossref-only acceptance stands, the attempt is stamped
+        prim$verified_at[i] <- verified_at; prim$tool_version[i] <- citations_tool_version
+        rechecked[prim$native_key[i]] <- 'kept'
+        if (progress) cat(sprintf('  %s: certain (crossref_only) kept, OpenAlex silent\n', prim$native_key[i]))
+        next
+      }
+      rechecked[prim$native_key[i]] <- if (d$match_status == 'certain') sprintf('upgraded to %s', d$match_reason) else sprintf('%s/%s', d$match_status, d$match_reason)
+    }
     # a reference the list (or the owner) marked for review is never
     # auto-accepted: it is queued with its candidates (citations_config.r)
     if (!is.na(prim$owner_review[i]) && (d$match_status == 'certain' || d$match_reason %in% 'service_unavailable')) {
       d$match_status <- 'pending'; d$match_reason <- 'owner_review'
     }
+    old_doi <- prim$doi[i]
     prim <- ApplyDecisionToRow(prim, i, d, verified_at)
+    if (!is.na(old_doi) && !identical(prim$doi[i], old_doi)) { prim$bibcite[i] <- NA_character_; prim$cite_id[i] <- NA_character_ }
     cands[[prim$native_key[i]]] <- d$candidates
     if (progress) cat(sprintf('  %s: %s (%s)\n', prim$native_key[i], d$match_status, d$match_reason))
   }
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands, skipped = skipped, quota = quota)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked)
 }
 
 # The screening file is applied to every row with a DOI whatever its status
@@ -318,7 +465,11 @@ DropGapNote <- function(notice) {
 # round can be repeated and the README can say how it was taken). A DOI
 # already screened by scite-mcp is listed only when it carries a notice (a
 # consensus-mcp row cannot read a notice type, so it does not close a notice
-# case). Rows without a DOI, self and rejected rows are never listed. Returns
+# case). A certain row accepted in Crossref-only mode (verification_mode
+# crossref_only; owner decision 2026-10-06) lacks OpenAlex by design and is
+# not a disagreement: it waits for the full re-check of the next --verify
+# and enters the audit-sample pool like any other certain row. Rows without
+# a DOI, self and rejected rows are never listed. Returns
 # one row per native key: source_label, native_key, n_records, match_status,
 # match_reason, doi, category (notice / disagreement / doubtful /
 # audit_sample), reason (the codes of the list, ';'-joined), screened_by (the
@@ -348,8 +499,9 @@ ScreeningCandidates <- function(prim, scite = NULL, sample_frac = citations_scre
   one_service <- vapply(prim$services, function(x) {
     sv <- if (is.na(x)) character(0) else strsplit(x, ';', fixed = TRUE)[[1]]
     !all(c('crossref', 'openalex') %in% sv) }, logical(1), USE.NAMES = FALSE)
+  xo <- if (is.null(prim$verification_mode)) rep(FALSE, nrow(prim)) else prim$verification_mode %in% 'crossref_only'
   disagree <- prim$match_reason %in% c('single_service', 'ambiguous') |
-              (one_service & prim$match_status %in% c('certain', 'approved', 'pending'))
+              (one_service & prim$match_status %in% c('certain', 'approved', 'pending') & !(xo & prim$match_status %in% 'certain'))
   # (c) doubtful identities
   grey <- prim$match_reason %in% 'grey_literature' |
           vapply(prim$raw_citation, IsGreyLiterature, logical(1), USE.NAMES = FALSE)
@@ -464,20 +616,118 @@ QueueRow <- function(ref, cands, queued_at) {
 }
 
 # Append the pending / not_found rows of `prim` that are not already queued
-# without a decision (keyed on source_label + native_key) to the queue file;
-# existing rows are never rewritten. Rows pending only because a service was
-# unavailable (service_unavailable) are not owner decisions and are not queued.
-# Returns the queue.
+# (keyed on source_label + native_key) to the queue file; existing rows are
+# never rewritten. A key is already queued when it has an open row (no
+# decision) or a recorded decision not yet applied to its row -- the decided_at
+# of the queue row differs from the row's (#114 item 4; the Chown and Lislevand
+# rounds re-appended such keys): the owner's decision stands until
+# --apply-queue. A key whose applied decision left it pending again (a later
+# retraction) is a new case and is queued. Rows pending only because a service
+# was unavailable (service_unavailable) are not owner decisions and are not
+# queued. Returns the queue, with the attribute `skipped_decided` naming the
+# keys held back for an unapplied decision.
 WritePendingQueue <- function(prim, candidates, path, queued_at = format(Sys.Date())) {
   queue <- ReadPendingQueue(path)
-  open <- paste(queue$source_label, queue$native_key)[is.na(queue$decision) | !nzchar(queue$decision)]
-  todo <- prim$match_status %in% c('pending', 'not_found') & !prim$match_reason %in% 'service_unavailable' &
-          !paste(prim$source_label, prim$native_key) %in% open
+  key_q <- paste(queue$source_label, queue$native_key)
+  has_decision <- !is.na(queue$decision) & nzchar(trimws(queue$decision))
+  open <- key_q[!has_decision]
+  key_p <- paste(prim$source_label, prim$native_key)
+  unapplied <- vapply(seq_len(nrow(prim)), function(i) {
+    at <- queue$decided_at[has_decision & key_q == key_p[i]]
+    length(at) > 0 && !(!is.na(prim$decided_at[i]) && prim$decided_at[i] %in% at)
+  }, logical(1))
+  todo <- prim$match_status %in% c('pending', 'not_found') & !prim$match_reason %in% 'service_unavailable' & !key_p %in% open
+  skipped <- prim$native_key[todo & unapplied]
+  todo <- todo & !unapplied
   new <- lapply(which(todo), function(i) QueueRow(prim[i, ], candidates[[prim$native_key[i]]], queued_at))
   if (length(new) > 0) queue <- rbind(queue, do.call(rbind, new))
   rownames(queue) <- NULL
   WritePendingQueueFile(queue, path)
-  queue
+  structure(queue, skipped_decided = skipped)
+}
+
+# ---- maintenance: duplicate rows (--dedupe-queue, #114 item 4) ------------------------
+# The queue rows that duplicate an earlier row of the same key, each with the
+# reason it is removed (the first row of a key is always kept):
+#  * `open_duplicate`: an open row (no decision) equal to an earlier row in
+#    every case column (everything but queued_at and the decision columns),
+#    whether that earlier row is open (an exact re-append) or decided (the
+#    re-append of a decided key that --queue made before the rule above);
+#  * `same_decision`: a decided row whose key has an earlier decided row with
+#    the same decision, decided_by and decided_at (one decision recorded
+#    twice; the rows may differ in reason or scite_note).
+# Rows of one key that differ in their case columns and both carry a decision,
+# or an open row with new candidates, are different cases and are kept.
+# Returns list(queue, removed): `removed` has the queue columns plus `row`
+# (the position in the file read) and `why`.
+queue_case_columns <- setdiff(pending_queue_columns, c('queued_at', 'decision', 'decided_by', 'decided_at'))
+DedupeQueue <- function(queue) {
+  n <- nrow(queue)
+  drop <- rep(FALSE, n); why <- rep(NA_character_, n)
+  if (n > 1) {
+    key <- paste(queue$source_label, queue$native_key)
+    has_decision <- !is.na(queue$decision) & nzchar(trimws(queue$decision))
+    Same <- function(a, b, cols) all(vapply(cols, function(col) {
+      x <- queue[[col]][a]; y <- queue[[col]][b]
+      (is.na(x) && is.na(y)) || (!is.na(x) && !is.na(y) && x == y) }, logical(1)))
+    for (j in 2:n) {
+      earlier <- which(key[seq_len(j - 1)] == key[j] & !drop[seq_len(j - 1)])
+      if (length(earlier) == 0) next
+      if (!has_decision[j]) {
+        if (any(vapply(earlier, function(i) Same(i, j, queue_case_columns), logical(1)))) { drop[j] <- TRUE; why[j] <- 'open_duplicate' }
+      } else {
+        dec <- earlier[has_decision[earlier]]
+        if (any(vapply(dec, function(i) Same(i, j, c('decision', 'decided_by', 'decided_at')), logical(1)))) { drop[j] <- TRUE; why[j] <- 'same_decision' }
+      }
+    }
+  }
+  removed <- queue[drop, , drop = FALSE]
+  removed$row <- which(drop); removed$why <- why[drop]
+  kept <- queue[!drop, , drop = FALSE]
+  rownames(kept) <- NULL; rownames(removed) <- NULL
+  list(queue = kept, removed = removed)
+}
+
+# The screening rows that duplicate another row of the same DOI: an exact
+# duplicate, an earlier row of the same DOI and service (the latest row per
+# DOI + service is kept, by checked_at then position), and a `none` row (a
+# recorded gap) for a DOI that another row answers (the gap is closed; the
+# Smith_2003 round recorded 30 such pairs, a `none` row then an owner-waiver
+# row). Returns list(scite, removed) with `row` and `why` on `removed`.
+DedupeSciteChecks <- function(scite) {
+  n <- nrow(scite)
+  drop <- rep(FALSE, n); why <- rep(NA_character_, n)
+  if (n > 1) {
+    all_cols <- do.call(paste, c(lapply(scite_check_columns, function(col) ifelse(is.na(scite[[col]]), '', scite[[col]])), sep = '\r'))
+    dup <- duplicated(all_cols); drop[dup] <- TRUE; why[dup] <- 'exact_duplicate'
+    ds <- paste(scite$doi, scite$checked_by)
+    for (k in unique(ds[duplicated(ds) & !drop])) {
+      i <- which(ds == k & !drop)
+      keep <- i[order(ifelse(is.na(scite$checked_at[i]), '', scite$checked_at[i]), i, decreasing = TRUE)][1]
+      drop[setdiff(i, keep)] <- TRUE; why[setdiff(i, keep)] <- 'older_same_service'
+    }
+    answered <- unique(scite$doi[!drop & scite$checked_by != 'none'])
+    gap <- !drop & scite$checked_by == 'none' & scite$doi %in% answered
+    drop[gap] <- TRUE; why[gap] <- 'gap_answered'
+  }
+  removed <- scite[drop, , drop = FALSE]
+  removed$row <- which(drop); removed$why <- why[drop]
+  kept <- scite[!drop, , drop = FALSE]
+  rownames(kept) <- NULL; rownames(removed) <- NULL
+  list(scite = kept, removed = removed)
+}
+
+# Remove the rows `rows` (positions in the frame ReadSciteChecks() read, header
+# excluded) from the screening file by line, so that every other line keeps
+# its bytes (the file is appended by hand, unquoted, with the DOIs' own case,
+# and holds no embedded newlines). Stops if the line count does not match.
+DropSciteCheckRows <- function(path, rows) {
+  lines <- readLines(path, encoding = 'UTF-8', warn = FALSE)
+  n_rows <- nrow(ReadSciteChecks(path))
+  if (length(lines) != n_rows + 1L)
+    stop(basename(path), ': ', length(lines), ' lines for ', n_rows, ' rows; the file cannot be edited by line', call. = FALSE)
+  if (length(rows) > 0) writeLines(lines[-(rows + 1L)], path, useBytes = TRUE)
+  invisible(length(rows))
 }
 
 ValidateDecision <- function(decision) grepl(queue_decision_pattern, trimws(decision), perl = TRUE)
@@ -493,15 +743,28 @@ SplitDecision <- function(decision) {
 # Apply the owner's decisions: every queue row with a non-empty `decision`
 # must have decided_by and an ISO decided_at, match the grammar and refer to an
 # existing reference; `1|2|3` take that candidate's DOI (approved /
-# owner_candidate); `doi:` is re-verified through Crossref (approved /
+# owner_candidate; the candidate must carry `crossref` in its services, since
+# the entry is built from the Crossref record -- an OpenAlex-only candidate is
+# rejected with the proposal doi: / nodoi, #114 item 3); `doi:` is re-verified through Crossref (approved /
 # owner_doi; stops when the DOI does not resolve); `manual:<Key>` records the
 # curated-bib key (approved / manual_bib); `nodoi` marks a DOI-less entry to be
 # built from the parsed fields (nodoi_approved); `self` and `drop` set those
-# statuses. Returns the updated primary_references frame. The queue itself is
-# not modified (approval is the committed decision).
+# statuses and clear the candidate's DOI and agreement (#114 item 5). A row
+# whose DOI changes loses its bibcite / cite_id for --bib to re-mint. A
+# `certain` row is overridden by a queue row the owner adds by hand with a
+# `doi:` decision (re-verified at Crossref). Returns the updated
+# primary_references frame. The queue itself is not modified (approval is
+# the committed decision).
 ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
   decided <- queue[!is.na(queue$decision) & nzchar(trimws(queue$decision)), , drop = FALSE]
   problems <- character(0)
+  # a decision already applied to its row (same decided_at, a final status) is
+  # history: the Crossref-record rule below is not re-imposed on it
+  Applied <- function(q) {
+    i <- which(prim$source_label == q$source_label & prim$native_key == q$native_key)
+    length(i) == 1 && !is.na(prim$match_status[i]) && prim$match_status[i] %in% c('approved', 'nodoi_approved', 'rejected', 'self') &&
+      !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at
+  }
   for (j in seq_len(nrow(decided))) {
     q <- decided[j, ]
     key <- paste(q$source_label, q$native_key)
@@ -511,6 +774,16 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     act <- SplitDecision(q$decision)$action
     if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
       problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
+    else if (grepl('^[123]$', act) && !Applied(q)) {
+      # a candidate only OpenAlex returned may have no Crossref record to build
+      # the entry from (#114 item 3): the owner checks the DOI and decides
+      # doi: (re-verified at Crossref) or nodoi
+      svc <- q[[paste0('c', act, '_services')]]
+      svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
+      if (!'crossref' %in% svc)
+        problems <- c(problems, sprintf('%s: candidate %s (%s) was returned by %s only, so no Crossref record exists to build its entry from; decide doi:%s if the DOI resolves at Crossref, else nodoi',
+                                        key, act, q[[paste0('c', act, '_doi')]], if (length(svc) == 0) 'no service' else paste(svc, collapse = ';'), q[[paste0('c', act, '_doi')]]))
+    }
     if (!is.na(SplitDecision(q$decision)$year) && !grepl('^([123]|doi:)', act))
       problems <- c(problems, sprintf('%s: a year override needs a candidate or doi: decision', key))
   }
@@ -524,6 +797,7 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
         !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at) next   # already applied
     parts <- SplitDecision(q$decision)
     dec <- parts$action
+    old_doi <- prim$doi[i]
     prim$decided_by[i] <- q$decided_by; prim$decided_at[i] <- q$decided_at
     prim$tool_version[i] <- citations_tool_version
     prim$year_override[i] <- parts$year
@@ -533,6 +807,8 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
       prim$title_sim[i] <- suppressWarnings(as.numeric(q[[paste0('c', dec, '_title_sim')]]))
       prim$services[i] <- q[[paste0('c', dec, '_services')]]
     } else if (startsWith(dec, 'doi:')) {
+      # the override path of a certain row as well (#114 item 5): the DOI the
+      # owner gives is re-verified at Crossref like any other
       doi <- CleanDOI(sub('^doi:', '', dec))
       if (is.null(cfg)) stop('ApplyQueueDecisions(): a doi: decision needs cfg to re-verify ', doi, call. = FALSE)
       w <- CrossrefWork(doi, cfg)
@@ -541,17 +817,35 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
       prim$doi[i] <- doi; prim$match_status[i] <- 'approved'; prim$match_reason[i] <- 'owner_doi'
       prim$title_sim[i] <- cand$title_sim; prim$author_match[i] <- cand$author_match; prim$year_match[i] <- cand$year_match
       prim$container_match[i] <- cand$container_match; prim$volume_match[i] <- cand$volume_match; prim$pages_match[i] <- cand$pages_match
+      prim$openalex_id[i] <- NA_character_; prim$is_retracted[i] <- NA; prim$editorial_notice[i] <- NA_character_
       prim$services[i] <- 'crossref'
       prim$verified_at[i] <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
     } else if (startsWith(dec, 'manual:')) {
-      prim$bibcite[i] <- sub('^manual:', '', dec); prim$match_status[i] <- 'approved'; prim$match_reason[i] <- 'manual_bib'
+      prim$bibcite[i] <- sub('^manual:', '', dec); prim$cite_id[i] <- NA_character_
+      prim$match_status[i] <- 'approved'; prim$match_reason[i] <- 'manual_bib'
     } else if (dec == 'nodoi') {
       prim$match_status[i] <- 'nodoi_approved'; prim$match_reason[i] <- 'owner_nodoi'; prim$doi[i] <- NA_character_
     } else if (dec == 'self') {
       prim$match_status[i] <- 'self'; prim$match_reason[i] <- 'owner_self'; prim$role[i] <- 'self'
+      prim <- ClearCandidateFields(prim, i)
     } else if (dec == 'drop') {
+      # the best (wrong) candidate's DOI and its agreement are cleared (#114 item 5)
       prim$match_status[i] <- 'rejected'; prim$match_reason[i] <- 'owner_drop'
+      prim <- ClearCandidateFields(prim, i)
     }
+    # a key minted for another DOI (or for a DOI the row no longer has) is
+    # not carried over: --bib mints or reuses one for the new state
+    if (!identical(prim$doi[i], old_doi) && !startsWith(dec, 'manual:')) { prim$bibcite[i] <- NA_character_; prim$cite_id[i] <- NA_character_ }
   }
+  prim
+}
+
+# The candidate-derived fields of a row: the DOI the services proposed, its
+# agreement flags, the OpenAlex id and the notices (not raw_doi, the source's
+# own text, and not services / verified_at, the record of the attempt).
+ClearCandidateFields <- function(prim, i) {
+  for (col in c('doi', 'openalex_id', 'editorial_notice')) prim[[col]][i] <- NA_character_
+  prim$title_sim[i] <- NA_real_
+  for (col in c('author_match', 'year_match', 'container_match', 'volume_match', 'pages_match', 'is_retracted')) prim[[col]][i] <- NA
   prim
 }

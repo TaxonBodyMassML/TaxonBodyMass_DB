@@ -36,12 +36,15 @@ Expect <- function(ok, what) {
 # anchors that make the data-driven animal ranks (orders and families, and the
 # majority rule for classes) work as they do on the real cache.
 Row <- function(taxon, species, kingdom, phylum, class, order, family, genus,
-                source = 'GBIF', conf = 99L, status = 'ACCEPTED', gfam = NA, gord = NA, changed = FALSE)
+                source = 'GBIF', conf = 99L, status = 'ACCEPTED', gfam = NA, gord = NA, changed = FALSE,
+                col_type = NA_character_, col_status = NA_character_, col_key = NA_character_, col_name = NA_character_)
   data.frame(taxon = taxon, kingdom = kingdom, phylum = phylum, class = class, order = order,
              family = family, taxon_provided = gsub('_', ' ', taxon), species_changed = changed,
              taxonomy_source = source, genus = genus, species = species,
              gbif_confidence = as.integer(conf), gbif_status = status, gbif_family = gfam, gbif_order = gord,
-             gbif_usageKey = if (is.na(conf)) NA_character_ else '1', stringsAsFactors = FALSE)
+             gbif_usageKey = if (is.na(conf)) NA_character_ else '1',
+             col_match_type = col_type, col_status = col_status, col_usageKey = col_key, col_matched_name = col_name,
+             stringsAsFactors = FALSE)
 cache <- rbind(
   # anchors
   Row('Myrmecia_gulosa',    'Myrmecia gulosa',    'Animalia', 'Arthropoda',   'Insecta',        'Hymenoptera',   'Formicidae',    'Myrmecia'),
@@ -62,7 +65,8 @@ cache <- rbind(
   Row('Calamaria_muelleri', 'Calamaria muelleri', 'Animalia', 'Chordata',     'Lycopodiopsida', 'Squamata',      'Colubridae',    'Calamaria', source = 'NCBI', conf = 100L, status = NA),
   # the conflict rows
   Row('Myrmecia_pyriformis', 'Myrmecia pyriformis (in: green algae)', 'Viridiplantae', 'Arthropoda', 'Insecta', 'Hymenoptera', 'Formicidae', 'Myrmecia',
-      source = 'NCBI', conf = 100L, status = NA, changed = TRUE),
+      source = 'NCBI', conf = 100L, status = NA, changed = TRUE,
+      col_type = 'variant', col_status = 'accepted', col_key = '73RLS', col_name = 'Myrmecia pyriformis'),   # as if COL had answered too (#103)
   Row('Parus_humilis',      'Cotoneaster humilis', 'Plantae', 'Tracheophyta', 'Aves',          'Passeriformes', 'Paridae',       'Cotoneaster',
       conf = 81L, status = 'SYNONYM', gfam = 'Rosaceae', gord = 'Rosales', changed = TRUE),
   Row('Rusa_nana',          'Rosa nana',          'Plantae',  'Tracheophyta', 'Magnoliopsida',  'Artiodactyla',  'Cervidae',      'Rosa',
@@ -74,6 +78,10 @@ cache <- rbind(
   # a future fuzzy match with no Part 7 entry
   Row('Testus_fuzzyus',     'Testum fuzzyum',     'Plantae',  'Tracheophyta', 'Mammalia',       'Rosales',       'Cervidae',      'Testum',
       conf = 82L, status = 'ACCEPTED', gfam = 'Rosaceae', gord = 'Rosales', changed = TRUE),
+  # a future homonym resolved by the COL stage (#103): GBIF gave the genus only (conf 94, higher-rank match),
+  # COL matched the plant exactly; the source's class and family are the beetle's
+  Row('Testus_colhomonymus', 'Testus colhomonymus', 'Plantae', 'Tracheophyta', 'Insecta',      'Asterales',     'Tenebrionidae', 'Testus',
+      source = 'COL', conf = 94L, status = 'ACCEPTED', col_type = 'variant', col_status = 'accepted', col_key = 'ABC12', col_name = 'Testus colhomonymus'),
   # a cross-kingdom Part 7 entry of before #81 whose GBIF fields describe the wrong organism
   Row('Trypanosoma_lewisi', 'Trypanosoma lewisi', 'Protozoa', 'Euglenozoa',   'Kinetoplastea',  'Trypanosomatida', 'Trypanosomatidae', 'Trypanosoma',
       source = 'manual', conf = 84L, status = 'SYNONYM', gfam = 'Pleuroceridae'),
@@ -86,8 +94,8 @@ Same <- function(tx, cols = c('species', 'genus', 'kingdom', 'phylum', 'class', 
 cat('the rule: which rows it touches\n')
 Expect('kingdom_conflict' %in% names(out), 'FixTaxonomyRanks() adds the kingdom_conflict column to a frame with a species column')
 Expect(identical(sort(out$taxon[!is.na(out$kingdom_conflict)]),
-                 sort(c('Myrmecia_pyriformis', 'Parus_humilis', 'Rusa_nana', 'Testus_homonymus', 'Testus_fuzzyus'))),
-       'exactly the five rows with a plant kingdom over animal ranks are flagged')
+                 sort(c('Myrmecia_pyriformis', 'Parus_humilis', 'Rusa_nana', 'Testus_homonymus', 'Testus_fuzzyus', 'Testus_colhomonymus'))),
+       'exactly the six rows with a plant kingdom over animal ranks are flagged')
 Expect(all(vapply(c('Camelia_japonica', 'Lycopodium_annotium', 'Asterina_gibbosa', 'Ulva_lactuca', 'Lobelia_cardinalis', 'Rosa_canina'), Same, logical(1))),
        'genuine plants, a fungus and an alga are untouched (the majority rule: Lycopodiopsida is no animal class though a snake carries it)')
 Expect(nrow(FilterAutotrophs(out[out$taxon %in% c('Camelia_japonica', 'Lycopodium_annotium', 'Asterina_gibbosa', 'Ulva_lactuca', 'Lobelia_cardinalis', 'Rosa_canina'), ])) == 0,
@@ -105,6 +113,13 @@ Expect(is.na(h$phylum) && is.na(h$order) && identical(h$class, 'Insecta') && ide
        "the plant phylum and order (Streptophyta; Asterales, seen under Plantae in the frame) are cleared for rank inference; the source's class and family stay")
 Expect(identical(h$taxonomy_source, 'NCBI') && isFALSE(h$species_changed), 'the source stays NCBI and the name is not a name change')
 Expect(nrow(FilterAutotrophs(h)) == 1, 'the row survives FilterAutotrophs()')
+
+c2 <- R('Testus_colhomonymus')
+Expect(identical(c2$kingdom, 'Animalia') && identical(c2$kingdom_conflict, 'Plantae') && identical(c2$species, 'Testus colhomonymus') &&
+       identical(c2$taxonomy_source, 'COL') && is.na(c2$phylum) && is.na(c2$order) && identical(c2$class, 'Insecta') && identical(c2$family, 'Tenebrionidae'),
+       'a COL row (#103) is treated the same: the homonym keeps its species and source COL, the plant phylum and order are cleared')
+Expect(identical(c2$col_match_type, 'variant') && identical(c2$col_usageKey, 'ABC12'),
+       'its COL match fields are left as evidence of what happened')
 
 cat('the fuzzy case (another genus from the other kingdom)\n')
 f <- R('Testus_fuzzyus')
@@ -126,6 +141,8 @@ Expect(identical(unlist(m[c('species', 'genus', 'kingdom', 'phylum', 'class', 'o
        'Myrmecia_pyriformis is the bull ant, taxonomy_source manual')
 Expect(isFALSE(m$species_changed) && is.na(m$gbif_confidence) && is.na(m$gbif_status) && is.na(m$gbif_usageKey),
        'its name is unchanged and the GBIF match fields are cleared')
+Expect(is.na(m$col_match_type) && is.na(m$col_status) && is.na(m$col_usageKey) && is.na(m$col_matched_name),
+       'a Part 7 entry that sets the kingdom clears the COL match fields too (#103)')
 p <- R('Parus_humilis')
 Expect(identical(unlist(p[c('species', 'genus', 'kingdom', 'phylum', 'class', 'order', 'family', 'taxonomy_source')], use.names = FALSE),
                  c('Pseudopodoces humilis', 'Pseudopodoces', 'Animalia', 'Chordata', 'Aves', 'Passeriformes', 'Paridae', 'manual')),

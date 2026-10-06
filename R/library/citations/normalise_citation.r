@@ -6,7 +6,9 @@
 # for hashing in-row citations (parse_reflists.r) and for similarity.
 # ParseCitationString() extracts parsed_author1, parsed_year, parsed_title,
 # parsed_container, parsed_volume, parsed_pages and an embedded DOI from a
-# reference-list entry by regular expressions. The parsed fields are query
+# reference-list entry by regular expressions (author-year styles; through
+# ParseNatureStyle() the Nature style and the initials-first PNAS style whose
+# year closes the entry). The parsed fields are query
 # inputs only: they never reach a bib entry or the Sheet (section F).
 # TitleSimilarity() is the mean of the Jaro-Winkler similarity (stringdist) and
 # the token-set Jaccard index of the two normalised titles, in [0, 1].
@@ -197,40 +199,80 @@ SplitBody <- function(body) {
 # Experimental Biology 83, 79-94 (1979).": the entry ends with "volume, pages
 # (year)" and the author block is a run of "Surname, I. I." items joined by
 # commas and '&' / 'and'; the pages may be absent ("Experimental Biology
-# Online 3 (1998)."). Returns NULL when the string does not end that way;
-# otherwise the fields, with the title and the container separated at the
-# last sentence boundary of the text between the authors and the volume (the
-# journal name is taken to hold no sentence boundary; an abbreviated journal
-# such as "Palaeogeogr. Palaeoclimatol. Palaeoecol." keeps only its last
-# token, which ContainerMatch() still accepts as a prefix match).
+# Online 3 (1998)."). The PNAS / Science style writes the same tail after an
+# initials-first author block, "A. M. Makarieva et al., Title. Proc. Natl.
+# Acad. Sci. U.S.A. 105, 16994-16999 (2008)." (Hoehler_etal_2023; #114 item
+# 2): items "I. I. Surname" (particles 'de', 'van' allowed, 'et al.,' closing
+# the block) separated by commas, the title following the last comma; the
+# volume may be glued to the journal ("Science206, 649-654 (1979)"). Returns
+# NULL when the string does not end that way or opens with neither block;
+# otherwise the fields, with the title and the container separated by
+# SplitTitleContainer() at the last sentence boundary of the text between the
+# authors and the volume, the container extended backwards over an
+# abbreviated journal name ("Proc. Natl. Acad. Sci. U.S.A.").
 nature_author_block <- '^(?:[A-Z][^,.]*?,\\s(?:[A-Z]\\.-?\\s?)+(?:,\\s|&\\s|and\\s|et al\\.\\s)?)+'
+initials_first_item  <- "(?:[A-Z]\\.(?:-[A-Z]\\.)?\\s?)+(?:(?:de|da|del|der|den|di|du|la|le|van|von|y)\\s)*[A-Z][A-Za-z'’-]+(?:\\s[A-Z][A-Za-z'’-]+)?"
+initials_first_block <- paste0('^(?:', initials_first_item, '(?:,\\s(?:and\\s|&\\s)?|\\s(?:and|&)\\s|\\set al\\.,\\s))+')
 ParseNatureStyle <- function(s) {
-  tail_re <- '\\s(\\d+[A-Za-z]?)\\s*(\\([^)]*\\))?(?:,\\s*(e?\\d+[A-Za-z]?)(\\s*[-]+\\s*(e?\\d+[A-Za-z]?))?)?\\s*\\(((1[6-9]|20)\\d{2})[a-z]?\\)\\.?\\s*$'
+  tail_re <- '(?:\\s|(?<=[A-Za-z.]))(\\d+[A-Za-z]?)\\s*(\\([^)]*\\))?(?:,\\s*(e?\\d+[A-Za-z]?)(\\s*[-]+\\s*(e?\\d+[A-Za-z]?))?)?\\s*\\(((1[6-9]|20)\\d{2})[a-z]?\\)\\.?\\s*$'
   tp <- regexpr(tail_re, s, perl = TRUE)
   if (tp <= 0) return(NULL)
   m <- regmatches(s, regexec(tail_re, s, perl = TRUE))[[1]]
   head <- trimws(substr(s, 1, tp - 1))
-  # the author block: "Surname, I. I.[, Surname, I.][ & Surname, I.]"
+  # the author block: "Surname, I. I.[, Surname, I.][ & Surname, I.]" or
+  # "I. I. Surname, I. Surname, " / "I. I. Surname et al., "
   ab <- regexpr(nature_author_block, head, perl = TRUE)
+  if (ab <= 0) ab <- regexpr(initials_first_block, head, perl = TRUE)
   if (ab <= 0) return(NULL)
   authors <- trimws(regmatches(head, ab))
   body <- trimws(substr(head, ab + attr(ab, 'match.length'), nchar(head)))
   if (!nzchar(body)) return(NULL)
-  sb <- gregexpr('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', body, perl = TRUE)[[1]]
-  if (sb[1] > 0) {
-    last <- sb[length(sb)]
-    title <- trimws(substr(body, 1, last - 1))
-    if (substr(body, last, last) %in% c('?', '!')) title <- paste0(title, substr(body, last, last))
-    container <- trimws(substr(body, last + 1, nchar(body)))
-  } else {
-    title <- body; container <- NA_character_
-  }
-  title <- sub('[.,;:]+$', '', title)
-  if (!is.na(container)) container <- sub('[.,;:]+\\s*$', '', container)
-  if (!is.na(container) && !nzchar(container)) container <- NA_character_
-  list(tail_start = tp, year = as.integer(m[7]), author1 = FirstSurname(authors),
-       title = if (nzchar(title)) title else NA_character_, container = container,
+  tc <- SplitTitleContainer(body)
+  list(tail_start = tp, year = as.integer(m[7]), author1 = FirstSurname(sub('\\s*(,|et al\\.,?)\\s*$', '', authors, perl = TRUE)),
+       title = tc$title, container = tc$container,
        volume = m[2], pages = if (nzchar(m[6])) paste0(m[4], '-', m[6]) else if (nzchar(m[4])) m[4] else NA_character_)
+}
+
+# Title and container of the text between an author block and the volume
+# ("Title. Journal", Nature and PNAS styles): the container starts at the last
+# sentence boundary ('.', '?.' or '!.' before a blank and a capital or digit)
+# and is extended backwards over the sentences before it that read as parts
+# of an abbreviated journal name -- a capitalised word or dotted abbreviation
+# of one to fifteen letters, or several such tokens each ending in a period
+# but the last ("Proc. Natl. Acad. Sci. U.S.A.", "Ann. N.Y. Acad. Sci.") --
+# so that the journal keeps all its tokens. A title ending in '?' or '!' keeps
+# its mark. Returns list(title, container), NA when absent.
+SplitTitleContainer <- function(body) {
+  body <- trimws(body)
+  sb <- gregexpr('(?<=\\w\\w|\\)|\\])(?:[.?!]|[?!]\\.)\\s+(?=[A-Z0-9(])', body, perl = TRUE)[[1]]
+  if (sb[1] <= 0) {
+    title <- sub('[.,;:]+$', '', body)
+    return(list(title = if (nzchar(title)) title else NA_character_, container = NA_character_))
+  }
+  lens <- attr(sb, 'match.length')
+  JournalLike <- function(x) {
+    toks <- strsplit(trimws(x), '\\s+', perl = TRUE)[[1]]
+    if (length(toks) == 0 || length(toks) > 6) return(FALSE)
+    word <- grepl("^[A-Z][A-Za-z]{0,14}$", toks, perl = TRUE) | grepl('^(?:[A-Z]\\.)+[A-Z]?$', toks, perl = TRUE)
+    dotted <- grepl('\\.$', toks)
+    all(word) && all(dotted[-length(toks)])
+  }
+  k <- length(sb)
+  # sentences before the last boundary: the one ending at boundary j spans (end of j-1, start of j)
+  while (k > 1) {
+    prev_end <- sb[k - 1] + lens[k - 1]
+    sentence <- substr(body, prev_end, sb[k] - 1)
+    if (substr(body, sb[k], sb[k]) != '.' || !JournalLike(sentence)) break
+    k <- k - 1
+  }
+  cut <- sb[k]
+  title <- trimws(substr(body, 1, cut - 1))
+  mark <- substr(body, cut, cut)
+  if (mark %in% c('?', '!')) title <- paste0(title, mark)
+  container <- trimws(substr(body, cut + lens[k], nchar(body)))
+  title <- sub('[.,;:]+$', '', title)
+  container <- sub('[.,;:]+\\s*$', '', container)
+  list(title = if (nzchar(title)) title else NA_character_, container = if (nzchar(container)) container else NA_character_)
 }
 
 # The author block and the body of an entry whose year closes it in brackets

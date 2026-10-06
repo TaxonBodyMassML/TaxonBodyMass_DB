@@ -58,6 +58,13 @@ Expect(reg$equation_bibcite[reg$source_label == 'Feldman_etal_2016'] == 'Feldman
        'the Feldman equation is registered for Feldman_etal_2016 and Meiri_2018; Brocher and Hishi are reported as lacking one')
 Expect(all(c('fishbase', 'sealifebase', 'vertnet-aves-sept2016', 'Myhrvold_2015', 'Jones_2009', 'Raymond_2011', 'Ernest_2003', 'Brose_2005', 'McCoy_2008', 'GuoBailly_2024') %in% reg$source_label),
        'the live, DataRetriever and recently added labels are registered')
+# value_tier (#34): the trust tiers approved on 2026-10-06
+tier3 <- c('Brose_2005', 'Brose_etal_2018', 'Vanni_2017', 'Gonzalez_2025', 'Castro_2025', 'DeLong_etal_2010', 'Kiorboe_2013', 'Kiorboe_2014', 'Pata_2025',
+           reg$source_label[grepl('^vertnet-', reg$source_label)])
+tier2 <- c('Feldman_etal_2016', 'Meiri_2018', 'fishbase', 'sealifebase')
+Expect(is.integer(reg$value_tier) && all(reg$value_tier %in% 1:3) && sum(reg$value_tier == 3) == 15 && sum(reg$value_tier == 2) == 4 && sum(reg$value_tier == 1) == 71 &&
+         setequal(reg$source_label[reg$value_tier == 3], tier3) && setequal(reg$source_label[reg$value_tier == 2], tier2),
+       'value_tier is integer 1-3: 15 tier-3 labels (VertNet dumps, Brose_2005, GATEWAy, Vanni, Gonzalez, Castro, DeLong_2010, Kiorboe, Pata), 4 tier-2 (Feldman, Meiri_2018, fishbase, sealifebase), 71 tier-1')
 Expect(Has(ErrorOf(LoadProvenanceClasses(reg_path, c(raw$source_label, 'NoSuch_2099'))), 'not registered') &&
          Has(ErrorOf(LoadProvenanceClasses(reg_path, c(raw$source_label, 'NoSuch_2099'))), 'NoSuch_2099'),
        'an unregistered source label stops the run and is named')
@@ -65,12 +72,15 @@ m2 <- MessagesOf(LoadProvenanceClasses(reg_path, raw$source_label[1:10]))
 Expect(Has(m2, 'registered label(s) not in the source frames of this run'), 'a registered label absent from the frames is reported, not fatal')
 WriteReg <- function(d) { f <- tempfile(fileext = '.csv'); write.csv(d, f, row.names = FALSE, na = ''); f }
 Reg <- function(...) data.frame(..., stringsAsFactors = FALSE)
-Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = 'A', class = 'secondary', default_provenance_type = 'unknown', equation_bibcite = NA, notes = NA)), 'A')), 'unknown class'),
+Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = 'A', class = 'secondary', default_provenance_type = 'unknown', equation_bibcite = NA, value_tier = 1, notes = NA)), 'A')), 'unknown class'),
        'an unknown class stops')
-Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = 'A', class = 'primary', default_provenance_type = 'measured', equation_bibcite = NA, notes = NA)), 'A')), 'unknown default_provenance_type'),
+Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = 'A', class = 'primary', default_provenance_type = 'measured', equation_bibcite = NA, value_tier = 1, notes = NA)), 'A')), 'unknown default_provenance_type'),
        'an unknown default_provenance_type stops')
-Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = c('A', 'A'), class = 'primary', default_provenance_type = 'measured_in_source', equation_bibcite = NA, notes = NA)), 'A')), 'duplicated label'),
+Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = c('A', 'A'), class = 'primary', default_provenance_type = 'measured_in_source', equation_bibcite = NA, value_tier = 1, notes = NA)), 'A')), 'duplicated label'),
        'a duplicated label stops')
+Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = c('A', 'B', 'C'), class = 'primary', default_provenance_type = 'measured_in_source', equation_bibcite = NA, value_tier = c('4', '', '2.5'), notes = NA)), 'A')), 'value_tier must be 1, 2 or 3') &&
+         is.null(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = c('A', 'B'), class = 'primary', default_provenance_type = 'measured_in_source', equation_bibcite = NA, value_tier = c(3, 1), notes = NA)), 'A'))),
+       'a value_tier outside 1-3, empty or fractional stops; 1-3 load (#34)')
 Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = 'A', class = 'primary')), 'A')), 'lacks column') && Has(ErrorOf(LoadProvenanceClasses(tempfile(), 'A')), 'not found'),
        'a registry without the schema or a missing file stops')
 
@@ -152,6 +162,17 @@ accepted <- Reg(genus = c('Aa', 'Cc', 'Ee'), species = c('bb', 'dd', 'ff'))
 prov <- BuildProvenance(records, prim, classes, citeids, accepted)
 Expect(identical(names(prov), provenance_columns) && is.integer(prov$hop) && is.integer(prov$n_records) && nrow(prov) == 14,
        sprintf('the table has the schema columns and %d rows', nrow(prov)))
+# record_status (#34): from the Pass-1 statuses by species x source group; lab-Sheet rows and rows without a status are 'kept'
+Expect(all(prov$record_status == 'kept'), 'without statuses every row is kept')
+st <- data.frame(genus = c('Cc', 'Cc', 'Aa'), species = c('dd', 'dd', 'bb'), source_group = c('Deriv', 'Comp', 'LabX'),
+                 record_status = c('excluded_loo_unique', 'kept', 'excluded_two_value_tier'), stringsAsFactors = FALSE)
+prov_st <- BuildProvenance(records, prim, classes, citeids, accepted, statuses = st)
+Expect(identical(names(prov_st), provenance_columns) && nrow(prov_st) == nrow(prov) &&
+         all(prov_st$record_status[prov_st$species == 'dd' & prov_st$source_mass == 'Deriv'] == 'excluded_loo_unique') &&
+         sum(prov_st$record_status == 'excluded_loo_unique') == sum(prov_st$species == 'dd' & prov_st$source_mass == 'Deriv') &&
+         all(prov_st$record_status[prov_st$origin == 'BM_data'] == 'kept') &&
+         all(prov_st$record_status[prov_st$species == 'dd' & prov_st$source_mass != 'Deriv'] == 'kept'),
+       "statuses: every row of an excluded species x source value reads excluded_<rule> (equation rows included), lab-Sheet rows stay kept whatever the status frame says")
 Expect(!any(prov$genus %in% c('Gg', 'Ii')) && all(paste(prov$genus, prov$species) %in% paste(accepted$genus, accepted$species)),
        'species outside the accepted table and records without a species are dropped')
 Expect(identical(prov$genus, sort(prov$genus, method = 'radix')) && identical(prov$provenance_type[prov$genus == 'Aa'], sort(prov$provenance_type[prov$genus == 'Aa'], method = 'radix')[order(order(prov$provenance_type[prov$genus == 'Aa'], method = 'radix'))]),
@@ -310,8 +331,15 @@ bib <- Reg(key = c('Comp:2013aa', 'Prim:2020aa', 'Deriv:2016aa', 'Term:2010aa', 
 ck <- CheckCitations(prov, bib, citeids, prim, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'))
 Expect(length(ck$problems) == 2 && Has(ck$problems, '1 source label(s) without a Bibcite: LabX') && Has(ck$problems, 'without a CiteID row (Sheet tabs / snapshots): Lucas_2011'),
        'a consistent set reports only the lab-Sheet label without a Bibcite and the conversion CiteID that has no CiteID row')
-Expect(ck$counts[['rows']] == 14 && ck$counts[['species']] == 3 && ck$counts[['primary_refs']] == 7 && ck$counts[['unresolved_refs']] == 1 && ck$counts[['unverified_refs']] == 0,
-       'counts: rows, species, distinct primary CiteIDs, unresolved and unverified references')
+Expect(ck$counts[['rows']] == 14 && ck$counts[['species']] == 3 && ck$counts[['primary_refs']] == 7 && ck$counts[['unresolved_refs']] == 1 && ck$counts[['unverified_refs']] == 0 &&
+         ck$counts[['crossref_only_refs']] == 0,
+       'counts: rows, species, distinct primary CiteIDs, unresolved and unverified references, none resting on Crossref alone')
+prim_xo <- prim; prim_xo$verification_mode <- ifelse(prim_xo$native_key == '1', 'crossref_only', NA_character_)
+ck_xo <- CheckCitations(prov, bib, citeids, prim_xo, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'))
+Expect(ck_xo$counts[['crossref_only_refs']] == 1 && ck_xo$coverage$refs_crossref_only[ck_xo$coverage$source_label == 'Comp'] == 1 &&
+         ck_xo$coverage$refs_resolved[ck_xo$coverage$source_label == 'Comp'] == 2 && all(ck_xo$coverage$refs_crossref_only[ck_xo$coverage$source_label != 'Comp'] == 0) &&
+         identical(ck_xo$problems, ck$problems),
+       'a certain row with verification_mode crossref_only is counted apart (total and per source) and is no problem')
 cov <- ck$coverage
 Expect(identical(cov$source_label, c('Comp', 'Deriv', 'Hech', 'NoEq', 'Prim')) && cov$n_species[cov$source_label == 'Comp'] == 3 &&
          cov$n_record_links[cov$source_label == 'Comp'] == 9 && cov$pct_resolved[cov$source_label == 'Comp'] == round(100 * 3 / 9, 1) &&
@@ -332,8 +360,12 @@ WriteCitationsReport(rp, ck, classes = classes, unmapped_sheet = c('Foo_2001 -> 
 lines <- readLines(rp)
 Expect(startsWith(lines[1], '# Citation and provenance warnings') && Has(lines, '## Totals') && Has(lines, '- provenance rows: 14 (3 species); distinct primary CiteIDs: 7; unresolved references (pending / not_found): 1; unverified references: 0') &&
          Has(lines, '## Problems') && Has(lines, '- 1 source label(s) without a Bibcite: LabX') && Has(lines, '- Foo_2001 -> Foo:2001aa') && Has(lines, '## Per-source coverage') &&
-         Has(lines, '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
-       'the report has the totals, the problems, the unmapped Sheet rows and the coverage table with the class column')
+         Has(lines, '- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 0') &&
+         Has(lines, '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
+       'the report has the totals (with the Crossref-only count), the problems, the unmapped Sheet rows and the coverage table with the class and refs_crossref_only columns')
+WriteCitationsReport(rp, ck_xo, classes = classes)
+Expect(Has(readLines(rp), 'without `--crossref-only`): 1') && Has(readLines(rp), '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
+       'the Crossref-only count appears in the totals and the coverage row')
 WriteCitationsReport(rp, CheckCitations(prov[0, ], bib, citeids, prim[0, ]))
 Expect(Has(readLines(rp), '(none)'), 'an empty check writes (none) sections')
 
@@ -357,7 +389,9 @@ Expect(any(grepl("whose Bibcite key is in neither bib file", runme)) && any(grep
        'section 8 lists the Sheet rows whose Bibcite is in neither bib instead of dropping them silently')
 Expect(any(grepl('^bibs <- CheckBibKeysUnique\\(curated_bib_path, primary_bib_path\\)', runme)) &&
          any(grepl('^pmap <- LoadSheetSnapshot\\(sheet_paths\\$snapshot_primary\\)', runme)) && !any(grepl('sheet_names\\(|read_sheet\\(', runme)) &&
-         any(grepl('^provenance <- BuildProvenance\\(prov_records, prim_refs, prov_classes, dcite\\[, c\\(.CiteID., .Bibcite., .doi.\\)\\], enriched\\)', runme)) &&
+         any(grepl('^provenance <- BuildProvenance\\(prov_records, prim_refs, prov_classes, dcite\\[, c\\(.CiteID., .Bibcite., .doi.\\)\\], enriched,$', runme)) &&
+         any(grepl('^\\s+statuses = record_statuses\\)$', runme)) &&
+         any(grepl("^record_statuses <- within_source\\[, c\\('genus', 'species', 'source_group', 'record_status'\\)\\]", runme)) &&
          any(grepl("'TaxonBodyMass_Provenance\\.csv\\.gz'", runme)) && any(grepl("'warnings_citations\\.md'", runme)) &&
          any(grepl('dcite\\[order\\(dcite\\$CiteID, dcite\\$Bibcite\\), citeids_columns\\]', runme)),
        'section 8 reads both bibs (unique keys), the primary tab from its tracked copy (#118, no Sheet call), builds the provenance table, the report and the CiteIDs CSV with the new columns')
