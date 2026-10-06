@@ -22,7 +22,9 @@
 #                                        conversion-factor rows and lab-Sheet rows
 #   CheckCitations(...)                  every primary_bibcite has a bib entry, every CiteID
 #                                        a Sheet row, every accepted row a DOI or an
-#                                        approval; per-source coverage
+#                                        approval; per-source coverage (with the certain
+#                                        rows that rest on Crossref alone, verification_mode
+#                                        crossref_only, counted apart)
 #   WriteCitationsReport(path, checks)   reports/warnings_citations.md
 # Base R only, no network.
 
@@ -372,6 +374,9 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted, statuses 
 # list(problems, coverage, counts).
 CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = character()) {
   problems <- character(0)
+  # the certain rows accepted in Crossref-only mode (owner decision 2026-10-06), counted apart
+  vm <- if (is.null(prim$verification_mode)) rep(NA_character_, nrow(prim)) else prim$verification_mode
+  xo <- prim$match_status %in% 'certain' & vm %in% 'crossref_only'
   pb <- unique(na.omit(provenance$primary_bibcite))
   missing_bib <- setdiff(pb, bib$key)
   if (length(missing_bib) > 0)
@@ -410,6 +415,7 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
                n_record_links = n_rec,
                pct_resolved = if (n_rec > 0) round(100 * resolved / n_rec, 1) else NA_real_,
                refs_total = nrow(pr), refs_resolved = sum(pr$match_status %in% c('certain', 'approved', 'nodoi_approved')),
+               refs_crossref_only = sum(xo[prim$source_label == l]),
                refs_pending = sum(pr$match_status %in% 'pending'), refs_not_found = sum(pr$match_status %in% 'not_found'),
                refs_self = sum(pr$match_status %in% 'self'), refs_rejected = sum(pr$match_status %in% 'rejected'),
                refs_unverified = sum(is.na(pr$match_status)),
@@ -421,7 +427,7 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
   list(problems = problems, coverage = cov,
        counts = c(rows = nrow(provenance), species = length(unique(paste(provenance$genus, provenance$species))),
                   primary_refs = length(pc), unresolved_refs = sum(prim$match_status %in% c('pending', 'not_found')),
-                  unverified_refs = sum(is.na(prim$match_status))))
+                  unverified_refs = sum(is.na(prim$match_status)), crossref_only_refs = sum(xo)))
 }
 
 WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = character(),
@@ -434,7 +440,9 @@ WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = 
              '## Totals', '',
              sprintf('- provenance rows: %d (%d species); distinct primary CiteIDs: %d; unresolved references (pending / not_found): %d; unverified references: %d',
                      checks$counts[['rows']], checks$counts[['species']], checks$counts[['primary_refs']],
-                     checks$counts[['unresolved_refs']], checks$counts[['unverified_refs']]), '',
+                     checks$counts[['unresolved_refs']], checks$counts[['unverified_refs']]),
+             sprintf('- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): %d',
+                     if ('crossref_only_refs' %in% names(checks$counts)) checks$counts[['crossref_only_refs']] else 0L), '',
              '## Problems', '')
   lines <- c(lines, if (length(checks$problems) == 0) '(none)' else paste0('- ', checks$problems), '',
              '## Sheet rows whose Bibcite is in neither bib file', '',
@@ -442,7 +450,7 @@ WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = 
              '## Labels in TaxonBodyMass.csv without a CiteID row', '',
              if (length(uncited_labels) == 0) '(none)' else paste0('- ', uncited_labels), '',
              '## Per-source coverage', '',
-             'One row per source label: species and record links (species x source x reference rows weighted by records), the share of record links resolved to a primary reference (hop >= 1 with a CiteID), and the reference counts of primary_references.csv by status.', '')
+             'One row per source label: species and record links (species x source x reference rows weighted by records), the share of record links resolved to a primary reference (hop >= 1 with a CiteID), and the reference counts of primary_references.csv by status (`refs_crossref_only`: the certain rows among `refs_resolved` that rest on Crossref alone).', '')
   lines <- c(lines, if (nrow(cov) == 0) '(none)' else MarkdownTable(cov))
   writeLines(lines, path)
   invisible(path)

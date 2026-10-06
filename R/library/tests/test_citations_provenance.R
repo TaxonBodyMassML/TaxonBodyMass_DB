@@ -331,8 +331,15 @@ bib <- Reg(key = c('Comp:2013aa', 'Prim:2020aa', 'Deriv:2016aa', 'Term:2010aa', 
 ck <- CheckCitations(prov, bib, citeids, prim, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'))
 Expect(length(ck$problems) == 2 && Has(ck$problems, '1 source label(s) without a Bibcite: LabX') && Has(ck$problems, 'without a CiteID row (Sheet tabs / snapshots): Lucas_2011'),
        'a consistent set reports only the lab-Sheet label without a Bibcite and the conversion CiteID that has no CiteID row')
-Expect(ck$counts[['rows']] == 14 && ck$counts[['species']] == 3 && ck$counts[['primary_refs']] == 7 && ck$counts[['unresolved_refs']] == 1 && ck$counts[['unverified_refs']] == 0,
-       'counts: rows, species, distinct primary CiteIDs, unresolved and unverified references')
+Expect(ck$counts[['rows']] == 14 && ck$counts[['species']] == 3 && ck$counts[['primary_refs']] == 7 && ck$counts[['unresolved_refs']] == 1 && ck$counts[['unverified_refs']] == 0 &&
+         ck$counts[['crossref_only_refs']] == 0,
+       'counts: rows, species, distinct primary CiteIDs, unresolved and unverified references, none resting on Crossref alone')
+prim_xo <- prim; prim_xo$verification_mode <- ifelse(prim_xo$native_key == '1', 'crossref_only', NA_character_)
+ck_xo <- CheckCitations(prov, bib, citeids, prim_xo, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'))
+Expect(ck_xo$counts[['crossref_only_refs']] == 1 && ck_xo$coverage$refs_crossref_only[ck_xo$coverage$source_label == 'Comp'] == 1 &&
+         ck_xo$coverage$refs_resolved[ck_xo$coverage$source_label == 'Comp'] == 2 && all(ck_xo$coverage$refs_crossref_only[ck_xo$coverage$source_label != 'Comp'] == 0) &&
+         identical(ck_xo$problems, ck$problems),
+       'a certain row with verification_mode crossref_only is counted apart (total and per source) and is no problem')
 cov <- ck$coverage
 Expect(identical(cov$source_label, c('Comp', 'Deriv', 'Hech', 'NoEq', 'Prim')) && cov$n_species[cov$source_label == 'Comp'] == 3 &&
          cov$n_record_links[cov$source_label == 'Comp'] == 9 && cov$pct_resolved[cov$source_label == 'Comp'] == round(100 * 3 / 9, 1) &&
@@ -353,8 +360,12 @@ WriteCitationsReport(rp, ck, classes = classes, unmapped_sheet = c('Foo_2001 -> 
 lines <- readLines(rp)
 Expect(startsWith(lines[1], '# Citation and provenance warnings') && Has(lines, '## Totals') && Has(lines, '- provenance rows: 14 (3 species); distinct primary CiteIDs: 7; unresolved references (pending / not_found): 1; unverified references: 0') &&
          Has(lines, '## Problems') && Has(lines, '- 1 source label(s) without a Bibcite: LabX') && Has(lines, '- Foo_2001 -> Foo:2001aa') && Has(lines, '## Per-source coverage') &&
-         Has(lines, '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
-       'the report has the totals, the problems, the unmapped Sheet rows and the coverage table with the class column')
+         Has(lines, '- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 0') &&
+         Has(lines, '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 0 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
+       'the report has the totals (with the Crossref-only count), the problems, the unmapped Sheet rows and the coverage table with the class and refs_crossref_only columns')
+WriteCitationsReport(rp, ck_xo, classes = classes)
+Expect(Has(readLines(rp), 'without `--crossref-only`): 1') && Has(readLines(rp), '| Comp | compilation | 3 | 9 | 33.3 | 4 | 2 | 1 | 1 | 0 | 1 | 0 | 0 | 1 | 0 |'),
+       'the Crossref-only count appears in the totals and the coverage row')
 WriteCitationsReport(rp, CheckCitations(prov[0, ], bib, citeids, prim[0, ]))
 Expect(Has(readLines(rp), '(none)'), 'an empty check writes (none) sections')
 
