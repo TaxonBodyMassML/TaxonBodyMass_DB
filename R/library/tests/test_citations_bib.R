@@ -60,6 +60,12 @@ cat('NormaliseSurname(), CrossrefFirstSurname()\n')
 Expect(identical(NormaliseSurname(c('MULDER', 'A. Piechnik', 'McLaughlin', "O'Gorman", 'van der Meer', 'DE GOEDE', 'Kiørboe')),
                  c('Mulder', 'Piechnik', 'McLaughlin', "O'Gorman", 'van der Meer', 'De Goede', 'Kiørboe')),
        'leading initials dropped, all-capitals surnames title-cased, mixed case untouched')
+Expect(identical(NormaliseSurname(c('Evans-WHITE', 'VillEGER', 'MacDONALD', 'DeLong', "O'GORMAN", 'LE GALL', 'Smith-Jones', 'X', NA)),
+                 c('Evans-White', 'Villeger', 'Macdonald', 'DeLong', "O'Gorman", 'Le Gall', 'Smith-Jones', 'X', NA)),
+       'token by token: an all-capitals token and a run of capitals after a lowercase letter are repaired; ordinary mixed case stays (#114 item 8)')
+Expect(identical(FoldSurnameForKey(c('Evans-WHITE', 'VillEGER', 'Båmstedt', 'Bmstedt', 'Sma', 'Schönheit')), c('Evans-White', 'Villeger', 'Bamstedt', 'Bmstedt', 'Sma', 'Schonheit')) &&
+         identical(FoldSurnameForCiteID(c('Evans-WHITE', 'VillEGER')), c('Evans-White', 'Villeger')),
+       "keys fold diacritics and repair the case; a letter the record lost ('Bmstedt', 'Sma') cannot be restored by code")
 Expect(identical(FoldSurnameForKey(c('MULDER', 'A. Piechnik')), c('Mulder', 'Piechnik')) &&
          identical(FoldSurnameForCiteID(c('MULDER', 'A. Piechnik')), c('Mulder', 'Piechnik')),
        'both folders apply NormaliseSurname()')
@@ -86,6 +92,13 @@ Expect(length(TwoLetterSuffixes()) == 676 && TwoLetterSuffixes()[1] == 'aa' && T
        '676 distinct suffixes in BibDesk order')
 
 # ---- entries from Crossref ------------------------------------------------------------------------
+cat('CrossrefYears(), KeyYear()\n')
+two <- list(DOI = '10.1/two', author = list(list(family = 'VillEGER', given = 'S.')), title = list('T'),
+            issued = list(`date-parts` = list(list(2012L, 11L))), `published-online` = list(`date-parts` = list(list(2012L, 11L))), `published-print` = list(`date-parts` = list(list(2013L, 3L))))
+Expect(identical(CrossrefYears(two), c(2012L, 2013L)) && CrossrefYear(two) == 2012L && KeyYear(two, NA, 2013L) == 2013L && KeyYear(two, NA, 2012L) == 2012L &&
+         KeyYear(two, NA, 2011L) == 2012L && KeyYear(two, NA, NA) == 2012L && KeyYear(two, 1976L, 2013L) == 1976L && identical(CrossrefYears(list()), integer()),
+       "the citation's year wins over the online-first year when the record carries it; a year the record lacks is ignored; the override wins over both")
+
 cat('EscapeLaTeX(), CrossrefAuthors(), CrossrefYear(), BuildBibEntry()\n')
 Expect(EscapeLaTeX('Fish &amp; chips at 100% of <i>Salpa</i> {thompsoni}_1 #2 $3 ~ ^') == 'Fish \\& chips at 100\\% of Salpa \\{thompsoni\\}\\_1 \\#2 \\$3 \\textasciitilde{} \\textasciicircum{}',
        'HTML is stripped and the LaTeX specials are escaped')
@@ -283,6 +296,32 @@ Expect(keep$prim$cite_id == 'Ikeda_1986' && keep$prim$bibcite == 'Ikeda:1986aa' 
        'a row that keeps its key keeps its CiteID over a Sheet row for the same Bibcite and DOI; a keyless row takes the table\'s id by DOI (#114 item 7)')
 nk <- AssignPrimaryKeys(PRow('Kiorboe_2013', '9', 'nodoi_approved', bibcite = 'Kremer:1976aa', cite_id = 'Kremer_1976x', reason = 'owner_nodoi'), cfg, cur_syn, ids0)
 Expect(nk$prim$cite_id == 'Kremer_1976x', 'the same for a nodoi row')
+cat('AssignPrimaryKeys(): key minting with the normalised surname and the citation year; existing keys untouched (#114 item 8)\n')
+Two <- function(doi) two
+mint <- AssignPrimaryKeys(rbind(PRow('SrcA', 'n', 'certain', doi = '10.1/two', author1 = 'Villeger', year = 2013L),
+                                PRow('SrcB', 'o', 'certain', doi = '10.1/two', author1 = 'Villeger', year = 2013L, bibcite = 'VillEGER:2012aa', cite_id = 'VillEGER_2012'),
+                                PRow('SrcC', 'p', 'certain', doi = '10.1/three', author1 = 'Villeger', year = 2011L)),
+                          cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Kp <- function(src, col) mint$prim[[col]][mint$prim$source_label == src]
+Expect(Kp('SrcA', 'bibcite') == 'VillEGER:2012aa' && Kp('SrcA', 'cite_id') == 'VillEGER_2012' && Kp('SrcB', 'bibcite') == 'VillEGER:2012aa' && Kp('SrcB', 'cite_id') == 'VillEGER_2012',
+       'a DOI already keyed by another row (its record-spelt key) keeps that key for every row: existing keys are reproduced, not renamed')
+Expect(Kp('SrcC', 'bibcite') == 'Villeger:2012aa' && Kp('SrcC', 'cite_id') == 'Villeger_2012' && startsWith(mint$entries[['Villeger:2012aa']], '@misc{Villeger:2012aa,') &&
+         grepl('\n\tyear = {2012}', mint$entries[['Villeger:2012aa']], fixed = TRUE),
+       "a new key takes the normalised surname; the citation's 2011 is not among the record's years, so the record's 2012 stands")
+mint2 <- AssignPrimaryKeys(PRow('SrcD', 'q', 'certain', doi = '10.1/four', author1 = 'Villeger', year = 2013L), cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Expect(mint2$prim$bibcite == 'Villeger:2013aa' && mint2$prim$cite_id == 'Villeger_2013' && grepl('\n\tyear = {2012}', mint2$entries[[1]], fixed = TRUE),
+       "a new key takes the citation's 2013 (the record's print year) over the online-first 2012; the entry's year field stays the record's")
+mint3 <- AssignPrimaryKeys(PRow('SrcD', 'q', 'certain', doi = '10.1/four', author1 = 'Villeger', year = 2013L, year_override = 2011L), cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Expect(mint3$prim$bibcite == 'Villeger:2011aa' && grepl('\n\tyear = {2011}', mint3$entries[[1]], fixed = TRUE) && grepl('Year 2011 by owner decision', mint3$entries[[1]], fixed = TRUE),
+       'a year override is applied at mint time and in the entry')
+source(file.path(lib, 'citations', 'provenance.r'))
+tracked <- LoadPrimaryReferences(cfg$wd_db)
+acc_t <- tracked[tracked$match_status %in% c('certain', 'approved', 'nodoi_approved'), ]
+pkeys <- ReadBibEntries(cfg$primary_bib)$key
+Expect(nrow(acc_t) > 2000 && all(!is.na(acc_t$bibcite)) && all(!is.na(acc_t$cite_id)) && setequal(pkeys, setdiff(unique(acc_t$bibcite), cur$key)),
+       sprintf('every one of the %d accepted tracked rows carries a bibcite and a cite_id, and the %d primary bib keys are exactly those bibcites: the keep-existing-key rule covers every existing key', nrow(acc_t), length(pkeys)))
+odd <- unique(acc_t$bibcite[grepl('^[A-Za-z-]*[a-z][A-Z]{2,}|^[A-Z]{2,}[:-]|-[A-Z]{2,}:', acc_t$bibcite)])
+Expect(all(c('Evans-WHITE:2005aa', 'VillEGER:2012aa') %in% odd), sprintf('the record-spelt keys the owner may rename are still in the tracked files (%s)', paste(odd, collapse = ', ')))
 
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')

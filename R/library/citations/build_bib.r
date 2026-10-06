@@ -50,14 +50,27 @@ ReadBibEntries <- function(path) {
 # letters, digits and '-' removed ('Menden-Deuer', 'van-der-Meer', 'Kiorboe').
 # A surname as the services deliver it, made fit for a key: leading initials
 # that a publisher folded into the family name ('A. Piechnik' -> 'Piechnik') are
-# dropped and an all-capitals surname ('MULDER') is written in title case; mixed
-# case ('McLaughlin', "O'Gorman", 'van der Meer') is left alone (#64).
+# dropped, and the case is repaired token by token (#64; #114 item 8): an
+# all-capitals token ('MULDER', the 'WHITE' of 'Evans-WHITE') is written in
+# title case, and a token with a run of two or more capitals after a lowercase
+# letter ('VillEGER') is lowercased after its first letter ('Villeger');
+# ordinary mixed case ('McLaughlin', 'DeLong', "O'Gorman", 'van der Meer') is
+# left alone. Diacritics are folded afterwards (FoldSurnameForKey()); a letter
+# the record itself lost ('Bmstedt' for Båmstedt, 'Sma' for Srna, 'Schnheit')
+# cannot be restored by code -- the owner renames such a key.
 NormaliseSurname <- function(surname) {
   s <- trimws(as.character(surname))
   s <- sub('^(?:[A-Z]\\.\\s*)+(?=\\S)', '', s, perl = TRUE)
-  caps <- !is.na(s) & nchar(s) > 1 & s == toupper(s) & grepl('[A-Z]', s)
-  s[caps] <- gsub('(^|[\\s-])([A-Z])([A-Z]*)', '\\1\\2\\L\\3', s[caps], perl = TRUE)
-  s
+  Fix <- function(tok) {
+    if (nchar(tok) > 1 && grepl('^[A-Z]+$', tok, perl = TRUE)) return(paste0(substr(tok, 1, 1), tolower(substring(tok, 2))))
+    if (grepl('[a-z][A-Z]{2,}', tok, perl = TRUE)) return(paste0(substr(tok, 1, 1), tolower(substring(tok, 2))))
+    tok
+  }
+  vapply(s, function(x) {
+    if (is.na(x) || !nzchar(x)) return(x)
+    toks <- regmatches(x, gregexpr("[^\\s'’-]+|[\\s'’-]+", x, perl = TRUE))[[1]]
+    paste(vapply(toks, function(t) if (grepl("^[\\s'’-]+$", t, perl = TRUE)) t else Fix(t), character(1)), collapse = '')
+  }, character(1), USE.NAMES = FALSE)
 }
 
 # The first author of a Crossref record that carries a name (a university
@@ -187,6 +200,29 @@ CrossrefYear <- function(work) {
   NA_integer_
 }
 
+# Every year a Crossref record carries (issued, print, online, approved, created).
+CrossrefYears <- function(work) {
+  out <- integer()
+  for (f in c('issued', 'published-print', 'published-online', 'approved', 'created')) {
+    dp <- work[[f]][['date-parts']]
+    if (length(dp) > 0 && length(dp[[1]]) > 0 && !is.null(dp[[1]][[1]])) out <- c(out, as.integer(dp[[1]][[1]]))
+  }
+  unique(out[!is.na(out)])
+}
+
+# The year a new key and CiteID are minted with (#114 item 8): the owner's
+# year override when recorded; else the citation's own year (`parsed_year`)
+# when the record carries it among its dates -- a paper published online in
+# 2012 and in print in 2013, cited as 2013, is keyed 2013, not Crossref's
+# online-first `issued` year; else the record's year (CrossrefYear()). Only
+# a year the record itself attests is taken from the citation. The entry's
+# `year` field stays the record's unless overridden (BuildBibEntry()).
+KeyYear <- function(work, year_override = NA_integer_, parsed_year = NA_integer_) {
+  if (!is.na(year_override)) return(as.integer(year_override))
+  if (!is.na(parsed_year) && as.integer(parsed_year) %in% CrossrefYears(work)) return(as.integer(parsed_year))
+  CrossrefYear(work)
+}
+
 # Fields are read with [[ ]] throughout: `$` would partially match `issued`
 # for a record without `issue` (books), `publisher-location` for one without
 # `publisher`.
@@ -211,7 +247,8 @@ FormatBibEntry <- function(type, key, fields) {
 # and is noted in the entry; nothing else is ever typed in. Returns the entry text.
 BuildBibEntry <- function(work, key, year_override = NA_integer_) {
   if (is.null(work) || is.null(work[['DOI']])) stop('BuildBibEntry(): a Crossref work record with a DOI is required', call. = FALSE)
-  type <- unname(crossref_type_map[work[['type']]]); if (is.null(type) || is.na(type)) type <- 'misc'
+  type <- if (is.null(work[['type']])) NA_character_ else unname(crossref_type_map[work[['type']]])
+  if (length(type) != 1 || is.na(type)) type <- 'misc'        # an unmapped or missing type
   container <- if (length(work[['container-title']]) > 0) work[['container-title']][[1]] else NA_character_
   publisher <- if (is.null(work[['publisher']])) NA_character_ else work[['publisher']]
   inst <- if (length(work[['institution']]) > 0) work[['institution']][[1]][['name']] else NA_character_
@@ -428,7 +465,10 @@ BuildBibEntryNoDOI <- function(row, key, approved_by, approved_date) {
 # instead of stopping the step. A record without any author name mints its
 # key from the row's parsed surname and is reported in `authorless` (#64). A
 # nodoi row reuses the key of the same DOI-less work approved for another
-# source (MatchingNoDOIEntry()); a manual_bib row must name a curated key.
+# source (MatchingNoDOIEntry()); a manual_bib row must name a curated key. A
+# new key takes the normalised surname (NormaliseSurname()) and the year of
+# KeyYear(); a row that already has a bibcite keeps it whatever these would
+# give (existing keys are never renamed by the tool; the owner renames).
 # A row that keeps its key keeps its CiteID (KeepOrMintCiteID()). `curated`:
 # ReadBibEntries() of the curated bib; `ids`: the tracked CiteIDs table
 # (Bibcite, CiteID, doi). Returns list(prim, entries, authorless, no_record):
@@ -441,6 +481,8 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
   acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
   acc <- acc[order(is.na(all_prim$doi[acc]), all_prim$doi[acc], all_prim$source_label[acc], all_prim$native_key[acc], method = 'radix')]
   row_dois <- setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]
+  has_id <- !is.na(all_prim$bibcite[acc]) & !is.na(all_prim$cite_id[acc])
+  row_ids <- setNames(all_prim$cite_id[acc][has_id], all_prim$bibcite[acc][has_id])    # the CiteID the rows already give a key
   Remember <- function(i) {
     if (!is.na(all_prim$cite_id[i]) && !all_prim$cite_id[i] %in% known_ids$CiteID)
       known_ids <<- rbind(known_ids, data.frame(CiteID = all_prim$cite_id[i], Bibcite = all_prim$bibcite[i],
@@ -457,14 +499,15 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
         if (is.na(fam) || !nzchar(fam)) fam <- 'Anon'
         authorless <- c(authorless, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi))
       }
-      yr <- CrossrefYear(w)
+      yr <- KeyYear(w, r$year_override, r$parsed_year)
       key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
              else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, row_dois))
       if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, r$year_override)
       known_keys <- union(known_keys, key)
       row_dois <- c(row_dois, setNames(r$doi, key))       # the next row with this DOI reuses the key
       all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- KeepOrMintCiteID(r, key, fam, yr, known_ids)
+      all_prim$cite_id[i] <- KeepOrMintCiteID(r, key, fam, yr, known_ids, row_ids)
+      row_ids[key] <- all_prim$cite_id[i]
     } else if (r$match_status == 'nodoi_approved') {
       surname <- FirstOfAuthorList(r$parsed_author1)
       twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
@@ -475,7 +518,8 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       }
       known_keys <- union(known_keys, key)
       all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- KeepOrMintCiteID(r, key, surname, r$parsed_year, known_ids)
+      all_prim$cite_id[i] <- KeepOrMintCiteID(r, key, surname, r$parsed_year, known_ids, row_ids)
+      row_ids[key] <- all_prim$cite_id[i]
     } else if (r$match_reason %in% 'manual_bib') {
       if (!r$bibcite %in% curated$key) stop('manual bibcite ', r$bibcite, ' (', r$source_label, ' ', r$native_key, ') is not in ', basename(cfg$curated_bib), call. = FALSE)
       all_prim$cite_id[i] <- CiteIDFor(sub(':.*$', '', r$bibcite), sub('^.*:(\\d{4}).*$', '\\1', r$bibcite), NA, r$bibcite, known_ids)
@@ -487,9 +531,12 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
 
 # The CiteID of a row that keeps its key is the one it has (#114 item 7: a
 # stale Sheet row for the same Bibcite once flipped Wilman's Dunning08 id);
-# otherwise CiteIDFor() reuses the id of the key or DOI in the table, or mints.
-KeepOrMintCiteID <- function(r, key, surname, year, known_ids) {
+# a row that takes a key another row already carries with a CiteID takes
+# that id (`row_ids`, key -> CiteID over the accepted rows); otherwise
+# CiteIDFor() reuses the id of the key or DOI in the table, or mints.
+KeepOrMintCiteID <- function(r, key, surname, year, known_ids, row_ids = character()) {
   if (!is.na(r$cite_id) && !is.na(r$bibcite) && identical(r$bibcite, key)) return(r$cite_id)
+  if (key %in% names(row_ids)) return(unname(row_ids[key]))
   CiteIDFor(surname, year, r$doi, key, known_ids)
 }
 
