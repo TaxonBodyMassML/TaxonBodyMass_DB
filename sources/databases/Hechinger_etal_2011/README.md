@@ -2,6 +2,7 @@
 
 Source: Hechinger, R. F. et al. (2011) Food webs including parasites, biomass, body sizes, and life stages for three California/Baja California estuaries. Ecology 92:791. https://doi.org/10.1890/10-1383.1
 Data: Ecological Archives E092-066, `Metaweb_Nodes.txt` (UTF-16 tab-delimited) and `metadata.htm`, downloaded 2026-09-27 from https://esapubs.org/archive/ecol/E092/066/. Data are for non-commercial scientific use.
+Licence: non-commercial (author statement) (in-file: `metadata.htm` "These data sets are freely available for non-commercial scientific use, given the appropriate scholarly citation"; https://doi.org/10.1890/10-1383.1). `Metaweb_Nodes.txt` is tracked as a non-commercial carve-out, not under the repository licence; see sources/LICENSES.md.
 
 Columns used: `Genus` + `SpecificEpithet`, `BodySize(g)` (individual fresh mass including hard parts; metadata II.C.2), `BodySizeEstimation`, `Resolution`, `Stage`, Kingdom..Family.
 Filters: species-resolution nodes; adult or unstaged rows; BodySizeEstimation 'species' or 'population' only (nodes whose size was approximated from another species are excluded). Values from the three estuaries are averaged by RunMe Pass 1.

@@ -1,91 +1,91 @@
-source_label,class,default_provenance_type,equation_bibcite,notes
-AmphiBIO,compilation,unknown,,tier A2; species-level Reference keys -> AmphiBIO_v1_literature_cited.pdf (match_reason species_level)
-AnAge,database,database_record,,"tier A2; HAGR BIBLIO ids (biblio.php, all traits of a record); database_record per id"
-AndersonGillooly_2017,compilation,unknown,,"tier C; RefM -> Wayback appendix pdf (238 entries, mostly compilations)"
-Anunciacao_etal_2025,compilation,unknown,,tier B; DOI URLs in-row
-AyalaBerdon_2025,compilation,unknown,,"added under #71; per-row author-year keys (22 used, 2 self: This study / unpublished data) -> references.csv transcribed from the ESM reference list; 10 species measured by the authors, 29 from the literature"
-Baach_2026,compilation,unknown,,"added under #72; per-row ref keys (9 of the 22 names of the Abundance Richness References sheet, ASCII-transliterated) -> references.csv; the EltonTraits, AVONET and Chown rows copy Wilman_etal_2014, Tobias_2022 and Chown_etal_2007 (hop 2 once their bib entries carry DOIs)"
-Barnes_2008,compilation,unknown,,tier A2; Reference short keys (+ per-row length-mass conversion refs) -> metadata.htm Literature Cited
-Brocher_etal_2025,derived,derived_allometry,,tier A2; numeric Reference -> S1_references.docx; mass from body length with the Sohlstrom et al. 2018 equations. TODO (owner decision 2026-10-04): verify the equation reference like a primary reference with role equation in a later round and fill equation_bibcite
-Brose_2005,compilation,unknown,,"tier A2; DataRetriever; web-level attribution (#64, owner decision 2026-10-04): ref_keys = key(s) of the record's study (Link reference; brose2005_references.csv, 20 studies -> 21 keys), role measurement -> compiled_from at hop 1; a record is the population mean of the study's web (#29); the Body size reference column (11 keys, mostly the same studies) is not used"
-Brose_etal_2018,compilation,unknown,,"tier B; web-level attribution (#64, owner decision 2026-10-04): ref_keys = key(s) of the record's food web citation (link.citation; references.csv, 23 citation strings -> 26 keys), role measurement -> compiled_from at hop 1; a record is the population mean of the web (#29), measured, regressed or compiled by the web's authors; the con/res.size.citation column (15 distinct, 19.5% of rows) is not used"
-Brown_etal_2018,compilation,compilation_terminal,,"tier E; Table 1 from McCoy & Gillooly 2008 Appendix S1 (now the source McCoy_2008), Table 2 untraceable"
-Cai_etal_2025,compilation,unknown,,"tier B; 106 Ref.BodyMass values, hand-built lookup; FishBase rows compilation_terminal"
-Castro_2025,compilation,unknown,,tier B; author-year keys -> Zenodo refs / Crossref reference[] of 10.1038/s41597-025-...
-Chown_etal_2007,compilation,unknown,,"tier A2; Appendix S2 superscript numbers 1-115 and * (Chown lab, unpublished; self) -> references.csv parsed from fec1245_supmat.pdf (issue #63); Appendix S1 ants keyed S1 (self, owner decision 2026-10-04)"
-Cohen_2014,primary,measured_in_source,,tier F; own measurements
-DeLong_etal_2010,compilation,compilation_terminal,,tier D; group-level references to terminal compilations (Makarieva 2005/2008 for prokaryotes and protists)
-DeLong_etal_2018,compilation,unknown,,tier B; Source = FirstAuthor year JOURNAL -> bioRxiv JATS reflist; mass provenance only for Original rows
-Ehnes_etal_2011,compilation,unknown,,tier A2; studies keys -> appendix pdf; ~63% this study (self rows)
-Eklof_etal_2017,primary,measured_in_source,,"tier F; own measurements (tissue mass, whole-mass conversion)"
-Ernest_2003,compilation,unknown,,tier A2; DataRetriever; refs column
-Faurby_etal_2018,compilation,unknown,,"tier B; in-row Mass.Source citations hashed to h:<sha1-8> keys by the parser (596 keys, 5,273 records; Smith et al. 2003 MOM on 3,421 rows -> hop 2 to Smith_2003 once verified; 92 handbooks, field guides, encyclopaedias and faunal databases role compilation, journal articles measurement; 486 keys cite a journal, volume and pages without author or title); Mass.Method Assumed isometric / Estimated based on equation rows (688) carry the record-level override prov_type derived_allometry citing the length source; Stage 2 round 2026-10-06 (Phase A; --verify pending)"
-Feldman_etal_2016,derived,derived_allometry,Feldman:2016aa,tier E; mass from length through the equations of the source itself; measurement refs by binomial join to Meiri_2018 later
-Fisher_2001,compilation,unknown,,tier A2; Source (female mass) short keys -> appendixA_references.bib (576)
-GalanAcedo_etal_2026,compilation,unknown,,"tier C; Refs1 integers -> Zenodo References.docx (1,216 entries)"
-Gillooly_etal_2016,compilation,unknown,,tier A2; negative-number codes -> article References / Appendix 1 (pdf)
-Gonzalez_2025,compilation,unknown,,"#74; data.source1 keys per row (paper / template / database sub-sources) -> references.csv built from the Dryad sheet References (build_references.r); 'unpublished - <contributor>' template rows are self (first published in StoichLife)"
-GuoBailly_2024,primary,measured_in_source,,"tier F; FCRR 32(4) chapter, primary (label renamed from Pauly_2024 under #3)"
-Hebert_etal_2016,compilation,unknown,,tier A0 pilot; Ref.dm codes -> references.csv (198 refs)
-Hechinger_etal_2011,primary,measured_in_source,,tier F; mixed: BodySizeEstimation per row to become prov_type
-Herberstein_etal_2022,compilation,unknown,,tier A0 pilot; in-row fullReference with DOI
-Hirt_etal_2017,compilation,unknown,,tier A2; mass.ref -> MOESM1 ESM pdf
-Hishi_etal_2019,derived,derived_allometry,,"tier E; family-level length-weight equations (Tanaka 1970, Petersen 1975); no per-record reference. TODO (owner decision 2026-10-04): verify the two equation references like primary references with role equation in a later round and fill equation_bibcite"
-Hoehler_etal_2023,compilation,unknown,,"tier A1; per-row Reference Code (16 codes cited by kept rows) -> references.csv transcribed from the xlsx Refs sheet (#66, 2026-10-05); the Hudson-coded rows are dropped (#66); hop 2 via Makarieva_2008 (DOI route, Makarieva:2008aa carries its DOI); Savage 2004, Gillooly 2017, Nagy 1999 role compilation (terminal)"
-Hrycik_2024,primary,measured_in_source,,tier F
-Hudson_2013,compilation,unknown,,tier A2; per-row Study author-year keys (126) -> references.csv transcribed from Appendix S6 (#59); Hoehler_etal_2023 copies its rows
-Ikeda_2014,compilation,unknown,,"tier B; ref_keys = author-year keys of the ESM (SplitRefKeys, one per record); reference list = Crossref reference[] of 10.1007/s00227-014-2540-5 (101 refs, 89 DOIs; format crossref_reflist, keys joined on author block + year + suffix) -> primary_references.csv (round 2026-10-05: 33 certain by deposited DOI, 1 self, 1 pending Bamstedt 1979 chapter, 2 not_found Ikeda 1974 Memoirs / Roger 1988); intermediate of Vanni_2017's Ikeda-database rows (hop 2)"
-Jennings_2002,primary,measured_in_source,,tier F
-Jones_2009,compilation,unknown,,tier A1; DataRetriever (PanTHERIA); References ids
-Kendall_etal_2019,primary,measured_in_source,,tier F
-Killen_etal_2016,compilation,unknown,,tier B; MMRref in-row
-Kinsella_etal_2020,primary,measured_in_source,,tier F
-Kiorboe_2013,compilation,unknown,,tier A0 pilot; numeric Reference -> Kiorboe2013_TableA1_references.csv (18 refs); also a conversion CiteID (mass_conversion.r)
-Kiorboe_2014,compilation,unknown,,tier A2; short keys + PANGAEA DOI per row -> Source: header blocks; Acuna rows -> PANGAEA 832241 hop 2
-Lagrue_etal_2015,primary,measured_in_source,,tier F
-Lane_2019,primary,measured_in_source,,tier F
-Lislevand_etal_2007,compilation,unknown,,"tier A1; ;-numeric refs (References column, 1-87) -> metadata.htm section F (87 entries) -> references.csv via build_references.py; the DataRetriever bird-size copy of the same file (m_mass only, no ref_keys) was removed 2026-10-05 (#102)"
-Lukic_2022,compilation,unknown,,tier A2; study -> References.xlsx (57)
-Mahe_2023,primary,measured_in_source,,tier F
-Makarieva_2008,compilation,unknown,,"tier C; SI mirror pdf per dataset; S5 = White 2006, S6a = McKechnie & Wolf 2004 second hop"
-Mathieu_2014,compilation,unknown,,tier D; all rows -> Bouche 1972 (reference not row-linked)
-McCoy_2008,compilation,unknown,,added under #7; numeric Ref codes (;-joined) -> appendixS1_references.csv (30 refs; erratum version since #61); ref 25 Brey data bank energy rows
-Meiri_2018,derived,derived_allometry,Feldman:2016aa,"tier A1; mass from the maximum SVL through the Feldman et al. 2016 equations (equation row per record); the three SVL reference columns of Appendix S1 (comma-separated author-year keys) -> references.csv built from the Appendix S3 key table by build_references.r (a key the table holds for several papers is '<key> [n]', told apart by the Taxa column through key_map.csv; Stage 2, 2026-10-05); the Biology reference column is not used"
-Meiri_2024,compilation,unknown,,"tier C; Sources (general) -> Supplementary Table S2 (species-level, no mass-specific field)"
-Mercer_etal_2001,primary,measured_in_source,,tier F
-Mulder_2011,primary,measured_in_source,,tier F
-Mull_etal_2022,compilation,unknown,,tier B; reference_doi + Sharkipedia references xlsx (27/27 keys)
-Myhrvold_2015,compilation,unknown,,tier A1; DataRetriever (Amniote); per-cell refs csv + literature-cited PDF in ~/.retriever
-Pata_2025,compilation,unknown,,"tier B; primaryReference -> reference_list csv upstream (1,310 rows)"
-Pekar_etal_2021,compilation,unknown,,tier B; referenceFull in-row
-Quaardvark,database,database_record,,tier E; ADW account pages (no reference fields exported); database_record per account
-Raymond_2011,compilation,unknown,,tier A2; DataRetriever; SOURCE_ID -> sources.csv
-Reum_2012,primary,measured_in_source,,tier F
-Reum_2013,primary,measured_in_source,,tier F
-Sarmiento-Lezcano_2023,primary,measured_in_source,,tier F
-Smith_2003,compilation,unknown,,"tier A1; Mass Reference ids -> REFERENCES sheet (286 entries) + 43 alias keys of the text/URL cells (text_keys.csv) -> references.csv (build_references.r), cells split at underscore + blank; 28 keys role compilation (Silva & Downing 1995, Jones et al. 2003, Walker's, Marquet & Cofre 1999, Ernest 2003, Grzimek, PanTHERIA = Jones_2009, ...); round of 2026-10-05 (Phases A-B complete: 255 keys verified, 200 owner decisions recorded, 3 alias keys open; Phase C pending); unpublished lab version v10.2 (#4)"
-Soria_etal_2021,compilation,unknown,,tier C; trait_data_sources.csv -> hop 2 via Amniote / PHYLACINE / MOM
-Tobias_2022,compilation,unknown,,"tier A1; AVONET Mass.Source + Mass.Refs.Other -> Mass_Sources sheet (42) plus four Metadata code keys -> references.csv (46; Stage 2 round 2026-10-05); Dunning (2008), Dunning (2021), BoW, EltonTraits_Other, Cramp, Higgins role compilation (Dunning via the existing Dunning_2008 entry; EltonTraits_Other hop 2 through Wilman_etal_2014); Live sample keys self; DataFromSplit (917 rows) awaits the owner"
-Trochet_2014,compilation,unknown,,tier D; species-level reference sets from article Table 1 (BDJ XML)
-Tsuboi_etal_2018,compilation,unknown,,tier B; in-row Reference
-Tucker_etal_2014a,compilation,unknown,,tier A2; short keys -> xlsx References (242)
-Tucker_etal_2014b,compilation,unknown,,tier A2; short keys -> Appendix S1 pdf
-Uyeda_etal_2017,compilation,compilation_terminal,,tier E; White 2006 and McKechnie & Wolf 2004 terminal; optional hop 2 via the White ESM pdf
-Verberk_2020,compilation,unknown,,tier B; Literature.source in-row (478 refs)
-Weisse_2024,compilation,unknown,,"tier A2; [n] -> References.xlsx (48, with DOI)"
-Wilman_etal_2014,compilation,unknown,,"tier A1; mammals (MamFuncDat.txt, #65): per-row Ref_ codes in BodyMass-Source -> references.csv transcribed from MamFuncDatSources.txt (176 entries; Ref_117 Smith_2003 and Ref_58 Jones_2009 are DB sources, hop 2 later); birds: the BodyMass-Source word as key (Dunning08 compilation_terminal, HBW volumes, PrimScale allometry, Other)"
-Wisnionski_2026,compilation,unknown,,"tier A2; per-row mass reference numbers of Table S1 (supplement pdf parsed by parse_wisnionski_supmat.py; 53 keys on the kept records) -> references.csv (132 entries); masses mostly AnAge / Dunning 1993 / Bokony et al. 2009 (#79)"
-fishbase,live,database_record,,tier G; PopCharRefNo / SourceRef -> refrens via rfishbase::references() (Phase 3)
-sealifebase,live,database_record,,tier G; as fishbase (Phase 3)
-vertnet-amphibia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
-vertnet-aves-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
-vertnet-fishes-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
-vertnet-mammalia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
-vertnet-reptilia-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
-vertnet-traits-sept2016,live,database_record,,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
-Lemoine_2026,primary,measured_in_source,,"tier F; own measurements (#76): individual fresh masses of soil macroinvertebrates weighed alive in Martinique for the image-allometry calibration of Lemoine et al. 2026; CIRAD Dataverse doi:10.18167/DVN1/SCH4AV"
-Leahy_2025,primary,measured_in_source,,"tier F; own measurements (#75): 2,805 worker ants weighed after their metabolic assays, 57 binomials kept; references.csv holds the one self entry so that a compilation citing this paper resolves to compiled_from at hop 2"
-Ghaderi_2026,derived,derived_allometry,,"tier E; Fresh W from literature body length and de Man ratio a through the Andrassy (1956) volumetric formula (checked on every row by the parser); per-row Source author-year keys (85) kept as ref_keys, no reference list on disk (uningested). TODO (owner decision 2026-10-04 pattern): verify Andrassy 1956 like a primary reference with role equation in a later round and fill equation_bibcite; ingestion itself awaits the owner decision of issue #73 (estimated masses)"
-Wascher_2025,compilation,unknown,,"added under #78; per-row bodymass_ref (4 references) -> references.csv; 117 of 124 kept rows cite AVONET (Tobias_2022, hop 2 through the registered label), 4 HBW vol. 14, 2 BIRDBASE, 1 Atwood 1980"
-Oskyrko_2024,compilation,unknown,,"tier A2 (#77); per-row citation cells of the sources file (author-year keys, comma-separated) -> references.csv transcribed from the ReptTraits reference list; the length-derived mass rows (Slavenko et al. 2019, Zimin et al. 2022, Meiri et al. 2021, the Feldman works, values equal to Feldman_etal_2016 / Meiri_2018) are dropped in the parser"
-Vanni_2017,compilation,unknown,,"#99; per-row Source name keys (90 distinct) -> references.csv transcribed from Metadata S1 (Data source references; build_references.py); the unpubl keys are unpublished data of the data paper's coauthors; Gonzalez_2025 copies its Vanni_database rows from this file"
+source_label,class,default_provenance_type,equation_bibcite,value_tier,notes
+AmphiBIO,compilation,unknown,,1,tier A2; species-level Reference keys -> AmphiBIO_v1_literature_cited.pdf (match_reason species_level)
+AnAge,database,database_record,,1,"tier A2; HAGR BIBLIO ids (biblio.php, all traits of a record); database_record per id"
+AndersonGillooly_2017,compilation,unknown,,1,"tier C; RefM -> Wayback appendix pdf (238 entries, mostly compilations)"
+Anunciacao_etal_2025,compilation,unknown,,1,tier B; DOI URLs in-row
+AyalaBerdon_2025,compilation,unknown,,1,"added under #71; per-row author-year keys (22 used, 2 self: This study / unpublished data) -> references.csv transcribed from the ESM reference list; 10 species measured by the authors, 29 from the literature"
+Baach_2026,compilation,unknown,,1,"added under #72; per-row ref keys (9 of the 22 names of the Abundance Richness References sheet, ASCII-transliterated) -> references.csv; the EltonTraits, AVONET and Chown rows copy Wilman_etal_2014, Tobias_2022 and Chown_etal_2007 (hop 2 once their bib entries carry DOIs)"
+Barnes_2008,compilation,unknown,,1,tier A2; Reference short keys (+ per-row length-mass conversion refs) -> metadata.htm Literature Cited
+Brocher_etal_2025,derived,derived_allometry,,1,tier A2; numeric Reference -> S1_references.docx; mass from body length with the Sohlstrom et al. 2018 equations. TODO (owner decision 2026-10-04): verify the equation reference like a primary reference with role equation in a later round and fill equation_bibcite
+Brose_2005,compilation,unknown,,3,"tier A2; DataRetriever; web-level attribution (#64, owner decision 2026-10-04): ref_keys = key(s) of the record's study (Link reference; brose2005_references.csv, 20 studies -> 21 keys), role measurement -> compiled_from at hop 1; a record is the population mean of the study's web (#29); the Body size reference column (11 keys, mostly the same studies) is not used"
+Brose_etal_2018,compilation,unknown,,3,"tier B; web-level attribution (#64, owner decision 2026-10-04): ref_keys = key(s) of the record's food web citation (link.citation; references.csv, 23 citation strings -> 26 keys), role measurement -> compiled_from at hop 1; a record is the population mean of the web (#29), measured, regressed or compiled by the web's authors; the con/res.size.citation column (15 distinct, 19.5% of rows) is not used"
+Brown_etal_2018,compilation,compilation_terminal,,1,"tier E; Table 1 from McCoy & Gillooly 2008 Appendix S1 (now the source McCoy_2008), Table 2 untraceable"
+Cai_etal_2025,compilation,unknown,,1,"tier B; 106 Ref.BodyMass values, hand-built lookup; FishBase rows compilation_terminal"
+Castro_2025,compilation,unknown,,3,tier B; author-year keys -> Zenodo refs / Crossref reference[] of 10.1038/s41597-025-...
+Chown_etal_2007,compilation,unknown,,1,"tier A2; Appendix S2 superscript numbers 1-115 and * (Chown lab, unpublished; self) -> references.csv parsed from fec1245_supmat.pdf (issue #63); Appendix S1 ants keyed S1 (self, owner decision 2026-10-04)"
+Cohen_2014,primary,measured_in_source,,1,tier F; own measurements
+DeLong_etal_2010,compilation,compilation_terminal,,3,tier D; group-level references to terminal compilations (Makarieva 2005/2008 for prokaryotes and protists)
+DeLong_etal_2018,compilation,unknown,,1,tier B; Source = FirstAuthor year JOURNAL -> bioRxiv JATS reflist; mass provenance only for Original rows
+Ehnes_etal_2011,compilation,unknown,,1,tier A2; studies keys -> appendix pdf; ~63% this study (self rows)
+Eklof_etal_2017,primary,measured_in_source,,1,"tier F; own measurements (tissue mass, whole-mass conversion)"
+Ernest_2003,compilation,unknown,,1,tier A2; DataRetriever; refs column
+Faurby_etal_2018,compilation,unknown,,1,"tier B; in-row Mass.Source citations hashed to h:<sha1-8> keys by the parser (596 keys, 5,273 records; Smith et al. 2003 MOM on 3,421 rows -> hop 2 to Smith_2003 once verified; 92 handbooks, field guides, encyclopaedias and faunal databases role compilation, journal articles measurement; 481 keys cite a journal, volume and pages without author or title, read by ParseJournalOnlyStyle() and decided by the container_volume_page rule); Mass.Method Assumed isometric / Estimated based on equation rows (688) carry the record-level override prov_type derived_allometry citing the length source; Stage 2 round 2026-10-06"
+Feldman_etal_2016,derived,derived_allometry,Feldman:2016aa,2,tier E; mass from length through the equations of the source itself; measurement refs by binomial join to Meiri_2018 later
+Fisher_2001,compilation,unknown,,1,tier A2; Source (female mass) short keys -> appendixA_references.bib (576)
+GalanAcedo_etal_2026,compilation,unknown,,1,"tier C; Refs1 integers -> Zenodo References.docx (1,216 entries)"
+Gillooly_etal_2016,compilation,unknown,,1,tier A2; negative-number codes -> article References / Appendix 1 (pdf)
+Gonzalez_2025,compilation,unknown,,3,"#74; data.source1 keys per row (paper / template / database sub-sources) -> references.csv built from the Dryad sheet References (build_references.r); 'unpublished - <contributor>' template rows are self (first published in StoichLife)"
+GuoBailly_2024,primary,measured_in_source,,1,"tier F; FCRR 32(4) chapter, primary (label renamed from Pauly_2024 under #3)"
+Hebert_etal_2016,compilation,unknown,,1,tier A0 pilot; Ref.dm codes -> references.csv (198 refs)
+Hechinger_etal_2011,primary,measured_in_source,,1,tier F; mixed: BodySizeEstimation per row to become prov_type
+Herberstein_etal_2022,compilation,unknown,,1,tier A0 pilot; in-row fullReference with DOI
+Hirt_etal_2017,compilation,unknown,,1,tier A2; mass.ref -> MOESM1 ESM pdf
+Hishi_etal_2019,derived,derived_allometry,,1,"tier E; family-level length-weight equations (Tanaka 1970, Petersen 1975); no per-record reference. TODO (owner decision 2026-10-04): verify the two equation references like primary references with role equation in a later round and fill equation_bibcite"
+Hoehler_etal_2023,compilation,unknown,,1,"tier A1; per-row Reference Code (16 codes cited by kept rows) -> references.csv transcribed from the xlsx Refs sheet (#66, 2026-10-05); the Hudson-coded rows are dropped (#66); hop 2 via Makarieva_2008 (DOI route, Makarieva:2008aa carries its DOI); Savage 2004, Gillooly 2017, Nagy 1999 role compilation (terminal)"
+Hrycik_2024,primary,measured_in_source,,1,tier F
+Hudson_2013,compilation,unknown,,1,tier A2; per-row Study author-year keys (126) -> references.csv transcribed from Appendix S6 (#59); Hoehler_etal_2023 copies its rows
+Ikeda_2014,compilation,unknown,,1,"tier B; ref_keys = author-year keys of the ESM (SplitRefKeys, one per record); reference list = Crossref reference[] of 10.1007/s00227-014-2540-5 (101 refs, 89 DOIs; format crossref_reflist, keys joined on author block + year + suffix) -> primary_references.csv (round 2026-10-05: 33 certain by deposited DOI, 1 self, 1 pending Bamstedt 1979 chapter, 2 not_found Ikeda 1974 Memoirs / Roger 1988); intermediate of Vanni_2017's Ikeda-database rows (hop 2)"
+Jennings_2002,primary,measured_in_source,,1,tier F
+Jones_2009,compilation,unknown,,1,tier A1; DataRetriever (PanTHERIA); References ids
+Kendall_etal_2019,primary,measured_in_source,,1,tier F
+Killen_etal_2016,compilation,unknown,,1,tier B; MMRref in-row
+Kinsella_etal_2020,primary,measured_in_source,,1,tier F
+Kiorboe_2013,compilation,unknown,,3,tier A0 pilot; numeric Reference -> Kiorboe2013_TableA1_references.csv (18 refs); also a conversion CiteID (mass_conversion.r)
+Kiorboe_2014,compilation,unknown,,3,tier A2; short keys + PANGAEA DOI per row -> Source: header blocks; Acuna rows -> PANGAEA 832241 hop 2
+Lagrue_etal_2015,primary,measured_in_source,,1,tier F
+Lane_2019,primary,measured_in_source,,1,tier F
+Lislevand_etal_2007,compilation,unknown,,1,"tier A1; ;-numeric refs (References column, 1-87) -> metadata.htm section F (87 entries) -> references.csv via build_references.py; the DataRetriever bird-size copy of the same file (m_mass only, no ref_keys) was removed 2026-10-05 (#102)"
+Lukic_2022,compilation,unknown,,1,tier A2; study -> References.xlsx (57)
+Mahe_2023,primary,measured_in_source,,1,tier F
+Makarieva_2008,compilation,unknown,,1,"tier C; SI mirror pdf per dataset; S5 = White 2006, S6a = McKechnie & Wolf 2004 second hop"
+Mathieu_2014,compilation,unknown,,1,tier D; all rows -> Bouche 1972 (reference not row-linked)
+McCoy_2008,compilation,unknown,,1,added under #7; numeric Ref codes (;-joined) -> appendixS1_references.csv (30 refs; erratum version since #61); ref 25 Brey data bank energy rows
+Meiri_2018,derived,derived_allometry,Feldman:2016aa,2,"tier A1; mass from the maximum SVL through the Feldman et al. 2016 equations (equation row per record); the three SVL reference columns of Appendix S1 (comma-separated author-year keys) -> references.csv built from the Appendix S3 key table by build_references.r (a key the table holds for several papers is '<key> [n]', told apart by the Taxa column through key_map.csv; Stage 2, 2026-10-05); the Biology reference column is not used"
+Meiri_2024,compilation,unknown,,1,"tier C; Sources (general) -> Supplementary Table S2 (species-level, no mass-specific field)"
+Mercer_etal_2001,primary,measured_in_source,,1,tier F
+Mulder_2011,primary,measured_in_source,,1,tier F
+Mull_etal_2022,compilation,unknown,,1,tier B; reference_doi + Sharkipedia references xlsx (27/27 keys)
+Myhrvold_2015,compilation,unknown,,1,tier A1; DataRetriever (Amniote); per-cell refs csv + literature-cited PDF in ~/.retriever
+Pata_2025,compilation,unknown,,3,"tier B; primaryReference -> reference_list csv upstream (1,310 rows)"
+Pekar_etal_2021,compilation,unknown,,1,tier B; referenceFull in-row
+Quaardvark,database,database_record,,1,tier E; ADW account pages (no reference fields exported); database_record per account
+Raymond_2011,compilation,unknown,,1,tier A2; DataRetriever; SOURCE_ID -> sources.csv
+Reum_2012,primary,measured_in_source,,1,tier F
+Reum_2013,primary,measured_in_source,,1,tier F
+Sarmiento-Lezcano_2023,primary,measured_in_source,,1,tier F
+Smith_2003,compilation,unknown,,1,"tier A1; Mass Reference ids -> REFERENCES sheet (286 entries) + 43 alias keys of the text/URL cells (text_keys.csv) -> references.csv (build_references.r), cells split at underscore + blank; 28 keys role compilation (Silva & Downing 1995, Jones et al. 2003, Walker's, Marquet & Cofre 1999, Ernest 2003, Grzimek, PanTHERIA = Jones_2009, ...); round of 2026-10-05 (Phases A-B complete: 255 keys verified, 200 owner decisions recorded, 3 alias keys open; Phase C pending); unpublished lab version v10.2 (#4)"
+Soria_etal_2021,compilation,unknown,,1,tier C; trait_data_sources.csv -> hop 2 via Amniote / PHYLACINE / MOM
+Tobias_2022,compilation,unknown,,1,"tier A1; AVONET Mass.Source + Mass.Refs.Other -> Mass_Sources sheet (42) plus four Metadata code keys -> references.csv (46; Stage 2 round 2026-10-05); Dunning (2008), Dunning (2021), BoW, EltonTraits_Other, Cramp, Higgins role compilation (Dunning via the existing Dunning_2008 entry; EltonTraits_Other hop 2 through Wilman_etal_2014); Live sample keys self; DataFromSplit (917 rows) awaits the owner"
+Trochet_2014,compilation,unknown,,1,tier D; species-level reference sets from article Table 1 (BDJ XML)
+Tsuboi_etal_2018,compilation,unknown,,1,tier B; in-row Reference
+Tucker_etal_2014a,compilation,unknown,,1,tier A2; short keys -> xlsx References (242)
+Tucker_etal_2014b,compilation,unknown,,1,tier A2; short keys -> Appendix S1 pdf
+Uyeda_etal_2017,compilation,compilation_terminal,,1,tier E; White 2006 and McKechnie & Wolf 2004 terminal; optional hop 2 via the White ESM pdf
+Verberk_2020,compilation,unknown,,1,tier B; Literature.source in-row (478 refs)
+Weisse_2024,compilation,unknown,,1,"tier A2; [n] -> References.xlsx (48, with DOI)"
+Wilman_etal_2014,compilation,unknown,,1,"tier A1; mammals (MamFuncDat.txt, #65): per-row Ref_ codes in BodyMass-Source -> references.csv transcribed from MamFuncDatSources.txt (176 entries; Ref_117 Smith_2003 and Ref_58 Jones_2009 are DB sources, hop 2 later); birds: the BodyMass-Source word as key (Dunning08 compilation_terminal, HBW volumes, PrimScale allometry, Other)"
+Wisnionski_2026,compilation,unknown,,1,"tier A2; per-row mass reference numbers of Table S1 (supplement pdf parsed by parse_wisnionski_supmat.py; 53 keys on the kept records) -> references.csv (132 entries); masses mostly AnAge / Dunning 1993 / Bokony et al. 2009 (#79)"
+fishbase,live,database_record,,2,tier G; PopCharRefNo / SourceRef -> refrens via rfishbase::references() (Phase 3)
+sealifebase,live,database_record,,2,tier G; as fishbase (Phase 3)
+vertnet-amphibia-sept2016,live,database_record,,3,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+vertnet-aves-sept2016,live,database_record,,3,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+vertnet-fishes-sept2016,live,database_record,,3,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+vertnet-mammalia-sept2016,live,database_record,,3,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+vertnet-reptilia-sept2016,live,database_record,,3,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+vertnet-traits-sept2016,live,database_record,,3,tier G; CyVerse Sept 2016 snapshot; database_record per publisher dataset keyed by occurrenceid (Phase 3)
+Lemoine_2026,primary,measured_in_source,,1,"tier F; own measurements (#76): individual fresh masses of soil macroinvertebrates weighed alive in Martinique for the image-allometry calibration of Lemoine et al. 2026; CIRAD Dataverse doi:10.18167/DVN1/SCH4AV"
+Leahy_2025,primary,measured_in_source,,1,"tier F; own measurements (#75): 2,805 worker ants weighed after their metabolic assays, 57 binomials kept; references.csv holds the one self entry so that a compilation citing this paper resolves to compiled_from at hop 2"
+Ghaderi_2026,derived,derived_allometry,,1,"tier E; Fresh W from literature body length and de Man ratio a through the Andrassy (1956) volumetric formula (checked on every row by the parser); per-row Source author-year keys (85) kept as ref_keys, no reference list on disk (uningested). TODO (owner decision 2026-10-04 pattern): verify Andrassy 1956 like a primary reference with role equation in a later round and fill equation_bibcite; ingestion itself awaits the owner decision of issue #73 (estimated masses)"
+Wascher_2025,compilation,unknown,,1,"added under #78; per-row bodymass_ref (4 references) -> references.csv; 117 of 124 kept rows cite AVONET (Tobias_2022, hop 2 through the registered label), 4 HBW vol. 14, 2 BIRDBASE, 1 Atwood 1980"
+Oskyrko_2024,compilation,unknown,,1,"tier A2 (#77); per-row citation cells of the sources file (author-year keys, comma-separated) -> references.csv transcribed from the ReptTraits reference list; the length-derived mass rows (Slavenko et al. 2019, Zimin et al. 2022, Meiri et al. 2021, the Feldman works, values equal to Feldman_etal_2016 / Meiri_2018) are dropped in the parser"
+Vanni_2017,compilation,unknown,,3,"#99; per-row Source name keys (90 distinct) -> references.csv transcribed from Metadata S1 (Data source references; build_references.py); the unpubl keys are unpublished data of the data paper's coauthors; Gonzalez_2025 copies its Vanni_database rows from this file"

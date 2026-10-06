@@ -6,7 +6,10 @@
 # R/library/citations/tests/fixtures/cache/; the review queue
 # (WritePendingQueue(), ApplyQueueDecisions()) and the screening overlay
 # (ApplySciteChecks()) run on temporary files; the screening list of the
-# selective policy (ScreeningCandidates()) on a synthetic frame. No network access.
+# selective policy (ScreeningCandidates()) on a synthetic frame; the
+# Crossref-only mode (DecideMatchCrossrefOnly(), RecheckCrossrefOnly(),
+# VerifyPrimaryReferences(crossref_only = TRUE) and the later full re-check)
+# on synthetic candidates and the same fixtures. No network access.
 #
 #   Rscript R/library/tests/test_citations_decide.R      (from any directory)
 #
@@ -258,9 +261,11 @@ Expect(q3$is_retracted[q3$native_key == '1'] && q3$services[q3$native_key == '1'
 # ---- the screening list -------------------------------------------------------------------------
 cat('ScreeningCandidates(), ScreeningSeed(), LatestScreen()\n')
 SRow <- function(key, doi, status = 'certain', reason = 'two_service_agreement', services = 'crossref;openalex', year = 2001L,
-                 citation = 'Doe, J. 2001. A study of things. J Things 5: 1-10.', notice = NA_character_, retracted = FALSE, role = 'measurement', n = 2L)
+                 citation = 'Doe, J. 2001. A study of things. J Things 5: 1-10.', notice = NA_character_, retracted = FALSE, role = 'measurement', n = 2L,
+                 mode = NA_character_)
   data.frame(source_label = 'Src', native_key = key, n_records = n, role = role, raw_citation = citation, parsed_year = year, doi = doi,
-             match_status = status, match_reason = reason, services = services, is_retracted = retracted, editorial_notice = notice, stringsAsFactors = FALSE)
+             match_status = status, match_reason = reason, services = services, is_retracted = retracted, editorial_notice = notice,
+             verification_mode = mode, stringsAsFactors = FALSE)
 sp <- rbind(SRow('n1', '10.1/notice', 'pending', 'retracted', notice = 'crossref:updated-by:erratum'),
             SRow('n2', '10.1/oaret', 'pending', 'retracted', retracted = TRUE),
             SRow('s1', '10.1/single', 'pending', 'single_service', services = 'crossref'),
@@ -275,6 +280,8 @@ sp <- rbind(SRow('n1', '10.1/notice', 'pending', 'retracted', notice = 'crossref
             SRow('x3', NA_character_, 'nodoi_approved', 'owner_nodoi'),
             SRow('z1', '10.1/scited', 'certain', 'two_service_agreement'),
             SRow('z2', '10.1/scitednotice', 'pending', 'retracted', notice = 'scite-mcp:erratum'),
+            SRow('xo1', '10.1/xo1', 'certain', 'crossref_only', services = 'crossref', mode = 'crossref_only'),
+            SRow('xo2', '10.1/xo2', 'certain', 'closed_world', services = 'crossref', mode = 'crossref_only'),
             do.call(rbind, lapply(1:40, function(k) SRow(sprintf('c%02d', k), sprintf('10.1/c%02d', k)))))
 ssc <- data.frame(doi = c('10.1/scited', '10.1/scitednotice', '10.1/c01', '10.1/c02', '10.1/c03'), is_retracted = c('FALSE', 'FALSE', NA, NA, NA),
                   notice_type = c('none', 'erratum', 'unchecked', 'unchecked', NA), notice_doi = NA, checked_at = '2026-10-05',
@@ -286,18 +293,24 @@ Expect(Get('n1')$category == 'notice' && Get('n1')$reason == 'retracted' && Get(
 Expect(Get('s1')$category == 'disagreement' && Get('s1')$reason == 'single_service' && Get('s2')$reason == 'single_service' &&
          Get('a1')$reason == 'ambiguous' && Get('a1')$category == 'disagreement',
        'single_service and ambiguous rows, and an accepted row one service answered, are listed under disagreement')
+Expect(!any(cl$category[cl$native_key %in% c('xo1', 'xo2')] %in% 'disagreement') &&
+         all(cl$category[cl$native_key %in% c('xo1', 'xo2')] %in% 'audit_sample'),
+       'a certain row accepted in Crossref-only mode (verification_mode crossref_only) is not a disagreement for lacking OpenAlex; it can only be drawn for the audit sample')
+sp_nomode <- sp[, setdiff(names(sp), 'verification_mode')]
+Expect(nrow(ScreeningCandidates(sp_nomode, ssc, date = as.Date('2026-10-05'))) >= nrow(cl) && 'xo1' %in% ScreeningCandidates(sp_nomode, ssc, date = as.Date('2026-10-05'))$native_key,
+       'a frame without the verification_mode column is read as all full: the Crossref-only rows are then disagreements')
 Expect(Get('g1')$reason == 'grey_literature' && Get('g2')$reason == 'grey_literature' && Get('d1')$reason == 'duplicate_doi' && Get('d2')$reason == 'duplicate_doi' &&
          Get('m1')$reason == 'doi_mismatch' && Get('o1')$reason == 'old_journal' && all(cl$category[cl$native_key %in% c('g1', 'g2', 'd1', 'd2', 'm1', 'o1')] == 'doubtful'),
        'grey literature (by reason or by the citation text), a DOI shared by two keys, a mismatching source DOI and an old journal are doubtful')
 Expect(!any(c('x1', 'x2', 'x3', 'z1') %in% cl$native_key) && Get('z2')$category == 'notice' && Get('z2')$screened_by == 'scite-mcp',
        'self, rejected and DOI-less rows are never listed; a DOI screened by scite-mcp only when it carries a notice')
 samp <- cl[cl$category == 'audit_sample', ]
-Expect(attr(cl, 'n_new_certain') == 38 && attr(cl, 'n_sample') == 3 && nrow(samp) == 3 && all(grepl('^c', samp$native_key)) &&
+Expect(attr(cl, 'n_new_certain') == 40 && attr(cl, 'n_sample') == 3 && nrow(samp) == 3 && all(grepl('^(c|xo)', samp$native_key)) &&
          !any(samp$native_key %in% c('c01', 'c02')) && all(samp$match_status == 'certain') && all(samp$reason == 'audit_sample'),
-       'the audit sample: 5% of the 38 newly certain DOIs (the two Consensus-screened and the Scite-screened ones excluded, the none-screened one and the listed ones not in the pool) is below the floor of 3, so 3 are drawn')
+       'the audit sample: 5% of the 40 newly certain DOIs (the two Consensus-screened and the Scite-screened ones excluded, the none-screened one and the listed ones not in the pool, the two Crossref-only rows in) is below the floor of 3, so 3 are drawn')
 big <- rbind(sp, do.call(rbind, lapply(41:120, function(k) SRow(sprintf('c%03d', k), sprintf('10.1/c%03d', k)))))
 clb <- ScreeningCandidates(big, ssc, date = as.Date('2026-10-05'))
-Expect(attr(clb, 'n_new_certain') == 118 && attr(clb, 'n_sample') == 6 && sum(clb$category == 'audit_sample') == 6 &&
+Expect(attr(clb, 'n_new_certain') == 120 && attr(clb, 'n_sample') == 6 && sum(clb$category == 'audit_sample') == 6 &&
          attr(ScreeningCandidates(big, ssc, sample_frac = 0.10, date = as.Date('2026-10-05')), 'n_sample') == 12 &&
          attr(ScreeningCandidates(big, ssc, min_sample = 10L, date = as.Date('2026-10-05')), 'n_sample') == 10,
        'with 118 newly certain DOIs the 5% sample is 6 (ceiling); sample_frac and min_sample are honoured')
@@ -491,6 +504,180 @@ p2$match_status <- 'pending'; p2$match_reason <- c('service_unavailable', 'grey_
 qf2 <- tempfile(fileext = '.csv')
 q2 <- WritePendingQueue(p2, list(), qf2, queued_at = '2026-10-05')
 Expect(nrow(q2) == 1 && q2$native_key == 'g' && q2$reason == 'grey_literature', 'WritePendingQueue() queues the grey-literature row but not the service_unavailable row')
+
+# ---- Crossref-only mode (owner decision 2026-10-06) ----------------------------------------------
+cat('DecideMatch(crossref_only = TRUE): the acceptance rules of the Crossref-only mode\n')
+XO <- function(...) DecideMatch(..., crossref_only = TRUE)
+IsXO <- function(d, doi = '10.1/thing') d$match_status == 'certain' && d$match_reason == 'crossref_only' && identical(d$doi, doi) &&
+  d$services == 'crossref' && d$verification_mode == 'crossref_only' && !isTRUE(d$is_retracted) && is.na(d$openalex_id)
+# (a) a DOI given by the source
+d <- XO(Ref(raw_doi = 'https://doi.org/10.1/THING'), doi_cands = Cand(title = 'Completely different title'))
+Expect(IsXO(d) && d$author_match && d$year_match, '(a) raw_doi resolves at Crossref, author + year agree: certain / crossref_only, services crossref, verification_mode crossref_only')
+d <- XO(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(author1 = 'Roe', year = 1990L))
+Expect(IsXO(d) && d$title_sim == 1, '(a) raw_doi resolves and the title agrees (>= 0.80): certain / crossref_only')
+d <- XO(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(author1 = 'Roe', year = 1990L, title = 'Completely different title'))
+Expect(d$match_status == 'pending' && d$match_reason == 'doi_mismatch' && d$doi == '10.1/thing' && d$verification_mode == 'crossref_only' && d$services == 'crossref',
+       'a disagreeing source DOI is still pending / doi_mismatch (owner matter)')
+d <- XO(Ref(raw_doi = '10.1/thing'), doi_cands = EmptyCandidates())
+Expect(d$match_status == 'pending' && d$match_reason == 'doi_mismatch' && is.na(d$doi), 'an unresolvable source DOI: doi_mismatch')
+d <- XO(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(update_types = 'update-to:retraction'))
+Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && d$is_retracted && Has(d$editorial_notice, 'crossref:update-to:retraction') && d$verification_mode == 'crossref_only',
+       'the notice case: a Crossref retraction on the source DOI forces pending / retracted')
+d <- XO(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(update_types = 'updated-by:erratum'))
+Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && !d$is_retracted && Has(d$editorial_notice, 'crossref:updated-by:erratum'),
+       'a correction notice is still read: pending / retracted without the retraction flag')
+# (b) the strong Crossref candidate
+d <- XO(Ref(), open_cands = Cand())
+Expect(IsXO(d) && d$title_sim == 1 && d$author_match && d$year_match && d$container_match && nrow(d$candidates) == 1 && d$candidates$services_for_doi == 'crossref',
+       '(b) a strong Crossref candidate (title_sim >= 0.93, author, year, one of container / volume / pages): certain / crossref_only')
+d <- XO(Ref(), open_cands = Cand(container = 'Other', volume = '9', pages = '99'))
+Expect(d$match_status == 'pending' && d$match_reason == 'weak_match' && d$verification_mode == 'crossref_only', 'neither container, volume nor pages agree: weak_match as now')
+d <- XO(Ref(), open_cands = Cand(title = 'A study of things today'))
+Expect(d$match_status == 'pending' && d$match_reason == 'weak_match' && d$title_sim < 0.93, 'title_sim below 0.93: weak_match as now')
+d <- XO(Ref(), open_cands = Cand(title = 'Predation by butterfish on ctenophores'))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold' && d$verification_mode == 'crossref_only', 'below 0.70: not_found / below_threshold as now')
+d <- XO(Ref(raw_citation = 'Doe, J. 2001. A study of things. Ph.D. thesis, Some University.'), open_cands = Cand(title = 'Predation by butterfish on ctenophores'))
+Expect(d$match_status == 'pending' && d$match_reason == 'grey_literature', 'grey literature as now')
+d <- XO(Ref(), open_cands = EmptyCandidates())
+Expect(d$match_status == 'not_found' && d$match_reason == 'no_candidates' && d$services == 'crossref', 'no candidate at all: not_found / no_candidates, never service_unavailable')
+d <- XO(Ref(), open_cands = rbind(Cand(), Cand(doi = '10.1/twin', title = 'A study of things!')))
+Expect(d$match_status == 'pending' && d$match_reason == 'ambiguous' && nrow(d$candidates) == 2 && d$verification_mode == 'crossref_only',
+       'the ambiguous case: a runner-up under another DOI within 0.05: pending / ambiguous as now')
+d <- XO(Ref(), open_cands = Cand(update_types = 'update-to:correction'))
+Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && Has(d$editorial_notice, 'crossref:update-to:correction'), 'a Crossref update-to notice on the best candidate: pending / retracted')
+xscite <- data.frame(doi = '10.1/thing', is_retracted = 'FALSE', notice_type = 'erratum', notice_doi = NA, checked_at = '2026-10-05', checked_by = 'scite-mcp', stringsAsFactors = FALSE)
+d <- XO(Ref(), open_cands = Cand(), scite = xscite)
+Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && d$services == 'crossref;scite-mcp' && Has(d$editorial_notice, 'scite-mcp:erratum'),
+       'a screening notice applies in the mode too and the screening service joins services')
+d <- XO(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex', is_retracted = TRUE, openalex_id = 'W1')))
+Expect(IsXO(d) && !d$is_retracted, 'OpenAlex rows handed in by mistake are dropped: the decision rests on Crossref alone (no OpenAlex id, no OpenAlex flag)')
+d <- XO(Ref(), open_cands = Cand(service = 'openalex'))
+Expect(d$match_status == 'not_found' && d$match_reason == 'no_candidates', 'OpenAlex-only candidates count for nothing in the mode')
+d <- XO(Ref(role = 'self'), open_cands = Cand())
+Expect(d$match_status == 'self' && d$services == '' && is.na(d$verification_mode), 'a self reference is self, no mode')
+# (c) a title-less citation on Crossref alone
+XTL <- function(raw_citation = 'Journal of Mammalogy 83: 1-19 (2002)', ...)
+  Ref(raw_citation = raw_citation, author1 = NA_character_, year = 2002L, title = NA_character_, container = 'Journal of Mammalogy', volume = '83', pages = '1-19', ...)
+XJM <- function(doi = '10.1/jm83', container = 'Journal of Mammalogy', volume = '83', pages = '1-19', year = 2002L, ...)
+  Cand(service = 'crossref', doi = doi, title = 'Systematics of Abrocoma', author1 = 'Braun', year = year, container = container, volume = volume, pages = pages, ...)
+d <- XO(XTL(), open_cands = XJM())
+Expect(IsXO(d, '10.1/jm83') && d$title_sim == 0 && d$container_match && d$volume_match && d$pages_match && d$year_match,
+       '(c) no title; container, volume, first page and year agree at Crossref: certain / crossref_only')
+d <- XO(XTL(), open_cands = rbind(XJM(), XJM(doi = '10.1/twin')))
+Expect(d$match_status == 'pending' && d$match_reason == 'ambiguous' && nrow(d$candidates) == 2, '(c) two DOIs agreeing on all four fields: pending / ambiguous')
+d <- XO(XTL(), open_cands = XJM(pages = '20-31'))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold' && d$doi == '10.1/jm83', '(c) a different first page: not_found / below_threshold (the candidate kept for the queue)')
+d <- XO(XTL(), open_cands = XJM(year = 2004L))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', '(c) the year two off: no agreement')
+d <- XO(XTL(), open_cands = XJM(year = 2003L))
+Expect(IsXO(d, '10.1/jm83'), '(c) the year one off is inside the window')
+d <- XO(XTL(), open_cands = XJM(container = 'J. Mammal.'))
+Expect(IsXO(d, '10.1/jm83'), '(c) the container is compared abbreviation-aware')
+d <- XO(XTL(), open_cands = XJM(container = 'Journal of Zoology'))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', '(c) another journal with the same volume and pages: no agreement')
+d <- XO(XTL(), open_cands = XJM(update_types = 'update-to:retraction'))
+Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && d$is_retracted, '(c) an agreeing candidate with a retraction notice: pending / retracted')
+d <- XO(XTL(raw_citation = 'Bulletin of the British Museum. Zoology 63: 123-128(1997)'), open_cands = XJM(pages = '20-31'))
+Expect(d$match_status == 'pending' && d$match_reason == 'grey_literature', '(c) no agreement and a bulletin: pending / grey_literature as for any failed search')
+d <- DecideMatch(XTL(), open_cands = XJM())
+Expect(d$match_status != 'certain' && d$verification_mode == 'full', 'the four-field acceptance is the mode\'s: the two-service rules do not accept a title-less citation from one service')
+# (d) the closed world
+d <- XO(Ref(), closed_cands = Cand(closed_world = TRUE))
+Expect(d$match_status == 'certain' && d$match_reason == 'closed_world' && d$services == 'crossref' && d$verification_mode == 'crossref_only',
+       '(d) a closed-world candidate with title_sim >= 0.95: certain / closed_world as now, marked crossref_only')
+d <- XO(Ref(), closed_cands = Cand(title = 'A study of things today', closed_world = TRUE))
+Expect(d$match_status == 'pending' && d$match_reason == 'weak_match', '(d) a closed-world candidate below 0.93 is a weak match like any other')
+Expect('crossref_only' %in% match_reasons && 'verification_mode' %in% primary_reference_columns && 'verification_mode' %in% primary_reference_optional_columns,
+       'crossref_only is in the reason vocabulary; verification_mode is an optional column of the schema')
+
+cat('VerifyReference() / VerifyPrimaryReferences() in Crossref-only mode, offline on the Kiorboe fixtures\n')
+x1 <- VerifyReference(prim[prim$native_key == '1', ], cfg, crossref_only = TRUE)
+Expect(IsXO(x1, '10.1016/j.jembe.2006.12.010') && x1$title_sim == 1 && all(x1$candidates$services_for_doi == 'crossref'),
+       'Doyle et al. 2007 on Crossref alone: certain / crossref_only (the Crossref query only; no OpenAlex id)')
+x9 <- VerifyReference(prim[prim$native_key == '9', ], cfg, crossref_only = TRUE)
+Expect(x9$match_status == 'pending' && x9$match_reason == 'weak_match' && x9$doi == '10.23860/diss-2825' && x9$services == 'crossref' && all(x9$candidates$services_for_doi == 'crossref'),
+       'Kremer 1976 (thesis) on Crossref alone: pending / weak_match with Crossref candidates only')
+resx <- VerifyPrimaryReferences(prim, cfg, verified_at = '2026-10-06T00:00:00Z', progress = FALSE, crossref_only = TRUE)
+px <- resx$prim
+Expect(identical(px$match_status[match(c('1', '6', '9', '12'), px$native_key)], c('certain', 'certain', 'pending', 'certain')) &&
+         identical(px$match_reason[match(c('1', '6', '9', '12'), px$native_key)], c('crossref_only', 'crossref_only', 'weak_match', 'crossref_only')) &&
+         all(px$services[px$native_key %in% c('1', '6', '9', '12')] == 'crossref') && all(px$verification_mode[px$native_key %in% c('1', '6', '9', '12')] == 'crossref_only') &&
+         all(px$verified_at[px$native_key %in% c('1', '6', '9', '12')] == '2026-10-06T00:00:00Z') && length(resx$rechecked) == 0 && identical(sort(names(resx$candidates)), c('1', '12', '6', '9')),
+       'VerifyPrimaryReferences(crossref_only = TRUE) decides the unverified rows on Crossref alone and marks them crossref_only')
+mixed <- p                                                                         # the fully verified frame of 2026-10-05
+mixed$match_status[mixed$native_key == '6'] <- 'pending'; mixed$match_reason[mixed$native_key == '6'] <- 'single_service'
+mixed$match_status[mixed$native_key == '12'] <- 'pending'; mixed$match_reason[mixed$native_key == '12'] <- 'service_unavailable'
+resm <- VerifyPrimaryReferences(mixed, cfg, verified_at = '2026-10-06T00:00:00Z', progress = FALSE, crossref_only = TRUE)
+pm <- resm$prim
+Expect(pm$match_reason[pm$native_key == '1'] == 'two_service_agreement' && pm$verified_at[pm$native_key == '1'] == '2026-10-05T00:00:00Z' && pm$verification_mode[pm$native_key == '1'] == 'full' &&
+         pm$match_reason[pm$native_key == '9'] == 'weak_match' && pm$verified_at[pm$native_key == '9'] == '2026-10-05T00:00:00Z' &&
+         all(pm$match_reason[pm$native_key %in% c('6', '12')] == 'crossref_only') && all(pm$verified_at[pm$native_key %in% c('6', '12')] == '2026-10-06T00:00:00Z') &&
+         identical(sort(names(resm$candidates)), c('12', '6')),
+       'the mode leaves a certain two-service row and a pending row decided with OpenAlex alone, and decides the single_service and service_unavailable rows')
+resf <- VerifyPrimaryReferences(mixed, cfg, force = TRUE, verified_at = '2026-10-07T00:00:00Z', progress = FALSE, crossref_only = TRUE)
+pf <- resf$prim
+Expect(all(pf$verified_at[pf$native_key %in% c('1', '6', '9', '12')] == '2026-10-07T00:00:00Z') && pf$match_reason[pf$native_key == '1'] == 'crossref_only' &&
+         pf$services[pf$native_key == '1'] == 'crossref' && pf$verification_mode[pf$native_key == '9'] == 'crossref_only' && pf$match_reason[pf$native_key == '9'] == 'weak_match',
+       '--force re-verifies every row in Crossref-only form (a two_service_agreement row becomes crossref_only)')
+
+cat('the later full --verify: RecheckCrossrefOnly() and the upgrade / demote / keep path of VerifyPrimaryReferences()\n')
+xr <- list(match_status = 'certain', verification_mode = 'crossref_only', doi = '10.1/thing')
+d_up <- DecideMatch(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex', openalex_id = 'W9')))
+Expect(identical(RecheckCrossrefOnly(xr, d_up), d_up) && d_up$match_reason == 'two_service_agreement', 'OpenAlex agrees: the upgrade is the two-service decision')
+d_doi <- DecideMatch(Ref(raw_doi = '10.1/thing'), doi_cands = rbind(Cand(), Cand(service = 'openalex')))
+Expect(identical(RecheckCrossrefOnly(xr, d_doi), d_doi) && d_doi$match_reason == 'doi_resolves', 'a source DOI clean at OpenAlex: upgraded to doi_resolves')
+d_sil <- DecideMatch(Ref(), open_cands = Cand())
+Expect(is.null(RecheckCrossrefOnly(xr, d_sil)) && d_sil$match_reason == 'single_service', 'OpenAlex silent (no row at all): keep')
+d_junk <- DecideMatch(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex', doi = '10.1/junk', title = 'Completely different title')))
+Expect(is.null(RecheckCrossrefOnly(xr, d_junk)) && d_junk$match_reason == 'single_service', 'OpenAlex offers only an implausible candidate (title_sim < 0.70): keep')
+d_dis <- DecideMatch(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex', doi = '10.1/other', title = 'A study of things indeed')))
+r <- RecheckCrossrefOnly(xr, d_dis)
+Expect(d_dis$match_reason == 'single_service' && r$match_status == 'pending' && r$match_reason == 'doi_mismatch' && r$doi == '10.1/thing' && nrow(r$candidates) == 2 &&
+         r$candidates$doi[2] == '10.1/other' && r$candidates$title_sim[2] >= 0.7 && r$verification_mode == 'full',
+       'OpenAlex disagrees (a plausible candidate under another DOI, none under the Crossref-only DOI): pending / doi_mismatch with both candidates')
+d_amb <- DecideMatch(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex'), Cand(service = 'openalex', doi = '10.1/twin', title = 'A study of things!')))
+Expect(identical(RecheckCrossrefOnly(xr, d_amb), d_amb) && d_amb$match_reason == 'ambiguous', 'OpenAlex returned the DOI and a twin: the two-service decision (ambiguous) stands')
+d_ret <- DecideMatch(Ref(), open_cands = rbind(Cand(), Cand(service = 'openalex', is_retracted = TRUE)))
+Expect(identical(RecheckCrossrefOnly(xr, d_ret), d_ret) && d_ret$match_reason == 'retracted', 'a retraction flag from OpenAlex: pending / retracted as always')
+Expect(is.null(RecheckCrossrefOnly(xr, DecideMatch(Ref(), open_cands = EmptyCandidates()))), 'no candidate at all (a changed Crossref answer): keep')
+xp <- EmptyPrimaryReferences()
+xp[1:4, 'native_key'] <- c('up', 'dis', 'sil', 'chg'); xp$source_label <- 'SrcX'; xp$raw_citation <- 'Doe, J. 2001. A study of things. J Things 5: 1-10.'
+xp$n_records <- 1L; xp$role <- 'measurement'; xp$match_status <- 'certain'; xp$match_reason <- 'crossref_only'; xp$services <- 'crossref'
+xp$verification_mode <- 'crossref_only'; xp$doi <- c('10.1/thing', '10.1/thing', '10.1/thing', '10.1/old'); xp$bibcite <- 'Doe:2001aa'; xp$cite_id <- 'Doe_2001'
+xp$verified_at <- '2026-10-06T00:00:00Z'; xp$tool_version <- 'tbmcite 0.0.9'
+orig_vr <- VerifyReference
+VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL, crossref_only = FALSE) {
+  stopifnot(!crossref_only)
+  switch(ref$native_key, up = d_up, dis = d_dis, sil = d_sil, chg = d_up)
+}
+resr <- VerifyPrimaryReferences(xp, cfg, verified_at = '2026-10-08T00:00:00Z', progress = FALSE)
+VerifyReference <- orig_vr
+pr <- resr$prim
+Expect(pr$match_status[1] == 'certain' && pr$match_reason[1] == 'two_service_agreement' && pr$services[1] == 'crossref;openalex' && pr$verification_mode[1] == 'full' &&
+         pr$openalex_id[1] == 'W9' && pr$bibcite[1] == 'Doe:2001aa' && pr$cite_id[1] == 'Doe_2001' && pr$verified_at[1] == '2026-10-08T00:00:00Z',
+       'upgrade: the row becomes certain / two_service_agreement with both services, verification_mode full, the OpenAlex id; the key stays (same DOI)')
+Expect(pr$match_status[2] == 'pending' && pr$match_reason[2] == 'doi_mismatch' && pr$verification_mode[2] == 'full' && pr$services[2] == 'crossref;openalex' &&
+         pr$doi[2] == '10.1/thing' && pr$verified_at[2] == '2026-10-08T00:00:00Z' && 'dis' %in% names(resr$candidates),
+       'demote: OpenAlex disagrees, the row is pending / doi_mismatch with its candidates kept for the queue')
+Expect(pr$match_status[3] == 'certain' && pr$match_reason[3] == 'crossref_only' && pr$verification_mode[3] == 'crossref_only' && pr$services[3] == 'crossref' &&
+         pr$verified_at[3] == '2026-10-08T00:00:00Z' && pr$tool_version[3] == citations_tool_version && !'sil' %in% names(resr$candidates),
+       'keep: OpenAlex silent, the Crossref-only acceptance stands and the attempt is stamped')
+Expect(pr$match_status[4] == 'certain' && pr$doi[4] == '10.1/thing' && is.na(pr$bibcite[4]) && is.na(pr$cite_id[4]),
+       'a DOI that changes under the new decision drops the key and CiteID for --bib to re-mint')
+Expect(identical(resr$rechecked, c(up = 'upgraded to two_service_agreement', dis = 'pending/doi_mismatch', sil = 'kept', chg = 'upgraded to two_service_agreement')),
+       'the re-check outcomes are reported by key')
+qfx <- tempfile(fileext = '.csv')
+qx <- WritePendingQueue(pr, resr$candidates, qfx, queued_at = '2026-10-08')
+Expect(nrow(qx) == 1 && qx$native_key == 'dis' && qx$reason == 'doi_mismatch' && qx$c1_doi == '10.1/thing' && qx$c1_services == 'crossref' && qx$c2_doi == '10.1/other' && qx$c2_services == 'openalex',
+       'the demoted row is queued with the Crossref DOI and the OpenAlex alternative')
+resu <- VerifyPrimaryReferences(px, cfg, verified_at = '2026-10-09T00:00:00Z', progress = FALSE)
+pu <- resu$prim
+Expect(all(pu$match_reason[pu$native_key %in% c('1', '6', '12')] == 'two_service_agreement') && all(pu$services[pu$native_key %in% c('1', '6', '12')] == 'crossref;openalex') &&
+         all(pu$verification_mode[pu$native_key %in% c('1', '6', '9', '12')] == 'full') && all(pu$verified_at[pu$native_key %in% c('1', '6', '9', '12')] == '2026-10-09T00:00:00Z') &&
+         identical(resu$rechecked, c(`1` = 'upgraded to two_service_agreement', `6` = 'upgraded to two_service_agreement', `12` = 'upgraded to two_service_agreement')) &&
+         pu$match_reason[pu$native_key == '9'] == 'weak_match',
+       'the Kiorboe rows accepted on Crossref alone are upgraded by the full run from the fixtures; the pending thesis is re-verified as usual')
+Expect(length(VerifyPrimaryReferences(pu, cfg, verified_at = '2026-10-10T00:00:00Z', progress = FALSE)$rechecked) == 0, 'a full row is not re-checked again')
 
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }

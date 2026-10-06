@@ -2,6 +2,7 @@
 
 Source: Hébert, M.-P., Beisner, B. E., & Maranger, R. (2016) A compilation of quantitative functional traits for marine and freshwater crustacean zooplankton. Ecology 97:1081. https://doi.org/10.1890/15-1275.1
 Data: Wiley Supporting Information (former Ecological Archives data paper): `zooplankton_traits.csv`, `references.csv`, `ecy1337-sup-0001-metadatas1.docx`; downloaded by M. Novak 2026-09-28.
+Licence: no copyright restrictions (Ecological Archives) (in-file: `ecy1337-sup-0001-metadatas1.docx` "Copyright and proprietary restrictions: none."; https://doi.org/10.1890/15-1275.1). The data file, the source's `references.csv` and the metadata docx are tracked and redistributed with attribution to the data paper; `primary_references.csv` is ours.
 
 Columns used: `Genus` + `Species`, `Dry.mass` (individual mean body dry mass, mg; semicolon-delimited file with decimal commas), `Group`, `Ref.dm`.
 Filters: rows whose dry mass reference includes codes 18 (Culver et al. 1985) or 20 (McCauley 1984) are excluded because those values come from length-weight regressions (the freshwater sub-data set); genus-level rows dropped. Adult (mostly female) individuals by design of the compilation.

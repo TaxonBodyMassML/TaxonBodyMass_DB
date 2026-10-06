@@ -7,8 +7,10 @@
 # on real responses and on synthetic records, the 404 of a non-existent DOI,
 # the deposited reference list of Ikeda 2014, the closed-world candidates, and
 # the screening file Bib/scite_checks.csv (ReadSciteChecks(), SciteVerdict())
-# with its scite-mcp / consensus-mcp / none vocabulary. jsonlite, digest and
-# stringdist are used; httr2 is never reached.
+# with its scite-mcp / consensus-mcp / none vocabulary, and -- with
+# CachedGET() replaced by a recording wrapper -- that a Crossref-only run of
+# the driver (decide.r, --crossref-only) sends no request to OpenAlex.
+# jsonlite, digest and stringdist are used; httr2 is never reached.
 #
 #   Rscript R/library/tests/test_citations_services.R      (from any directory)
 #
@@ -20,7 +22,7 @@ if (length(this_file) == 0)
 repo <- normalizePath(file.path(dirname(this_file), '..', '..', '..'))
 lib  <- file.path(repo, 'R', 'library')
 source(file.path(lib, 'helpers.r'))
-for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'verify_services.r'))
+for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'verify_services.r', 'decide.r'))
   source(file.path(lib, 'citations', f))
 
 failures <- character(0)
@@ -280,6 +282,37 @@ Expect(v$checked && v$service == 'scite-mcp' && v$notice == 'scite-mcp:correctio
 v <- SciteVerdict('10.1/zz', sc)
 Expect(!v$checked && is.na(v$service) && !v$gap && !SciteVerdict(NA, sc)$checked && !SciteVerdict('10.1/a', NULL)$checked && !SciteVerdict('10.1/a', empty)$checked,
        'an unscreened DOI, an NA DOI or no screening rows: not checked, no gap')
+
+# ---- Crossref-only mode: no OpenAlex request ------------------------------------------------
+cat('VerifyPrimaryReferences(crossref_only = TRUE): no request leaves for OpenAlex (CachedGET() mocked)\n')
+orig_get <- CachedGET
+seen <- character()
+CachedGET <- function(url, cfg) {
+  seen <<- c(seen, url)
+  if (grepl('openalex', url, fixed = TRUE)) stop('OpenAlex was asked in Crossref-only mode: ', url, call. = FALSE)
+  orig_get(url, cfg)
+}
+krl <- ParseRefListCSV(file.path(repo, 'sources', 'databases', 'Kiorboe_2013', 'Kiorboe2013_TableA1_references.csv'), key_col = 'Reference', citation_col = 'Citation')
+kprim <- InitPrimaryReferences('Kiorboe_2013', krl, c('1', '6', '9', '12'), compiler = 'Kiorboe')
+kprim$raw_doi[kprim$native_key == '6'] <- '10.1007/BF00392514'       # a source DOI: the work lookup, Crossref only
+resx <- tryCatch(VerifyPrimaryReferences(kprim, cfg, verified_at = '2026-10-06T00:00:00Z', progress = FALSE, crossref_only = TRUE),
+                 error = function(e) e)
+Expect(!inherits(resx, 'error') && length(seen) == 4 && all(grepl('^https://api\\.crossref\\.org/', seen)) && sum(grepl('/works/10\\.1007%2Fbf00392514', seen)) == 1 &&
+         sum(grepl('query\\.bibliographic=', seen)) == 3,
+       sprintf('a Crossref-only run of four references sends %d requests, all to api.crossref.org (one work lookup, three bibliographic queries), none to OpenAlex', length(seen)))
+px <- resx$prim
+Expect(identical(px$match_status[match(c('1', '6', '9', '12'), px$native_key)], c('certain', 'certain', 'pending', 'certain')) &&
+         identical(px$match_reason[match(c('1', '6', '9', '12'), px$native_key)], c('crossref_only', 'crossref_only', 'weak_match', 'crossref_only')) &&
+         all(px$services == 'crossref') && all(px$verification_mode == 'crossref_only') && all(is.na(px$openalex_id)),
+       'the four rows are decided on Crossref alone: three certain / crossref_only (one through the source DOI), the thesis weak_match; services crossref, verification_mode crossref_only, no OpenAlex id')
+seen <- character()
+CachedGET <- function(url, cfg) { seen <<- c(seen, url); orig_get(url, cfg) }
+resn <- VerifyPrimaryReferences(kprim, cfg, verified_at = '2026-10-06T00:00:00Z', progress = FALSE)
+Expect(sum(grepl('^https://api\\.openalex\\.org/', seen)) == 4 && sum(grepl('^https://api\\.crossref\\.org/', seen)) == 4 &&
+         all(resn$prim$services == 'crossref;openalex') && all(resn$prim$verification_mode == 'full'),
+       'the same run without the flag asks OpenAlex once per reference (services crossref;openalex, verification_mode full)')
+CachedGET <- orig_get
+Expect(identical(CachedGET, orig_get), 'CachedGET() restored')
 
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }

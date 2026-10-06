@@ -1,3 +1,14 @@
+# Hrycik et al. (2024) Great Lakes benthic invertebrate individual weights
+
+Source: Hrycik, A. R. (2024) Individual weight estimates for Great Lakes benthic invertebrates. Dryad. https://doi.org/10.5061/dryad.tx95x6b42 (bib key `Hrycik:2024aa`, `Citation.bib`).
+Data: `IndividualWeights_AllData.csv` and `SpeciesList.csv`, the files of the Dryad deposit; the deposit's own README follows below the rule.
+Licence: unknown; owner to check https://doi.org/10.5061/dryad.tx95x6b42 (this README is the Dryad README of the deposit and states no licence; Dryad deposits are CC0 by repository policy, not quoted on disk). The two csv files are tracked; see sources/LICENSES.md.
+Source label: `Hrycik_2024`.
+
+Columns used, Filters, Mass type and Imputed rows: the parse script `BodyMass_Hrycik_2024.r` documents the columns read and the filters applied; the full README in the convention of the other source folders is pending (issue #6, 2026-10-06).
+
+---
+
 # Data from: Individual weight estimates for Great Lakes benthic invertebrates
 
 [https://doi.org/10.5061/dryad.tx95x6b42](https://doi.org/10.5061/dryad.tx95x6b42)

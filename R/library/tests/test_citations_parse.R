@@ -373,7 +373,7 @@ Expect(nrow(ps) == 3 && ps$role[ps$native_key == 'Ikeda (unpublished data)'] == 
 cat('InitPrimaryReferences(), MergePrimaryReferences(), Read/WritePrimaryReferences()\n')
 keys <- c('1', '1; 6', '6', NA, '12', '99', '12; 1')
 prim <- InitPrimaryReferences('Kiorboe_2013', rl, keys, compiler = 'Kiorboe')
-Expect(identical(names(prim), primary_reference_columns), 'the skeleton has the 32 columns of the schema')
+Expect(identical(names(prim), primary_reference_columns) && length(primary_reference_columns) == 36L, 'the skeleton has the 36 columns of the schema (verification_mode the last)')
 Expect(identical(prim$native_key, c('1', '6', '12', '99')) && identical(prim$n_records, c(3L, 2L, 2L, 1L)),
        'one row per key cited, in reference-list order then the unmatched keys; n_records counts records')
 Expect(is.na(prim$raw_citation[4]) && prim$notes[4] == 'key not in reference list' && prim$match_reason[4] == 'key_not_in_reflist',
