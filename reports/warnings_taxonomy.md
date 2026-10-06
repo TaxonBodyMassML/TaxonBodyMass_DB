@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 17:46:08
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 17:23:15
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 167 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 175 names, 1774 rows
+- Names unresolved after all enrichment stages: 174 names, 1819 rows
 - Kingdom conflicts corrected before the autotroph filter: 5 names, 38 rows (2 unresolved)
 
 ## Missing `class` after all enrichment stages (18 rows)
@@ -404,7 +404,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (175 names, 1774 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (174 names, 1819 rows -- dropped from the output)
 
 Paraphidippus_flavus | Brose_etal_2018 | 216 rows
 
@@ -422,6 +422,8 @@ Lysigamasus_cornutus | Brose_etal_2018 | 87 rows
 
 Tholeria_reversalis | Brose_etal_2018 | 77 rows
 
+Nestus_mendicus | Brose_2005, Brose_etal_2018 | 76 rows
+
 Melanophthalma_floridana | Brose_etal_2018 | 64 rows
 
 Parschisturella_ceruviata | Brose_etal_2018 | 45 rows
@@ -432,21 +434,19 @@ Rossella_tarenja | Brose_etal_2018 | 43 rows
 
 Nestus_ruralis | Brose_etal_2018 | 41 rows
 
-Nestus_mendicus | Brose_2005, Brose_etal_2018 | 39 rows
-
 Amphidinium_hadai | Brose_etal_2018 | 35 rows
 
 Apanteles_hemileucae | Brose_etal_2018 | 33 rows
 
 Eciton_rufa | Herberstein_etal_2022 | 20 rows
 
+Filinia_longispina | Brose_2005, Brose_etal_2018 | 20 rows
+
 Thalestris_rufovalescans | Brose_etal_2018 | 20 rows
 
 Fulva_dominica | vertnet-aves-sept2016, vertnet-traits-sept2016 | 16 rows
 
 Phaeoptyx_maculatus | Brose_etal_2018 | 16 rows
-
-Filinia_longispina | Brose_2005, Brose_etal_2018 | 11 rows
 
 Agelenopsis_castaneus | Gonzalez_2025 | 10 rows
 
@@ -585,8 +585,6 @@ Desoria_sensibilis | Hishi_etal_2019 | 1 row
 Dicyrtoma_pallens | Hishi_etal_2019 | 1 row
 
 Dicyrtomina_yaeyamensis | Hishi_etal_2019 | 1 row
-
-Edaphus_blAhweissi | Brose_2005 | 1 row
 
 Euphonia_aureata | vertnet-traits-sept2016 | 1 row
 

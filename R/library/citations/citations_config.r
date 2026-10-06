@@ -306,6 +306,11 @@ reflist_specs <- list(
   Hoehler_etal_2023 = list(format = 'csv', file = 'references.csv',
                            key_col = 'key', citation_col = 'citation', sep = ';',
                            compiler = 'Hoehler', compilation_doi = '10.1073/pnas.2303764120'),
+  # AVONET (Stage 2 of #1): the Mass_Sources sheet (42 Citation keys) plus the
+  # four Mass.Source code words of the Metadata sheet the parser keeps as keys
+  Tobias_2022  = list(format = 'csv', file = 'references.csv', folder = 'Tobias_etal_2022',
+                      frame = 'Tobias_2022', key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Tobias'),
   # derived source (Stage 2): the Appendix S3 key table via build_references.r
   # (a key the table holds for several papers is '<key> [n]'; `note` carries the
   # entry's Taxa text); the records' SVL reference cells split at ',' or ';'
