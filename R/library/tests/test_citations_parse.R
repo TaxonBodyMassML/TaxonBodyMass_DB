@@ -213,6 +213,59 @@ Expect(identical(DetectSelf(c('This study', 'Ikeda (unpublished data)', 'Vinagre
        'self: this study / own data / the compiler\'s unpublished data, not another author\'s unpublished data')
 
 # ---- the skeleton ------------------------------------------------------------------------
+cat('ParseAuthorYearKey(), ReflistFromCrossrefReferences()\n')
+ak <- ParseAuthorYearKey(c('Ikeda et al. (2007)', 'Ikeda and Mitchell (1982)', 'Kaeriyama & Ikeda (2004)', 'Ikeda (2013a)',
+                           'Ikeda (unpublished data)', 'Köster et al. (2010)', 'garbage', NA))
+Expect(identical(ak$author1, c('Ikeda', 'Ikeda', 'Kaeriyama', 'Ikeda', 'Ikeda', 'Köster', NA, NA)) &&
+         identical(ak$author2, c(NA, 'Mitchell', 'Ikeda', NA, NA, NA, NA, NA)) &&
+         identical(ak$et_al, c(TRUE, FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE)) &&
+         identical(ak$n_authors, c(3L, 2L, 2L, 1L, 1L, 3L, NA, NA)) &&
+         identical(ak$year, c(2007L, 1982L, 2004L, 2013L, NA, 2010L, NA, NA)) &&
+         identical(ak$suffix, c(NA, NA, NA, 'a', NA, NA, NA, NA)) &&
+         identical(ak$unpublished, c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, FALSE)),
+       'the ESM key forms: et al., two surnames (and / &), a letter suffix, unpublished data, diacritics; junk and NA give NA')
+dep <- data.frame(key = paste0('CR', 1:9),
+                  doi = c('10.1/a', '10.1/b', '10.1/c', '10.1/d', NA, '10.1/f', '10.1/g', '10.1/h', '10.1/i'),
+                  author = c('T Ikeda', 'T Ikeda', 'T Ikeda', 'T Ikeda', 'T Ikeda', 'U Båmstedt', 'T Ikeda', 'T Ikeda', 'X Doe'),
+                  year = c('2013', '2013', '2012', '2012', '1974', '1979', '2012', '2007', '2000'),
+                  unstructured = c('Ikeda T (2013a) Euphausiids. Mar Biol 160:251–262',
+                                   'Ikeda T (2013b) Amphipods. J Oceanogr 69:339–355',
+                                   'Ikeda T, Takahashi T (2012) Chaetognaths. J Exp Mar Biol Ecol 424–425:78–88',
+                                   'Ikeda T, McKinnon AD (2012) Hyperbenthos. Plankton Benthos Res 7:8–19',
+                                   'Ikeda T (1974) Nutritional ecology of marine zooplankton. Mem Fac Fish Hokkaido Univ 22:1–97',
+                                   'Båmstedt U (1979) Seasonal variation. In: Naylor E, Hartnoll RG (eds) Cyclic phenomena. Pergamon Press, Oxford, pp 267–274',
+                                   'Ikeda T (2012) Deep zooplankton. J Oceanogr 68:641–649',
+                                   'Ikeda T, Sano F, Yamaguchi A (2007) Copepods. Mar Ecol Prog Ser 339:215–219',
+                                   NA),
+                  journal_title = c(rep(NA, 8), 'Some J'), article_title = c(rep(NA, 8), 'A title'),
+                  volume = c(rep(NA, 8), '5'), first_page = c(rep(NA, 8), '10'), stringsAsFactors = FALSE)
+rc <- ReflistFromCrossrefReferences(dep, c('Ikeda (2013a)', 'Ikeda (2013b)', 'Ikeda and Takahashi (2012)', 'Ikeda and McKinnon (2012)',
+                                           'Ikeda (2012)', 'Ikeda et al. (2007)', 'Ikeda (1974)', 'Bamstedt (1979)', 'Doe (2000)',
+                                           'Ikeda (unpublished data)', 'Ikeda (2013)', 'Nobody (1999)', 'Ikeda and Sano (2007)'))
+un <- attr(rc, 'unresolved')
+Expect(nrow(rc) == 10 && identical(rc$raw_doi[match(c('Ikeda (2013a)', 'Ikeda (2013b)', 'Ikeda and Takahashi (2012)', 'Ikeda and McKinnon (2012)', 'Ikeda (2012)', 'Ikeda et al. (2007)'), rc$native_key)],
+                                   c('10.1/a', '10.1/b', '10.1/c', '10.1/d', '10.1/g', '10.1/h')),
+       'suffix, the second surname and the author form (one / two / et al.) pick one deposited reference each among same-author same-year entries')
+Expect(rc$raw_citation[rc$native_key == 'Ikeda (2013a)'] == dep$unstructured[1] && rc$note[rc$native_key == 'Ikeda (2013a)'] == 'deposited reference CR1',
+       'the deposited unstructured text is the citation and the Crossref reference key the note')
+Expect(is.na(rc$raw_doi[rc$native_key == 'Ikeda (1974)']) && rc$raw_citation[rc$native_key == 'Ikeda (1974)'] == dep$unstructured[5],
+       'a deposited reference without DOI joins with raw_doi NA')
+Expect(rc$raw_doi[rc$native_key == 'Bamstedt (1979)'] == '10.1/f' && Has(rc$owner_review[rc$native_key == 'Bamstedt (1979)'], 'book chapter'),
+       'diacritics are folded (Bamstedt / Båmstedt) and a deposited book chapter is flagged for the owner\'s review')
+Expect(rc$raw_citation[rc$native_key == 'Doe (2000)'] == 'X Doe (2000) A title. Some J 5:10' && Has(rc$note[rc$native_key == 'Doe (2000)'], 'assembled'),
+       'without unstructured text the citation is assembled from the structured fields')
+Expect(rc$raw_citation[rc$native_key == 'Ikeda (unpublished data)'] == 'Ikeda (unpublished data)' && is.na(rc$raw_doi[rc$native_key == 'Ikeda (unpublished data)']) &&
+         Has(rc$note[rc$native_key == 'Ikeda (unpublished data)'], 'unpublished'),
+       'the compiler\'s unpublished data keeps the key as its citation (DetectSelf() marks it self)')
+Expect(nrow(un) == 3 && identical(un$key, c('Ikeda (2013)', 'Nobody (1999)', 'Ikeda and Sano (2007)')) &&
+         Has(un$reason[1], 'CR1, CR2') && Has(un$reason[2], 'no deposited reference') && Has(un$reason[3], 'no deposited reference'),
+       'a key without suffix against two suffixed entries is ambiguous, an unknown author and a wrong author form are unmatched')
+ps <- InitPrimaryReferences('Ikeda_2014', rc, c('Ikeda (2013a)', 'Ikeda (unpublished data)', 'Ikeda (unpublished data)', 'Nobody (1999)'), compiler = 'Ikeda')
+Expect(nrow(ps) == 3 && ps$role[ps$native_key == 'Ikeda (unpublished data)'] == 'self' && ps$n_records[ps$native_key == 'Ikeda (unpublished data)'] == 2L &&
+         ps$raw_doi[ps$native_key == 'Ikeda (2013a)'] == '10.1/a' && ps$parsed_title[ps$native_key == 'Ikeda (2013a)'] == 'Euphausiids' &&
+         ps$match_reason[ps$native_key == 'Nobody (1999)'] == 'key_not_in_reflist',
+       'the skeleton from the joined list: self for the unpublished key, raw_doi and parsed_* from the deposited text, an unresolved key reported')
+
 cat('InitPrimaryReferences(), MergePrimaryReferences(), Read/WritePrimaryReferences()\n')
 keys <- c('1', '1; 6', '6', NA, '12', '99', '12; 1')
 prim <- InitPrimaryReferences('Kiorboe_2013', rl, keys, compiler = 'Kiorboe')

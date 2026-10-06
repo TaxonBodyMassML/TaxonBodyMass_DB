@@ -27,14 +27,119 @@ FixTaxonomyRanks <- function(dat) {
   }
 
   # Part 2 ── Cross-kingdom noise clearing
-  # A small number of animal taxa have plant class values (Magnoliopsida) in
-  # source records, presumably from join artifacts. Clear these so rank inference
-  # can fill them from the correct order mapping.
+  # A small number of animal taxa have plant class values (Magnoliopsida; the
+  # snake Calamaria muelleri carried Lycopodiopsida, found by the inverse scan
+  # of #81) in source records, presumably from join artifacts. Clear these so
+  # rank inference can fill them from the correct order mapping.
   if (all(c('kingdom', 'class') %in% names(dat))) {
     noise_idx <- !is.na(dat$kingdom) & !is.na(dat$class) &
       dat$kingdom %in% c('Animalia', 'Chromista', 'Fungi', 'Protozoa') &
-      dat$class == 'Magnoliopsida'
+      dat$class %in% c('Magnoliopsida', 'Liliopsida', 'Lycopodiopsida',
+                       'Pinopsida', 'Polypodiopsida')
     if (any(noise_idx)) dat$class[noise_idx] <- NA_character_
+  }
+
+  # Part 2b ── Cross-kingdom conflicts (#81)
+  # An authority matched the name to a plant, alga or fungus while the lower
+  # ranks are an animal's. Two ways: an exact homonym in two kingdoms, where
+  # GBIF abstains (matchType NONE) and NCBI's first row is the plant (Myrmecia
+  # pyriformis, the bull ant and a green alga; Centropogon australis, the
+  # fortescue and a campanula), or a GBIF fuzzy match below confidence 90 into
+  # the other kingdom (Parus humilis -> Pyrus humilis = Cotoneaster humilis).
+  # Both stages fill NA ranks only, so the source's pre-seeded phylum, class,
+  # order and family survive under the plant kingdom; FilterAutotrophs() then
+  # dropped the row on the kingdom alone and no report saw it (check 11 of
+  # check_enriched() runs on the post-filter frame). Here, on frames with a
+  # species column (the enrichment cache; per-source frames and the genus
+  # cache are not touched), such a row keeps the animal's ranks: the kingdom
+  # the authority returned goes to kingdom_conflict (listed by
+  # check_enriched()), kingdom becomes Animalia, the ranks that are not animal
+  # ranks (Tracheophyta, Magnoliopsida, Asterales, ...) are cleared for rank
+  # inference (RunMe.r) or a Part 7 entry to refill, and the species is kept
+  # only when it is the input binomial (the homonym case: NCBI's annotation
+  # '(in: green algae)' is stripped). A species of another genus came from the
+  # wrong kingdom's authority and is cleared with the genus and the source: the
+  # name is then unresolved and listed as such instead of vanishing. A row is
+  # a conflict when its phylum or class is in the animal lists below, or its
+  # order or family occurs more often under Animalia than under the autotroph
+  # kingdoms in the frame (the majority rule keeps a plant class a source wrote
+  # on an animal record, Lycopodiopsida, from counting as animal; a row whose
+  # only animal rank is a family no other row has is not detected). A rank
+  # value is cleared when it is in the plant lists below or occurs under an
+  # autotroph kingdom in a row that is no conflict; anything else (the
+  # source's family, say) is kept.
+  autotroph_kingdoms <- c('Plantae', 'Viridiplantae', 'Fungi')   # as FilterAutotrophs()
+  animal_phyla <- c(
+    'Acanthocephala', 'Annelida', 'Arthropoda', 'Brachiopoda', 'Bryozoa',
+    'Chaetognatha', 'Chordata', 'Cnidaria', 'Ctenophora', 'Cycliophora',
+    'Echinodermata', 'Echiura', 'Entoprocta', 'Gastrotricha', 'Gnathostomulida',
+    'Hemichordata', 'Kinorhyncha', 'Loricifera', 'Micrognathozoa', 'Mollusca',
+    'Nematoda', 'Nematomorpha', 'Nemertea', 'Onychophora', 'Orthonectida',
+    'Phoronida', 'Placozoa', 'Platyhelminthes', 'Porifera', 'Priapulida',
+    'Rhombozoa', 'Rotifera', 'Sipuncula', 'Tardigrada', 'Xenacoelomorpha'
+  )
+  animal_classes <- c(
+    'Actinopterygii', 'Amphibia', 'Anthozoa', 'Arachnida', 'Ascidiacea',
+    'Asteroidea', 'Aves', 'Bivalvia', 'Branchiopoda', 'Cephalopoda',
+    'Chilopoda', 'Chondrichthyes', 'Clitellata', 'Collembola', 'Copepoda',
+    'Crinoidea', 'Demospongiae', 'Diplopoda', 'Echinoidea', 'Elasmobranchii',
+    'Entognatha', 'Gastropoda', 'Hexanauplia', 'Holocephali', 'Holothuroidea',
+    'Hydrozoa', 'Insecta', 'Malacostraca', 'Mammalia', 'Maxillopoda',
+    'Monogononta', 'Myxini', 'Ophiuroidea', 'Ostracoda', 'Petromyzonti',
+    'Polychaeta', 'Polyplacophora', 'Pycnogonida', 'Reptilia', 'Scyphozoa',
+    'Thecostraca', 'Trematoda', 'Cestoda', 'Turbellaria', 'Rhabditophora',
+    'Chromadorea', 'Enoplea', 'Eutardigrada', 'Heterotardigrada', 'Gymnolaemata'
+  )
+  autotroph_phyla <- c(                                          # the algal phyla of FilterAutotrophs() and the land plant and fungal phyla
+    'Ochrophyta', 'Bacillariophyta', 'Haptophyta', 'Cryptophyta', 'Chlorophyta',
+    'Rhodophyta', 'Charophyta', 'Glaucophyta', 'Streptophyta', 'Euglenophyta',
+    'Cyanobacteria', 'Cyanobacteriota', 'Tracheophyta', 'Magnoliophyta',
+    'Bryophyta', 'Marchantiophyta', 'Anthocerotophyta', 'Pteridophyta',
+    'Pinophyta', 'Ascomycota', 'Basidiomycota', 'Mucoromycota', 'Chytridiomycota'
+  )
+  autotroph_classes <- c(
+    'Magnoliopsida', 'Liliopsida', 'Lycopodiopsida', 'Pinopsida', 'Polypodiopsida',
+    'Bryopsida', 'Equisetopsida', 'Trebouxiophyceae', 'Chlorophyceae', 'Ulvophyceae',
+    'Florideophyceae', 'Bangiophyceae', 'Klebsormidiophyceae', 'Zygnematophyceae',
+    'Charophyceae', 'Phaeophyceae', 'Bacillariophyceae', 'Agaricomycetes',
+    'Sordariomycetes', 'Dothideomycetes', 'Lecanoromycetes', 'Eurotiomycetes'
+  )
+  if (all(c('kingdom', 'species') %in% names(dat))) {
+    if (!'kingdom_conflict' %in% names(dat)) dat$kingdom_conflict <- NA_character_
+    lower <- intersect(c('phylum', 'class', 'order', 'family'), names(dat))
+    is_animal    <- !is.na(dat$kingdom) & dat$kingdom == 'Animalia'
+    is_autotroph <- !is.na(dat$kingdom) & dat$kingdom %in% autotroph_kingdoms
+    animal_vals <- lapply(setNames(lower, lower), function(r) {
+      n_animal <- table(dat[[r]][is_animal]); n_auto <- table(dat[[r]][is_autotroph])
+      n_auto_of <- n_auto[names(n_animal)]; n_auto_of[is.na(n_auto_of)] <- 0L
+      unique(c(names(n_animal)[n_animal > n_auto_of],
+               if (r == 'phylum') animal_phyla else if (r == 'class') animal_classes))
+    })
+    has_animal_rank <- Reduce(`|`, lapply(lower, function(r)
+      !is.na(dat[[r]]) & dat[[r]] %in% animal_vals[[r]]), init = rep(FALSE, nrow(dat)))
+    conflict <- which(is_autotroph & has_animal_rank)
+    if (length(conflict) > 0) {
+      plain_autotroph <- is_autotroph; plain_autotroph[conflict] <- FALSE
+      plant_vals <- lapply(setNames(lower, lower), function(r)
+        unique(c(na.omit(dat[[r]][plain_autotroph]),
+                 if (r == 'phylum') autotroph_phyla else if (r == 'class') autotroph_classes)))
+      dat$kingdom_conflict[conflict] <- dat$kingdom[conflict]
+      dat$kingdom[conflict]          <- 'Animalia'
+      for (r in lower) {
+        clear <- conflict[!is.na(dat[[r]][conflict]) & dat[[r]][conflict] %in% plant_vals[[r]]]
+        dat[[r]][clear] <- NA_character_
+      }
+      input    <- if ('taxon_provided' %in% names(dat)) dat$taxon_provided[conflict]
+                  else gsub('_', ' ', dat$taxon[conflict])
+      binomial <- sub('^([A-Z][a-z]+ [a-z][a-z-]+).*', '\\1', dat$species[conflict])
+      keep     <- !is.na(binomial) & !is.na(input) & binomial == input   # the homonym case
+      dat$species[conflict[keep]] <- binomial[keep]
+      if ('genus' %in% names(dat)) dat$genus[conflict[keep]] <- sub(' .*', '', binomial[keep])
+      gone <- conflict[!keep]
+      dat$species[gone] <- NA_character_
+      for (col in intersect(c('genus', 'taxonomy_source'), names(dat))) dat[[col]][gone] <- NA_character_
+      if ('species_changed' %in% names(dat)) dat$species_changed[conflict] <- FALSE
+    }
   }
 
   # Part 3 ── Order-level class fills
@@ -272,7 +377,14 @@ FixTaxonomyRanks <- function(dat) {
   # matched the name to a homonym in another kingdom, so the species name and
   # every rank are wrong and the Part 5 NA-fills cannot repair them. Only the
   # columns present in `dat` are written, so this is safe both on per-source
-  # frames (no species/genus columns) and on the enrichment cache.
+  # frames (no species/genus columns) and on the enrichment cache. An entry
+  # that sets the kingdom corrects a match to another organism, so the GBIF
+  # match fields of the row (confidence, status, usageKey, gbif_family,
+  # gbif_order) are cleared as well: they describe the wrong organism, and
+  # Pass 1 of RunMe.r prefers gbif_family/gbif_order over family/order (until
+  # #81 Trypanosoma lewisi kept the gastropod family Pleuroceridae in the
+  # output this way). species_changed is set from the comparison with the
+  # input name, as the enrichment stages do.
   taxon_overwrites <- list(
     # Alligator lizard (Anguidae; Feldman et al. 2016, Meiri 2018). GBIF
     # returned no match and NCBI resolved the name to the plant Abronia villosa
@@ -299,7 +411,91 @@ FixTaxonomyRanks <- function(dat) {
     # Bernieria madagascariensis: species column contains author citation string from source data;
     # strip to canonical binomial so downstream checks and API re-queries work correctly.
     'Bernieria_madagascariensis' = c(species = 'Bernieria madagascariensis',
-                                     taxonomy_source = 'manual')
+                                     taxonomy_source = 'manual'),
+    # Valid species the GBIF backbone lacks (#85, 2026-10-05): GBIF matches the
+    # genus only (matchType HIGHERRANK) and no other stage knows the name, so the
+    # record was dropped as unresolved. Ranks from the Catalogue of Life
+    # (ChecklistBank dataset 3LR, match/nameusage: status accepted) unless stated.
+    # Philorea aracniformis and P. maritima Vidal & Flores 2000 (Physogasterini;
+    # Gonzalez_2025, 28 and 13 rows of Gonzalez et al. 2011): the CoL checklist
+    # lists aracniformis; maritima is in the ChileFauna catalogue of Chilean
+    # Tenebrionidae from the same description; GBIF has the genus (4725706) only.
+    'Philorea_aracniformis'    = c(species = 'Philorea aracniformis', genus = 'Philorea',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Coleoptera',
+                                   family = 'Tenebrionidae', taxonomy_source = 'manual'),
+    'Philorea_maritima'        = c(species = 'Philorea maritima', genus = 'Philorea',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Coleoptera',
+                                   family = 'Tenebrionidae', taxonomy_source = 'manual'),
+    # Zonateres lanei Bailey, Thomas & da Silva 2005 (Oskyrko_2024, 1 row): CoL accepted.
+    'Zonateres_lanei'          = c(species = 'Zonateres lanei', genus = 'Zonateres',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Colubridae', taxonomy_source = 'manual'),
+    # Caribicus anelpistus (Schwartz, Graham & Duval 1979) (Feldman_etal_2016, Meiri_2018):
+    # the target of the Celestus_anelpistus rule of fix_misspellings.r; GBIF has the
+    # genus only (11344845, PROVISIONALLY_ACCEPTED), so the record was lost; CoL accepted.
+    'Caribicus_anelpistus'     = c(species = 'Caribicus anelpistus', genus = 'Caribicus',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Diploglossidae', taxonomy_source = 'manual'),
+    # Ancylodactylus gigas (Perret 1986) (Meiri_2024, 1 row): CoL accepted.
+    'Ancylodactylus_gigas'     = c(species = 'Ancylodactylus gigas', genus = 'Ancylodactylus',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Gekkonidae', taxonomy_source = 'manual'),
+    # Urostrophus grilli (Boulenger 1891) (Meiri_2024, 1 row): CoL accepted.
+    'Urostrophus_grilli'       = c(species = 'Urostrophus grilli', genus = 'Urostrophus',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Reptilia', order = 'Squamata',
+                                   family = 'Leiosauridae', taxonomy_source = 'manual'),
+    # Dichotomius opacus (Blanchard 1845) (Anunciacao_etal_2025, 9 rows): CoL accepted as
+    # Dichotomius (Selenocopris) opacus; GBIF has the genus only (1092917).
+    'Dichotomius_opacus'       = c(species = 'Dichotomius opacus', genus = 'Dichotomius',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Coleoptera',
+                                   family = 'Scarabaeidae', taxonomy_source = 'manual'),
+    # Cross-kingdom conflicts found by the scan of #81 (2026-10-05; Part 2b
+    # above keeps such rows out of the autotroph filter from now on). GBIF
+    # verified the same day.
+    # Bull ant (Formicidae; Herberstein_etal_2022, Leahy_2025). An exact
+    # homonym of the green alga Myrmecia pyriformis J.B.Petersen (GBIF
+    # 2638665), so GBIF abstained and NCBI answered with the alga,
+    # 'Myrmecia pyriformis (in: green algae)', kingdom Viridiplantae over the
+    # pre-seeded Hymenoptera/Formicidae. GBIF 1317766, Smith 1858, ACCEPTED.
+    'Myrmecia_pyriformis'      = c(species = 'Myrmecia pyriformis', genus = 'Myrmecia',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Insecta', order = 'Hymenoptera',
+                                   family = 'Formicidae', taxonomy_source = 'manual'),
+    # Ground tit (Paridae; Myhrvold_2015 as 'Parus humilis', the old name).
+    # The GBIF backbone lacks the synonym and fuzzy-matched Pyrus humilis =
+    # Cotoneaster humilis (Rosaceae) at 81 over the pre-seeded Aves/Paridae.
+    # Accepted name Pseudopodoces humilis, under which Myhrvold_2015 also has a
+    # record, so this record folds into that species.
+    'Parus_humilis'            = c(species = 'Pseudopodoces humilis', genus = 'Pseudopodoces',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Aves', order = 'Passeriformes',
+                                   family = 'Paridae', taxonomy_source = 'manual'),
+    # Fortescue (Tetrarogidae). An exact homonym of the campanula Centropogon
+    # australis (E.Wimm.) Gleason (GBIF 3165329); NCBI answered 'Centropogon
+    # australis (in: eudicots)', Viridiplantae/Streptophyta/Magnoliopsida over
+    # the pre-seeded Scorpaeniformes/Tetrarogidae. GBIF 2335165, White 1790,
+    # ACCEPTED; class as the cache has it for Notesthes robusta.
+    'Centropogon_australis'    = c(species = 'Centropogon australis', genus = 'Centropogon',
+                                   kingdom = 'Animalia', phylum = 'Chordata',
+                                   class = 'Actinopterygii', order = 'Scorpaeniformes',
+                                   family = 'Tetrarogidae', taxonomy_source = 'manual'),
+    # Springtail (Neanuridae; Hishi_etal_2019). GBIF fuzzy-matched Lobelia
+    # decipiens = Monopsis decipiens (Campanulaceae) at 83 over the pre-seeded
+    # Collembola/Neanuridae. Lobella decipiens Yosii, 1965 is accepted in the
+    # Catalogue of Life; the GBIF backbone's accepted name is Lobellina
+    # decipiens (R.Yosii, 1965), 10776730, as for Lobella_mizunasiana ->
+    # Lobellina mizunasiana in the cache.
+    'Lobella_decipiens'        = c(species = 'Lobellina decipiens', genus = 'Lobellina',
+                                   kingdom = 'Animalia', phylum = 'Arthropoda',
+                                   class = 'Collembola', order = 'Poduromorpha',
+                                   family = 'Neanuridae', taxonomy_source = 'manual')
   )
   if ('taxon' %in% names(dat)) {
     for (tx in names(taxon_overwrites)) {
@@ -308,7 +504,16 @@ FixTaxonomyRanks <- function(dat) {
       fill <- taxon_overwrites[[tx]]
       for (col in intersect(names(fill), names(dat)))
         dat[[col]][idx] <- fill[[col]]
-      if ('species_changed' %in% names(dat)) dat$species_changed[idx] <- FALSE
+      if ('kingdom' %in% names(fill))
+        for (col in intersect(c('gbif_confidence', 'gbif_status', 'gbif_usageKey',
+                                'gbif_family', 'gbif_order'), names(dat)))
+          dat[[col]][idx] <- NA
+      if (all(c('species_changed', 'species') %in% names(dat))) {
+        input <- if ('taxon_provided' %in% names(dat)) dat$taxon_provided[idx]
+                 else gsub('_', ' ', dat$taxon[idx])
+        dat$species_changed[idx] <- !is.na(dat$species[idx]) & !is.na(input) &
+                                    dat$species[idx] != input
+      }
     }
   }
 

@@ -77,7 +77,13 @@ Expect(Has(ErrorOf(LoadProvenanceClasses(WriteReg(Reg(source_label = 'A', class 
 # ---- source_mass ----------------------------------------------------------------------------------
 cat('SplitSourceMass(), KnownConversionCiteIDs()\n')
 known <- KnownConversionCiteIDs()
-Expect(all(c('Kiorboe_2013', 'Lucas_2011', 'Brey_2010', 'Studier_1992', 'MendenDeuer_2000') %in% known), 'the conversion CiteIDs come from MassConversionFactors')
+Expect(all(c('Kiorboe_2013', 'Lucas_2011', 'Brey_2010', 'Studier_1992', 'MendenDeuer_2000', 'Horn_2016', 'Rizzuto_2019') %in% known), 'the conversion CiteIDs come from MassConversionFactors')
+Expect(identical(ConversionCiteIDs(c('bird', 'mammal', 'vertebrate')), c('Horn_2016', 'Rizzuto_2019', '')) &&
+         identical(LabelWithConversion('Gonzalez_2025', c('bird', 'mammal', 'vertebrate')),
+                   c('Gonzalez_2025; Horn_2016', 'Gonzalez_2025; Rizzuto_2019', 'Gonzalez_2025')) &&
+         isTRUE(all.equal(ToWetMass(c(0.3906, 0.2925, 0.25), from = 'dry', group = c('bird', 'mammal', 'vertebrate')), c(1, 1, 1))) &&
+         isTRUE(all.equal(ToWetMass(0.3906 * 0.8527, from = 'afdw', group = 'bird'), 1)),
+       'the bird (Horn 2016) and mammal (Rizzuto 2019) groups convert and cite; the generic vertebrate group stays uncited (#86)')
 sm <- SplitSourceMass(c('Kiorboe_2013; Brey_2010', 'Smith_2003', 'Hebert_etal_2016; Kiorboe_2013; Lucas_2011', 'X; Brey_2010; Brey_2010', NA), known)
 Expect(identical(sm$label, c('Kiorboe_2013', 'Smith_2003', 'Hebert_etal_2016', 'X', NA)) &&
          identical(sm$conversion, c('Brey_2010', NA, 'Kiorboe_2013; Lucas_2011', 'Brey_2010', NA)),

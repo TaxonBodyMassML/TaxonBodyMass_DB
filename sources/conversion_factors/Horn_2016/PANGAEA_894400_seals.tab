@@ -1,0 +1,76 @@
+/* DATA DESCRIPTION:
+Citation:	Horn, Sabine; de la Vega, Camille (2018): Assessment of wet mass, dry mass, ash mass, ash free dry mass, carbon content and nitrogen content of harbor seal (Phoca vitulina) tissues [dataset]. Alfred Wegener Institute - Wadden Sea Station Sylt, PANGAEA, https://doi.org/10.1594/PANGAEA.894400, 
+	In supplement to: Horn, S; de la Vega, C (2016): Relationships between fresh weight, dry weight, ash free dry weight, carbon and nitrogen content for selected vertebrates. Journal of Experimental Marine Biology and Ecology, 481, 41-48, https://doi.org/10.1016/j.jembe.2016.04.010
+Coverage:	MEDIAN LATITUDE: 54.368943 * MEDIAN LONGITUDE: 8.580000 * SOUTH-BOUND LATITUDE: 54.174720 * WEST-BOUND LONGITUDE: 8.322610 * NORTH-BOUND LATITUDE: 54.641470 * EAST-BOUND LONGITUDE: 8.741830
+	DATE/TIME START: 2015-06-03T00:00:00 * DATE/TIME END: 2015-08-01T00:00:00
+Event(s):	Amrum_BIO2 * LATITUDE: 54.641470 * LONGITUDE: 8.322610 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Blauortsand_BIO * LATITUDE: 54.174720 * LONGITUDE: 8.675560 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+	Grothusenkoog_BIO * LATITUDE: 54.290640 * LONGITUDE: 8.741830 * LOCATION: Wadden Sea * METHOD/DEVICE: Biology (BIO)
+Comment:	The table contains measured values for fresh weight, dry weight, ash weight and ash free dry weight of tissue samples of three individual harbor seals (Phoca vitulina) found in the Wadden Sea. In addition, %C and %N was measured for each tissue type.
+Parameter(s):	Species (Species) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Identification (ID) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of harbor seal individual
+	DATE/TIME (Date/Time) * GEOCODE * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Location (Location) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Latitude of event (Latitude) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Longitude of event (Longitude) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	UTM Zone, Universal Transverse Mercator (UTM Zone) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	UTM Easting, Universal Transverse Mercator [m] (UTM east) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	UTM Northing, Universal Transverse Mercator [m] (UTM north) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Phoca vitulina, wet mass [g] (P. vitulina wm) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Sample type (Samp type) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de)
+	Wet mass [g] (Wet m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of tissue sample
+	Dry mass [g] (Dry m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of tissue sample
+	Ash mass [g] (Ash m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of tissue sample
+	Ash free dry mass [g] (afdm) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: of tissue sample
+	Sample mass [mg] (Samp m) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: for C:N sample
+	Carbon, total [%] (TC) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: dry mass
+	Nitrogen, total [%] (TN) * PI: Horn, Sabine (https://orcid.org/0000-0003-1637-1191, sabine.horn@awi.de) * COMMENT: dry mass
+License:	Creative Commons Attribution 3.0 Unported (CC-BY-3.0) (URI: https://creativecommons.org/licenses/by/3.0/)
+Size:	651 data points
+*/
+Species	ID	Date/Time	Location	Latitude	Longitude	UTM Zone	UTM east [m]	UTM north [m]	P. vitulina wm [g]	Samp type	Wet m [g]	Dry m [g]	Ash m [g]	afdm [g]	Samp m [mg]	TC [%]	TN [%]
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	blood	7.1053	1.5411	0.0842	1.4569	1.26	0.49	0.15
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	blubber-skin	3.9184	2.2855	0.0404	2.2451	1.35	0.61	0.06
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	bones	4.0369	1.9738	0.7975	1.1763	1.17	0.27	0.07
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	brain	1.9057	0.3966	0.0278	0.3688	1.26	0.52	0.09
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	heart	2.3905	0.6067	0.0257	0.5810	1.35	0.50	0.12
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	intestine	0.6072	0.1240	0.0086	0.1154	1.33	0.47	0.13
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	kidney	2.5022	0.6284	0.0323	0.5961	1.26	0.51	0.12
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	left over	4.0493	0.8182	0.0484	0.7698	1.27	0.47	0.13
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	liver	2.5307	0.7886	0.0296	0.7590	1.17	0.52	0.13
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	lung	4.2378	1.1702	0.0517	1.1185	1.26	0.48	0.14
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	muscle	1.9153	0.5481	0.0218	0.5263	1.17	0.48	0.15
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	pancreas	2.2141	0.5252	0.0297	0.4955	1.09	0.49	0.13
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	reprod syst	6.7558	1.4308	0.0753	1.3555	1.20	0.46	0.14
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	spleen	1.1710	0.2952	0.0140	0.2812	0.97	0.48	0.14
+Phoca vitulina	1	2015-06-03	Grothusenkoog	54.2906	8.7418	32	483195	6015890	83800	stomac-oesophage	4.4626	1.1971	0.0486	1.1485	1.26	0.47	0.15
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	blood							
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	blubber-skin	3.8471	1.7016	0.0991	1.6025	0.95	0.50	0.02
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	bones	2.1830	0.9694	0.1833	0.7861	1.13	0.41	0.12
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	brain	2.1293	0.5475	0.0351	0.5124	1.11	0.53	0.09
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	heart	1.9626	0.4658	0.0208	0.4450	1.25	0.49	0.13
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	intestine	1.5792	0.3146	0.0174	0.2972	1.08	0.45	0.13
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	kidney	2.4904	0.5737	0.0287	0.5450	1.27	0.48	0.12
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	left over							
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	liver	1.7533	0.3777	0.0210	0.3567	1.22	0.46	0.12
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	lung	2.8949	0.8334	0.0321	0.8013	1.05	0.51	0.14
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	muscle	3.1632	0.8868	0.0396	0.8472	1.50	0.48	0.15
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	pancreas	2.3430	0.6018	0.0388	0.5630	1.08	0.46	0.13
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	reprod syst	1.8302	0.4480	0.0194	0.4286	1.03	0.45	0.15
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	spleen	1.9014	0.4548	0.0220	0.4328	0.95	0.47	0.14
+Phoca vitulina	2	2015-06-15	Amrum	54.6415	8.3226	32	456283	6055106	85400	stomac-oesophage	2.6112	0.6564	0.0252	0.6312	1.24	0.47	0.16
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	blood	2.2236	0.7199	0.0230	0.6969	0.93	0.51	0.16
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	blubber-skin	4.7620	3.7623	0.1073	3.6550	1.03	0.67	0.01
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	bones	1.7520	0.6453	0.0512	0.5941	1.10	0.37	0.11
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	brain	0.7332	0.1687	0.0114	0.1573	1.17	0.55	0.09
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	heart	2.3643	0.5285	0.0251	0.5034	1.02	0.47	0.13
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	intestine	1.9279	0.5056	0.0344	0.4712	0.98	0.47	0.13
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	kidney	0.9584	0.2276	0.0139	0.2137	1.22	0.48	0.13
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	left over							
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	liver	1.7854	0.5450	0.0359	0.5091	1.34	0.48	0.12
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	lung	2.9116	0.6822	0.0399	0.6423	1.22	0.48	0.13
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	muscle	5.3335	1.4524	0.0979	1.3545	1.31	0.44	0.13
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	pancreas	2.1908	0.4951	0.0331	0.4620	1.05	0.47	0.13
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	reprod syst	0.4123	0.1051	0.0056	0.0995	1.31	0.44	0.14
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	spleen	2.9515	0.7044	0.0475	0.6569			
+Phoca vitulina	3	2015-08-01	Blauortsand	54.1747	8.6756	32	478822	6003010	16200	stomac-oesophage	2.5003	0.5837	0.0627	0.5210	0.95	0.45	0.13
