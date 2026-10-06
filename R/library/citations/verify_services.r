@@ -367,13 +367,20 @@ ReadSciteChecks <- function(path) {
     stop(basename(path), ": a consensus-mcp row must have notice_type 'unchecked' (Consensus has no retraction field)", call. = FALSE)
   if (any(cons & toupper(d$is_retracted) %in% 'TRUE'))
     stop(basename(path), ': a consensus-mcp row cannot assert is_retracted', call. = FALSE)
+  waiv <- d$checked_by == 'owner-waiver'
+  if (any(waiv & !(d$notice_type %in% 'waived')))
+    stop(basename(path), ": an owner-waiver row must have notice_type 'waived'", call. = FALSE)
+  if (any(waiv & toupper(d$is_retracted) %in% 'TRUE'))
+    stop(basename(path), ': an owner-waiver row cannot assert is_retracted', call. = FALSE)
   d
 }
 
 # The screening verdict for one DOI from the rows of ReadSciteChecks():
 # list(checked, service, is_retracted, notice, gap). `service` is the
 # screening service to append to `services` ('scite-mcp' wins over
-# 'consensus-mcp'); `gap` is TRUE when the only row says checked_by 'none'.
+# 'consensus-mcp', which wins over 'owner-waiver'); `gap` is TRUE when the only
+# row says checked_by 'none'. An 'owner-waiver' row is a screen without notice:
+# it closes the gap of a 'none' row and never flips a status.
 SciteVerdict <- function(doi, scite) {
   none <- list(checked = FALSE, service = NA_character_, is_retracted = FALSE, notice = NA_character_, gap = FALSE)
   doi <- CleanDOI(doi)
@@ -382,7 +389,8 @@ SciteVerdict <- function(doi, scite) {
   if (nrow(rows) == 0) return(none)
   answered <- rows[rows$checked_by != 'none', , drop = FALSE]
   if (nrow(answered) == 0) return(list(checked = FALSE, service = 'none', is_retracted = FALSE, notice = NA_character_, gap = TRUE))
-  service <- if ('scite-mcp' %in% answered$checked_by) 'scite-mcp' else 'consensus-mcp'
+  service <- if ('scite-mcp' %in% answered$checked_by) 'scite-mcp' else
+             if ('consensus-mcp' %in% answered$checked_by) 'consensus-mcp' else 'owner-waiver'
   notices <- answered$notice_type[!is.na(answered$notice_type) & nzchar(answered$notice_type) &
                                   !answered$notice_type %in% screening_notice_none]
   list(checked = TRUE, service = service,

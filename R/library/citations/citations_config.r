@@ -193,12 +193,18 @@ pending_queue_columns <- c(
 # notice_type 'unchecked' and the DOI relies on the Crossref update-to and
 # OpenAlex is_retracted flags that verify_services.r consults for every DOI), or
 # 'none' (neither service answered: the row records the gap and the reference
-# stays pending). `services` of a verified reference lists the services behind
-# the decision: 'crossref;openalex' plus ';scite-mcp' or ';consensus-mcp' when a
-# screening row exists for its DOI.
+# stays pending), or 'owner-waiver' (owner decision 2026-10-05: a DOI that no
+# service indexes -- the JSTOR-era Mammalian Species accounts of Smith_2003 --
+# is waived by the owner; the row carries notice_type 'waived', counts as a
+# screen without notice, so that it never turns a status to pending /
+# unscreened, and is superseded by any later scite-mcp or consensus-mcp row;
+# the Scite re-screen is due after 2026-11-01). `services` of a verified
+# reference lists the services behind the decision: 'crossref;openalex' plus
+# ';scite-mcp', ';consensus-mcp' or ';owner-waiver' when a screening row
+# exists for its DOI.
 scite_check_columns <- c('doi', 'is_retracted', 'notice_type', 'notice_doi', 'checked_at', 'checked_by')
-screening_services  <- c('scite-mcp', 'consensus-mcp', 'none')
-screening_notice_none <- c('none', 'unchecked')     # notice_type values that are not a notice
+screening_services  <- c('scite-mcp', 'consensus-mcp', 'owner-waiver', 'none')
+screening_notice_none <- c('none', 'unchecked', 'waived')     # notice_type values that are not a notice
 
 # Bib/source_provenance_classes.csv (issue #1, 1.6)
 provenance_class_columns <- c('source_label', 'class', 'default_provenance_type', 'equation_bibcite', 'notes')

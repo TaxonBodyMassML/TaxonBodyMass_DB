@@ -222,9 +222,22 @@ good <- rbind(Row('https://doi.org/10.1/A', 'FALSE', 'none', 'scite-mcp'),
               Row('10.1/f', 'FALSE', 'none', 'scite-mcp'),
               Row('10.1/f', NA, 'unchecked', 'consensus-mcp'),
               Row('10.1/g', NA, NA, 'none'),
-              Row('10.1/g', 'FALSE', 'correction', 'scite-mcp'))
+              Row('10.1/g', 'FALSE', 'correction', 'scite-mcp'),
+              Row('10.1/h', NA, NA, 'none'),
+              Row('10.1/h', NA, 'waived', 'owner-waiver'),
+              Row('10.1/i', NA, 'waived', 'owner-waiver'),
+              Row('10.1/i', 'TRUE', 'retraction', 'scite-mcp'))
 sc <- ReadSciteChecks(WriteChecks(good))
-Expect(nrow(sc) == 9 && sc$doi[1] == '10.1/a' && all(sc$checked_by %in% screening_services), 'a valid file reads with cleaned DOIs')
+Expect(nrow(sc) == 13 && sc$doi[1] == '10.1/a' && all(sc$checked_by %in% screening_services), 'a valid file reads with cleaned DOIs')
+Expect(Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', NA, 'unchecked', 'owner-waiver')))), "must have notice_type 'waived'") &&
+         Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', 'TRUE', 'waived', 'owner-waiver')))), 'cannot assert is_retracted'),
+       'an owner-waiver row must say waived and cannot assert a retraction')
+v <- SciteVerdict('10.1/h', sc)
+Expect(v$checked && v$service == 'owner-waiver' && !v$is_retracted && is.na(v$notice) && !v$gap,
+       "an owner-waiver row closes the gap of a 'none' row: checked, no notice, no gap")
+v <- SciteVerdict('10.1/i', sc)
+Expect(v$checked && v$service == 'scite-mcp' && v$is_retracted && v$notice == 'scite-mcp:retraction',
+       'a scite-mcp row supersedes an owner-waiver row')
 Expect(Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', 'FALSE', 'none', 'scholar')))), 'checked_by must be one of'),
        'an unknown screening service is rejected')
 Expect(Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', 'FALSE', 'none', 'consensus-mcp')))), "must have notice_type 'unchecked'"),
