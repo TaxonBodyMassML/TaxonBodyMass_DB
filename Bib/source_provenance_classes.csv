@@ -19,7 +19,7 @@ DeLong_etal_2018,compilation,unknown,,1,tier B; Source = FirstAuthor year JOURNA
 Ehnes_etal_2011,compilation,unknown,,1,tier A2; studies keys -> appendix pdf; ~63% this study (self rows)
 Eklof_etal_2017,primary,measured_in_source,,1,"tier F; own measurements (tissue mass, whole-mass conversion)"
 Ernest_2003,compilation,unknown,,1,tier A2; DataRetriever; refs column
-Faurby_etal_2018,compilation,unknown,,1,tier B; Mass.Source full citation -> Smith 2003 hop 2; Mass.Method per row to become prov_type
+Faurby_etal_2018,compilation,unknown,,1,"tier B; in-row Mass.Source citations hashed to h:<sha1-8> keys by the parser (596 keys, 5,273 records; Smith et al. 2003 MOM on 3,421 rows -> hop 2 to Smith_2003 once verified; 92 handbooks, field guides, encyclopaedias and faunal databases role compilation, journal articles measurement; 481 keys cite a journal, volume and pages without author or title, read by ParseJournalOnlyStyle() and decided by the container_volume_page rule); Mass.Method Assumed isometric / Estimated based on equation rows (688) carry the record-level override prov_type derived_allometry citing the length source; Stage 2 round 2026-10-06 (Phases A-C: 317 of 596 keys accepted, 90.8% of record links with a primary CiteID, 3,950 rows hop 2 through Smith_2003; 268 title-less keys open, issue #128)"
 Feldman_etal_2016,derived,derived_allometry,Feldman:2016aa,2,tier E; mass from length through the equations of the source itself; measurement refs by binomial join to Meiri_2018 later
 Fisher_2001,compilation,unknown,,1,tier A2; Source (female mass) short keys -> appendixA_references.bib (576)
 GalanAcedo_etal_2026,compilation,unknown,,1,"tier C; Refs1 integers -> Zenodo References.docx (1,216 entries)"
