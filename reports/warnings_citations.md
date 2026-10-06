@@ -1,11 +1,11 @@
-# Citation and provenance warnings -- 2026-10-06 12:32:38
+# Citation and provenance warnings -- 2026-10-06 13:32:41
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 211506 (39887 species); distinct primary CiteIDs: 5085; unresolved references (pending / not_found): 955; unverified references: 5063
-- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 2156
+- provenance rows: 211506 (39887 species); distinct primary CiteIDs: 9288; unresolved references (pending / not_found): 968; unverified references: 829
+- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 3846
 
 ## Problems
 
@@ -78,7 +78,7 @@ One row per source label: species and record links (species x source x reference
 | Makarieva_2008 | compilation | 1419 | 2958 | 97.7 | 340 | 299 | 145 | 16 | 6 | 0 | 0 | 19 | 0 | 0 |
 | Mathieu_2014 | compilation | 96 | 97 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | McCoy_2008 | compilation | 1050 | 2801 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2800 |
-| Meiri_2018 | derived | 6582 | 46794 | 34.5 | 6233 | 1140 | 0 | 7 | 3 | 9 | 33 | 5041 | 0 | 0 |
+| Meiri_2018 | derived | 6582 | 46794 | 90.5 | 6233 | 5361 | 1690 | 13 | 10 | 9 | 33 | 807 | 0 | 0 |
 | Meiri_2024 | compilation | 1162 | 1162 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mercer_etal_2001 | primary | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
