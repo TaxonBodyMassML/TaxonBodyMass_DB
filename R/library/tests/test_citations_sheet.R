@@ -64,8 +64,9 @@ Expect(FormatCitationTextNoDOI(Row()) == 'Kremer (1976). The ecology of the cten
            'Kremer (1976). The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay. Mar. Biol., 3, 4-10. No DOI.' &&
          FormatCitationTextNoDOI(Row(author1 = NA, year = NA, container = NA)) == '(n.d.). The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay. No DOI.' &&
          startsWith(FormatCitationTextNoDOI(Row(author1 = 'Ikeda and Hirakawa and Imamura')), 'Ikeda, Hirakawa, & Imamura (1976).') &&
-         startsWith(FormatCitationTextNoDOI(Row(author1 = 'Omori and Ikeda')), 'Omori & Ikeda (1976).'),
-       'the DOI-less cell from the approved parsed fields: the author field as approved (no invented et al.), ending with No DOI')
+         startsWith(FormatCitationTextNoDOI(Row(author1 = 'Omori and Ikeda')), 'Omori & Ikeda (1976).') &&
+         startsWith(FormatCitationTextNoDOI(Row(author1 = '{Birdcare Avicultural}')), 'Birdcare Avicultural (1976).'),
+       'the DOI-less cell from the approved parsed fields: the author field as approved (no invented et al.; corporate braces dropped), ending with No DOI')
 Expect(grepl('^Ikeda, T. & Bruce, B. \\(1985\\)\\.', FormatCitationText(w, year_override = 1985L)), 'a recorded year override changes the Citation cell year')
 
 # ---- the rows -------------------------------------------------------------------------------------

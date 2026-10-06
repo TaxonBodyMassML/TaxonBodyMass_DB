@@ -7,6 +7,10 @@
 # rows) of the names whose authority kingdom was a plant, alga or fungus over
 # animal ranks and that Part 2b of fix_taxonomy_ranks.r corrected (#81); taken
 # before FilterAutotrophs(), which dropped them unreported until then.
+# `col_resolutions`: an optional data frame (taxon, taxon_provided,
+# col_matched_name, col_match_type, col_status, species, sources, rows) of
+# the names stage 4 (Catalogue of Life) resolved, i.e. the names GBIF, NCBI
+# and WoRMS could not (#103); listed so the stage's work is checked by eye.
 # `exclusions`: the result of ExcludeDiscordantValues() (#34): its per-value
 # exclusion table is written as its own section of warnings_mass_values.md
 # (the excluded value beside the kept ones), and its unresolved table gives
@@ -14,7 +18,8 @@
 # `within_source` then holds the independent values, excluded ones included
 # (columns excluded, exclusion_rule, value_tier).
 check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
-                           unresolved = NULL, kingdom_conflicts = NULL, exclusions = NULL) {
+                           unresolved = NULL, kingdom_conflicts = NULL,
+                           col_resolutions = NULL, exclusions = NULL) {
   dir.create(file.path(wd_root, "reports"), showWarnings = FALSE)
   warn <- character(0)
   warn_summary <- character(0)
@@ -333,6 +338,26 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
     warn_summary <- c(warn_summary, sprintf(
       "- Kingdom conflicts corrected before the autotroph filter: %d names, %d rows (%d unresolved)",
       nrow(kc), sum(kc$rows), sum(is.na(kc$species))))
+  }
+
+  # 14. Names resolved by the Catalogue of Life stage (#103): the input, the
+  #     name COL matched (a spelling variant shows here), the match type and
+  #     the usage status (a synonym resolves to its accepted species), the
+  #     accepted species, the sources and record counts. These are the names
+  #     GBIF, NCBI and WoRMS could not resolve; until #103 the stage was a
+  #     no-op, so every one of them was dropped.
+  if (!is.null(col_resolutions) && nrow(col_resolutions) > 0) {
+    cr <- col_resolutions[order(col_resolutions$taxon), ]
+    na_dash <- function(x) ifelse(is.na(x), "-", as.character(x))
+    warn <- c(warn, sprintf(
+      "\n## Names resolved by Catalogue of Life (%d names, %d rows -- names GBIF, NCBI and WoRMS lacked; stage 4, #103)\n\n%s",
+      nrow(cr), sum(cr$rows),
+      paste(sprintf("%s | matched %s (%s, %s) | species=%s | %s | %d row%s",
+                    cr$taxon, na_dash(cr$col_matched_name), na_dash(cr$col_match_type), na_dash(cr$col_status),
+                    cr$species, cr$sources, cr$rows, ifelse(cr$rows == 1, "", "s")), collapse = "\n\n")))
+    warn_summary <- c(warn_summary, sprintf(
+      "- Names resolved by Catalogue of Life: %d names, %d rows (%d under another name)",
+      nrow(cr), sum(cr$rows), sum(cr$taxon_provided != cr$species)))
   }
 
   # Write reports
