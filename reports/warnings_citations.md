@@ -1,11 +1,11 @@
-# Citation and provenance warnings -- 2026-10-06 09:55:05
+# Citation and provenance warnings -- 2026-10-06 10:44:17
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 179241 (39887 species); distinct primary CiteIDs: 2209; unresolved references (pending / not_found): 41; unverified references: 5044
-- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 87
+- provenance rows: 180188 (39887 species); distinct primary CiteIDs: 2369; unresolved references (pending / not_found): 63; unverified references: 5063
+- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 232
 
 ## Problems
 
@@ -57,7 +57,7 @@ One row per source label: species and record links (species x source x reference
 | Herberstein_etal_2022 | compilation | 1653 | 2693 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 380 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hishi_etal_2019 | derived | 320 | 324 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hoehler_etal_2023 | compilation | 1764 | 2771 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hoehler_etal_2023 | compilation | 1764 | 3411 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ikeda_2014 | compilation | 332 | 690 | 99.7 | 37 | 36 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
@@ -75,7 +75,7 @@ One row per source label: species and record links (species x source x reference
 | Lislevand_etal_2007 | compilation | 3415 | 7399 | 67.8 | 84 | 81 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 42 | 196 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mahe_2023 | primary | 71 | 14563 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Makarieva_2008 | compilation | 1419 | 2052 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Makarieva_2008 | compilation | 1419 | 2958 | 97.7 | 340 | 299 | 145 | 16 | 6 | 0 | 0 | 19 | 0 | 0 |
 | Mathieu_2014 | compilation | 96 | 97 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | McCoy_2008 | compilation | 1050 | 2801 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 2800 |
 | Meiri_2018 | derived | 6582 | 46794 | 34.5 | 6233 | 1140 | 0 | 7 | 3 | 9 | 33 | 5041 | 0 | 0 |
