@@ -429,9 +429,10 @@ BuildBibEntryNoDOI <- function(row, key, approved_by, approved_date) {
 # key from the row's parsed surname and is reported in `authorless` (#64). A
 # nodoi row reuses the key of the same DOI-less work approved for another
 # source (MatchingNoDOIEntry()); a manual_bib row must name a curated key.
-# `curated`: ReadBibEntries() of the curated bib; `ids`: the tracked CiteIDs
-# table (Bibcite, CiteID, doi). Returns list(prim, entries, authorless,
-# no_record): `entries` is the named character vector key -> entry text.
+# A row that keeps its key keeps its CiteID (KeepOrMintCiteID()). `curated`:
+# ReadBibEntries() of the curated bib; `ids`: the tracked CiteIDs table
+# (Bibcite, CiteID, doi). Returns list(prim, entries, authorless, no_record):
+# `entries` is the named character vector key -> entry text.
 AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(doi) CrossrefWork(doi, cfg)) {
   known_keys <- c(curated$key, ids$Bibcite)
   known_dois <- setNames(curated$doi, curated$key)
@@ -463,7 +464,7 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       known_keys <- union(known_keys, key)
       row_dois <- c(row_dois, setNames(r$doi, key))       # the next row with this DOI reuses the key
       all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(fam, yr, r$doi, key, known_ids)
+      all_prim$cite_id[i] <- KeepOrMintCiteID(r, key, fam, yr, known_ids)
     } else if (r$match_status == 'nodoi_approved') {
       surname <- FirstOfAuthorList(r$parsed_author1)
       twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
@@ -474,7 +475,7 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       }
       known_keys <- union(known_keys, key)
       all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(surname, r$parsed_year, NA, key, known_ids)
+      all_prim$cite_id[i] <- KeepOrMintCiteID(r, key, surname, r$parsed_year, known_ids)
     } else if (r$match_reason %in% 'manual_bib') {
       if (!r$bibcite %in% curated$key) stop('manual bibcite ', r$bibcite, ' (', r$source_label, ' ', r$native_key, ') is not in ', basename(cfg$curated_bib), call. = FALSE)
       all_prim$cite_id[i] <- CiteIDFor(sub(':.*$', '', r$bibcite), sub('^.*:(\\d{4}).*$', '\\1', r$bibcite), NA, r$bibcite, known_ids)
@@ -482,6 +483,14 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
     Remember(i)
   }
   list(prim = all_prim, entries = entries, authorless = authorless, no_record = no_record)
+}
+
+# The CiteID of a row that keeps its key is the one it has (#114 item 7: a
+# stale Sheet row for the same Bibcite once flipped Wilman's Dunning08 id);
+# otherwise CiteIDFor() reuses the id of the key or DOI in the table, or mints.
+KeepOrMintCiteID <- function(r, key, surname, year, known_ids) {
+  if (!is.na(r$cite_id) && !is.na(r$bibcite) && identical(r$bibcite, key)) return(r$cite_id)
+  CiteIDFor(surname, year, r$doi, key, known_ids)
 }
 
 # ---- the file ---------------------------------------------------------------------------

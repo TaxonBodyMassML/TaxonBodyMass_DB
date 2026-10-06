@@ -216,12 +216,15 @@ if (Flag('--bib')) {
   WritePrimaryBib(entries, cfg$primary_bib)
   CheckBibKeysUnique(cfg$curated_bib, cfg$primary_bib)
   n_parsed <- CheckBibSyntax(cfg$primary_bib)
-  # write back every source's bibcite / cite_id
+  # write back every source's bibcite / cite_id -- only the files whose values
+  # changed (#114 item 7: an added optional column or quoting alone is no change)
+  written <- character()
   for (l in unique(all_prim$source_label)) {
     p <- all_prim[all_prim$source_label == l, ]
-    WritePrimaryReferences(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))
+    if (WritePrimaryReferencesIfChanged(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))) written <- c(written, l)
   }
   prim <- all_prim[all_prim$source_label == src, ]
+  Note('--bib: primary_references written for %d source(s)%s', length(written), if (length(written) == 0) '' else paste0(': ', paste(written, collapse = ', ')))
   if (length(res$no_record) > 0)
     Note('--bib: %d accepted DOI(s) have no Crossref record, so no entry was built and the row keeps its bibcite / cite_id as they were (an OpenAlex-only candidate approved before #114 item 3: withdraw the decision and give doi:<DOI> once it resolves at Crossref, or nodoi): %s',
          length(res$no_record), paste(res$no_record, collapse = '; '))

@@ -14,7 +14,7 @@
 #                               role 'self' for the compiler's own unpublished data
 #   MergePrimaryReferences()    re-running --init keeps the owner's edits and the
 #                               verification columns of existing rows
-#   ReadPrimaryReferences() / WritePrimaryReferences()
+#   ReadPrimaryReferences() / WritePrimaryReferences() / WritePrimaryReferencesIfChanged()
 # The parsers for the other formats of issue #1 (xlsx, bib, docx, pdf, html,
 # EndNote .doc) stop with a clear message until their tier is reached.
 # Everything is offline.
@@ -443,4 +443,32 @@ WritePrimaryReferences <- function(d, path) {
   dir.create(dirname(path), showWarnings = FALSE, recursive = TRUE)
   write.csv(d, path, row.names = FALSE, na = '', fileEncoding = 'UTF-8')
   invisible(d)
+}
+
+# Two primary_references frames hold the same values: the same rows in the
+# same order and, column by column, the same text (NA equal to NA; numbers
+# compared as numbers). Columns a file lacks (the optional ones) read as NA,
+# so a file written before `owner_review` or `parsed_url` is the same as its
+# frame with those columns empty.
+SamePrimaryReferences <- function(a, b) {
+  if (is.null(a) || is.null(b) || nrow(a) != nrow(b)) return(FALSE)
+  for (col in primary_reference_columns) {
+    x <- a[[col]]; y <- b[[col]]
+    if (is.numeric(x) || is.numeric(y)) { x <- suppressWarnings(as.numeric(x)); y <- suppressWarnings(as.numeric(y)) }
+    else { x <- as.character(x); y <- as.character(y) }
+    same <- (is.na(x) & is.na(y)) | (!is.na(x) & !is.na(y) & x == y)
+    if (!all(same)) return(FALSE)
+  }
+  TRUE
+}
+
+# Write `d` only when the file's values differ from it (#114 item 7): a run
+# that changes nothing for a source, or only the column set, leaves its file
+# alone, so that --bib does not rewrite another source's file for an added
+# optional column or quoting. Returns TRUE when the file was written.
+WritePrimaryReferencesIfChanged <- function(d, path) {
+  existing <- ReadPrimaryReferences(path)
+  if (!is.null(existing) && SamePrimaryReferences(existing, d)) return(invisible(FALSE))
+  WritePrimaryReferences(d, path)
+  invisible(TRUE)
 }

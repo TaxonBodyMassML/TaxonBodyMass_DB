@@ -276,6 +276,13 @@ res2 <- AssignPrimaryKeys(res$prim, cfg, cur_syn, ids0)
 Expect(identical(res2$prim, res$prim) && identical(res2$entries, res$entries), 'a second pass over the keyed frame reproduces it (idempotent)')
 Expect(Has(ErrorOf(AssignPrimaryKeys(PRow('X', 'm', 'approved', bibcite = 'Nope:2000aa', reason = 'manual_bib'), cfg, cur_syn, ids0)), 'is not in'),
        'a manual bibcite the curated bib lacks stops')
+stale <- rbind(ids0, data.frame(Bibcite = 'Ikeda:1986aa', CiteID = 'IkedaJr_1985', doi = '10.1007/bf00392514', stringsAsFactors = FALSE))   # a stale Sheet row for the same Bibcite and DOI
+keep <- AssignPrimaryKeys(PRow('Wilman_etal_2014', 'Dunning08', 'approved', doi = '10.1007/bf00392514', bibcite = 'Ikeda:1986aa', cite_id = 'Ikeda_1986', reason = 'owner_candidate'), cfg, cur_syn, stale)
+fresh <- AssignPrimaryKeys(PRow('Wilman_etal_2014', 'Dunning08', 'approved', doi = '10.1007/bf00392514', reason = 'owner_candidate'), cfg, cur_syn, stale)
+Expect(keep$prim$cite_id == 'Ikeda_1986' && keep$prim$bibcite == 'Ikeda:1986aa' && fresh$prim$cite_id == 'IkedaJr_1985' && fresh$prim$bibcite == 'Ikeda:1986ab',
+       'a row that keeps its key keeps its CiteID over a Sheet row for the same Bibcite and DOI; a keyless row takes the table\'s id by DOI (#114 item 7)')
+nk <- AssignPrimaryKeys(PRow('Kiorboe_2013', '9', 'nodoi_approved', bibcite = 'Kremer:1976aa', cite_id = 'Kremer_1976x', reason = 'owner_nodoi'), cfg, cur_syn, ids0)
+Expect(nk$prim$cite_id == 'Kremer_1976x', 'the same for a nodoi row')
 
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')

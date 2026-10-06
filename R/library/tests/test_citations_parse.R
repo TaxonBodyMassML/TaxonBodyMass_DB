@@ -345,6 +345,21 @@ Expect(identical(back$native_key, m$native_key) && identical(back$n_records, m$n
          is.logical(back$author_match) && identical(back$raw_citation, m$raw_citation),
        'the CSV round-trips with its column types')
 Expect(is.null(ReadPrimaryReferences(tempfile())), 'a missing file reads as NULL')
+cat('WritePrimaryReferencesIfChanged(), SamePrimaryReferences()\n')
+old_cols <- setdiff(primary_reference_columns, primary_reference_optional_columns)
+f2 <- tempfile(fileext = '.csv'); write.csv(m[, old_cols], f2, row.names = FALSE, na = '')    # a file written before owner_review / parsed_url
+md5_before <- tools::md5sum(f2)
+Expect(SamePrimaryReferences(ReadPrimaryReferences(f2), m) && !WritePrimaryReferencesIfChanged(m, f2) && tools::md5sum(f2) == md5_before &&
+         !'owner_review' %in% names(read.csv(f2, nrows = 1)),
+       'a file lacking the optional columns but equal in every value is not rewritten (#114 item 7: the Leahy case)')
+m2 <- m; m2$cite_id[1] <- 'Changed_2000'
+Expect(WritePrimaryReferencesIfChanged(m2, f2) && tools::md5sum(f2) != md5_before && ReadPrimaryReferences(f2)$cite_id[1] == 'Changed_2000' && 'parsed_url' %in% names(read.csv(f2, nrows = 1)),
+       'a changed value rewrites the file (with the full schema)')
+Expect(!WritePrimaryReferencesIfChanged(m2, f2) && WritePrimaryReferencesIfChanged(m2, tempfile(fileext = '.csv')) &&
+         !SamePrimaryReferences(m, m2) && !SamePrimaryReferences(m, m[-1, ]) && SamePrimaryReferences(m, m),
+       'a second write is a no-op; a missing file is written; frames differing in a value or a row are not the same')
+mt <- m; mt$title_sim[1] <- 0.5; mt2 <- mt; mt2$title_sim[1] <- 0.50
+Expect(SamePrimaryReferences(mt, mt2), 'numbers compare as numbers')
 
 # ---- stubs -------------------------------------------------------------------------------
 cat('format stubs\n')
