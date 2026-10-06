@@ -430,6 +430,10 @@ Expect(Has(oa, 'returned by openalex only') && Has(oa, 'no Crossref record') && 
          Has(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = NA), base)), 'returned by no service only') &&
          is.null(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = 'crossref'), base))) && is.null(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = 'openalex;crossref'), base))),
        "a 1|2|3 decision on a candidate without crossref in its services is rejected, proposing doi:<DOI> or nodoi (#114 item 3); crossref alone or with openalex passes")
+other <- Q('24', '2', c2 = '10.5040/9781472927002'); other$source_label <- 'Lislevand_etal_2007'; other$c2_services <- 'openalex'
+ol <- ApplyQueueDecisions(rbind(other, Q('6', '1')), base)
+Expect(is.data.frame(ol) && ol$match_status[ol$native_key == '6'] == 'approved',
+       "another source's decided row on an OpenAlex-only candidate does not stop this source's --apply-queue (the check is scoped to the frame's source)")
 Expect(Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')), base)), 'does not match the grammar') &&
          Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')), base)), 'decided_by is empty'),
        'every problem is reported in one stop')
