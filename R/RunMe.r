@@ -531,6 +531,24 @@ if ('kingdom_conflict' %in% names(unique_taxa)) {
   message(sprintf('%d cleaned names (%d rows) had a plant, alga or fungus kingdom over animal ranks; corrected (#81) and listed in reports/warnings_taxonomy.md',
                   nrow(kingdom_conflicts), sum(kingdom_conflicts$rows)))
 }
+# Names resolved by the Catalogue of Life stage (stage 4; names GBIF, NCBI
+# and WoRMS could not resolve), with the name COL matched, the match type and
+# status, their sources and row counts, for the taxonomy report (#103).
+col_resolutions <- NULL
+if (all(c('col_match_type', 'taxonomy_source') %in% names(unique_taxa))) {
+  col_resolutions <- unique_taxa[!is.na(unique_taxa$taxonomy_source) & unique_taxa$taxonomy_source == 'COL',
+                                 c('taxon', 'taxon_provided', 'col_matched_name', 'col_match_type',
+                                   'col_status', 'species')]
+  cr_rows <- adat_enriched %>%
+    filter(taxon %in% col_resolutions$taxon) %>%
+    group_by(taxon) %>%
+    summarise(rows    = n(),
+              sources = paste(sort(unique(SourceLabel(source_mass))), collapse = ', '),
+              .groups = 'drop') %>% as.data.frame()
+  col_resolutions <- merge(col_resolutions, cr_rows, by = 'taxon')
+  message(sprintf('%d cleaned names (%d rows) resolved by Catalogue of Life (stage 4, #103); listed in reports/warnings_taxonomy.md',
+                  nrow(col_resolutions), sum(col_resolutions$rows)))
+}
 n_resolved_pre_autotroph <- n_distinct(adat_enriched$taxon[!is.na(adat_enriched$species)])
 adat_enriched <- FilterAutotrophs(adat_enriched)
 n_names_autotroph <- n_resolved_pre_autotroph -
@@ -731,7 +749,7 @@ message(sprintf('  %d genus x source values, %d collapsed as copies; %d genus-on
 # log10_range is computed from.
 check_enriched(enriched, within_source[within_source$independent, ],
                remove_flagged = RemoveHighMaxMinRatio, kingdom_conflicts = kingdom_conflicts,
-               unresolved = unresolved_names)
+               col_resolutions = col_resolutions, unresolved = unresolved_names)
 
 n_species_after_filter <- nrow(enriched)   # accepted species before the range filter
 # De-duplication counts (#5), taken like nSpeciesAfterFilter before the range filter
