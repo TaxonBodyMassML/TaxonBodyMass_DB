@@ -28,6 +28,8 @@ raw_ref[!is.na(raw_ref) & raw_ref == '-999'] <- NA
 adat$ref_keys <- vapply(SplitRefKeys(raw_ref, '_[[:space:]]+'), function(k) {
   if (is.na(k)) return(NA_character_)
   toks <- trimws(strsplit(k, ';', fixed = TRUE)[[1]])
+  # '60130' (6 rows) is '60_ 130' run together: read as 60 and 130 (owner decision 2026-10-05)
+  if ('60130' %in% toks) toks <- unique(c(toks[toks != '60130'], '60', '130'))
   num  <- grepl('^[0-9]+$', toks)
   low  <- tolower(trimws(gsub('[[:space:]]+', ' ', toks[!num])))
   miss <- setdiff(low, text_keys$text)

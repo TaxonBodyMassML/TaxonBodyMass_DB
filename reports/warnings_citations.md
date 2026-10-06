@@ -1,18 +1,61 @@
-# Citation and provenance warnings -- 2026-10-05 14:18:38
+# Citation and provenance warnings -- 2026-10-05 17:16:28
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127912 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 109; unverified references: 152
+- provenance rows: 127919 (38955 species); distinct primary CiteIDs: 520; unresolved references (pending / not_found): 234; unverified references: 3
 
 ## Problems
 
-- 29 accepted reference(s) without a bib entry (run --bib): Smith_2003 61, Smith_2003 69, Smith_2003 77, Smith_2003 78, Smith_2003 79, Smith_2003 80, Smith_2003 81, Smith_2003 82, Smith_2003 83, Smith_2003 84, Smith_2003 85, Smith_2003 86, Smith_2003 87, Smith_2003 88, Smith_2003 89, Smith_2003 90, Smith_2003 91, Smith_2003 92, Smith_2003 96, Smith_2003 97, Smith_2003 98, Smith_2003 99, Smith_2003 100, Smith_2003 101, Smith_2003 122, Smith_2003 127, Smith_2003 153, Smith_2003 165, Smith_2003 167
+- 51 accepted reference(s) without a bib entry (run --bib): Smith_2003 61, Smith_2003 69, Smith_2003 122, Smith_2003 127, Smith_2003 153, Smith_2003 165, Smith_2003 167, Smith_2003 178, Smith_2003 180, Smith_2003 182, Smith_2003 183, Smith_2003 185, Smith_2003 187, Smith_2003 188, Smith_2003 190, Smith_2003 193, Smith_2003 194, Smith_2003 198, Smith_2003 200, Smith_2003 201, Smith_2003 204, Smith_2003 205, Smith_2003 206, Smith_2003 214, Smith_2003 216, Smith_2003 217, Smith_2003 219, Smith_2003 221, Smith_2003 223, Smith_2003 227, Smith_2003 233, Smith_2003 234, Smith_2003 235, Smith_2003 236, Smith_2003 237, Smith_2003 239, Smith_2003 242, Smith_2003 243, Smith_2003 247, Smith_2003 249, Smith_2003 256, Smith_2003 270, Smith_2003 271, Smith_2003 272, Smith_2003 273, Smith_2003 274, Smith_2003 275, Smith_2003 276, Smith_2003 279, Smith_2003 281, Smith_2003 282
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-(none)
+- BM_primary_citations: Bennett_1979b -> Bennett:1979ab
+- BM_primary_citations: Lockyer_1981 -> Lockyer:1981aa
+- BM_primary_citations: Makarieva_2005 -> Makarieva:2005aa
+- BM_primary_citations: Nagy_1999 -> Nagy:1999aa
+- BM_primary_citations: Savage_2004 -> Savage:2004aa
+- BM_primary_citations: Schulz_2002 -> Schulz:2002aa
+- BM_primary_citations: Weibel_2004 -> Weibel:2004aa
+- BM_primary_citations: Worthy_2013 -> Worthy:2013aa
+- BM_primary_citations: Tijhuis_1993 -> Tijhuis:1993aa
+- BM_primary_citations: Long_2017 -> Long:2017aa
+- BM_primary_citations: Cordova_2015 -> Cordova:2015aa
+- BM_primary_citations: Fuentes_2013 -> Fuentes:2013aa
+- BM_primary_citations: Schnheit_1980 -> Schnheit:1980aa
+- BM_primary_citations: Scholten_2000 -> Scholten:2000aa
+- BM_primary_citations: Ikeda_2007 -> Ikeda:2007aa
+- BM_primary_citations: Ikeda_2012d -> Ikeda:2012ad
+- BM_primary_citations: Ikeda_2012 -> Ikeda:2012aa
+- BM_primary_citations: Ikeda_2013 -> Ikeda:2013aa
+- BM_primary_citations: Ikeda_2013b -> Ikeda:2013ab
+- BM_primary_citations: Ikeda_2013c -> Ikeda:2013ac
+- BM_primary_citations: Bamstedt_1979 -> Bamstedt:1979aa
+- BM_primary_citations: Ikeda_2012b -> Ikeda:2012ab
+- BM_primary_citations: Kaeriyama_2004 -> Kaeriyama:2004aa
+- BM_primary_citations: Ikeda_1990 -> Ikeda:1990aa
+- BM_primary_citations: Torres_1994 -> Torres:1994aa
+- BM_primary_citations: Childress_1975 -> Childress:1975aa
+- BM_primary_citations: Ikeda_1988 -> Ikeda:1988aa
+- BM_primary_citations: Ikeda_2012c -> Ikeda:2012ac
+- BM_primary_citations: Ikeda_2014c -> Ikeda:2014ac
+- BM_primary_citations: Ikeda_2014b -> Ikeda:2014ab
+- BM_primary_citations: Ikeda_1974 -> Ikeda:1974aa
+- BM_primary_citations: Koster_2009 -> Koster:2009aa
+- BM_primary_citations: Nival_1972 -> Nival:1972aa
+- BM_primary_citations: Mayzaud_1973 -> Mayzaud:1973aa
+- BM_primary_citations: Cetta_1986 -> Cetta:1986aa
+- BM_primary_citations: Biggs_1977 -> Biggs:1977aa
+- BM_primary_citations: Lombard_2005 -> Lombard:2005aa
+- BM_primary_citations: Donnelly_2004 -> Donnelly:2004aa
+- BM_primary_citations: Thuesen_1993 -> Thuesen:1993aa
+- BM_primary_citations: Roger_1988 -> Roger:1988aa
+- BM_primary_citations: Reeve_1970 -> Reeve:1970aa
+- BM_primary_citations: Szyper_1981 -> Szyper:1981aa
+- BM_primary_citations: Ikeda_1989b -> Ikeda:1989ab
+- BM_primary_citations: Madin_1992 -> Madin:1992aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
@@ -91,7 +134,7 @@ One row per source label: species and record links (species x source x reference
 | Reum_2012 | primary | 17 | 17 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2013 | primary | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Smith_2003 | compilation | 3515 | 4771 | 0 | 256 | 29 | 39 | 39 | 0 | 0 | 149 | 0 | 0 |
+| Smith_2003 | compilation | 3515 | 4775 | 0 | 255 | 51 | 90 | 113 | 0 | 1 | 0 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5362 | 5459 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tobias_2022 | compilation | 9659 | 10032 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 47 | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -103,7 +146,7 @@ One row per source label: species and record links (species x source x reference
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 12218 | 12297 | 91.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12218 | 12300 | 91.2 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 131 | 131 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2060 | 2873 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 298 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

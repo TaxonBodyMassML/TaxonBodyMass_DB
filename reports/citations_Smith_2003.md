@@ -1,79 +1,78 @@
-# Citations of Smith_2003 -- 2026-10-05 14:15:48 (tbmcite 0.1.0)
+# Citations of Smith_2003 -- 2026-10-05 17:09:47 (tbmcite 0.1.0)
 
 Steps: --verify --queue
 
 - --verify: compilation DOI 10.1890/02-9003; 0 deposited references (0 with DOI)
-- --verify: 147 reference(s) left unverified -- api.openalex.org: request quota exhausted (HTTP 429, resets in about 2.8 h); references that need this service are left unverified, re-run --verify later (or set OPENALEX_API_KEY): 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 264, 265, 266, 267, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, WalkersOnline, Walkers, DamuthWG, Goheen, MorganErnest, Woodman, PanTHERIA, MammSpp249, MammSpp459, AfghanPDF, IiasaTropMoist, IiasaAfrRainfor, web.vienna.talpinae.mogera, web.vienna.erinaceidae.hylomys, web.vienna.erinaceidae.mesechinus, web.vienna.sorex.asper, web.vienna.sorex.gracillimus, web.vienna.sorex.roboratus, web.vienna.sorex.sinalis, web.vienna.soricinae.schelkovnikovi, web.vienna.soriculus.caudatus, web.vienna.soriculus.leucops, web.vienna.soriculus.macrurus, web.vienna.talpinae, web.vienna.talpinae.scapanulus, web.vienna.talpinae.scaptonyx, web.napak.marmots, web.aciar.mn100, web.adw.moschus-fuscus, web.lyon.marmot.himalayana, web.tripod.trachypithecus-auratus, web.animalinfo.anthor, web.animalinfo.embadian, web.animalinfo.nesonets, web.ukraine.bobac, web.glirarium.chaetocauda, web.kyrgyz-taigan.gallery, web.tiho.gibbons, web.traveltaiwan.em, web.ultimateungulate.dama-mesopotamica, web.ultimateungulate.sus-celebensis, web.earthscape.robinson23, web.hokudai.oriilist08
-- status counts: certain 29, pending 39, not_found 39, unverified 149
-- --queue: 78 open queue row(s) for Smith_2003 in pending_citations.csv (298 rows in the file)
+- status counts: certain 51, pending 90, rejected 1, not_found 113
+- --queue: 203 open queue row(s) for Smith_2003 in pending_citations.csv (423 rows in the file)
 
 ## References
 
 | native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| 11 | 1 | measurement | pending | weak_match | 10.2307/j.ctv264f91j.24 | 1.000 |  |  |
-| 13 | 1 | measurement | pending | weak_match | 10.2307/j.ctv264f91j.36 | 0.826 |  |  |
-| 15 | 1 | measurement | not_found | below_threshold | 10.1126/science.180.4086.603 | 0.502 |  |  |
-| 25 | 1 | measurement | not_found | below_threshold | 10.2307/1380422 | 0.489 |  |  |
+| 11 | 1 | compilation | pending | weak_match | 10.2307/j.ctv264f91j.24 | 1.000 |  |  |
+| 13 | 1 | compilation | pending | weak_match | 10.2307/j.ctv264f91j.36 | 0.826 |  |  |
+| 15 | 1 | compilation | not_found | below_threshold | 10.1126/science.180.4086.603 | 0.502 |  |  |
+| 25 | 1 | compilation | not_found | below_threshold | 10.2307/1380422 | 0.489 |  |  |
 | 56 | 12 | compilation | not_found | below_threshold | 10.1017/s0030605300018810 | 0.501 |  |  |
-| 59 | 224 | measurement | not_found | below_threshold | 10.2307/1382547 | 0.489 |  |  |
-| 60 | 985 | compilation | not_found | below_threshold | 10.1002/food.19960400524 | 0.431 |  |  |
+| 59 | 224 | compilation | not_found | below_threshold | 10.2307/1382547 | 0.489 |  |  |
+| 60 | 991 | compilation | not_found | below_threshold | 10.1002/food.19960400524 | 0.431 |  |  |
 | 61 | 504 | compilation | certain | two_service_agreement | 10.2307/3546496 | 1.000 |  |  |
-| 63 | 120 | measurement | not_found | below_threshold | 10.1017/s0030605300024984 | 0.642 |  |  |
+| 63 | 120 | compilation | not_found | below_threshold | 10.1017/s0030605300024984 | 0.642 |  |  |
 | 64 | 6 | measurement | pending | grey_literature | 10.2307/j.ctv1rmj4g.19 | 0.498 |  |  |
-| 65 | 50 | measurement | not_found | below_threshold | 10.2307/3800863 | 0.527 |  |  |
+| 65 | 50 | compilation | not_found | below_threshold | 10.2307/3800863 | 0.527 |  |  |
 | 66 | 130 | compilation | pending | weak_match | 10.1086/285297 | 0.858 |  |  |
 | 68 | 323 | compilation | pending | weak_match | 10.1890/02-9002 | 1.000 |  |  |
 | 69 | 1 | compilation | certain | two_service_agreement | 10.1111/j.1095-8312.1987.tb01990.x | 1.000 |  |  |
-| 70 | 175 | measurement | not_found | below_threshold | 10.5134/143347 | 0.681 |  |  |
+| 70 | 175 | compilation | not_found | below_threshold | 10.5134/143347 | 0.681 |  |  |
 | 71 | 2 | measurement | pending | grey_literature | 10.15517/rbt.v46i2.19533 | 0.000 |  |  |
 | 72 | 3 | measurement | pending | ambiguous | 10.1006/bijl.1999.0370 | 1.000 |  |  |
 | 73 | 2 | measurement | not_found | below_threshold | 10.1525/abt.2013.75.7.9 | 0.404 |  |  |
 | 74 | 19 | compilation | pending | ambiguous | 10.1111/j.1558-5646.1985.tb00395.x | 1.000 |  |  |
 | 75 | 48 | compilation | pending | ambiguous | 10.1111/j.1558-5646.1987.tb05849.x | 0.906 |  |  |
 | 76 | 1 | measurement | pending | weak_match | 10.2307/3503867 | 0.871 |  |  |
-| 77 | 1 | measurement | certain | two_service_agreement | 10.2307/3503774 | 1.000 |  |  |
-| 78 | 1 | measurement | certain | two_service_agreement | 10.2307/3503939 | 1.000 |  |  |
-| 79 | 1 | measurement | certain | two_service_agreement | 10.2307/3503937 | 1.000 |  |  |
-| 80 | 1 | measurement | certain | two_service_agreement | 10.2307/3503993 | 1.000 |  |  |
-| 81 | 1 | measurement | certain | two_service_agreement | 10.2307/3504308 | 1.000 |  |  |
-| 82 | 1 | measurement | certain | two_service_agreement | 10.2307/3504269 | 1.000 |  |  |
-| 83 | 1 | measurement | certain | two_service_agreement | 10.2307/3504093 | 1.000 |  |  |
-| 84 | 1 | measurement | certain | two_service_agreement | 10.1093/mspecies/374.1 | 1.000 |  |  |
-| 85 | 1 | measurement | certain | two_service_agreement | 10.2307/3504101 | 1.000 |  |  |
-| 86 | 1 | measurement | certain | two_service_agreement | 10.2307/0.411.1 | 1.000 |  |  |
-| 87 | 1 | measurement | certain | two_service_agreement | 10.2307/3504143 | 1.000 |  |  |
-| 88 | 1 | measurement | certain | two_service_agreement | 10.2307/3504154 | 1.000 |  |  |
-| 89 | 1 | measurement | certain | two_service_agreement | 10.2307/3504090 | 1.000 |  |  |
-| 90 | 1 | measurement | certain | two_service_agreement | 10.2307/3504294 | 1.000 |  |  |
-| 91 | 1 | measurement | certain | two_service_agreement | 10.2307/3504241 | 1.000 |  |  |
-| 92 | 1 | measurement | certain | two_service_agreement | 10.2307/3504276 | 1.000 |  |  |
+| 77 | 1 | measurement | pending | unscreened | 10.2307/3503774 | 1.000 |  |  |
+| 78 | 1 | measurement | pending | unscreened | 10.2307/3503939 | 1.000 |  |  |
+| 79 | 1 | measurement | pending | unscreened | 10.2307/3503937 | 1.000 |  |  |
+| 80 | 1 | measurement | pending | unscreened | 10.2307/3503993 | 1.000 |  |  |
+| 81 | 1 | measurement | pending | unscreened | 10.2307/3504308 | 1.000 |  |  |
+| 82 | 1 | measurement | pending | unscreened | 10.2307/3504269 | 1.000 |  |  |
+| 83 | 1 | measurement | pending | unscreened | 10.2307/3504093 | 1.000 |  |  |
+| 84 | 1 | measurement | pending | unscreened | 10.1093/mspecies/374.1 | 1.000 |  |  |
+| 85 | 1 | measurement | pending | unscreened | 10.2307/3504101 | 1.000 |  |  |
+| 86 | 1 | measurement | pending | unscreened | 10.2307/0.411.1 | 1.000 |  |  |
+| 87 | 1 | measurement | pending | unscreened | 10.2307/3504143 | 1.000 |  |  |
+| 88 | 1 | measurement | pending | unscreened | 10.2307/3504154 | 1.000 |  |  |
+| 89 | 1 | measurement | pending | unscreened | 10.2307/3504090 | 1.000 |  |  |
+| 90 | 1 | measurement | pending | unscreened | 10.2307/3504294 | 1.000 |  |  |
+| 91 | 1 | measurement | pending | unscreened | 10.2307/3504241 | 1.000 |  |  |
+| 92 | 1 | measurement | pending | unscreened | 10.2307/3504276 | 1.000 |  |  |
 | 93 | 1 | measurement | not_found | below_threshold | 10.2307/3504326 | 0.662 |  |  |
 | 94 | 1 | measurement | not_found | below_threshold | 10.2307/3504323 | 0.611 |  |  |
 | 95 | 1 | measurement | not_found | below_threshold | 10.2307/3504329 | 0.480 |  |  |
-| 96 | 1 | measurement | certain | two_service_agreement | 10.2307/3504377 | 1.000 |  |  |
-| 97 | 1 | measurement | certain | two_service_agreement | 10.2307/3504418 | 1.000 |  |  |
-| 98 | 1 | measurement | certain | two_service_agreement | 10.2307/3504345 | 1.000 |  |  |
-| 99 | 1 | measurement | certain | two_service_agreement | 10.2307/3504488 | 1.000 |  |  |
-| 100 | 1 | measurement | certain | two_service_agreement | 10.2307/0.624.1 | 1.000 |  |  |
-| 101 | 1 | measurement | certain | two_service_agreement | 10.2307/3504333 | 1.000 |  |  |
+| 96 | 1 | measurement | pending | unscreened | 10.2307/3504377 | 1.000 |  |  |
+| 97 | 1 | measurement | pending | unscreened | 10.2307/3504418 | 1.000 |  |  |
+| 98 | 1 | measurement | pending | unscreened | 10.2307/3504345 | 1.000 |  |  |
+| 99 | 1 | measurement | pending | unscreened | 10.2307/3504488 | 1.000 |  |  |
+| 100 | 1 | measurement | pending | unscreened | 10.2307/0.624.1 | 1.000 |  |  |
+| 101 | 1 | measurement | pending | unscreened | 10.2307/3504333 | 1.000 |  |  |
 | 103 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2001)673<0001:bc>2.0.co;2 | 1.000 |  |  |
 | 104 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2001)675<0001:cs>2.0.co;2 | 1.000 |  |  |
 | 105 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2002)700<0001:at>2.0.co;2 | 1.000 |  |  |
-| 106 | 16 | measurement | pending | weak_match | 10.5860/choice.45-3203 | 0.968 |  |  |
-| 107 | 2 | measurement | pending | weak_match | 10.2307/3799805 | 1.000 |  |  |
-| 108 | 14 | measurement | not_found | below_threshold | 10.1111/j.1365-2028.1983.tb00334.x | 0.689 |  |  |
-| 109 | 3 | measurement | not_found | below_threshold | 10.1111/j.1365-2028.1983.tb00334.x | 0.689 |  |  |
-| 110 | 38 | measurement | pending | weak_match | 10.5860/choice.33-2131 | 0.760 |  |  |
-| 111 | 42 | measurement | pending | weak_match | 10.2307/1378663 | 1.000 |  |  |
-| 113 | 7 | measurement | not_found | below_threshold | 10.1038/188986e0 | 0.417 |  |  |
-| 114 | 22 | measurement | not_found | below_threshold | 10.4312/9789612975777 | 0.447 |  |  |
-| 115 | 28 | measurement | not_found | below_threshold | 10.1177/001946466600300307 | 0.342 |  |  |
-| 116 | 4 | measurement | not_found | below_threshold | 10.5962/bhl.title.5746 | 0.292 |  |  |
-| 117 | 34 | measurement | pending | weak_match | 10.1016/0305-4403(78)90065-1 | 1.000 |  |  |
-| 118 | 80 | measurement | not_found | below_threshold | 10.1017/s0266467400001851 | 0.364 |  |  |
-| 119 | 71 | measurement | pending | weak_match | 10.1086/407439 | 0.777 |  |  |
-| 120 | 11 | measurement | not_found | below_threshold | 10.1017/s0026749x00001621 | 0.326 |  |  |
+| 106 | 16 | compilation | pending | weak_match | 10.5860/choice.45-3203 | 0.968 |  |  |
+| 107 | 2 | compilation | pending | weak_match | 10.2307/3799805 | 1.000 |  |  |
+| 108 | 14 | compilation | not_found | below_threshold | 10.1111/j.1365-2028.1983.tb00334.x | 0.689 |  |  |
+| 109 | 3 | compilation | not_found | below_threshold | 10.1111/j.1365-2028.1983.tb00334.x | 0.689 |  |  |
+| 110 | 38 | compilation | pending | weak_match | 10.5860/choice.33-2131 | 0.760 |  |  |
+| 111 | 42 | compilation | pending | weak_match | 10.2307/1378663 | 1.000 |  |  |
+| 113 | 7 | compilation | not_found | below_threshold | 10.1038/188986e0 | 0.417 |  |  |
+| 114 | 22 | compilation | not_found | below_threshold | 10.4312/9789612975777 | 0.447 |  |  |
+| 115 | 28 | compilation | not_found | below_threshold | 10.1177/001946466600300307 | 0.342 |  |  |
+| 116 | 4 | compilation | not_found | below_threshold | 10.5962/bhl.title.5746 | 0.292 |  |  |
+| 117 | 34 | compilation | pending | weak_match | 10.1016/0305-4403(78)90065-1 | 1.000 |  |  |
+| 118 | 80 | compilation | not_found | below_threshold | 10.1017/s0266467400001851 | 0.364 |  |  |
+| 119 | 71 | compilation | pending | weak_match | 10.1086/407439 | 0.777 |  |  |
+| 120 | 11 | compilation | not_found | below_threshold | 10.1017/s0026749x00001621 | 0.326 |  |  |
 | 121 | 11 | measurement | pending | weak_match | 10.5962/bhl.title.3369 | 0.758 |  |  |
 | 122 | 24 | measurement | certain | two_service_agreement | 10.5962/bhl.title.3152 | 1.000 |  |  |
 | 123 | 14 | measurement | pending | weak_match | 10.5962/bhl.title.5582 | 0.833 |  |  |
@@ -81,36 +80,36 @@ Steps: --verify --queue
 | 125 | 11 | measurement | not_found | below_threshold | 10.1515/9783112652985-001 | 0.313 |  |  |
 | 126 | 1 | measurement | not_found | below_threshold | 10.1017/s0952836904006314 | 0.621 |  |  |
 | 127 | 1 | measurement | certain | two_service_agreement | 10.2982/0012-8317(2000)89[73:asotsm]2.0.co;2 | 1.000 |  |  |
-| 128 | 22 | measurement | pending | weak_match | 10.5962/bhl.title.2801 | 1.000 |  |  |
-| 129 | 28 | measurement | not_found | below_threshold | 10.1017/s0030605300019888 | 0.537 |  |  |
-| 130 | 61 | measurement | pending | ambiguous | 10.1016/0006-3207(87)90094-2 | 1.000 |  |  |
-| 131 | 17 | measurement | pending | ambiguous | 10.5962/bhl.title.100742 | 1.000 |  |  |
-| 132 | 36 | measurement | pending | weak_match | 10.1038/137968a0 | 1.000 |  |  |
-| 133 | 28 | measurement | pending | ambiguous | 10.5962/bhl.title.100742 | 1.000 |  |  |
-| 134 | 35 | measurement | not_found | below_threshold | 10.1017/s0030605300006700 | 0.442 |  |  |
-| 135 | 27 | measurement | not_found | below_threshold | 10.5962/bhl.part.16753 | 0.375 |  |  |
+| 128 | 22 | compilation | pending | weak_match | 10.5962/bhl.title.2801 | 1.000 |  |  |
+| 129 | 28 | compilation | not_found | below_threshold | 10.1017/s0030605300019888 | 0.537 |  |  |
+| 130 | 67 | compilation | pending | ambiguous | 10.1016/0006-3207(87)90094-2 | 1.000 |  |  |
+| 131 | 17 | compilation | pending | ambiguous | 10.5962/bhl.title.100742 | 1.000 |  |  |
+| 132 | 36 | compilation | pending | weak_match | 10.1038/137968a0 | 1.000 |  |  |
+| 133 | 28 | compilation | pending | ambiguous | 10.5962/bhl.title.100742 | 1.000 |  |  |
+| 134 | 35 | compilation | not_found | below_threshold | 10.1017/s0030605300006700 | 0.442 |  |  |
+| 135 | 27 | compilation | not_found | below_threshold | 10.5962/bhl.part.16753 | 0.375 |  |  |
 | 136 | 11 | compilation | not_found | below_threshold | 10.1002/sce.3730240746 | 0.422 |  |  |
 | 137 | 20 | compilation | not_found | below_threshold | 10.1002/sce.3730240746 | 0.427 |  |  |
 | 138 | 8 | compilation | not_found | below_threshold | 10.1002/sce.3730240746 | 0.454 |  |  |
 | 139 | 7 | compilation | not_found | below_threshold | 10.1002/sce.3730240746 | 0.422 |  |  |
 | 140 | 15 | compilation | not_found | below_threshold | 10.1002/sce.3730240746 | 0.427 |  |  |
 | 141 | 18 | compilation | pending | weak_match | 10.1093/acref/9780199206087.001.0001/acref-9780199206087 | 1.000 |  |  |
-| 142 | 11 | measurement | pending | ambiguous | 10.2307/3346 | 1.000 |  |  |
-| 144 | 2 | measurement | pending | ambiguous | 10.1007/s00330-003-1839-2 | 1.000 |  |  |
+| 142 | 11 | compilation | pending | ambiguous | 10.2307/3346 | 1.000 |  |  |
+| 144 | 2 | measurement | not_found | below_threshold | 10.1002/9781444317688.ch14 | 0.351 |  |  |
 | 146 | 1 | measurement | not_found | below_threshold | 10.2307/jj.41379811.5 | 0.697 |  |  |
-| 147 | 2 | measurement | not_found | below_threshold | 10.3366/edinburgh/9781474429566.003.0002 | 0.453 |  |  |
-| 148 | 16 | measurement | pending | ambiguous | 10.1046/j.1439-0310.2003.00950.x | 1.000 |  |  |
-| 150 | 44 | measurement | pending | ambiguous | 10.5281/zenodo.13501287 | 1.000 |  |  |
-| 151 | 119 | measurement | not_found | below_threshold | 10.7202/020996ar | 0.445 |  |  |
+| 147 | 2 | compilation | not_found | below_threshold | 10.3366/edinburgh/9781474429566.003.0002 | 0.453 |  |  |
+| 148 | 16 | compilation | pending | ambiguous | 10.1046/j.1439-0310.2003.00950.x | 1.000 |  |  |
+| 150 | 44 | compilation | pending | ambiguous | 10.5281/zenodo.13501287 | 1.000 |  |  |
+| 151 | 119 | compilation | not_found | below_threshold | 10.7202/020996ar | 0.445 |  |  |
 | 152 | 2 | measurement | pending | ambiguous | 10.5860/choice.36-2177 | 1.000 |  |  |
 | 153 | 1000 | compilation | certain | two_service_agreement | 10.1086/368289 | 1.000 |  |  |
 | 154 | 19 | measurement | not_found | below_threshold | 10.56373/2003-02-16 | 0.426 |  |  |
-| 161 | 15 | measurement | pending | weak_match | 10.1644/1545-1542(2000)081<0621:br>2.0.co;2 | 1.000 |  |  |
-| 162 | 1 | measurement | pending | grey_literature | 10.1017/s0030605300010474 | 0.468 |  |  |
-| 163 | 10 | measurement | pending | weak_match | 10.5281/zenodo.16241179 | 1.000 |  |  |
+| 161 | 15 | compilation | pending | weak_match | 10.1644/1545-1542(2000)081<0621:br>2.0.co;2 | 1.000 |  |  |
+| 162 | 1 | compilation | pending | grey_literature | 10.1017/s0030605300010474 | 0.468 |  |  |
+| 163 | 10 | compilation | pending | weak_match | 10.5281/zenodo.16241179 | 1.000 |  |  |
 | 164 | 1 | measurement | pending | weak_match | 10.7312/fimb11454-009 | 0.727 |  |  |
 | 165 | 7 | measurement | certain | two_service_agreement | 10.1046/j.1365-2699.2003.01028.x | 1.000 |  |  |
-| 166 | 1 | measurement | not_found | below_threshold | 10.1080/03014223.2001.9517638 | 0.596 |  |  |
+| 166 | 1 | compilation | not_found | below_threshold | 10.1080/03014223.2001.9517638 | 0.596 |  |  |
 | 167 | 1 | measurement | certain | two_service_agreement | 10.1046/j.1365-2907.2003.00020.x | 1.000 |  |  |
 | 168 | 1 | measurement | not_found | below_threshold | 10.5564/jis.v45i114.1892 | 0.570 |  |  |
 | 169 | 1 | measurement | not_found | below_threshold | 10.1159/000130745 | 0.478 |  |  |
@@ -118,152 +117,151 @@ Steps: --verify --queue
 | 171 | 1 | measurement | pending | weak_match | 10.1023/a:1013815720609 | 0.764 |  |  |
 | 172 | 1 | measurement | pending | ambiguous | 10.1139/z98-230 | 1.000 |  |  |
 | 173 | 15 | measurement | pending | weak_match | 10.1046/j.1466-822x.2003.00052.x | 0.885 |  |  |
-| 174 | 4 | compilation |  |  |  |  |  |  |
-| 175 | 1 | measurement |  |  |  |  |  |  |
-| 176 | 1 | measurement |  |  |  |  |  |  |
-| 177 | 1 | measurement |  |  |  |  |  |  |
-| 178 | 1 | measurement |  |  |  |  |  |  |
-| 179 | 1 | measurement |  |  |  |  |  |  |
-| 180 | 2 | measurement |  |  |  |  |  |  |
-| 181 | 1 | measurement |  |  |  |  |  |  |
-| 182 | 6 | measurement |  |  |  |  |  |  |
-| 183 | 1 | measurement |  |  |  |  |  |  |
-| 184 | 1 | compilation |  |  |  |  |  |  |
-| 185 | 2 | measurement |  |  |  |  |  |  |
-| 186 | 1 | measurement |  |  |  |  |  |  |
-| 187 | 1 | measurement |  |  |  |  |  |  |
-| 188 | 6 | measurement |  |  |  |  |  |  |
-| 189 | 1 | measurement |  |  |  |  |  |  |
-| 190 | 1 | measurement |  |  |  |  |  |  |
-| 191 | 1 | measurement |  |  |  |  |  |  |
-| 192 | 1 | measurement |  |  |  |  |  |  |
-| 193 | 1 | measurement |  |  |  |  |  |  |
-| 194 | 1 | compilation |  |  |  |  |  |  |
-| 195 | 1 | measurement |  |  |  |  |  |  |
-| 196 | 2 | compilation |  |  |  |  |  |  |
-| 197 | 3 | measurement |  |  |  |  |  |  |
-| 198 | 1 | measurement |  |  |  |  |  |  |
-| 199 | 1 | measurement |  |  |  |  |  |  |
-| 200 | 1 | measurement |  |  |  |  |  |  |
-| 201 | 1 | measurement |  |  |  |  |  |  |
-| 202 | 1 | measurement |  |  |  |  |  |  |
-| 203 | 1 | measurement |  |  |  |  |  |  |
-| 204 | 1 | measurement |  |  |  |  |  |  |
-| 205 | 1 | measurement |  |  |  |  |  |  |
-| 206 | 1 | measurement |  |  |  |  |  |  |
-| 207 | 1 | measurement |  |  |  |  |  |  |
-| 208 | 1 | measurement |  |  |  |  |  |  |
-| 211 | 1 | measurement |  |  |  |  |  |  |
-| 212 | 1 | measurement |  |  |  |  |  |  |
-| 213 | 1 | measurement |  |  |  |  |  |  |
-| 214 | 1 | measurement |  |  |  |  |  |  |
-| 215 | 4 | measurement |  |  |  |  |  |  |
-| 216 | 1 | compilation |  |  |  |  |  |  |
-| 217 | 2 | measurement |  |  |  |  |  |  |
-| 218 | 1 | measurement |  |  |  |  |  |  |
-| 219 | 1 | measurement |  |  |  |  |  |  |
-| 220 | 1 | measurement |  |  |  |  |  |  |
-| 221 | 1 | measurement |  |  |  |  |  |  |
-| 222 | 1 | measurement |  |  |  |  |  |  |
-| 223 | 1 | measurement |  |  |  |  |  |  |
-| 224 | 2 | measurement |  |  |  |  |  |  |
-| 225 | 1 | measurement |  |  |  |  |  |  |
-| 226 | 6 | measurement |  |  |  |  |  |  |
-| 227 | 1 | measurement |  |  |  |  |  |  |
-| 228 | 1 | measurement |  |  |  |  |  |  |
-| 229 | 1 | measurement |  |  |  |  |  |  |
-| 230 | 1 | measurement |  |  |  |  |  |  |
-| 231 | 1 | compilation |  |  |  |  |  |  |
-| 232 | 1 | measurement |  |  |  |  |  |  |
-| 233 | 2 | measurement |  |  |  |  |  |  |
-| 234 | 1 | measurement |  |  |  |  |  |  |
-| 235 | 1 | measurement |  |  |  |  |  |  |
-| 236 | 1 | measurement |  |  |  |  |  |  |
-| 237 | 1 | measurement |  |  |  |  |  |  |
-| 238 | 1 | measurement |  |  |  |  |  |  |
-| 239 | 1 | measurement |  |  |  |  |  |  |
-| 240 | 1 | measurement |  |  |  |  |  |  |
-| 241 | 1 | measurement |  |  |  |  |  |  |
-| 242 | 1 | measurement |  |  |  |  |  |  |
-| 243 | 1 | measurement |  |  |  |  |  |  |
-| 244 | 4 | measurement |  |  |  |  |  |  |
-| 246 | 5 | measurement |  |  |  |  |  |  |
-| 247 | 1 | measurement |  |  |  |  |  |  |
-| 248 | 1 | measurement |  |  |  |  |  |  |
-| 249 | 2 | measurement |  |  |  |  |  |  |
-| 250 | 2 | measurement |  |  |  |  |  |  |
-| 251 | 1 | measurement |  |  |  |  |  |  |
-| 252 | 2 | measurement |  |  |  |  |  |  |
-| 253 | 1 | measurement |  |  |  |  |  |  |
-| 254 | 1 | measurement |  |  |  |  |  |  |
-| 255 | 1 | measurement |  |  |  |  |  |  |
-| 256 | 1 | measurement |  |  |  |  |  |  |
-| 257 | 84 | measurement |  |  |  |  |  |  |
-| 258 | 1 | measurement |  |  |  |  |  |  |
-| 259 | 13 | measurement |  |  |  |  |  |  |
-| 260 | 32 | measurement |  |  |  |  |  |  |
-| 261 | 26 | measurement |  |  |  |  |  |  |
-| 264 | 1 | measurement |  |  |  |  |  |  |
-| 265 | 1 | measurement |  |  |  |  |  |  |
-| 266 | 1 | measurement |  |  |  |  |  |  |
-| 267 | 1 | measurement |  |  |  |  |  |  |
-| 269 | 1 | measurement |  |  |  |  |  |  |
-| 270 | 1 | measurement |  |  |  |  |  |  |
-| 271 | 1 | measurement |  |  |  |  |  |  |
-| 272 | 1 | measurement |  |  |  |  |  |  |
-| 273 | 1 | measurement |  |  |  |  |  |  |
-| 274 | 1 | measurement |  |  |  |  |  |  |
-| 275 | 1 | measurement |  |  |  |  |  |  |
-| 276 | 1 | measurement |  |  |  |  |  |  |
-| 277 | 1 | measurement |  |  |  |  |  |  |
-| 278 | 1 | measurement |  |  |  |  |  |  |
-| 279 | 1 | measurement |  |  |  |  |  |  |
-| 280 | 1 | measurement |  |  |  |  |  |  |
-| 281 | 1 | measurement |  |  |  |  |  |  |
-| 282 | 1 | measurement |  |  |  |  |  |  |
-| 283 | 1 | measurement |  |  |  |  |  |  |
-| WalkersOnline | 15 | compilation |  |  |  |  |  |  |
-| Walkers | 4 | compilation |  |  |  |  |  |  |
-| DamuthWG | 11 | compilation |  |  |  |  |  |  |
-| Goheen | 11 | measurement |  |  |  |  |  |  |
-| MorganErnest | 4 | compilation |  |  |  |  |  |  |
-| Woodman | 3 | measurement |  |  |  |  |  |  |
-| PanTHERIA | 3 | compilation |  |  |  |  |  |  |
-| MammSpp249 | 1 | measurement |  |  |  |  |  |  |
-| MammSpp459 | 1 | measurement |  |  |  |  |  |  |
-| AfghanPDF | 3 | measurement |  |  |  |  |  |  |
-| IiasaTropMoist | 3 | compilation |  |  |  |  |  |  |
-| IiasaAfrRainfor | 1 | compilation |  |  |  |  |  |  |
-| web.vienna.talpinae.mogera | 3 | measurement |  |  |  |  |  |  |
-| web.vienna.erinaceidae.hylomys | 2 | measurement |  |  |  |  |  |  |
-| web.vienna.erinaceidae.mesechinus | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.sorex.asper | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.sorex.gracillimus | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.sorex.roboratus | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.sorex.sinalis | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.soricinae.schelkovnikovi | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.soriculus.caudatus | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.soriculus.leucops | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.soriculus.macrurus | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.talpinae | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.talpinae.scapanulus | 1 | measurement |  |  |  |  |  |  |
-| web.vienna.talpinae.scaptonyx | 1 | measurement |  |  |  |  |  |  |
-| web.napak.marmots | 2 | measurement |  |  |  |  |  |  |
-| web.aciar.mn100 | 2 | measurement |  |  |  |  |  |  |
-| web.adw.moschus-fuscus | 1 | measurement |  |  |  |  |  |  |
-| web.lyon.marmot.himalayana | 1 | measurement |  |  |  |  |  |  |
-| web.tripod.trachypithecus-auratus | 1 | measurement |  |  |  |  |  |  |
-| web.animalinfo.anthor | 1 | measurement |  |  |  |  |  |  |
-| web.animalinfo.embadian | 1 | measurement |  |  |  |  |  |  |
-| web.animalinfo.nesonets | 1 | measurement |  |  |  |  |  |  |
-| web.ukraine.bobac | 1 | measurement |  |  |  |  |  |  |
-| web.glirarium.chaetocauda | 1 | measurement |  |  |  |  |  |  |
-| web.kyrgyz-taigan.gallery | 1 | measurement |  |  |  |  |  |  |
-| web.tiho.gibbons | 1 | measurement |  |  |  |  |  |  |
-| web.traveltaiwan.em | 1 | measurement |  |  |  |  |  |  |
-| web.ultimateungulate.dama-mesopotamica | 1 | measurement |  |  |  |  |  |  |
-| web.ultimateungulate.sus-celebensis | 1 | measurement |  |  |  |  |  |  |
-| web.earthscape.robinson23 | 1 | measurement |  |  |  |  |  |  |
-| web.hokudai.oriilist08 | 1 | measurement |  |  |  |  |  |  |
-| 60130 | 6 | measurement |  | key_not_in_reflist |  |  |  |  |
-| 655 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |
+| 174 | 4 | compilation | not_found | below_threshold | 10.1007/978-1-4757-2135-5_18 | 0.310 |  |  |
+| 175 | 1 | measurement | not_found | below_threshold | 10.1016/s0031-9384(97)00465-4 | 0.426 |  |  |
+| 176 | 1 | measurement | not_found | below_threshold | 10.1080/09397140.2001.10637861 | 0.533 |  |  |
+| 177 | 1 | measurement | not_found | below_threshold | 10.1017/s1367943002002305 | 0.694 |  |  |
+| 178 | 1 | measurement | certain | two_service_agreement | 10.1080/13921657.1999.10512305 | 1.000 |  |  |
+| 179 | 1 | measurement | pending | weak_match | 10.1046/j.1096-3642.2003.00050.x | 0.766 |  |  |
+| 180 | 2 | measurement | certain | two_service_agreement | 10.1046/j.1095-8312.2003.00150.x | 1.000 |  |  |
+| 181 | 1 | measurement | pending | weak_match | 10.1644/bpr-010 | 1.000 |  |  |
+| 182 | 6 | measurement | certain | two_service_agreement | 10.1046/j.1366-9516.2001.00119.x | 1.000 |  |  |
+| 183 | 1 | measurement | certain | two_service_agreement | 10.1071/wr02035 | 1.000 |  |  |
+| 184 | 1 | compilation | pending | ambiguous | 10.1139/g01-015 | 1.000 |  |  |
+| 185 | 2 | measurement | certain | two_service_agreement | 10.1007/s003350010228 | 1.000 |  |  |
+| 186 | 1 | measurement | not_found | below_threshold | 10.17520/biods.2022117 | 0.412 |  |  |
+| 187 | 1 | measurement | certain | two_service_agreement | 10.1644/1545-1542(2004)085<0105:fddabi>2.0.co;2 | 1.000 |  |  |
+| 188 | 6 | measurement | certain | two_service_agreement | 10.1046/j.1365-2435.1998.00162.x | 1.000 |  |  |
+| 189 | 1 | measurement | not_found | below_threshold | 10.32800/abc.2023.46.0057 | 0.515 |  |  |
+| 190 | 1 | measurement | certain | two_service_agreement | 10.1016/s0306-4565(99)00024-8 | 1.000 |  |  |
+| 191 | 1 | measurement | not_found | below_threshold | 10.21426/b613110340 | 0.512 |  |  |
+| 192 | 1 | compilation | not_found | below_threshold | 10.1093/ref:odnb/1783 | 0.401 |  |  |
+| 193 | 1 | measurement | certain | two_service_agreement | 10.2307/1382708 | 1.000 |  |  |
+| 194 | 1 | compilation | certain | two_service_agreement | 10.1242/jeb.205.18.2897 | 1.000 |  |  |
+| 195 | 1 | measurement | not_found | below_threshold | 10.1560/b12r-nlfr-gwvh-0b83 | 0.573 |  |  |
+| 196 | 2 | compilation | not_found | below_threshold | 10.1177/146045829700300110 | 0.302 |  |  |
+| 197 | 3 | measurement | pending | weak_match | 10.1023/a:1023011417146 | 0.883 |  |  |
+| 198 | 1 | measurement | certain | two_service_agreement | 10.2307/1382600 | 1.000 |  |  |
+| 199 | 1 | measurement | pending | weak_match | 10.5281/zenodo.13432500 | 1.000 |  |  |
+| 200 | 1 | measurement | certain | two_service_agreement | 10.1046/j.1365-2028.2002.00326.x | 1.000 |  |  |
+| 201 | 1 | measurement | certain | two_service_agreement | 10.1006/gcen.2000.7545 | 1.000 |  |  |
+| 202 | 1 | measurement | not_found | below_threshold | 10.1038/sj.bdj.4811819 | 0.534 |  |  |
+| 203 | 1 | measurement | not_found | below_threshold | 10.1038/sj.bdj.4811819 | 0.534 |  |  |
+| 204 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.203.23.3655 | 1.000 |  |  |
+| 205 | 1 | measurement | certain | two_service_agreement | 10.1515/mamm.1977.41.1.75 | 1.000 |  |  |
+| 206 | 1 | measurement | certain | two_service_agreement | 10.1515/mamm.2001.65.3.387 | 1.000 |  |  |
+| 207 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.part.81575 | 0.396 |  |  |
+| 208 | 1 | measurement | not_found | below_threshold | 10.1111/j.0107-055x.2007.00067_17.x | 0.374 |  |  |
+| 211 | 1 | compilation | pending | weak_match | 10.5860/choice.35-2112 | 1.000 |  |  |
+| 212 | 1 | measurement | not_found | below_threshold | 10.2307/3666619 | 0.584 |  |  |
+| 213 | 1 | measurement | not_found | below_threshold | 10.1007/s11284-016-1338-y | 0.488 |  |  |
+| 214 | 1 | measurement | certain | two_service_agreement | 10.1078/1616-5047-00098 | 1.000 |  |  |
+| 215 | 4 | compilation | not_found | below_threshold | 10.1130/0-8137-5405-4.205 | 0.403 |  |  |
+| 216 | 1 | compilation | certain | two_service_agreement | 10.1073/pnas.0436428100 | 0.947 |  |  |
+| 217 | 2 | measurement | certain | two_service_agreement | 10.2307/3545896 | 1.000 |  |  |
+| 218 | 1 | measurement | not_found | below_threshold | 10.2305/iucn.uk.2017-3.rlts.t115554360a22387922.en | 0.479 |  |  |
+| 219 | 1 | measurement | certain | two_service_agreement | 10.1644/741 | 1.000 |  |  |
+| 220 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2004)744<0001:sv>2.0.co;2 | 1.000 |  |  |
+| 221 | 1 | measurement | certain | two_service_agreement | 10.1644/748 | 1.000 |  |  |
+| 222 | 1 | measurement | pending | single_service | 10.5281/zenodo.13466089 | 1.000 |  |  |
+| 223 | 1 | measurement | certain | two_service_agreement | 10.1078/1616-5047-00052 | 1.000 |  |  |
+| 224 | 2 | measurement | not_found | below_threshold | 10.1093/mspecies/sead011 | 0.473 |  |  |
+| 225 | 1 | measurement | pending | single_service | 10.5281/zenodo.13471731 | 1.000 |  |  |
+| 226 | 6 | measurement | pending | grey_literature | 10.1078/1616-5047-00085 | 0.500 |  |  |
+| 227 | 1 | measurement | certain | two_service_agreement | 10.2307/1382084 | 1.000 |  |  |
+| 228 | 1 | measurement | not_found | below_threshold | 10.1071/zo99073 | 0.536 |  |  |
+| 229 | 1 | measurement | not_found | below_threshold | 10.1002/ejoc.200490035 | 0.391 |  |  |
+| 230 | 1 | measurement | not_found | below_threshold | 10.1002/ejoc.200490031 | 0.408 |  |  |
+| 231 | 1 | compilation | not_found | below_threshold | 10.1145/1010432.1010489 | 0.000 |  |  |
+| 232 | 1 | measurement | not_found | below_threshold | 10.1093/bioinformatics/bth046 | 0.000 |  |  |
+| 233 | 2 | measurement | certain | two_service_agreement | 10.1644/750 | 1.000 |  |  |
+| 234 | 1 | measurement | certain | two_service_agreement | 10.1644/751 | 1.000 |  |  |
+| 235 | 1 | measurement | certain | two_service_agreement | 10.1644/752 | 1.000 |  |  |
+| 236 | 1 | measurement | certain | two_service_agreement | 10.1644/753 | 1.000 |  |  |
+| 237 | 1 | measurement | certain | two_service_agreement | 10.1644/754 | 1.000 |  |  |
+| 238 | 1 | measurement | pending | ambiguous | 10.1644/755 | 1.000 |  |  |
+| 239 | 1 | measurement | certain | two_service_agreement | 10.1644/756 | 1.000 |  |  |
+| 240 | 1 | measurement | not_found | below_threshold | 10.1644/757 | 0.652 |  |  |
+| 241 | 1 | measurement | pending | ambiguous | 10.1644/758 | 1.000 |  |  |
+| 242 | 1 | measurement | certain | two_service_agreement | 10.1644/761 | 1.000 |  |  |
+| 243 | 1 | measurement | certain | two_service_agreement | 10.1017/s0952836905007016 | 0.938 |  |  |
+| 244 | 4 | measurement | pending | grey_literature | 10.1078/1616-5047-00085 | 0.522 |  |  |
+| 246 | 5 | measurement | pending | weak_match | 10.1017/s0266467401001481 | 0.902 |  |  |
+| 247 | 1 | measurement | certain | two_service_agreement | 10.1644/1545-1542(2000)081<0958:rotbsw>2.0.co;2 | 1.000 |  |  |
+| 248 | 1 | measurement | pending | weak_match | 10.1206/0003-0082(2004)426<0001:ancsol>2.0.co;2 | 0.915 |  |  |
+| 249 | 2 | measurement | certain | two_service_agreement | 10.1017/s0266467401001389 | 1.000 |  |  |
+| 250 | 2 | measurement | pending | weak_match | 10.2307/1369226 | 0.958 |  |  |
+| 251 | 1 | measurement | not_found | below_threshold | 10.4067/s0716-078x2001000300015 | 0.554 |  |  |
+| 252 | 2 | measurement | pending | weak_match | 10.1139/z01-192 | 0.907 |  |  |
+| 253 | 1 | compilation | pending | weak_match | 10.5860/choice.33-2131 | 1.000 |  |  |
+| 254 | 1 | measurement | pending | ambiguous | 10.2307/3503811 | 1.000 |  |  |
+| 255 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2001)660<0001:ca>2.0.co;2 | 1.000 |  |  |
+| 256 | 1 | measurement | certain | two_service_agreement | 10.1071/wr98071 | 1.000 |  |  |
+| 257 | 84 | compilation | not_found | below_threshold | 10.3403/30322449 | 0.362 |  |  |
+| 258 | 1 | measurement | pending | weak_match | 10.1515/mamm.1996.60.2.255 | 0.826 |  |  |
+| 259 | 13 | compilation | pending | weak_match | 10.5281/zenodo.7316516 | 1.000 |  |  |
+| 260 | 32 | compilation | not_found | below_threshold | 10.7196/samj.2022.v112i4.15986 | 0.308 |  |  |
+| 261 | 26 | compilation | pending | ambiguous | 10.5281/zenodo.8204791 | 1.000 |  |  |
+| 264 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2005)765[0001:pw]2.0.co;2 | 1.000 |  |  |
+| 265 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2005)767[0001:cp]2.0.co;2 | 1.000 |  |  |
+| 266 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2005)771[0001:aj]2.0.co;2 | 1.000 |  |  |
+| 267 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2005)772[0001:lc]2.0.co;2 | 1.000 |  |  |
+| 269 | 1 | measurement | pending | ambiguous | 10.1644/1545-1410(2005)776[0001:cm]2.0.co;2 | 1.000 |  |  |
+| 270 | 1 | measurement | certain | two_service_agreement | 10.1644/777.1 | 1.000 |  |  |
+| 271 | 1 | measurement | certain | two_service_agreement | 10.1644/778.1 | 1.000 |  |  |
+| 272 | 1 | measurement | certain | two_service_agreement | 10.1644/779.1 | 1.000 |  |  |
+| 273 | 1 | measurement | certain | two_service_agreement | 10.1644/780.1 | 1.000 |  |  |
+| 274 | 1 | measurement | certain | two_service_agreement | 10.1644/781.1 | 1.000 |  |  |
+| 275 | 1 | measurement | certain | two_service_agreement | 10.1644/782.1 | 1.000 |  |  |
+| 276 | 1 | measurement | certain | two_service_agreement | 10.1644/783.1 | 1.000 |  |  |
+| 277 | 1 | measurement | pending | ambiguous | 10.1644/784.1 | 1.000 |  |  |
+| 278 | 1 | measurement | not_found | below_threshold | 10.1016/j.bioelechem.2004.06.011 | 0.488 |  |  |
+| 279 | 1 | measurement | certain | two_service_agreement | 10.1644/786.1 | 1.000 |  |  |
+| 280 | 1 | measurement | not_found | below_threshold | 10.1644/787.1 | 0.646 |  |  |
+| 281 | 1 | measurement | certain | two_service_agreement | 10.1023/a:1016660123189 | 1.000 |  |  |
+| 282 | 1 | measurement | certain | two_service_agreement | 10.1111/j.1365-2028.2004.00505.x | 1.000 |  |  |
+| 283 | 1 | measurement | pending | weak_match | 10.1007/s00442-006-0469-1 | 1.000 |  |  |
+| WalkersOnline | 15 | compilation | not_found | below_threshold | 10.1017/s0030605300018810 | 0.501 |  |  |
+| Walkers | 4 | compilation | not_found | below_threshold | 10.1017/s0030605300018810 | 0.501 |  |  |
+| DamuthWG | 11 | compilation | not_found | below_threshold | 10.7490/f1000research.1114856.1 | 0.518 |  |  |
+| Goheen | 11 | measurement | not_found | below_threshold | 10.1093/benz/9780199773787.article.b00018177 | 0.445 |  |  |
+| MorganErnest | 4 | compilation | not_found | below_threshold | 10.1093/oseo/instance.00284333 | 0.306 |  |  |
+| Woodman | 3 | measurement | not_found | below_threshold | 10.1093/benz/9780199773787.article.b2236058 | 0.470 |  |  |
+| PanTHERIA | 3 | compilation | not_found | below_threshold | 10.1890/08-1494.1 | 0.450 |  |  |
+| MammSpp249 | 1 | measurement | not_found | below_threshold | 10.2307/3503804 | 0.304 |  |  |
+| MammSpp459 | 1 | measurement | not_found | below_threshold | 10.3389/fimmu.2017.01614 | 0.440 |  |  |
+| AfghanPDF | 3 | measurement | not_found | below_threshold | 10.29171/azu_acku_serial_ds371_2_a544_v1986_n53 | 0.356 |  |  |
+| IiasaTropMoist | 3 | compilation | not_found | below_threshold | 10.1007/978-1-4757-2135-5_18 | 0.309 |  |  |
+| IiasaAfrRainfor | 1 | compilation | not_found | below_threshold | 10.1007/springerreference_5637 | 0.401 |  |  |
+| web.vienna.talpinae.mogera | 3 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.371 |  |  |
+| web.vienna.erinaceidae.hylomys | 2 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.383 |  |  |
+| web.vienna.erinaceidae.mesechinus | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.391 |  |  |
+| web.vienna.sorex.asper | 1 | measurement | not_found | below_threshold | 10.2307/jj.30297277.46 | 0.424 |  |  |
+| web.vienna.sorex.gracillimus | 1 | measurement | not_found | below_threshold | 10.2307/jj.30297277.46 | 0.424 |  |  |
+| web.vienna.sorex.roboratus | 1 | measurement | not_found | below_threshold | 10.2307/jj.30297277.46 | 0.434 |  |  |
+| web.vienna.sorex.sinalis | 1 | measurement | not_found | below_threshold | 10.1007/s12686-017-0780-7 | 0.459 |  |  |
+| web.vienna.soricinae.schelkovnikovi | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.372 |  |  |
+| web.vienna.soriculus.caudatus | 1 | measurement | not_found | below_threshold | 10.1111/j.1749-4877.2008.00097.x | 0.415 |  |  |
+| web.vienna.soriculus.leucops | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.366 |  |  |
+| web.vienna.soriculus.macrurus | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.368 |  |  |
+| web.vienna.talpinae | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.365 |  |  |
+| web.vienna.talpinae.scapanulus | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.376 |  |  |
+| web.vienna.talpinae.scaptonyx | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1141.2012.01067 | 0.365 |  |  |
+| web.napak.marmots | 2 | measurement | not_found | below_threshold | 10.33021/exp.v2i1.437 | 0.351 |  |  |
+| web.aciar.mn100 | 2 | measurement | not_found | below_threshold | 10.1145/1060745.1060746 | 0.410 |  |  |
+| web.adw.moschus-fuscus | 1 | measurement | not_found | below_threshold | 10.1016/b978-1-59-749951-4.00002-3 | 0.443 |  |  |
+| web.lyon.marmot.himalayana | 1 | measurement | not_found | below_threshold | 10.31219/osf.io/kztrc_v2 | 0.346 |  |  |
+| web.tripod.trachypithecus-auratus | 1 | measurement | not_found | below_threshold | 10.31420/uakari.v8i2.114 | 0.346 |  |  |
+| web.animalinfo.anthor | 1 | measurement | not_found | below_threshold | 10.1007/978-3-642-95855-7_10 | 0.446 |  |  |
+| web.animalinfo.embadian | 1 | measurement | not_found | below_threshold | 10.1353/rom.0.0016 | 0.323 |  |  |
+| web.animalinfo.nesonets | 1 | measurement | not_found | below_threshold | 10.1353/rom.0.0005 | 0.332 |  |  |
+| web.ukraine.bobac | 1 | measurement | not_found | below_threshold | 10.3917/ethn.083.0561e | 0.365 |  |  |
+| web.glirarium.chaetocauda | 1 | measurement | not_found | below_threshold | 10.1007/978-3-662-63701-2_27 | 0.470 |  |  |
+| web.kyrgyz-taigan.gallery | 1 | measurement | not_found | no_candidates |  |  |  |  |
+| web.tiho.gibbons | 1 | measurement | not_found | below_threshold | 10.1055/s-0034-1396235 | 0.362 |  |  |
+| web.traveltaiwan.em | 1 | measurement | not_found | below_threshold | 10.46430/phpt0030 | 0.430 |  |  |
+| web.ultimateungulate.dama-mesopotamica | 1 | measurement | not_found | below_threshold | 10.1007/978-3-662-63701-2_27 | 0.464 |  |  |
+| web.ultimateungulate.sus-celebensis | 1 | measurement | not_found | below_threshold | 10.1007/978-3-662-63701-2_27 | 0.471 |  |  |
+| web.earthscape.robinson23 | 1 | measurement | not_found | below_threshold | 10.1007/978-3-642-18963-0_3 | 0.424 |  |  |
+| web.hokudai.oriilist08 | 1 | measurement | not_found | below_threshold | 10.55277/researchhub.2q1iiwny.1 | 0.401 |  |  |
+| 655 | 1 | measurement | rejected | owner_drop |  |  |  |  |
