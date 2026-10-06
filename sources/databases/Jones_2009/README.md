@@ -2,6 +2,11 @@
 
 The data of this label are fetched live by `R/library/data_retrieve.r` (retriever dataset `pantheria`, Ecological Archives E090-184; `sources/Rdata/BodyMass_DataRetrieverAll.Rdata`) and are described, with the filters, the `ref_keys` rule and the Provenance paragraph of the label, in `sources/databases/DataRetriever/README.md`. This folder holds only the files of the primary-source attribution of issue #1 (Stage 2, round of 2026-10-06).
 
+Filters: see `sources/databases/DataRetriever/README.md` (positive `adultbodymass_g` only; nothing is filtered here).
+Mass type: see the DataRetriever README (wet mass in grams as compiled by PanTHERIA).
+Imputed rows: none (the extrapolated `adultbodymass_g_ext` column is not read; see the DataRetriever README).
+Licence: repository (CC BY 4.0) (the files here are our own working tables: the reference list transcribed from the archive's `metadata.htm` and the tool's `primary_references.csv`; no raw file is stored. The data paper's terms -- `metadata.htm`: "Copyright restrictions: None. Proprietary restrictions: None. Costs: None, the authors believe that scientific data collated using public funds should be free for scientific use."; https://doi.org/10.1890/08-1494.1 -- apply to the data fetched at run time, see the DataRetriever README).
+
 | file | contents |
 | --- | --- |
 | `build_references.py` | writes `references.csv` from the archive's `metadata.htm` in the retriever cache (`~/.retriever/raw_data/pantheria/5604752`, a zip): the numbered list "Reference list for the data set" (Class V, Section B), one entry per `<br />`-separated line, tags stripped, entities unescaped, whitespace collapsed; stops on a numbering gap |
