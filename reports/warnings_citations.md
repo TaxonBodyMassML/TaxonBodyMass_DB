@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 17:55:44
+# Citation and provenance warnings -- 2026-10-05 18:53:03
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 132286 (39024 species); distinct primary CiteIDs: 693; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 133610 (39024 species); distinct primary CiteIDs: 925; unresolved references (pending / not_found): 31; unverified references: 3
 
 ## Problems
 
@@ -91,7 +91,7 @@ One row per source label: species and record links (species x source x reference
 | Reum_2012 | primary | 17 | 17 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2013 | primary | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Smith_2003 | compilation | 3519 | 4309 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Smith_2003 | compilation | 3519 | 4779 | 98.1 | 255 | 244 | 0 | 0 | 0 | 11 | 0 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5361 | 5458 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tobias_2022 | compilation | 9674 | 10047 | 90.5 | 46 | 43 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 47 | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -103,7 +103,7 @@ One row per source label: species and record links (species x source x reference
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 12233 | 12302 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12233 | 12933 | 99.6 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 131 | 131 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2065 | 2878 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 299 | 539 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

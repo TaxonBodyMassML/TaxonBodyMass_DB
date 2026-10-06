@@ -115,6 +115,14 @@ Expect(is.numeric(cr$score) && all(!is.na(cr$score)) && cr$type[5] == 'posted-co
 Expect(nrow(CrossrefQuery(NA, cfg)) == 0 && nrow(CrossrefQuery('  ', cfg)) == 0, 'an empty query gives no candidates without a request')
 Expect(grepl('rows=5&mailto=offline%40invalid$', CrossrefQueryURL(query1, cfg)) && grepl('query.bibliographic=Doyle%202007', CrossrefQueryURL(query1, cfg), fixed = TRUE),
        'the query URL is percent-encoded with rows and mailto')
+
+# a citation that is itself a URL with '%20' escapes (Smith_2003 reference 174):
+# URLencode() skips a string holding '%xx' unless repeated = TRUE, and curl
+# refuses the raw spaces
+u_pct <- CrossrefQueryURL('www.iiasa.ac.at/~sendzim/ Trop%20Wet%20Forest.xls', cfg)
+Expect(grepl('query.bibliographic=www.iiasa.ac.at%2F~sendzim%2F%20Trop%2520Wet%2520Forest.xls&', u_pct, fixed = TRUE) &&
+         !inherits(try(curl::curl_parse_url(u_pct), silent = TRUE), 'try-error'),
+       'Enc() percent-encodes a query that already holds %xx sequences')
 w <- CrossrefWork('10.1007/BF00392514', cfg)
 Expect(!is.null(w) && w$DOI == '10.1007/bf00392514' && w$author[[1]]$family == 'Ikeda' && w$volume == '92' && length(w$reference) == 28,
        'CrossrefWork() returns the full message of a DOI (case-insensitive, with reference[])')
@@ -230,9 +238,22 @@ good <- rbind(Row('https://doi.org/10.1/A', 'FALSE', 'none', 'scite-mcp'),
               Row('10.1/f', 'FALSE', 'none', 'scite-mcp'),
               Row('10.1/f', NA, 'unchecked', 'consensus-mcp'),
               Row('10.1/g', NA, NA, 'none'),
-              Row('10.1/g', 'FALSE', 'correction', 'scite-mcp'))
+              Row('10.1/g', 'FALSE', 'correction', 'scite-mcp'),
+              Row('10.1/h', NA, NA, 'none'),
+              Row('10.1/h', NA, 'waived', 'owner-waiver'),
+              Row('10.1/i', NA, 'waived', 'owner-waiver'),
+              Row('10.1/i', 'TRUE', 'retraction', 'scite-mcp'))
 sc <- ReadSciteChecks(WriteChecks(good))
-Expect(nrow(sc) == 9 && sc$doi[1] == '10.1/a' && all(sc$checked_by %in% screening_services), 'a valid file reads with cleaned DOIs')
+Expect(nrow(sc) == 13 && sc$doi[1] == '10.1/a' && all(sc$checked_by %in% screening_services), 'a valid file reads with cleaned DOIs')
+Expect(Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', NA, 'unchecked', 'owner-waiver')))), "must have notice_type 'waived'") &&
+         Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', 'TRUE', 'waived', 'owner-waiver')))), 'cannot assert is_retracted'),
+       'an owner-waiver row must say waived and cannot assert a retraction')
+v <- SciteVerdict('10.1/h', sc)
+Expect(v$checked && v$service == 'owner-waiver' && !v$is_retracted && is.na(v$notice) && !v$gap,
+       "an owner-waiver row closes the gap of a 'none' row: checked, no notice, no gap")
+v <- SciteVerdict('10.1/i', sc)
+Expect(v$checked && v$service == 'scite-mcp' && v$is_retracted && v$notice == 'scite-mcp:retraction',
+       'a scite-mcp row supersedes an owner-waiver row')
 Expect(Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', 'FALSE', 'none', 'scholar')))), 'checked_by must be one of'),
        'an unknown screening service is rejected')
 Expect(Has(ErrorOf(ReadSciteChecks(WriteChecks(Row('10.1/x', 'FALSE', 'none', 'consensus-mcp')))), "must have notice_type 'unchecked'"),

@@ -192,6 +192,12 @@ Expect(r9$match_status == 'pending' && r9$match_reason == 'weak_match' && r9$ser
        'a consensus-mcp row only records the service on a pending row')
 Expect(r6$services == 'crossref;openalex' && identical(ApplySciteChecks(p, NULL), p) && identical(ApplySciteChecks(p, sc2[0, ]), p),
        'unscreened DOIs and an empty screening file leave rows unchanged')
+sc4 <- rbind(sc2[2, ], data.frame(doi = '10.1007/bf00355587', is_retracted = NA, notice_type = 'waived', notice_doi = NA, checked_at = '2026-10-05',
+                                  checked_by = 'owner-waiver', stringsAsFactors = FALSE))
+q4 <- ApplySciteChecks(p, sc4, verified_at = '2026-10-08T00:00:00Z')
+r12w <- q4[q4$native_key == '12', ]
+Expect(r12w$match_status == 'certain' && r12w$services == 'crossref;openalex;owner-waiver' && is.na(r12w$editorial_notice) && !isTRUE(r12w$is_retracted),
+       "an owner-waiver row after a 'none' row leaves a certain row certain and records the waiver in services")
 sc3 <- data.frame(doi = '10.1016/j.jembe.2006.12.010', is_retracted = 'TRUE', notice_type = 'retraction', notice_doi = NA, checked_at = '2026-10-05', checked_by = 'scite-mcp', stringsAsFactors = FALSE)
 q3 <- ApplySciteChecks(q, sc3)
 Expect(q3$is_retracted[q3$native_key == '1'] && q3$services[q3$native_key == '1'] == 'crossref;openalex;scite-mcp' && Has(q3$editorial_notice[q3$native_key == '1'], 'scite-mcp:retraction'),
