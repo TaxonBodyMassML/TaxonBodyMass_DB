@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 17:01:00
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 17:23:15
 
 ## Summary
 
@@ -8,6 +8,7 @@
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 - Names unresolved after all enrichment stages: 174 names, 1819 rows
+- Kingdom conflicts corrected before the autotroph filter: 5 names, 38 rows (2 unresolved)
 
 ## Missing `class` after all enrichment stages (18 rows)
 
@@ -752,3 +753,15 @@ Tringa_sinornatus | vertnet-aves-sept2016 | 1 row
 Tyroglyphus_linterni | Brown_etal_2018 | 1 row
 
 Zophosis_congesta | Herberstein_etal_2022 | 1 row
+
+## Kingdom conflicts corrected before the autotroph filter (5 names, 38 rows -- an authority's plant, alga or fungus kingdom over animal ranks; #81)
+
+Erodius_nanus | Plantae -> Animalia | - / - / Coleoptera / Tenebrionidae | species=unresolved [-] | Baach_2026, Chown_etal_2007, Ehnes_etal_2011, Makarieva_2008 | 4 rows
+
+Lobella_decipiens | Plantae -> Animalia | Arthropoda / Collembola / Poduromorpha / Neanuridae | species=Lobellina decipiens [manual] | Hishi_etal_2019 | 1 row
+
+Myrmecia_pyriformis | Viridiplantae -> Animalia | Arthropoda / Insecta / Hymenoptera / Formicidae | species=Myrmecia pyriformis [manual] | Herberstein_etal_2022, Leahy_2025 | 31 rows
+
+Parus_humilis | Plantae -> Animalia | Chordata / Aves / Passeriformes / Paridae | species=Pseudopodoces humilis [manual] | Myhrvold_2015 | 1 row
+
+Rusa_nana | Plantae -> Animalia | - / - / Artiodactyla / Cervidae | species=unresolved [-] | Smith_2003 | 1 row

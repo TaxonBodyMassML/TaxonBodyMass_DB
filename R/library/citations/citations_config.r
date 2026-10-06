@@ -305,7 +305,12 @@ reflist_specs <- list(
   # Refs sheet of the workbook transcribed verbatim to references.csv (#66)
   Hoehler_etal_2023 = list(format = 'csv', file = 'references.csv',
                            key_col = 'key', citation_col = 'citation', sep = ';',
-                           compiler = 'Hoehler', compilation_doi = '10.1073/pnas.2303764120')
+                           compiler = 'Hoehler', compilation_doi = '10.1073/pnas.2303764120'),
+  # AVONET (Stage 2 of #1): the Mass_Sources sheet (42 Citation keys) plus the
+  # four Mass.Source code words of the Metadata sheet the parser keeps as keys
+  Tobias_2022  = list(format = 'csv', file = 'references.csv', folder = 'Tobias_etal_2022',
+                      frame = 'Tobias_2022', key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Tobias')
 )
 
 ReflistSpec <- function(source_label) {
