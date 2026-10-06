@@ -129,6 +129,7 @@ match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', '
                       'single_service', 'ambiguous', 'grey_literature', 'retracted',
                       'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'service_unavailable',   # unscreened: historical (rows and queue entries before 2026-10-05)
                       'owner_review', 'self',
+                      'crossref_only',   # certain on Crossref alone in Crossref-only mode (owner decision 2026-10-06; decide.r)
                       'owner_candidate', 'owner_doi', 'manual_bib', 'owner_nodoi',
                       'owner_self', 'owner_drop', 'key_not_in_reflist')
 reference_roles  <- c('measurement', 'compilation', 'equation', 'conversion', 'database', 'self')
@@ -166,7 +167,7 @@ primary_reference_columns <- c(
   'match_status', 'match_reason', 'services',
   'title_sim', 'author_match', 'year_match', 'container_match', 'volume_match', 'pages_match',
   'openalex_id', 'is_retracted', 'editorial_notice', 'verified_at', 'tool_version',
-  'decided_by', 'decided_at', 'year_override', 'notes', 'owner_review', 'parsed_url')
+  'decided_by', 'decided_at', 'year_override', 'notes', 'owner_review', 'parsed_url', 'verification_mode')
 # the columns the owner may edit by hand (everything else is written by the tool)
 primary_reference_owner_columns <- c('role', 'parsed_author1', 'parsed_year', 'parsed_title',
                                      'parsed_container', 'parsed_volume', 'parsed_pages', 'notes', 'owner_review',
@@ -184,7 +185,15 @@ primary_reference_owner_columns <- c('role', 'parsed_author1', 'parsed_year', 'p
 # writes it as the entry's `url` field. A file lacking either optional column
 # reads with it filled NA, and --bib does not rewrite another source's file
 # for the missing column alone (item 7).
-primary_reference_optional_columns <- c('owner_review', 'parsed_url')
+# `verification_mode` (added 2026-10-06, Crossref-only mode for the backlog,
+# owner decision 2026-10-06; optional, tool-written): the mode of the last
+# automated verification of the row, 'crossref_only' (decided on Crossref
+# alone, --crossref-only, OpenAlex never asked) or 'full' (Crossref +
+# OpenAlex); NA for a row verified before the column existed (all of them in
+# full) and for owner-decided and self rows. A certain 'crossref_only' row is
+# re-checked in full by the next --verify without the flag
+# (VerifyPrimaryReferences(), RecheckCrossrefOnly()).
+primary_reference_optional_columns <- c('owner_review', 'parsed_url', 'verification_mode')
 # For a `nodoi` entry parsed_author1 may hold the full author list in BibTeX
 # form ('Ikeda and Hirakawa and Imamura') when the owner approved it; the
 # field is a query input only until then. A corporate author is written in

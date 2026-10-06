@@ -226,8 +226,9 @@ Expect(startsWith(pu, '@misc{') && Field(pu, 'url') == 'https://animaldiversity.
 pu2 <- BuildBibEntryNoDOI(c(Row(container = 'Mar. Biol.', volume = '3', pages = '4-10'), parsed_url = 'https://example.org/paper'), 'K:1976ad', 'MN', '2026-10-06')
 Expect(startsWith(pu2, '@article{') && Field(pu2, 'url') == 'https://example.org/paper', 'parsed_url adds a url field to any type without changing the type')
 Expect('parsed_url' %in% primary_reference_columns && 'parsed_url' %in% primary_reference_optional_columns && 'parsed_url' %in% primary_reference_owner_columns &&
-         identical(tail(primary_reference_columns, 2), c('owner_review', 'parsed_url')),
-       'parsed_url is an optional, owner-editable column at the end of the schema (older files read with it NA)')
+         identical(tail(primary_reference_columns, 3), c('owner_review', 'parsed_url', 'verification_mode')) &&
+         'verification_mode' %in% primary_reference_optional_columns && !'verification_mode' %in% primary_reference_owner_columns,
+       'parsed_url is an optional, owner-editable column at the end of the schema (older files read with it NA); verification_mode an optional tool-written one after it')
 
 cat('MatchingNoDOIEntry()\n')
 NoDOIRow <- function(source_label, native_key, author1, year, title, bibcite = NA_character_, status = 'nodoi_approved')
