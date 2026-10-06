@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 21:32:27
+# Citation and provenance warnings -- 2026-10-06 07:30:43
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 172589 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5044
+- provenance rows: 194668 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 8215
 
 ## Problems
 
@@ -61,7 +61,7 @@ One row per source label: species and record links (species x source x reference
 | Hudson_2013 | compilation | 110 | 1246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1246 |
 | Ikeda_2014 | compilation | 298 | 587 | 99.8 | 37 | 36 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Jones_2009 | compilation | 3285 | 3303 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Jones_2009 | compilation | 3285 | 21393 | 0 | 3066 | 0 | 0 | 0 | 0 | 0 | 3066 | 0 | 0 |
 | Kendall_etal_2019 | primary | 424 | 4033 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Killen_etal_2016 | compilation | 18 | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kinsella_etal_2020 | primary | 92 | 572 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -82,7 +82,7 @@ One row per source label: species and record links (species x source x reference
 | Mercer_etal_2001 | primary | 50 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Myhrvold_2015 | compilation | 15875 | 16084 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Myhrvold_2015 | compilation | 15875 | 20079 | 0 | 105 | 0 | 0 | 0 | 0 | 0 | 105 | 0 | 0 |
 | Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | Pata_2025 | compilation | 99 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 97 | 359 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

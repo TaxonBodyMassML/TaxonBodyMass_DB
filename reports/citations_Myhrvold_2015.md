@@ -1,0 +1,116 @@
+# Citations of Myhrvold_2015 -- 2026-10-06 07:28:04 (tbmcite 0.1.0)
+
+Steps: --init --offline
+
+- --init: 16677 records, 16677 with ref_keys (0.0% NA); 105 native keys -> primary_references.csv
+- --init: 4 reference(s) marked for the owner's review: Bennett_1986, Kratochvil_2006a, Paleczny_2008, Warham_1971
+
+## References
+
+| native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
+| --- | ---: | --- | --- | --- | --- | --- | --- | --- |
+| Alonso_2009 | 1 | measurement |  |  |  |  |  |  |
+| Atanasov_2012a | 1 | measurement |  |  |  |  |  |  |
+| Atanasov_2012b | 2 | measurement |  |  |  |  |  |  |
+| Auliya_2010 | 1 | measurement |  |  |  |  |  |  |
+| Austad_2011 | 1 | measurement |  |  |  |  |  |  |
+| Kot_2010 | 1 | measurement |  |  |  |  |  |  |
+| Banzato_2012 | 1 | measurement |  |  |  |  |  |  |
+| Bell_1986 | 1 | measurement |  |  |  |  |  |  |
+| Bennett_1986 | 1240 | measurement |  |  |  |  |  |  |
+| Boback_2003 | 1132 | measurement |  |  |  |  |  |  |
+| Borissenko_2003 | 14 | measurement |  |  |  |  |  |  |
+| BrunetRossinni_2004 | 3 | measurement |  |  |  |  |  |  |
+| Caceres_2011 | 1 | measurement |  |  |  |  |  |  |
+| Clemente_2009 | 3 | measurement |  |  |  |  |  |  |
+| Clemente_2011 | 2 | measurement |  |  |  |  |  |  |
+| Cordero_2012 | 1 | measurement |  |  |  |  |  |  |
+| Corlett_2011 | 1 | measurement |  |  |  |  |  |  |
+| Cuthbert_2004 | 1 | measurement |  |  |  |  |  |  |
+| deMagalhaes_2009 | 966 | measurement |  |  |  |  |  |  |
+| Delson_2000 | 79 | measurement |  |  |  |  |  |  |
+| Dickman_1996 | 1 | measurement |  |  |  |  |  |  |
+| Dobie_1971 | 1 | measurement |  |  |  |  |  |  |
+| Dobson_2010 | 18 | measurement |  |  |  |  |  |  |
+| Duncan_2009 | 1 | measurement |  |  |  |  |  |  |
+| Dunning_1992 | 7580 | measurement |  |  |  |  |  |  |
+| Dyke_2010 | 45 | measurement |  |  |  |  |  |  |
+| Ernest_2003 | 933 | measurement |  |  |  |  |  |  |
+| Ferreira_2013 | 1 | measurement |  |  |  |  |  |  |
+| Fokidis_2008 | 11 | measurement |  |  |  |  |  |  |
+| Franz_2011 | 1 | measurement |  |  |  |  |  |  |
+| Gaulke_2010 | 1 | measurement |  |  |  |  |  |  |
+| Gavrilov_2012 | 1 | measurement |  |  |  |  |  |  |
+| Geiser_1990 | 1 | measurement |  |  |  |  |  |  |
+| Geiser_2004 | 1 | measurement |  |  |  |  |  |  |
+| Geiser_2010 | 1 | measurement |  |  |  |  |  |  |
+| Gimenez_2012 | 6 | measurement |  |  |  |  |  |  |
+| Goncalves_2013 | 1 | measurement |  |  |  |  |  |  |
+| Graham_2012 | 1 | measurement |  |  |  |  |  |  |
+| Greene_2013 | 4 | measurement |  |  |  |  |  |  |
+| Hammond_2009 | 1 | measurement |  |  |  |  |  |  |
+| Harris_2009 | 1 | measurement |  |  |  |  |  |  |
+| Hedenstrom_2007 | 2 | measurement |  |  |  |  |  |  |
+| HermesLima_2012 | 1 | measurement |  |  |  |  |  |  |
+| Hickey_1996 | 3 | measurement |  |  |  |  |  |  |
+| Hofmeyr_2005 | 8 | measurement |  |  |  |  |  |  |
+| Iverson_1993 | 162 | measurement |  |  |  |  |  |  |
+| Jefferson_2008 | 1 | measurement |  |  |  |  |  |  |
+| Jones_2003 | 47 | measurement |  |  |  |  |  |  |
+| Jones_2003_2 | 1 | measurement |  |  |  |  |  |  |
+| Jones_1967 | 1 | measurement |  |  |  |  |  |  |
+| Jones_2009 | 3348 | measurement |  |  |  |  |  |  |
+| Jouventin_2002 | 1 | measurement |  |  |  |  |  |  |
+| Kays_2009 | 1 | measurement |  |  |  |  |  |  |
+| King_1999 | 8 | measurement |  |  |  |  |  |  |
+| Kratochvil_2006a | 9 | measurement |  |  |  |  |  |  |
+| Krist_2011 | 52 | measurement |  |  |  |  |  |  |
+| Lambertucci_2009 | 1 | measurement |  |  |  |  |  |  |
+| Lanicci | 1 | measurement |  |  |  |  |  |  |
+| Lee_1998 | 20 | measurement |  |  |  |  |  |  |
+| Lelievre_2010 | 1 | measurement |  |  |  |  |  |  |
+| MarinhoFilho_2002 | 2 | measurement |  |  |  |  |  |  |
+| Meiri_2010 | 1140 | measurement |  |  |  |  |  |  |
+| Meiri_2011 | 660 | measurement |  |  |  |  |  |  |
+| Merritt_2010 | 1 | measurement |  |  |  |  |  |  |
+| Meyers_2009 | 138 | measurement |  |  |  |  |  |  |
+| Mountain_1991 | 1 | measurement |  |  |  |  |  |  |
+| Naughton_2012 | 1 | measurement |  |  |  |  |  |  |
+| Nowak_1994 | 11 | measurement |  |  |  |  |  |  |
+| Olifiers_2004 | 5 | measurement |  |  |  |  |  |  |
+| Paleczny_2008 | 4 | measurement |  |  |  |  |  |  |
+| Palmer_2003 | 1 | measurement |  |  |  |  |  |  |
+| Pangerc_2010 | 1 | measurement |  |  |  |  |  |  |
+| Parrott_2009 | 2 | measurement |  |  |  |  |  |  |
+| Patrick_2011 | 2 | measurement |  |  |  |  |  |  |
+| PincheiraDonoso_2011 | 44 | measurement |  |  |  |  |  |  |
+| Prins_2014 | 1 | measurement |  |  |  |  |  |  |
+| PuenteRolon_2004 | 2 | measurement |  |  |  |  |  |  |
+| Ricklefs_2010b | 153 | measurement |  |  |  |  |  |  |
+| Rydell_2002 | 4 | measurement |  |  |  |  |  |  |
+| Saber_2010 | 1 | measurement |  |  |  |  |  |  |
+| Savage_2004 | 557 | measurement |  |  |  |  |  |  |
+| Schmidly_2004 | 1 | measurement |  |  |  |  |  |  |
+| SchuckPaima_2008 | 45 | measurement |  |  |  |  |  |  |
+| Secor_2009 | 4 | measurement |  |  |  |  |  |  |
+| Seebeck_1998 | 1 | measurement |  |  |  |  |  |  |
+| SerranoMeneses_2006 | 29 | measurement |  |  |  |  |  |  |
+| Seymour_1979 | 4 | measurement |  |  |  |  |  |  |
+| Sibly_2012 | 1 | measurement |  |  |  |  |  |  |
+| Smith_2009 | 1 | measurement |  |  |  |  |  |  |
+| Stahlschmidt_2009 | 4 | measurement |  |  |  |  |  |  |
+| Stone_1992 | 1 | measurement |  |  |  |  |  |  |
+| Subach_2009 | 4 | measurement |  |  |  |  |  |  |
+| Szekely_2007 | 1721 | measurement |  |  |  |  |  |  |
+| Tacutu_2013 | 164 | measurement |  |  |  |  |  |  |
+| Thorbjarnarson_1996 | 18 | measurement |  |  |  |  |  |  |
+| Voss_2013 | 1 | measurement |  |  |  |  |  |  |
+| Ward_2004 | 1 | measurement |  |  |  |  |  |  |
+| Warham_1971 | 1 | measurement |  |  |  |  |  |  |
+| Wasser_2010 | 222 | measurement |  |  |  |  |  |  |
+| Watson_2012 | 1 | measurement |  |  |  |  |  |  |
+| Werner_2012 | 41 | measurement |  |  |  |  |  |  |
+| Werner_2013 | 50 | measurement |  |  |  |  |  |  |
+| West_2010 | 1 | measurement |  |  |  |  |  |  |
+| Wilson_2003 | 63 | measurement |  |  |  |  |  |  |
+| Woodman_2010 | 3 | measurement |  |  |  |  |  |  |

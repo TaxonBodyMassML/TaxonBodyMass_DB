@@ -358,7 +358,20 @@ reflist_specs <- list(
   # entry's Taxa text); the records' SVL reference cells split at ',' or ';'
   Meiri_2018   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '[,;]',
-                      compiler = 'Meiri', compilation_doi = '10.1111/geb.12773')
+                      compiler = 'Meiri', compilation_doi = '10.1111/geb.12773'),
+  # the two retriever compilations of the DataRetrieverAll frame (Stage 2 of #1;
+  # R/library/data_retrieve.r keeps their keys, so a DataRetrieve = TRUE run is
+  # needed before --init): Amniote per-cell source names -> the keys of
+  # references.csv (build_references.py: the Supplemental Table 1 entry matched
+  # to each name; `owner_review` where none or several match); PanTHERIA
+  # `References` numbers -> the 3,143 entries of the E090-184 metadata list
+  Myhrvold_2015 = list(format = 'csv', file = 'references.csv', frame = 'DataRetrieverAll',
+                       key_col = 'key', citation_col = 'citation', type_col = 'note',
+                       review_col = 'owner_review', sep = ';', compiler = 'Myhrvold',
+                       compilation_doi = '10.1890/15-0846R.1'),
+  Jones_2009   = list(format = 'csv', file = 'references.csv', frame = 'DataRetrieverAll',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Jones', compilation_doi = '10.1890/08-1494.1')
 )
 
 ReflistSpec <- function(source_label) {

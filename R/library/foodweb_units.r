@@ -198,6 +198,53 @@ WebReferenceKeys <- function(x, refs, citation_col, label) {
   unname(keys[cit])
 }
 
+# The value-providing source names of the Amniote database's per-cell
+# reference strings (Myhrvold et al. 2015, Amniote_Database_References csv;
+# issue #1 Stage 2). A cell reads "<name>", "<name> from median of n(<name>,
+# ...)" (the stored value is the median of n raw values and equals the one
+# <name> reported) or "mean of <name> & <name> from median of n(...)" (an even
+# n: the mean of the two middle values; '&' or 'and'); a name may carry the
+# batch prefix "BC Birds - " / "BC mammals - " / "BC Reptiles - ", which is not
+# part of the reference. The names before "from median of" are the sources of
+# the value and become its keys; the names in the brackets are not. `refs` is
+# the references table of the source (columns `key` and `reference_name`, the
+# vocabulary that lets a cell be split: a name itself holds ', ' and ' and ').
+# Returns the '; '-joined keys per cell, NA for a missing cell (-999, empty);
+# stops on a cell that the vocabulary cannot split.
+AmnioteValueSources <- function(x, refs, label = 'Myhrvold_2015') {
+  for (col in c('key', 'reference_name'))
+    if (col %!in% names(refs)) stop(label, ': references table lacks column ', col)
+  x   <- trimws(as.character(x))
+  out <- rep(NA_character_, length(x))
+  todo <- which(!is.na(x) & !x %in% c('', '-999'))
+  if (length(todo) == 0) return(out)
+  nm   <- trimws(refs$reference_name)
+  keys <- setNames(trimws(refs$key), nm)
+  esc  <- gsub('([][{}()+*^$|\\\\?.])', '\\\\\\1', nm[order(-nchar(nm))])
+  alt  <- paste(esc, collapse = '|')
+  pfx  <- '(?:BC (?:Birds|mammals|Reptiles) - )?'
+  head <- sub(' from median of [0-9]+\\(.*\\)$', '', x[todo], perl = TRUE)
+  is_mean <- startsWith(head, 'mean of ')
+  body <- ifelse(is_mean, substring(head, 9), head)
+  one  <- sprintf('^%s(%s)$', pfx, alt)
+  # 'mean of  & Iverson, ..., 1993' (one cell writes an empty first name)
+  two  <- sprintf('^%s(%s)? (?:&|and) %s(%s)$', pfx, alt, pfx, alt)
+  m1 <- regmatches(body, regexec(one, body, perl = TRUE))
+  m2 <- regmatches(body, regexec(two, body, perl = TRUE))
+  res <- vapply(seq_along(body), function(i) {
+    found <- if (is_mean[i]) m2[[i]][-1] else m1[[i]][-1]
+    found <- found[nzchar(found)]
+    if (length(found) == 0) return(NA_character_)
+    paste(unique(keys[found]), collapse = '; ')
+  }, character(1))
+  bad <- is.na(res)
+  if (any(bad))
+    stop(label, ': ', sum(bad), ' reference cell(s) that the references table cannot split: ',
+         paste(head(x[todo][bad], 3), collapse = ' | '))
+  out[todo] <- res
+  out
+}
+
 # Apply the per-web (or per-study) actions of a units table to stacked rows.
 # `units` has the column `key` (foodweb.name / study), `action` and
 # `log_reason`; every value of dat[[key]] must be in the table. Drops are
