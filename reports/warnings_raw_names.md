@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 21:30:35
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-06 08:38:20
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 

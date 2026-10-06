@@ -14,8 +14,8 @@ directory is read or written by the pipeline.
 
 One row per flagged record: a species x source value as it stood when a screen
 flagged it. The file is the record of what was flagged, by which method, and
-what was decided; it is an input of the range-filter revisit (issue #34) and
-is read by no code. Rows are appended, never rewritten: a value corrected or
+what was decided; it was the truth set of the range-filter revisit (issue #34,
+whose adoption batch is the last method below) and is read by no code. Rows are appended, never rewritten: a value corrected or
 removed since keeps its row, with the value of its day.
 
 Columns: `taxon` (the cleaned input name, `Genus_species`), `mass_g`,
@@ -115,6 +115,33 @@ Methods, with their dates and severity rules:
   `log10_pred` log10 of the median of the other six sources' Pass-1 values on
   main 8ac5bbe, `SUSPICIOUS` (small medusae are possible); the species falls
   to the `log10_range > 1` filter, left to the owner.
+
+- `range_rule_2026-10-06` (869 rows): the values the record-level range rule
+  of issue #34 (`R/library/exclude_discordant.r`, README pipeline step 5)
+  excluded from their species' cross-source mean at its adoption, on main
+  8b1ff08 with the 2026-10-05 frames: one row per excluded independent
+  Pass-1 value (a collapsed copy excluded with its parent is named in the
+  parent's note, not given a row). `mass_g` is the excluded value, `n` its
+  record count, `log10_pred` log10 of the median of the kept values of the
+  species, `severity` `CRITICAL` when `abs_residual >= 2` (210 rows) and
+  `SUSPICIOUS` otherwise (659); the note gives the rule (`loo_unique` 463,
+  `tier_tiebreak` 73, `distance_tiebreak` 60, `two_value_tier` 273), the
+  value's trust tier (and whether it was converted from another mass type),
+  the kept values with their tiers, and the species' resulting mean. The
+  rows were generated from the run's exclusion table with
+  `ExclusionRegisterRows()` (not hand-edited) and the species they belong to
+  are kept in `TaxonBodyMass.csv` (39,023 -> 39,887 species at adoption; the
+  315 species the rule left unresolved stay removed by the `log10_range > 1`
+  filter and are listed with all their values in
+  `reports/warnings_mass_values.md`). Later runs do not append to the
+  register: `reports/excluded_records.csv` is the live list of a run's
+  exclusions, species and genus level, and `reports/warnings_mass_values.md`
+  lists them beside the kept values. The batch covers 33 of the 54 register
+  rows above whose species were in the removed set (the registered record is
+  the excluded one); one more species (*Keratella cochlearis*) had its
+  `Brose_2005` value excluded, which holds the same datum as the registered
+  GATEWAy value; the other 20 stay removed (same-tier pairs, a tier-2
+  maximum against a tier-3 value, which may not decide, and the continua).
 
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.

@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-05 21:32:16
+# Genus-only records -- 2026-10-06 08:40:01
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -20,7 +20,7 @@ Input records identified to genus only (a cleaned name without an underscore; th
 | genus x source values (after the autotroph filter) | 722 |
 | values collapsed as copies | 3 |
 | genus-only records (pseudo-taxa) | 656 |
-| records more than 1 log10 from the genus's species mean | 48 |
+| records more than 1 log10 from the genus's species mean | 50 |
 
 ## Resolution by stage
 
@@ -314,56 +314,58 @@ Values collapsed as copies by the registry or the blind rule (dedupe_sources.r):
 
 ## Genus-only records more than one order of magnitude from the genus's species values
 
-The genus-only record against the arithmetic mean of the genus's species cross-source means (the two enter the genus mean with equal weight). Genus-only records are not range-checked (issue #34); nothing is removed here.
+The genus-only record against the arithmetic mean of the genus's species cross-source means (the two enter the genus mean with equal weight). The record-level range rule (issue #34, exclude_discordant.r) judges the record against the median of the species means: more than 1 log10 from the median of two or more species it is excluded from the genus mean (status excluded_genus_only_discordant); against a single species the two-value tier rule applies (excluded_two_value_tier when the record is the lower-trust side; kept and listed as unresolved otherwise). An excluded record stays in the genus row's source_mass; a genus with no other contributor has no row.
 
-| genus | genus_only_g | species_mean_g | n_species | log10_ratio | sources |
-| --- | --- | --- | ---: | ---: | --- |
-| Protoperidinium | 2.26e-14 | 9.83e-08 | 9 | -6.64 | Brose_etal_2018 |
-| Cephalodiscus |  0.2 | 1.66e+05 | 1 | -5.92 | Brose_etal_2018 |
-| Fritillaria | 4.9e-06 | 0.0928 | 1 | -4.28 | Brose_etal_2018 |
-| Holoparamecus |    2 | 0.000115 | 1 | 4.24 | Brose_etal_2018 |
-| Doliolum | 22.5 | 0.0021 | 1 | 4.03 | Pata_2025 |
-| Pseudocalanus | 0.0928 | 5.8e-05 | 2 | 3.2 | Brose_etal_2018 |
-| Henricia | 0.0701 | 94.1 | 2 | -3.13 | Brose_etal_2018 |
-| Cercopithecus |    5 | 4.03e+03 | 17 | -2.91 | vertnet-mammalia-sept2016 |
-| Ensifera | 0.0454 | 10.3 | 1 | -2.36 | Brose_2005; Brose_etal_2018 |
-| Coryphaena | 28.3 | 6.25e+03 | 1 | -2.34 | vertnet-fishes-sept2016 |
-| Ara |    5 |  785 | 9 | -2.2 | vertnet-aves-sept2016 |
-| Xanthocalanus | 2.51e-05 | 0.00387 | 1 | -2.19 | Brose_etal_2018 |
-| Spio | 0.00103 | 0.158 | 1 | -2.18 | Brose_etal_2018 |
-| Octolasion | 0.0117 | 1.55 | 3 | -2.12 | Cohen_2014 |
-| Planorbis | 0.00256 | 0.325 | 1 | -2.1 | Brose_etal_2018 |
-| Trachylepis |  0.2 | 19.2 | 81 | -1.98 | vertnet-reptilia-sept2016 |
-| Hirundichthys | 0.963 | 84.5 | 5 | -1.94 | vertnet-fishes-sept2016+vertnet-traits-sept2016 |
-| Tomocerus | 1.15e-05 | 0.000774 | 12 | -1.83 | Cohen_2014 |
-| Salpa | 22.6 | 0.342 | 2 | 1.82 | Pata_2025 |
-| Canis |  236 | 1.39e+04 | 6 | -1.77 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
-| Scytodes | 4.75 | 0.082 | 1 | 1.76 | Brose_etal_2018 |
-| Tylenchus | 2.81e-06 | 5e-08 | 1 | 1.75 | Cohen_2014 |
-| Galago |    4 |  218 | 4 | -1.74 | vertnet-mammalia-sept2016 |
-| Dorylaimus | 2.94e-07 | 1.5e-05 | 1 | -1.71 | Cohen_2014 |
-| Mononchus | 3.26e-07 | 1.64e-05 | 23 | -1.7 | Brose_etal_2018; Cohen_2014 |
-| Trimeresurus | 14.1 |  459 | 42 | -1.51 | vertnet-reptilia-sept2016 |
-| Dendrocygna |   26 |  772 | 7 | -1.47 | vertnet-aves-sept2016 |
-| Phthiracarus | 5.74e-06 | 0.00017 | 12 | -1.47 | Cohen_2014 |
-| Steganacarus | 8.3e-06 | 0.000211 | 3 | -1.41 | Cohen_2014 |
-| Lumbricus | 0.199 |    5 | 8 | -1.4 | Cohen_2014 |
-| Rana |    1 | 21.5 | 26 | -1.33 | vertnet-traits-sept2016 |
-| Neodolichorhynchus | 3.88e-08 | 8.24e-07 | 1 | -1.33 | Brose_etal_2018 |
-| Gallus |   44 |  918 | 3 | -1.32 | vertnet-aves-sept2016 |
-| Lygosoma | 1.34 | 27.7 | 14 | -1.32 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
-| Dolomedes | 0.03 | 0.573 | 4 | -1.28 | Brose_etal_2018 |
-| Chiromantis | 0.548 | 10.3 | 3 | -1.27 | vertnet-amphibia-sept2016 |
-| Eupodes | 3.44e-05 | 2e-06 | 1 | 1.24 | Brose_etal_2018; Cohen_2014 |
-| Conochilus | 3.66e-07 | 6.12e-06 | 3 | -1.22 | Brose_2005; Brose_etal_2018 |
-| Tyrophagus | 1.73e-05 | 1.17e-06 | 1 | 1.17 | Brose_etal_2018; Cohen_2014 |
-| Lagopus | 31.5 |  445 | 3 | -1.15 | vertnet-traits-sept2016 |
-| Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 |
-| Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
-| Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 |
-| Strongylura |   37 |  421 | 4 | -1.06 | vertnet-fishes-sept2016 |
-| Bufo | 7.96 | 85.5 | 4 | -1.03 | vertnet-amphibia-sept2016 |
-| Veigaia | 0.000408 | 3.81e-05 | 5 | 1.03 | Brose_etal_2018; Cohen_2014 |
-| Mustela | 55.5 |  578 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 |
-| Sphenomorphus | 1.24 | 12.5 | 107 | -1 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
+| genus | genus_only_g | species_mean_g | n_species | log10_ratio | sources | status | value_tier |
+| --- | --- | --- | ---: | ---: | --- | --- | ---: |
+| Protoperidinium | 2.26e-14 | 9.83e-08 | 9 | -6.64 | Brose_etal_2018 | excluded_genus_only_discordant | 3 |
+| Cephalodiscus |  0.2 | 1.66e+05 | 1 | -5.92 | Brose_etal_2018 | kept (unresolved: maximum_cannot_decide) | 3 |
+| Fritillaria | 4.9e-06 | 0.0928 | 1 | -4.28 | Brose_etal_2018 | kept (unresolved: same_tier) | 3 |
+| Holoparamecus |    2 | 0.000115 | 1 | 4.24 | Brose_etal_2018 | excluded_two_value_tier | 3 |
+| Doliolum | 22.5 | 0.0021 | 1 | 4.03 | Pata_2025 | kept (unresolved: same_tier) | 3 |
+| Pseudocalanus | 0.0928 | 5.8e-05 | 2 | 3.2 | Brose_etal_2018 | excluded_genus_only_discordant | 3 |
+| Henricia | 0.0701 | 94.1 | 2 | -3.13 | Brose_etal_2018 | excluded_genus_only_discordant | 3 |
+| Cercopithecus |    5 | 4.22e+03 | 19 | -2.93 | vertnet-mammalia-sept2016 | excluded_genus_only_discordant | 3 |
+| Ensifera | 0.0454 | 10.3 | 1 | -2.36 | Brose_2005; Brose_etal_2018 | excluded_two_value_tier | 3 |
+| Coryphaena | 28.3 | 6.25e+03 | 1 | -2.34 | vertnet-fishes-sept2016 | excluded_two_value_tier | 3 |
+| Diphyes | 0.00406 | 0.836 | 2 | -2.31 | Castro_2025 | excluded_genus_only_discordant | 3 |
+| Ara |    5 |  785 | 9 | -2.2 | vertnet-aves-sept2016 | excluded_genus_only_discordant | 3 |
+| Xanthocalanus | 2.51e-05 | 0.00387 | 1 | -2.19 | Brose_etal_2018 | kept (unresolved: same_tier) | 3 |
+| Spio | 0.00103 | 0.158 | 1 | -2.18 | Brose_etal_2018 | kept (unresolved: same_tier) | 3 |
+| Octolasion | 0.0117 | 1.55 | 3 | -2.12 | Cohen_2014 | excluded_genus_only_discordant | 1 |
+| Planorbis | 0.00256 | 0.325 | 1 | -2.1 | Brose_etal_2018 | kept (unresolved: same_tier) | 3 |
+| Trachylepis |  0.2 | 19.1 | 82 | -1.98 | vertnet-reptilia-sept2016 | excluded_genus_only_discordant | 3 |
+| Hirundichthys | 0.963 | 84.5 | 5 | -1.94 | vertnet-fishes-sept2016+vertnet-traits-sept2016 | excluded_genus_only_discordant | 3 |
+| Salpa | 22.6 | 0.314 | 3 | 1.86 | Pata_2025 | excluded_genus_only_discordant | 3 |
+| Tomocerus | 1.15e-05 | 0.000774 | 12 | -1.83 | Cohen_2014 | excluded_genus_only_discordant | 1 |
+| Canis |  236 | 1.39e+04 | 6 | -1.77 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 | excluded_genus_only_discordant | 3 |
+| Scytodes | 4.75 | 0.082 | 1 | 1.76 | Brose_etal_2018 | excluded_two_value_tier | 3 |
+| Tylenchus | 2.81e-06 | 5e-08 | 1 | 1.75 | Cohen_2014 | kept (unresolved: same_tier) | 1 |
+| Galago |    4 |  218 | 4 | -1.74 | vertnet-mammalia-sept2016 | excluded_genus_only_discordant | 3 |
+| Dorylaimus | 2.94e-07 | 1.5e-05 | 1 | -1.71 | Cohen_2014 | kept (unresolved: same_tier) | 1 |
+| Mononchus | 3.26e-07 | 1.64e-05 | 23 | -1.7 | Brose_etal_2018; Cohen_2014 | excluded_genus_only_discordant | 1 |
+| Trimeresurus | 14.1 |  466 | 43 | -1.52 | vertnet-reptilia-sept2016 | excluded_genus_only_discordant | 3 |
+| Phthiracarus | 5.74e-06 | 0.00017 | 12 | -1.47 | Cohen_2014 | excluded_genus_only_discordant | 1 |
+| Dendrocygna |   26 |  741 | 8 | -1.45 | vertnet-aves-sept2016 | excluded_genus_only_discordant | 3 |
+| Steganacarus | 8.3e-06 | 0.000211 | 3 | -1.41 | Cohen_2014 | excluded_genus_only_discordant | 1 |
+| Lumbricus | 0.199 |    5 | 8 | -1.4 | Cohen_2014 | kept (within 1 log10 of the species median) | 1 |
+| Rana |    1 | 21.5 | 26 | -1.33 | vertnet-traits-sept2016 | excluded_genus_only_discordant | 3 |
+| Neodolichorhynchus | 3.88e-08 | 8.24e-07 | 1 | -1.33 | Brose_etal_2018 | excluded_two_value_tier | 3 |
+| Lygosoma | 1.34 | 27.7 | 14 | -1.32 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 | excluded_genus_only_discordant | 3 |
+| Gallus |   44 |  891 | 4 | -1.31 | vertnet-aves-sept2016 | excluded_genus_only_discordant | 3 |
+| Dolomedes | 0.03 | 0.573 | 4 | -1.28 | Brose_etal_2018 | excluded_genus_only_discordant | 3 |
+| Chiromantis | 0.548 | 10.3 | 3 | -1.27 | vertnet-amphibia-sept2016 | excluded_genus_only_discordant | 3 |
+| Eupodes | 3.44e-05 | 2e-06 | 1 | 1.24 | Brose_etal_2018; Cohen_2014 | kept (unresolved: same_tier) | 1 |
+| Conochilus | 3.66e-07 | 6.12e-06 | 3 | -1.22 | Brose_2005; Brose_etal_2018 | kept (within 1 log10 of the species median) | 3 |
+| Tyrophagus | 1.73e-05 | 1.17e-06 | 1 | 1.17 | Brose_etal_2018; Cohen_2014 | kept (unresolved: same_tier) | 1 |
+| Lagopus | 31.5 |  445 | 3 | -1.15 | vertnet-traits-sept2016 | excluded_genus_only_discordant | 3 |
+| Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 | kept (unresolved: same_tier) | 3 |
+| Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 | kept (unresolved: same_tier) | 1 |
+| Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 | kept (within 1 log10 of the species median) | 1 |
+| Eiseniella | 0.0117 | 0.136 | 1 | -1.06 | Cohen_2014 | kept (unresolved: same_tier) | 1 |
+| Strongylura |   37 |  421 | 4 | -1.06 | vertnet-fishes-sept2016 | kept (within 1 log10 of the species median) | 3 |
+| Bufo | 7.96 | 85.5 | 4 | -1.03 | vertnet-amphibia-sept2016 | kept (within 1 log10 of the species median) | 3 |
+| Veigaia | 0.000408 | 3.81e-05 | 5 | 1.03 | Brose_etal_2018; Cohen_2014 | excluded_genus_only_discordant | 1 |
+| Mustela | 55.5 |  578 | 17 | -1.02 | vertnet-mammalia-sept2016+vertnet-traits-sept2016 | kept (within 1 log10 of the species median) | 3 |
+| Sphenomorphus | 1.24 | 12.6 | 108 | -1.01 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 | kept (within 1 log10 of the species median) | 3 |
 

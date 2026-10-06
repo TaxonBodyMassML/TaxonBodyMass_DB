@@ -459,7 +459,7 @@ i_rep   <- grep("^WriteRawNameReport\\(file\\.path\\(wd_root, 'reports', 'warnin
 i_chk   <- grep('^CheckRawNames\\(\\)', runme)
 i_mis   <- grep('^source_list <- lapply\\(source_list, FixMisspellings\\)', runme)
 i_unres <- grep('^unresolved_names <- adat_enriched', runme)
-i_ce    <- grep('unresolved = unresolved_names\\)', runme)
+i_ce    <- grep('unresolved = unresolved_names, exclusions = excl\\)', runme)
 Expect(length(i_load) == 1 && length(i_fix) == 1 && i_load < i_fix, 'the vocabulary is loaded from audit/ before FixFormatting() runs')
 Expect(length(i_imp) == 1 && length(i_rep) == 1 && length(i_chk) == 1 && length(i_mis) == 1 &&
          i_fix < i_imp && i_imp < i_rep && i_rep < i_chk && i_chk < i_mis,
