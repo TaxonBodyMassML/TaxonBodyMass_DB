@@ -132,20 +132,20 @@ Expect(is.na(rn$n_old) && rn$added == 5 && FormatSheetComparison('T', rn) == 'T:
 cat('FormatSheetNumber(), SnapshotSheetTab(), LoadSheetSnapshot()\n')
 x <- c(5.8, 1/3, 3e6, 1.74e-05, NA, 195.527745925457, 0.1 + 0.2, 123456789012345678, -2.5, 0)
 f <- FormatSheetNumber(x)
-Expect(identical(as.numeric(f), x) && identical(f[c(1, 3, 4, 5, 9, 10)], c('5.8', '3000000', '1.74e-05', NA, '-2.5', '0')) &&
-         nchar(gsub('[^0-9]', '', f[2])) >= 16 && f[7] == '0.30000000000000004',
-       'the shortest decimal that reads back as the same double: 15 digits for typed values, 16 or 17 for computed ones, NA kept')
-Expect(as.numeric(sprintf('%a', pi)) == pi && as.numeric(sprintf('%a', 1/3)) == 1/3 &&
-         all(as.numeric(bm$mass_g[grepl('^-?0x', bm$mass_g)]) > 0),
-       'the hexadecimal form of the residue reads back exactly, and the committed copy\'s hex cells (formula results) read as masses')
+Expect(identical(f, c('5.8', '0.333333333333333', '3000000', '1.74e-05', NA, '195.527745925457', '0.3', '1.23456789012346e+17', '-2.5', '0')) &&
+         identical(as.numeric(f)[c(1, 3, 4, 6, 9, 10)], x[c(1, 3, 4, 6, 9, 10)]) && abs(as.numeric(f[2]) - 1/3) < 1e-15 && abs(as.numeric(f[7]) - (0.1 + 0.2)) < 1e-15,
+       '15 significant digits: every typed value reads back as the same double, a computed one (1/3, 0.1 + 0.2) within 1e-15 relative, NA kept')
+Expect(identical(FormatSheetNumber(as.numeric(f)), f) && identical(FormatSheetNumber(as.numeric(bm$mass_g)), bm$mass_g) &&
+         !any(grepl('0x', bm$mass_g, fixed = TRUE)) && all(nchar(sub('^0+\\.?0*', '', gsub('e.*$|[^0-9.]', '', bm$mass_g[!is.na(bm$mass_g)]))) <= 16),   # <= 15 digits plus the point
+       'the 15-digit string is a fixpoint of read-then-write, on these values and on every mass of the committed copy (decimals only)')
 sf <- tempfile(fileext = '.csv')
 SnapshotSheetTab(data.frame(k = c('A', NA, 'NA', 'q"uote'), v = c(1.5, NA, 2, 1/3), i = c(1L, 2L, NA, 4L), stringsAsFactors = FALSE), sf)
 Expect(identical(readLines(sf)[1:3], c('"k","v","i"', '"A","1.5","1"', ',,"2"')),
        'the copy is a plain CSV: every cell quoted text, an empty cell for NA, the Sheet\'s column order')
 back <- LoadSheetSnapshot(sf)
-Expect(identical(back$k, c('A', NA, 'NA', 'q"uote')) && identical(back$v, c('1.5', NA, '2', FormatSheetNumber(1/3))) && identical(back$i, c('1', '2', NA, '4')) &&
-         identical(as.numeric(back$v), c(1.5, NA, 2, 1/3)),
-       'read back: an empty cell is NA, a cell that says NA is the string "NA" (as read_sheet() gives them), quotes survive, the numbers are exact')
+Expect(identical(back$k, c('A', NA, 'NA', 'q"uote')) && identical(back$v, c('1.5', NA, '2', '0.333333333333333')) && identical(back$i, c('1', '2', NA, '4')) &&
+         identical(as.numeric(back$v)[1:3], c(1.5, NA, 2)) && abs(as.numeric(back$v[4]) - 1/3) < 1e-15,
+       'read back: an empty cell is NA, a cell that says NA is the string "NA" (as read_sheet() gives them), quotes survive, the numbers at 15 digits')
 
 # ---- (f) the age of a copy ------------------------------------------------------------------
 cat('SheetSnapshotAge(), ReportSheetSnapshots()\n')

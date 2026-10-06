@@ -21,8 +21,8 @@
 #   SheetAuth()                          the cached gargle token, no browser prompt
 #   ReadSheetTab(url, tab, col_types)    one tab as a data frame (character by default)
 #   SnapshotSheetTab(df, path)           a tab to its CSV copy: the Sheet's row and column
-#                                        order, every column as character (a double as the
-#                                        shortest decimal that reads back exactly), NA as ''
+#                                        order, every column as character (a double as a
+#                                        15-significant-digit decimal), NA as ''
 #   LoadSheetSnapshot(path)              a copy back as an all-character frame (NA for '')
 #   CheckSheetSnapshots(paths)           stop with every missing copy named
 #   ReportSheetSnapshots(paths, wd_root) one line: rows and last commit date of each copy
@@ -61,28 +61,19 @@ SheetSnapshotTabs <- function(paths) list(
   list(tab = sheet_tab_citations, path = paths$snapshot_citations, col_types = 'c',                  key = 'CiteID'),
   list(tab = sheet_tab_primary,   path = paths$snapshot_primary,   col_types = 'c',                  key = 'CiteID'))
 
-# A double as the shortest string that as.numeric() reads back as the same
-# double, so that the copy holds the Sheet's values exactly and a copy
-# re-read and re-written is byte-identical: 15 significant digits for every
-# hand-typed value ('5.8', '3000000', '1.74e-05'), 16 or 17 for most values
-# the Sheet computed by formula (39.185428331549502; as.character() would
-# round them). as.numeric() is not correctly rounded for 17-digit strings on
-# every platform (R's own strtod; it is one ulp off for a few per cent of
-# such strings on arm64), so the values no decimal string reaches are
-# written as C99 hexadecimal floats ('0x1.52669c0e2a4bp+13'), which
-# as.numeric() reads exactly everywhere (about 3 % of the BM_data masses at
-# the 2026-10-05 run, all formula results). NA -> NA.
+# A double as a decimal with 15 significant digits ('5.8', '3000000',
+# '1.74e-05'; owner decision 2026-10-05, readability over bit-exactness):
+# every hand-typed value reads back as the same double, and a value the
+# Sheet computed by formula (a 17-digit double such as 39.185428331549502)
+# is rounded to 15 digits in the copy, within 1e-15 relative of the Sheet's
+# value, far below the four significant figures of the outputs. The 15-digit
+# string is stable: read back and written again it is the same string, so a
+# copy re-read and re-written is byte-identical, and the comparison of a
+# refresh (CompareSheetFrames()) formats the Sheet's values the same way, so
+# an unchanged Sheet reports no change. NA -> NA.
 FormatSheetNumber <- function(x) {
   out <- rep(NA_character_, length(x))
-  todo <- !is.na(x)
-  for (digits in 15:17) {
-    if (!any(todo)) break
-    s <- sprintf('%.*g', digits, x[todo])
-    ok <- as.numeric(s) == x[todo]
-    out[which(todo)[ok]] <- s[ok]
-    todo[which(todo)[ok]] <- FALSE
-  }
-  if (any(todo)) out[todo] <- sprintf('%a', x[todo])
+  out[!is.na(x)] <- sprintf('%.15g', x[!is.na(x)])
   out
 }
 
