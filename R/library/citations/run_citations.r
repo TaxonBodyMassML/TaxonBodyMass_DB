@@ -2,7 +2,7 @@
 #
 #   Rscript R/library/citations/run_citations.r --source <Src> \
 #       [--init] [--verify] [--queue] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
-#       [--force] [--offline]
+#       [--screening-list] [--force] [--offline]
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -15,6 +15,10 @@
 #                  accepted references (keys reused by DOI), assign bibcite and cite_id
 #   --sheet        append the accepted references to the Sheet tab BM_primary_citations
 #                  (dry run unless --no-dry-run); snapshot both citation tabs
+#   --screening-list  the DOIs an agent should screen with Scite under the selective
+#                  screening policy (notices, disagreements, doubtful identities, an
+#                  audit sample of the newly certain DOIs); printed and written to
+#                  reports/screening_<Src>.md; no network, nothing else written
 #   --force        re-verify `certain` rows as well
 #   --offline      never touch the network (cached responses only)
 # Every step writes reports/citations_<Src>.md. RunMe.r never calls this file.
@@ -35,7 +39,7 @@ Flag <- function(f) f %in% args
 src_i <- which(args == '--source')
 if (length(src_i) != 1 || src_i == length(args)) stop('--source <Src> is required')
 src <- args[src_i + 1]
-steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet')
+steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet', '--screening-list')
 known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline')
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
@@ -255,8 +259,43 @@ if (Flag('--sheet')) {
        if (dry) ' (dry run)' else '', nrow(rows), src, nrow(res$new), res$n_before, sheet_tab_citations, nrow(bm))
 }
 
+# ---- --screening-list ----
+# The screening list of the selective policy (owner decision 2026-10-05):
+# ScreeningCandidates() over the source's rows and Bib/scite_checks.csv, the
+# audit sample seeded from the label and today's date. Offline by nature.
+if (Flag('--screening-list')) {
+  scite <- ReadSciteChecks(cfg$scite_csv)
+  today <- Sys.Date()
+  cand <- ScreeningCandidates(prim, scite, date = today)
+  n_cat <- table(factor(cand$category, levels = screening_categories))
+  Note('--screening-list: %d DOI(s) to screen for %s (%s); audit sample %d of %d newly certain DOI(s) (%.0f%%, at least %d), seed %d from "%s %s"',
+       nrow(cand), src, paste(sprintf('%s %d', names(n_cat), n_cat), collapse = ', '),
+       attr(cand, 'n_sample'), attr(cand, 'n_new_certain'), 100 * citations_screening$sample_frac, citations_screening$min_sample,
+       attr(cand, 'seed'), src, attr(cand, 'date'))
+  for (i in seq_len(nrow(cand)))
+    cat(sprintf('  %-12s %-28s %s  %s / %s  [%s]%s\n', cand$category[i], cand$native_key[i], cand$doi[i], cand$match_status[i],
+                cand$match_reason[i], cand$reason[i], if (nzchar(cand$screened_by[i])) paste0(' screened: ', cand$screened_by[i]) else ''))
+  sl <- file.path(cfg$reports_dir, sprintf('screening_%s.md', src))
+  tab <- cand[, c('native_key', 'n_records', 'category', 'reason', 'doi', 'match_status', 'match_reason', 'screened_by', 'parsed_year')]
+  writeLines(c(sprintf('# Screening list of %s -- %s (%s)', src, format(today), citations_tool_version), '',
+               'Selective screening policy (owner decision 2026-10-05): a reference is certain on Crossref + OpenAlex alone;',
+               'Scite (Consensus as the fallback) is called for the DOIs below. Categories: notice (read the notice type),',
+               'disagreement (the two services disagree or only one answered), doubtful (grey literature, a DOI shared by',
+               sprintf('several keys, a mismatching source DOI, a reference before %d), audit_sample (a random %.0f%% of the newly',
+                       citations_screening$old_year, 100 * citations_screening$sample_frac),
+               sprintf('certain DOIs, at least %d: %d of %d drawn with seed %d = strtoi(substr(sha1("%s %s"), 1, 7), 16)).',
+                       citations_screening$min_sample, attr(cand, 'n_sample'), attr(cand, 'n_new_certain'), attr(cand, 'seed'), src, attr(cand, 'date')),
+               'A DOI already screened by scite-mcp is listed only when it carries a notice.', '',
+               sprintf('%d DOI(s) to screen: %s.', nrow(cand), paste(sprintf('%s %d', names(n_cat), n_cat), collapse = ', ')), '',
+               MarkdownTable(tab)), sl)
+  cat('  screening list:', sl, '\n')
+}
+
 # ---- the report ----
+# --screening-list alone writes only its own file (the citations report is the
+# record of the verifying steps)
 md <- file.path(cfg$reports_dir, sprintf('citations_%s.md', src))
+if (identical(args[args %in% steps], '--screening-list')) quit(save = 'no', status = 0)
 tab <- prim[, c('native_key', 'n_records', 'role', 'match_status', 'match_reason', 'doi', 'title_sim', 'bibcite', 'cite_id')]
 tab$title_sim <- ifelse(is.na(tab$title_sim), '', formatC(tab$title_sim, digits = 3, format = 'f'))
 writeLines(c(sprintf('# Citations of %s -- %s (%s)', src, format(Sys.time(), '%Y-%m-%d %H:%M:%S'), citations_tool_version), '',

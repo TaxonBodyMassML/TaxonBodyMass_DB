@@ -379,8 +379,10 @@ ReadSciteChecks <- function(path) {
 # list(checked, service, is_retracted, notice, gap). `service` is the
 # screening service to append to `services` ('scite-mcp' wins over
 # 'consensus-mcp', which wins over 'owner-waiver'); `gap` is TRUE when the only
-# row says checked_by 'none'. An 'owner-waiver' row is a screen without notice:
-# it closes the gap of a 'none' row and never flips a status.
+# row says checked_by 'none' (recorded only: under the selective screening
+# policy of 2026-10-05 a gap never changes a status, decide.r). An
+# 'owner-waiver' row is a screen without notice: it closes the gap of a 'none'
+# row and never flips a status (kept valid for history).
 SciteVerdict <- function(doi, scite) {
   none <- list(checked = FALSE, service = NA_character_, is_retracted = FALSE, notice = NA_character_, gap = FALSE)
   doi <- CleanDOI(doi)
