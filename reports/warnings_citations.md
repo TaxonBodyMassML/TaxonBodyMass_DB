@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 16:40:27
+# Citation and provenance warnings -- 2026-10-05 17:01:06
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127784 (39025 species); distinct primary CiteIDs: 543; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 127814 (39025 species); distinct primary CiteIDs: 571; unresolved references (pending / not_found): 31; unverified references: 3
 
 ## Problems
 
@@ -59,7 +59,7 @@ One row per source label: species and record links (species x source x reference
 | Hoehler_etal_2023 | compilation | 1635 | 2564 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 69 | 90 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 110 | 1246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 1246 |
-| Ikeda_2014 | compilation | 298 | 587 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 587 |
+| Ikeda_2014 | compilation | 298 | 587 | 99.8 | 37 | 36 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3285 | 3303 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kendall_etal_2019 | primary | 424 | 4033 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -99,7 +99,7 @@ One row per source label: species and record links (species x source x reference
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Vanni_2017 | compilation | 174 | 3599 | 95.6 | 73 | 67 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
+| Vanni_2017 | compilation | 174 | 4059 | 96.1 | 73 | 67 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

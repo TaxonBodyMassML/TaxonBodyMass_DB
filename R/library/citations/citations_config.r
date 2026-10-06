@@ -220,7 +220,10 @@ sheet_primary_columns <- c('CiteID', 'Bibcite', 'Citation', 'DOI', 'Role', 'Adde
 # `ref_keys` (parse_reflists.r). `format` selects the parser: csv (a two-column
 # key/citation file), inrow (the citation text sits in every record:
 # `citation_col`, an optional `doi_col`, and `intext_col`, the short in-text
-# form kept as the reference's note), or one of the formats of later tiers
+# form kept as the reference's note), crossref_reflist (the tables cite
+# author-year keys and the paper has no reference list of its own on disk: the
+# list is the one the compilation's Crossref record deposits,
+# ReflistFromCrossrefReferences()), or one of the formats of later tiers
 # (xlsx, bib, docx, pdf, html, endnote_doc). `sep` is
 # the regular expression the parse script passed to SplitRefKeys(). The
 # compilation's own DOI (for CandidatesFromCompilationReflist()) is read from the
@@ -245,7 +248,12 @@ reflist_specs <- list(
   Herberstein_etal_2022 = list(format = 'inrow', file = 'observations.csv',
                                citation_col = 'fullReference', intext_col = 'inTextReference',
                                compiler = 'Herberstein'),
-  Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda'),
+  # the ESM tables' author-year keys ('Ikeda (2013a)', 'Ikeda and Mitchell (1982)',
+  # 'Ikeda et al. (2007)') joined to the reference list the paper's Crossref
+  # record deposits (101 references, 89 with DOI); the curated Ikeda:2014aa
+  # entry has no doi field, so the DOI is given here
+  Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda',
+                      compilation_doi = '10.1007/s00227-014-2540-5'),
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ';',
                       compiler = 'Hudson'),
