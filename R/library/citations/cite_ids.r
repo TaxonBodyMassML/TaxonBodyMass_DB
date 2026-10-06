@@ -1,7 +1,7 @@
 # Citation tooling (issue #1): CiteIDs, the labels of the Sheet tabs that map
 # to bib keys ('Doyle_2007', 'Martinez-Palacios_1992').
 #
-#   CiteIDFor(surname, year, doi, bibcite, known)   'Surname_YYYY' with suffixes b, c, ...;
+#   CiteIDFor(surname, year, doi, bibcite, known)   'Surname_YYYY' with suffixes b, c, ..., z, aa, ab, ...;
 #                                                   reused when the DOI or the Bibcite already
 #                                                   has a CiteID; never '_etal_'
 # `known` is a data frame with CiteID, Bibcite and (optionally) doi: the union
@@ -30,7 +30,11 @@ CiteIDFor <- function(surname, year, doi = NA_character_, bibcite = NA_character
   if (is.na(base) || !nzchar(base)) base <- 'Anon'
   year <- if (is.na(year)) 'nd' else as.character(year)
   taken <- if (is.null(known)) character() else known$CiteID
-  for (suf in c('', letters[-1])) {
+  # '', b..z, then aa, ab, ... (a reference list can hold more than 25 works of
+  # one surname and year: Appendix S3 of Meiri_2018 keys 66 SEMARNAT species
+  # accounts as 'Flores-Villela and Rubio-Perez 2008')
+  suffixes <- c('', letters[-1], as.vector(t(outer(letters, letters, paste0))))
+  for (suf in suffixes) {
     id <- paste0(base, '_', year, suf)
     if (!id %in% taken) return(id)
   }

@@ -378,6 +378,10 @@ known <- data.frame(CiteID = c('Doyle_2007', 'Ikeda_1986', 'Kiorboe_2013'), Bibc
 Expect(CiteIDFor('Doyle', 2007L) == 'Doyle_2007' && CiteIDFor('Doyle', 2007L, known = known) == 'Doyle_2007b' &&
          CiteIDFor('Doyle', 2007L, known = rbind(known, data.frame(CiteID = 'Doyle_2007b', Bibcite = 'Doyle:2007ab', doi = NA))) == 'Doyle_2007c',
        "'Surname_YYYY' with b, c, ... suffixes over the known CiteIDs (never _etal_)")
+many <- data.frame(CiteID = c('Flores_2008', paste0('Flores_2008', letters[-1])), Bibcite = NA, doi = NA)
+Expect(CiteIDFor('Flores', 2008L, known = many) == 'Flores_2008aa' &&
+         CiteIDFor('Flores', 2008L, known = rbind(many, data.frame(CiteID = 'Flores_2008aa', Bibcite = NA, doi = NA))) == 'Flores_2008ab',
+       'after z the suffixes continue aa, ab, ... (66 Flores-Villela and Rubio-Perez 2008 entries in Meiri_2018)')
 Expect(CiteIDFor('Other', 1999L, bibcite = 'Ikeda:1986aa', known = known) == 'Ikeda_1986' &&
          CiteIDFor('Other', 1999L, doi = 'https://doi.org/10.1016/J.JEMBE.2006.12.010', known = known) == 'Doyle_2007' &&
          CiteIDFor('Other', 1999L, doi = '10.1/new', bibcite = 'New:1999aa', known = known) == 'Other_1999',
