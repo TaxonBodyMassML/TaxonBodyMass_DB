@@ -374,9 +374,14 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # with their outcome. A row whose DOI changes under a new decision loses its
 # bibcite / cite_id, as under a queue decision, so that --bib mints or reuses
 # a key for the new DOI.
+# `min_records`: verify only the keys cited by at least that many records
+# (`n_records`); the others keep their status (NA for a new reference, reported
+# as unverified, named in `below_min_records`) for a later run -- the owner's
+# rule for a large list on one OpenAlex day (Jones_2009, 2026-10-06). The
+# default 1 means every key.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
-                                    progress = interactive(), crossref_only = FALSE) {
+                                    progress = interactive(), crossref_only = FALSE, min_records = 1L) {
   if (is.null(prim$verification_mode)) prim$verification_mode <- rep(NA_character_, nrow(prim))
   certain <- prim$match_status %in% 'certain'
   if (isTRUE(crossref_only)) {
@@ -389,6 +394,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
     todo <- is.na(prim$match_status) | prim$match_status %in% c('pending', 'not_found') | (force & certain) | recheck
   }
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
+  below <- todo & (is.na(prim$n_records) | prim$n_records < min_records)
+  todo  <- todo & !below
   cands <- list()
   skipped <- character(0); quota <- NULL; rechecked <- character(0)
   for (i in which(todo)) {
@@ -426,7 +433,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked,
+       below_min_records = prim$native_key[below])
 }
 
 # The screening file is applied to every row with a DOI whatever its status
@@ -798,10 +806,14 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     act <- SplitDecision(q$decision)$action
     if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
       problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
-    else if (grepl('^[123]$', act) && !Applied(q)) {
+    else if (grepl('^[123]$', act) && q$source_label %in% prim$source_label && !Applied(q)) {
       # a candidate only OpenAlex returned may have no Crossref record to build
       # the entry from (#114 item 3): the owner checks the DOI and decides
-      # doi: (re-verified at Crossref) or nodoi
+      # doi: (re-verified at Crossref) or nodoi. Only the rows of the source
+      # being applied are checked: another source's row cannot be seen as
+      # applied from this frame (the Lislevand 24 decision, already applied
+      # with bibcite Fry:1988aa, stopped every other source's --apply-queue;
+      # Hudson round, 2026-10-06)
       svc <- q[[paste0('c', act, '_services')]]
       svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
       if (!'crossref' %in% svc)

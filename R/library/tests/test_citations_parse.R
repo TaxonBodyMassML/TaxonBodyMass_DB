@@ -230,6 +230,53 @@ Expect(nat$parsed_author1[4] == 'Klok' && is.na(nat$parsed_year[4]) && nat$parse
          nat$parsed_title[4] == 'Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications',
        'undated Nature-style entry: author block stripped from the title')
 
+cat('ParseCitationString() on the Chicago author-date style (Myhrvold_2015 literature cited)\n')
+chi <- ParseCitationString(c(
+  'Meiri, S. 2010. “Length-Weight Allometries in Lizards.” Journal of Zoology 281 (February): 218–26. doi:10.1111/j.1469-7998.2010.00696.x.',
+  'Alderman, Rachael Louise. 2012. “The Shy Albatross (Thalassarche Cauta): Population Trends, and the Future for Management”. University of Tasmania.',
+  'Adkisson, C.S. 1999. “Pine Grosbeak (Pinicola Enucleator).” In The Birds of North America Online, edited by A. Poole.',
+  'Seymour, Roger S. 1979. “Dinosaur Eggs: Gas Conductance through the Shell, Water Loss during Incubation and Clutch Size.” Paleobiology 5 (1): 1–11.'))
+Expect(chi$parsed_title[1] == 'Length-Weight Allometries in Lizards' && chi$parsed_container[1] == 'Journal of Zoology' &&
+         chi$parsed_volume[1] == '281' && chi$parsed_pages[1] == '218-26' && chi$parsed_year[1] == 2010L && chi$parsed_author1[1] == 'Meiri',
+       'Chicago style: the quoted title ends at the closing quote; journal, volume (issue): pages read')
+Expect(grepl('^The Shy Albatross', chi$parsed_title[2]) && !grepl('"', chi$parsed_title[2]) && chi$parsed_container[2] == 'University of Tasmania',
+       'Chicago style: a title with inner periods and the period outside the quotes; the publisher is the container')
+Expect(chi$parsed_title[3] == 'Pine Grosbeak (Pinicola Enucleator)' && grepl('^The Birds of North America Online', chi$parsed_container[3]),
+       'Chicago style: a chapter ("In ...") keeps the book as container')
+Expect(chi$parsed_container[4] == 'Paleobiology' && chi$parsed_volume[4] == '5' && chi$parsed_pages[4] == '1-11',
+       'Chicago style: a title holding a colon and commas is kept whole')
+
+cat('ParseCitationString() on the comma style (Hudson_2013 Appendix S6)\n')
+cs <- ParseCitationString(c(
+  'Acquarone, M., Born, E.W. & Speakman, J.R. (2006) Field Metabolic Rates of Walrus (Odobenus rosmarus) Measured by the Doubly Labeled Water Method, Aquatic Mammals, 32, 363\u2013369.',
+  'Bell, G.P., Bartholomew, G.A. & Nagy, K.A. (1986) The roles of energetics, water economy, foraging behavior, and geothermal refugia in the distribution of the bat, Macrotus californicus, Journal of Comparative Physiology B: Biochemical, Systemic, and Environmental Physiology, 156, 441\u2013450.',
+  'Riek, A., van der Sluijs, L. & Gerken, M. (2007) Measuring the energy expenditure and water flux in free-ranging alpacas (Lama pacos) in the Peruvian Andes using the doubly labelled water technique, Journal of Experimental Zoology, 307A, 667\u2013675.',
+  'Simmen, B., Bayart, F., Rasamimanana, H., Zahariev, A., Blanc, S. & Pasquet, P. (2010) Total energy expenditure and body composition in two free-living sympatric lemurs, PLoS One, 5, e9860.',
+  'Fleming, T.H. (1988) Energetics, in T.H. Fleming, ed., The short-tailed fruit bat: a study in plant-animal interactions, chapter 8, The University of Chicago Press, Chicago, pp. 217\u2013238.',
+  'Nagy, K.A., Gavrilov, V.M., Kerimov, A.B. & Ivankina, E. (1999) Relationships between field metabolic rate and territoriality in passerines, in Acta XXII Congressus Internationalis Ornithologici, Durban, South Africa, pp. 390\u2013400.',
+  'von Helversen, O. & Reyer, H.U. (1984) Nectar intake and energy expenditure in a flower visiting bat, Oecologia, 63, 178\u2013184.',
+  'Nagy, K. A. (1987). Field metabolic rate and food requirement scaling in mammals and birds. Ecological Monographs, 57, 111-128.'))
+Expect(cs$parsed_author1[1] == 'Acquarone' && cs$parsed_year[1] == 2006L && cs$parsed_container[1] == 'Aquatic Mammals' &&
+         cs$parsed_volume[1] == '32' && cs$parsed_pages[1] == '363-369' &&
+         cs$parsed_title[1] == 'Field Metabolic Rates of Walrus (Odobenus rosmarus) Measured by the Doubly Labeled Water Method',
+       'comma style: title ends at the comma before the journal')
+Expect(cs$parsed_container[2] == 'Journal of Comparative Physiology B: Biochemical, Systemic, and Environmental Physiology' &&
+         cs$parsed_title[2] == 'The roles of energetics, water economy, foraging behavior, and geothermal refugia in the distribution of the bat, Macrotus californicus' &&
+         cs$parsed_volume[2] == '156', 'comma style: a journal name of comma_containers keeps its commas')
+Expect(cs$parsed_volume[3] == '307A' && cs$parsed_pages[3] == '667-675' && cs$parsed_container[3] == 'Journal of Experimental Zoology' &&
+         cs$parsed_volume[4] == '5' && cs$parsed_pages[4] == 'e9860' && cs$parsed_container[4] == 'PLoS One',
+       'comma style: a lettered volume and an article number')
+Expect(cs$parsed_title[5] == 'Energetics' && cs$parsed_container[5] == 'The short-tailed fruit bat: a study in plant-animal interactions' &&
+         is.na(cs$parsed_volume[5]) && cs$parsed_pages[5] == '217-238' && cs$parsed_year[5] == 1988L,
+       'comma style: a chapter gives the book as container, no volume')
+Expect(cs$parsed_title[6] == 'Relationships between field metabolic rate and territoriality in passerines' &&
+         cs$parsed_container[6] == 'Acta XXII Congressus Internationalis Ornithologici' && cs$parsed_pages[6] == '390-400',
+       'comma style: proceedings give the volume name as container')
+Expect(cs$parsed_author1[7] == 'von Helversen' && cs$parsed_container[7] == 'Oecologia', 'comma style: a particle surname')
+Expect(cs$parsed_title[8] == 'Field metabolic rate and food requirement scaling in mammals and birds' && cs$parsed_container[8] == 'Ecological Monographs',
+       'an entry with a period after the title is left to the generic path')
+Expect(is.null(ParseCommaStyle('Nagy, K. A. (1987). Field metabolic rate and food requirement scaling in mammals and birds. Ecological Monographs, 57, 111-128.')),
+       'ParseCommaStyle() returns NULL on a sentence boundary in the body')
 cat('ParseCitationString() on the initials-first PNAS style (Hoehler_etal_2023 reference list; #114 item 2)\n')
 pn <- ParseCitationString(c(
   "A. M. Makarieva et al., Mean mass-specific metabolic rates are strikingly similar across life's major domains: Evidence for life's metabolic optimum. Proc. Natl. Acad. Sci. U.S.A. 105, 16994-16999 (2008).",

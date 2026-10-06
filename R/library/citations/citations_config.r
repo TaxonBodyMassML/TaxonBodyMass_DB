@@ -304,9 +304,14 @@ reflist_specs <- list(
   # entry has no doi field, so the DOI is given here
   Ikeda_2014   = list(format = 'crossref_reflist', sep = ';', compiler = 'Ikeda',
                       compilation_doi = '10.1007/s00227-014-2540-5'),
+  # the per-row Study key of Appendix S5 ('Nagy et al 1990a', 'Costa & Gales 2000',
+  # 'Ballance 1995'; one key per row) -> references.csv, the 126 entries of
+  # Appendix S6 transcribed by parse_hudson_s6.py from the supplement PDF (its
+  # comma style is parsed by ParseCommaStyle(); the three chapter / proceedings
+  # entries carry owner_review)
   Hudson_2013  = list(format = 'csv', file = 'references.csv',
-                      key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Hudson'),
+                      key_col = 'key', citation_col = 'citation', review_col = 'owner_review', sep = ';',
+                      compiler = 'Hudson', compilation_doi = '10.1111/1365-2656.12086'),
   Oskyrko_2024 = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', sep = ',',
                       compiler = 'Oskyrko'),
@@ -374,6 +379,12 @@ reflist_specs <- list(
   Smith_2003   = list(format = 'csv', file = 'references.csv', folder = 'Smith_etal_2003', frame = 'Smith_2003',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '_[[:space:]]+',
                       compiler = 'Smith'),
+  # the SI's per-table reference lists (S1a, S2a, S3 = Chown's numbered list, S4,
+  # S6b, S7) and the whole-table sources of its notes, read from pnas08SI.pdf by
+  # parse_makarieva_si.py into references.csv; keys '<table>:<author-year>' (Stage 2 of #1)
+  Makarieva_2008 = list(format = 'csv', file = 'references.csv', folder = 'Makarieva_etal_2008',
+                        frame = 'Makarieva_2008', key_col = 'key', citation_col = 'citation',
+                        type_col = 'note', review_col = 'owner_review', sep = ';', compiler = 'Makarieva'),
   # derived source (Stage 2): the Appendix S3 key table via build_references.r
   # (a key the table holds for several papers is '<key> [n]'; `note` carries the
   # entry's Taxa text); the records' SVL reference cells split at ',' or ';'
@@ -385,7 +396,20 @@ reflist_specs <- list(
   # mass was taken from; hashed to 'h:<sha1-8>' keys by the parser as for
   # Herberstein; 'Smith, F. A., et al. 2003 ...' on most rows (hop 2 to Smith_2003)
   Faurby_etal_2018 = list(format = 'inrow', file = 'Trait_data.csv', citation_col = 'Mass.Source',
-                          compiler = 'Faurby', compilation_doi = '10.1002/ecy.2443')
+                          compiler = 'Faurby', compilation_doi = '10.1002/ecy.2443'),
+  # the two retriever compilations of the DataRetrieverAll frame (Stage 2 of #1;
+  # R/library/data_retrieve.r keeps their keys, so a DataRetrieve = TRUE run is
+  # needed before --init): Amniote per-cell source names -> the keys of
+  # references.csv (build_references.py: the Supplemental Table 1 entry matched
+  # to each name; `owner_review` where none or several match); PanTHERIA
+  # `References` numbers -> the 3,143 entries of the E090-184 metadata list
+  Myhrvold_2015 = list(format = 'csv', file = 'references.csv', frame = 'DataRetrieverAll',
+                       key_col = 'key', citation_col = 'citation', type_col = 'note',
+                       review_col = 'owner_review', sep = ';', compiler = 'Myhrvold',
+                       compilation_doi = '10.1890/15-0846R.1'),
+  Jones_2009   = list(format = 'csv', file = 'references.csv', frame = 'DataRetrieverAll',
+                      key_col = 'key', citation_col = 'citation', sep = ';',
+                      compiler = 'Jones', compilation_doi = '10.1890/08-1494.1')
 )
 
 ReflistSpec <- function(source_label) {

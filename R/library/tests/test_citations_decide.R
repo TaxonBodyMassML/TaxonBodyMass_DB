@@ -214,6 +214,19 @@ Expect(identical(res2$prim$verified_at[res2$prim$native_key %in% c('1', '6', '12
        'a re-run leaves certain rows alone and re-verifies pending rows')
 res3 <- VerifyPrimaryReferences(p, cfg, force = TRUE, verified_at = '2026-10-07T00:00:00Z', progress = FALSE)
 Expect(all(res3$prim$verified_at == '2026-10-07T00:00:00Z'), 'force = TRUE re-verifies certain rows too')
+mr <- prim; mr$n_records[match(c('1', '6', '9', '12'), mr$native_key)] <- c(5L, 1L, 2L, 1L)
+res_mr <- VerifyPrimaryReferences(mr, cfg, verified_at = '2026-10-08T00:00:00Z', progress = FALSE, min_records = 2L)
+Expect(identical(sort(res_mr$below_min_records), c('12', '6')) &&
+         all(is.na(res_mr$prim$match_status[res_mr$prim$native_key %in% c('6', '12')])) &&
+         all(is.na(res_mr$prim$verified_at[res_mr$prim$native_key %in% c('6', '12')])) &&
+         identical(res_mr$prim$match_status[match(c('1', '9'), res_mr$prim$native_key)], c('certain', 'pending')) &&
+         identical(sort(names(res_mr$candidates)), c('1', '9')),
+       'min_records = 2 verifies the keys on two or more records only; the singletons stay unverified and are named')
+res_mr2 <- VerifyPrimaryReferences(res_mr$prim, cfg, verified_at = '2026-10-09T00:00:00Z', progress = FALSE)
+Expect(identical(res_mr2$prim$match_status[match(c('6', '12'), res_mr2$prim$native_key)], c('certain', 'certain')) &&
+         length(res_mr2$below_min_records) == 0 &&
+         identical(res_mr2$prim$verified_at[res_mr2$prim$native_key == '1'], '2026-10-08T00:00:00Z'),
+       'a later run without the option verifies the singletons and leaves the earlier decisions alone')
 skip <- prim; skip$raw_citation[skip$native_key == '9'] <- NA; skip$role[skip$native_key == '12'] <- 'self'
 res4 <- VerifyPrimaryReferences(skip, cfg, progress = FALSE)
 Expect(is.na(res4$prim$match_status[res4$prim$native_key == '9']) && res4$prim$match_status[res4$prim$native_key == '12'] == 'self' &&
@@ -467,6 +480,10 @@ Expect(Has(oa, 'returned by openalex only') && Has(oa, 'no Crossref record') && 
          Has(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = NA), base)), 'returned by no service only') &&
          is.null(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = 'crossref'), base))) && is.null(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = 'openalex;crossref'), base))),
        "a 1|2|3 decision on a candidate without crossref in its services is rejected, proposing doi:<DOI> or nodoi (#114 item 3); crossref alone or with openalex passes")
+other <- Q('24', '2', c2 = '10.5040/9781472927002'); other$source_label <- 'Lislevand_etal_2007'; other$c2_services <- 'openalex'
+ol <- ApplyQueueDecisions(rbind(other, Q('6', '1')), base)
+Expect(is.data.frame(ol) && ol$match_status[ol$native_key == '6'] == 'approved',
+       "another source's decided row on an OpenAlex-only candidate does not stop this source's --apply-queue (the check is scoped to the frame's source)")
 Expect(Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')), base)), 'does not match the grammar') &&
          Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')), base)), 'decided_by is empty'),
        'every problem is reported in one stop')
