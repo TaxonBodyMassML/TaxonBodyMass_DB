@@ -782,10 +782,14 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     act <- SplitDecision(q$decision)$action
     if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
       problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
-    else if (grepl('^[123]$', act) && !Applied(q)) {
+    else if (grepl('^[123]$', act) && q$source_label %in% prim$source_label && !Applied(q)) {
       # a candidate only OpenAlex returned may have no Crossref record to build
       # the entry from (#114 item 3): the owner checks the DOI and decides
-      # doi: (re-verified at Crossref) or nodoi
+      # doi: (re-verified at Crossref) or nodoi. Only the rows of the source
+      # being applied are checked: another source's row cannot be seen as
+      # applied from this frame (the Lislevand 24 decision, already applied
+      # with bibcite Fry:1988aa, stopped every other source's --apply-queue;
+      # Hudson round, 2026-10-06)
       svc <- q[[paste0('c', act, '_services')]]
       svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
       if (!'crossref' %in% svc)

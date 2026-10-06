@@ -406,6 +406,26 @@ NoDOIAuthorField <- function(author1) {
   paste(parts, collapse = ' and ')
 }
 
+# An editor list as the chapter container prints it ('Gans, C., Dawson, W. R.',
+# 'Huei, R. B., Pianka, E. R. and Schoener, T. W.', 'Horn, H.-G., Bohme, W. &
+# U. Krebs', 'Kunz TH, Fenton MB') in BibTeX form, the names joined by ' and ':
+# the list is split at commas, '&' and 'and'; a piece that is only initials
+# ('C.', 'W. R.', 'H.-G.', 'TH') belongs to the surname before it; a list
+# already joined by ' and ' comes back unchanged. BibTeX reads a name list only
+# at ' and ', so a comma-joined list is one unparsable name (RefManageR
+# rejected six Meiri_2018 chapter entries, Hudson round 2026-10-06).
+BibTeXNameList <- function(x) {
+  if (is.null(x) || is.na(x) || !nzchar(trimws(x))) return(x)
+  toks <- trimws(strsplit(x, '\\s*(?:,|&|\\band\\b)\\s*', perl = TRUE)[[1]])
+  toks <- toks[nzchar(toks)]
+  is_init <- grepl('^(?:[A-Z]\\.?[-\\s]*)+$', toks, perl = TRUE)
+  names <- character(); for (i in seq_along(toks)) {
+    if (is_init[i] && length(names) > 0) names[length(names)] <- paste0(names[length(names)], ', ', toks[i])
+    else names <- c(names, toks[i])
+  }
+  paste(names, collapse = ' and ')
+}
+
 # The entry type of a DOI-less reference under the conventions above, with
 # the chapter parts and the URL it rests on: list(type, chapter, url).
 NoDOIEntryType <- function(row) {
@@ -438,7 +458,7 @@ BuildBibEntryNoDOI <- function(row, key, approved_by, approved_date) {
   else if (type %in% c('phdthesis', 'mastersthesis')) f$school <- EscapeLaTeX(ThesisSchool(cont))
   else if (type == 'incollection') {
     ch <- et$chapter
-    f$editor    <- if (is.na(ch$editor)) NA_character_ else EscapeLaTeX(ch$editor)
+    f$editor    <- if (is.na(ch$editor)) NA_character_ else EscapeLaTeX(BibTeXNameList(ch$editor))
     f$booktitle <- if (is.na(ch$booktitle)) EscapeLaTeX(cont) else EscapeLaTeX(ch$booktitle)
     f$publisher <- if (is.na(ch$publisher)) NA_character_ else EscapeLaTeX(ch$publisher)
     if (is.na(pages) && !is.na(ch$pages)) pages <- ch$pages
