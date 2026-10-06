@@ -8,7 +8,11 @@
 #   VerifyReference(ref, cfg, ...) the service calls for one reference and the decision
 #   VerifyPrimaryReferences(...)   over a primary_references frame (skips decided rows)
 #   WritePendingQueue(...)         appends the undecided pending/not_found rows to
-#                                  Bib/pending_citations.csv (append-only, idempotent)
+#                                  Bib/pending_citations.csv (append-only, idempotent;
+#                                  a key with an unapplied decision is not re-queued)
+#   DedupeQueue(queue)             the duplicate rows of the queue (--dedupe-queue)
+#   DedupeSciteChecks(scite)       the duplicate rows of Bib/scite_checks.csv (removed by
+#                                  line through DropSciteCheckRows())
 #   ApplyQueueDecisions(...)       validates the owner's `decision` and applies it
 #                                  (1|2|3, doi:..., manual:<Key>, nodoi, self, drop)
 #   ScreeningCandidates(...)       the DOIs of a source an agent should screen with Scite
@@ -464,20 +468,118 @@ QueueRow <- function(ref, cands, queued_at) {
 }
 
 # Append the pending / not_found rows of `prim` that are not already queued
-# without a decision (keyed on source_label + native_key) to the queue file;
-# existing rows are never rewritten. Rows pending only because a service was
-# unavailable (service_unavailable) are not owner decisions and are not queued.
-# Returns the queue.
+# (keyed on source_label + native_key) to the queue file; existing rows are
+# never rewritten. A key is already queued when it has an open row (no
+# decision) or a recorded decision not yet applied to its row -- the decided_at
+# of the queue row differs from the row's (#114 item 4; the Chown and Lislevand
+# rounds re-appended such keys): the owner's decision stands until
+# --apply-queue. A key whose applied decision left it pending again (a later
+# retraction) is a new case and is queued. Rows pending only because a service
+# was unavailable (service_unavailable) are not owner decisions and are not
+# queued. Returns the queue, with the attribute `skipped_decided` naming the
+# keys held back for an unapplied decision.
 WritePendingQueue <- function(prim, candidates, path, queued_at = format(Sys.Date())) {
   queue <- ReadPendingQueue(path)
-  open <- paste(queue$source_label, queue$native_key)[is.na(queue$decision) | !nzchar(queue$decision)]
-  todo <- prim$match_status %in% c('pending', 'not_found') & !prim$match_reason %in% 'service_unavailable' &
-          !paste(prim$source_label, prim$native_key) %in% open
+  key_q <- paste(queue$source_label, queue$native_key)
+  has_decision <- !is.na(queue$decision) & nzchar(trimws(queue$decision))
+  open <- key_q[!has_decision]
+  key_p <- paste(prim$source_label, prim$native_key)
+  unapplied <- vapply(seq_len(nrow(prim)), function(i) {
+    at <- queue$decided_at[has_decision & key_q == key_p[i]]
+    length(at) > 0 && !(!is.na(prim$decided_at[i]) && prim$decided_at[i] %in% at)
+  }, logical(1))
+  todo <- prim$match_status %in% c('pending', 'not_found') & !prim$match_reason %in% 'service_unavailable' & !key_p %in% open
+  skipped <- prim$native_key[todo & unapplied]
+  todo <- todo & !unapplied
   new <- lapply(which(todo), function(i) QueueRow(prim[i, ], candidates[[prim$native_key[i]]], queued_at))
   if (length(new) > 0) queue <- rbind(queue, do.call(rbind, new))
   rownames(queue) <- NULL
   WritePendingQueueFile(queue, path)
-  queue
+  structure(queue, skipped_decided = skipped)
+}
+
+# ---- maintenance: duplicate rows (--dedupe-queue, #114 item 4) ------------------------
+# The queue rows that duplicate an earlier row of the same key, each with the
+# reason it is removed (the first row of a key is always kept):
+#  * `open_duplicate`: an open row (no decision) equal to an earlier row in
+#    every case column (everything but queued_at and the decision columns),
+#    whether that earlier row is open (an exact re-append) or decided (the
+#    re-append of a decided key that --queue made before the rule above);
+#  * `same_decision`: a decided row whose key has an earlier decided row with
+#    the same decision, decided_by and decided_at (one decision recorded
+#    twice; the rows may differ in reason or scite_note).
+# Rows of one key that differ in their case columns and both carry a decision,
+# or an open row with new candidates, are different cases and are kept.
+# Returns list(queue, removed): `removed` has the queue columns plus `row`
+# (the position in the file read) and `why`.
+queue_case_columns <- setdiff(pending_queue_columns, c('queued_at', 'decision', 'decided_by', 'decided_at'))
+DedupeQueue <- function(queue) {
+  n <- nrow(queue)
+  drop <- rep(FALSE, n); why <- rep(NA_character_, n)
+  if (n > 1) {
+    key <- paste(queue$source_label, queue$native_key)
+    has_decision <- !is.na(queue$decision) & nzchar(trimws(queue$decision))
+    Same <- function(a, b, cols) all(vapply(cols, function(col) {
+      x <- queue[[col]][a]; y <- queue[[col]][b]
+      (is.na(x) && is.na(y)) || (!is.na(x) && !is.na(y) && x == y) }, logical(1)))
+    for (j in 2:n) {
+      earlier <- which(key[seq_len(j - 1)] == key[j] & !drop[seq_len(j - 1)])
+      if (length(earlier) == 0) next
+      if (!has_decision[j]) {
+        if (any(vapply(earlier, function(i) Same(i, j, queue_case_columns), logical(1)))) { drop[j] <- TRUE; why[j] <- 'open_duplicate' }
+      } else {
+        dec <- earlier[has_decision[earlier]]
+        if (any(vapply(dec, function(i) Same(i, j, c('decision', 'decided_by', 'decided_at')), logical(1)))) { drop[j] <- TRUE; why[j] <- 'same_decision' }
+      }
+    }
+  }
+  removed <- queue[drop, , drop = FALSE]
+  removed$row <- which(drop); removed$why <- why[drop]
+  kept <- queue[!drop, , drop = FALSE]
+  rownames(kept) <- NULL; rownames(removed) <- NULL
+  list(queue = kept, removed = removed)
+}
+
+# The screening rows that duplicate another row of the same DOI: an exact
+# duplicate, an earlier row of the same DOI and service (the latest row per
+# DOI + service is kept, by checked_at then position), and a `none` row (a
+# recorded gap) for a DOI that another row answers (the gap is closed; the
+# Smith_2003 round recorded 30 such pairs, a `none` row then an owner-waiver
+# row). Returns list(scite, removed) with `row` and `why` on `removed`.
+DedupeSciteChecks <- function(scite) {
+  n <- nrow(scite)
+  drop <- rep(FALSE, n); why <- rep(NA_character_, n)
+  if (n > 1) {
+    all_cols <- do.call(paste, c(lapply(scite_check_columns, function(col) ifelse(is.na(scite[[col]]), '', scite[[col]])), sep = '\r'))
+    dup <- duplicated(all_cols); drop[dup] <- TRUE; why[dup] <- 'exact_duplicate'
+    ds <- paste(scite$doi, scite$checked_by)
+    for (k in unique(ds[duplicated(ds) & !drop])) {
+      i <- which(ds == k & !drop)
+      keep <- i[order(ifelse(is.na(scite$checked_at[i]), '', scite$checked_at[i]), i, decreasing = TRUE)][1]
+      drop[setdiff(i, keep)] <- TRUE; why[setdiff(i, keep)] <- 'older_same_service'
+    }
+    answered <- unique(scite$doi[!drop & scite$checked_by != 'none'])
+    gap <- !drop & scite$checked_by == 'none' & scite$doi %in% answered
+    drop[gap] <- TRUE; why[gap] <- 'gap_answered'
+  }
+  removed <- scite[drop, , drop = FALSE]
+  removed$row <- which(drop); removed$why <- why[drop]
+  kept <- scite[!drop, , drop = FALSE]
+  rownames(kept) <- NULL; rownames(removed) <- NULL
+  list(scite = kept, removed = removed)
+}
+
+# Remove the rows `rows` (positions in the frame ReadSciteChecks() read, header
+# excluded) from the screening file by line, so that every other line keeps
+# its bytes (the file is appended by hand, unquoted, with the DOIs' own case,
+# and holds no embedded newlines). Stops if the line count does not match.
+DropSciteCheckRows <- function(path, rows) {
+  lines <- readLines(path, encoding = 'UTF-8', warn = FALSE)
+  n_rows <- nrow(ReadSciteChecks(path))
+  if (length(lines) != n_rows + 1L)
+    stop(basename(path), ': ', length(lines), ' lines for ', n_rows, ' rows; the file cannot be edited by line', call. = FALSE)
+  if (length(rows) > 0) writeLines(lines[-(rows + 1L)], path, useBytes = TRUE)
+  invisible(length(rows))
 }
 
 ValidateDecision <- function(decision) grepl(queue_decision_pattern, trimws(decision), perl = TRUE)

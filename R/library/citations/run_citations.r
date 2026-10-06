@@ -19,6 +19,12 @@
 #                  screening policy (notices, disagreements, doubtful identities, an
 #                  audit sample of the newly certain DOIs); printed and written to
 #                  reports/screening_<Src>.md; no network, nothing else written
+#   --dedupe-queue maintenance: remove the duplicate rows of Bib/pending_citations.csv
+#                  (an open row re-appended for a key already queued or decided, a
+#                  decision recorded twice) and of Bib/scite_checks.csv (exact
+#                  duplicates, an older row per DOI + service, a `none` gap row for a
+#                  DOI another row answers); the removed rows are printed and written
+#                  to reports/dedupe_queue_<date>.md; no network, no source file touched
 #   --force        re-verify `certain` rows as well
 #   --offline      never touch the network (cached responses only)
 # Every step writes reports/citations_<Src>.md. RunMe.r never calls this file.
@@ -37,20 +43,43 @@ for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'v
 
 args <- commandArgs(trailingOnly = TRUE)
 Flag <- function(f) f %in% args
+steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet', '--screening-list', '--dedupe-queue')
 src_i <- which(args == '--source')
-if (length(src_i) != 1 || src_i == length(args)) stop('--source <Src> is required')
-src <- args[src_i + 1]
-steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet', '--screening-list')
+maintenance_only <- identical(args[args %in% steps], '--dedupe-queue')
+if ((length(src_i) != 1 || src_i == length(args)) && !maintenance_only) stop('--source <Src> is required')
+src <- if (length(src_i) == 1 && src_i < length(args)) args[src_i + 1] else NA_character_
 known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline')
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
 
 cfg  <- CitationsConfig(wd_root, offline = Flag('--offline'))
+dir.create(cfg$reports_dir, showWarnings = FALSE)
+
+# ---- --dedupe-queue (maintenance over the two shared files; no source needed) ----
+if (Flag('--dedupe-queue')) {
+  dq <- DedupeQueue(ReadPendingQueue(cfg$pending_csv))
+  ds <- DedupeSciteChecks(ReadSciteChecks(cfg$scite_csv))
+  if (nrow(dq$removed) > 0) WritePendingQueueFile(dq$queue, cfg$pending_csv)
+  if (nrow(ds$removed) > 0) DropSciteCheckRows(cfg$scite_csv, ds$removed$row)
+  cat(sprintf('--dedupe-queue: %d duplicate row(s) removed from %s (%d kept), %d from %s (%d kept)\n',
+              nrow(dq$removed), basename(cfg$pending_csv), nrow(dq$queue), nrow(ds$removed), basename(cfg$scite_csv), nrow(ds$scite)))
+  qt <- dq$removed[, c('row', 'why', 'queued_at', 'source_label', 'native_key', 'reason', 'c1_doi', 'decision', 'decided_at')]
+  st <- ds$removed[, c('row', 'why', 'doi', 'notice_type', 'checked_at', 'checked_by')]
+  for (i in seq_len(nrow(qt))) cat(sprintf('  queue row %s (%s): %s %s, %s, decision %s\n', qt$row[i], qt$why[i], qt$source_label[i], qt$native_key[i], qt$reason[i], if (is.na(qt$decision[i])) '(open)' else qt$decision[i]))
+  for (i in seq_len(nrow(st))) cat(sprintf('  scite row %s (%s): %s %s %s\n', st$row[i], st$why[i], st$doi[i], st$checked_by[i], st$notice_type[i]))
+  md <- file.path(cfg$reports_dir, sprintf('dedupe_queue_%s.md', format(Sys.Date())))
+  writeLines(c(sprintf('# Duplicate queue and screening rows removed -- %s (%s)', format(Sys.Date()), citations_tool_version), '',
+               sprintf('%s: %d row(s) removed, %d kept. %s: %d row(s) removed, %d kept.', basename(cfg$pending_csv), nrow(dq$removed), nrow(dq$queue),
+                       basename(cfg$scite_csv), nrow(ds$removed), nrow(ds$scite)), '',
+               '## pending_citations.csv', '', if (nrow(qt) > 0) MarkdownTable(qt) else 'none', '',
+               '## scite_checks.csv', '', if (nrow(st) > 0) MarkdownTable(st) else 'none'), md)
+  cat('  report:', md, '\n')
+  if (identical(args[args %in% steps], '--dedupe-queue')) quit(save = 'no', status = 0)
+}
 spec <- tryCatch(ReflistSpec(src), error = function(e) NULL)
 folder <- if (!is.null(spec$folder)) spec$folder else src     # the source folder under sources/databases
 frame  <- if (!is.null(spec$frame)) spec$frame else folder     # the cached frame BodyMass_<frame>.Rdata
 prim_path <- PrimaryReferencesPathForLabel(cfg$wd_db, src)
-dir.create(cfg$reports_dir, showWarnings = FALSE)
 dir.create(file.path(wd_root, 'tmp'), showWarnings = FALSE)
 cat(sprintf('run_citations: %s (%s)\n', src, citations_tool_version))
 
@@ -157,6 +186,8 @@ if (Flag('--queue')) {
   queue <- WritePendingQueue(prim, candidates, cfg$pending_csv)
   open <- queue[queue$source_label == src & (is.na(queue$decision) | !nzchar(queue$decision)), ]
   Note('--queue: %d open queue row(s) for %s in %s (%d rows in the file)', nrow(open), src, basename(cfg$pending_csv), nrow(queue))
+  held <- attr(queue, 'skipped_decided')
+  if (length(held) > 0) Note('--queue: %d key(s) not re-queued, their recorded decision awaits --apply-queue: %s', length(held), paste(held, collapse = ', '))
 }
 
 # ---- --apply-queue ----

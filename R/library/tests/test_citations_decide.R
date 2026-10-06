@@ -302,8 +302,55 @@ Expect(identical(back$native_key, queue$native_key) && identical(back$c1_doi, qu
 decided <- back; decided$decision <- '1'; decided$decided_by <- 'MN'; decided$decided_at <- '2026-10-06'
 WritePendingQueueFile(decided, qf)
 queue3 <- WritePendingQueue(p, res$candidates, qf, queued_at = '2026-10-07')
-Expect(nrow(queue3) == 2 && identical(queue3$native_key, c('9', '9')) && queue3$decision[1] == '1' && is.na(queue3$decision[2]) && queue3$queued_at[2] == '2026-10-07',
-       'a decided row is never rewritten; a still-pending reference is queued again as a new row')
+Expect(nrow(queue3) == 1 && queue3$decision[1] == '1' && identical(attr(queue3, 'skipped_decided'), '9'),
+       'a decided row is never rewritten, and a key whose decision is recorded but not yet applied is not queued again (#114 item 4)')
+p_applied <- p; p_applied$decided_at[p_applied$native_key == '9'] <- '2026-10-06'      # the decision was applied, then the row fell back to pending (a retraction)
+queue4 <- WritePendingQueue(p_applied, res$candidates, qf, queued_at = '2026-10-07')
+Expect(nrow(queue4) == 2 && identical(queue4$native_key, c('9', '9')) && queue4$decision[1] == '1' && is.na(queue4$decision[2]) && queue4$queued_at[2] == '2026-10-07' &&
+         length(attr(queue4, 'skipped_decided')) == 0,
+       'a key whose applied decision (same decided_at on the row) left it pending again is a new case and is queued')
+WritePendingQueueFile(decided, qf)
+p_other <- p; p_other$decided_at[p_other$native_key == '9'] <- '2026-10-01'               # an older decision applied, a newer one recorded
+Expect(nrow(WritePendingQueue(p_other, res$candidates, qf, queued_at = '2026-10-07')) == 1, 'a newer recorded decision than the one applied holds the key back as well')
+
+cat('DedupeQueue(), DedupeSciteChecks()\n')
+QR <- function(src, key, reason, decision = NA, by = NA, at = NA, c1 = NA, queued = '2026-10-04', scite_note = NA) {
+  row <- as.data.frame(as.list(setNames(rep(NA_character_, length(pending_queue_columns)), pending_queue_columns)), stringsAsFactors = FALSE)
+  row$queued_at <- queued; row$source_label <- src; row$native_key <- key; row$reason <- reason; row$c1_doi <- c1
+  row$decision <- decision; row$decided_by <- by; row$decided_at <- at; row$scite_note <- scite_note
+  row
+}
+dqq <- rbind(QR('Herb', 'h:1', 'doi_mismatch', 'doi:10.1/a', 'owner', '2026-10-04'),              # 1 decided
+             QR('Herb', 'h:2', 'doi_mismatch', 'doi:10.1/b', 'owner', '2026-10-04'),              # 2 decided
+             QR('Lisl', '33', 'weak_match', '1', 'owner', '2026-10-05', c1 = '10.5962/x'),        # 3 decided
+             QR('Herb', 'h:1', 'doi_mismatch'),                                                   # 4 open re-append of 1 -> open_duplicate
+             QR('Herb', 'h:2', 'doi_mismatch'),                                                   # 5 open re-append of 2 -> open_duplicate
+             QR('Lisl', '33', 'unscreened', '1', 'owner', '2026-10-05', c1 = '10.5962/x', scite_note = 'screening:none'),  # 6 same decision as 3 -> same_decision
+             QR('Src', 'k', 'weak_match', c1 = '10.1/c', queued = '2026-10-05'),                 # 7 open
+             QR('Src', 'k', 'weak_match', c1 = '10.1/c', queued = '2026-10-06'),                 # 8 exact open duplicate of 7 -> open_duplicate
+             QR('Src', 'k', 'ambiguous', c1 = '10.1/d', queued = '2026-10-07'),                  # 9 open, new candidates -> kept
+             QR('Src', 'm', 'weak_match', '1', 'owner', '2026-10-05', c1 = '10.1/e'),            # 10 decided
+             QR('Src', 'm', 'weak_match', 'drop', 'owner', '2026-10-06', c1 = '10.1/e'))         # 11 another decision -> kept
+dd <- DedupeQueue(dqq)
+Expect(identical(dd$removed$row, c(4L, 5L, 6L, 8L)) && identical(dd$removed$why, c('open_duplicate', 'open_duplicate', 'same_decision', 'open_duplicate')) &&
+         nrow(dd$queue) == 7 && identical(dd$queue$reason[dd$queue$native_key == '33'], 'weak_match') && all(c('row', 'why') %in% names(dd$removed)),
+       'the open re-appends of decided keys, the twice-recorded decision and the exact open duplicate go (the first row of each kept); a new case and a second decision stay')
+Expect(nrow(DedupeQueue(dqq[c(1, 2, 3, 7, 9, 10, 11), ])$removed) == 0 && identical(DedupeQueue(dqq[1, ])$queue, dqq[1, ]) && nrow(DedupeQueue(dqq[0, ])$removed) == 0,
+       'a queue without duplicates is unchanged; one row and no rows work')
+SR <- function(doi, by, notice = 'none', at = '2026-10-05', ret = NA) data.frame(doi = doi, is_retracted = ret, notice_type = notice, notice_doi = NA, checked_at = at, checked_by = by, stringsAsFactors = FALSE)
+sc <- rbind(SR('10.1644/741', 'none'), SR('10.1644/750', 'none'), SR('10.1/lone', 'none'),                      # 1-3
+            SR('10.1644/741', 'owner-waiver', 'waived'), SR('10.1644/750', 'owner-waiver', 'waived'),         # 4-5: answer the gaps of 1-2
+            SR('10.1/x', 'scite-mcp', 'none', '2026-10-04', 'FALSE'), SR('10.1/x', 'scite-mcp', 'erratum', '2026-10-06', 'FALSE'),  # 6 older than 7
+            SR('10.1/y', 'consensus-mcp', 'unchecked'), SR('10.1/y', 'consensus-mcp', 'unchecked'),           # 9 exact duplicate of 8
+            SR('10.1/z', 'consensus-mcp', 'unchecked'), SR('10.1/z', 'scite-mcp', 'none', ret = 'FALSE'))     # two services: both kept
+ds <- DedupeSciteChecks(sc)
+Expect(identical(ds$removed$row, c(1L, 2L, 6L, 9L)) && identical(ds$removed$why, c('gap_answered', 'gap_answered', 'older_same_service', 'exact_duplicate')) &&
+         nrow(ds$scite) == 7 && '10.1/lone' %in% ds$scite$doi && ds$scite$notice_type[ds$scite$doi == '10.1/x'] == 'erratum' && sum(ds$scite$doi == '10.1/z') == 2,
+       'a none row answered by a later row, an older row of the same DOI and service, an exact duplicate go; a lone gap and two services for one DOI stay')
+Expect(nrow(DedupeSciteChecks(sc[c(3, 4, 5, 7, 8, 10, 11), ])$removed) == 0, 'a screening file without duplicates is unchanged')
+tracked <- DedupeQueue(ReadPendingQueue(file.path(repo, 'Bib', 'pending_citations.csv')))
+tracked_s <- DedupeSciteChecks(ReadSciteChecks(file.path(repo, 'Bib', 'scite_checks.csv')))
+Expect(nrow(tracked$removed) == 0 && nrow(tracked_s$removed) == 0, 'the tracked queue and screening file carry no duplicate rows (--dedupe-queue applied 2026-10-06)')
 Expect(Has(ErrorOf(ReadPendingQueue({ f <- tempfile(fileext = '.csv'); writeLines('a,b', f); f })), 'lacks column'), 'a queue file without the schema stops')
 
 cat('ValidateDecision(), ApplyQueueDecisions()\n')
