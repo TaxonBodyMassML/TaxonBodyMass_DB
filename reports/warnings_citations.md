@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-06 09:40:36
+# Citation and provenance warnings -- 2026-10-06 09:55:05
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 179241 (39887 species); distinct primary CiteIDs: 2096; unresolved references (pending / not_found): 76; unverified references: 5044
+- provenance rows: 179241 (39887 species); distinct primary CiteIDs: 2209; unresolved references (pending / not_found): 41; unverified references: 5044
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 87
 
 ## Problems
 
-- 87 accepted reference(s) without a bib entry (run --bib): Hudson_2013 Adams et al 1986, Hudson_2013 Arnould et al 1996, Hudson_2013 Ballance 1995, Hudson_2013 Bell et al 1986, Hudson_2013 Berteaux et al 1996, Hudson_2013 Bradshaw & Bradshaw 1999, Hudson_2013 Bryant 1997, Hudson_2013 Bryce et al 2001, Hudson_2013 Burness et al 2001, Hudson_2013 Carlson et al 1993, Hudson_2013 Cooper et al 2003, Hudson_2013 Costa et al 1986, Hudson_2013 Costa & Gales 2000, Hudson_2013 Crocker et al 2007, Hudson_2013 Dekar et al 2010, Hudson_2013 Ellis et al 1995, Hudson_2013 Engstrand et al 2002, Hudson_2013 Evans et al 2003, Hudson_2013 Foley et al 1990, Hudson_2013 Furness & Bryant 1996, Hudson_2013 Fyhn et al 2001, Hudson_2013 Gabrielsen et al 1987, Hudson_2013 Geiser & Coburn 1999, Hudson_2013 Gilbert et al 2009, Hudson_2013 Goldstein & Nagy 1985, Hudson_2013 Gotaas et al 2000, Hudson_2013 Grenot et al 1984, Hudson_2013 Hodum et al 1998, Hudson_2013 Jonsson et al 1996, Hudson_2013 Kooyman et al 1992, Hudson_2013 Mehlum et al 1993, Hudson_2013 Moreno et al 1988, Hudson_2013 Moreno 1989, Hudson_2013 Moreno et al 1995, Hudson_2013 Moreno et al 1991, Hudson_2013 Moreno & Sanz 1994, Hudson_2013 Nagy et al 1990a, Hudson_2013 Nagy et al 1991, Hudson_2013 Nagy et al 1995, Hudson_2013 Nagy et al 1990b, Hudson_2013 Nagy & Bradshaw 2000, Hudson_2013 Nagy et al 1988, Hudson_2013 Nagy & Martin 1985, Hudson_2013 Nagy & Milton 1979, Hudson_2013 Nagy & Obst 1992, Hudson_2013 Nagy et al 1984, Hudson_2013 Obst et al 1987, Hudson_2013 Obst & Nagy 1992, Hudson_2013 Ochocińska & Taylor 2005, Hudson_2013 Peterson et al 1976, Hudson_2013 Piersma et al 2003, Hudson_2013 Piersma & Morrison 1994, Hudson_2013 Pontzer et al 2010, Hudson_2013 Powers & Conley 1994, Hudson_2013 Powers & Nagy 1988, Hudson_2013 Quin et al 2010, Hudson_2013 Riek et al 2007, Hudson_2013 Schmid & Speakman 2000, Hudson_2013 Schmid & Speakman 2009, Hudson_2013 Shaffer et al 2001, Hudson_2013 Sheriff et al 2009, Hudson_2013 Simmen et al 2010, Hudson_2013 Tatner 1990, Hudson_2013 Taylor et al 1997, Hudson_2013 Tulp et al 2009, Hudson_2013 Uttley et al 1994, Hudson_2013 Voigt et al 2006, Hudson_2013 Wallis & Green 1992, Hudson_2013 Weathers et al 2001, Hudson_2013 Weathers et al 1990, Hudson_2013 Weathers & Nagy 1984, Hudson_2013 Weathers & Paton 1997, Hudson_2013 Weathers et al 1996, Hudson_2013 Weathers & Stiles 1989, Hudson_2013 Westerterp & Bryant 1984, Hudson_2013 Williams et al 1995, Hudson_2013 Williams et al 2002, Hudson_2013 Williams et al 2001, Hudson_2013 Williams et al 1993, Hudson_2013 Williams et al 1991, Hudson_2013 Williams 1987, Hudson_2013 Williams 1988, Hudson_2013 Williams 1993, Hudson_2013 Williams & Dwinnel 1990, Hudson_2013 Williams & Nagy 1984, Hudson_2013 Williams & Nagy 1985, Hudson_2013 Winstanley et al 2003
+(none)
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -59,7 +59,7 @@ One row per source label: species and record links (species x source x reference
 | Hishi_etal_2019 | derived | 320 | 324 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1764 | 2771 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hudson_2013 | compilation | 125 | 1371 | 0 | 122 | 87 | 87 | 25 | 10 | 0 | 0 | 0 | 0 | 0 |
+| Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ikeda_2014 | compilation | 332 | 690 | 99.7 | 37 | 36 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 31 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3444 | 3464 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
