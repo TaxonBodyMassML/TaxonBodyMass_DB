@@ -493,7 +493,9 @@ SplitDecision <- function(decision) {
 # Apply the owner's decisions: every queue row with a non-empty `decision`
 # must have decided_by and an ISO decided_at, match the grammar and refer to an
 # existing reference; `1|2|3` take that candidate's DOI (approved /
-# owner_candidate); `doi:` is re-verified through Crossref (approved /
+# owner_candidate; the candidate must carry `crossref` in its services, since
+# the entry is built from the Crossref record -- an OpenAlex-only candidate is
+# rejected with the proposal doi: / nodoi, #114 item 3); `doi:` is re-verified through Crossref (approved /
 # owner_doi; stops when the DOI does not resolve); `manual:<Key>` records the
 # curated-bib key (approved / manual_bib); `nodoi` marks a DOI-less entry to be
 # built from the parsed fields (nodoi_approved); `self` and `drop` set those
@@ -502,6 +504,13 @@ SplitDecision <- function(decision) {
 ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
   decided <- queue[!is.na(queue$decision) & nzchar(trimws(queue$decision)), , drop = FALSE]
   problems <- character(0)
+  # a decision already applied to its row (same decided_at, a final status) is
+  # history: the Crossref-record rule below is not re-imposed on it
+  Applied <- function(q) {
+    i <- which(prim$source_label == q$source_label & prim$native_key == q$native_key)
+    length(i) == 1 && !is.na(prim$match_status[i]) && prim$match_status[i] %in% c('approved', 'nodoi_approved', 'rejected', 'self') &&
+      !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at
+  }
   for (j in seq_len(nrow(decided))) {
     q <- decided[j, ]
     key <- paste(q$source_label, q$native_key)
@@ -511,6 +520,16 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     act <- SplitDecision(q$decision)$action
     if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
       problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
+    else if (grepl('^[123]$', act) && !Applied(q)) {
+      # a candidate only OpenAlex returned may have no Crossref record to build
+      # the entry from (#114 item 3): the owner checks the DOI and decides
+      # doi: (re-verified at Crossref) or nodoi
+      svc <- q[[paste0('c', act, '_services')]]
+      svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
+      if (!'crossref' %in% svc)
+        problems <- c(problems, sprintf('%s: candidate %s (%s) was returned by %s only, so no Crossref record exists to build its entry from; decide doi:%s if the DOI resolves at Crossref, else nodoi',
+                                        key, act, q[[paste0('c', act, '_doi')]], if (length(svc) == 0) 'no service' else paste(svc, collapse = ';'), q[[paste0('c', act, '_doi')]]))
+    }
     if (!is.na(SplitDecision(q$decision)$year) && !grepl('^([123]|doi:)', act))
       problems <- c(problems, sprintf('%s: a year override needs a candidate or doi: decision', key))
   }

@@ -185,6 +185,9 @@ ch5 <- BuildBibEntryNoDOI(Row(container = 'Biology of Reptilia, Vol. 5, p. 127-2
 Expect(startsWith(ch5, '@incollection{') && Field(ch5, 'editor') == 'Gans, C., Dawson, W. R.' && Field(ch5, 'booktitle') == 'Biology of Reptilia, Vol. 5' &&
          Field(ch5, 'publisher') == 'London, Academic Press' && Field(ch5, 'pages') == '127--223',
        "'Editors' outside brackets: the sentence before it names the editors, 'p. 127-223' gives the pages")
+ch6 <- ParseChapterContainer('A. Alon (editor) Encyclopedia of plants and animals of the land of Israel. Ministry of Defense Press, Tel-Aviv. (in Hebrew)')
+Expect(ch6$editor == 'A. Alon' && ch6$booktitle == 'Encyclopedia of plants and animals of the land of Israel' && ch6$publisher == 'Ministry of Defense Press, Tel-Aviv. (in Hebrew)',
+       "'<Editors> (editor) <Book title>. <Publisher>': initials before a marker-only bracket name the editors")
 Expect(is.null(ParseChapterContainer('Handbook of birds, 2nd ed. Oxford University Press')) && is.null(ParseChapterContainer('John Wiley & Sons')) &&
          is.null(ParseChapterContainer(NA)) && is.null(ParseChapterContainer('Mammals in the Seas')) &&
          startsWith(BuildBibEntryNoDOI(Row(container = 'Handbook of birds, 2nd ed. Oxford University Press'), 'H:2000aa', 'MN', '2026-10-06'), '@book{'),
@@ -233,6 +236,46 @@ Expect(is.null(MatchingNoDOIEntry(NoDOIRow('Hebert_etal_2016', '74', 'Ikeda', 19
 Expect(is.null(MatchingNoDOIEntry(pri[1, ], pri)), 'a row never matches itself')
 pri2 <- pri; pri2$match_status[1] <- 'pending'; pri2$bibcite[1] <- NA
 Expect(is.null(MatchingNoDOIEntry(pri2[3, ], pri2)), 'only nodoi_approved rows with a bibcite are reused')
+
+# ---- the --bib step -------------------------------------------------------------------------------------
+cat('AssignPrimaryKeys()\n')
+PRow <- function(source_label, native_key, status, doi = NA_character_, bibcite = NA_character_, cite_id = NA_character_, reason = NA_character_,
+                 author1 = 'Kremer', year = 1976L, title = 'The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay',
+                 container = 'Ph.D. thesis, Univ. of Rhode Island', year_override = NA_integer_) {
+  r <- EmptyPrimaryReferences()[rep(1L, 0), ]
+  r[1, 'native_key'] <- native_key
+  r$source_label <- source_label; r$match_status <- status; r$match_reason <- reason; r$doi <- doi; r$bibcite <- bibcite; r$cite_id <- cite_id
+  r$parsed_author1 <- author1; r$parsed_year <- year; r$parsed_title <- title; r$parsed_container <- container
+  r$decided_by <- 'owner'; r$decided_at <- '2026-10-04'; r$year_override <- year_override; r$n_records <- 1L; r$role <- 'measurement'
+  r
+}
+ap <- rbind(PRow('Kiorboe_2013', '6', 'certain', doi = '10.1007/bf00392514'),
+            PRow('Hebert_etal_2016', '12', 'approved', doi = '10.1007/BF00392514', reason = 'owner_candidate'),
+            PRow('Kiorboe_2013', '9', 'nodoi_approved', reason = 'owner_nodoi'),
+            PRow('Kiorboe_2013', '12', 'approved', bibcite = 'Omori:1969aa', reason = 'manual_bib'),
+            PRow('Lislevand_etal_2007', '24', 'approved', doi = '10.9999/this-doi-does-not-exist', reason = 'owner_candidate'),
+            PRow('Kiorboe_2013', '1', 'pending', doi = '10.1/pending'))
+ids0 <- data.frame(Bibcite = c('Omori:1969aa', 'Kiorboe:2013aa'), CiteID = c('Omori_1969', 'Kiorboe_2013'), doi = c(NA, '10.4319/lo.2013.58.5.1843'), stringsAsFactors = FALSE)
+cur_syn <- data.frame(key = c('Omori:1969aa', 'Kiorboe:2013aa'), type = 'article', doi = c(NA, '10.4319/lo.2013.58.5.1843'), stringsAsFactors = FALSE)
+res <- AssignPrimaryKeys(ap, cfg, cur_syn, ids0)
+K <- function(src, key, col) res$prim[[col]][res$prim$source_label == src & res$prim$native_key == key]
+Expect(identical(sort(names(res$entries)), c('Ikeda:1986aa', 'Kremer:1976aa')) && startsWith(res$entries[['Ikeda:1986aa']], '@article{Ikeda:1986aa,') &&
+         startsWith(res$entries[['Kremer:1976aa']], '@phdthesis{Kremer:1976aa,'),
+       'one entry per key: the Crossref record of the DOI rows, the owner-approved fields of the nodoi row; no entry for the curated manual key')
+Expect(K('Kiorboe_2013', '6', 'bibcite') == 'Ikeda:1986aa' && K('Hebert_etal_2016', '12', 'bibcite') == 'Ikeda:1986aa' &&
+         K('Kiorboe_2013', '6', 'cite_id') == 'Ikeda_1986' && K('Hebert_etal_2016', '12', 'cite_id') == 'Ikeda_1986',
+       'two sources citing one DOI (case apart) share the key and the CiteID')
+Expect(K('Kiorboe_2013', '9', 'bibcite') == 'Kremer:1976aa' && K('Kiorboe_2013', '9', 'cite_id') == 'Kremer_1976' &&
+         K('Kiorboe_2013', '12', 'cite_id') == 'Omori_1969' && K('Kiorboe_2013', '12', 'bibcite') == 'Omori:1969aa',
+       'the nodoi row gets a key and a CiteID; the manual_bib row keeps the curated key and takes its CiteID from the table')
+Expect(identical(res$no_record, 'Lislevand_etal_2007 24 (10.9999/this-doi-does-not-exist)') && is.na(K('Lislevand_etal_2007', '24', 'bibcite')) &&
+         is.na(K('Lislevand_etal_2007', '24', 'cite_id')) && length(res$authorless) == 0,
+       'an accepted DOI without a Crossref record is reported in no_record, not fatal; the row stays without a key (#114 item 3)')
+Expect(is.na(K('Kiorboe_2013', '1', 'bibcite')) && nrow(res$prim) == nrow(ap) && identical(names(res$prim), names(ap)), 'a pending row is untouched; the frame keeps its shape')
+res2 <- AssignPrimaryKeys(res$prim, cfg, cur_syn, ids0)
+Expect(identical(res2$prim, res$prim) && identical(res2$entries, res$entries), 'a second pass over the keyed frame reproduces it (idempotent)')
+Expect(Has(ErrorOf(AssignPrimaryKeys(PRow('X', 'm', 'approved', bibcite = 'Nope:2000aa', reason = 'manual_bib'), cfg, cur_syn, ids0)), 'is not in'),
+       'a manual bibcite the curated bib lacks stops')
 
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')

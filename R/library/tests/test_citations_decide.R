@@ -346,6 +346,11 @@ Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', 'maybe'), base)), 'does not match 
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', '1', by = NA), base)), 'decided_by is empty'), 'a decision without decided_by stops')
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', '1', at = 'yesterday'), base)), 'decided_at is not an ISO date'), 'a decision without an ISO decided_at stops')
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', '2'), base)), 'candidate 2 has no DOI'), 'picking a candidate the row does not have stops')
+oa <- ErrorOf(ApplyQueueDecisions(Q('6', '1', c1 = '10.30906/1026-2296-2019-26-1-1-10', c1_services = 'openalex'), base))
+Expect(Has(oa, 'returned by openalex only') && Has(oa, 'no Crossref record') && Has(oa, 'decide doi:10.30906/1026-2296-2019-26-1-1-10') && Has(oa, 'else nodoi') &&
+         Has(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = NA), base)), 'returned by no service only') &&
+         is.null(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = 'crossref'), base))) && is.null(ErrorOf(ApplyQueueDecisions(Q('6', '1', c1_services = 'openalex;crossref'), base))),
+       "a 1|2|3 decision on a candidate without crossref in its services is rejected, proposing doi:<DOI> or nodoi (#114 item 3); crossref alone or with openalex passes")
 Expect(Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')), base)), 'does not match the grammar') &&
          Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')), base)), 'decided_by is empty'),
        'every problem is reported in one stop')

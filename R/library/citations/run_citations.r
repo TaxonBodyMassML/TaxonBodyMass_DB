@@ -179,56 +179,9 @@ if (Flag('--bib')) {
   # this source's rows are taken from memory (they may have just changed)
   all_prim <- rbind(all_prim[all_prim$source_label != src, ], prim)
   ids <- read.csv(cfg$citeids_csv, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'))
-  known_keys <- c(curated$key, ids$Bibcite)
-  known_dois <- setNames(curated$doi, curated$key)
-  known_ids  <- ids[, intersect(c('CiteID', 'Bibcite', 'doi'), names(ids))]
-  entries <- character()
-  authorless <- character()
+  res <- AssignPrimaryKeys(all_prim, cfg, curated, ids)
+  all_prim <- res$prim; entries <- res$entries; authorless <- res$authorless
   acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
-  # deterministic order: by DOI then source/key, so that keys do not depend on the run
-  acc <- acc[order(is.na(all_prim$doi[acc]), all_prim$doi[acc], all_prim$source_label[acc], all_prim$native_key[acc], method = 'radix')]
-  for (i in acc) {
-    r <- all_prim[i, ]
-    if (!is.na(r$doi)) {
-      w <- CrossrefWork(r$doi, cfg)
-      if (is.null(w)) stop('no Crossref record for accepted DOI ', r$doi, ' (', r$source_label, ' ', r$native_key, ')')
-      fam <- CrossrefFirstSurname(w)
-      # a record without any author name: the key is minted from the
-      # reference's parsed surname (a key, not bib text) and the author-less
-      # entry is reported for the owner (#64)
-      if (is.na(fam) || !nzchar(fam)) {
-        fam <- FirstOfAuthorList(r$parsed_author1)
-        if (is.na(fam) || !nzchar(fam)) fam <- 'Anon'
-        authorless <- c(authorless, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi))
-      }
-      yr <- CrossrefYear(w)
-      key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
-             else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]))
-      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, r$year_override)
-      known_keys <- union(known_keys, key)
-      all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(fam, yr, r$doi, key, known_ids)
-    } else if (r$match_status == 'nodoi_approved') {
-      surname <- FirstOfAuthorList(r$parsed_author1)
-      # the same DOI-less work approved for another source keeps its key; the
-      # entry is built from the row that owns the key
-      twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
-      key <- if (!is.na(r$bibcite)) r$bibcite else if (!is.null(twin)) twin$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
-      if (!key %in% curated$key && !key %in% names(entries)) {
-        own <- if (!is.null(twin)) twin else r
-        entries[key] <- BuildBibEntryNoDOI(own, key, own$decided_by, own$decided_at)
-      }
-      known_keys <- union(known_keys, key)
-      all_prim$bibcite[i] <- key
-      all_prim$cite_id[i] <- CiteIDFor(surname, r$parsed_year, NA, key, known_ids)
-    } else if (r$match_reason %in% 'manual_bib') {
-      if (!r$bibcite %in% curated$key) stop('manual bibcite ', r$bibcite, ' (', r$source_label, ' ', r$native_key, ') is not in ', basename(cfg$curated_bib))
-      all_prim$cite_id[i] <- CiteIDFor(sub(':.*$', '', r$bibcite), sub('^.*:(\\d{4}).*$', '\\1', r$bibcite), NA, r$bibcite, known_ids)
-    }
-    if (!is.na(all_prim$cite_id[i]) && !all_prim$cite_id[i] %in% known_ids$CiteID)
-      known_ids <- rbind(known_ids, data.frame(CiteID = all_prim$cite_id[i], Bibcite = all_prim$bibcite[i],
-                                               doi = if ('doi' %in% names(known_ids)) r$doi else NULL, stringsAsFactors = FALSE)[, names(known_ids)])
-  }
   WritePrimaryBib(entries, cfg$primary_bib)
   CheckBibKeysUnique(cfg$curated_bib, cfg$primary_bib)
   n_parsed <- CheckBibSyntax(cfg$primary_bib)
@@ -238,6 +191,9 @@ if (Flag('--bib')) {
     WritePrimaryReferences(p, PrimaryReferencesPathForLabel(cfg$wd_db, l))
   }
   prim <- all_prim[all_prim$source_label == src, ]
+  if (length(res$no_record) > 0)
+    Note('--bib: %d accepted DOI(s) have no Crossref record, so no entry was built and the row keeps its bibcite / cite_id as they were (an OpenAlex-only candidate approved before #114 item 3: withdraw the decision and give doi:<DOI> once it resolves at Crossref, or nodoi): %s',
+         length(res$no_record), paste(res$no_record, collapse = '; '))
   if (length(authorless) > 0)
     Note('--bib: %d accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): %s',
          length(authorless), paste(authorless, collapse = '; '))

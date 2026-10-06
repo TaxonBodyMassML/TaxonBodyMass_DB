@@ -11,6 +11,9 @@
 #                               the type (article, book, incollection, phdthesis,
 #                               mastersthesis, misc) follows the conventions for the
 #                               parsed_* fields set out before NoDOIEntryType()
+#   AssignPrimaryKeys(...)      the --bib step over every source's accepted rows: keys,
+#                               CiteIDs and the entries (rows without a Crossref record
+#                               are reported, not fatal)
 #   WritePrimaryBib(entries)    the GENERATED header and the entries in key order
 #   CheckBibKeysUnique()        stops on a key present in both bib files
 #   CheckBibSyntax(path)        RefManageR parse of a generated file (optional)
@@ -118,6 +121,7 @@ TwoLetterSuffixes <- function() {
 BibKeyFor <- function(surname, year, doi = NA_character_, known_keys = character(), known_dois = character()) {
   doi <- CleanDOI(doi)
   if (!is.na(doi) && length(known_dois) > 0) {
+    known_dois <- setNames(CleanDOI(known_dois), names(known_dois))      # a row's DOI as recorded, whatever its case
     hit <- names(known_dois)[!is.na(known_dois) & known_dois == doi]
     if (length(hit) > 0) return(hit[1])
   }
@@ -331,7 +335,15 @@ ParseChapterContainer <- function(cont) {
       b <- blocks[hit[1]]; len <- attr(blocks, 'match.length')[hit[1]]
       inside <- sub('(?i)^\\s*(eds?|editors?)\\.?\\s+', '', substr(s, b + 1, b + len - 2), perl = TRUE)
       editor <- Clean(sub(nodoi_editor_marker, '', inside, perl = TRUE))
-      list(editor = editor, booktitle = StripPages(Clean(substr(s, 1, b - 1))), publisher = Clean(substr(s, b + len, nchar(s))), pages = pages)
+      before <- Clean(substr(s, 1, b - 1)); after <- Clean(substr(s, b + len, nchar(s)))
+      # '<Editors> (editor) <Book title>. <Publisher>': the text before a marker-only
+      # bracket is the editors when it reads as names (dotted initials, few tokens)
+      if (is.na(editor) && !is.na(before) && grepl('\\b[A-Z]\\.', before, perl = TRUE) && length(strsplit(before, '\\s+')[[1]]) <= 8 && !is.na(after)) {
+        sb <- regexpr(boundary, after, perl = TRUE)
+        if (sb > 0) return(list(editor = before, booktitle = StripPages(Clean(substr(after, 1, sb - 1))), publisher = Clean(substr(after, sb + 1, nchar(after))), pages = pages))
+        return(list(editor = before, booktitle = StripPages(after), publisher = NA_character_, pages = pages))
+      }
+      list(editor = editor, booktitle = StripPages(before), publisher = after, pages = pages)
     } else {
       # 'Book title. Editors, Editors, Publisher': the marker outside brackets, the
       # editors in the sentence before it
@@ -402,6 +414,74 @@ BuildBibEntryNoDOI <- function(row, key, approved_by, approved_date) {
   f$url    <- if (is.na(et$url)) NA_character_ else gsub('%', '\\%', et$url, fixed = TRUE)
   f$note   <- sprintf('No DOI; from %s reference list; approved %s %s', row$source_label, approved_date, approved_by)
   FormatBibEntry(type, key, f)
+}
+
+# ---- keys, CiteIDs and entries for every accepted row (--bib) ----------------------------
+# The bib step over the primary_references rows of every source (`all_prim`):
+# for each accepted row (certain, approved, nodoi_approved) in a deterministic
+# order -- by DOI, then source and key, so that keys never depend on the run --
+# the bib key, the CiteID and, for a key the curated bib lacks, the entry
+# text. A DOI row's entry is built from its Crossref record (`work_for(doi)`,
+# CrossrefWork() from the cache or the network); a row whose DOI has no
+# Crossref record (an OpenAlex-only DOI approved before the rule of #114 item
+# 3) keeps its bibcite / cite_id as they are and is reported in `no_record`
+# instead of stopping the step. A record without any author name mints its
+# key from the row's parsed surname and is reported in `authorless` (#64). A
+# nodoi row reuses the key of the same DOI-less work approved for another
+# source (MatchingNoDOIEntry()); a manual_bib row must name a curated key.
+# `curated`: ReadBibEntries() of the curated bib; `ids`: the tracked CiteIDs
+# table (Bibcite, CiteID, doi). Returns list(prim, entries, authorless,
+# no_record): `entries` is the named character vector key -> entry text.
+AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(doi) CrossrefWork(doi, cfg)) {
+  known_keys <- c(curated$key, ids$Bibcite)
+  known_dois <- setNames(curated$doi, curated$key)
+  known_ids  <- ids[, intersect(c('CiteID', 'Bibcite', 'doi'), names(ids)), drop = FALSE]
+  entries <- character(); authorless <- character(); no_record <- character()
+  acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
+  acc <- acc[order(is.na(all_prim$doi[acc]), all_prim$doi[acc], all_prim$source_label[acc], all_prim$native_key[acc], method = 'radix')]
+  row_dois <- setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]
+  Remember <- function(i) {
+    if (!is.na(all_prim$cite_id[i]) && !all_prim$cite_id[i] %in% known_ids$CiteID)
+      known_ids <<- rbind(known_ids, data.frame(CiteID = all_prim$cite_id[i], Bibcite = all_prim$bibcite[i],
+                                                doi = if ('doi' %in% names(known_ids)) all_prim$doi[i] else NULL, stringsAsFactors = FALSE)[, names(known_ids)])
+  }
+  for (i in acc) {
+    r <- all_prim[i, ]
+    if (!is.na(r$doi)) {
+      w <- work_for(r$doi)
+      if (is.null(w)) { no_record <- c(no_record, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi)); next }
+      fam <- CrossrefFirstSurname(w)
+      if (is.na(fam) || !nzchar(fam)) {
+        fam <- FirstOfAuthorList(r$parsed_author1)
+        if (is.na(fam) || !nzchar(fam)) fam <- 'Anon'
+        authorless <- c(authorless, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi))
+      }
+      yr <- CrossrefYear(w)
+      key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
+             else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, row_dois))
+      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, r$year_override)
+      known_keys <- union(known_keys, key)
+      row_dois <- c(row_dois, setNames(r$doi, key))       # the next row with this DOI reuses the key
+      all_prim$bibcite[i] <- key
+      all_prim$cite_id[i] <- CiteIDFor(fam, yr, r$doi, key, known_ids)
+    } else if (r$match_status == 'nodoi_approved') {
+      surname <- FirstOfAuthorList(r$parsed_author1)
+      twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
+      key <- if (!is.na(r$bibcite)) r$bibcite else if (!is.null(twin)) twin$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
+      if (!key %in% curated$key && !key %in% names(entries)) {
+        own <- if (!is.null(twin)) twin else r
+        entries[key] <- BuildBibEntryNoDOI(own, key, own$decided_by, own$decided_at)
+      }
+      known_keys <- union(known_keys, key)
+      all_prim$bibcite[i] <- key
+      all_prim$cite_id[i] <- CiteIDFor(surname, r$parsed_year, NA, key, known_ids)
+    } else if (r$match_reason %in% 'manual_bib') {
+      if (!r$bibcite %in% curated$key) stop('manual bibcite ', r$bibcite, ' (', r$source_label, ' ', r$native_key, ') is not in ', basename(cfg$curated_bib), call. = FALSE)
+      all_prim$cite_id[i] <- CiteIDFor(sub(':.*$', '', r$bibcite), sub('^.*:(\\d{4}).*$', '\\1', r$bibcite), NA, r$bibcite, known_ids)
+    }
+    Remember(i)
+  }
+  list(prim = all_prim, entries = entries, authorless = authorless, no_record = no_record)
 }
 
 # ---- the file ---------------------------------------------------------------------------
