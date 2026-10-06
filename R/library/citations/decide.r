@@ -601,8 +601,12 @@ SplitDecision <- function(decision) {
 # owner_doi; stops when the DOI does not resolve); `manual:<Key>` records the
 # curated-bib key (approved / manual_bib); `nodoi` marks a DOI-less entry to be
 # built from the parsed fields (nodoi_approved); `self` and `drop` set those
-# statuses. Returns the updated primary_references frame. The queue itself is
-# not modified (approval is the committed decision).
+# statuses and clear the candidate's DOI and agreement (#114 item 5). A row
+# whose DOI changes loses its bibcite / cite_id for --bib to re-mint. A
+# `certain` row is overridden by a queue row the owner adds by hand with a
+# `doi:` decision (re-verified at Crossref). Returns the updated
+# primary_references frame. The queue itself is not modified (approval is
+# the committed decision).
 ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
   decided <- queue[!is.na(queue$decision) & nzchar(trimws(queue$decision)), , drop = FALSE]
   problems <- character(0)
@@ -645,6 +649,7 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
         !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at) next   # already applied
     parts <- SplitDecision(q$decision)
     dec <- parts$action
+    old_doi <- prim$doi[i]
     prim$decided_by[i] <- q$decided_by; prim$decided_at[i] <- q$decided_at
     prim$tool_version[i] <- citations_tool_version
     prim$year_override[i] <- parts$year
@@ -654,6 +659,8 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
       prim$title_sim[i] <- suppressWarnings(as.numeric(q[[paste0('c', dec, '_title_sim')]]))
       prim$services[i] <- q[[paste0('c', dec, '_services')]]
     } else if (startsWith(dec, 'doi:')) {
+      # the override path of a certain row as well (#114 item 5): the DOI the
+      # owner gives is re-verified at Crossref like any other
       doi <- CleanDOI(sub('^doi:', '', dec))
       if (is.null(cfg)) stop('ApplyQueueDecisions(): a doi: decision needs cfg to re-verify ', doi, call. = FALSE)
       w <- CrossrefWork(doi, cfg)
@@ -662,17 +669,35 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
       prim$doi[i] <- doi; prim$match_status[i] <- 'approved'; prim$match_reason[i] <- 'owner_doi'
       prim$title_sim[i] <- cand$title_sim; prim$author_match[i] <- cand$author_match; prim$year_match[i] <- cand$year_match
       prim$container_match[i] <- cand$container_match; prim$volume_match[i] <- cand$volume_match; prim$pages_match[i] <- cand$pages_match
+      prim$openalex_id[i] <- NA_character_; prim$is_retracted[i] <- NA; prim$editorial_notice[i] <- NA_character_
       prim$services[i] <- 'crossref'
       prim$verified_at[i] <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
     } else if (startsWith(dec, 'manual:')) {
-      prim$bibcite[i] <- sub('^manual:', '', dec); prim$match_status[i] <- 'approved'; prim$match_reason[i] <- 'manual_bib'
+      prim$bibcite[i] <- sub('^manual:', '', dec); prim$cite_id[i] <- NA_character_
+      prim$match_status[i] <- 'approved'; prim$match_reason[i] <- 'manual_bib'
     } else if (dec == 'nodoi') {
       prim$match_status[i] <- 'nodoi_approved'; prim$match_reason[i] <- 'owner_nodoi'; prim$doi[i] <- NA_character_
     } else if (dec == 'self') {
       prim$match_status[i] <- 'self'; prim$match_reason[i] <- 'owner_self'; prim$role[i] <- 'self'
+      prim <- ClearCandidateFields(prim, i)
     } else if (dec == 'drop') {
+      # the best (wrong) candidate's DOI and its agreement are cleared (#114 item 5)
       prim$match_status[i] <- 'rejected'; prim$match_reason[i] <- 'owner_drop'
+      prim <- ClearCandidateFields(prim, i)
     }
+    # a key minted for another DOI (or for a DOI the row no longer has) is
+    # not carried over: --bib mints or reuses one for the new state
+    if (!identical(prim$doi[i], old_doi) && !startsWith(dec, 'manual:')) { prim$bibcite[i] <- NA_character_; prim$cite_id[i] <- NA_character_ }
   }
+  prim
+}
+
+# The candidate-derived fields of a row: the DOI the services proposed, its
+# agreement flags, the OpenAlex id and the notices (not raw_doi, the source's
+# own text, and not services / verified_at, the record of the attempt).
+ClearCandidateFields <- function(prim, i) {
+  for (col in c('doi', 'openalex_id', 'editorial_notice')) prim[[col]][i] <- NA_character_
+  prim$title_sim[i] <- NA_real_
+  for (col in c('author_match', 'year_match', 'container_match', 'volume_match', 'pages_match', 'is_retracted')) prim[[col]][i] <- NA
   prim
 }

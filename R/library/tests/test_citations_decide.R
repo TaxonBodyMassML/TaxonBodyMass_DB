@@ -379,6 +379,12 @@ Expect(a$match_status[a$native_key == '9'] == 'nodoi_approved' && a$match_reason
 Expect(a$match_status[a$native_key == '12'] == 'approved' && a$match_reason[a$native_key == '12'] == 'manual_bib' && a$bibcite[a$native_key == '12'] == 'Omori:1969aa',
        "decision 'manual:<Key>': approved / manual_bib with the curated key")
 Expect(a$match_status[a$native_key == '1'] == 'rejected' && a$match_reason[a$native_key == '1'] == 'owner_drop', "decision 'drop': rejected / owner_drop")
+pv <- p; pv$match_status[pv$native_key == '1'] <- 'pending'; pv$bibcite[pv$native_key == '1'] <- 'Doyle:2007aa'      # the verified frame: row 1 carries the candidate's DOI
+av <- ApplyQueueDecisions(Q('1', 'drop'), pv)
+Expect(!is.na(pv$doi[pv$native_key == '1']) && is.na(av$doi[av$native_key == '1']) && is.na(av$title_sim[av$native_key == '1']) && is.na(av$author_match[av$native_key == '1']) &&
+         is.na(av$openalex_id[av$native_key == '1']) && is.na(av$bibcite[av$native_key == '1']) && identical(av$raw_doi[av$native_key == '1'], pv$raw_doi[pv$native_key == '1']) &&
+         identical(av$services[av$native_key == '1'], pv$services[pv$native_key == '1']) && av$match_status[av$native_key == '1'] == 'rejected',
+       "'drop' clears the wrong candidate's DOI, agreement, OpenAlex id and key; raw_doi and the services consulted stay (#114 item 5)")
 Expect(!'99' %in% a$native_key && nrow(a) == nrow(base), 'a decision for a key the file lacks is ignored')
 s <- ApplyQueueDecisions(Q('6', 'self'), base)
 Expect(s$match_status[s$native_key == '6'] == 'self' && s$match_reason[s$native_key == '6'] == 'owner_self' && s$role[s$native_key == '6'] == 'self', "decision 'self': status and role self")
@@ -388,6 +394,19 @@ Expect(a2$match_status[a2$native_key == '6'] == 'approved' && a2$match_reason[a2
          !is.na(a2$verified_at[a2$native_key == '6']),
        "decision 'doi:': re-verified at Crossref (cached), approved / owner_doi with fresh agreement flags")
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', 'doi:10.9999/this-doi-does-not-exist'), base, cfg)), 'does not resolve at Crossref'), 'a doi: decision that does not resolve stops')
+cert <- p; cert$bibcite[cert$native_key == '6'] <- 'Ikeda:1986aa'; cert$cite_id[cert$native_key == '6'] <- 'Ikeda_1986'
+Expect(cert$match_status[cert$native_key == '6'] == 'certain', 'fixture: reference 6 is certain with a key')
+ov <- ApplyQueueDecisions(Q('6', 'doi:10.1007/s00227-014-2540-5', at = '2026-10-06'), cert, cfg)
+Expect(ov$match_status[ov$native_key == '6'] == 'approved' && ov$match_reason[ov$native_key == '6'] == 'owner_doi' && ov$doi[ov$native_key == '6'] == '10.1007/s00227-014-2540-5' &&
+         is.na(ov$bibcite[ov$native_key == '6']) && is.na(ov$cite_id[ov$native_key == '6']) && ov$title_sim[ov$native_key == '6'] < 0.5 && isTRUE(ov$author_match[ov$native_key == '6']) && ov$services[ov$native_key == '6'] == 'crossref' &&
+         ov$decided_at[ov$native_key == '6'] == '2026-10-06',
+       "a doi: decision on a certain row is the override path (#114 item 5): re-verified at Crossref, approved / owner_doi, the old key dropped for --bib to re-mint")
+same <- ApplyQueueDecisions(Q('6', 'doi:10.1007/bf00392514', at = '2026-10-06'), cert, cfg)
+Expect(same$bibcite[same$native_key == '6'] == 'Ikeda:1986aa' && same$cite_id[same$native_key == '6'] == 'Ikeda_1986' && same$match_reason[same$native_key == '6'] == 'owner_doi',
+       'a doi: decision confirming the row\'s own DOI keeps its key and CiteID')
+Expect(identical(ApplyQueueDecisions(Q('6', 'doi:10.1007/s00227-014-2540-5', at = '2026-10-06'), ov, cfg), ov), 'the override is applied once (same decided_at)')
+sf <- ApplyQueueDecisions(Q('1', 'self'), base)
+Expect(sf$match_status[sf$native_key == '1'] == 'self' && is.na(sf$doi[sf$native_key == '1']) && is.na(sf$title_sim[sf$native_key == '1']), "'self' clears the candidate fields too")
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', 'doi:10.1007/bf00392514'), base)), 'needs cfg'), 'a doi: decision without cfg stops')
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', 'maybe'), base)), 'does not match the grammar'), 'an invalid decision stops')
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('6', '1', by = NA), base)), 'decided_by is empty'), 'a decision without decided_by stops')
