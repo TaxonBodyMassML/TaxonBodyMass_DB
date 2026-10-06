@@ -6,6 +6,9 @@
 #   ParseRefListCSV(...)        a key/citation CSV (Kiorboe_2013, McCoy_2008, Hebert_etal_2016, ...)
 #   ParseInRowCitations(...)    full-text citations carried by every record (Herberstein_etal_2022, ...)
 #   ExpandSameAuthorMarkers()   the '---' / em-dash "same author as above" convention
+#   ParseAuthorYearKey(), ReflistFromCrossrefReferences()
+#                               author-year keys of a compilation's tables joined to the
+#                               reference list its Crossref record deposits (Ikeda_2014)
 #   InitPrimaryReferences()     the skeleton: one row per native key used in the data,
 #                               raw_citation verbatim, parsed_* from ParseCitationString(),
 #                               role 'self' for the compiler's own unpublished data
@@ -190,6 +193,139 @@ EmptyPrimaryReferences <- function() {
   out$n_records <- integer(); out$parsed_year <- integer(); out$title_sim <- numeric(); out$year_override <- integer()
   for (col in c('author_match', 'year_match', 'container_match', 'volume_match', 'pages_match', 'is_retracted'))
     out[[col]] <- logical()
+  out
+}
+
+# ---- author-year keys against a deposited reference list ----------------------------
+# A compilation whose records cite author-year keys in the running-text form of
+# its own tables ('Ikeda (2013a)', 'Ikeda and Mitchell (1982)', 'Ikeda et al.
+# (2007)', 'Ikeda (unpublished data)') and whose Crossref record deposits the
+# paper's reference list (reflist_specs format 'crossref_reflist', Ikeda_2014).
+# ParseAuthorYearKey() reads the key: the first surname, the second surname or
+# the 'et al.' marker, the year and its letter suffix, or the unpublished-data
+# marker. Keys of this form never carry a title, so they are joined to the
+# deposited references (CandidatesFromCompilationReflist(): key, doi, author,
+# year, unstructured, ...) by ReflistFromCrossrefReferences() on the author
+# block alone, deterministically: same first surname (diacritics folded), same
+# year and suffix (a key without suffix accepts a suffixed entry), and the same
+# author form -- one author, the two surnames, or three and more for 'et al.'. The deposited `unstructured` text is the
+# citation ('Ikeda T (2013a) Title. Mar Biol 160:251–262'; its author block is
+# read the same way), the deposited DOI is `raw_doi`, and the Crossref
+# reference key ('2540_CR47') is kept in `note`. A key matching no deposited
+# reference, or more than one, is not resolved (attribute 'unresolved' of the
+# result: key, reason); the compiler's own unpublished data is kept under the
+# key itself so that DetectSelf() can mark it `self`. A deposited book chapter
+# ('In: ... (eds)') is flagged for the owner's review (standing rule).
+ParseAuthorYearKey <- function(keys) {
+  keys <- trimws(as.character(keys))
+  out <- data.frame(key = keys, author1 = NA_character_, author2 = NA_character_, et_al = FALSE,
+                    n_authors = NA_integer_, year = NA_integer_, suffix = NA_character_,
+                    unpublished = FALSE, stringsAsFactors = FALSE)
+  m <- regmatches(keys, regexec('^(.+?)\\s*\\((\\d{4})([a-z])?\\)$', keys, perl = TRUE))
+  mu <- grepl('^(.+?)\\s*\\((unpubl\\.?|unpublished)( data)?\\)$', keys, ignore.case = TRUE, perl = TRUE)
+  for (i in seq_along(keys)) {
+    if (is.na(keys[i]) || !nzchar(keys[i])) next
+    if (mu[i]) {
+      out$unpublished[i] <- TRUE
+      authors <- sub('\\s*\\(.*$', '', keys[i], perl = TRUE)
+    } else if (length(m[[i]]) > 0) {
+      authors <- m[[i]][2]
+      out$year[i] <- as.integer(m[[i]][3])
+      if (nzchar(m[[i]][4])) out$suffix[i] <- m[[i]][4]
+    } else next
+    out$et_al[i] <- grepl('\\bet al\\.?$', authors, perl = TRUE)
+    authors <- sub('\\s*\\bet al\\.?$', '', authors, perl = TRUE)
+    parts <- trimws(strsplit(authors, '\\s+(and|&)\\s+|,\\s*', perl = TRUE)[[1]])
+    parts <- parts[nzchar(parts)]
+    if (length(parts) == 0) next
+    out$author1[i] <- parts[1]
+    if (length(parts) >= 2) out$author2[i] <- parts[2]
+    out$n_authors[i] <- if (out$et_al[i]) 3L else length(parts)
+  }
+  out
+}
+
+# The author block of a deposited reference: surnames in order and the year with
+# its suffix, from the `unstructured` text ('Ikeda T, Mitchell AW (1982) ...';
+# the surname is the first token of each comma-separated author) or, without
+# one, from the structured `author` ('T Ikeda', last token) and `year`.
+DepositedAuthorBlock <- function(deposited) {
+  n <- nrow(deposited)
+  out <- data.frame(surname1 = NA_character_, surname2 = NA_character_, n_authors = NA_integer_,
+                    year = NA_integer_, suffix = NA_character_, stringsAsFactors = FALSE)[rep(1L, n), ]
+  rownames(out) <- NULL
+  if (n == 0) return(out)
+  unstr <- deposited$unstructured
+  m <- regmatches(unstr, regexec('^(.+?)\\s*\\((\\d{4})([a-z])?\\)', ifelse(is.na(unstr), '', unstr), perl = TRUE))
+  for (i in seq_len(n)) {
+    if (!is.na(unstr[i]) && length(m[[i]]) > 0) {
+      block <- m[[i]][2]
+      out$year[i] <- as.integer(m[[i]][3])
+      if (nzchar(m[[i]][4])) out$suffix[i] <- m[[i]][4]
+      authors <- trimws(strsplit(block, ',\\s*', perl = TRUE)[[1]])
+      authors <- authors[nzchar(authors)]
+      surnames <- vapply(authors, function(a) strsplit(a, '\\s+', perl = TRUE)[[1]][1], character(1), USE.NAMES = FALSE)
+      if (length(surnames) > 0) out$surname1[i] <- surnames[1]
+      if (length(surnames) > 1) out$surname2[i] <- surnames[2]
+      out$n_authors[i] <- length(surnames)
+    } else {
+      a <- deposited$author[i]
+      if (!is.na(a) && nzchar(a)) { toks <- strsplit(trimws(a), '\\s+', perl = TRUE)[[1]]; out$surname1[i] <- toks[length(toks)] }
+      out$year[i] <- suppressWarnings(as.integer(substr(deposited$year[i], 1, 4)))
+    }
+  }
+  out
+}
+
+ReflistFromCrossrefReferences <- function(deposited, keys) {
+  stopifnot(is.data.frame(deposited), all(c('key', 'doi', 'author', 'year', 'unstructured') %in% names(deposited)))
+  keys <- unique(trimws(as.character(keys[!is.na(keys)])))
+  keys <- keys[nzchar(keys)]
+  Fold <- function(x) { y <- tolower(FoldASCII(x)); gsub('[^a-z]', '', y) }
+  pk <- ParseAuthorYearKey(keys)
+  db <- DepositedAuthorBlock(deposited)
+  Chr <- function(x) ifelse(is.na(x) | !nzchar(x), NA_character_, x)
+  assembled <- trimws(paste(ifelse(is.na(deposited$author), '', deposited$author),
+                            ifelse(is.na(deposited$year), '', paste0('(', deposited$year, ')')),
+                            ifelse(is.na(deposited$article_title), '', paste0(deposited$article_title, '.')),
+                            ifelse(is.na(deposited$journal_title), '', deposited$journal_title),
+                            paste0(ifelse(is.na(deposited$volume), '', deposited$volume),
+                                   ifelse(is.na(deposited$first_page), '', paste0(':', deposited$first_page)))))
+  citation <- ifelse(is.na(deposited$unstructured), gsub('\\s+', ' ', assembled), deposited$unstructured)
+  chapter <- !is.na(deposited$unstructured) & grepl('\\bIn:\\s.*\\((eds?|Eds?)\\)', deposited$unstructured, perl = TRUE)
+  out <- data.frame(native_key = character(), raw_citation = character(), raw_doi = character(),
+                    note = character(), owner_review = character(), stringsAsFactors = FALSE)
+  unresolved <- data.frame(key = character(), reason = character(), stringsAsFactors = FALSE)
+  for (i in seq_len(nrow(pk))) {
+    k <- pk[i, ]
+    if (k$unpublished) {
+      out[nrow(out) + 1L, ] <- list(k$key, k$key, NA_character_, 'unpublished data cited by the tables; not a deposited reference', NA_character_)
+      next
+    }
+    if (is.na(k$author1) || is.na(k$year)) {
+      unresolved[nrow(unresolved) + 1L, ] <- list(k$key, 'not an author-year key'); next
+    }
+    # a suffix in the key must be the deposited one; a key without suffix accepts
+    # a suffixed entry (a style difference between the tables and the list), and
+    # several such entries make the key ambiguous, which is reported
+    hit <- !is.na(db$surname1) & Fold(db$surname1) == Fold(k$author1) & !is.na(db$year) & db$year == k$year &
+           (is.na(k$suffix) | (!is.na(db$suffix) & db$suffix == k$suffix))
+    known <- !is.na(db$n_authors)
+    if (k$et_al) hit <- hit & (!known | db$n_authors >= 3L)
+    else if (!is.na(k$author2)) hit <- hit & (!known | (db$n_authors == 2L & !is.na(db$surname2) & Fold(db$surname2) == Fold(k$author2)))
+    else hit <- hit & (!known | db$n_authors == 1L)
+    j <- which(hit)
+    if (length(j) == 0) { unresolved[nrow(unresolved) + 1L, ] <- list(k$key, 'no deposited reference with this author block and year'); next }
+    if (length(j) > 1) {
+      unresolved[nrow(unresolved) + 1L, ] <- list(k$key, paste('matches deposited references', paste(deposited$key[j], collapse = ', ')))
+      next
+    }
+    out[nrow(out) + 1L, ] <- list(k$key, citation[j], Chr(deposited$doi[j]),
+                                  paste0('deposited reference ', deposited$key[j], if (is.na(deposited$unstructured[j])) ' (citation assembled from the structured fields)' else ''),
+                                  if (chapter[j]) 'book chapter (the deposited reference names editors)' else NA_character_)
+  }
+  rownames(out) <- NULL; rownames(unresolved) <- NULL
+  attr(out, 'unresolved') <- unresolved
   out
 }
 

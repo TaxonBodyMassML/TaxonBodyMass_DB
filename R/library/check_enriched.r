@@ -2,8 +2,13 @@
 # names that no enrichment stage resolved to an accepted species (#38); they
 # are listed in reports/warnings_taxonomy.md, where the run log used to print
 # only their count.
+# `kingdom_conflicts`: an optional data frame (taxon, kingdom_conflict,
+# kingdom, phylum, class, order, family, species, taxonomy_source, sources,
+# rows) of the names whose authority kingdom was a plant, alga or fungus over
+# animal ranks and that Part 2b of fix_taxonomy_ranks.r corrected (#81); taken
+# before FilterAutotrophs(), which dropped them unreported until then.
 check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
-                           unresolved = NULL) {
+                           unresolved = NULL, kingdom_conflicts = NULL) {
   dir.create(file.path(wd_root, "reports"), showWarnings = FALSE)
   warn <- character(0)
   warn_summary <- character(0)
@@ -225,6 +230,28 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
     warn_summary <- c(warn_summary, sprintf(
       "- Names unresolved after all enrichment stages: %d names, %d rows",
       nrow(unresolved), sum(unresolved$rows)))
+  }
+
+  # 13. Cross-kingdom conflicts corrected before the autotroph filter (#81):
+  #     the kingdom the authority returned and the final one, the ranks, the
+  #     final species ('unresolved' when the species came from the wrong
+  #     kingdom's authority and was cleared, so the name is also in section
+  #     12), the sources and record counts. Check 11 above cannot see these
+  #     rows: it runs on the post-filter frame.
+  if (!is.null(kingdom_conflicts) && nrow(kingdom_conflicts) > 0) {
+    kc <- kingdom_conflicts[order(kingdom_conflicts$taxon), ]
+    na_dash <- function(x) ifelse(is.na(x), "-", as.character(x))
+    warn <- c(warn, sprintf(
+      "\n## Kingdom conflicts corrected before the autotroph filter (%d names, %d rows -- an authority's plant, alga or fungus kingdom over animal ranks; #81)\n\n%s",
+      nrow(kc), sum(kc$rows),
+      paste(sprintf("%s | %s -> %s | %s / %s / %s / %s | species=%s [%s] | %s | %d row%s",
+                    kc$taxon, kc$kingdom_conflict, na_dash(kc$kingdom),
+                    na_dash(kc$phylum), na_dash(kc$class), na_dash(kc$order), na_dash(kc$family),
+                    ifelse(is.na(kc$species), "unresolved", kc$species), na_dash(kc$taxonomy_source),
+                    kc$sources, kc$rows, ifelse(kc$rows == 1, "", "s")), collapse = "\n\n")))
+    warn_summary <- c(warn_summary, sprintf(
+      "- Kingdom conflicts corrected before the autotroph filter: %d names, %d rows (%d unresolved)",
+      nrow(kc), sum(kc$rows), sum(is.na(kc$species))))
   }
 
   # Write reports

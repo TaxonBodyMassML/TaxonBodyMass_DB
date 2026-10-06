@@ -7,7 +7,8 @@
 # more than once enters as the mean of its measurements. One row per individual,
 # so n = 1 and Pass 1 of RunMe.r takes the species geometric mean.
 # Hoehler et al. (2023) Dataset S01 copies 1,497 of these rows under Reference
-# Code 'Hudson et al. (2013)' (Bib/source_dependencies.csv).
+# Code 'Hudson et al. (2013)'; its parser drops them since #66
+# (Bib/source_dependencies.csv, provenance_only edge).
 adat <- read.csv(file.path(wd_source, 'jane12086-sup-0003-AppendixS5.csv'), header = TRUE,
                  check.names = FALSE, stringsAsFactors = FALSE, encoding = 'UTF-8')
 adat$taxon  <- paste(trimws(adat$Genus), trimws(adat$Species))

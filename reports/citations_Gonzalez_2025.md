@@ -1,8 +1,8 @@
-# Citations of Gonzalez_2025 -- 2026-10-05 13:23:14 (tbmcite 0.1.0)
+# Citations of Gonzalez_2025 -- 2026-10-05 14:16:02 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --bib
 
-- --apply-queue: 10 decision(s) applied: Johnson et al 2010 -> approved, McIntyre et al 2008 -> approved, McManamay et al 2011 -> approved, Sereda et al 2008 -> approved, Small et al 2011 -> approved, Sterrett et al 2015 -> approved, Tarvainen et al 2005 -> approved, Taylor et al. 2012 -> approved, Vanni et al 2002 -> approved, Zimmer et al 2006 -> approved
+- --bib: 568 entries written to TaxonBodyMass_PrimaryCitations.bib (11 reuse a curated key); RefManageR parsed 568; Gonzalez_2025: 35 rows with bibcite
 
 ## References
 
@@ -26,25 +26,25 @@ Steps: --apply-queue
 | Ikeda database | 450 | measurement | certain | doi_resolves | 10.1007/bf00391956 | 1.000 | Ikeda:1989aa | Ikeda_1989 |
 | Jankowski 2000 | 24 | measurement | certain | doi_resolves | 10.1093/plankt/22.7.1329 | 1.000 | Jankowski:2000ab | Jankowski_2000b |
 | Jansen et al. 2012 | 14 | measurement | certain | doi_resolves | 10.1007/s00227-012-1944-3 | 1.000 | Jansen:2012aa | Jansen_2012 |
-| Johnson et al 2010 | 1 | measurement | approved | owner_doi | 10.1139/f10-085 | 0.000 |  |  |
+| Johnson et al 2010 | 1 | measurement | approved | owner_doi | 10.1139/f10-085 | 0.000 | Johnson:2010aa | Johnson_2010 |
 | Leal et al. 2017 | 36 | measurement | certain | doi_resolves | 10.1002/ece3.2802 | 1.000 | Leal:2017aa | Leal_2017 |
 | Ludwig et al. 2018 | 86 | measurement | certain | doi_resolves | 10.1002/ece3.4028 | 1.000 | Ludwig:2018aa | Ludwig_2018 |
-| McIntyre et al 2008 | 0 | measurement | approved | owner_doi | 10.1890/07-1552.1 | 0.000 |  |  |
+| McIntyre et al 2008 | 0 | measurement | approved | owner_doi | 10.1890/07-1552.1 | 0.000 | McIntyre:2008aa | McIntyre_2008 |
 | McIntyre, PB, unpub | 5 | measurement | rejected | owner_drop | 10.1093/gmo/9781561592630.article.j281200 | 0.553 |  |  |
-| McManamay et al 2011 | 0 | measurement | approved | owner_doi | 10.1899/09-152.1 | 0.000 |  |  |
+| McManamay et al 2011 | 0 | measurement | approved | owner_doi | 10.1899/09-152.1 | 0.000 | McManamay:2011aa | McManamay_2011 |
 | Moody et al. 2019 | 244 | measurement | certain | doi_resolves | 10.1111/1365-2435.13301 | 1.000 | Moody:2019aa | Moody_2019 |
 | Paseka & Grunberg 2019 | 18 | measurement | certain | doi_resolves | 10.1111/oik.05339 | 1.000 | Paseka:2018aa | Paseka_2018 |
 | Rizzuto et al. 2019 | 50 | measurement | approved | owner_doi | 10.1002/ece3.5880 | 1.000 | Rizzuto:2019aa | Rizzuto_2019 |
-| Sereda et al 2008 | 0 | measurement | approved | owner_doi | 10.1111/j.1365-2427.2008.02029.x | 0.000 |  |  |
-| Small et al 2011 | 0 | measurement | approved | owner_doi | 10.1890/10-0081.1 | 0.000 |  |  |
-| Sterrett et al 2015 | 32 | measurement | approved | owner_doi | 10.1111/fwb.12516 | 0.000 |  |  |
+| Sereda et al 2008 | 0 | measurement | approved | owner_doi | 10.1111/j.1365-2427.2008.02029.x | 0.000 | Sereda:2008aa | Sereda_2008 |
+| Small et al 2011 | 0 | measurement | approved | owner_doi | 10.1890/10-0081.1 | 0.000 | Small:2011aa | Small_2011 |
+| Sterrett et al 2015 | 32 | measurement | approved | owner_doi | 10.1111/fwb.12516 | 0.000 | Sterrett:2015aa | Sterrett_2015 |
 | Tande 1982 | 33 | measurement | certain | doi_resolves | 10.1016/0022-0981(82)90087-9 | 1.000 | Tande:1982aa | Tande_1982 |
-| Tarvainen et al 2005 | 0 | measurement | approved | owner_doi | 10.1111/j.1365-2427.2005.01331.x | 0.000 |  |  |
-| Taylor et al. 2012 | 0 | measurement | approved | owner_doi | 10.1899/11-113.1 | 0.000 |  |  |
+| Tarvainen et al 2005 | 0 | measurement | approved | owner_doi | 10.1111/j.1365-2427.2005.01331.x | 0.000 | Tarvainen:2005aa | Tarvainen_2005 |
+| Taylor et al. 2012 | 0 | measurement | approved | owner_doi | 10.1899/11-113.1 | 0.000 | Taylor:2012aa | Taylor_2012 |
 | Torres & Vanni 2007 | 0 | measurement | approved | owner_candidate | 10.1111/j.2006.0030-1299.15268.x | 0.000 | Torres:2007aa | Torres_2007 |
-| Vanni et al 2002 | 0 | measurement | approved | owner_doi | 10.1046/j.1461-0248.2002.00314.x | 0.000 |  |  |
+| Vanni et al 2002 | 0 | measurement | approved | owner_doi | 10.1046/j.1461-0248.2002.00314.x | 0.000 | Vanni:2002aa | Vanni_2002 |
 | Woods et al. 2004 | 11 | measurement | certain | doi_resolves | 10.1111/j.1365-2435.2004.00823.x | 1.000 | Woods:2004aa | Woods_2004 |
-| Zimmer et al 2006 | 0 | measurement | approved | owner_doi | 10.4319/lo.2006.51.1.0197 | 0.000 |  |  |
+| Zimmer et al 2006 | 0 | measurement | approved | owner_doi | 10.4319/lo.2006.51.1.0197 | 0.000 | Zimmer:2006aa | Zimmer_2006 |
 | unpublished - Filipiak | 68 | self | self | self |  |  |  |  |
 | unpublished - González | 55 | self | self | self |  |  |  |  |
 | unpublished - Leroux | 58 | self | self | self |  |  |  |  |
