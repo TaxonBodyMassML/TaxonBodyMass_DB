@@ -149,7 +149,8 @@ BuildLicenceManifest <- function(wd_root,
     message(sprintf('licence manifest: %d tracked files in %d folders, %d live rows; %d added, %d dropped',
                     nrow(new), length(unique(new$folder)), nrow(live), length(added), length(dropped)))
     if (length(added) > 0)
-      message('  added (licence "', LICENCE_UNKNOWN, '"): ', paste(added, collapse = ', '))
+      message('  added (raw files enter as "', LICENCE_UNKNOWN, '", scripts and READMEs under the ',
+              'repository licence): ', paste(added, collapse = ', '))
     if (length(dropped) > 0) message('  dropped: ', paste(dropped, collapse = ', '))
   }
   if (write) write.csv(out, manifest, row.names = FALSE, na = '', fileEncoding = 'UTF-8')
