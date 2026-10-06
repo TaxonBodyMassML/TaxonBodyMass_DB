@@ -345,8 +345,9 @@ Expect(any(grepl("^wd_bib\\s*<-\\s*file\\.path\\(wd_root, 'Bib'\\)", runme)) && 
          any(grepl("^primary_bib_path <- file\\.path\\(wd_bib, 'TaxonBodyMass_PrimaryCitations\\.bib'\\)", runme)),
        "wd_bib is 'Bib' and the bib is read through it")
 Expect(any(grepl("'citations_config\\.r', 'normalise_citation\\.r', 'parse_reflists\\.r', 'build_bib\\.r', 'provenance\\.r'", runme)) &&
+         any(grepl("^source\\(file\\.path\\(wd_root, 'R', 'library', 'sheet_snapshots\\.r'\\)\\)", runme)) &&
          !any(grepl("source\\(.*(verify_services|sheet_append|decide|cite_ids|run_citations)\\.r", runme)),
-       'RunMe sources the five offline citation files and none of the network ones')
+       'RunMe sources the five offline citation files and sheet_snapshots.r (offline but for the DataSheets = TRUE download) and none of the network ones')
 Expect(any(grepl('^prov_classes <- LoadProvenanceClasses\\(file\\.path\\(wd_bib, .source_provenance_classes\\.csv.\\)', runme)) &&
          any(grepl('^prim_refs <- LoadPrimaryReferences\\(wd_db\\)', runme)) &&
          which(grepl('^prov_classes <- LoadProvenanceClasses', runme)) > which(grepl('NormaliseSourceLabel\\(df\\$source_mass\\)', runme))[1] &&
@@ -355,11 +356,11 @@ Expect(any(grepl('^prov_classes <- LoadProvenanceClasses\\(file\\.path\\(wd_bib,
 Expect(any(grepl("whose Bibcite key is in neither bib file", runme)) && any(grepl('^sheet_unmapped <- c\\(', runme)),
        'section 8 lists the Sheet rows whose Bibcite is in neither bib instead of dropping them silently')
 Expect(any(grepl('^bibs <- CheckBibKeysUnique\\(curated_bib_path, primary_bib_path\\)', runme)) &&
-         any(grepl('sheet_tab_primary %in% sheet_names\\(bm_sheet_url\\)', runme)) && any(grepl("'BM_primary_citations_snapshot\\.csv'", runme)) &&
+         any(grepl('^pmap <- LoadSheetSnapshot\\(sheet_paths\\$snapshot_primary\\)', runme)) && !any(grepl('sheet_names\\(|read_sheet\\(', runme)) &&
          any(grepl('^provenance <- BuildProvenance\\(prov_records, prim_refs, prov_classes, dcite\\[, c\\(.CiteID., .Bibcite., .doi.\\)\\], enriched\\)', runme)) &&
          any(grepl("'TaxonBodyMass_Provenance\\.csv\\.gz'", runme)) && any(grepl("'warnings_citations\\.md'", runme)) &&
          any(grepl('dcite\\[order\\(dcite\\$CiteID, dcite\\$Bibcite\\), citeids_columns\\]', runme)),
-       'section 8 reads both bibs (unique keys), the primary tab or its snapshot, builds the provenance table, the report and the CiteIDs CSV with the new columns')
+       'section 8 reads both bibs (unique keys), the primary tab from its tracked copy (#118, no Sheet call), builds the provenance table, the report and the CiteIDs CSV with the new columns')
 Expect(any(grepl('^source_split <- SplitSourceMass\\(adat_enriched\\$source_mass\\)', runme)) && any(grepl('KnownConversionCiteIDs\\(\\)\\)$', runme)) &&
          any(grepl("^adat\\$origin <- ifelse\\(adat\\$taxon %in% sheet\\$species\\$taxon, 'BM_data', 'pipeline'\\)", runme)) &&
          any(grepl('^    ref_keys        = JoinRefKeys\\(ref_keys\\),', runme)) &&

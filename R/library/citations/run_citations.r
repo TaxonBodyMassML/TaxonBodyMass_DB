@@ -30,6 +30,7 @@ lib <- file.path(wd_root, 'R', 'library')
 source(file.path(lib, 'helpers.r'))
 source(file.path(lib, 'mass_conversion.r'))
 source(file.path(lib, 'dedupe_sources.r'))
+source(file.path(lib, 'sheet_snapshots.r'))      # SheetAuth(), ReadSheetTab(), SnapshotSheetTab() (#118)
 for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'verify_services.r',
             'decide.r', 'build_bib.r', 'cite_ids.r', 'sheet_append.r', 'provenance.r'))
   source(file.path(lib, 'citations', f))
