@@ -2,6 +2,7 @@
 
 Source: five data papers fetched live through the Python `retriever` package (rdataretriever) by `R/library/data_retrieve.r` when `DataRetrieve = TRUE` in `R/RunMe.r`, and saved together as `sources/Rdata/BodyMass_DataRetrieverAll.Rdata`. No raw files are stored in this folder.
 Data: retriever datasets `mammal-life-hist`, `predator-prey-body-ratio`, `pantheria`, `amniote-life-hist` and `socean-diet-data`, downloaded at each run (`bird-size`, Lislevand et al. 2007, was fetched here until 2026-10-05, issue #102: the same file is parsed by `sources/databases/Lislevand_etal_2007/`, and the retriever copy -- male mass only, no reference numbers -- duplicated it under the same label) (see the main README, Prerequisites, for the retriever venv).
+Licence: unknown; owner to check https://retriever.readthedocs.io (nothing is stored here: the five Ecological Archives data papers are fetched at run time by rdataretriever and their terms are stated in each data paper's Ecological Archives metadata, which is not on disk; the tracked csv files of this folder are our own unit decisions and reference tables, under the repository licence). See sources/LICENSES.md, "Not redistributed".
 
 | retriever dataset | Source label | Reference | Columns used |
 |---|---|---|---|

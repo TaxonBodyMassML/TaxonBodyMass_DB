@@ -2,7 +2,7 @@
 #
 #   Rscript R/library/citations/run_citations.r --source <Src> \
 #       [--init] [--verify] [--queue] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
-#       [--screening-list] [--force] [--offline] [--min-records N]
+#       [--screening-list] [--force] [--offline] [--crossref-only] [--min-records N]
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -27,6 +27,13 @@
 #                  to reports/dedupe_queue_<date>.md; no network, no source file touched
 #   --force        re-verify `certain` rows as well
 #   --offline      never touch the network (cached responses only)
+#   --crossref-only  with --verify (or --queue): Crossref-only mode (owner decision
+#                  2026-10-06, the backlog while the OpenAlex key's daily budget is about
+#                  1,000 lookups): OpenAlex is not called; Crossref alone accepts under
+#                  the rules of DecideMatchCrossrefOnly() (certain / crossref_only,
+#                  verification_mode crossref_only); only unverified, service_unavailable
+#                  and single_service rows are decided (--force: every row, as usual);
+#                  a later --verify without the flag re-checks the accepted rows in full
 #   --min-records N  --verify only the keys cited by N or more records (n_records);
 #                  the others stay unverified for a later run (a large list on one
 #                  OpenAlex day; owner's rule for Jones_2009, 2026-10-06)
@@ -55,9 +62,11 @@ mr_i <- which(args == '--min-records')
 if (length(mr_i) > 1 || (length(mr_i) == 1 && mr_i == length(args))) stop('--min-records needs one value N')
 min_records <- if (length(mr_i) == 1) suppressWarnings(as.integer(args[mr_i + 1])) else 1L
 if (is.na(min_records) || min_records < 1) stop('--min-records N: N must be a positive integer')
-known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--min-records', if (length(mr_i) == 1) args[mr_i + 1])
+known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--crossref-only', '--min-records', if (length(mr_i) == 1) args[mr_i + 1])
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
+crossref_only <- Flag('--crossref-only')
+if (crossref_only && !(Flag('--verify') || Flag('--queue'))) stop('--crossref-only needs --verify (or --queue)')
 
 cfg  <- CitationsConfig(wd_root, offline = Flag('--offline'))
 dir.create(cfg$reports_dir, showWarnings = FALSE)
@@ -176,13 +185,15 @@ candidates <- list()
 if (Flag('--verify') || Flag('--queue')) {
   comp_doi <- CompilationDOI()
   reflist <- if (is.na(comp_doi)) NULL else CandidatesFromCompilationReflist(comp_doi, cfg)
-  Note('%s: compilation DOI %s; %d deposited references (%d with DOI)',
+  Note('%s: compilation DOI %s; %d deposited references (%d with DOI)%s',
        if (Flag('--verify')) '--verify' else '--queue (re-scoring pending rows from the cache)',
        if (is.na(comp_doi)) 'none' else comp_doi,
-       if (is.null(reflist)) 0L else nrow(reflist), if (is.null(reflist)) 0L else sum(!is.na(reflist$doi)))
+       if (is.null(reflist)) 0L else nrow(reflist), if (is.null(reflist)) 0L else sum(!is.na(reflist$doi)),
+       if (crossref_only) '; Crossref-only mode (owner decision 2026-10-06): OpenAlex not called, Crossref alone accepts (certain / crossref_only)' else '')
   scite <- ReadSciteChecks(cfg$scite_csv)
-  res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE,
-                                 min_records = min_records)
+  run_at <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
+  res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE, crossref_only = crossref_only,
+                                 verified_at = run_at, min_records = min_records)
   if (min_records > 1)
     Note('--min-records %d: %d key(s) cited by fewer records left unverified for a later run', min_records,
          length(res$below_min_records))
@@ -190,8 +201,16 @@ if (Flag('--verify') || Flag('--queue')) {
   WritePrimaryReferences(prim, prim_path)
   if (length(res$skipped) > 0)
     Note('--verify: %d reference(s) left unverified -- %s: %s', length(res$skipped), res$quota, paste(res$skipped, collapse = ', '))
+  xo <- prim$match_status %in% 'certain' & prim$verification_mode %in% 'crossref_only'
+  if (crossref_only)
+    Note('--verify --crossref-only: %d row(s) decided on Crossref alone this run, %d of them certain / crossref_only (%d such rows now in the file, to be re-checked in full by a later --verify without the flag)',
+         sum(prim$verified_at %in% run_at & prim$verification_mode %in% 'crossref_only'), sum(prim$verified_at %in% run_at & xo), sum(xo))
+  if (length(res$rechecked) > 0)
+    Note('--verify: %d certain / crossref_only row(s) re-checked with OpenAlex: %s', length(res$rechecked),
+         paste(sprintf('%s %s', names(res$rechecked), res$rechecked), collapse = ', '))
   tab <- table(factor(prim$match_status, levels = c(match_statuses, NA)), useNA = 'ifany')
-  Note('status counts: %s', paste(sprintf('%s %d', ifelse(is.na(names(tab)), 'unverified', names(tab)), tab)[tab > 0], collapse = ', '))
+  Note('status counts: %s%s', paste(sprintf('%s %d', ifelse(is.na(names(tab)), 'unverified', names(tab)), tab)[tab > 0], collapse = ', '),
+       if (any(xo)) sprintf(' (certain / crossref_only: %d)', sum(xo)) else '')
 }
 if (Flag('--queue')) {
   queue <- WritePendingQueue(prim, candidates, cfg$pending_csv)
@@ -298,9 +317,14 @@ if (Flag('--screening-list')) {
 # record of the verifying steps)
 md <- file.path(cfg$reports_dir, sprintf('citations_%s.md', src))
 if (identical(args[args %in% steps], '--screening-list')) quit(save = 'no', status = 0)
-tab <- prim[, c('native_key', 'n_records', 'role', 'match_status', 'match_reason', 'doi', 'title_sim', 'bibcite', 'cite_id')]
+tab <- prim[, c('native_key', 'n_records', 'role', 'match_status', 'match_reason', 'services', 'verification_mode', 'doi', 'title_sim', 'bibcite', 'cite_id')]
 tab$title_sim <- ifelse(is.na(tab$title_sim), '', formatC(tab$title_sim, digits = 3, format = 'f'))
+n_xo <- sum(prim$match_status %in% 'certain' & prim$verification_mode %in% 'crossref_only')
 writeLines(c(sprintf('# Citations of %s -- %s (%s)', src, format(Sys.time(), '%Y-%m-%d %H:%M:%S'), citations_tool_version), '',
-             sprintf('Steps: %s', paste(args[args %in% c(steps, '--no-dry-run', '--force', '--offline')], collapse = ' ')), '',
+             sprintf('Steps: %s', paste(args[args %in% c(steps, '--no-dry-run', '--force', '--offline', '--crossref-only')], collapse = ' ')), '',
+             sprintf('Verification mode: %s%s',
+                     if (crossref_only) 'crossref_only (owner decision 2026-10-06: OpenAlex not called, Crossref alone accepts; the accepted rows carry verification_mode crossref_only and are re-checked in full by a later --verify without the flag)'
+                     else 'full (Crossref + OpenAlex)',
+                     if (n_xo > 0) sprintf('; %d certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)', n_xo) else ''), '',
              paste0('- ', unlist(report)), '', '## References', '', MarkdownTable(tab)), md)
 cat('  report:', md, '\n')

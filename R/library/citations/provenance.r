@@ -22,7 +22,9 @@
 #                                        conversion-factor rows and lab-Sheet rows
 #   CheckCitations(...)                  every primary_bibcite has a bib entry, every CiteID
 #                                        a Sheet row, every accepted row a DOI or an
-#                                        approval; per-source coverage
+#                                        approval; per-source coverage (with the certain
+#                                        rows that rest on Crossref alone, verification_mode
+#                                        crossref_only, counted apart)
 #   WriteCitationsReport(path, checks)   reports/warnings_citations.md
 # Base R only, no network.
 
@@ -74,7 +76,12 @@ LoadProvenanceClasses <- function(path, known_labels) {
   if (length(bad) > 0) problems <- c(problems, sprintf('unknown class %s (allowed: %s)', paste(bad, collapse = ', '), paste(provenance_classes, collapse = ', ')))
   bad <- setdiff(unique(d$default_provenance_type), provenance_types)
   if (length(bad) > 0) problems <- c(problems, sprintf('unknown default_provenance_type %s (allowed: %s)', paste(bad, collapse = ', '), paste(provenance_types, collapse = ', ')))
+  # value_tier (#34): 1, 2 or 3 in every row (exclude_discordant.r)
+  tier <- suppressWarnings(as.integer(d$value_tier))
+  bad_tier <- is.na(tier) | !tier %in% 1:3 | tier != suppressWarnings(as.numeric(d$value_tier))
+  if (any(bad_tier)) problems <- c(problems, sprintf('value_tier must be 1, 2 or 3 in every row (bad: %s)', paste(d$source_label[bad_tier], collapse = ', ')))
   if (length(problems) > 0) stop(basename(path), ': ', paste(problems, collapse = '; '), call. = FALSE)
+  d$value_tier <- tier
   eq <- d$default_provenance_type %in% 'derived_allometry' & is.na(d$equation_bibcite)
   if (any(eq))
     message(sprintf('  %s: derived source(s) without an equation_bibcite yet (their rows carry no equation reference): %s',
@@ -163,7 +170,7 @@ IntermediateReferences <- function(pipe, prim, labels) {
 EmptyProvenance <- function() {
   out <- as.data.frame(setNames(rep(list(character()), length(provenance_columns)), provenance_columns), stringsAsFactors = FALSE)
   out$hop <- integer(); out$n_records <- integer()
-  out
+  out[, provenance_columns]
 }
 
 # `records`: the per-record frame (genus, species, taxon, source_label, origin;
@@ -171,7 +178,12 @@ EmptyProvenance <- function() {
 # (genus, species) pairs of `accepted`. `prim`: LoadPrimaryReferences();
 # `classes`: LoadProvenanceClasses(); `citeids`: a frame with CiteID and
 # Bibcite (and doi) mapping labels and conversion CiteIDs to bib keys.
-BuildProvenance <- function(records, prim, classes, citeids, accepted) {
+# `statuses` (#34): a frame (genus, species, source_group, record_status) of
+# the Pass-1 values, from ExcludeDiscordantValues(); a row's record_status is
+# that of its species x source group ('kept', or 'excluded_<rule>' for a value
+# the record-level range rule left out of the mean), 'kept' for lab-Sheet rows
+# and when no status is given.
+BuildProvenance <- function(records, prim, classes, citeids, accepted, statuses = NULL) {
   need <- c('genus', 'species', 'taxon', 'source_label', 'origin')
   miss <- setdiff(need, names(records))
   if (length(miss) > 0) stop('BuildProvenance(): records lack column(s) ', paste(miss, collapse = ', '), call. = FALSE)
@@ -341,6 +353,14 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
     }
   }
   out <- do.call(rbind, out)
+  out$record_status <- rep('kept', nrow(out))
+  if (!is.null(statuses) && nrow(statuses) > 0) {
+    grp <- if (exists('SourceGroup')) SourceGroup(out$source_mass) else out$source_mass
+    m <- match(paste(out$genus, out$species, grp, sep = '\r'),
+               paste(statuses$genus, statuses$species, statuses$source_group, sep = '\r'))
+    hit <- out$origin != 'BM_data' & !is.na(m)
+    out$record_status[hit] <- statuses$record_status[m[hit]]
+  }
   out <- out[order(out$genus, out$species, out$source_mass, out$origin, out$hop, out$provenance_type,
                    out$primary_cite_id, out$ref_role, method = 'radix'), provenance_columns]
   rownames(out) <- NULL
@@ -354,6 +374,9 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
 # list(problems, coverage, counts).
 CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = character()) {
   problems <- character(0)
+  # the certain rows accepted in Crossref-only mode (owner decision 2026-10-06), counted apart
+  vm <- if (is.null(prim$verification_mode)) rep(NA_character_, nrow(prim)) else prim$verification_mode
+  xo <- prim$match_status %in% 'certain' & vm %in% 'crossref_only'
   pb <- unique(na.omit(provenance$primary_bibcite))
   missing_bib <- setdiff(pb, bib$key)
   if (length(missing_bib) > 0)
@@ -392,6 +415,7 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
                n_record_links = n_rec,
                pct_resolved = if (n_rec > 0) round(100 * resolved / n_rec, 1) else NA_real_,
                refs_total = nrow(pr), refs_resolved = sum(pr$match_status %in% c('certain', 'approved', 'nodoi_approved')),
+               refs_crossref_only = sum(xo[prim$source_label == l]),
                refs_pending = sum(pr$match_status %in% 'pending'), refs_not_found = sum(pr$match_status %in% 'not_found'),
                refs_self = sum(pr$match_status %in% 'self'), refs_rejected = sum(pr$match_status %in% 'rejected'),
                refs_unverified = sum(is.na(pr$match_status)),
@@ -403,7 +427,7 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
   list(problems = problems, coverage = cov,
        counts = c(rows = nrow(provenance), species = length(unique(paste(provenance$genus, provenance$species))),
                   primary_refs = length(pc), unresolved_refs = sum(prim$match_status %in% c('pending', 'not_found')),
-                  unverified_refs = sum(is.na(prim$match_status))))
+                  unverified_refs = sum(is.na(prim$match_status)), crossref_only_refs = sum(xo)))
 }
 
 WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = character(),
@@ -416,7 +440,9 @@ WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = 
              '## Totals', '',
              sprintf('- provenance rows: %d (%d species); distinct primary CiteIDs: %d; unresolved references (pending / not_found): %d; unverified references: %d',
                      checks$counts[['rows']], checks$counts[['species']], checks$counts[['primary_refs']],
-                     checks$counts[['unresolved_refs']], checks$counts[['unverified_refs']]), '',
+                     checks$counts[['unresolved_refs']], checks$counts[['unverified_refs']]),
+             sprintf('- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): %d',
+                     if ('crossref_only_refs' %in% names(checks$counts)) checks$counts[['crossref_only_refs']] else 0L), '',
              '## Problems', '')
   lines <- c(lines, if (length(checks$problems) == 0) '(none)' else paste0('- ', checks$problems), '',
              '## Sheet rows whose Bibcite is in neither bib file', '',
@@ -424,7 +450,7 @@ WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = 
              '## Labels in TaxonBodyMass.csv without a CiteID row', '',
              if (length(uncited_labels) == 0) '(none)' else paste0('- ', uncited_labels), '',
              '## Per-source coverage', '',
-             'One row per source label: species and record links (species x source x reference rows weighted by records), the share of record links resolved to a primary reference (hop >= 1 with a CiteID), and the reference counts of primary_references.csv by status.', '')
+             'One row per source label: species and record links (species x source x reference rows weighted by records), the share of record links resolved to a primary reference (hop >= 1 with a CiteID), and the reference counts of primary_references.csv by status (`refs_crossref_only`: the certain rows among `refs_resolved` that rest on Crossref alone).', '')
   lines <- c(lines, if (nrow(cov) == 0) '(none)' else MarkdownTable(cov))
   writeLines(lines, path)
   invisible(path)
