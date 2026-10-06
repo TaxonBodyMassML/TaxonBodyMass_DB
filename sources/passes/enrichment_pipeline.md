@@ -10,7 +10,7 @@ Each stage queries a different taxonomic authority and fills only the rank field
 
 **Final output:** `TaxonBodyMass_DB/TaxonBodyMass.csv` — deduplicated to one row per resolved species, with full taxonomy and provenance columns. Autotrophic taxa are removed by `FilterAutotrophs()` (see §5) before deduplication.
 
-**Caching:** `RunMe.r` enriches each unique name once and stores the result in `sources/enrich_cache.Rdata`; subsequent runs (`fresh_start = FALSE`) query only names absent from the cache. Stage 7 (`BackfillRanks()`, `rgbif::name_usage(data = "parents")` on the stored GBIF usage key) fills higher ranks still missing for resolved species.
+**Caching:** `RunMe.r` enriches each unique name once and stores the result in `sources/enrich_cache.Rdata`; subsequent runs (`fresh_start = FALSE`) query only names absent from the cache. A stage that is corrected therefore does not re-run on cached names by itself (issue #103 re-ran the Catalogue of Life stage once, on the unresolved names of the current data only). Stage 7 (`BackfillRanks()`, `rgbif::name_usage(data = "parents")` on the stored GBIF usage key) fills higher ranks still missing for resolved species.
 
 **Per-stage pass files:** after each stage completes, the data frame *passed to `EnrichTaxonomy()`* is written to `sources/passes/`. In cache mode that is only the new names of the current run (e.g. 182 rows), **not** the whole database, so these files must not be used for whole-database counts — those are computed in `RunMe.r` and written to `../TaxonBodyMassML/ms/numbers_db.tex`.
 
@@ -74,7 +74,7 @@ Stages run sequentially inside `EnrichTaxonomy()`. Each stage receives the same 
 | 1 | `rgbif::name_backbone_checklist()` | GBIF name backbone (batch POST) | 1,000 | none | — |
 | 2 | `taxize::classification(db="ncbi")` | NCBI Entrez (esearch + efetch) | 1 (sequential) | 0.34 s | every 100 rows |
 | 3 | `worrms::wm_records_names()` | WoRMS AphiaRecordsByMatchNames | 50 | 0.5 s | every 500 rows |
-| 4 | `httr2::request()` (`api.checklistbank.org/nidx/match`) | COL ChecklistBank names index | 1 (sequential) | 0.5 s | every 100 rows |
+| 4 | `httr2::request()` (`api.checklistbank.org/dataset/3LR/match/nameusage`) | Catalogue of Life checklist, ChecklistBank name-usage matcher | 1 (sequential) | 0.5 s | every 100 rows |
 | 5 | `ritis::search_scientific()` + `ritis::hierarchy_full()` | ITIS JSON service | 1 (sequential) | 0.5 s | every 100 rows |
 | 6 | `httr2::request()` (SPARQL) | Wikidata query service | 10 | 1.0 s | every 100 rows |
 
@@ -135,13 +135,15 @@ Accepted match types: `exact`, `phonetic`, `near_1`. Records with other match ty
 
 ---
 
-### Stage 4 — COL (`httr2` GET `https://api.checklistbank.org/nidx/match?name=`)
+### Stage 4 — Catalogue of Life (`httr2` GET `https://api.checklistbank.org/dataset/3LR/match/nameusage?q=`)
 
-**API:** ChecklistBank names-index match (Catalogue of Life)
+**API:** ChecklistBank name-usage matcher of the Catalogue of Life checklist (dataset `3LR`). Functions `ColMatchFetch()` (the call), `ParseColMatch()` (the response mapping) and `ColStage()` (the row update) in `enrich_taxonomy.r`; the stage runs on the names still without a species after WoRMS and never replaces a species an earlier stage set (no override of GBIF; issue #103).
 
-**Fields added:** `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, `species`
+**Fields added:** `kingdom`, `phylum`, `class`, `order`, `family`, `genus`, `species` (NA-fill, as in stages 2–6; the genus is the accepted species' genus), and the match record `col_match_type`, `col_status`, `col_usageKey`, `col_matched_name` for every name queried.
 
-Queries taxa one at a time. Matches of type `EXACT` or `FUZZY` are accepted; the classification is read from the returned `usage$classification`. Particularly effective for Squamata because COL sources directly from the Reptile Database.
+**Response mapping.** The response is `{type, usage, original, issues, match}`. `type` (lower case; `exact`, `variant`, `canonical`, `ambiguous`, `none`, `unsupported`, `higherrank`) goes to `col_match_type`; a bare binomial without authorship matches as `variant`, a misspelt epithet is not fuzzy-matched at species rank but answered as `higherrank` with the genus as `usage`, an unknown name as `none` without `usage`. `usage$status` (`accepted`, `provisionally accepted`, `synonym`, `ambiguous synonym`, `misapplied`, `bare name`) goes to `col_status`, `usage$id` to `col_usageKey`, `usage$name` to `col_matched_name`. A match resolves the name when `type` is `exact`, `variant` or `canonical`, the status is `accepted`, `provisionally accepted` or `synonym`, and a species-rank name is available: the usage itself when it is an accepted species, else the `species` entry of `usage$classification` (for a synonym, its accepted species: *Felis concolor* -> *Puma concolor*). `kingdom`..`genus` are read from `classification`; COL's kingdoms are GBIF's (Animalia, Plantae, Fungi, Chromista, Protozoa, Bacteria), so Part 2b of `fix_taxonomy_ranks.r` sees a COL row like a GBIF or NCBI row. `higherrank`, `ambiguous`, `none`, `unsupported` and the misapplied, ambiguous-synonym and bare-name statuses fill nothing (the answer is still recorded). On a resolved row `gbif_family` and `gbif_order` are cleared: they come from GBIF's higher-rank or fuzzy match of a name GBIF could not resolve, and Pass 1 of `RunMe.r` prefers them over `family`/`order`; `gbif_confidence`, `gbif_status` and `gbif_usageKey` stay as the record of what GBIF returned. There is no numeric confidence. Rate limit: `Sys.sleep(0.5)` per call, 3 tries with a 10 s backoff. Exercised without network access by `Rscript R/library/tests/test_col_stage.R` on recorded responses in `R/library/tests/fixtures/col/`.
+
+**History.** Until issue #103 (2026-10-06) the stage called `api.checklistbank.org/nidx/match?name=`, the names-index endpoint, which answers only `{nidx, matched}`; the stage tested `body$type %in% c('EXACT', 'FUZZY')`, never true, and so never resolved a name (0 COL rows in the cache against 47,667 GBIF rows). The corrected stage was run once on the 172 names unresolved in the current data (2026-10-06): it resolved none of them (145 `higherrank`, 27 `none`), because the #85 round had already filled every valid name GBIF lacks by hand (Part 7 of `fix_taxonomy_ranks.r`) and the remainder are absent from COL too; the match types are recorded in the cache. A live cross-check on the Part 7 names showed the stage resolving the COL-only names (*Caribicus anelpistus*, *Ancylodactylus gigas*, *Urostrophus grilli*, *Zonateres lanei*, *Bernieria madagascariensis*) to the same species, and rejecting the cross-kingdom homonyms COL answers as `ambiguous` (*Centropogon australis*). The other unresolved cache rows (names no longer in the data) and the rows ITIS and Wikidata resolved were not re-offered to COL. The names the stage resolves are listed in `reports/warnings_taxonomy.md` (section *Names resolved by Catalogue of Life*).
 
 ---
 
@@ -173,11 +175,15 @@ Rate limit: `Sys.sleep(1.0)` between batches per Wikidata's fair-use policy. Req
 | --- | --- | --- |
 | `taxon_provided` | character | Input taxon string (underscores → spaces) submitted to APIs |
 | `species_changed` | logical | `TRUE` if GBIF/fallback resolved to a different accepted species |
-| `taxonomy_source` | character | First stage that resolved `species` (GBIF, NCBI, WoRMS, COL, ITIS, Wikidata) |
+| `taxonomy_source` | character | First stage that resolved `species` (GBIF, NCBI, WoRMS, COL, ITIS, Wikidata; `manual` for a Part 7 overwrite of `fix_taxonomy_ranks.r`) |
 | `gbif_confidence` | numeric | GBIF match confidence score (0–100; `NA` if not resolved by GBIF) |
 | `gbif_status` | character | GBIF taxonomic status (ACCEPTED, SYNONYM, DOUBTFUL, `NA`) |
-| `gbif_family` | character | Family returned by GBIF (regardless of pre-seeded value) |
-| `gbif_order` | character | Order returned by GBIF (regardless of pre-seeded value) |
+| `gbif_family` | character | Family returned by GBIF (regardless of pre-seeded value); `NA` on a row stage 4 resolved |
+| `gbif_order` | character | Order returned by GBIF (regardless of pre-seeded value); `NA` on a row stage 4 resolved |
+| `col_match_type` | character | ChecklistBank match type for every name stage 4 queried (`exact`, `variant`, `canonical`, `ambiguous`, `none`, `unsupported`, `higherrank`; `NA` if the name never reached stage 4) |
+| `col_status` | character | Status of the matched COL usage (`accepted`, `provisionally accepted`, `synonym`, ...) |
+| `col_usageKey` | character | COL usage id of the matched name (e.g. `BC766`) |
+| `col_matched_name` | character | The name COL matched (the synonym for a synonym match; a spelling variant shows here) |
 
 ---
 
@@ -214,5 +220,9 @@ After enrichment and autotroph filtering, `RunMe.r` deduplicates the data to one
 8. Species name changed during enrichment (synonym collapses, misresolutions)
 9. High mass disagreement: `log10(max/min)` > 2.0 across per-source values collapsed to the same species (all species with `log10_range > 1` are subsequently removed)
 10. Source-provided family or order differs from GBIF-returned family or order (potential misresolution flag)
+11. Non-Animalia kingdom with an Animalia order or family (cross-kingdom misresolution)
+12. Names unresolved after all enrichment stages, with sources and row counts (#38)
+13. Kingdom conflicts corrected before the autotroph filter (#81)
+14. Names resolved by Catalogue of Life (stage 4), with the matched name, match type, status and accepted species (#103)
 
 ---
