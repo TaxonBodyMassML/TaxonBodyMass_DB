@@ -310,7 +310,13 @@ reflist_specs <- list(
   # four Mass.Source code words of the Metadata sheet the parser keeps as keys
   Tobias_2022  = list(format = 'csv', file = 'references.csv', folder = 'Tobias_etal_2022',
                       frame = 'Tobias_2022', key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Tobias')
+                      compiler = 'Tobias'),
+  # the 87 numbered entries of the Ecological Archives metadata.htm reference
+  # list (section F), written to references.csv by build_references.py; the
+  # records' References column cites them ';'-separated (Stage 2 of #1)
+  Lislevand_etal_2007 = list(format = 'csv', file = 'references.csv',
+                             key_col = 'key', citation_col = 'citation', sep = ';',
+                             compiler = 'Lislevand', compilation_doi = '10.1890/06-2054')
 )
 
 ReflistSpec <- function(source_label) {

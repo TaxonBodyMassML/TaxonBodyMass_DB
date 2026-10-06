@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 17:23:20
+# Citation and provenance warnings -- 2026-10-05 17:55:44
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 128108 (39025 species); distinct primary CiteIDs: 612; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 132286 (39024 species); distinct primary CiteIDs: 693; unresolved references (pending / not_found): 31; unverified references: 3
 
 ## Problems
 
@@ -25,7 +25,7 @@ One row per source label: species and record links (species x source x reference
 | source_label | class | n_species | n_record_links | pct_resolved | refs_total | refs_resolved | refs_pending | refs_not_found | refs_self | refs_rejected | refs_unverified | unmatched_key_links | uningested_links |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | AmphiBIO | compilation | 537 | 538 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| AnAge | database | 2524 | 2530 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| AnAge | database | 2525 | 2531 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AndersonGillooly_2017 | compilation | 94 | 297 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 100 | 619 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AyalaBerdon_2025 | compilation | 36 | 151 | 54.3 | 22 | 20 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
@@ -35,7 +35,7 @@ One row per source label: species and record links (species x source x reference
 | Brose_2005 | compilation | 294 | 8999 | 94 | 12 | 7 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
 | Brose_etal_2018 | compilation | 1765 | 170381 | 90.1 | 24 | 22 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 27 | 27 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Cai_etal_2025 | compilation | 4761 | 4769 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Cai_etal_2025 | compilation | 4763 | 4771 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 433 | 1229 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 306 | 549 | 54.3 | 115 | 113 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 310 | 387 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -71,7 +71,7 @@ One row per source label: species and record links (species x source x reference
 | Lane_2019 | primary | 9 | 26 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Leahy_2025 | primary | 56 | 1551 | 0 | 1 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Lemoine_2026 | primary | 55 | 800 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Lislevand_etal_2007 | compilation | 3073 | 4338 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Lislevand_etal_2007 | compilation | 3359 | 7258 | 67.8 | 84 | 81 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 41 | 192 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mahe_2023 | primary | 53 | 12609 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Makarieva_2008 | compilation | 1267 | 1827 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -82,7 +82,7 @@ One row per source label: species and record links (species x source x reference
 | Mercer_etal_2001 | primary | 50 | 51 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Myhrvold_2015 | compilation | 15872 | 16081 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Myhrvold_2015 | compilation | 15875 | 16084 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | Pata_2025 | compilation | 99 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 97 | 359 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -93,9 +93,9 @@ One row per source label: species and record links (species x source x reference
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Smith_2003 | compilation | 3519 | 4309 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5361 | 5458 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Tobias_2022 | compilation | 9671 | 10044 | 90.5 | 46 | 43 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
+| Tobias_2022 | compilation | 9674 | 10047 | 90.5 | 46 | 43 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 47 | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Tsuboi_etal_2018 | compilation | 3440 | 15946 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Tsuboi_etal_2018 | compilation | 3441 | 15947 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014b | compilation | 396 | 399 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 708 | 711 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -103,13 +103,13 @@ One row per source label: species and record links (species x source x reference
 | Verberk_2020 | compilation | 193 | 951 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 123 | 123 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 42 | 83 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 12230 | 12299 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12233 | 12302 | 99.5 | 67 | 42 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 131 | 131 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2065 | 2878 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 299 | 539 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 124 | 729 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-aves-sept2016 | live | 5684 | 80047 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-aves-sept2016 | live | 5686 | 80051 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-fishes-sept2016 | live | 107 | 246 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-mammalia-sept2016 | live | 708 | 9061 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-reptilia-sept2016 | live | 243 | 1334 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-traits-sept2016 | live | 5401 | 85689 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-traits-sept2016 | live | 5402 | 85690 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
