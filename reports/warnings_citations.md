@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 17:01:06
+# Citation and provenance warnings -- 2026-10-05 17:23:20
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 127814 (39025 species); distinct primary CiteIDs: 571; unresolved references (pending / not_found): 31; unverified references: 3
+- provenance rows: 128108 (39025 species); distinct primary CiteIDs: 612; unresolved references (pending / not_found): 31; unverified references: 3
 
 ## Problems
 
@@ -93,7 +93,7 @@ One row per source label: species and record links (species x source x reference
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Smith_2003 | compilation | 3519 | 4309 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5361 | 5458 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Tobias_2022 | compilation | 9671 | 10043 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Tobias_2022 | compilation | 9671 | 10044 | 90.5 | 46 | 43 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 47 | 48 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tsuboi_etal_2018 | compilation | 3440 | 15946 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014a | compilation | 154 | 154 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
