@@ -1,0 +1,202 @@
+row,group,species,qWkg,Mpg,TC,source,reference
+2,Acanthamoebidae,Acanthamoeba (Hartmanella) castellani,11.2,1340,20,114,Griffiths & Hughes 1968
+3,Acanthamoebidae,Acanthamoeba (Hartmanella) castellani,28.2,[6700],20,297,Waidyasekera & Kitching 1975
+4,Acanthamoebidae,Acanthamoeba (Hartmanella) castellani,4.8,[6700],20,86,Edwards & Lloyd 1977a
+5,Acanthamoebidae,Acanthamoeba (Hartmanella) castellani,8.3,[6700],20,86,Edwards & Lloyd 1977a
+6,Acanthamoebidae,Acanthamoeba (Hartmanella) castellani,3.8,[6700],20,87,Edwards & Lloyd 1977b
+7,Acanthamoebidae,Acanthamoeba sp.,5.3,4320,20,210,Neff et al. 1958
+8,Actinophryidae,Actinosphaerium eichhornii,0.4,14561000,20,135,Howland & Bernstein 1931
+9,Amoebae,Amoeba proteus,1.5,[936000],20,OTHER,Fenchel & Finlay 1983
+10,Amoebae,Amoeba proteus,1,900000,20,OTHER,Fenchel & Finlay 1983
+11,Euglenida,Astasia klebsii,3.5,[3800],20,291,von Dach 1942
+12,Euglenida,Astasia klebsii,1.8,[3800],20,291,von Dach 1942
+13,Euglenida,Astasia klebsii,1.8,[3800],20,292,von Dach 1950
+14,Euglenida,Astasia longa,9.4,13500,20,223,Padilla 1960
+15,Euglenida,Astasia longa,20,6400,20,224,Padilla & James 1960
+16,Euglenida,Astasia longa,4.4,4800,20,139,Hunter & Lee 1962
+17,Euglenida,Astasia longa,4.9,6900,20,305,Wilson 1963
+18,Euglenida,Astasia longa,3.8,6000,20,306,Wilson & James 1963
+19,Euglenida,Astasia longa,2.9,13500,20,306,Wilson & James 1963
+20,Ciliophora,Bresslaua insidiatrix,23.9,26000,20,252,Scholander et al. 1952
+21,Ciliophora,Bresslaua insidiatrix,21.7,17000,20,252,Scholander et al. 1952
+22,Amoebidae,Chaos chaos,1.3,73870000,20,133,Holter & Zeuthen 1948
+23,Amoebidae,Chaos chaos,1.7,50000000,20,132,Holter 1950
+24,Amoebidae,Chaos chaos,1.3,9644000,20,252,Scholander et al. 1952
+25,Amoebidae,Chaos chaos,0.8,50000000,20,22,Albritton 1955
+26,Cryptophyta,Chilomonas paramecium,16,2260,20,191,Mast et al. 1936
+27,Cryptophyta,Chilomonas paramecium,84,1840,20,142,Hutchens et al. 1948
+28,Cryptophyta,Chilomonas paramecium,61,[2260],20,134,Holz 1954
+29,Ciliophora,Coleps hirtus,4.2,91000,20,250,Sarojini & Nagabhushanam 1966
+30,Ciliophora,Colpidium campylum,10.8,[54400],20,230,Pitts 1932
+31,Trypanosomatidae,Crithida (Strigomonas) fasciculata,7.8,[2078],20,138,Hunter & Cosgrove 1956
+32,Trypanosomatidae,Crithida (Strigomonas) fasciculata,8.0,[2078],20,70,Cosgrove 1959
+33,Trypanosomatidae,Crithida (Strigomonas) fasciculata,7.3,[2078],20,137,Hunter 1960
+34,Trypanosomatidae,Crithidia (Strigomonas) oncopelti,10,[30],30,OTHER,"Ryley 1955a; [cell mass data: Holwill 1965, cylinder or pear shaped, 8.2×2.6 μm]"
+35,Dictyosteliida,Dictyostelium discodeum,4.9,840,20,112,Gregg 1950
+36,Dictyosteliida,Dictyostelium discodeum,7.6,980,20,112,Gregg 1950
+37,Dictyosteliida,Dictyostelium discodeum,7.7,580,20,112,Gregg 1950
+38,Dictyosteliida,Dictyostelium discodeum,9.5,490,20,"169,310",Liddel & Wright 1961; Wright 1964
+39,Dictyosteliida,Dictyostelium discodeum,6.9,390,20,"169,310",Liddel & Wright 1961; Wright 1964
+40,Dictyosteliida,Dictyostelium discodeum,7.6,310,20,"169,310",Liddel & Wright 1961; Wright 1964
+41,Apicomplexa,Eimeria acervulina,2.0,2640,20,307,Wilson P. 1961
+42,Apicomplexa,Eimeria stiedae,2.5,[7980],20,296,Wagenbach & Burns 1969
+43,Apicomplexa,Eimeria tenella,7.2,[5010],20,262,Smith & Herrick 1944
+44,Apicomplexa,Eimeria tenella,2.3,5440,20,296,Wagenbach & Burns 1969
+45,Trypanosomatidae,Endotrypanum schaudinni,0.93,[114],20,312,Zeledon 1960a
+46,Trypanosomatidae,Endotrypanum schaudinni,0.84,[114],20,313,Zeledon 1960b
+47,Trypanosomatidae,Endotrypanum schaudinni,1.0,[114],20,314,Zeledon 1960c
+48,Trypanosomatidae,Endotrypanum schaudinni,0.88,[114],20,315,Zeledon 1960d
+49,Entamoebidae,Entamoeba hystolitica,0.7,[8600],20,202,Montalvo et al. 1971
+50,Entamoebidae,Entamoeba hystolitica,0.4,[8600],20,235,Reeves 1971
+51,Entamoebidae,Entamoeba hystolitica,1.3,13900,20,299,Weinbach & Diamond 1974
+52,Ciliophora,Frontonia leucas,0.4,745000,20,158,Laybourn & Finlay 1976
+53,Trypanosomatidae,Leishmania brasiliensis,33,13,20,79,de Monge & Zeledón 1963
+54,Trypanosomatidae,Leishmania brasiliensis,33,13,20,316,Zeledon & de Monge 1966
+55,Trypanosomatidae,Leishmania brasiliensis,22,8,20,316,Zeledon & de Monge 1966
+56,Trypanosomatidae,Leishmania brasiliensis,59,13,20,317,Zeledon & de Monge 1967
+57,Trypanosomatidae,Leishmania brasiliensis,22,7,20,317,Zeledon & de Monge 1967
+58,Trypanosomatidae,Leishmania brasiliensis,20,9,20,317,Zeledon & de Monge 1967
+59,Trypanosomatidae,Leishmania brasiliensis,28,8,20,317,Zeledon & de Monge 1967
+60,Trypanosomatidae,Leishmania donovani,12,[18],20,102,Fulton & Joyner 1949
+61,Trypanosomatidae,Leishmania donovani,17,[18],20,56,Chatterjee & Ghosh 1959
+62,Trypanosomatidae,Leishmania donovani,9.3,[18],20,56,Chatterjee & Ghosh 1959
+63,Trypanosomatidae,Leishmania donovani,77,[18],20,108,Ghosh & Chatterjee 1961
+64,Trypanosomatidae,Leishmania enrietti,7.0,[12],20,312,Zeledon 1960a
+65,Trypanosomatidae,Leishmania enrietti,7.9,[12],20,313,Zeledon 1960b
+66,Trypanosomatidae,Leishmania enrietti,10,[12],20,111,Greenblatt & Glaser 1965
+67,Paramoebidae,Mayorella palestinensis,3.7,8300,20,236,Reich 1948
+68,Dinophyceae,Noctiluca miliaris,1.4,223986000,20,232,Rajagopal 1962
+69,Ciliophora,Paramecium aurelia,34.9,105000,20,219,Pace & Kimura 1944
+70,Ciliophora,Paramecium aurelia,34.2,127000,20,215,Pace 1945
+71,Ciliophora,Paramecium aurelia,2.9,160000,20,258,Simonsen & Van Wagtendonk 1952
+72,Ciliophora,Paramecium aurelia,9.6,160000,20,165,Levine & Howard 1955
+73,Ciliophora,Paramecium calkinsi,10.0,[157000],20,"32,33",Boell & Woodruff 1940
+74,Ciliophora,Paramecium calkinsi,6.0,[157000],20,"32,33",Boell & Woodruff 1940
+75,Ciliophora,Paramecium calkinsi,10.5,[157000],20,33,Woodruff 1940
+76,Ciliophora,Paramecium calkinsi,3.4,[157000],20,31,Boell 1945
+77,Ciliophora,Paramecium caudatum,0.8,[526000],20,179,Lund 1918
+78,Ciliophora,Paramecium caudatum,0.2,[526000],20,179,Lund 1918
+79,Ciliophora,Paramecium caudatum,30.3,501000,20,73,Cunningham & Kirk 1942
+80,Ciliophora,Paramecium caudatum,17.7,668000,20,219,Pace & Kimura 1944
+81,Ciliophora,Paramecium caudatum,4.5,526000,20,61,Clark 1945
+82,Ciliophora,Paramecium caudatum,25.4,618000,20,215,Pace 1945
+83,Ciliophora,Paramecium caudatum,22.1,618000,20,215,Pace 1945
+84,Ciliophora,Paramecium caudatum,15.5,618000,20,215,Pace 1945
+85,Ciliophora,Paramecium caudatum,4.2,526000,20,211,Nicol 1960
+86,Ciliophora,Paramecium caudatum,3.2,530000,20,"17,18",Khlebovitch 1972; 1974
+87,Ciliophora,Paramecium multimicronucleatum,5.3,[685000],20,191,Mast et al. 1936
+88,Amoebidae,Pelomyxa carolinensis,1.1,36730000,20,216,Pace & Belda 1944a
+89,Amoebidae,Pelomyxa carolinensis,1.0,35400000,20,217,Pace & Belda 1944b
+90,Amoebidae,Pelomyxa carolinensis,1.0,32830000,20,217,Pace & Belda 1944b
+91,Amoebidae,Pelomyxa carolinensis,1.1,32010000,20,217,Pace & Belda 1944b
+92,Amoebidae,Pelomyxa carolinensis,0.9,36060000,20,220,Pace & Kimura 1946
+93,Amoebidae,Pelomyxa carolinensis,0.5,49708000,20,218,Pace & Frost 1948
+94,Amoebidae,Pelomyxa carolinensis,0.9,49708000,20,222,Pace & McCashland 1951
+95,Amoebidae,Pelomyxa palustris,0.7,90000000,20,163,Leiner et al. 1968
+96,Apicomplexa,Plasmodium cathemerium,1.8,54,20,184,Maier & Coggeshall 1941
+97,Apicomplexa,Plasmodium cathemerium,3.2,89,20,184,Maier & Coggeshall 1941
+98,Apicomplexa,Plasmodium gallinaceum,1.3,71,20,96,Evans 1946
+99,Apicomplexa,Plasmodium gallinaceum,1.1,71,20,264,Speck et al. 1946
+100,Apicomplexa,Plasmodium gallinaceum,0.8,71,20,186,Marshall 1948a
+101,Apicomplexa,Plasmodium gallinaceum,2.4,71,20,187,Marshall 1948b
+102,Apicomplexa,Plasmodium knowlesi,28.8,59,20,101,Fulton 1939
+103,Apicomplexa,Plasmodium knowlesi,0.9,59,20,184,Maier & Coggeshall 1941
+104,Apicomplexa,Plasmodium knowlesi,1.5,37,20,199,McKee et al. 1946
+105,Kinetoplastida,Pleuromonas jaculans,12,25,20,OTHER,Fenchel & Finlay 1983
+106,Ciliophora?,Podophrya fixa,0.52,14900,20,OTHER,Fenchel & Finlay 1983
+107,Trypanosomatidae,Schizotrypanum verpertilionis,2.1,108,20,312,Zeledon 1960a
+108,Ciliophora?,Spirostoma minus,3.4,[500000],20,OTHER,Fenchel & Finlay 1983
+109,Ciliophora,Spirostomum ambiguum,5.9,12000000,20,17,Khlebovitch 1972
+110,Ciliophora,Spirostomum intermedium,2.1,1342000,20,226,Pigon 1955
+111,Ciliophora,Spirostomum intermedium,1.2,229000,20,226,Pigon 1955
+112,Ciliophora,Spirostomum teres,0.5,423000,20,158,Laybourn & Finlay 1976
+113,Ciliophora,Stentor coeruleus,13.1,[680000],20,303,Whiteley 1960
+114,Ciliophora,Stentor coeruleus,1.8,1100000,20,156,Laybourn 1975
+115,Ciliophora,Stentor coeruleus,1.9,680000,20,156,Laybourn 1975
+116,Ciliophora,Tetrahymena geleii (pyriformis),12.3,35000,20,213,Ormsbee 1942
+117,Ciliophora,Tetrahymena geleii (pyriformis),7.8,53000,20,213,Ormsbee 1942
+118,Ciliophora,Tetrahymena geleii (pyriformis),45.0,24000,20,221,Pace & Lyman 1947
+119,Ciliophora,Tetrahymena geleii (pyriformis),29.9,24000,20,221,Pace & Lyman 1947
+120,Ciliophora,Tetrahymena geleii (pyriformis),6.8,[22000],20,253,Seaman 1949
+121,Ciliophora,Tetrahymena geleii (pyriformis),5.9,[22000],20,"254,255",Seaman 1950; Seaman & Noulihan 1950
+122,Ciliophora,Tetrahymena geleii (pyriformis),15.0,[22000],20,89,Eichel 1953
+123,Ciliophora,Tetrahymena geleii (pyriformis),15.8,[22000],20,214,Ottova 1955
+124,Ciliophora,Tetrahymena geleii (pyriformis),6.1,[22000],20,214,Ottova 1955
+125,Ciliophora,Tetrahymena pyriformis,24.2,[22000],20,182,Lwoff 1934
+126,Ciliophora,Tetrahymena pyriformis,20.9,[22000],20,243,Ryley 1952
+127,Ciliophora,Tetrahymena pyriformis,9.9,[22000],20,241,Roth et al. 1954
+128,Ciliophora,Tetrahymena pyriformis,7.9,[22000],20,241,Roth et al. 1954
+129,Ciliophora,Tetrahymena pyriformis,13.4,[22000],20,240,Roth & Eichel 1955
+130,Ciliophora,Tetrahymena pyriformis,13.8,17000,20,120,Hamburger & Zeuthen 1957
+131,Ciliophora,Tetrahymena pyriformis,6.1,49000,20,120,Hamburger & Zeuthen 1957
+132,Ciliophora,Tetrahymena pyriformis,11.4,33000,20,276,Van de Vijver 1966
+133,Ciliophora,Tetrahymena pyriformis,7.4,22000,20,62,Conner & Cline 1967
+134,Ciliophora,Tetrahymena pyriformis,16.3,22000,20,29,Biczók 1969
+135,Ciliophora,Tetrahymena pyriformis,13.5,22000,20,29,Biczók 1969
+136,Ciliophora,Tetrahymena pyriformis,6.4,22000,20,121,Hamburger & Zeuthen 1971
+137,Ciliophora,Tetrahymena pyriformis,12.2,22000,20,47,Burmeister 1972
+138,Ciliophora,Tetrahymena pyriformis,94.2,11000,20,"17,18",Khlebovitch 1972; 1974
+139,Ciliophora,Tetrahymena pyriformis,10.2,22000,20,48,Burmeister 1976
+140,Ciliophora,Tracheloraphis sp.,16.0,340000,20,278,Vernberg & Coull 1974
+141,Trichomonada,Trichomonas (Tritrichomonas) foetus,3.6,670,20,246,Ryley 1955b
+142,Trichomonada,Trichomonas (Tritrichomonas) foetus,2.7,[580],20,83,Doran 1957
+143,Trichomonada,Trichomonas (Tritrichomonas) foetus,4.5,[580],20,51,Čerkasovová 1970
+144,Trichomonada,Trichomonas batrachorum,1.9,[560],20,84,Doran 1958
+145,Trichomonada,Trichomonas nasai,8.1,[210],20,83,Doran 1957
+146,Trichomonada,Trichomonas vaginalis,1.7,[690],20,233,Read & Rothman 1955
+147,Trichomonada,Trichomonas vaginalis,1.0,870,20,309,Wirtschafter et al. 1956
+148,Amoebae,Trichosphaerium sieboldi,4,100,20,OTHER,Crawford et al. 1994
+149,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,1.5,[107],20,209,Nakamura & Anderson 1951
+150,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,4.0,82,20,282,von Brand & Agosin 1952
+151,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,3.3,[107],20,247,Ryley 1956
+152,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,1.2,169,20,247,Ryley 1956
+153,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,2.1,[107],20,312,Zeledon 1960a
+154,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,2.1,[107],20,313,Zeledon 1960b
+155,Trypanosomatidae,Trypanosoma (Schizotrypanum) cruzi,2.3,[107],20,315,Zeledon 1960d
+156,Trypanosomatidae,Trypanosoma lewisi,0.9,58,20,"242,244",Ryley 1951; 1953
+157,Trypanosomatidae,Trypanosoma lewisi,1.1,58,20,247,Ryley 1956
+158,Trypanosomatidae,Trypanosoma lewisi,7.1,58,20,272,Thurston 1958
+159,Trypanosomatidae,Trypanosoma lewisi,15.5,46,20,249,Sanchez & Dusanic 1968
+160,Trypanosomatidae,Trypanosoma lewisi,20.9,58,20,249,Sanchez & Dusanic 1968
+161,Trypanosomatidae,Trypanosoma lewisi,13.6,58,20,249,Sanchez & Dusanic 1968
+162,Trypanosomatidae,Trypanosoma lewisi,28,58,20,174,Lincicome & Warsi 1965
+163,Trypanosomatidae,Trypanosoma lewisi,7.9,58,20,175,Lincicome & Warsi 1966
+164,Trypanosomatidae,Trypanosoma lewisi,20.4,58,20,175,Lincicome & Warsi 1966
+165,Trypanosomatidae,Trypanosoma lewisi,20.0,58,20,175,Lincicome & Warsi 1966
+166,Trypanosomatidae,Trypanosoma lewisi,13.6,58,20,175,Lincicome & Warsi 1966
+167,Trypanosomatidae,Trypanosoma lewisi,6.1,58,20,171,Lincicome & Lee 1971
+168,Trypanosomatidae,Trypanosoma lewisi,16.8,58,20,171,Lincicome & Lee 1971
+169,Trypanosomatidae,Trypanosoma lewisi,6.1,58,20,171,Lincicome & Lee 1971
+170,Trypanosomatidae,Trypanosoma lewisi,11.1,58,20,176,Lincicome & Warsi 1968
+171,Trypanosomatidae,Trypanosoma lewisi,21.5,58,20,176,Lincicome & Warsi 1968
+172,Trypanosomatidae,Trypanosoma lewisi,17.5,58,20,176,Lincicome & Warsi 1968
+173,Trypanosomatidae,Trypanosoma lewisi,5.9,58,20,172,Lincicome & Smith 1964
+174,Trypanosomatidae,Trypanosoma lewisi,10.6,58,20,172,Lincicome & Smith 1964
+175,Trypanosomatidae,Trypanosoma lewisi,11.3,58,20,172,Lincicome & Smith 1964
+176,Trypanosomatidae,Trypanosoma lewisi,1.7,46,20,170,Lincicome & Hill 1965
+177,Trypanosomatidae,Trypanosoma lewisi,5.2,58,20,170,Lincicome & Hill 1965
+178,Trypanosomatidae,Trypanosoma lewisi,5.7,58,20,170,Lincicome & Hill 1965
+179,Trypanosomatidae,Trypanosoma lewisi,20,58,20,174,Lincicome & Warsi 1965
+180,Trypanosomatidae,Trypanosoma lewisi,5.3,58,20,173,Lincicome & Smith 1966
+181,Trypanosomatidae,Trypanosoma lewisi,13.8,58,20,173,Lincicome & Smith 1966
+182,Trypanosomatidae,Trypanosoma lewisi,5.2,58,20,173,Lincicome & Smith 1966
+183,Trypanosomatidae,Trypanosoma lewisi,2.1,58,20,175,Lincicome & Warsi 1966
+184,Trypanosomatidae,Trypanosoma lewisi,9.8,58,20,175,Lincicome & Warsi 1966
+185,Trypanosomatidae,Trypanosoma lewisi,9.6,58,20,175,Lincicome & Warsi 1966
+186,Trypanosomatidae,Trypanosoma lewisi,29,58,20,175,Lincicome & Warsi 1966
+187,Trypanosomatidae,Trypanosoma lewisi,14.5,58,20,176,Lincicome & Warsi 1968
+188,Trypanosomatidae,Trypanosoma lewisi,30.8,58,20,176,Lincicome & Warsi 1968
+189,Trypanosomatidae,Trypanosoma lewisi,22.4,58,20,176,Lincicome & Warsi 1968
+190,Trypanosomatidae,Trypanosoma lewisi,12.9,58,20,171,Lincicome & Lee 1971
+191,Trypanosomatidae,Trypanosoma lewisi,35.1,58,20,171,Lincicome & Lee 1971
+192,Trypanosomatidae,Trypanosoma lewisi,27.2,58,20,171,Lincicome & Lee 1971
+193,Trypanosomatidae,Trypanosoma lewisi,60.0,58,20,159,Lee & Barlow 1972
+194,Trypanosomatidae,Trypanosoma lewisi,85.9,58,20,159,Lee & Barlow 1972
+195,Trypanosomatidae,Trypanosoma lewisi,25.4,58,20,159,Lee & Barlow 1972
+196,Trypanosomatidae,Trypanosoma lewisi,6.6,46,20,173,Lincicome & Smith 1966
+197,Trypanosomatidae,Trypanosoma lewisi,13.1,58,20,173,Lincicome & Smith 1966
+198,Trypanosomatidae,Trypanosoma lewisi,6.6,58,20,173,Lincicome & Smith 1966
+199,Trypanosomatidae,Trypanosoma lewisi,7.9,58,20,176,Lincicome & Warsi 1968
+200,Trypanosomatidae,Trypanosoma lewisi,17.7,58,20,176,Lincicome & Warsi 1968
+201,Trypanosomatidae,Trypanosoma lewisi,11.8,58,20,176,Lincicome & Warsi 1968
+202,Ciliophora,Urostyla grandis,57,[166000],20,OTHER,Fenchel & Finlay 1983

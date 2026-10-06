@@ -102,6 +102,9 @@ Expect(identical(CrossrefYears(two), c(2012L, 2013L)) && CrossrefYear(two) == 20
 cat('EscapeLaTeX(), CrossrefAuthors(), CrossrefYear(), BuildBibEntry()\n')
 Expect(EscapeLaTeX('Fish &amp; chips at 100% of <i>Salpa</i> {thompsoni}_1 #2 $3 ~ ^') == 'Fish \\& chips at 100\\% of Salpa \\{thompsoni\\}\\_1 \\#2 \\$3 \\textasciitilde{} \\textasciicircum{}',
        'HTML is stripped and the LaTeX specials are escaped')
+Expect(EscapeLaTeX('The pangolin {Manis temmincki Smuts, 1835) in Zimbabwe') == 'The pangolin \\textbraceleft{}Manis temmincki Smuts, 1835) in Zimbabwe' &&
+         EscapeLaTeX('a } b') == 'a \\textbraceright{} b' && EscapeLaTeX('{a} {b}') == '\\{a\\} \\{b\\}',
+       'an unbalanced brace becomes \\textbraceleft{} / \\textbraceright{} (parseable); balanced pairs stay \\{ \\} (Coulson 1989 of Jones_2009)')
 Expect(EscapeLaTeX('a\\b') == 'a\\textbackslash{}b' && EscapeLaTeX('  two   spaces  ') == 'two spaces' && EscapeLaTeX('x&lt;y&gt;z&nbsp;w&eacute;') == 'x<y>z w',
        'a backslash becomes \\textbackslash{}, blanks collapse, entities decode or vanish')
 w <- CrossrefWork('10.1007/bf00392514', cfg)
@@ -177,9 +180,19 @@ Expect(ThesisSchool('University of Oslo, PhD thesis') == 'University of Oslo' &&
        'ThesisSchool() takes the text after the thesis word, or before it when nothing follows')
 ch1 <- BuildBibEntryNoDOI(Row(author1 = 'Speakman, J. R. and Thomas, D. W.', year = 2003L, title = 'Physiological ecology and energetics of bats',
                               container = 'Bat Ecology (Kunz TH, Fenton MB, eds), University of Chicago Press, Chicago', pages = '430-490'), 'Speakman:2003aa', 'owner', '2026-10-04')
-Expect(startsWith(ch1, '@incollection{Speakman:2003aa,') && Field(ch1, 'editor') == 'Kunz TH, Fenton MB' && Field(ch1, 'booktitle') == 'Bat Ecology' &&
+Expect(startsWith(ch1, '@incollection{Speakman:2003aa,') && Field(ch1, 'editor') == 'Kunz TH and Fenton MB' && Field(ch1, 'booktitle') == 'Bat Ecology' &&
          Field(ch1, 'publisher') == 'University of Chicago Press, Chicago' && Field(ch1, 'pages') == '430--490' && is.na(Field(ch1, 'journal')),
        "form B 'Book title (Editors, eds), Publisher, Place': @incollection with editor, booktitle, publisher and pages")
+Expect(BibTeXNameList('Gans, C., Dawson, W. R.') == 'Gans, C. and Dawson, W. R.' &&
+         BibTeXNameList('Huei, R. B., Pianka, E. R. and Schoener, T. W.') == 'Huei, R. B. and Pianka, E. R. and Schoener, T. W.' &&
+         BibTeXNameList('Horn, H.-G., Bohme, W. & U. Krebs') == 'Horn, H.-G. and Bohme, W. and U. Krebs' &&
+         BibTeXNameList('Fielder, P. L. and, Kareiva, P. M.') == 'Fielder, P. L. and Kareiva, P. M.' &&
+         BibTeXNameList('Rockstein, M.') == 'Rockstein, M.' && BibTeXNameList('Kunz TH and Fenton MB') == 'Kunz TH and Fenton MB',
+       "BibTeXNameList(): comma / '&' editor lists become ' and '-joined BibTeX name lists; initials stay with their surname")
+chE <- BuildBibEntryNoDOI(Row(author1 = 'Bennett', year = 1976L, title = 'Metabolism', container = 'Biology of Reptilia, Vol. 5, p. 127-223. Gans, C., Dawson, W. R., Editors, London, Academic Press', pages = '127-223'), 'Bennett:1976aa', 'owner', '2026-10-05')
+tfE <- tempfile(fileext = '.bib'); writeLines(chE, tfE)
+Expect(Field(chE, 'editor') == 'Gans, C. and Dawson, W. R.' && length(suppressMessages(suppressWarnings(RefManageR::ReadBib(tfE, check = FALSE)))) == 1,
+       'a chapter whose editors are comma-joined gets a BibTeX editor list RefManageR parses (the Meiri_2018 Bennett 1976 entry)')
 ch2 <- BuildBibEntryNoDOI(Row(author1 = 'Keister and Buck', year = 1964L, container = 'Physiology of Insecta, Volume 3 (ed. Rockstein, M.), Academic Press, New York', volume = '3', pages = '617-658'),
                           'Keister:1964aa', 'owner', '2026-10-04')
 Expect(startsWith(ch2, '@incollection{') && Field(ch2, 'editor') == 'Rockstein, M.' && Field(ch2, 'booktitle') == 'Physiology of Insecta, Volume 3' &&
@@ -195,7 +208,7 @@ Expect(startsWith(ch4, '@incollection{') && Field(ch4, 'editor') == 'Bennett, D.
          Field(ch4, 'publisher') == 'University of Oxford' && Field(ch4, 'pages') == '9--28',
        'a leading pages clause before In: fills the pages when parsed_pages is empty')
 ch5 <- BuildBibEntryNoDOI(Row(container = 'Biology of Reptilia, Vol. 5, p. 127-223. Gans, C., Dawson, W. R., Editors, London, Academic Press'), 'Bennett:1976aa', 'owner', '2026-10-05')
-Expect(startsWith(ch5, '@incollection{') && Field(ch5, 'editor') == 'Gans, C., Dawson, W. R.' && Field(ch5, 'booktitle') == 'Biology of Reptilia, Vol. 5' &&
+Expect(startsWith(ch5, '@incollection{') && Field(ch5, 'editor') == 'Gans, C. and Dawson, W. R.' && Field(ch5, 'booktitle') == 'Biology of Reptilia, Vol. 5' &&
          Field(ch5, 'publisher') == 'London, Academic Press' && Field(ch5, 'pages') == '127--223',
        "'Editors' outside brackets: the sentence before it names the editors, 'p. 127-223' gives the pages")
 ch6 <- ParseChapterContainer('A. Alon (editor) Encyclopedia of plants and animals of the land of Israel. Ministry of Defense Press, Tel-Aviv. (in Hebrew)')

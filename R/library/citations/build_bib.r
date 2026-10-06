@@ -162,12 +162,19 @@ EscapeLaTeX <- function(x) {
   x <- gsub('\\', '\u0001', x, fixed = TRUE)
   x <- gsub('~', '\u0002', x, fixed = TRUE)
   x <- gsub('^', '\u0003', x, fixed = TRUE)
-  x <- gsub('{', '\\{', x, fixed = TRUE)
-  x <- gsub('}', '\\}', x, fixed = TRUE)
+  # a balanced pair of braces is escaped as \{ \}; an unbalanced brace (a
+  # Crossref title typing '{' for '(', Coulson 1989 of Jones_2009) would leave
+  # the entry unparseable to BibTeX and RefManageR, which count raw braces, so
+  # it becomes the brace-free \textbraceleft{} / \textbraceright{}
+  balanced <- lengths(regmatches(x, gregexpr('{', x, fixed = TRUE))) == lengths(regmatches(x, gregexpr('}', x, fixed = TRUE)))
+  x <- gsub('{', '\u0004', x, fixed = TRUE)
+  x <- gsub('}', '\u0005', x, fixed = TRUE)
   for (ch in c('&', '%', '$', '#', '_')) x <- gsub(ch, paste0('\\', ch), x, fixed = TRUE)
   x <- gsub('\u0001', '\\textbackslash{}', x, fixed = TRUE)
   x <- gsub('\u0002', '\\textasciitilde{}', x, fixed = TRUE)
   x <- gsub('\u0003', '\\textasciicircum{}', x, fixed = TRUE)
+  x <- ifelse(balanced, gsub('\u0004', '\\{', x, fixed = TRUE), gsub('\u0004', '\\textbraceleft{}', x, fixed = TRUE))
+  x <- ifelse(balanced, gsub('\u0005', '\\}', x, fixed = TRUE), gsub('\u0005', '\\textbraceright{}', x, fixed = TRUE))
   trimws(gsub('\\s+', ' ', x, perl = TRUE))
 }
 
@@ -406,6 +413,26 @@ NoDOIAuthorField <- function(author1) {
   paste(parts, collapse = ' and ')
 }
 
+# An editor list as the chapter container prints it ('Gans, C., Dawson, W. R.',
+# 'Huei, R. B., Pianka, E. R. and Schoener, T. W.', 'Horn, H.-G., Bohme, W. &
+# U. Krebs', 'Kunz TH, Fenton MB') in BibTeX form, the names joined by ' and ':
+# the list is split at commas, '&' and 'and'; a piece that is only initials
+# ('C.', 'W. R.', 'H.-G.', 'TH') belongs to the surname before it; a list
+# already joined by ' and ' comes back unchanged. BibTeX reads a name list only
+# at ' and ', so a comma-joined list is one unparsable name (RefManageR
+# rejected six Meiri_2018 chapter entries, Hudson round 2026-10-06).
+BibTeXNameList <- function(x) {
+  if (is.null(x) || is.na(x) || !nzchar(trimws(x))) return(x)
+  toks <- trimws(strsplit(x, '\\s*(?:,|&|\\band\\b)\\s*', perl = TRUE)[[1]])
+  toks <- toks[nzchar(toks)]
+  is_init <- grepl('^(?:[A-Z]\\.?[-\\s]*)+$', toks, perl = TRUE)
+  names <- character(); for (i in seq_along(toks)) {
+    if (is_init[i] && length(names) > 0) names[length(names)] <- paste0(names[length(names)], ', ', toks[i])
+    else names <- c(names, toks[i])
+  }
+  paste(names, collapse = ' and ')
+}
+
 # The entry type of a DOI-less reference under the conventions above, with
 # the chapter parts and the URL it rests on: list(type, chapter, url).
 NoDOIEntryType <- function(row) {
@@ -438,7 +465,7 @@ BuildBibEntryNoDOI <- function(row, key, approved_by, approved_date) {
   else if (type %in% c('phdthesis', 'mastersthesis')) f$school <- EscapeLaTeX(ThesisSchool(cont))
   else if (type == 'incollection') {
     ch <- et$chapter
-    f$editor    <- if (is.na(ch$editor)) NA_character_ else EscapeLaTeX(ch$editor)
+    f$editor    <- if (is.na(ch$editor)) NA_character_ else EscapeLaTeX(BibTeXNameList(ch$editor))
     f$booktitle <- if (is.na(ch$booktitle)) EscapeLaTeX(cont) else EscapeLaTeX(ch$booktitle)
     f$publisher <- if (is.na(ch$publisher)) NA_character_ else EscapeLaTeX(ch$publisher)
     if (is.na(pages) && !is.na(ch$pages)) pages <- ch$pages

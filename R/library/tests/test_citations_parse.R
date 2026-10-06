@@ -131,6 +131,67 @@ Expect(r$parsed_author1[5] == 'Meiri' && r$parsed_year[5] == 2021L &&
          r$parsed_title[5] == 'Different solutions lead to similar life history traits across the great divides of the amniote tree of life',
        "'et al.' ends the author block")
 
+cat('ParseCitationString() on title-less citations (the Faurby_etal_2018 Mass.Source cells)\n')
+j <- ParseCitationString(c(
+  'Journal of Mammalogy 83: 1-19 (2002)',
+  'Annals and Magazine of Natural History 8 12: 395-403 (1912)',
+  'Bonner zoologische Beiträge 56 151-157 (2009)',
+  'Bulletin of the British Museum. Zoology 63: 123-128(1997)',
+  'Proceedings of the Zoological Society of London 118: 765-816(1948-1949)',
+  'Fieldiana Zoology 112: 1-63 (2006) (listed as Cynopterus_brachyotis)',
+  'Annals and Magazine of Natural History  8 16: 66-79 124-146, 357-380, 506-514 (1915)',
+  'Proceedings of the Zoological Society of London 1906 859-864 (1906)',
+  'Senckenbergiana Biologica: 80 233-239 (2000)',
+  'Plecotus et al 11-12: 3-13 (2009)',
+  'Occasional Papers of the Museum of Texas Tech University 231: 1-12. (2004)',
+  'Philosophical Transactions fo the Royal Society of London Series B 366: 2564-2576 (2011)',
+  'Journal of Mammalogy 81:758-768',
+  'Doe, J. 2001. A study of things. J Things 5: 1-10.',
+  'Doe JA, Roe B. A study of things. J Things 5: 1-10 (2001)'))
+Expect(all(is.na(j$parsed_author1[1:12])) && all(is.na(j$parsed_title[1:12])), 'title-less citations: author and title stay NA')
+Expect(j$parsed_container[1] == 'Journal of Mammalogy' && j$parsed_volume[1] == '83' && j$parsed_pages[1] == '1-19' && j$parsed_year[1] == 2002L,
+       "'Journal volume: pages (year)': container, volume, pages, year")
+Expect(j$parsed_container[2] == 'Annals and Magazine of Natural History' && j$parsed_volume[2] == '12' && j$parsed_pages[2] == '395-403' && j$parsed_year[2] == 1912L,
+       'a series number before the volume is dropped')
+Expect(j$parsed_container[3] == 'Bonner zoologische Beitrage' && j$parsed_volume[3] == '56' && j$parsed_pages[3] == '151-157' && j$parsed_year[3] == 2009L,
+       'no colon between volume and pages; diacritics folded')
+Expect(j$parsed_container[4] == 'Bulletin of the British Museum. Zoology' && j$parsed_volume[4] == '63' && j$parsed_pages[4] == '123-128' && j$parsed_year[4] == 1997L,
+       'a period inside the journal name; no blank before the year')
+Expect(j$parsed_volume[5] == '118' && j$parsed_pages[5] == '765-816' && j$parsed_year[5] == 1948L, 'a year range takes its first year')
+Expect(j$parsed_container[6] == 'Fieldiana Zoology' && j$parsed_volume[6] == '112' && j$parsed_pages[6] == '1-63' && j$parsed_year[6] == 2006L,
+       'a trailing note in brackets is ignored')
+Expect(j$parsed_volume[7] == '16' && j$parsed_pages[7] == '66-79' && j$parsed_year[7] == 1915L, 'several page ranges: the first is the pages')
+Expect(j$parsed_container[8] == 'Proceedings of the Zoological Society of London' && j$parsed_volume[8] == '1906' && j$parsed_pages[8] == '859-864' && j$parsed_year[8] == 1906L,
+       'a year-numbered volume before the bracketed year')
+Expect(j$parsed_container[9] == 'Senckenbergiana Biologica' && j$parsed_volume[9] == '80' && j$parsed_pages[9] == '233-239', 'a colon after the journal name')
+Expect(j$parsed_volume[10] == '11-12' && j$parsed_pages[10] == '3-13' && j$parsed_container[10] == 'Plecotus et al', 'a double volume')
+Expect(j$parsed_volume[11] == '231' && j$parsed_pages[11] == '1-12' && j$parsed_year[11] == 2004L, 'a period after the pages')
+Expect(j$parsed_container[12] == 'Philosophical Transactions fo the Royal Society of London Series B' && j$parsed_volume[12] == '366' && j$parsed_pages[12] == '2564-2576',
+       "a one-letter series name ('Series B') is not an author initial")
+Expect(is.na(j$parsed_year[13]) && j$parsed_volume[13] == '81' && j$parsed_pages[13] == '758-768', 'without a bracketed year the generic parse applies')
+Expect(j$parsed_author1[14] == 'Doe' && j$parsed_title[14] == 'A study of things' && j$parsed_container[14] == 'J Things' && j$parsed_volume[14] == '5',
+       'an author-year citation ending in volume: pages is not title-less (a year before the numbers)')
+Expect(j$parsed_author1[15] == 'Doe' && j$parsed_title[15] == 'A study of things' && j$parsed_container[15] == 'J Things' && j$parsed_year[15] == 2001L,
+       'an author block before the title keeps the generic parse although the year closes the entry')
+Expect(is.null(ParseJournalOnlyStyle('Garbutt N. Mammals of Madagascar a Complete Guide (2007)')) &&
+         is.null(ParseJournalOnlyStyle('Acta Oecologica 41-49 (2012)')),
+       'ParseJournalOnlyStyle(): NULL for a book and for pages without a volume')
+
+cat('ParseCitationString() on the book form of the Faurby_etal_2018 cells\n')
+b <- ParseCitationString(c(
+  'Smith AT, Xie Y, Hoffmann RS, Lunde D, MacKinnon J, Wilson DE, Wozencraft WD. A Guide to the Mammals of China (2008)',
+  'Ohdachi SD, Ishibashi I, Iwasa MA, Saitih T. The Wild Mammals of Japan. (2009)',
+  'Garbutt N. Mammals of Madagascar a Complete Guide (2007)',
+  'Gromov IM, Erbajeva MA [The mammals of Russia and adjacent territories Lagomorphs and Rodents) (1995)',
+  'Mittermeier RA, Rylands AB,  Wilson DE Handbook of the Mammals of the World - Volume 3 (2013) (as S. hypoleucus southern form)'))
+Expect(b$parsed_author1[1] == 'Smith' && b$parsed_title[1] == 'A Guide to the Mammals of China' && is.na(b$parsed_container[1]) && b$parsed_year[1] == 2008L,
+       "the last author's initials closed by a period ('Wozencraft WD.') end the author block")
+Expect(b$parsed_author1[2] == 'Ohdachi' && b$parsed_title[2] == 'The Wild Mammals of Japan' && b$parsed_year[2] == 2009L, 'four authors with bare initials, a period after the title')
+Expect(b$parsed_author1[3] == 'Garbutt' && b$parsed_title[3] == 'Mammals of Madagascar a Complete Guide' && is.na(b$parsed_volume[3]), 'one author, bare initial')
+Expect(b$parsed_author1[4] == 'Gromov' && startsWith(b$parsed_title[4], '[The mammals of Russia'), 'a title opening with a square bracket starts the title')
+Expect(b$parsed_author1[5] == 'Mittermeier' && b$parsed_title[5] == 'Handbook of the Mammals of the World - Volume 3' && b$parsed_year[5] == 2013L,
+       'a note in brackets after the bracketed year is dropped')
+
 cat('ParseCitationString() on other styles\n')
 q <- ParseCitationString(c(
   'Taylor, G. M., Nol, E., & Boire, D. (1995). Brain regions and encephalization in anurans: adaptation or stability? Brain, behavior and evolution, 45(2), 96-109. doi:10.1159/000113543',
@@ -169,6 +230,53 @@ Expect(nat$parsed_author1[4] == 'Klok' && is.na(nat$parsed_year[4]) && nat$parse
          nat$parsed_title[4] == 'Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications',
        'undated Nature-style entry: author block stripped from the title')
 
+cat('ParseCitationString() on the Chicago author-date style (Myhrvold_2015 literature cited)\n')
+chi <- ParseCitationString(c(
+  'Meiri, S. 2010. “Length-Weight Allometries in Lizards.” Journal of Zoology 281 (February): 218–26. doi:10.1111/j.1469-7998.2010.00696.x.',
+  'Alderman, Rachael Louise. 2012. “The Shy Albatross (Thalassarche Cauta): Population Trends, and the Future for Management”. University of Tasmania.',
+  'Adkisson, C.S. 1999. “Pine Grosbeak (Pinicola Enucleator).” In The Birds of North America Online, edited by A. Poole.',
+  'Seymour, Roger S. 1979. “Dinosaur Eggs: Gas Conductance through the Shell, Water Loss during Incubation and Clutch Size.” Paleobiology 5 (1): 1–11.'))
+Expect(chi$parsed_title[1] == 'Length-Weight Allometries in Lizards' && chi$parsed_container[1] == 'Journal of Zoology' &&
+         chi$parsed_volume[1] == '281' && chi$parsed_pages[1] == '218-26' && chi$parsed_year[1] == 2010L && chi$parsed_author1[1] == 'Meiri',
+       'Chicago style: the quoted title ends at the closing quote; journal, volume (issue): pages read')
+Expect(grepl('^The Shy Albatross', chi$parsed_title[2]) && !grepl('"', chi$parsed_title[2]) && chi$parsed_container[2] == 'University of Tasmania',
+       'Chicago style: a title with inner periods and the period outside the quotes; the publisher is the container')
+Expect(chi$parsed_title[3] == 'Pine Grosbeak (Pinicola Enucleator)' && grepl('^The Birds of North America Online', chi$parsed_container[3]),
+       'Chicago style: a chapter ("In ...") keeps the book as container')
+Expect(chi$parsed_container[4] == 'Paleobiology' && chi$parsed_volume[4] == '5' && chi$parsed_pages[4] == '1-11',
+       'Chicago style: a title holding a colon and commas is kept whole')
+
+cat('ParseCitationString() on the comma style (Hudson_2013 Appendix S6)\n')
+cs <- ParseCitationString(c(
+  'Acquarone, M., Born, E.W. & Speakman, J.R. (2006) Field Metabolic Rates of Walrus (Odobenus rosmarus) Measured by the Doubly Labeled Water Method, Aquatic Mammals, 32, 363\u2013369.',
+  'Bell, G.P., Bartholomew, G.A. & Nagy, K.A. (1986) The roles of energetics, water economy, foraging behavior, and geothermal refugia in the distribution of the bat, Macrotus californicus, Journal of Comparative Physiology B: Biochemical, Systemic, and Environmental Physiology, 156, 441\u2013450.',
+  'Riek, A., van der Sluijs, L. & Gerken, M. (2007) Measuring the energy expenditure and water flux in free-ranging alpacas (Lama pacos) in the Peruvian Andes using the doubly labelled water technique, Journal of Experimental Zoology, 307A, 667\u2013675.',
+  'Simmen, B., Bayart, F., Rasamimanana, H., Zahariev, A., Blanc, S. & Pasquet, P. (2010) Total energy expenditure and body composition in two free-living sympatric lemurs, PLoS One, 5, e9860.',
+  'Fleming, T.H. (1988) Energetics, in T.H. Fleming, ed., The short-tailed fruit bat: a study in plant-animal interactions, chapter 8, The University of Chicago Press, Chicago, pp. 217\u2013238.',
+  'Nagy, K.A., Gavrilov, V.M., Kerimov, A.B. & Ivankina, E. (1999) Relationships between field metabolic rate and territoriality in passerines, in Acta XXII Congressus Internationalis Ornithologici, Durban, South Africa, pp. 390\u2013400.',
+  'von Helversen, O. & Reyer, H.U. (1984) Nectar intake and energy expenditure in a flower visiting bat, Oecologia, 63, 178\u2013184.',
+  'Nagy, K. A. (1987). Field metabolic rate and food requirement scaling in mammals and birds. Ecological Monographs, 57, 111-128.'))
+Expect(cs$parsed_author1[1] == 'Acquarone' && cs$parsed_year[1] == 2006L && cs$parsed_container[1] == 'Aquatic Mammals' &&
+         cs$parsed_volume[1] == '32' && cs$parsed_pages[1] == '363-369' &&
+         cs$parsed_title[1] == 'Field Metabolic Rates of Walrus (Odobenus rosmarus) Measured by the Doubly Labeled Water Method',
+       'comma style: title ends at the comma before the journal')
+Expect(cs$parsed_container[2] == 'Journal of Comparative Physiology B: Biochemical, Systemic, and Environmental Physiology' &&
+         cs$parsed_title[2] == 'The roles of energetics, water economy, foraging behavior, and geothermal refugia in the distribution of the bat, Macrotus californicus' &&
+         cs$parsed_volume[2] == '156', 'comma style: a journal name of comma_containers keeps its commas')
+Expect(cs$parsed_volume[3] == '307A' && cs$parsed_pages[3] == '667-675' && cs$parsed_container[3] == 'Journal of Experimental Zoology' &&
+         cs$parsed_volume[4] == '5' && cs$parsed_pages[4] == 'e9860' && cs$parsed_container[4] == 'PLoS One',
+       'comma style: a lettered volume and an article number')
+Expect(cs$parsed_title[5] == 'Energetics' && cs$parsed_container[5] == 'The short-tailed fruit bat: a study in plant-animal interactions' &&
+         is.na(cs$parsed_volume[5]) && cs$parsed_pages[5] == '217-238' && cs$parsed_year[5] == 1988L,
+       'comma style: a chapter gives the book as container, no volume')
+Expect(cs$parsed_title[6] == 'Relationships between field metabolic rate and territoriality in passerines' &&
+         cs$parsed_container[6] == 'Acta XXII Congressus Internationalis Ornithologici' && cs$parsed_pages[6] == '390-400',
+       'comma style: proceedings give the volume name as container')
+Expect(cs$parsed_author1[7] == 'von Helversen' && cs$parsed_container[7] == 'Oecologia', 'comma style: a particle surname')
+Expect(cs$parsed_title[8] == 'Field metabolic rate and food requirement scaling in mammals and birds' && cs$parsed_container[8] == 'Ecological Monographs',
+       'an entry with a period after the title is left to the generic path')
+Expect(is.null(ParseCommaStyle('Nagy, K. A. (1987). Field metabolic rate and food requirement scaling in mammals and birds. Ecological Monographs, 57, 111-128.')),
+       'ParseCommaStyle() returns NULL on a sentence boundary in the body')
 cat('ParseCitationString() on the initials-first PNAS style (Hoehler_etal_2023 reference list; #114 item 2)\n')
 pn <- ParseCitationString(c(
   "A. M. Makarieva et al., Mean mass-specific metabolic rates are strikingly similar across life's major domains: Evidence for life's metabolic optimum. Proc. Natl. Acad. Sci. U.S.A. 105, 16994-16999 (2008).",

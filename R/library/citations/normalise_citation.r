@@ -175,9 +175,19 @@ SplitBody <- function(body) {
       body <- sub('[,;:.]\\s*$', '', body)
     }
   }
-  # the first sentence boundary separates title and container
-  sb <- regexpr('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', body, perl = TRUE)
-  if (sb > 0) {
+  # a quoted title (the Chicago author-date style of the Myhrvold_2015 list,
+  # '"Title." Journal 281 (2): 218-26.' or '"Title". University of Tasmania.'
+  # once the curly quotes are folded): the closing quote separates title and
+  # container, whatever periods the title holds
+  qt <- regexec('^"(.+?)([.?!])?"[.,]?\\s*(.*)$', body, perl = TRUE)[[1]]
+  # otherwise the first sentence boundary separates title and container
+  sb <- if (qt[1] > 0) -1L else regexpr('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', body, perl = TRUE)
+  if (qt[1] > 0) {
+    parts     <- regmatches(body, list(qt))[[1]]
+    title     <- trimws(parts[2])
+    if (parts[3] %in% c('?', '!')) title <- paste0(title, parts[3])
+    container <- trimws(parts[4])
+  } else if (sb > 0) {
     title     <- trimws(substr(body, 1, sb - 1))
     container <- trimws(substr(body, sb + 1, nchar(body)))
     # a title ending in '?' or '!' keeps its mark
@@ -275,6 +285,41 @@ SplitTitleContainer <- function(body) {
   list(title = if (nzchar(title)) title else NA_character_, container = if (nzchar(container)) container else NA_character_)
 }
 
+# A title-less citation, "Journal volume: pages (year)": the form the
+# Mass.Source cells of Faurby_etal_2018 (PHYLACINE) take on most rows, 'Journal
+# of Mammalogy 83: 1-19 (2002)', 'Annals and Magazine of Natural History 8 12:
+# 395-403 (1912)' (series and volume), 'Bonner zoologische Beitrage 56 151-157
+# (2009)' (no colon), 'Bulletin of the British Museum. Zoology 63: 123-128(1997)',
+# 'Proceedings of the Zoological Society of London 1906 859-864 (1906)' (a
+# year-numbered volume), 'Fieldiana Zoology 112: 1-63 (2006) (listed as ...)' (a
+# trailing note). The text before the numbers is the container, a series number
+# before the volume is dropped, the first page range is the pages, the
+# bracketed year closing the entry is the year; author and title stay NA (the
+# decision rule container_volume_page of decide.r accepts such a reference on
+# the agreement of those fields alone; owner decision 2026-10-06). Returns NULL
+# when the string does not end that way, carries a year before the numbers, or
+# opens with an author block ('Doe JA, Roe B. A study. J Things 5: 1-10 (2001)'
+# belongs to the generic parse).
+journal_only_tail <- paste0(
+  '^(.*?[^\\s\\d,:])',                                   # 1 the container
+  '[\\s,:]+',
+  '(?:(\\d{1,2})[,\\s]\\s*)?',                           # 2 an optional series number
+  '(\\d{1,4}(?:\\s*-\\s*\\d{1,4})?)\\b',                 # 3 the volume ('11-12' a double volume)
+  '\\s*[:,]?\\s*',
+  '(e?\\d+[A-Za-z]?)(?:\\s*-\\s*(e?\\d+[A-Za-z]?))?',    # 4, 5 the first page range
+  '(?:[,\\s]+\\d+\\s*-\\s*\\d+)*',                       # further ranges
+  '\\.?\\s*\\(\\s*((?:1[6-9]|20)\\d{2})(?:\\s*-\\s*\\d{2,4})?\\s*\\)',   # 6 the year, '(1948-1949)' allowed
+  '\\.?(?:\\s*\\([^()]*\\))?\\s*$')                      # a trailing note in brackets
+author_block_pattern <- '\\b[A-Z][A-Za-z\'-]+,? [A-Z]{1,3}[.,]|\\b[A-Z][A-Za-z\'-]+, [A-Z]\\.'
+ParseJournalOnlyStyle <- function(s) {
+  m <- regmatches(s, regexec(journal_only_tail, s, perl = TRUE))[[1]]
+  if (length(m) == 0) return(NULL)
+  head <- sub('[\\s.,;:]+$', '', trimws(m[2]), perl = TRUE)
+  if (!nzchar(head) || grepl(year_regex, head, perl = TRUE) || grepl(author_block_pattern, head, perl = TRUE)) return(NULL)
+  list(container = head, volume = gsub('\\s+', '', m[4]),
+       pages = if (nzchar(m[6])) paste0(m[5], '-', m[6]) else m[5], year = as.integer(m[7]))
+}
+
 # The author block and the body of an entry whose year closes it in brackets
 # (the Nature / Scientific Data reference style, "Authors. Title. Container
 # vol(issue), pages, (year)."; ReptTraits, Oskyrko_2024): there is no year
@@ -290,11 +335,13 @@ author_connectors <- c('and', '&', 'et', 'al.', 'al', 'de', 'da', 'del', 'der', 
 SplitAuthorsFromTitle <- function(head) {
   toks <- strsplit(trimws(head), '\\s+', perl = TRUE)[[1]]
   # dotted initials ('J.', 'J.-P.', 'J.B.,'), bare capitals with a comma ('P,',
-  # 'TK,') or two to three bare capitals ('TK'); a lone 'A' is a title word
-  is_initial <- grepl('^([A-Z]\\.-?){1,3}[A-Z]?,?$|^[A-Z]{1,3},$|^[A-Z]{2,3}$', toks, perl = TRUE)
+  # 'TK,'), two to three bare capitals ('TK') or two to three capitals closed by
+  # a period ('WD.', the last author of 'Smith AT, ..., Wozencraft WD. A Guide
+  # to the Mammals of China (2008)'); a lone 'A' is a title word
+  is_initial <- grepl('^([A-Z]\\.-?){1,3}[A-Z]?,?$|^[A-Z]{1,3},$|^[A-Z]{2,3}\\.?,?$', toks, perl = TRUE)
   is_conn    <- tolower(toks) %in% author_connectors
   has_comma  <- grepl(',$', toks)
-  is_cap     <- grepl('^["\'(]?[A-Z0-9]', toks, perl = TRUE)
+  is_cap     <- grepl('^["\'(\\[]?[A-Z0-9]', toks, perl = TRUE)
   start <- NA_integer_
   for (j in seq_along(toks)) {
     if (!is_cap[j] || has_comma[j] || is_initial[j] || is_conn[j]) next
@@ -305,6 +352,59 @@ SplitAuthorsFromTitle <- function(head) {
     return(list(authors = head, body = NA_character_))
   list(authors = sub('[\\s.,;:]+$', '', paste(toks[seq_len(start - 1L)], collapse = ' '), perl = TRUE),
        body    = paste(toks[start:length(toks)], collapse = ' '))
+}
+
+# The comma style of the Hudson_2013 reference list (Appendix S6 of Hudson et
+# al. 2013, a LaTeX bibliography): "Authors (year) Title, Journal, volume,
+# pages." -- the title is followed by a comma, not a period, so the generic
+# path (SplitBody()) would read "Title, Journal" as the title and find no
+# container. The author block is everything before the first " (year) ". The
+# body must hold no sentence boundary (an entry with "Title. Journal ..." is
+# left to the generic path) and must end in ", Journal, volume, pages." (the
+# volume "307A", the pages "667-675" or an article number "e9860"); the
+# journal is taken to hold no comma unless it is one of `comma_containers`.
+# A chapter or proceedings entry of the same list, "Title, in Editors, eds.,
+# Book, chapter n, Publisher, pp. 83-91." / "Title, in Proceedings, Place,
+# pp. 390-400.", gives the title before ", in " and the book or proceedings
+# name as the container (no volume). Returns NULL when the string is not of
+# this form.
+comma_containers <- c('Journal of Comparative Physiology B: Biochemical, Systemic, and Environmental Physiology')
+ParseCommaStyle <- function(s) {
+  m <- regmatches(s, regexec('^(.+?) \\(((1[6-9]|20)\\d{2})[a-z]?\\) (.+)$', s, perl = TRUE))[[1]]
+  if (length(m) == 0) return(NULL)
+  authors <- m[2]; year <- as.integer(m[3]); body <- trimws(m[5])
+  sb_body <- sub(', pp\\. \\d+.*$', '', body, perl = TRUE)          # 'pp. 83-91' is no sentence boundary
+  if (grepl('(?<=\\w\\w|\\)|\\])[.?!]\\s+(?=[A-Z0-9(])', sb_body, perl = TRUE)) return(NULL)
+  if (grepl('\\(((1[6-9]|20)\\d{2})[a-z]?\\)', body, perl = TRUE)) return(NULL)
+  res <- list(year = year, author1 = FirstSurname(authors), volume = NA_character_, pages = NA_character_)
+  # journal article: ", Journal, volume, pages."
+  art <- regexec('^(.+), ([^,]+), (\\d+[A-Za-z]?), (e?\\d+(?:\\s*-+\\s*e?\\d+)?)\\.?$', body, perl = TRUE)
+  am <- regmatches(body, art)[[1]]
+  if (length(am) > 0) {
+    title <- am[2]; container <- am[3]
+    for (cc in comma_containers) {
+      cc_f <- gsub('\\s+', ' ', FoldASCII(cc))
+      head <- sub(',\\s*(\\d+[A-Za-z]?),\\s*e?\\d+(?:\\s*-+\\s*e?\\d+)?\\.?$', '', body, perl = TRUE)
+      if (endsWith(head, paste0(', ', cc_f))) {
+        container <- cc_f
+        title <- substr(head, 1, nchar(head) - nchar(cc_f) - 2)
+      }
+    }
+    res$title <- sub('[.,;:]+$', '', trimws(title)); res$container <- trimws(container)
+    res$volume <- am[4]; res$pages <- gsub('\\s*-+\\s*', '-', am[5])
+    return(res)
+  }
+  # chapter or proceedings: "Title, in <editors, eds.,> Book, <chapter n,> Publisher, pp. a-b."
+  ch <- regexec('^(.+?), in (.+), pp\\. (\\d+\\s*-+\\s*\\d+)\\.?$', body, perl = TRUE)
+  cm <- regmatches(body, ch)[[1]]
+  if (length(cm) == 0) return(NULL)
+  rest <- cm[3]
+  rest <- sub('^.*?\\beds?\\., ', '', rest, perl = TRUE)      # the editors
+  rest <- sub(',\\s*chapter\\s+\\d+,.*$', '', rest, perl = TRUE)
+  res$title <- sub('[.,;:]+$', '', trimws(cm[2]))
+  res$container <- trimws(sub(',.*$', '', rest))
+  res$pages <- gsub('\\s*-+\\s*', '-', cm[4])
+  res
 }
 
 # Parse one citation string per element into a data frame of query fields:
@@ -328,6 +428,9 @@ ParseCitationString <- function(x) {
     # remove a DOI / URL tail so it does not pollute pages or container
     s <- sub('\\s*(doi:?\\s*|https?://(dx\\.)?doi\\.org/)10\\.[0-9]{4,9}/\\S+\\s*$', '', s, ignore.case = TRUE, perl = TRUE)
     s <- sub('\\s*https?://\\S+\\s*$', '', s, perl = TRUE)
+    # a note in brackets after the bracketed year ("... Volume 3 (2013) (as S.
+    # hypoleucus southern form)", the PHYLACINE cells) is not part of the entry
+    s <- sub('(\\(\\s*(1[6-9]|20)[0-9]{2}[a-z]?\\s*\\))\\s*\\([^()]*\\)\\s*$', '\\1', s, perl = TRUE)
     pos <- regexpr(year_regex, s, perl = TRUE)
     nat <- ParseNatureStyle(s)
     if (!is.null(nat)) {
@@ -341,6 +444,28 @@ ParseCitationString <- function(x) {
       out$parsed_container[i] <- nat$container
       out$parsed_volume[i]    <- nat$volume
       out$parsed_pages[i]     <- nat$pages
+      next
+    }
+    jo <- ParseJournalOnlyStyle(s)
+    if (!is.null(jo)) {
+      # "Journal volume: pages (year)" without author or title (the PHYLACINE
+      # Mass.Source cells): container, volume, pages and year only
+      out$parsed_year[i]      <- jo$year
+      out$parsed_container[i] <- jo$container
+      out$parsed_volume[i]    <- jo$volume
+      out$parsed_pages[i]     <- jo$pages
+      next
+    }
+    cs <- ParseCommaStyle(s)
+    if (!is.null(cs)) {
+      # "Authors (year) Title, Journal, volume, pages." (Hudson_2013's Appendix
+      # S6): the title ends at a comma, which SplitBody() cannot see
+      out$parsed_year[i]      <- cs$year
+      out$parsed_author1[i]   <- cs$author1
+      out$parsed_title[i]     <- cs$title
+      out$parsed_container[i] <- cs$container
+      out$parsed_volume[i]    <- cs$volume
+      out$parsed_pages[i]     <- cs$pages
       next
     }
     # a bracketed year closing the entry with a comma before it or no volume

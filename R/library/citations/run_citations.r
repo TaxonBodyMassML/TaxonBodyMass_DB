@@ -2,7 +2,7 @@
 #
 #   Rscript R/library/citations/run_citations.r --source <Src> \
 #       [--init] [--verify] [--queue] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
-#       [--screening-list] [--force] [--offline] [--crossref-only]
+#       [--screening-list] [--force] [--offline] [--crossref-only] [--min-records N]
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -34,6 +34,9 @@
 #                  verification_mode crossref_only); only unverified, service_unavailable
 #                  and single_service rows are decided (--force: every row, as usual);
 #                  a later --verify without the flag re-checks the accepted rows in full
+#   --min-records N  --verify only the keys cited by N or more records (n_records);
+#                  the others stay unverified for a later run (a large list on one
+#                  OpenAlex day; owner's rule for Jones_2009, 2026-10-06)
 # Every step writes reports/citations_<Src>.md. RunMe.r never calls this file.
 
 this_file <- sub('^--file=', '', grep('^--file=', commandArgs(), value = TRUE))
@@ -55,7 +58,11 @@ src_i <- which(args == '--source')
 maintenance_only <- identical(args[args %in% steps], '--dedupe-queue')
 if ((length(src_i) != 1 || src_i == length(args)) && !maintenance_only) stop('--source <Src> is required')
 src <- if (length(src_i) == 1 && src_i < length(args)) args[src_i + 1] else NA_character_
-known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--crossref-only')
+mr_i <- which(args == '--min-records')
+if (length(mr_i) > 1 || (length(mr_i) == 1 && mr_i == length(args))) stop('--min-records needs one value N')
+min_records <- if (length(mr_i) == 1) suppressWarnings(as.integer(args[mr_i + 1])) else 1L
+if (is.na(min_records) || min_records < 1) stop('--min-records N: N must be a positive integer')
+known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--crossref-only', '--min-records', if (length(mr_i) == 1) args[mr_i + 1])
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
 crossref_only <- Flag('--crossref-only')
@@ -186,7 +193,10 @@ if (Flag('--verify') || Flag('--queue')) {
   scite <- ReadSciteChecks(cfg$scite_csv)
   run_at <- format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC')
   res <- VerifyPrimaryReferences(prim, cfg, reflist, scite, force = Flag('--force'), progress = TRUE, crossref_only = crossref_only,
-                                 verified_at = run_at)
+                                 verified_at = run_at, min_records = min_records)
+  if (min_records > 1)
+    Note('--min-records %d: %d key(s) cited by fewer records left unverified for a later run', min_records,
+         length(res$below_min_records))
   prim <- res$prim; candidates <- res$candidates
   WritePrimaryReferences(prim, prim_path)
   if (length(res$skipped) > 0)

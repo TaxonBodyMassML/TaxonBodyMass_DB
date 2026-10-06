@@ -1,46 +1,43 @@
 # Duplicate queue and screening rows removed -- 2026-10-06 (tbmcite 0.1.0)
 
-pending_citations.csv: 3 row(s) removed, 1272 kept. scite_checks.csv: 30 row(s) removed, 641 kept.
+pending_citations.csv: 0 row(s) removed, 3326 kept. scite_checks.csv: 31 row(s) removed, 939 kept.
 
 ## pending_citations.csv
 
-| row | why | queued_at | source_label | native_key | reason | c1_doi | decision | decided_at |
-| ---: | --- | --- | --- | --- | --- | --- | --- | --- |
-| 161 | open_duplicate | 2026-10-04 | Herberstein_etal_2022 | h:3cfad141 | doi_mismatch |  |  |  |
-| 162 | open_duplicate | 2026-10-04 | Herberstein_etal_2022 | h:fc0ce1f8 | doi_mismatch |  |  |  |
-| 332 | same_decision | 2026-10-05 | Lislevand_etal_2007 | 33 | unscreened | 10.5962/bhl.title.132270 | 1 | 2026-10-05 |
+none
 
 ## scite_checks.csv
 
 | row | why | doi | notice_type | checked_at | checked_by |
 | ---: | --- | --- | --- | --- | --- |
-| 550 | gap_answered | 10.2307/3503774 | none | 2026-10-05 | none |
-| 551 | gap_answered | 10.2307/3503939 | none | 2026-10-05 | none |
-| 552 | gap_answered | 10.2307/3503937 | none | 2026-10-05 | none |
-| 553 | gap_answered | 10.2307/3503993 | none | 2026-10-05 | none |
-| 554 | gap_answered | 10.2307/3504308 | none | 2026-10-05 | none |
-| 555 | gap_answered | 10.2307/3504269 | none | 2026-10-05 | none |
-| 556 | gap_answered | 10.2307/3504093 | none | 2026-10-05 | none |
-| 557 | gap_answered | 10.1093/mspecies/374.1 | none | 2026-10-05 | none |
-| 558 | gap_answered | 10.2307/3504101 | none | 2026-10-05 | none |
-| 559 | gap_answered | 10.2307/0.411.1 | none | 2026-10-05 | none |
-| 560 | gap_answered | 10.2307/3504143 | none | 2026-10-05 | none |
-| 561 | gap_answered | 10.2307/3504154 | none | 2026-10-05 | none |
-| 562 | gap_answered | 10.2307/3504090 | none | 2026-10-05 | none |
-| 563 | gap_answered | 10.2307/3504294 | none | 2026-10-05 | none |
-| 564 | gap_answered | 10.2307/3504241 | none | 2026-10-05 | none |
-| 565 | gap_answered | 10.2307/3504276 | none | 2026-10-05 | none |
-| 566 | gap_answered | 10.2307/3504377 | none | 2026-10-05 | none |
-| 567 | gap_answered | 10.2307/3504418 | none | 2026-10-05 | none |
-| 568 | gap_answered | 10.2307/3504345 | none | 2026-10-05 | none |
-| 569 | gap_answered | 10.2307/3504488 | none | 2026-10-05 | none |
-| 570 | gap_answered | 10.2307/0.624.1 | none | 2026-10-05 | none |
-| 571 | gap_answered | 10.2307/3504333 | none | 2026-10-05 | none |
-| 596 | gap_answered | 10.1644/741 | none | 2026-10-05 | none |
-| 600 | gap_answered | 10.1644/750 | none | 2026-10-05 | none |
-| 601 | gap_answered | 10.1644/751 | none | 2026-10-05 | none |
-| 603 | gap_answered | 10.1644/753 | none | 2026-10-05 | none |
-| 611 | gap_answered | 10.1644/777.1 | none | 2026-10-05 | none |
-| 612 | gap_answered | 10.1644/778.1 | none | 2026-10-05 | none |
-| 614 | gap_answered | 10.1644/780.1 | none | 2026-10-05 | none |
-| 617 | gap_answered | 10.1644/783.1 | none | 2026-10-05 | none |
+| 299 | older_same_service | 10.1890/02-9003 | unchecked | 2026-10-04 | consensus-mcp |
+| 309 | older_same_service | 10.1093/jmammal/81.3.758 | unchecked | 2026-10-04 | consensus-mcp |
+| 316 | gap_answered | 10.1093/oso/9780195343229.001.0001 | none | 2026-10-04 | none |
+| 881 | exact_duplicate | 10.1111/j.1365-2427.2010.02461.x | unchecked | 2026-10-04 | consensus-mcp |
+| 882 | exact_duplicate | 10.1673/031.008.2601 | unchecked | 2026-10-04 | consensus-mcp |
+| 883 | exact_duplicate | 10.1899/07-112.1 | unchecked | 2026-10-04 | consensus-mcp |
+| 884 | exact_duplicate | 10.1111/1365-2435.12919 | unchecked | 2026-10-04 | consensus-mcp |
+| 885 | exact_duplicate | 10.1111/jfb.13123 | unchecked | 2026-10-04 | consensus-mcp |
+| 886 | exact_duplicate | 10.1371/journal.pone.0115104 | unchecked | 2026-10-04 | consensus-mcp |
+| 887 | exact_duplicate | 10.1111/phen.12168 | unchecked | 2026-10-04 | consensus-mcp |
+| 888 | exact_duplicate | 10.3390/insects7020013 | unchecked | 2026-10-04 | consensus-mcp |
+| 889 | exact_duplicate | 10.1371/journal.pone.0183236 | unchecked | 2026-10-04 | consensus-mcp |
+| 890 | exact_duplicate | 10.1007/bf00412517 | unchecked | 2026-10-04 | consensus-mcp |
+| 891 | exact_duplicate | 10.1111/j.1600-0706.2008.17177.x | unchecked | 2026-10-04 | consensus-mcp |
+| 892 | exact_duplicate | 10.1016/j.jembe.2016.04.010 | unchecked | 2026-10-04 | consensus-mcp |
+| 893 | exact_duplicate | 10.1093/plankt/22.7.1329 | unchecked | 2026-10-04 | consensus-mcp |
+| 894 | exact_duplicate | 10.1007/s00227-012-1944-3 | unchecked | 2026-10-04 | consensus-mcp |
+| 895 | exact_duplicate | 10.1002/ece3.2802 | unchecked | 2026-10-04 | consensus-mcp |
+| 896 | exact_duplicate | 10.1002/ece3.4028 | unchecked | 2026-10-04 | consensus-mcp |
+| 897 | exact_duplicate | 10.1111/1365-2435.13301 | unchecked | 2026-10-04 | consensus-mcp |
+| 898 | exact_duplicate | 10.1111/oik.05339 | unchecked | 2026-10-04 | consensus-mcp |
+| 899 | exact_duplicate | 10.1111/j.1365-2435.2004.00823.x | unchecked | 2026-10-04 | consensus-mcp |
+| 900 | exact_duplicate | 10.1111/j.2006.0030-1299.15268.x | unchecked | 2026-10-04 | consensus-mcp |
+| 901 | exact_duplicate | 10.1007/s11284-016-1402-7 | unchecked | 2026-10-04 | consensus-mcp |
+| 902 | exact_duplicate | 10.1002/ece3.5880 | unchecked | 2026-10-04 | consensus-mcp |
+| 903 | exact_duplicate | 10.1111/j.1600-0706.2010.19151.x | unchecked | 2026-10-04 | consensus-mcp |
+| 904 | exact_duplicate | 10.1890/07-1552.1 | unchecked | 2026-10-04 | consensus-mcp |
+| 905 | exact_duplicate | 10.1046/j.1461-0248.2002.00314.x | unchecked | 2026-10-04 | consensus-mcp |
+| 906 | exact_duplicate | 10.1899/09-152.1 | unchecked | 2026-10-04 | consensus-mcp |
+| 907 | exact_duplicate | 10.1111/j.1365-2427.2008.02029.x | unchecked | 2026-10-04 | consensus-mcp |
+| 908 | exact_duplicate | 10.1111/fwb.12516 | unchecked | 2026-10-04 | consensus-mcp |

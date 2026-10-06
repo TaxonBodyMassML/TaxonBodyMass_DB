@@ -1,0 +1,17 @@
+# Myhrvold_2015 (Amniote life-history database): reference list and primary references
+
+The data of this label are fetched live by `R/library/data_retrieve.r` (retriever dataset `amniote-life-hist`, Ecological Archives E096-269; `sources/Rdata/BodyMass_DataRetrieverAll.Rdata`) and are described, with the filters, the cell grammar of the per-value source names, the key rule and the Provenance paragraph of the label, in `sources/databases/DataRetriever/README.md`. This folder holds only the files of the primary-source attribution of issue #1 (Stage 2, round of 2026-10-06).
+
+Filters: see `sources/databases/DataRetriever/README.md` (positive `adult_body_mass_g` only; nothing is filtered here).
+Mass type: see the DataRetriever README (body mass in grams as compiled by the Amniote database, the median of the raw values).
+Imputed rows: none flagged (see the DataRetriever README).
+Licence: repository (CC BY 4.0) (the files here are our own working tables: the name table and the transcription of the Supplemental Table 1 literature-cited list, and the tool's `primary_references.csv`; no raw file is stored. The data paper's terms -- `metadata.htm`: "Copyright restrictions: None. Proprietary restrictions: Please cite this data paper when the data are used in publications. Costs: None."; the figshare collection is CC0 1.0 per the retriever script; https://doi.org/10.1890/15-0846R.1 -- apply to the data fetched at run time, see the DataRetriever README).
+
+| file | contents |
+| --- | --- |
+| `build_references.py` | reads the retriever cache (`~/.retriever/raw_data/amniote-life-hist/`: the data and references csv of `Data_Files/`, and in the archive zip `8067269` Supplemental Table 1, the literature-cited PDF, and Supplemental Table 2, the name vocabulary); splits the `adult_body_mass_g` reference cells of the records with a positive mass into their value-providing names; reads the PDF with PyMuPDF; matches each name to one entry by first surname and year; writes the two csv files below (counts and the names left for the owner on stderr) |
+| `references.csv` | one row per name on the body-mass records (105): `key` (`Surname_year[letter]`, `_2` for a second spelling of one entry), `reference_name` (the name verbatim, the batch prefix removed), `citation` (the matched Supplemental Table 1 entry verbatim, a same-author marker expanded; the name itself where no single entry matches), `note` (entry number, expansion, record count), `owner_review` (filled for the 4 names without a single match) |
+| `literature_cited.csv` | `entry`, `citation`: the 948 entries of Supplemental Table 1 in list order, for checking the matches (the list is not numbered in the PDF) |
+| `primary_references.csv` | the tool's working file (`run_citations.r --source Myhrvold_2015 --init`; `reflist_specs$Myhrvold_2015`, frame `DataRetrieverAll`, `review_col = 'owner_review'`): 105 keys on 16,677 records; `role` set by the owner's rule (59 `compilation`, see the DataRetriever README) |
+
+The names before "from median of" in a cell are the sources of the stored value (the median of the raw values listed in the brackets equals the value they reported; an even count gives "mean of A & B"); the bracketed contributors are not keys. Citation of the compilation: `Myhrvold:2015aa` in `Bib/TaxonBodyMass_Citations.bib` (doi 10.1890/15-0846R.1, given in `reflist_specs`).

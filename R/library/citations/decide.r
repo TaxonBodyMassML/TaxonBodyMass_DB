@@ -4,7 +4,8 @@
 #   ScoreCandidate(parsed, cand)   title_sim, author/year/container/volume/pages agreement,
 #                                  computed locally (service scores are never inputs)
 #   DecideMatch(ref, cands, ...)   certain / pending / not_found with a reason code,
-#                                  the rules of the table in issue #1 section 2.3
+#                                  the rules of the table in issue #1 section 2.3 (and the
+#                                  container_volume_page rule for title-less citations)
 #   VerifyReference(ref, cfg, ...) the service calls for one reference and the decision
 #   VerifyPrimaryReferences(...)   over a primary_references frame (skips decided rows)
 #   WritePendingQueue(...)         appends the undecided pending/not_found rows to
@@ -134,7 +135,7 @@ DecideMatch <- function(ref, doi_cands = NULL, open_cands = NULL, closed_cands =
   # the Crossref candidates attached, is not queued for the owner, and is
   # re-verified by the next --verify. Owner matters (a disagreeing source DOI,
   # grey literature, a notice, a self reference) are decided as usual.
-  provisional <- c('doi_resolves', 'two_service_agreement', 'closed_world', 'single_service',
+  provisional <- c('doi_resolves', 'two_service_agreement', 'closed_world', 'container_volume_page', 'single_service',
                    'ambiguous', 'weak_match', 'below_threshold', 'no_candidates')
   if (!'openalex' %in% strsplit(services, ';', fixed = TRUE)[[1]] && d$match_reason %in% provisional) {
     d$match_status <- 'pending'; d$match_reason <- 'service_unavailable'
@@ -165,6 +166,29 @@ DecideMatchWith <- function(ref, doi_cands, open_cands, closed_cands, scite, th,
   by_doi <- CollapseByDOI(sc)
   best <- by_doi[1, , drop = FALSE]
   grey <- IsGreyLiterature(ref$raw_citation)
+  if (is.na(ref$parsed_title) || !nzchar(ref$parsed_title)) {
+    # a title-less citation ("Journal volume: pages (year)", ParseJournalOnlyStyle();
+    # the PHYLACINE Mass.Source cells): there is no title to compare, so a
+    # candidate is the work only when its container (abbreviation-aware),
+    # volume, first page and year (within the window) all agree (owner decision
+    # 2026-10-06). Both services returning it: certain / container_volume_page;
+    # one: pending / single_service; two such DOIs: ambiguous; none: the
+    # not_found / grey_literature outcome of a failed search.
+    agree <- by_doi$container_match & by_doi$volume_match & by_doi$pages_match & by_doi$year_match
+    if (!any(agree)) {
+      if (grey) return(Decision('pending', 'grey_literature', best, by_doi, services))
+      return(Decision('not_found', 'below_threshold', best, by_doi, services))
+    }
+    hits <- by_doi[agree, , drop = FALSE]
+    best <- hits[1, , drop = FALSE]
+    nt <- NoticeFor(best$doi, sc, scite)
+    svc <- ServicesWith(services, nt)
+    if (nt$flag) return(Decision('pending', 'retracted', best, by_doi, svc, nt))
+    if (nrow(hits) > 1) return(Decision('pending', 'ambiguous', best, by_doi, svc, nt))
+    both <- all(c('crossref', 'openalex') %in% strsplit(best$services_for_doi, ';', fixed = TRUE)[[1]])
+    if (both) return(Decision('certain', 'container_volume_page', best, by_doi, svc, nt))
+    return(Decision('pending', 'single_service', best, by_doi, svc, nt))
+  }
   if (best$title_sim < th$not_found_sim) {
     if (grey) return(Decision('pending', 'grey_literature', best, by_doi, services))
     return(Decision('not_found', 'below_threshold', best, by_doi, services))
@@ -350,9 +374,14 @@ ApplyDecisionToRow <- function(prim, i, d, verified_at) {
 # with their outcome. A row whose DOI changes under a new decision loses its
 # bibcite / cite_id, as under a queue decision, so that --bib mints or reuses
 # a key for the new DOI.
+# `min_records`: verify only the keys cited by at least that many records
+# (`n_records`); the others keep their status (NA for a new reference, reported
+# as unverified, named in `below_min_records`) for a later run -- the owner's
+# rule for a large list on one OpenAlex day (Jones_2009, 2026-10-06). The
+# default 1 means every key.
 VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, force = FALSE,
                                     verified_at = format(Sys.time(), '%Y-%m-%dT%H:%M:%SZ', tz = 'UTC'),
-                                    progress = interactive(), crossref_only = FALSE) {
+                                    progress = interactive(), crossref_only = FALSE, min_records = 1L) {
   if (is.null(prim$verification_mode)) prim$verification_mode <- rep(NA_character_, nrow(prim))
   certain <- prim$match_status %in% 'certain'
   if (isTRUE(crossref_only)) {
@@ -365,6 +394,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
     todo <- is.na(prim$match_status) | prim$match_status %in% c('pending', 'not_found') | (force & certain) | recheck
   }
   todo <- todo & !is.na(prim$raw_citation) & !(prim$role %in% 'self')
+  below <- todo & (is.na(prim$n_records) | prim$n_records < min_records)
+  todo  <- todo & !below
   cands <- list()
   skipped <- character(0); quota <- NULL; rechecked <- character(0)
   for (i in which(todo)) {
@@ -402,7 +433,8 @@ VerifyPrimaryReferences <- function(prim, cfg, reflist = NULL, scite = NULL, for
   self <- prim$role %in% 'self' & is.na(prim$match_status)
   prim$match_status[self] <- 'self'; prim$match_reason[self] <- 'self'
   prim <- ApplySciteChecks(prim, scite, verified_at)
-  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked)
+  list(prim = prim, candidates = cands, skipped = skipped, quota = quota, rechecked = rechecked,
+       below_min_records = prim$native_key[below])
 }
 
 # The screening file is applied to every row with a DOI whatever its status
@@ -774,10 +806,14 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     act <- SplitDecision(q$decision)$action
     if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
       problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
-    else if (grepl('^[123]$', act) && !Applied(q)) {
+    else if (grepl('^[123]$', act) && q$source_label %in% prim$source_label && !Applied(q)) {
       # a candidate only OpenAlex returned may have no Crossref record to build
       # the entry from (#114 item 3): the owner checks the DOI and decides
-      # doi: (re-verified at Crossref) or nodoi
+      # doi: (re-verified at Crossref) or nodoi. Only the rows of the source
+      # being applied are checked: another source's row cannot be seen as
+      # applied from this frame (the Lislevand 24 decision, already applied
+      # with bibcite Fry:1988aa, stopped every other source's --apply-queue;
+      # Hudson round, 2026-10-06)
       svc <- q[[paste0('c', act, '_services')]]
       svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
       if (!'crossref' %in% svc)
