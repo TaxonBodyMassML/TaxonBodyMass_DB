@@ -83,6 +83,7 @@ source(file.path(wd_root, 'R', 'library', 'check_source_docs.r'))
 source(file.path(wd_root, 'R', 'library', 'check_cache.r'))
 source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
+source(file.path(wd_root, 'R', 'library', 'exclude_discordant.r'))
 source(file.path(wd_root, 'R', 'library', 'enrich_genus.r'))
 source(file.path(wd_root, 'R', 'library', 'sheet_override.r'))
 source(file.path(wd_root, 'R', 'library', 'sheet_snapshots.r'))
@@ -585,7 +586,8 @@ adat_enriched <- OrderForPass1(adat_enriched)
 # The per-record frame behind the provenance table (section 8, issue #1): one
 # row per resolved record with its label, origin, conversion CiteIDs and
 # native reference keys; the table itself is restricted to the species of the
-# final output once the range filter has run.
+# final output once the range filter has run (the excluded values of the kept
+# species included, #34).
 prov_records <- adat_enriched[!is.na(adat_enriched$species),
                               c('genus', 'species', 'taxon', 'source_label', 'origin', 'conversion_ids', 'ref_keys', 'prov_type')]
 # a lab-Sheet row citing several sources: one record per cited source
@@ -641,24 +643,51 @@ message(sprintf(paste('DedupeSources: %d of %d per-source values collapsed as co
                 sum(within_source$dedupe_rule %in% 'registry'), nrow(source_deps),
                 sum(grepl('^blind', within_source$dedupe_rule))))
 
+# Record-level range rule (#34, exclude_discordant.r): where the independent
+# values of a species span more than an order of magnitude, the one discordant
+# value (or the lower-trust side of two) is excluded from the cross-source
+# mean when the cascade can single it out: leave-one-out with the kept side
+# spanning two registry-independent evidence groups, then the trust tiers of
+# Bib/source_provenance_classes.csv (value_tier; a converted value is tier 3; a
+# tier-2 maxima-based value may be excluded but never decides against another
+# value), then the distance from the median, then the two-value tier rule.
+# Copies collapsed into an excluded value go with it. Species the cascade
+# leaves unresolved fall to the species filter below as before.
+excl          <- ExcludeDiscordantValues(within_source, dedupe$related, prov_classes, threshold = 1)
+within_source <- excl$values
+message(sprintf(paste('ExcludeDiscordantValues: %d species over the threshold; %d rescued by excluding %d values',
+                      '(%d collapsed copies with them; %s); %d unresolved (%s), left to the species filter.'),
+                excl$counts$species_flagged, excl$counts$species_rescued, excl$counts$values_excluded_independent,
+                excl$counts$values_excluded_copies,
+                paste(sprintf('%s %d', names(excl$counts$by_rule), excl$counts$by_rule)[excl$counts$by_rule > 0], collapse = ', '),
+                excl$counts$species_unresolved,
+                paste(sprintf('%s %d', names(excl$counts$unresolved_by_reason), excl$counts$unresolved_by_reason)[excl$counts$unresolved_by_reason > 0], collapse = ', ')))
+
 # Pass 2: across-source arithmetic mean per accepted species over the
 # independent values only (#5; the arithmetic mean is kept by owner decision,
-# #16). source_mass still lists every contributing label and n every record;
-# n_sources counts the per-source values, n_independent those entering the
-# mean, and source_dependencies records each collapsed value as 'dropped<kept'.
+# #16), the excluded values left out (#34). source_mass still lists every
+# contributing label and n every record; n_sources counts the per-source
+# values, n_independent those entering the mean, source_dependencies records
+# each collapsed value as 'dropped<kept', and n_excluded / sources_excluded
+# the values the range rule left out as 'label<rule' (copies with their
+# parent's rule). log10_range spans the values in the mean.
 enriched <- within_source %>%
   group_by(genus, species) %>%
   summarise(
     taxon           = first(taxon),
     taxon_provided  = paste(unique(unlist(strsplit(taxon_provided, '; '))), collapse = '; '),
-    log10_range     = if (sum(independent) > 1) log10(max(mass_g[independent]) / min(mass_g[independent])) else 0,
-    mass_g          = mean(mass_g[independent], na.rm = TRUE), # arithmetic mean
+    log10_range     = if (sum(independent & !excluded) > 1) log10(max(mass_g[independent & !excluded]) / min(mass_g[independent & !excluded])) else 0,
+    mass_g          = mean(mass_g[independent & !excluded], na.rm = TRUE), # arithmetic mean
     source_mass     = paste(unique(trimws(unlist(strsplit(source_mass, ';', fixed = TRUE)))), collapse = '; '),
     n               = sum(n, na.rm = TRUE),
     n_sources       = n(),
-    n_independent   = sum(independent),
+    n_independent   = sum(independent & !excluded),
     source_dependencies = if (any(!independent))
       paste(paste0(source_label[!independent], '<', collapsed_into[!independent]), collapse = '; ')
+      else NA_character_,
+    n_excluded      = sum(excluded),
+    sources_excluded = if (any(excluded))
+      paste(paste0(source_label[excluded], '<', exclusion_rule[excluded]), collapse = '; ')
       else NA_character_,
     kingdom         = na.omit(kingdom)[1],
     phylum          = na.omit(phylum)[1],
@@ -737,7 +766,8 @@ message(sprintf('  FilterAutotrophs: %d autotroph genera removed from the genus-
 # of one species (owner decision 2026-10-04; one record per source instead
 # would have moved 48 genera by at most 0.17 log10). Genus-only records are
 # not range-checked against the genus's species values (#34); the records more
-# than an order of magnitude from them are listed in the report.
+# than an order of magnitude from them are judged by the record-level range
+# rule in section 6 (#34), once the species table is final.
 genus_values  <- GenusOnlyValues(genus_rows_kept)
 genus_dedupe  <- DedupeGenusValues(genus_values, source_deps)
 genus_values  <- genus_dedupe$values
@@ -745,23 +775,31 @@ genus_records <- GenusOnlyRecords(genus_values)
 message(sprintf('  %d genus x source values, %d collapsed as copies; %d genus-only records',
                 nrow(genus_values), sum(!genus_values$independent), nrow(genus_records)))
 
-# QC reports name the extreme sources among the independent values, the ones
-# log10_range is computed from.
+# QC reports list every independent value of the species the range rule left
+# unresolved (the ones the species filter removes) and, in their own section,
+# the values the rule excluded beside the kept ones (#34).
 check_enriched(enriched, within_source[within_source$independent, ],
                remove_flagged = RemoveHighMaxMinRatio, kingdom_conflicts = kingdom_conflicts,
-               col_resolutions = col_resolutions, unresolved = unresolved_names)
+               col_resolutions = col_resolutions, unresolved = unresolved_names, exclusions = excl)
 
 n_species_after_filter <- nrow(enriched)   # accepted species before the range filter
-# De-duplication counts (#5), taken like nSpeciesAfterFilter before the range filter
+# De-duplication counts (#5), taken like nSpeciesAfterFilter before the range
+# filter; the single-datum count is a de-duplication statistic and ignores the
+# exclusions of #34 (a two-value species rescued by rule D also has one value
+# in its mean)
 n_values_collapsed     <- sum(!within_source$independent)
-n_species_single_datum <- sum(enriched$n_sources > 1 & enriched$n_independent == 1)
+ws_key                 <- paste(within_source$genus, within_source$species)
+n_species_single_datum <- sum(tapply(within_source$independent, ws_key, sum) == 1 & tapply(within_source$independent, ws_key, length) > 1)
 n_dependency_edges     <- nrow(source_deps)
+# Record-level range rule counts (#34)
+n_values_excluded      <- excl$counts$values_excluded_independent
+n_species_rescued      <- excl$counts$species_rescued
 n_removed_high_range <- 0L
 if (RemoveHighMaxMinRatio) {
   res      <- remove_high_range_taxa(enriched, threshold = 1)
   enriched <- res$dat
   n_removed_high_range <- res$n_removed
-  message(sprintf("RemoveHighMaxMinRatio: removed %d taxa with log10(max/min) > 1 from output.",
+  message(sprintf("RemoveHighMaxMinRatio: removed %d taxa with log10(max/min) > 1 from output (unresolved by the record-level rule, #34).",
                   n_removed_high_range))
 }
 
@@ -781,7 +819,9 @@ if (dir.exists(ms_dir)) {
     nRemovedHighRange   = n_removed_high_range,  # species removed by log10_range > 1
     nValuesCollapsed    = n_values_collapsed,    # per-source values collapsed as copies (#5)
     nSpeciesSingleDatum = n_species_single_datum,# multi-source species left with one independent value
-    nDependencyEdges    = n_dependency_edges     # edges in Bib/source_dependencies.csv
+    nDependencyEdges    = n_dependency_edges,    # edges in Bib/source_dependencies.csv
+    nValuesExcluded     = n_values_excluded,     # per-source values excluded by the record-level range rule (#34)
+    nSpeciesRescued     = n_species_rescued      # species kept through such an exclusion
   )
   writeLines(c(
     '% TaxonBodyMass_DB pipeline macros -- auto-generated by TaxonBodyMass_DB/R/RunMe.r',
@@ -800,13 +840,33 @@ if (dir.exists(ms_dir)) {
 # the genus-only record of a genus (section 5b: one value per genus, the
 # arithmetic mean of its independent per-source values) enters the mean with
 # the weight of one species. n_independent sums the species' independent
-# values and the independent sources of the genus-only record (#5, #49).
+# values and the independent sources of the genus-only record (#5, #49). A
+# genus-only record more than an order of magnitude from the median of the
+# genus's species means is excluded from the genus mean by the record-level
+# range rule (#34, ExcludeDiscordantGenusRecords(): two or more species decide
+# outright, a single species through the two-value tier rule, the record the
+# only side that can be excluded); the record stays in TaxonBodyMass_GenusLevel.csv's
+# source_mass and is listed in reports/genus_only_records.md.
+species_tiers <- within_source %>%
+  filter(independent & !excluded) %>%
+  group_by(genus, species) %>%
+  summarise(tier = min(value_tier), .groups = 'drop') %>% as.data.frame()
+genus_excl    <- ExcludeDiscordantGenusRecords(genus_records, genus_values, enriched, species_tiers, prov_classes, threshold = 1)
+genus_records <- genus_excl$records
+message(sprintf('ExcludeDiscordantGenusRecords: %d genus-only records excluded from their genus mean (%s), %d unresolved against a single species (kept)',
+                genus_excl$counts$records_excluded,
+                paste(sprintf('%s %d', names(genus_excl$counts$by_rule), genus_excl$counts$by_rule)[genus_excl$counts$by_rule > 0], collapse = ', '),
+                genus_excl$counts$records_unresolved))
+# The live list of the run's exclusions, species and genus level
+# (reports/excluded_records.csv; the register audit/flagged_species.csv holds
+# the one append-only batch of the adoption, method range_rule_2026-10-06).
+WriteExcludedRecords(file.path(wd_root, 'reports', 'excluded_records.csv'), excl, genus_excl)
 gdat <- GenusLevelTable(enriched, genus_records)
 
 # The report on the genus-only path (reports/genus_only_records.md): names
 # above genus, autotroph genera removed, fuzzy matches and homonym choices,
 # synonyms folded, collapsed values, and the genus-only records more than an
-# order of magnitude from the genus's species-based mean (#34).
+# order of magnitude from the genus's species-based mean, excluded or not (#34).
 species_genus_means <- enriched %>%
   group_by(genus) %>%
   summarise(species_mean = mean(mass_g), n_species = n(), .groups = 'drop') %>% as.data.frame()
@@ -820,7 +880,7 @@ WriteGenusOnlyReport(file.path(wd_root, 'reports', 'genus_only_records.md'),
                      res = merge(genus_res, genus_name_summary, by = 'taxon'),
                      removed_autotrophs = removed_autotrophs, dedupe = genus_dedupe,
                      records = genus_records, species_genus_means = species_genus_means,
-                     deps = source_deps)
+                     deps = source_deps, exclusions = genus_excl)
 
 
 
@@ -952,8 +1012,13 @@ write.csv(dcite, file = file.path(wd_bib, 'TaxonBodyMass_CitationCiteIDs.csv'),
 # hop and provenance type of each reference, the primary CiteID / bib key /
 # DOI where a reference is resolved, the registry's default where a record
 # carries no key, one row per conversion CiteID, and the lab-Sheet rows as
-# measurements in their cited source.
-provenance <- BuildProvenance(prov_records, prim_refs, prov_classes, dcite[, c('CiteID', 'Bibcite', 'doi')], enriched)
+# measurements in their cited source. record_status says whether the value
+# behind a row is in the species' mean ('kept', collapsed copies included) or
+# was excluded by the record-level range rule ('excluded_<rule>', #34); the
+# excluded records keep their rows.
+record_statuses <- within_source[, c('genus', 'species', 'source_group', 'record_status')]
+provenance <- BuildProvenance(prov_records, prim_refs, prov_classes, dcite[, c('CiteID', 'Bibcite', 'doi')], enriched,
+                              statuses = record_statuses)
 prov_con <- gzfile(file.path(wd_root, 'TaxonBodyMass_Provenance.csv.gz'), open = 'wb')
 write.csv(provenance, prov_con, row.names = FALSE)
 close(prov_con)
