@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 20:11:52
+# Citation and provenance warnings -- 2026-10-05 21:32:27
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 172590 (39024 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5044
+- provenance rows: 172589 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5044
 
 ## Problems
 
