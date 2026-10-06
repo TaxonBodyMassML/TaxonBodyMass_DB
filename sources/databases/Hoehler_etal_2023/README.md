@@ -2,6 +2,7 @@
 
 Source: Hoehler, T. M., Mankel, D., Girguis, P. R., McCollom, T. M., Kiang, N. Y., & Jørgensen, B. B. (2023) The metabolic rate of the biosphere and its components. PNAS 120:e2303764120. https://doi.org/10.1073/pnas.2303764120
 Data: PNAS Supporting Information `pnas.2303764120.sd01.xlsx` (sheet Metabolic_Data, 10,530 rows) and SI appendix PDF; downloaded by M. Novak 2026-09-28.
+Licence: CC BY-NC-ND 4.0 (owner decision 2026-10-06 after the 2026-10-02 audit of the PNAS licence line, not on disk; https://doi.org/10.1073/pnas.2303764120). `pnas.2303764120.sd01.xlsx` is tracked as a non-commercial carve-out, not under the repository licence; `pnas.2303764120.sapp.pdf` is a publisher file (PNAS SI appendix) tracked for reproducibility. See sources/LICENSES.md.
 
 Columns used: `Species`, `tsn rank`, `Group`, `Wet Mass (g)`, Kingdom..Family.
 Filters: species/subspecies-rank rows only; autotroph and fungal groups (Seedling, Tree sapling, Eukaryotic Microalgae, Cyanobacteria, Fungi) excluded; the Fishes group excluded (juvenile/small experimental fish, median 0.2-0.7 log10 below other sources); the six rows whose wet mass is a spreadsheet formula from dry mass are dropped; the seven rows whose `Comments` mark the cell size as a genus-level value ('BacDive, GENUS', 'BM Vol 3, genus') are dropped. Subspecies and strain suffixes truncated to binomials.

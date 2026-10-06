@@ -2,6 +2,7 @@
 
 Source: Brey, T., Müller-Wiegmann, C., Zittier, Z. M. C., & Hagen, W. (2010) Body composition in aquatic organisms — A global data bank of relationships between mass, elemental composition and energy content. Journal of Sea Research 64:334-340. https://doi.org/10.1016/j.seares.2010.05.002
 Data: `Conversion04.zip` (Conversion04.xlsm, 2012 update; 5,768 records, 3,444 taxa) downloaded 2026-09-30 from http://www.thomas-brey.de/science/DBconversion/datafiles/Conversion04.zip (Virtual Handbook, Downloads > Data Banks).
+Licence: unknown; owner to check http://www.thomas-brey.de/science/DBconversion/ (`Conversion04.zip` holds Conversion04.xlsm only, no licence file; ask T. Brey). The zip is tracked; the two medians csv files are ours. See sources/LICENSES.md.
 
 `summarise_conversion04.py` reads sheet `Data`, averages records within species and writes `conversion04_group_medians.csv`: medians (and quartiles) of DM/WM (shell-free), AFDM/DM and C/DM per taxon group, plus the record-level median of C/WM = C/DM x DM/WM. These medians supply the `fish`, `invertebrate`, `mollusc`, `annelid`, `chaetognath` and `echinoderm` rows of `R/library/mass_conversion.r` (and the `helminth` row by analogy with non-gelatinous invertebrates). Crustacea and Cnidaria medians were used only to cross-check the Kiørboe (2013) pelagic values.
 
