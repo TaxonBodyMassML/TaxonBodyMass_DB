@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-05 17:52:54
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-05 18:52:56
 
 ## Summary
 
@@ -11,15 +11,15 @@
   - fishbase (44)
   - Makarieva_2008 (33)
   - AnAge (32)
+  - Quaardvark (31)
   - vertnet-aves-sept2016 (31)
-  - Quaardvark (30)
   - Castro_2025 (29)
   - vertnet-fishes-sept2016 (27)
   - Myhrvold_2015 (26)
   - Smith_2003 (20)
-  - Tobias_2022 (19)
   - vertnet-reptilia-sept2016 (19)
   - Barnes_2008 (18)
+  - Tobias_2022 (18)
   - Raymond_2011 (17)
   - Vanni_2017 (17)
   - Feldman_etal_2016 (13)
@@ -27,9 +27,9 @@
   - Killen_etal_2016 (10)
   - Tsuboi_etal_2018 (10)
   - Hirt_etal_2017 (9)
-  - Lislevand_etal_2007 (8)
   - Tucker_etal_2014a (8)
   - Brose_2005 (7)
+  - Lislevand_etal_2007 (7)
   - GalanAcedo_etal_2026 (6)
   - Hechinger_etal_2011 (6)
   - Kiorboe_2014; Kiorboe_2013 (6)
@@ -67,6 +67,7 @@
   - Froese_2025; Froese_2014 (1)
   - Gillooly_etal_2016 (1)
   - GuoBailly_2024 (1)
+  - Hudson_2013 (1)
   - Ikeda_2014; Kiorboe_2013 (1)
   - Kangausaru_2018 (1)
   - Lane_2019 (1)
@@ -76,38 +77,38 @@
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (1)
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Viana_2016 (1)
-- Moderate mass disagreement (log10 range 1-2): 808 species
+- Moderate mass disagreement (log10 range 1-2): 805 species
 - Suspicious sources (log10 1-2, by frequency):
   - Cai_etal_2025 (147)
   - Feldman_etal_2016 (109)
-  - Myhrvold_2015 (109)
   - Brose_etal_2018 (108)
+  - Myhrvold_2015 (108)
   - fishbase (85)
-  - vertnet-aves-sept2016 (69)
+  - vertnet-aves-sept2016 (68)
   - Makarieva_2008 (66)
-  - Tsuboi_etal_2018 (52)
+  - Tsuboi_etal_2018 (53)
   - Quaardvark (50)
   - Meiri_2024 (49)
   - vertnet-mammalia-sept2016 (49)
   - vertnet-reptilia-sept2016 (41)
-  - Tobias_2022 (40)
   - Castro_2025 (38)
-  - AnAge (37)
+  - AnAge (36)
   - Smith_2003 (35)
+  - Tobias_2022 (34)
   - vertnet-traits-sept2016 (26)
   - Brose_2005 (21)
-  - vertnet-aves-sept2016; vertnet-traits-sept2016 (20)
   - Barnes_2008 (19)
   - Herberstein_etal_2022 (19)
+  - vertnet-aves-sept2016; vertnet-traits-sept2016 (19)
   - vertnet-fishes-sept2016 (19)
   - vertnet-reptilia-sept2016; vertnet-traits-sept2016 (19)
   - Mahe_2023 (18)
   - vertnet-mammalia-sept2016; vertnet-traits-sept2016 (18)
   - Hirt_etal_2017 (15)
+  - Lislevand_etal_2007 (15)
   - DeLong_etal_2018 (14)
   - Uyeda_etal_2017 (14)
   - Killen_etal_2016 (13)
-  - Lislevand_etal_2007 (13)
   - Vanni_2017 (13)
   - AmphiBIO (12)
   - DeLong_etal_2010 (12)
@@ -132,13 +133,13 @@
   - Kiorboe_2013 (5)
   - McCoy_2008; Brey_2010 (5)
   - Vanni_2017; Brey_2010 (5)
+  - Verberk_2020 (5)
   - Ehnes_etal_2011 (4)
   - GuoBailly_2024 (4)
   - Hebert_etal_2016; Kiorboe_2013 (4)
   - Hishi_etal_2019; Studier_1992 (4)
   - Jones_2009 (4)
   - Soria_etal_2021 (4)
-  - Verberk_2020 (4)
   - AndersonGillooly_2017 (3)
   - Brown_etal_2018 (3)
   - Gonzalez_2025; Brey_2010 (3)
@@ -222,12 +223,12 @@ Acipenser medirostris [range=5.65]
 Coryphaena equiselis [range=5.61]
         Min_source: Makarieva_2008 0.03
         Max_source: Cai_etal_2025 1.212e+04
+Glareola pratincola [range=5.54]
+        Min_source: Lislevand_etal_2007 77
+        Max_source: vertnet-aves-sept2016 2.677e+07
 Tetrahymena pyriformis [range=5.54]
         Min_source: Kiorboe_2014; Kiorboe_2013; MendenDeuer_2000 1.452e-08
         Max_source: Brown_etal_2018 0.005
-Glareola pratincola [range=5.54]
-        Min_source: Lislevand_etal_2007 77.99
-        Max_source: vertnet-aves-sept2016 2.677e+07
 Taphozous georgianus [range=5.43]
         Min_source: Myhrvold_2015 24.43
         Max_source: vertnet-mammalia-sept2016 6.53e+06
@@ -519,9 +520,6 @@ Nycticeinops schlieffenii [range=3.16]
 Rhinolophus pusillus [range=3.14]
         Min_source: Tsuboi_etal_2018 4.7
         Max_source: vertnet-mammalia-sept2016 6428
-Aptenodytes forsteri [range=3.13]
-        Min_source: Raymond_2011 28.1
-        Max_source: Lislevand_etal_2007 3.82e+04
 Petrogale lateralis [range=3.12]
         Min_source: vertnet-mammalia-sept2016 4
         Max_source: Myhrvold_2015 5284
@@ -549,6 +547,9 @@ Pleuronectes platessa [range=3.08]
 Zoarces viviparus [range=3.08]
         Min_source: Castro_2025 0.2515
         Max_source: fishbase 305.1
+Aptenodytes forsteri [range=3.08]
+        Min_source: Raymond_2011 28.1
+        Max_source: Lislevand_etal_2007 3.385e+04
 Abramis brama [range=3.06]
         Min_source: DeLong_etal_2018 8.59
         Max_source: Cai_etal_2025 9931
@@ -567,9 +568,6 @@ Gaidropsarus vulgaris [range=3.05]
 Thalassarche melanophris [range=3.05]
         Min_source: Raymond_2011 3.6
         Max_source: Quaardvark 4000
-Diomedea exulans [range=3.05]
-        Min_source: Raymond_2011 8.2
-        Max_source: Lislevand_etal_2007 9110
 Channa punctata [range=3.04]
         Min_source: Castro_2025 0.6194
         Max_source: fishbase 681.9
@@ -579,12 +577,12 @@ Crocodylus porosus [range=3.04]
 Moschus fuscus [range=3.04]
         Min_source: Smith_2003 12.5
         Max_source: Jones_2009 1.37e+04
+Diomedea exulans [range=3.04]
+        Min_source: Raymond_2011 8.2
+        Max_source: Hudson_2013 8974
 Phylloscartes nigrifrons [range=3.03]
         Min_source: Tobias_2022 9.1
         Max_source: vertnet-aves-sept2016 9755
-Procellaria aequinoctialis [range=3.03]
-        Min_source: Raymond_2011 1.3
-        Max_source: Lislevand_etal_2007 1390
 Vibilia stebbingi [range=3.03]
         Min_source: Brose_etal_2018 0.00011
         Max_source: Pata_2025 0.117
@@ -597,6 +595,9 @@ Esox lucius [range=3.02]
 Lepus timidus [range=3.02]
         Min_source: vertnet-mammalia-sept2016 4
         Max_source: AnAge 4175
+Procellaria aequinoctialis [range=3.01]
+        Min_source: Raymond_2011 1.3
+        Max_source: Lislevand_etal_2007 1335
 Rungwecebus kipunji [range=3.00]
         Min_source: Soria_etal_2021 13
         Max_source: Faurby_etal_2018 1.3e+04
@@ -678,8 +679,8 @@ Notemigonus crysoleucas [range=2.83]
 Ihlea racovitzai [range=2.83]
         Min_source: Brose_etal_2018 0.0074
         Max_source: Pata_2025 5
-Acanthiza robustirostris [range=2.82]
-        Min_source: Tobias_2022 6.1
+Acanthiza robustirostris [range=2.83]
+        Min_source: Lislevand_etal_2007 6.05
         Max_source: vertnet-aves-sept2016 4050
 Oncorhynchus nerka [range=2.82]
         Min_source: Castro_2025 15.62
@@ -792,9 +793,6 @@ Spinibarbus sinensis [range=2.64]
 Pan troglodytes [range=2.63]
         Min_source: vertnet-mammalia-sept2016 124.8
         Max_source: GalanAcedo_etal_2026 5.37e+04
-Cygnus cygnus [range=2.61]
-        Min_source: vertnet-aves-sept2016 30.29
-        Max_source: Lislevand_etal_2007 1.235e+04
 Planiliza macrolepis [range=2.61]
         Min_source: Castro_2025 5.6
         Max_source: Cai_etal_2025 2279
@@ -816,12 +814,15 @@ Arapaima gigas [range=2.58]
 Boiga nigriceps [range=2.58]
         Min_source: vertnet-reptilia-sept2016 5.5
         Max_source: Myhrvold_2015 2080
+Cygnus cygnus [range=2.58]
+        Min_source: vertnet-aves-sept2016 30.29
+        Max_source: Quaardvark 1.145e+04
+Alauda gulgula [range=2.57]
+        Min_source: Lislevand_etal_2007 26.05
+        Max_source: vertnet-aves-sept2016 9743
 Vimba vimba [range=2.57]
         Min_source: DeLong_etal_2018 6.29
         Max_source: fishbase 2330
-Alauda gulgula [range=2.57]
-        Min_source: Lislevand_etal_2007 26.32
-        Max_source: vertnet-aves-sept2016 9743
 Coelops frithii [range=2.56]
         Min_source: Smith_2003 7.4
         Max_source: vertnet-mammalia-sept2016 2688
@@ -949,7 +950,7 @@ Scophthalmus maximus [range=2.40]
         Min_source: Castro_2025 100.5
         Max_source: Brose_etal_2018 2.5e+04
 Spizocorys starki [range=2.38]
-        Min_source: Lislevand_etal_2007 18.5
+        Min_source: Lislevand_etal_2007 18.55
         Max_source: vertnet-aves-sept2016 4478
 Alburnus chalcoides [range=2.38]
         Min_source: DeLong_etal_2018 5.2
@@ -1297,7 +1298,7 @@ Caranx ruber [range=2.00]
         Min_source: Viana_2016 81.9
         Max_source: Froese_2025 8200
 
-## Moderate mass disagreement (log10 range 1-2) (808 species)
+## Moderate mass disagreement (log10 range 1-2) (805 species)
 
 Balaenoptera musculus [range=2.00]
         Min_source: Brose_etal_2018 1.9e+06
@@ -1423,7 +1424,7 @@ Petromyzon marinus [range=1.89]
         Min_source: Makarieva_2008 22.8
         Max_source: Quaardvark 1750
 Psitteuteles versicolor [range=1.88]
-        Min_source: Lislevand_etal_2007 53.47
+        Min_source: Lislevand_etal_2007 53.45
         Max_source: vertnet-aves-sept2016 4042
 Acipenser ruthenus [range=1.88]
         Min_source: Makarieva_2008 258
@@ -1464,9 +1465,6 @@ Balionycteris maculata [range=1.86]
 Arizona elegans [range=1.86]
         Min_source: vertnet-reptilia-sept2016 30.31
         Max_source: Myhrvold_2015 2189
-Cisticola haesitatus [range=1.86]
-        Min_source: Tobias_2022 6.92
-        Max_source: vertnet-aves-sept2016 498
 Euphausia pacifica [range=1.86]
         Min_source: Gonzalez_2025; Kiorboe_2013 0.002115
         Max_source: DeLong_etal_2010 0.152
@@ -1482,6 +1480,9 @@ Ameiurus nebulosus [range=1.85]
 Pantherophis bairdi [range=1.85]
         Min_source: vertnet-reptilia-sept2016 56.6
         Max_source: Myhrvold_2015 4030
+Cisticola haesitatus [range=1.85]
+        Min_source: Lislevand_etal_2007 7
+        Max_source: vertnet-aves-sept2016 498
 Cercopithecus neglectus [range=1.85]
         Min_source: vertnet-mammalia-sept2016 85
         Max_source: Tsuboi_etal_2018 5979
@@ -1743,6 +1744,9 @@ Lithobates sylvaticus [range=1.68]
 Delphinapterus leucas [range=1.67]
         Min_source: vertnet-traits-sept2016 3.2e+04
         Max_source: Tucker_etal_2014b 1.514e+06
+Telophorus zeylonus [range=1.67]
+        Min_source: Lislevand_etal_2007 63.15
+        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 2977
 Dendropsophus microcephalus [range=1.67]
         Min_source: Castro_2025 0.6
         Max_source: AmphiBIO 28
@@ -1752,9 +1756,6 @@ Parvocalanus crassirostris [range=1.67]
 Gerres filamentosus [range=1.67]
         Min_source: Brose_2005 20.11
         Max_source: Cai_etal_2025 934.3
-Telophorus zeylonus [range=1.67]
-        Min_source: Lislevand_etal_2007 64.12
-        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 2977
 Entelurus aequoreus [range=1.67]
         Min_source: Tsuboi_etal_2018 9.319
         Max_source: Brose_etal_2018 432
@@ -1883,7 +1884,7 @@ Pareledone charcoti [range=1.62]
         Max_source: Makarieva_2008 136.7
 Aythya australis [range=1.62]
         Min_source: vertnet-aves-sept2016 21.8
-        Max_source: Lislevand_etal_2007 902
+        Max_source: Verberk_2020 900
 Crotalus scutulatus [range=1.61]
         Min_source: vertnet-reptilia-sept2016 33.84
         Max_source: Feldman_etal_2016 1388
@@ -1932,9 +1933,6 @@ Pogona barbata [range=1.59]
 Apalone ferox [range=1.59]
         Min_source: Verberk_2020 1123
         Max_source: Quaardvark 4.36e+04
-Spheniscus demersus [range=1.59]
-        Min_source: vertnet-aves-sept2016 93.31
-        Max_source: Lislevand_etal_2007 3600
 Loris tardigradus [range=1.59]
         Min_source: Quaardvark 177
         Max_source: vertnet-mammalia-sept2016 6828
@@ -1974,6 +1972,9 @@ Ictalurus furcatus [range=1.56]
 Cheirogaleus major [range=1.56]
         Min_source: vertnet-mammalia-sept2016 13.86
         Max_source: GalanAcedo_etal_2026 505
+Spheniscus demersus [range=1.56]
+        Min_source: vertnet-aves-sept2016 93.31
+        Max_source: Lislevand_etal_2007 3400
 Thymallus thymallus [range=1.56]
         Min_source: Brose_etal_2018 118.3
         Max_source: fishbase 4300
@@ -2142,15 +2143,15 @@ Cheiraster gerlachei [range=1.49]
 Varanus salvadorii [range=1.49]
         Min_source: Meiri_2024 2904
         Max_source: Quaardvark 9e+04
-Pterocles gutturalis [range=1.49]
-        Min_source: vertnet-aves-sept2016 11
-        Max_source: Lislevand_etal_2007 340.5
 Ambloplites rupestris [range=1.49]
         Min_source: Brose_etal_2018 97
         Max_source: Quaardvark 3000
 Crenimugil crenilabis [range=1.49]
         Min_source: fishbase 145.1
         Max_source: Cai_etal_2025 4481
+Pterocles gutturalis [range=1.49]
+        Min_source: vertnet-aves-sept2016 11
+        Max_source: Tobias_2022 338
 Mussurana bicolor [range=1.49]
         Min_source: vertnet-reptilia-sept2016 12.5
         Max_source: Myhrvold_2015 384
@@ -2211,9 +2212,6 @@ Platyceps collaris [range=1.46]
 Tupaia glis [range=1.46]
         Min_source: vertnet-mammalia-sept2016 7
         Max_source: AnAge 200
-Entomyzon cyanotis [range=1.45]
-        Min_source: vertnet-aves-sept2016 4
-        Max_source: Lislevand_etal_2007 114
 Pleuromamma robusta [range=1.45]
         Min_source: Castro_2025 7.66e-05
         Max_source: DeLong_etal_2010 0.00218
@@ -2301,6 +2299,9 @@ Trachinotus goodei [range=1.43]
 Varanus timorensis [range=1.43]
         Min_source: Meiri_2024 16.4
         Max_source: Feldman_etal_2016 436.9
+Entomyzon cyanotis [range=1.43]
+        Min_source: vertnet-aves-sept2016 4
+        Max_source: Tsuboi_etal_2018 106.4
 Anguilla dieffenbachii [range=1.42]
         Min_source: Lagrue_etal_2015 760.2
         Max_source: Cai_etal_2025 2.022e+04
@@ -2319,6 +2320,9 @@ Chodsigoa smithii [range=1.42]
 Eospalax smithii [range=1.42]
         Min_source: Smith_2003 14.4
         Max_source: Faurby_etal_2018 379
+Podargus papuensis [range=1.42]
+        Min_source: Lislevand_etal_2007 362
+        Max_source: vertnet-aves-sept2016 9482
 Neanura muscorum [range=1.42]
         Min_source: Brose_etal_2018 1.26e-05
         Max_source: Ehnes_etal_2011 0.00033
@@ -2349,6 +2353,9 @@ Engraulis japonicus [range=1.41]
 Benthosema glaciale [range=1.41]
         Min_source: Barnes_2008 0.2221
         Max_source: McCoy_2008 5.66
+Cuculus gularis [range=1.41]
+        Min_source: Lislevand_etal_2007 100.8
+        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 2566
 Poecilia reticulata [range=1.41]
         Min_source: DeLong_etal_2018 0.06682
         Max_source: Cai_etal_2025 1.7
@@ -2358,9 +2365,6 @@ Aspidoscelis sexlineatus [range=1.40]
 Mycteria ibis [range=1.40]
         Min_source: Myhrvold_2015 2000
         Max_source: vertnet-aves-sept2016 5.05e+04
-Podargus papuensis [range=1.40]
-        Min_source: Tobias_2022 375.7
-        Max_source: vertnet-aves-sept2016 9482
 Gyrodinium dominans [range=1.40]
         Min_source: DeLong_etal_2018 1e-09
         Max_source: DeLong_etal_2010 2.51e-08
@@ -2370,9 +2374,6 @@ Psammophis biseriatus [range=1.40]
 Mystus gulio [range=1.40]
         Min_source: Castro_2025 12
         Max_source: fishbase 300
-Cuculus gularis [range=1.40]
-        Min_source: Tobias_2022 103
-        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 2566
 Pseudacris regilla [range=1.40]
         Min_source: Quaardvark 0.35
         Max_source: Hoehler_etal_2023 8.717
@@ -2403,12 +2404,12 @@ Procolobus verus [range=1.39]
 Siren intermedia [range=1.39]
         Min_source: Makarieva_2008 13.7
         Max_source: Cai_etal_2025 336.7
-Glareola nordmanni [range=1.39]
-        Min_source: vertnet-aves-sept2016 4
-        Max_source: Lislevand_etal_2007 98.25
 Callionymus maculatus [range=1.39]
         Min_source: Barnes_2008 1.49
         Max_source: fishbase 36.57
+Glareola nordmanni [range=1.39]
+        Min_source: vertnet-aves-sept2016 4
+        Max_source: Lislevand_etal_2007 97.5
 Contia tenuis [range=1.39]
         Min_source: vertnet-reptilia-sept2016 1.4
         Max_source: Myhrvold_2015 34
@@ -2419,7 +2420,7 @@ Notophthalmus viridescens [range=1.38]
         Min_source: Gillooly_etal_2016 1
         Max_source: Cai_etal_2025 24.1
 Cisticola ayresii [range=1.38]
-        Min_source: Tobias_2022 7
+        Min_source: Lislevand_etal_2007 7
         Max_source: vertnet-aves-sept2016 167.9
 Enophrys diceraus [range=1.38]
         Min_source: GuoBailly_2024 31.7
@@ -2616,6 +2617,9 @@ Menticirrhus littoralis [range=1.32]
 Phaeognathus hubrichti [range=1.32]
         Min_source: vertnet-amphibia-sept2016; vertnet-traits-sept2016 4.524
         Max_source: Cai_etal_2025 94
+Calendulauda sabota [range=1.32]
+        Min_source: Lislevand_etal_2007 24.5
+        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 508.8
 Psammophis punctulatus [range=1.32]
         Min_source: Meiri_2024 97
         Max_source: Myhrvold_2015 2009
@@ -2628,9 +2632,6 @@ Giuris margaritacea [range=1.31]
 Amphiglossus astrolabi [range=1.31]
         Min_source: Meiri_2024 14.53
         Max_source: Feldman_etal_2016 299.5
-Calendulauda sabota [range=1.31]
-        Min_source: Tobias_2022 24.7
-        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 508.8
 Daption capense [range=1.31]
         Min_source: vertnet-aves-sept2016; vertnet-traits-sept2016 267.6
         Max_source: Brose_etal_2018 5500
@@ -2829,6 +2830,9 @@ Pangasius sanitwongsei [range=1.24]
 Limanda limanda [range=1.24]
         Min_source: Barnes_2008 58.07
         Max_source: Brose_etal_2018 1000
+Hieraaetus pennatus [range=1.24]
+        Min_source: vertnet-aves-sept2016 49
+        Max_source: Lislevand_etal_2007 842
 Themisto japonica [range=1.23]
         Min_source: Kiorboe_2014; Kiorboe_2013 0.0009086
         Max_source: Vanni_2017; Kiorboe_2013 0.01554
@@ -2847,9 +2851,6 @@ Dermacentor andersoni [range=1.23]
 Flaccisagitta hexaptera [range=1.23]
         Min_source: Kiorboe_2013; Brey_2010 0.01401
         Max_source: Ikeda_2014; Brey_2010 0.2361
-Hieraaetus pennatus [range=1.23]
-        Min_source: vertnet-aves-sept2016 49
-        Max_source: Tobias_2022 823.8
 Pardofelis marmorata [range=1.22]
         Min_source: Smith_2003 2827
         Max_source: Myhrvold_2015 4.736e+04
@@ -3195,6 +3196,9 @@ Xiphister atropurpureus [range=1.13]
 Sebastes saxicola [range=1.13]
         Min_source: GuoBailly_2024 22.4
         Max_source: McCoy_2008 300
+Anthus leucophrys [range=1.13]
+        Min_source: Lislevand_etal_2007 23.2
+        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 310.3
 Chelon dumerili [range=1.13]
         Min_source: Castro_2025 16.99
         Max_source: fishbase 227.1
@@ -3294,9 +3298,6 @@ Metridia princeps [range=1.10]
 Gymnosarda unicolor [range=1.10]
         Min_source: Quaardvark 1.75e+04
         Max_source: Cai_etal_2025 2.178e+05
-Anthus leucophrys [range=1.09]
-        Min_source: Tobias_2022 24.98
-        Max_source: vertnet-aves-sept2016; vertnet-traits-sept2016 310.3
 Leptodeira septentrionalis [range=1.09]
         Min_source: Quaardvark 29.1
         Max_source: Myhrvold_2015 361
@@ -3527,7 +3528,7 @@ Lasiorhinus krefftii [range=1.05]
         Max_source: Quaardvark 3.25e+04
 Falco berigora [range=1.05]
         Min_source: vertnet-aves-sept2016; vertnet-traits-sept2016 53.01
-        Max_source: AnAge 593.5
+        Max_source: Lislevand_etal_2007 593.7
 Trachycephalus typhonius [range=1.05]
         Min_source: Makarieva_2008 5.1
         Max_source: AmphiBIO 56.9
@@ -3672,9 +3673,6 @@ Tigriopus californicus [range=1.01]
 Myiarchus validus [range=1.01]
         Min_source: vertnet-aves-sept2016 4
         Max_source: Tsuboi_etal_2018 40.76
-Botaurus stellaris [range=1.01]
-        Min_source: vertnet-aves-sept2016 285.3
-        Max_source: Lislevand_etal_2007 2906
 Grammatorcynus bilineatus [range=1.01]
         Min_source: Tsuboi_etal_2018 785
         Max_source: Cai_etal_2025 7991
@@ -3696,18 +3694,12 @@ Cisticola cinnamomeus [range=1.01]
 Gobiobotia meridionalis [range=1.00]
         Min_source: Cai_etal_2025 2.3
         Max_source: fishbase 23.25
-Scotopelia peli [range=1.00]
-        Min_source: Lislevand_etal_2007 217
-        Max_source: Myhrvold_2015 2188
 Cerrophidion godmani [range=1.00]
         Min_source: vertnet-reptilia-sept2016 29.25
         Max_source: Feldman_etal_2016 294.6
 Hypsilurus schultzewestrumi [range=1.00]
         Min_source: Meiri_2024 16.01
         Max_source: Feldman_etal_2016 161.2
-Tadorna ferruginea [range=1.00]
-        Min_source: vertnet-aves-sept2016; vertnet-traits-sept2016 135.2
-        Max_source: Lislevand_etal_2007 1360
 Aotus zonalis [range=1.00]
         Min_source: GalanAcedo_etal_2026 900
         Max_source: Tsuboi_etal_2018 9025

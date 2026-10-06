@@ -1,4 +1,4 @@
-# Genus-only records -- 2026-10-05 17:52:55
+# Genus-only records -- 2026-10-05 18:52:57
 
 Input records identified to genus only (a cleaned name without an underscore; the sources' rows and the genus-level rows of the lab Sheet, which replace the sources' rows of the same bare name, issue #57) are resolved at genus rank through the enrichment cache and the GBIF backbone (R/library/enrich_genus.r, issue #49), filtered with FilterAutotrophs(), combined as one value per genus and source (geometric mean), de-duplicated with the registry Bib/source_dependencies.csv and combined as one record per genus (arithmetic mean of the independent per-source values) that enters the genus mean of TaxonBodyMass_GenusLevel.csv with the weight of one species. Names resolving above genus and names no stage resolved leave the table; the latter are also listed in reports/warnings_taxonomy.md.
 
@@ -326,7 +326,7 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Pseudocalanus | 0.0928 | 5.8e-05 | 2 | 3.2 | Brose_etal_2018 |
 | Henricia | 0.0701 | 94.1 | 2 | -3.13 | Brose_etal_2018 |
 | Cercopithecus |    5 | 4.03e+03 | 17 | -2.91 | vertnet-mammalia-sept2016 |
-| Ensifera | 0.0454 | 10.6 | 1 | -2.37 | Brose_2005; Brose_etal_2018 |
+| Ensifera | 0.0454 | 10.3 | 1 | -2.36 | Brose_2005; Brose_etal_2018 |
 | Coryphaena | 28.3 | 6.25e+03 | 1 | -2.34 | vertnet-fishes-sept2016 |
 | Ara |    5 |  785 | 9 | -2.2 | vertnet-aves-sept2016 |
 | Xanthocalanus | 2.51e-05 | 0.00387 | 1 | -2.19 | Brose_etal_2018 |
@@ -344,20 +344,20 @@ The genus-only record against the arithmetic mean of the genus's species cross-s
 | Dorylaimus | 2.94e-07 | 1.5e-05 | 1 | -1.71 | Cohen_2014 |
 | Mononchus | 3.26e-07 | 1.64e-05 | 23 | -1.7 | Brose_etal_2018; Cohen_2014 |
 | Trimeresurus | 14.1 |  459 | 42 | -1.51 | vertnet-reptilia-sept2016 |
-| Dendrocygna |   26 |  774 | 7 | -1.47 | vertnet-aves-sept2016 |
+| Dendrocygna |   26 |  772 | 7 | -1.47 | vertnet-aves-sept2016 |
 | Phthiracarus | 5.74e-06 | 0.00017 | 12 | -1.47 | Cohen_2014 |
 | Steganacarus | 8.3e-06 | 0.000211 | 3 | -1.41 | Cohen_2014 |
 | Lumbricus | 0.199 |    5 | 8 | -1.4 | Cohen_2014 |
 | Rana |    1 | 21.5 | 26 | -1.33 | vertnet-traits-sept2016 |
 | Neodolichorhynchus | 3.88e-08 | 8.24e-07 | 1 | -1.33 | Brose_etal_2018 |
+| Gallus |   44 |  918 | 3 | -1.32 | vertnet-aves-sept2016 |
 | Lygosoma | 1.34 | 27.7 | 14 | -1.32 | vertnet-reptilia-sept2016+vertnet-traits-sept2016 |
-| Gallus |   44 |  908 | 3 | -1.31 | vertnet-aves-sept2016 |
 | Dolomedes | 0.03 | 0.573 | 4 | -1.28 | Brose_etal_2018 |
 | Chiromantis | 0.548 | 10.3 | 3 | -1.27 | vertnet-amphibia-sept2016 |
 | Eupodes | 3.44e-05 | 2e-06 | 1 | 1.24 | Brose_etal_2018; Cohen_2014 |
 | Conochilus | 3.66e-07 | 6.12e-06 | 3 | -1.22 | Brose_2005; Brose_etal_2018 |
 | Tyrophagus | 1.73e-05 | 1.17e-06 | 1 | 1.17 | Brose_etal_2018; Cohen_2014 |
-| Lagopus | 31.5 |  449 | 3 | -1.15 | vertnet-traits-sept2016 |
+| Lagopus | 31.5 |  445 | 3 | -1.15 | vertnet-traits-sept2016 |
 | Pelagobia | 0.0253 | 0.0019 | 1 | 1.12 | Pata_2025 |
 | Microtritia | 2.08e-06 | 2.74e-05 | 1 | -1.12 | Cohen_2014 |
 | Eupelops | 1.07e-05 | 0.000139 | 3 | -1.11 | Cohen_2014 |

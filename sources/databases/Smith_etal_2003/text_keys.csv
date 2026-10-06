@@ -1,0 +1,56 @@
+text,key,note
+walkers online,WalkersOnline,"text key of the Mass Reference column (15 kept rows); Walker's Mammals of the World consulted online; the printed sixth edition is entry 56 (Nowak 1999); METADATA: ""Masses for additional species provided by Morgan Ernest (Walker's Mammals of the World)"""
+walkers,Walkers,"text key of the Mass Reference column (4 kept rows); Walker's Mammals of the World, edition unstated (entry 56 is the printed sixth edition, WalkersOnline the online form)"
+smithsonian book of na mammals,161,
+smithsonian book of mammals,161,
+damuth working group,DamuthWG,"text key of the Mass Reference column (11 kept rows); unpublished data of a working group around J. Damuth (the NCEAS body-size working group of the data paper); cf. METADATA: ""Kate Jones (sources: Damuth, 1998 and Lovegrove 2001)"""
+jake goheen,Goheen,"text key of the Mass Reference column (11 kept rows, written 'Jake Goheen' or 'jake'); masses sent by Jake Goheen from the Nairobi Museum (METADATA entries of 2004-06-22 and 2005-07-02); personal communication"
+jake,Goheen,
+morgans dataset,MorganErnest,"text key of the Mass Reference column (4 kept rows, 'Morgans dataset' or 'Morgan'); S. K. Morgan Ernest's data set (METADATA: Australia from Strahan 1995; additional species from Walker's Mammals of the World); unpublished"
+morgan,MorganErnest,
+neal woodman,Woodman,"text key of the Mass Reference column (3 kept rows, 'Neal Woodman_ pers com.' and 'Neal Woodman pers. Com'); Cryptotis body sizes given by Neal Woodman (METADATA 2004-08-13); personal communication"
+neal woodman pers. com,Woodman,
+pers com.,,"fragment of 'Neal Woodman_ pers com.' left by the split; no key"
+pers. com.,,"fragment of 'Neal Woodman_ pers. com.' left by the split; no key"
+pantheria,PanTHERIA,"text key of the Mass Reference column (3 kept rows, 'Pantheria' or 'Pantehria'); PanTHERIA (Jones et al. 2009), the database source Jones_2009; METADATA 2010-05-18: ""SKL added body size for Moschus fuscus, Ochotona curzoniae, Ochotona cansus, Sciurus lis from Pantheria"""
+pantehria,PanTHERIA,
+mammalian species no.249,MammSpp249,"text key of the Mass Reference column (1 kept row, Syntheosciurus brochus); Mammalian Species account no. 249, not among the numbered entries"
+mammalian spp. account no. 459,MammSpp459,"text key of the Mass Reference column (1 kept row, Phodopus roborovskii); Mammalian Species account no. 459, not among the numbered entries"
+afghan mammals.pdf,AfghanPDF,"text key of the Mass Reference column (3 kept rows, 'Afghan mammals.pdf' or 'mammals of afghan.pdf'); an unidentified PDF on the mammals of Afghanistan"
+mammals of afghan.pdf,AfghanPDF,
+animaldiversity.ummz.umich.edu,73,
+www.iiasa.ac.at/~sendzim/mammaldatasets/ trop%20wet%20forest%20mamm.xls,174,
+www.iiasa.ac.at/~sendzim/mammaldatasets/ woodland%20savanna%20mamm.xls,196,
+www.iiasa.ac.at/~sendzim/mammaldatasets/ tropical%20moist%20forest%20mammals.xls,IiasaTropMoist,"URL key of the Mass Reference column (3 kept rows); a third IIASA mammal data set of J. Sendzimir (entries 174 and 196 are the other two)"
+www.iiasa.ac.at/~sendzim/mammaldatasets/ african%20rainfor%20mamm.xls,IiasaAfrRainfor,"URL key of the Mass Reference column (1 kept row); a fourth IIASA mammal data set of J. Sendzimir"
+http://members.vienna.at/shrew/itsesap95-talpinae.htmlno.mogera,web.vienna.talpinae.mogera,"URL key of the Mass Reference column (3 kept rows); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-erinaceidae.htmlno.hylomys,web.vienna.erinaceidae.hylomys,"URL key of the Mass Reference column (2 kept rows); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-erinaceidae.htmlno.mesechinus,web.vienna.erinaceidae.mesechinus,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-sorex.htmlno.asper,web.vienna.sorex.asper,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-sorex.htmlno.gracillimus,web.vienna.sorex.gracillimus,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-sorex.htmlno.roboratus,web.vienna.sorex.roboratus,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-sorex.htmlno.sinalis,web.vienna.sorex.sinalis,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-soricinae.htmlno.schelkovnikovi,web.vienna.soricinae.schelkovnikovi,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-soriculus.htmlno.caudatus,web.vienna.soriculus.caudatus,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-soriculus.htmlno.leucops,web.vienna.soriculus.leucops,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-soriculus.htmlno.macrurus,web.vienna.soriculus.macrurus,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-talpinae.html,web.vienna.talpinae,"URL key of the Mass Reference column (1 kept row); family page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-talpinae.htmlno.scapanulus,web.vienna.talpinae.scapanulus,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://members.vienna.at/shrew/itsesap95-talpinae.htmlno.scaptonyx,web.vienna.talpinae.scaptonyx,"URL key of the Mass Reference column (1 kept row); species page of the shrew site members.vienna.at/shrew (itsesAP95 pages)"
+http://www.napak.com/marmots_of_the_world.html,web.napak.marmots,"URL key of the Mass Reference column (2 kept rows); web page"
+www.aciar.gov.au/web.nsf/ doc/acia-5ufv6v/$file/mn100-part%203.pd,web.aciar.mn100,"URL key of the Mass Reference column (2 kept rows); an ACIAR monograph PDF (MN100, part 3)"
+http://animaldiversity.ummz.umich.edu/site/accounts/information/moschus_fuscus.html,web.adw.moschus-fuscus,"URL key of the Mass Reference column (1 kept row); Animal Diversity Web species account (the site itself is entry 73)"
+http://cons-dev.univ-lyon1.fr/marmotte/marmot.en/saga.en/world.marmot/species/entexthima.html,web.lyon.marmot.himalayana,"URL key of the Mass Reference column (1 kept row); web page"
+http://members.tripod.com/uakari/trachypithecus_auratus.html,web.tripod.trachypithecus-auratus,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.animalinfo.org/species/bat/anthor .htm,web.animalinfo.anthor,"URL key of the Mass Reference column (1 kept row); animalinfo.org species page (entries 229 and 230 are two other pages of the site)"
+http://www.animalinfo.org/species/bat/embadian.htm,web.animalinfo.embadian,"URL key of the Mass Reference column (1 kept row); animalinfo.org species page"
+http://www.animalinfo.org/species/nesonets.htm,web.animalinfo.nesonets,"URL key of the Mass Reference column (1 kept row); animalinfo.org species page"
+http://www.encyclopediaofukraine.com/pages/b/o/bobac.htm,web.ukraine.bobac,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.glirarium.org/dormouse/biology-chaetocauda.html,web.glirarium.chaetocauda,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.kyrgyz-taigan.elcat.kg/eng-gallery%205%203.htm,web.kyrgyz-taigan.gallery,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.tiho-hannover.de/gibbons/main2/index.html,web.tiho.gibbons,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.traveltaiwan.com/e/em.html,web.traveltaiwan.em,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.ultimateungulate.com/artiodactyla/dama_mesopotamica.html,web.ultimateungulate.dama-mesopotamica,"URL key of the Mass Reference column (1 kept row); web page"
+http://www.ultimateungulate.com/artiodactyla/sus_celebensis.html,web.ultimateungulate.sus-celebensis,"URL key of the Mass Reference column (1 kept row); web page"
+www.earthscape.org/r3/robinson/robinson23.pdf,web.earthscape.robinson23,"URL key of the Mass Reference column (1 kept row); PDF"
+www.hokudai.ac.jp/fsc/ bg/muse/pdf/oriipdf/oriilist08.pdf,web.hokudai.oriilist08,"URL key of the Mass Reference column (1 kept row); PDF"

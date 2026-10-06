@@ -1,10 +1,10 @@
-# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 17:51:17
+# TaxonBodyMass_DB Raw Name Report -- 2026-10-05 18:51:10
 
 Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) changed beyond blank -> underscore or that matched a rule of `audit/raw_name_patterns.csv`, grouped by the class of the rule that decided its fate and by source. Row counts are records in the cached frames before any later filter. A dropped record shows `(dropped)`; a `Genus_sp` or `Genus_cf` result is a marker that `RemoveNonTaxa()` removes.
 
 ## Summary
 
-1,356 distinct raw names (60,067 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
+1,357 distinct raw names (60,066 rows) in 15 class(es). Names not covered by any rule (class `error`): 0.
 
 | class | names | rows | records dropped | sources |
 |---|---:|---:|---:|---|
@@ -20,7 +20,7 @@ Every raw taxon name that `FixFormatting()` (`R/library/fix_formatting.r`) chang
 | species_group | 7 | 53 | 0 | Hrycik_2024 (5), Kendall_etal_2019 (2) |
 | synonym | 10 | 35 | 0 | Makarieva_2008 (4), DeLong_etal_2018 (2), Verberk_2020 (2), vertnet-aves-sept2016 (2) |
 | authority | 166 | 6,765 | 0 | Brose_2005 (164), Makarieva_2008 (2), Brose_etal_2018 (1) |
-| trinomial | 163 | 2,834 | 0 | Cai_etal_2025 (41), Makarieva_2008 (34), Brose_etal_2018 (30), McCoy_2008 (14), Quaardvark (11), Hirt_etal_2017 (10), Lislevand_etal_2007 (9), Brose_2005 (7), Herberstein_etal_2022 (5), AndersonGillooly_2017 (2), Baach_2026 (2), Verberk_2020 (2), Brown_etal_2018 (1), Hrycik_2024 (1), Kendall_etal_2019 (1), sealifebase (1), Smith_2003 (1), Tucker_etal_2014b (1) |
+| trinomial | 164 | 2,833 | 0 | Cai_etal_2025 (41), Makarieva_2008 (34), Brose_etal_2018 (30), McCoy_2008 (14), Quaardvark (11), Hirt_etal_2017 (10), Lislevand_etal_2007 (8), Brose_2005 (7), Herberstein_etal_2022 (5), AndersonGillooly_2017 (2), Baach_2026 (2), Verberk_2020 (2), Brown_etal_2018 (1), Hrycik_2024 (1), Kendall_etal_2019 (1), sealifebase (1), Smith_2003 (1), Tucker_etal_2014b (1) |
 | encoding | 2 | 101 | 0 | Brose_etal_2018 (1), Makarieva_2008 (1) |
 | symbols | 63 | 413 | 0 | Makarieva_2008 (31), Mahe_2023 (15), Brose_etal_2018 (6), vertnet-traits-sept2016 (3), Hechinger_etal_2011 (2), Brose_2005 (1), DeLong_etal_2010 (1), Herberstein_etal_2022 (1), Kinsella_etal_2020 (1), Pekar_etal_2021 (1), Tucker_etal_2014b (1), vertnet-aves-sept2016 (1), vertnet-fishes-sept2016 (1), vertnet-mammalia-sept2016 (1) |
 
@@ -502,13 +502,13 @@ The 60 names with most records (of 167):
 | `Conocephalus discolor (Thunbg.)` | `Conocephalus_discolor` | authority | 38 | Brose_2005 |
 | `Nestus mendicus (Er.)` | `Nestus_mendicus` | authority | 38 | Brose_2005 |
 
-## trinomial (163 names, 2,834 rows)
+## trinomial (164 names, 2,833 rows)
 
 A third, lowercase token (a subspecies or variety epithet, with or without a rank marker such as var. or ssp.) folds into the species.
 
-By source: Brose_etal_2018 (30 names, 2,534 rows); Brose_2005 (7 names, 137 rows); Cai_etal_2025 (41 names, 41 rows); Makarieva_2008 (34 names, 34 rows); AndersonGillooly_2017 (2 names, 15 rows); McCoy_2008 (14 names, 15 rows); Hirt_etal_2017 (10 names, 11 rows); Quaardvark (11 names, 11 rows); Hrycik_2024 (1 names, 9 rows); Lislevand_etal_2007 (9 names, 9 rows); Herberstein_etal_2022 (5 names, 5 rows); Verberk_2020 (2 names, 4 rows); Kendall_etal_2019 (1 names, 3 rows); Baach_2026 (2 names, 2 rows); Brown_etal_2018 (1 names, 1 rows); sealifebase (1 names, 1 rows); Smith_2003 (1 names, 1 rows); Tucker_etal_2014b (1 names, 1 rows).
+By source: Brose_etal_2018 (30 names, 2,534 rows); Brose_2005 (7 names, 137 rows); Cai_etal_2025 (41 names, 41 rows); Makarieva_2008 (34 names, 34 rows); AndersonGillooly_2017 (2 names, 15 rows); McCoy_2008 (14 names, 15 rows); Hirt_etal_2017 (10 names, 11 rows); Quaardvark (11 names, 11 rows); Hrycik_2024 (1 names, 9 rows); Lislevand_etal_2007 (8 names, 8 rows); Herberstein_etal_2022 (5 names, 5 rows); Verberk_2020 (2 names, 4 rows); Kendall_etal_2019 (1 names, 3 rows); Baach_2026 (2 names, 2 rows); Brown_etal_2018 (1 names, 1 rows); sealifebase (1 names, 1 rows); Smith_2003 (1 names, 1 rows); Tucker_etal_2014b (1 names, 1 rows).
 
-The 60 names with most records (of 173):
+The 60 names with most records (of 172):
 
 | raw name | result | classes | rows | source |
 |---|---|---|---:|---|
