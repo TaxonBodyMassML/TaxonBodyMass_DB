@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-05 21:32:27
+# Citation and provenance warnings -- 2026-10-06 07:11:20
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 172589 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5044
+- provenance rows: 172620 (39023 species); distinct primary CiteIDs: 2047; unresolved references (pending / not_found): 41; unverified references: 5640
 
 ## Problems
 
@@ -43,7 +43,7 @@ One row per source label: species and record links (species x source x reference
 | Ehnes_etal_2011 | compilation | 454 | 2259 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Eklof_etal_2017 | primary | 5 | 103 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ernest_2003 | compilation | 1207 | 1216 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Faurby_etal_2018 | compilation | 4998 | 5046 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Faurby_etal_2018 | compilation | 4998 | 5046 | 0 | 596 | 0 | 0 | 0 | 0 | 0 | 596 | 0 | 0 |
 | Feldman_etal_2016 | derived | 9474 | 9592 | 100 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 137 | 139 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | compilation | 410 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

@@ -358,7 +358,13 @@ reflist_specs <- list(
   # entry's Taxa text); the records' SVL reference cells split at ',' or ';'
   Meiri_2018   = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '[,;]',
-                      compiler = 'Meiri', compilation_doi = '10.1111/geb.12773')
+                      compiler = 'Meiri', compilation_doi = '10.1111/geb.12773'),
+  # PHYLACINE 1.2 (Stage 2): the Mass.Source cell of Trait_data.csv is the full
+  # citation (or a bare 'Journal volume: pages (year)' string) of the work the
+  # mass was taken from; hashed to 'h:<sha1-8>' keys by the parser as for
+  # Herberstein; 'Smith, F. A., et al. 2003 ...' on most rows (hop 2 to Smith_2003)
+  Faurby_etal_2018 = list(format = 'inrow', file = 'Trait_data.csv', citation_col = 'Mass.Source',
+                          compiler = 'Faurby', compilation_doi = '10.1002/ecy.2443')
 )
 
 ReflistSpec <- function(source_label) {
