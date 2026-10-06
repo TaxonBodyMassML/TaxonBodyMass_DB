@@ -1,1162 +1,1159 @@
-# Citations of Meiri_2018 -- 2026-10-05 17:43:03 (tbmcite 0.1.0)
+# Citations of Meiri_2018 -- 2026-10-05 19:30:44 (tbmcite 0.1.0)
 
-Steps: --queue
+Steps: --sheet --no-dry-run
 
-- --queue (re-scoring pending rows from the cache): compilation DOI 10.1111/geb.12773; 48 deposited references (42 with DOI)
-- --verify: 4234 reference(s) left unverified -- api.openalex.org: request quota exhausted (HTTP 429, resets in about 23.3 h); references that need this service are left unverified, re-run --verify later (or set OPENALEX_API_KEY): Darevsky 1964 [2], Darevsky 1992, Darevsky and Kupriyanova 1993, Darevsky and Orlov 1994 [1], Darevsky and Orlov 1994 [2], Darevsky and Orlov 2005, Darevsky and Orlova 1996, Darevsky and Roitberg 1999, Darevsky and Shcherbak 1978, Darevsky and Szczerbak 1997, Darevsky and Tuniyev 1997, Darevsky and Van Sang 1983, Darevsky et al. 1984, Darevsky et al. 2004, Das 1991, Das 1993, Das 1996, Das 1997 [3], Das 1997 [4], Das 1999 [1], Das 2004 [1], Das 2004 [2], Das 2005, Das 2010, Das 2011, Das and Austin 2007, Das and Bauer 1998, Das and Bauer 2000, Das and Das 2007, Das and Das 2017, Das and de Silva 2011, Das and Greer 2002, Das and Grismer 2003, Das and Leong 2004, Das and Lim 2000, Das and Lim 2003, Das and Lim 2005, Das and Lim 2009, Das and Palden 2000, Das and Sengupta 2000, Das and Vijayakumar 2009, Das and Yaakob 2003, Das et al. 1998, Das et al. 2008 [2], Das et al. 2009, Das et al. 2017, Dashevsky et al. 2013, Datta-Roy et al. 2013 [1], Datta-Roy et al. 2013 [2], Datta-Roy et al. 2017, Daudin and de Silva 2007, Daut and Andrews 1993, David et al. 2004, David et al. 2006, David et al. 2011, Davidge 1979, Davis 1954, Davis and Bamford 2005, Davis and Dixon 1961, Davis and Smith 1953, Davis et al. 2008, Davis et al. 2014, Davis et al. 2015 [1], Davis et al. 2015 [2], Davis et al. 2016, Dayananda et al. 2016, D'Cruze and Stafford 2006, de Amorim et al. 2017, de Buffrenil and Hemery 2002, de Buffrenil and Rimblot-Baly 1999, de Espinoza et al. 1990, De Freitas et al. 2011, de Freitas et al. 2013 [1], de Grijs 1936, de Jong 1927, De Jong 1930, De Lisle 1996, de los Santos and de Nicolas 2008, de Oca 1994, de Oca 1996, de Oca et al. 2001, de Oca et al. 2013, De Oca et al. 2013, De Oca et al. 2014, de Oca et al. 2014, de Oca et al. 2018, de Oliveira and Pessanha 2013, De Pous et al. 2015, de Queiroz 1990 [1], de Queiroz 1990 [2], De Rooij 1915, de Silva et al. 2005 [1], De Silva et al. 2017, De Sousa et al. 2010, De Witte 1922, de Witte 1933 [1], de Witte 1933 [2], de Witte 1941, de Witte 1953, Dearing and Schall 1994, Deepak et al. 2015, Deepak et al. 2016 [2], Degenhardt et al. 1996, Dehghani et al. 2014, Dejun 1989, Del Canto 2013, Del Prado et al. 2018, Delaugerre 1984, Dely and Bohme 1984, Demangel et al. 2015, Denzer et al. 2015, Deraniyagala 1953, Dewynter and Surugue 2012, Dial 1975, Dial and Grismer 1992, Dial et al. 1987, Dias and Rocha 2004, Dias and Rocha 2013, Dias et al. 2002, Diaz and Cadiz 2012, Diaz and Hedges 2008, Diaz and Hedges 2009, Diaz et al. 1996, Diaz et al. 1998, Diaz et al. 2004, Diaz et al. 2006, Diaz et al. 2007, Diaz-Ayala et al. 2015, Diaz-Cardenas et al. 2017, Dickerson 1916, Dickerson 1919, Dickinson and Fa 2000, Dimond et al. 2012, Diong and Lim 1998, Disi 1991, Disi et al. 2001, Dittmer et al. 2015, Dixon 1956, Dixon 1960 [2], Dixon 1962, Dixon 1966, Dixon 1969, Dixon 1970 [1], Dixon 1970 [2], Dixon 1970 [3], Dixon 1973 [1], Dixon 1974, Dixon and Huey 1970, Dixon and Kluge 1964, Dixon and Lamar 1981, Dixon and Lemos-Espinal 2010, Dixon and Soini 1986, Dixon and Wright 1975, Dmi'el et al. 1997, Doan and Adams 2015, Doan and Castoe 2003, Doan and Lamar 2012, Doan and Schargel 2003, Dodd 1980, Dodd 1985, Doi and Kamita 1937, Domingos et al. 2017 [1], Dominguez et al. 2006, Dominguez et al. 2010, Dominguez-Godoy et al. 2017, Donnellan et al. 2002, Donnellan et al. 2009, Donnelly et al. 2006, Donoso-Barros 1966 [1], Donoso-Barros 1966 [2], Doody et al. 2010, Doody et al. 2014, Doria 1874, dos Santos 2013, dos Santos et al. 2007, Dos Santos et al. 2012, dos Santos et al. 2012, Doughty 1997, Doughty and Hutchinson 2008, Doughty and Oliver 2011, Doughty and Oliver 2013, Doughty and Shine 1995, Doughty and Thompson 1998, Doughty et al. 2007, Doughty et al. 2008, Doughty et al. 2010, Doughty et al. 2011 [1], Doughty et al. 2012 [1], Doughty et al. 2012 [2], Doughty et al. 2014, Doughty et al. 2015, Doughty et al. 2016, Doughty et al. 2018, Douglas 1982, Downes and Shine 1999, Drewes 1972, Dring 1979, Drummond et al. 2014, Du and Ji 2001, Du et al. 2000, Du et al. 2005 [3], Du et al. 2006, Du et al. 2011, Du et al. 2012, Du et al. 2014, Du Toit et al. 2003, Dubey et al. 2010, Dubey et al. 2013, Dubke et al. 2018, Duda and Sahi 1978 [2], Dudek et al. 2015, Duellman 1961, Duellman 1963, Duellman 1965, Duellman 1978, Duellman 1987, Duellman 2005, Duellman and Mendelson 1995, Duffield and Bull 1996, Duffield and Bull 1998, Dujsebayeva et al. 2009, Dunger 1964, Dunger 1967 [1], Dunger 1967 [2], Dunger 1967 [3], Dunger 1972, Dunger 1973, Dunham and Miles 1985, Dunham et al. 1978, Dunn 1927, Dunn 1935, Dunn 1940, Dunn 1944 [1], Dunn 1944 [2], Dunson and Bramham 1981, Durtsche 2000, Dutra et al. 2011, Dutton et al. 1975, Duvdevani 1971, Duvdevani and Borut 1974, Echevarria and Venegas 2013, Echevarria and Venegas 2015, Echevarria et al. 2015, Echternacht 1970, Echternacht 1977, Echternacht 1983, Eckhardt et al. 2012, Eckhardt et al. 2017, Edwards 1999, Edwards and Melville 2011, Edwards et al. 2002, Edwards et al. 2013, Eidenmueller and Wicker 2005, Eifler and Passek 2000, Eiselt 1968, Eiselt 1969, Eiselt and Schmidtler 1986, Ekner et al. 2008, El Mouden et al. 1999, Ellinger et al. 2001, Ellis and Pauwels 2012, Elstrott and Irschick 2004, Emmrich 1994, Emslie 1972, Entiauspe-Neto et al. 2017, Erdelen 1998 [2], Eremchenko and Das 2004, Eremchenko et al. 1992, Ergul et al. 2014, Ergul et al. 2017, Erickson 2003, Eroglu et al. 2017 [1], Eroglu et al. 2017 [2], Escobar et al. 2003, Escobar-Huerta et al. 2015, Escobedo-Galvan et al. 2017, Escudero et al. 2017, Eskandarzadeh et al. 2015, Espinoza and Lobo 2003, Espinoza et al. 2000, Espinoza et al. 2004, Esqueda 2004, Esqueda et al. 2004, Esqueda et al. 2016, Esquerre et al. 2013, Esquerre et al. 2014, Esquerre et al. 2016, Esser and Rodder 2012, Etchepare et al. 2015, Etheridge 1965, Etheridge 1968, Etheridge 1969, Etheridge 1995, Etheridge 2000, Etheridge 2001, Etheridge and Christie 2003, Etheridge and Espinoza 1997, Etheridge and Williams 1985, Etheridge and Williams 1991, Evans 1951, Evans and Evans 1980, Faizi and Rastegar-Pouyani 2006, Faizi et al. 2010, Faizi et al. 2017, Farhadi Qomi et al. 2011, Faria and Araujo 2004, Fathinia and Rastegar-Pouyani 2011, Fathinia et al. 2009, Fathinia et al. 2011 [1], Fathinia et al. 2014, Faundez 2012, Feder and Feder 1981, Fellers and Drost 1991, Fellers et al. 1998, Feltrim and De Lema 2000, Fenner et al. 2007, Ferguson et al. 2006, Feria-Ortiz and Garcia-Vazquez 2012, Feria-Ortiz et al. 2011, Feria-Ortiz et al. 2018, Fernandez et al. 2015, Ferner et al. 1997, Ferreira et al. 2009, Ferreira et al. 2016, Ferreiro and Galan 2004, Filadelfo et al. 2014, Filho et al. 2017, Filogonio et al. 2009, Finley 1945, Fischer 2012, Fischer and Lindenmayer 2005, Fisher 1997, Fisher et al. 2013 [1], Fisher et al. 2013 [2], Fisher et al. 2017, Fitch 1954, Fitch 1955, Fitch 1967, Fitch 1970, Fitch 1976, Fitch 1978 [1], Fitch 1978 [2], Fitch 1981, Fitch 1983, Fitch 1985, Fitch 1989, Fitch 2003, Fitch and Greene 1965, Fitch and Hackforth-Jones 1983, Fitch and Henderson 1973, Fitch and Henderson 1976, Fitch and Henderson 1978, Fitch and Hillis 1984, Fitch et al. 1976, Fitness et al. 2013, Fitze et al. 2012, Fitzgerald et al. 1991, Fitzgerald et al. 1993, Fitzgerald et al. 1999 [1], Fitzgerald et al. 1999 [2], Fitzgerald et al. 2015, FitzSimons 1930, FitzSimons 1932, Fitzsimons 1938, Fitzsimons 1941, FitzSimons 1943, Flecks et al. 2012 [1], Flecks et al. 2012 [2], Fleischmann 1981, Fleming and Hooker 1975, Fleming et al. 2013, Flemming 1993, Flemming 1994, Flemming and Mouton 2000, Flemming and Mouton 2002, Flemming and van Wyk 1992, Flores-villela and Munoz-Alonso 1990, Flores-Villela and Rubio-Perez 2008 [2], Flores-Villela and Rubio-Perez 2008 [4], Flores-Villela and Rubio-Perez 2008 [5], Flores-Villela and Rubio-Perez 2008 [6], Flores-Villela and Rubio-Perez 2008 [7], Flores-Villela and Rubio-Perez 2008 [9], Flores-Villela and Rubio-Perez 2008 [11], Flores-Villela and Rubio-Perez 2008 [12], Flores-Villela and Rubio-Perez 2008 [13], Flores-Villela and Rubio-Perez 2008 [14], Flores-Villela and Rubio-Perez 2008 [15], Flores-Villela and Rubio-Perez 2008 [16], Flores-Villela and Rubio-Perez 2008 [17], Flores-Villela and Rubio-Perez 2008 [18], Flores-Villela and Rubio-Perez 2008 [19], Flores-Villela and Rubio-Perez 2008 [21], Flores-Villela and Rubio-Perez 2008 [23], Flores-Villela and Rubio-Perez 2008 [24], Flores-Villela and Rubio-Perez 2008 [26], Flores-Villela and Rubio-Perez 2008 [27], Flores-Villela and Rubio-Perez 2008 [31], Flores-Villela and Rubio-Perez 2008 [32], Flores-Villela and Rubio-Perez 2008 [33], Flores-Villela and Rubio-Perez 2008 [34], Flores-Villela and Rubio-Perez 2008 [35], Flores-Villela and Rubio-Perez 2008 [36], Flores-Villela and Rubio-Perez 2008 [37], Flores-Villela and Rubio-Perez 2008 [40], Flores-Villela and Rubio-Perez 2008 [41], Flores-Villela and Rubio-Perez 2008 [42], Flores-Villela and Rubio-Perez 2008 [43], Flores-Villela and Rubio-Perez 2008 [44], Flores-Villela and Rubio-Perez 2008 [46], Flores-Villela and Rubio-Perez 2008 [47], Flores-Villela and Rubio-Perez 2008 [48], Flores-Villela and Rubio-Perez 2008 [49], Flores-Villela and Rubio-Perez 2008 [50], Flores-Villela and Rubio-Perez 2008 [51], Flores-Villela and Rubio-Perez 2008 [52], Flores-Villela and Rubio-Perez 2008 [53], Flores-Villela and Rubio-Perez 2008 [54], Flores-Villela and Rubio-Perez 2008 [55], Flores-Villela and Rubio-Perez 2008 [56], Flores-Villela and Rubio-Perez 2008 [57], Flores-Villela and Rubio-Perez 2008 [59], Flores-Villela and Rubio-Perez 2008 [60], Flores-Villela and Rubio-Perez 2008 [61], Flores-Villela and Rubio-Perez 2008 [62], Flores-Villela and Rubio-Perez 2008 [63], Flores-Villela and Rubio-Perez 2008 [64], Flores-Villela and Rubio-Perez 2008 [65], Flores-Villela and Rubio-Perez 2008 [66], Flores-villela and Sanchez 2003, Flores-villela et al. 2005, Flores-villela et al. 2007, Flores-Villela et al. 2010 [1], Flores-Villela et al. 2010 [2], Flores-Villela et al. 2010 [3], Florio et al. 2012, Flower 1933, Flury 1949, Fobes et al. 1992, Fobes et al. 1993, Fong and Diaz 2004, Fong and Garrido 2000, Font et al. 2009, Fontes et al. 2003, Formanowicz et al. 1990, Foster et al. 2015, Foufopoulos and Ives 1999, Foufopoulos and Richards 2007, Fouquette 1968, Fox and Shipman 2003, Franco and de la Torre 1990, Frankenberg and Werner 1992, Franzen and Heckes 1999, Franzen et al. 2008, Frappell and Daniels 1991, Freeman 1997, Freire 1999, Freire et al. 2012, Freire et al. 2013, Fritts 1969 [2], Fritts 1972, Fritts et al. 2002, Frydlova and Frynta 2010, Frydlova and Frynta 2015, Fuenmayor et al. 1999, Fuentes-Fernandez et al. 2016, Fuhn 1972, Fuller et al. 2005, Funk 1981, Funnell et al. 2012, Gadsden and Castaneda 2013, Gadsden and Estrada-Rodriguez 2008, Gadsden et al. 2006, Gadsden et al. 2015 [1], Gainsbury and Colli 2003, Galan 1997, Galan 1999, Galan 2003 [1], Galan 2003 [2], Galan 2011, Galan and Salvador 2006, Galan and Vicente 2003, Galdamez et al. 2016, Galdino and Van Sluys 2011, Galdino et al. 2003, Gallagher and Dixon 1980, Gallagher and Dixon 1992, Gallardo 1962, Gallego-Carmona et al. 2016, Galoyan 2017, Galoyan and Geissler 2013, Gamble et al. 2011 [2], Ganesh 2017, Ganesh and Arumugam 2016, Ganesh and Shankar 2009, Ganesh et al. 2011, Ganesh et al. 2017, Gans 1961, Gans 1962, Gans 1963 [1], Gans 1963 [2], Gans 1963 [3], Gans 1963 [4], Gans 1964, Gans 1965 [1], Gans 1965 [2], Gans 1965 [3], Gans 1966, Gans 1971 [1], Gans 1971 [2], Gans 1976 [1], Gans 1987, Gans and Diefenbach 1972, Gans and Fusari 1994, Gans and Kochva 1965, Gans and Kraklau 1989, Gans and Mathers 1977, Gans et al. 1965, Garcia-Bastida et al. 2013, Garcia-Perez 1995, Garcia-Perez and Schargel 2017, Garcia-Perez and Yustiz 1995, Garcia-Rosales et al. 2017, Garcia-Vazquez and Feria-Ortiz 2006, Garcia-Vazquez et al. 2009, Garcia-Vazquez et al. 2010 [1], Garcia-Vazquez et al. 2010 [2], Garcia-Vazquez et al. 2014, Garda et al. 2012, Garda et al. 2014, Gardner 1994, Gardner 2013, Gardner and Jasper 2012 [2], Garin et al. 2013, Garland 1994, Garman 1892, Garrick 1974, Garrido 1982, Garrido and Hedges 1992, Garrido and Hedges 2001, Garrido and Moreno 1998, Garrison et al. 2016, Gates 1963, Gatten 1985, Gaulke 2011, Gaulke and Curio 2001, Gaulke et al. 2002, Gaulke et al. 2007 [2], Gawor et al. 2016, Geheber et al. 2016, Gehlbach and Collete 1957, Gehring et al. 2010 [1], Gehring et al. 2010 [2], Gehring et al. 2011, Geissler et al. 2011 [3], Geissler et al. 2012, Geniez and Arnold 2006, Geniez et al. 2004, Geniez et al. 2011, Geniez et al. 2014, Gerber and Echternacht 2000, Gerlach 2002, Gerlach 2005 [2], Gerlach and Canning 1996, Germano 2007, Germano and Williams 2005, Gerner 2008, Gerson 2011, Ghaleb et al. 2017, Gharzi and Yari 2013, Ghimire and Shah 2014, Gholamifard and Rastegar-Pouyani 2015, Gholamifard et al. 2015 [1], Gholamifard et al. 2015 [2], Gholamifard et al. 2016, Gibbons 1981, Gibbons 1984, Gibbons and Brown 1988, Gibbons and Watkins 1982, Gibbs et al. 2007, Gicca 1982, Gienger and Beck 2007, Giese et al. 2014, Gifford and Powell 2002 [2], Gifford and Powell 2007, Gifford et al. 2000, Gifford et al. 2008, Gil et al. 1993, Gil et al. 1994, Giles 2000, Gill 1993 [2], Gill 1997, Girard 2013, Giri 2008, Giri and Bauer 2008, Giri et al. 2009 [1], Giri et al. 2009 [2], Giri et al. 2009 [3], Giri et al. 2017, Girling et al. 1998, Giugliano et al. 2013, Glaw and Vences 1994, Glaw and Vences 2007, Glaw et al. 2001, Glaw et al. 2006, Glaw et al. 2009 [1], Glaw et al. 2009 [2], Glaw et al. 2010, Glaw et al. 2012, Glaw et al. 2014, Glor et al. 1998, Glor et al. 2000, Gocmen et al. 1996, Gocmen et al. 2008, Goicoechea et al. 2013, Goldberg 1983, Goldberg 1987, Goldberg 2005, Goldberg 2006 [1], Goldberg 2006 [2], Goldberg 2006 [3], Goldberg 2006 [4], Goldberg 2006 [5], Goldberg 2006 [6], Goldberg 2006 [7], Goldberg 2007 [1], Goldberg 2007 [2], Goldberg 2008 [1], Goldberg 2008 [2], Goldberg 2008 [4], Goldberg 2008 [5], Goldberg 2009 [2], Goldberg 2009 [3], Goldberg 2009 [4], Goldberg 2009 [5], Goldberg 2010 [1], Goldberg 2010 [2], Goldberg 2010 [3], Goldberg 2010 [4], Goldberg 2010 [5], Goldberg 2010 [6], Goldberg 2011 [1], Goldberg 2011 [2], Goldberg 2011 [3], Goldberg 2011 [5], Goldberg 2011 [6], Goldberg 2011 [7], Goldberg 2011 [8], Goldberg 2012 [1], Goldberg 2012 [3], Goldberg 2012 [4], Goldberg 2012 [5], Goldberg 2012 [6], Goldberg 2012 [7], Goldberg 2012 [8], Goldberg 2012 [9], Goldberg 2012 [10], Goldberg 2012 [11], Goldberg 2012 [12], Goldberg 2012 [13], Goldberg 2012 [14], Goldberg 2012 [15], Goldberg 2013 [1], Goldberg 2013 [2], Goldberg 2013 [3], Goldberg 2013 [4], Goldberg 2013 [5], Goldberg 2013 [6], Goldberg 2013 [7], Goldberg 2013 [8], Goldberg 2013 [9], Goldberg 2013 [10], Goldberg 2013 [11], Goldberg 2013 [13], Goldberg 2013 [14], Goldberg 2013 [15], Goldberg 2013 [16], Goldberg 2014 [2], Goldberg 2014 [3], Goldberg 2014 [4], Goldberg 2014 [5], Goldberg 2014 [7], Goldberg 2014 [8], Goldberg 2014 [10], Goldberg 2014 [11], Goldberg 2014 [12], Goldberg 2015 [1], Goldberg 2015 [2], Goldberg 2015 [3], Goldberg 2015 [4], Goldberg 2015 [5], Goldberg 2015 [6], Goldberg 2016 [1], Goldberg 2016 [2], Goldberg 2016 [3], Goldberg 2017 [1], Goldberg 2017 [2], Goldberg 2017 [3], Goldberg 2017 [4], Goldberg 2017 [5], Goldberg 2017 [6], Goldberg 2017 [7], Goldberg 2018 [1], Goldberg 2018 [2], Goldberg and Beaman 2003, Goldberg and Beaman 2004 [1], Goldberg and Beaman 2004 [2], Goldberg and Beaman 2005, Goldberg and Beaman 2012, Goldberg and Bezy 2014 [4], Goldberg and Bezy 2014 [5], Goldberg and Bezy 2014 [6], Goldberg and Bursey 2010 [1], Goldberg and Bursey 2010 [2], Goldberg and Bursey 2017, Goldberg and Camarillo-Rangel 2003, Goldberg and Grismer 2013, Goldberg and Grismer 2014 [1], Goldberg and Grismer 2014 [2], Goldberg and Grismer 2014 [3], Goldberg and Grismer 2014 [4], Goldberg and Grismer 2014 [5], Goldberg and Grismer 2014 [7], Goldberg and Grismer 2014 [8], Goldberg and Grismer 2014 [9], Goldberg and Grismer 2014 [10], Goldberg and Grismer 2015 [1], Goldberg and Grismer 2015 [2], Goldberg and Grismer 2015 [3], Goldberg and Grismer 2016 [1], Goldberg and Grismer 2016 [2], Goldberg and Grismer 2016 [3], Goldberg and Grismer 2016 [4], Goldberg and Grismer 2016 [5], Goldberg and Grismer 2016 [6], Goldberg and Grismer 2016 [7], Goldberg and Grismer 2016 [8], Goldberg and Grismer 2017 [2], Goldberg and Grismer 2017 [3], Goldberg and Grismer 2017 [4], Goldberg and Grismer 2017 [5], Goldberg and Kraus 2009, Goldberg and Kraus 2011 [1], Goldberg and Kraus 2011 [2], Goldberg and Kraus 2011 [3], Goldberg and Kraus 2012, Goldberg and Kraus 2016, Goldberg and Lowe 1997, Goldberg and Mahrdt 2010, Goldberg and Maza 2014, Goldberg and Maza 2017 [1], Goldberg and Maza 2017 [3], Goldberg and Miller 1985, Goldberg and Robinson 1979, Goldberg and Rodriguez 1986, Goldberg et al. 1995, Goldberg et al. 2002 [1], Goldberg et al. 2003 [1], Goldberg et al. 2003 [2], Goldberg et al. 2009, Goldberg et al. 2011, Goldberg et al. 2012 [1], Goldberg et al. 2012 [2], Goldberg et al. 2014 [1], Goldberg et al. 2014 [2], Goldberg et al. 2016, Golubev et al. 1994, Gomes and Maciel 2012, Gomes et al. 2009, Gomes et al. 2015, Goncalves et al. 2012 [2], Goncalves et al. 2012 [3], Gonzalez et al. 2005, Gonzalez et al. 2014, Gonzalez-Espinoza et al. 2017, Gonzalez-Negron 2004, Gonzalez-Porter et al. 2015, Good 1994, Good and Schwenk 1985, Goodman 2004, Goodman 2006 [1], Goodman 2007 [2], Goodman and Isaac 2008, Goodman et al. 2007, Goodman et al. 2009, Goodman et al. 2013, Goonewardene et al. 2003, Goris and Maeda 2004, Gorman and Harwood 1977, Gorman and Stamm 1975, Gorzula and Senaris 1999, Goyannes-Araujo et al. 2009, Graham 1981, Graham and Schwarts 1978, Granatosky and Krysko 2014, Grandison 1956, Grandison 1972, Grant 2005, Gray et al. 2016, Greaves et al. 2007, Greaves et al. 2008, Greckhamer 1995, Green and Christian 2007, Greenbaum 2005, Greenbaum and Carr 2005, Greenbaum et al. 2006, Greenbaum et al. 2011, Greenbaum et al. 2012 [1], Greenbaum et al. 2012 [2], Greene 1983, Greene et al. 2006, Greenville and Dickman 2005, Greer 1967 [2], Greer 1968, Greer 1973, Greer 1974, Greer 1976, Greer 1977 [2], Greer 1979, Greer 1980, Greer 1982 [1], Greer 1982 [2], Greer 1983, Greer 1985, Greer 1986, Greer 1989, Greer 1990, Greer 1991 [2], Greer 1992, Greer 1997 [1], Greer 2001, Greer 2005, Greer and Haacke 1982, Greer and Parker 1967 [1], Greer and Parker 1968 [1], Greer and Parker 1968 [2], Greer and Parker 1971, Greer and Parker 1974, Greer and Parker 1979, Greer and Shea 2000, Greer and Shea 2004, Greer and Simon 1982, Greer and Smith 2000, Greer and Wadsworth 2003, Greer and Wilson 2001, Greer et al. 1985, Greer et al. 2005, Griffing et al. 2017, Griffing et al. 2018, Griffith 1990, Griffith 1991, Grillitsch and Cabela 1990, Grisales-Martinez et al. 2017, Grismer 1990 [1], Grismer 1994, Grismer 1999 [1], Grismer 1999 [2], Grismer 2000, Grismer 2002, Grismer 2005, Grismer 2006 [2], Grismer 2007, Grismer 2008 [1], Grismer 2010, Grismer and Ahmed 2008, Grismer and Das 2006, Grismer and Grismer 2010, Grismer and Grismer 2017, Grismer and Hollingsworth 2001, Grismer and Leong 2005, Grismer and Onn 2008, Grismer and Onn 2009, Grismer and Onn 2010, Grismer and Ottley 1988, Grismer and Quah 2015, Grismer et al. 1994, Grismer et al. 1995, Grismer et al. 1999, Grismer et al. 2002 [1], Grismer et al. 2003, Grismer et al. 2007, Grismer et al. 2008 [1], Grismer et al. 2008 [2], Grismer et al. 2008 [3], Grismer et al. 2008 [4], Grismer et al. 2008 [5], Grismer et al. 2009 [1], Grismer et al. 2009 [2], Grismer et al. 2009 [3], Grismer et al. 2010 [1], Grismer et al. 2010 [2], Grismer et al. 2010 [4], Grismer et al. 2010 [5], Grismer et al. 2010 [6], Grismer et al. 2012 [1], Grismer et al. 2013 [1], Grismer et al. 2013 [2], Grismer et al. 2013 [3], Grismer et al. 2014 [2], Grismer et al. 2014 [3], Grismer et al. 2014 [5], Grismer et al. 2014 [6], Grismer et al. 2014 [8], Grismer et al. 2014 [9], Grismer et al. 2014 [10], Grismer et al. 2015 [1], Grismer et al. 2015 [2], Grismer et al. 2015 [3], Grismer et al. 2015 [4], Grismer et al. 2016 [2], Grismer et al. 2016 [3], Grismer et al. 2016 [4], Grismer et al. 2016 [5], Grismer et al. 2016 [6], Grismer et al. 2016 [7], Grismer et al. 2017 [1], Grismer et al. 2017 [2], Grismer et al. 2017 [3], Grizante et al. 2012, Grossmann and Harbig 2010, Grossmann and Ulber 1990, Grummer and Bryson 2014, Guarino 2010, Guarino et al. 2016, Gudynas and Skuk 1983, Guillette 1982, Guillette 1983, Guillette and Casas-Andreu 1987, Guillette and Smith 1982, Guizado-Rodriguez et al. 2014, Gul et al. 2014, Gul et al. 2015 [1], Gul et al. 2015 [2], Gul et al. 2017, Gunther 1893, Gunther 1895, Gunther 1994, Gunther 2000, Gunther and Rosler 2003, Gunther et al. 2005, Guo et al. 2015, Gutierrez et al. 2013, Gutsche 2005, Gutsche and Streich 2009, Gutsche et al. 2004, Guyer 1986, Guyer and Donnelly 2005, Gvozdik et al. 2013, Haacke 1964, Haacke 1965, Haacke 1966, Haacke 1979, Haacke 1986, Haacke 1997, Haacke 2008, Haagner and Mccartney 1992, Haagner and Morgan 1992, Haagner et al. 2000, Haas 1943, Haas 1952, Haas 1957, Haas and Battersby 1959, Haas and Werner 1969, Hagen and Bull 2011, Hahn 1979, Hailey et al. 1987, Haitao 2011, Hall 1976, Hall and Smith 1979, Hallermann 2000, Hallermann 2004, Hallermann 2005, Hallermann 2009, Hallermann and Bohme 2000, Hallermann and Bohme 2007, Hallermann and McGuire 2001, Hallermann et al. 2004, Hallermann et al. 2010, Hallowell 1861, Halloy 2006, Halloy and Halloy 1997, Halloy et al. 2006, Halloy et al. 2007, Hamidy and Mulyadi 2007, Hamilton et al. 2007, Hamilton et al. 2008, Harbig 1988, Harbig 2000, Harbig 2001, Hardeman 2010, Harding et al. 2016, Hardy 1966, Hardy and Cole 1998, Hardy and McDiarmid 1969, Hare 2005, Hare and Cree 2005, Hare et al. 2006, Hare et al. 2010, Harikrishnan and Vasudevan 2013, Harikrishnan et al. 2012 [2], Harikrishnan et al. 2012 [3], Harlow and Taylor 2000, Harmon and Gibson 2006, Harris 1982, Harris 1994, Harris and Ayala 1987, Harris and Kluge 1984, Hartley et al. 1998, Hartmann et al. 2009, Hartmann et al. 2010, Hartmann et al. 2011, Hartmann et al. 2013 [1], Hartmann et al. 2013 [2], Hartmann et al. 2016, Harvey and Gutberlet 1998, Harvey et al. 2004, Harvey et al. 2008, Harvey et al. 2012, Harvey et al. 2014, Harvey et al. 2015, Harvey et al. 2016, Harvey et al. 2017 [1], Harvey et al. 2017 [2], Harvey et al. 2018, Hasbun and Kohler 2009, Hauschild 1988, Hauschild and Gassner 1995, Hawlitschek and Glaw 2013, Hawlitschek et al. 2011, Hawlitschek et al. 2016, Hayden et al. 2008, Hayes and Carter 2005, Hayes et al. 2004, He et al. 2011, Heaton 2017, Heatwole 1975, Heatwole and Taylor 1987, Heatwole and Torres 1967, Heatwole and Veron 1977, Hecht et al. 2013, Hedges and Conn 2012, Hedges and Garrido 1993, Hedges and Thomas 1989, Hedges and Thomas 2001, Hedges et al. 2016, Heger and Heger 2007, Heidari et al. 2010, Heidari et al. 2012, Heidari et al. 2013, Heideman 1994, Heideman 2002, Heideman et al. 2008, Heidrich et al. 2007, Heinicke et al. 2011 [1], Heinicke et al. 2017 [2], Heitz et al. 2016, Heller 1903, Henderson 1988 [1], Henderson 1988 [2], Henderson 1988 [3], Henderson and Powell 2009, Hendrickson 1966, Henkel 2010, Henkel and Bohme 2001, Henkel and Schmidt 2000, Henle 1989 [1], Henle 1989 [2], Henle 1989 [3], Henle 1990 [1], Henle 1990 [2], Henle 1990 [3], Henle 1991, Henle and Bohme 2003, Herczeg et al. 2007, Heredia et al. 2013, Hernandez and Espinoza 2004, Hernandez et al. 2000, Hernandez-Gallegos et al. 2002, Hernandez-Salinas and Ramirez-Bautista 2014, Hernandez-Salinas et al. 2010, Hernandez-Salinas et al. 2013, Hernandez-Salinas et al. 2016, Herrel et al. 2001, Herrel et al. 2002, Herrel et al. 2004 [2], Herrel et al. 2008, Herrel et al. 2011, Herrmann and Herrmann 2005, Herrmann et al. 2009, Hertz 1976, Hertz 1980, Hertz and Nevo 1981, Hewitt 1938, Hewitt and Methuen 1913, Hews 1996, Heyer 1972, Hibbits 2005, Hibbits et al. 2005, Hibbitts and Hibbitts 2015, Hidalgo-Licona et al. 2016, Hierlihy et al. 2013, Higham et al. 2017, Hikida 1988, Hikida and Zhao 1989, Hikida et al. 2001, Hikida et al. 2002, Hikida et al. 2003, Hillbrand et al. 2011, Hirth 1963 [1], Hirth 1963 [2], Hirth 1965, Hitchmough 1977, Hitchmough 1997, Hite et al. 2008, Hodge et al. 2003, Hodges 1995, Hofer et al. 2003, Hohl et al. 2015, Hojati and Savasari 2014, Hojati et al. 2013 [2], Hojati et al. 2014, Hojati et al. 2016, Holanova et al. 2012, Holden et al. 2014, Holman 1964, Holman 1966, Holman 1971 [1], Holman 1971 [2], Holman 1971 [3], Holman 1971 [4], Holman 1971 [5], Holmes 2004, Holmes and Cree 2006, Honda and Ota 2017, Honda et al. 1997, Honda et al. 2001, Honegger 1969, Honegger 1985, Hoofien 1962, Hoofien 1967, Hoogmoed 1973, Hoogmoed 1974, Hoogmoed 1985, Hoogmoed 1989, Hoogmoed and Avila-Pires 1991, Hoogmoed and Avila-Pires 1992, Hoogmoed and Dixon 1977, Hoogmoed et al. 2009, Horn and Visser 1997, Horner 1992, Horner 2005, Horner 2007 [1], Horner 2007 [2], Horner 2009, Horton 1973, Hoskin 2013, Hoskin 2014, Hoskin and Couper 2004, Hoskin and Couper 2012, Hoskin and Couper 2013, Hoskin and Couper 2014, Hoskin and Couper 2015, Hoskin and Higgie 2008, Hoskin et al. 2003, Hosono and Hikida 1999, Hosseinzadeh et al. 2014 [1], Hotchkin et al. 2001, How and Kitchener 1983, How et al. 1986, How et al. 1987, How et al. 1990, How et al. 1998, Howard et al. 1999, Howard et al. 2007, Hribal and Holanova 2004, Huang 1997 [1], Huang 1997 [2], Huang 1998 [2], Huang 2006 [1], Huang 2006 [2], Huang 2007 [1], Huang 2007 [2], Huang 2010, Huang 2011, Huang and Tu 2008, Huang et al. 2006, Huang et al. 2014, Huerta et al. 2015, Huey 1975, Huey and Bennett 1987, Huey and Dixon 1970, Huey and Pianka 1981, Huey et al. 1974, Huey et al. 1989, Hughes and Behangana 2017, Hughes et al. 2017, Hulebak et al. 2007, Hulse 1992, Hult and Germano 2015, Hummelinck 1940, Hunsaker 1959, Huron et al. 2016, Hurtubia 1973, Husak and McGuire 2014, Husak et al. 2006, Hutchinson 1993, Hutchinson and Donnellan 1992, Hutchinson and Donnellan 1999, Hutchinson et al. 2001, Hutchinson et al. 2009, Hutchinson et al. 2014, Ibarguengoytia 2004, Ibarguengoytia and Casalins 2007, Ibarguengoytia and Cussac 1996, Ibarguengoytia et al. 2007, Ibarguengoytia et al. 2008, Ibarguengoytia et al. 2010, Ibarguengoytia et al. 2016, Ibarra-Vidal 2005, Ibrahim 2004, Ibrahim 2013 [1], Ibrahim 2013 [2], Ibrahim and El-Naggar 2013, Iglesias et al. 2012, Ikeuchi 2004, Ikeuchi et al. 2005, Ikeuchi et al. 2012, Ilgaz 2006, Ilgaz 2009, In den Bosch 1988, In den Bosch 2001 [2], In Den Bosch and Bout 1998, Ineich 1999 [1], Ineich 1999 [2], Ineich 2008, Ineich 2009 [1], Ineich 2009 [2], Ineich 2011, Ineich and Bourgoin 2016, Ineich and Chirio 2000, Ineich and Chirio 2004, Ineich and Fisher 2016, Ineich and Le Garff 2015, Ineich et al. 1997, Ineich et al. 2004, Ineich et al. 2014 [1], Ineich et al. 2016, Inger 1959, Inger 1960, Inger 1961, Inger 1983, Inger and Brown 1980, Inger and Greenberg 1966, Inger and Stuebing 1994, Inger et al. 1984 [1], Inger et al. 1984 [2], Inger et al. 1990, Inger et al. 2001, Ingram 1991, Ingram and Covacevich 1988, Ingram and Covacevich 1989, Ingram and Czechura 1990, Iraeta et al. 2013, Irschick et al. 1996, Irschick et al. 1997, Isada et al. 2010, Iskandar 1994, Iskandar et al. 2011, Iskandar et al. 2017, Itescu et al. 2016 [1], Itescu et al. 2016 [2], Itoh and Ito 2015, Iturriaga and Gonzalez 2015, Iturriaga and Marrero 2013, Iverson et al. 2004 [1], Iverson et al. 2005, Iverson et al. 2006, Izhaki and Haim 1996, Jablonski 2016, Jackson and Telford 1974, Jacobs 2003, Jacobsen 1982, Jacobsen 1984, Jacobsen 1987, Jacobsen 1994, Jacobsen and Broadley 2000, Jacobsen et al. 2010, Jacobsen et al. 2014, Jahed-Haghshenas and Hojati 2015, Jairam and Jairam-Doerga 2015, Jaksic and Schwenk 1983, Jaksic et al. 1980, Jaksic et al. 1982, James and Losos 1991, James and Shine 1988, James et al. 1992, James et al. 2001, Jared et al. 1998, Javed et al. 2010, Jayaneththi and Jablonski 2016, Jennings 1988 [1], Jennings 1990 [1], Jennings 1990 [2], Jennings 1995, Jennings and Thompson 1999, Jensen et al. 2008, Jenssen 1973, Jenssen and Nunez 1994, Jenssen et al. 1989, Jepson 2014, Jerdon 1853, Jerjomtschenko et al. 1999, Jessop et al. 2006, Jessop et al. 2009, Jestrzemski et al. 2013, Jesu et al. 1999, Jesus 2012, Jewell 2008, Jewell 2017, Jewell and Leschen 2004, Jha and Thapa 2002, Ji 2002, Ji et al. 2002, Ji et al. 2006 [1], Ji et al. 2006 [2], Ji et al. 2009, Jimenez?Arcos et al. 2017, Jimenez-Cruz et al. 2005, Jimenez-Robles et al. 2016, Jin and Liao 2015, Jin and Liu 2007, Jin et al. 2007, Jin et al. 2013, Joger 1980, Joger 1981, Joger 1993, Joger and Lambert 1996, Joger and Mayer 2002, Johansen 2012, John et al. 2012 [1], John et al. 2012 [2], John et al. 2012 [3], Johnson and Voigt 1978, Johnson et al. 2010, Johnson et al. 2012, Johnston 1999, Johnston 2000, Johnston 2005, Johnston and Bouskila 2007, Jones 1985, Jones 1987, Jones 2004, Jones and Lovich 2009, Jongbloed 2000, Jono et al. 2015 [1], Jono et al. 2015 [2], Jordan and Amaya 2011, Jordan et al. 2011, Judd 1975, Judd and Ross 1978, Junior et al. 2016, Juri et al. 2015, Kacoliris et al. 2013, Kaiser et al. 2011, Kalayci et al. 2015, Kalboussi and Nouira 2004, Kaliontzopoulou et al. 2008, Kaliontzopoulou et al. 2010 [3], Kamali and Anderson 2015, Kamel and Gatten 1983, Kapsalas et al. 2016, Karamiani and Rastegar-Pouyani 2012, Karamiani et al. 2013 [1], Karamiani et al. 2013 [2], Karamiani et al. 2015 [1], Karamiani et al. 2015 [2], Karasov et al. 1986, Karges and Wright 1987, Karin et al. 2016, Karin et al. 2018, Karmishev and Yarigin 2013, Karsen et al. 1986, Karsen et al. 1998, Karsten et al. 2008, Karunarathna and Amarasinghe 2013, Karunarathna and Kumarasinghe 2011, Karunarathna et al. 2015, Kasperoviczus et al. 2011, Kastle et al. 2013, Kathriner et al. 2014 [1], Kathriner et al. 2014 [2], Katz et al. 2013, Kavaliers et al. 1984, Kawai 2016, Kay and Keogh 2012, Kazemi et al. 2011, Kearney 2002, Kearney 2003 [1], Kennedy 1968, Kennedy 1973, Keogh et al. 2008, Kerr 2013, Kerr et al. 2005, Kerr et al. 2006, Kerster and Smith 1955, Kessler 2010, Khan 1988, Khan 1991, Khan 1993 [1], Khan 2001, Khan 2003, Khan 2006, Khan and Khan 1997, Khan and Rosler 2000, Khan and Tasnim 1990, Khan et al. 2012, Khosravani et al. 2015, Kiabi et al. 1999, Kidov and Timoshina 2017, Kidov et al. 2017, Kiester 1975, Kiester 1982, Kiester 1983, Kim et al. 2012, King and Green 1993, King and Horner 1989, King et al. 1989, Kingdon and Spawls 2010, Kingsbury 1995, Kirchhof et al. 2010 [2], Kirchhof et al. 2012, Kirchhof et al. 2014 [2], Kirchhof et al. 2017 [1], Kirshner 2007, Kizirian 1995, Kizirian 1996, Kizirian and Coloma 1991, Kizirian and McDiarmid 1998, Kizirian et al. 2008, Klauber 1931, Klausewitz 1954 [1], Klaver and Bohme 1988, Klaver and Bohme 1992, Klein et al. 2005, Klemmer and Gaulke 1993, Kluge 1963, Kluge 1964, Kluge 1967, Klutsch et al. 2007, Knapp et al. 2006, Knight and Scudday 1985, Knox 2010, Koch 2013, Koch and Arida 2017, Koch and Beraun 2011, Koch et al. 2006, Koch et al. 2007, Koch et al. 2009 [2], Koch et al. 2009 [3], Koch et al. 2010 [2], Koch et al. 2011, Koch et al. 2013 [2], Koch et al. 2014, Koch et al. 2016, Koenig et al. 2001, Kohl et al. 2016, Kohler 1995, Kohler 1996 [1], Kohler 1996 [2], Kohler 1997, Kohler 2001, Kohler 2003 [1], Kohler 2003 [2], Kohler 2003 [3], Kohler 2005, Kohler 2008, Kohler 2009, Kohler 2010, Kohler 2011 [1], Kohler and Hasbun 2001, Kohler and Hedges 2016, Kohler and Klemmer 1994, Kohler and Lehr 2004, Kohler and Lehr 2015, Kohler and McCranie 2001, Kohler and Smith 2008, Kohler and Sunyer 2008, Kohler and Vesely 2010, Kohler and Vesely 2011, Kohler et al. 1997, Kohler et al. 2000, Kohler et al. 2001, Kohler et al. 2004 [1], Kohler et al. 2006 [1], Kohler et al. 2006 [2], Kohler et al. 2007, Kohler et al. 2009 [1], Kohler et al. 2009 [2], Kohler et al. 2010 [1], Kohler et al. 2010 [2], Kohler et al. 2012 [1], Kohler et al. 2012 [2], Kohler et al. 2013 [1], Kohler et al. 2013 [2], Kohler et al. 2013 [3], Kohler et al. 2014 [2], Kohler et al. 2014 [3], Kohler et al. 2015, Kohler et al. 2016 [1], Kohler et al. 2016 [2], Kohlsdorf and Navas 2006, Kohlsdorf and Navas 2007, Kohlsdorf et al. 2001, Kohlsdorf et al. 2004, Kok 2005, Kok 2008, Kok 2009, Kok 2011, Kok and Rivas 2011, Kok et al. 2013, Kolbe et al. 2008, Kolodiuk et al. 2010, Koppetsch and Bohme 2017, Koppitz 2018, Kopstein 1926, Kopstein 1927, Korff and McHenry 2011, Kornilios et al. 2018, Kotenko 1986, Kovach and Goodman 2015, Kowalski et al. 2011, Kozykariski et al. 2011, Kratochvil and Frynta 2006 [1], Kratochvil and Frynta 2007, Kratochvil et al. 2001, Kraus 2005, Kraus 2007 [1], Kraus 2007 [2], Kraus 2008, Kraus and Allison 2006 [1], Kraus and Myers 2012, Krause and Bohme 2010, Krause et al. 2013, Krekorian 1983, Krishnan 2005, Krishnan 2008, Kroniger and Zawadzki 2005, Kruger 1996, Krvavac et al. 2015, Krysko et al. 2007, Kubicka et al. 2012, Kubisch et al. 2012, Kucharzewski 2016, Kumas and Ayaz 2014, Kumluta et al. 2004, Kumlutas et al. 2004, Kun et al. 2014, Kunya et al. 2011 [1], Kunya et al. 2014, Kunya et al. 2015, Kunz and Borges-Martins 2013, Kuo et al. 2009, Kurita and Hikida 2014, Kurita and Toda 2013, Kurita et al. 2017 [2], Kurita et al. 2017 [3], Kurnaz et al. 2017 [2], Kurnaz et al. 2018, Kutt 1993, Kwet 2015, La Marca and Garcia Perez 1990, Labanowski and Lowin 2011, Labra 1995, Lachman et al. 2006, Lahti and Beck 2008, Lai-Gao et al. 2010, Lailvaux et al. 2003, Lais 1976 [1], Lais 1976 [4], Lajmi et al. 2016, Lalremsanga et al. 2010, Lamar 1985, Lamar et al. 2015, Lamborot and Diaz 1987, Lamborot and Ortiz 1990, Lancini 1963 [1], Lancini 1963 [2], Lancini 1968, Landauro et al. 2015, Lang and Bohme 1990, Langerwerf 2006, Langner 2017, Lanza 1978 [1], Lanza 1979, Lanza 1982, Lanza and Carfi 1966, Lanza and Carfi 1968, Lanza and Poggesi 1975, Lanza and Sassi 1968, Lanza and Vanni 1976, Lappin and Swinney 1999, Lara-Gongora 1983, Lara-Gongora 2004, Lara-Resendiz and Garcia-Vazquez 2013, Lara-Resendiz et al. 2013, Lara-Resendiz et al. 2017 [3], Lara-Tufino et al. 2013, Lara-Tufino et al. 2015, Lara-Tufino et al. 2016, Lardner et al. 2010, Largen 1995, Largen and Spawls 2006, Largen and Spawls 2010, Laspiur and Acosta 2015, Laspiur et al. 2007, Laurent 1951, Laurent 1952 [2], Laurent 1964, Laurent 1982 [1], Laurent 1982 [2], Laurent 1986, Laurent 1990, Laurent 1992 [1], Laurent 1998, Law et al. 2016, Lawler et al. 1995, Lazcano and Banda-Leal 2017, Lazcano et al. 2006 [1], Lazcano et al. 2006 [2], Lazcano et al. 2017, Lazell 1964 [1], Lazell 1972, Lazell 1973, Lazell 1983, Lazell 1987, Lazell 1992, Lazell 1994, Lazell 2002, Lazell and Williams 1962, Le Berre 1989, Le et al. 2016, Leache 2005, Leache et al. 2014 [2], Leal and Losos 2000, Leavitt and Hibbitts 2012, Leclair and Leclair 2011, LeClere 2013, Lee 1975, Lee 1976, Lee 1983, Lee 2000, Leenders and Watkins-Colwell 2004, Lemay and Marsiglia 1952, Lemm 2006, Lemm and Cueva 2016, Lemm et al. 2005, Lemos Espinal 2003 [1], Lemos Espinal 2003 [2], Lemos Espinal 2003 [3], Lemos-Espinal and Dixon 2013, Lemos-Espinal and Smith 2005, Lemos-Espinal et al. 1996, Lemos-Espinal et al. 1997 [3], Lemos-Espinal et al. 1997 [4], Lemos-Espinal et al. 1998, Lemos-Espinal et al. 1999, Lemos-Espinal et al. 2000 [1], Lemos-Espinal et al. 2000 [2], Lemos-Espinal et al. 2001, Lemos-Espinal et al. 2002, Lemos-Espinal et al. 2003 [2], Lemos-Espinal et al. 2003 [3], Lemos-Espinal et al. 2004 [1], Lemos-Espinal et al. 2012, Lemos-Espinal et al. 2013, Lemos-Espinal et al. 2015, Lenart et al. 1994, Lenart et al. 1995, Leptien and Bohme 1994, Leptien and Lui 1997, Lerner 2004, Les and Powell 2014, Lettink et al. 2010, Lettink et al. 2011, Lettink et al. 2013, Leviton 1959, Leviton and Anderson 1967, Leviton and Anderson 1984, Leviton et al. 1992, Lewis et al. 2000, Lewis et al. 2008, Leyte-Manrique et al. 2011, Li et al. 2009 [1], Li et al. 2011, Li et al. 2012, Li et al. 2013 [2], Li et al. 2014 [2], Li et al. 2017, Licht and Gorman 1970, Licht et al. 1966, Lidth de Jeude 1887, Lidth de Jeude 1895, Lidth de Jeude 1905, Lieb 1990, Liggins et al. 2008 [2], Light et al. 1966, Lima and da Rocha 2006, Lima and de Sousa 2006, Lima et al. 2014 [1], Lima et al. 2014 [2], Lin and Cheng 1981, Lin and Yao 2016, Lin et al. 2007, Linares and Eterovick 2013, Liner and Dixon 1992, Liner and Dixon 1994, Linkem and Brown 2013, Linkem et al. 2008, Linkem et al. 2010 [1], Linkem et al. 2010 [2], Linkem et al. 2010 [3], Linsdale 1932, Lisboa and Freire 2012, Lisboa et al. 2012, Ljubisavljevic et al. 2007 [1], Ljubisavljevic et al. 2008, Ljubisavljevic et al. 2012, Lloyd 2015, Lo Cascio et al. 2006, Lobo and Abdala 2007, Lobo and Espinoza 1999, Lobo and Espinoza 2004, Lobo and Etheridge 2013, Lobo and Nenda 2015, Lobo and Quinteros 2005 [2], Lobo et al. 2007, Lobo et al. 2010 [3], Lobo et al. 2012 [2], Lobo et al. 2012 [3], Lobo et al. 2013, Loehr 2010, Lonnberg 1911, Loos et al. 2012, Lopez 2009, Lopez et al. 2002, Lopez-Ortiz and Lewis 2002, Lopez-Victoria et al. 2011, Lopez-Victoria et al. 2013, Lorvelec et al. 2017, Losos 1992, Losos 2008, Losos 2009, Losos and Greene 1988, Losos et al. 2012 [2], Lotzkat et al. 2011, Lotzkat et al. 2012 [1], Lotzkat et al. 2012 [2], Lotzkat et al. 2013, Lotzkat et al. 2014, Loveridge 1920, Loveridge 1923, Loveridge 1928, Loveridge 1932 [1], Loveridge 1932 [2], Loveridge 1933, Loveridge 1935 [1], Loveridge 1935 [2], Loveridge 1936 [2], Loveridge 1938, Loveridge 1941 [2], Loveridge 1942 [1], Loveridge 1942 [2], Loveridge 1942 [3], Loveridge 1944 [1], Loveridge 1944 [2], Loveridge 1947, Loveridge 1948, Loveridge 1951, Loveridge 1952, Loveridge 1953, Loveridge 1955, Loveridge 1956, Loveridge 1962, Lowe and Howard 1975, Lu et al. 2014, Lue and Lin 2008, Luo et al. 2012, Lutzmann and Necas 2002, Lutzmann et al. 2010, Luu et al. 2011, Luu et al. 2013 [1], Luu et al. 2013 [2], Luu et al. 2014 [1], Luu et al. 2014 [2], Luu et al. 2015 [1], Luu et al. 2016 [1], Luu et al. 2016 [2], Luu et al. 2016 [3], Luu et al. 2017 [1], Luu et al. 2017 [2], Lymberakis and Kalionzopoulou 2003, Lymberakis et al. 2008, Lymberakis et al. 2016, Lynch and Smith 1965 [1], Lynch and Smith 1965 [2], Lynxwiler and Parmerlee 1993, Macculloch and Lathrop 2001, Macdonald 1981, Macdonald et al. 2013, Macleay 1877, MacMillen et al. 1989, Magnusson et al. 1985, Mahler et al. 2016, Mahony 2009 [2], Mahony 2009 [3], Mahony 2010, Mahony 2011, Mahony and Ali Reza 2008, Mahony et al. 2009 [1], Mahrdt and Beaman 2002, Mahrdt et al. 2010, Maia et al. 2011, Maisano 2001, Maisano 2002 [1], Maisano 2002 [2], Majumder and Agarwala 2015, Malhotra and Thorpe 1992, Malhotra and Thorpe 1995, Malhotra and Thorpe 1999, Malkmus et al. 2002, Mallery 2017, Malonza and Bauer 2014, Malonza and Bwong 2009, Malonza et al. 2016, Mamani et al. 2015, Mamou et al. 2017, Manamendra-Arachchi et al. 2006, Manamendra-Arachchi et al. 2007, Mane and Trape 2015, Manes et al. 2007, Manhas et al. 2018, Manicom and Schwarzkopf 2010, Manicom et al. 2014, Mann and Meek 2004, Manthey 2008, Manthey 2010, Manthey and Denzer 1991, Manthey and Denzer 2006, Manthey and Denzer 2012, Manthey and Denzer 2016, Manthey and Grossmann 1997, Manthey and Schuster 1992, Manthey and Schuster 1996, Manthey et al. 2012, Manuel and Rodrigo 2016, Manzani and Abe 1990, Manzani and Abe 2002, Maragou et al. 1999, Marambio-Alfaro and Troncoso-Palacios 2014, Marchioro et al. 2005, Marco 2008, Mariaux and Tilbury 2006, Mariaux et al. 2008, Marin et al. 2016, Marin et al. 2017, Markezich and Taphorn 1994, Markezich et al. 1997, Marquet et al. 1990, Marquez and Marquez 2009, Martens 1997, Martin 2008 [1], Martin 2008 [2], Martin and Lopez 2010, Martin et al. 2013, Martin et al. 2015 [1], Martin et al. 2017 [3], Martinez et al. 2011, Martinez et al. 2017, Martinez-Torres et al. 2003, Martins 1991, Martins 1993, Martins 2006, Martori and Acosta 1990, Martori and Aun 1993, Martori and Aun 2010, Marx 1956, Marx 1960, Maryan et al. 2007, Maryan et al. 2013 [1], Maryan et al. 2013 [2], Maryan et al. 2014, Maryan et al. 2015 [1], Maryan et al. 2015 [2], Maschio et al. 2009, Maslin and Walker 1973, Maso and Pijoan 2011, Masroor 2008, Masroor 2009 [1], Masroor 2009 [2], Masroor 2012, Mata-Silva and Ramirez-Bautista 2005, Mata-Silva et al. 2010, Mata-Silva et al. 2012, Mata-Silva et al. 2013, Mateo 2008, Mateo 2009, Mateo and Cuadrado 2012, Mateo et al. 1998, Mateo et al. 2001, Mateo et al. 2011, Mather and Sites 1985, Matschie 1892, Matschie 1893, Mausfeld and Bohme 2002, Mausfeld and Vrcibradic 2002, Mautz 1979, Mautz 1982, Mautz and Nagy 2000, Mayer and Lazell 2000, Mayes et al. 2007, Mayhew 1966, Maza 2008, Mazuch et al. 2016, McBrayer 2004, McBrayer and Anderson 2007, McCoid 1994, McCoid et al. 1997, McConkey 1954, McConkey 1955, McConnachie 2014, McConnachie et al. 2009, McCoy 1968, McCoy 1970 [1], McCoy 1970 [2], McCoy 1980, McCoy 2006, McCoy 2015, McCoy and Fox 1992, McCoy and Webber 1984, McCoy et al. 2004, McCranie 1992, McCranie and Gotte 2014, McCranie and Gutsche 2016, McCranie and Hedges 2012, McCranie and Hedges 2013 [1], McCranie and Hedges 2013 [2], McCranie and Hedges 2013 [3], McCranie and Kohler 2001, McCranie and Kohler 2015, McCranie and Wilson 1996, McCranie et al. 1992, McCranie et al. 2001, McCranie et al. 2004, McCrystal and Dixon 1987, McDiarmid et al. 1976, McElroy 2007, McGill 2015, Mcgrann et al. 2006, McGregor 1904, McGuire 1994, McGuire 1996, McGuire 1998, McGuire and Alcala 2000, McGuire and Dudley 2005, McGuire et al. 2007 [1], McKay 2006, McKinney et al. 1973, McLean et al. 2013, McMahan and Zug 2007, McNab and Auffenberg 1976, Measey et al. 2014, Mecham 1980, Mecke and Doughty 2018, Mecke et al. 2009, Mecke et al. 2013, Mecke et al. 2016 [1], Mecke et al. 2016 [2], Mecke et al. 2016 [3], Mecke et al. 2016 [4], Mediannikov et al. 2012, Medica 1967, Medina and Ibarguengoytia 2010, Medina et al. 2016 [2], Medina-Rangel and Lopez-Perilla 2014 [2], Meek 1910, Meek 1986, Meek 1999, Mehely 1909, Meier 1979, Meier 1980, Meier 1984, Meier 1995, Meier et al. 1993, Meilink et al. 2013, Meirte 2004, Mella et al. 2010, Mellado and Olmedo 1990, Melnikov and Pierson 2012, Melnikov et al. 2012, Melnikov et al. 2013 [1], Melnikov et al. 2014, Melnikov et al. 2015 [1], Melnikov et al. 2015 [2], Melville et al. 2014, Melville et al. 2016, Melzer et al. 2017, Mendez de la Cruz et al. 2003 [2], Mendez de la Cruz et al. 2003 [3], Mendez de la Cruz et al. 2003 [4], Mendez de la Cruz et al. 2003 [5], Mendez-De la Cruz et al. 1999, Mendoza-Hernandez et al. 2011, Mendoza-Quijano 2012, Mendyk 2008, Mendyk 2011, Menegon et al. 2002, Menegon et al. 2009, Menegon et al. 2015, Meneken et al. 2005, Menezes et al. 2004, Menezes et al. 2013, Mertens 1928, Mertens 1931, Mertens 1934, Mertens 1938, Mertens 1942, Mertens 1950, Mertens 1959, Mertens 1962, Mertens 1963 [1], Mertens 1964 [1], Mertens 1964 [2], Mertens 1966 [1], Mertens 1968, Mertens 1975, Meshaka et al. 1994, Mesquita and Colli 2003, Mesquita et al. 2000, Mesquita et al. 2006 [1], Metallinou and Carranza 2013, Metallinou et al. 2014, Meyer and Mouton 2007, Meza-Joya 2015, Micco et al. 1997, Michael and Lindenmayer 2010, Michael et al. 2010, Michael et al. 2014, Migliore et al. 2014, Migliore et al. 2017, Mijares-Urrutia and Arends 1997, Mijares-Urrutia et al. 2000, Miller 2017, Miller et al. 2012, Milne and Bull 2000, Milne et al. 2002, Milton 1987, Min and Das 2012, Ministerio del Medio Ambiente 2014, Minoli and Avila 2011, Minoli et al. 2010, Minoli et al. 2014, Minton 1966, Minton 2004, Minton et al. 1970, Miralles 2005, Miralles 2006, Miralles and Carranza 2010, Miralles et al. 2005 [2], Miralles et al. 2006, Miralles et al. 2009 [1], Miralles et al. 2009 [2], Miralles et al. 2011 [1], Miralles et al. 2011 [2], Miralles et al. 2011 [3], Miralles et al. 2011 [4], Miralles et al. 2012, Miralles et al. 2015 [1], Miralles et al. 2016 [1], Miralles et al. 2016 [2], Miralles et al. 2017, Miranda et al. 2010, Mirza and Raju 2017, Mirza and Sanap 2010, Mirza and Sanap 2014, Mirza et al. 2013, Mirza et al. 2014 [1], Mirza et al. 2014 [2], Mirza et al. 2017, Mishagina 2007, Mitchell 1965, Mitchell 1973, Mittleman 1942, Miyata 1983, Miyata 1985 [1], Miyata 1985 [2], Miyata 2013, Modry et al. 1999, Modry et al. 2013, Mohammed et al. 2015 [1], Mohammed et al. 2015 [2], Mojica et al. 2003, Molavi et al. 2014, Molina and Senaris 2003, Molina et al. 2002, Molina-Borja 2003, Molina-Borja and Rodriguez-Dominguez 2004, Molina-Borja et al. 2010, Monard 1940, Monard 1949, Monasterio et al. 2013, Monasterio et al. 2016 [2], Monguillot et al. 2006, Montano et al. 2013, Montanucci 1971, Montanucci 1973, Montanucci 1976, Montanucci 1983, Montanucci 1989, Montanucci 2015, Montechiaro et al. 2011, Montero 1996, Montero 2001, Montero and Cespedez 2002, Montero et al. 1997, Montero-Mendieta et al. 2017, Montgomery et al. 2011, Montoya and Burns 2007, Moore et al. 2017, Mora et al. 2012, Moradi and Shafiei 2011, Moradi et al. 2011, Moraes et al. 2017 [1], Moraes et al. 2017 [2], Morais et al. 2014, Morato et al. 2015, Moravec 2004, Moravec and Bohme 1997, Moravec and Bohme 2008, Moravec and Modry 1994 [1], Moravec and Modry 1994 [2], Moravec et al. 1999, Moravec et al. 2006, Moravec et al. 2011, Moreno Azocar et al. 2016, Moreno et al. 2001, Mori and Hikida 1993, Mori and Hikida 1994, Morinaga and Bergmann 2017, Morris 1965, Morrison 2003, Morrison et al. 2008, Morrison et al. 2013, Morton and James 1988, Mosauer 1936, Mosher and Bateman 2014, Moster et al. 1995, Mott et al. 2008 [2], Mott et al. 2009, Mott et al. 2011 [1], Mott et al. 2011 [2], Mott et al. 2011 [3], Mount 1961, Mount 1963, Mount 1968, Moura and Cruz 2017, Mouton and Van Wyk 1994, Mouton and Van Wyk 1995, Mouton and VanWyk 1993, Mouton et al. 2000 [2], Mouton et al. 2010, Mozaffari and Parham 2007, Mozaffari et al. 2011 [1], Mozaffari et al. 2011 [2], Muchlinski et al. 1995, Mukherjee et al. 2005, Mules 2012, Muller 1923, Muller and Hellmich 1939, Muller and Wettstein 1932, Mulroy and Wiseman 2012, Munger 1984, Munoz and Hewlett 2011, Munoz-Alonso and Flores-Villela 1990, Murphy 1997, Murphy and Jowers 2013, Murphy et al. 2000, Murphy et al. 2006 [1], Murphy et al. 2009, Murphy et al. 2016, Murphy et al. 2017, Murray 2014, Murray and Lease 2015, Murray et al. 2014, Murray et al. 2015, Murray et al. 2016, Murthy 2010, Murthy et al. 2015, Mushinsky 1985, Mushinsky 1992, Musters 1983, Myers 1971, Myers 1973, Myers and Donnelly 2001, Myers and Donnelly 2008, Myers et al. 1993, Myers et al. 2009, Mys 1988, Nader and Jawdat 1976, Nagy 1982, Nakamura et al. 2014, Nanhoe and Ouboter 1987, Naretto et al. 2016, Nascimento et al. 2015, Nasri et al. 2015, Nassar and Hraoui-Bloquet 2014, Nassar et al. 2013, Nassar et al. 2017, Nava et al. 2002, Navarro and Nunez 1993, Navarro et al. 2001, Naya and Bozinovic 2006, Naya et al. 2008, Naya et al. 2009, Nazarov and Poyarkov 2013, Nazarov and Rajabizadeh 2007, Nazarov et al. 2008, Nazarov et al. 2011, Nazarov et al. 2012 [1], Nazarov et al. 2012 [2], Nazarov et al. 2013, Nazarov et al. 2014, Nazarov et al. 2017, Neang and Poyarkov 2016, Neang et al. 2010, Neang et al. 2011 [2], Neang et al. 2015 [1], Neang et al. 2015 [2], Necas 1994, Necas 1999, Necas 2009, Necas et al. 2003, Necas et al. 2005, Necas et al. 2009, Neill 1957, Nelson and Powell 2002, Nelson et al. 2001, Nemes et al. 2013, Nemtzov 2008, Nettmann and Rykena 1984 [1], Nettmann and Rykena 1984 [2], Nevo 1981, Newman 1994, Ngo 2008, Ngo 2011, Ngo and Chan 2010, Ngo and Chan 2011, Ngo and Gamble 2011, Ngo and Grismer 2012, Ngo and Ziegler 2009, Ngo et al. 2000, Ngo et al. 2008, Ngo et al. 2010, Ngo et al. 2014 [1], Ngo et al. 2016 [1], Ngo et al. 2016 [2], Nguyen et al. 2010 [1], Nguyen et al. 2010 [4], Nguyen et al. 2010 [5], Nguyen et al. 2011 [1], Nguyen et al. 2011 [2], Nguyen et al. 2011 [3], Nguyen et al. 2012, Nguyen et al. 2013 [1], Nguyen et al. 2013 [2], Nguyen et al. 2013 [3], Nguyen et al. 2013 [4], Nguyen et al. 2014 [1], Nguyen et al. 2014 [2], Nguyen et al. 2014 [3], Nguyen et al. 2014 [4], Nguyen et al. 2015, Nguyen et al. 2017 [3], Nguyen et al. 2018, Nicholson and Kohler 2014, Nicholson et al. 2001, Nieden 1913, Niejalke 2006, Nielsen and Oliver 2017, Nielsen et al. 2011, Nielsen et al. 2016, Nikolskii 1915, Nikolsky 1915, Nilson and Andren 1978, Nilson et al. 2003, Nkosi et al. 2004, Noble 1921 [1], Noble 1921 [2], Noble 1923, Noble 1924, Noble and Klingel 1932, Noble et al. 2011, Nogales et al. 2001, Nogueira and Rodrigues 2006, Noonan et al. 2013, Nordberg and Schwarzkopf 2015, Norrie and Langerwerf 1987, Norval and Mao 2006, Norval et al. 2007, Norval et al. 2011, Norval et al. 2012 [1], Norval et al. 2012 [2], Norval et al. 2012 [3], Norval et al. 2016, Novelli et al. 2011, Nunez 2007, Nunez and Fox 1989, Nunez and Labra 1985, Nunez and Navarro 1992, Nunez and Pincheira-Donoso 2006, Nunez and Scolaro 2009, Nunez and Torres-Mura 1992, Nunez and Yanez 1983, Nunez and Yanez 1984, Nunez et al. 1991, Nunez et al. 2003, Nunez et al. 2004, Nunez et al. 2010, Nussbaum and Raxworthy 1994 [1], Nussbaum and Raxworthy 1994 [2], Nussbaum and Raxworthy 1995 [2], Nussbaum and Raxworthy 1995 [3], Nussbaum and Raxworthy 1998 [3], Nussbaum and Raxworthy 2000, Nussbaum et al. 1999, Nussbaum et al. 2000, O’Neill et al. 2008, O’Shea et al. 2015, Obando et al. 2010, Ober 1968, Ober 1970, Obst and Wranik 1998, Ocampo et al. 2012, Ochotorena et al. 2004, Oftedal 1974, Okada 1936, Okamoto and Hikida 2012, Olesen and Valido 2003, Oliveira and Gomes 2017, Oliveira et al. 2018, Oliver 1948, Oliver and Doughty 2016, Oliver and Lobo 2002, Oliver and McDonald 2016, Oliver and Parkin 2014, Oliver and Richards 2012, Oliver et al. 2008, Oliver et al. 2009 [2], Oliver et al. 2010 [1], Oliver et al. 2010 [2], Oliver et al. 2011, Oliver et al. 2012 [2], Oliver et al. 2014 [1], Oliver et al. 2014 [2], Oliver et al. 2014 [3], Oliver et al. 2015, Oliver et al. 2016 [1], Oliver et al. 2016 [2], Olmedo and Cayot 1994, Olson 1979, Olsson and Shine 1998, Olsson and Shine 1999, Olsson et al. 2002, Onn and Grismer 2008, Onn et al. 2010 [1], Openshaw and Keogh 2014, Oraie et al. 2013, Ord and Blumstein 2002, Orlov et al. 2006, Orlov et al. 2007, Orlov et al. 2008, Orlov et al. 2010, Orlova and Bischoff 1984, Orlova et al. 2017, Ortega et al. 2016 [1], Ortega et al. 2016 [2], Ortega et al. 2016 [3], Ortega et al. 2016 [4], Ortega-Andrade 2006, Ortega-Leon et al. 2007, Ortega-Rubio et al. 1993, Ortiz 1987, Ortiz 1989, Ortiz 1994, Ortiz and Marquet 1987, Ortiz et al. 2001, Ortiz et al. 2016, Ortiz-Zapata 1980, Osterwalder et al. 2004, Ota 1987, Ota 1989 [1], Ota 1989 [2], Ota 1991, Ota 2000 [2], Ota and Crombie 1989, Ota and Hikida 1988, Ota and Nabhitabhata 1991, Ota and Weidenhofer 1992, Ota et al. 1987, Ota et al. 1989, Ota et al. 1991, Ota et al. 1995 [1], Ota et al. 1995 [3], Ota et al. 1996, Ota et al. 1998 [1], Ota et al. 1998 [2], Ota et al. 2000, Ouboter 1986, Paden 2008, Padial 2005, Pafilis and Maragou 2013, Pafilis et al. 2007, Pafilis et al. 2008 [1], Pafilis et al. 2011, Pafilis et al. 2016 [1], Pafilis et al. 2017, Pakenham 1983, Pal et al. 2011, Palmer 1987, Palmer 1992, Paluh and Bauer 2016, Paluh and Bauer 2017, Pancharatna and Kumbar 2005, Pandav et al. 2010, Panfilov 1999, Panitvong et al. 2010, Panitvong et al. 2012, Panov and Zykova 1997, Panov and Zykova 2016, Panvitvong et al. 2014, Papenfuss 1969, Papenfuss 1982, Papenfuss and Parham 2013, Papenfuss et al. 2001, Pareja et al. 2016, Parker 1929, Parker 1932 [2], Parker 1936, Parker 1942, Parker 1956, Parker 1971, Parker 1972, Parker 1974, Parker 1982, Parker 1983, Parker 2014, Parrish and Anderson 1999, Parrish and Gill 2003, Parsa et al. 2009, Pasachnik 2013, Pasachnik et al. 2005, Pasachnik et al. 2012 [1], Pasachnik et al. 2012 [2], Passos and Borges-Nojosa 2011, Passos et al. 2011, Passos et al. 2013 [1], Passos et al. 2013 [2], Passos et al. 2013 [3], Pasteur 1962 [2], Pasteur 1964 [2], Pasteur 1967, Pasteur 1978, Pasteur 1981, Pasteur 1995, Pasteur and Blanc 1991, Pasteur and Broadley 1988, Patchell and Shine 1986, Patrick et al. 2011, Patterson 1975, Patterson 1990, Patterson 1991, Patterson 1997, Patterson and Bell 2009, Patterson and Daugherty 1990, Patterson and Daugherty 1994, Patterson et al. 2013, Paulissen 2000, Paulissen and Walker 1994, Paulissen and Walker 1998, Pauwels and Meirte 1996, Pauwels and Salle 2009, Pauwels and Sumontha 2014, Pauwels and Vande Weghe 2008, Pauwels et al. 2000, Pauwels et al. 2003, Pauwels et al. 2004 [1], Pauwels et al. 2004 [2], Pauwels et al. 2009, Pauwels et al. 2010, Pauwels et al. 2013, Pauwels et al. 2014 [1], Pauwels et al. 2014 [2], Pauwels et al. 2015, Pauwels et al. 2016 [1], Pauwels et al. 2017 [2], Pauwels et al. 2017 [4], Pauwels et al. 2018, Pavey et al. 2010, Pavon-Vazquez et al. 2014, Pavon-Vazquez et al. 2017, Paz et al. 2013, Pearson and Bradford 1976, Pearson and Jones 2000, Peloso and Avila-Pires 2010, Peloso and Morales 2017, Peloso et al. 2011, Pengilley 1981, Penilla-Juarez et al. 2012, Penner et al. 2017, Pepper et al. 2011 [1], Pepper et al. 2013, Pepper et al. 2017, Peracca 1897, Peracca 1904, Peracca 1907, Percino-Daniel et al. 2012, Perera 2009, Pereyra 1992, Perez and Avila 2011, Perez et al. 2012, Perez et al. 2013, Perez-Cembranos and Perez-Mellado 2015, Perez-Higareda et al. 2002, Perez-Mellado 1981, Perez-Mellado 1992, Perez-Mellado and de la Riva 1993, Perez-Mellado et al. 1993, Perez-Mendez et al. 2016, Perez-Quintero 1988, Perez-Ramos et al. 2000, Pernetta and Black 1983, Pernetta et al. 2005, Perret 1973, Perret 1982, Perret 1986, Perry 1989, Perry 1990, Perry 1996, Perry and Garland 2002, Perry et al. 1990, Perry et al. 2000, Petelo and Swierk 2017, Peters 1863, Peters 1964 [1], Peters 1964 [2], Peters 1971, Peters 1984, Peters and Orces 1956, Peterson et al. 1994, Pethiyagoda and Manamendra-Arachchi 1998, Petren and Case 1997, Pham et al. 2015, Pham et al. 2017, Pham et al. 2018, Philipp and Philipp 2007, Phillips 1995, Phung and Ziegler 2011, Phung et al. 2014, Pianka 1971 [2], Pianka 1982, Pianka 1986, Pianka 1991, Pianka 1994, Pianka 1995, Pianka 2007, Pianka 2011 [2], Pianka 2013 [1], Pianka 2013 [2], Pianka 2013 [3], Pianka 2013 [4], Pianka 2014 [1], Pianka 2014 [2], Pianka 2014 [3], Pianka 2014 [4], Pianka 2014 [5], Pianka and Harp 2011, Pianka and Huey 1978, Pianka and King 2004, Pianka and Parker 1972, Pianka and Parker 1975 [1], Pianka and Parker 1975 [2], Pianka and Pianka 1970, Pianka and Vitt 2003, Pianka et al. 1998, Pianka et al. 2017, Piantoni et al. 2006 [1], Pienaar 1966, Pietersen 2014, Pietersen et al. 2017, Pike et al. 2008, Pincheira-Donoso 2004, Pincheira-Donoso and Nunez 2003, Pincheira-Donoso and Nunez 2005, Pincheira-Donoso and Scolaro 2007, Pincheira-Donoso and Tregenza 2011, Pincheira-Donoso et al. 2007, Pincheira-Donoso et al. 2011, Pinilla 1991, Pinna et al. 2010, Pinna et al. 2014, Pinto et al. 2005, Pizzatto 2005, Plasman et al. 2007, Platel 1976, Poe 2014, Poe and Armijo 2014, Poe and Ibanez 2007, Poe and Ryan 2017, Poe and Yanez-Miranda 2007, Poe and Yanez-Miranda 2008, Poe et al. 2008, Poe et al. 2009 [1], Poe et al. 2009 [2], Poe et al. 2012, Poe et al. 2015 [1], Poe et al. 2015 [2], Poglayen and Smith 1958, Pollo 2008, Pollo 2017, Polovic et al. 2013, Ponce and Kohler 2008, Pope 1928, Pope 1929, Porter 2008, Portik and Bauer 2012, Portik et al. 2013 [2], Portik et al. 2016, Porto et al. 2000, Post 2000, Pough 1973 [2], Pough 1974, Pough 1977, Pough and Busack 1978, Pough et al. 1997, Pounds 1988, Pour et al. 2016, Powell 1990, Powell 1992 [1], Powell 1992 [2], Powell 1999 [1], Powell 1999 [3], Powell 1999 [4], Powell 1999 [5], Powell 1999 [6], Powell 2002, Powell and Bauer 2012 [1], Powell and Bauer 2012 [2], Powell and Birt 2001, Powell and Carr 1990, Powell and Gifford 2010, Powell and Glor 2000, Powell and Henderson 2001, Powell and Henderson 2005, Powell and Henderson 2008, Powell and Henderson 2017, Powell and Maxey 1990, Powell and Neland 1998, Powell and Russell 1984, Powell et al. 1998, Powell et al. 2005, Powell et al. 2006, Powell et al. 2010, Powell et al. 2016, Powell et al. 2017, Prates et al. 2017, Preest 1994, Pregill 1984 [1], Pregill 1984 [2], Pregill 1986, Pregill 1992, Pregill and Steadman 2004, Price 1986, Price 1990, Price-Rees et al. 2014, Protzel et al. 2015, Protzel et al. 2016, Protzel et al. 2017, Puente et al. 2005, Puente et al. 2009, Pui et al. 2017, Punzo 1982, Punzo 2001, Punzo 2007, Qu et al. 2011 [3], Quah et al. 2017, Qualls and Shine 1998, Quang et al. 2007, Quatrini et al. 2001, Questel and Boggio 2012, Quinn et al. 2010, Quinteros 2012, Quinteros and Abdala 2011, Quinteros et al. 2008 [1], Quinteros et al. 2008 [2], Quinteros et al. 2014, Qureshi et al. 2012, Quyet and Ziegler 2003, Rabosky et al. 2017, Radachowsky et al. 2003, Radder and Shanbhag 2003, Radder and Shine 2007, Radder et al. 2006, Radder et al. 2008, Radocaj et al. 2011, Radtkey et al. 1997, Rajabizadeh and Rastegar-Pouyani 2009, Rajabizadeh et al. 2010, Rajabizadeh et al. 2018, Ramallo et al. 2017, Ramanantsoa 1974, Ramirez Bautista and Arizmendi 2004 [1], Ramirez Bautista and Arizmendi 2004 [3], Ramirez Bautista and Arizmendi 2004 [4], Ramirez Bautista and Arizmendi 2004 [5], Ramirez Bautista and Arizmendi 2004 [6], Ramirez Bautista and Arizmendi 2004 [11], Ramirez Bautista and Arizmendi 2004 [12], Ramirez Bautista and Arizmendi 2004 [14], Ramirez Bautista and Arizmendi 2004 [16], Ramirez Bautista and Arizmendi 2004 [17], Ramirez Bautista and Arizmendi 2004 [18], Ramirez Bautista and Arizmendi 2004 [19], Ramirez Bautista and Arizmendi 2004 [20], Ramirez Bautista and Arizmendi 2004 [22], Ramirez Bautista and Arizmendi 2004 [24], Ramirez Bautista and Arizmendi 2004 [25], Ramirez Bautista and Arizmendi 2004 [26], Ramirez Bautista and Arizmendi 2004 [27], Ramirez Bautista and Arizmendi 2004 [30], Ramirez Bautista et al. 2004 [1], Ramirez Bautista et al. 2004 [2], Ramirez Bautista et al. 2004 [3], Ramirez Bautista et al. 2004 [4], Ramirez Bautista et al. 2004 [6], Ramirez Bautista et al. 2004 [7], Ramirez Bautista et al. 2004 [8], Ramirez Bautista et al. 2004 [9], Ramirez Bautista et al. 2004 [10], Ramirez Leyton and Pincheira-Donoso 2005, Ramirez-Alvarez and Troncoso-Palacios 2016, Ramirez-Bautista and Davila-Ulloa 2009, Ramirez-Bautista and Gonzalez-Romero 2002, Ramirez-Bautista and Gutierrez-Mayen 2003, Ramirez-Bautista and Olivera-Becerril 2004, Ramirez-Bautista and Pardo-De La Rosa 2002, Ramirez-Bautista and Vitt 1997, Ramirez-Bautista and Vitt 1998, Ramirez-Bautista et al. 1998, Ramirez-Bautista et al. 2000, Ramirez-Bautista et al. 2004, Ramirez-Bautista et al. 2005, Ramirez-Bautista et al. 2008, Ramirez-Bautista et al. 2009, Ramirez-Bautista et al. 2012, Ramirez-Bautista et al. 2014, Ramirez-Bautista et al. 2015, Ramirez-Bautista et al. 2018, Ramirez-Pinilla 1995, Ramirez-Pinilla et al. 2002, Ramirez-Pinilla et al. 2009, Ramirez-Reyes et al. 2017, Ramirez-Sandoval et al. 2006, Ramiro et al. 2017, Ramos and Powell 2001 [1], Ramos-Pallares et al. 2010, Ramsey 2000, Rand 1961, Rand 1963, Rand 1967 [1], Rand 1968, Rand 1982, Rand and Williams 1969, Rand et al. 1975, Randriamahazo 2002, Randriamahazo and Mori 2001, Rao et al. 2010, Rao et al. 2017, Raselimanana et al. 2000, Raselimanana et al. 2006, Rasilla 2008, Rastegar-Pouyani 2000, Rastegar-Pouyani 2006, Rastegar-Pouyani and Fattahi 2015, Rastegar-Pouyani and Rastegar-Pouyani 2001, Rastegar-Pouyani and Torki 2007, Rastegar-Pouyani et al. 2006, Rastegar-Pouyani et al. 2011 [1], Rastegar-Pouyani et al. 2011 [2], Rastegar-Pouyani et al. 2013 [2], Rastegar-Pouyani et al. 2016, Ratsoavina et al. 2011, Ratsoavina et al. 2013, Ratsoavina et al. 2015, Ratsoavina et al. 2017, Rauhala 1993, Rautenberg and Laps 2010, Raw and Brothers 2008, Rawlinson 1974, Raxworthy 1991, Raxworthy and Nussbaum 1993 [1], Raxworthy and Nussbaum 1993 [2], Raxworthy and Nussbaum 1994, Raxworthy and Nussbaum 1995, Raxworthy and Nussbaum 2006, Raxworthy et al. 2007, Razzetti and Msuya 2002, Razzetti et al. 2011, Read 1998, Read 1999, Reaney and Whiting 2002, Reaney et al. 2012, Reano-Hernandez et al. 2015, Reano-Hernandez et al. 2016, Recchio et al. 2014, Recoder et al. 2012, Recoder et al. 2014, Reed and Marx 1959, Reeder 1990, Reeder 1996, Reeve 1952, Regalado 2006, Reidpath 2006, Reis et al. 2017, Reissig 2014 [1], Reissig 2014 [2], Rendahl 1937, Rengifo et al. 2015, Reyes et al. 2008, Reyes-Puig et al. 2008, Rezazadeh et al. 2010, Rezende-Pinto et al. 2009, Rhodes 1963, Ribeiro and Freire 2011, Ribeiro and Silva 2014, Ribeiro et al. 2007, Ribeiro et al. 2008, Ribeiro et al. 2011, Ribeiro et al. 2012 [2], Ribeiro et al. 2013, Ribeiro et al. 2014, Ribeiro et al. 2015 [2], Ribeiro et al. 2016, Ribeiro et al. 2018, Ribeiro–Junior et al. 2016, Richards and Aplin 2015, Richmond and Jockusch 2007, Richmond and Reeder 2002, Rifai et al. 2003, Rifai et al. 2005, Righi et al. 2012, Rittmeyer and Austin 2017, Rivas and Schargel 2008, Rivas et al. 2005, Rivas et al. 2012 [2], Rivas et al. 2013, Rivas et al. 2015 [1], Rivas et al. 2015 [2], Rivas et al. 2015 [3], Rivas et al. 2015 [4], Rivas et al. 2015 [5], Rivero 1998, Rivero-Blanco 1979, Rivero-Blanco and Schargel 2012, Riyanto 2012, Riyanto et al. 2014, Riyanto et al. 2015 [1], Riyanto et al. 2015 [2], Riyanto et al. 2016, Riyanto et al. 2017 [1], Riyanto et al. 2017 [2], Riyanto et al. 2018, Rizk and Nassar 2015, Robb 1980 [1], Robb 1980 [2], Roberto and Albano 2012, Roberto et al. 2014 [1], Roberts and Daly 2014 [2], Robinson 1983, Robles and Halloy 2009, Robles and Halloy 2012, Rocha 1998, Rocha 2000, Rocha and Rodrigues 2005, Rocha and van Sluys 2006, Rocha et al. 2000, Rocha et al. 2002, Rocha et al. 2004, Rocha et al. 2009 [2], Rocha et al. 2010 [1], Rocha et al. 2010 [4], Rocha et al. 2016 [2], Rodda and Dean-Bradley 2001, Rodda et al. 2001, Rodda et al. 2015 [1], Rodder et al. 2009, Rodrigues 1986, Rodrigues 1987, Rodrigues 1997, Rodrigues 2000, Rodrigues 2002, Rodrigues and Avila-Pires 2005, Rodrigues and Borges 1997, Rodrigues and Dos Santos 2008, Rodrigues et al. 1989, Rodrigues et al. 2001, Rodrigues et al. 2002 [1], Rodrigues et al. 2002 [2], Rodrigues et al. 2002 [3], Rodrigues et al. 2005, Rodrigues et al. 2006, Rodrigues et al. 2009 [1], Rodrigues et al. 2009 [2], Rodrigues et al. 2009 [3], Rodrigues et al. 2013 [2], Rodrigues et al. 2013 [3], Rodrigues et al. 2017, Rodriguez and Casas-Andreu 2011, Rodriguez-Cabrera and Fong 2015, Rodriguez-Dominguez and Molina-Borja 1998, Rodriguez-Prieto et al. 2010, Rodriguez-Ramirez and Lewis 1991, Rodriguez-Romero et al. 2004, Rodriguez-Romero et al. 2011, Roe et al. 2005, Rogers 1997, Rogovin and Semenov 2002, Rogovin and Semenov 2004, Rohr 1997, Roitberg 2007, Roitberg et al. 2013, Rojas et al. 2016, Rojas-Gonzalez and Zamora-Abrego 2016, Rojas-Runjaic et al. 2008, Rojas-Runjaic et al. 2010, Rojas-Runjaic et al. 2015, Roll 2000, Roll 2005, Roll et al. 2013, Romero-Schmidt et al. 1999, Rorabaugh and Lemos-Espinal 2016, Rosa and Rakotozafy 2013, Rosenberg 1967, Rosler 2001, Rosler 2005, Rosler and Glaw 2008, Rosler and Glaw 2010, Rosler and Kaiser 2016, Rosler and Obst 2007, Rosler and Tiedemann 2007, Rosler and Wranik 1999, Rosler and Wranik 2004, Rosler and Wranik 2005, Rosler and Wranik 2006 [1], Rosler and Wranik 2007, Rosler et al. 2000, Rosler et al. 2004, Rosler et al. 2006, Rosler et al. 2007, Rosler et al. 2008 [1], Rosler et al. 2008 [2], Rosler et al. 2010, Rosler et al. 2011, Rosler et al. 2012, Rosler et al. 2017 [2], Rouag et al. 2007, Roughgarden 1995, Rounaghi et al. 2018, Rounsevell et al. 1985, Routman and Hulse 1984, Roux 1907, Roux 1927, Roze 1958, Rua and Galan 2003, Rueda and Hernandez-Camacho 1988, Rueda and Williams 1986, Rueda-Almonacid 1989, Rueda-Almonacid and Rances Caicedo 2004, Rueda-Solano et al. 2014, Ruibal 1952, Ruibal 1961, Ruibal and Philibosian 1974, Ruiz et al. 2016, Ruiz-Garcia et al. 2016, Rummery et al. 1995, Russell and Bauer 1986, Russell and Bauer 2000, Ruthven 1915, Ruthven 1916, Ruthven 1923, Ruthven 1924 [2], Ruthven 1925, Ruthven 1926, Sabath 1981, Sadasivan et al. 2018, Sadek 1981, Sadlier 1985, Sadlier 1987, Sadlier 1988, Sadlier 1990 [1], Sadlier 1990 [2], Sadlier and Bauer 1997, Sadlier and Bauer 1999, Sadlier and Bauer 2000, Sadlier et al. 1999, Sadlier et al. 2005 [1], Sadlier et al. 2005 [2], Sadlier et al. 2006 [1], Sadlier et al. 2009 [1], Sadlier et al. 2009 [2], Sadlier et al. 2012, Sadlier et al. 2013, Sadlier et al. 2014 [1], Sadlier et al. 2014 [2], Sadlier et al. 2014 [3], Sadlier et al. 2014 [4], Sadlier et al. 2014 [5], Safaei-Mahroo et al. 2016, Safaei-Mahroo et al. 2017, Sagonas et al. 2013 [1], Sagonas et al. 2013 [2], Sagonas et al. 2017 [1], Sagonas et al. 2017 [2], Sagonas et al. 2018, Sakata and Hikida 2003 [2], Sales and Freire 2016, Sales et al. 2012, Sales et al. 2015, Salica and Halloy 2009, Salked 2004, Sallaberry et al. 1982, Salvador 1975, Salvador 1984 [1], Salvador 1984 [2], Salvador 2006, Salvador 2007 [2], Salvador 2007 [3], Salvador 2007 [5], Salvador 2007 [6], Salvador 2007 [7], Salvador 2008 [1], Salvador 2008 [3], Salvador 2008 [4], Salvador 2008 [5], Salvador 2008 [6], Salvador 2009 [1], Salvador 2009 [2], Salvador 2009 [3], Salvador 2009 [4], Salvador 2010, Salvador and Brown 2007 [1], Salvador and Brown 2007 [2], Salvador and Busack 2009, Salvador et al. 2008, Salvidio et al. 2004, Samarawickrama et al. 2006, Sami et al. 2017, Sanabria et al. 2010, Sanchez and Probst 2015, Sanchez et al. 2010, Sanchez-Hernandez et al. 2013, Sanchez-Pacheco 2010 [2], Sanchez-Pacheco et al. 2011, Sanchez-Pacheco et al. 2012, Sanchez-Pacheco et al. 2015, Sanchez-Pacheco et al. 2016, Sanchez-Pacheco et al. 2017 [1], Sancho et al. 2017, Sanchooli et al. 2015 [1], Sang 2010, Sang et al. 2006, Santana et al. 2011, Santos-Bibiano et al. 2016, Santoyo-Brito et al. 2017, Sanyal and Prasad 1967, Saoudi et al. 2017 [2], Sarker 2014, Sarre and Dearn 1991, Sa-Sousa 2008, Sa-Sousa and Harris 2002, Sass et al. 2007, Sassi et al. 1978, Savage 1952 [1], Savage 2002, Savage and Talbot 1978, Savage et al. 2008, Savvides et al. 2017, Sayyed et al. 2016, Scarpetta et al. 2015, Schall 1974, Schall 1978, Schall 1983, Schall 1993, Schargel et al. 2010, Schargel et al. 2017, Schatti and Desvoignes 1999, Schauble and Grigg 1998, Schell et al. 1993, Scherz et al. 2017, Schettino 1999, Schettino et al. 2010, Schimmenti and Jesu 1996, Schleich 1987, Schleich and Kastle 1998 [2], Schleich and Kastle 2002, Schleich et al. 1996, Schleicher 2015, Schlesinger and Shine 1994, Schlesinger et al. 2010, Schluter 2004, Schmidt 1919 [4], Schmidt 1921 [1], Schmidt 1923 [1], Schmidt 1930, Schmidt 1932 [1], Schmidt 1932 [2], Schmidt 1936 [2], Schmidt 1939, Schmidt 1941, Schmidt 1943, Schmidt 1957, Schmidt and Bogert 1947, Schmidt and Marx 1955, Schmidt and Noble 1919, Schmidt and Simon 1988, Schmidt et al. 1919, Schmidt-Ballardo et al. 2015, Schmidtler 1997, Schmidtler and Bischoff 1999, Schmidtler et al. 1994, Schmitz and Ziegler 2003, Schneider 1984, Schneider and Bauer 2009, Schneider et al. 2011, Schneider et al. 2014 [1], Schneider et al. 2014 [2], Schoener 1970, Schoener and Schoener 1971 [1], Schoener et al. 1982, Scholz et al. 2013, Schonecker et al. 2004, Schulze Niehoff 2018, Schwaner 1980, Schwartz 1959, Schwartz 1965, Schwartz 1968 [1], Schwartz 1968 [2], Schwartz 1970 [2], Schwartz 1971 [1], Schwartz 1971 [2], Schwartz 1974, Schwartz 1978, Schwartz 1979 [1], Schwartz 1979 [2], Schwartz 1980, Schwartz and Henderson 1991, Schwartz and Inchaustegui 1980, Schwartz and Klinikowski 1966, Schwartz and Thomas 1977, Schwartz et al. 1979, Schwarzkopf 1992, Schwarzkopf 1993, Schwarzkopf 2005, Scolaro 2005, Scolaro 2006, Scolaro and Cei 1997, Scolaro and Cei 2003, Scolaro and Cei 2006, Scolaro and Ibarguengoytia 2007, Scolaro and Ibarguengoytia 2008, Scolaro and Pincheira-Donoso 2010, Scolaro and Tappari 2009, Scolaro et al. 2005, Scolaro et al. 2008, Scolaro et al. 2012, Scolaro et al. 2013, Scolaro et al. 2016, Scortecci 1948, Scoular et al. 2011, Scroggie and Clemann 2009, Seetharamaraju et al. 2009, Seetharamaraju et al. 2011, Segoli et al. 2002, Seifan et al. 2009, Seipp 1994, Semhan and Halloy 2016, Semhan et al. 2013, Senczuk et al. 2014, Sepulveda et al. 2006, Setyawatiningsih et al. 2016, Seufer et al. 2005, Sexton and Brown 1977, Sexton et al. 1992, Shafiei et al. 2015, Shah 2002, Shahriza and Ibrahim 2014, Shahrudin 2013, Shahrudin 2016, Shanbhag et al. 2010, Sharma 1976, Sharma 2002, Shaw 1952, Shaw 1960, Shcherbak and Nekrasova 1994, Shea 1991 [2], Shea 1993, Shea 1995, Shea 2006, Shea 2007, Shea 2012, Shea 2017 [1], Shea 2017 [2], Shea 2017 [3], Shea and Greer 2002, Shea and Michels 2008, Shea and Miller 1995, Shea et al. 2009, Shea et al. 2011, Shen et al. 2005, Shen et al. 2017, Shenbrot and Semyonov 1990, Shenbrot et al. 1991, Sherbrooke 1975, Sherbrooke 1997, Sherbrooke 2002 [1], Sherbrooke 2002 [2], Sherbrooke 2003, Sherbrooke 2017, Sherbrooke and Middendorf 2001, Shew et al. 2002, Shi and Zhao 2010, Shi and Zhao 2011, Shine 1983, Shine 1986, Shine 1992, Shine and Greer 1991, Shine and Wall 2008, Shine et al. 1998, Shrestha 2001, Shreve 1940, Shreve 1968, Shukla 1983, Siler 2010, Siler and Brown 2010, Siler et al. 2009, Siler et al. 2010 [1], Siler et al. 2010 [2], Siler et al. 2011 [1], Siler et al. 2011 [3], Siler et al. 2011 [4], Siler et al. 2012 [1], Siler et al. 2012 [2], Siler et al. 2013, Siler et al. 2014 [2], Siler et al. 2014 [5], Siler et al. 2016 [1], Siler et al. 2016 [2], Siler et al. 2017, Siliceo and Diaz 2010, Siliceo-Cantero and Garcia 2016, Silva et al. 2010, Silva et al. 2017 [2], Silva et al. 2018, Silva-Soares et al. 2018, Silveira 2009, Silveira et al. 2012, Simbotwe 1980, Simbotwe 1985, Simo-Riudalbas et al. 2017 [1], Sindaco 2007, Sindaco et al. 2006, Sindaco et al. 2007, Sindaco et al. 2009, Sindaco et al. 2010, Sindaco et al. 2012 [1], Sindaco et al. 2014, Singh et al. 2002, Sinitsin 1930, Sinsch et al. 2002, Sistrom et al. 2009, Sistrom et al. 2012, Skipwith and Oliver 2014, Skipwith et al. 2014, Smedley 1931, Smid et al. 2014 [1], Smid et al. 2015 [1], Smid et al. 2017 [1], Smirina and Ananjeva 2007, Smirina and Ananjeva 2017, Smith 1921, Smith 1925, Smith 1927, Smith 1930, Smith 1931, Smith 1933, Smith 1935, Smith 1936, Smith 1937 [3], Smith 1939 [1], Smith 1939 [2], Smith 1940, Smith 1942, Smith 1943, Smith 1946, Smith 1951, Smith 1968 [3], Smith 1972 [1], Smith 1973, Smith 1992, Smith 2012, Smith and Adams 2007, Smith and Bumzahem 1953, Smith and Bumzahem 1955, Smith and del Toro 1977, Smith and Hall 1974, Smith and Henry 1999, Smith and Iverson 1993 [1], Smith and Iverson 1993 [2], Smith and Larsen 1975, Smith and Nickel 2002, Smith and Smith 1952, Smith and Smith 1977, Smith and Tanner 1972, Smith and Van Gelder 1955, Smith et al. 1977, Smith et al. 1995 [1], Smith et al. 1995 [2], Smith et al. 1997 [1], Smith et al. 1997 [2], Smith et al. 2000, Smith et al. 2002, Smith et al. 2003 [1], Smith et al. 2003 [2], Smith et al. 2006 [2], Smith et al. 2013, Smits 1985, Smits et al. 1986, Snell and Christian 1985, Soares 2015, Soares et al. 2018, Solano–Zavaleta et al. 2016, Solano-Zavaleta et al. 2017, Solovyeva et al. 2018 [1], Somaweera 2009, Somaweera 2017, Somaweera and Somaweera 2009, Somma and Brooks 1976, Somma and Koch 2012, Song 1985, Song 1987, Song et al. 2017, Sos and Herczeg 2009, Soule 1966, Sousa et al. 2015, Sousa et al. 2017, Sowell et al. 1995, Spawls et al. 2002, Spellerberg 2002, Spencer 2000, Speybroeck et al. 2016, Sprackland 1991, Sprackland 1999, Sprackland and Swinney 1998, Sproston et al. 1999, Sreekar et al. 2010, Sreekar et al. 2011, Srinivasulu et al. 2015, Srinivasulu et al. 2016, Stafford and Meyer 2000, Stafrace 2000, Stamps and Andrews 1992, Stamps et al. 1997, Standen 2008, Stanley and Raxworthy 2016, Stanley et al. 2016 [1], Starostova et al. 2005, Starostova et al. 2008, Starostova et al. 2010, Stebbins 1958, Stebbins 2003, Stebbins and McGinnis 2012, Stebbins et al. 1967, Stefany 2008, Steffen 2009, Steffen and Appel 2012, Steinberg et al. 2007, Steinberg et al. 2008, Steindachner 1891, Steiner 1986, Stejneger 1907, Stellatelli et al. 2016 [1], Stellatelli et al. 2016 [2], Stellatelli et al. 2018, Sternfeld 1911, Sternfeld 1918, Stewart 1985, Stille and Stille 2017, Stipala 2014, Stipala et al. 2011, Stipala et al. 2012, Stojanov et al. 2011, Stoliczka 1873, Stone et al. 2003, Storm and Leonard 1995, Storr 1967, Storr 1968, Storr 1971, Storr 1974 [1], Storr 1974 [2], Storr 1975, Storr 1977, Storr 1978 [1], Storr 1978 [2], Storr 1978 [3], Storr 1981, Storr 1982 [1], Storr 1982 [2], Storr 1982 [3], Storr 1983, Storr 1984, Storr 1987, Storr 1988 [2], Storr 1990 [1], Storr 1990 [2], Storr 1991 [1], Storr 1991 [2], Storr 1991 [3], Storr 1991 [4], Storr et al. 1983, Storr et al. 1990, Storr et al. 1999, Strauss 2016, Stuart 1939, Stuart 1942, Stuart 1955, Stuart 1991, Stuart 1998, Stuart and Emmett 2006, Stuart et al. 2010, Stuart-Fox and Ord 2004, Stuart-Smith et al. 2008, Stubbs et al. 2017, Stugren 1984, Sturaro 2016, Sturaro and Avila-Pires 2011, Sturaro and Avila-Pires 2013, Sturaro and da Silva 2010, Suarez et al. 2016, Subba Rao and Rajabai 1972, Sukprasert et al. 2018, Sullivan and Sullivan 2012, Sullivan et al. 2013, Sumarli and Grismer 2016, Sumarli et al. 2015, Sumarli et al. 2016, Sumontha et al. 2010, Sumontha et al. 2012 [1], Sumontha et al. 2012 [2], Sumontha et al. 2014, Sumontha et al. 2015, Sumontha et al. 2017, Sun et al. 2012, Sung et al. 2018, Supsup et al. 2016 [2], Supsup et al. 2017, Sura 1987, Sutherland 2011, Swain and Jones 2000, Swain et al. 1980, Swan and Watharow 2005, Swan et al. 2017, Sweet 2007, Sweet and Pianka 2007, Sy and Parcon 2014, Szczerbak 2003, Szczerbak and Golubev 1996, Szyndlar 1984, Takahashi 2008, Takenaka 1989, Tamar et al. 2017, Tan and Schwanz 2015, Tanaka and Nishihira 1989, Tang et al. 2012, Tang et al. 2014, Tanner 1957, Tanner 1987, Tanner 1988 [1], Tanner 1988 [2], Tanner and Krogh 1975, Tarazona et al. 2008, Tavares et al. 2017, Tayhan et al. 2011, Taylor 1917, Taylor 1919, Taylor 1922 [1], Taylor 1922 [2], Taylor 1923, Taylor 1933, Taylor 1935 [1], Taylor 1935 [2], Taylor 1936, Taylor 1937, Taylor 1942, Taylor 1950, Taylor 1953, Taylor 1956, Taylor 1962, Taylor 1963, Taylor 1985, Taylor 2004, Taylor and Elbel 1958, Taylor and Walker 2014, Taylor and Weyer 1958, Taylor et al. 1999, Taylor et al. 2014, Tedesco 1998, Teitzel 2001, Teixeira 2002, Teixeira et al. 2005, Teixeira et al. 2013 [2], Teixeira et al. 2013 [3], Teixeira et al. 2014, Teixeira et al. 2016, Telford 1955 [1], Telford 1955 [2], Telford 1959, Telford 1969, Telford 1971, Teran-Juarez et al. 2017, Tessa et al. 2017, Test et al. 1966, Teynie 2004, Teynie and David 2010, Teynie and David 2014, Thanh et al. 2006, Thomas 1964, Thomas 1966 [1], Thomas 1966 [2], Thomas 1981, Thomas 1985, Thomas and Hedges 1988, Thomas and Hedges 1989, Thomas and Hedges 1991, Thomas and Hedges 1992, Thomas and Hedges 1993, Thomas and Hedges 1998 [1], Thomas and Hedges 1998 [2], Thomas and Hedges 1998 [3], Thomas and Hedges 2006, Thomas and Schwartz 1967, Thomas and Schwartz 1974, Thomas and Schwartz 1983, Thomas et al. 1992, Thomas et al. 1998, Thomas et al. 2009, Thompson 1994, Thompson and Pianka 2001, Thompson et al. 1992, Thompson et al. 1999 [1], Thompson et al. 1999 [2], Throckmorton 1973, Tihen 1949, Tihen 1954, Tikader and Sharma 1992, Tilbury 1991, Tilbury 1992, Tilbury 1998, Tilbury 2010, Tilbury and Emmrich 1996, Tilbury and Tolley 2009, Tilbury and Tolley 2015, Tingley et al. 2013, Tinkle and Dunham 1983, Tinkle et al. 1970, Tocher 2003, Tocher 2009, Toda et al. 2008, Todd 2008, Tok et al. 2016, Tok et al. 2017, Tomasevic-Kolarov et al. 2010, Torki 2007, Torki 2010, Torki 2012, Torki et al. 2010, Torki et al. 2011 [1], Torki et al. 2011 [2], Torki et al. 2011 [3], Tornier 1900 [1], Tornier 1901, Tornier 1902 [1], Tornier 1904, Toro 1999, Torres et al. 2000, Torres et al. 2014 [2], Torres-Carvajal 2004 [1], Torres-Carvajal 2004 [2], Torres-Carvajal 2007 [2], Torres-Carvajal and Carvajal-Campos 2009, Torres-Carvajal and Lobos 2014, Torres-Carvajal and Mafla-Endara 2013 [1], Torres-Carvajal and Salazar-Valenzuela 2013, Torres-Carvajal et al. 2005, Torres-Carvajal et al. 2009, Torres-Carvajal et al. 2010, Torres-Carvajal et al. 2011, Torres-Carvajal et al. 2013, Torres-Carvajal et al. 2014 [2], Torres-Carvajal et al. 2015 [3], Torres-Carvajal et al. 2017 [1], Towns 1971, Towns 1985 [2], Towns 1994, Towns et al. 2002, Townsend 2006, Townsend and Wilson 2008, Townsend et al. 2004 [1], Townsend et al. 2004 [2], Townsend et al. 2008, Trape 2011, Trape 2014, Trape 2017, Trape and Mane 2014, Trape et al. 2012, Trape et al. 2014, Trauth et al. 2013, Trindade et al. 2013, Trivers 1976, Troncoso 2010, Troncoso-Palacios 2014 [1], Troncoso-Palacios and Esquerre 2014, Troncoso-Palacios and Ferri-Yanez 2013, Troncoso-Palacios and Garin 2013, Troncoso-Palacios and Labra 2017, Troncoso-Palacios and Lobo 2012, Troncoso-Palacios et al. 2011, Troncoso-Palacios et al. 2013, Troncoso-Palacios et al. 2015 [1], Troncoso-Palacios et al. 2015 [2], Troncoso-Palacios et al. 2016 [1], Troncoso-Palacios et al. 2016 [2], Trubcheninova et al. 1977, Trudgen 1999, Truntau et al. 2016, Truong et al. 2008, Truong et al. 2010 [1], Truter et al. 2014, Tsasi et al. 2009, Tulli and Scrocchi 2005, Tuniyev and Tuniyev 2012, Tuniyev et al. 2011, Turner 1977, Turner and Valentic 1998, Turner et al. 1969 [1], Turner et al. 1969 [2], Turner et al. 2017, Tzarevsky 1927, Udagedara and Karunarathna 2014, Ugueto and Harvey 2010, Ugueto and Harvey 2011, Ugueto and Rivas 2010, Ugueto et al. 2007, Ugueto et al. 2009 [1], Ugueto et al. 2009 [2], Ugueto et al. 2013, Ullenbruch et al. 2007, Ullenbruch et al. 2010, Uller and Olsson 2010, Uller et al. 2009, Underwood 1964, Urban 1999, Uribe et al. 1996, Urra et al. 2017, Uzum et al. 2014 [1], Uzum et al. 2014 [2], Uzzell 1958, Uzzell 1966, Uzzell 1970, Uzzell 1973, Valakos 1987, Valakos and Mylonas 1992, Valakos and Vlachopanos 1987, Valakos and Vlachopanos 1989, Valakos et al. 2008, Valdecantos et al. 2012, Valdeon et al. 2013, Valdez et al. 2011, Valdez-Gonzalez and Ramirez-Bautista 2002, Valdez-Villavicencio and Galina-Tessaro 2014, Valdez-Villavicencio and Peralta-Garcia 2012, Valido and Nogales 2003, Valladares 2004, Valladares et al. 2002, Valverde 1958, van Barneveld 2006, van Berkum 1986, van Berkum et al. 1986, van Buurt 2005, Van Damme and Vanhooydonck 2001, Van Damme and Vanhooydonck 2002, Van Denburgh 1894, Van Denburgh 1912, Van Denburgh 1922, Van Denburgh and Slevin 1913, van der Kooij 2001 [1], van der Kooij 2001 [3], van der Meer et al. 2010, van der Reijden 2008, van Devender 1978, Van Devender 1982, Van Devender 1983, Van Sluys et al. 2004 [1], Van Sluys et al. 2004 [2], Van Sluys et al. 2010, Van Wyk 1991, van Wyk 1994, Van Wyk and Mouton 1996, van Wyk and Mouton 1998, Vance 1978, Vanderduys 2016, Vanderduys 2017, Vanderduys et al. 2011, Vanegas-Guerrero et al. 2015 [2], Vanhooydonck and Van Damme 1999, Vanhooydonck et al. 2000, Vanhooydonck et al. 2015, Vanzolini 1961, Vanzolini 1964, Vanzolini 1971, Vanzolini 1978 [2], Vanzolini 1982, Vanzolini 1989, Vanzolini 1991 [2], Vanzolini 1991 [3], Vanzolini 1992, Vanzolini 1994, Vanzolini 1995 [1], Vanzolini 1995 [2], Vanzolini 1996, Vanzolini 1997, Vanzolini 2002 [1], Vanzolini and Ramos 1977, Vanzolini and Reboucas-Spieker 1976, Vanzolini et al. 1980, Vasconcelos and Carranza 2014, Vasconcelos et al. 2012 [2], Vasconcelos et al. 2012 [3], Vassilieva et al. 2016, Vaz-Ferreira and Sierra de Soriano 1961, Vega 2001, Vega et al. 2000, Vega et al. 2008, Vega et al. 2018, Velasco and Herrel 2007, Velasco and Hurtado-Gomez 2014, Velasco et al. 2010, Veludo 2011, Vences et al. 1996, Vences et al. 1999, Vences et al. 2004 [1], Venegas et al. 2008, Venegas et al. 2010 [1], Venegas et al. 2010 [2], Venegas et al. 2011, Venegas et al. 2013 [1], Venegas et al. 2013 [2], Venegas et al. 2014, Venegas et al. 2016 [1], Venegas et al. 2016 [2], Venegas et al. 2017, Venugopal 2013, Verburgt et al. 2015, Verburgt et al. 2018, Vergilov et al. 2018, Veron 1969, Veron and Heatwole 1970, Verrastro and Ely 2015, Verrastro et al. 2003, Verrastro et al. 2017, Verwaijen and Van Damme 2008 [2], Verwaijen et al. 2002, Vesely 1999, Vial and Stewart 1985, Vidal et al. 2002, Vidal et al. 2006, Vidanapathirana et al. 2014, Vieira et al. 2000, Vieira et al. 2017, Villa and Occhipinti 1988, Villa and Wilson 1988, Villamil et al. 2017, Villeneuve 2015, Villeneuve 2017, Vindum et al. 2003, Vinegar 1975, Vinson and Vinson 1969, Visser 1975, Visser 1987, Vitt 1974 [2], Vitt 1977, Vitt 1981, Vitt 1983, Vitt 1985, Vitt 1986, Vitt 1991 [1], Vitt 1991 [2], Vitt 1991 [3], Vitt 1995, Vitt 2000, Vitt and Avila-Pires 1998, Vitt and Blackburn 1991, Vitt and Breitenbach 1993, Vitt and Caldwell 1993, Vitt and Caldwell 2009, Vitt and Cooper 1985, Vitt and Cooper 1986, Vitt and de Carvalho 1992, Vitt and de Carvalho 1995, Vitt and Dickson 1988, Vitt and Goldberg 1983, Vitt and Pianka 1977, Vitt and Zani 1996 [1], Vitt and Zani 1996 [2], Vitt and Zani 1996 [3], Vitt and Zani 1997, Vitt et al. 1978, Vitt et al. 1993, Vitt et al. 1995 [1], Vitt et al. 1995 [2], Vitt et al. 1996 [1], Vitt et al. 1996 [2], Vitt et al. 1997 [1], Vitt et al. 1997 [3], Vitt et al. 1998 [1], Vitt et al. 1998 [2], Vitt et al. 2000 [1], Vitt et al. 2000 [2], Vitt et al. 2001 [1], Vitt et al. 2001 [2], Vitt et al. 2002, Vitt et al. 2003 [1], Vitt et al. 2003 [2], Vitt et al. 2003 [3], Vitt et al. 2005, Vitt et al. 2008 [1], Vitt et al. 2008 [2], Vivek et al. 2015, Vogt 1932, Volynchik 2014, Vrcibradic and Rocha 2005, Vrcibradic and Rocha 2011, Vrcibradic et al. 2007, Vucko 2008, Vyas 2010, Vyas 2017, Wagner 2010 [1], Wagner 2010 [2], Wagner 2014, Wagner and Bauer 2011, Wagner and Bohme 2007, Wagner and Crochet 2009, Wagner et al. 2008 [1], Wagner et al. 2008 [2], Wagner et al. 2009 [1], Wagner et al. 2009 [2], Wagner et al. 2009 [4], Wagner et al. 2011 [1], Wagner et al. 2011 [2], Wagner et al. 2012 [2], Wagner et al. 2012 [3], Wagner et al. 2012 [4], Wagner et al. 2013 [1], Wagner et al. 2013 [2], Wagner et al. 2014 [1], Wagner et al. 2014 [2], Waiprom et al. 2013, Wake and Kluge 1961, Walikanna and Karunarathna 2009, Walker 1955, Walker 1981, Walker 2012 [2], Walker and Maslin 1981, Walker et al. 1966, Walker et al. 1996, Walker et al. 1997, Walker et al. 2005, Walker et al. 2012 [2], Walker et al. 2015, Wall and Shine 2007, Wall and Shine 2013, Walley 1998, Waltner 1991, Wan et al. 2007, Wang and Wang 1993, Wang et al. 1989, Wang et al. 2010, Wang et al. 2011 [1], Wang et al. 2011 [2], Wang et al. 2013 [2], Wang et al. 2013 [3], Wang et al. 2013 [4], Wang et al. 2014, Wang et al. 2015, Wang et al. 2016 [1], Wang et al. 2016 [2], Wang et al. 2017 [1], Wang et al. 2017 [2], Wang et al. 2017 [3], Wang et al. 2018, Wapstra et al. 2001, Warburg 1966, Warne and Charnov 2008, Warrick et al. 1998, Wasonga and Malonza 2006, Watkins 1996, Watkins-Colwell et al. 1998, Watkins-Colwell et al. 2003, Watkins-Colwell et al. 2006, Watling et al. 2005, Watson 2005, Watt 2002, Webb 1965, Webb 1970 [1], Webb 1970 [2], Webb 2006, Webb 2008, Webb and Axtell 1994, Webb and Shine 1994, Webb et al. 1962, Webb et al. 2000, Webb et al. 2002, Weber 1960, Weeks and Espinoza 2013, Weijola and Sweet 2010, Weijola et al. 2016, Weijola et al. 2017, Weinell and Bauer 2018, Weintraub 1980, Wells 2002, Wells 2012, Wells and Wellington 1983, Wells and Wellington 1985, Welton et al. 2009, Welton et al. 2010 [1], Welton et al. 2010 [2], Welton et al. 2010 [3], Welton et al. 2014 [1], Werler 1949, Werler 1951, Werler and Campbell 2004, Werler and Shannon 1961, Werner 1894, Werner 1895, Werner 1901, Werner 1908, Werner 1910 [1], Werner 1910 [2], Werner 1913, Werner 1916, Werner 1929, Werner 1930, Werner 1971, Werner 1973, Werner 1980, Werner 1982 [1], Werner 1983, Werner 1986 [1], Werner 1989, Werner 1992, Werner 1993, Werner 1995 [1], Werner 1995 [2], Werner 1998 [2], Werner 2004, Werner 2016, Werner and Ashkenazi 2010, Werner and Chou 2002, Werner and Igic 2002, Werner and Seifan 2006, Werner and Sivan 1993, Werner and Sivan 1994, Werner and Whitaker 1978, Werner et al. 1996, Werner et al. 1997, Werner et al. 2006, Western 1974, Wettstein 1940, Wettstein 1960, While et al. 2009, Whitaker 1968, Whitaker 1970, Whitaker and Lyall 2004, Whitaker et al. 2018, White and Anderson 1994, White and Powell 1996, White et al. 1992, White et al. 2002, White et al. 2017 [2], Whiting and Bateman 1999, Whiting and Haacke 1996, Whiting et al. 2007, Whiting et al. 2015 [1], Whiting et al. 2015 [2], Whitworth and Beirne 2011, Wickramasinghe 2006, Wickramasinghe and Munindradasa 2007, Wickramasinghe et al. 2007, Wickramasinghe et al. 2011, Wickramasinghe et al. 2016, Wiederhecker et al. 2003, Wiens and Slingluff 2001, Wiens et al. 2006, Wiewandt 1982, Wikelski 2005, Wikelski and Carbone 2004, Wiles 2004, Wilhoft 1961, Wilhoft and Reiter 1965, Williams 1962 [1], Williams 1962 [2], Williams 1963, Williams 1965, Williams 1970, Williams 1975 [3], Williams 1982, Williams 1983, Williams 1985, Williams 1986, Williams 1992, Williams and Duellman 1984, Williams and Mittermeier 1991, Williams and Rand 1977, Williams and Webster 1974, Williams et al. 1970, Williams et al. 1996 [1], Williams et al. 1996 [2], Williams et al. 2015, Wilms 2005, Wilms and Bohme 2000, Wilms and Bohme 2001, Wilms and Bohme 2007, Wilms and Schmitz 2007, Wilms et al. 2009, Wilms et al. 2010, Wilson 2005, Wilson and Cree 2003, Wilson and Swan 2003, Wilson and Swan 2008, Wilson and Swan 2010, Wilson and Swan 2013, Wilson and Vogel 2000, Winchell et al. 2016, Winck and Rocha 2012, Withers 1981, Withers et al. 2000, Witten 1993, Witz and Wilson 1993, Wone and Beauchamp 2003, Wood and Johansen 1974, Wood et al. 2009, Wood et al. 2010, Wood et al. 2013, Wood et al. 2017, Woodruff 1972, Woolrich-Pina and Smith 2012, Woolrich-Pina et al. 2012 [1], Woolrich-Pina et al. 2014, Worthy 1991, Worthy 2016, Wright 1967, Wright 1971, Wright and Lowe 1965, Wright and Lowe 1993, Wright et al. 2000, Wu et al. 2005, Wu et al. 2009, Wu et al. 2015, Wu et al. 2018, Wymann and Whiting 2002, Xiang et al. 1996, Xu and Ji 2006, Xu et al. 2001, Yakin et al. 2012, Yalcinkaya and Gocmen 2012, Yan et al. 2016, Yanez and Nunez 1983, Yanez-Munoz et al. 2006, Yang 1983, Yang 2015, Yang and Chan 2015, Yang and Wang 2010, Yang et al. 1979, Yang et al. 2012 [1], Yang et al. 2012 [2], Yanosky et al. 1993, Yeriomchenko and Panfilov 1990, Yildiz and Igci 2015, Youmans and Grismer 2006, Young-Downey and Moreno 1991, Yousefkhani et al. 2013 [5], Yousefkhani et al. 2014, Yousefkhani et al. 2015, Yousefkhani et al. 2017, Youssef et al. 2008, Yuan and Rao 2011, Yuan et al. 2009, Yufek 2012, Yuni et al. 2015, Zagar et al. 2014, Zaldivar-Rae et al. 2008, Zaldivar-Riveron and de Oca 2001, Zaldivar-Riveron and de Oca 2002, Zaldivar-Riveron et al. 2002 [1], Zaldivar-Riveron et al. 2002 [4], Zaldivar-Riveron et al. 2002 [5], Zaldivar-Riveron et al. 2002 [6], Zaldivar-Riveron et al. 2002 [7], Zaldivar-Riveron et al. 2002 [8], Zaldivar-Riveron et al. 2002 [9], Zaldivar-Riveron et al. 2002 [11], Zaldivar-Riveron et al. 2002 [12], Zaldivar-Riveron et al. 2002 [13], Zaldivar-Riveron et al. 2002 [14], Zaldivar-Riveron et al. 2002 [17], Zaldivar-Riveron et al. 2002 [18], Zaldivar-Riveron et al. 2002 [19], Zaldivar-Riveron et al. 2002 [20], Zaldivar-Riveron et al. 2002 [21], Zaldivar-Riveron et al. 2002 [22], Zaldivar-Riveron et al. 2002 [23], Zaldivar-Riveron et al. 2002 [24], Zaldivar-Riveron et al. 2002 [27], Zaldivar-Riveron et al. 2002 [28], Zaldivar-Riveron et al. 2002 [29], Zaldivar-Riveron et al. 2002 [30], Zaldivar-Riveron et al. 2002 [31], Zaldivar-Riveron et al. 2005, Zamora-Abrego et al. 2007, Zamora-Camacho et al. 2015, Zamora-Camacho et al. 2016, Zamudio and Parra-Olea 2000, Zari 1993, Zari 1996, Zari 1997, Zari 2013, Zari 2016, Zeng et al. 2016, Zhang and Ji 2004, Zhang et al. 2006, Zhang et al. 2009, Zhang et al. 2016, Zhao 1998 [1], Zhao 1998 [2], Zhao and Li 1984, Zhao and Li 1987, Zhao and Liu 2013, Zhao et al. 1999, Zhao et al. 2011, Zhao et al. 2016, Zhou and Wang 2008, Zhou et al. 1982, Zhou et al. 2018, Ziegler 2002, Ziegler and Bischoff 1999, Ziegler et al. 1999 [1], Ziegler et al. 1999 [2], Ziegler et al. 2002, Ziegler et al. 2005 [2], Ziegler et al. 2007 [1], Ziegler et al. 2007 [2], Ziegler et al. 2007 [3], Ziegler et al. 2008 [1], Ziegler et al. 2008 [2], Ziegler et al. 2009, Ziegler et al. 2010 [1], Ziegler et al. 2010 [2], Ziegler et al. 2013, Ziegler et al. 2014, Ziegler et al. 2015 [1], Ziegler et al. 2016 [1], Znari and El Mouden 1997, Znari and Nagy 1997, Zotos et al. 2012, Zou et al. 2016, Zug 1970, Zug 1985 [1], Zug 1987, Zug 1991, Zug 1998, Zug 2004, Zug 2010 [1], Zug 2010 [2], Zug 2012, Zug 2013, Zug and Allison 2006, Zug and Fisher 2012, Zug and Ineich 1995, Zug and Kaiser 2014, Zug and Schwartz 1958, Zug et al. 1982, Zug et al. 1998, Zug et al. 2001, Zug et al. 2003, Zug et al. 2006, Zug et al. 2007, Zug et al. 2011, Zug et al. 2012, Zug et al. 2017, Zugmayer 1909, Zuniga-Vega 2011, Zuniga-Vega et al. 2005, Zuniga-Vega et al. 2016, Zuniga-Vega et al. 2017, Zweifel 1958, Zweifel 1966, Zweifel 1979, Zweifel 1980, Zweifel and Lowe 1966, Al-Johany and Spellerberg 1988, Bocourt 1873, Christian et al. 2003, Henle and Ehrl 1991, Laver et al. 2012, Loveridge 1959 [2], Peters 1982, Wang et al. 1996
-- status counts: certain 417, pending 306, rejected 33, not_found 425, self 9, unverified 5043
-- --queue: 731 open queue row(s) for Meiri_2018 in pending_citations.csv (960 rows in the file)
+- --sheet: 1088 row(s) for Meiri_2018, 1087 new, tab had 977 rows; BM_citations snapshotted (441 rows)
 
 ## References
 
 | native_key | n_records | role | match_status | match_reason | doi | title_sim | bibcite | cite_id |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- |
-| Abdala 2002 | 2 | measurement | not_found | below_threshold | 10.15517/rbt.v61i4.12794 | 0.569 |  |  |
-| Abdala 2003 | 9 | measurement | not_found | below_threshold | 10.31017/cdh.2024.(2024-023) | 0.460 |  |  |
-| Abdala 2005 | 21 | measurement | not_found | below_threshold | 10.30550/j.azl/2265 | 0.569 |  |  |
-| Abdala 2007 [1] | 1 | measurement | not_found | below_threshold | 10.54830/bmnhn.v62.2013.151 | 0.467 |  |  |
-| Abdala and Gomez 2006 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.1317.1.2 | 1.000 |  |  |
-| Abdala and Heredia 2013 | 7 | measurement | not_found | below_threshold | 10.31017/cdh.2019.(2019-005) | 0.450 |  |  |
-| Abdala and Lobo 2006 [1] | 1 | measurement | certain | two_service_agreement | 10.2994/1808-9798(2006)1[1:doanpl]2.0.co;2 | 1.000 |  |  |
-| Abdala and Quinteros 2008 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.1317.1.2 | 0.709 |  |  |
-| Abdala et al. 2008 | 8 | measurement | certain | two_service_agreement | 10.1655/08-022r1.1 | 1.000 |  |  |
-| Abdala et al. 2009 | 22 | measurement | certain | two_service_agreement | 10.2994/057.004.0201 | 1.000 |  |  |
+| Abdala 2002 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.569 | Abdala:2002aa | Abdala_2002 |
+| Abdala 2003 | 9 | measurement | nodoi_approved | owner_nodoi |  | 0.460 | Abdala:2003aa | Abdala_2003 |
+| Abdala 2005 | 21 | measurement | nodoi_approved | owner_nodoi |  | 0.569 | Abdala:2005aa | Abdala_2005 |
+| Abdala 2007 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.467 | Abdala:2007aa | Abdala_2007 |
+| Abdala and Gomez 2006 | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.1317.1.2 | 1.000 | Abdala:2006aa | Abdala_2006 |
+| Abdala and Heredia 2013 | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.450 | Abdala:2013ab | Abdala_2013b |
+| Abdala and Lobo 2006 [1] | 1 | measurement | certain | two_service_agreement | 10.2994/1808-9798(2006)1[1:doanpl]2.0.co;2 | 1.000 | Abdala:2006ab | Abdala_2006b |
+| Abdala and Quinteros 2008 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.709 | Abdala:2008ab | Abdala_2008b |
+| Abdala et al. 2008 | 8 | measurement | certain | two_service_agreement | 10.1655/08-022r1.1 | 1.000 | Abdala:2008aa | Abdala_2008 |
+| Abdala et al. 2009 | 22 | measurement | certain | two_service_agreement | 10.2994/057.004.0201 | 1.000 | Abdala:2009aa | Abdala_2009 |
 | Abdala et al. 2010 | 7 | measurement | pending | single_service | 10.31017/977 | 1.000 |  |  |
-| Abdala et al. 2011 | 19 | measurement | pending | ambiguous | 10.11646/zootaxa.2968.1.2 | 1.000 |  |  |
-| Abdala et al. 2012 [1] | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.3301.1.2 | 1.000 |  |  |
-| Abdala et al. 2012 [2] | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3163.1.1 | 0.966 |  |  |
-| Abdala et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.15517/rbt.v61i4.12794 | 1.000 |  |  |
-| Abdala et al. 2014 [1] | 9 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3866.4.4 | 1.000 |  |  |
+| Abdala et al. 2011 | 19 | measurement | approved | owner_candidate | 10.11646/zootaxa.2968.1.2 | 1.000 | Abdala:2011aa | Abdala_2011 |
+| Abdala et al. 2012 [1] | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.3301.1.2 | 1.000 | Abdala:2012aa | Abdala_2012 |
+| Abdala et al. 2012 [2] | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3163.1.1 | 0.966 | S:2012aa | S_2012 |
+| Abdala et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.15517/rbt.v61i4.12794 | 1.000 | Abdala:2013aa | Abdala_2013 |
+| Abdala et al. 2014 [1] | 9 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3866.4.4 | 1.000 | Abdala:2014aa | Abdala_2014 |
 | Abdala et al. 2015 | 1 | measurement | pending | weak_match | 10.2994/sajh-d-14-00033.1 | 0.917 |  |  |
-| Abdala et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1643/ch-15-381 | 1.000 |  |  |
-| Abdala et al. 2017 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.1717.1.5 | 0.502 |  |  |
+| Abdala et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1643/ch-15-381 | 1.000 | Abdala:2016aa | Abdala_2016 |
+| Abdala et al. 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.502 | Abdala:2017aa | Abdala_2017 |
 | Abe 1984 | 1 | measurement | pending | weak_match | 10.1016/0300-9629(84)90056-2 | 0.920 |  |  |
-| Abe and Johansen 1987 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.127.1.159 | 1.000 |  |  |
-| Abu Baker et al. 2005 | 1 | measurement | not_found | below_threshold | 10.1080/09397140.2010.10638437 | 0.517 |  |  |
-| Acosta et al. 1996 | 1 | measurement | not_found | below_threshold | 10.31017/cdh.2020.(2019-021) | 0.548 |  |  |
-| Acosta et al. 2015 | 1 | measurement | not_found | below_threshold | 10.4067/s0718-34292015000300016 | 0.285 |  |  |
-| Adamopoulou and Legakis 2002 | 1 | measurement | certain | two_service_agreement | 10.1560/q2x8-nlmu-6bhq-5ej8 | 1.000 |  |  |
-| Adamopoulou and Valakos 2000 | 1 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2000)000[0610:scsiam]2.0.co;2 | 1.000 |  |  |
-| Adamopoulou and Valakos 2005 | 1 | measurement | certain | two_service_agreement | 10.1560/hwwq-r26y-wthb-k00v | 1.000 |  |  |
-| Afrasiab and Mohamad 2009 | 1 | measurement | certain | two_service_agreement | 10.1080/09397140.2009.10638346 | 1.000 |  |  |
-| Afrasiab et al. 2013 | 3 | measurement | not_found | below_threshold | 10.3897/herpetozoa.35.e89497 | 0.410 |  |  |
-| Agarwal 2009 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.5493.2.4 | 0.557 |  |  |
-| Agarwal and Bauer 2017 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.4193.2.2 | 0.375 |  |  |
+| Abe and Johansen 1987 | 1 | measurement | certain | two_service_agreement | 10.1242/jeb.127.1.159 | 1.000 | Abe:1987aa | Abe_1987 |
+| Abu Baker et al. 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.517 | Abu-Baker:2005aa | AbuBaker_2005 |
+| Acosta et al. 1996 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.548 | Acosta:1996aa | Acosta_1996 |
+| Acosta et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.285 | Acosta:2015aa | Acosta_2015 |
+| Adamopoulou and Legakis 2002 | 1 | measurement | certain | two_service_agreement | 10.1560/q2x8-nlmu-6bhq-5ej8 | 1.000 | Adamopoulou:2002aa | Adamopoulou_2002 |
+| Adamopoulou and Valakos 2000 | 1 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2000)000[0610:scsiam]2.0.co;2 | 1.000 | Adamopoulou:2000aa | Adamopoulou_2000 |
+| Adamopoulou and Valakos 2005 | 1 | measurement | certain | two_service_agreement | 10.1560/hwwq-r26y-wthb-k00v | 1.000 | Adamopoulou:2005aa | Adamopoulou_2005 |
+| Afrasiab and Mohamad 2009 | 1 | measurement | certain | two_service_agreement | 10.1080/09397140.2009.10638346 | 1.000 | Afrasiab:2009aa | Afrasiab_2009 |
+| Afrasiab et al. 2013 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.410 | Afrasiab:2013aa | Afrasiab_2013 |
+| Agarwal 2009 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.557 | Agarwal:2009aa | Agarwal_2009 |
+| Agarwal and Bauer 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.375 | Agarwal:2017aa | Agarwal_2017 |
 | Agarwal et al. 2010 | 3 | compilation | pending | single_service | 10.30906/1026-2296-2010-17-2-81-93 | 1.000 |  |  |
-| Agarwal et al. 2011 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.2765.1.2 | 1.000 |  |  |
-| Agarwal et al. 2012 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.4586.1.4 | 0.547 |  |  |
-| Agarwal et al. 2016 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4170.2.7 | 1.000 |  |  |
-| Agarwal et al. 2018 | 1 | measurement | certain | two_service_agreement | 10.3099/mcz41.1 | 1.000 |  |  |
-| Aguilar et al. 2013 | 5 | measurement | certain | two_service_agreement | 10.3897/zookeys.364.6109 | 1.000 |  |  |
-| Aguilar–Kirigin and Abdala 2016 | 1 | measurement | not_found | below_threshold | 10.31017/cdh.2020.(2020-029) | 0.502 |  |  |
-| Aguilar–Kirigin et al. 2016 | 1 | measurement | not_found | below_threshold | 10.31017/cdh.2020.(2020-029) | 0.502 |  |  |
-| Aguilar-Lopez et al. 2015 | 1 | measurement | not_found | below_threshold | 10.2307/1563753 | 0.374 |  |  |
-| Aguilar-Lopez et al. 2016 | 1 | measurement | not_found | below_threshold | 10.54207/bsmps1000-2016-624w4y | 0.416 |  |  |
-| Aguilar-Miguel 2005 | 1 | measurement | not_found | below_threshold | 10.1894/0038-4909(2005)050<0024:aboblh>2.0.co;2 | 0.399 |  |  |
-| Aguirre and Gatica 2010 [1] | 1 | measurement | not_found | below_threshold | 10.32800/amz.2016.14.0217 | 0.317 |  |  |
-| Aguirre and Gatica 2010 [2] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.326 |  |  |
-| Aguirre and Gatica 2010 [3] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.310 |  |  |
-| Aguirre and Gatica 2010 [4] | 1 | measurement | not_found | below_threshold | 10.15741/revbio.05.2018.01 | 0.310 |  |  |
-| Aguirre and Gatica 2010 [5] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.310 |  |  |
-| Aguirre and Gatica 2010 [6] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.317 |  |  |
-| Aguirre and Gatica 2010 [7] | 1 | measurement | not_found | below_threshold | 10.32800/amz.2016.14.0217 | 0.313 |  |  |
-| Aguirre and Gatica 2010 [8] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.309 |  |  |
-| Aguirre and Gatica 2010 [9] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.313 |  |  |
-| Aguirre and Gatica 2010 [10] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.301 |  |  |
-| Aguirre and Gatica 2010 [11] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.304 |  |  |
-| Aguirre and Gatica 2010 [14] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.302 |  |  |
-| Aguirre and Gatica 2010 [15] | 1 | measurement | not_found | below_threshold | 10.32800/amz.2016.14.0217 | 0.299 |  |  |
-| Aguirre and Gatica 2010 [16] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.326 |  |  |
-| Aguirre and Gatica 2010 [17] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.315 |  |  |
-| Aguirre and Gatica 2010 [18] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.329 |  |  |
-| Aguirre and Gatica 2010 [19] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.331 |  |  |
-| Aguirre and Gatica 2010 [23] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.313 |  |  |
-| Aguirre and Gatica 2010 [25] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.317 |  |  |
-| Aguirre and Gatica 2010 [26] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.331 |  |  |
-| Aguirre and Gatica 2010 [27] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.297 |  |  |
-| Aguirre and Gatica 2010 [29] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.290 |  |  |
-| Aguirre and Gatica 2010 [30] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.320 |  |  |
-| Aguirre and Gatica 2010 [31] | 1 | measurement | not_found | below_threshold | 10.23910/ijbsm/2019.10.1.1950 | 0.311 |  |  |
-| Aguirre-Penafiel et al. 2014 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3866.2.4 | 1.000 |  |  |
-| Ahl 1933 | 1 | measurement | not_found | below_threshold | 10.1002/mmnz.19710470209 | 0.329 |  |  |
-| Ahmadzadeh et al. 2008 | 13 | measurement | not_found | below_threshold | 10.1017/chol9780521069359.011 | 0.504 |  |  |
-| Ahmadzadeh et al. 2009 | 1 | measurement | not_found | below_threshold | 10.31594/commagene.749989 | 0.517 |  |  |
-| Ahmadzadeh et al. 2011 | 5 | measurement | pending | ambiguous | 10.11646/zootaxa.2924.1.2 | 1.000 |  |  |
-| Ahmadzadeh et al. 2013 [3] | 7 | measurement | certain | doi_resolves | 10.1371/journal.pone.0080563 | 1.000 |  |  |
-| Ahmed 2009 | 23 | compilation | not_found | below_threshold | 10.3329/jasbs.v43i2.46514 | 0.396 |  |  |
-| Ahmed et al. 2009 | 22 | compilation | not_found | below_threshold | 10.2307/j.ctt1ws7wdj.13 | 0.606 |  |  |
-| Ahsan and Abu Saeed 2004 | 1 | measurement | not_found | below_threshold | 10.9734/jsrr/2015/18258 | 0.499 |  |  |
-| Akani et al. 2002 | 3 | measurement | not_found | below_threshold | 10.1017/s0952836998010012 | 0.606 |  |  |
-| Akbarpour et al. 2017 | 4 | measurement | certain | two_service_agreement | 10.1080/09397140.2017.1388490 | 1.000 |  |  |
-| Akiki et al. 2015 | 1 | measurement | not_found | below_threshold | 10.11160/bah.177 | 0.600 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [1] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.317 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [2] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.293 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [3] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.328 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [4] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.319 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [5] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.326 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [6] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.319 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [7] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.317 |  |  |
-| Alaniz-Garcia and Valdez-Villavicencio 2008 [8] | 1 | measurement | not_found | below_threshold | 10.61728/ae24004183 | 0.309 |  |  |
-| Albert and Fernandez 2009 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2234.1.4 | 1.000 |  |  |
-| Albuquerque et al. 2015 | 23 | measurement | certain | two_service_agreement | 10.1086/683678 | 1.000 |  |  |
-| Alcala 1966 | 3 | compilation | pending | grey_literature | 10.2307/1441095 | 0.549 |  |  |
-| Alcala 1986 | 94 | compilation | not_found | below_threshold | 10.53420/apjcs.2022.2 | 0.320 |  |  |
-| Alcala and Brown 1966 | 2 | measurement | certain | two_service_agreement | 10.2307/1441095 | 1.000 |  |  |
-| Alcala and Brown 1967 | 1 | measurement | certain | two_service_agreement | 10.2307/1442238 | 1.000 |  |  |
-| Alcantara et al. 2015 | 2 | measurement | not_found | below_threshold | 10.5818/1529-9651-25.3.82 | 0.371 |  |  |
-| Ales et al. 2017 [1] | 1 | measurement | not_found | below_threshold | 10.31687/saremnms.20.0.32 | 0.602 |  |  |
+| Agarwal et al. 2011 | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.2765.1.2 | 1.000 | Agarwal:2011aa | Agarwal_2011 |
+| Agarwal et al. 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.547 | Agarwal:2012aa | Agarwal_2012 |
+| Agarwal et al. 2016 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4170.2.7 | 1.000 | Agarwal:2016aa | Agarwal_2016 |
+| Agarwal et al. 2018 | 1 | measurement | certain | two_service_agreement | 10.3099/mcz41.1 | 1.000 | Agarwal:2018aa | Agarwal_2018 |
+| Aguilar et al. 2013 | 5 | measurement | certain | two_service_agreement | 10.3897/zookeys.364.6109 | 1.000 | Aguilar:2013aa | Aguilar_2013 |
+| Aguilar–Kirigin and Abdala 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.502 | Aguilar-Kirigin:2016aa | Aguilar-Kirigin_2016 |
+| Aguilar–Kirigin et al. 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.502 | Aguilar-Kirigin:2016ab | Aguilar-Kirigin_2016b |
+| Aguilar-Lopez et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.374 | Aguilar-Lopez:2015aa | Aguilar-Lopez_2015 |
+| Aguilar-Lopez et al. 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.416 | Aguilar-Lopez:2016aa | Aguilar-Lopez_2016 |
+| Aguilar-Miguel 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.399 | Aguilar-Miguel:2005aa | Aguilar-Miguel_2005 |
+| Aguirre and Gatica 2010 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.317 | Aguirre:2010ai | Aguirre_2010i |
+| Aguirre and Gatica 2010 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.326 | Aguirre:2010ao | Aguirre_2010o |
+| Aguirre and Gatica 2010 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.310 | Aguirre:2010ar | Aguirre_2010r |
+| Aguirre and Gatica 2010 [4] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.310 | Aguirre:2010as | Aguirre_2010s |
+| Aguirre and Gatica 2010 [5] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.310 | Aguirre:2010at | Aguirre_2010t |
+| Aguirre and Gatica 2010 [6] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.317 | Aguirre:2010au | Aguirre_2010u |
+| Aguirre and Gatica 2010 [7] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.313 | Aguirre:2010av | Aguirre_2010v |
+| Aguirre and Gatica 2010 [8] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.309 | Aguirre:2010aw | Aguirre_2010w |
+| Aguirre and Gatica 2010 [9] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.313 | Aguirre:2010ax | Aguirre_2010x |
+| Aguirre and Gatica 2010 [10] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.301 | Aguirre:2010aa | Aguirre_2010 |
+| Aguirre and Gatica 2010 [11] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.304 | Aguirre:2010ab | Aguirre_2010b |
+| Aguirre and Gatica 2010 [14] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.302 | Aguirre:2010ac | Aguirre_2010c |
+| Aguirre and Gatica 2010 [15] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.299 | Aguirre:2010ad | Aguirre_2010d |
+| Aguirre and Gatica 2010 [16] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.326 | Aguirre:2010ae | Aguirre_2010e |
+| Aguirre and Gatica 2010 [17] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.315 | Aguirre:2010af | Aguirre_2010f |
+| Aguirre and Gatica 2010 [18] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.329 | Aguirre:2010ag | Aguirre_2010g |
+| Aguirre and Gatica 2010 [19] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.331 | Aguirre:2010ah | Aguirre_2010h |
+| Aguirre and Gatica 2010 [23] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.313 | Aguirre:2010aj | Aguirre_2010j |
+| Aguirre and Gatica 2010 [25] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.317 | Aguirre:2010ak | Aguirre_2010k |
+| Aguirre and Gatica 2010 [26] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.331 | Aguirre:2010al | Aguirre_2010l |
+| Aguirre and Gatica 2010 [27] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.297 | Aguirre:2010am | Aguirre_2010m |
+| Aguirre and Gatica 2010 [29] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.290 | Aguirre:2010an | Aguirre_2010n |
+| Aguirre and Gatica 2010 [30] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.320 | Aguirre:2010ap | Aguirre_2010p |
+| Aguirre and Gatica 2010 [31] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.311 | Aguirre:2010aq | Aguirre_2010q |
+| Aguirre-Penafiel et al. 2014 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3866.2.4 | 1.000 | Aguirre-PeNAFIEL:2014aa | Aguirre-PeNAFIEL_2014 |
+| Ahl 1933 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.329 | Ahl:1933aa | Ahl_1933 |
+| Ahmadzadeh et al. 2008 | 13 | measurement | nodoi_approved | owner_nodoi |  | 0.504 | Ahmadzadeh:2008aa | Ahmadzadeh_2008 |
+| Ahmadzadeh et al. 2009 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.517 | Ahmadzadeh:2009aa | Ahmadzadeh_2009 |
+| Ahmadzadeh et al. 2011 | 5 | measurement | approved | owner_candidate | 10.11646/zootaxa.2924.1.2 | 1.000 | Ahmadzadeh:2011aa | Ahmadzadeh_2011 |
+| Ahmadzadeh et al. 2013 [3] | 7 | measurement | certain | doi_resolves | 10.1371/journal.pone.0080563 | 1.000 | Ahmadzadeh:2013aa | Ahmadzadeh_2013 |
+| Ahmed 2009 | 23 | compilation | nodoi_approved | owner_nodoi |  | 0.396 | Ahmed:2009aa | Ahmed_2009 |
+| Ahmed et al. 2009 | 22 | compilation | nodoi_approved | owner_nodoi |  | 0.606 | Ahmed:2009ab | Ahmed_2009b |
+| Ahsan and Abu Saeed 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.499 | Ahsan:2004aa | Ahsan_2004 |
+| Akani et al. 2002 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.606 | Akani:2002aa | Akani_2002 |
+| Akbarpour et al. 2017 | 4 | measurement | certain | two_service_agreement | 10.1080/09397140.2017.1388490 | 1.000 | Akbarpour:2017aa | Akbarpour_2017 |
+| Akiki et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.600 | Akiki:2015aa | Akiki_2015 |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.317 | Alaniz-Garcia:2008aa | Alaniz-Garcia_2008 |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.293 | Alaniz-Garcia:2008ab | Alaniz-Garcia_2008b |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.328 | Alaniz-Garcia:2008ac | Alaniz-Garcia_2008c |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [4] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.319 | Alaniz-Garcia:2008ad | Alaniz-Garcia_2008d |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [5] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.326 | Alaniz-Garcia:2008ae | Alaniz-Garcia_2008e |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [6] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.319 | Alaniz-Garcia:2008af | Alaniz-Garcia_2008f |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [7] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.317 | Alaniz-Garcia:2008ag | Alaniz-Garcia_2008g |
+| Alaniz-Garcia and Valdez-Villavicencio 2008 [8] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.309 | Alaniz-Garcia:2008ah | Alaniz-Garcia_2008h |
+| Albert and Fernandez 2009 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2234.1.4 | 1.000 | Albert:2009aa | Albert_2009 |
+| Albuquerque et al. 2015 | 23 | measurement | certain | two_service_agreement | 10.1086/683678 | 1.000 | de-Albuquerque:2015aa | deAlbuquerque_2015 |
+| Alcala 1966 | 3 | compilation | nodoi_approved | owner_nodoi |  | 0.549 | Alcala:1966ab | Alcala_1966b |
+| Alcala 1986 | 94 | compilation | nodoi_approved | owner_nodoi |  | 0.320 | Alcala:1986aa | Alcala_1986 |
+| Alcala and Brown 1966 | 2 | measurement | certain | two_service_agreement | 10.2307/1441095 | 1.000 | Alcala:1966aa | Alcala_1966 |
+| Alcala and Brown 1967 | 1 | measurement | certain | two_service_agreement | 10.2307/1442238 | 1.000 | Alcala:1967aa | Alcala_1967 |
+| Alcantara et al. 2015 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.371 | Alcantara:2015aa | Alcantara_2015 |
+| Ales et al. 2017 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.602 | Ales:2017aa | Ales_2017 |
 | Ales et al. 2017 [2] | 1 | measurement | pending | single_service | 10.31017/10776 | 1.000 |  |  |
-| Alexander 1966 | 1 | measurement | not_found | below_threshold | 10.2307/1441127 | 0.663 |  |  |
-| Alexander 2007 | 6 | compilation | pending | grey_literature | 10.5962/bhl.title.149108 | 0.465 |  |  |
-| Alexander and Marais 2007 | 17 | compilation | not_found | below_threshold | 10.56889/ebag4813 | 0.338 |  |  |
-| Alfonso et al. 2012 [1] | 2 | measurement | not_found | below_threshold | 10.1163/156853803322440844 | 0.609 |  |  |
-| Alfonso et al. 2012 [2] | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v19i4.13915 | 1.000 |  |  |
-| Alfonso et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v21i4.14008 | 1.000 |  |  |
-| Ali et al. 2017 | 6 | measurement | pending | ambiguous | 10.30906/1026-2296-2017-24-4-267-274 | 1.000 |  |  |
-| Al-Johany 1999 | 1 | measurement | not_found | below_threshold | 10.1016/j.sjbs.2016.12.003 | 0.512 |  |  |
-| Al-Johany and Spellerberg 1989 | 1 | measurement | certain | two_service_agreement | 10.1016/s0140-1963(18)31049-8 | 1.000 |  |  |
+| Alexander 1966 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.663 | Alexander:1966aa | Alexander_1966 |
+| Alexander 2007 | 6 | compilation | nodoi_approved | owner_nodoi |  | 0.465 | Alexander:2007aa | Alexander_2007 |
+| Alexander and Marais 2007 | 17 | compilation | nodoi_approved | owner_nodoi |  | 0.338 | Alexander:2007ab | Alexander_2007b |
+| Alfonso et al. 2012 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.609 | Alfonso:2012ab | Alfonso_2012b |
+| Alfonso et al. 2012 [2] | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v19i4.13915 | 1.000 | Alfonso:2012aa | Alfonso_2012 |
+| Alfonso et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v21i4.14008 | 1.000 | Alfonso:2014aa | Alfonso_2014 |
+| Ali et al. 2017 | 6 | measurement | approved | owner_candidate | 10.30906/1026-2296-2017-24-4-267-274 | 1.000 | Ali:2017aa | Ali_2017 |
+| Al-Johany 1999 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.512 | Al-Johany:1999aa | Al-Johany_1999 |
+| Al-Johany and Spellerberg 1989 | 1 | measurement | certain | two_service_agreement | 10.1016/s0140-1963(18)31049-8 | 1.000 | Al-Johany:1989aa | Al-Johany_1989 |
 | Al-Johany et al. 1997 | 1 | measurement | pending | weak_match | 10.1006/jare.1996.0241 | 0.843 |  |  |
-| Allen et al. 2017 [1] | 15 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4268.2.5 | 1.000 |  |  |
-| Allison 1982 | 3 | measurement | pending | weak_match | 10.1007/978-94-009-8632-9_39 | 1.000 |  |  |
-| Almeida-Gomes et al. 2008 | 5 | compilation | certain | two_service_agreement | 10.1590/s0001-37652008000200007 | 1.000 |  |  |
-| Almeida-Gomes et al. 2012 | 1 | measurement | certain | two_service_agreement | 10.5007/2175-7925.2012v25n1p203 | 1.000 |  |  |
-| Almog et al. 2005 | 1 | measurement | not_found | below_threshold | 10.1080/00222930400001293 | 0.574 |  |  |
-| Al-Sadoon and Abdo 1991 | 1 | measurement | certain | two_service_agreement | 10.1016/s0140-1963(18)30673-6 | 1.000 |  |  |
-| Al-Sadoon and Abdo 1994 | 2 | measurement | certain | two_service_agreement | 10.1016/s0140-1963(05)80061-8 | 1.000 |  |  |
-| Al-Sadoon and Spellerberg 1985 | 11 | measurement | certain | two_service_agreement | 10.1163/156853885x00281 | 1.000 |  |  |
-| Al-Sadoon et al. 2016 [1] | 11 | compilation | pending | ambiguous | 10.1016/j.sjbs.2016.04.005 | 0.762 |  |  |
-| Al-Safadi 1989 | 2 | measurement | not_found | below_threshold | 10.11646/zootaxa.1317.1.6 | 0.621 |  |  |
-| Altamirano-Benavides et al. 2013 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3717.3.4 | 1.000 |  |  |
-| Altunisik et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.3906/zoo-1212-18 | 1.000 |  |  |
+| Allen et al. 2017 [1] | 15 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4268.2.5 | 1.000 | Allen:2017aa | Allen_2017 |
+| Allison 1982 | 3 | measurement | approved | owner_candidate | 10.1007/978-94-009-8632-9_39 | 1.000 | Allison:1982aa | Allison_1982 |
+| Almeida-Gomes et al. 2008 | 5 | compilation | certain | two_service_agreement | 10.1590/s0001-37652008000200007 | 1.000 | Almeida-Gomes:2008aa | Almeida-Gomes_2008 |
+| Almeida-Gomes et al. 2012 | 1 | measurement | certain | two_service_agreement | 10.5007/2175-7925.2012v25n1p203 | 1.000 | Almeida-Gomes:2011aa | Almeida-Gomes_2011 |
+| Almog et al. 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.574 | Almog:2005aa | Almog_2005 |
+| Al-Sadoon and Abdo 1991 | 1 | measurement | certain | two_service_agreement | 10.1016/s0140-1963(18)30673-6 | 1.000 | Al-Sadoon:1991aa | Al-Sadoon_1991 |
+| Al-Sadoon and Abdo 1994 | 2 | measurement | certain | two_service_agreement | 10.1016/s0140-1963(05)80061-8 | 1.000 | Al-Sadoon:1994aa | Al-Sadoon_1994 |
+| Al-Sadoon and Spellerberg 1985 | 11 | measurement | certain | two_service_agreement | 10.1163/156853885x00281 | 1.000 | Al-Sadoon:1985aa | Al-Sadoon_1985 |
+| Al-Sadoon et al. 2016 [1] | 11 | compilation | nodoi_approved | owner_nodoi |  | 0.762 | Al-Sadoon:2016aa | Al-Sadoon_2016 |
+| Al-Safadi 1989 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.621 | Al-Safadi:1989aa | Al-Safadi_1989 |
+| Altamirano-Benavides et al. 2013 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3717.3.4 | 1.000 | Altamirano-Benavides:2013aa | Altamirano-Benavides_2013 |
+| Altunisik et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.3906/zoo-1212-18 | 1.000 | AltuniSIK:2013aa | AltuniSIK_2013 |
 | Altunisik et al. 2016 | 1 | measurement | pending | single_service | 10.30906/1026-2296-2016-23-4-278-282 | 1.000 |  |  |
-| Alvarez 2004 | 1 | measurement | certain | two_service_agreement | 10.4067/s0716-078x2004000300015 | 1.000 |  |  |
-| Alvarez and Valentin 1988 | 1 | measurement | not_found | below_threshold | 10.5354/0365-7779.1857.2242 | 0.533 |  |  |
+| Alvarez 2004 | 1 | measurement | certain | two_service_agreement | 10.4067/s0716-078x2004000300015 | 1.000 | GodINEZ-Alvarez:2004aa | GodINEZ-Alvarez_2004 |
+| Alvarez and Valentin 1988 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.533 | Alvarez:1988aa | Alvarez_1988 |
 | Alvarez del Toro and Smith 1956 | 5 | measurement | not_found | below_threshold | 10.2307/3626059 | 0.584 |  |  |
-| Alvarez del Toro and Smith 1962 | 3 | measurement | not_found | below_threshold | 10.2307/3626059 | 0.624 |  |  |
-| Alvear and Puig 2016 | 1 | measurement | certain | two_service_agreement | 10.15560/12.5.1983 | 1.000 |  |  |
-| Amaral 1933 | 12 | measurement | not_found | below_threshold | 10.1590/s0074-02761933000100003 | 0.375 |  |  |
-| Amaral 1935 | 2 | measurement | not_found | below_threshold | 10.1590/s0074-02761938000200011 | 0.397 |  |  |
-| Amaral 1950 | 2 | measurement | certain | two_service_agreement | 10.2307/1437908 | 1.000 |  |  |
-| Amarasinghe and Campbell 2016 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4137.2.12 | 1.000 |  |  |
-| Amarasinghe et al. 2009 [2] | 9 | measurement | pending | ambiguous | 10.47605/tapro.v1i1.2 | 1.000 |  |  |
-| Amarasinghe et al. 2011 | 1 | measurement | pending | single_service | 10.5281/zenodo.16516674 | 1.000 |  |  |
+| Alvarez del Toro and Smith 1962 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.624 | Alvarez-del-Toro:1962aa | AlvarezdelToro_1962 |
+| Alvear and Puig 2016 | 1 | measurement | certain | two_service_agreement | 10.15560/12.5.1983 | 1.000 | Rios-Alvear:2016aa | RiosAlvear_2016 |
+| Amaral 1933 | 12 | measurement | nodoi_approved | owner_nodoi |  | 0.375 | Amaral:1933aa | Amaral_1933 |
+| Amaral 1935 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.397 | Amaral:1935aa | Amaral_1935 |
+| Amaral 1950 | 2 | measurement | certain | two_service_agreement | 10.2307/1437908 | 1.000 | do-Amaral:1950aa | doAmaral_1950 |
+| Amarasinghe and Campbell 2016 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4137.2.12 | 1.000 | Amarasinghe:2016ab | Amarasinghe_2016b |
+| Amarasinghe et al. 2009 [2] | 9 | measurement | approved | owner_candidate | 10.47605/tapro.v1i1.2 | 1.000 | Amarasinghe:2009aa | Amarasinghe_2009 |
+| Amarasinghe et al. 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Amarasinghe:2011aa | Amarasinghe_2011 |
 | Amarasinghe et al. 2014 [1] | 1 | measurement | not_found | below_threshold | 10.1655/herpetologica-d-13-00087 | 0.300 |  |  |
-| Amarasinghe et al. 2014 [2] | 2 | measurement | certain | two_service_agreement | 10.1655/herpetologica-d-13-00087 | 1.000 |  |  |
-| Amarasinghe et al. 2015 [1] | 1 | measurement | certain | two_service_agreement | 10.1655/herpetologica-d-14-00034 | 1.000 |  |  |
-| Amarasinghe et al. 2015 [2] | 4 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3915.1.3 | 1.000 |  |  |
-| Amarasinghe et al. 2016 [1] | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4132.4.3 | 1.000 |  |  |
-| Amarasinghe et al. 2016 [2] | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4154.2.3 | 1.000 |  |  |
-| Amarasinghe et al. 2016 [3] | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4200.3.5 | 1.000 |  |  |
-| Amarasinghe et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4272.1.5 | 1.000 |  |  |
-| Amaro-Valdes and Herrera-Montano 2017 | 2 | measurement | certain | two_service_agreement | 10.17161/randa.v24i1.14140 | 1.000 |  |  |
-| Amat 2008 [2] | 3 | measurement | not_found | below_threshold | 10.3897/compcytogen.v10i3.7655 | 0.481 |  |  |
-| Amat et al. 2008 | 1 | measurement | certain | two_service_agreement | 10.1163/156853808785112129 | 1.000 |  |  |
-| Amey and Couper 2009 | 7 | measurement | pending | ambiguous | 10.11646/zootaxa.2173.1.2 | 1.000 |  |  |
-| Amey and Edwards 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4317.1.5 | 1.000 |  |  |
-| Amey and Whittier 2000 | 1 | measurement | certain | two_service_agreement | 10.1071/zo00031 | 1.000 |  |  |
-| Amey and Wilmer 2014 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3821.2.4 | 1.000 |  |  |
-| Amey et al. 2005 | 2 | measurement | pending | grey_literature | 10.11646/zootaxa.2173.1.2 | 0.568 |  |  |
-| Ammanna 2013 | 1 | measurement | pending | grey_literature | 10.33256/hb157.37 | 0.521 |  |  |
-| Amorim et al. 2014 | 1 | measurement | not_found | below_threshold | 10.1670/21-039 | 0.564 |  |  |
-| Amrein and Amrein 1951 | 1 | measurement | certain | two_service_agreement | 10.2307/1437565 | 1.000 |  |  |
+| Amarasinghe et al. 2014 [2] | 2 | measurement | certain | two_service_agreement | 10.1655/herpetologica-d-13-00087 | 1.000 | Amarasinghe:2014aa | Amarasinghe_2014 |
+| Amarasinghe et al. 2015 [1] | 1 | measurement | certain | two_service_agreement | 10.1655/herpetologica-d-14-00034 | 1.000 | Amarasinghe:2015ab | Amarasinghe_2015b |
+| Amarasinghe et al. 2015 [2] | 4 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3915.1.3 | 1.000 | Amarasinghe:2015aa | Amarasinghe_2015 |
+| Amarasinghe et al. 2016 [1] | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4132.4.3 | 1.000 | Amarasinghe:2016aa | Amarasinghe_2016 |
+| Amarasinghe et al. 2016 [2] | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4154.2.3 | 1.000 | Amarasinghe:2016ac | Amarasinghe_2016c |
+| Amarasinghe et al. 2016 [3] | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4200.3.5 | 1.000 | Amarasinghe:2016ad | Amarasinghe_2016d |
+| Amarasinghe et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4272.1.5 | 1.000 | Amarasinghe:2017aa | Amarasinghe_2017 |
+| Amaro-Valdes and Herrera-Montano 2017 | 2 | measurement | certain | two_service_agreement | 10.17161/randa.v24i1.14140 | 1.000 | Amaro-Valdes:2017aa | Amaro-Valdes_2017 |
+| Amat 2008 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.481 | Amat:2008ab | Amat_2008b |
+| Amat et al. 2008 | 1 | measurement | certain | two_service_agreement | 10.1163/156853808785112129 | 1.000 | Amat:2008aa | Amat_2008 |
+| Amey and Couper 2009 | 7 | measurement | approved | owner_candidate | 10.11646/zootaxa.2173.1.2 | 1.000 | Amey:2009aa | Amey_2009 |
+| Amey and Edwards 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4317.1.5 | 1.000 | Amey:2017aa | Amey_2017 |
+| Amey and Whittier 2000 | 1 | measurement | certain | two_service_agreement | 10.1071/zo00031 | 1.000 | Amey:2000aa | Amey_2000 |
+| Amey and Wilmer 2014 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3821.2.4 | 1.000 | Amey:2014aa | Amey_2014 |
+| Amey et al. 2005 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.568 | Amey:2005aa | Amey_2005 |
+| Ammanna 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.521 | Ammanna:2013aa | Ammanna_2013 |
+| Amorim et al. 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.564 | Amorim:2014aa | Amorim_2014 |
+| Amrein and Amrein 1951 | 1 | measurement | certain | two_service_agreement | 10.2307/1437565 | 1.000 | Amrein:1951aa | Amrein_1951 |
 | Ananjeva and Stuart 2001 | 1 | measurement | pending | single_service | 10.30906/1026-2296-2001-8-3-165-170 | 1.000 |  |  |
-| Ananjeva et al. 1990 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.part.18860 | 0.357 |  |  |
-| Ananjeva et al. 2007 [2] | 1 | measurement | pending | single_service | 10.13140/2.1.4121.1521 | 1.000 |  |  |
-| Ananjeva et al. 2011 [2] | 3 | measurement | not_found | below_threshold | 10.30906/1026-2296-2020-27-4-217-230 | 0.655 |  |  |
+| Ananjeva et al. 1990 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.357 | Ananjeva:1990aa | Ananjeva_1990 |
+| Ananjeva et al. 2007 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Ananjeva:2007aa | Ananjeva_2007 |
+| Ananjeva et al. 2011 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.655 | Ananjeva:2011aa | Ananjeva_2011 |
 | Ananjeva et al. 2013 | 1 | measurement | pending | single_service | 10.30906/1026-2296-2013-20-3-197-202 | 1.000 |  |  |
-| Ananjeva et al. 2017 [1] | 1 | measurement | pending | weak_match | 10.2307/1445482 | 0.772 |  |  |
-| Anaya-Rojas et al. 2010 | 1 | measurement | certain | two_service_agreement | 10.1590/s0031-10492010001000001 | 1.000 |  |  |
-| Anderson 1894 | 2 | measurement | pending | weak_match | 10.1080/00222939408677818 | 0.770 |  |  |
-| Anderson 1895 | 8 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1884.tb02861.x | 0.570 |  |  |
-| Anderson 1896 | 16 | compilation | pending | weak_match | 10.5962/bhl.title.54454 | 0.974 |  |  |
-| Anderson 1898 | 43 | measurement | not_found | below_threshold | 10.5962/bhl.title.45263 | 0.699 |  |  |
-| Anderson 1901 | 13 | measurement | pending | weak_match | 10.1111/j.1469-7998.1901.tb08169.x | 0.736 |  |  |
-| Anderson 1963 | 10 | measurement | pending | single_service | 10.5281/zenodo.16467725 | 1.000 |  |  |
-| Anderson 1999 | 116 | compilation | pending | weak_match | 10.1643/0045-8511(2000)000[1144:br]2.0.co;2 | 1.000 |  |  |
-| Anderson and Leviton 1966 | 9 | measurement | not_found | below_threshold | 10.11646/zootaxa.4109.3.2 | 0.583 |  |  |
-| Anderson and Leviton 1967 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.part.10436 | 0.511 |  |  |
-| Anderson and Leviton 1969 | 21 | measurement | pending | single_service | 10.5281/zenodo.16456336 | 1.000 |  |  |
-| Anderson and Vitt 1990 | 5 | measurement | certain | two_service_agreement | 10.1007/bf00318265 | 1.000 |  |  |
-| Andersson 1914 | 4 | measurement | pending | single_service | 10.5281/zenodo.16427639 | 1.000 |  |  |
-| Andrade et al. 2006 | 6 | measurement | certain | two_service_agreement | 10.1163/156853806777239995 | 1.000 |  |  |
-| Andrade et al. 2016 [2] | 1 | measurement | not_found | below_threshold | 10.36253/a_h-15046 | 0.380 |  |  |
-| Andrade-Soto et al. 2017 | 1 | measurement | not_found | below_threshold | 10.21829/azm.2024.4012624 | 0.532 |  |  |
-| Andreone 2000 | 1 | measurement | not_found | below_threshold | 10.1080/11250009809386783 | 0.520 |  |  |
-| Andreone and Gavetti 1998 | 1 | measurement | certain | two_service_agreement | 10.1080/11250009809386783 | 1.000 |  |  |
-| Andreone and Greer 2002 | 32 | measurement | certain | two_service_agreement | 10.1017/s0952836902001280 | 1.000 |  |  |
-| Andreone and Guarino 2003 | 2 | measurement | not_found | below_threshold | 10.1163/156853803322763927 | 0.559 |  |  |
-| Andreone et al. 2001 | 9 | measurement | not_found | below_threshold | 10.1643/0045-8511(2006)6[711:snsooc]2.0.co;2 | 0.504 |  |  |
-| Andreone et al. 2005 | 1 | measurement | certain | two_service_agreement | 10.1080/03946975.2005.10531221 | 1.000 |  |  |
-| Andrews 1976 | 2 | measurement | certain | two_service_agreement | 10.2307/1443362 | 1.000 |  |  |
-| Andrews 1979 [2] | 1 | measurement | certain | two_service_agreement | 10.2307/1443868 | 1.000 |  |  |
-| Andrews 1979 [3] | 1 | measurement | certain | two_service_agreement | 10.2307/2387791 | 1.000 |  |  |
-| Andrews 1983 | 1 | measurement | not_found | below_threshold | 10.5406/illinois/9780252036460.003.0004 | 0.306 |  |  |
-| Andrews 2008 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2007.10.001 | 1.000 |  |  |
-| Andrews and Asato 1977 | 1 | measurement | certain | two_service_agreement | 10.1016/0300-9629(77)90015-9 | 1.000 |  |  |
-| Andrews and Pough 1985 | 66 | measurement | certain | two_service_agreement | 10.1086/physzool.58.2.30158569 | 1.000 |  |  |
-| Andrews and Rand 1974 | 31 | measurement | certain | two_service_agreement | 10.2307/1935459 | 1.000 |  |  |
-| Andrews et al. 1999 [2] | 2 | measurement | certain | two_service_agreement | 10.2307/1565547 | 1.000 |  |  |
-| Andrews et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1670/16-124 | 1.000 |  |  |
+| Ananjeva et al. 2017 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.772 | Ananjeva:2017aa | Ananjeva_2017 |
+| Anaya-Rojas et al. 2010 | 1 | measurement | certain | two_service_agreement | 10.1590/s0031-10492010001000001 | 1.000 | Anaya-Rojas:2010aa | Anaya-Rojas_2010 |
+| Anderson 1894 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.770 | Anderson:1894aa | Anderson_1894 |
+| Anderson 1895 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.570 | Anderson:1895aa | Anderson_1895 |
+| Anderson 1896 | 16 | compilation | nodoi_approved | owner_nodoi |  | 0.974 | Anderson:1896aa | Anderson_1896 |
+| Anderson 1898 | 43 | measurement | nodoi_approved | owner_nodoi |  | 0.699 | Anderson:1898aa | Anderson_1898 |
+| Anderson 1901 | 13 | measurement | nodoi_approved | owner_nodoi |  | 0.736 | Anderson:1901aa | Anderson_1901 |
+| Anderson 1963 | 10 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Anderson:1963aa | Anderson_1963 |
+| Anderson 1999 | 116 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Anderson:1999ab | Anderson_1999b |
+| Anderson and Leviton 1966 | 9 | measurement | nodoi_approved | owner_nodoi |  | 0.583 | Anderson:1966aa | Anderson_1966 |
+| Anderson and Leviton 1967 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.511 | Anderson:1967aa | Anderson_1967 |
+| Anderson and Leviton 1969 | 21 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Anderson:1969aa | Anderson_1969 |
+| Anderson and Vitt 1990 | 5 | measurement | certain | two_service_agreement | 10.1007/bf00318265 | 1.000 | Anderson:1990aa | Anderson_1990 |
+| Andersson 1914 | 4 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Andersson:1914aa | Andersson_1914 |
+| Andrade et al. 2006 | 6 | measurement | certain | two_service_agreement | 10.1163/156853806777239995 | 1.000 | Andrade:2006aa | Andrade_2006 |
+| Andrade et al. 2016 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.380 | Andrade:2016aa | Andrade_2016 |
+| Andrade-Soto et al. 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.532 | Andrade-Soto:2017aa | Andrade-Soto_2017 |
+| Andreone 2000 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.520 | Andreone:2000aa | Andreone_2000 |
+| Andreone and Gavetti 1998 | 1 | measurement | certain | two_service_agreement | 10.1080/11250009809386783 | 1.000 | Andreone:1998aa | Andreone_1998 |
+| Andreone and Greer 2002 | 32 | measurement | certain | two_service_agreement | 10.1017/s0952836902001280 | 1.000 | Andreone:2002aa | Andreone_2002 |
+| Andreone and Guarino 2003 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.559 | Andreone:2003aa | Andreone_2003 |
+| Andreone et al. 2001 | 9 | measurement | nodoi_approved | owner_nodoi |  | 0.504 | Andreone:2001aa | Andreone_2001 |
+| Andreone et al. 2005 | 1 | measurement | certain | two_service_agreement | 10.1080/03946975.2005.10531221 | 1.000 | Andreone:2005aa | Andreone_2005 |
+| Andrews 1976 | 2 | measurement | certain | two_service_agreement | 10.2307/1443362 | 1.000 | Andrews:1976aa | Andrews_1976 |
+| Andrews 1979 [2] | 1 | measurement | certain | two_service_agreement | 10.2307/1443868 | 1.000 | Andrews:1979aa | Andrews_1979 |
+| Andrews 1979 [3] | 1 | measurement | certain | two_service_agreement | 10.2307/2387791 | 1.000 | Andrews:1979ab | Andrews_1979b |
+| Andrews 1983 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.306 | Andrews:1983aa | Andrews_1983 |
+| Andrews 2008 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2007.10.001 | 1.000 | Andrews:2008aa | Andrews_2008 |
+| Andrews and Asato 1977 | 1 | measurement | certain | two_service_agreement | 10.1016/0300-9629(77)90015-9 | 1.000 | Andrews:1977aa | Andrews_1977 |
+| Andrews and Pough 1985 | 66 | measurement | certain | two_service_agreement | 10.1086/physzool.58.2.30158569 | 1.000 | Andrews:1985aa | Andrews_1985 |
+| Andrews and Rand 1974 | 31 | measurement | certain | two_service_agreement | 10.2307/1935459 | 1.000 | Andrews:1974aa | Andrews_1974 |
+| Andrews et al. 1999 [2] | 2 | measurement | certain | two_service_agreement | 10.2307/1565547 | 1.000 | Andrews:1999aa | Andrews_1999 |
+| Andrews et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1670/16-124 | 1.000 | Andrews:2017aa | Andrews_2017 |
 | Angel 1940 | 2 | measurement | pending | weak_match | 10.5962/p.329788 | 0.874 |  |  |
-| Angel 1942 | 131 | measurement | not_found | below_threshold | 10.63917/mem.2007.1118 | 0.344 |  |  |
-| Annandale 1904 | 1 | measurement | not_found | below_threshold | 10.1111/j.1469-7998.1888.tb06713.x | 0.409 |  |  |
-| Annandale 1908 | 1 | measurement | certain | two_service_agreement | 10.26515/rzsi/v2/i1/1908/163304 | 1.000 |  |  |
-| Annandale 1913 | 3 | measurement | pending | weak_match | 10.26515/rzsi/v9/i4/1913/163665 | 1.000 |  |  |
-| Antley et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v23i2.14106 | 1.000 |  |  |
-| Aplin et al. 1993 | 4 | measurement | not_found | below_threshold | 10.2307/1565052 | 0.634 |  |  |
-| Aplin et al. 2006 | 3 | measurement | pending | ambiguous | 10.11646/zootaxa.1313.1.1 | 1.000 |  |  |
-| Arad 1995 | 3 | measurement | pending | weak_match | 10.1016/0300-9629(95)00102-6 | 1.000 |  |  |
-| Arad et al. 1997 | 1 | measurement | certain | two_service_agreement | 10.1163/156853897x00152 | 1.000 |  |  |
-| Arakelyan 2002 | 3 | measurement | not_found | below_threshold | 10.3390/genes8060149 | 0.493 |  |  |
-| Arakelyan et al. 2011 | 24 | compilation | not_found | below_threshold | 10.1057/9781137030009.0017 | 0.558 |  |  |
-| Arakelyan et al. 2013 | 4 | measurement | certain | two_service_agreement | 10.13128/acta_herpetol-10568 | 1.000 |  |  |
-| Arbel 1984 | 13 | compilation | not_found | below_threshold | 10.1080/00362178485380081 | 0.466 |  |  |
-| Arena and Wooler 2003 | 1 | measurement | certain | two_service_agreement | 10.1071/zo02040 | 1.000 |  |  |
-| Ariani et al. 2012 | 1 | measurement | certain | two_service_agreement | 10.1080/00222933.2011.597523 | 1.000 |  |  |
-| Ariano-Sanchez and Gil-Escobedo 2016 | 1 | measurement | not_found | no_candidates |  |  |  |  |
-| Ariano-Sanchez and Torres-Almazan 2010 | 1 | measurement | not_found | below_threshold | 10.53846/goediss-2319 | 0.468 |  |  |
-| Ariano-Sanchez et al. 2011 | 1 | measurement | not_found | below_threshold | 10.22201/fc.25942158e.2021.1.192 | 0.495 |  |  |
-| Arias et al. 2011 [2] | 5 | measurement | pending | ambiguous | 10.11646/zootaxa.3022.1.1 | 1.000 |  |  |
-| Arias et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.15560/9.4.844 | 1.000 |  |  |
-| Arias et al. 2014 [1] | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00002948 | 1.000 |  |  |
-| Arias et al. 2014 [2] | 1 | measurement | certain | two_service_agreement | 10.1643/ch-13-037 | 1.000 |  |  |
-| Arias et al. 2018 | 1 | measurement | certain | two_service_agreement | 10.1111/zsc.12277 | 1.000 |  |  |
-| Arillo et al. 1967 | 2 | measurement | not_found | below_threshold | 10.4000/books.edizionikaplan.252 | 0.402 |  |  |
-| Armstead et al. 2017 | 2 | measurement | not_found | below_threshold | 10.2307/1444008 | 0.528 |  |  |
-| Arnold 1972 | 2 | measurement | not_found | below_threshold | 10.1007/978-3-030-18453-7_8 | 0.626 |  |  |
-| Arnold 1977 | 6 | measurement | pending | grey_literature | 10.2307/4111134 | 0.518 |  |  |
+| Angel 1942 | 131 | measurement | nodoi_approved | owner_nodoi |  | 0.344 | Angel:1942aa | Angel_1942 |
+| Annandale 1904 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.409 | Annandale:1904aa | Annandale_1904 |
+| Annandale 1908 | 1 | measurement | certain | two_service_agreement | 10.26515/rzsi/v2/i1/1908/163304 | 1.000 | Annandale:1908aa | Annandale_1908 |
+| Annandale 1913 | 3 | measurement | approved | owner_candidate | 10.26515/rzsi/v9/i4/1913/163665 | 1.000 | Anon:1913aa | Anon_1913 |
+| Antley et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v23i2.14106 | 1.000 | Antley:2016aa | Antley_2016 |
+| Aplin et al. 1993 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.634 | Aplin:1993aa | Aplin_1993 |
+| Aplin et al. 2006 | 3 | measurement | approved | owner_candidate | 10.11646/zootaxa.1313.1.1 | 1.000 | Aplin:2006aa | Aplin_2006 |
+| Arad 1995 | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Arad:1995aa | Arad_1995 |
+| Arad et al. 1997 | 1 | measurement | certain | two_service_agreement | 10.1163/156853897x00152 | 1.000 | Arad:1997aa | Arad_1997 |
+| Arakelyan 2002 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.493 | Arakelyan:2002aa | Arakelyan_2002 |
+| Arakelyan et al. 2011 | 24 | compilation | nodoi_approved | owner_nodoi |  | 0.558 | Arakelyan:2011aa | Arakelyan_2011 |
+| Arakelyan et al. 2013 | 4 | measurement | certain | two_service_agreement | 10.13128/acta_herpetol-10568 | 1.000 | Arakelyan:2013aa | Arakelyan_2013 |
+| Arbel 1984 | 13 | compilation | nodoi_approved | owner_nodoi |  | 0.466 | Arbel:1984aa | Arbel_1984 |
+| Arena and Wooler 2003 | 1 | measurement | certain | two_service_agreement | 10.1071/zo02040 | 1.000 | Arena:2003aa | Arena_2003 |
+| Ariani et al. 2012 | 1 | measurement | certain | two_service_agreement | 10.1080/00222933.2011.597523 | 1.000 | Ariani:2011aa | Ariani_2011 |
+| Ariano-Sanchez and Gil-Escobedo 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  |  | Ariano-Sanchez:2016aa | Ariano-Sanchez_2016 |
+| Ariano-Sanchez and Torres-Almazan 2010 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.468 | Ariano-Sanchez:2010aa | Ariano-Sanchez_2010 |
+| Ariano-Sanchez et al. 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.495 | Ariano-Sanchez:2011aa | Ariano-Sanchez_2011 |
+| Arias et al. 2011 [2] | 5 | measurement | approved | owner_candidate | 10.11646/zootaxa.3022.1.1 | 1.000 | Arias:2011aa | Arias_2011 |
+| Arias et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.15560/9.4.844 | 1.000 | Arias:2013aa | Arias_2013 |
+| Arias et al. 2014 [1] | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00002948 | 1.000 | Arias:2014aa | Arias_2014 |
+| Arias et al. 2014 [2] | 1 | measurement | certain | two_service_agreement | 10.1643/ch-13-037 | 1.000 | Arias:2014ab | Arias_2014b |
+| Arias et al. 2018 | 1 | measurement | certain | two_service_agreement | 10.1111/zsc.12277 | 1.000 | Arias:2018aa | Arias_2018 |
+| Arillo et al. 1967 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.402 | Arillo:1967aa | Arillo_1967 |
+| Armstead et al. 2017 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.528 | Armstead:2017aa | Armstead_2017 |
+| Arnold 1972 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.626 | Arnold:1972aa | Arnold_1972 |
+| Arnold 1977 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.518 | Arnold:1977aa | Arnold_1977 |
 | Arnold 1980 [1] | 4 | measurement | pending | single_service | 10.5962/bhl.part.237 | 1.000 |  |  |
-| Arnold 1980 [2] | 2 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1980.tb01447.x | 1.000 |  |  |
-| Arnold 1980 [3] | 10 | compilation | not_found | below_threshold | 10.52132/ajrsp.e.2024.57.4 | 0.400 |  |  |
-| Arnold 1980 [4] | 9 | measurement | pending | grey_literature | 10.5962/bhl.title.2780 | 0.526 |  |  |
-| Arnold 1982 | 1 | measurement | not_found | below_threshold | 10.3897/bdj.11.e101647 | 0.363 |  |  |
-| Arnold 1983 | 7 | measurement | pending | weak_match | 10.5281/zenodo.13655059 | 1.000 |  |  |
-| Arnold 1984 [1] | 21 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1984.tb02377.x | 1.000 |  |  |
-| Arnold 1984 [2] | 30 | measurement | certain | two_service_agreement | 10.1080/00222938400770131 | 1.000 |  |  |
-| Arnold 1986 [1] | 22 | compilation | not_found | below_threshold | 10.5040/9798216010920.0010 | 0.369 |  |  |
-| Arnold 1986 [2] | 15 | measurement | not_found | below_threshold | 10.11646/zootaxa.1317.1.6 | 0.542 |  |  |
-| Arnold 1992 | 1 | measurement | certain | two_service_agreement | 10.2307/1565125 | 1.000 |  |  |
-| Arnold 1997 | 4 | measurement | pending | ambiguous | 10.1111/j.1096-3642.1997.tb00138.x | 1.000 |  |  |
-| Arnold and Bour 2008 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1705.1.3 | 1.000 |  |  |
-| Arnold and Gardner 1994 | 6 | measurement | not_found | below_threshold | 10.11646/zootaxa.3378.1.1 | 0.557 |  |  |
-| Arnold and Leviton 1977 | 3 | measurement | pending | weak_match | 10.5281/zenodo.13409815 | 1.000 |  |  |
-| Arnold and Ovenden 2004 | 59 | compilation | not_found | below_threshold | 10.1017/s0030605300016082 | 0.615 |  |  |
-| Arnold et al. 1998 | 1 | measurement | certain | two_service_agreement | 10.1080/03946975.1998.10539366 | 0.982 |  |  |
-| Arnold et al. 2007 | 10 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1430.1.1 | 1.000 |  |  |
-| Arnold et al. 2008 | 2 | measurement | certain | two_service_agreement | 10.1111/j.1463-6409.2008.00351.x | 1.000 |  |  |
-| Arosemena and Ibanez 1993 | 1 | measurement | not_found | below_threshold | 10.1655/0018-0831(2007)63[375:fnsoag]2.0.co;2 | 0.467 |  |  |
-| Arredondo 2013 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00002880 | 1.000 |  |  |
-| Arredondo and Sanchez-Pacheco 2010 | 1 | measurement | certain | two_service_agreement | 10.1670/09-218.1 | 1.000 |  |  |
-| Arribas 2004 | 1 | measurement | not_found | below_threshold | 10.1163/1570756053993505 | 0.521 |  |  |
-| Arribas 2008 [1] | 1 | measurement | not_found | below_threshold | 10.1163/1570756053993505 | 0.425 |  |  |
-| Arribas 2008 [2] | 1 | measurement | not_found | below_threshold | 10.11160/bah.12007 | 0.432 |  |  |
-| Arribas 2008 [3] | 1 | measurement | not_found | below_threshold | 10.1163/1570756053993505 | 0.408 |  |  |
-| Arribas 2009 [1] | 1 | measurement | not_found | below_threshold | 10.1163/1570756053993505 | 0.425 |  |  |
-| Arribas 2009 [2] | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.634.1.1 | 0.483 |  |  |
-| Arribas 2010 [2] | 1 | measurement | pending | grey_literature | 10.11646/zootaxa.1240.1.1 | 0.398 |  |  |
-| Arribas 2014 | 3 | measurement | not_found | below_threshold | 10.11646/zootaxa.634.1.1 | 0.485 |  |  |
-| Arribas and Carranza 2004 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.634.1.1 | 1.000 |  |  |
+| Arnold 1980 [2] | 2 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1980.tb01447.x | 1.000 | Arnold:1980aa | Arnold_1980 |
+| Arnold 1980 [3] | 10 | compilation | nodoi_approved | owner_nodoi |  | 0.400 | Arnold:1980ab | Arnold_1980b |
+| Arnold 1980 [4] | 9 | measurement | nodoi_approved | owner_nodoi |  | 0.526 | Arnold:1980ac | Arnold_1980c |
+| Arnold 1982 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.363 | Arnold:1982aa | Arnold_1982 |
+| Arnold 1983 | 7 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Arnold:1983aa | Arnold_1983 |
+| Arnold 1984 [1] | 21 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1984.tb02377.x | 1.000 | Arnold:1984ab | Arnold_1984b |
+| Arnold 1984 [2] | 30 | measurement | certain | two_service_agreement | 10.1080/00222938400770131 | 1.000 | Arnold:1984aa | Arnold_1984 |
+| Arnold 1986 [1] | 22 | compilation | nodoi_approved | owner_nodoi |  | 0.369 | Arnold:1986aa | Arnold_1986 |
+| Arnold 1986 [2] | 15 | measurement | nodoi_approved | owner_nodoi |  | 0.542 | Arnold:1986ab | Arnold_1986b |
+| Arnold 1992 | 1 | measurement | certain | two_service_agreement | 10.2307/1565125 | 1.000 | Arnold:1992aa | Arnold_1992 |
+| Arnold 1997 | 4 | measurement | approved | owner_candidate | 10.1111/j.1096-3642.1997.tb00138.x | 1.000 | Arnold:1997aa | Arnold_1997 |
+| Arnold and Bour 2008 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1705.1.3 | 1.000 | Arnold:2008ab | Arnold_2008b |
+| Arnold and Gardner 1994 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.557 | Arnold:1994aa | Arnold_1994 |
+| Arnold and Leviton 1977 | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Arnold:1977ab | Arnold_1977b |
+| Arnold and Ovenden 2004 | 59 | compilation | nodoi_approved | owner_nodoi |  | 0.615 | Arnold:2004aa | Arnold_2004 |
+| Arnold et al. 1998 | 1 | measurement | certain | two_service_agreement | 10.1080/03946975.1998.10539366 | 0.982 | Arnold:1998aa | Arnold_1998 |
+| Arnold et al. 2007 | 10 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1430.1.1 | 1.000 | Arnold:2007aa | Arnold_2007 |
+| Arnold et al. 2008 | 2 | measurement | certain | two_service_agreement | 10.1111/j.1463-6409.2008.00351.x | 1.000 | Arnold:2008aa | Arnold_2008 |
+| Arosemena and Ibanez 1993 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.467 | Arosemena:1993aa | Arosemena_1993 |
+| Arredondo 2013 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00002880 | 1.000 | Arredondo:2013aa | Arredondo_2013 |
+| Arredondo and Sanchez-Pacheco 2010 | 1 | measurement | certain | two_service_agreement | 10.1670/09-218.1 | 1.000 | Arredondo:2010aa | Arredondo_2010 |
+| Arribas 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.521 | Arribas:2004ab | Arribas_2004b |
+| Arribas 2008 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.425 | Arribas:2008aa | Arribas_2008 |
+| Arribas 2008 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.432 | Arribas:2008ab | Arribas_2008b |
+| Arribas 2008 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.408 | Arribas:2008ac | Arribas_2008c |
+| Arribas 2009 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.425 | Arribas:2009aa | Arribas_2009 |
+| Arribas 2009 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.483 | Arribas:2009ab | Arribas_2009b |
+| Arribas 2010 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.398 | Arribas:2010aa | Arribas_2010 |
+| Arribas 2014 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.485 | Arribas:2014aa | Arribas_2014 |
+| Arribas and Carranza 2004 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.634.1.1 | 1.000 | Arribas:2004aa | Arribas_2004 |
 | Arribas et al. 2006 | 2 | measurement | pending | ambiguous | 10.11646/zootaxa.1240.1.1 | 0.913 |  |  |
-| Arribas et al. 2013 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3626.4.1 | 1.000 |  |  |
-| Artacho et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2016.11.001 | 1.000 |  |  |
-| Aryal et al. 2010 | 4 | compilation | not_found | below_threshold | 10.3126/tuj.v35i1.35832 | 0.632 |  |  |
-| Ashton 2005 | 1 | measurement | certain | two_service_agreement | 10.1670/148-04a.1 | 1.000 |  |  |
-| Ataev et al. 1994 | 7 | measurement | pending | weak_match | 10.1007/978-94-011-1116-4_20 | 1.000 |  |  |
-| Atkins et al. 2015 | 1 | measurement | not_found | below_threshold | 10.1670/13-194 | 0.681 |  |  |
-| Auerbach 1987 | 3 | compilation | not_found | below_threshold | 10.1007/978-1-4613-1869-9_18 | 0.528 |  |  |
-| Auffenberg 1980 | 14 | measurement | certain | two_service_agreement | 10.58782/flmnh.tgzc4676 | 1.000 |  |  |
-| Auffenberg 1981 | 1 | measurement | pending | weak_match | 10.2307/1444685 | 1.000 |  |  |
-| Auffenberg 1982 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.title.42386 | 0.500 |  |  |
-| Auffenberg 1988 | 2 | measurement | not_found | below_threshold | 10.1126/science.241.4871.1368 | 0.397 |  |  |
-| Auffenberg and Auffenberg 1988 | 2 | measurement | certain | two_service_agreement | 10.58782/flmnh.nbft8708 | 1.000 |  |  |
-| Auffenberg and Auffenberg 1989 | 11 | measurement | certain | two_service_agreement | 10.58782/flmnh.suvw4694 | 1.000 |  |  |
-| Auffenberg et al. 1989 | 1 | measurement | not_found | below_threshold | 10.1007/s40009-023-01264-5 | 0.437 |  |  |
-| Auffenberg et al. 2004 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.2636.1.1 | 0.580 |  |  |
-| Auffenberg et al. 2010 | 2 | measurement | pending | ambiguous | 10.11646/zootaxa.2636.1.1 | 1.000 |  |  |
-| Augustino and Utong 2013 | 2 | measurement | pending | weak_match | 10.3724/sp.j.1245.2013.00268 | 0.711 |  |  |
-| Aun and Martori 1998 | 1 | measurement | not_found | below_threshold | 10.54778/rr.v37i2.50 | 0.378 |  |  |
-| Aurich et al. 2011 | 4 | measurement | not_found | below_threshold | 10.1016/j.zool.2024.126160 | 0.503 |  |  |
-| Aurich et al. 2015 | 4 | measurement | not_found | below_threshold | 10.11606/issn.2316-9079.v14i1p53-62 | 0.499 |  |  |
-| Austin 1995 | 5 | measurement | not_found | below_threshold | 10.1655/02-48 | 0.502 |  |  |
-| Austin 2006 | 2 | measurement | not_found | below_threshold | 10.1101/2025.08.21.671428 | 0.602 |  |  |
-| Austin et al. 2010 | 8 | measurement | certain | two_service_agreement | 10.1016/j.ympev.2010.06.005 | 1.000 |  |  |
-| Autumn and Losos 1997 | 1 | measurement | certain | two_service_agreement | 10.2307/1565678 | 1.000 |  |  |
-| Autumn et al. 1994 | 1 | measurement | certain | two_service_agreement | 10.1086/physzool.67.1.30163845 | 1.000 |  |  |
-| Avci et al. 2015 | 1 | measurement | not_found | below_threshold | 10.1080/09397140.2015.1101925 | 0.598 |  |  |
-| Avery 1981 | 1 | measurement | certain | two_service_agreement | 10.1163/156853881x00375 | 1.000 |  |  |
-| Avery 1996 | 2 | measurement | certain | two_service_agreement | 10.1093/oso/9780198577874.003.0012 | 1.000 |  |  |
-| Avila 2003 | 9 | measurement | certain | two_service_agreement | 10.1655/0018-0831(2003)059[0283:ansols]2.0.co;2 | 1.000 |  |  |
-| Avila 2009 | 19 | measurement | pending | grey_literature | 10.47749/t/unicamp.1992.39561 | 0.503 |  |  |
-| Avila and Perez 2011 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.2440.1.4 | 0.507 |  |  |
-| Avila et al. 2003 | 12 | measurement | certain | two_service_agreement | 10.1655/02-67 | 1.000 |  |  |
-| Avila et al. 2004 | 2 | measurement | certain | two_service_agreement | 10.1655/03-04 | 1.000 |  |  |
-| Avila et al. 2007 [2] | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.1452.1.3 | 1.000 |  |  |
-| Avila et al. 2008 [1] | 9 | measurement | certain | two_service_agreement | 10.1670/06-244r2.1 | 1.000 |  |  |
-| Avila et al. 2008 [2] | 1 | measurement | certain | two_service_agreement | 10.2994/1808-9798(2008)3[112:rbafho]2.0.co;2 | 1.000 |  |  |
-| Avila et al. 2008 [3] | 1 | measurement | not_found | below_threshold | 10.1590/s1519-69842004000500007 | 0.528 |  |  |
-| Avila et al. 2009 | 11 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2234.1.3 | 1.000 |  |  |
-| Avila et al. 2010 [1] | 14 | measurement | pending | ambiguous | 10.11646/zootaxa.2434.1.4 | 1.000 |  |  |
-| Avila et al. 2010 [2] | 1 | measurement | certain | two_service_agreement | 10.1017/s0022149x09990538 | 1.000 |  |  |
-| Avila et al. 2011 | 4 | measurement | pending | ambiguous | 10.11646/zootaxa.2924.1.1 | 1.000 |  |  |
-| Avila et al. 2012 [1] | 9 | measurement | pending | ambiguous | 10.11646/zootaxa.3431.1.2 | 1.000 |  |  |
-| Avila et al. 2012 [2] | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3325.1.3 | 1.000 |  |  |
-| Avila et al. 2013 [2] | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3608.4.1 | 1.000 |  |  |
-| Avila et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3793.1.4 | 1.000 |  |  |
-| Avila et al. 2015 [1] | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3947.1.4 | 1.000 |  |  |
-| Avila et al. 2015 [2] | 1 | compilation | certain | two_service_agreement | 10.15560/11.4.1710 | 1.000 |  |  |
-| Avila et al. 2016 | 1 | compilation | certain | two_service_agreement | 10.15560/12.6.2018 | 1.000 |  |  |
-| Avila et al. 2017 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4362.4.4 | 1.000 |  |  |
-| Avila-Pires 1995 | 91 | compilation | not_found | below_threshold | 10.1006/anbo.2000.1329 | 0.306 |  |  |
-| Avila-Pires 2001 | 2 | measurement | not_found | below_threshold | 10.31390/opmns.071 | 0.539 |  |  |
-| Avila-Pires and Hoogmoed 2000 | 4 | measurement | not_found | below_threshold | 10.11646/zootaxa.376.1.1 | 0.459 |  |  |
-| Avila-Pires and Vitt 1998 | 11 | measurement | not_found | below_threshold | 10.2307/1447787 | 0.513 |  |  |
-| Avila-Pires et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.46357/bcnaturais.v8i3.556 | 1.000 |  |  |
-| Avila-Pires et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.2994/sajh-d-17-00028.1 | 1.000 |  |  |
-| Axtell 1956 | 2 | measurement | pending | grey_literature | 10.2307/1439633 | 0.438 |  |  |
-| Axtell 1968 | 1 | compilation | not_found | below_threshold | 10.17161/randa.v33i1.22980 | 0.364 |  |  |
-| Axtell 1983 | 1 | compilation | not_found | below_threshold | 10.2307/3671341 | 0.556 |  |  |
-| Axtell and Axtell 1971 | 4 | measurement | certain | two_service_agreement | 10.2307/1441602 | 0.980 |  |  |
-| Ayala and Castro 1983 | 8 | measurement | not_found | below_threshold | 10.15446/caldasia.v39n1.63318 | 0.499 |  |  |
-| Ayala and Harris 1984 | 1 | measurement | not_found | below_threshold | 10.2307/1563434 | 0.625 |  |  |
-| Ayala and Serna 1986 | 2 | measurement | not_found | below_threshold | 10.15446/caldasia.v36n2.47483 | 0.592 |  |  |
-| Ayala and Williams 1988 | 2 | measurement | not_found | below_threshold | 10.5962/bhl.part.6014 | 0.603 |  |  |
-| Ayala et al. 1983 | 2 | measurement | not_found | below_threshold | 10.5962/bhl.part.28059 | 0.645 |  |  |
-| Ayala et al. 1984 | 3 | measurement | certain | two_service_agreement | 10.11606/0031-1049.1984.35.p135-145 | 0.987 |  |  |
-| Ayala-Varela and Torres-Carvajal 2011 | 2 | measurement | pending | weak_match | 10.3897/zookeys.53.456 | 1.000 |  |  |
-| Ayala-Varela and Velasco 2010 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.2577.1.2 | 1.000 |  |  |
-| Ayala-Varela et al. 2011 | 1 | measurement | certain | two_service_agreement | 10.15560/7.5.629 | 1.000 |  |  |
-| Ayala-Varela et al. 2014 | 2 | measurement | pending | weak_match | 10.11646/zootaxa.2577.1.2 | 0.738 |  |  |
-| Ayala-Varela et al. 2015 | 1 | measurement | pending | weak_match | 10.5281/zenodo.16165648 | 0.800 |  |  |
-| Bacon 1967 | 3 | measurement | pending | single_service | 10.5281/zenodo.13676078 | 1.000 |  |  |
-| Baha El Din 1996 | 2 | measurement | pending | weak_match | 10.1080/09397140.1996.10637688 | 1.000 |  |  |
-| Baha El Din 2001 | 5 | measurement | pending | weak_match | 10.1080/09397140.2001.10637848 | 1.000 |  |  |
-| Baha El Din 2005 | 2 | measurement | certain | two_service_agreement | 10.1080/09397140.2005.10638078 | 1.000 |  |  |
-| Baha El Din 2007 | 2 | measurement | certain | two_service_agreement | 10.1080/09397140.2007.10638200 | 1.000 |  |  |
-| Bahir and Maduwage 2005 | 7 | measurement | pending | grey_literature | 10.1655/herpetologica-d-13-00087 | 0.536 |  |  |
-| Bahir and Silva 2005 | 2 | measurement | pending | grey_literature | 10.1111/j.1469-7998.1981.tb03439.x | 0.572 |  |  |
-| Bahmani et al. 2011 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.part.15563 | 0.637 |  |  |
-| Bahmani et al. 2014 | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1245.2012.00079 | 0.469 |  |  |
-| Baier et al. 2009 | 12 | compilation | not_found | below_threshold | 10.1525/9780520949973-013 | 0.591 |  |  |
-| Baig 1998 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.1857.1.3 | 0.687 |  |  |
-| Baig and Masroor 2006 | 17 | measurement | not_found | below_threshold | 10.5962/bhl.part.15563 | 0.651 |  |  |
-| Bain et al. 2007 | 1 | measurement | not_found | below_threshold | 10.3897/bdj.14.e178266 | 0.607 |  |  |
-| Baker 1947 | 2 | measurement | pending | ambiguous | 10.1111/j.1096-3642.1940.tb02074.x | 0.714 |  |  |
-| Baker et al. 1967 | 2 | measurement | certain | two_service_agreement | 10.2307/2423442 | 1.000 |  |  |
-| Balakrishna 2014 | 1 | measurement | not_found | below_threshold | 10.13102/scb12659 | 0.474 |  |  |
-| Balakrishna and Achari 2014 | 1 | measurement | not_found | below_threshold | 10.17161/randa.v31i1.22395 | 0.479 |  |  |
-| Balakrishna et al. 2012 | 1 | measurement | not_found | below_threshold | 10.53562/ajcb.73480 | 0.456 |  |  |
-| Balestrin 2008 | 4 | measurement | pending | grey_literature | 10.22564/6simbgf2014.037 | 0.485 |  |  |
-| Balestrin and Cappellari 2011 | 2 | measurement | certain | two_service_agreement | 10.1590/s0073-47212011000100013 | 1.000 |  |  |
-| Balestrin et al. 2010 | 2 | measurement | certain | two_service_agreement | 10.1590/s1676-06032010000100013 | 1.000 |  |  |
-| Ball and Borrell 2016 | 9 | measurement | certain | two_service_agreement | 10.11609/jott.2373.8.12.9454-9460 | 1.000 |  |  |
-| Ballinger 1977 | 1 | measurement | certain | two_service_agreement | 10.2307/1939012 | 1.000 |  |  |
-| Ballinger and Congdon 1981 | 1 | measurement | certain | two_service_agreement | 10.1080/00222938100770171 | 1.000 |  |  |
-| Ballinger and Schrank 1972 | 1 | measurement | not_found | below_threshold | 10.2307/3671852 | 0.478 |  |  |
-| Ballinger et al. 2000 [1] | 2 | measurement | certain | two_service_agreement | 10.1076/snfe.35.3.179.8857 | 1.000 |  |  |
-| Banda-Leal et al. 2017 | 3 | measurement | certain | two_service_agreement | 10.1670/15-168 | 1.000 |  |  |
-| Banta 1963 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.12884 | 1.000 |  |  |
-| Banuelos-Alamillo et al. 2016 | 1 | measurement | not_found | below_threshold | 10.2307/1563626 | 0.370 |  |  |
-| Bar 2003 | 3 | measurement | pending | grey_literature | 10.69704/jhaesi.116.2004.26420 | 0.253 |  |  |
-| Barabanov and Ananjeva 2007 | 10 | compilation | certain | two_service_agreement | 10.11646/zootaxa.1399.1.1 | 1.000 |  |  |
-| Baran and Gruber 1982 | 3 | measurement | not_found | below_threshold | 10.1002/fedr.4921050103 | 0.615 |  |  |
-| Baran et al. 2005 | 2 | measurement | not_found | below_threshold | 10.4081/bmrsn.2017.51 | 0.448 |  |  |
-| Barbadillo and Martinez-Solano 2002 | 12 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2002)002[0208:viilva]2.0.co;2 | 1.000 |  |  |
+| Arribas et al. 2013 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3626.4.1 | 1.000 | Arribas:2013aa | Arribas_2013 |
+| Artacho et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2016.11.001 | 1.000 | Artacho:2017aa | Artacho_2017 |
+| Aryal et al. 2010 | 4 | compilation | nodoi_approved | owner_nodoi |  | 0.632 | Aryal:2010aa | Aryal_2010 |
+| Ashton 2005 | 1 | measurement | certain | two_service_agreement | 10.1670/148-04a.1 | 1.000 | Ashton:2005aa | Ashton_2005 |
+| Ataev et al. 1994 | 7 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Ataev:1994aa | Ataev_1994 |
+| Atkins et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.681 | Atkins:2015aa | Atkins_2015 |
+| Auerbach 1987 | 3 | compilation | nodoi_approved | owner_nodoi |  | 0.528 | Auerbach:1987aa | Auerbach_1987 |
+| Auffenberg 1980 | 14 | measurement | certain | two_service_agreement | 10.58782/flmnh.tgzc4676 | 1.000 | Auffenberg:1980aa | Auffenberg_1980 |
+| Auffenberg 1981 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Auffenberg:1981aa | Auffenberg_1981 |
+| Auffenberg 1982 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.500 | Auffenberg:1982aa | Auffenberg_1982 |
+| Auffenberg 1988 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.397 | Auffenberg:1988ab | Auffenberg_1988b |
+| Auffenberg and Auffenberg 1988 | 2 | measurement | certain | two_service_agreement | 10.58782/flmnh.nbft8708 | 1.000 | Auffenberg:1988aa | Auffenberg_1988 |
+| Auffenberg and Auffenberg 1989 | 11 | measurement | certain | two_service_agreement | 10.58782/flmnh.suvw4694 | 1.000 | Auffenberg:1989aa | Auffenberg_1989 |
+| Auffenberg et al. 1989 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.437 | Auffenberg:1989ab | Auffenberg_1989b |
+| Auffenberg et al. 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.580 | Auffenberg:2004aa | Auffenberg_2004 |
+| Auffenberg et al. 2010 | 2 | measurement | approved | owner_candidate | 10.11646/zootaxa.2636.1.1 | 1.000 | Auffenberg:2010aa | Auffenberg_2010 |
+| Augustino and Utong 2013 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.711 | Augustino:2013aa | Augustino_2013 |
+| Aun and Martori 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.378 | Aun:1998aa | Aun_1998 |
+| Aurich et al. 2011 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.503 | Aurich:2011aa | Aurich_2011 |
+| Aurich et al. 2015 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.499 | Aurich:2015aa | Aurich_2015 |
+| Austin 1995 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.502 | Austin:1995aa | Austin_1995 |
+| Austin 2006 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.602 | Austin:2006aa | Austin_2006 |
+| Austin et al. 2010 | 8 | measurement | certain | two_service_agreement | 10.1016/j.ympev.2010.06.005 | 1.000 | Austin:2010aa | Austin_2010 |
+| Autumn and Losos 1997 | 1 | measurement | certain | two_service_agreement | 10.2307/1565678 | 1.000 | Autumn:1997aa | Autumn_1997 |
+| Autumn et al. 1994 | 1 | measurement | certain | two_service_agreement | 10.1086/physzool.67.1.30163845 | 1.000 | Autumn:1994aa | Autumn_1994 |
+| Avci et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.598 | Avci:2015aa | Avci_2015 |
+| Avery 1981 | 1 | measurement | certain | two_service_agreement | 10.1163/156853881x00375 | 1.000 | Avery:1980aa | Avery_1980 |
+| Avery 1996 | 2 | measurement | certain | two_service_agreement | 10.1093/oso/9780198577874.003.0012 | 1.000 | Avery:1996aa | Avery_1996 |
+| Avila 2003 | 9 | measurement | certain | two_service_agreement | 10.1655/0018-0831(2003)059[0283:ansols]2.0.co;2 | 1.000 | Avila:2003aa | Avila_2003 |
+| Avila 2009 | 19 | measurement | nodoi_approved | owner_nodoi |  | 0.503 | Avila:2009ac | Avila_2009c |
+| Avila and Perez 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.507 | Avila:2011ab | Avila_2011b |
+| Avila et al. 2003 | 12 | measurement | certain | two_service_agreement | 10.1655/02-67 | 1.000 | Avila:2003ab | Avila_2003b |
+| Avila et al. 2004 | 2 | measurement | certain | two_service_agreement | 10.1655/03-04 | 1.000 | Avila:2004aa | Avila_2004 |
+| Avila et al. 2007 [2] | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.1452.1.3 | 1.000 | Avila:2007aa | Avila_2007 |
+| Avila et al. 2008 [1] | 9 | measurement | certain | two_service_agreement | 10.1670/06-244r2.1 | 1.000 | Avila:2008aa | Avila_2008 |
+| Avila et al. 2008 [2] | 1 | measurement | certain | two_service_agreement | 10.2994/1808-9798(2008)3[112:rbafho]2.0.co;2 | 1.000 | Avila:2008ab | Avila_2008b |
+| Avila et al. 2008 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.528 | Avila:2008ac | Avila_2008c |
+| Avila et al. 2009 | 11 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2234.1.3 | 1.000 | Avila:2009ab | Avila_2009b |
+| Avila et al. 2010 [1] | 14 | measurement | approved | owner_candidate | 10.11646/zootaxa.2434.1.4 | 1.000 | Avila:2010aa | Avila_2010 |
+| Avila et al. 2010 [2] | 1 | measurement | certain | two_service_agreement | 10.1017/s0022149x09990538 | 1.000 | Avila:2009aa | Avila_2009 |
+| Avila et al. 2011 | 4 | measurement | approved | owner_candidate | 10.11646/zootaxa.2924.1.1 | 1.000 | Avila:2011aa | Avila_2011 |
+| Avila et al. 2012 [1] | 9 | measurement | approved | owner_candidate | 10.11646/zootaxa.3431.1.2 | 1.000 | Avila:2012ab | Avila_2012b |
+| Avila et al. 2012 [2] | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3325.1.3 | 1.000 | Avila:2012aa | Avila_2012 |
+| Avila et al. 2013 [2] | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3608.4.1 | 1.000 | Avila:2013aa | Avila_2013 |
+| Avila et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3793.1.4 | 1.000 | Avila:2014aa | Avila_2014 |
+| Avila et al. 2015 [1] | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3947.1.4 | 1.000 | Avila:2015aa | Avila_2015 |
+| Avila et al. 2015 [2] | 1 | compilation | certain | two_service_agreement | 10.15560/11.4.1710 | 1.000 | Avila:2015ab | Avila_2015b |
+| Avila et al. 2016 | 1 | compilation | certain | two_service_agreement | 10.15560/12.6.2018 | 1.000 | Avila:2016aa | Avila_2016 |
+| Avila et al. 2017 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4362.4.4 | 1.000 | Avila:2017aa | Avila_2017 |
+| Avila-Pires 1995 | 91 | compilation | nodoi_approved | owner_nodoi |  | 0.306 | Avila-Pires:1995aa | Avila-Pires_1995 |
+| Avila-Pires 2001 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.539 | Avila-Pires:2001aa | Avila-Pires_2001 |
+| Avila-Pires and Hoogmoed 2000 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.459 | Avila-Pires:2000aa | Avila-Pires_2000 |
+| Avila-Pires and Vitt 1998 | 11 | measurement | nodoi_approved | owner_nodoi |  | 0.513 | Avila-Pires:1998aa | Avila-Pires_1998 |
+| Avila-Pires et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.46357/bcnaturais.v8i3.556 | 1.000 | Avila-Pires:2013aa | Avila-Pires_2013 |
+| Avila-Pires et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.2994/sajh-d-17-00028.1 | 1.000 | Avila-Pires:2017aa | Avila-Pires_2017 |
+| Axtell 1956 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.438 | Axtell:1956aa | Axtell_1956 |
+| Axtell 1968 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.364 | Axtell:1968aa | Axtell_1968 |
+| Axtell 1983 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.556 | Axtell:1983aa | Axtell_1983 |
+| Axtell and Axtell 1971 | 4 | measurement | certain | two_service_agreement | 10.2307/1441602 | 0.980 | Axtell:1971aa | Axtell_1971 |
+| Ayala and Castro 1983 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.499 | Ayala:1983aa | Ayala_1983 |
+| Ayala and Harris 1984 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.625 | Ayala:1984ab | Ayala_1984b |
+| Ayala and Serna 1986 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.592 | Ayala:1986aa | Ayala_1986 |
+| Ayala and Williams 1988 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.603 | Ayala:1988aa | Ayala_1988 |
+| Ayala et al. 1983 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.645 | Ayala:1983ab | Ayala_1983b |
+| Ayala et al. 1984 | 3 | measurement | certain | two_service_agreement | 10.11606/0031-1049.1984.35.p135-145 | 0.987 | Ayala:1984aa | Ayala_1984 |
+| Ayala-Varela and Torres-Carvajal 2011 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Ayala-Varela:2011ab | Ayala-Varela_2011b |
+| Ayala-Varela and Velasco 2010 | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.2577.1.2 | 1.000 | Ayala-Varela:2010aa | Ayala-Varela_2010 |
+| Ayala-Varela et al. 2011 | 1 | measurement | certain | two_service_agreement | 10.15560/7.5.629 | 1.000 | Ayala-Varela:2011aa | Ayala-Varela_2011 |
+| Ayala-Varela et al. 2014 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.738 | Ayala-Varela:2014aa | Ayala-Varela_2014 |
+| Ayala-Varela et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.800 | Ayala-Varela:2015aa | Ayala-Varela_2015 |
+| Bacon 1967 | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bacon:1967aa | Bacon_1967 |
+| Baha El Din 1996 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Baha-El-Din:1996aa | BahaElDin_1996 |
+| Baha El Din 2001 | 5 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Baha-El-Din:2001aa | BahaElDin_2001 |
+| Baha El Din 2005 | 2 | measurement | certain | two_service_agreement | 10.1080/09397140.2005.10638078 | 1.000 | Baha-El-Din:2005aa | BahaElDin_2005 |
+| Baha El Din 2007 | 2 | measurement | certain | two_service_agreement | 10.1080/09397140.2007.10638200 | 1.000 | Baha-El-Din:2007aa | BahaElDin_2007 |
+| Bahir and Maduwage 2005 | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.536 | Bahir:2005aa | Bahir_2005 |
+| Bahir and Silva 2005 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.572 | Bahir:2005ab | Bahir_2005b |
+| Bahmani et al. 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.637 | Bahmani:2011aa | Bahmani_2011 |
+| Bahmani et al. 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.469 | Bahmani:2014aa | Bahmani_2014 |
+| Baier et al. 2009 | 12 | compilation | nodoi_approved | owner_nodoi |  | 0.591 | Baier:2009aa | Baier_2009 |
+| Baig 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.687 | Baig:1998aa | Baig_1998 |
+| Baig and Masroor 2006 | 17 | measurement | nodoi_approved | owner_nodoi |  | 0.651 | Baig:2006aa | Baig_2006 |
+| Bain et al. 2007 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.607 | Bain:2007aa | Bain_2007 |
+| Baker 1947 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.714 | Baker:1947aa | Baker_1947 |
+| Baker et al. 1967 | 2 | measurement | certain | two_service_agreement | 10.2307/2423442 | 1.000 | Baker:1967aa | Baker_1967 |
+| Balakrishna 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.474 | Balakrishna:2014aa | Balakrishna_2014 |
+| Balakrishna and Achari 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.479 | Balakrishna:2014ab | Balakrishna_2014b |
+| Balakrishna et al. 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.456 | Balakrishna:2012aa | Balakrishna_2012 |
+| Balestrin 2008 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.485 | Balestrin:2008aa | Balestrin_2008 |
+| Balestrin and Cappellari 2011 | 2 | measurement | certain | two_service_agreement | 10.1590/s0073-47212011000100013 | 1.000 | Balestrin:2011aa | Balestrin_2011 |
+| Balestrin et al. 2010 | 2 | measurement | certain | two_service_agreement | 10.1590/s1676-06032010000100013 | 1.000 | Balestrin:2010aa | Balestrin_2010 |
+| Ball and Borrell 2016 | 9 | measurement | certain | two_service_agreement | 10.11609/jott.2373.8.12.9454-9460 | 1.000 | Ball:2016aa | Ball_2016 |
+| Ballinger 1977 | 1 | measurement | certain | two_service_agreement | 10.2307/1939012 | 1.000 | Ballinger:1977aa | Ballinger_1977 |
+| Ballinger and Congdon 1981 | 1 | measurement | certain | two_service_agreement | 10.1080/00222938100770171 | 1.000 | Ballinger:1981aa | Ballinger_1981 |
+| Ballinger and Schrank 1972 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.478 | Ballinger:1972aa | Ballinger_1972 |
+| Ballinger et al. 2000 [1] | 2 | measurement | certain | two_service_agreement | 10.1076/snfe.35.3.179.8857 | 1.000 | Ballinger:2000aa | Ballinger_2000 |
+| Banda-Leal et al. 2017 | 3 | measurement | certain | two_service_agreement | 10.1670/15-168 | 1.000 | Banda-Leal:2017aa | Banda-Leal_2017 |
+| Banta 1963 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.12884 | 1.000 | Banta:1963aa | Banta_1963 |
+| Banuelos-Alamillo et al. 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.370 | Banuelos-Alamillo:2016aa | Banuelos-Alamillo_2016 |
+| Bar 2003 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.253 | Bar:2003aa | Bar_2003 |
+| Barabanov and Ananjeva 2007 | 10 | compilation | certain | two_service_agreement | 10.11646/zootaxa.1399.1.1 | 1.000 | Barabanov:2007aa | Barabanov_2007 |
+| Baran and Gruber 1982 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.615 | Baran:1982aa | Baran_1982 |
+| Baran et al. 2005 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.448 | Baran:2005aa | Baran_2005 |
+| Barbadillo and Martinez-Solano 2002 | 12 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2002)002[0208:viilva]2.0.co;2 | 1.000 | Barbadillo:2002aa | Barbadillo_2002 |
 | Barbault 1974 [1] | 5 | measurement | pending | weak_match | 10.3406/revec.1974.4838 | 0.900 |  |  |
-| Barbault 1976 | 3 | measurement | certain | two_service_agreement | 10.2307/1443363 | 1.000 |  |  |
-| Barbour 1905 | 2 | measurement | pending | weak_match | 10.5281/zenodo.13509313 | 0.803 |  |  |
-| Barbour 1921 [1] | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.12094 | 1.000 |  |  |
-| Barbour and Dunn 1919 | 2 | measurement | certain | two_service_agreement | 10.5962/bhl.part.12089 | 1.000 |  |  |
-| Barbour and Loveridge 1928 [1] | 6 | measurement | pending | weak_match | 10.5962/bhl.title.49344 | 0.742 |  |  |
-| Barbour and Loveridge 1928 [2] | 11 | measurement | not_found | below_threshold | 10.5962/bhl.part.12097 | 0.368 |  |  |
-| Barbour and Shreve 1937 | 1 | measurement | pending | grey_literature | 10.3099/mcz-43.1 | 0.320 |  |  |
-| Barej et al. 2010 | 3 | measurement | pending | grey_literature | 10.35929/rsz.0099 | 0.457 |  |  |
-| Barreto et al. 2012 | 1 | compilation | certain | two_service_agreement | 10.15560/8.6.1365 | 1.000 |  |  |
-| Barreto-Lima 2009 | 2 | measurement | certain | two_service_agreement | 10.1080/01650520902834397 | 1.000 |  |  |
-| Barreto-Lima and Sousa 2011 | 1 | measurement | pending | grey_literature | 10.11606/issn.2316-9079.v15i1p21-27 | 0.636 |  |  |
+| Barbault 1976 | 3 | measurement | certain | two_service_agreement | 10.2307/1443363 | 1.000 | Barbault:1976aa | Barbault_1976 |
+| Barbour 1905 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.803 | Barbour:1905aa | Barbour_1905 |
+| Barbour 1921 [1] | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.12094 | 1.000 | Barbour:1921aa | Barbour_1921 |
+| Barbour and Dunn 1919 | 2 | measurement | certain | two_service_agreement | 10.5962/bhl.part.12089 | 1.000 | Barbour:1919aa | Barbour_1919 |
+| Barbour and Loveridge 1928 [1] | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.742 | Barbour:1928aa | Barbour_1928 |
+| Barbour and Loveridge 1928 [2] | 11 | measurement | nodoi_approved | owner_nodoi |  | 0.368 | Barbour:1928ab | Barbour_1928b |
+| Barbour and Shreve 1937 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.320 | Barbour:1937aa | Barbour_1937 |
+| Barej et al. 2010 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.457 | Barej:2010aa | Barej_2010 |
+| Barreto et al. 2012 | 1 | compilation | certain | two_service_agreement | 10.15560/8.6.1365 | 1.000 | Barreto:2012aa | Barreto_2012 |
+| Barreto-Lima 2009 | 2 | measurement | certain | two_service_agreement | 10.1080/01650520902834397 | 1.000 | Barreto-Lima:2009aa | Barreto-Lima_2009 |
+| Barreto-Lima and Sousa 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.636 | Barreto-Lima:2011aa | Barreto-Lima_2011 |
 | Barreto-Lima et al. 2012 | 1 | measurement | pending | weak_match | 10.1017/s0022149x11000599 | 0.838 |  |  |
-| Barrio-Amoros and Ortiz 2016 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4136.3.6 | 1.000 |  |  |
-| Barros and Teixeira 2007 | 1 | measurement | not_found | below_threshold | 10.1590/0001-3765202120190206 | 0.521 |  |  |
+| Barrio-Amoros and Ortiz 2016 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4136.3.6 | 1.000 | Barrio-AmorOS:2016aa | Barrio-AmorOS_2016 |
+| Barros and Teixeira 2007 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.521 | Barros:2007aa | Barros_2007 |
 | Barros et al. 1996 | 2 | measurement | pending | single_service | 10.5962/bhl.part.6029 | 0.960 |  |  |
-| Barros et al. 2007 | 1 | measurement | not_found | below_threshold | 10.15560/3.1.9 | 0.469 |  |  |
-| Barroso et al. 2016 | 3 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2016.10.004 | 1.000 |  |  |
-| Bartholomew and Tucker 1964 | 4 | measurement | certain | two_service_agreement | 10.1086/physzool.37.4.30152753 | 1.000 |  |  |
-| Bartlett 1985 | 1 | measurement | pending | grey_literature | 10.32873/unl.dc.tnas.42.2 | 0.498 |  |  |
-| Bartlett and Bartlett 2003 | 8 | compilation | not_found | below_threshold | 10.1163/9789004629660 | 0.644 |  |  |
-| Barts 2004 | 2 | measurement | not_found | below_threshold | 10.1007/978-3-663-05065-0_4 | 0.424 |  |  |
-| Barts et al. 2001 | 1 | measurement | not_found | below_threshold | 10.17104/9783406834813-109 | 0.364 |  |  |
-| Bateman and Chung-Maccoubrey 2012 | 1 | measurement | not_found | below_threshold | 10.2307/1441881 | 0.643 |  |  |
-| Bateman and Chung-MacCoubrey 2013 | 3 | measurement | not_found | below_threshold | 10.1007/s10164-007-0053-0 | 0.491 |  |  |
-| Bateman et al. 2010 | 3 | measurement | certain | two_service_agreement | 10.1670/08-252.1 | 1.000 |  |  |
-| Bates 2013 | 1 | measurement | not_found | below_threshold | 10.7748/ns2013.10.28.5.26.s32 | 0.301 |  |  |
-| Bates et al. 2013 | 4 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3750.5.3 | 1.000 |  |  |
+| Barros et al. 2007 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.469 | Barros:2007ab | Barros_2007b |
+| Barroso et al. 2016 | 3 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2016.10.004 | 1.000 | Barroso:2016aa | Barroso_2016 |
+| Bartholomew and Tucker 1964 | 4 | measurement | certain | two_service_agreement | 10.1086/physzool.37.4.30152753 | 1.000 | Bartholomew:1964aa | Bartholomew_1964 |
+| Bartlett 1985 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.498 | Bartlett:1985aa | Bartlett_1985 |
+| Bartlett and Bartlett 2003 | 8 | compilation | nodoi_approved | owner_nodoi |  | 0.644 | Bartlett:2003aa | Bartlett_2003 |
+| Barts 2004 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.424 | Barts:2004aa | Barts_2004 |
+| Barts et al. 2001 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.364 | Barts:2001aa | Barts_2001 |
+| Bateman and Chung-Maccoubrey 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.643 | Bateman:2012aa | Bateman_2012 |
+| Bateman and Chung-MacCoubrey 2013 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.491 | Bateman:2013aa | Bateman_2013 |
+| Bateman et al. 2010 | 3 | measurement | certain | two_service_agreement | 10.1670/08-252.1 | 1.000 | Bateman:2010aa | Bateman_2010 |
+| Bates 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.301 | Bates:2013ab | Bates_2013b |
+| Bates et al. 2013 | 4 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3750.5.3 | 1.000 | Bates:2013aa | Bates_2013 |
 | Batista et al. 2015 [1] | 5 | measurement | pending | weak_match | 10.11646/zootaxa.3994.2.2 | 1.000 |  |  |
-| Batista et al. 2015 [2] | 7 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4039.1.2 | 1.000 |  |  |
-| Batuwita 2016 | 5 | measurement | certain | two_service_agreement | 10.1670/15-093 | 1.000 |  |  |
-| Batuwita and Bahir 2005 | 6 | measurement | pending | grey_literature | 10.11646/zootaxa.4254.1.4 | 0.659 |  |  |
-| Batuwita and Edirisinghe 2017 | 7 | measurement | certain | two_service_agreement | 10.1515/travmu-2017-0001 | 1.000 |  |  |
-| Batuwita and Pethiyagoda 2007 | 1 | measurement | pending | weak_match | 10.4038/cjsbs.v36i2.482 | 0.962 |  |  |
-| Batuwita and Pethiyagoda 2012 | 2 | measurement | pending | ambiguous | 10.11646/zootaxa.3359.1.2 | 1.000 |  |  |
-| Batuwita and Udugampala 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4254.1.4 | 1.000 |  |  |
-| Bauer 1985 | 1 | measurement | pending | single_service | 10.5281/zenodo.13663491 | 1.000 |  |  |
-| Bauer 2002 [1] | 5 | measurement | not_found | below_threshold | 10.1002/mmnz.200600022 | 0.464 |  |  |
-| Bauer 2002 [2] | 3 | measurement | pending | single_service | 10.5281/zenodo.16704546 | 1.000 |  |  |
-| Bauer 2003 [1] | 8 | measurement | pending | single_service | 10.5281/zenodo.16530366 | 1.000 |  |  |
-| Bauer 2004 | 2 | measurement | not_found | below_threshold | 10.2307/j.ctv2ks6tbb.211 | 0.472 |  |  |
-| Bauer 2006 | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1242.1.1 | 1.000 |  |  |
-| Bauer 2010 | 1 | measurement | pending | single_service | 10.5281/zenodo.16448201 | 1.000 |  |  |
-| Bauer 2013 | 39 | measurement | certain | two_service_agreement | 10.1353/book.21983 | 1.000 |  |  |
-| Bauer and Das 1998 | 2 | measurement | certain | two_service_agreement | 10.2307/1447438 | 1.000 |  |  |
-| Bauer and DeVaney 1987 | 1 | measurement | pending | weak_match | 10.1163/156853887x00126 | 0.786 |  |  |
-| Bauer and Doughty 2012 | 5 | measurement | pending | ambiguous | 10.11646/zootaxa.3187.1.2 | 1.000 |  |  |
-| Bauer and Giri 2004 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.4039.1.5 | 0.487 |  |  |
-| Bauer and Gunther 1992 | 6 | measurement | certain | two_service_agreement | 10.5962/bhl.part.6178 | 0.988 |  |  |
-| Bauer and Lamb 2003 | 1 | measurement | pending | weak_match | 10.3099/0006-9698-524.1.1 | 0.728 |  |  |
-| Bauer and Menegon 2006 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2006.9635537 | 1.000 |  |  |
-| Bauer and Pauwels 2002 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2002.9635458 | 1.000 |  |  |
-| Bauer and Russell 1986 | 2 | measurement | not_found | below_threshold | 10.1080/03014223.1986.10422655 | 0.661 |  |  |
+| Batista et al. 2015 [2] | 7 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4039.1.2 | 1.000 | Batista:2015aa | Batista_2015 |
+| Batuwita 2016 | 5 | measurement | certain | two_service_agreement | 10.1670/15-093 | 1.000 | Batuwita:2016aa | Batuwita_2016 |
+| Batuwita and Bahir 2005 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.659 | Batuwita:2005aa | Batuwita_2005 |
+| Batuwita and Edirisinghe 2017 | 7 | measurement | certain | two_service_agreement | 10.1515/travmu-2017-0001 | 1.000 | Batuwita:2017ab | Batuwita_2017b |
+| Batuwita and Pethiyagoda 2007 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.962 | Batuwita:2007aa | Batuwita_2007 |
+| Batuwita and Pethiyagoda 2012 | 2 | measurement | approved | owner_candidate | 10.11646/zootaxa.3359.1.2 | 1.000 | Batuwita:2012aa | Batuwita_2012 |
+| Batuwita and Udugampala 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4254.1.4 | 1.000 | Batuwita:2017aa | Batuwita_2017 |
+| Bauer 1985 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:1985aa | Bauer_1985 |
+| Bauer 2002 [1] | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.464 | Bauer:2002ac | Bauer_2002c |
+| Bauer 2002 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:2002ad | Bauer_2002d |
+| Bauer 2003 [1] | 8 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:2003ab | Bauer_2003b |
+| Bauer 2004 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.472 | Bauer:2004ab | Bauer_2004b |
+| Bauer 2006 | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1242.1.1 | 1.000 | Bauer:2006ac | Bauer_2006c |
+| Bauer 2010 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:2010ab | Bauer_2010b |
+| Bauer 2013 | 39 | measurement | certain | two_service_agreement | 10.1353/book.21983 | 1.000 | Bauer:2013aa | Bauer_2013 |
+| Bauer and Das 1998 | 2 | measurement | certain | two_service_agreement | 10.2307/1447438 | 1.000 | Bauer:1998aa | Bauer_1998 |
+| Bauer and DeVaney 1987 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.786 | Bauer:1987aa | Bauer_1987 |
+| Bauer and Doughty 2012 | 5 | measurement | approved | owner_candidate | 10.11646/zootaxa.3187.1.2 | 1.000 | Bauer:2012aa | Bauer_2012 |
+| Bauer and Giri 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.487 | Bauer:2004ac | Bauer_2004c |
+| Bauer and Gunther 1992 | 6 | measurement | certain | two_service_agreement | 10.5962/bhl.part.6178 | 0.988 | Bauer:1992ab | Bauer_1992b |
+| Bauer and Lamb 2003 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.728 | Bauer:2003ac | Bauer_2003c |
+| Bauer and Menegon 2006 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2006.9635537 | 1.000 | Bauer:2006aa | Bauer_2006 |
+| Bauer and Pauwels 2002 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2002.9635458 | 1.000 | Bauer:2002aa | Bauer_2002 |
+| Bauer and Russell 1986 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.661 | Bauer:1986aa | Bauer_1986 |
 | Bauer and Russell 1989 | 6 | measurement | pending | weak_match | 10.1080/00222938900770101 | 0.883 |  |  |
-| Bauer and Russell 1990 | 1 | measurement | pending | grey_literature | 10.1515/9783110885958.214 | 0.387 |  |  |
-| Bauer and Russell 1991 | 8 | measurement | pending | grey_literature | 10.7591/cornell/9781501774485.003.0018 | 0.548 |  |  |
-| Bauer and Russell 1992 | 20 | measurement | certain | two_service_agreement | 10.1080/08927014.1992.9523127 | 1.000 |  |  |
-| Bauer and Russell 1993 [1] | 1 | compilation | not_found | below_threshold | 10.1111/j.1558-5646.1965.tb01719.x | 0.275 |  |  |
-| Bauer and Russell 1993 [2] | 1 | compilation | not_found | below_threshold | 10.2307/1445528 | 0.285 |  |  |
-| Bauer and Russell 1993 [3] | 1 | compilation | not_found | below_threshold | 10.5962/bhl.title.45434 | 0.305 |  |  |
-| Bauer and Russell 1993 [4] | 1 | compilation | not_found | below_threshold | 10.2307/1445528 | 0.268 |  |  |
-| Bauer and Russell 1993 [5] | 1 | compilation | not_found | below_threshold | 10.2307/1445528 | 0.291 |  |  |
-| Bauer and Russell 2003 | 1 | compilation | not_found | below_threshold | 10.5962/bhl.title.3173 | 0.280 |  |  |
-| Bauer and Sadlier 1994 | 6 | compilation | pending | weak_match | 10.2984/67.4.8 | 0.704 |  |  |
-| Bauer and Sadlier 2000 | 69 | compilation | pending | weak_match | 10.1643/0045-8511(2001)001[0883:]2.0.co;2 | 1.000 |  |  |
-| Bauer and Vindum 1990 | 21 | compilation | pending | single_service | 10.5281/zenodo.15887695 | 1.000 |  |  |
-| Bauer et al. 1994 | 2 | compilation | pending | ambiguous | 10.1002/mmnz.19940700103 | 0.993 |  |  |
-| Bauer et al. 1996 [1] | 1 | measurement | pending | weak_match | 10.31390/opmns.071 | 1.000 |  |  |
-| Bauer et al. 1998 | 2 | measurement | not_found | below_threshold | 10.1353/psc.2005.0055 | 0.634 |  |  |
-| Bauer et al. 1999 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.1999.9651067 | 1.000 |  |  |
-| Bauer et al. 2000 [1] | 1 | measurement | not_found | below_threshold | 10.2984/1534-6188(2008)62[247:anssob]2.0.co;2 | 0.601 |  |  |
-| Bauer et al. 2002 [1] | 2 | measurement | not_found | below_threshold | 10.3099/0006-9698-524.1.1 | 0.628 |  |  |
-| Bauer et al. 2002 [2] | 2 | measurement | certain | two_service_agreement | 10.58837/tnh.2.2.102853 | 1.000 |  |  |
-| Bauer et al. 2003 [2] | 2 | measurement | pending | ambiguous | 10.11646/zootaxa.376.1.1 | 1.000 |  |  |
-| Bauer et al. 2003 [3] | 2 | measurement | not_found | below_threshold | 10.7196/samj.2022.v112i3.16384 | 0.500 |  |  |
-| Bauer et al. 2004 | 3 | measurement | certain | two_service_agreement | 10.5358/hsj.23.17 | 1.000 |  |  |
-| Bauer et al. 2006 [3] | 2 | measurement | certain | two_service_agreement | 10.1670/0022-1511(2006)40[510:nsocsg]2.0.co;2 | 1.000 |  |  |
-| Bauer et al. 2006 [4] | 1 | measurement | certain | two_service_agreement | 10.1353/psc.2005.0055 | 1.000 |  |  |
-| Bauer et al. 2006 [5] | 8 | measurement | pending | single_service | 10.5281/zenodo.16434137 | 1.000 |  |  |
-| Bauer et al. 2006 [6] | 1 | measurement | not_found | below_threshold | 10.1080/02541858.1996.11448395 | 0.633 |  |  |
-| Bauer et al. 2006 [7] | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.2006.9635542 | 1.000 |  |  |
-| Bauer et al. 2007 [1] | 1 | measurement | not_found | below_threshold | 10.11609/jott.zpj.1307.1865-6 | 0.470 |  |  |
-| Bauer et al. 2007 [2] | 1 | measurement | pending | weak_match | 10.1002/mmnz.200600022 | 0.895 |  |  |
-| Bauer et al. 2008 [2] | 1 | measurement | certain | two_service_agreement | 10.2984/1534-6188(2008)62[247:anssob]2.0.co;2 | 0.953 |  |  |
-| Bauer et al. 2008 [3] | 5 | measurement | pending | ambiguous | 10.11646/zootaxa.1750.1.3 | 1.000 |  |  |
-| Bauer et al. 2009 [1] | 4 | measurement | not_found | below_threshold | 10.5962/p.283200 | 0.454 |  |  |
-| Bauer et al. 2009 [2] | 1 | compilation | pending | grey_literature | 10.15560/8.4.666 | 0.566 |  |  |
-| Bauer et al. 2009 [3] | 2 | measurement | pending | ambiguous | 10.11646/zootaxa.2124.1.4 | 1.000 |  |  |
-| Bauer et al. 2010 [2] | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.2570.1.2 | 1.000 |  |  |
-| Bauer et al. 2011 [1] | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.2942.1.2 | 1.000 |  |  |
-| Bauer et al. 2012 [1] | 5 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3404.1.1 | 1.000 |  |  |
-| Bauer et al. 2012 [2] | 2 | measurement | certain | two_service_agreement | 10.2984/66.2.10 | 1.000 |  |  |
-| Bauer et al. 2015 | 1 | measurement | not_found | below_threshold | 10.1080/02541858.1996.11448395 | 0.353 |  |  |
-| Baumer et al. 2012 | 1 | measurement | not_found | below_threshold | 10.1111/j.1748-1090.1982.tb02027.x | 0.464 |  |  |
-| Bauwens and Diaz-Uriarte 1997 | 14 | measurement | certain | two_service_agreement | 10.1086/285980 | 1.000 |  |  |
+| Bauer and Russell 1990 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.387 | Bauer:1990aa | Bauer_1990 |
+| Bauer and Russell 1991 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.548 | Bauer:1991aa | Bauer_1991 |
+| Bauer and Russell 1992 | 20 | measurement | certain | two_service_agreement | 10.1080/08927014.1992.9523127 | 1.000 | Bauer:1992aa | Bauer_1992 |
+| Bauer and Russell 1993 [1] | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.275 | Bauer:1993aa | Bauer_1993 |
+| Bauer and Russell 1993 [2] | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.285 | Bauer:1993ab | Bauer_1993b |
+| Bauer and Russell 1993 [3] | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.305 | Bauer:1993ac | Bauer_1993c |
+| Bauer and Russell 1993 [4] | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.268 | Bauer:1993ad | Bauer_1993d |
+| Bauer and Russell 1993 [5] | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.291 | Bauer:1993ae | Bauer_1993e |
+| Bauer and Russell 2003 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.280 | Bauer:2003ad | Bauer_2003d |
+| Bauer and Sadlier 1994 | 6 | compilation | nodoi_approved | owner_nodoi |  | 0.704 | Bauer:1994ab | Bauer_1994b |
+| Bauer and Sadlier 2000 | 69 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:2000aa | Bauer_2000 |
+| Bauer and Vindum 1990 | 21 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:1990ab | Bauer_1990b |
+| Bauer et al. 1994 | 2 | compilation | approved | owner_candidate | 10.1002/mmnz.19940700103 | 0.993 | Bauer:1994aa | Bauer_1994 |
+| Bauer et al. 1996 [1] | 1 | measurement | approved | owner_candidate | 10.31390/opmns.071 | 1.000 | Bauer:1996aa | Bauer_1996 |
+| Bauer et al. 1998 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.634 | Bauer:1998ab | Bauer_1998b |
+| Bauer et al. 1999 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.1999.9651067 | 1.000 | Bauer:1999aa | Bauer_1999 |
+| Bauer et al. 2000 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.601 | Bauer:2000ab | Bauer_2000b |
+| Bauer et al. 2002 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.628 | Bauer:2002ae | Bauer_2002e |
+| Bauer et al. 2002 [2] | 2 | measurement | certain | two_service_agreement | 10.58837/tnh.2.2.102853 | 1.000 | Bauer:2002ab | Bauer_2002b |
+| Bauer et al. 2003 [2] | 2 | measurement | approved | owner_candidate | 10.11646/zootaxa.376.1.1 | 1.000 | Bauer:2003aa | Bauer_2003 |
+| Bauer et al. 2003 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.500 | Bauer:2003ae | Bauer_2003e |
+| Bauer et al. 2004 | 3 | measurement | certain | two_service_agreement | 10.5358/hsj.23.17 | 1.000 | Bauer:2004aa | Bauer_2004 |
+| Bauer et al. 2006 [3] | 2 | measurement | certain | two_service_agreement | 10.1670/0022-1511(2006)40[510:nsocsg]2.0.co;2 | 1.000 | Bauer:2006ae | Bauer_2006e |
+| Bauer et al. 2006 [4] | 1 | measurement | certain | two_service_agreement | 10.1353/psc.2005.0055 | 1.000 | Bauer:2006ad | Bauer_2006d |
+| Bauer et al. 2006 [5] | 8 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bauer:2006af | Bauer_2006f |
+| Bauer et al. 2006 [6] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.633 | Bauer:2006ag | Bauer_2006g |
+| Bauer et al. 2006 [7] | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.2006.9635542 | 1.000 | Bauer:2006ab | Bauer_2006b |
+| Bauer et al. 2007 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.470 | Bauer:2007aa | Bauer_2007 |
+| Bauer et al. 2007 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.895 | Bauer:2007ab | Bauer_2007b |
+| Bauer et al. 2008 [2] | 1 | measurement | certain | two_service_agreement | 10.2984/1534-6188(2008)62[247:anssob]2.0.co;2 | 0.953 | Bauer:2008ab | Bauer_2008b |
+| Bauer et al. 2008 [3] | 5 | measurement | approved | owner_candidate | 10.11646/zootaxa.1750.1.3 | 1.000 | Bauer:2008aa | Bauer_2008 |
+| Bauer et al. 2009 [1] | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.454 | Bauer:2009ab | Bauer_2009b |
+| Bauer et al. 2009 [2] | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.566 | Bauer:2009ac | Bauer_2009c |
+| Bauer et al. 2009 [3] | 2 | measurement | approved | owner_candidate | 10.11646/zootaxa.2124.1.4 | 1.000 | Bauer:2009aa | Bauer_2009 |
+| Bauer et al. 2010 [2] | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.2570.1.2 | 1.000 | Bauer:2010aa | Bauer_2010 |
+| Bauer et al. 2011 [1] | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.2942.1.2 | 1.000 | Bauer:2011aa | Bauer_2011 |
+| Bauer et al. 2012 [1] | 5 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3404.1.1 | 1.000 | Bauer:2012ab | Bauer_2012b |
+| Bauer et al. 2012 [2] | 2 | measurement | certain | two_service_agreement | 10.2984/66.2.10 | 1.000 | Bauer:2012ac | Bauer_2012c |
+| Bauer et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.353 | Bauer:2015aa | Bauer_2015 |
+| Baumer et al. 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.464 | Baumer:2012aa | Baumer_2012 |
+| Bauwens and Diaz-Uriarte 1997 | 14 | measurement | certain | two_service_agreement | 10.1086/285980 | 1.000 | Bauwens:1997aa | Bauwens_1997 |
 | Bauwens et al. 1990 | 1 | measurement | pending | weak_match | 10.2307/1564296 | 0.821 |  |  |
-| Bauwens et al. 1995 | 13 | measurement | pending | ambiguous | 10.1111/j.1558-5646.1995.tb02321.x | 1.000 |  |  |
-| Bauwens et al. 1999 | 1 | measurement | pending | ambiguous | 10.1111/j.1469-7998.1999.tb01056.x | 1.000 |  |  |
-| Bayless and Dwyer 1997 | 1 | measurement | not_found | below_threshold | 10.2307/1437354 | 0.356 |  |  |
-| Beal et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.1002/ece3.1297 | 1.000 |  |  |
-| Beck 1990 | 1 | measurement | certain | two_service_agreement | 10.2307/1564290 | 1.000 |  |  |
-| Beck and Lowe 1994 | 2 | measurement | certain | two_service_agreement | 10.1007/bf00301653 | 1.000 |  |  |
-| Beckon 1992 | 3 | measurement | certain | two_service_agreement | 10.2307/1446204 | 1.000 |  |  |
-| Bedford et al. 1993 | 1 | measurement | certain | two_service_agreement | 10.7882/rzsnsw.1993.019 | 1.000 |  |  |
-| Bedriaga 1884 | 3 | measurement | not_found | below_threshold | 10.5962/bhl.part.9546 | 0.465 |  |  |
-| Bedriaga 1912 | 18 | measurement | not_found | below_threshold | 10.5962/bhl.title.4249 | 0.688 |  |  |
+| Bauwens et al. 1995 | 13 | measurement | approved | owner_candidate | 10.1111/j.1558-5646.1995.tb02321.x | 1.000 | Bauwens:1995aa | Bauwens_1995 |
+| Bauwens et al. 1999 | 1 | measurement | approved | owner_candidate | 10.1111/j.1469-7998.1999.tb01056.x | 1.000 | Bauwens:1999aa | Bauwens_1999 |
+| Bayless and Dwyer 1997 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.356 | Bayless:1997aa | Bayless_1997 |
+| Beal et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.1002/ece3.1297 | 1.000 | Beal:2014aa | Beal_2014 |
+| Beck 1990 | 1 | measurement | certain | two_service_agreement | 10.2307/1564290 | 1.000 | Beck:1990aa | Beck_1990 |
+| Beck and Lowe 1994 | 2 | measurement | certain | two_service_agreement | 10.1007/bf00301653 | 1.000 | Beck:1994aa | Beck_1994 |
+| Beckon 1992 | 3 | measurement | certain | two_service_agreement | 10.2307/1446204 | 1.000 | Beckon:1992aa | Beckon_1992 |
+| Bedford et al. 1993 | 1 | measurement | certain | two_service_agreement | 10.7882/rzsnsw.1993.019 | 1.000 | Bedford:1993aa | Bedford_1993 |
+| Bedriaga 1884 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.465 | Bedriaga:1884aa | Bedriaga_1884 |
+| Bedriaga 1912 | 18 | measurement | nodoi_approved | owner_nodoi |  | 0.688 | Bedriaga:1912aa | Bedriaga_1912 |
 | Beebe 1945 | 10 | measurement | pending | ambiguous | 10.5962/p.203521 | 0.851 |  |  |
-| Bejakovic et al. 1995 | 1 | measurement | not_found | below_threshold | 10.1007/s10709-010-9435-2 | 0.544 |  |  |
-| Bejakovic et al. 1996 [2] | 3 | measurement | not_found | below_threshold | 10.1080/11250000802168231 | 0.551 |  |  |
-| Bell and Patterson 2008 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.1882.1.3 | 0.692 |  |  |
-| Bell and Price 1996 | 1 | compilation | not_found | below_threshold | 10.2307/1565010 | 0.400 |  |  |
-| Bell et al. 2003 | 1 | measurement | pending | weak_match | 10.21829/azm.2003.902553 | 1.000 |  |  |
-| Bell et al. 2012 | 1 | measurement | not_found | below_threshold | 10.1016/j.jnc.2025.126882 | 0.478 |  |  |
-| Belliure 2006 | 1 | measurement | not_found | below_threshold | 10.1163/15685381-20181087 | 0.413 |  |  |
-| Benabib 1994 | 11 | measurement | certain | two_service_agreement | 10.2307/1467079 | 1.000 |  |  |
-| Bennett 1980 | 6 | measurement | certain | two_service_agreement | 10.1016/s0003-3472(80)80135-7 | 1.000 |  |  |
-| Bennett 2000 | 1 | measurement | pending | grey_literature | 10.70922/4besfs62 | 0.473 |  |  |
-| Bennett and Dawson 1976 | 29 | measurement | not_found | below_threshold | 10.1016/0377-8401(77)90020-7 | 0.485 |  |  |
-| Bennett and Gorman 1979 | 3 | measurement | certain | two_service_agreement | 10.1007/bf00346598 | 1.000 |  |  |
-| Bentz et al. 2011 | 3 | measurement | not_found | below_threshold | 10.17161/randa.v17i4.16130 | 0.434 |  |  |
-| Beovides–Casas and Mancina 2006 | 1 | measurement | pending | weak_match | 10.32800/abc.2006.29.0001 | 1.000 |  |  |
-| Berg et al. 2015 | 2 | measurement | not_found | below_threshold | 10.2523/28822-ms | 0.507 |  |  |
-| Berghof and Trautmann 2009 | 1 | measurement | not_found | below_threshold | 10.1163/156853880x00132 | 0.624 |  |  |
-| Bergmann and Russell 2007 | 2 | measurement | certain | two_service_agreement | 10.1111/j.1096-3642.2007.00251.x | 0.979 |  |  |
-| Bernardo-Silva et al. 2006 | 1 | measurement | certain | two_service_agreement | 10.1590/s0073-47212006000400014 | 1.000 |  |  |
-| Beser et al. 2015 | 1 | measurement | not_found | below_threshold | 10.3906/zoo-1909-39 | 0.497 |  |  |
-| Beutler 1981 | 1 | measurement | not_found | below_threshold | 10.4098/at.arch.79-10 | 0.267 |  |  |
-| Bezy 1967 | 1 | measurement | certain | two_service_agreement | 10.2307/1442245 | 1.000 |  |  |
-| Bezy 1982 | 1 | compilation | not_found | below_threshold | 10.2307/2421431 | 0.426 |  |  |
-| Bezy and Camarillo 1997 | 1 | measurement | certain | two_service_agreement | 10.5962/p.208096 | 1.000 |  |  |
-| Bezy and Camarillo 2002 | 17 | measurement | certain | two_service_agreement | 10.5962/p.226792 | 1.000 |  |  |
-| Bezy and Flores Villela 1999 | 1 | measurement | not_found | below_threshold | 10.5962/p.208096 | 0.637 |  |  |
-| Bezy and Goldberg 2015 | 7 | measurement | not_found | below_threshold | 10.1670/07-219r1.1 | 0.537 |  |  |
-| Bezy et al. 1982 | 1 | measurement | pending | weak_match | 10.5962/p.208096 | 0.778 |  |  |
-| Bezy et al. 2008 | 2 | measurement | certain | two_service_agreement | 10.1670/07-219r1.1 | 1.000 |  |  |
-| Bhupathy et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.1670/08-136r1.1 | 1.000 |  |  |
-| Bienentreu et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.15560/9.1.169 | 1.000 |  |  |
-| Bille 2001 | 3 | measurement | not_found | below_threshold | 10.3112/erdkunde.1986.04.04 | 0.444 |  |  |
-| Birt et al. 2001 | 1 | measurement | certain | two_service_agreement | 10.2307/1566043 | 1.000 |  |  |
-| Bischoff 1981 | 1 | measurement | not_found | below_threshold | 10.1163/156853895x00091 | 0.459 |  |  |
-| Bischoff 1984 [1] | 1 | measurement | not_found | below_threshold | 10.1515/9783111643809-037 | 0.564 |  |  |
-| Bischoff 1984 [2] | 1 | measurement | not_found | below_threshold | 10.1163/156853888x00026 | 0.454 |  |  |
-| Bischoff 1984 [3] | 1 | measurement | not_found | below_threshold | 10.1080/11250000509356658 | 0.460 |  |  |
-| Bischoff 1984 [4] | 1 | measurement | not_found | below_threshold | 10.1515/9783112565162-004 | 0.491 |  |  |
-| Bischoff and Schmidtler 1999 | 3 | measurement | not_found | below_threshold | 10.1080/09397140.1999.10637800 | 0.456 |  |  |
-| Bischoff et al. 1984 | 1 | measurement | not_found | below_threshold | 10.1002/mmnz.4830380203 | 0.503 |  |  |
-| Bissell and Martins 2004 | 1 | measurement | pending | ambiguous | 10.1525/california/9780520238541.003.0010 | 0.750 |  |  |
-| Biswas 1975 | 2 | measurement | pending | single_service | 10.5281/zenodo.13519201 | 1.000 |  |  |
-| Biswas and Ishwar 2006 | 1 | measurement | not_found | below_threshold | 10.1515/9781400880676-084 | 0.480 |  |  |
-| Biswas and Sanyal 1977 | 2 | measurement | not_found | below_threshold | 10.11646/zootaxa.3914.4.9 | 0.506 |  |  |
-| Biswas and Sanyal 1980 | 4 | compilation | certain | two_service_agreement | 10.26515/rzsi/v77/i1-4/1979/161856 | 1.000 |  |  |
-| Black 2005 | 1 | compilation | not_found | below_threshold | 10.5818/1529-9651-21.2.68 | 0.400 |  |  |
-| Blackburn and Flemming 2012 | 1 | measurement | certain | two_service_agreement | 10.1002/jmor.11011 | 1.000 |  |  |
-| Blackburn and Vitt 1992 | 2 | measurement | pending | weak_match | 10.1007/978-1-4612-2866-0_11 | 0.736 |  |  |
-| Blanc 1977 | 7 | measurement | pending | weak_match | 10.1016/b978-0-08-028002-8.50015-0 | 0.882 |  |  |
-| Blanco and Acosta 2003 | 1 | measurement | not_found | below_threshold | 10.5818/1529-9651.13.3.33 | 0.295 |  |  |
-| Blanford 1875 | 5 | measurement | not_found | below_threshold | 10.5281/zenodo.16638213 | 0.504 |  |  |
-| Blanford 1881 | 7 | measurement | pending | weak_match | 10.1111/j.1096-3642.1881.tb01304.x | 0.787 |  |  |
+| Bejakovic et al. 1995 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.544 | Bejakovic:1995aa | Bejakovic_1995 |
+| Bejakovic et al. 1996 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.551 | Bejakovic:1996aa | Bejakovic_1996 |
+| Bell and Patterson 2008 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.692 | Bell:2008aa | Bell_2008 |
+| Bell and Price 1996 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.400 | Bell:1996aa | Bell_1996 |
+| Bell et al. 2003 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bell:2003aa | Bell_2003 |
+| Bell et al. 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.478 | Bell:2012aa | Bell_2012 |
+| Belliure 2006 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.413 | Belliure:2006aa | Belliure_2006 |
+| Benabib 1994 | 11 | measurement | certain | two_service_agreement | 10.2307/1467079 | 1.000 | Benabib:1994aa | Benabib_1994 |
+| Bennett 1980 | 6 | measurement | certain | two_service_agreement | 10.1016/s0003-3472(80)80135-7 | 1.000 | Bennett:1980aa | Bennett_1980 |
+| Bennett 2000 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.473 | Bennett:2000aa | Bennett_2000 |
+| Bennett and Dawson 1976 | 29 | measurement | nodoi_approved | owner_nodoi |  | 0.485 | Bennett:1976aa | Bennett_1976 |
+| Bennett and Gorman 1979 | 3 | measurement | certain | two_service_agreement | 10.1007/bf00346598 | 1.000 | Bennett:1979ac | Bennett_1979c |
+| Bentz et al. 2011 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.434 | Bentz:2011aa | Bentz_2011 |
+| Beovides–Casas and Mancina 2006 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Beovides-Casas:2006aa | Beovides-Casas_2006 |
+| Berg et al. 2015 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.507 | Berg:2015aa | Berg_2015 |
+| Berghof and Trautmann 2009 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.624 | Berghof:2009aa | Berghof_2009 |
+| Bergmann and Russell 2007 | 2 | measurement | certain | two_service_agreement | 10.1111/j.1096-3642.2007.00251.x | 0.979 | Bergmann:2007aa | Bergmann_2007 |
+| Bernardo-Silva et al. 2006 | 1 | measurement | certain | two_service_agreement | 10.1590/s0073-47212006000400014 | 1.000 | Bernardo-Silva:2006aa | Bernardo-Silva_2006 |
+| Beser et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.497 | Beser:2015aa | Beser_2015 |
+| Beutler 1981 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.267 | Beutler:1981aa | Beutler_1981 |
+| Bezy 1967 | 1 | measurement | certain | two_service_agreement | 10.2307/1442245 | 1.000 | Bezy:1967aa | Bezy_1967 |
+| Bezy 1982 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.426 | Bezy:1982aa | Bezy_1982 |
+| Bezy and Camarillo 1997 | 1 | measurement | certain | two_service_agreement | 10.5962/p.208096 | 1.000 | Bezy:1997aa | Bezy_1997 |
+| Bezy and Camarillo 2002 | 17 | measurement | certain | two_service_agreement | 10.5962/p.226792 | 1.000 | Bezy:2002aa | Bezy_2002 |
+| Bezy and Flores Villela 1999 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.637 | Bezy:1999aa | Bezy_1999 |
+| Bezy and Goldberg 2015 | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.537 | Bezy:2015aa | Bezy_2015 |
+| Bezy et al. 1982 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.778 | Bezy:1982ab | Bezy_1982b |
+| Bezy et al. 2008 | 2 | measurement | certain | two_service_agreement | 10.1670/07-219r1.1 | 1.000 | Bezy:2008aa | Bezy_2008 |
+| Bhupathy et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.1670/08-136r1.1 | 1.000 | Bhupathy:2009aa | Bhupathy_2009 |
+| Bienentreu et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.15560/9.1.169 | 1.000 | Bienentreu:2013aa | Bienentreu_2013 |
+| Bille 2001 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.444 | Bille:2001aa | Bille_2001 |
+| Birt et al. 2001 | 1 | measurement | certain | two_service_agreement | 10.2307/1566043 | 1.000 | Birt:2001aa | Birt_2001 |
+| Bischoff 1981 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.459 | Bischoff:1981aa | Bischoff_1981 |
+| Bischoff 1984 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.564 | Bischoff:1984aa | Bischoff_1984 |
+| Bischoff 1984 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.454 | Bischoff:1984ab | Bischoff_1984b |
+| Bischoff 1984 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.460 | Bischoff:1984ac | Bischoff_1984c |
+| Bischoff 1984 [4] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.491 | Bischoff:1984ad | Bischoff_1984d |
+| Bischoff and Schmidtler 1999 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.456 | Bischoff:1999aa | Bischoff_1999 |
+| Bischoff et al. 1984 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.503 | Bischoff:1984ae | Bischoff_1984e |
+| Bissell and Martins 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.750 | Bissell:2004aa | Bissell_2004 |
+| Biswas 1975 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Biswas:1975aa | Biswas_1975 |
+| Biswas and Ishwar 2006 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.480 | Biswas:2006aa | Biswas_2006 |
+| Biswas and Sanyal 1977 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.506 | Biswas:1977aa | Biswas_1977 |
+| Biswas and Sanyal 1980 | 4 | compilation | certain | two_service_agreement | 10.26515/rzsi/v77/i1-4/1979/161856 | 1.000 | Biswas:1979aa | Biswas_1979 |
+| Black 2005 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.400 | Black:2005aa | Black_2005 |
+| Blackburn and Flemming 2012 | 1 | measurement | certain | two_service_agreement | 10.1002/jmor.11011 | 1.000 | Blackburn:2011aa | Blackburn_2011 |
+| Blackburn and Vitt 1992 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.736 | Blackburn:1992aa | Blackburn_1992 |
+| Blanc 1977 | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.882 | Blanc:1977aa | Blanc_1977 |
+| Blanco and Acosta 2003 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.295 | Blanco:2003aa | Blanco_2003 |
+| Blanford 1875 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.504 | Blanford:1875aa | Blanford_1875 |
+| Blanford 1881 | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.787 | Blanford:1881aa | Blanford_1881 |
 | Blazquez et al. 1997 | 1 | measurement | pending | weak_match | 10.1111/j.1439-0310.1997.tb00141.x | 0.916 |  |  |
 | Block et al. 2016 | 1 | measurement | pending | single_service | 10.31017/8997 | 1.000 |  |  |
-| Blom et al. 2016 | 23 | measurement | certain | two_service_agreement | 10.1098/rspb.2016.0181 | 1.000 |  |  |
-| Bobrov 1992 | 1 | measurement | not_found | below_threshold | 10.1670/196-03a | 0.626 |  |  |
+| Blom et al. 2016 | 23 | measurement | certain | two_service_agreement | 10.1098/rspb.2016.0181 | 1.000 | Blom:2016aa | Blom_2016 |
+| Bobrov 1992 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.626 | Bobrov:1992aa | Bobrov_1992 |
 | Bobrov 2013 [2] | 1 | measurement | not_found | below_threshold | 10.31610/trudyzin/2020.324.3.364 | 0.575 |  |  |
-| Bobrov and Semenov 2008 | 107 | compilation | not_found | below_threshold | 10.5479/si.23317515.105.1 | 0.543 |  |  |
-| Bocage 1893 | 1 | measurement | pending | weak_match | 10.5962/p.39619 | 0.732 |  |  |
-| Bochaton and Kemp 2017 | 3 | measurement | certain | two_service_agreement | 10.1080/02724634.2017.1239626 | 1.000 |  |  |
-| Bochaton et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1016/j.quascirev.2016.08.017 | 1.000 |  |  |
-| Bochaton et al. 2017 [1] | 1 | measurement | certain | two_service_agreement | 10.1098/rspb.2017.0921 | 1.000 |  |  |
-| Bochaton et al. 2017 [2] | 3 | measurement | certain | two_service_agreement | 10.1080/08912963.2017.1343824 | 1.000 |  |  |
-| Bock et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.15517/rbt.v57i4.5462 | 1.000 |  |  |
-| Bock et al. 2010 | 1 | measurement | certain | two_service_agreement | 10.1590/s0031-10492010000300001 | 1.000 |  |  |
-| Boettger 1887 | 2 | measurement | not_found | below_threshold | 10.1016/j.jcz.2021.06.004 | 0.340 |  |  |
-| Boettger 1893 [2] | 2 | measurement | not_found | below_threshold | 10.1515/9783112340288-013 | 0.341 |  |  |
-| Boettger 1913 | 2 | measurement | pending | weak_match | 10.5281/zenodo.16158214 | 1.000 |  |  |
-| Bogaerts 2006 | 6 | measurement | not_found | below_threshold | 10.1163/156853892x00391 | 0.422 |  |  |
-| Bogert and Cowles 1947 | 2 | measurement | not_found | below_threshold | 10.1206/0003-0082(2006)3542[1:aodcsi]2.0.co;2 | 0.382 |  |  |
-| Bogert and Martin del Campo 1956 | 2 | measurement | pending | ambiguous | 10.2307/1440533 | 1.000 |  |  |
-| Bogert and Oliver 1945 | 5 | compilation | pending | grey_literature | 10.1086/281271 | 0.684 |  |  |
-| Bohle and Schonecker 2004 | 1 | measurement | not_found | below_threshold | 10.1163/156853880x00132 | 0.659 |  |  |
-| Bohme 1975 | 1 | measurement | not_found | below_threshold | 10.1080/01650526209380631 | 0.524 |  |  |
-| Bohme 1981 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.part.24159 | 0.397 |  |  |
-| Bohme 1984 [2] | 1 | measurement | not_found | below_threshold | 10.5962/bhl.title.10613 | 0.342 |  |  |
-| Bohme 1985 | 1 | measurement | not_found | below_threshold | 10.1111/aec.13213 | 0.439 |  |  |
-| Bohme 1989 | 1 | measurement | certain | two_service_agreement | 10.1080/03946975.1989.10539424 | 1.000 |  |  |
-| Bohme 2005 | 1 | measurement | not_found | below_threshold | 10.1108/978-1-60752-752-720251004 | 0.468 |  |  |
-| Bohme 2012 | 1 | measurement | not_found | below_threshold | 10.33256/152.43 | 0.593 |  |  |
-| Bohme and Esser 2015 | 1 | measurement | not_found | below_threshold | 10.6018/analesbio.38.05 | 0.470 |  |  |
-| Bohme and Fischer 1999 | 1 | measurement | not_found | below_threshold | 10.1080/15627020.2000.11407187 | 0.454 |  |  |
-| Bohme and Jacobs 2001 | 1 | measurement | not_found | below_threshold | 10.1007/978-3-662-25966-5_1 | 0.448 |  |  |
-| Bohme and Kirschner 2002 | 2 | measurement | not_found | below_threshold | 10.5962/bhl.part.29558 | 0.436 |  |  |
-| Bohme and Klaver 1980 | 2 | measurement | certain | two_service_agreement | 10.1163/156853880x00024 | 1.000 |  |  |
-| Bohme and Klaver 1981 | 1 | measurement | certain | two_service_agreement | 10.1163/156853881x00401 | 1.000 |  |  |
-| Bohme and Klaver 1990 | 1 | measurement | not_found | below_threshold | 10.1007/bf02061146 | 0.525 |  |  |
-| Bohme and Leptien 1990 | 1 | measurement | not_found | below_threshold | 10.1515/9783110885958.192 | 0.288 |  |  |
-| Bohme and Scerbak 1991 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.3114.1.6 | 0.464 |  |  |
-| Bohme and Schmitz 1996 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.79974 | 1.000 |  |  |
-| Bohme and Ziegler 2005 | 3 | measurement | not_found | below_threshold | 10.11646/zootaxa.2434.1.2 | 0.699 |  |  |
-| Bohme and Ziegler 2007 | 1 | measurement | not_found | below_threshold | 10.1007/978-3-031-36115-9_40 | 0.411 |  |  |
-| Bohme et al. 2000 | 3 | measurement | certain | two_service_agreement | 10.5962/bhl.part.80148 | 1.000 |  |  |
-| Bohme et al. 2002 | 1 | measurement | not_found | below_threshold | 10.3897/zookeys.568.6872 | 0.478 |  |  |
-| Bohme et al. 2005 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.4920.4.5 | 0.698 |  |  |
-| Bohme et al. 2013 | 1 | measurement | not_found | below_threshold | 10.31610/trudyzin/2013.317.4.426 | 0.419 |  |  |
+| Bobrov and Semenov 2008 | 107 | compilation | nodoi_approved | owner_nodoi |  | 0.543 | Bobrov:2008aa | Bobrov_2008 |
+| Bocage 1893 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.732 | Bocage:1893aa | Bocage_1893 |
+| Bochaton and Kemp 2017 | 3 | measurement | certain | two_service_agreement | 10.1080/02724634.2017.1239626 | 1.000 | Bochaton:2016ab | Bochaton_2016b |
+| Bochaton et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1016/j.quascirev.2016.08.017 | 1.000 | Bochaton:2016aa | Bochaton_2016 |
+| Bochaton et al. 2017 [1] | 1 | measurement | certain | two_service_agreement | 10.1098/rspb.2017.0921 | 1.000 | Bochaton:2017ab | Bochaton_2017b |
+| Bochaton et al. 2017 [2] | 3 | measurement | certain | two_service_agreement | 10.1080/08912963.2017.1343824 | 1.000 | Bochaton:2017aa | Bochaton_2017 |
+| Bock et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.15517/rbt.v57i4.5462 | 1.000 | Bock:2008aa | Bock_2008 |
+| Bock et al. 2010 | 1 | measurement | certain | two_service_agreement | 10.1590/s0031-10492010000300001 | 1.000 | Bock:2010aa | Bock_2010 |
+| Boettger 1887 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.340 | Boettger:1887aa | Boettger_1887 |
+| Boettger 1893 [2] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.341 | Boettger:1893aa | Boettger_1893 |
+| Boettger 1913 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boettger:1913aa | Boettger_1913 |
+| Bogaerts 2006 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.422 | Bogaerts:2006aa | Bogaerts_2006 |
+| Bogert and Cowles 1947 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.382 | Bogert:1947aa | Bogert_1947 |
+| Bogert and Martin del Campo 1956 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Bogert:1956aa | Bogert_1956 |
+| Bogert and Oliver 1945 | 5 | compilation | nodoi_approved | owner_nodoi |  | 0.684 | Bogert:1945aa | Bogert_1945 |
+| Bohle and Schonecker 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.659 | Bohle:2004aa | Bohle_2004 |
+| Bohme 1975 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.524 | Bohme:1975aa | Bohme_1975 |
+| Bohme 1981 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.397 | Bohme:1981aa | Bohme_1981 |
+| Bohme 1984 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.342 | Bohme:1984aa | Bohme_1984 |
+| Bohme 1985 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.439 | Bohme:1985aa | Bohme_1985 |
+| Bohme 1989 | 1 | measurement | certain | two_service_agreement | 10.1080/03946975.1989.10539424 | 1.000 | Bohme:1989aa | Bohme_1989 |
+| Bohme 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.468 | Bohme:2005aa | Bohme_2005 |
+| Bohme 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.593 | Bohme:2012aa | Bohme_2012 |
+| Bohme and Esser 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.470 | Bohme:2015aa | Bohme_2015 |
+| Bohme and Fischer 1999 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.454 | Bohme:1999aa | Bohme_1999 |
+| Bohme and Jacobs 2001 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.448 | Bohme:2001aa | Bohme_2001 |
+| Bohme and Kirschner 2002 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.436 | Bohme:2002aa | Bohme_2002 |
+| Bohme and Klaver 1980 | 2 | measurement | certain | two_service_agreement | 10.1163/156853880x00024 | 1.000 | Bohme:1980aa | Bohme_1980 |
+| Bohme and Klaver 1981 | 1 | measurement | certain | two_service_agreement | 10.1163/156853881x00401 | 1.000 | Bohme:1980ab | Bohme_1980b |
+| Bohme and Klaver 1990 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.525 | Bohme:1990aa | Bohme_1990 |
+| Bohme and Leptien 1990 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.288 | Bohme:1990ab | Bohme_1990b |
+| Bohme and Scerbak 1991 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.464 | Bohme:1991aa | Bohme_1991 |
+| Bohme and Schmitz 1996 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.79974 | 1.000 | Bohme:1996aa | Bohme_1996 |
+| Bohme and Ziegler 2005 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.699 | Bohme:2005ab | Bohme_2005b |
+| Bohme and Ziegler 2007 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.411 | Bohme:2007aa | Bohme_2007 |
+| Bohme et al. 2000 | 3 | measurement | certain | two_service_agreement | 10.5962/bhl.part.80148 | 1.000 | Bohme:2000aa | Bohme_2000 |
+| Bohme et al. 2002 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.478 | Bohme:2002ab | Bohme_2002b |
+| Bohme et al. 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.698 | Bohme:2005ac | Bohme_2005c |
+| Bohme et al. 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.419 | Bohme:2013aa | Bohme_2013 |
 | Bohme et al. 2015 | 1 | measurement | pending | single_service | 10.30906/1026-2296-2015-22-1-41-52 | 1.000 |  |  |
-| Bonine and Garland 1999 | 25 | measurement | pending | ambiguous | 10.1111/j.1469-7998.1999.tb01201.x | 1.000 |  |  |
-| Bonine et al. 2005 | 23 | measurement | certain | two_service_agreement | 10.1242/jeb.01903 | 1.000 |  |  |
-| Borczyk 2013 | 1 | measurement | certain | two_service_agreement | 10.3897/zookeys.320.5372 | 1.000 |  |  |
-| Boretto and Ibarguengoytia 2006 | 1 | measurement | certain | two_service_agreement | 10.1163/156853806776052119 | 1.000 |  |  |
-| Boretto and Ibarguengoytia 2009 | 5 | measurement | certain | two_service_agreement | 10.1670/07-241r2.1 | 1.000 |  |  |
-| Boretto et al. 2007 | 2 | measurement | certain | two_service_agreement | 10.1163/156853807781374791 | 1.000 |  |  |
-| Boretto et al. 2014 [3] | 1 | measurement | certain | two_service_agreement | 10.1670/12-171 | 1.000 |  |  |
+| Bonine and Garland 1999 | 25 | measurement | approved | owner_candidate | 10.1111/j.1469-7998.1999.tb01201.x | 1.000 | Bonine:1999aa | Bonine_1999 |
+| Bonine et al. 2005 | 23 | measurement | certain | two_service_agreement | 10.1242/jeb.01903 | 1.000 | Bonine:2005aa | Bonine_2005 |
+| Borczyk 2013 | 1 | measurement | certain | two_service_agreement | 10.3897/zookeys.320.5372 | 1.000 | Borczyk:2013aa | Borczyk_2013 |
+| Boretto and Ibarguengoytia 2006 | 1 | measurement | certain | two_service_agreement | 10.1163/156853806776052119 | 1.000 | Boretto:2006aa | Boretto_2006 |
+| Boretto and Ibarguengoytia 2009 | 5 | measurement | certain | two_service_agreement | 10.1670/07-241r2.1 | 1.000 | Boretto:2009aa | Boretto_2009 |
+| Boretto et al. 2007 | 2 | measurement | certain | two_service_agreement | 10.1163/156853807781374791 | 1.000 | Boretto:2007aa | Boretto_2007 |
+| Boretto et al. 2014 [3] | 1 | measurement | certain | two_service_agreement | 10.1670/12-171 | 1.000 | Boretto:2014aa | Boretto_2014 |
 | Boretto et al. 2015 | 1 | measurement | pending | weak_match | 10.1111/jzo.12245 | 0.830 |  |  |
-| Boretto et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1007/s00360-017-1136-z | 1.000 |  |  |
-| Borges Martins 1998 | 4 | measurement | not_found | below_threshold | 10.47749/t/unicamp.2005.351161 | 0.473 |  |  |
-| Borges-Nojosa et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4169.1.8 | 1.000 |  |  |
-| Borner and Schuttler 1983 | 1 | measurement | not_found | below_threshold | 10.2307/1446204 | 0.473 |  |  |
-| Borteiro et al. 2013 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.3620.2.3 | 0.538 |  |  |
-| Botov et al. 2015 | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4040.1.4 | 1.000 |  |  |
-| Bouazza et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1111/jzo.12353 | 1.000 |  |  |
-| Boudzoumou et al. 2013 | 5 | measurement | certain | two_service_agreement | 10.1080/21564574.2012.761284 | 1.000 |  |  |
-| Boulenger 1885 [1] | 401 | compilation | pending | weak_match | 10.5962/bhl.title.53974 | 0.766 |  |  |
-| Boulenger 1885 [2] | 380 | compilation | pending | weak_match | 10.5962/bhl.title.53974 | 0.766 |  |  |
-| Boulenger 1887 [2] | 477 | compilation | pending | weak_match | 10.5962/bhl.title.53974 | 0.766 |  |  |
-| Boulenger 1887 [3] | 3 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1887.tb08157.x | 1.000 |  |  |
+| Boretto et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1007/s00360-017-1136-z | 1.000 | Boretto:2017aa | Boretto_2017 |
+| Borges Martins 1998 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.473 | Borges-Martins:1998aa | BorgesMartins_1998 |
+| Borges-Nojosa et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4169.1.8 | 1.000 | Borges-Nojosa:2016aa | Borges-Nojosa_2016 |
+| Borner and Schuttler 1983 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.473 | Borner:1983aa | Borner_1983 |
+| Borteiro et al. 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.538 | Borteiro:2013aa | Borteiro_2013 |
+| Botov et al. 2015 | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4040.1.4 | 1.000 | Botov:2015aa | Botov_2015 |
+| Bouazza et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1111/jzo.12353 | 1.000 | Bouazza:2016aa | Bouazza_2016 |
+| Boudzoumou et al. 2013 | 5 | measurement | certain | two_service_agreement | 10.1080/21564574.2012.761284 | 1.000 | Boudzoumou:2013aa | Boudzoumou_2013 |
+| Boulenger 1885 [1] | 401 | compilation | nodoi_approved | owner_nodoi |  | 0.766 | Boulenger:1885aa | Boulenger_1885 |
+| Boulenger 1885 [2] | 380 | compilation | nodoi_approved | owner_nodoi |  | 0.766 | Boulenger:1885aa | Boulenger_1885 |
+| Boulenger 1887 [2] | 477 | compilation | nodoi_approved | owner_nodoi |  | 0.766 | Boulenger:1887ab | Boulenger_1887b |
+| Boulenger 1887 [3] | 3 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1887.tb08157.x | 1.000 | Boulenger:1887aa | Boulenger_1887 |
 | Boulenger 1887 [4] | 8 | measurement | pending | weak_match | 10.1080/00222938709460073 | 0.817 |  |  |
 | Boulenger 1888 [1] | 2 | measurement | pending | weak_match | 10.1080/00222938809460892 | 0.860 |  |  |
 | Boulenger 1888 [2] | 1 | measurement | pending | weak_match | 10.1080/00222938809460873 | 0.844 |  |  |
 | Boulenger 1889 | 1 | measurement | pending | weak_match | 10.1080/00222938909460337 | 0.854 |  |  |
-| Boulenger 1890 [1] | 58 | measurement | pending | grey_literature | 10.1111/j.1096-3642.1898.tb03194.x | 0.670 |  |  |
-| Boulenger 1890 [2] | 1 | measurement | not_found | below_threshold | 10.5962/bhl.title.5490 | 0.686 |  |  |
-| Boulenger 1890 [3] | 134 | compilation | pending | ambiguous | 10.5962/bhl.title.100797 | 1.000 |  |  |
-| Boulenger 1892 | 5 | measurement | not_found | below_threshold | 10.5962/bhl.title.16204 | 0.308 |  |  |
+| Boulenger 1890 [1] | 58 | measurement | nodoi_approved | owner_nodoi |  | 0.670 | Boulenger:1890aa | Boulenger_1890 |
+| Boulenger 1890 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.686 | Boulenger:1890ab | Boulenger_1890b |
+| Boulenger 1890 [3] | 134 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1890ac | Boulenger_1890c |
+| Boulenger 1892 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.308 | Boulenger:1892aa | Boulenger_1892 |
 | Boulenger 1894 [1] | 13 | compilation | pending | weak_match | 10.1080/00222939408677772 | 0.818 |  |  |
-| Boulenger 1894 [2] | 1 | measurement | pending | single_service | 10.5281/zenodo.13489269 | 1.000 |  |  |
-| Boulenger 1895 [1] | 2 | measurement | not_found | below_threshold | 10.5281/zenodo.13426283 | 0.656 |  |  |
-| Boulenger 1895 [2] | 1 | measurement | pending | single_service | 10.5281/zenodo.16547439 | 1.000 |  |  |
-| Boulenger 1896 [1] | 2 | measurement | pending | single_service | 10.5281/zenodo.16562823 | 1.000 |  |  |
+| Boulenger 1894 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1894aa | Boulenger_1894 |
+| Boulenger 1895 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.656 | Boulenger:1895aa | Boulenger_1895 |
+| Boulenger 1895 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1895ab | Boulenger_1895b |
+| Boulenger 1896 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1896aa | Boulenger_1896 |
 | Boulenger 1896 [2] | 1 | measurement | pending | weak_match | 10.1080/00222939608680318 | 0.836 |  |  |
-| Boulenger 1896 [3] | 1 | measurement | pending | grey_literature | 10.5281/zenodo.16509303 | 0.358 |  |  |
-| Boulenger 1896 [4] | 1 | measurement | pending | grey_literature | 10.1111/j.1096-3642.1896.tb03036.x | 0.554 |  |  |
-| Boulenger 1897 [1] | 3 | compilation | pending | single_service | 10.5281/zenodo.13395514 | 1.000 |  |  |
-| Boulenger 1897 [2] | 1 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1897.tb03122.x | 0.580 |  |  |
-| Boulenger 1897 [3] | 1 | measurement | pending | weak_match | 10.5281/zenodo.16484757 | 0.716 |  |  |
-| Boulenger 1897 [4] | 3 | measurement | pending | grey_literature | 10.5281/zenodo.16509303 | 0.582 |  |  |
+| Boulenger 1896 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.358 | Boulenger:1896ab | Boulenger_1896b |
+| Boulenger 1896 [4] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.554 | Boulenger:1896ac | Boulenger_1896c |
+| Boulenger 1897 [1] | 3 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1897aa | Boulenger_1897 |
+| Boulenger 1897 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.580 | Boulenger:1897ab | Boulenger_1897b |
+| Boulenger 1897 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.716 | Boulenger:1897ac | Boulenger_1897c |
+| Boulenger 1897 [4] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.582 | Boulenger:1897ad | Boulenger_1897d |
 | Boulenger 1897 [5] | 2 | measurement | pending | weak_match | 10.1080/00222939708680502 | 0.886 |  |  |
-| Boulenger 1897 [7] | 4 | measurement | pending | single_service | 10.5281/zenodo.16272328 | 1.000 |  |  |
-| Boulenger 1898 [2] | 6 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1898.tb03134.x | 0.690 |  |  |
-| Boulenger 1898 [3] | 2 | measurement | not_found | below_threshold | 10.1080/00222939808678026 | 0.601 |  |  |
-| Boulenger 1899 [1] | 2 | measurement | not_found | below_threshold | 10.1111/j.1469-7998.1899.tb06851.x | 0.666 |  |  |
-| Boulenger 1899 [2] | 5 | measurement | pending | grey_literature | 10.5281/zenodo.16651770 | 0.645 |  |  |
-| Boulenger 1899 [3] | 2 | measurement | pending | weak_match | 10.1111/j.1469-7998.1899.tb06855.x | 0.726 |  |  |
-| Boulenger 1900 [1] | 1 | measurement | pending | single_service | 10.5281/zenodo.13402074 | 1.000 |  |  |
-| Boulenger 1900 [2] | 1 | measurement | not_found | below_threshold | 10.1080/00222931508693687 | 0.560 |  |  |
-| Boulenger 1900 [3] | 2 | measurement | pending | grey_literature | 10.1111/j.1096-3642.1900.tb00308.x | 0.468 |  |  |
-| Boulenger 1900 [4] | 2 | measurement | pending | weak_match | 10.1111/j.1096-3642.1890.tb01716.x | 0.802 |  |  |
-| Boulenger 1901 [1] | 2 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1901.tb08168.x | 1.000 |  |  |
-| Boulenger 1901 [2] | 1 | measurement | not_found | below_threshold | 10.1080/00222930108678513 | 0.603 |  |  |
-| Boulenger 1902 | 3 | measurement | not_found | below_threshold | 10.1080/00222930208678538 | 0.696 |  |  |
+| Boulenger 1897 [7] | 4 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1897ae | Boulenger_1897e |
+| Boulenger 1898 [2] | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.690 | Boulenger:1898aa | Boulenger_1898 |
+| Boulenger 1898 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.601 | Boulenger:1898ab | Boulenger_1898b |
+| Boulenger 1899 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.666 | Boulenger:1899aa | Boulenger_1899 |
+| Boulenger 1899 [2] | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.645 | Boulenger:1899ab | Boulenger_1899b |
+| Boulenger 1899 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.726 | Boulenger:1899ac | Boulenger_1899c |
+| Boulenger 1900 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1900aa | Boulenger_1900 |
+| Boulenger 1900 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.560 | Boulenger:1900ab | Boulenger_1900b |
+| Boulenger 1900 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.468 | Boulenger:1900ac | Boulenger_1900c |
+| Boulenger 1900 [4] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.802 | Boulenger:1990aa | Boulenger_1990 |
+| Boulenger 1901 [1] | 2 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1901.tb08168.x | 1.000 | Boulenger:1901aa | Boulenger_1901 |
+| Boulenger 1901 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.603 | Boulenger:1901ab | Boulenger_1901b |
+| Boulenger 1902 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.696 | Boulenger:1902aa | Boulenger_1902 |
 | Boulenger 1903 [1] | 3 | measurement | pending | ambiguous | 10.1080/00222930308678877 | 0.848 |  |  |
-| Boulenger 1903 [2] | 1 | measurement | pending | single_service | 10.5281/zenodo.16158108 | 1.000 |  |  |
-| Boulenger 1905 [1] | 2 | measurement | pending | weak_match | 10.1111/j.1469-7998.1905.tb08390.x | 0.755 |  |  |
-| Boulenger 1905 [2] | 2 | measurement | not_found | below_threshold | 10.1111/j.1469-7998.1905.tb08391.x | 0.546 |  |  |
-| Boulenger 1905 [3] | 1 | measurement | pending | single_service | 10.5281/zenodo.16086721 | 1.000 |  |  |
-| Boulenger 1907 [1] | 2 | measurement | not_found | below_threshold | 10.5962/bhl.part.26462 | 0.627 |  |  |
-| Boulenger 1907 [2] | 1 | measurement | not_found | below_threshold | 10.1080/00222930709487258 | 0.663 |  |  |
-| Boulenger 1907 [3] | 2 | measurement | pending | ambiguous | 10.1080/00222930708562661 | 0.847 |  |  |
-| Boulenger 1908 [1] | 1 | measurement | not_found | below_threshold | 10.1080/00222939608680317 | 0.639 |  |  |
-| Boulenger 1908 [2] | 3 | measurement | pending | single_service | 10.5281/zenodo.16530573 | 1.000 |  |  |
-| Boulenger 1909 | 4 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1909.tb00143.x | 0.567 |  |  |
-| Boulenger 1910 | 6 | measurement | pending | single_service | 10.5281/zenodo.16441119 | 1.000 |  |  |
+| Boulenger 1903 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1903aa | Boulenger_1903 |
+| Boulenger 1905 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.755 | Boulenger:1905aa | Boulenger_1905 |
+| Boulenger 1905 [2] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.546 | Boulenger:1905ab | Boulenger_1905b |
+| Boulenger 1905 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1905ac | Boulenger_1905c |
+| Boulenger 1907 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.627 | Boulenger:1907aa | Boulenger_1907 |
+| Boulenger 1907 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.663 | Boulenger:1907ab | Boulenger_1907b |
+| Boulenger 1907 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.847 | Boulenger:1907ac | Boulenger_1907c |
+| Boulenger 1908 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.639 | Boulenger:1908aa | Boulenger_1908 |
+| Boulenger 1908 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1908ab | Boulenger_1908b |
+| Boulenger 1909 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.567 | Boulenger:1909aa | Boulenger_1909 |
+| Boulenger 1910 | 6 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1910aa | Boulenger_1910 |
 | Boulenger 1911 | 7 | measurement | pending | weak_match | 10.1080/00222931108692903 | 0.869 |  |  |
-| Boulenger 1912 | 66 | compilation | pending | weak_match | 10.1038/090619a0 | 1.000 |  |  |
-| Boulenger 1913 | 3 | measurement | pending | ambiguous | 10.1080/00222930308678877 | 0.848 |  |  |
-| Boulenger 1914 [1] | 9 | measurement | pending | weak_match | 10.5281/zenodo.16486426 | 1.000 |  |  |
-| Boulenger 1914 [2] | 1 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1913.tb02003.x | 0.590 |  |  |
-| Boulenger 1915 | 1 | measurement | not_found | below_threshold | 10.1111/j.1096-3642.1913.tb01982.x | 0.585 |  |  |
+| Boulenger 1912 | 66 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1912aa | Boulenger_1912 |
+| Boulenger 1913 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.848 | Boulenger:1913aa | Boulenger_1913 |
+| Boulenger 1914 [1] | 9 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1914aa | Boulenger_1914 |
+| Boulenger 1914 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.590 | Boulenger:1914ab | Boulenger_1914b |
+| Boulenger 1915 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.585 | Boulenger:1915aa | Boulenger_1915 |
 | Boulenger 1917 | 2 | measurement | pending | weak_match | 10.1080/00222931709486935 | 0.828 |  |  |
-| Boulenger 1920 [2] | 1 | measurement | pending | single_service | 10.5281/zenodo.16524575 | 1.000 |  |  |
-| Boulenger 1920 [3] | 63 | measurement | pending | ambiguous | 10.5962/bhl.title.54022 | 1.000 |  |  |
-| Boulenger 1921 | 107 | measurement | pending | ambiguous | 10.5962/bhl.title.54022 | 1.000 |  |  |
-| Bourke et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4231.1.5 | 1.000 |  |  |
-| Bowker 1984 | 12 | measurement | certain | two_service_agreement | 10.1086/physzool.57.4.30163342 | 1.000 |  |  |
-| Bowker 1986 | 1 | measurement | not_found | below_threshold | 10.2307/3670047 | 0.565 |  |  |
-| Bowler 2006 | 6 | measurement | not_found | below_threshold | 10.59350/7y8nd-nnm49 | 0.415 |  |  |
-| Boylan 1985 | 1 | measurement | not_found | below_threshold | 10.1111/j.1748-1090.1984.tb03021.x | 0.521 |  |  |
-| Brana 1996 | 8 | measurement | certain | two_service_agreement | 10.2307/3545893 | 1.000 |  |  |
-| Brana et al. 1992 | 3 | measurement | certain | two_service_agreement | 10.2307/1565137 | 1.000 |  |  |
-| Branch 1998 | 277 | compilation | pending | ambiguous | 10.2307/1447414 | 1.000 |  |  |
-| Branch 2014 | 2 | compilation | not_found | below_threshold | 10.2307/1447414 | 0.614 |  |  |
-| Branch and Haagner 1993 | 1 | measurement | certain | two_service_agreement | 10.1163/156853893x00282 | 1.000 |  |  |
-| Branch and McCartney 1992 | 4 | measurement | certain | two_service_agreement | 10.1080/04416651.1992.9650346 | 1.000 |  |  |
-| Branch and Tolley 2010 | 2 | measurement | certain | two_service_agreement | 10.1080/21564574.2010.516275 | 1.000 |  |  |
-| Branch et al. 2003 | 5 | measurement | certain | two_service_agreement | 10.1080/21564574.2003.9635484 | 1.000 |  |  |
-| Branch et al. 2005 [1] | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2005.9635526 | 1.000 |  |  |
-| Branch et al. 2005 [2] | 3 | measurement | not_found | below_threshold | 10.2982/028.113.0101 | 0.509 |  |  |
+| Boulenger 1920 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1920aa | Boulenger_1920 |
+| Boulenger 1920 [3] | 63 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1920ab | Boulenger_1920b |
+| Boulenger 1921 | 107 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Boulenger:1921aa | Boulenger_1921 |
+| Bourke et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4231.1.5 | 1.000 | Bourke:2017aa | Bourke_2017 |
+| Bowker 1984 | 12 | measurement | certain | two_service_agreement | 10.1086/physzool.57.4.30163342 | 1.000 | Bowker:1984aa | Bowker_1984 |
+| Bowker 1986 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.565 | Bowker:1986aa | Bowker_1986 |
+| Bowler 2006 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.415 | Bowler:2006aa | Bowler_2006 |
+| Boylan 1985 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.521 | Boylan:1985aa | Boylan_1985 |
+| Brana 1996 | 8 | measurement | certain | two_service_agreement | 10.2307/3545893 | 1.000 | Brana:1996aa | Brana_1996 |
+| Brana et al. 1992 | 3 | measurement | certain | two_service_agreement | 10.2307/1565137 | 1.000 | Brana:1992aa | Brana_1992 |
+| Branch 1998 | 277 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Branch:1998aa | Branch_1998 |
+| Branch 2014 | 2 | compilation | nodoi_approved | owner_nodoi |  | 0.614 | Branch:2014aa | Branch_2014 |
+| Branch and Haagner 1993 | 1 | measurement | certain | two_service_agreement | 10.1163/156853893x00282 | 1.000 | Branch:1993aa | Branch_1993 |
+| Branch and McCartney 1992 | 4 | measurement | certain | two_service_agreement | 10.1080/04416651.1992.9650346 | 1.000 | Branch:1992aa | Branch_1992 |
+| Branch and Tolley 2010 | 2 | measurement | certain | two_service_agreement | 10.1080/21564574.2010.516275 | 1.000 | Branch:2010aa | Branch_2010 |
+| Branch et al. 2003 | 5 | measurement | certain | two_service_agreement | 10.1080/21564574.2003.9635484 | 1.000 | Branch:2003aa | Branch_2003 |
+| Branch et al. 2005 [1] | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2005.9635526 | 1.000 | Branch:2005aa | Branch_2005 |
+| Branch et al. 2005 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.509 | Branch:2005ab | Branch_2005b |
 | Branch et al. 2006 | 5 | measurement | pending | weak_match | 10.1080/21564574.2006.9635545 | 0.899 |  |  |
-| Branch et al. 2007 | 1 | measurement | not_found | below_threshold | 10.1080/21564574.2006.9635541 | 0.552 |  |  |
-| Branch et al. 2011 | 1 | measurement | certain | two_service_agreement | 10.3099/0006-9698-524.1.1 | 1.000 |  |  |
+| Branch et al. 2007 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.552 | Branch:2007aa | Branch_2007 |
+| Branch et al. 2011 | 1 | measurement | certain | two_service_agreement | 10.3099/0006-9698-524.1.1 | 1.000 | Branch:2011aa | Branch_2011 |
 | Branch et al. 2014 | 6 | measurement | pending | weak_match | 10.11646/zootaxa.3814.1.1 | 0.915 |  |  |
 | Branch et al. 2017 [1] | 1 | measurement | pending | weak_match | 10.11646/zootaxa.4324.1.8 | 0.849 |  |  |
-| Brandao and Motta 2005 | 1 | measurement | certain | two_service_agreement | 10.11606/issn.2316-9079.v4i2p139-145 | 1.000 |  |  |
-| Brandley et al. 2014 | 1 | measurement | certain | doi_resolves | 10.1371/journal.pone.0092233 | 1.000 |  |  |
-| Brandt and Navas 2011 | 21 | measurement | certain | doi_resolves | 10.1371/journal.pone.0020040 | 1.000 |  |  |
-| Brattstrom 1955 | 2 | measurement | certain | two_service_agreement | 10.2307/2422189 | 1.000 |  |  |
-| Breitman et al. 2011 [2] | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.3120.1.1 | 1.000 |  |  |
-| Breitman et al. 2011 [3] | 2 | measurement | pending | ambiguous | 10.11646/zootaxa.3123.1.2 | 1.000 |  |  |
-| Breitman et al. 2015 [1] | 3 | measurement | certain | two_service_agreement | 10.1655/herpmonographs-d-14-00003 | 1.000 |  |  |
-| Brennan and Bauer 2017 | 17 | measurement | pending | weak_match | 10.5281/zenodo.16063738 | 1.000 |  |  |
-| Brennan and Holycross 2009 | 12 | compilation | not_found | below_threshold | 10.2307/2420795 | 0.664 |  |  |
-| Brennan et al. 2009 | 2 | measurement | certain | two_service_agreement | 10.17161/ch.v0i1.11932 | 1.000 |  |  |
-| Breuil 2002 | 17 | measurement | not_found | below_threshold | 10.5962/bhl.title.12856 | 0.587 |  |  |
-| Bringsoe 1998 | 1 | measurement | not_found | below_threshold | 10.1515/9783112652985-001 | 0.307 |  |  |
-| Brito et al. 2012 | 1 | measurement | certain | two_service_agreement | 10.15560/8.1.172 | 1.000 |  |  |
-| Britto et al. 2001 | 1 | measurement | not_found | below_threshold | 10.1054/ceca.2001.0207 | 0.369 |  |  |
-| Broadley 1962 | 44 | measurement | not_found | below_threshold | 10.1080/0440730x.1962.9650474 | 0.444 |  |  |
-| Broadley 1963 | 3 | measurement | certain | two_service_agreement | 10.1080/00222936308651355 | 1.000 |  |  |
-| Broadley 1965 [1] | 1 | measurement | not_found | below_threshold | 10.5962/p.397647 | 0.629 |  |  |
-| Broadley 1965 [2] | 2 | measurement | not_found | below_threshold | 10.2307/4109176 | 0.586 |  |  |
-| Broadley 1968 | 10 | measurement | not_found | below_threshold | 10.1080/21564574.2000.9635437 | 0.648 |  |  |
-| Broadley 1974 [1] | 4 | measurement | not_found | below_threshold | 10.1080/21564574.2000.9635437 | 0.675 |  |  |
-| Broadley 1974 [2] | 1 | measurement | not_found | below_threshold | 10.2307/1447298 | 0.489 |  |  |
-| Broadley 1989 | 1 | measurement | not_found | below_threshold | 10.1080/21564574.2000.9650017 | 0.614 |  |  |
-| Broadley 1990 | 6 | measurement | not_found | below_threshold | 10.1038/075534a0 | 0.515 |  |  |
-| Broadley 1992 | 4 | measurement | certain | two_service_agreement | 10.1080/04416651.1992.9650356 | 1.000 |  |  |
-| Broadley 1994 | 4 | measurement | certain | two_service_agreement | 10.1080/03946975.1994.10539253 | 1.000 |  |  |
-| Broadley 1995 | 1 | measurement | certain | two_service_agreement | 10.1163/156853895x00037 | 1.000 |  |  |
-| Broadley 1997 | 2 | measurement | certain | two_service_agreement | 10.1080/21564574.1997.9649971 | 1.000 |  |  |
-| Broadley 2000 | 20 | measurement | certain | two_service_agreement | 10.1080/21564574.2000.9635437 | 1.000 |  |  |
-| Broadley 2006 | 3 | measurement | pending | single_service | 10.5281/zenodo.15915667 | 1.000 |  |  |
-| Broadley 2008 | 1 | measurement | pending | weak_match | 10.1896/054.052.0102 | 1.000 |  |  |
-| Broadley and Bauer 1999 | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.1998.9650002 | 1.000 |  |  |
-| Broadley and Branch 2002 | 7 | measurement | certain | two_service_agreement | 10.1080/21564574.2002.9635459 | 1.000 |  |  |
-| Broadley and Broadley 1997 | 10 | measurement | not_found | below_threshold | 10.1080/21564574.2000.9650017 | 0.479 |  |  |
-| Broadley and Gans 1978 | 2 | measurement | certain | two_service_agreement | 10.5962/p.330808 | 1.000 |  |  |
-| Broadley and Measey 2016 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2016.1183717 | 1.000 |  |  |
-| Broadley and Mouton 2000 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2000.9635443 | 1.000 |  |  |
-| Broadley et al. 1976 | 22 | measurement | pending | grey_literature | 10.5962/p.330808 | 0.523 |  |  |
-| Broadley et al. 2006 | 7 | measurement | certain | two_service_agreement | 10.1080/21564574.2006.9635543 | 1.000 |  |  |
-| Broadley et al. 2014 | 4 | measurement | certain | two_service_agreement | 10.1080/21564574.2014.930071 | 1.000 |  |  |
-| Brongersma 1930 | 1 | measurement | pending | grey_literature | 10.5962/p.327518 | 0.581 |  |  |
-| Brongersma 1934 | 4 | measurement | pending | weak_match | 10.1111/j.1096-3642.1927.tb02255.x | 0.841 |  |  |
-| Brongersma 1942 | 8 | measurement | not_found | below_threshold | 10.1111/j.1365-2699.2010.02471.x | 0.432 |  |  |
-| Brongersma 1948 | 3 | measurement | not_found | below_threshold | 10.5962/bhl.title.11828 | 0.309 |  |  |
-| Brongersma 1953 | 1 | measurement | not_found | below_threshold | 10.5962/bhl.title.11828 | 0.342 |  |  |
+| Brandao and Motta 2005 | 1 | measurement | certain | two_service_agreement | 10.11606/issn.2316-9079.v4i2p139-145 | 1.000 | Brandao:2005aa | Brandao_2005 |
+| Brandley et al. 2014 | 1 | measurement | certain | doi_resolves | 10.1371/journal.pone.0092233 | 1.000 | Brandley:2014aa | Brandley_2014 |
+| Brandt and Navas 2011 | 21 | measurement | certain | doi_resolves | 10.1371/journal.pone.0020040 | 1.000 | Brandt:2011aa | Brandt_2011 |
+| Brattstrom 1955 | 2 | measurement | certain | two_service_agreement | 10.2307/2422189 | 1.000 | Brattstrom:1955aa | Brattstrom_1955 |
+| Breitman et al. 2011 [2] | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.3120.1.1 | 1.000 | Breitman:2011aa | Breitman_2011 |
+| Breitman et al. 2011 [3] | 2 | measurement | approved | owner_candidate | 10.11646/zootaxa.3123.1.2 | 1.000 | Breitman:2011ab | Breitman_2011b |
+| Breitman et al. 2015 [1] | 3 | measurement | certain | two_service_agreement | 10.1655/herpmonographs-d-14-00003 | 1.000 | Breitman:2015aa | Breitman_2015 |
+| Brennan and Bauer 2017 | 17 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brennan:2017aa | Brennan_2017 |
+| Brennan and Holycross 2009 | 12 | compilation | nodoi_approved | owner_nodoi |  | 0.664 | Brennan:2009ab | Brennan_2009b |
+| Brennan et al. 2009 | 2 | measurement | certain | two_service_agreement | 10.17161/ch.v0i1.11932 | 1.000 | Brennan:2009aa | Brennan_2009 |
+| Breuil 2002 | 17 | measurement | nodoi_approved | owner_nodoi |  | 0.587 | Breuil:2002aa | Breuil_2002 |
+| Bringsoe 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.307 | Bringsoe:1998aa | Bringsoe_1998 |
+| Brito et al. 2012 | 1 | measurement | certain | two_service_agreement | 10.15560/8.1.172 | 1.000 | Brito:2012aa | Brito_2012 |
+| Britto et al. 2001 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.369 | Britto:2001aa | Britto_2001 |
+| Broadley 1962 | 44 | measurement | nodoi_approved | owner_nodoi |  | 0.444 | Broadley:1962aa | Broadley_1962 |
+| Broadley 1963 | 3 | measurement | certain | two_service_agreement | 10.1080/00222936308651355 | 1.000 | Broadley:1963aa | Broadley_1963 |
+| Broadley 1965 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.629 | Broadley:1965aa | Broadley_1965 |
+| Broadley 1965 [2] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.586 | Broadley:1965ab | Broadley_1965b |
+| Broadley 1968 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.648 | Broadley:1968aa | Broadley_1968 |
+| Broadley 1974 [1] | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.675 | Broadley:1974aa | Broadley_1974 |
+| Broadley 1974 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.489 | Broadley:1974ab | Broadley_1974b |
+| Broadley 1989 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.614 | Broadley:1989aa | Broadley_1989 |
+| Broadley 1990 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.515 | Broadley:1990aa | Broadley_1990 |
+| Broadley 1992 | 4 | measurement | certain | two_service_agreement | 10.1080/04416651.1992.9650356 | 1.000 | Broadley:1992aa | Broadley_1992 |
+| Broadley 1994 | 4 | measurement | certain | two_service_agreement | 10.1080/03946975.1994.10539253 | 1.000 | Broadley:1994aa | Broadley_1994 |
+| Broadley 1995 | 1 | measurement | certain | two_service_agreement | 10.1163/156853895x00037 | 1.000 | Broadley:1995aa | Broadley_1995 |
+| Broadley 1997 | 2 | measurement | certain | two_service_agreement | 10.1080/21564574.1997.9649971 | 1.000 | Broadley:1997aa | Broadley_1997 |
+| Broadley 2000 | 20 | measurement | certain | two_service_agreement | 10.1080/21564574.2000.9635437 | 1.000 | Broadley:2000aa | Broadley_2000 |
+| Broadley 2006 | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Broadley:2006ab | Broadley_2006b |
+| Broadley 2008 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Broadley:2008aa | Broadley_2008 |
+| Broadley and Bauer 1999 | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.1998.9650002 | 1.000 | Broadley:1998aa | Broadley_1998 |
+| Broadley and Branch 2002 | 7 | measurement | certain | two_service_agreement | 10.1080/21564574.2002.9635459 | 1.000 | Broadley:2002aa | Broadley_2002 |
+| Broadley and Broadley 1997 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.479 | Broadley:1997ab | Broadley_1997b |
+| Broadley and Gans 1978 | 2 | measurement | certain | two_service_agreement | 10.5962/p.330808 | 1.000 | Broadley:1978aa | Broadley_1978 |
+| Broadley and Measey 2016 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2016.1183717 | 1.000 | Broadley:2016aa | Broadley_2016 |
+| Broadley and Mouton 2000 | 1 | measurement | certain | two_service_agreement | 10.1080/21564574.2000.9635443 | 1.000 | Broadley:2000ab | Broadley_2000b |
+| Broadley et al. 1976 | 22 | measurement | nodoi_approved | owner_nodoi |  | 0.523 | Broadley:1976aa | Broadley_1976 |
+| Broadley et al. 2006 | 7 | measurement | certain | two_service_agreement | 10.1080/21564574.2006.9635543 | 1.000 | Broadley:2006aa | Broadley_2006 |
+| Broadley et al. 2014 | 4 | measurement | certain | two_service_agreement | 10.1080/21564574.2014.930071 | 1.000 | Broadley:2014aa | Broadley_2014 |
+| Brongersma 1930 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.581 | Brongersma:1930aa | Brongersma_1930 |
+| Brongersma 1934 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.841 | Brongersma:1934aa | Brongersma_1934 |
+| Brongersma 1942 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.432 | Brongersma:1942aa | Brongersma_1942 |
+| Brongersma 1948 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.309 | Brongersma:1948aa | Brongersma_1948 |
+| Brongersma 1953 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.342 | Brongersma:1953aa | Brongersma_1953 |
 | Brooke and Houston 1983 | 5 | measurement | pending | weak_match | 10.1111/j.1469-7998.1983.tb05782.x | 0.841 |  |  |
-| Brooks 1968 | 2 | measurement | not_found | below_threshold | 10.2307/2388091 | 0.464 |  |  |
-| Brooks 1975 | 1 | compilation | not_found | below_threshold | 10.1007/978-1-4615-9391-1_18 | 0.290 |  |  |
-| Brown 1953 | 9 | measurement | pending | weak_match | 10.5962/bhl.part.27154 | 0.766 |  |  |
+| Brooks 1968 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.464 | Brooks:1968aa | Brooks_1968 |
+| Brooks 1975 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.290 | Brooks:1975aa | Brooks_1975 |
+| Brown 1953 | 9 | measurement | nodoi_approved | owner_nodoi |  | 0.766 | Brown:1953aa | Brown_1953 |
 | Brown 1954 | 5 | measurement | pending | weak_match | 10.5962/bhl.title.3073 | 0.872 |  |  |
-| Brown 1956 | 10 | measurement | pending | single_service | 10.5281/zenodo.16442307 | 1.000 |  |  |
-| Brown 1976 | 3 | measurement | not_found | below_threshold | 10.5962/bhl.part.1637 | 0.394 |  |  |
-| Brown 1991 [2] | 71 | measurement | pending | grey_literature | 10.5962/bhl.part.22970 | 0.440 |  |  |
-| Brown 1995 | 5 | measurement | pending | weak_match | 10.5281/zenodo.13398960 | 0.778 |  |  |
-| Brown 1996 | 1 | measurement | not_found | below_threshold | 10.1093/aesa/89.1.12 | 0.485 |  |  |
-| Brown 1999 | 6 | measurement | certain | two_service_agreement | 10.2307/1447974 | 1.000 |  |  |
-| Brown 2012 [1] | 28 | compilation | not_found | below_threshold | 10.1071/9781486300372.ch05 | 0.499 |  |  |
-| Brown 2012 [2] | 7 | compilation | not_found | below_threshold | 10.1007/2506_2013_27 | 0.455 |  |  |
-| Brown 2012 [3] | 50 | compilation | not_found | below_threshold | 10.1071/978148630037207.39.44.2014.7 | 0.456 |  |  |
-| Brown and Alcala 1961 [1] | 2 | measurement | pending | single_service | 10.5281/zenodo.15915175 | 1.000 |  |  |
-| Brown and Alcala 1963 | 3 | measurement | pending | single_service | 10.5281/zenodo.13414564 | 1.000 |  |  |
-| Brown and Alcala 1978 | 33 | compilation | not_found | below_threshold | 10.37801/ajad2023.20.1.p2 | 0.339 |  |  |
-| Brown and Alcala 1980 | 67 | compilation | not_found | below_threshold | 10.37801/ajad2023.20.1.p2 | 0.331 |  |  |
-| Brown and Alcala 1995 | 3 | measurement | pending | single_service | 10.5281/zenodo.13400745 | 1.000 |  |  |
-| Brown and Allison 1986 | 4 | measurement | not_found | below_threshold | 10.1670/18-014 | 0.653 |  |  |
-| Brown and Gibbons 1986 | 7 | measurement | pending | single_service | 10.5281/zenodo.16191789 | 1.000 |  |  |
-| Brown and Nagy 2007 | 45 | measurement | certain | two_service_agreement | 10.1017/cbo9780511752438.006 | 1.000 |  |  |
-| Brown and Parker 1973 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.4671.1.9 | 0.720 |  |  |
-| Brown and Parker 1977 | 13 | measurement | pending | single_service | 10.5281/zenodo.16060394 | 1.000 |  |  |
-| Brown and Parker 1985 | 6 | measurement | pending | single_service | 10.5281/zenodo.16267860 | 1.000 |  |  |
-| Brown and Rabor 1967 | 17 | measurement | pending | single_service | 10.5281/zenodo.16233726 | 1.000 |  |  |
-| Brown and Tanner 1949 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.7603 | 1.000 |  |  |
-| Brown et al. 1992 | 3 | measurement | not_found | below_threshold | 10.2307/1446048 | 0.680 |  |  |
-| Brown et al. 1996 | 1 | measurement | not_found | below_threshold | 10.3724/sp.j.1245.2012.00001 | 0.639 |  |  |
-| Brown et al. 1999 [1] | 1 | measurement | certain | two_service_agreement | 10.2307/1447481 | 1.000 |  |  |
-| Brown et al. 1999 [2] | 1 | measurement | certain | two_service_agreement | 10.1111/j.1600-0587.1999.tb00503.x | 1.000 |  |  |
-| Brown et al. 2000 | 8 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2000)2000[0191:doanso]2.0.co;2 | 1.000 |  |  |
-| Brown et al. 2007 | 9 | measurement | pending | weak_match | 10.5281/zenodo.5332404 | 1.000 |  |  |
-| Brown et al. 2008 | 10 | measurement | certain | two_service_agreement | 10.1655/07-078.1 | 1.000 |  |  |
-| Brown et al. 2009 | 11 | measurement | certain | two_service_agreement | 10.1670/08-207.1 | 1.000 |  |  |
-| Brown et al. 2010 [1] | 7 | measurement | pending | weak_match | 10.1670/08-316.1 | 0.763 |  |  |
-| Brown et al. 2010 [2] | 30 | measurement | not_found | below_threshold | 10.5962/bhl.title.8434 | 0.400 |  |  |
-| Brown et al. 2011 [1] | 7 | measurement | certain | two_service_agreement | 10.1670/10-123.1 | 1.000 |  |  |
-| Brown et al. 2011 [2] | 13 | measurement | certain | two_service_agreement | 10.1655/herpetologica-d-11-00025.1 | 1.000 |  |  |
-| Brown et al. 2012 [1] | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.3243.1.1 | 1.000 |  |  |
-| Brown et al. 2017 [1] | 1 | measurement | not_found | below_threshold | 10.3099/0027-4100-14.1.1 | 0.499 |  |  |
-| Brownlie and Loveridge 1983 | 4 | measurement | pending | weak_match | 10.1016/0300-9629(83)90560-1 | 1.000 |  |  |
-| Bruna et al. 1996 | 2 | measurement | certain | two_service_agreement | 10.2307/1447665 | 1.000 |  |  |
-| Brygoo 1971 | 33 | measurement | not_found | below_threshold | 10.1093/icb/11.2.361 | 0.522 |  |  |
-| Brygoo 1978 | 38 | measurement | not_found | below_threshold | 10.1146/annurev.ph.39.030177.002313 | 0.424 |  |  |
-| Brygoo 1981 [1] | 5 | measurement | pending | ambiguous | 10.5962/p.285822 | 0.724 |  |  |
-| Brygoo 1986 | 10 | measurement | pending | ambiguous | 10.5962/p.326716 | 0.781 |  |  |
-| Brygoo 1987 [1] | 2 | measurement | certain | two_service_agreement | 10.5962/p.287541 | 1.000 |  |  |
-| Brygoo 1987 [3] | 2 | measurement | pending | ambiguous | 10.5962/p.285914 | 0.708 |  |  |
-| Brygoo and Roux-Esteve 1981 | 6 | measurement | certain | two_service_agreement | 10.5962/p.304631 | 1.000 |  |  |
-| Brygoo and Roux-Esteve 1983 | 6 | measurement | certain | two_service_agreement | 10.5962/p.286004 | 1.000 |  |  |
-| Brygoo et al. 1972 | 1 | measurement | pending | weak_match | 10.5962/p.272587 | 1.000 |  |  |
-| Bryson and Graham 2010 | 3 | measurement | certain | two_service_agreement | 10.1655/09-012.1 | 1.000 |  |  |
-| Bryson and Lazcano 2005 | 1 | measurement | not_found | below_threshold | 10.15560/10.4.950 | 0.477 |  |  |
-| Bshaena and Joger 2013 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00002913 | 1.000 |  |  |
-| Buckley and Axtell 1990 | 1 | compilation | not_found | below_threshold | 10.17161/randa.v17i3.16100 | 0.454 |  |  |
-| Buckley and Axtell 1997 | 1 | measurement | certain | two_service_agreement | 10.2307/1447849 | 1.000 |  |  |
+| Brown 1956 | 10 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1956aa | Brown_1956 |
+| Brown 1976 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.394 | Brown:1976aa | Brown_1976 |
+| Brown 1991 [2] | 71 | measurement | nodoi_approved | owner_nodoi |  | 0.440 | Brown:1991ab | Brown_1991b |
+| Brown 1995 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.778 | Brown:1995aa | Brown_1995 |
+| Brown 1996 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.485 | Brown:1996aa | Brown_1996 |
+| Brown 1999 | 6 | measurement | certain | two_service_agreement | 10.2307/1447974 | 1.000 | Brown:1999ac | Brown_1999c |
+| Brown 2012 [1] | 28 | compilation | nodoi_approved | owner_nodoi |  | 0.499 | Brown:2012ab | Brown_2012b |
+| Brown 2012 [2] | 7 | compilation | nodoi_approved | owner_nodoi |  | 0.455 | Brown:2012ac | Brown_2012c |
+| Brown 2012 [3] | 50 | compilation | nodoi_approved | owner_nodoi |  | 0.456 | Brown:2012ad | Brown_2012d |
+| Brown and Alcala 1961 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1961aa | Brown_1961 |
+| Brown and Alcala 1963 | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1963aa | Brown_1963 |
+| Brown and Alcala 1978 | 33 | compilation | nodoi_approved | owner_nodoi |  | 0.339 | Brown:1978ab | Brown_1978b |
+| Brown and Alcala 1980 | 67 | compilation | nodoi_approved | owner_nodoi |  | 0.331 | Brown:1980aa | Brown_1980 |
+| Brown and Alcala 1995 | 3 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1995ab | Brown_1995b |
+| Brown and Allison 1986 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.653 | Brown:1986aa | Brown_1986 |
+| Brown and Gibbons 1986 | 7 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1986ab | Brown_1986b |
+| Brown and Nagy 2007 | 45 | measurement | certain | two_service_agreement | 10.1017/cbo9780511752438.006 | 1.000 | Brown:2007aa | Brown_2007 |
+| Brown and Parker 1973 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.720 | Brown:1973aa | Brown_1973 |
+| Brown and Parker 1977 | 13 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1977aa | Brown_1977 |
+| Brown and Parker 1985 | 6 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1985aa | Brown_1985 |
+| Brown and Rabor 1967 | 17 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:1967aa | Brown_1967 |
+| Brown and Tanner 1949 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.7603 | 1.000 | Brown:1949aa | Brown_1949 |
+| Brown et al. 1992 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.680 | Brown:1992aa | Brown_1992 |
+| Brown et al. 1996 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.639 | Brown:1996ab | Brown_1996b |
+| Brown et al. 1999 [1] | 1 | measurement | certain | two_service_agreement | 10.2307/1447481 | 1.000 | Brown:1999ab | Brown_1999b |
+| Brown et al. 1999 [2] | 1 | measurement | certain | two_service_agreement | 10.1111/j.1600-0587.1999.tb00503.x | 1.000 | Brown:1999aa | Brown_1999 |
+| Brown et al. 2000 | 8 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2000)2000[0191:doanso]2.0.co;2 | 1.000 | Brown:2000aa | Brown_2000 |
+| Brown et al. 2007 | 9 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brown:2007ab | Brown_2007b |
+| Brown et al. 2008 | 10 | measurement | certain | two_service_agreement | 10.1655/07-078.1 | 1.000 | Brown:2008aa | Brown_2008 |
+| Brown et al. 2009 | 11 | measurement | certain | two_service_agreement | 10.1670/08-207.1 | 1.000 | Brown:2009aa | Brown_2009 |
+| Brown et al. 2010 [1] | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.763 | Brown:2010aa | Brown_2010 |
+| Brown et al. 2010 [2] | 30 | measurement | nodoi_approved | owner_nodoi |  | 0.400 | Brown:2010ab | Brown_2010b |
+| Brown et al. 2011 [1] | 7 | measurement | certain | two_service_agreement | 10.1670/10-123.1 | 1.000 | Brown:2011ab | Brown_2011b |
+| Brown et al. 2011 [2] | 13 | measurement | certain | two_service_agreement | 10.1655/herpetologica-d-11-00025.1 | 1.000 | Brown:2011aa | Brown_2011 |
+| Brown et al. 2012 [1] | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.3243.1.1 | 1.000 | Brown:2012aa | Brown_2012 |
+| Brown et al. 2017 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.499 | Brown:2017aa | Brown_2017 |
+| Brownlie and Loveridge 1983 | 4 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Brownlie:1983aa | Brownlie_1983 |
+| Bruna et al. 1996 | 2 | measurement | certain | two_service_agreement | 10.2307/1447665 | 1.000 | Bruna:1996aa | Bruna_1996 |
+| Brygoo 1971 | 33 | measurement | nodoi_approved | owner_nodoi |  | 0.522 | Brygoo:1971aa | Brygoo_1971 |
+| Brygoo 1978 | 38 | measurement | nodoi_approved | owner_nodoi |  | 0.424 | Brygoo:1978aa | Brygoo_1978 |
+| Brygoo 1981 [1] | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.724 | Brygoo:1981ab | Brygoo_1981b |
+| Brygoo 1986 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.781 | Brygoo:1986aa | Brygoo_1986 |
+| Brygoo 1987 [1] | 2 | measurement | certain | two_service_agreement | 10.5962/p.287541 | 1.000 | Brygoo:1987aa | Brygoo_1987 |
+| Brygoo 1987 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.708 | Brygoo:1987ab | Brygoo_1987b |
+| Brygoo and Roux-Esteve 1981 | 6 | measurement | certain | two_service_agreement | 10.5962/p.304631 | 1.000 | Brygoo:1981aa | Brygoo_1981 |
+| Brygoo and Roux-Esteve 1983 | 6 | measurement | certain | two_service_agreement | 10.5962/p.286004 | 1.000 | Brygoo:1983aa | Brygoo_1983 |
+| Brygoo et al. 1972 | 1 | measurement | approved | owner_candidate | 10.5962/p.272587 | 1.000 | Brygoo:1972aa | Brygoo_1972 |
+| Bryson and Graham 2010 | 3 | measurement | certain | two_service_agreement | 10.1655/09-012.1 | 1.000 | Bryson:2010aa | Bryson_2010 |
+| Bryson and Lazcano 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.477 | Bryson:2005aa | Bryson_2005 |
+| Bshaena and Joger 2013 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00002913 | 1.000 | Bshaena:2013aa | Bshaena_2013 |
+| Buckley and Axtell 1990 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.454 | Buckley:1990aa | Buckley_1990 |
+| Buckley and Axtell 1997 | 1 | measurement | certain | two_service_agreement | 10.2307/1447849 | 1.000 | Buckley:1997aa | Buckley_1997 |
 | Bucklitsch et al. 2012 | 1 | measurement | pending | weak_match | 10.13128/acta_herpetol-11037 | 0.825 |  |  |
-| Budak et al. 1998 | 1 | measurement | pending | grey_literature | 10.3906/zoo-0911-97 | 0.415 |  |  |
-| Buden 1998 [1] | 2 | measurement | not_found | below_threshold | 10.63172/180800rkkxka | 0.416 |  |  |
-| Buden 2007 [1] | 1 | measurement | certain | two_service_agreement | 10.2984/1534-6188(2007)61[407:ansotg]2.0.co;2 | 1.000 |  |  |
-| Buden 2007 [2] | 5 | measurement | certain | two_service_agreement | 10.2984/1534-6188(2007)61[415:rosaat]2.0.co;2 | 1.000 |  |  |
+| Budak et al. 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.415 | Budak:1998aa | Budak_1998 |
+| Buden 1998 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.416 | Buden:1998aa | Buden_1998 |
+| Buden 2007 [1] | 1 | measurement | certain | two_service_agreement | 10.2984/1534-6188(2007)61[407:ansotg]2.0.co;2 | 1.000 | Buden:2007aa | Buden_2007 |
+| Buden 2007 [2] | 5 | measurement | certain | two_service_agreement | 10.2984/1534-6188(2007)61[415:rosaat]2.0.co;2 | 1.000 | Buden:2007ab | Buden_2007b |
 | Buden 2008 | 1 | measurement | pending | weak_match | 10.2984/1534-6188(2008)62[499:tron]2.0.co;2 | 0.825 |  |  |
-| Buden and Taborosi 2016 | 21 | compilation | not_found | below_threshold | 10.2984/65.2.277 | 0.686 |  |  |
-| Buffrenil et al. 2004 | 21 | measurement | certain | two_service_agreement | 10.1670/0022-1511(2005)039[0328:cdoedi]2.0.co;2 | 1.000 |  |  |
-| Bujes and Verrastro 2006 | 1 | measurement | certain | two_service_agreement | 10.1590/s1519-69842006000500021 | 0.930 |  |  |
-| Bulbul et al. 2016 [1] | 1 | measurement | certain | two_service_agreement | 10.1163/15707563-00002489 | 1.000 |  |  |
-| Bulbul et al. 2016 [2] | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00003073 | 1.000 |  |  |
-| Bull and Bonnett 2004 | 1 | measurement | not_found | below_threshold | 10.3389/fevo.2021.722455 | 0.633 |  |  |
+| Buden and Taborosi 2016 | 21 | compilation | nodoi_approved | owner_nodoi |  | 0.686 | Buden:2016aa | Buden_2016 |
+| Buffrenil et al. 2004 | 21 | measurement | certain | two_service_agreement | 10.1670/0022-1511(2005)039[0328:cdoedi]2.0.co;2 | 1.000 | de-Buffrenil:2005aa | deBuffrenil_2005 |
+| Bujes and Verrastro 2006 | 1 | measurement | certain | two_service_agreement | 10.1590/s1519-69842006000500021 | 0.930 | Bujes:2006aa | Bujes_2006 |
+| Bulbul et al. 2016 [1] | 1 | measurement | certain | two_service_agreement | 10.1163/15707563-00002489 | 1.000 | Bulbul:2016ab | Bulbul_2016b |
+| Bulbul et al. 2016 [2] | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00003073 | 1.000 | Bulbul:2016aa | Bulbul_2016 |
+| Bull and Bonnett 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.633 | Bull:2004aa | Bull_2004 |
 | Bullock 1986 | 8 | measurement | pending | weak_match | 10.1016/0006-3207(86)90088-1 | 0.899 |  |  |
-| Bullock et al. 1985 | 5 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1985.tb03560.x | 1.000 |  |  |
-| Burgin 1993 | 2 | measurement | certain | two_service_agreement | 10.7882/rzsnsw.1993.041 | 1.000 |  |  |
-| Bursey et al. 2007 | 5 | measurement | certain | two_service_agreement | 10.1654/4228.1 | 1.000 |  |  |
-| Burstein et al. 1974 | 13 | measurement | certain | two_service_agreement | 10.2307/1562907 | 1.000 |  |  |
-| Burt 1930 | 5 | measurement | not_found | below_threshold | 10.5962/bhl.title.121909 | 0.562 |  |  |
-| Burt 1931 | 2 | measurement | certain | two_service_agreement | 10.5479/si.03629236.154.1 | 1.000 |  |  |
-| Burt and Burt 1931 | 6 | measurement | pending | grey_literature | 10.5962/bhl.title.121444 | 0.530 |  |  |
-| Busack 1975 | 1 | measurement | not_found | below_threshold | 10.1006/jare.1994.1062 | 0.545 |  |  |
-| Busack 1976 | 1 | measurement | certain | two_service_agreement | 10.2307/1443478 | 1.000 |  |  |
-| Busack 1978 [1] | 3 | measurement | certain | two_service_agreement | 10.2307/1563420 | 1.000 |  |  |
-| Busack 1986 | 1 | measurement | not_found | below_threshold | 10.2307/1447108 | 0.461 |  |  |
-| Busack 1987 | 1 | measurement | certain | two_service_agreement | 10.1163/156853887x00270 | 1.000 |  |  |
-| Busack and Visnaw 1989 | 1 | measurement | pending | weak_match | 10.1163/156853889x00386 | 0.785 |  |  |
-| Busais and Joger 2011 [2] | 4 | measurement | certain | two_service_agreement | 10.3897/vz.61.e31151 | 1.000 |  |  |
-| Bush 1992 | 14 | measurement | certain | two_service_agreement | 10.5962/p.420543 | 1.000 |  |  |
-| Bush et al. 2007 | 18 | measurement | not_found | below_threshold | 10.7882/rzsnsw.1993.007 | 0.585 |  |  |
-| Bush et al. 2010 | 52 | compilation | pending | weak_match | 10.5860/choice.34-0927 | 0.849 |  |  |
-| Bustard 1966 | 1 | measurement | not_found | below_threshold | 10.5962/p.412999 | 0.632 |  |  |
-| Bustard 1967 [2] | 4 | measurement | not_found | below_threshold | 10.1016/j.ympev.2011.12.013 | 0.487 |  |  |
-| Bustard 1968 | 14 | measurement | not_found | below_threshold | 10.7882/az.2015.021 | 0.644 |  |  |
-| Bustos-Zagal et al. 2011 | 11 | measurement | not_found | below_threshold | 10.22201/ib.20078706e.2011.2.471 | 0.550 |  |  |
-| Butler and Losos 2002 | 15 | measurement | pending | ambiguous | 10.1890/0012-9615(2002)072[0541:msdssa]2.0.co;2 | 1.000 |  |  |
-| Butler et al. 2000 | 36 | measurement | pending | ambiguous | 10.1111/j.0014-3820.2000.tb00026.x | 1.000 |  |  |
-| Cabezas et al. 2010 | 1 | measurement | not_found | below_threshold | 10.2994/sajh-d-20-00055.1 | 0.618 |  |  |
-| Cabezas-Cartes et al. 2015 | 5 | measurement | not_found | below_threshold | 10.1111/jzo.12502 | 0.521 |  |  |
-| Cabezas-Cartes et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1111/jzo.12502 | 1.000 |  |  |
+| Bullock et al. 1985 | 5 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.1985.tb03560.x | 1.000 | Bullock:1985aa | Bullock_1985 |
+| Burgin 1993 | 2 | measurement | certain | two_service_agreement | 10.7882/rzsnsw.1993.041 | 1.000 | Burgin:1993aa | Burgin_1993 |
+| Bursey et al. 2007 | 5 | measurement | certain | two_service_agreement | 10.1654/4228.1 | 1.000 | Bursey:2007aa | Bursey_2007 |
+| Burstein et al. 1974 | 13 | measurement | certain | two_service_agreement | 10.2307/1562907 | 1.000 | Burstein:1974aa | Burstein_1974 |
+| Burt 1930 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.562 | Burt:1930aa | Burt_1930 |
+| Burt 1931 | 2 | measurement | certain | two_service_agreement | 10.5479/si.03629236.154.1 | 1.000 | Burt:1931aa | Burt_1931 |
+| Burt and Burt 1931 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.530 | Burt:1931ab | Burt_1931b |
+| Busack 1975 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.545 | Busack:1975aa | Busack_1975 |
+| Busack 1976 | 1 | measurement | certain | two_service_agreement | 10.2307/1443478 | 1.000 | Busack:1976aa | Busack_1976 |
+| Busack 1978 [1] | 3 | measurement | certain | two_service_agreement | 10.2307/1563420 | 1.000 | Busack:1978aa | Busack_1978 |
+| Busack 1986 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.461 | Busack:1986aa | Busack_1986 |
+| Busack 1987 | 1 | measurement | certain | two_service_agreement | 10.1163/156853887x00270 | 1.000 | Busack:1987aa | Busack_1987 |
+| Busack and Visnaw 1989 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.785 | Busack:1989aa | Busack_1989 |
+| Busais and Joger 2011 [2] | 4 | measurement | certain | two_service_agreement | 10.3897/vz.61.e31151 | 1.000 | Busais:2011aa | Busais_2011 |
+| Bush 1992 | 14 | measurement | certain | two_service_agreement | 10.5962/p.420543 | 1.000 | Bush:1992aa | Bush_1992 |
+| Bush et al. 2007 | 18 | measurement | nodoi_approved | owner_nodoi |  | 0.585 | Bush:2007aa | Bush_2007 |
+| Bush et al. 2010 | 52 | compilation | nodoi_approved | owner_nodoi |  | 0.849 | Bush:2010aa | Bush_2010 |
+| Bustard 1966 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.632 | Bustard:1966aa | Bustard_1966 |
+| Bustard 1967 [2] | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.487 | Bustard:1967aa | Bustard_1967 |
+| Bustard 1968 | 14 | measurement | nodoi_approved | owner_nodoi |  | 0.644 | Bustard:1968aa | Bustard_1968 |
+| Bustos-Zagal et al. 2011 | 11 | measurement | nodoi_approved | owner_nodoi |  | 0.550 | Bustos-Zagal:2011aa | Bustos-Zagal_2011 |
+| Butler and Losos 2002 | 15 | measurement | approved | owner_candidate | 10.1890/0012-9615(2002)072[0541:msdssa]2.0.co;2 | 1.000 | Butler:2002aa | Butler_2002 |
+| Butler et al. 2000 | 36 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Butler:2002ab | Butler_2002b |
+| Cabezas et al. 2010 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.618 | Cabezas:2010aa | Cabezas_2010 |
+| Cabezas-Cartes et al. 2015 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.521 | Cabezas-Cartes:2015aa | Cabezas-Cartes_2015 |
+| Cabezas-Cartes et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1111/jzo.12502 | 1.000 | Cabezas-Cartes:2017aa | Cabezas-Cartes_2017 |
 | Cabrera 2004 | 1 | measurement | pending | weak_match | 10.1163/1568538041975080 | 0.874 |  |  |
-| Cabrera 2012 | 2 | measurement | pending | weak_match | 10.1163/1568538041975080 | 0.716 |  |  |
-| Cabrera and Monguillot 2006 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.1106.1.3 | 1.000 |  |  |
-| Cabrera et al. 2013 | 21 | measurement | certain | two_service_agreement | 10.1016/j.jcz.2012.08.003 | 1.000 |  |  |
-| Cacciali and Scott 2015 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3980.1.2 | 1.000 |  |  |
-| Cacciali et al. 2007 | 1 | measurement | certain | two_service_agreement | 10.11606/issn.2316-9079.v6i2p137-146 | 1.000 |  |  |
-| Cacciali et al. 2017 [2] | 3 | measurement | certain | two_service_agreement | 10.7717/peerj.3523 | 1.000 |  |  |
-| Cadle 1991 | 8 | measurement | not_found | below_threshold | 10.11646/zootaxa.3956.3.6 | 0.648 |  |  |
-| Cadle 1998 | 5 | measurement | pending | weak_match | 10.11646/zootaxa.3956.3.6 | 0.725 |  |  |
+| Cabrera 2012 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.716 | Cabrera:2012aa | Cabrera_2012 |
+| Cabrera and Monguillot 2006 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cabrera:2006aa | Cabrera_2006 |
+| Cabrera et al. 2013 | 21 | measurement | certain | two_service_agreement | 10.1016/j.jcz.2012.08.003 | 1.000 | Cabrera:2013aa | Cabrera_2013 |
+| Cacciali and Scott 2015 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3980.1.2 | 1.000 | Cacciali:2015aa | Cacciali_2015 |
+| Cacciali et al. 2007 | 1 | measurement | certain | two_service_agreement | 10.11606/issn.2316-9079.v6i2p137-146 | 1.000 | Cacciali:2007aa | Cacciali_2007 |
+| Cacciali et al. 2017 [2] | 3 | measurement | certain | two_service_agreement | 10.7717/peerj.3523 | 1.000 | Cacciali:2017aa | Cacciali_2017 |
+| Cadle 1991 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.648 | Cadle:1991aa | Cadle_1991 |
+| Cadle 1998 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.725 | Cadle:1998aa | Cadle_1998 |
 | Cadle 2001 | 6 | measurement | pending | grey_literature | 10.11646/zootaxa.4205.1.4 | 0.541 |  |  |
-| Cadle 2004 | 2 | measurement | not_found | below_threshold | 10.1086/426091 | 0.337 |  |  |
-| Cadle and Chuna 1995 | 2 | measurement | pending | single_service | 10.5281/zenodo.15900494 | 1.000 |  |  |
-| Caicedo-Portilla 2014 | 2 | measurement | not_found | below_threshold | 10.15446/caldasia.v36n1.43899 | 0.659 |  |  |
-| Cajade et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3709.2.4 | 1.000 |  |  |
-| Calderon 2002 [1] | 1 | measurement | not_found | below_threshold | 10.5281/zenodo.16520209 | 0.365 |  |  |
-| Calderon 2002 [2] | 1 | measurement | not_found | below_threshold | 10.20868/upm.thesis.6070 | 0.286 |  |  |
-| Calderon 2002 [3] | 1 | measurement | not_found | below_threshold | 10.58842/hhpf3205 | 0.283 |  |  |
-| Calderon 2002 [4] | 1 | measurement | not_found | below_threshold | 10.58842/hhpf3205 | 0.283 |  |  |
-| Calderon 2002 [5] | 1 | measurement | not_found | below_threshold | 10.58842/hhpf3205 | 0.294 |  |  |
-| Calderon 2002 [6] | 1 | measurement | not_found | below_threshold | 10.1046/j.1439-0442.2002.00431.x | 0.396 |  |  |
-| Calderon 2002 [7] | 1 | measurement | not_found | below_threshold | 10.20868/upm.thesis.23452 | 0.288 |  |  |
-| Calderon 2002 [8] | 1 | measurement | not_found | below_threshold | 10.20868/upm.thesis.6070 | 0.291 |  |  |
-| Calderon 2002 [9] | 1 | measurement | not_found | below_threshold | 10.20868/upm.thesis.6070 | 0.270 |  |  |
-| Calderon 2002 [10] | 1 | measurement | not_found | below_threshold | 10.20868/upm.thesis.6070 | 0.271 |  |  |
-| Calderon et al. 1995 | 1 | compilation | not_found | below_threshold | 10.17161/randa.v17i2.16093 | 0.356 |  |  |
-| Calderon-Espinosa and Barragan Forero 2011 | 2 | measurement | certain | two_service_agreement | 10.2994/057.006.0306 | 1.000 |  |  |
-| Calderon-Espinosa and Medina-Rangel 2016 | 20 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4067.2.6 | 1.000 |  |  |
-| Caldwell et al. 2015 | 3 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2015.05.002 | 1.000 |  |  |
-| Camacho et al. 2015 | 10 | measurement | certain | two_service_agreement | 10.1111/1365-2435.12355 | 1.000 |  |  |
-| Campbell 1973 | 2 | measurement | not_found | below_threshold | 10.1016/0020-7519(74)90013-7 | 0.476 |  |  |
-| Campbell 1982 | 1 | measurement | pending | ambiguous | 10.2307/1444801 | 0.752 |  |  |
-| Campbell 1984 | 1 | measurement | not_found | below_threshold | 10.5962/p.208125 | 0.632 |  |  |
-| Campbell 1994 | 1 | measurement | pending | weak_match | 10.1655/herpetologica-d-19-00047 | 0.796 |  |  |
-| Campbell 1999 | 35 | compilation | pending | ambiguous | 10.2307/1447993 | 1.000 |  |  |
-| Campbell and Brodie 1999 | 1 | measurement | not_found | below_threshold | 10.1655/herpetologica-d-19-00047 | 0.666 |  |  |
-| Campbell and Camarillo 1994 | 6 | measurement | not_found | below_threshold | 10.1894/0038-4909(2004)049<0327:nlotgd>2.0.co;2 | 0.568 |  |  |
-| Campbell and Echternacht 2003 | 2 | measurement | certain | two_service_agreement | 10.1023/a:1026172314139 | 1.000 |  |  |
-| Campbell and Frost 1993 | 18 | measurement | pending | grey_literature | 10.11646/zootaxa.4763.3.1 | 0.523 |  |  |
-| Campbell et al. 1989 [2] | 1 | measurement | not_found | below_threshold | 10.2307/1564824 | 0.615 |  |  |
-| Campbell et al. 1998 | 1 | measurement | pending | weak_match | 10.1670/15-024 | 0.841 |  |  |
-| Campbell et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1670/14-162 | 1.000 |  |  |
-| Canovas et al. 2014 | 1 | measurement | not_found | below_threshold | 10.14198/aleua.2014.26.07 | 0.526 |  |  |
-| Canseco-Marquez et al. 2008 | 5 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1750.1.6 | 1.000 |  |  |
-| Capizzi 1999 | 1 | measurement | not_found | below_threshold | 10.1163/156853888x00026 | 0.580 |  |  |
-| Cappellari et al. 2007 | 1 | measurement | certain | two_service_agreement | 10.1590/s0073-47212007000100006 | 1.000 |  |  |
-| Cappellari et al. 2011 | 1 | measurement | pending | weak_match | 10.1590/s0073-47212007000100006 | 0.796 |  |  |
-| Capula and Luiselli 1994 | 3 | measurement | certain | two_service_agreement | 10.1080/11250009409355879 | 1.000 |  |  |
-| Capula et al. 2002 | 1 | measurement | certain | two_service_agreement | 10.1080/11250000209356435 | 1.000 |  |  |
-| Caputo and Lanza 1992 | 3 | measurement | certain | two_service_agreement | 10.1163/156853892x00391 | 1.000 |  |  |
-| Caputo and Mellado 1992 | 8 | measurement | certain | two_service_agreement | 10.1080/11250009209386690 | 1.000 |  |  |
-| Caputo et al. 1995 | 20 | measurement | certain | two_service_agreement | 10.1080/03946975.1995.10539275 | 1.000 |  |  |
-| Carbajal-Marquez and Quintero-Diaz 2017 | 1 | measurement | not_found | below_threshold | 10.1016/j.rmb.2016.09.002 | 0.511 |  |  |
-| Cardenete and Cardenete 2010 | 1 | measurement | not_found | below_threshold | 10.31939/vieraea.2010.38.03 | 0.357 |  |  |
-| Cardozo et al. 2015 | 1 | measurement | certain | two_service_agreement | 10.5735/086.052.0301 | 1.000 |  |  |
+| Cadle 2004 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.337 | Cadle:2004aa | Cadle_2004 |
+| Cadle and Chuna 1995 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cadle:1995aa | Cadle_1995 |
+| Caicedo-Portilla 2014 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.659 | Caicedo-Portilla:2014aa | Caicedo-Portilla_2014 |
+| Cajade et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3709.2.4 | 1.000 | Cajade:2013aa | Cajade_2013 |
+| Calderon 2002 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.365 | Calderon:2002ab | Calderon_2002b |
+| Calderon 2002 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.286 | Calderon:2002ac | Calderon_2002c |
+| Calderon 2002 [3] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.283 | Calderon:2002ad | Calderon_2002d |
+| Calderon 2002 [4] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.283 | Calderon:2002ae | Calderon_2002e |
+| Calderon 2002 [5] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.294 | Calderon:2002af | Calderon_2002f |
+| Calderon 2002 [6] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.396 | Calderon:2002ag | Calderon_2002g |
+| Calderon 2002 [7] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.288 | Calderon:2002ah | Calderon_2002h |
+| Calderon 2002 [8] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.291 | Calderon:2002ai | Calderon_2002i |
+| Calderon 2002 [9] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.270 | Calderon:2002aj | Calderon_2002j |
+| Calderon 2002 [10] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.271 | Calderon:2002aa | Calderon_2002 |
+| Calderon et al. 1995 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.356 | Calderon:1995aa | Calderon_1995 |
+| Calderon-Espinosa and Barragan Forero 2011 | 2 | measurement | certain | two_service_agreement | 10.2994/057.006.0306 | 1.000 | Calderon-Espinosa:2011aa | Calderon-Espinosa_2011 |
+| Calderon-Espinosa and Medina-Rangel 2016 | 20 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4067.2.6 | 1.000 | CalderON-Espinosa:2016aa | CalderON-Espinosa_2016 |
+| Caldwell et al. 2015 | 3 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2015.05.002 | 1.000 | Caldwell:2015aa | Caldwell_2015 |
+| Camacho et al. 2015 | 10 | measurement | certain | two_service_agreement | 10.1111/1365-2435.12355 | 1.000 | Camacho:2014aa | Camacho_2014 |
+| Campbell 1973 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.476 | Campbell:1973aa | Campbell_1973 |
+| Campbell 1982 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.752 | Campbell:1982aa | Campbell_1982 |
+| Campbell 1984 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.632 | Campbell:1984aa | Campbell_1984 |
+| Campbell 1994 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.796 | Campbell:1994aa | Campbell_1994 |
+| Campbell 1999 | 35 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Campbell:1999ab | Campbell_1999b |
+| Campbell and Brodie 1999 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.666 | Campbell:1999ac | Campbell_1999c |
+| Campbell and Camarillo 1994 | 6 | measurement | nodoi_approved | owner_nodoi |  | 0.568 | Campbell:1994ab | Campbell_1994b |
+| Campbell and Echternacht 2003 | 2 | measurement | certain | two_service_agreement | 10.1023/a:1026172314139 | 1.000 | Campbell:2003aa | Campbell_2003 |
+| Campbell and Frost 1993 | 18 | measurement | nodoi_approved | owner_nodoi |  | 0.523 | Campbell:1993aa | Campbell_1993 |
+| Campbell et al. 1989 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.615 | Campbell:1989aa | Campbell_1989 |
+| Campbell et al. 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.841 | Campbell:1998aa | Campbell_1998 |
+| Campbell et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.1670/14-162 | 1.000 | Campbell:2016aa | Campbell_2016 |
+| Canovas et al. 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.526 | Canovas:2014aa | Canovas_2014 |
+| Canseco-Marquez et al. 2008 | 5 | measurement | certain | two_service_agreement | 10.11646/zootaxa.1750.1.6 | 1.000 | Canseco-MARQUEZ:2008aa | Canseco-MARQUEZ_2008 |
+| Capizzi 1999 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.580 | Capizzi:1999aa | Capizzi_1999 |
+| Cappellari et al. 2007 | 1 | measurement | certain | two_service_agreement | 10.1590/s0073-47212007000100006 | 1.000 | Cappellari:2007aa | Cappellari_2007 |
+| Cappellari et al. 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.796 | Cappellari:2011aa | Cappellari_2011 |
+| Capula and Luiselli 1994 | 3 | measurement | certain | two_service_agreement | 10.1080/11250009409355879 | 1.000 | Capula:1994aa | Capula_1994 |
+| Capula et al. 2002 | 1 | measurement | certain | two_service_agreement | 10.1080/11250000209356435 | 1.000 | Capula:2002aa | Capula_2002 |
+| Caputo and Lanza 1992 | 3 | measurement | certain | two_service_agreement | 10.1163/156853892x00391 | 1.000 | Caputo:1992ab | Caputo_1992b |
+| Caputo and Mellado 1992 | 8 | measurement | certain | two_service_agreement | 10.1080/11250009209386690 | 1.000 | Caputo:1992aa | Caputo_1992 |
+| Caputo et al. 1995 | 20 | measurement | certain | two_service_agreement | 10.1080/03946975.1995.10539275 | 1.000 | Caputo:1995aa | Caputo_1995 |
+| Carbajal-Marquez and Quintero-Diaz 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.511 | Carbajal-Marquez:2017aa | Carbajal-Marquez_2017 |
+| Cardenete and Cardenete 2010 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.357 | Cardenete:2010aa | Cardenete_2010 |
+| Cardozo et al. 2015 | 1 | measurement | certain | two_service_agreement | 10.5735/086.052.0301 | 1.000 | Cardozo:2015aa | Cardozo_2015 |
 | Carey 1975 | 2 | measurement | pending | weak_match | 10.58782/flmnh.yonr1716 | 0.920 |  |  |
-| Carl and Jones 1979 | 1 | measurement | certain | two_service_agreement | 10.2307/1563322 | 1.000 |  |  |
-| Carlino and Pauwels 2015 | 15 | measurement | pending | grey_literature | 10.3897/bdj.14.e178266 | 0.546 |  |  |
-| Carlino and Pauwels 2016 | 1 | measurement | pending | grey_literature | 10.3390/d16070406 | 0.503 |  |  |
-| Carneiro et al. 2017 | 4 | measurement | not_found | below_threshold | 10.3390/ani14243642 | 0.365 |  |  |
-| Carothers et al. 1998 | 10 | measurement | not_found | below_threshold | 10.4067/s0716-078x2004000400008 | 0.466 |  |  |
-| Carpenter 1970 | 8 | measurement | not_found | below_threshold | 10.1525/9780520328389-039 | 0.548 |  |  |
-| Carpenter and Robson 2005 | 5 | measurement | certain | two_service_agreement | 10.1017/s0030605305001201 | 1.000 |  |  |
-| Carr 1949 | 1 | measurement | certain | two_service_agreement | 10.2307/1437677 | 1.000 |  |  |
-| Carranza and Arnold 2012 | 13 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3378.1.1 | 1.000 |  |  |
-| Carranza et al. 2001 | 2 | measurement | certain | two_service_agreement | 10.1098/rspb.2001.1699 | 1.000 |  |  |
-| Carranza et al. 2008 | 24 | measurement | certain | two_service_agreement | 10.1016/j.ympev.2007.11.018 | 1.000 |  |  |
-| Carranza et al. 2016 | 3 | measurement | certain | doi_resolves | 10.7717/peerj.2371 | 1.000 |  |  |
-| Carreira et al. 2005 | 18 | measurement | not_found | below_threshold | 10.25085/rsea.780105 | 0.332 |  |  |
-| Carretero 2012 | 3 | measurement | certain | two_service_agreement | 10.11160/bah.12003 | 1.000 |  |  |
+| Carl and Jones 1979 | 1 | measurement | certain | two_service_agreement | 10.2307/1563322 | 1.000 | Carl:1979aa | Carl_1979 |
+| Carlino and Pauwels 2015 | 15 | measurement | nodoi_approved | owner_nodoi |  | 0.546 | Carlino:2015aa | Carlino_2015 |
+| Carlino and Pauwels 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.503 | Carlino:2016aa | Carlino_2016 |
+| Carneiro et al. 2017 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.365 | Carneiro:2017aa | Carneiro_2017 |
+| Carothers et al. 1998 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.466 | Carothers:1998aa | Carothers_1998 |
+| Carpenter 1970 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.548 | Carpenter:1970aa | Carpenter_1970 |
+| Carpenter and Robson 2005 | 5 | measurement | certain | two_service_agreement | 10.1017/s0030605305001201 | 1.000 | Carpenter:2005aa | Carpenter_2005 |
+| Carr 1949 | 1 | measurement | certain | two_service_agreement | 10.2307/1437677 | 1.000 | Carr:1949aa | Carr_1949 |
+| Carranza and Arnold 2012 | 13 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3378.1.1 | 1.000 | Carranza:2012aa | Carranza_2012 |
+| Carranza et al. 2001 | 2 | measurement | certain | two_service_agreement | 10.1098/rspb.2001.1699 | 1.000 | Carranza:2001aa | Carranza_2001 |
+| Carranza et al. 2008 | 24 | measurement | certain | two_service_agreement | 10.1016/j.ympev.2007.11.018 | 1.000 | Carranza:2008aa | Carranza_2008 |
+| Carranza et al. 2016 | 3 | measurement | certain | doi_resolves | 10.7717/peerj.2371 | 1.000 | Carranza:2016aa | Carranza_2016 |
+| Carreira et al. 2005 | 18 | measurement | nodoi_approved | owner_nodoi |  | 0.332 | Carreira:2005aa | Carreira_2005 |
+| Carretero 2012 | 3 | measurement | certain | two_service_agreement | 10.11160/bah.12003 | 1.000 | Carretero:2012aa | Carretero_2012 |
 | Carretero et al. 2006 | 4 | measurement | pending | weak_match | 10.1080/15627020.2006.11407341 | 0.844 |  |  |
-| Carretero et al. 2010 | 2 | measurement | pending | grey_literature | 10.1163/156853805774408694 | 0.386 |  |  |
+| Carretero et al. 2010 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.386 | Carretero:2010aa | Carretero_2010 |
 | Carretero et al. 2016 | 2 | measurement | pending | retracted | 10.1007/s00114-016-1422-8 | 1.000 |  |  |
-| Carter and Hayes 2004 | 1 | measurement | not_found | below_threshold | 10.1525/california/9780520238541.003.0021 | 0.693 |  |  |
-| Carvalho 2016 | 3 | measurement | pending | ambiguous | 10.1206/3853.1 | 1.000 |  |  |
-| Carvalho et al. 2006 | 1 | measurement | not_found | below_threshold | 10.33256/hb176.711 | 0.323 |  |  |
-| Carvalho et al. 2016 | 16 | measurement | certain | two_service_agreement | 10.1206/3852.1 | 1.000 |  |  |
-| Casas-Andreu and Gurrola-Hidalgo 1993 | 2 | measurement | not_found | below_threshold | 10.1093/sysbio/43.1.148 | 0.513 |  |  |
-| Casas-Andreu et al. 1996 | 1 | measurement | not_found | below_threshold | 10.37360/blacpma.23.22.1.3 | 0.353 |  |  |
-| Cascio 2010 | 2 | measurement | not_found | below_threshold | 10.1163/156853890x00212 | 0.611 |  |  |
-| Cascio and Capula 2011 | 1 | measurement | not_found | below_threshold | 10.2307/1447608 | 0.363 |  |  |
-| Case 1975 | 16 | measurement | certain | two_service_agreement | 10.2307/1935296 | 1.000 |  |  |
-| Case 1978 | 18 | measurement | certain | two_service_agreement | 10.2307/1936628 | 1.000 |  |  |
-| Case 1982 | 5 | measurement | not_found | below_threshold | 10.2307/1444423 | 0.383 |  |  |
-| Case 1983 [1] | 12 | measurement | pending | weak_match | 10.4159/harvard.9780674183384.c17 | 0.830 |  |  |
-| Case 2002 | 4 | measurement | pending | weak_match | 10.1093/oso/9780195133462.003.0015 | 0.700 |  |  |
-| Case and Schwaner 1993 | 3 | measurement | certain | two_service_agreement | 10.1007/bf00317309 | 1.000 |  |  |
-| Case et al. 1998 | 10 | measurement | pending | ambiguous | 10.1007/978-1-4615-6051-7_7 | 1.000 |  |  |
-| Castaneda-Gaytan et al. 2003 | 1 | measurement | certain | two_service_agreement | 10.21829/azm.2003.89891782 | 1.000 |  |  |
-| Castanet and Baez 1991 | 6 | measurement | certain | two_service_agreement | 10.1163/156853891x00356 | 1.000 |  |  |
-| Castilla and Bauwens 1991 [2] | 1 | measurement | certain | two_service_agreement | 10.1007/bf00320612 | 1.000 |  |  |
-| Castilla and Bauwens 2000 [1] | 1 | measurement | certain | two_service_agreement | 10.2307/1565362 | 1.000 |  |  |
-| Castilla and Herrel 2009 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jaridenv.2008.09.005 | 1.000 |  |  |
-| Castilla and Labra 1998 | 1 | measurement | certain | two_service_agreement | 10.1016/s1146-609x(98)80014-3 | 1.000 |  |  |
-| Castilla et al. 2013 | 1 | measurement | pending | doi_mismatch |  |  |  |  |
-| Castrillon and Strussman 1998 | 2 | measurement | certain | two_service_agreement | 10.1590/s0101-81751998000300001 | 1.000 |  |  |
-| Castro et al. 1991 | 1 | measurement | certain | two_service_agreement | 10.2307/1564815 | 1.000 |  |  |
-| Castro-Franco et al. 2017 | 1 | measurement | not_found | below_threshold | 10.21829/azm.2017.3331144 | 0.605 |  |  |
-| Castro-Herrera 1988 | 10 | measurement | pending | grey_literature | 10.1007/978-3-642-72793-1_16 | 0.380 |  |  |
-| Castro-Mello 2000 | 1 | measurement | certain | two_service_agreement | 10.11606/0031-1049.2000.41.p243-246 | 1.000 |  |  |
-| Castro-Mello 2003 | 1 | measurement | certain | two_service_agreement | 10.1590/s0031-10492003000700001 | 1.000 |  |  |
-| Cazares-Hernandez et al. 2017 | 1 | measurement | not_found | below_threshold | 10.1007/978-3-0348-9372-5_14 | 0.452 |  |  |
-| Cecchetto and Naretto 2015 | 1 | measurement | pending | weak_match | 10.1016/j.jtherbio.2015.09.001 | 0.787 |  |  |
-| Cei 1978 | 1 | measurement | pending | single_service | 10.5281/zenodo.13416518 | 1.000 |  |  |
-| Cei 1982 | 3 | measurement | certain | two_service_agreement | 10.2307/1563814 | 1.000 |  |  |
-| Cei 1986 | 89 | measurement | pending | weak_match | 10.2307/1445419 | 0.746 |  |  |
-| Cei 1993 | 77 | measurement | not_found | below_threshold | 10.1002/mmnz.19950710123 | 0.376 |  |  |
-| Cei and Castro 1973 | 4 | measurement | certain | two_service_agreement | 10.2307/1563009 | 1.000 |  |  |
-| Cei and Pefaur 1982 | 1 | measurement | not_found | below_threshold | 10.1590/s0101-81751988000400009 | 0.524 |  |  |
-| Cei and Scolaro 1983 | 1 | measurement | not_found | below_threshold | 10.31017/cdh.2024.(2024-023) | 0.474 |  |  |
-| Cei and Scolaro 1996 | 3 | measurement | not_found | below_threshold | 10.4081/bmrsn.2017.50 | 0.378 |  |  |
-| Cei and Videla 2003 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.3619.4.2 | 0.539 |  |  |
-| Cei et al. 1983 | 3 | measurement | not_found | below_threshold | 10.56178/na.vi34.906 | 0.559 |  |  |
-| Cei et al. 2001 | 3 | measurement | certain | two_service_agreement | 10.2307/1565897 | 1.000 |  |  |
-| Cei et al. 2003 [1] | 29 | measurement | certain | two_service_agreement | 10.1046/j.1439-0469.2003.00218.x | 1.000 |  |  |
-| Cei et al. 2003 [2] | 3 | measurement | pending | weak_match | 10.30972/fac.1905510 | 0.934 |  |  |
-| Cejudo and Marquez 2001 | 2 | measurement | not_found | below_threshold | 10.1016/j.beproc.2021.104509 | 0.479 |  |  |
-| Censky 1986 | 1 | compilation | not_found | below_threshold | 10.2307/2424116 | 0.517 |  |  |
-| Censky 1995 | 1 | measurement | certain | two_service_agreement | 10.2307/1564738 | 1.000 |  |  |
-| Censky 1998 | 1 | compilation | not_found | below_threshold | 10.1163/156853995x00199 | 0.391 |  |  |
-| Censky and Paulson 1992 | 3 | measurement | certain | two_service_agreement | 10.5962/p.215175 | 1.000 |  |  |
-| Ceriaco 2015 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3973.3.6 | 1.000 |  |  |
-| Ceriaco and Bauer 2018 | 1 | measurement | certain | two_service_agreement | 10.1080/00222933.2017.1422283 | 1.000 |  |  |
-| Ceriaco et al. 2016 [2] | 5 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4109.3.2 | 1.000 |  |  |
-| Cervenka and Kratochvil 2010 | 1 | measurement | not_found | below_threshold | 10.1017/s0024282909990405 | 0.483 |  |  |
-| Chabanaud 1916 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.17129 | 1.000 |  |  |
-| Chabanaud 1917 [1] | 2 | measurement | pending | weak_match | 10.5962/p.36933 | 0.801 |  |  |
-| Chabanaud 1917 [3] | 2 | measurement | pending | weak_match | 10.5962/p.36935 | 1.000 |  |  |
-| Chabanaud 1918 [1] | 1 | measurement | pending | weak_match | 10.5962/bhl.part.19996 | 0.897 |  |  |
-| Chabanaud 1918 [2] | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.19995 | 1.000 |  |  |
-| Chaitanya et al. 2018 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4374.1.3 | 1.000 |  |  |
-| Chan-ard and Makchai 2011 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.2730.1.3 | 0.662 |  |  |
-| Chan-ard et al. 2008 | 1 | measurement | pending | weak_match | 10.3390/ani14060826 | 0.745 |  |  |
-| Chan-ard et al. 2011 [1] | 7 | measurement | not_found | below_threshold | 10.11646/zootaxa.4661.3.6 | 0.620 |  |  |
-| Chan-ard et al. 2011 [2] | 1 | measurement | not_found | below_threshold | 10.1080/00222930050117521 | 0.511 |  |  |
-| Chan-ard et al. 2015 | 121 | compilation | pending | weak_match | 10.5860/choice.192577 | 1.000 |  |  |
-| Chandramouli and Ganesh 2011 | 4 | compilation | pending | ambiguous | 10.47605/tapro.v2i2.30 | 1.000 |  |  |
-| Chandramouli et al. 2012 [1] | 1 | measurement | pending | weak_match | 10.11609/jott.o2856.2536-8 | 0.742 |  |  |
-| Chandramouli et al. 2012 [2] | 1 | measurement | not_found | below_threshold | 10.47605/tapro.v12i1.301 | 0.454 |  |  |
-| Chang and Oh 2012 | 3 | measurement | not_found | below_threshold | 10.2307/3545893 | 0.574 |  |  |
-| Chapman and Dell 1985 | 40 | measurement | pending | weak_match | 10.5281/zenodo.13429847 | 1.000 |  |  |
-| Chapple 2003 | 30 | measurement | certain | two_service_agreement | 10.1655/0733-1347(2003)017[0145:elabit]2.0.co;2 | 1.000 |  |  |
-| Chapple 2005 | 1 | measurement | certain | two_service_agreement | 10.1071/zo05030 | 1.000 |  |  |
-| Chapple and Patterson 2007 | 1 | measurement | certain | two_service_agreement | 10.1080/03014220709510094 | 1.000 |  |  |
-| Chapple et al. 2011 [1] | 5 | measurement | pending | ambiguous | 10.11646/zootaxa.2782.1.1 | 1.000 |  |  |
-| Chapple et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00003116 | 1.000 |  |  |
-| Charnov et al. 2007 | 10 | measurement | certain | two_service_agreement | 10.1086/522840 | 1.000 |  |  |
-| Chaudhuri et al. 2015 | 1 | measurement | not_found | below_threshold | 10.15641/bo.1528 | 0.656 |  |  |
-| Chavez and Catenazzi 2014 | 11 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3774.1.3 | 1.000 |  |  |
-| Chavez and Chavez-Arribasplata 2016 | 1 | measurement | certain | two_service_agreement | 10.11606/issn.2316-9079.v15i2p147-154 | 1.000 |  |  |
+| Carter and Hayes 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.693 | Carter:2004aa | Carter_2004 |
+| Carvalho 2016 | 3 | measurement | approved | owner_candidate | 10.1206/3853.1 | 1.000 | Carvalho:2016ab | Carvalho_2016b |
+| Carvalho et al. 2006 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.323 | Carvalho:2006aa | Carvalho_2006 |
+| Carvalho et al. 2016 | 16 | measurement | certain | two_service_agreement | 10.1206/3852.1 | 1.000 | Carvalho:2016aa | Carvalho_2016 |
+| Casas-Andreu and Gurrola-Hidalgo 1993 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.513 | Casas-Andreu:1993aa | Casas-Andreu_1993 |
+| Casas-Andreu et al. 1996 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.353 | Casas-Andreu:1996aa | Casas-Andreu_1996 |
+| Cascio 2010 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.611 | Cascio:2010aa | Cascio_2010 |
+| Cascio and Capula 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.363 | Cascio:2011aa | Cascio_2011 |
+| Case 1975 | 16 | measurement | certain | two_service_agreement | 10.2307/1935296 | 1.000 | Case:1975aa | Case_1975 |
+| Case 1978 | 18 | measurement | certain | two_service_agreement | 10.2307/1936628 | 1.000 | Case:1978aa | Case_1978 |
+| Case 1982 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.383 | Case:1982aa | Case_1982 |
+| Case 1983 [1] | 12 | measurement | nodoi_approved | owner_nodoi |  | 0.830 | Case:1983aa | Case_1983 |
+| Case 2002 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.700 | Case:2002aa | Case_2002 |
+| Case and Schwaner 1993 | 3 | measurement | certain | two_service_agreement | 10.1007/bf00317309 | 1.000 | Case:1993aa | Case_1993 |
+| Case et al. 1998 | 10 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Case:1998aa | Case_1998 |
+| Castaneda-Gaytan et al. 2003 | 1 | measurement | certain | two_service_agreement | 10.21829/azm.2003.89891782 | 1.000 | Castaneda-Gaytan:2003aa | CastanedaGaytan_2003 |
+| Castanet and Baez 1991 | 6 | measurement | certain | two_service_agreement | 10.1163/156853891x00356 | 1.000 | Castanet:1991aa | Castanet_1991 |
+| Castilla and Bauwens 1991 [2] | 1 | measurement | certain | two_service_agreement | 10.1007/bf00320612 | 1.000 | Castilla:1991aa | Castilla_1991 |
+| Castilla and Bauwens 2000 [1] | 1 | measurement | certain | two_service_agreement | 10.2307/1565362 | 1.000 | Castilla:2000aa | Castilla_2000 |
+| Castilla and Herrel 2009 | 1 | measurement | certain | two_service_agreement | 10.1016/j.jaridenv.2008.09.005 | 1.000 | Castilla:2009aa | Castilla_2009 |
+| Castilla and Labra 1998 | 1 | measurement | certain | two_service_agreement | 10.1016/s1146-609x(98)80014-3 | 1.000 | Castilla:1998aa | Castilla_1998 |
+| Castilla et al. 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  |  | Castilla:2013aa | Castilla_2013 |
+| Castrillon and Strussman 1998 | 2 | measurement | certain | two_service_agreement | 10.1590/s0101-81751998000300001 | 1.000 | Castrillon:1998aa | Castrillon_1998 |
+| Castro et al. 1991 | 1 | measurement | certain | two_service_agreement | 10.2307/1564815 | 1.000 | Castro:1991aa | Castro_1991 |
+| Castro-Franco et al. 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.605 | Castro-Franco:2017aa | Castro-Franco_2017 |
+| Castro-Herrera 1988 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.380 | Castro-Herrera:1988aa | Castro-Herrera_1988 |
+| Castro-Mello 2000 | 1 | measurement | certain | two_service_agreement | 10.11606/0031-1049.2000.41.p243-246 | 1.000 | Castro-Mello:2000aa | Castro-Mello_2000 |
+| Castro-Mello 2003 | 1 | measurement | certain | two_service_agreement | 10.1590/s0031-10492003000700001 | 1.000 | Castro-Mello:2003aa | Castro-Mello_2003 |
+| Cazares-Hernandez et al. 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.452 | Cazares-Hernandez:2017aa | Cazares-Hernandez_2017 |
+| Cecchetto and Naretto 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.787 | Cecchetto:2015aa | Cecchetto_2015 |
+| Cei 1978 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cei:1978aa | Cei_1978 |
+| Cei 1982 | 3 | measurement | certain | two_service_agreement | 10.2307/1563814 | 1.000 | Cei:1982aa | Cei_1982 |
+| Cei 1986 | 89 | measurement | nodoi_approved | owner_nodoi |  | 0.746 | Cei:1986aa | Cei_1986 |
+| Cei 1993 | 77 | measurement | nodoi_approved | owner_nodoi |  | 0.376 | Cei:1993aa | Cei_1993 |
+| Cei and Castro 1973 | 4 | measurement | certain | two_service_agreement | 10.2307/1563009 | 1.000 | Cei:1973aa | Cei_1973 |
+| Cei and Pefaur 1982 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.524 | Cei:1982ab | Cei_1982b |
+| Cei and Scolaro 1983 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.474 | Cei:1983aa | Cei_1983 |
+| Cei and Scolaro 1996 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.378 | Cei:1996aa | Cei_1996 |
+| Cei and Videla 2003 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.539 | Cei:2003ab | Cei_2003b |
+| Cei et al. 1983 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.559 | Cei:1983ab | Cei_1983b |
+| Cei et al. 2001 | 3 | measurement | certain | two_service_agreement | 10.2307/1565897 | 1.000 | Cei:2001aa | Cei_2001 |
+| Cei et al. 2003 [1] | 29 | measurement | certain | two_service_agreement | 10.1046/j.1439-0469.2003.00218.x | 1.000 | Cei:2003aa | Cei_2003 |
+| Cei et al. 2003 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.934 | Cei:2003ac | Cei_2003c |
+| Cejudo and Marquez 2001 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.479 | Cejudo:2001aa | Cejudo_2001 |
+| Censky 1986 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.517 | Censky:1986aa | Censky_1986 |
+| Censky 1995 | 1 | measurement | certain | two_service_agreement | 10.2307/1564738 | 1.000 | Censky:1995aa | Censky_1995 |
+| Censky 1998 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.391 | Censky:1998aa | Censky_1998 |
+| Censky and Paulson 1992 | 3 | measurement | certain | two_service_agreement | 10.5962/p.215175 | 1.000 | Censky:1992aa | Censky_1992 |
+| Ceriaco 2015 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3973.3.6 | 1.000 | CerIACO:2015aa | CerIACO_2015 |
+| Ceriaco and Bauer 2018 | 1 | measurement | certain | two_service_agreement | 10.1080/00222933.2017.1422283 | 1.000 | Ceriaco:2018aa | Ceriaco_2018 |
+| Ceriaco et al. 2016 [2] | 5 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4109.3.2 | 1.000 | CerIACO:2016aa | CerIACO_2016 |
+| Cervenka and Kratochvil 2010 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.483 | Cervenka:2010aa | Cervenka_2010 |
+| Chabanaud 1916 | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.17129 | 1.000 | Chabanaud:1916aa | Chabanaud_1916 |
+| Chabanaud 1917 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.801 | Chabanaud:1917aa | Chabanaud_1917 |
+| Chabanaud 1917 [3] | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Chabanaud:1917ab | Chabanaud_1917b |
+| Chabanaud 1918 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.897 | Chabanaud:1918ab | Chabanaud_1918b |
+| Chabanaud 1918 [2] | 1 | measurement | certain | two_service_agreement | 10.5962/bhl.part.19995 | 1.000 | Chabanaud:1918aa | Chabanaud_1918 |
+| Chaitanya et al. 2018 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4374.1.3 | 1.000 | Chaitanya:2018aa | Chaitanya_2018 |
+| Chan-ard and Makchai 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.662 | Chan-ard:2011aa | Chan-ard_2011 |
+| Chan-ard et al. 2008 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.745 | Chan-ard:2008aa | Chan-ard_2008 |
+| Chan-ard et al. 2011 [1] | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.620 | Chan-ard:2011ab | Chan-ard_2011b |
+| Chan-ard et al. 2011 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.511 | Chan-ard:2011ac | Chan-ard_2011c |
+| Chan-ard et al. 2015 | 121 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Chan-ard:2015aa | Chan-ard_2015 |
+| Chandramouli and Ganesh 2011 | 4 | compilation | approved | owner_candidate | 10.47605/tapro.v2i2.30 | 1.000 | Chandramouli:2011aa | Chandramouli_2011 |
+| Chandramouli et al. 2012 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.742 | Chandramoulfi:2012aa | Chandramoulfi_2012 |
+| Chandramouli et al. 2012 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.454 | Chandramouli:2012aa | Chandramouli_2012 |
+| Chang and Oh 2012 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.574 | Chang:2012aa | Chang_2012 |
+| Chapman and Dell 1985 | 40 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Chapman:1985aa | Chapman_1985 |
+| Chapple 2003 | 30 | measurement | certain | two_service_agreement | 10.1655/0733-1347(2003)017[0145:elabit]2.0.co;2 | 1.000 | Chapple:2003aa | Chapple_2003 |
+| Chapple 2005 | 1 | measurement | certain | two_service_agreement | 10.1071/zo05030 | 1.000 | Chapple:2006aa | Chapple_2006 |
+| Chapple and Patterson 2007 | 1 | measurement | certain | two_service_agreement | 10.1080/03014220709510094 | 1.000 | Chapple:2007aa | Chapple_2007 |
+| Chapple et al. 2011 [1] | 5 | measurement | approved | owner_candidate | 10.11646/zootaxa.2782.1.1 | 1.000 | Chapple:2011aa | Chapple_2011 |
+| Chapple et al. 2017 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-00003116 | 1.000 | Chapple:2017aa | Chapple_2017 |
+| Charnov et al. 2007 | 10 | measurement | certain | two_service_agreement | 10.1086/522840 | 1.000 | Charnov:2007aa | Charnov_2007 |
+| Chaudhuri et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.656 | Chaudhuri:2015aa | Chaudhuri_2015 |
+| Chavez and Catenazzi 2014 | 11 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3774.1.3 | 1.000 | ChAVEZ:2014aa | ChAVEZ_2014 |
+| Chavez and Chavez-Arribasplata 2016 | 1 | measurement | certain | two_service_agreement | 10.11606/issn.2316-9079.v15i2p147-154 | 1.000 | Chavez:2016aa | Chavez_2016 |
 | Chavez and Vasquez 2012 | 8 | measurement | pending | weak_match | 10.3897/zookeys.168.2048 | 0.907 |  |  |
-| Chavez et al. 2011 | 7 | measurement | certain | two_service_agreement | 10.3897/zookeys.109.1304 | 1.000 |  |  |
-| Chavez et al. 2017 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4350.2.6 | 1.000 |  |  |
-| Chavez-Arribasplata et al. 2015 | 1 | measurement | not_found | below_threshold | 10.15560/8.2.302 | 0.630 |  |  |
-| Cheke 1984 | 12 | measurement | not_found | below_threshold | 10.2307/2844923 | 0.580 |  |  |
-| Chen and Lue 1987 | 1 | measurement | pending | grey_literature | 10.11646/zootaxa.3734.1.6 | 0.642 |  |  |
-| Chen et al. 2001 [2] | 2 | measurement | certain | two_service_agreement | 10.2108/zsj.18.115 | 1.000 |  |  |
-| Chen et al. 2003 | 1 | measurement | certain | two_service_agreement | 10.1016/s0306-4565(03)00022-6 | 1.000 |  |  |
-| Chen et al. 2013 | 65 | measurement | certain | two_service_agreement | 10.1111/bij.12030 | 1.000 |  |  |
-| Chen et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v21i1.13981 | 1.000 |  |  |
-| Chettri and Bhupathy 2010 | 1 | measurement | certain | two_service_agreement | 10.11609/jott.o2329.1109-13 | 1.000 |  |  |
-| Chiari et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2269.1.3 | 1.000 |  |  |
-| Chippindale 1991 | 1 | measurement | not_found | below_threshold | 10.1088/1755-1315/457/1/012004 | 0.653 |  |  |
-| Chirio and Ineich 2000 | 2 | measurement | pending | grey_literature | 10.5962/bhl.part.27646 | 0.585 |  |  |
-| Chirio and LeBreton 2007 | 3 | compilation | pending | weak_match | 10.1080/15627020.2008.11657247 | 1.000 |  |  |
-| Chirio et al. 2008 | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.2008.9635565 | 1.000 |  |  |
-| Chiszar et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.1002/zoo.20219 | 1.000 |  |  |
-| Chi-xian et al. 2004 | 1 | measurement | not_found | below_threshold | 10.1670/10-100.1 | 0.524 |  |  |
-| Chondropoulos and Lykakis 1983 | 1 | measurement | certain | two_service_agreement | 10.2307/1445101 | 1.000 |  |  |
-| Chou et al. 2001 | 1 | measurement | not_found | below_threshold | 10.11646/zootaxa.5763.2.2 | 0.671 |  |  |
-| Christian 1988 | 1 | measurement | pending | weak_match | 10.1016/s0306-4565(98)00031-x | 1.000 |  |  |
-| Christian and Garland 1996 | 20 | measurement | certain | two_service_agreement | 10.2307/1565513 | 1.000 |  |  |
-| Christian and Tracy 1982 | 1 | measurement | not_found | below_threshold | 10.2307/1563959 | 0.539 |  |  |
-| Christian and Tracy 1985 | 1 | measurement | certain | two_service_agreement | 10.1007/bf00378565 | 1.000 |  |  |
-| Christian and Waldschmidt 1984 | 16 | measurement | not_found | below_threshold | 10.2307/3544146 | 0.464 |  |  |
-| Christian et al. 1986 | 1 | measurement | certain | two_service_agreement | 10.2307/1444889 | 1.000 |  |  |
-| Christian et al. 1999 | 1 | measurement | certain | two_service_agreement | 10.1046/j.1442-9993.1999.241960.x | 1.000 |  |  |
-| Christian et al. 2006 | 2 | measurement | pending | ambiguous | 10.1086/506528 | 1.000 |  |  |
-| Christie et al. 2011 | 1 | measurement | certain | two_service_agreement | 10.1071/wr11063 | 1.000 |  |  |
-| Chuaynkern et al. 2005 | 11 | measurement | not_found | below_threshold | 10.47605/tapro.v14i1.396 | 0.573 |  |  |
-| Cicek and Gocmen 2013 | 1 | measurement | certain | two_service_agreement | 10.13128/acta_herpetol-13404 | 1.000 |  |  |
-| Cicek et al. 2011 | 1 | measurement | not_found | below_threshold | 10.1080/09397140.1995.10637672 | 0.446 |  |  |
-| Cicek et al. 2012 | 1 | measurement | not_found | below_threshold | 10.3406/anata.2003.1012 | 0.506 |  |  |
-| Cicek et al. 2014 | 1 | measurement | not_found | below_threshold | 10.1134/s1062359025602150 | 0.637 |  |  |
-| Cicek et al. 2015 | 1 | measurement | not_found | below_threshold | 10.30906/1026-2296-2024-31-1-1-6 | 0.499 |  |  |
-| Ciofi and De Boer 2004 | 1 | measurement | not_found | below_threshold | 10.1098/rspb.1999.0918 | 0.579 |  |  |
-| Ciofi et al. 2007 | 1 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2007)7[462:paohrs]2.0.co;2 | 1.000 |  |  |
-| Cisneros-Heredia 2005 | 2 | measurement | not_found | below_threshold | 10.47051/ihcp4063 | 0.548 |  |  |
-| Cisse and Karns 1978 | 15 | measurement | pending | grey_literature | 10.21474/ijar01/17598 | 0.303 |  |  |
-| Cisse et al. 1977 | 3 | measurement | pending | grey_literature | 10.5962/bhl.part.79610 | 0.521 |  |  |
-| Civantos et al. 2003 | 1 | measurement | certain | two_service_agreement | 10.1139/z03-163 | 1.000 |  |  |
-| Clark 1973 | 2 | measurement | not_found | below_threshold | 10.2307/1940686 | 0.566 |  |  |
-| Clark 1991 | 1 | measurement | not_found | below_threshold | 10.1046/j.0962-1083.2001.01458.x | 0.401 |  |  |
-| Clark et al. 2015 | 3 | measurement | certain | two_service_agreement | 10.1016/j.anbehav.2015.08.002 | 1.000 |  |  |
+| Chavez et al. 2011 | 7 | measurement | certain | two_service_agreement | 10.3897/zookeys.109.1304 | 1.000 | Chavez:2011aa | Chavez_2011 |
+| Chavez et al. 2017 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4350.2.6 | 1.000 | ChAVEZ:2017aa | ChAVEZ_2017 |
+| Chavez-Arribasplata et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.630 | Chavez-Arribasplata:2015aa | Chavez-Arribasplata_2015 |
+| Cheke 1984 | 12 | measurement | nodoi_approved | owner_nodoi |  | 0.580 | Cheke:1984aa | Cheke_1984 |
+| Chen and Lue 1987 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.642 | Chen:1987aa | Chen_1987 |
+| Chen et al. 2001 [2] | 2 | measurement | certain | two_service_agreement | 10.2108/zsj.18.115 | 1.000 | Chen:2001aa | Chen_2001 |
+| Chen et al. 2003 | 1 | measurement | certain | two_service_agreement | 10.1016/s0306-4565(03)00022-6 | 1.000 | Chen:2003aa | Chen_2003 |
+| Chen et al. 2013 | 65 | measurement | certain | two_service_agreement | 10.1111/bij.12030 | 1.000 | Chen:2013aa | Chen_2013 |
+| Chen et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.17161/randa.v21i1.13981 | 1.000 | Chen:2014aa | Chen_2014 |
+| Chettri and Bhupathy 2010 | 1 | measurement | certain | two_service_agreement | 10.11609/jott.o2329.1109-13 | 1.000 | Chettri:2010aa | Chettri_2010 |
+| Chiari et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2269.1.3 | 1.000 | Chiari:2009aa | Chiari_2009 |
+| Chippindale 1991 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.653 | Chippindale:1991aa | Chippindale_1991 |
+| Chirio and Ineich 2000 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.585 | Chirio:2000aa | Chirio_2000 |
+| Chirio and LeBreton 2007 | 3 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Chirio:2007aa | Chirio_2007 |
+| Chirio et al. 2008 | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.2008.9635565 | 1.000 | Chirio:2008aa | Chirio_2008 |
+| Chiszar et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.1002/zoo.20219 | 1.000 | Chiszar:2008aa | Chiszar_2008 |
+| Chi-xian et al. 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.524 | Chi-xian:2004aa | Chi-xian_2004 |
+| Chondropoulos and Lykakis 1983 | 1 | measurement | certain | two_service_agreement | 10.2307/1445101 | 1.000 | Chondropoulos:1983aa | Chondropoulos_1983 |
+| Chou et al. 2001 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.671 | Chou:2001aa | Chou_2001 |
+| Christian 1988 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Christian:1988aa | Christian_1988 |
+| Christian and Garland 1996 | 20 | measurement | certain | two_service_agreement | 10.2307/1565513 | 1.000 | Christian:1996aa | Christian_1996 |
+| Christian and Tracy 1982 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.539 | Christian:1982aa | Christian_1982 |
+| Christian and Tracy 1985 | 1 | measurement | certain | two_service_agreement | 10.1007/bf00378565 | 1.000 | Christian:1985aa | Christian_1985 |
+| Christian and Waldschmidt 1984 | 16 | measurement | nodoi_approved | owner_nodoi |  | 0.464 | Christian:1984aa | Christian_1984 |
+| Christian et al. 1986 | 1 | measurement | certain | two_service_agreement | 10.2307/1444889 | 1.000 | Christian:1986aa | Christian_1986 |
+| Christian et al. 1999 | 1 | measurement | certain | two_service_agreement | 10.1046/j.1442-9993.1999.241960.x | 1.000 | Christian:1999aa | Christian_1999 |
+| Christian et al. 2006 | 2 | measurement | approved | owner_candidate | 10.1086/506528 | 1.000 | Christian:2006aa | Christian_2006 |
+| Christie et al. 2011 | 1 | measurement | certain | two_service_agreement | 10.1071/wr11063 | 1.000 | Christie:2011aa | Christie_2011 |
+| Chuaynkern et al. 2005 | 11 | measurement | nodoi_approved | owner_nodoi |  | 0.573 | Chuaynkern:2005aa | Chuaynkern_2005 |
+| Cicek and Gocmen 2013 | 1 | measurement | certain | two_service_agreement | 10.13128/acta_herpetol-13404 | 1.000 | Cicek:2013aa | Cicek_2013 |
+| Cicek et al. 2011 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.446 | Cicek:2011aa | Cicek_2011 |
+| Cicek et al. 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.506 | Cicek:2012aa | Cicek_2012 |
+| Cicek et al. 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.637 | Cicek:2014aa | Cicek_2014 |
+| Cicek et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.499 | Cicek:2015aa | Cicek_2015 |
+| Ciofi and De Boer 2004 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.579 | Ciofi:2004aa | Ciofi_2004 |
+| Ciofi et al. 2007 | 1 | measurement | certain | two_service_agreement | 10.1643/0045-8511(2007)7[462:paohrs]2.0.co;2 | 1.000 | Ciofi:2007aa | Ciofi_2007 |
+| Cisneros-Heredia 2005 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.548 | Cisneros-Heredia:2005aa | Cisneros-Heredia_2005 |
+| Cisse and Karns 1978 | 15 | measurement | nodoi_approved | owner_nodoi |  | 0.303 | Cisse:1978aa | Cisse_1978 |
+| Cisse et al. 1977 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.521 | Cisse:1977aa | Cisse_1977 |
+| Civantos et al. 2003 | 1 | measurement | certain | two_service_agreement | 10.1139/z03-163 | 1.000 | Civantos:2003aa | Civantos_2003 |
+| Clark 1973 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.566 | Clark:1973aa | Clark_1973 |
+| Clark 1991 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.401 | Clark:1991aa | Clark_1991 |
+| Clark et al. 2015 | 3 | measurement | certain | two_service_agreement | 10.1016/j.anbehav.2015.08.002 | 1.000 | Clark:2015aa | Clark_2015 |
 | Clark et al. 2016 | 2 | measurement | pending | weak_match | 10.1655/herpetologica-d-15-00040 | 0.843 |  |  |
-| Clause et al. 2016 [4] | 3 | measurement | not_found | below_threshold | 10.22201/fc.25942158e.2025.2.1039 | 0.491 |  |  |
-| Clausen 1938 | 1 | measurement | certain | two_service_agreement | 10.2307/1435513 | 1.000 |  |  |
-| Clemann et al. 2004 | 1 | measurement | certain | two_service_agreement | 10.1670/224-03a-n | 1.000 |  |  |
-| Clemann et al. 2008 | 4 | measurement | certain | two_service_agreement | 10.32800/abc.2008.31.2.0051 | 1.000 |  |  |
-| Clemente et al. 2008 | 14 | measurement | pending | ambiguous | 10.1242/jeb.018044 | 1.000 |  |  |
-| Clemente et al. 2009 [2] | 18 | measurement | certain | two_service_agreement | 10.1111/j.1095-8312.2009.01207.x | 1.000 |  |  |
-| Clobert et al. 1998 | 85 | measurement | pending | ambiguous | 10.1046/j.1420-9101.1998.11030329.x | 1.000 |  |  |
-| Clover 1979 | 2 | measurement | pending | ambiguous | 10.2307/2412583 | 1.000 |  |  |
-| Clusella-Trullas et al. 2007 | 4 | measurement | certain | two_service_agreement | 10.1007/s10682-006-9124-x | 1.000 |  |  |
-| Cobos et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4107.3.5 | 1.000 |  |  |
-| Cochran 1922 | 1 | measurement | certain | two_service_agreement | 10.5479/si.00963801.60-2421.1 | 1.000 |  |  |
-| Cochran 1933 | 1 | measurement | pending | single_service | 10.5281/zenodo.13411397 | 1.000 |  |  |
-| Cochran 1938 | 1 | measurement | pending | weak_match | 10.5281/zenodo.13653942 | 0.817 |  |  |
-| Coddington and Cree 1997 | 2 | measurement | certain | two_service_agreement | 10.1071/pc980379 | 1.000 |  |  |
-| Cogger 1972 | 2 | measurement | not_found | below_threshold | 10.5962/bhl.title.3764 | 0.645 |  |  |
-| Cogger 1975 | 2 | measurement | certain | two_service_agreement | 10.3853/j.0067-1975.30.1975.401 | 1.000 |  |  |
-| Cogger 2000 | 539 | compilation | pending | ambiguous | 10.1071/9780643109773 | 1.000 |  |  |
-| Cogger 2014 | 20 | compilation | pending | ambiguous | 10.1071/9780643109773 | 1.000 |  |  |
-| Cogger et al. 1983 | 8 | measurement | not_found | below_threshold | 10.1007/978-94-009-8629-9_49 | 0.492 |  |  |
-| Cole 1968 | 1 | compilation | not_found | below_threshold | 10.2307/40024616 | 0.415 |  |  |
-| Cole and Dessauer 1993 | 3 | measurement | not_found | below_threshold | 10.7589/0090-3558-26.3.403 | 0.568 |  |  |
-| Cole and Kok 2006 | 1 | measurement | certain | two_service_agreement | 10.1206/0003-0082(2006)3524[1:ansogl]2.0.co;2 | 1.000 |  |  |
-| Cole et al. 1990 | 4 | measurement | not_found | below_threshold | 10.1002/jmor.1052010302 | 0.503 |  |  |
-| Cole et al. 1993 | 2 | measurement | not_found | below_threshold | 10.1002/jmor.1052010302 | 0.491 |  |  |
-| Cole et al. 1995 | 4 | measurement | not_found | below_threshold | 10.1206/0003-0082(2006)3524[1:ansogl]2.0.co;2 | 0.441 |  |  |
-| Collette 1962 | 1 | measurement | certain | two_service_agreement | 10.2307/1441196 | 1.000 |  |  |
-| Colli and Zamboni 1999 | 1 | measurement | certain | two_service_agreement | 10.2307/1447606 | 1.000 |  |  |
-| Colli et al. 1998 | 5 | measurement | not_found | below_threshold | 10.1670/16-036 | 0.607 |  |  |
-| Colli et al. 2003 [1] | 2 | measurement | not_found | below_threshold | 10.1655/0018-0831(2003)059[0076:acenso]2.0.co;2 | 0.647 |  |  |
-| Colli et al. 2003 [2] | 1 | measurement | certain | two_service_agreement | 10.1655/0018-0831(2003)059[0076:acenso]2.0.co;2 | 1.000 |  |  |
-| Colli et al. 2003 [3] | 2 | measurement | certain | two_service_agreement | 10.1670/180-02a | 1.000 |  |  |
-| Colli et al. 2009 | 2 | measurement | certain | two_service_agreement | 10.1655/08-049r1.1 | 1.000 |  |  |
-| Colli et al. 2015 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4000.4.1 | 1.000 |  |  |
-| Colli et al. 2016 | 69 | measurement | certain | two_service_agreement | 10.1016/j.biocon.2016.07.033 | 1.000 |  |  |
-| Collins 1971 | 1 | measurement | pending | single_service | 10.5281/zenodo.15941894 | 1.000 |  |  |
-| Colwell 1993 | 1 | measurement | not_found | below_threshold | 10.5818/1529-9651.10.2.27 | 0.320 |  |  |
-| Comas et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.1016/j.baae.2014.05.005 | 1.000 |  |  |
-| Conant and Collins 1998 | 71 | compilation | pending | weak_match | 10.2307/3669973 | 0.770 |  |  |
-| Congdon et al. 1978 | 4 | measurement | certain | two_service_agreement | 10.1086/283293 | 1.000 |  |  |
-| Connette et al. 2017 | 2 | measurement | certain | two_service_agreement | 10.1371/journal.pone.0174432 | 1.000 |  |  |
-| Connolly and Cree 2008 | 1 | measurement | certain | two_service_agreement | 10.1016/j.biocon.2008.02.026 | 1.000 |  |  |
-| Conrad et al. 2012 | 10 | measurement | certain | doi_resolves | 10.1371/journal.pone.0041767 | 1.000 |  |  |
-| Conradie 2012 [1] | 1 | measurement | pending | grey_literature | 10.1139/cjz-2014-0086 | 0.365 |  |  |
-| Conradie 2012 [2] | 1 | measurement | pending | grey_literature | 10.1093/zoolinnean/zlaf193 | 0.498 |  |  |
-| Conradie and Bourquin 2013 | 1 | measurement | not_found | below_threshold | 10.1016/j.zool.2016.11.005 | 0.395 |  |  |
-| Conradie et al. 2012 | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.2012.676079 | 1.000 |  |  |
-| Contreras-Lozano et al. 2010 | 2 | measurement | not_found | below_threshold | 10.1002/jmor.20117 | 0.531 |  |  |
-| Conzendey et al. 2013 | 1 | measurement | not_found | below_threshold | 10.2307/1565704 | 0.433 |  |  |
-| Cooper 1953 | 1 | measurement | not_found | below_threshold | 10.1670/148-04a.1 | 0.672 |  |  |
-| Cooper 1988 | 1 | compilation | not_found | below_threshold | 10.2307/1564347 | 0.398 |  |  |
-| Cooper and Guillette 1991 | 1 | measurement | certain | two_service_agreement | 10.1163/156853891x00338 | 1.000 |  |  |
-| Cooper and Habegger 2000 | 1 | measurement | certain | two_service_agreement | 10.1163/156853801300044480 | 1.000 |  |  |
-| Cooper and Vitt 1989 | 1 | measurement | certain | two_service_agreement | 10.1086/284948 | 1.000 |  |  |
-| Cooper and Vitt 2002 | 29 | measurement | certain | two_service_agreement | 10.1017/s0952836902001085 | 1.000 |  |  |
-| Cope 1863 | 1 | measurement | not_found | below_threshold | 10.1635/053.167.0112 | 0.418 |  |  |
+| Clause et al. 2016 [4] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.491 | Clause:2016aa | Clause_2016 |
+| Clausen 1938 | 1 | measurement | certain | two_service_agreement | 10.2307/1435513 | 1.000 | Clausen:1938aa | Clausen_1938 |
+| Clemann et al. 2004 | 1 | measurement | certain | two_service_agreement | 10.1670/224-03a-n | 1.000 | Clemann:2004aa | Clemann_2004 |
+| Clemann et al. 2008 | 4 | measurement | certain | two_service_agreement | 10.32800/abc.2008.31.2.0051 | 1.000 | Arthur-Rylah-Inst-for-Environmental-Research-Australia:2008aa | ArthurRylahInstforEnvironmentalResearchAustralia_2008 |
+| Clemente et al. 2008 | 14 | measurement | approved | owner_candidate | 10.1242/jeb.018044 | 1.000 | Clemente:2008aa | Clemente_2008 |
+| Clemente et al. 2009 [2] | 18 | measurement | certain | two_service_agreement | 10.1111/j.1095-8312.2009.01207.x | 1.000 | Clemente:2009aa | Clemente_2009 |
+| Clobert et al. 1998 | 85 | measurement | approved | owner_candidate | 10.1046/j.1420-9101.1998.11030329.x | 1.000 | Clobert:1998aa | Clobert_1998 |
+| Clover 1979 | 2 | measurement | approved | owner_candidate | 10.2307/2412583 | 1.000 | Clover:1979aa | Clover_1979 |
+| Clusella-Trullas et al. 2007 | 4 | measurement | certain | two_service_agreement | 10.1007/s10682-006-9124-x | 1.000 | Clusella-Trullas:2006aa | ClusellaTrullas_2006 |
+| Cobos et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4107.3.5 | 1.000 | Cobos:2016aa | Cobos_2016 |
+| Cochran 1922 | 1 | measurement | certain | two_service_agreement | 10.5479/si.00963801.60-2421.1 | 1.000 | Cochran:1922aa | Cochran_1922 |
+| Cochran 1933 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cochran:1933aa | Cochran_1933 |
+| Cochran 1938 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.817 | Cochran:1938aa | Cochran_1938 |
+| Coddington and Cree 1997 | 2 | measurement | certain | two_service_agreement | 10.1071/pc980379 | 1.000 | Coddington:1997aa | Coddington_1997 |
+| Cogger 1972 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.645 | Cogger:1972aa | Cogger_1972 |
+| Cogger 1975 | 2 | measurement | certain | two_service_agreement | 10.3853/j.0067-1975.30.1975.401 | 1.000 | Cogger:1975aa | Cogger_1975 |
+| Cogger 2000 | 539 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Cogger:2000aa | Cogger_2000 |
+| Cogger 2014 | 20 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Cogger:2014aa | Cogger_2014 |
+| Cogger et al. 1983 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.492 | Cogger:1983aa | Cogger_1983 |
+| Cole 1968 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.415 | Cole:1968aa | Cole_1968 |
+| Cole and Dessauer 1993 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.568 | Cole:1993aa | Cole_1993 |
+| Cole and Kok 2006 | 1 | measurement | certain | two_service_agreement | 10.1206/0003-0082(2006)3524[1:ansogl]2.0.co;2 | 1.000 | Cole:2006aa | Cole_2006 |
+| Cole et al. 1990 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.503 | Cole:1990aa | Cole_1990 |
+| Cole et al. 1993 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.491 | Cole:1993ab | Cole_1993b |
+| Cole et al. 1995 | 4 | measurement | nodoi_approved | owner_nodoi |  | 0.441 | Cole:1995aa | Cole_1995 |
+| Collette 1962 | 1 | measurement | certain | two_service_agreement | 10.2307/1441196 | 1.000 | Collette:1962aa | Collette_1962 |
+| Colli and Zamboni 1999 | 1 | measurement | certain | two_service_agreement | 10.2307/1447606 | 1.000 | Colli:1999aa | Colli_1999 |
+| Colli et al. 1998 | 5 | measurement | nodoi_approved | owner_nodoi |  | 0.607 | Colli:1998aa | Colli_1998 |
+| Colli et al. 2003 [1] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.647 | Colli:2003ac | Colli_2003c |
+| Colli et al. 2003 [2] | 1 | measurement | certain | two_service_agreement | 10.1655/0018-0831(2003)059[0076:acenso]2.0.co;2 | 1.000 | Colli:2003aa | Colli_2003 |
+| Colli et al. 2003 [3] | 2 | measurement | certain | two_service_agreement | 10.1670/180-02a | 1.000 | Colli:2003ab | Colli_2003b |
+| Colli et al. 2009 | 2 | measurement | certain | two_service_agreement | 10.1655/08-049r1.1 | 1.000 | Colli:2009aa | Colli_2009 |
+| Colli et al. 2015 | 2 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4000.4.1 | 1.000 | Colli:2015aa | Colli_2015 |
+| Colli et al. 2016 | 69 | measurement | certain | two_service_agreement | 10.1016/j.biocon.2016.07.033 | 1.000 | Colli:2016aa | Colli_2016 |
+| Collins 1971 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Collins:1971aa | Collins_1971 |
+| Colwell 1993 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.320 | Colwell:1993aa | Colwell_1993 |
+| Comas et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.1016/j.baae.2014.05.005 | 1.000 | Comas:2014aa | Comas_2014 |
+| Conant and Collins 1998 | 71 | compilation | nodoi_approved | owner_nodoi |  | 0.770 | Conant:1998aa | Conant_1998 |
+| Congdon et al. 1978 | 4 | measurement | certain | two_service_agreement | 10.1086/283293 | 1.000 | Congdon:1978aa | Congdon_1978 |
+| Connette et al. 2017 | 2 | measurement | certain | two_service_agreement | 10.1371/journal.pone.0174432 | 1.000 | Connette:2017aa | Connette_2017 |
+| Connolly and Cree 2008 | 1 | measurement | certain | two_service_agreement | 10.1016/j.biocon.2008.02.026 | 1.000 | Connolly:2008aa | Connolly_2008 |
+| Conrad et al. 2012 | 10 | measurement | certain | doi_resolves | 10.1371/journal.pone.0041767 | 1.000 | Conrad:2012aa | Conrad_2012 |
+| Conradie 2012 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.365 | Conradie:2012ab | Conradie_2012b |
+| Conradie 2012 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.498 | Conradie:2012ac | Conradie_2012c |
+| Conradie and Bourquin 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.395 | Conradie:2013aa | Conradie_2013 |
+| Conradie et al. 2012 | 3 | measurement | certain | two_service_agreement | 10.1080/21564574.2012.676079 | 1.000 | Conradie:2012aa | Conradie_2012 |
+| Contreras-Lozano et al. 2010 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.531 | Contreras-Lozano:2010aa | Contreras-Lozano_2010 |
+| Conzendey et al. 2013 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.433 | Conzendey:2013aa | Conzendey_2013 |
+| Cooper 1953 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.672 | Cooper:1953aa | Cooper_1953 |
+| Cooper 1988 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.398 | Cooper:1988aa | Cooper_1988 |
+| Cooper and Guillette 1991 | 1 | measurement | certain | two_service_agreement | 10.1163/156853891x00338 | 1.000 | Cooper:1991aa | Cooper_1991 |
+| Cooper and Habegger 2000 | 1 | measurement | certain | two_service_agreement | 10.1163/156853801300044480 | 1.000 | Cooper:2001aa | Cooper_2001 |
+| Cooper and Vitt 1989 | 1 | measurement | certain | two_service_agreement | 10.1086/284948 | 1.000 | Cooper:1989aa | Cooper_1989 |
+| Cooper and Vitt 2002 | 29 | measurement | certain | two_service_agreement | 10.1017/s0952836902001085 | 1.000 | Cooper:2002aa | Cooper_2002 |
+| Cope 1863 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.418 | Cope:1863aa | Cope_1863 |
 | Cope 1868 [1] | 4 | measurement | pending | single_service | 10.5962/bhl.part.27233 | 1.000 |  |  |
-| Cope 1868 [2] | 1 | measurement | pending | single_service | 10.5281/zenodo.16086422 | 1.000 |  |  |
-| Cope 1885 [1] | 2 | compilation | pending | weak_match | 10.5281/zenodo.15892593 | 1.000 |  |  |
-| Cope 1885 [2] | 2 | measurement | not_found | below_threshold | 10.2307/1005256 | 0.431 |  |  |
-| Cope 1889 | 2 | measurement | pending | ambiguous | 10.1515/9783486725933-003 | 1.000 |  |  |
-| Cope 1895 | 7 | measurement | not_found | below_threshold | 10.5962/bhl.title.57226 | 0.508 |  |  |
-| Cope 1896 | 1 | measurement | pending | single_service | 10.5281/zenodo.16196802 | 1.000 |  |  |
+| Cope 1868 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cope:1868aa | Cope_1868 |
+| Cope 1885 [1] | 2 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Cope:1885aa | Cope_1885 |
+| Cope 1885 [2] | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.431 | Cope:1885ab | Cope_1885b |
+| Cope 1889 | 2 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cope:1889aa | Cope_1889 |
+| Cope 1895 | 7 | measurement | nodoi_approved | owner_nodoi |  | 0.508 | Cope:1895aa | Cope_1895 |
+| Cope 1896 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Cope:1896aa | Cope_1896 |
 | Cope 1899 | 4 | measurement | pending | weak_match | 10.5962/bhl.title.54674 | 0.859 |  |  |
-| Corbalan et al. 2009 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2021.1.3 | 1.000 |  |  |
-| Corbalan et al. 2013 | 2 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2013.05.006 | 1.000 |  |  |
-| Cordes and Walker 2016 | 1 | measurement | not_found | below_threshold | 10.1111/eth.13142 | 0.455 |  |  |
-| Cordes et al. 1995 | 2 | measurement | certain | two_service_agreement | 10.1080/02541858.1995.11448386 | 1.000 |  |  |
-| Corke 1987 | 1 | measurement | certain | two_service_agreement | 10.1016/0006-3207(87)90120-0 | 1.000 |  |  |
-| Corl et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.1111/j.1558-5646.2009.00791.x | 1.000 |  |  |
-| Corn and Dalby 1973 | 2 | measurement | certain | two_service_agreement | 10.2307/1563202 | 1.000 |  |  |
-| Corneil et al. 2015 | 1 | measurement | not_found | below_threshold | 10.15517/rbt.v60i4.2154 | 0.579 |  |  |
-| Corovic and Crnobrnja-Isailovic 2018 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-17000218 | 1.000 |  |  |
-| Corry et al. 2010 | 35 | measurement | not_found | below_threshold | 10.1098/rsos.150461 | 0.450 |  |  |
-| Corti and Cascio 2002 | 24 | compilation | not_found | below_threshold | 10.17147/asu-1-350363 | 0.264 |  |  |
-| Costa et al. 2005 | 1 | measurement | not_found | below_threshold | 10.2307/1566133 | 0.490 |  |  |
-| Costa et al. 2008 [3] | 12 | measurement | pending | ambiguous | 10.15560/4.3.267 | 1.000 |  |  |
-| Costa et al. 2008 [4] | 31 | measurement | pending | ambiguous | 10.15560/4.1.86 | 1.000 |  |  |
-| Costa et al. 2015 | 1 | measurement | certain | two_service_agreement | 10.1590/0001-3765201520140088 | 1.000 |  |  |
-| Costandius and Mouton 2006 | 1 | measurement | pending | ambiguous | 10.1080/15627020.2006.11407340 | 1.000 |  |  |
-| Cota et al. 2011 | 2 | measurement | not_found | below_threshold | 10.33256/hb166.2122 | 0.522 |  |  |
+| Corbalan et al. 2009 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.2021.1.3 | 1.000 | CorbalAN:2009aa | CorbalAN_2009 |
+| Corbalan et al. 2013 | 2 | measurement | certain | two_service_agreement | 10.1016/j.jtherbio.2013.05.006 | 1.000 | Corbalan:2013aa | Corbalan_2013 |
+| Cordes and Walker 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.455 | Cordes:2016aa | Cordes_2016 |
+| Cordes et al. 1995 | 2 | measurement | certain | two_service_agreement | 10.1080/02541858.1995.11448386 | 1.000 | Cordes:1995aa | Cordes_1995 |
+| Corke 1987 | 1 | measurement | certain | two_service_agreement | 10.1016/0006-3207(87)90120-0 | 1.000 | Corke:1987aa | Corke_1987 |
+| Corl et al. 2009 | 1 | measurement | certain | two_service_agreement | 10.1111/j.1558-5646.2009.00791.x | 1.000 | Corl:2010aa | Corl_2010 |
+| Corn and Dalby 1973 | 2 | measurement | certain | two_service_agreement | 10.2307/1563202 | 1.000 | Corn:1973aa | Corn_1973 |
+| Corneil et al. 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.579 | Corneil:2015aa | Corneil_2015 |
+| Corovic and Crnobrnja-Isailovic 2018 | 1 | measurement | certain | two_service_agreement | 10.1163/15685381-17000218 | 1.000 | Corovic:2018aa | Corovic_2018 |
+| Corry et al. 2010 | 35 | measurement | nodoi_approved | owner_nodoi |  | 0.450 | Corry:2010aa | Corry_2010 |
+| Corti and Cascio 2002 | 24 | compilation | nodoi_approved | owner_nodoi |  | 0.264 | Corti:2002aa | Corti_2002 |
+| Costa et al. 2005 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.490 | Costa:2005aa | Costa_2005 |
+| Costa et al. 2008 [3] | 12 | measurement | approved | owner_candidate | 10.15560/4.3.267 | 1.000 | Costa:2008ab | Costa_2008b |
+| Costa et al. 2008 [4] | 31 | measurement | approved | owner_candidate | 10.15560/4.1.86 | 1.000 | Costa:2008aa | Costa_2008 |
+| Costa et al. 2015 | 1 | measurement | certain | two_service_agreement | 10.1590/0001-3765201520140088 | 1.000 | Costa:2015aa | Costa_2015 |
+| Costandius and Mouton 2006 | 1 | measurement | approved | owner_candidate | 10.1080/15627020.2006.11407340 | 1.000 | Costandius:2006aa | Costandius_2006 |
+| Cota et al. 2011 | 2 | measurement | nodoi_approved | owner_nodoi |  | 0.522 | Cota:2011aa | Cota_2011 |
 | Couper and Amey 2009 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.2312.1.3 | 0.929 |  |  |
-| Couper and Gregson 1994 | 8 | measurement | pending | grey_literature | 10.24199/j.mmv.2007.64.2 | 0.433 |  |  |
-| Couper and Hoskin 2013 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3664.4.7 | 1.000 |  |  |
-| Couper and Oliver 2016 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4093.4.4 | 1.000 |  |  |
-| Couper et al. 1993 | 8 | measurement | pending | single_service | 10.5281/zenodo.16432436 | 1.000 |  |  |
-| Couper et al. 1996 | 1 | measurement | pending | grey_literature | 10.17082/j.2204-1478.56.1.2012-05 | 0.434 |  |  |
-| Couper et al. 2000 | 3 | measurement | pending | grey_literature | 10.1071/zo02072 | 0.590 |  |  |
-| Couper et al. 2002 | 1 | measurement | pending | grey_literature | 10.17082/j.2204-1478.60.2016.2016-07 | 0.527 |  |  |
-| Couper et al. 2005 | 3 | measurement | certain | two_service_agreement | 10.1071/zo04010 | 1.000 |  |  |
-| Couper et al. 2007 | 3 | measurement | pending | ambiguous | 10.11646/zootaxa.1587.1.2 | 1.000 |  |  |
-| Couper et al. 2008 [1] | 1 | measurement | pending | single_service | 10.5281/zenodo.15901813 | 1.000 |  |  |
-| Couper et al. 2008 [2] | 4 | measurement | certain | two_service_agreement | 10.3853/j.0067-1975.60.2008.1492 | 1.000 |  |  |
-| Couper et al. 2010 | 3 | measurement | pending | ambiguous | 10.11646/zootaxa.2433.1.4 | 1.000 |  |  |
-| Couper et al. 2012 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.3556.1.2 | 1.000 |  |  |
-| Couper et al. 2016 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4162.1.3 | 1.000 |  |  |
-| Covacevich 1984 | 1 | measurement | pending | grey_literature | 10.17082/j.2204-1478.56.2.2013-23 | 0.504 |  |  |
-| Covacevich and Ingram 1975 | 3 | measurement | not_found | below_threshold | 10.17082/j.2204-1478.64.2022.2021-03 | 0.505 |  |  |
-| Covacevich and Ingram 1978 | 1 | measurement | pending | single_service | 10.5281/zenodo.16473562 | 1.000 |  |  |
-| Cox et al. 1998 | 69 | compilation | pending | ambiguous | 10.2307/1447416 | 1.000 |  |  |
-| Cox et al. 2003 | 200 | measurement | pending | ambiguous | 10.1111/j.0014-3820.2003.tb00371.x | 1.000 |  |  |
-| Cox et al. 2010 [1] | 70 | compilation | pending | ambiguous | 10.2307/1447416 | 1.000 |  |  |
-| Cox et al. 2010 [2] | 1 | measurement | certain | two_service_agreement | 10.1016/j.ympev.2010.03.020 | 1.000 |  |  |
-| Craig et al. 2007 [2] | 1 | measurement | certain | two_service_agreement | 10.7882/az.2007.006 | 1.000 |  |  |
-| Cree 1994 | 76 | measurement | certain | two_service_agreement | 10.1080/03014223.1994.9518005 | 1.000 |  |  |
-| Cree and Guillette 1995 | 1 | measurement | certain | two_service_agreement | 10.2307/1564553 | 1.000 |  |  |
-| Cree and Hare 2010 | 8 | measurement | not_found | below_threshold | 10.1046/j.1442-9993.2003.01293.x | 0.464 |  |  |
-| Cree and Hare 2016 | 22 | measurement | certain | two_service_agreement | 10.1007/978-3-319-41674-8_7 | 1.000 |  |  |
-| Cree et al. 1999 | 1 | measurement | pending | grey_literature | 10.1080/03014223.1984.10428239 | 0.526 |  |  |
+| Couper and Gregson 1994 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.433 | Couper:1994aa | Couper_1994 |
+| Couper and Hoskin 2013 | 1 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3664.4.7 | 1.000 | Couper:2013aa | Couper_2013 |
+| Couper and Oliver 2016 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4093.4.4 | 1.000 | Couper:2016aa | Couper_2016 |
+| Couper et al. 1993 | 8 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Couper:1993aa | Couper_1993 |
+| Couper et al. 1996 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.434 | Couper:1996aa | Couper_1996 |
+| Couper et al. 2000 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.590 | Couper:2000aa | Couper_2000 |
+| Couper et al. 2002 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.527 | Couper:2002aa | Couper_2002 |
+| Couper et al. 2005 | 3 | measurement | certain | two_service_agreement | 10.1071/zo04010 | 1.000 | Couper:2005aa | Couper_2005 |
+| Couper et al. 2007 | 3 | measurement | approved | owner_candidate | 10.11646/zootaxa.1587.1.2 | 1.000 | Couper:2007aa | Couper_2007 |
+| Couper et al. 2008 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Couper:2008ab | Couper_2008b |
+| Couper et al. 2008 [2] | 4 | measurement | certain | two_service_agreement | 10.3853/j.0067-1975.60.2008.1492 | 1.000 | Couper:2008aa | Couper_2008 |
+| Couper et al. 2010 | 3 | measurement | approved | owner_candidate | 10.11646/zootaxa.2433.1.4 | 1.000 | Couper:2010aa | Couper_2010 |
+| Couper et al. 2012 | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.3556.1.2 | 1.000 | Couper:2012aa | Couper_2012 |
+| Couper et al. 2016 | 3 | measurement | certain | two_service_agreement | 10.11646/zootaxa.4162.1.3 | 1.000 | Couper:2016ab | Couper_2016b |
+| Covacevich 1984 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.504 | Covacevich:1984aa | Covacevich_1984 |
+| Covacevich and Ingram 1975 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.505 | Covacevich:1975aa | Covacevich_1975 |
+| Covacevich and Ingram 1978 | 1 | measurement | nodoi_approved | owner_nodoi |  | 1.000 | Covacevich:1978aa | Covacevich_1978 |
+| Cox et al. 1998 | 69 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Cox:1998aa | Cox_1998 |
+| Cox et al. 2003 | 200 | measurement | approved | owner_candidate | 10.1111/j.0014-3820.2003.tb00371.x | 1.000 | Cox:2003aa | Cox_2003 |
+| Cox et al. 2010 [1] | 70 | compilation | nodoi_approved | owner_nodoi |  | 1.000 | Cox:2010ab | Cox_2010b |
+| Cox et al. 2010 [2] | 1 | measurement | certain | two_service_agreement | 10.1016/j.ympev.2010.03.020 | 1.000 | Cox:2010aa | Cox_2010 |
+| Craig et al. 2007 [2] | 1 | measurement | certain | two_service_agreement | 10.7882/az.2007.006 | 1.000 | Craig:2007aa | Craig_2007 |
+| Cree 1994 | 76 | measurement | certain | two_service_agreement | 10.1080/03014223.1994.9518005 | 1.000 | Cree:1994aa | Cree_1994 |
+| Cree and Guillette 1995 | 1 | measurement | certain | two_service_agreement | 10.2307/1564553 | 1.000 | Cree:1995aa | Cree_1995 |
+| Cree and Hare 2010 | 8 | measurement | nodoi_approved | owner_nodoi |  | 0.464 | Cree:2010aa | Cree_2010 |
+| Cree and Hare 2016 | 22 | measurement | certain | two_service_agreement | 10.1007/978-3-319-41674-8_7 | 1.000 | Cree:2016aa | Cree_2016 |
+| Cree et al. 1999 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.526 | Cree:1999aa | Cree_1999 |
 | Creer et al. 2001 | 9 | measurement | pending | weak_match | 10.2307/1565961 | 0.874 |  |  |
-| Crespo and Koch 2015 | 1 | measurement | not_found | below_threshold | 10.11606/issn.2316-9079.v15i1p69-73 | 0.539 |  |  |
-| Crisp et al. 1979 | 1 | measurement | certain | two_service_agreement | 10.2307/1443410 | 1.000 |  |  |
-| Crochet et al. 2003 | 6 | measurement | certain | two_service_agreement | 10.1046/j.1096-3642.2003.00044.x | 1.000 |  |  |
-| Crombie and Pregill 1999 | 2 | compilation | certain | two_service_agreement | 10.2307/1467060 | 1.000 |  |  |
-| Crombie and Steadman 1986 | 3 | measurement | not_found | below_threshold | 10.1179/jbr.1986.14.2.359 | 0.547 |  |  |
-| Crother 1988 | 1 | compilation | not_found | below_threshold | 10.1016/b978-012197955-3/50021-5 | 0.304 |  |  |
-| Crottini et al. 2011 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.2982.1.4 | 1.000 |  |  |
-| Crottini et al. 2012 | 1 | measurement | pending | ambiguous | 10.11646/zootaxa.3490.1.5 | 1.000 |  |  |
-| Crottini et al. 2015 | 4 | measurement | certain | two_service_agreement | 10.1007/s13127-014-0191-5 | 1.000 |  |  |
-| Crovetto and Salvidio 2013 | 1 | measurement | certain | two_service_agreement | 10.25225/fozo.v62.i4.a3.2013 | 1.000 |  |  |
-| Cruz 1997 | 1 | measurement | certain | two_service_agreement | 10.2307/1565679 | 1.000 |  |  |
-| Cruz 1998 | 1 | measurement | not_found | below_threshold | 10.1076/snfe.32.1.28.13465 | 0.569 |  |  |
-| Cruz et al. 1997 | 1 | measurement | certain | two_service_agreement | 10.1076/snfe.32.1.28.13465 | 1.000 |  |  |
-| Cruz et al. 1998 | 1 | measurement | not_found | below_threshold | 10.1076/snfe.32.1.28.13465 | 0.561 |  |  |
-| Cruz et al. 1999 [2] | 1 | measurement | certain | two_service_agreement | 10.2307/1565638 | 1.000 |  |  |
-| Cruz et al. 2005 | 31 | measurement | certain | two_service_agreement | 10.1111/j.1420-9101.2005.00936.x | 1.000 |  |  |
-| Cruz et al. 2011 | 19 | measurement | certain | two_service_agreement | 10.1007/s00360-010-0524-4 | 1.000 |  |  |
-| Cruz et al. 2018 | 1 | measurement | not_found | below_threshold | 10.4289/0013-8797.119.4.525 | 0.497 |  |  |
-| Cruz-Elizalde et al. 2014 | 1 | measurement | not_found | below_threshold | 10.1894/0038-4909(2008)53[175:sbitwm]2.0.co;2 | 0.620 |  |  |
-| Cruz-Elizalde et al. 2017 [1] | 1 | measurement | pending | weak_match | 10.1016/j.zool.2020.125781 | 0.727 |  |  |
-| Cruz-Elizalde et al. 2017 [2] | 1 | measurement | not_found | below_threshold | 10.1007/s11756-024-01778-3 | 0.572 |  |  |
-| Cruz-Saenz 2012 | 1 | measurement | pending | grey_literature | 10.61728/ae24001779 | 0.346 |  |  |
-| Cruz-Saenz and Lazcano 2012 | 1 | measurement | certain | two_service_agreement | 10.22201/ib.20078706e.2012.1.1038 | 1.000 |  |  |
-| Cuadrado 2001 | 1 | measurement | certain | two_service_agreement | 10.1017/s0952836901001510 | 1.000 |  |  |
-| Cuadrado 2010 | 1 | measurement | not_found | below_threshold | 10.29077/aula.8.6_gonzalez | 0.284 |  |  |
-| Cuellar 1984 | 1 | measurement | certain | two_service_agreement | 10.2307/2425319 | 1.000 |  |  |
-| Cuellar 1993 | 1 | measurement | not_found | below_threshold | 10.1093/sysbio/43.1.148 | 0.492 |  |  |
-| Cuervo and Shine 2007 | 1 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.2007.00328.x | 1.000 |  |  |
-| Cullum 1997 | 10 | measurement | pending | weak_match | 10.1086/286055 | 0.761 |  |  |
-| Cunha 1977 | 1 | measurement | not_found | below_threshold | 10.46357/bcnaturais.v13i3.350 | 0.401 |  |  |
-| Cunningham et al. 2012 [2] | 3 | measurement | not_found | below_threshold | 10.1139/cjz-2014-0086 | 0.510 |  |  |
-| Cupul-Magana et al. 2016 | 1 | measurement | not_found | below_threshold | 10.1670/10-078.1 | 0.312 |  |  |
+| Crespo and Koch 2015 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.539 | Crespo:2015aa | Crespo_2015 |
+| Crisp et al. 1979 | 1 | measurement | certain | two_service_agreement | 10.2307/1443410 | 1.000 | Crisp:1979aa | Crisp_1979 |
+| Crochet et al. 2003 | 6 | measurement | certain | two_service_agreement | 10.1046/j.1096-3642.2003.00044.x | 1.000 | Crochet:2002aa | Crochet_2002 |
+| Crombie and Pregill 1999 | 2 | compilation | certain | two_service_agreement | 10.2307/1467060 | 1.000 | Crombie:1999aa | Crombie_1999 |
+| Crombie and Steadman 1986 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.547 | Crombie:1986aa | Crombie_1986 |
+| Crother 1988 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.304 | Crother:1988aa | Crother_1988 |
+| Crottini et al. 2011 | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.2982.1.4 | 1.000 | Crottini:2011aa | Crottini_2011 |
+| Crottini et al. 2012 | 1 | measurement | approved | owner_candidate | 10.11646/zootaxa.3490.1.5 | 1.000 | Crottini:2012aa | Crottini_2012 |
+| Crottini et al. 2015 | 4 | measurement | certain | two_service_agreement | 10.1007/s13127-014-0191-5 | 1.000 | Crottini:2014aa | Crottini_2014 |
+| Crovetto and Salvidio 2013 | 1 | measurement | certain | two_service_agreement | 10.25225/fozo.v62.i4.a3.2013 | 1.000 | Crovetto:2013aa | Crovetto_2013 |
+| Cruz 1997 | 1 | measurement | certain | two_service_agreement | 10.2307/1565679 | 1.000 | Cruz:1997ab | Cruz_1997b |
+| Cruz 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.569 | Cruz:1998aa | Cruz_1998 |
+| Cruz et al. 1997 | 1 | measurement | certain | two_service_agreement | 10.1076/snfe.32.1.28.13465 | 1.000 | Cruz:1997aa | Cruz_1997 |
+| Cruz et al. 1998 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.561 | Cruz:1998ab | Cruz_1998b |
+| Cruz et al. 1999 [2] | 1 | measurement | certain | two_service_agreement | 10.2307/1565638 | 1.000 | Cruz:1999aa | Cruz_1999 |
+| Cruz et al. 2005 | 31 | measurement | certain | two_service_agreement | 10.1111/j.1420-9101.2005.00936.x | 1.000 | Cruz:2005aa | Cruz_2005 |
+| Cruz et al. 2011 | 19 | measurement | certain | two_service_agreement | 10.1007/s00360-010-0524-4 | 1.000 | Cruz:2010aa | Cruz_2010 |
+| Cruz et al. 2018 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.497 | Cruz:2018aa | Cruz_2018 |
+| Cruz-Elizalde et al. 2014 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.620 | Cruz-Elizalde:2014aa | Cruz-Elizalde_2014 |
+| Cruz-Elizalde et al. 2017 [1] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.727 | Cruz-Elizalde:2017aa | Cruz-Elizalde_2017 |
+| Cruz-Elizalde et al. 2017 [2] | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.572 | Cruz-Elizalde:2017ab | Cruz-Elizalde_2017b |
+| Cruz-Saenz 2012 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.346 | Cruz-Saenz:2012ab | Cruz-Saenz_2012b |
+| Cruz-Saenz and Lazcano 2012 | 1 | measurement | certain | two_service_agreement | 10.22201/ib.20078706e.2012.1.1038 | 1.000 | Cruz-Saenz:2012aa | Cruz-Saenz_2012 |
+| Cuadrado 2001 | 1 | measurement | certain | two_service_agreement | 10.1017/s0952836901001510 | 1.000 | Cuadrado:2001aa | Cuadrado_2001 |
+| Cuadrado 2010 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.284 | Cuadrado:2010aa | Cuadrado_2010 |
+| Cuellar 1984 | 1 | measurement | certain | two_service_agreement | 10.2307/2425319 | 1.000 | Cuellar:1984aa | Cuellar_1984 |
+| Cuellar 1993 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.492 | Cuellar:1993aa | Cuellar_1993 |
+| Cuervo and Shine 2007 | 1 | measurement | certain | two_service_agreement | 10.1111/j.1469-7998.2007.00328.x | 1.000 | Cuervo:2007aa | Cuervo_2007 |
+| Cullum 1997 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.761 | Cullum:1997aa | Cullum_1997 |
+| Cunha 1977 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.401 | Cunha:1977aa | Cunha_1977 |
+| Cunningham et al. 2012 [2] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.510 | Cunningham:2012aa | Cunningham_2012 |
+| Cupul-Magana et al. 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.312 | Cupul-Magana:2016aa | Cupul-Magana_2016 |
 | Curtin et al. 2005 | 2 | measurement | pending | weak_match | 10.1080/15627020.2005.11407303 | 0.889 |  |  |
-| Cyriac and Umesh 2013 | 1 | measurement | pending | ambiguous | 10.47605/tapro.v5i1.88 | 1.000 |  |  |
+| Cyriac and Umesh 2013 | 1 | measurement | approved | owner_candidate | 10.47605/tapro.v5i1.88 | 1.000 | Cyriac:2013aa | Cyriac_2013 |
 | Cyriac and Umesh 2014 | 1 | measurement | pending | single_service | 10.30906/1026-2296-2014-21-3-187-194 | 1.000 |  |  |
-| da Silva and Aird 2001 | 1 | measurement | certain | two_service_agreement | 10.1016/s1532-0456(00)00215-5 | 1.000 |  |  |
-| Da Silva and Avila-Pires 2013 | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3681.4.8 | 1.000 |  |  |
-| da Silva and Tolley 2013 | 2 | measurement | certain | two_service_agreement | 10.1111/bij.12045 | 1.000 |  |  |
-| da Silva et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.3897/zookeys.361.5738 | 1.000 |  |  |
-| Da Silva et al. 2016 [1] | 2 | measurement | certain | two_service_agreement | 10.1111/bij.12819 | 1.000 |  |  |
-| Da Silva et al. 2017 | 1 | measurement | not_found | below_threshold | 10.1007/978-3-642-65751-1_28 | 0.676 |  |  |
-| Dal Vechio et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.1590/s1984-46702014000200002 | 1.000 |  |  |
-| Dal Vechio et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.2994/sajh-d-16-00027.1 | 1.000 |  |  |
-| Dalrymple 1980 | 1 | measurement | certain | two_service_agreement | 10.2307/1563699 | 1.000 |  |  |
-| Daltry 2009 | 11 | measurement | pending | grey_literature | 10.1093/oso/9780195095609.003.0011 | 0.420 |  |  |
+| da Silva and Aird 2001 | 1 | measurement | certain | two_service_agreement | 10.1016/s1532-0456(00)00215-5 | 1.000 | Jorge-da-Silva:2001aa | JorgedaSilva_2001 |
+| Da Silva and Avila-Pires 2013 | 6 | measurement | certain | two_service_agreement | 10.11646/zootaxa.3681.4.8 | 1.000 | Da-Silva:2013ab | DaSilva_2013b |
+| da Silva and Tolley 2013 | 2 | measurement | certain | two_service_agreement | 10.1111/bij.12045 | 1.000 | Da-Silva:2013aa | DaSilva_2013 |
+| da Silva et al. 2013 | 1 | measurement | certain | two_service_agreement | 10.3897/zookeys.361.5738 | 1.000 | da-Silva:2013aa | daSilva_2013 |
+| Da Silva et al. 2016 [1] | 2 | measurement | certain | two_service_agreement | 10.1111/bij.12819 | 1.000 | da-Silva:2016aa | daSilva_2016 |
+| Da Silva et al. 2017 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.676 | Da-Silva:2017aa | DaSilva_2017 |
+| Dal Vechio et al. 2014 | 1 | measurement | certain | two_service_agreement | 10.1590/s1984-46702014000200002 | 1.000 | Dal-Vechio:2014aa | DalVechio_2014 |
+| Dal Vechio et al. 2016 | 1 | measurement | certain | two_service_agreement | 10.2994/sajh-d-16-00027.1 | 1.000 | Vechio:2016aa | Vechio_2016 |
+| Dalrymple 1980 | 1 | measurement | certain | two_service_agreement | 10.2307/1563699 | 1.000 | Dalrymple:1980aa | Dalrymple_1980 |
+| Daltry 2009 | 11 | measurement | nodoi_approved | owner_nodoi |  | 0.420 | Daltry:2009aa | Daltry_2009 |
 | Damadi et al. 2016 | 2 | measurement | pending | weak_match | 10.22067/ijab.v11i2.42372 | 1.000 |  |  |
-| D'Amore et al. 2018 | 3 | measurement | not_found | below_threshold | 10.2307/1564707 | 0.427 |  |  |
-| Damuth 1987 | 27 | measurement | certain | two_service_agreement | 10.1111/j.1095-8312.1987.tb01990.x | 1.000 |  |  |
+| D'Amore et al. 2018 | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.427 | DAmore:2018aa | DAmore_2018 |
+| Damuth 1987 | 27 | measurement | certain | two_service_agreement | 10.1111/j.1095-8312.1987.tb01990.x | 1.000 | Damuth:1987aa | Damuth_1987 |
 | Dandge and Tiple 2015 | 1 | measurement | pending | single_service | 10.30906/1026-2296-2015-22-3-233-240 | 1.000 |  |  |
-| D'angiolella et al. 2011 | 7 | measurement | certain | two_service_agreement | 10.3099/0027-4100-160.2.35 | 1.000 |  |  |
-| Daniel 1983 | 14 | compilation | not_found | below_threshold | 10.5962/bhl.title.52287 | 0.515 |  |  |
-| Daniells et al. 2008 | 5 | compilation | not_found | below_threshold | 10.1163/ej.9789004194083.i-439.105 | 0.577 |  |  |
-| Daniells et al. 2010 | 1 | compilation | not_found | below_threshold | 10.1201/ebk1420064162-11 | 0.309 |  |  |
-| Darevsky 1964 [1] | 3 | measurement | pending | weak_match | 10.5479/si.23317515.7 | 0.886 |  |  |
+| D'angiolella et al. 2011 | 7 | measurement | certain | two_service_agreement | 10.3099/0027-4100-160.2.35 | 1.000 | Dangiolella:2011aa | Dangiolella_2011 |
+| Daniel 1983 | 14 | compilation | nodoi_approved | owner_nodoi |  | 0.515 | Daniel:1983aa | Daniel_1983 |
+| Daniells et al. 2008 | 5 | compilation | nodoi_approved | owner_nodoi |  | 0.577 | Daniells:2008aa | Daniells_2008 |
+| Daniells et al. 2010 | 1 | compilation | nodoi_approved | owner_nodoi |  | 0.309 | Daniells:2010aa | Daniells_2010 |
+| Darevsky 1964 [1] | 3 | measurement | nodoi_approved | owner_nodoi |  | 0.886 | Darevsky:1964aa | Darevsky_1964 |
 | Darevsky 1964 [2] | 3 | measurement |  |  |  |  |  |  |
 | Darevsky 1992 | 5 | measurement |  |  |  |  |  |  |
 | Darevsky and Kupriyanova 1993 | 5 | measurement |  |  |  |  |  |  |
@@ -3645,7 +3642,7 @@ Steps: --queue
 | Paulissen 2000 | 1 | measurement |  |  |  |  |  |  |
 | Paulissen and Walker 1994 | 1 | measurement |  |  |  |  |  |  |
 | Paulissen and Walker 1998 | 1 | compilation |  |  |  |  |  |  |
-| Paulissen et al. 2016 | 1 | measurement | not_found | below_threshold | 10.1111/eth.13142 | 0.455 |  |  |
+| Paulissen et al. 2016 | 1 | measurement | nodoi_approved | owner_nodoi |  | 0.455 | Paulissen:2016aa | Paulissen_2016 |
 | Pauwels and Meirte 1996 | 1 | measurement |  |  |  |  |  |  |
 | Pauwels and Salle 2009 | 2 | measurement |  |  |  |  |  |  |
 | Pauwels and Sumontha 2014 | 1 | measurement |  |  |  |  |  |  |
@@ -5194,7 +5191,7 @@ Steps: --queue
 | Williams 1983 | 55 | measurement |  |  |  |  |  |  |
 | Williams 1985 | 1 | measurement |  |  |  |  |  |  |
 | Williams 1986 | 2 | measurement |  |  |  |  |  |  |
-| Williams 1988 | 10 | measurement | not_found | below_threshold | 10.5962/bhl.part.6014 | 0.603 |  |  |
+| Williams 1988 | 10 | measurement | nodoi_approved | owner_nodoi |  | 0.603 | Williams:1988aa | Williams_1988 |
 | Williams 1992 | 6 | measurement |  |  |  |  |  |  |
 | Williams and Duellman 1984 | 7 | measurement |  |  |  |  |  |  |
 | Williams and Mittermeier 1991 | 2 | measurement |  |  |  |  |  |  |
