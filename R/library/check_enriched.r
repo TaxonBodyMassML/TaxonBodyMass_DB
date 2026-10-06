@@ -11,15 +11,22 @@
 # col_matched_name, col_match_type, col_status, species, sources, rows) of
 # the names stage 4 (Catalogue of Life) resolved, i.e. the names GBIF, NCBI
 # and WoRMS could not (#103); listed so the stage's work is checked by eye.
+# `exclusions`: the result of ExcludeDiscordantValues() (#34): its per-value
+# exclusion table is written as its own section of warnings_mass_values.md
+# (the excluded value beside the kept ones), and its unresolved table gives
+# the reason each species in the range sections was left to the filter.
+# `within_source` then holds the independent values, excluded ones included
+# (columns excluded, exclusion_rule, value_tier).
 check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
                            unresolved = NULL, kingdom_conflicts = NULL,
-                           col_resolutions = NULL) {
+                           col_resolutions = NULL, exclusions = NULL) {
   dir.create(file.path(wd_root, "reports"), showWarnings = FALSE)
   warn <- character(0)
   warn_summary <- character(0)
   warn_namechange <- character(0)
   errs <- character(0)
   mass_summary <- character(0)
+  excl_block <- character(0)
 
   # 1. Mass validity
   bad_mass <- dat[!is.finite(dat$mass_g) | dat$mass_g <= 0, ]
@@ -101,18 +108,30 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
     }
   }
 
-  # 9. High mass disagreement across collapsed taxon strings
+  # 9. High mass disagreement across collapsed taxon strings: every
+  #    independent value of the species (label, value, records, tier), the
+  #    extremes first, and the reason the record-level rule left it (#34)
+  unres_tab <- if (!is.null(exclusions)) exclusions$unresolved else NULL
+  fmt_value <- function(ws) {
+    tier <- if ("value_tier" %in% names(ws)) sprintf(", T%d", ws$value_tier) else ""
+    sprintf("%s %.4g g (n %d%s)", ws$source_mass, ws$mass_g, ws$n, tier)
+  }
   fmt_mass_line <- function(row, ws_all) {
     base <- sprintf("%s [range=%.2f]", row$species, row$log10_range)
+    if (!is.null(unres_tab)) {
+      r <- unres_tab$reason[unres_tab$genus == row$genus & unres_tab$species == row$species]
+      if (length(r) == 1) base <- sprintf("%s [unresolved: %s]", base, r)
+    }
     if (!is.null(ws_all)) {
       ws <- ws_all[ws_all$genus == row$genus & ws_all$species == row$species, ]
+      if ("excluded" %in% names(ws)) ws <- ws[!ws$excluded, ]
       if (nrow(ws) > 1) {
-        min_row <- ws[which.min(ws$mass_g), ]
-        max_row <- ws[which.max(ws$mass_g), ]
-        base <- sprintf("%s\n        Min_source: %s %.4g\n        Max_source: %s %.4g",
+        ws <- ws[order(ws$mass_g), ]
+        base <- sprintf("%s\n        Min_source: %s %.4g\n        Max_source: %s %.4g\n        Values: %s",
           base,
-          min_row$source_mass, min_row$mass_g,
-          max_row$source_mass, max_row$mass_g)
+          ws$source_mass[1], ws$mass_g[1],
+          ws$source_mass[nrow(ws)], ws$mass_g[nrow(ws)],
+          paste(fmt_value(ws), collapse = "; "))
       }
     }
     base
@@ -134,8 +153,70 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
   if ("log10_range" %in% names(dat)) {
     if (remove_flagged)
       mass_summary <- c(
-        "**Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**",
+        "**Note: All species listed in the two range sections below (log10 range > 1 after the record-level range rule) have been removed from TaxonBodyMass.csv.**",
         mass_summary)
+    # 9a. Values excluded from the cross-source mean by the record-level range
+    #     rule (#34): the species are kept; the section lists the excluded
+    #     value beside the kept ones.
+    if (!is.null(exclusions)) {
+      ex <- exclusions$exclusions
+      ie <- ex[is.na(ex$copy_of), , drop = FALSE]
+      cnt <- exclusions$counts
+      by_rule <- cnt$by_rule[cnt$by_rule > 0]
+      by_reason <- cnt$unresolved_by_reason[cnt$unresolved_by_reason > 0]
+      mass_summary <- c(mass_summary,
+        sprintf("- Record-level range rule (#34): %d species over the threshold; %d rescued by excluding %d values (%d collapsed copies with them); %d unresolved and removed",
+                cnt$species_flagged, cnt$species_rescued, cnt$values_excluded_independent, cnt$values_excluded_copies, cnt$species_unresolved),
+        if (length(by_rule) > 0) sprintf("- Exclusions by rule: %s", paste(sprintf("%s %d", names(by_rule), by_rule), collapse = ", ")),
+        if (length(by_reason) > 0) sprintf("- Unresolved by reason: %s", paste(sprintf("%s %d", names(by_reason), by_reason), collapse = ", ")))
+      if (nrow(ie) > 0) {
+        src_tab <- sort(table(ie$source_label), decreasing = TRUE)
+        tier_tab <- table(factor(ie$value_tier, levels = 1:3))
+        lines_ex <- sprintf("%s [%s, %+.2f log10, T%d]\n        Excluded: %s %.4g g (n %d)%s\n        Kept: %s -> %.4g g",
+          ie$species, ie$rule, ie$distance_log10, ie$value_tier,
+          ie$source_mass, ie$mass_g, ie$n,
+          vapply(seq_len(nrow(ie)), function(i) {
+            cp <- ex$source_label[!is.na(ex$copy_of) & ex$copy_of == ie$source_label[i] & ex$genus == ie$genus[i] & ex$species == ie$species[i]]
+            if (length(cp) == 0) "" else sprintf(" [+ copies %s]", paste(cp, collapse = ", "))
+          }, character(1)),
+          ie$kept_values, ie$kept_mass_g)
+        excl_block <- c(
+          sprintf("## Values excluded from the cross-source mean by the record-level range rule (%d values in %d species; issue #34)",
+                  nrow(ie), length(unique(paste(ie$genus, ie$species)))),
+          "",
+          paste("These species are kept in TaxonBodyMass.csv: the listed value is left out of their mean (and of n_independent and log10_range),",
+                "stays in source_mass and n, and is flagged in sources_excluded and in TaxonBodyMass_Provenance.csv.gz (record_status).",
+                "Rules: loo_unique (the one value whose exclusion brings the rest within the threshold, the rest spanning two registry-independent",
+                "evidence groups), tier_tiebreak / distance_tiebreak (several such values: the lowest trust tier, else the farthest from the median),",
+                "two_value_tier (two values or one evidence group against one value: the lower-trust side). Tiers: value_tier in",
+                "Bib/source_provenance_classes.csv (1 compiled/measured, 2 maxima-based, 3 specimens, individuals, converted and web-level values;",
+                "a converted value is tier 3). The distance is log10 of the excluded value over the median of the kept values. Live list: reports/excluded_records.csv."),
+          "",
+          sprintf("- Excluded values by tier: T1 %d, T2 %d, T3 %d", tier_tab[["1"]], tier_tab[["2"]], tier_tab[["3"]]),
+          sprintf("- Excluded values by source:\n%s", paste(sprintf("  - %s (%d)", names(src_tab), as.integer(src_tab)), collapse = "\n")),
+          "",
+          paste(lines_ex, collapse = "\n"))
+        # 9b. the rescued species that rest on a single kept value (owner
+        #     decision 2026-10-06: flagged SUSPICIOUS in the register; the kept
+        #     value has no second source behind it)
+        sv <- ie[ie$single_value_rescue, , drop = FALSE]
+        sv_key <- paste(sv$genus, sv$species)
+        sv1 <- sv[!duplicated(sv_key), , drop = FALSE]
+        if (nrow(sv1) > 0) {
+          lines_sv <- sprintf("%s: kept %s | excluded %s [%s]", sv1$species, sv1$kept_values,
+            vapply(paste(sv1$genus, sv1$species), function(k) paste(sprintf("%s %.4g g (n %d, T%d)", sv$source_mass[sv_key == k], sv$mass_g[sv_key == k], sv$n[sv_key == k], sv$value_tier[sv_key == k]), collapse = "; "), character(1)),
+            sv1$rule)
+          excl_block <- c(excl_block, "",
+            sprintf("### Rescued species resting on a single kept value (%d species; single_value_rescue in reports/excluded_records.csv, SUSPICIOUS rows in audit/flagged_species.csv)", nrow(sv1)),
+            "",
+            paste("The exclusion left one value in the mean; the kept value has no second source behind it and the tiers, not the data, decided which side was wrong.",
+                  "Owner decision 2026-10-06: kept, flagged for review."),
+            "",
+            paste(lines_sv, collapse = "\n"))
+          mass_summary <- c(mass_summary, sprintf("- Rescued species resting on a single kept value (flagged SUSPICIOUS): %d", nrow(sv1)))
+        }
+      }
+    }
 
     high_range <- dat[!is.na(dat$log10_range) & dat$log10_range > 2.0, ]
     high_range <- high_range[order(-high_range$log10_range), ]
@@ -290,13 +371,14 @@ check_enriched <- function(dat, within_source = NULL, remove_flagged = FALSE,
       "No name changes."),
       file.path(wd_root, "reports", "warnings_name_change.md"))
   }
-  if (length(errs) > 0) {
+  if (length(errs) > 0 || length(excl_block) > 0) {
     summary_block_mass <- paste0("## Summary\n\n", paste(mass_summary, collapse = "\n"))
     writeLines(c(sprintf("# TaxonBodyMass_DB Mass Value Warnings -- %s\n", now),
-      summary_block_mass, errs),
+      summary_block_mass, if (length(excl_block) > 0) c("", excl_block), errs),
       file.path(wd_root, "reports", "warnings_mass_values.md"))
-    warning(sprintf("%d error type(s) found -- see reports/warnings_mass_values.md", length(errs)),
-      immediate. = TRUE)
+    if (length(errs) > 0)
+      warning(sprintf("%d error type(s) found -- see reports/warnings_mass_values.md", length(errs)),
+        immediate. = TRUE)
   } else {
     writeLines(c(sprintf("# TaxonBodyMass_DB Mass Value Warnings -- %s\n", now),
       "No errors found."),

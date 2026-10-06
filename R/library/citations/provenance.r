@@ -74,7 +74,12 @@ LoadProvenanceClasses <- function(path, known_labels) {
   if (length(bad) > 0) problems <- c(problems, sprintf('unknown class %s (allowed: %s)', paste(bad, collapse = ', '), paste(provenance_classes, collapse = ', ')))
   bad <- setdiff(unique(d$default_provenance_type), provenance_types)
   if (length(bad) > 0) problems <- c(problems, sprintf('unknown default_provenance_type %s (allowed: %s)', paste(bad, collapse = ', '), paste(provenance_types, collapse = ', ')))
+  # value_tier (#34): 1, 2 or 3 in every row (exclude_discordant.r)
+  tier <- suppressWarnings(as.integer(d$value_tier))
+  bad_tier <- is.na(tier) | !tier %in% 1:3 | tier != suppressWarnings(as.numeric(d$value_tier))
+  if (any(bad_tier)) problems <- c(problems, sprintf('value_tier must be 1, 2 or 3 in every row (bad: %s)', paste(d$source_label[bad_tier], collapse = ', ')))
   if (length(problems) > 0) stop(basename(path), ': ', paste(problems, collapse = '; '), call. = FALSE)
+  d$value_tier <- tier
   eq <- d$default_provenance_type %in% 'derived_allometry' & is.na(d$equation_bibcite)
   if (any(eq))
     message(sprintf('  %s: derived source(s) without an equation_bibcite yet (their rows carry no equation reference): %s',
@@ -163,7 +168,7 @@ IntermediateReferences <- function(pipe, prim, labels) {
 EmptyProvenance <- function() {
   out <- as.data.frame(setNames(rep(list(character()), length(provenance_columns)), provenance_columns), stringsAsFactors = FALSE)
   out$hop <- integer(); out$n_records <- integer()
-  out
+  out[, provenance_columns]
 }
 
 # `records`: the per-record frame (genus, species, taxon, source_label, origin;
@@ -171,7 +176,12 @@ EmptyProvenance <- function() {
 # (genus, species) pairs of `accepted`. `prim`: LoadPrimaryReferences();
 # `classes`: LoadProvenanceClasses(); `citeids`: a frame with CiteID and
 # Bibcite (and doi) mapping labels and conversion CiteIDs to bib keys.
-BuildProvenance <- function(records, prim, classes, citeids, accepted) {
+# `statuses` (#34): a frame (genus, species, source_group, record_status) of
+# the Pass-1 values, from ExcludeDiscordantValues(); a row's record_status is
+# that of its species x source group ('kept', or 'excluded_<rule>' for a value
+# the record-level range rule left out of the mean), 'kept' for lab-Sheet rows
+# and when no status is given.
+BuildProvenance <- function(records, prim, classes, citeids, accepted, statuses = NULL) {
   need <- c('genus', 'species', 'taxon', 'source_label', 'origin')
   miss <- setdiff(need, names(records))
   if (length(miss) > 0) stop('BuildProvenance(): records lack column(s) ', paste(miss, collapse = ', '), call. = FALSE)
@@ -341,6 +351,14 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted) {
     }
   }
   out <- do.call(rbind, out)
+  out$record_status <- rep('kept', nrow(out))
+  if (!is.null(statuses) && nrow(statuses) > 0) {
+    grp <- if (exists('SourceGroup')) SourceGroup(out$source_mass) else out$source_mass
+    m <- match(paste(out$genus, out$species, grp, sep = '\r'),
+               paste(statuses$genus, statuses$species, statuses$source_group, sep = '\r'))
+    hit <- out$origin != 'BM_data' & !is.na(m)
+    out$record_status[hit] <- statuses$record_status[m[hit]]
+  }
   out <- out[order(out$genus, out$species, out$source_mass, out$origin, out$hop, out$provenance_type,
                    out$primary_cite_id, out$ref_role, method = 'radix'), provenance_columns]
   rownames(out) <- NULL

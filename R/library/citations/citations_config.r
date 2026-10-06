@@ -238,13 +238,16 @@ screening_categories <- c('notice', 'disagreement', 'doubtful', 'audit_sample')
 screening_list_reasons <- c('retracted', 'ambiguous', 'single_service', 'grey_literature', 'duplicate_doi',
                             'doi_mismatch', 'old_journal', 'audit_sample')
 
-# Bib/source_provenance_classes.csv (issue #1, 1.6)
-provenance_class_columns <- c('source_label', 'class', 'default_provenance_type', 'equation_bibcite', 'notes')
+# Bib/source_provenance_classes.csv (issue #1, 1.6; value_tier added by #34:
+# the trust tier of a source's values for the record-level range rule,
+# R/library/exclude_discordant.r)
+provenance_class_columns <- c('source_label', 'class', 'default_provenance_type', 'equation_bibcite', 'value_tier', 'notes')
 
 # TaxonBodyMass_Provenance.csv.gz (issue #1, 1.3)
 provenance_columns <- c('genus', 'species', 'taxon', 'source_mass', 'source_bibcite', 'origin',
                         'hop', 'via_cite_id', 'ref_role', 'provenance_type',
-                        'primary_cite_id', 'primary_bibcite', 'primary_doi', 'match_status', 'n_records')
+                        'primary_cite_id', 'primary_bibcite', 'primary_doi', 'match_status', 'n_records',
+                        'record_status')   # #34: kept, or excluded_<rule> for a value left out of the mean
 
 # Bib/TaxonBodyMass_CitationCiteIDs.csv: the first two columns are unchanged
 # (TaxonBodyMassML reads them and nothing else); the rest were added by #1.

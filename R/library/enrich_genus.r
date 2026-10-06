@@ -614,27 +614,35 @@ GenusOnlyRecords <- function(values) {
 # The genus table: the arithmetic mean by accepted genus over the species'
 # cross-source means (`enriched`: genus, mass_g, n, n_independent, source_mass)
 # and the genus-only record of the genus (`records` from
-# GenusOnlyRecords()). n sums the records, n_independent the independent
+# GenusOnlyRecords(); a record whose record_status is not 'kept' was excluded
+# by the record-level range rule, ExcludeDiscordantGenusRecords() in
+# exclude_discordant.r (#34), and does not enter the mean, n or
+# n_independent; its labels stay in source_mass). n sums the records,
+# n_independent the independent
 # values; source_mass lists the distinct labels and conversion CiteIDs of the
 # contributors joined by '; ' as in TaxonBodyMass.csv (joined by '-' without
 # unique() before issue #1, which hyphenated labels such as vertnet-aves-sept2016
 # and Martinez-Palacios_1992 made ambiguous). Rows are ordered by genus in the
 # C locale.
 GenusLevelTable <- function(enriched, records) {
-  Take <- function(d, taxon) data.frame(taxon = taxon, mass_g = d$mass_g, n = d$n, n_independent = d$n_independent,
-                                        source_mass = d$source_mass, stringsAsFactors = FALSE)
-  g <- rbind(Take(enriched, enriched$genus), Take(records, records$genus))
+  Take <- function(d, taxon, kept = rep(TRUE, nrow(d)))
+    data.frame(taxon = taxon, mass_g = d$mass_g, n = d$n, n_independent = d$n_independent,
+               source_mass = d$source_mass, kept = kept, stringsAsFactors = FALSE)
+  rec_kept <- if ('record_status' %in% names(records)) records$record_status == 'kept' else rep(TRUE, nrow(records))
+  g <- rbind(Take(enriched, enriched$genus), Take(records, records$genus, rec_kept))
   g <- g[!is.na(g$taxon) & nchar(g$taxon) > 0, , drop = FALSE]
   if (nrow(g) == 0)
     return(data.frame(taxon = character(0), mass_g = numeric(0), source_mass = character(0), n = numeric(0),
                       n_independent = integer(0), stringsAsFactors = FALSE))
+  # a genus whose only contributor is an excluded genus-only record has no row
+  g <- g[g$taxon %in% g$taxon[g$kept], , drop = FALSE]
   sp <- split(g, g$taxon)
   out <- data.frame(
     taxon         = names(sp),
-    mass_g        = vapply(sp, function(d) mean(d$mass_g), numeric(1)),
+    mass_g        = vapply(sp, function(d) mean(d$mass_g[d$kept]), numeric(1)),
     source_mass   = vapply(sp, function(d) paste(unique(trimws(unlist(strsplit(d$source_mass, ';', fixed = TRUE)))), collapse = '; '), character(1)),
-    n             = vapply(sp, function(d) sum(d$n, na.rm = TRUE), numeric(1)),
-    n_independent = vapply(sp, function(d) as.integer(sum(d$n_independent, na.rm = TRUE)), integer(1)),
+    n             = vapply(sp, function(d) sum(d$n[d$kept], na.rm = TRUE), numeric(1)),
+    n_independent = vapply(sp, function(d) as.integer(sum(d$n_independent[d$kept], na.rm = TRUE)), integer(1)),
     stringsAsFactors = FALSE)
   out <- out[order(out$taxon, method = 'radix'), ]
   rownames(out) <- NULL
@@ -651,8 +659,10 @@ GenusLevelTable <- function(enriched, records) {
 # rows joined with rows and sources), `removed_autotrophs` the resolved rows
 # FilterAutotrophs() removed, `dedupe` the result of DedupeGenusValues(),
 # `records` the pseudo-taxon records, `species_genus_means` a data frame
-# (genus, species_mean, n_species) of the species path.
-WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records, species_genus_means, deps) {
+# (genus, species_mean, n_species) of the species path, `exclusions` the
+# result of ExcludeDiscordantGenusRecords() (#34; NULL lists the distant
+# records without a status).
+WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records, species_genus_means, deps, exclusions = NULL) {
   Tab <- function(df) if (nrow(df) == 0) '(none)' else MarkdownTable(df)
   Fmt <- function(x) ifelse(is.na(x), '', formatC(x, digits = 3, format = 'g'))
   rows_total <- sum(res$rows)
@@ -686,6 +696,15 @@ WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records,
   far_tab <- data.frame(genus = far$genus, genus_only_g = Fmt(far$mass_g), species_mean_g = Fmt(far$species_mean),
                         n_species = far$n_species, log10_ratio = round(far$log10_ratio, 2), sources = far$source_label,
                         stringsAsFactors = FALSE)
+  if (!is.null(exclusions)) {
+    st <- exclusions$records$record_status[match(far$genus, exclusions$records$genus)]
+    un <- exclusions$unresolved
+    reason <- un$reason[match(far$genus, un$genus)]
+    far_tab$status <- ifelse(!is.na(st) & st != 'kept', st,
+                      ifelse(!is.na(reason), paste0('kept (unresolved: ', reason, ')'),
+                             'kept (within 1 log10 of the species median)'))
+    far_tab$value_tier <- exclusions$records$value_tier[match(far$genus, exclusions$records$genus)]
+  }
   lines <- c(
     sprintf('# Genus-only records -- %s', format(Sys.time(), '%Y-%m-%d %H:%M:%S')),
     '',
@@ -727,7 +746,11 @@ WriteGenusOnlyReport <- function(path, res, removed_autotrophs, dedupe, records,
     '', Tab(dd_tab),
     '', '## Genus-only records more than one order of magnitude from the genus\'s species values', '',
     paste('The genus-only record against the arithmetic mean of the genus\'s species cross-source means (the two',
-          'enter the genus mean with equal weight). Genus-only records are not range-checked (issue #34); nothing is removed here.'),
+          'enter the genus mean with equal weight). The record-level range rule (issue #34, exclude_discordant.r) judges the',
+          'record against the median of the species means: more than 1 log10 from the median of two or more species it is excluded',
+          'from the genus mean (status excluded_genus_only_discordant); against a single species the two-value tier rule applies',
+          '(excluded_two_value_tier when the record is the lower-trust side; kept and listed as unresolved otherwise). An excluded',
+          'record stays in the genus row\'s source_mass; a genus with no other contributor has no row.'),
     '', Tab(far_tab), '')
   writeLines(lines, path)
   invisible(list(higher = higher, unresolved = unres, autotrophs = auto, fuzzy = fuzzy, homonym = homonym, cross = cross,
