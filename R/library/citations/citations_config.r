@@ -125,7 +125,7 @@ citations_grey_pattern <- paste0('\\b(thesis|dissertation|report|unpublished|unp
 # ---- controlled vocabularies ---------------------------------------------------
 match_statuses   <- c('certain', 'pending', 'approved', 'nodoi_approved', 'rejected',
                       'not_found', 'self')
-match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', 'closed_world',
+match_reasons    <- c('doi_resolves', 'doi_mismatch', 'two_service_agreement', 'closed_world', 'container_volume_page',
                       'single_service', 'ambiguous', 'grey_literature', 'retracted',
                       'weak_match', 'below_threshold', 'no_candidates', 'unscreened', 'service_unavailable',   # unscreened: historical (rows and queue entries before 2026-10-05)
                       'owner_review', 'self',
