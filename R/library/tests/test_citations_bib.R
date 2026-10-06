@@ -150,6 +150,69 @@ Expect(Field(al, 'author') == 'Ikeda and Hirakawa and Imamura' && startsWith(al,
 Expect(FirstOfAuthorList('Ikeda and Hirakawa and Imamura') == 'Ikeda' && FirstOfAuthorList('Kremer') == 'Kremer' && FirstOfAuthorList('Doe, J. and Roe, R.') == 'Doe' && is.na(FirstOfAuthorList(NA)),
        'FirstOfAuthorList() gives the first surname of an author field for keys and CiteIDs')
 
+cat('BuildBibEntryNoDOI(): the conventions of #114 item 1 (theses, chapters, corporate authors, URLs)\n')
+ms <- BuildBibEntryNoDOI(Row(container = 'MSc thesis, University of British Columbia'), 'Nsiku:1999aa', 'MN', '2026-10-06')
+Expect(startsWith(ms, '@mastersthesis{') && Field(ms, 'school') == 'University of British Columbia', "an 'MSc thesis' container: @mastersthesis with the school")
+Expect(startsWith(BuildBibEntryNoDOI(Row(container = 'M.S. thesis, Middle Tennessee State University'), 'B:2015aa', 'MN', '2026-10-06'), '@mastersthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'MSc. Thesis, Ben Gurion University of the Negev'), 'B:2003aa', 'MN', '2026-10-06'), '@mastersthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = "Master's thesis, Some College"), 'B:2003ab', 'MN', '2026-10-06'), '@mastersthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'Ph.D. Thesis, Stanford University'), 'A:1966aa', 'MN', '2026-10-06'), '@phdthesis{') &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'Unpublished PhD dissertation, University of Massachusetts'), 'A:1966ab', 'MN', '2026-10-06'), '@phdthesis{'),
+       "M.S., MSc., Master's are masters theses; Ph.D. and a dissertation stay @phdthesis (Massachusetts is not an M.S.)")
+Expect(ThesisSchool('University of Oslo, PhD thesis') == 'University of Oslo' && ThesisSchool('Ph.D. thesis, Univ. of Rhode Island') == 'Univ. of Rhode Island' &&
+         is.na(ThesisSchool('PhD thesis')),
+       'ThesisSchool() takes the text after the thesis word, or before it when nothing follows')
+ch1 <- BuildBibEntryNoDOI(Row(author1 = 'Speakman, J. R. and Thomas, D. W.', year = 2003L, title = 'Physiological ecology and energetics of bats',
+                              container = 'Bat Ecology (Kunz TH, Fenton MB, eds), University of Chicago Press, Chicago', pages = '430-490'), 'Speakman:2003aa', 'owner', '2026-10-04')
+Expect(startsWith(ch1, '@incollection{Speakman:2003aa,') && Field(ch1, 'editor') == 'Kunz TH, Fenton MB' && Field(ch1, 'booktitle') == 'Bat Ecology' &&
+         Field(ch1, 'publisher') == 'University of Chicago Press, Chicago' && Field(ch1, 'pages') == '430--490' && is.na(Field(ch1, 'journal')),
+       "form B 'Book title (Editors, eds), Publisher, Place': @incollection with editor, booktitle, publisher and pages")
+ch2 <- BuildBibEntryNoDOI(Row(author1 = 'Keister and Buck', year = 1964L, container = 'Physiology of Insecta, Volume 3 (ed. Rockstein, M.), Academic Press, New York', volume = '3', pages = '617-658'),
+                          'Keister:1964aa', 'owner', '2026-10-04')
+Expect(startsWith(ch2, '@incollection{') && Field(ch2, 'editor') == 'Rockstein, M.' && Field(ch2, 'booktitle') == 'Physiology of Insecta, Volume 3' &&
+         Field(ch2, 'publisher') == 'Academic Press, New York' && Field(ch2, 'volume') == '3' && Field(ch2, 'pages') == '617--658',
+       "'(ed. Name)' marks the editor; the volume of the series is kept")
+ch3 <- BuildBibEntryNoDOI(Row(container = 'In: Burghardt, G. M. and Rand, A. S. (eds.), Iguanas of the world: their behavior, ecology and conservation. Noyes Publications, Park Ridge, New Jersey', pages = '84-116'),
+                          'Auffenberg:1982aa', 'owner', '2026-10-05')
+Expect(startsWith(ch3, '@incollection{') && Field(ch3, 'editor') == 'Burghardt, G. M. and Rand, A. S.' && Field(ch3, 'booktitle') == 'Iguanas of the world: their behavior, ecology and conservation' &&
+         Field(ch3, 'publisher') == 'Noyes Publications, Park Ridge, New Jersey' && Field(ch3, 'pages') == '84--116',
+       "form A 'In: Editors (eds.), Book title. Publisher, Place': the booktitle ends at the first sentence end after the marker")
+ch4 <- BuildBibEntryNoDOI(Row(container = 'Pages 9-28 In: Bennett, D. (Ed.), Wildlife of Polillo Island Philippines. University of Oxford'), 'Bennett:2000aa', 'owner', '2026-10-05')
+Expect(startsWith(ch4, '@incollection{') && Field(ch4, 'editor') == 'Bennett, D.' && Field(ch4, 'booktitle') == 'Wildlife of Polillo Island Philippines' &&
+         Field(ch4, 'publisher') == 'University of Oxford' && Field(ch4, 'pages') == '9--28',
+       'a leading pages clause before In: fills the pages when parsed_pages is empty')
+ch5 <- BuildBibEntryNoDOI(Row(container = 'Biology of Reptilia, Vol. 5, p. 127-223. Gans, C., Dawson, W. R., Editors, London, Academic Press'), 'Bennett:1976aa', 'owner', '2026-10-05')
+Expect(startsWith(ch5, '@incollection{') && Field(ch5, 'editor') == 'Gans, C., Dawson, W. R.' && Field(ch5, 'booktitle') == 'Biology of Reptilia, Vol. 5' &&
+         Field(ch5, 'publisher') == 'London, Academic Press' && Field(ch5, 'pages') == '127--223',
+       "'Editors' outside brackets: the sentence before it names the editors, 'p. 127-223' gives the pages")
+Expect(is.null(ParseChapterContainer('Handbook of birds, 2nd ed. Oxford University Press')) && is.null(ParseChapterContainer('John Wiley & Sons')) &&
+         is.null(ParseChapterContainer(NA)) && is.null(ParseChapterContainer('Mammals in the Seas')) &&
+         startsWith(BuildBibEntryNoDOI(Row(container = 'Handbook of birds, 2nd ed. Oxford University Press'), 'H:2000aa', 'MN', '2026-10-06'), '@book{'),
+       "a singular 'ed.' is an edition, not an editor marker: @book as before; Lockyer's 'Mammals in the Seas 3, 379-487' stays @article")
+Expect(startsWith(BuildBibEntryNoDOI(Row(container = 'Mammals in the Seas', volume = '3', pages = '379-487'), 'Lockyer:1981aa', 'MN', '2026-10-06'), '@article{'), 'a container with volume and pages and no marker: @article')
+corp <- BuildBibEntryNoDOI(Row(author1 = '{Birdcare Avicultural}', year = 2021L, title = 'Birdcare Avicultural data',
+                               container = 'Birdcare Avicultural, www.birdcare.com.au (accessed 24/08/2021)'), 'Birdcare-Avicultural:2021aa', 'owner', '2026-10-05')
+Expect(startsWith(corp, '@misc{') && grepl('\n\tauthor = {{Birdcare Avicultural}},\n', corp, fixed = TRUE) &&
+         Field(corp, 'howpublished') == 'Birdcare Avicultural, www.birdcare.com.au (accessed 24/08/2021)' && Field(corp, 'url') == 'www.birdcare.com.au' && is.na(Field(corp, 'publisher')),
+       'a corporate author in braces is written {{...}} (not escaped); a URL in the container makes a database-style @misc with howpublished and url')
+Expect(NoDOIAuthorField('{FAO & WHO} and Doe, J.') == '{FAO \\& WHO} and Doe, J.' && NoDOIAuthorField('Ikeda and Hirakawa') == 'Ikeda and Hirakawa' && is.na(NoDOIAuthorField(NA)) &&
+         FirstOfAuthorList('{Birdcare Avicultural}') == 'Birdcare Avicultural' && FirstOfAuthorList('{World Parrot Trust} and Doe') == 'World Parrot Trust',
+       'NoDOIAuthorField() escapes inside the braces; FirstOfAuthorList() drops them for keys and CiteIDs')
+web <- BuildBibEntryNoDOI(c(Row(author1 = '{World Parrot Trust}', year = 2021L, container = 'World Parrot Trust'), notes = 'web page (ADW precedent): https://www.parrots.org/encyclopedia/x. Owner 2026-10-05'),
+                          'World-Parrot-Trust:2021aa', 'owner', '2026-10-05')
+Expect(startsWith(web, '@misc{') && Field(web, 'url') == 'https://www.parrots.org/encyclopedia/x' && Field(web, 'howpublished') == 'World Parrot Trust',
+       "a URL in notes is used when the notes or container say web / database; a trailing period is not part of it")
+bk2 <- BuildBibEntryNoDOI(c(Row(container = 'Some Publisher'), notes = 'no Crossref DOI, only a review at https://example.org/review'), 'X:2000aa', 'MN', '2026-10-06')
+Expect(startsWith(bk2, '@book{') && is.na(Field(bk2, 'url')), 'a URL in the notes of an ordinary book is not taken (no database / web word)')
+pu <- BuildBibEntryNoDOI(c(Row(container = 'Online database'), parsed_url = 'https://animaldiversity.org/accounts/Mus_musculus/'), 'ADW:2020aa', 'MN', '2026-10-06')
+Expect(startsWith(pu, '@misc{') && Field(pu, 'url') == 'https://animaldiversity.org/accounts/Mus_musculus/' && Field(pu, 'howpublished') == 'Online database',
+       'the optional parsed_url column is the url field (underscores not escaped in a URL)')
+pu2 <- BuildBibEntryNoDOI(c(Row(container = 'Mar. Biol.', volume = '3', pages = '4-10'), parsed_url = 'https://example.org/paper'), 'K:1976ad', 'MN', '2026-10-06')
+Expect(startsWith(pu2, '@article{') && Field(pu2, 'url') == 'https://example.org/paper', 'parsed_url adds a url field to any type without changing the type')
+Expect('parsed_url' %in% primary_reference_columns && 'parsed_url' %in% primary_reference_optional_columns && 'parsed_url' %in% primary_reference_owner_columns &&
+         identical(tail(primary_reference_columns, 2), c('owner_review', 'parsed_url')),
+       'parsed_url is an optional, owner-editable column at the end of the schema (older files read with it NA)')
+
 cat('MatchingNoDOIEntry()\n')
 NoDOIRow <- function(source_label, native_key, author1, year, title, bibcite = NA_character_, status = 'nodoi_approved')
   data.frame(source_label = source_label, native_key = native_key, parsed_author1 = author1, parsed_year = year,
@@ -174,22 +237,23 @@ Expect(is.null(MatchingNoDOIEntry(pri2[3, ], pri2)), 'only nodoi_approved rows w
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')
 pb <- tempfile(fileext = '.bib')
-WritePrimaryBib(c('Ikeda:1986aa' = e, 'Doe:2010aa' = ch, 'Kremer:1976aa' = nd, 'anon:2000aa' = mi), pb)
+WritePrimaryBib(c('Ikeda:1986aa' = e, 'Doe:2010aa' = ch, 'Kremer:1976aa' = nd, 'anon:2000aa' = mi, 'Nsiku:1999aa' = ms, 'Speakman:2003aa' = ch1, 'Birdcare-Avicultural:2021aa' = corp), pb)
 lines <- readLines(pb, encoding = 'UTF-8')
 Expect(startsWith(lines[1], '%% GENERATED by R/library/citations/build_bib.r') && any(grepl(citations_tool_version, lines, fixed = TRUE)) && lines[7] == '',
        'the header says GENERATED and names the tool version')
 rb <- ReadBibEntries(pb)
-Expect(identical(rb$key, c('Doe:2010aa', 'Ikeda:1986aa', 'Kremer:1976aa', 'anon:2000aa')) && identical(rb$type, c('incollection', 'article', 'phdthesis', 'misc')) &&
-         identical(rb$doi, c('10.1/t', '10.1007/bf00392514', NA, NA)),
+Expect(identical(rb$key, c('Birdcare-Avicultural:2021aa', 'Doe:2010aa', 'Ikeda:1986aa', 'Kremer:1976aa', 'Nsiku:1999aa', 'Speakman:2003aa', 'anon:2000aa')) &&
+         identical(rb$type, c('misc', 'incollection', 'article', 'phdthesis', 'mastersthesis', 'incollection', 'misc')) &&
+         identical(rb$doi, c(NA, '10.1/t', '10.1007/bf00392514', NA, NA, NA, NA)),
        'entries are written in byte order of the keys (upper case before lower) and read back')
 Expect(Has(ErrorOf(WritePrimaryBib(c('A:1aa' = e, 'A:1aa' = ch), tempfile())), 'duplicated key'), 'duplicated keys stop the write')
 empty <- tempfile(fileext = '.bib'); WritePrimaryBib(character(), empty)
 Expect(nrow(ReadBibEntries(empty)) == 0 && startsWith(readLines(empty)[1], '%% GENERATED'), 'an empty entry set writes the header only')
 n <- CheckBibSyntax(pb)
-Expect(is.na(n) || n == 4L, sprintf('RefManageR parses every generated entry (%s)', if (is.na(n)) 'RefManageR not installed, skipped' else n))
+Expect(is.na(n) || n == 7L, sprintf('RefManageR parses every generated entry, the @mastersthesis and the {{corporate}} author included (%s)', if (is.na(n)) 'RefManageR not installed, skipped' else n))
 if (!is.na(n)) {
   bad <- tempfile(fileext = '.bib'); writeLines(c(readLines(pb), '@article{Broken:2000aa,', '\tauthor = {Unclosed'), bad)
-  Expect(!is.null(ErrorOf(CheckBibSyntax(bad))) || isTRUE(suppressWarnings(CheckBibSyntax(bad)) < 5), 'a broken entry is not counted as parsed')
+  Expect(!is.null(ErrorOf(CheckBibSyntax(bad))) || isTRUE(suppressWarnings(CheckBibSyntax(bad)) < 8), 'a broken entry is not counted as parsed')
 }
 cb <- tempfile(fileext = '.bib'); writeLines(c('@article{Doe:2010aa,', '\ttitle = {X}}', '@book{Only:2000aa,', '\ttitle = {Y}}'), cb)
 Expect(Has(ErrorOf(CheckBibKeysUnique(cb, pb)), 'present in both') && Has(ErrorOf(CheckBibKeysUnique(cb, pb)), 'Doe:2010aa'),
@@ -198,7 +262,7 @@ cb2 <- tempfile(fileext = '.bib'); writeLines(c('@book{Only:2000aa,', '\ttitle =
 Expect(Has(ErrorOf(CheckBibKeysUnique(cb2, pb)), 'duplicated bib key'), 'a key twice in one file stops too')
 cb3 <- tempfile(fileext = '.bib'); writeLines(c('@book{Only:2000aa,', '\ttitle = {Y}}'), cb3)
 ok <- CheckBibKeysUnique(cb3, pb)
-Expect(is.list(ok) && nrow(ok$curated) == 1 && nrow(ok$primary) == 4, 'disjoint files pass and return both entry tables')
+Expect(is.list(ok) && nrow(ok$curated) == 1 && nrow(ok$primary) == 7, 'disjoint files pass and return both entry tables')
 Expect(is.null(ErrorOf(CheckBibKeysUnique(cfg$curated_bib, tempfile()))), 'the curated bib alone has unique keys')
 
 # ---- CiteIDs ----------------------------------------------------------------------------------------------

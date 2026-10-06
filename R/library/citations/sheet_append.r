@@ -73,7 +73,8 @@ FormatCitationText <- function(work, year_override = NA_integer_) {
 
 # The Citation cell of a DOI-less, owner-approved entry, from the parsed
 # fields: the author field as approved (a surname, or a BibTeX 'A and B and C'
-# list written 'A, B, & C'), never an invented 'et al.'.
+# list written 'A, B, & C'; a corporate name's braces, '{Birdcare
+# Avicultural}', are dropped), never an invented 'et al.'.
 FormatCitationTextNoDOI <- function(row) {
   row <- as.list(row)
   src <- row$parsed_container
@@ -81,7 +82,7 @@ FormatCitationTextNoDOI <- function(row) {
   if (!is.na(row$parsed_pages)) src <- paste0(src, ', ', row$parsed_pages)
   au <- NA_character_
   if (!is.na(row$parsed_author1)) {
-    names <- trimws(strsplit(row$parsed_author1, '\\s+and\\s+', perl = TRUE)[[1]])
+    names <- trimws(gsub('[{}]', '', strsplit(row$parsed_author1, '\\s+and\\s+', perl = TRUE)[[1]]))
     au <- if (length(names) == 1) names else if (length(names) == 2) paste(names, collapse = ' & ') else
           paste0(paste(names[-length(names)], collapse = ', '), ', & ', names[length(names)])
   }
