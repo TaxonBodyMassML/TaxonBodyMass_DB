@@ -169,6 +169,49 @@ Expect(nat$parsed_author1[4] == 'Klok' && is.na(nat$parsed_year[4]) && nat$parse
          nat$parsed_title[4] == 'Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications',
        'undated Nature-style entry: author block stripped from the title')
 
+cat('ParseCitationString() on the initials-first PNAS style (Hoehler_etal_2023 reference list; #114 item 2)\n')
+pn <- ParseCitationString(c(
+  "A. M. Makarieva et al., Mean mass-specific metabolic rates are strikingly similar across life's major domains: Evidence for life's metabolic optimum. Proc. Natl. Acad. Sci. U.S.A. 105, 16994-16999 (2008).",
+  'V. M. Savage et al., The predominance of quarter-power scaling in biology. Funct. Ecol.18, 257-282 (2004)',
+  'L. G. Fuentes et al., Modification of glucose import capacity in Escherichia coli: physiologic consequences and utility for improving DNA vaccine production. Microb. Cell. Fact. 12, 42 (2013).',
+  'A. F. Bennett, J. A. Ruben, Endothermy and activity in verebrates. Science206, 649-654 (1979).',
+  'A. M. Makarieva, V. G. Gorshkov, B.-L. Li,  Energetics of the smallest: Do bacteria breathe at the same rate as whales?. Proc. Biol. Sci. 272, 2219-2224 (2005).',
+  'H. N. Schulz, D. de Beer, Uptake rates of oxygen and sulfide measured with individual Thiomargarita namibiensis cells by using microelectrodes. Appl. Environ. Microbiol. 68, 5746-5749 (2002)',
+  'L. Tijhuis, M. C. M. van Loosdrecht, J. J. Heijnen, A Thermodynamically Based Correlation for Maintenance Gibbs Energy Requirements in Aerobic and Anaerobic Chemotrophic Growth. Biotechnol. Bioeng.42, 509-519 (1993).',
+  'J. F. Gillooly, J. P. Gomez, E. V. Mavrodiev,  A broad-scale comparison of aerobic activity levels in vertebrates: endotherms versus ectotherms. Proc. Biol. Sci. 284, 20162328 (2017).'))
+Expect(pn$parsed_author1[1] == 'Makarieva' && pn$parsed_year[1] == 2008L && pn$parsed_volume[1] == '105' && pn$parsed_pages[1] == '16994-16999' &&
+         pn$parsed_title[1] == "Mean mass-specific metabolic rates are strikingly similar across life's major domains: Evidence for life's metabolic optimum" &&
+         pn$parsed_container[1] == 'Proc. Natl. Acad. Sci. U.S.A',
+       "'A. M. Makarieva et al., Title. Journal vol, pages (year).': the surname, not the first initial, and the whole abbreviated journal (not just 'U.S.A')")
+Expect(pn$parsed_author1[2] == 'Savage' && pn$parsed_title[2] == 'The predominance of quarter-power scaling in biology' && pn$parsed_container[2] == 'Funct. Ecol' &&
+         pn$parsed_volume[2] == '18' && pn$parsed_pages[2] == '257-282' && pn$parsed_year[2] == 2004L,
+       'a volume glued to the journal (Funct. Ecol.18) and no final period')
+Expect(pn$parsed_author1[3] == 'Fuentes' && pn$parsed_container[3] == 'Microb. Cell. Fact' && pn$parsed_volume[3] == '12' && pn$parsed_pages[3] == '42' &&
+         startsWith(pn$parsed_title[3], 'Modification of glucose import capacity in Escherichia coli: physiologic'),
+       'an article number as the pages; a colon inside the title')
+Expect(pn$parsed_author1[4] == 'Bennett' && pn$parsed_container[4] == 'Science' && pn$parsed_volume[4] == '206' && pn$parsed_pages[4] == '649-654' &&
+         pn$parsed_title[4] == 'Endothermy and activity in verebrates',
+       'two authors without et al.; Science206 splits into the journal and the volume')
+Expect(pn$parsed_author1[5] == 'Makarieva' && pn$parsed_title[5] == 'Energetics of the smallest: Do bacteria breathe at the same rate as whales?' &&
+         pn$parsed_container[5] == 'Proc. Biol. Sci' && pn$parsed_volume[5] == '272',
+       "a hyphenated initial (B.-L. Li), a double blank, and a title ending in '?.' keeps its question mark; the journal is not cut to 'Sci'")
+Expect(pn$parsed_author1[6] == 'Schulz' && pn$parsed_container[6] == 'Appl. Environ. Microbiol' && pn$parsed_author1[7] == 'Tijhuis' && pn$parsed_container[7] == 'Biotechnol. Bioeng' &&
+         pn$parsed_title[7] == 'A Thermodynamically Based Correlation for Maintenance Gibbs Energy Requirements in Aerobic and Anaerobic Chemotrophic Growth',
+       "name particles in the author block ('D. de Beer', 'M. C. M. van Loosdrecht'); a title starting with 'A' is not an initial")
+Expect(pn$parsed_author1[8] == 'Gillooly' && pn$parsed_container[8] == 'Proc. Biol. Sci' && pn$parsed_volume[8] == '284' && pn$parsed_pages[8] == '20162328',
+       'three authors then the title after a double blank')
+hoe <- read.csv(file.path(repo, 'sources', 'databases', 'Hoehler_etal_2023', 'primary_references.csv'), stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'))
+ph <- ParseCitationString(hoe$raw_citation)
+Expect(nrow(hoe) == 16 && identical(ph$parsed_author1, sub(' .*$', '', gsub('ö', 'o', hoe$native_key))) && all(!is.na(ph$parsed_volume)) && all(!is.na(ph$parsed_container)) &&
+         !any(nchar(ph$parsed_author1) == 1),
+       'all 16 Hoehler_etal_2023 citations give the surname of their key, a volume and a journal (no single-letter author)')
+tc <- SplitTitleContainer('Studies on the water relations of adult locusts (Orthoptera, Acrididae) I. Respiration and the production of metabolic water. Bulletin of Entomological Research')
+Expect(tc$container == 'Bulletin of Entomological Research' && startsWith(tc$title, 'Studies on the water relations') &&
+         identical(SplitTitleContainer('Only a title'), list(title = 'Only a title', container = NA_character_)) &&
+         SplitTitleContainer('Growth rates. Ann. N.Y. Acad. Sci.')$container == 'Ann. N.Y. Acad. Sci' &&
+         SplitTitleContainer('Growth rates. II. Fish and birds. J. Exp. Biol.')$title == 'Growth rates. II. Fish and birds',
+       'SplitTitleContainer(): a title-case sentence is not taken for a journal; dotted abbreviations are (Ann. N.Y. Acad. Sci.)')
+
 cat('TitleSimilarity() and the agreement helpers\n')
 Expect(TitleSimilarity('The energy density of jellyfish: Estimates from bomb-calorimetry', 'The energy density of jellyfish: estimates from bomb-calorimetry') == 1,
        'case and punctuation do not matter')
@@ -302,6 +345,21 @@ Expect(identical(back$native_key, m$native_key) && identical(back$n_records, m$n
          is.logical(back$author_match) && identical(back$raw_citation, m$raw_citation),
        'the CSV round-trips with its column types')
 Expect(is.null(ReadPrimaryReferences(tempfile())), 'a missing file reads as NULL')
+cat('WritePrimaryReferencesIfChanged(), SamePrimaryReferences()\n')
+old_cols <- setdiff(primary_reference_columns, primary_reference_optional_columns)
+f2 <- tempfile(fileext = '.csv'); write.csv(m[, old_cols], f2, row.names = FALSE, na = '')    # a file written before owner_review / parsed_url
+md5_before <- tools::md5sum(f2)
+Expect(SamePrimaryReferences(ReadPrimaryReferences(f2), m) && !WritePrimaryReferencesIfChanged(m, f2) && tools::md5sum(f2) == md5_before &&
+         !'owner_review' %in% names(read.csv(f2, nrows = 1)),
+       'a file lacking the optional columns but equal in every value is not rewritten (#114 item 7: the Leahy case)')
+m2 <- m; m2$cite_id[1] <- 'Changed_2000'
+Expect(WritePrimaryReferencesIfChanged(m2, f2) && tools::md5sum(f2) != md5_before && ReadPrimaryReferences(f2)$cite_id[1] == 'Changed_2000' && 'parsed_url' %in% names(read.csv(f2, nrows = 1)),
+       'a changed value rewrites the file (with the full schema)')
+Expect(!WritePrimaryReferencesIfChanged(m2, f2) && WritePrimaryReferencesIfChanged(m2, tempfile(fileext = '.csv')) &&
+         !SamePrimaryReferences(m, m2) && !SamePrimaryReferences(m, m[-1, ]) && SamePrimaryReferences(m, m),
+       'a second write is a no-op; a missing file is written; frames differing in a value or a row are not the same')
+mt <- m; mt$title_sim[1] <- 0.5; mt2 <- mt; mt2$title_sim[1] <- 0.50
+Expect(SamePrimaryReferences(mt, mt2), 'numbers compare as numbers')
 
 # ---- stubs -------------------------------------------------------------------------------
 cat('format stubs\n')

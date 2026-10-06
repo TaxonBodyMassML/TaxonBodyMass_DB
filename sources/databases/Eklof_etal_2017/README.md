@@ -2,6 +2,7 @@
 
 Source: Eklöf, J., Austin, Å., Bergström, U., Donadi, S., Eriksson, B. D. H. K., Hansen, J., & Sundblad, G. (2017) Size matters: relationships between body size and body mass of common coastal, aquatic invertebrates in the Baltic Sea. PeerJ 5:e2906. https://doi.org/10.7717/peerj.2906
 Data: supplemental data set `Eklof_etal_2017.xlsx` (sheets 'Data key' and 'Data', 339 rows), exported to `Eklof_etal_2017.csv`. In the repository since 2023-01-12 (FracFeed_DB).
+Licence: unknown; owner to check https://doi.org/10.7717/peerj.2906 (not stated in the files, the README or the bib; the 2026-10-02 audit read CC BY 4.0, the PeerJ article licence). The xlsx and our csv export are tracked; see sources/LICENSES.md.
 
 Columns used: `Taxa`, `Class`, `DW` (g dry weight per individual), `AFDW` (g ash-free dry weight per individual). `Size` (body length, or shell height for gastropods, mm) is not used.
 Filters: rows with missing or non-positive mass are dropped (none in the current file). Names are taken as written: 7 of the 14 taxa are binomials (Amphibalanus improvisus, Bithynia tentaculata, Limecoma balthica, Mytilus edulis, Potamopyrgus antipodarum, Radix balthica, Theodoxus fluviatilis); the genus- and family-level 'spp.' entries are handled by the pipeline's name filters.

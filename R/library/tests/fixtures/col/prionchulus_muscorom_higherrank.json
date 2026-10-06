@@ -1,0 +1,151 @@
+{
+    "usage": {
+        "id": "87JZG",
+        "name": "Prionchulus",
+        "authorship": "Cobb, 1916",
+        "rank": "genus",
+        "code": "zoological",
+        "status": "accepted",
+        "namesIndexId": 5749012,
+        "sectorKey": 1336,
+        "classification": [
+            {
+                "id": "B8PMV",
+                "name": "Prionchulinae",
+                "authorship": "Andr\u00e1ssy, 1976",
+                "rank": "subfamily",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 7428188,
+                "sectorKey": 1336,
+                "label": "Prionchulinae Andr\u00e1ssy, 1976",
+                "labelHtml": "Prionchulinae Andr\u00e1ssy, 1976",
+                "parentId": "87C75"
+            },
+            {
+                "id": "87C75",
+                "name": "Mononchidae",
+                "authorship": "Filipjev, 1934",
+                "rank": "family",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 5748642,
+                "sectorKey": 1336,
+                "label": "Mononchidae Filipjev, 1934",
+                "labelHtml": "Mononchidae Filipjev, 1934",
+                "parentId": "8FZD7"
+            },
+            {
+                "id": "8FZD7",
+                "name": "Mononchoidea",
+                "authorship": "Filipjev, 1934",
+                "rank": "superfamily",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 5748653,
+                "sectorKey": 1336,
+                "label": "Mononchoidea Filipjev, 1934",
+                "labelHtml": "Mononchoidea Filipjev, 1934",
+                "parentId": "8FZ9Y"
+            },
+            {
+                "id": "8FZ9Y",
+                "name": "Mononchina",
+                "authorship": "Kirjanova & Krall, 1969",
+                "rank": "suborder",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 5748647,
+                "sectorKey": 1336,
+                "label": "Mononchina Kirjanova & Krall, 1969",
+                "labelHtml": "Mononchina Kirjanova & Krall, 1969",
+                "parentId": "87BZF"
+            },
+            {
+                "id": "87BZF",
+                "name": "Mononchida",
+                "authorship": "Jairajpuri, 1969",
+                "rank": "order",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 5748635,
+                "sectorKey": 1336,
+                "label": "Mononchida Jairajpuri, 1969",
+                "labelHtml": "Mononchida Jairajpuri, 1969",
+                "parentId": "8FZ92"
+            },
+            {
+                "id": "8FZ92",
+                "name": "Dorylaimia",
+                "rank": "subclass",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 2990231,
+                "sectorKey": 1336,
+                "label": "Dorylaimia",
+                "labelHtml": "Dorylaimia",
+                "parentId": "87BRS"
+            },
+            {
+                "id": "87BRS",
+                "name": "Enoplea",
+                "phrase": "sensu De Ley & Blaxter, 2004",
+                "rank": "class",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 3251058,
+                "sectorKey": 1336,
+                "label": "Enoplea sensu De Ley & Blaxter, 2004",
+                "labelHtml": "Enoplea sensu De Ley & Blaxter, 2004",
+                "parentId": "NM"
+            },
+            {
+                "id": "NM",
+                "name": "Nematoda",
+                "authorship": "Diesing, 1861",
+                "rank": "phylum",
+                "code": "zoological",
+                "status": "accepted",
+                "namesIndexId": 17681,
+                "sectorKey": 1336,
+                "label": "Nematoda Diesing, 1861",
+                "labelHtml": "Nematoda Diesing, 1861",
+                "parentId": "N"
+            },
+            {
+                "id": "N",
+                "name": "Animalia",
+                "rank": "kingdom",
+                "status": "accepted",
+                "namesIndexId": 9237,
+                "label": "Animalia",
+                "labelHtml": "Animalia",
+                "parentId": "CS5HF"
+            },
+            {
+                "id": "CS5HF",
+                "name": "Eukaryota",
+                "authorship": "(Chatton, 1925) Whittaker & Margulis, 1978",
+                "rank": "domain",
+                "status": "accepted",
+                "namesIndexId": 3444548,
+                "label": "Eukaryota (Chatton, 1925) Whittaker & Margulis, 1978",
+                "labelHtml": "Eukaryota (Chatton, 1925) Whittaker & Margulis, 1978"
+            }
+        ],
+        "label": "Prionchulus Cobb, 1916",
+        "labelHtml": "<i>Prionchulus</i> Cobb, 1916",
+        "parentId": "B8PMV"
+    },
+    "sectorKey": 1336,
+    "type": "higherrank",
+    "original": {
+        "name": "Prionchulus muscorom",
+        "status": "accepted",
+        "label": "Prionchulus muscorom",
+        "labelHtml": "Prionchulus muscorom"
+    },
+    "issues": {},
+    "id": "87JZG",
+    "match": true
+}

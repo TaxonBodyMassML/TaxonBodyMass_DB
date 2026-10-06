@@ -166,10 +166,11 @@ primary_reference_columns <- c(
   'match_status', 'match_reason', 'services',
   'title_sim', 'author_match', 'year_match', 'container_match', 'volume_match', 'pages_match',
   'openalex_id', 'is_retracted', 'editorial_notice', 'verified_at', 'tool_version',
-  'decided_by', 'decided_at', 'year_override', 'notes', 'owner_review')
+  'decided_by', 'decided_at', 'year_override', 'notes', 'owner_review', 'parsed_url')
 # the columns the owner may edit by hand (everything else is written by the tool)
 primary_reference_owner_columns <- c('role', 'parsed_author1', 'parsed_year', 'parsed_title',
-                                     'parsed_container', 'parsed_volume', 'parsed_pages', 'notes', 'owner_review')
+                                     'parsed_container', 'parsed_volume', 'parsed_pages', 'notes', 'owner_review',
+                                     'parsed_url')
 # `owner_review` (added 2026-10-04, #64; optional in files written before it): a
 # reason, from the reference list's `review_col` or the owner, why the reference
 # must be decided in the review queue whatever the services say (a known alias
@@ -177,10 +178,18 @@ primary_reference_owner_columns <- c('role', 'parsed_author1', 'parsed_year', 'p
 # reports no body sizes). A verified row with a reason is forced to pending /
 # owner_review and queued with its candidates; the standing rule that theses,
 # books and near-misses always queue (owner, 2026-10-04) is applied through it.
-primary_reference_optional_columns <- c('owner_review')
+# `parsed_url` (added 2026-10-06, #114 item 1; optional in files written before
+# it): the web address of a DOI-less database-style reference (a web page, an
+# online database), set by the owner for a `nodoi` entry; BuildBibEntryNoDOI()
+# writes it as the entry's `url` field. A file lacking either optional column
+# reads with it filled NA, and --bib does not rewrite another source's file
+# for the missing column alone (item 7).
+primary_reference_optional_columns <- c('owner_review', 'parsed_url')
 # For a `nodoi` entry parsed_author1 may hold the full author list in BibTeX
 # form ('Ikeda and Hirakawa and Imamura') when the owner approved it; the
-# field is a query input only until then.
+# field is a query input only until then. A corporate author is written in
+# braces, '{Birdcare Avicultural}', and kept as one name (build_bib.r, the
+# conventions of BuildBibEntryNoDOI()).
 
 # Bib/pending_citations.csv (issue #1, 1.5)
 pending_candidate_fields <- c('doi', 'title', 'author1', 'year', 'container', 'title_sim', 'services')
@@ -229,13 +238,16 @@ screening_categories <- c('notice', 'disagreement', 'doubtful', 'audit_sample')
 screening_list_reasons <- c('retracted', 'ambiguous', 'single_service', 'grey_literature', 'duplicate_doi',
                             'doi_mismatch', 'old_journal', 'audit_sample')
 
-# Bib/source_provenance_classes.csv (issue #1, 1.6)
-provenance_class_columns <- c('source_label', 'class', 'default_provenance_type', 'equation_bibcite', 'notes')
+# Bib/source_provenance_classes.csv (issue #1, 1.6; value_tier added by #34:
+# the trust tier of a source's values for the record-level range rule,
+# R/library/exclude_discordant.r)
+provenance_class_columns <- c('source_label', 'class', 'default_provenance_type', 'equation_bibcite', 'value_tier', 'notes')
 
 # TaxonBodyMass_Provenance.csv.gz (issue #1, 1.3)
 provenance_columns <- c('genus', 'species', 'taxon', 'source_mass', 'source_bibcite', 'origin',
                         'hop', 'via_cite_id', 'ref_role', 'provenance_type',
-                        'primary_cite_id', 'primary_bibcite', 'primary_doi', 'match_status', 'n_records')
+                        'primary_cite_id', 'primary_bibcite', 'primary_doi', 'match_status', 'n_records',
+                        'record_status')   # #34: kept, or excluded_<rule> for a value left out of the mean
 
 # Bib/TaxonBodyMass_CitationCiteIDs.csv: the first two columns are unchanged
 # (TaxonBodyMassML reads them and nothing else); the rest were added by #1.

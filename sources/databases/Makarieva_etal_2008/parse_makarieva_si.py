@@ -51,8 +51,9 @@ How each table cites its sources (SI notes, and what is keyed):
   S7   'Source' column as S1a (the bracket is a culture-collection image or a
        citation).
 
-Usage: parse_makarieva_si.py [PDF]   (default: pnas08SI.pdf next to this script;
-       the file is the publisher's SI, kept untracked; mirror
+Usage: parse_makarieva_si.py [PDF]   (default: pnas08SI.pdf next to this script:
+       the publisher's SI, tracked since 2026-10-06 (owner rule, issue #124),
+       copyright (2008) National Academy of Sciences; also at the authors' mirror
        http://www.bioticregulation.ru/common/pdf/pnas08/pnas08SI.pdf)
 Counts and every anomaly go to stderr; the script exits non-zero when a table
 row cannot be joined to its committed CSV row, a cited key matches no or
@@ -1014,8 +1015,8 @@ def num_eq(a, b):
 def main(argv):
     pdf = argv[1] if len(argv) > 1 else DEFAULT_PDF
     if not os.path.exists(pdf):
-        sys.exit(f'{pdf} not found: download the SI from '
-                 'http://www.bioticregulation.ru/common/pdf/pnas08/pnas08SI.pdf (kept untracked)')
+        sys.exit(f'{pdf} not found: the tracked SI PDF is missing (mirror '
+                 'http://www.bioticregulation.ru/common/pdf/pnas08/pnas08SI.pdf)')
     doc = fitz.open(pdf)
     if len(doc) != 212:
         err(f'{os.path.basename(pdf)}: {len(doc)} pages, expected 212')

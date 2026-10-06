@@ -46,8 +46,10 @@ FixTaxonomyRanks <- function(dat) {
   # pyriformis, the bull ant and a green alga; Centropogon australis, the
   # fortescue and a campanula), or a GBIF fuzzy match below confidence 90 into
   # the other kingdom (Parus humilis -> Pyrus humilis = Cotoneaster humilis).
-  # Both stages fill NA ranks only, so the source's pre-seeded phylum, class,
-  # order and family survive under the plant kingdom; FilterAutotrophs() then
+  # Both stages fill NA ranks only (as does the COL stage, #103, whose exact
+  # match of a cross-kingdom homonym lands here the same way), so the
+  # source's pre-seeded phylum, class, order and family survive under the
+  # plant kingdom; FilterAutotrophs() then
   # dropped the row on the kingdom alone and no report saw it (check 11 of
   # check_enriched() runs on the post-filter frame). Here, on frames with a
   # species column (the enrichment cache; per-source frames and the genus
@@ -380,11 +382,13 @@ FixTaxonomyRanks <- function(dat) {
   # frames (no species/genus columns) and on the enrichment cache. An entry
   # that sets the kingdom corrects a match to another organism, so the GBIF
   # match fields of the row (confidence, status, usageKey, gbif_family,
-  # gbif_order) are cleared as well: they describe the wrong organism, and
-  # Pass 1 of RunMe.r prefers gbif_family/gbif_order over family/order (until
-  # #81 Trypanosoma lewisi kept the gastropod family Pleuroceridae in the
-  # output this way). species_changed is set from the comparison with the
-  # input name, as the enrichment stages do.
+  # gbif_order) and the COL match fields (col_match_type, col_status,
+  # col_usageKey, col_matched_name; stage 4, #103) are cleared as well: they
+  # describe the wrong organism, and Pass 1 of RunMe.r prefers
+  # gbif_family/gbif_order over family/order (until #81 Trypanosoma lewisi
+  # kept the gastropod family Pleuroceridae in the output this way).
+  # species_changed is set from the comparison with the input name, as the
+  # enrichment stages do.
   taxon_overwrites <- list(
     # Alligator lizard (Anguidae; Feldman et al. 2016, Meiri 2018). GBIF
     # returned no match and NCBI resolved the name to the plant Abronia villosa
@@ -506,7 +510,8 @@ FixTaxonomyRanks <- function(dat) {
         dat[[col]][idx] <- fill[[col]]
       if ('kingdom' %in% names(fill))
         for (col in intersect(c('gbif_confidence', 'gbif_status', 'gbif_usageKey',
-                                'gbif_family', 'gbif_order'), names(dat)))
+                                'gbif_family', 'gbif_order', 'col_match_type',
+                                'col_status', 'col_usageKey', 'col_matched_name'), names(dat)))
           dat[[col]][idx] <- NA
       if (all(c('species_changed', 'species') %in% names(dat))) {
         input <- if ('taxon_provided' %in% names(dat)) dat$taxon_provided[idx]
