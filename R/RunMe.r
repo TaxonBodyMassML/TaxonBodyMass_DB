@@ -5,9 +5,9 @@
 # Authentications
 #~~~~~~~~~~~~~~~~
 
-# Authenticate with Google Sheets upfront so the browser prompt (if needed)
-# fires before any computation rather than mid-run.
-if (!googlesheets4::gs4_has_token()){googlesheets4::gs4_auth()}
+# The Google Sheet token is only needed with DataSheets = TRUE (control flags
+# below); the authentication and the download sit after the library sourcing,
+# before any computation, so that a prompt (if any) fires at the start.
 
 # NCBI/Entrez API key — raises rate limit from 3 to 10 req/sec during taxonomy
 # enrichment. Get a free key at https://www.ncbi.nlm.nih.gov/account/
@@ -33,6 +33,11 @@ DataRetrieve <- TRUE
 DataVertNet  <- TRUE
 # TRUE: re-download FishBase and SeaLifeBase via rfishbase
 DataFishbase <- TRUE
+# TRUE: read the lab Google Sheet (tabs BM_data, BM_citations, BM_primary_citations;
+# needs a googlesheets4 token) and refresh the tracked CSV copies. FALSE: load the
+# copies (sources/BM_data_snapshot.csv, Bib/BM_citations_snapshot.csv,
+# Bib/BM_primary_citations_snapshot.csv); stops if any is missing (#118).
+DataSheets   <- FALSE
 # TRUE: ignore enrichment cache and re-enrich all taxa from scratch (hours of
 # API calls). FALSE: reuse sources/enrich_cache.Rdata and enrich only new taxa.
 fresh_start  <- FALSE
@@ -80,6 +85,7 @@ source(file.path(wd_root, 'R', 'library', 'check_taxon_names.r'))
 source(file.path(wd_root, 'R', 'library', 'dedupe_sources.r'))
 source(file.path(wd_root, 'R', 'library', 'enrich_genus.r'))
 source(file.path(wd_root, 'R', 'library', 'sheet_override.r'))
+source(file.path(wd_root, 'R', 'library', 'sheet_snapshots.r'))
 # The offline part of the citation tooling (issue #1): the registry of source
 # classes and the primary references feed the provenance table; the network
 # steps (Crossref, OpenAlex, the Sheet append) live in run_citations.r and are
@@ -94,6 +100,29 @@ raw_name_patterns <- LoadRawNamePatterns(file.path(wd_root, 'audit', 'raw_name_p
 dir.create(file.path(wd_root, 'tmp'),          showWarnings = FALSE)
 dir.create(file.path(wd_root, 'reports'),      showWarnings = FALSE)
 dir.create(file.path(wd_root, 'sources', 'Rdata'), showWarnings = FALSE)
+
+##########################################################################
+# Lab Google Sheet: the tracked copies of its three tabs (#118)
+##########################################################################
+# Sections 4 and 8 read the copies (sources/BM_data_snapshot.csv,
+# Bib/BM_citations_snapshot.csv, Bib/BM_primary_citations_snapshot.csv;
+# R/library/sheet_snapshots.r) whatever DataSheets is. TRUE downloads the
+# tabs first and rewrites the copies, printing each tab's difference against
+# the committed file (rows added, removed, changed) for the commit of the
+# refreshed copies; the run goes on. FALSE checks that the copies exist and
+# says when each was last committed, so a stale copy is visible, and needs
+# no Google token. Either way the outputs are the same for the same copies.
+sheet_paths <- CitationsPaths(wd_root)
+if (DataSheets) {
+  SheetAuth()
+  message('Lab Sheet (DataSheets = TRUE): downloading the tabs and refreshing the tracked copies')
+  sheet_refresh <- RefreshSheetSnapshots(citations_sheet_url, sheet_paths)
+  sheet_origin  <- 'the Sheet (copies refreshed)'
+} else {
+  CheckSheetSnapshots(sheet_paths)         # stops naming every missing copy
+  ReportSheetSnapshots(sheet_paths, wd_root)
+  sheet_origin <- 'the tracked copies'
+}
 
 ##########################################################################
 # DataRetriever sources
@@ -302,15 +331,12 @@ adat_raw   <- adat_raw[ grepl('_', adat_raw$taxon), ]
 ##########################################################################
 # 4. Lab Google Sheet override (lab-curated values take priority)
 ##########################################################################
-bm_sheet_url <- paste0(
-  'https://docs.google.com/spreadsheets/d/',
-  '1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing'
-)
-ddat <- read_sheet(
-  bm_sheet_url,
-  sheet     = 'BM_data',
-  col_types = 'ccncnnn'
-)
+# The BM_data tab from its tracked copy (the Sheet's rows and columns, every
+# cell as text; refreshed above when DataSheets = TRUE): mass_g back to the
+# number the Sheet holds, the rows with a mass, the first four columns
+# (group, taxon, mass_g, source_mass).
+ddat <- LoadSheetSnapshot(sheet_paths$snapshot_data)
+ddat$mass_g <- as.numeric(ddat$mass_g)
 ddat <- ddat[which(!is.na(ddat$mass_g)), 1:4]
 # Every Sheet taxon must already be a cleaned name, Genus_species or Genus:
 # the Sheet bypasses FixFormatting() and the section-2b guard, and the
@@ -344,9 +370,9 @@ genus_only <- sheet$genus_only
 adat$origin <- ifelse(adat$taxon %in% sheet$species$taxon, 'BM_data', 'pipeline')
 for (col in c('ref_keys', 'prov_type'))
   if (!col %in% names(adat)) adat[[col]] <- NA_character_
-message(sprintf(paste('Lab Sheet (BM_data): %d species-level rows (replacing the compiled records of %d species),',
+message(sprintf(paste('Lab Sheet (BM_data, from %s): %d species-level rows (replacing the compiled records of %d species),',
                       '%d genus-level rows (replacing the genus-only rows of %d bare names)'),
-                nrow(sheet$species), sheet$n_species_replaced, nrow(sheet$genus), sheet$n_genus_replaced))
+                sheet_origin, nrow(sheet$species), sheet$n_species_replaced, nrow(sheet$genus), sheet$n_genus_replaced))
 
 
 ##########################################################################
@@ -802,17 +828,16 @@ write.csv(gdat, file = file.path(wd_root, 'TaxonBodyMass_GenusLevel.csv'),
 # 8. Citations and provenance (issue #1)
 #    Both bib files are read (the curated BibDesk file and the generated
 #    Bib/TaxonBodyMass_PrimaryCitations.bib; a key in both stops the run) and
-#    both Sheet tabs (BM_citations: source labels and conversion references
-#    -> bib keys, as before; BM_primary_citations: the verified primary
-#    references appended by run_citations.r --sheet, read from the Sheet
-#    when the tab exists, else from its tracked snapshot). Sheet rows whose
+#    both citation tabs of the Sheet from their tracked copies (#118;
+#    BM_citations: source labels and conversion references -> bib keys, as
+#    before; BM_primary_citations: the verified primary references appended
+#    by run_citations.r --sheet, which refreshes both copies). Sheet rows whose
 #    Bibcite is in neither bib are listed, not dropped silently. The CiteIDs
 #    CSV keeps Bibcite and CiteID as its first two columns (TaxonBodyMassML
 #    reads nothing else) and gains doi, role (source | conversion | primary)
 #    and bib_file. The provenance table TaxonBodyMass_Provenance.csv.gz links
 #    every species x source label x reference, and its checks go to
-#    reports/warnings_citations.md. Nothing here touches the network beyond
-#    reading the Sheet.
+#    reports/warnings_citations.md. Nothing here touches the network.
 ##########################################################################
 curated_bib_path <- file.path(wd_bib, 'TaxonBodyMass_Citations.bib')
 primary_bib_path <- file.path(wd_bib, 'TaxonBodyMass_PrimaryCitations.bib')
@@ -823,24 +848,9 @@ bib_keys <- bib_entries$key
 message(sprintf('Bib files: %d curated entries (%d with DOI), %d generated primary entries',
                 nrow(bibs$curated), sum(!is.na(bibs$curated$doi)), nrow(bibs$primary)))
 
-gmap <- read_sheet(
-  bm_sheet_url,
-  sheet     = 'BM_citations',
-  col_types = 'cc-'
-)
-gmap <- as.data.frame(gmap, stringsAsFactors = FALSE)
-if (sheet_tab_primary %in% sheet_names(bm_sheet_url)) {
-  pmap <- as.data.frame(read_sheet(bm_sheet_url, sheet = sheet_tab_primary, col_types = 'c'), stringsAsFactors = FALSE)
-  pmap_origin <- 'the Sheet'
-} else if (file.exists(file.path(wd_bib, 'BM_primary_citations_snapshot.csv'))) {
-  pmap <- read.csv(file.path(wd_bib, 'BM_primary_citations_snapshot.csv'), stringsAsFactors = FALSE,
-                   colClasses = 'character', na.strings = c('', 'NA'), check.names = FALSE)
-  pmap_origin <- 'its snapshot'
-} else {
-  pmap <- as.data.frame(setNames(rep(list(character()), length(sheet_primary_columns)), sheet_primary_columns), stringsAsFactors = FALSE)
-  pmap_origin <- 'nowhere (no tab, no snapshot)'
-}
-message(sprintf('Sheet tabs: BM_citations %d rows; %s %d rows from %s', nrow(gmap), sheet_tab_primary, nrow(pmap), pmap_origin))
+gmap <- LoadSheetSnapshot(sheet_paths$snapshot_citations)[, 1:2]     # CiteID, Bibcite
+pmap <- LoadSheetSnapshot(sheet_paths$snapshot_primary)              # the seven sheet_primary_columns
+message(sprintf('Sheet tabs (from %s): %s %d rows; %s %d rows', sheet_origin, sheet_tab_citations, nrow(gmap), sheet_tab_primary, nrow(pmap)))
 
 CleanCiteMap <- function(m) {
   m$Bibcite <- gsub('.*\\{(.+)\\}', '\\1', m$Bibcite, perl = TRUE)
