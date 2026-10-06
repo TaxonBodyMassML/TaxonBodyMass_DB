@@ -1,5 +1,2 @@
 "taxon","kingdom","phylum","class","order","family","taxon_provided","species_changed","taxonomy_source","genus","species","gbif_confidence","gbif_status","gbif_family","gbif_order","gbif_usageKey"
-"Burhinus_recurvirostris","Animalia","Chordata","Aves","Charadriiformes","Burhinidae","Burhinus recurvirostris",TRUE,"GBIF","Esacus","Esacus recurvirostris",98,"SYNONYM","Burhinidae","Charadriiformes","2482090"
-"Ceratogymna_cylindricus","Animalia","Chordata","Aves","Bucerotiformes","Bucerotidae","Ceratogymna cylindricus",TRUE,"GBIF","Bycanistes","Bycanistes cylindricus",98,"SYNONYM","Bucerotidae","Bucerotiformes","2475944"
-"Phylloscopus_ruficapillus","Animalia","Chordata","Aves","Passeriformes","Phylloscopidae","Phylloscopus ruficapillus",TRUE,"GBIF","Phylloscopus","Phylloscopus ruficapilla",96,"ACCEPTED","Phylloscopidae","Passeriformes","7341644"
-"Xanthotis_polygramma","Animalia","Chordata","Aves","Passeriformes","Meliphagidae","Xanthotis polygramma",TRUE,"GBIF","Xanthotis","Xanthotis polygrammus",96,"ACCEPTED","Meliphagidae","Passeriformes","2487225"
+"Barbus_callensis","Animalia","Chordata",NA,"Cypriniformes","Cyprinidae","Barbus callensis",TRUE,"GBIF","Luciobarbus","Luciobarbus callensis",98,"SYNONYM","Cyprinidae","Cypriniformes","5207002"

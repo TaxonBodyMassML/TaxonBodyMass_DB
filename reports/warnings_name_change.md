@@ -1,7 +1,7 @@
-# TaxonBodyMass_DB Species Name Changes -- 2026-10-05 20:10:52
+# TaxonBodyMass_DB Species Name Changes -- 2026-10-05 21:32:15
 
 
-## Species name changed during enrichment (5719 rows)
+## Species name changed during enrichment (5720 rows)
 
 Hylarana luctuosa -> Abavorana luctuosa [GBIF]
 
@@ -5760,6 +5760,8 @@ Trachylepis ivensii; Lubuya ivensii -> Lubuya ivensii [GBIF]
 Lucifer typus; Lucifer reynaudii -> Lucifer typus [GBIF]
 
 Loripes lacteus -> Lucina lacteus [GBIF]
+
+Barbus callensis; Luciobarbus callensis -> Luciobarbus callensis [GBIF]
 
 Luidia sarsi -> Luidia sarsii [GBIF]
 

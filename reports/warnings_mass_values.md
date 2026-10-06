@@ -1,9 +1,9 @@
-# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-05 20:10:52
+# TaxonBodyMass_DB Mass Value Warnings -- 2026-10-05 21:32:15
 
 ## Summary
 
 **Note: All species listed below (log10 range > 1) have been removed from TaxonBodyMass.csv.**
-- High mass disagreement (log10 range > 2): 373 species
+- High mass disagreement (log10 range > 2): 374 species
 - Suspicious sources (log10 > 2, by frequency):
   - Cai_etal_2025 (84)
   - vertnet-mammalia-sept2016 (56)
@@ -13,7 +13,7 @@
   - AnAge (32)
   - Quaardvark (31)
   - vertnet-aves-sept2016 (31)
-  - Castro_2025 (29)
+  - Castro_2025 (30)
   - vertnet-fishes-sept2016 (27)
   - Myhrvold_2015 (26)
   - Smith_2003 (20)
@@ -74,6 +74,7 @@
   - Mahe_2023 (1)
   - Mathieu_2014 (1)
   - Reum_2012 (1)
+  - Vanni_2017; Kiorboe_2013; Lucas_2011 (1)
   - vertnet-aves-sept2016; vertnet-traits-sept2016 (1)
   - vertnet-fishes-sept2016; vertnet-traits-sept2016 (1)
   - Viana_2016 (1)
@@ -176,7 +177,7 @@
   - Watson_2007 (1)
   - Weisse_2024 (1)
   - Wisnionski_2026 (1)
-## log10(max/min mass) > 2 after dedup (373 species) -- likely misresolution or unit error
+## log10(max/min mass) > 2 after dedup (374 species) -- likely misresolution or unit error
 
 Rimostrombidium caudatum [range=8.99]
         Min_source: DeLong_etal_2010 4.2e-08
@@ -466,6 +467,9 @@ Serranus scriba [range=3.30]
 Calanus finmarchicus [range=3.30]
         Min_source: DeLong_etal_2018 9.05e-07
         Max_source: Ikeda_2014; Kiorboe_2013 0.001808
+Aurelia aurita [range=3.29]
+        Min_source: Castro_2025 0.1389
+        Max_source: Vanni_2017; Kiorboe_2013; Lucas_2011 271.4
 Carpiodes cyprinus [range=3.28]
         Min_source: vertnet-fishes-sept2016 3.253
         Max_source: Quaardvark 6180

@@ -1,4 +1,4 @@
-# Source de-duplication summary -- 2026-10-05 20:10:41
+# Source de-duplication summary -- 2026-10-05 21:32:03
 
 Values that enter through several compilations are collapsed before the cross-source mean (issue #5): a registry edge collapses a child value into its parent (or a sibling sharing an external parent) when the two agree within the edge tolerance; the blind rule collapses values identical to >= 3 significant digits in any two sources, whatever the registry says about the pair; `provenance_only` edges grant no tolerance-based collapse (their blind collapses are counted below, #31). Registry: `Bib/source_dependencies.csv`; code: `R/library/dedupe_sources.r`.
 
@@ -6,10 +6,10 @@ Values that enter through several compilations are collapsed before the cross-so
 
 | quantity | value |
 | --- | ---: |
-| species x source values (Pass-1 rows) | 125237 |
+| species x source values (Pass-1 rows) | 125243 |
 | accepted species | 40202 |
-| multi-source species | 25296 |
-| within-species value pairs | 290501 |
+| multi-source species | 25297 |
+| within-species value pairs | 290522 |
 | pairs identical (|dlog10| <= 1e-06) | 51018 |
 | pairs related by the registry and within its tolerance | 75429 |
 | pairs identical to >= 3 significant digits (blind rule) | 43590 |
@@ -115,7 +115,7 @@ A provenance_only edge documents a relation whose values generally differ and ta
 | Hebert_etal_2016 | Kiorboe_2013 | TRUE | 42 | 0 | 0 | 0 | 0 |
 | Gonzalez_2025 | Ikeda_2014 | TRUE | 33 | 0 | 0 | 0 | 0 |
 | Gonzalez_2025 | Kiorboe_2013 | TRUE | 26 | 0 | 0 | 0 | 0 |
-| Vanni_2017 | Ikeda_2014 | TRUE | 90 | 4 | 4 | 4 | 0 |
+| Vanni_2017 | Ikeda_2014 | TRUE | 91 | 4 | 4 | 4 | 0 |
 
 ## Multi-source species left with one independent value
 

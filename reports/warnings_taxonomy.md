@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 20:10:52
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-05 21:32:15
 
 ## Summary
 
@@ -7,7 +7,7 @@
 - Low GBIF confidence (75-89): 167 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
-- Names unresolved after all enrichment stages: 174 names, 1819 rows
+- Names unresolved after all enrichment stages: 172 names, 1817 rows
 - Kingdom conflicts corrected before the autotroph filter: 5 names, 38 rows (2 unresolved)
 
 ## Missing `class` after all enrichment stages (18 rows)
@@ -404,7 +404,7 @@ Calamornis_heudei | source=Paradoxornithidae | GBIF=Sylviidae
 
 Trichogaster_fasciata | source=Anabantiformes | GBIF=Perciformes
 
-## Names unresolved after all enrichment stages (174 names, 1819 rows -- dropped from the output)
+## Names unresolved after all enrichment stages (172 names, 1817 rows -- dropped from the output)
 
 Paraphidippus_flavus | Brose_etal_2018 | 216 rows
 
@@ -540,8 +540,6 @@ Austrosyphus_collatus | Kendall_etal_2019 | 1 row
 
 Austrosyrphus_damastor | Kendall_etal_2019 | 1 row
 
-Babus_callensis | Froese_2025 | 1 row
-
 Ballistura_japonica | Hishi_etal_2019 | 1 row
 
 Ballistura_takeshitai | Hishi_etal_2019 | 1 row
@@ -557,8 +555,6 @@ Calandrella_fremantlii | vertnet-aves-sept2016 | 1 row
 Carduelis_communis | vertnet-aves-sept2016 | 1 row
 
 Chamaeleo_nasutus | vertnet-reptilia-sept2016 | 1 row
-
-Charcharhinus_obscurus | Froese_2025 | 1 row
 
 Chydorus_bicuspidatus | Hebert_etal_2016 | 1 row
 

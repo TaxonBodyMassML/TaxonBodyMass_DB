@@ -107,7 +107,14 @@ Methods, with their dates and severity rules:
   raw spelling is in the note, `mass_g` the Pass-1 value of the wrong record,
   `n` its record count, `log10_pred` log10 of the species' cross-source mean on
   main f9f16ac; all five `CRITICAL` by owner instruction (the renames are kept,
-  the species are left to #34).
+  the species are left to #34). One further row under the same label
+  (2026-10-05, housekeeping after the owner's Sheet edits): *Aurelia aurita*
+  once the owner removed the `Hirst_1998` 5 g override row from BM_data; the
+  row registers the `Castro_2025` value (0.1389 g, `n` 95) that now sets the
+  bottom of the species' range against the Vanni_2017 medusae (271.4 g),
+  `log10_pred` log10 of the median of the other six sources' Pass-1 values on
+  main 8ac5bbe, `SUSPICIOUS` (small medusae are possible); the species falls
+  to the `log10_range > 1` filter, left to the owner.
 
 To add rows: append them with a new `method` label (`<kind>_<date>`), state
 the method's severity rule in this file, and leave the existing rows alone.
