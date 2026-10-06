@@ -329,7 +329,13 @@ reflist_specs <- list(
   # the cells are split at '_' followed by a blank
   Smith_2003   = list(format = 'csv', file = 'references.csv', folder = 'Smith_etal_2003', frame = 'Smith_2003',
                       key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '_[[:space:]]+',
-                      compiler = 'Smith')
+                      compiler = 'Smith'),
+  # derived source (Stage 2): the Appendix S3 key table via build_references.r
+  # (a key the table holds for several papers is '<key> [n]'; `note` carries the
+  # entry's Taxa text); the records' SVL reference cells split at ',' or ';'
+  Meiri_2018   = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', type_col = 'note', sep = '[,;]',
+                      compiler = 'Meiri', compilation_doi = '10.1111/geb.12773')
 )
 
 ReflistSpec <- function(source_label) {

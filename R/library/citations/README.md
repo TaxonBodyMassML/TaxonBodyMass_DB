@@ -20,7 +20,7 @@ everything that talks to a service or to the Google Sheet runs by hand through
 | `build_bib.r` | `ReadBibEntries()`, `BibKeyFor()`, `BuildBibEntry()` (Crossref record only), `BuildBibEntryNoDOI()`, `WritePrimaryBib()`, `CheckBibKeysUnique()`, `CheckBibSyntax()` |
 | `cite_ids.r` | `CiteIDFor()` |
 | `sheet_append.r` | `ReadSheetTab()`, `FormatCitationText()`, `BuildSheetRows()`, `AppendPrimaryCitations()` (dry run by default, idempotent on Bibcite, append-only, snapshots before and after, `BM_primary_citations` only) |
-| `provenance.r` | `LoadPrimaryReferences()`, `LoadProvenanceClasses()`, `SplitSourceMass()`, `BuildProvenance()` (with the hop-2 helpers `MatchIntermediateLabel()` and `IntermediateReferences()`), `CheckCitations()`, `WriteCitationsReport()` (sourced by RunMe.r) |
+| `provenance.r` | `LoadPrimaryReferences()`, `LoadProvenanceClasses()`, `SplitSourceMass()`, `BuildProvenance()` (with the hop-2 helpers `MatchIntermediateLabel()` and `IntermediateReferences()`, and the length-source and equation rows of a derived source's keyed records), `CheckCitations()`, `WriteCitationsReport()` (sourced by RunMe.r) |
 | `run_citations.r` | the command line |
 | `tests/fixtures/cache/` | recorded Crossref and OpenAlex responses for the unit tests in `R/library/tests/test_citations_*.R` (no network in tests) |
 
@@ -45,6 +45,10 @@ everything that talks to a service or to the Google Sheet runs by hand through
 | none, keyless, pending, or the intermediate has no `primary_references.csv` yet | the intermediate is the terminal citation (owner decision 2026-10-04) | 1 | `compilation_terminal` | NA | the intermediate (`ref_role = compilation`) |
 
 No third hop is attempted: a reference of the intermediate that is itself a label stays as that label. A record-level `prov_type` override is never changed. The terminal rows become hop-2 (or `compiled_from`) rows by themselves once the intermediate's reference list is ingested; nothing in the source's `primary_references.csv` changes, so `role` stays `measurement` there and the owner may set it to `compilation` if wanted (the hop-2 rule does not depend on it). Herberstein_etal_2022 -> Chown_etal_2007 is the first case: 244 ant records cite Chown et al. 2007, whose Appendix S1 holds the authors' own measurements of those eight species, so they will read `compiled_from` citing Chown once `Chown_etal_2007` is ingested (its S1 keys are `self`); until then they are `compilation_terminal` at Chown.
+
+## Derived sources: the length sources and the equation
+
+A source whose registry row is `class derived`, `default_provenance_type derived_allometry` with an `equation_bibcite` (Feldman_etal_2016, Meiri_2018) computes its masses from a length. A keyless record of such a source gets one row, `ref_role = equation`, citing the equation (the registry default). Where the parse script keeps the length sources as `ref_keys` (Meiri_2018, Stage 2), `BuildProvenance()` writes two kinds of rows per record: one per reference with `ref_role = measurement` and `provenance_type = derived_allometry` (the role's usual `compiled_from` is replaced for a derived source, so that the type says the value is computed; the primary citation is the length source's, `match_status` the reference's; an unmatched key stays `unknown` / `unmatched_key`), and one `ref_role = equation` row per species x label counting the records, citing the `equation_bibcite`. No record-level `prov_type` override is needed; a record that carries one is left to the override and gets no equation row. A length source that is itself a database label is not followed to a second hop under a derived source (the value is the computation, not the intermediate's record). The equation row is always resolved, so the per-source `pct_resolved` of a derived source counts it; the share of length-source links resolved is reported separately in the round's notes.
 
 ## Workflow for one source
 
