@@ -116,20 +116,29 @@ Methods, with their dates and severity rules:
   main 8ac5bbe, `SUSPICIOUS` (small medusae are possible); the species falls
   to the `log10_range > 1` filter, left to the owner.
 
-- `range_rule_2026-10-06` (869 rows): the values the record-level range rule
-  of issue #34 (`R/library/exclude_discordant.r`, README pipeline step 5)
-  excluded from their species' cross-source mean at its adoption, on main
-  8b1ff08 with the 2026-10-05 frames: one row per excluded independent
-  Pass-1 value (a collapsed copy excluded with its parent is named in the
-  parent's note, not given a row). `mass_g` is the excluded value, `n` its
-  record count, `log10_pred` log10 of the median of the kept values of the
-  species, `severity` `CRITICAL` when `abs_residual >= 2` (210 rows) and
-  `SUSPICIOUS` otherwise (659); the note gives the rule (`loo_unique` 463,
-  `tier_tiebreak` 73, `distance_tiebreak` 60, `two_value_tier` 273), the
-  value's trust tier (and whether it was converted from another mass type),
-  the kept values with their tiers, and the species' resulting mean. The
-  rows were generated from the run's exclusion table with
-  `ExclusionRegisterRows()` (not hand-edited) and the species they belong to
+- `range_rule_2026-10-06` (1,085 rows): the record-level range rule of
+  issue #34 (`R/library/exclude_discordant.r`, README pipeline step 5) at
+  its adoption, on main a331557 with the 2026-10-05 frames. 869 rows are the
+  values the rule excluded from their species' cross-source mean: one row
+  per excluded independent Pass-1 value (a collapsed copy excluded with its
+  parent is named in the parent's note, not given a row); `mass_g` is the
+  excluded value, `n` its record count, `log10_pred` log10 of the median of
+  the kept values of the species, `severity` `CRITICAL` when
+  `abs_residual >= 2` (210 rows) and `SUSPICIOUS` otherwise (659); the note
+  gives the rule (`loo_unique` 463, `tier_tiebreak` 73, `distance_tiebreak`
+  60, `two_value_tier` 273), the value's trust tier (and whether it was
+  converted from another mass type), the kept values with their tiers, and
+  the species' resulting mean. 216 further rows (owner decision 2026-10-06)
+  flag the rescued species that rest on a single kept value, where the trust
+  tiers rather than the data decided which side was wrong: `mass_g` and
+  `source_mass` are the kept value and its label, `n` its record count,
+  `log10_pred` log10 of the excluded value, `severity` `SUSPICIOUS` in every
+  row, the note beginning "rescued species rests on one kept value; review"
+  and naming both sides (e.g. *Rimostrombidium caudatum*: DeLong_etal_2018
+  41.4 g kept, DeLong_etal_2010 4.2e-8 g excluded, a ciliate the rule got
+  wrong). The rows were generated from the run's exclusion table with
+  `ExclusionRegisterRows()` and `SingleValueRescueRows()` (not hand-edited)
+  and the species they belong to
   are kept in `TaxonBodyMass.csv` (39,023 -> 39,887 species at adoption; the
   315 species the rule left unresolved stay removed by the `log10_range > 1`
   filter and are listed with all their values in
