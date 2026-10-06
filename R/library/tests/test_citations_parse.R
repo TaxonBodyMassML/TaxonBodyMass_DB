@@ -169,6 +169,22 @@ Expect(nat$parsed_author1[4] == 'Klok' && is.na(nat$parsed_year[4]) && nat$parse
          nat$parsed_title[4] == 'Temperature- and body mass-related variation in cyclic gas exchange characteristics and metabolic rates of seven weevil species: broader implications',
        'undated Nature-style entry: author block stripped from the title')
 
+cat('ParseCitationString() on the Chicago author-date style (Myhrvold_2015 literature cited)\n')
+chi <- ParseCitationString(c(
+  'Meiri, S. 2010. “Length-Weight Allometries in Lizards.” Journal of Zoology 281 (February): 218–26. doi:10.1111/j.1469-7998.2010.00696.x.',
+  'Alderman, Rachael Louise. 2012. “The Shy Albatross (Thalassarche Cauta): Population Trends, and the Future for Management”. University of Tasmania.',
+  'Adkisson, C.S. 1999. “Pine Grosbeak (Pinicola Enucleator).” In The Birds of North America Online, edited by A. Poole.',
+  'Seymour, Roger S. 1979. “Dinosaur Eggs: Gas Conductance through the Shell, Water Loss during Incubation and Clutch Size.” Paleobiology 5 (1): 1–11.'))
+Expect(chi$parsed_title[1] == 'Length-Weight Allometries in Lizards' && chi$parsed_container[1] == 'Journal of Zoology' &&
+         chi$parsed_volume[1] == '281' && chi$parsed_pages[1] == '218-26' && chi$parsed_year[1] == 2010L && chi$parsed_author1[1] == 'Meiri',
+       'Chicago style: the quoted title ends at the closing quote; journal, volume (issue): pages read')
+Expect(grepl('^The Shy Albatross', chi$parsed_title[2]) && !grepl('"', chi$parsed_title[2]) && chi$parsed_container[2] == 'University of Tasmania',
+       'Chicago style: a title with inner periods and the period outside the quotes; the publisher is the container')
+Expect(chi$parsed_title[3] == 'Pine Grosbeak (Pinicola Enucleator)' && grepl('^The Birds of North America Online', chi$parsed_container[3]),
+       'Chicago style: a chapter ("In ...") keeps the book as container')
+Expect(chi$parsed_container[4] == 'Paleobiology' && chi$parsed_volume[4] == '5' && chi$parsed_pages[4] == '1-11',
+       'Chicago style: a title holding a colon and commas is kept whole')
+
 cat('ParseCitationString() on the comma style (Hudson_2013 Appendix S6)\n')
 cs <- ParseCitationString(c(
   'Acquarone, M., Born, E.W. & Speakman, J.R. (2006) Field Metabolic Rates of Walrus (Odobenus rosmarus) Measured by the Doubly Labeled Water Method, Aquatic Mammals, 32, 363\u2013369.',

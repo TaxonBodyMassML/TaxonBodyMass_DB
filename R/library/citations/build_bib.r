@@ -162,12 +162,19 @@ EscapeLaTeX <- function(x) {
   x <- gsub('\\', '\u0001', x, fixed = TRUE)
   x <- gsub('~', '\u0002', x, fixed = TRUE)
   x <- gsub('^', '\u0003', x, fixed = TRUE)
-  x <- gsub('{', '\\{', x, fixed = TRUE)
-  x <- gsub('}', '\\}', x, fixed = TRUE)
+  # a balanced pair of braces is escaped as \{ \}; an unbalanced brace (a
+  # Crossref title typing '{' for '(', Coulson 1989 of Jones_2009) would leave
+  # the entry unparseable to BibTeX and RefManageR, which count raw braces, so
+  # it becomes the brace-free \textbraceleft{} / \textbraceright{}
+  balanced <- lengths(regmatches(x, gregexpr('{', x, fixed = TRUE))) == lengths(regmatches(x, gregexpr('}', x, fixed = TRUE)))
+  x <- gsub('{', '\u0004', x, fixed = TRUE)
+  x <- gsub('}', '\u0005', x, fixed = TRUE)
   for (ch in c('&', '%', '$', '#', '_')) x <- gsub(ch, paste0('\\', ch), x, fixed = TRUE)
   x <- gsub('\u0001', '\\textbackslash{}', x, fixed = TRUE)
   x <- gsub('\u0002', '\\textasciitilde{}', x, fixed = TRUE)
   x <- gsub('\u0003', '\\textasciicircum{}', x, fixed = TRUE)
+  x <- ifelse(balanced, gsub('\u0004', '\\{', x, fixed = TRUE), gsub('\u0004', '\\textbraceleft{}', x, fixed = TRUE))
+  x <- ifelse(balanced, gsub('\u0005', '\\}', x, fixed = TRUE), gsub('\u0005', '\\textbraceright{}', x, fixed = TRUE))
   trimws(gsub('\\s+', ' ', x, perl = TRUE))
 }
 

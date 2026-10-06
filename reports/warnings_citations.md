@@ -1,11 +1,11 @@
-# Citation and provenance warnings -- 2026-10-06 10:44:17
+# Citation and provenance warnings -- 2026-10-06 11:57:04
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 180188 (39887 species); distinct primary CiteIDs: 2369; unresolved references (pending / not_found): 63; unverified references: 5063
-- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 232
+- provenance rows: 210802 (39887 species); distinct primary CiteIDs: 4835; unresolved references (pending / not_found): 678; unverified references: 5063
+- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 1940
 
 ## Problems
 
@@ -62,7 +62,7 @@ One row per source label: species and record links (species x source x reference
 | Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ikeda_2014 | compilation | 332 | 690 | 99.7 | 37 | 36 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 31 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Jones_2009 | compilation | 3444 | 3464 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Jones_2009 | compilation | 3444 | 23010 | 57.6 | 3066 | 2452 | 1651 | 578 | 30 | 0 | 6 | 0 | 0 | 0 |
 | Kendall_etal_2019 | primary | 424 | 4033 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Killen_etal_2016 | compilation | 35 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kinsella_etal_2020 | primary | 92 | 572 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -83,7 +83,7 @@ One row per source label: species and record links (species x source x reference
 | Mercer_etal_2001 | primary | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Myhrvold_2015 | compilation | 16326 | 16547 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Myhrvold_2015 | compilation | 16326 | 26777 | 67 | 105 | 98 | 57 | 2 | 5 | 0 | 0 | 0 | 0 | 0 |
 | Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
 | Pata_2025 | compilation | 117 | 117 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 99 | 363 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -92,7 +92,7 @@ One row per source label: species and record links (species x source x reference
 | Reum_2012 | primary | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2013 | primary | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Smith_2003 | compilation | 3679 | 5043 | 98.2 | 255 | 244 | 0 | 0 | 0 | 0 | 11 | 0 | 0 | 0 |
+| Smith_2003 | compilation | 3679 | 5047 | 98.2 | 255 | 244 | 0 | 0 | 0 | 0 | 11 | 0 | 0 | 0 |
 | Soria_etal_2021 | compilation | 5529 | 5636 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tobias_2022 | compilation | 9794 | 10172 | 90.5 | 46 | 43 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -104,7 +104,7 @@ One row per source label: species and record links (species x source x reference
 | Verberk_2020 | compilation | 214 | 1244 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 124 | 124 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Weisse_2024 | compilation | 43 | 85 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Wilman_etal_2014 | compilation | 12511 | 13272 | 99.6 | 67 | 42 | 0 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
+| Wilman_etal_2014 | compilation | 12511 | 14300 | 99.6 | 67 | 42 | 0 | 0 | 19 | 0 | 6 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 149 | 150 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2209 | 3153 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | sealifebase | live | 319 | 591 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

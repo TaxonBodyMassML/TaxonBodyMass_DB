@@ -102,6 +102,9 @@ Expect(identical(CrossrefYears(two), c(2012L, 2013L)) && CrossrefYear(two) == 20
 cat('EscapeLaTeX(), CrossrefAuthors(), CrossrefYear(), BuildBibEntry()\n')
 Expect(EscapeLaTeX('Fish &amp; chips at 100% of <i>Salpa</i> {thompsoni}_1 #2 $3 ~ ^') == 'Fish \\& chips at 100\\% of Salpa \\{thompsoni\\}\\_1 \\#2 \\$3 \\textasciitilde{} \\textasciicircum{}',
        'HTML is stripped and the LaTeX specials are escaped')
+Expect(EscapeLaTeX('The pangolin {Manis temmincki Smuts, 1835) in Zimbabwe') == 'The pangolin \\textbraceleft{}Manis temmincki Smuts, 1835) in Zimbabwe' &&
+         EscapeLaTeX('a } b') == 'a \\textbraceright{} b' && EscapeLaTeX('{a} {b}') == '\\{a\\} \\{b\\}',
+       'an unbalanced brace becomes \\textbraceleft{} / \\textbraceright{} (parseable); balanced pairs stay \\{ \\} (Coulson 1989 of Jones_2009)')
 Expect(EscapeLaTeX('a\\b') == 'a\\textbackslash{}b' && EscapeLaTeX('  two   spaces  ') == 'two spaces' && EscapeLaTeX('x&lt;y&gt;z&nbsp;w&eacute;') == 'x<y>z w',
        'a backslash becomes \\textbackslash{}, blanks collapse, entities decode or vanish')
 w <- CrossrefWork('10.1007/bf00392514', cfg)

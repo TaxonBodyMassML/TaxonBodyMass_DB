@@ -2,8 +2,10 @@
 # Requires Python + retriever package (see README Prerequisites).
 # Called from RunMe.r when DataRetrieve = TRUE.
 # Depends on: wd_root, wd_rdata, wd_db, StackBrose2005(), DropPlaceholders(),
-# ApplyUnitActions(), WebReferenceKeys() (R/library/foodweb_units.r), imputed_log,
-# ImputedEntriesSince(), SaveImputedLive() (R/library/helpers.r).
+# ApplyUnitActions(), WebReferenceKeys(), AmnioteValueSources()
+# (R/library/foodweb_units.r), SplitRefKeys(), ExplodeRefKeys()
+# (R/library/citations/parse_reflists.r), imputed_log, ImputedEntriesSince(),
+# SaveImputedLive() (R/library/helpers.r).
 # The frame holds every record as the source wrote it (issue #69): the name
 # cleaning (FixFormatting(), FixMisspellings(), RemoveNonTaxa()) and the
 # per-species pooling are section 2b and Pass 1 of RunMe.r, as for every
@@ -122,12 +124,31 @@ ppb <- ppb[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 #  a species‐level database of life history, ecology, and geography of 
 #  extant and recently extinct mammals: Ecological Archives E090‐184. 
 #  Ecology. 2009 Sep;90(9):2648-.
+# The `References` column of the data file (the retriever names it `refs`)
+# cites the numbered entries of the Ecological Archives E090-184 metadata
+# reference list (1-3143; sources/databases/Jones_2009/references.csv, written
+# by build_references.py) ';'-separated for the whole species row, every trait
+# and not body mass alone (the Lislevand_etal_2007 situation); the numbers are
+# kept per record as `ref_keys` (issue #1, Stage 2). 18 cells glue two
+# four-digit numbers without the separator ('30483049' for 3048;3049): a
+# token of eight digits whose halves are both entries of the list is split.
 pan <- rdataretriever::fetch('pantheria')[[1]]
-pan <- pan[, c('msw05_binomial', 'adultbodymass_g', 'msw05_order', 'msw05_family')]
-colnames(pan) <- c('taxon', 'mass_g', 'order', 'family')
+pan_refs <- read.csv(file.path(wd_db, 'Jones_2009', 'references.csv'),
+                     stringsAsFactors = FALSE, colClasses = 'character', encoding = 'UTF-8')
+pan_max  <- max(as.integer(pan_refs$key))
+pan_cited <- trimws(as.character(pan$refs))
+pan_cited[pan_cited %in% c('', '-999')] <- NA_character_      # no reference (none among the rows with a mass)
+pan_cited <- gsub('(?<=^|;)([0-9]{4})([0-9]{4})(?=;|$)', '\\1;\\2', pan_cited, perl = TRUE)
+pan$ref_keys <- SplitRefKeys(pan_cited, ';')
+pan <- pan[, c('msw05_binomial', 'adultbodymass_g', 'msw05_order', 'msw05_family', 'ref_keys')]
+colnames(pan)[1:4] <- c('taxon', 'mass_g', 'order', 'family')
 pan$order  <- as.character(pan$order)
 pan$family <- as.character(pan$family)
 pan <- pan[which(!is.na(pan$mass_g) & pan$mass_g > 0), ]
+pan_bad <- setdiff(unique(ExplodeRefKeys(pan$ref_keys)$native_key), pan_refs$key)
+if (length(pan_bad) > 0)
+  warning('Jones_2009: ', length(pan_bad), ' cited reference number(s) not in references.csv (1-', pan_max, '): ',
+          paste(head(pan_bad, 5), collapse = ', '))
 pan$n <- 1
 pan$source_mass <- 'Jones_2009'
 
@@ -135,16 +156,34 @@ pan$source_mass <- 'Jones_2009'
 # Myhrvold NP, Baldridge E, Chan B, Sivam D, Freeman DL, Ernest SM. An amniote 
 #  life‐history database to perform comparative analyses with birds, mammals, 
 #  and reptiles: Ecological Archives E096‐269. Ecology. 2015 Nov;96(11):3109-.
-amn <- rdataretriever::fetch('amniote-life-hist')[[1]]
+# The dataset's second table (`references`, the Amniote_Database_References
+# csv in the same EAV layout, joined by the retriever's `record_id` = row of the
+# data file) names the sources of every value: the value-providing names of
+# the adult_body_mass_g cell ("Dunning, 1992", "mean of Dunning, 1992 & Bennett,
+# 1986 from median of 4(...)") are mapped by AmnioteValueSources()
+# (R/library/foodweb_units.r) to the keys of
+# sources/databases/Myhrvold_2015/references.csv (build_references.py: one
+# row per name on the body-mass records, the literature-cited entry matched
+# to it) and kept per record as `ref_keys`, '; '-joined (issue #1, Stage 2).
+amn_all <- rdataretriever::fetch('amniote-life-hist')
+amn <- amn_all$main
 amn <- amn[amn$trait == 'adult_body_mass_g', ]
+amn_ref <- amn_all$references
+amn_ref <- amn_ref[amn_ref$trait == 'adult_body_mass_g', c('record_id', 'reference')]
+if (anyDuplicated(amn_ref$record_id) || !all(amn$record_id %in% amn_ref$record_id))
+  stop('Myhrvold_2015: the references table does not join the data table one to one by record_id')
+amn_refs <- read.csv(file.path(wd_db, 'Myhrvold_2015', 'references.csv'),
+                     stringsAsFactors = FALSE, colClasses = 'character', encoding = 'UTF-8')
 amn$taxon  <- paste(amn$genus, amn$species)
 amn$mass_g <- as.numeric(amn$trait_value)
-amn <- amn[, c('taxon', 'mass_g', 'classes', 'ordered', 'family')]
+amn <- amn[which(!is.na(amn$mass_g) & amn$mass_g > 0), ]
+# the references table names the sources of the kept cells only
+amn$ref_keys <- AmnioteValueSources(amn_ref$reference[match(amn$record_id, amn_ref$record_id)], amn_refs)
+amn <- amn[, c('taxon', 'mass_g', 'classes', 'ordered', 'family', 'ref_keys')]
 colnames(amn)[3:4] <- c('class', 'order')
 amn$class  <- as.character(amn$class)
 amn$order  <- as.character(amn$order)
 amn$family <- as.character(amn$family)
-amn <- amn[which(!is.na(amn$mass_g) & amn$mass_g > 0), ]
 amn$n <- 1
 amn$source_mass <- 'Myhrvold_2015'
 
