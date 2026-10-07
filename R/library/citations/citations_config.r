@@ -108,6 +108,20 @@ citations_thresholds <- list(
   year_window        = 1L     # |parsed_year - candidate year| tolerated
 )
 
+# ---- recommendations for the open queue rows (recommend.r; owner decision 2026-10-06) ----
+# `accept_sim`: a candidate whose title_sim reaches it, whose year is within
+# `year_window` of the parsed year and which Crossref returned is 'strong'
+# and recommended as is; `correction_sim`: the similarity a candidate under a
+# correction notice (not a retraction) needs to be recommended; a `10.2307/`
+# DOI is JSTOR's copy of a paper that has a publisher DOI (the Lislevand
+# precedent: the publisher DOI is recommended over the JSTOR twin). The rule
+# names are the `recommended_by` values 'policy:<rule>' in order of
+# precedence (the first matching rule wins, RecommendRow()).
+citations_recommend <- list(accept_sim = 0.90, correction_sim = 0.95, year_window = 1L, jstor_prefix = '10.2307/')
+recommend_rules <- c('self_role', 'owner_review_flagged', 'titleless_journal_key', 'titleless_incomplete',
+                     'correction_notice', 'retraction_notice', 'jstor_twin', 'publisher_twin', 'strong_candidate',
+                     'openalex_only_candidate', 'grey_complete', 'fields_complete_no_match', 'fields_incomplete')
+
 # Crossref / OpenAlex work types that are never a primary reference and are
 # filtered before scoring (a figshare collection or a dataset component often
 # carries the article's title and authors under a second DOI).

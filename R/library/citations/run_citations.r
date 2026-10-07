@@ -1,8 +1,10 @@
 # Citation tooling (issue #1): the command line.
 #
 #   Rscript R/library/citations/run_citations.r --source <Src> \
-#       [--init] [--verify] [--queue] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
+#       [--init] [--verify] [--queue] [--recommend] [--apply-queue] [--bib] [--sheet [--no-dry-run]] \
 #       [--screening-list] [--force] [--offline] [--crossref-only] [--min-records N]
+#   Rscript R/library/citations/run_citations.r --recommend --all-sources [--force]
+#   Rscript R/library/citations/run_citations.r --dedupe-queue
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -25,7 +27,12 @@
 #                  duplicates, an older row per DOI + service, a `none` gap row for a
 #                  DOI another row answers); the removed rows are printed and written
 #                  to reports/dedupe_queue_<date>.md; no network, no source file touched
-#   --force        re-verify `certain` rows as well
+#   --recommend    fill the recommendation block of the open queue rows of the source
+#                  (recommend.r: the policy rules of the README, offline; agent and owner
+#                  rows kept unless --force); with --all-sources instead of --source, every
+#                  source, and the rule x source table goes to reports/recommendations_<date>.md
+#   --force        re-verify `certain` rows as well; with --recommend, recompute the
+#                  recommendation of agent and owner rows too
 #   --offline      never touch the network (cached responses only)
 #   --crossref-only  with --verify (or --queue): Crossref-only mode (owner decision
 #                  2026-10-06, the backlog while the OpenAlex key's daily budget is about
@@ -48,21 +55,26 @@ source(file.path(lib, 'mass_conversion.r'))
 source(file.path(lib, 'dedupe_sources.r'))
 source(file.path(lib, 'sheet_snapshots.r'))      # SheetAuth(), ReadSheetTab(), SnapshotSheetTab() (#118)
 for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'verify_services.r',
-            'decide.r', 'build_bib.r', 'cite_ids.r', 'sheet_append.r', 'provenance.r'))
+            'decide.r', 'recommend.r', 'build_bib.r', 'cite_ids.r', 'sheet_append.r', 'provenance.r'))
   source(file.path(lib, 'citations', f))
 
 args <- commandArgs(trailingOnly = TRUE)
 Flag <- function(f) f %in% args
-steps <- c('--init', '--verify', '--queue', '--apply-queue', '--bib', '--sheet', '--screening-list', '--dedupe-queue')
+steps <- c('--init', '--verify', '--queue', '--recommend', '--apply-queue', '--bib', '--sheet', '--screening-list', '--dedupe-queue')
+# the steps that work on the shared files and need no --source; --recommend
+# joins them under --all-sources
+source_free_steps <- c('--dedupe-queue')
+all_sources <- Flag('--all-sources')
 src_i <- which(args == '--source')
-maintenance_only <- identical(args[args %in% steps], '--dedupe-queue')
-if ((length(src_i) != 1 || src_i == length(args)) && !maintenance_only) stop('--source <Src> is required')
+needs_source <- any(args %in% setdiff(steps, source_free_steps)) && !all_sources
+if ((length(src_i) != 1 || src_i == length(args)) && needs_source) stop('--source <Src> is required')
+if (all_sources && (length(src_i) > 0 || !identical(args[args %in% steps], '--recommend'))) stop('--all-sources goes with --recommend alone, without --source')
 src <- if (length(src_i) == 1 && src_i < length(args)) args[src_i + 1] else NA_character_
 mr_i <- which(args == '--min-records')
 if (length(mr_i) > 1 || (length(mr_i) == 1 && mr_i == length(args))) stop('--min-records needs one value N')
 min_records <- if (length(mr_i) == 1) suppressWarnings(as.integer(args[mr_i + 1])) else 1L
 if (is.na(min_records) || min_records < 1) stop('--min-records N: N must be a positive integer')
-known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--crossref-only', '--min-records', if (length(mr_i) == 1) args[mr_i + 1])
+known <- c('--source', src, steps, '--no-dry-run', '--force', '--offline', '--crossref-only', '--all-sources', '--min-records', if (length(mr_i) == 1) args[mr_i + 1])
 if (any(!args %in% known)) stop('unknown argument(s): ', paste(setdiff(args, known), collapse = ' '))
 if (!any(Flag(steps))) stop('give at least one step: ', paste(steps, collapse = ' '))
 crossref_only <- Flag('--crossref-only')
@@ -70,6 +82,41 @@ if (crossref_only && !(Flag('--verify') || Flag('--queue'))) stop('--crossref-on
 
 cfg  <- CitationsConfig(wd_root, offline = Flag('--offline'))
 dir.create(cfg$reports_dir, showWarnings = FALSE)
+dir.create(file.path(wd_root, 'tmp'), showWarnings = FALSE)
+run_date <- format(Sys.Date())
+
+report <- list()
+Note <- function(...) { msg <- sprintf(...); cat(' ', msg, '\n'); report[[length(report) + 1]] <<- msg }
+
+# ---- --recommend: the policy recommendations of the open rows (offline) ----
+# One line per source: the rows recommended, the rule counts, the rows kept
+# for a session's or the owner's own reading.
+RecommendStep <- function(sources = NULL) {
+  queue <- ReadPendingQueue(cfg$pending_csv)
+  rec <- RecommendDecisions(queue, LoadPrimaryReferences(cfg$wd_db), overwrite = Flag('--force'), sources = sources)
+  WritePendingQueueFile(rec, cfg$pending_csv)
+  counts <- attr(rec, 'counts')
+  for (l in colnames(counts)) {
+    n <- counts[, l]
+    open_l <- rec$source_label == l & (is.na(rec$decision) | !nzchar(trimws(rec$decision)))
+    Note('--recommend: %s: %d open row(s), %d with a recommendation, %d left to the owner (%s)%s', l, sum(open_l),
+         sum(open_l & !is.na(rec$recommendation)), sum(open_l & is.na(rec$recommendation)),
+         paste(sprintf('%s %d', names(n)[n > 0], n[n > 0]), collapse = ', '),
+         if (any(n[c('agent', 'owner')] > 0)) sprintf('; %d agent / owner row(s) kept%s', sum(n[c('agent', 'owner')]), if (Flag('--force')) '' else ' (--force recomputes them)') else '')
+  }
+  invisible(rec)
+}
+if (Flag('--recommend') && all_sources) {
+  rec <- RecommendStep()
+  counts <- attr(rec, 'counts')
+  md <- file.path(cfg$reports_dir, sprintf('recommendations_%s.md', run_date))
+  writeLines(c(sprintf('# Recommendations for the open queue rows -- %s (%s)', run_date, citations_tool_version), '',
+               sprintf('%d open row(s) in %s, %d recomputed by the policy rules of recommend.r (README, section "Recommendations"); agent and owner rows %s.',
+                       attr(rec, 'n_open'), basename(cfg$pending_csv), attr(rec, 'n_recommended'), if (Flag('--force')) 'recomputed (--force)' else 'kept'), '',
+               paste0('- ', unlist(report)), '', '## Rule x source', '', MarkdownTable(RecommendationCountsTable(counts))), md)
+  cat('  report:', md, '\n')
+  quit(save = 'no', status = 0)
+}
 
 # ---- --dedupe-queue (maintenance over the two shared files; no source needed) ----
 if (Flag('--dedupe-queue')) {
@@ -96,11 +143,7 @@ spec <- tryCatch(ReflistSpec(src), error = function(e) NULL)
 folder <- if (!is.null(spec$folder)) spec$folder else src     # the source folder under sources/databases
 frame  <- if (!is.null(spec$frame)) spec$frame else folder     # the cached frame BodyMass_<frame>.Rdata
 prim_path <- PrimaryReferencesPathForLabel(cfg$wd_db, src)
-dir.create(file.path(wd_root, 'tmp'), showWarnings = FALSE)
 cat(sprintf('run_citations: %s (%s)\n', src, citations_tool_version))
-
-report <- list()
-Note <- function(...) { msg <- sprintf(...); cat(' ', msg, '\n'); report[[length(report) + 1]] <<- msg }
 
 # ---- the source's frame ----
 LoadFrame <- function(folder) {
@@ -220,6 +263,9 @@ if (Flag('--queue')) {
   if (length(held) > 0) Note('--queue: %d key(s) not re-queued, their recorded decision awaits --apply-queue: %s', length(held), paste(held, collapse = ', '))
 }
 
+# ---- --recommend (this source's open rows) ----
+if (Flag('--recommend')) RecommendStep(src)
+
 # ---- --apply-queue ----
 if (Flag('--apply-queue')) {
   queue <- ReadPendingQueue(cfg$pending_csv)
@@ -321,7 +367,7 @@ tab <- prim[, c('native_key', 'n_records', 'role', 'match_status', 'match_reason
 tab$title_sim <- ifelse(is.na(tab$title_sim), '', formatC(tab$title_sim, digits = 3, format = 'f'))
 n_xo <- sum(prim$match_status %in% 'certain' & prim$verification_mode %in% 'crossref_only')
 writeLines(c(sprintf('# Citations of %s -- %s (%s)', src, format(Sys.time(), '%Y-%m-%d %H:%M:%S'), citations_tool_version), '',
-             sprintf('Steps: %s', paste(args[args %in% c(steps, '--no-dry-run', '--force', '--offline', '--crossref-only')], collapse = ' ')), '',
+             sprintf('Steps: %s', paste(args[args %in% c(steps, '--no-dry-run', '--force', '--offline', '--crossref-only', '--all-sources')], collapse = ' ')), '',
              sprintf('Verification mode: %s%s',
                      if (crossref_only) 'crossref_only (owner decision 2026-10-06: OpenAlex not called, Crossref alone accepts; the accepted rows carry verification_mode crossref_only and are re-checked in full by a later --verify without the flag)'
                      else 'full (Crossref + OpenAlex)',
