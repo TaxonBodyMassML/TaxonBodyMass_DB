@@ -416,6 +416,24 @@ tracked_s <- DedupeSciteChecks(ReadSciteChecks(file.path(repo, 'Bib', 'scite_che
 Expect(nrow(tracked$removed) == 0 && nrow(tracked_s$removed) == 0, 'the tracked queue and screening file carry no duplicate rows (--dedupe-queue applied 2026-10-06)')
 Expect(Has(ErrorOf(ReadPendingQueue({ f <- tempfile(fileext = '.csv'); writeLines('a,b', f); f })), 'lacks column'), 'a queue file without the schema stops')
 
+cat('the recommendation block (2026-10-06): migration of a 38-column queue file\n')
+old_cols <- setdiff(pending_queue_columns, pending_queue_optional_columns)
+qf38 <- tempfile(fileext = '.csv')
+write.csv(back[, old_cols], qf38, row.names = FALSE, na = '', fileEncoding = 'UTF-8')
+q38 <- ReadPendingQueue(qf38)
+Expect(length(old_cols) == 38 && length(pending_queue_columns) == 42 && identical(names(q38), pending_queue_columns) && nrow(q38) == 1 &&
+         all(is.na(unlist(q38[, pending_queue_optional_columns]))) && q38$c1_doi == back$c1_doi && is.na(q38$decision),
+       'a 38-column file (before the recommendation block) reads with recommendation, recommendation_reason, recommended_by and owner_note NA')
+WritePendingQueueFile(q38, qf38)
+Expect(length(strsplit(readLines(qf38, n = 1), ',')[[1]]) == 42 && identical(ReadPendingQueue(qf38)$native_key, q38$native_key),
+       'written back it has the 42 columns and round-trips')
+Expect(Has(ErrorOf(ReadPendingQueue({ f <- tempfile(fileext = '.csv'); write.csv(back[, setdiff(old_cols, 'reason')], f, row.names = FALSE); f })), 'lacks column(s) reason'),
+       'a file lacking a required column (reason) still stops')
+rec_dup <- rbind(QR('Src', 'r', 'weak_match', c1 = '10.1/r', queued = '2026-10-05'), QR('Src', 'r', 'weak_match', c1 = '10.1/r', queued = '2026-10-06'))
+rec_dup$recommendation <- c('1', NA); rec_dup$recommended_by <- c('policy:strong_candidate', NA)
+Expect(identical(DedupeQueue(rec_dup)$removed$why, 'open_duplicate') && !any(pending_queue_optional_columns %in% queue_case_columns),
+       'open rows differing only in the recommendation block are duplicates (the block is not a case column)')
+
 cat('ValidateDecision(), ApplyQueueDecisions()\n')
 Expect(all(ValidateDecision(c('1', '2', '3', 'doi:10.1007/bf00392514', 'manual:Ikeda:1986aa', 'manual:Van-der-Meer:1994aa', 'nodoi', 'self', 'drop', ' drop ',
                                 '1:year=1976', 'doi:10.1007/bf00392514:year=1986', 'nodoi:year=1976'))) &&
@@ -499,6 +517,25 @@ Expect(yo2$match_status[yo2$native_key == '6'] == 'approved' && yo2$match_reason
 Expect(Has(ErrorOf(ApplyQueueDecisions(Q('9', 'nodoi:year=1976'), base)), 'a year override needs a candidate or doi: decision'),
        'a year override on nodoi / self / drop stops')
 Expect(identical(ApplyQueueDecisions(Q('6', NA), base), base) && identical(ApplyQueueDecisions(Q('6', '  '), base), base), 'rows without a decision change nothing')
+
+cat('QueueDecisionProblems(), the owner_note copy\n')
+Expect(length(QueueDecisionProblems(Q('6', '1'))) == 0 && length(QueueDecisionProblems(Q('9', 'nodoi'))) == 0 && length(QueueDecisionProblems(Q('6', 'doi:10.1007/bf00392514:year=1999'))) == 0,
+       'a sound decision has no problems')
+Expect(identical(QueueDecisionProblems(Q('6', 'maybe', by = NA)), 'Kiorboe_2013 6: decision \'maybe\' does not match the grammar'),
+       'the grammar is checked first and alone')
+pb <- QueueDecisionProblems(Q('6', '2', by = '', at = 'x'))
+Expect(length(pb) == 3 && Has(pb[1], 'decided_by is empty') && Has(pb[2], 'decided_at is not an ISO date') && Has(pb[3], 'candidate 2 has no DOI in the queue'),
+       'every other problem of a row is listed')
+Expect(Has(QueueDecisionProblems(Q('6', '1', c1_services = 'openalex')), 'returned by openalex only') && length(QueueDecisionProblems(Q('6', '1', c1_services = 'openalex'), check_crossref_record = FALSE)) == 0 &&
+         Has(QueueDecisionProblems(Q('9', 'nodoi:year=1976')), 'a year override needs a candidate or doi: decision'),
+       'the Crossref-record rule is switched off for an applied decision; the year-override rule is kept')
+qn <- Q('6', '1'); qn$owner_note <- ' looked at the PDF, it is the one '
+an <- ApplyQueueDecisions(qn, base)
+Expect(an$notes[an$native_key == '6'] == 'owner 2026-10-06: looked at the PDF, it is the one' && identical(ApplyQueueDecisions(qn, an), an) &&
+         is.na(ApplyQueueDecisions(Q('6', '1'), base)$notes[6]) == is.na(base$notes[6]),
+       'a non-empty owner_note is appended to the row\'s notes as "owner <decided_at>: <note>", once; an empty one changes nothing')
+bn <- base; bn$notes[bn$native_key == '6'] <- 'existing note'
+Expect(ApplyQueueDecisions(qn, bn)$notes[bn$native_key == '6'] == 'existing note; owner 2026-10-06: looked at the PDF, it is the one', 'the note joins existing notes with "; "')
 
 cat('DecideMatch() without OpenAlex (service_unavailable), WritePendingQueue() skip\n')
 d <- DecideMatch(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(), services = 'crossref')
