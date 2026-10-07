@@ -14,6 +14,8 @@
 #   DedupeQueue(queue)             the duplicate rows of the queue (--dedupe-queue)
 #   DedupeSciteChecks(scite)       the duplicate rows of Bib/scite_checks.csv (removed by
 #                                  line through DropSciteCheckRows())
+#   QueueDecisionProblems(q)       the problems of one decided queue row (grammar, decided_by,
+#                                  date, candidate DOI and Crossref record, year override)
 #   ApplyQueueDecisions(...)       validates the owner's `decision` and applies it
 #                                  (1|2|3, doi:..., manual:<Key>, nodoi, self, drop)
 #   ScreeningCandidates(...)       the DOIs of a source an agent should screen with Scite
@@ -603,10 +605,14 @@ EmptyPendingQueue <- function()
   as.data.frame(setNames(rep(list(character()), length(pending_queue_columns)), pending_queue_columns),
                 stringsAsFactors = FALSE)
 
+# A file written before the recommendation block existed (38 columns) reads
+# with those four columns NA and is written back with all of them; a file
+# lacking any other column still stops.
 ReadPendingQueue <- function(path) {
   if (!file.exists(path)) return(EmptyPendingQueue())
   d <- read.csv(path, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'),
                 check.names = FALSE, encoding = 'UTF-8', fileEncoding = 'UTF-8')
+  for (col in setdiff(pending_queue_optional_columns, names(d))) d[[col]] <- rep(NA_character_, nrow(d))
   miss <- setdiff(pending_queue_columns, names(d))
   if (length(miss) > 0) stop(basename(path), ' lacks column(s) ', paste(miss, collapse = ', '), call. = FALSE)
   d[, pending_queue_columns]
@@ -692,7 +698,10 @@ WritePendingQueue <- function(prim, candidates, path, queued_at = format(Sys.Dat
 # or an open row with new candidates, are different cases and are kept.
 # Returns list(queue, removed): `removed` has the queue columns plus `row`
 # (the position in the file read) and `why`.
-queue_case_columns <- setdiff(pending_queue_columns, c('queued_at', 'decision', 'decided_by', 'decided_at'))
+# The recommendation block is not a case column either: a re-append carries
+# none, and a recommendation changed by --recommend must not make an open row
+# a new case.
+queue_case_columns <- setdiff(pending_queue_columns, c('queued_at', 'decision', 'decided_by', 'decided_at', pending_queue_optional_columns))
 DedupeQueue <- function(queue) {
   n <- nrow(queue)
   drop <- rep(FALSE, n); why <- rep(NA_character_, n)
@@ -787,11 +796,49 @@ SplitDecision <- function(decision) {
 # `doi:` decision (re-verified at Crossref). Returns the updated
 # primary_references frame. The queue itself is not modified (approval is
 # the committed decision).
+# The problems of one decided queue row (a one-row frame): the grammar, an
+# empty decided_by, a decided_at that is not an ISO date, a candidate the row
+# has no DOI for, a candidate without a Crossref record to build its entry
+# from (#114 item 3; checked when `check_crossref_record`, which
+# ApplyQueueDecisions() switches off for a decision already applied to its
+# row), and a year override on a decision that takes none. A character
+# vector, empty when the row is sound; the Sheet pull (decisions_sheet.r)
+# reports these per row where ApplyQueueDecisions() stops on them.
+QueueDecisionProblems <- function(q, check_crossref_record = TRUE) {
+  q <- as.list(q)
+  key <- paste(q$source_label, q$native_key)
+  if (!ValidateDecision(q$decision)) return(sprintf('%s: decision %s does not match the grammar', key, shQuote(q$decision)))
+  problems <- character(0)
+  if (is.na(q$decided_by) || !nzchar(q$decided_by)) problems <- c(problems, sprintf('%s: decided_by is empty', key))
+  if (is.na(q$decided_at) || is.na(as.Date(q$decided_at, format = '%Y-%m-%d'))) problems <- c(problems, sprintf('%s: decided_at is not an ISO date', key))
+  parts <- SplitDecision(q$decision)
+  act <- parts$action
+  if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
+    problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
+  else if (grepl('^[123]$', act) && check_crossref_record) {
+    # a candidate only OpenAlex returned may have no Crossref record to build
+    # the entry from (#114 item 3): the owner checks the DOI and decides
+    # doi: (re-verified at Crossref) or nodoi
+    svc <- q[[paste0('c', act, '_services')]]
+    svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
+    if (!'crossref' %in% svc)
+      problems <- c(problems, sprintf('%s: candidate %s (%s) was returned by %s only, so no Crossref record exists to build its entry from; decide doi:%s if the DOI resolves at Crossref, else nodoi',
+                                      key, act, q[[paste0('c', act, '_doi')]], if (length(svc) == 0) 'no service' else paste(svc, collapse = ';'), q[[paste0('c', act, '_doi')]]))
+  }
+  if (!is.na(parts$year) && !grepl('^([123]|doi:)', act))
+    problems <- c(problems, sprintf('%s: a year override needs a candidate or doi: decision', key))
+  problems
+}
+
 ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
   decided <- queue[!is.na(queue$decision) & nzchar(trimws(queue$decision)), , drop = FALSE]
   problems <- character(0)
   # a decision already applied to its row (same decided_at, a final status) is
-  # history: the Crossref-record rule below is not re-imposed on it
+  # history: the Crossref-record rule is not re-imposed on it. Only the rows
+  # of the source being applied are checked: another source's row cannot be
+  # seen as applied from this frame (the Lislevand 24 decision, already
+  # applied with bibcite Fry:1988aa, stopped every other source's
+  # --apply-queue; Hudson round, 2026-10-06)
   Applied <- function(q) {
     i <- which(prim$source_label == q$source_label & prim$native_key == q$native_key)
     length(i) == 1 && !is.na(prim$match_status[i]) && prim$match_status[i] %in% c('approved', 'nodoi_approved', 'rejected', 'self') &&
@@ -799,29 +846,7 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
   }
   for (j in seq_len(nrow(decided))) {
     q <- decided[j, ]
-    key <- paste(q$source_label, q$native_key)
-    if (!ValidateDecision(q$decision)) { problems <- c(problems, sprintf('%s: decision %s does not match the grammar', key, shQuote(q$decision))); next }
-    if (is.na(q$decided_by) || !nzchar(q$decided_by)) problems <- c(problems, sprintf('%s: decided_by is empty', key))
-    if (is.na(q$decided_at) || is.na(as.Date(q$decided_at, format = '%Y-%m-%d'))) problems <- c(problems, sprintf('%s: decided_at is not an ISO date', key))
-    act <- SplitDecision(q$decision)$action
-    if (grepl('^[123]$', act) && (is.na(q[[paste0('c', act, '_doi')]]) || !nzchar(q[[paste0('c', act, '_doi')]])))
-      problems <- c(problems, sprintf('%s: candidate %s has no DOI in the queue', key, act))
-    else if (grepl('^[123]$', act) && q$source_label %in% prim$source_label && !Applied(q)) {
-      # a candidate only OpenAlex returned may have no Crossref record to build
-      # the entry from (#114 item 3): the owner checks the DOI and decides
-      # doi: (re-verified at Crossref) or nodoi. Only the rows of the source
-      # being applied are checked: another source's row cannot be seen as
-      # applied from this frame (the Lislevand 24 decision, already applied
-      # with bibcite Fry:1988aa, stopped every other source's --apply-queue;
-      # Hudson round, 2026-10-06)
-      svc <- q[[paste0('c', act, '_services')]]
-      svc <- if (is.na(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
-      if (!'crossref' %in% svc)
-        problems <- c(problems, sprintf('%s: candidate %s (%s) was returned by %s only, so no Crossref record exists to build its entry from; decide doi:%s if the DOI resolves at Crossref, else nodoi',
-                                        key, act, q[[paste0('c', act, '_doi')]], if (length(svc) == 0) 'no service' else paste(svc, collapse = ';'), q[[paste0('c', act, '_doi')]]))
-    }
-    if (!is.na(SplitDecision(q$decision)$year) && !grepl('^([123]|doi:)', act))
-      problems <- c(problems, sprintf('%s: a year override needs a candidate or doi: decision', key))
+    problems <- c(problems, QueueDecisionProblems(q, check_crossref_record = q$source_label %in% prim$source_label && !Applied(q)))
   }
   if (length(problems) > 0)
     stop('pending_citations.csv: ', paste(problems, collapse = '; '), call. = FALSE)
@@ -872,6 +897,14 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     # a key minted for another DOI (or for a DOI the row no longer has) is
     # not carried over: --bib mints or reuses one for the new state
     if (!identical(prim$doi[i], old_doi) && !startsWith(dec, 'manual:')) { prim$bibcite[i] <- NA_character_; prim$cite_id[i] <- NA_character_ }
+    # what the owner typed beside the decision on the tab goes into the row's
+    # notes, dated, once
+    note <- if (is.null(q$owner_note)) NA_character_ else trimws(q$owner_note)
+    if (!is.na(note) && nzchar(note)) {
+      entry <- sprintf('owner %s: %s', q$decided_at, note)
+      have <- if (is.na(prim$notes[i])) character(0) else trimws(strsplit(prim$notes[i], ';', fixed = TRUE)[[1]])
+      if (!entry %in% have) prim$notes[i] <- if (is.na(prim$notes[i]) || !nzchar(prim$notes[i])) entry else paste(prim$notes[i], entry, sep = '; ')
+    }
   }
   prim
 }

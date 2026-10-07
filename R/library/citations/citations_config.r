@@ -208,7 +208,21 @@ pending_queue_columns <- c(
   'reason',
   paste0('c1_', pending_candidate_fields), paste0('c2_', pending_candidate_fields),
   paste0('c3_', pending_candidate_fields),
-  'scite_note', 'decision', 'decided_by', 'decided_at')
+  'scite_note',
+  'recommendation', 'recommendation_reason', 'recommended_by', 'owner_note',
+  'decision', 'decided_by', 'decided_at')
+# The recommendation block (added 2026-10-06, the owner decision workflow of
+# the Sheet tab BM_decisions; optional in files written before it, read as NA):
+# `recommendation` is a decision string in the grammar above, or empty when the
+# case is left to the owner; `recommendation_reason` says why in a few words;
+# `recommended_by` is 'policy:<rule>' (recommend.r, recomputed by every
+# --recommend), 'agent' (a session's reading of the case, kept until
+# --recommend --force) or 'owner'; `owner_note` is the free text the owner
+# typed beside the decision on the tab, copied into the row's `notes` by
+# --apply-queue. None of the four is a decision: the owner's `decision` is
+# still the only thing --apply-queue reads, and `accept` on the tab becomes
+# the recommendation shown there at --decisions-pull time.
+pending_queue_optional_columns <- c('recommendation', 'recommendation_reason', 'recommended_by', 'owner_note')
 
 # Bib/scite_checks.csv (issue #1, 1.7; owner amendments 2026-10-04 and
 # 2026-10-05): one row per DOI screened for retractions and corrections in a
