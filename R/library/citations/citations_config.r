@@ -37,6 +37,9 @@ CitationsPaths <- function(wd_root) {
     classes_csv        = file.path(wd_root, 'Bib', 'source_provenance_classes.csv'),
     snapshot_primary   = file.path(wd_root, 'Bib', 'BM_primary_citations_snapshot.csv'),
     snapshot_citations = file.path(wd_root, 'Bib', 'BM_citations_snapshot.csv'),
+    snapshot_decisions = file.path(wd_root, 'Bib', 'BM_decisions_snapshot.csv'),
+    snapshot_decision_items = file.path(wd_root, 'Bib', 'BM_decision_items_snapshot.csv'),
+    decision_items_csv = file.path(wd_root, 'Bib', 'decision_items.csv'),
     snapshot_data      = file.path(wd_root, 'sources', 'BM_data_snapshot.csv'),
     provenance_csv     = file.path(wd_root, 'TaxonBodyMass_Provenance.csv.gz'),
     warnings_md        = file.path(wd_root, 'reports', 'warnings_citations.md')
@@ -45,13 +48,36 @@ CitationsPaths <- function(wd_root) {
 
 # The lab Google Sheet and the names of the three tabs RunMe.r reads (the mass
 # overrides and the two citation maps), each with a tracked copy (the
-# snapshot_* paths above; R/library/sheet_snapshots.r, #118). Only
-# `sheet_tab_primary` is ever written by this tooling (sheet_append.r).
+# snapshot_* paths above; R/library/sheet_snapshots.r, #118). This tooling
+# writes `sheet_tab_primary` (sheet_append.r) and the two decision tabs of
+# the owner's workflow (decisions_sheet.r, owner decision 2026-10-06):
+# `sheet_tab_decisions`, one row per open queue row, appended by
+# --decisions-push and read back by --decisions-pull, which writes only its
+# `status` column; `sheet_tab_decision_items`, the questions that are not a
+# queue row (Bib/decision_items.csv). RunMe.r never reads either.
 citations_sheet_url  <- paste0('https://docs.google.com/spreadsheets/d/',
                                '1_TzVFXjcUrDBGHbpRuLh3NwYIF1I8AucsJh8heIFulY/edit?usp=sharing')
 sheet_tab_data       <- 'BM_data'
 sheet_tab_citations  <- 'BM_citations'
 sheet_tab_primary    <- 'BM_primary_citations'
+sheet_tab_decisions  <- 'BM_decisions'
+sheet_tab_decision_items <- 'BM_decision_items'
+# The columns of BM_decisions, in this order: the key (source_label,
+# native_key, queued_at: a key re-queued after a pull is a new row), the
+# case (n_records, reason, the parsed citation as one cell, the three
+# candidates as HYPERLINK cells 'title (year) container [sim]', the notice,
+# whether the fields a nodoi entry needs are complete), the recommendation
+# and its reason, then what the owner fills (`decision`, `owner_note`), the
+# raw citation, the push date and the `status` the pull writes back
+# ('pulled <date>', 'error: <why>', 'deferred', 'ignored: already pulled').
+# Frozen A:B and a wrapped `parsed` column are the owner's one-time cosmetics.
+sheet_decisions_columns <- c('source_label', 'native_key', 'queued_at', 'n_records', 'reason', 'parsed', 'c1', 'c2', 'c3',
+                             'notice', 'fields_complete', 'recommendation', 'recommendation_reason', 'decision', 'owner_note',
+                             'raw_citation', 'pushed_at', 'status')
+# the dropdown of the `decision` column (non-strict: 'doi:10...',
+# 'manual:<Key>' and 'N:year=YYYY' may be typed as free text); `accept` takes
+# the row's recommendation, `defer` (or an empty cell) leaves the row open
+decision_tab_choices <- c('accept', '1', '2', '3', 'nodoi', 'drop', 'self', 'defer')
 # How BM_data is read (read_sheet() col_types): Taxon.group, taxon, mass_g,
 # source_mass, a, b, Length; the numbers as the cells' values, which the
 # character read would give as formatted text. RunMe.r keeps columns 1-4.
