@@ -14,6 +14,9 @@
 #   PullDecisions(queue, tab, ...)       pure: the tab read back -> the queue with the decisions
 #                                        written and one status per tab row, in the read's order
 #   PullSummary(results)                 pulled / deferred / errors / ignored per source
+#   ReadDecisionItems(path), WriteDecisionItems(items, path)   Bib/decision_items.csv
+#   PushDecisionItems(items, ...)        the items not yet on BM_decision_items (key item_id)
+#   PullDecisionItems(items, tab, ...)   pure: a new answer on the tab -> answer + answered_at
 #   AppendRoundLog(path, title, lines)   a dated entry in audit/provenance_rounds.md
 #
 # The tab is appended to and its `status` column rewritten; no other cell is
@@ -302,4 +305,74 @@ PullSummary <- function(results) {
 AppendRoundLog <- function(path, title, lines, date = format(Sys.Date())) {
   cat(c('', sprintf('## %s -- %s', date, title), '', lines), file = path, sep = '\n', append = TRUE)
   invisible(path)
+}
+
+# ---- the decision items ----------------------------------------------------------------------
+# The questions that are not a queue row (Bib/decision_items.csv,
+# decision_item_columns): pushed to BM_decision_items on item_id, the
+# owner's `answer` pulled back with the pull date; the agents implement the
+# answer by hand and the round log keeps 'item_id: question -> answer'.
+EmptyDecisionItems <- function()
+  as.data.frame(setNames(rep(list(character()), length(decision_item_columns)), decision_item_columns), stringsAsFactors = FALSE)
+
+ReadDecisionItems <- function(path) {
+  if (!file.exists(path)) return(EmptyDecisionItems())
+  d <- read.csv(path, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'),
+                check.names = FALSE, encoding = 'UTF-8', fileEncoding = 'UTF-8')
+  miss <- setdiff(decision_item_columns, names(d))
+  if (length(miss) > 0) stop(basename(path), ' lacks column(s) ', paste(miss, collapse = ', '), call. = FALSE)
+  if (anyDuplicated(d$item_id)) stop(basename(path), ': duplicated item_id ', paste(unique(d$item_id[duplicated(d$item_id)]), collapse = ', '), call. = FALSE)
+  d[, decision_item_columns]
+}
+
+WriteDecisionItems <- function(items, path) {
+  write.csv(items[, decision_item_columns], path, row.names = FALSE, na = '', fileEncoding = 'UTF-8')
+  invisible(items)
+}
+
+# Every item as a tab row (the answered ones too: the tab is the record),
+# `status` empty.
+BuildDecisionItemRows <- function(items) {
+  out <- as.data.frame(items[, decision_item_columns], stringsAsFactors = FALSE)
+  out$status <- rep(NA_character_, nrow(out))
+  rownames(out) <- NULL
+  out[, sheet_decision_items_columns]
+}
+
+PushDecisionItems <- function(items, url = citations_sheet_url, tab = sheet_tab_decision_items, dry_run = TRUE, snapshot_path = NULL, io = DecisionsSheetIO())
+  AppendKeyedRows(BuildDecisionItemRows(items), 'item_id', url, tab, sheet_decision_items_columns,
+                  dry_run = dry_run, snapshot_path = snapshot_path, io = io, what = 'item')
+
+# The items tab read back against the file: an item with a non-empty
+# `answer` on the tab and no `answered_at` in the file takes the answer and
+# `pulled_at`; an item already answered in the file keeps its answer
+# ('pulled <answered_at>', or 'ignored: already answered ...' when the tab
+# differs); an unanswered item stays as it is (status empty); a tab row
+# whose item_id the file lacks is an error. Pure. Returns list(items,
+# results, log): `results` one row per tab row (item_id, answer, status) in
+# the tab's order, `log` the round-log lines of the newly answered items.
+PullDecisionItems <- function(items, tab, pulled_at = format(Sys.Date())) {
+  need <- c('item_id', 'answer')
+  miss <- setdiff(need, names(tab))
+  if (length(miss) > 0) stop('the items tab lacks column(s) ', paste(miss, collapse = ', '), call. = FALSE)
+  tab <- as.data.frame(tab, stringsAsFactors = FALSE)
+  n <- nrow(tab)
+  results <- data.frame(item_id = tab$item_id, answer = vapply(seq_len(n), function(i) Cell(tab$answer[i]), character(1)),
+                        status = rep(NA_character_, n), stringsAsFactors = FALSE)
+  log <- character(0)
+  for (i in seq_len(n)) {
+    j <- match(tab$item_id[i], items$item_id)
+    if (is.na(j)) { results$status[i] <- 'error: no item with this item_id'; next }
+    ans <- results$answer[i]
+    if (Nz(items$answered_at[j])) {
+      results$status[i] <- if (!is.na(ans) && !is.na(items$answer[j]) && ans == items$answer[j]) sprintf('pulled %s', items$answered_at[j])
+                           else sprintf('ignored: already answered %s (change it in the CSV)', items$answered_at[j])
+      next
+    }
+    if (is.na(ans)) next
+    items$answer[j] <- ans; items$answered_at[j] <- pulled_at
+    results$status[i] <- sprintf('pulled %s', pulled_at)
+    log <- c(log, sprintf('%s: %s -> %s', items$item_id[j], items$question[j], ans))
+  }
+  list(items = items, results = results, log = log)
 }

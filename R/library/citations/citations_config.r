@@ -78,6 +78,15 @@ sheet_decisions_columns <- c('source_label', 'native_key', 'queued_at', 'n_recor
 # 'manual:<Key>' and 'N:year=YYYY' may be typed as free text); `accept` takes
 # the row's recommendation, `defer` (or an empty cell) leaves the row open
 decision_tab_choices <- c('accept', '1', '2', '3', 'nodoi', 'drop', 'self', 'defer')
+# Bib/decision_items.csv: the questions for the owner that are not a queue
+# row (a role, a key rename, a year to confirm, a fold of two entries;
+# decisions_sheet.r). `item_id` is '<Src>-<n>'; the agents write question,
+# options and recommendation, the owner answers on the tab
+# BM_decision_items (the same columns plus `status`), --decisions-pull
+# copies a new answer and its date into the file, and a session implements
+# the answer by hand.
+decision_item_columns <- c('item_id', 'asked_at', 'source_label', 'question', 'options', 'recommendation', 'answer', 'answered_at')
+sheet_decision_items_columns <- c(decision_item_columns, 'status')
 # How BM_data is read (read_sheet() col_types): Taxon.group, taxon, mass_g,
 # source_mass, a, b, Length; the numbers as the cells' values, which the
 # character read would give as formatted text. RunMe.r keeps columns 1-4.

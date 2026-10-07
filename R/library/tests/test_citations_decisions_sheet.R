@@ -221,5 +221,38 @@ lg <- tempfile(fileext = '.md')
 AppendRoundLog(lg, 'test', c('- one', '- two'), date = '2026-10-10')
 Expect(identical(readLines(lg), c('', '## 2026-10-10 -- test', '', '- one', '- two')), 'a round-log entry: a dated heading and the lines')
 
+cat('ReadDecisionItems(), WriteDecisionItems(), PushDecisionItems(), PullDecisionItems()\n')
+items <- data.frame(item_id = c('Src-1', 'Src-2', 'Other-1'), asked_at = '2026-10-06', source_label = c('Src', 'Src', 'Other'),
+                    question = c('Q1?', 'Q2?', 'Q3?'), options = 'a | b', recommendation = 'a', answer = c(NA, 'b', NA), answered_at = c(NA, '2026-10-05', NA), stringsAsFactors = FALSE)
+itf <- tempfile(fileext = '.csv')
+WriteDecisionItems(items, itf)
+back <- ReadDecisionItems(itf)
+Expect(identical(names(back), decision_item_columns) && nrow(back) == 3 && is.na(back$answer[1]) && back$answer[2] == 'b' && nrow(ReadDecisionItems(tempfile())) == 0,
+       'the items file round-trips; a missing file reads as empty')
+Expect(Has(ErrorOf(ReadDecisionItems({ f <- tempfile(fileext = '.csv'); write.csv(rbind(items, items[1, ]), f, row.names = FALSE); f })), 'duplicated item_id Src-1'), 'a duplicated item_id stops')
+irows <- BuildDecisionItemRows(items)
+Expect(identical(names(irows), sheet_decision_items_columns) && nrow(irows) == 3 && all(is.na(irows$status)), 'every item becomes a tab row with an empty status')
+fi <- FakeSheet(); isnap <- tempfile(fileext = '.csv')
+ri <- suppressMessages(PushDecisionItems(items, 'url', sheet_tab_decision_items, dry_run = FALSE, snapshot_path = isnap, io = fi$io))
+ri2 <- suppressMessages(PushDecisionItems(rbind(items, data.frame(item_id = 'Src-3', asked_at = '2026-10-07', source_label = 'Src', question = 'Q4?', options = 'x', recommendation = 'x', answer = NA, answered_at = NA)),
+                                          'url', sheet_tab_decision_items, dry_run = FALSE, snapshot_path = isnap, io = fi$io))
+Expect(nrow(ri$new) == 3 && ri$n_after == 3 && nrow(ri2$new) == 1 && ri2$new$item_id == 'Src-3' && ri2$n_after == 4 && nrow(read.csv(isnap, stringsAsFactors = FALSE)) == 4 &&
+         !any(grepl('set_validation', fi$env$log)),
+       'items are appended on item_id (idempotent), snapshotted, with no dropdown')
+itab <- fi$env$tabs$BM_decision_items
+itab$answer <- c('a', 'b', NA, 'yes')
+itab <- rbind(itab, data.frame(item_id = 'Nope-1', asked_at = NA, source_label = NA, question = NA, options = NA, recommendation = NA, answer = 'x', answered_at = NA, status = NA))
+pi <- PullDecisionItems(rbind(items, data.frame(item_id = 'Src-3', asked_at = '2026-10-07', source_label = 'Src', question = 'Q4?', options = 'x', recommendation = 'x', answer = NA, answered_at = NA)), itab, pulled_at = '2026-10-10')
+Expect(pi$items$answer[1] == 'a' && pi$items$answered_at[1] == '2026-10-10' && pi$items$answer[2] == 'b' && pi$items$answered_at[2] == '2026-10-05' && is.na(pi$items$answer[3]) &&
+         pi$items$answer[4] == 'yes' && identical(pi$results$status, c('pulled 2026-10-10', 'pulled 2026-10-05', NA, 'pulled 2026-10-10', 'error: no item with this item_id')) &&
+         identical(pi$log, c('Src-1: Q1? -> a', 'Src-3: Q4? -> yes')),
+       'a new answer is written with the pull date, an old one kept, an open item left, an unknown id an error; the log lines name the newly answered items')
+itab$answer[2] <- 'changed'
+Expect(PullDecisionItems(items, itab, pulled_at = '2026-10-11')$results$status[2] == 'ignored: already answered 2026-10-05 (change it in the CSV)', 'a changed answer after the pull is ignored')
+tracked <- ReadDecisionItems(file.path(repo, 'Bib', 'decision_items.csv'))
+Expect(nrow(tracked) >= 8 && !anyDuplicated(tracked$item_id) && all(grepl('^[A-Za-z0-9_]+-[0-9]+$', tracked$item_id)) && all(nzchar(tracked$question)) && all(nzchar(tracked$options)) &&
+         all(tracked$source_label %in% names(reflist_specs)),
+       'the tracked items file: unique <Src>-<n> ids, a question and options each, known source labels')
+
 cat(sprintf('\n%d checks, %d failed\n', n_checks, length(failures)))
 if (length(failures) > 0) { cat(paste0('  FAIL: ', failures, '\n'), sep = ''); quit(status = 1) }

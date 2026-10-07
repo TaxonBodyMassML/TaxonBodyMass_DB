@@ -169,6 +169,10 @@ if (Flag('--decisions-push')) {
        if (length(per) > 0) paste0(': ', paste(sprintf('%s %d', names(per), per), collapse = ', ')) else '',
        if (dry) '' else if (is.na(res$validation_error)) '; decision dropdown set' else paste0('; decision dropdown NOT set: ', res$validation_error))
   if (length(res$duplicates) > 0) Note('--decisions-push: %d key(s) appear twice on %s: %s', length(res$duplicates), sheet_tab_decisions, paste(res$duplicates, collapse = '; '))
+  items <- ReadDecisionItems(cfg$decision_items_csv)
+  ri <- PushDecisionItems(items, citations_sheet_url, sheet_tab_decision_items, dry_run = dry, snapshot_path = cfg$snapshot_decision_items, io = io)
+  Note('--decisions-push%s: %d item(s) in %s, %d to append to %s (tab had %d rows%s)', if (dry) ' (dry run)' else '', nrow(items), basename(cfg$decision_items_csv),
+       nrow(ri$new), sheet_tab_decision_items, ri$n_before, if (dry) '' else sprintf(', now %d', ri$n_after))
   quit(save = 'no', status = 0)
 }
 
@@ -192,13 +196,29 @@ if (Flag('--decisions-pull')) {
   for (i in seq_len(nrow(sm))) Note('--decisions-pull: %s: pulled %d, deferred %d, errors %d, ignored %d', sm$source_label[i], sm$pulled[i], sm$deferred[i], sm$errors[i], sm$ignored[i])
   err <- res$results[startsWith(res$results$status, 'error'), , drop = FALSE]
   for (i in seq_len(nrow(err))) cat(sprintf('    %s %s (%s): %s -> %s\n', err$source_label[i], err$native_key[i], err$queued_at[i], err$cell[i], err$status[i]))
+  # the items: a new answer on the tab goes into the file with the pull date
+  item_log <- character(0)
+  if (io$exists(citations_sheet_url, sheet_tab_decision_items)) {
+    items <- ReadDecisionItems(cfg$decision_items_csv)
+    itab <- io$read(citations_sheet_url, sheet_tab_decision_items)
+    pi <- PullDecisionItems(items, itab, pulled_at = run_date)
+    WriteDecisionItems(pi$items, cfg$decision_items_csv)
+    if (nrow(pi$results) > 0 && 'status' %in% names(itab)) io$write_column(citations_sheet_url, sheet_tab_decision_items, match('status', names(itab)), ifelse(is.na(pi$results$status), '', pi$results$status))
+    SnapshotSheetTab(io$read(citations_sheet_url, sheet_tab_decision_items), cfg$snapshot_decision_items)
+    item_log <- pi$log
+    Note('--decisions-pull: %d item(s) on %s: %d newly answered (written to %s), %d answered before, %d error(s), %d still open', nrow(pi$results), sheet_tab_decision_items,
+         length(pi$log), basename(cfg$decision_items_csv), sum(grepl('^(pulled|ignored)', pi$results$status)) - length(pi$log), sum(grepl('^error', pi$results$status)), sum(is.na(pi$results$status)))
+    for (l in pi$log) cat('   ', l, '\n')
+  }
   md <- file.path(cfg$reports_dir, sprintf('decisions_pull_%s.md', run_date))
   rt <- res$results[, c('source_label', 'native_key', 'queued_at', 'cell', 'decision', 'status')]
   writeLines(c(sprintf('# Owner decisions pulled from %s -- %s (%s)', sheet_tab_decisions, run_date, citations_tool_version), '',
-               paste0('- ', unlist(report)), '', '## Per source', '', MarkdownTable(sm), '', '## Rows', '', MarkdownTable(rt)), md)
+               paste0('- ', unlist(report)), '', '## Per source', '', MarkdownTable(sm), '', '## Rows', '', MarkdownTable(rt),
+               if (length(item_log) > 0) c('', '## Items answered', '', paste0('- ', item_log))), md)
   cat('  report:', md, '\n')
   AppendRoundLog(file.path(wd_root, 'audit', 'provenance_rounds.md'), sprintf('Owner decisions pulled from %s (issue #1)', sheet_tab_decisions),
-                 c(paste0('- ', unlist(report)), sprintf('- Report: `reports/decisions_pull_%s.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR.', run_date)), run_date)
+                 c(paste0('- ', unlist(report)), if (length(item_log) > 0) paste0('- Item answered: ', item_log),
+                   sprintf('- Report: `reports/decisions_pull_%s.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.', run_date)), run_date)
   quit(save = 'no', status = 0)
 }
 spec <- tryCatch(ReflistSpec(src), error = function(e) NULL)
