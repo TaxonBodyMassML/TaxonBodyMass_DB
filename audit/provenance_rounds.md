@@ -555,3 +555,17 @@ Branch `issue-1-stage2-faurby` after merging main f20bb28 (Hudson, Makarieva and
 - Item answered: Myhrvold_2015-1: sources/databases/Myhrvold_2015/literature_cited.csv (the 948 entries of Supplemental Table 1, transcribed from the archive's PDF) is classed in the licence manifest as a lab-derived table (repository licence). Keep, or reclass it role parsed, class transcription (facts) in a small follow-up PR? -> reclass: role parsed, class transcription (facts)
 - Item answered: Jones_2009-1: Curated De-Magalhaes:2009aa lacks a doi field, so --bib minted De-MagalhAES:2009aa for AnAge's paper. Add doi = {10.1111/j.1420-9101.2009.01783.x} to the curated entry in BibDesk and re-run --bib (folds the key; one stale Sheet row to delete afterwards), or leave? -> add the DOI and fold
 - Report: `reports/decisions_pull_2026-10-08.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-08 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 968 tab row(s) read from BM_decisions: 968 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 277, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 23, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 8 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 8 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-08.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
