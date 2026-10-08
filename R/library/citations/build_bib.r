@@ -11,9 +11,19 @@
 #                               the type (article, book, incollection, phdthesis,
 #                               mastersthesis, misc) follows the conventions for the
 #                               parsed_* fields set out before NoDOIEntryType()
+#   ReadBibCorrections(path)    Bib/bib_corrections.csv, the owner's corrections to the
+#                               generated entries (issue #141; validated, empty when absent)
+#   ApplyBibCorrections(entry, corrections)
+#                               the corrections of an entry's key applied to the entry
+#                               text while the field still equals crossref_value; a
+#                               mismatch (Crossref fixed upstream, or a stale row) is
+#                               skipped and reported
+#   CheckBibCorrections(corrections, path)
+#                               read-only: the state of every correction against the
+#                               generated file (applied / unapplied / stale / no_entry)
 #   AssignPrimaryKeys(...)      the --bib step over every source's accepted rows: keys,
 #                               CiteIDs and the entries (rows without a Crossref record
-#                               are reported, not fatal)
+#                               are reported, not fatal; the corrections applied)
 #   WritePrimaryBib(entries)    the GENERATED header and the entries in key order
 #   CheckBibKeysUnique()        stops on a key present in both bib files
 #   CheckBibSyntax(path)        RefManageR parse of a generated file (optional)
@@ -301,6 +311,172 @@ BuildBibEntry <- function(work, key, year_override = NA_integer_) {
   FormatBibEntry(type, key, f)
 }
 
+# ---- owner corrections to the generated entries (issue #141) ----------------------------
+# Bib/bib_corrections.csv: one row per bib key and field (bib_corrections_columns,
+# citations_config.r). A Crossref record may carry damaged text -- Scherer:1984aa
+# has 'B�ger, Peter' for Böger, a replacement character the publisher deposited --
+# and the tool never types over a record by itself, so the owner records the
+# correction here (a BM_decision_items question or a note on the tab; the
+# session appends the row) and --bib applies it after the entry is built from
+# the record: only while the entry's field still equals `crossref_value`,
+# compared on the same footing (both sides escaped by the builder), so that a
+# record fixed upstream retires the correction by itself and a stale row is
+# skipped and reported rather than written over the new text. The Sheet's
+# Citation cell (FormatCitationText()) applies the same corrections from the
+# same decision, so a future append agrees with the bib; the cells already on
+# the Sheet are never rewritten. Both values are plain UTF-8 text as the
+# record gives it and as the owner wants it to read, never LaTeX-escaped by
+# hand: EscapeLaTeX() treats them like Crossref's own text (the bib keeps its
+# UTF-8 names, 'Båmstedt, Ulf'), and the author field goes through
+# NoDOIAuthorField() (a corporate name in braces, the ' and ' list), the
+# convention of the owner's nodoi author lists.
+EmptyBibCorrections <- function()
+  as.data.frame(setNames(rep(list(character()), length(bib_corrections_columns)), bib_corrections_columns), stringsAsFactors = FALSE)
+
+# The file, validated: the columns, a bib key and a non-empty corrected value
+# in every row, a field BuildBibEntry() writes, decided_by and a decided_at
+# date, no key + field twice, a corrected value that differs from the record's.
+# An absent file reads as no corrections. `crossref_value` may be empty (the
+# record carries no such field; the correction supplies it).
+ReadBibCorrections <- function(path) {
+  if (!file.exists(path)) return(EmptyBibCorrections())
+  d <- read.csv(path, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'),
+                check.names = FALSE, encoding = 'UTF-8', fileEncoding = 'UTF-8')
+  miss <- setdiff(bib_corrections_columns, names(d))
+  if (length(miss) > 0) stop(basename(path), ' lacks column(s) ', paste(miss, collapse = ', '), call. = FALSE)
+  d <- d[, bib_corrections_columns, drop = FALSE]
+  for (col in names(d)) d[[col]] <- ifelse(is.na(d[[col]]), NA_character_, trimws(d[[col]]))
+  Blank <- function(x) is.na(x) | !nzchar(x)
+  problems <- character(0)
+  Where <- function(bad) paste0('row(s) ', paste(which(bad), collapse = ', '))
+  if (any(Blank(d$bibcite))) problems <- c(problems, paste('empty bibcite in', Where(Blank(d$bibcite))))
+  bad <- Blank(d$field) | !d$field %in% bib_correction_fields
+  if (any(bad)) problems <- c(problems, sprintf('field must be one of %s in %s', paste(bib_correction_fields, collapse = ', '), Where(bad)))
+  if (any(Blank(d$corrected_value))) problems <- c(problems, paste('empty corrected_value in', Where(Blank(d$corrected_value))))
+  if (any(Blank(d$decided_by))) problems <- c(problems, paste('empty decided_by in', Where(Blank(d$decided_by))))
+  bad <- Blank(d$decided_at) | !grepl('^\\d{4}-\\d{2}-\\d{2}$', d$decided_at, perl = TRUE)
+  if (any(bad)) problems <- c(problems, paste('decided_at must be a YYYY-MM-DD date in', Where(bad)))
+  same <- !is.na(d$crossref_value) & !is.na(d$corrected_value) & d$crossref_value == d$corrected_value
+  if (any(same)) problems <- c(problems, paste('corrected_value equals crossref_value in', Where(same)))
+  kf <- paste(d$bibcite, d$field)
+  if (anyDuplicated(kf)) problems <- c(problems, paste('a key and field twice:', paste(unique(kf[duplicated(kf)]), collapse = '; ')))
+  if (length(problems) > 0) stop(basename(path), ': ', paste(problems, collapse = '; '), call. = FALSE)
+  d$crossref_value[Blank(d$crossref_value)] <- NA_character_
+  rownames(d) <- NULL
+  d
+}
+
+# A correction's value as the builder would write it: the author field under
+# the nodoi author convention (NoDOIAuthorField(): each name escaped, braces
+# kept), pages with '--', anything else EscapeLaTeX(); NA stays NA (no field).
+BibCorrectionFieldValue <- function(field, value) {
+  if (is.null(value) || is.na(value) || !nzchar(value)) return(NA_character_)
+  if (field == 'author') NoDOIAuthorField(value)
+  else if (field == 'pages') gsub('-+', '--', EscapeLaTeX(value))
+  else EscapeLaTeX(value)
+}
+
+# The lines of an entry (one field per line, FormatBibEntry()) and, per line,
+# the field name, its value and the closing suffix (',' or the entry's '}').
+BibEntryLines <- function(entry) {
+  lines <- strsplit(entry, '\n', fixed = TRUE)[[1]]
+  m <- regmatches(lines, regexec('^\t([A-Za-z]+) = \\{(.*)\\}([,}])$', lines, perl = TRUE))
+  data.frame(line = lines,
+             field  = vapply(m, function(x) if (length(x) == 4) x[2] else NA_character_, character(1)),
+             value  = vapply(m, function(x) if (length(x) == 4) x[3] else NA_character_, character(1)),
+             suffix = vapply(m, function(x) if (length(x) == 4) x[4] else NA_character_, character(1)),
+             stringsAsFactors = FALSE)
+}
+
+BibEntryKey <- function(entry) trimws(sub('^\\s*@[A-Za-z]+\\s*\\{\\s*([^,]+),.*$', '\\1', strsplit(entry, '\n', fixed = TRUE)[[1]][1], perl = TRUE))
+
+# The corrections of the entry's key applied to the entry text. A correction
+# is applied when the entry's current field value equals the row's
+# crossref_value as the builder writes it (BibCorrectionFieldValue(); an
+# empty crossref_value matches an entry without the field, and the field is
+# added as the first field); otherwise it is skipped -- the record was fixed
+# upstream or the row is stale -- and reported with the entry's current
+# value. Returns list(entry, corrections): the latter one row per correction
+# of the key (bibcite, field, status 'applied' / 'stale', current) -- empty
+# when the key has none.
+ApplyBibCorrections <- function(entry, corrections) {
+  empty <- data.frame(bibcite = character(), field = character(), status = character(), current = character(), stringsAsFactors = FALSE)
+  if (is.null(corrections) || nrow(corrections) == 0) return(list(entry = entry, corrections = empty))
+  key <- BibEntryKey(entry)
+  rows <- corrections[corrections$bibcite == key, , drop = FALSE]
+  if (nrow(rows) == 0) return(list(entry = entry, corrections = empty))
+  el <- BibEntryLines(entry)
+  out <- empty
+  for (i in seq_len(nrow(rows))) {
+    f <- rows$field[i]
+    at <- which(el$field %in% f)[1]
+    current <- if (is.na(at)) NA_character_ else el$value[at]
+    expected <- BibCorrectionFieldValue(f, rows$crossref_value[i])
+    status <- 'stale'
+    if (identical(current, expected)) {
+      new <- BibCorrectionFieldValue(f, rows$corrected_value[i])
+      if (is.na(at)) {
+        added <- data.frame(line = sprintf('\t%s = {%s},', f, new), field = f, value = new, suffix = ',', stringsAsFactors = FALSE)
+        el <- rbind(el[1, , drop = FALSE], added, el[-1, , drop = FALSE])
+      } else { el$value[at] <- new; el$line[at] <- sprintf('\t%s = {%s}%s', f, new, el$suffix[at]) }
+      status <- 'applied'
+    }
+    out <- rbind(out, data.frame(bibcite = key, field = f, status = status, current = current, stringsAsFactors = FALSE))
+  }
+  rownames(out) <- NULL
+  list(entry = paste(el$line, collapse = '\n'), corrections = out)
+}
+
+# The entries of a generated bib file as text, named by key (the layout of
+# WritePrimaryBib(): '@type{key,' on one line, one field per line).
+ReadBibEntryTexts <- function(path) {
+  if (!file.exists(path)) return(character())
+  lines <- readLines(path, warn = FALSE, encoding = 'UTF-8')
+  starts <- grep('^\\s*@[A-Za-z]+\\s*\\{', lines, perl = TRUE)
+  starts <- starts[!grepl('^\\s*@(comment|string|preamble)', lines[starts], ignore.case = TRUE, perl = TRUE)]
+  if (length(starts) == 0) return(character())
+  ends <- c(starts[-1] - 1L, length(lines))
+  texts <- vapply(seq_along(starts), function(i) { b <- lines[starts[i]:ends[i]]; paste(b[seq_len(max(which(nzchar(b))))], collapse = '\n') }, character(1))
+  setNames(texts, vapply(texts, BibEntryKey, character(1), USE.NAMES = FALSE))
+}
+
+# Read-only, for the pipeline's checks (CheckCitations(), reports/warnings_citations.md):
+# the state of every correction against the generated file -- 'applied' (the
+# entry carries the corrected value), 'unapplied' (it still carries the
+# crossref_value: --bib has not run since the row was added), 'stale' (it
+# carries neither: the Crossref record changed, or the row never matched) or
+# 'no_entry' (the key is not in the file). Returns a frame (bibcite, field,
+# status, current).
+CheckBibCorrections <- function(corrections, primary_bib_path) {
+  empty <- data.frame(bibcite = character(), field = character(), status = character(), current = character(), stringsAsFactors = FALSE)
+  if (is.null(corrections) || nrow(corrections) == 0) return(empty)
+  texts <- ReadBibEntryTexts(primary_bib_path)
+  out <- lapply(seq_len(nrow(corrections)), function(i) {
+    key <- corrections$bibcite[i]; f <- corrections$field[i]
+    if (!key %in% names(texts)) return(data.frame(bibcite = key, field = f, status = 'no_entry', current = NA_character_, stringsAsFactors = FALSE))
+    el <- BibEntryLines(texts[[key]])
+    at <- which(el$field %in% f)[1]
+    current <- if (is.na(at)) NA_character_ else el$value[at]
+    status <- if (identical(current, BibCorrectionFieldValue(f, corrections$corrected_value[i]))) 'applied'
+              else if (identical(current, BibCorrectionFieldValue(f, corrections$crossref_value[i]))) 'unapplied' else 'stale'
+    data.frame(bibcite = key, field = f, status = status, current = current, stringsAsFactors = FALSE)
+  })
+  do.call(rbind, out)
+}
+
+# The author names of a corrected author field as a Crossref-style author
+# list (family / given, or name for a braced corporate author), for the
+# Sheet's Citation cell: 'Scherer, Siegfried and Böger, Peter' ->
+# list(list(family = 'Scherer', given = 'Siegfried'), list(family = 'Böger', given = 'Peter')).
+BibTeXAuthorsAsCrossref <- function(author) {
+  parts <- trimws(strsplit(as.character(author), '\\s+and\\s+', perl = TRUE)[[1]])
+  parts <- parts[nzchar(parts)]
+  lapply(parts, function(a) {
+    if (grepl('^\\{.*\\}$', a, perl = TRUE)) return(list(name = sub('^\\{(.*)\\}$', '\\1', a, perl = TRUE)))
+    if (grepl(',', a, fixed = TRUE)) list(family = trimws(sub(',.*$', '', a)), given = trimws(sub('^[^,]*,', '', a))) else list(family = a)
+  })
+}
+
 # ---- DOI-less entries: the conventions for the owner's parsed_* fields -----------------
 # A `nodoi` entry is built from the owner-approved parsed fields alone, so the
 # fields follow a small convention (issue #114, item 1; README):
@@ -519,13 +695,19 @@ BuildBibEntryNoDOI <- function(row, key, approved_by, approved_date) {
 # give (existing keys are never renamed by the tool; the owner renames).
 # A row that keeps its key keeps its CiteID (KeepOrMintCiteID()). `curated`:
 # ReadBibEntries() of the curated bib; `ids`: the tracked CiteIDs table
-# (Bibcite, CiteID, doi). Returns list(prim, entries, authorless, no_record):
-# `entries` is the named character vector key -> entry text.
-AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(doi) CrossrefWork(doi, cfg)) {
+# (Bibcite, CiteID, doi); `corrections`: ReadBibCorrections(), applied to
+# every entry built from a Crossref record (ApplyBibCorrections(), #141).
+# Returns list(prim, entries, authorless, no_record, corrections): `entries`
+# is the named character vector key -> entry text; `corrections` one row per
+# correction row (bibcite, field, status 'applied' / 'stale' / 'no_entry' --
+# the last for a key no Crossref entry was built for this run --, current).
+AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(doi) CrossrefWork(doi, cfg), corrections = NULL) {
   known_keys <- c(curated$key, ids$Bibcite)
   known_dois <- setNames(curated$doi, curated$key)
   known_ids  <- ids[, intersect(c('CiteID', 'Bibcite', 'doi'), names(ids)), drop = FALSE]
   entries <- character(); authorless <- character(); no_record <- character()
+  if (is.null(corrections)) corrections <- EmptyBibCorrections()
+  corr_out <- data.frame(bibcite = character(), field = character(), status = character(), current = character(), stringsAsFactors = FALSE)
   acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
   acc <- acc[order(is.na(all_prim$doi[acc]), all_prim$doi[acc], all_prim$source_label[acc], all_prim$native_key[acc], method = 'radix')]
   row_dois <- setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]
@@ -567,7 +749,11 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       yr <- KeyYear(w, yo, r$parsed_year)
       key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
              else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, row_dois))
-      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, yo)
+      if (!key %in% curated$key && !key %in% names(entries)) {
+        ac <- ApplyBibCorrections(BuildBibEntry(w, key, yo), corrections)
+        entries[key] <- ac$entry
+        corr_out <- rbind(corr_out, ac$corrections)
+      }
       known_keys <- union(known_keys, key)
       row_dois <- c(row_dois, setNames(r$doi, key))       # the next row with this DOI reuses the key
       all_prim$bibcite[i] <- key
@@ -591,7 +777,14 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
     }
     Remember(i)
   }
-  list(prim = all_prim, entries = entries, authorless = authorless, no_record = no_record)
+  # a correction row for a key no Crossref entry was built for (a curated or
+  # DOI-less key, or a key that left the bib)
+  unused <- !paste(corrections$bibcite, corrections$field) %in% paste(corr_out$bibcite, corr_out$field)
+  if (any(unused))
+    corr_out <- rbind(corr_out, data.frame(bibcite = corrections$bibcite[unused], field = corrections$field[unused], status = 'no_entry',
+                                           current = NA_character_, stringsAsFactors = FALSE))
+  rownames(corr_out) <- NULL
+  list(prim = all_prim, entries = entries, authorless = authorless, no_record = no_record, corrections = corr_out)
 }
 
 # The CiteID of a row that keeps its key is the one it has (#114 item 7: a

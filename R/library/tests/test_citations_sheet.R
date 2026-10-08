@@ -69,6 +69,41 @@ Expect(FormatCitationTextNoDOI(Row()) == 'Kremer (1976). The ecology of the cten
        'the DOI-less cell from the approved parsed fields: the author field as approved (no invented et al.; corporate braces dropped), ending with No DOI')
 Expect(grepl('^Ikeda, T. & Bruce, B. \\(1985\\)\\.', FormatCitationText(w, year_override = 1985L)), 'a recorded year override changes the Citation cell year')
 
+# the owner's corrections to the generated entries (#141): the cell takes the same corrections as the bib entry of its key
+cat('FormatCitationText() with Bib/bib_corrections.csv\n')
+co <- ReadBibCorrections(cfg$corrections_csv)
+ws <- CrossrefWork('10.1007/bf00384277', cfg)
+cell <- read.csv(cfg$snapshot_primary, stringsAsFactors = FALSE, colClasses = 'character', encoding = 'UTF-8')
+cell <- cell$Citation[cell$CiteID == 'Scherer_1984']
+cit_c <- FormatCitationText(ws, key = 'Scherer:1984aa', corrections = co)
+Expect(nrow(co) >= 1 && grepl('B�ger, P. (1984).', FormatCitationText(ws), fixed = TRUE) && grepl('Scherer, S., Ernst, A., Chen, T.-W., & Böger, P. (1984).', cit_c, fixed = TRUE) &&
+         length(cell) == 1 && cit_c == cell && sub('^[^(]*', '', cit_c) == sub('^[^(]*', '', FormatCitationText(ws)),
+       'the Scherer:1984aa author correction gives the Sheet cell the owner wrote by hand (Böger, P.); the rest of the cell is unchanged')
+Corr <- function(bibcite, field, crossref_value, corrected_value)
+  data.frame(bibcite = bibcite, field = field, crossref_value = crossref_value, corrected_value = corrected_value, decided_by = 'owner', decided_at = '2026-10-08', notes = '', stringsAsFactors = FALSE)
+stale <- Corr('Scherer:1984aa', 'author', 'Scherer, Siegfried and Böger, Peter', 'Scherer, S. and Böger, P.')
+Expect(identical(FormatCitationText(ws, key = 'Scherer:1984aa', corrections = stale), FormatCitationText(ws)) &&
+         identical(FormatCitationText(ws, key = 'Other:1984aa', corrections = co), FormatCitationText(ws)) &&
+         identical(FormatCitationText(ws, corrections = co), FormatCitationText(ws)) && identical(FormatCitationText(ws, key = 'Scherer:1984aa', corrections = co[0, ]), FormatCitationText(ws)),
+       'a correction the bib skips as stale is skipped here too; another key, no key or no corrections: the cell from the record alone')
+synw <- list(DOI = '10.1/Z', type = 'journal-article', title = list('A <i>Title</i> &amp; more'), author = list(list(family = 'Doe', given = 'J.')),
+             `container-title` = list('J'), publisher = 'Pub', volume = '3', issue = '2', page = '1-9', issued = list(`date-parts` = list(list(2010L))))
+Expect(FormatCitationText(synw) == 'Doe, J. (2010). A Title & more. J, 3(2), 1-9. https://doi.org/10.1/z', 'the synthetic record\'s cell')
+many <- rbind(Corr('Doe:2010aa', 'title', 'A Title & more', 'A Title and <i>more</i>'), Corr('Doe:2010aa', 'journal', 'J', 'Journal'), Corr('Doe:2010aa', 'volume', '3', '13'),
+              Corr('Doe:2010aa', 'number', '2', '12'), Corr('Doe:2010aa', 'pages', '1-9', '1--19'), Corr('Doe:2010aa', 'publisher', 'Pub', 'Other Pub'))
+Expect(FormatCitationText(synw, key = 'Doe:2010aa', corrections = many) == 'Doe, J. (2010). A Title and more. Journal, 13(12), 1-19. https://doi.org/10.1/z',
+       'title (plain text matched against the escaped field; tags stripped), journal, volume, number and pages corrections reach the cell; a publisher correction is stale for an @article (no publisher field) and changes nothing')
+bookw <- list(DOI = '10.1/B', type = 'book', title = list('A Book'), author = list(), publisher = 'Pub &amp; Co', issued = list(`date-parts` = list(list(2001L))))
+bc <- rbind(Corr('Anon:2001aa', 'publisher', 'Pub & Co', 'Publisher and Company'), Corr('Anon:2001aa', 'author', NA, 'Doe, J. and {Some Society} and Roe, R. B.'))
+Expect(FormatCitationText(bookw) == '(2001). A Book. Pub & Co. https://doi.org/10.1/b' &&
+         FormatCitationText(bookw, key = 'Anon:2001aa', corrections = bc) == 'Doe, J., Some Society, & Roe, R. B. (2001). A Book. Publisher and Company. https://doi.org/10.1/b',
+       'a publisher correction reaches the cell when the record has no container; an author list supplied for an author-less record is written with initials, a braced corporate name as given')
+prim_c <- EmptyPrimaryReferences(); prim_c[1, 'native_key'] <- 'S7:Scherer et al. 1984'
+prim_c$source_label <- 'Makarieva_2008'; prim_c$match_status <- 'certain'; prim_c$doi <- '10.1007/bf00384277'; prim_c$bibcite <- 'Scherer:1984aa'; prim_c$cite_id <- 'Scherer_1984'; prim_c$role <- 'measurement'
+rows_c <- BuildSheetRows(prim_c, list('10.1007/bf00384277' = ws), added = '2026-10-08', added_by = 'tbmcite test', corrections = co)
+Expect(nrow(rows_c) == 1 && rows_c$Citation == cell && rows_c$Bibcite == '\\citep{Scherer:1984aa}' && BuildSheetRows(prim_c, list('10.1007/bf00384277' = ws))$Citation == FormatCitationText(ws),
+       'BuildSheetRows() passes the corrections through by the row\'s bibcite; without them the row carries Crossref\'s text')
+
 # ---- the rows -------------------------------------------------------------------------------------
 cat('BuildSheetRows()\n')
 prim <- EmptyPrimaryReferences()

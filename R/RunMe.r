@@ -1022,7 +1022,11 @@ provenance <- BuildProvenance(prov_records, prim_refs, prov_classes, dcite[, c('
 prov_con <- gzfile(file.path(wd_root, 'TaxonBodyMass_Provenance.csv.gz'), open = 'wb')
 write.csv(provenance, prov_con, row.names = FALSE)
 close(prov_con)
-citation_checks <- CheckCitations(provenance, bib_entries, dcite, prim_refs, sheet_bibcites = pmap$Bibcite)
+# the owner's corrections to the generated entries (Bib/bib_corrections.csv,
+# issue #141) must all be carried by the generated bib; read-only here
+bib_corrections <- CheckBibCorrections(ReadBibCorrections(file.path(wd_bib, 'bib_corrections.csv')), primary_bib_path)
+citation_checks <- CheckCitations(provenance, bib_entries, dcite, prim_refs, sheet_bibcites = pmap$Bibcite,
+                                  bib_corrections = bib_corrections)
 WriteCitationsReport(file.path(wd_root, 'reports', 'warnings_citations.md'), citation_checks, classes = prov_classes,
                      unmapped_sheet = sheet_unmapped,
                      uncited_labels = if (length(uncited) > 0) paste0(names(uncited), ' (', as.integer(uncited), ' rows)') else character())

@@ -1,6 +1,7 @@
 # Citation tooling (issue #1): the lab Google Sheet.
 #
-#   FormatCitationText(work)            the Citation cell from a Crossref work record only
+#   FormatCitationText(work, ...)       the Citation cell from a Crossref work record only
+#                                       (plus the owner's bib corrections of the entry's key, #141)
 #   FormatCitationTextNoDOI(row, ...)   the Citation cell of an owner-approved DOI-less entry
 #   BuildSheetRows(prim, works)         the rows of BM_primary_citations for a source
 #   AppendPrimaryCitations(rows, ...)   set-difference on Bibcite, print the diff, snapshot
@@ -53,15 +54,41 @@ StripTags <- function(x) { x <- gsub('<[^>]+>', '', x, perl = TRUE); x <- gsub('
 
 # 'Authors (Year). Title. Container, volume(issue), pages. https://doi.org/DOI'
 # from a Crossref work record and nothing else (`year_override`: the owner's
-# recorded ':year=' decision, see BuildBibEntry()).
-FormatCitationText <- function(work, year_override = NA_integer_) {
+# recorded ':year=' decision, see BuildBibEntry()) -- and, given the entry's
+# `key` and the owner's `corrections` (ReadBibCorrections(), #141), the
+# corrections the bib entry of that key takes: the same rows, decided by the
+# same test (ApplyBibCorrections() on the entry BuildBibEntry() builds from
+# the record, so a correction the bib skips as stale is skipped here too),
+# put into the cell's parts as plain text: `author` as a Crossref-style name
+# list (BibTeXAuthorsAsCrossref(), the initials as for the record's names),
+# `title` the text, `journal` / `booktitle` / `series` / `howpublished` the
+# container, `publisher` / `school` / `institution` the container only when
+# the record has no container-title (the cell shows the publisher then),
+# `volume`, `number`, `pages` as given. The cells already on the Sheet are
+# never rewritten.
+FormatCitationText <- function(work, year_override = NA_integer_, key = NA_character_, corrections = NULL) {
   if (is.null(work) || is.null(work[['DOI']])) stop('FormatCitationText(): a Crossref work record with a DOI is required', call. = FALSE)
   au <- CrossrefAuthorList(work); yr <- CrossrefYear(work)
   if (!is.na(year_override)) yr <- as.integer(year_override)
   title <- StripTags(CrossrefTitle(work))
-  cont <- if (length(work[['container-title']]) > 0) StripTags(work[['container-title']][[1]]) else
+  has_cont <- length(work[['container-title']]) > 0
+  cont <- if (has_cont) StripTags(work[['container-title']][[1]]) else
           if (!is.null(work[['publisher']])) StripTags(work[['publisher']]) else NA_character_
   vol <- work[['volume']]; iss <- work[['issue']]; pg <- work[['page']]   # [[ ]]: `$issue` would match `issued`
+  if (!is.null(corrections) && nrow(corrections) > 0 && !is.na(key) && key %in% corrections$bibcite) {
+    ac <- ApplyBibCorrections(BuildBibEntry(work, key, year_override), corrections)$corrections
+    for (i in which(ac$status == 'applied')) {
+      f <- ac$field[i]
+      v <- corrections$corrected_value[corrections$bibcite == key & corrections$field == f][1]
+      if (f == 'author') au <- CrossrefAuthorList(list(author = BibTeXAuthorsAsCrossref(v)))
+      else if (f == 'title') title <- StripTags(v)
+      else if (f %in% c('journal', 'booktitle', 'series', 'howpublished')) cont <- StripTags(v)
+      else if (f %in% c('publisher', 'school', 'institution')) { if (!has_cont) cont <- StripTags(v) }
+      else if (f == 'volume') vol <- v
+      else if (f == 'number') iss <- v
+      else if (f == 'pages') pg <- v
+    }
+  }
   src <- cont
   if (!is.null(vol)) src <- paste0(src, ', ', vol, if (!is.null(iss)) paste0('(', iss, ')') else '')
   if (!is.null(pg)) src <- paste0(src, ', ', gsub('-+', '-', pg))
@@ -99,13 +126,14 @@ FormatCitationTextNoDOI <- function(row) {
 # `manual_bib` row cites a curated bib key (an owner's `manual:<Key>` decision,
 # such as Vanni_2017's 'Ikeda database' -> Ikeda:2014aa): its Sheet row is the
 # owner's (BM_citations) and the curated entry may carry no DOI, so no row is
-# built for it (issue #99).
-BuildSheetRows <- function(prim, works, added = format(Sys.Date()), added_by = citations_tool_version) {
+# built for it (issue #99). `corrections`: ReadBibCorrections(), applied to
+# the Citation cell of a Crossref row as to its bib entry (#141).
+BuildSheetRows <- function(prim, works, added = format(Sys.Date()), added_by = citations_tool_version, corrections = NULL) {
   ok <- prim$match_status %in% c('certain', 'approved', 'nodoi_approved') & !is.na(prim$bibcite) & !is.na(prim$cite_id) &
     !(prim$match_reason %in% 'manual_bib')
   rows <- lapply(which(ok), function(i) {
     r <- prim[i, ]
-    cit <- if (!is.na(r$doi) && !is.null(works[[r$doi]])) FormatCitationText(works[[r$doi]], r$year_override)
+    cit <- if (!is.na(r$doi) && !is.null(works[[r$doi]])) FormatCitationText(works[[r$doi]], r$year_override, key = r$bibcite, corrections = corrections)
            else if (r$match_status == 'nodoi_approved') FormatCitationTextNoDOI(r)
            else NA_character_
     data.frame(CiteID = r$cite_id, Bibcite = paste0('\\citep{', r$bibcite, '}'), Citation = cit,

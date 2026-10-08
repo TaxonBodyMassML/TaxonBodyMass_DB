@@ -22,7 +22,9 @@
 #                                        conversion-factor rows and lab-Sheet rows
 #   CheckCitations(...)                  every primary_bibcite has a bib entry, every CiteID
 #                                        a Sheet row, every accepted row a DOI or an
-#                                        approval; per-source coverage (with the certain
+#                                        approval, every owner correction of
+#                                        Bib/bib_corrections.csv applied to the generated
+#                                        bib (#141); per-source coverage (with the certain
 #                                        rows that rest on Crossref alone, verification_mode
 #                                        crossref_only, counted apart)
 #   WriteCitationsReport(path, checks)   reports/warnings_citations.md
@@ -370,9 +372,15 @@ BuildProvenance <- function(records, prim, classes, citeids, accepted, statuses 
 # ---- checks -----------------------------------------------------------------------------------
 # `bib`: ReadBibEntries() of both files bound with a `file` column; `citeids`:
 # the CiteIDs frame (CiteID, Bibcite); `prim`: LoadPrimaryReferences();
-# `sheet_rows`: the BM_primary_citations rows (Bibcite). Returns
-# list(problems, coverage, counts).
-CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = character()) {
+# `sheet_rows`: the BM_primary_citations rows (Bibcite); `bib_corrections`:
+# CheckBibCorrections() of Bib/bib_corrections.csv against the generated bib
+# (#141; read-only) -- a correction the generated entry does not carry is a
+# problem: 'stale' / 'no_entry' when the entry carries neither the corrected
+# value nor the Crossref value the row records (the record changed upstream,
+# or the row never matched: retire or update it), 'unapplied' when it still
+# carries the Crossref value (--bib has not run since the row was added).
+# Returns list(problems, coverage, counts).
+CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = character(), bib_corrections = NULL) {
   problems <- character(0)
   # the certain rows accepted in Crossref-only mode (owner decision 2026-10-06), counted apart
   vm <- if (is.null(prim$verification_mode)) rep(NA_character_, nrow(prim)) else prim$verification_mode
@@ -403,6 +411,16 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
         problems <- c(problems, sprintf('%d accepted bibcite(s) with no CiteID row yet (run --sheet): %s', length(ns), paste(unique(ns), collapse = ', ')))
     }
   }
+  # the owner's corrections to the generated entries (#141), checked read-only against the generated bib
+  if (!is.null(bib_corrections) && nrow(bib_corrections) > 0) {
+    Say <- function(d) paste(sprintf('%s %s (%s)', d$bibcite, d$field, ifelse(is.na(d$current), 'no such field', paste0("'", d$current, "'"))), collapse = '; ')
+    st <- bib_corrections[bib_corrections$status %in% c('stale', 'no_entry'), , drop = FALSE]
+    if (nrow(st) > 0)
+      problems <- c(problems, sprintf('%d bib correction(s) no longer match the Crossref value (Bib/bib_corrections.csv; the generated entry carries neither the corrected value nor the recorded crossref_value: the record changed upstream or the row is stale -- retire or update the row): %s', nrow(st), Say(st)))
+    un <- bib_corrections[bib_corrections$status %in% 'unapplied', , drop = FALSE]
+    if (nrow(un) > 0)
+      problems <- c(problems, sprintf('%d bib correction(s) not yet applied to the generated bib (run --bib): %s', nrow(un), Say(un)))
+  }
   # per-source coverage over the pipeline rows
   pipe <- provenance[provenance$origin != 'BM_data', , drop = FALSE]
   labs <- sort(unique(pipe$source_mass), method = 'radix')
@@ -427,7 +445,9 @@ CheckCitations <- function(provenance, bib, citeids, prim, sheet_bibcites = char
   list(problems = problems, coverage = cov,
        counts = c(rows = nrow(provenance), species = length(unique(paste(provenance$genus, provenance$species))),
                   primary_refs = length(pc), unresolved_refs = sum(prim$match_status %in% c('pending', 'not_found')),
-                  unverified_refs = sum(is.na(prim$match_status)), crossref_only_refs = sum(xo)))
+                  unverified_refs = sum(is.na(prim$match_status)), crossref_only_refs = sum(xo),
+                  bib_corrections = if (is.null(bib_corrections)) 0L else nrow(bib_corrections),
+                  bib_corrections_applied = if (is.null(bib_corrections)) 0L else sum(bib_corrections$status %in% 'applied')))
 }
 
 WriteCitationsReport <- function(path, checks, classes = NULL, unmapped_sheet = character(),
