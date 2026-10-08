@@ -7,6 +7,7 @@
 #   Rscript R/library/citations/run_citations.r --decisions-push [--no-dry-run]
 #   Rscript R/library/citations/run_citations.r --decisions-pull [--offline]
 #   Rscript R/library/citations/run_citations.r --dedupe-queue
+#   Rscript R/library/citations/run_citations.r --recite
 #
 #   --init         build or update sources/databases/<Src>/primary_references.csv from the
 #                  source's reference list (citations_config.r reflist_specs) and the
@@ -45,6 +46,13 @@
 #                  their answer and date; reports/decisions_pull_<date>.md and a dated
 #                  entry in audit/provenance_rounds.md; --offline skips the Crossref check
 #                  of doi: decisions; no --source
+#   --recite       maintenance: re-parse every queue row whose owner_note is a `cite:`
+#                  note (decided or not) with the current parser into its parsed_*
+#                  columns (ReciteQueue(); the notes pulled before the APA parser
+#                  existed were read by the generic path); the queue is written, the
+#                  change table printed and reports/recite_<date>.md written; rows whose
+#                  note still lacks a required field are left alone and listed; no
+#                  network, no source file touched, no --source
 #   --force        re-verify `certain` rows as well; with --recommend, recompute the
 #                  recommendation of agent and owner rows too
 #   --offline      never touch the network (cached responses only)
@@ -75,16 +83,16 @@ for (f in c('citations_config.r', 'normalise_citation.r', 'parse_reflists.r', 'v
 args <- commandArgs(trailingOnly = TRUE)
 Flag <- function(f) f %in% args
 steps <- c('--init', '--verify', '--queue', '--recommend', '--apply-queue', '--bib', '--sheet', '--screening-list',
-           '--dedupe-queue', '--decisions-push', '--decisions-pull')
+           '--dedupe-queue', '--decisions-push', '--decisions-pull', '--recite')
 # the steps that work on the shared files and need no --source; --recommend
 # joins them under --all-sources
-source_free_steps <- c('--dedupe-queue', '--decisions-push', '--decisions-pull')
+source_free_steps <- c('--dedupe-queue', '--decisions-push', '--decisions-pull', '--recite')
 all_sources <- Flag('--all-sources')
 src_i <- which(args == '--source')
 needs_source <- any(args %in% setdiff(steps, source_free_steps)) && !all_sources
 if ((length(src_i) != 1 || src_i == length(args)) && needs_source) stop('--source <Src> is required')
 if (all_sources && (length(src_i) > 0 || !identical(args[args %in% steps], '--recommend'))) stop('--all-sources goes with --recommend alone, without --source')
-if ((Flag('--decisions-push') || Flag('--decisions-pull')) && length(src_i) > 0) stop('--decisions-push / --decisions-pull take no --source')
+if ((Flag('--decisions-push') || Flag('--decisions-pull') || Flag('--recite')) && length(src_i) > 0) stop('--decisions-push / --decisions-pull / --recite take no --source')
 src <- if (length(src_i) == 1 && src_i < length(args)) args[src_i + 1] else NA_character_
 mr_i <- which(args == '--min-records')
 if (length(mr_i) > 1 || (length(mr_i) == 1 && mr_i == length(args))) stop('--min-records needs one value N')
@@ -173,6 +181,28 @@ if (Flag('--decisions-push')) {
   ri <- PushDecisionItems(items, citations_sheet_url, sheet_tab_decision_items, dry_run = dry, snapshot_path = cfg$snapshot_decision_items, io = io)
   Note('--decisions-push%s: %d item(s) in %s, %d to append to %s (tab had %d rows%s)', if (dry) ' (dry run)' else '', nrow(items), basename(cfg$decision_items_csv),
        nrow(ri$new), sheet_tab_decision_items, ri$n_before, if (dry) '' else sprintf(', now %d', ri$n_after))
+  quit(save = 'no', status = 0)
+}
+
+# ---- --recite: the cite: notes of the queue re-parsed with the current parser ----
+if (Flag('--recite')) {
+  queue <- ReadPendingQueue(cfg$pending_csv)
+  rc <- ReciteQueue(queue)
+  if (nrow(rc$changes) > 0) WritePendingQueueFile(rc$queue, cfg$pending_csv)
+  changed_rows <- unique(paste(rc$changes$source_label, rc$changes$native_key, rc$changes$queued_at))
+  Note('--recite: %d cite: row(s) in %s: %d re-parsed with a change (%d cell(s)), %d unchanged, %d left alone (a required field still missing)%s',
+       rc$rows, basename(cfg$pending_csv), length(changed_rows), nrow(rc$changes), rc$rows - length(changed_rows) - nrow(rc$unparsed), nrow(rc$unparsed),
+       if (nrow(rc$changes) > 0) '' else ' -- nothing written')
+  Note('--recite: cells changed per column: %s', paste(sprintf('%s %d', names(rc$per_column), rc$per_column), collapse = ', '))
+  for (i in seq_len(nrow(rc$unparsed))) Note('--recite: left alone: %s %s (%s): missing %s', rc$unparsed$source_label[i], rc$unparsed$native_key[i], rc$unparsed$queued_at[i], rc$unparsed$missing[i])
+  if (nrow(rc$changes) > 0) { cat('\n'); print(rc$changes[, c('source_label', 'native_key', 'column', 'old', 'new')], right = FALSE, row.names = FALSE); cat('\n') }
+  md <- file.path(cfg$reports_dir, sprintf('recite_%s.md', run_date))
+  per <- data.frame(column = names(rc$per_column), cells_changed = as.integer(rc$per_column), stringsAsFactors = FALSE)
+  writeLines(c(sprintf('# cite: notes re-parsed -- %s (%s)', run_date, citations_tool_version), '', paste0('- ', unlist(report)), '',
+               '## Cells changed per column', '', MarkdownTable(per), '',
+               '## Changes', '', MarkdownTable(rc$changes), '',
+               '## Rows left alone', '', MarkdownTable(rc$unparsed)), md)
+  cat('  report:', md, '\n')
   quit(save = 'no', status = 0)
 }
 

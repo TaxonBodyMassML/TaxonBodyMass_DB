@@ -12,6 +12,7 @@
 #   SetDecisionValidation(url, tab, col) the dropdown on the `decision` column (Sheets batchUpdate)
 #   CiteNote(note), ParseCiteNote(note) the `cite: <full citation>` form of owner_note (2026-10-08):
 #                                        the citation text, and its parsed fields with the missing ones
+#   ReciteQueue(queue)                   pure: every cite: row re-parsed with the current parser (--recite)
 #   ResolveTabDecision(tab_row, q, cfg)  what the owner typed -> a decision, or a per-row error
 #   PullDecisions(queue, tab, ...)       pure: the tab read back -> the queue with the decisions
 #                                        (and the parsed fields of a cite: note) written and one
@@ -209,16 +210,56 @@ PushDecisionRows <- function(queue, url = citations_sheet_url, tab = sheet_tab_d
 # supplies the bibliographic fields of a DOI-less entry, so that the owner
 # never edits parsed_* in primary_references.csv by hand. CiteNote()
 # (decide.r, which --apply-queue uses too) gives the citation text, NA for
-# any other note; ParseCiteNote() parses it with ParseCitationString() into
-# the six parsed_* fields (as the queue stores them, every one character)
-# and names the required ones (author1, year, title, container: what
-# BuildBibEntryNoDOI() needs) that are missing. NULL for any other note.
+# any other note; ParseCiteNote() parses it with ParseCitationString() (the
+# owner writes the notes in APA style, ParseAPAStyle()) into the six
+# parsed_* fields (as the queue stores them, every one character) and names
+# the required ones that are missing: author1, year and container always,
+# the title unless container, volume and pages are all there (a journal
+# item cited without its title, 'Allgaier, A. (1993). Bat Research News,
+# 34(4), 100.', which BuildBibEntryNoDOI() writes without a title field);
+# `no_title` says that this is such an item. NULL for any other note.
 ParseCiteNote <- function(note) {
   cite <- CiteNote(note)
   if (is.na(cite)) return(NULL)
   p <- ParseCitationString(cite)
   parsed <- lapply(setNames(cite_note_fields, cite_note_fields), function(col) { v <- p[[col]][1]; if (Nz(v)) as.character(v) else NA_character_ })
-  list(citation = cite, parsed = parsed, missing = MissingFields(parsed))
+  no_title <- is.na(parsed$parsed_title) && HasJournalKey(parsed)
+  missing <- MissingFields(parsed)
+  if (no_title) missing <- setdiff(missing, 'title')
+  list(citation = cite, parsed = parsed, missing = missing, no_title = no_title)
+}
+
+# Every queue row whose owner_note is a `cite:` note, decided or not,
+# re-parsed with the current parser into its six parsed_* columns
+# (--recite, 2026-10-08: the notes pulled before ParseAPAStyle() existed
+# were read by the generic path, which swallowed "vol(issue): pages.
+# Publisher" into the container or found no container at all). A row whose
+# note still lacks a required field is left as it is and reported. Pure.
+# Returns list(queue, rows, changes, per_column, unparsed): `rows` the
+# number of cite: rows, `changes` one row per changed cell (source_label,
+# native_key, queued_at, column, old, new), `per_column` the count of
+# changed cells per parsed_* column, `unparsed` the rows left alone
+# (source_label, native_key, queued_at, missing).
+ReciteQueue <- function(queue) {
+  Key <- function(i) list(source_label = queue$source_label[i], native_key = queue$native_key[i], queued_at = queue$queued_at[i])
+  changes <- data.frame(source_label = character(), native_key = character(), queued_at = character(), column = character(), old = character(), new = character(), stringsAsFactors = FALSE)
+  unparsed <- data.frame(source_label = character(), native_key = character(), queued_at = character(), missing = character(), stringsAsFactors = FALSE)
+  rows <- 0L
+  for (i in seq_len(nrow(queue))) {
+    pc <- ParseCiteNote(queue$owner_note[i])
+    if (is.null(pc)) next
+    rows <- rows + 1L
+    if (length(pc$missing) > 0) { unparsed <- rbind(unparsed, data.frame(Key(i), missing = paste(pc$missing, collapse = ', '), stringsAsFactors = FALSE)); next }
+    for (col in cite_note_fields) {
+      old <- Cell(queue[[col]][i]); new <- pc$parsed[[col]]
+      if (identical(old, new)) next
+      changes <- rbind(changes, data.frame(Key(i), column = col, old = old, new = new, stringsAsFactors = FALSE))
+      queue[[col]][i] <- new
+    }
+  }
+  per_column <- setNames(vapply(cite_note_fields, function(col) sum(changes$column == col), integer(1)), cite_note_fields)
+  rownames(changes) <- NULL; rownames(unparsed) <- NULL
+  list(queue = queue, rows = rows, changes = changes, per_column = per_column, unparsed = unparsed)
 }
 
 # What the owner typed in `decision` of one tab row, resolved against its
@@ -233,7 +274,8 @@ ParseCiteNote <- function(note) {
 # is a per-row error whatever the cell says; a complete one makes an empty
 # cell `nodoi`, leaves any typed decision (and `defer`) as it is, and is
 # shown in the status as `pulled <date> (cite: Author (Year) Title.
-# Container vol: pages)`. Returns list(decision, status, message, parsed):
+# Container vol: pages)` (`; no title` added for a journal item cited
+# without one). Returns list(decision, status, message, parsed):
 # decision NA unless the row is decided; `parsed` the cite: fields (a named
 # list of the six parsed_* columns) when a decided row carries them, else NULL.
 ResolveTabDecision <- function(tab_row, queue_row, cfg = NULL, pulled_at = format(Sys.Date()), decided_by = 'owner') {
@@ -269,7 +311,7 @@ ResolveTabDecision <- function(tab_row, queue_row, cfg = NULL, pulled_at = forma
     else if (is.null(CrossrefWork(doi, cfg))) return(Err(sprintf('doi:%s does not resolve at Crossref', doi)))
   }
   status <- sprintf('pulled %s', pulled_at)
-  if (!is.null(cite)) status <- sprintf('%s (cite: %s)', status, FormatParsedCell(cite$parsed))
+  if (!is.null(cite)) status <- sprintf('%s (cite: %s%s)', status, FormatParsedCell(cite$parsed), if (isTRUE(cite$no_title)) '; no title' else '')
   list(decision = decision, status = status, message = msg, parsed = if (is.null(cite)) NULL else cite$parsed)
 }
 
