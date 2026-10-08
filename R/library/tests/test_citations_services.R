@@ -125,6 +125,46 @@ u_pct <- CrossrefQueryURL('www.iiasa.ac.at/~sendzim/ Trop%20Wet%20Forest.xls', c
 Expect(grepl('query.bibliographic=www.iiasa.ac.at%2F~sendzim%2F%20Trop%2520Wet%2520Forest.xls&', u_pct, fixed = TRUE) &&
          !inherits(try(curl::curl_parse_url(u_pct), silent = TRUE), 'try-error'),
        'Enc() percent-encodes a query that already holds %xx sequences')
+
+cat('FirstPage(), CrossrefContainerQueryURL(), CrossrefQueryContainer(): the second Crossref path of a title-less reference (#128)\n')
+Expect(FirstPage('19-29') == '19' && FirstPage(' 395-403 ') == '395' && FirstPage('e12345') == 'e12345' && FirstPage('12') == '12' && FirstPage('1–19') == '1',
+       'FirstPage(): the first page of a range (any dash), a single page or an article number as given')
+u_geb <- CrossrefContainerQueryURL('Global Ecology and Biogeography', '18', '19-29', 2009L, cfg)
+Expect(u_geb == 'https://api.crossref.org/works?query.container-title=Global%20Ecology%20and%20Biogeography&query.bibliographic=18%2019-29&filter=from-pub-date:2008,until-pub-date:2010&rows=10&mailto=offline%40invalid',
+       'the container-filtered query URL: query.container-title, query.bibliographic = volume and pages, a from/until-pub-date filter of year +- 1, rows 10, mailto')
+Expect(!grepl('filter=', CrossrefContainerQueryURL('J Things', '1', '2-3', NA, cfg), fixed = TRUE) && grepl('query.bibliographic=1%202-3&rows=10&', CrossrefContainerQueryURL('J Things', '1', '2-3', NA, cfg), fixed = TRUE) &&
+         grepl('query.container-title=Annals%20and%20Magazine%20of%20Natural%20History&query.bibliographic=12%20395-403&filter=from-pub-date:1911,until-pub-date:1913&', CrossrefContainerQueryURL('Annals  and Magazine of Natural History ', ' 12', '395-403', '1912', cfg), fixed = TRUE) &&
+         cfg$network$crossref_container_rows == 10L,
+       'no year: no date filter; a year as text and stray blanks are tolerated; the rows come from citations_network')
+Expect(CacheKey(u_geb) == CacheKey(sub('offline%40invalid', 'a%40b.org', u_geb, fixed = TRUE)), 'the container query is cached like every other call, keyed without the mailto')
+cc <- CrossrefQueryContainer('Global Ecology and Biogeography', '18', '19-29', 2009L, cfg)
+Expect(identical(names(cc), names(EmptyCandidates())) && nrow(cc) == 10 && all(cc$service == 'crossref') && cc$doi[1] == '10.1111/j.1466-8238.2008.00422.x' &&
+         cc$title[1] == 'Body size frequency distributions in African mammals are bimodal at all spatial scales' && cc$author1[1] == 'Kelt' && cc$year[1] == 2008L &&
+         cc$container[1] == 'Global Ecology and Biogeography' && cc$volume[1] == '18' && cc$pages[1] == '19-29' && cc$type[1] == 'journal-article',
+       'the recorded response for "Global Ecology and Biogeography 18: 19-29 (2009)" (91 Faurby records): ten crossref candidates, the article at volume 18 pages 19-29 first (issued online in 2008)')
+Expect(sum(cc$type == 'journal-issue') == 8 && all(is.na(cc$pages[cc$type == 'journal-issue'])),
+       'the journal issues of the same volume come back too (dropped before scoring by citations_excluded_types)')
+cr_geb <- CrossrefQuery('Global Ecology and Biogeography 18: 19-29 (2009)', cfg)
+Expect(nrow(cr_geb) == 5 && all(cr_geb$type == 'journal-issue') && !'10.1111/j.1466-8238.2008.00422.x' %in% cr_geb$doi,
+       'the raw-string query of the same key (the first path) returns the issues of volume 18 only: the failure mode of issue #128')
+Expect(nrow(CrossrefQueryContainer(NA, '18', '19-29', 2009L, cfg)) == 0 && nrow(CrossrefQueryContainer('X', NA, '19-29', 2009L, cfg)) == 0 &&
+         nrow(CrossrefQueryContainer('X', '18', '', 2009L, cfg)) == 0 && nrow(CrossrefQueryContainer('X', '18', ' - ', 2009L, cfg)) == 0 && nrow(CrossrefQueryContainer('', '18', '19-29', 2009L, cfg)) == 0,
+       'a missing container, volume or pages: no candidates and no request')
+Expect(ContainerMatch('Global Ecol. Biogeogr.', cc$container[1]) && ContainerMatch('Glob Ecol Biogeogr', cc$container[1]) && ContainerMatch(cc$container[1], 'Global Ecology and Biogeography') &&
+         !ContainerMatch('Journal of Biogeography', cc$container[1]),
+       'an abbreviated container name matches the record\'s through the existing ContainerMatch() (the decision compares containers abbreviation-aware)')
+cc_jm <- CrossrefQueryContainer('Journal of Mammalogy', '83', '1-19', 2002L, cfg)
+Expect(nrow(cc_jm) == 10 && all(c('10.1644/1545-1542(2002)083<0001:sotacs>2.0.co;2', '10.1093/jmammal/83.1.1') %in% cc_jm$doi) &&
+         all(cc_jm$pages[match(c('10.1644/1545-1542(2002)083<0001:sotacs>2.0.co;2', '10.1093/jmammal/83.1.1'), cc_jm$doi)] == '1-19'),
+       'the recorded response for "Journal of Mammalogy 83: 1-19 (2002)": the Allen Press and OUP deposits of the article at pages 1-19 are among the ten')
+cc_mam <- CrossrefQueryContainer('Mammalia', '27', '238-255', 1963L, cfg)
+Expect(nrow(cc_mam) == 10 && all(cc_mam$container == 'Mammalia') && all(is.na(cc_mam$pages)) && any(cc_mam$title %in% 'NOTES'),
+       'the recorded response for "Mammalia 27: 238-255 (1963)": de Gruyter\'s issues, NOTES and BIBLIOGRAPHIE items without page numbers (nothing to accept)')
+cc_ms <- CrossrefQueryContainer('Mammalian Species', '612', '1-8', 1999L, cfg)
+cr_ms <- CrossrefQuery('Mammalian Species 612: 1-8 (1999)', cfg)
+Expect(nrow(cc_ms) == 1 && cc_ms$doi == '10.2307/3504526' && cc_ms$title == 'Nycteris thebaica' && is.na(cc_ms$volume) && cc_ms$issue == '612' && cc_ms$pages == '1' &&
+         nrow(cr_ms) == 5 && all(is.na(cr_ms$volume)) && identical(cr_ms$issue, c('612', '610', '609', '608', '615')) && all(cr_ms$pages == '1') && 'issue' %in% names(EmptyCandidates()),
+       'the recorded responses for "Mammalian Species 612: 1-8 (1999)": the JSTOR-era accounts carry the account number as the issue and no volume (kept as `issue` on the candidate row)')
 w <- CrossrefWork('10.1007/BF00392514', cfg)
 Expect(!is.null(w) && w$DOI == '10.1007/bf00392514' && w$author[[1]]$family == 'Ikeda' && w$volume == '92' && length(w$reference) == 28,
        'CrossrefWork() returns the full message of a DOI (case-insensitive, with reference[])')
@@ -141,8 +181,8 @@ syn <- list(DOI = '10.1/ABC', type = 'journal-article', title = list('Main title
             `container-title` = list('J Syn'), volume = '1', page = '2-3', score = 99,
             `update-to` = list(list(type = 'retraction', DOI = '10.1/abc')), `updated-by` = list(list(type = 'erratum', DOI = '10.1/abc-err')))
 si <- NormaliseCrossrefItem(syn, closed_world = TRUE)
-Expect(si$doi == '10.1/abc' && si$title == 'Main title: A subtitle' && si$author1 == 'First' && si$year == 2001L &&
-         si$update_types == 'update-to:retraction;updated-by:erratum' && si$closed_world && si$score == 99,
+Expect(si$doi == '10.1/abc' && si$title == 'Main title: A subtitle' && si$author1 == 'First' && si$year == 2001L && is.na(si$issue) &&
+         si$update_types == 'update-to:retraction;updated-by:erratum' && si$closed_world && si$score == 99 && NormaliseCrossrefItem(c(syn, list(issue = '4')))$issue == '4',
        'synthetic item: subtitle appended, sequence=first author chosen, year from published-online, update types joined')
 org <- NormaliseCrossrefItem(list(DOI = '10.1/org', type = 'report', title = list(), author = list(list(name = 'Some Agency')), publisher = 'Agency Press'))
 Expect(is.na(org$title) && org$author1 == 'Some Agency' && org$container == 'Agency Press' && is.na(org$year),
@@ -217,8 +257,8 @@ Expect(is.null(OpenAlexWork(NA, cfg)) && Has(ErrorOf(OpenAlexWork('10.1234/not-c
 sw <- NormaliseOpenAlexItem(list(id = 'https://openalex.org/W1', doi = 'https://doi.org/10.1/XYZ', display_name = 'Only display name',
                                  publication_year = 1999, type = 'book', is_retracted = TRUE,
                                  authorships = list(list(author = list(display_name = 'Jean-Pierre van der Meer'))),
-                                 biblio = list(volume = '7', first_page = '12', last_page = '12'), relevance_score = 3.5))
-Expect(sw$doi == '10.1/xyz' && sw$title == 'Only display name' && sw$author1 == 'Meer' && sw$year == 1999L && sw$pages == '12' &&
+                                 biblio = list(volume = '7', issue = '2', first_page = '12', last_page = '12'), relevance_score = 3.5))
+Expect(sw$doi == '10.1/xyz' && sw$title == 'Only display name' && sw$author1 == 'Meer' && sw$year == 1999L && sw$pages == '12' && sw$issue == '2' &&
          isTRUE(sw$is_retracted) && is.na(sw$container) && sw$score == 3.5,
        'synthetic OpenAlex work: display_name fallback, last name token, single page, retraction flag')
 
@@ -305,6 +345,20 @@ Expect(identical(px$match_status[match(c('1', '6', '9', '12'), px$native_key)], 
          identical(px$match_reason[match(c('1', '6', '9', '12'), px$native_key)], c('crossref_only', 'crossref_only', 'weak_match', 'crossref_only')) &&
          all(px$services == 'crossref') && all(px$verification_mode == 'crossref_only') && all(is.na(px$openalex_id)),
        'the four rows are decided on Crossref alone: three certain / crossref_only (one through the source DOI), the thesis weak_match; services crossref, verification_mode crossref_only, no OpenAlex id')
+seen <- character()
+CachedGET <- function(url, cfg) {
+  seen <<- c(seen, url)
+  if (grepl('openalex', url, fixed = TRUE)) stop('OpenAlex was asked in Crossref-only mode: ', url, call. = FALSE)
+  orig_get(url, cfg)
+}
+geb <- c(list(source_label = 'Faurby_etal_2018', native_key = 'h:509f77e1', raw_citation = 'Global Ecology and Biogeography 18: 19-29 (2009)', raw_doi = NA_character_,
+              role = 'measurement', n_records = 91L, editorial_notice = NA_character_, match_reason = NA_character_),
+         as.list(ParseCitationString('Global Ecology and Biogeography 18: 19-29 (2009)')))
+xg <- VerifyReference(geb, cfg, crossref_only = TRUE)
+Expect(length(seen) == 2 && all(grepl('^https://api\\.crossref\\.org/works\\?', seen)) && grepl('query.bibliographic=Global%20Ecology', seen[1], fixed = TRUE) &&
+         grepl('query.container-title=Global%20Ecology%20and%20Biogeography&query.bibliographic=18%2019-29&filter=from-pub-date:2008,until-pub-date:2010&rows=10', seen[2], fixed = TRUE) &&
+         xg$match_status == 'certain' && xg$doi == '10.1111/j.1466-8238.2008.00422.x',
+       'a title-less journal key sends exactly two Crossref requests, the raw string then the container-filtered query, and none to OpenAlex (#128)')
 seen <- character()
 CachedGET <- function(url, cfg) { seen <<- c(seen, url); orig_get(url, cfg) }
 resn <- VerifyPrimaryReferences(kprim, cfg, verified_at = '2026-10-06T00:00:00Z', progress = FALSE)

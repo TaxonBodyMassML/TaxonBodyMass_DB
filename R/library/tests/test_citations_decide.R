@@ -54,6 +54,9 @@ Expect(sc$title_sim == 1 && sc$author_match && sc$year_match && sc$container_mat
 sc <- ScoreCandidate(Ref(), Cand(author1 = 'Roe', year = 2003L, container = 'Other', volume = '6', pages = '2-4'))
 Expect(sc$n_agree == 0L && !sc$year_match, 'year 2003 is outside the +-1 window; nothing else agrees')
 Expect(ScoreCandidate(Ref(), Cand(year = 2002L))$year_match, 'year 2002 is inside the window')
+Expect(ScoreCandidate(Ref(), Cand(volume = NA_character_, issue = '5'))$volume_match && !ScoreCandidate(Ref(), Cand(volume = '6', issue = '5'))$volume_match &&
+         !ScoreCandidate(Ref(), Cand(volume = NA_character_, issue = '6'))$volume_match && !ScoreCandidate(Ref(), Cand(volume = NA_character_))$volume_match,
+       'a candidate without a volume agrees on its issue (the Mammalian Species accounts, #128); a volume that is there is compared as the volume')
 Expect(nrow(ScoreCandidate(Ref(), EmptyCandidates())) == 0 && 'n_agree' %in% names(ScoreCandidate(Ref(), EmptyCandidates())),
        'no candidates: an empty scored frame with the score columns')
 all <- ScoreAll(Ref(), rbind(Cand(doi = '10.1/data', type = 'dataset'), Cand(doi = '10.1/comp', type = 'component'),
@@ -153,6 +156,18 @@ d <- DecideMatch(TL(), open_cands = rbind(JM(container = 'Journal of Zoology'), 
 Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', 'another journal with the same volume and pages: no agreement')
 d <- DecideMatch(TL(), open_cands = rbind(JM(pages = '1'), JM('openalex', pages = '1')))
 Expect(d$match_status == 'certain', 'the first page alone agrees with the page range')
+d <- DecideMatch(TL(), open_cands = rbind(JM(type = 'book-chapter'), JM('openalex', type = 'book-chapter')))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', 'the type condition (#128): all four fields agree but the work is a book chapter, not an article: no agreement')
+Expect(DecideMatch(TL(), open_cands = rbind(JM(type = NA_character_), JM('openalex', type = NA_character_)))$match_status == 'certain' &&
+         DecideMatch(TL(), open_cands = rbind(JM(type = 'proceedings-article'), JM('openalex', type = 'article')))$match_status == 'certain' &&
+         DecideMatch(TL(), open_cands = rbind(JM(), JM('openalex', type = 'letter')))$match_status == 'certain',
+       'an unknown type, a proceedings article, an OpenAlex article or letter are articles of a serial')
+Expect(identical(TitlelessAgreement(ScoreCandidate(TL(), EmptyCandidates())), logical(0)) &&
+         identical(TitlelessAgreement(ScoreCandidate(TL(), rbind(JM(), JM(pages = NA_character_), JM(year = NA_integer_), JM(type = 'monograph')))), c(TRUE, FALSE, FALSE, FALSE)),
+       'TitlelessAgreement(): the agreeing rows; NA pages, NA year or a monograph never agree')
+Expect(TitlelessJournalKey(TL()) && !TitlelessJournalKey(Ref()) && !TitlelessJournalKey(Ref(title = NA_character_, volume = NA_character_)) && !TitlelessJournalKey(Ref(title = NA_character_, pages = '')) &&
+         !TitlelessJournalKey(Ref(title = NA_character_, container = NA_character_)) && TitlelessJournalKey(Ref(title = '', author1 = NA_character_)) && TitlelessJournalKey(as.data.frame(TL(), stringsAsFactors = FALSE)),
+       'TitlelessJournalKey(): no title with container, volume and pages present (a one-row frame too); a title or a missing field is not the shape')
 d <- DecideMatch(TL(), open_cands = rbind(JM(), JM('openalex', is_retracted = TRUE)))
 Expect(d$match_status == 'pending' && d$match_reason == 'retracted' && d$is_retracted, 'an agreeing candidate with a retraction flag: pending / retracted')
 d <- DecideMatch(TL(), open_cands = JM(), services = 'crossref')
@@ -672,6 +687,23 @@ d <- XO(XTL(raw_citation = 'Bulletin of the British Museum. Zoology 63: 123-128(
 Expect(d$match_status == 'pending' && d$match_reason == 'grey_literature', '(c) no agreement and a bulletin: pending / grey_literature as for any failed search')
 d <- DecideMatch(XTL(), open_cands = XJM())
 Expect(d$match_status != 'certain' && d$verification_mode == 'full', 'the four-field acceptance is the mode\'s: the two-service rules do not accept a title-less citation from one service')
+# the failure mode of issue #128: the journal's front matter of the same volume
+# and year ranked above the article -- never accepted, whatever the ranking
+Front <- function(doi, title, pages, type = 'journal-article')
+  Cand(doi = doi, title = title, author1 = NA_character_, year = 2002L, container = 'Journal of Mammalogy', volume = '83', pages = pages, type = type)
+front <- rbind(Front('10.1/notes', 'NOTES', NA_character_), Front('10.1/index', 'Author Index', '1-19', 'book-chapter'),
+               Front('10.1/contents', 'Contents', 'i-iv'), Front('10.1/issue', NA_character_, NA_character_, 'journal-issue'))
+d <- XO(XTL(), open_cands = front)
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold' && !'10.1/issue' %in% d$candidates$doi && nrow(d$candidates) == 3,
+       "(c) 'NOTES' without a page, an 'Author Index' deposited as a chapter at the cited page, a 'Contents' page at i-iv, the issue itself: none is the work (not_found; the issue is excluded before scoring)")
+d <- XO(XTL(), open_cands = rbind(front, XJM()))
+Expect(IsXO(d, '10.1/jm83') && nrow(d$candidates) == 4, '(c) the article pooled in from the container-filtered query is accepted beside the front matter')
+d <- XO(XTL(), open_cands = XJM(type = 'book-chapter'))
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', '(c) a candidate agreeing on all four fields but typed book-chapter is not accepted')
+d <- XO(XTL(), open_cands = XJM(type = NA_character_))
+Expect(IsXO(d, '10.1/jm83'), '(c) an unknown type is accepted')
+d <- XO(XTL(), open_cands = XJM(pages = '20-31'))
+Expect(d$match_status == 'not_found' && d$doi == '10.1/jm83', '(c) the page differs: rejected, the stray kept as the queue candidate')
 # (d) the closed world
 d <- XO(Ref(), closed_cands = Cand(closed_world = TRUE))
 Expect(d$match_status == 'certain' && d$match_reason == 'closed_world' && d$services == 'crossref' && d$verification_mode == 'crossref_only',
@@ -680,6 +712,34 @@ d <- XO(Ref(), closed_cands = Cand(title = 'A study of things today', closed_wor
 Expect(d$match_status == 'pending' && d$match_reason == 'weak_match', '(d) a closed-world candidate below 0.93 is a weak match like any other')
 Expect('crossref_only' %in% match_reasons && 'verification_mode' %in% primary_reference_columns && 'verification_mode' %in% primary_reference_optional_columns,
        'crossref_only is in the reason vocabulary; verification_mode is an optional column of the schema')
+
+cat('VerifyReference() on title-less journal keys: the container-filtered second path (#128), offline on the Faurby fixtures\n')
+TLRef <- function(raw, key = 'k', n = 1L)
+  c(list(source_label = 'Faurby_etal_2018', native_key = key, raw_citation = raw, raw_doi = NA_character_, role = 'measurement', n_records = n,
+         editorial_notice = NA_character_, match_reason = NA_character_), as.list(ParseCitationString(raw)))
+geb <- TLRef('Global Ecology and Biogeography 18: 19-29 (2009)', 'h:509f77e1', 91L)
+Expect(is.na(geb$parsed_title) && geb$parsed_container == 'Global Ecology and Biogeography' && geb$parsed_volume == '18' && geb$parsed_pages == '19-29' && geb$parsed_year == 2009L && TitlelessJournalKey(geb),
+       'the key with 91 records parses to the title-less shape')
+xg <- VerifyReference(geb, cfg, crossref_only = TRUE)
+Expect(IsXO(xg, '10.1111/j.1466-8238.2008.00422.x') && xg$title_sim == 0 && xg$container_match && xg$volume_match && xg$pages_match && xg$year_match,
+       'GEB 18: 19-29 (2009): certain / crossref_only on container, volume, first page and year (issued 2008, within the window) -- the raw-string query alone found only the issues')
+Expect(sum(xg$candidates$doi == '10.1111/j.1466-8238.2008.00422.x') == 1 && all(xg$candidates$services_for_doi == 'crossref') && !any(xg$candidates$type %in% 'journal-issue'),
+       'the pooled candidates hold one row per DOI, Crossref only, the issues dropped')
+xj <- VerifyReference(TLRef('Journal of Mammalogy 83: 1-19 (2002)'), cfg, crossref_only = TRUE)
+Expect(xj$match_status == 'pending' && xj$match_reason == 'ambiguous' && xj$services == 'crossref' && xj$verification_mode == 'crossref_only' &&
+         all(c('10.1644/1545-1542(2002)083<0001:sotacs>2.0.co;2', '10.1093/jmammal/83.1.1') %in% xj$candidates$doi[1:2]),
+       'Journal of Mammalogy 83: 1-19 (2002): the Allen Press and OUP deposits both agree on the four fields: pending / ambiguous, the twins as c1 / c2 for the owner (recommend.r titleless_twin)')
+xm <- VerifyReference(TLRef('Mammalia 27: 238-255 (1963)'), cfg, crossref_only = TRUE)
+Expect(xm$match_status == 'not_found' && xm$match_reason == 'below_threshold' && all(is.na(xm$candidates$pages)) && !any(xm$candidates$type %in% 'journal-issue'),
+       "Mammalia 27: 238-255 (1963): de Gruyter's NOTES / BIBLIOGRAPHIE items carry no page numbers, so nothing agrees: not_found / below_threshold as before")
+xs <- VerifyReference(TLRef('Mammalian Species 612: 1-8 (1999)'), cfg, crossref_only = TRUE)
+Expect(IsXO(xs, '10.2307/3504526') && xs$volume_match && xs$pages_match && nrow(xs$candidates) == 5 && sum(TitlelessAgreement(xs$candidates)) == 1,
+       'Mammalian Species 612: 1-8 (1999): the account deposited as issue 612 without a volume is accepted on its issue; its four sibling accounts (page 1, 1999) do not agree')
+cc_geb <- CrossrefQueryContainer('Global Ecology and Biogeography', '18', '19-29', 2009L, cfg)
+d <- XO(TLRef('Global Ecology and Biogeography 18: 30-40 (2009)'), open_cands = cc_geb)
+Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', 'the same candidates against a key at another page (30-40): rejected')
+d <- XO(TLRef('Global Ecology and Biogeography 18: 19-29 (2012)'), open_cands = cc_geb)
+Expect(d$match_status == 'not_found', 'the same candidates against a key three years off: rejected')
 
 cat('VerifyReference() / VerifyPrimaryReferences() in Crossref-only mode, offline on the Kiorboe fixtures\n')
 x1 <- VerifyReference(prim[prim$native_key == '1', ], cfg, crossref_only = TRUE)

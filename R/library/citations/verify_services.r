@@ -8,6 +8,11 @@
 #                                       exhausted quota (429 after the retries) raises the
 #                                       classed condition 'citations_quota' (QuotaCondition())
 #   CrossrefQuery(query, cfg)           /works?query.bibliographic=... -> candidates
+#   CrossrefQueryContainer(container, volume, pages, year, cfg)
+#                                       the second path for a title-less reference (#128):
+#                                       /works?query.container-title=<container>&
+#                                       query.bibliographic=<volume> <pages>&
+#                                       filter=from-pub-date:<year-1>,until-pub-date:<year+1>
 #   CrossrefWork(doi, cfg)              /works/<doi> -> the full message (reference[],
 #                                       update-to, updated-by) or NULL on 404
 #   CandidatesFromCompilationReflist()  the compilation paper's deposited reference list
@@ -17,9 +22,11 @@
 #   ReadSciteChecks(path)               Bib/scite_checks.csv (written in Claude Code sessions
 #                                       from the Scite MCP tools; read-only here)
 # Candidates are normalised to one row each: service, doi, title, author1, year,
-# container, volume, pages, type, openalex_id, is_retracted, update_types,
+# container, volume, pages, issue, type, openalex_id, is_retracted, update_types,
 # closed_world, score (the service's relevance score, cached but never used by
-# decide.r). No Google Scholar.
+# decide.r). `issue` is kept for the series that deposit their account number
+# as the issue with no volume (the JSTOR-era Mammalian Species accounts):
+# ScoreCandidate() lets it stand for the volume then (#128). No Google Scholar.
 
 CitationsConfig <- function(wd_root, offline = FALSE, mailto = NULL) {
   paths <- CitationsPaths(wd_root)
@@ -160,18 +167,18 @@ Enc <- function(x) utils::URLencode(enc2utf8(as.character(x)), reserved = TRUE, 
 EmptyCandidates <- function() {
   data.frame(service = character(), doi = character(), title = character(), author1 = character(),
              year = integer(), container = character(), volume = character(), pages = character(),
-             type = character(), openalex_id = character(), is_retracted = logical(),
+             issue = character(), type = character(), openalex_id = character(), is_retracted = logical(),
              update_types = character(), closed_world = logical(), score = numeric(),
              stringsAsFactors = FALSE)
 }
 
 CandidateRow <- function(service, doi, title, author1, year, container, volume, pages, type,
                          openalex_id = NA_character_, is_retracted = NA, update_types = NA_character_,
-                         closed_world = FALSE, score = NA_real_) {
+                         closed_world = FALSE, score = NA_real_, issue = NA_character_) {
   Chr <- function(x) if (is.null(x) || length(x) == 0 || identical(x, '')) NA_character_ else as.character(x[[1]])
   data.frame(service = service, doi = CleanDOI(Chr(doi)), title = Chr(title), author1 = Chr(author1),
              year = if (is.null(year) || length(year) == 0) NA_integer_ else suppressWarnings(as.integer(year[[1]])),
-             container = Chr(container), volume = Chr(volume), pages = Chr(pages), type = Chr(type),
+             container = Chr(container), volume = Chr(volume), pages = Chr(pages), issue = Chr(issue), type = Chr(type),
              openalex_id = Chr(openalex_id), is_retracted = if (is.null(is_retracted)) NA else as.logical(is_retracted),
              update_types = Chr(update_types), closed_world = closed_world,
              score = if (is.null(score) || length(score) == 0) NA_real_ else as.numeric(score[[1]]),
@@ -203,7 +210,7 @@ NormaliseCrossrefItem <- function(item, closed_world = FALSE) {
                container = if (length(item[['container-title']]) > 0) item[['container-title']][[1]] else item$publisher,
                volume = item$volume, pages = item$page, type = item$type,
                update_types = if (length(upd) > 0) paste(upd, collapse = ';') else NA_character_,
-               closed_world = closed_world, score = item$score)
+               closed_world = closed_world, score = item$score, issue = item$issue)
 }
 
 # One OpenAlex work as a candidate row.
@@ -219,7 +226,7 @@ NormaliseOpenAlexItem <- function(w) {
   CandidateRow('openalex', doi = w$doi, title = if (!is.null(w$title)) w$title else w$display_name,
                author1 = a1, year = w$publication_year, container = src, volume = w$biblio$volume,
                pages = pages, type = w$type, openalex_id = w$id, is_retracted = w$is_retracted,
-               score = w$relevance_score)
+               score = w$relevance_score, issue = w$biblio$issue)
 }
 
 # ---- Crossref ------------------------------------------------------------------------
@@ -230,6 +237,46 @@ CrossrefQueryURL <- function(query, cfg, rows = cfg$network$crossref_rows)
 CrossrefQuery <- function(query, cfg, rows = cfg$network$crossref_rows) {
   if (is.na(query) || !nzchar(trimws(query))) return(EmptyCandidates())
   r <- CachedGET(CrossrefQueryURL(query, cfg, rows), cfg)
+  if (r$status != 200L) return(EmptyCandidates())
+  items <- ParseJSON(r$body)$message$items
+  if (length(items) == 0) return(EmptyCandidates())
+  do.call(rbind, lapply(items, NormaliseCrossrefItem))
+}
+
+# The first page of a pages field ('19-29' -> '19', '395-403' -> '395', 'e12345'
+# as given), the same reading as PagesMatch().
+FirstPage <- function(pages) sub('\\s*[-\u2013\u2014].*$', '', trimws(as.character(pages)))
+
+# The container-filtered query of a title-less reference ("Journal volume:
+# pages (year)", ParseJournalOnlyStyle(); issue #128). The bibliographic query
+# on such a string ranks the journal's front matter ('NOTES', 'Author Index',
+# a 'Contents' page of the same year) above the article at the cited volume
+# and page (the Faurby_etal_2018 round of 2026-10-06: 236 of 471 keys), so the
+# second path asks Crossref for the container by its field query, gives the
+# volume and the pages as the bibliographic terms, and limits the publication
+# date to the year +- the window; without a year there is no date filter.
+# The pages go in as the source gives them ('1-19', not the first page '1'):
+# Crossref indexes its page field as one token, so the range finds the
+# article where a bare first page is lost among issue numbers and front
+# matter (probed 2026-10-08 on eight Faurby keys with known answers: the range
+# found all seven that exist, the first page five). `crossref_container_rows`
+# items; cached like every other call.
+CrossrefContainerQueryURL <- function(container, volume, pages, year, cfg, rows = cfg$network$crossref_container_rows,
+                                      window = cfg$thresholds$year_window) {
+  url <- sprintf('%s?query.container-title=%s&query.bibliographic=%s', cfg$network$crossref_api,
+                 Enc(gsub('\\s+', ' ', trimws(container))), Enc(gsub('\\s+', ' ', paste(trimws(volume), trimws(pages)))))
+  year <- suppressWarnings(as.integer(year))
+  if (length(year) == 1 && !is.na(year))
+    url <- sprintf('%s&filter=from-pub-date:%d,until-pub-date:%d', url, year - window, year + window)
+  sprintf('%s&rows=%d&mailto=%s', url, as.integer(rows), Enc(cfg$mailto))
+}
+
+# The candidates of the container-filtered query; empty without a request when
+# the container, the volume or the pages are missing (the shape needs all three).
+CrossrefQueryContainer <- function(container, volume, pages, year, cfg, rows = cfg$network$crossref_container_rows) {
+  Missing <- function(x) is.null(x) || length(x) != 1 || is.na(x) || !nzchar(trimws(as.character(x)))
+  if (Missing(container) || Missing(volume) || Missing(pages) || !nzchar(FirstPage(pages))) return(EmptyCandidates())
+  r <- CachedGET(CrossrefContainerQueryURL(container, volume, pages, year, cfg, rows), cfg)
   if (r$status != 200L) return(EmptyCandidates())
   items <- ParseJSON(r$body)$message$items
   if (length(items) == 0) return(EmptyCandidates())

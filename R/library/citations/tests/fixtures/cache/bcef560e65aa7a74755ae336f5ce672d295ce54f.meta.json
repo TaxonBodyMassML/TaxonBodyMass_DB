@@ -1,0 +1,6 @@
+{
+  "url": "https://api.crossref.org/works?query.bibliographic=Mammalia%2027%3A%20238-255%20%281963%29&rows=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-08T21:05:41Z",
+  "tool_version": "tbmcite 0.1.0"
+}

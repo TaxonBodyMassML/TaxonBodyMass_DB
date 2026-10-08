@@ -6,7 +6,13 @@
 #   DecideMatch(ref, cands, ...)   certain / pending / not_found with a reason code,
 #                                  the rules of the table in issue #1 section 2.3 (and the
 #                                  container_volume_page rule for title-less citations)
+#   TitlelessJournalKey(ref)       the title-less shape "Journal volume: pages (year)": no title,
+#                                  container, volume and pages present (#128)
+#   TitlelessAgreement(by_doi)     the candidates such a reference accepts: container, volume,
+#                                  first page and year agreeing, the type an article's
 #   VerifyReference(ref, cfg, ...) the service calls for one reference and the decision
+#                                  (a title-less reference is searched twice at Crossref: the
+#                                  raw string and the container-filtered query, #128)
 #   VerifyPrimaryReferences(...)   over a primary_references frame (skips decided rows)
 #   WritePendingQueue(...)         appends the undecided pending/not_found rows to
 #                                  Bib/pending_citations.csv (append-only, idempotent;
@@ -34,7 +40,8 @@
 # ---- scoring --------------------------------------------------------------------------
 # The locally computed agreement between the parsed reference and one
 # candidate row; adds title_sim, author_match, year_match, container_match,
-# volume_match, pages_match and n_agree to the row.
+# volume_match (the candidate's issue standing for a missing volume),
+# pages_match and n_agree to the row.
 ScoreCandidate <- function(parsed, cand, window = citations_thresholds$year_window) {
   if (nrow(cand) == 0) return(cbind(cand, title_sim = numeric(), author_match = logical(), year_match = logical(),
                                      container_match = logical(), volume_match = logical(), pages_match = logical(),
@@ -43,7 +50,12 @@ ScoreCandidate <- function(parsed, cand, window = citations_thresholds$year_wind
   cand$author_match    <- vapply(cand$author1, function(a) AuthorMatch(parsed$parsed_author1, a), logical(1), USE.NAMES = FALSE)
   cand$year_match      <- !is.na(parsed$parsed_year) & !is.na(cand$year) & abs(cand$year - parsed$parsed_year) <= window
   cand$container_match <- vapply(cand$container, function(x) ContainerMatch(parsed$parsed_container, x), logical(1), USE.NAMES = FALSE)
-  cand$volume_match    <- vapply(cand$volume, function(x) VolumeMatch(parsed$parsed_volume, x), logical(1), USE.NAMES = FALSE)
+  # a record without a volume that carries its number as the issue (the
+  # JSTOR-era Mammalian Species accounts, 'Mammalian Species 612: 1-8' deposited
+  # as issue 612, volume none): the issue stands for the volume (#128)
+  cand$volume_match    <- vapply(seq_len(nrow(cand)), function(i)
+    VolumeMatch(parsed$parsed_volume, cand$volume[i]) ||
+      (is.na(cand$volume[i]) && !is.null(cand$issue) && VolumeMatch(parsed$parsed_volume, cand$issue[i])), logical(1))
   cand$pages_match     <- vapply(cand$pages, function(x) PagesMatch(parsed$parsed_pages, x), logical(1), USE.NAMES = FALSE)
   cand$n_agree <- as.integer(cand$author_match) + as.integer(cand$year_match) + as.integer(cand$container_match) +
                   as.integer(cand$volume_match) + as.integer(cand$pages_match)
@@ -65,6 +77,33 @@ ScoreAll <- function(parsed, ...) {
 
 IsGreyLiterature <- function(raw_citation)
   !is.na(raw_citation) && grepl(citations_grey_pattern, tolower(FoldASCII(raw_citation)), perl = TRUE)
+
+# A title-less citation with a whole journal key -- "Journal volume: pages
+# (year)" (ParseJournalOnlyStyle(); the PHYLACINE Mass.Source cells): no
+# parsed_title, container, volume and pages all present (the HasJournalKey()
+# shape of recommend.r). Such a reference is searched through the
+# container-filtered Crossref query as well (#128) and decided by the
+# container_volume_page rule instead of the title rules.
+TitlelessJournalKey <- function(ref) {
+  ref <- as.list(ref)
+  Nz <- function(x) !is.null(x) && length(x) == 1 && !is.na(x) && nzchar(trimws(as.character(x)))
+  !Nz(ref$parsed_title) && Nz(ref$parsed_container) && Nz(ref$parsed_volume) && Nz(ref$parsed_pages)
+}
+
+# The rows of a scored, DOI-collapsed candidate frame a title-less citation
+# accepts (owner decision 2026-10-06; the type condition of #128): container
+# (abbreviation-aware), volume, first page and year (within the window) all
+# agree, and the work is an article of a serial -- its type one of
+# titleless_candidate_types or unknown. A journal's front matter at the same
+# page ('NOTES', 'Author Index' deposited as a chapter or a paratext) or at
+# another page is not the work. NA never agrees.
+TitlelessAgreement <- function(by_doi) {
+  if (nrow(by_doi) == 0) return(logical(0))
+  type_ok <- is.na(by_doi$type) | by_doi$type %in% titleless_candidate_types
+  agree <- by_doi$container_match & by_doi$volume_match & by_doi$pages_match & by_doi$year_match & type_ok
+  agree[is.na(agree)] <- FALSE
+  agree
+}
 
 # A retraction or editorial notice on a DOI from any of the three sources:
 # OpenAlex is_retracted, Crossref update-to / updated-by, Scite. Returns
@@ -174,11 +213,12 @@ DecideMatchWith <- function(ref, doi_cands, open_cands, closed_cands, scite, th,
     # a title-less citation ("Journal volume: pages (year)", ParseJournalOnlyStyle();
     # the PHYLACINE Mass.Source cells): there is no title to compare, so a
     # candidate is the work only when its container (abbreviation-aware),
-    # volume, first page and year (within the window) all agree (owner decision
-    # 2026-10-06). Both services returning it: certain / container_volume_page;
-    # one: pending / single_service; two such DOIs: ambiguous; none: the
-    # not_found / grey_literature outcome of a failed search.
-    agree <- by_doi$container_match & by_doi$volume_match & by_doi$pages_match & by_doi$year_match
+    # volume, first page and year (within the window) all agree and it is an
+    # article (TitlelessAgreement(); owner decision 2026-10-06, the type
+    # condition of #128). Both services returning it: certain /
+    # container_volume_page; one: pending / single_service; two such DOIs:
+    # ambiguous; none: the not_found / grey_literature outcome of a failed search.
+    agree <- TitlelessAgreement(by_doi)
     if (!any(agree)) {
       if (grey) return(Decision('pending', 'grey_literature', best, by_doi, services))
       return(Decision('not_found', 'below_threshold', best, by_doi, services))
@@ -256,8 +296,7 @@ DecideMatchCrossrefOnly <- function(ref, doi_cands = NULL, open_cands = NULL, cl
   titleless <- is.null(ref$parsed_title) || is.na(ref$parsed_title) || !nzchar(ref$parsed_title)
   if (titleless && d$match_reason %in% c('below_threshold', 'grey_literature') && nrow(d$candidates) > 0) {
     by_doi <- d$candidates
-    agree <- by_doi$container_match & by_doi$volume_match & by_doi$pages_match & by_doi$year_match
-    agree[is.na(agree)] <- FALSE
+    agree <- TitlelessAgreement(by_doi)
     if (any(agree)) {
       hits <- by_doi[agree, , drop = FALSE]
       best <- hits[1, , drop = FALSE]
@@ -311,6 +350,14 @@ RecheckCrossrefOnly <- function(row, d, th = citations_thresholds) {
 # `crossref_only` (the mode of --crossref-only, DecideMatchCrossrefOnly()) no
 # OpenAlex request is made: the Crossref work or query and the closed-world
 # candidates are the whole evidence.
+# A title-less reference with a whole journal key (TitlelessJournalKey()) is
+# searched at Crossref twice (#128): the raw string first, as for any
+# reference, then the container-filtered query (CrossrefQueryContainer():
+# the container as a field query, the volume and first page as the terms,
+# the year +- the window as a date filter), whose items rank the article
+# above the journal's front matter. The two sets are pooled, one row per
+# DOI, and the decision is the container_volume_page rule as before (in
+# Crossref-only mode the (c) rule of DecideMatchCrossrefOnly()).
 VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL, crossref_only = FALSE) {
   ref <- as.list(ref)
   if (identical(ref$role, 'self')) return(DecideMatch(ref))
@@ -325,6 +372,10 @@ VerifyReference <- function(ref, cfg, reflist = NULL, scite = NULL, crossref_onl
                                                            ref$parsed_container, ref$parsed_volume, ref$parsed_pages)), collapse = ' ')
            else ref$raw_citation
   cr <- CrossrefQuery(query, cfg)
+  if (TitlelessJournalKey(ref)) {
+    cr <- rbind(cr, CrossrefQueryContainer(ref$parsed_container, ref$parsed_volume, ref$parsed_pages, ref$parsed_year, cfg))
+    cr <- cr[is.na(cr$doi) | !duplicated(cr$doi), , drop = FALSE]
+  }
   closed <- ClosedWorldCandidates(ref, reflist, cfg)
   if (isTRUE(crossref_only)) return(DecideMatch(ref, open_cands = cr, closed_cands = closed, scite = scite, crossref_only = TRUE))
   oa <- if (!is.na(ref$parsed_title)) OpenAlexQuery(ref$parsed_title, ref$parsed_year, cfg)
