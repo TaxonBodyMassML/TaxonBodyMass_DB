@@ -146,6 +146,69 @@ Expect(Field(yo, 'year') == '1985' && Field(yo, 'note') == 'Year 1985 by owner d
          Field(e, 'year') == '1986' && is.na(Field(e, 'note')),
        'a recorded year override replaces the year and is noted in the entry; without one the record\'s year stands')
 
+# ---- the owner's corrections to generated entries (#141) -------------------------------------------
+cat('ReadBibCorrections(), ApplyBibCorrections(), CheckBibCorrections()\n')
+co <- ReadBibCorrections(cfg$corrections_csv)
+Expect(identical(names(co), bib_corrections_columns) && nrow(co) == 1 && co$bibcite == 'Scherer:1984aa' && co$field == 'author' &&
+         co$crossref_value == 'Scherer, Siegfried and Ernst, Anneliese and Chen, Ting-Wei and B�ger, Peter' &&
+         co$corrected_value == 'Scherer, Siegfried and Ernst, Anneliese and Chen, Ting-Wei and Böger, Peter' &&
+         co$decided_by == 'owner' && co$decided_at == '2026-10-08' && startsWith(co$notes, 'Crossref replacement character'),
+       'the tracked Bib/bib_corrections.csv validates: the Scherer:1984aa author row, the replacement character as Crossref gives it, the corrected name as plain UTF-8')
+Expect(nrow(ReadBibCorrections(tempfile())) == 0 && identical(names(ReadBibCorrections(tempfile())), bib_corrections_columns) && nrow(EmptyBibCorrections()) == 0,
+       'an absent file reads as no corrections')
+WriteCorr <- function(...) { f <- tempfile(fileext = '.csv'); d <- rbind(co, ...); write.csv(d, f, row.names = FALSE, na = '', fileEncoding = 'UTF-8'); f }
+CorrRow <- function(bibcite = 'Doe:2010aa', field = 'title', crossref_value = 'A Title & more', corrected_value = 'A Title and more', decided_by = 'owner', decided_at = '2026-10-08', notes = 'test')
+  data.frame(bibcite = bibcite, field = field, crossref_value = crossref_value, corrected_value = corrected_value, decided_by = decided_by, decided_at = decided_at, notes = notes, stringsAsFactors = FALSE)
+Expect(nrow(ReadBibCorrections(WriteCorr(CorrRow()))) == 2 && is.na(ReadBibCorrections(WriteCorr(CorrRow(crossref_value = '')))$crossref_value[2]),
+       'a sound row reads; an empty crossref_value reads as NA (the record has no such field)')
+Expect(Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(bibcite = '')))), 'empty bibcite in row(s) 2') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(field = 'doi')))), 'field must be one of author, title, journal') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(field = 'year')))), 'field must be one of') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(corrected_value = ' ')))), 'empty corrected_value in row(s) 2') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(decided_by = '')))), 'empty decided_by') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(decided_at = '8 Oct 2026')))), 'decided_at must be a YYYY-MM-DD date') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(corrected_value = 'A Title & more')))), 'corrected_value equals crossref_value') &&
+         Has(ErrorOf(ReadBibCorrections(WriteCorr(CorrRow(), CorrRow(corrected_value = 'Other')))), 'a key and field twice: Doe:2010aa title'),
+       'an invalid row is rejected: empty bibcite, a field the builder does not write (doi, year), empty corrected_value or decided_by, a bad date, no change, a key + field twice')
+bad_cols <- tempfile(fileext = '.csv'); write.csv(co[, -7], bad_cols, row.names = FALSE)
+Expect(Has(ErrorOf(ReadBibCorrections(bad_cols)), 'lacks column(s) notes'), 'a missing column stops')
+ws <- CrossrefWork('10.1007/bf00384277', cfg)
+es <- BuildBibEntry(ws, 'Scherer:1984aa')
+ac <- ApplyBibCorrections(es, co)
+Expect(Field(es, 'author') == co$crossref_value && Field(ac$entry, 'author') == co$corrected_value &&
+         identical(strsplit(ac$entry, '\n')[[1]][-2], strsplit(es, '\n')[[1]][-2]) && grepl('Böger, Peter},\n', ac$entry, fixed = TRUE) &&
+         nrow(ac$corrections) == 1 && ac$corrections$status == 'applied' && ac$corrections$bibcite == 'Scherer:1984aa' && ac$corrections$field == 'author' && ac$corrections$current == co$crossref_value,
+       "the Scherer:1984aa entry from the recorded Crossref record carries 'B�ger'; the correction replaces the author line alone and is reported applied")
+again <- ApplyBibCorrections(ac$entry, co)
+Expect(identical(again$entry, ac$entry) && again$corrections$status == 'stale' && again$corrections$current == co$corrected_value,
+       'on an entry that no longer carries the Crossref value (fixed upstream) the correction is skipped and reported stale with the entry\'s current value')
+fixed <- ws; fixed$author[[4]]$family <- 'Böger'
+acf <- ApplyBibCorrections(BuildBibEntry(fixed, 'Scherer:1984aa'), co)
+Expect(acf$corrections$status == 'stale' && Field(acf$entry, 'author') == co$corrected_value && identical(acf$entry, BuildBibEntry(fixed, 'Scherer:1984aa')),
+       'a Crossref record fixed upstream retires the correction by itself: nothing written, the row reported stale for the owner to remove')
+st <- ApplyBibCorrections(es, CorrRow('Scherer:1984aa', 'author', 'Scherer, Siegfried and B�ger, Peter', 'Scherer, S. and Böger, P.'))
+Expect(identical(st$entry, es) && st$corrections$status == 'stale' && st$corrections$current == co$crossref_value,
+       'a row whose crossref_value never matched the record is stale too')
+other <- ApplyBibCorrections(ch, co)
+Expect(identical(other$entry, ch) && nrow(other$corrections) == 0 && identical(names(other$corrections), c('bibcite', 'field', 'status', 'current')) &&
+         identical(ApplyBibCorrections(ch, NULL)$entry, ch) && identical(ApplyBibCorrections(ch, EmptyBibCorrections())$entry, ch),
+       'an entry of another key, or no corrections at all, is untouched and reports nothing')
+# the comparison is made on the same footing: both values are plain text that the builder escapes as it escapes Crossref's
+tc <- ApplyBibCorrections(ch, rbind(CorrRow(), CorrRow(field = 'pages', crossref_value = '1-9', corrected_value = '1-19'), CorrRow(field = 'booktitle', crossref_value = 'Big Book', corrected_value = 'Big & Bigger Book')))
+Expect(Field(ch, 'title') == 'A Title \\& more' && Field(tc$entry, 'title') == 'A Title and more' && Field(tc$entry, 'pages') == '1--19' && Field(tc$entry, 'booktitle') == 'Big \\& Bigger Book' &&
+         all(tc$corrections$status == 'applied') && Field(tc$entry, 'doi') == '10.1/t' && endsWith(tc$entry, '}}'),
+       "a plain 'A Title & more' matches the escaped title 'A Title \\& more', '1-9' the pages '1--9'; the corrected text is escaped the same way; the entry's last line keeps its closing brace")
+nf <- BuildBibEntry(list(DOI = '10.1/noauthor', type = 'journal-article', title = list('An account'), `container-title` = list('Mammalian Species'), issued = list(`date-parts` = list(list(1990L)))), 'Anon:1990aa')
+na <- ApplyBibCorrections(nf, CorrRow('Anon:1990aa', 'author', NA, 'Doe, J. and {FAO & WHO}'))
+tfa <- tempfile(fileext = '.bib'); writeLines(na$entry, tfa)
+Expect(is.na(Field(nf, 'author')) && na$corrections$status == 'applied' && is.na(na$corrections$current) && strsplit(na$entry, '\n')[[1]][2] == '\tauthor = {Doe, J. and {FAO \\& WHO}},' &&
+         Field(na$entry, 'title') == 'An account' && length(suppressMessages(suppressWarnings(RefManageR::ReadBib(tfa, check = FALSE)))) == 1 &&
+         ApplyBibCorrections(es, CorrRow('Scherer:1984aa', 'author', NA, 'Doe, J.'))$corrections$status == 'stale',
+       'an empty crossref_value supplies a field the record lacks (an author-less account): added as the first field under the nodoi author convention, parseable; on an entry that has the field it is stale')
+Expect(identical(BibTeXAuthorsAsCrossref('Scherer, Siegfried and {FAO & WHO} and Plain'), list(list(family = 'Scherer', given = 'Siegfried'), list(name = 'FAO & WHO'), list(family = 'Plain'))) &&
+         BibCorrectionFieldValue('author', 'Doe, J. and {FAO & WHO}') == 'Doe, J. and {FAO \\& WHO}' && BibCorrectionFieldValue('pages', '1-9') == '1--9' && is.na(BibCorrectionFieldValue('title', NA)),
+       'the corrected author list reads back into Crossref-style names for the Sheet; the field values are escaped as the builder writes them')
+
 cat('BuildBibEntryNoDOI()\n')
 Row <- function(author1 = 'Kremer', year = 1976L, title = 'The ecology of the ctenophore Mnemiopsis leidyi in Narragansett Bay',
                 container = 'Ph.D. thesis, Univ. of Rhode Island', volume = NA, pages = NA)
@@ -363,6 +426,41 @@ Expect(all(shared1$prim$bibcite == 'Silva:1995aa') && all(shared1$prim$cite_id =
          grepl('Boca Raton: CRC Press', shared1$entries[[1]], fixed = TRUE) && grepl('approved 2026-10-05', shared1$entries[[1]], fixed = TRUE) &&
          identical(shared2$entries, shared1$entries) && identical(shared2$prim, shared1$prim),
        'a shared DOI-less entry is built from the row decided first, and a second pass reproduces it although the later row sorts first')
+cat('AssignPrimaryKeys(), CheckBibCorrections(): the owner\'s corrections in the --bib step (#141)\n')
+# the --bib step: applied, stale and entry-less rows reported; a second pass reproduces the corrected entries
+co3 <- rbind(co, CorrRow('Ikeda:1986aa', 'title', 'Not the Crossref title', 'Whatever'), CorrRow('Omori:1969aa', 'author', 'X', 'Y'))
+cp <- rbind(PRow('Makarieva_2008', 'S7:Scherer et al. 1984', 'certain', doi = '10.1007/bf00384277', author1 = 'Scherer', year = 1984L),
+            PRow('Kiorboe_2013', '6', 'certain', doi = '10.1007/bf00392514'),
+            PRow('Kiorboe_2013', '12', 'approved', bibcite = 'Omori:1969aa', reason = 'manual_bib'))
+rc <- AssignPrimaryKeys(cp, cfg, cur_syn, ids0, corrections = co3)
+Expect(Field(rc$entries[['Scherer:1984aa']], 'author') == co$corrected_value && Field(rc$entries[['Ikeda:1986aa']], 'title') == Field(e, 'title') &&
+         identical(rc$corrections$status, c('applied', 'stale', 'no_entry')) && identical(rc$corrections$bibcite, c('Scherer:1984aa', 'Ikeda:1986aa', 'Omori:1969aa')) &&
+         rc$corrections$current[2] == Field(e, 'title') && is.na(rc$corrections$current[3]) &&
+         rc$prim$bibcite[1] == 'Scherer:1984aa' && rc$prim$cite_id[1] == 'Scherer_1984',
+       'AssignPrimaryKeys() applies the corrections to the entries it builds from Crossref and reports each row: applied, stale (with the entry\'s value), no_entry for a curated key; keys and CiteIDs as before')
+rc2 <- AssignPrimaryKeys(rc$prim, cfg, cur_syn, ids0, corrections = co3)
+Expect(identical(rc2$entries, rc$entries) && identical(rc2$corrections, rc$corrections) && identical(AssignPrimaryKeys(cp, cfg, cur_syn, ids0)$corrections, rc$corrections[0, ]) &&
+         Field(AssignPrimaryKeys(cp, cfg, cur_syn, ids0)$entries[['Scherer:1984aa']], 'author') == co$crossref_value,
+       'a second pass reproduces the corrected entries (idempotent); without corrections the entry carries Crossref\'s text and nothing is reported')
+cbib <- tempfile(fileext = '.bib'); WritePrimaryBib(rc$entries, cbib)
+cc <- CheckBibCorrections(co3, cbib)
+Expect(identical(cc$status, c('applied', 'stale', 'no_entry')) && cc$current[1] == co$corrected_value && cc$current[2] == Field(e, 'title') && is.na(cc$current[3]) &&
+         identical(names(cc), c('bibcite', 'field', 'status', 'current')),
+       'CheckBibCorrections() reads the generated file back: the applied row, the stale row with the entry\'s value, the entry-less row')
+ubib <- tempfile(fileext = '.bib'); WritePrimaryBib(AssignPrimaryKeys(cp, cfg, cur_syn, ids0)$entries, ubib)
+Expect(CheckBibCorrections(co, ubib)$status == 'unapplied' && nrow(CheckBibCorrections(EmptyBibCorrections(), cbib)) == 0 && nrow(CheckBibCorrections(NULL, cbib)) == 0 &&
+         CheckBibCorrections(co, tempfile())$status == 'no_entry' && identical(names(ReadBibEntryTexts(cbib)), c('Ikeda:1986aa', 'Scherer:1984aa')) && ReadBibEntryTexts(cbib)[['Scherer:1984aa']] == rc$entries[['Scherer:1984aa']],
+       'a file built without the corrections reads unapplied (run --bib); no corrections or no file: nothing / no_entry; the entry texts read back as written')
+Expect(CheckBibCorrections(co, cfg$primary_bib)$status == 'applied',
+       'the tracked generated bib carries the seeded correction (Scherer:1984aa author)')
+# the Sheet's Citation cell takes the same correction (sheet_append.r), so a future append agrees with the bib and with the cell the owner edited by hand
+source(file.path(lib, 'sheet_snapshots.r')); source(file.path(lib, 'citations', 'sheet_append.r'))
+cell <- read.csv(cfg$snapshot_primary, stringsAsFactors = FALSE, colClasses = 'character', encoding = 'UTF-8')
+cell <- cell$Citation[cell$CiteID == 'Scherer_1984']
+cit_c <- FormatCitationText(ws, key = 'Scherer:1984aa', corrections = co)
+Expect(length(cell) == 1 && cit_c == cell && grepl('& Böger, P. (1984).', cit_c, fixed = TRUE) && grepl('B�ger, P.', FormatCitationText(ws), fixed = TRUE) &&
+         identical(FormatCitationText(ws, key = 'Scherer:1984aa', corrections = co[0, ]), FormatCitationText(ws)),
+       'FormatCitationText() with the corrections gives the cell the owner wrote on the Sheet (Böger, P.); without them Crossref\'s text')
 source(file.path(lib, 'citations', 'provenance.r'))
 tracked <- LoadPrimaryReferences(cfg$wd_db)
 acc_t <- tracked[tracked$match_status %in% c('certain', 'approved', 'nodoi_approved'), ]
