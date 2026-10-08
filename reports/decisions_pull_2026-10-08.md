@@ -9,7 +9,7 @@
 - --decisions-pull: Meiri_2018: pulled 23, deferred 0, errors 0, ignored 0
 - --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
-- --decisions-pull: 8 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 8 answered before, 0 error(s), 0 still open
+- --decisions-pull: 9 item(s) on BM_decision_items: 1 newly answered (written to decision_items.csv), 8 answered before, 0 error(s), 0 still open
 
 ## Per source
 
@@ -43,7 +43,7 @@
 | Wilman_etal_2014 | Ref_138 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_141 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_144 | 2026-10-04 |  |  | pulled 2026-10-08 |
-| Wilman_etal_2014 | Ref_145 | 2026-10-04 |  | nodoi | pulled 2026-10-08 (cite: Dieterlen (1976) Zweiter Fund von Dendromus kahuziensis (Dendromurinae; Cricetidae; Rodentia) und weitere Dendromus-Fange im Kivu-Hochland oberhalb 2000 m. Stuttgarter Beitrage zur Naturkunde - Serie A (Biologie) 286: 1-5) |
+| Wilman_etal_2014 | Ref_145 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_146 | 2026-10-04 | drop |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_147 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_148 | 2026-10-04 |  |  | pulled 2026-10-08 |
@@ -60,13 +60,13 @@
 | Wilman_etal_2014 | Ref_176 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_177 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Abe 1984 | 2026-10-05 | 1 |  | pulled 2026-10-08 |
-| Meiri_2018 | Alvarez del Toro and Smith 1956 | 2026-10-05 |  | nodoi | pulled 2026-10-08 (cite: Alvarez del Toro (1956) Notulae herpetologicae Chiapasiae I. Herpetologica 12: 3-17) |
+| Meiri_2018 | Alvarez del Toro and Smith 1956 | 2026-10-05 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Amarasinghe et al. 2014 [1] | 2026-10-05 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Batista et al. 2015 [1] | 2026-10-05 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Beebe 1945 | 2026-10-05 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Bobrov 2013 [2] | 2026-10-05 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Brown 1954 | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Cadle 2001 | 2026-10-05 |  | nodoi | pulled 2026-10-08 (cite: Cadle (2001) A new species of lizard related to Stenocercus caducus (Cope) (Squamata: Iguanidae) from Peru and Bolivia, with a key to the "Ophryoessoides group". Bulletin of the Museum of Comparative Zoology 157: 183-221) |
+| Meiri_2018 | Cadle 2001 | 2026-10-05 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Carey 1975 | 2026-10-05 | 1 |  | pulled 2026-10-08 |
 | Meiri_2018 | Cope 1899 | 2026-10-05 | 1 |  | pulled 2026-10-08 |
 | Makarieva_2008 | S1a:Ensign 1970 | 2026-10-06 | 1 |  | pulled 2026-10-08 |
@@ -91,7 +91,7 @@
 | Makarieva_2008 | S4:Will 1952 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Makarieva_2008 | S7:Carpenter et al. 2004 | 2026-10-06 | 1 |  | pulled 2026-10-08 |
 | Makarieva_2008 | S7:Koenig & Schmidt 1995 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Myhrvold_2015 | Bennett_1986 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Bennett (1986) Environmental correlates of evolutionary change in mammals. PhD thesis, University of Sussex) |
+| Myhrvold_2015 | Bennett_1986 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Myhrvold_2015 | Dunning_1992 | 2026-10-06 | 1 |  | pulled 2026-10-08 |
 | Myhrvold_2015 | Kratochvil_2006a | 2026-10-06 | 1 |  | pulled 2026-10-08 |
 | Myhrvold_2015 | Lanicci | 2026-10-06 |  |  | pulled 2026-10-08 |
@@ -298,45 +298,45 @@
 | Jones_2009 | 1604 | 2026-10-06 | 2 |  | pulled 2026-10-08 |
 | Jones_2009 | 2211 | 2026-10-06 | 2 |  | pulled 2026-10-08 |
 | Jones_2009 | 2670 | 2026-10-06 | 2 |  | pulled 2026-10-08 |
-| Jones_2009 | 55 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Allgaier (1993) Bat Research News 34: 100; no title) |
+| Jones_2009 | 55 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 137 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 141 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 511 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 703 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Croin Michielsen (1966) Intraspecific and interspecific competition in the shrews Sorex araneus L. and S. minutus L. Archives Neerlandaises de Zoologie 17: 73-174) |
+| Jones_2009 | 703 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 748 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 889 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 890 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 953 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 975 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 977 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 1091 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: George (1982) Ctenodactylus (Ctenodactylidae, Rodentia): one species or two?. Mammalia 46: 375-380) |
+| Jones_2009 | 1091 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1106 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1150 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1238 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1412 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1600 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1878 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 1885 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Marshall (1959) The breeding biology of equatorial vertebrates: reproduction of the bat Chaerephon hindei Thomas at latitude 0026'N. Proceedings of the Zoological Society of London 132: 607-616) |
+| Jones_2009 | 1885 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1982 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1991 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 2091 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Mutere (1968) The breeding biology of the fruit bat Rousettus aegyptiacus E. Geoffroy living at 0022'S. Acta Tropica 25: 97-108) |
-| Jones_2009 | 2092 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Mutere (1970) The breeding biology of equatorial vertebrates: Reproduction in the insectivorous bat Hipposideros caffer living at 0027'N. Bijdragen tot de Dierkunde 40: 56-58) |
-| Jones_2009 | 2093 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Mutere (1973) A comparative study of reproduction in two populations of the insectivorous bat Otomops martiensseni at latitudes 105'S and 2030'S. Journal of Zoology 171: 79-92) |
+| Jones_2009 | 2091 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Jones_2009 | 2092 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Jones_2009 | 2093 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2195 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2293 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2434 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2438 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2460 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 2510 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Ruiz (1995) Bat Research News 36: 63; no title) |
+| Jones_2009 | 2510 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2608 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 2807 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Tavares (1995) Bat Research News 36: 114-115; no title) |
-| Jones_2009 | 2896 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: van der Merwe (1987) Adaptive breeding strategies in some South African bats between 22 degrees S and 28 degrees S. South African Journal of Science 83: 607-609) |
-| Jones_2009 | 3018 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Wiles (1996) Research and recovery actions for the Mariana Fruit Bat on Guam. Guam Division of Aquatic and Wildlife Resources, Mangilao, Guam. Unpublished report) |
-| Jones_2009 | 3026 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Williams (1978) Aspects of the ecology and behavior of the Malayan tapir (Tapirus indicus Desmarest) in the National Park of West Malaysia. PhD thesis, Michigan State University) |
-| Jones_2009 | 3029 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Williams (1984) The Central American tapir (Tapirus bairdii Gill) in northwestern Costa Rica. PhD thesis, Michigan State University) |
+| Jones_2009 | 2807 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Jones_2009 | 2896 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Jones_2009 | 3018 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Jones_2009 | 3026 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Jones_2009 | 3029 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 3049 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 3105 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 3120 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Young (1993) Dodo: Journal of the Jersey Wildlife Preservation Trust 29: 22-33; no title) |
+| Jones_2009 | 3120 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 3123 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 19 | 2026-10-06 | 1 |  | pulled 2026-10-08 |
 | Jones_2009 | 22 | 2026-10-06 | 1 |  | pulled 2026-10-08 |
@@ -564,7 +564,7 @@
 | Jones_2009 | 1835 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1838 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1845 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 1849 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Mace (1979) The evolutionary ecology of small mammals. PhD thesis, University of Sussex) |
+| Jones_2009 | 1849 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1851 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1864 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 1871 | 2026-10-06 |  |  | pulled 2026-10-08 |
@@ -591,7 +591,7 @@
 | Jones_2009 | 2029 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2041 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2054 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 2090 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Mutere (1967) The breeding biology of equatorial vertebrates: reproduction in the fruit bat, Eidolon helvum, at latitude 0020'N. Journal of Zoology 153: 153-161) |
+| Jones_2009 | 2090 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2096 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2101 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2119 | 2026-10-06 |  |  | pulled 2026-10-08 |
@@ -651,7 +651,7 @@
 | Jones_2009 | 2593 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2601 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2604 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Jones_2009 | 2605 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Shillito (1963) Field observations on the growth, reproduction and activity of a woodland population of the common shrew, Sorex araneus L. Journal of Zoology 140: 99-114) |
+| Jones_2009 | 2605 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2607 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2609 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Jones_2009 | 2622 | 2026-10-06 |  |  | pulled 2026-10-08 |
@@ -805,7 +805,7 @@
 | Faurby_etal_2018 | h:a232ad83 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:5adcf074 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:f18df201 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:f2eae45b | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Ambid (1988) Comparative Biochemistry and Physiology Part A: Physiology 91: 105-202; no title) |
+| Faurby_etal_2018 | h:f2eae45b | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:17855313 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:dfc34945 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:0c479337 | 2026-10-06 |  |  | pulled 2026-10-08 |
@@ -986,13 +986,17 @@
 | Meiri_2018 | Goldberg 2006 [1] | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Lettink et al. 2013 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Luo et al. 2012 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Modry et al. 2013 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Modry (2013) Revision of the Levantine "Lacerta" laevis / kulzeri-complex: 3. The rock lizard of Wadi Ramm, Phoenicolacerta kulzeri khazaliensis ssp. n. Vertebrate Zoology 63: 307-312) |
+| Meiri_2018 | Modry et al. 2013 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Nguyen et al. 2013 [4] | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Nunez and Navarro 1992 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Nunez (1992) Liolaemus rosenmanni, una nueva especie Chilena de lagartija relacionada al grupo "ruibali". Boletin del Museo Nacional de Historia Natural, Chile 43: 55-62) |
+| Meiri_2018 | Nunez and Navarro 1992 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Oliver and McDonald 2016 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Pavon-Vazquez et al. 2017 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Scherz et al. 2017 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Schmidtler and Bischoff 1999 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Schmidtler (1999) Revision des levantinischen Lacerta laevis/kulzeri-Komplexes: 1. Die Felseneidechse Lacerta cyanisparsa sp. n. Salamandra 35: 129-146) |
-| Meiri_2018 | Shaw 1952 | 2026-10-06 |  | nodoi | pulled 2026-10-08 (cite: Shaw (1952) Notes on the eggs and young of some United States and Mexican lizards, I. Herpetologica 8: 71-79) |
+| Meiri_2018 | Schmidtler and Bischoff 1999 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Meiri_2018 | Shaw 1952 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Stuart et al. 2010 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Zweifel and Lowe 1966 | 2026-10-06 |  |  | pulled 2026-10-08 |
+
+## Items answered
+
+- Faurby_etal_2018-3: Issue #128: the container-filtered Crossref query (and the issue-as-volume rule for the Mammalian Species accounts) finds a Crossref record agreeing on journal, volume or number, first page and year for 30 of the 266 title-less keys you decided nodoi with a cite: note on 2026-10-08 (133 record links; reports/container_query_Faurby_etal_2018.md, table "Owner-decided keys the second path resolves"). For 11 keys the record is the work you typed (same title, author and year; e.g. Global Ecology and Biogeography 18: 19-29 = Kelt & Meyer 2009, 91 records). For 18 keys the record of the cited journal, number and page is a different work from the one you typed (16 Mammalian Species accounts, e.g. 612 = Nycteris thebaica where you typed Tylomys nudicaudus; Bull. AMNH 244: 1-306 = Patton et al. 2000 where you typed Voss 2001; Ann. Mag. Nat. Hist. 8 16: 66-79 = Dollman 1915 where you typed Thomas 1915): either PHYLACINE's journal key is wrong and your citation names the real source, or the typed citation is. For 1 key no title was typed (Comp. Biochem. Physiol. A 91: 105-202, Ambid 1988; the record at page 105 is Moreira 1988, so the key's pages look mistyped). Four more keys have two agreeing DOIs (publisher twins; three already carry one of them by your earlier decisions). Upgrade the DOI-less entries to the Crossref DOIs (a session appends doi: queue rows, --apply-queue --bib --sheet; the nodoi keys are replaced)? -> upgrade the 11, re-decide the 18 by hand (say per key whether the key or the typed citation names the work)
