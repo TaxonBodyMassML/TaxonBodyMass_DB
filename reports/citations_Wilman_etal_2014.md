@@ -1,10 +1,10 @@
-# Citations of Wilman_etal_2014 -- 2026-10-08 12:31:49 (tbmcite 0.1.0)
+# Citations of Wilman_etal_2014 -- 2026-10-08 16:16:12 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --sheet --offline
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 59 row(s) for Wilman_etal_2014, 15 new, tab had 10372 rows; BM_citations snapshotted (443 rows)
+- --sheet (dry run): 59 row(s) for Wilman_etal_2014, 0 new, tab had 10400 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -33,7 +33,7 @@ Verification mode: full (Crossref + OpenAlex)
 | Ref_138 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.208 | Cotterill:2002ab | Cotterill_2002b |
 | Ref_139 | 2 | measurement | approved | owner_candidate | crossref;openalex |  | 10.11646/zootaxa.1199.1.4 | 0.000 | Vilela:2006aa | Vilela_2006 |
 | Ref_140 | 2 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1644/1545-1542(2002)083<0421:robmma>2.0.co;2 | 0.000 | Rickart:2002aa | Rickart_2002 |
-| Ref_141 | 2 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.329 | van-Roosmalen:2002aa | vanRoosmalen_2002 |
+| Ref_141 | 2 | measurement | approved | owner_doi | crossref |  | 10.62015/np.2002.v10.503 | 0.866 | Van-Roosmalen:2002aa | VanRoosmalen_2002 |
 | Ref_142 | 3 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1515/mamm.2004.019 | 0.000 | Mullin:2004aa | Mullin_2004 |
 | Ref_143 | 3 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.000 | Hershkovitz:1998aa | Hershkovitz_1998 |
 | Ref_144 | 4 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.000 | Dieterlen:1979ab | Dieterlen_1979b |

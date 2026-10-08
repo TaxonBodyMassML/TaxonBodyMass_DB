@@ -1,7 +1,7 @@
 # Owner decisions pulled from BM_decisions -- 2026-10-08 (tbmcite 0.1.0)
 
-- --decisions-pull: 968 tab row(s) read from BM_decisions: 968 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
-- --decisions-pull: Faurby_etal_2018: pulled 277, deferred 0, errors 0, ignored 0
+- --decisions-pull: 987 tab row(s) read from BM_decisions: 987 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
 - --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
 - --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
 - --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
@@ -9,13 +9,13 @@
 - --decisions-pull: Meiri_2018: pulled 23, deferred 0, errors 0, ignored 0
 - --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
-- --decisions-pull: 9 item(s) on BM_decision_items: 1 newly answered (written to decision_items.csv), 8 answered before, 0 error(s), 0 still open
+- --decisions-pull: 9 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
 
 ## Per source
 
 | source_label | pulled | deferred | errors | ignored |
 | --- | ---: | ---: | ---: | ---: |
-| Faurby_etal_2018 | 277 | 0 | 0 | 0 |
+| Faurby_etal_2018 | 296 | 0 | 0 | 0 |
 | Hebert_etal_2016 | 10 | 0 | 0 | 0 |
 | Jones_2009 | 608 | 0 | 0 | 0 |
 | Kiorboe_2013 | 2 | 0 | 0 | 0 |
@@ -996,7 +996,22 @@
 | Meiri_2018 | Shaw 1952 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Stuart et al. 2010 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Zweifel and Lowe 1966 | 2026-10-06 |  |  | pulled 2026-10-08 |
-
-## Items answered
-
-- Faurby_etal_2018-3: Issue #128: the container-filtered Crossref query (and the issue-as-volume rule for the Mammalian Species accounts) finds a Crossref record agreeing on journal, volume or number, first page and year for 30 of the 266 title-less keys you decided nodoi with a cite: note on 2026-10-08 (133 record links; reports/container_query_Faurby_etal_2018.md, table "Owner-decided keys the second path resolves"). For 11 keys the record is the work you typed (same title, author and year; e.g. Global Ecology and Biogeography 18: 19-29 = Kelt & Meyer 2009, 91 records). For 18 keys the record of the cited journal, number and page is a different work from the one you typed (16 Mammalian Species accounts, e.g. 612 = Nycteris thebaica where you typed Tylomys nudicaudus; Bull. AMNH 244: 1-306 = Patton et al. 2000 where you typed Voss 2001; Ann. Mag. Nat. Hist. 8 16: 66-79 = Dollman 1915 where you typed Thomas 1915): either PHYLACINE's journal key is wrong and your citation names the real source, or the typed citation is. For 1 key no title was typed (Comp. Biochem. Physiol. A 91: 105-202, Ambid 1988; the record at page 105 is Moreira 1988, so the key's pages look mistyped). Four more keys have two agreeing DOIs (publisher twins; three already carry one of them by your earlier decisions). Upgrade the DOI-less entries to the Crossref DOIs (a session appends doi: queue rows, --apply-queue --bib --sheet; the nodoi keys are replaced)? -> upgrade the 11, re-decide the 18 by hand (say per key whether the key or the typed citation names the work)
+| Faurby_etal_2018 | h:42976958 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:21e13536 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:4c7263e9 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:532040a2 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:aeb63656 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:f4cdd570 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:172b775c | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:18637c76 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:1a8d68b2 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:3267c76e | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7a67797b | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7f199c9a | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:8a52733e | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:c4055440 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:cd1657ef | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:d3134ddb | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:e350b818 | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:f302a95d | 2026-10-08 | 1 | 1 | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:f2eae45b | 2026-10-08 | drop | drop | pulled 2026-10-08 |
