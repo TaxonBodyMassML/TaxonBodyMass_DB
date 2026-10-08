@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-08 13:49:01
+# Citation and provenance warnings -- 2026-10-08 15:51:45
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -13,7 +13,16 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-(none)
+- BM_primary_citations: Nekaris_2003 -> Nekaris:2003aa
+- BM_primary_citations: Kelt_2009 -> Kelt:2009aa
+- BM_primary_citations: Mora_2005 -> Mora:2005aa
+- BM_primary_citations: Macholan_2008 -> Macholan:2008aa
+- BM_primary_citations: deWinton_1901 -> de-Winton:1901aa
+- BM_primary_citations: Thomas_1904 -> Thomas:1904aa
+- BM_primary_citations: Churchfield_2004 -> Churchfield:2004aa
+- BM_primary_citations: Best_1996c -> Best:1996ac
+- BM_primary_citations: Tellez_1999 -> Tellez:1999aa
+- BM_primary_citations: Long_1995b -> Long:1995ab
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
