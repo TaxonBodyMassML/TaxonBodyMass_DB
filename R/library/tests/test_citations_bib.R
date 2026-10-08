@@ -349,6 +349,20 @@ mint4 <- AssignPrimaryKeys(rbind(PRow('SrcA', 'a', 'certain', doi = '10.1/four',
 Expect(length(mint4$entries) == 1 && names(mint4$entries) == 'Villeger:2011aa' && all(mint4$prim$bibcite == 'Villeger:2011aa') &&
          grepl('\n\tyear = {2011}', mint4$entries[[1]], fixed = TRUE) && grepl('Year 2011 by owner decision', mint4$entries[[1]], fixed = TRUE),
        'a year override recorded on any accepted row of a DOI applies to the entry and the key, whichever row builds them')
+# a DOI-less work shared by two sources: the entry is built from the row
+# decided first, on the pass that keys the new row and on every later pass
+# (a second --bib had rewritten eight shared entries from the later-decided
+# rows that sorted first, 2026-10-08)
+sh1 <- PRow('Smith_2003', '60', 'nodoi_approved', reason = 'owner_nodoi', author1 = 'Silva', year = 1995L, title = 'CRC Handbook of Mammalian Body Masses', container = 'Boca Raton: CRC Press')
+sh1$decided_at <- '2026-10-05'
+sh2 <- PRow('Jones_2009', '2600', 'nodoi_approved', reason = 'owner_nodoi', author1 = 'Silva', year = 1995L, title = 'CRC handbook of mammalian body masses', container = 'CRC Press')
+sh2$decided_at <- '2026-10-08'
+shared1 <- AssignPrimaryKeys(rbind(AssignPrimaryKeys(sh1, cfg, cur_syn, ids0)$prim, sh2), cfg, cur_syn, ids0)   # Smith keyed first, then the Jones row joins
+shared2 <- AssignPrimaryKeys(shared1$prim, cfg, cur_syn, ids0)                                                   # the second pass over both keyed rows
+Expect(all(shared1$prim$bibcite == 'Silva:1995aa') && all(shared1$prim$cite_id == 'Silva_1995') && length(shared1$entries) == 1 &&
+         grepl('Boca Raton: CRC Press', shared1$entries[[1]], fixed = TRUE) && grepl('approved 2026-10-05', shared1$entries[[1]], fixed = TRUE) &&
+         identical(shared2$entries, shared1$entries) && identical(shared2$prim, shared1$prim),
+       'a shared DOI-less entry is built from the row decided first, and a second pass reproduces it although the later row sorts first')
 source(file.path(lib, 'citations', 'provenance.r'))
 tracked <- LoadPrimaryReferences(cfg$wd_db)
 acc_t <- tracked[tracked$match_status %in% c('certain', 'approved', 'nodoi_approved'), ]

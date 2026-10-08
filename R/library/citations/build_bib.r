@@ -122,6 +122,27 @@ MatchingNoDOIEntry <- function(row, prim) {
   as.list(prim[hit[1], ])
 }
 
+# The row a DOI-less entry is built from when several accepted rows share
+# its key (a work cited by two compilations, MatchingNoDOIEntry()): the row
+# decided first (`decided_at`, then source label and key), among the rows of
+# `prim` that carry `key`, the row being keyed (`r`) and the twin it takes
+# the key from. Before 2026-10-08 the entry was built from the twin on the
+# run that keyed the new row and from whichever keyed row sorted first on
+# every later run, so a second `--bib` rewrote the text of eight shared
+# entries (Silva 1995, Garbutt 1999, Medway 1969, ... from the Jones_2009
+# rows decided that day instead of the Smith_2003 rows of 2026-10-05).
+# Returns the row as a list.
+NoDOIEntryOwner <- function(key, r, twin, prim) {
+  rows <- list(as.list(r))
+  if (!is.null(twin)) rows <- c(rows, list(as.list(twin)))
+  same <- which(prim$match_status %in% 'nodoi_approved' & prim$bibcite %in% key)
+  rows <- c(rows, lapply(same, function(i) as.list(prim[i, ])))
+  at  <- vapply(rows, function(x) if (is.null(x$decided_at) || is.na(x$decided_at)) '9999-99-99' else as.character(x$decided_at), character(1))
+  src <- vapply(rows, function(x) as.character(x$source_label), character(1))
+  nk  <- vapply(rows, function(x) as.character(x$native_key), character(1))
+  rows[[order(at, src, nk, method = 'radix')[1]]]
+}
+
 TwoLetterSuffixes <- function() {
   l <- letters
   as.vector(t(outer(l, l, paste0)))    # aa, ab, ..., az, ba, ...
@@ -557,7 +578,7 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
       key <- if (!is.na(r$bibcite)) r$bibcite else if (!is.null(twin)) twin$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
       if (!key %in% curated$key && !key %in% names(entries)) {
-        own <- if (!is.null(twin)) twin else r
+        own <- NoDOIEntryOwner(key, r, twin, all_prim)
         entries[key] <- BuildBibEntryNoDOI(own, key, own$decided_by, own$decided_at)
       }
       known_keys <- union(known_keys, key)

@@ -43,7 +43,7 @@ Google Scholar.
 
 ## DOI-less entries: the conventions for the owner's `parsed_*` fields (#114, item 1)
 
-A `nodoi` decision builds the entry from the row's `parsed_*` fields and nothing else (`BuildBibEntryNoDOI()`), so the owner writes them under a small convention; `NoDOIEntryType()` reads it. Nothing in `primary_references.csv` was changed for it: the files written before 2026-10-06 are read as they are, and the next `--bib` applies the types below to them (Speakman & Thomas 2003 and Keister & Buck 1964 become `@incollection`; Lockyer 1981, `Mammals in the Seas 3, 379-487`, stays `@article` until the container carries a marker).
+A `nodoi` decision builds the entry from the row's `parsed_*` fields and nothing else (`BuildBibEntryNoDOI()`), so the owner writes them under a small convention; `NoDOIEntryType()` reads it. A DOI-less work two sources approve keeps one key (`MatchingNoDOIEntry()`: same first surname, year and normalised title) and its entry is built from the row decided first (`NoDOIEntryOwner()`, `decided_at` then source label and key; 2026-10-08 -- before that the twin's fields were used on the pass that keyed the new row and whichever keyed row sorted first on every later pass, so a second `--bib` silently rewrote shared entries such as Silva 1995 or Bonaccorso 1998 from the later-decided row). Nothing in `primary_references.csv` was changed for it: the files written before 2026-10-06 are read as they are, and the next `--bib` applies the types below to them (Speakman & Thomas 2003 and Keister & Buck 1964 become `@incollection`; Lockyer 1981, `Mammals in the Seas 3, 379-487`, stays `@article` until the container carries a marker).
 
 | `parsed_*` | entry |
 | --- | --- |
