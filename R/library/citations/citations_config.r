@@ -130,6 +130,7 @@ CitationsUserAgent <- function(mailto) {
 citations_network <- list(rate_per_s = 1, max_tries = 4L, max_retry_seconds = 30, timeout_s = 60,
                           transient_status = c(429L, 500L, 502L, 503L, 504L),
                           crossref_rows = 5L, openalex_per_page = 5L,
+                          crossref_container_rows = 10L,   # the container-filtered query of a title-less reference (#128)
                           crossref_api = 'https://api.crossref.org/works',
                           openalex_api = 'https://api.openalex.org/works')
 
@@ -153,7 +154,7 @@ citations_thresholds <- list(
 # names are the `recommended_by` values 'policy:<rule>' in order of
 # precedence (the first matching rule wins, RecommendRow()).
 citations_recommend <- list(accept_sim = 0.90, correction_sim = 0.95, year_window = 1L, jstor_prefix = '10.2307/')
-recommend_rules <- c('self_role', 'owner_review_flagged', 'titleless_journal_key', 'titleless_incomplete',
+recommend_rules <- c('self_role', 'owner_review_flagged', 'titleless_twin', 'titleless_journal_key', 'titleless_incomplete',
                      'correction_notice', 'retraction_notice', 'jstor_twin', 'publisher_twin', 'strong_candidate',
                      'openalex_only_candidate', 'grey_complete', 'fields_complete_no_match', 'fields_incomplete')
 
@@ -164,6 +165,16 @@ citations_excluded_types <- c('dataset', 'component', 'peer-review', 'grant', 'j
                               'journal-issue', 'journal-volume', 'book-series', 'book-set',
                               'report-component', 'report-series', 'proceedings-series',
                               'paratext', 'libguides', 'supplementary-materials')
+
+# The work types a title-less citation ("Journal volume: pages (year)",
+# ParseJournalOnlyStyle()) may be matched to under the container_volume_page
+# rule (#128): the shape names an article of a serial, so a candidate agreeing
+# on container, volume, first page and year is accepted only when its type is
+# one of these (Crossref 'journal-article' / 'proceedings-article', OpenAlex
+# 'article' / 'review' / 'letter' -- OpenAlex files many short old notes as
+# letters or reviews) or unknown (NA). A journal's front matter ('NOTES',
+# 'Author Index', a 'Contents' page) that happens to share the page is not.
+titleless_candidate_types <- c('journal-article', 'proceedings-article', 'article', 'review', 'letter')
 
 # Grey-literature patterns (issue #1, 2.3): a reference matching one of these with
 # no good candidate is queued as `grey_literature` with the proposal `nodoi`.

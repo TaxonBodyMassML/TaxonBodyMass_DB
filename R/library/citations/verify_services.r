@@ -8,6 +8,11 @@
 #                                       exhausted quota (429 after the retries) raises the
 #                                       classed condition 'citations_quota' (QuotaCondition())
 #   CrossrefQuery(query, cfg)           /works?query.bibliographic=... -> candidates
+#   CrossrefQueryContainer(container, volume, pages, year, cfg)
+#                                       the second path for a title-less reference (#128):
+#                                       /works?query.container-title=<container>&
+#                                       query.bibliographic=<volume> <pages>&
+#                                       filter=from-pub-date:<year-1>,until-pub-date:<year+1>
 #   CrossrefWork(doi, cfg)              /works/<doi> -> the full message (reference[],
 #                                       update-to, updated-by) or NULL on 404
 #   CandidatesFromCompilationReflist()  the compilation paper's deposited reference list
@@ -230,6 +235,46 @@ CrossrefQueryURL <- function(query, cfg, rows = cfg$network$crossref_rows)
 CrossrefQuery <- function(query, cfg, rows = cfg$network$crossref_rows) {
   if (is.na(query) || !nzchar(trimws(query))) return(EmptyCandidates())
   r <- CachedGET(CrossrefQueryURL(query, cfg, rows), cfg)
+  if (r$status != 200L) return(EmptyCandidates())
+  items <- ParseJSON(r$body)$message$items
+  if (length(items) == 0) return(EmptyCandidates())
+  do.call(rbind, lapply(items, NormaliseCrossrefItem))
+}
+
+# The first page of a pages field ('19-29' -> '19', '395-403' -> '395', 'e12345'
+# as given), the same reading as PagesMatch().
+FirstPage <- function(pages) sub('\\s*[-\u2013\u2014].*$', '', trimws(as.character(pages)))
+
+# The container-filtered query of a title-less reference ("Journal volume:
+# pages (year)", ParseJournalOnlyStyle(); issue #128). The bibliographic query
+# on such a string ranks the journal's front matter ('NOTES', 'Author Index',
+# a 'Contents' page of the same year) above the article at the cited volume
+# and page (the Faurby_etal_2018 round of 2026-10-06: 236 of 471 keys), so the
+# second path asks Crossref for the container by its field query, gives the
+# volume and the pages as the bibliographic terms, and limits the publication
+# date to the year +- the window; without a year there is no date filter.
+# The pages go in as the source gives them ('1-19', not the first page '1'):
+# Crossref indexes its page field as one token, so the range finds the
+# article where a bare first page is lost among issue numbers and front
+# matter (probed 2026-10-08 on eight Faurby keys with known answers: the range
+# found all seven that exist, the first page five). `crossref_container_rows`
+# items; cached like every other call.
+CrossrefContainerQueryURL <- function(container, volume, pages, year, cfg, rows = cfg$network$crossref_container_rows,
+                                      window = cfg$thresholds$year_window) {
+  url <- sprintf('%s?query.container-title=%s&query.bibliographic=%s', cfg$network$crossref_api,
+                 Enc(gsub('\\s+', ' ', trimws(container))), Enc(gsub('\\s+', ' ', paste(trimws(volume), trimws(pages)))))
+  year <- suppressWarnings(as.integer(year))
+  if (length(year) == 1 && !is.na(year))
+    url <- sprintf('%s&filter=from-pub-date:%d,until-pub-date:%d', url, year - window, year + window)
+  sprintf('%s&rows=%d&mailto=%s', url, as.integer(rows), Enc(cfg$mailto))
+}
+
+# The candidates of the container-filtered query; empty without a request when
+# the container, the volume or the pages are missing (the shape needs all three).
+CrossrefQueryContainer <- function(container, volume, pages, year, cfg, rows = cfg$network$crossref_container_rows) {
+  Missing <- function(x) is.null(x) || length(x) != 1 || is.na(x) || !nzchar(trimws(as.character(x)))
+  if (Missing(container) || Missing(volume) || Missing(pages) || !nzchar(FirstPage(pages))) return(EmptyCandidates())
+  r <- CachedGET(CrossrefContainerQueryURL(container, volume, pages, year, cfg, rows), cfg)
   if (r$status != 200L) return(EmptyCandidates())
   items <- ParseJSON(r$body)$message$items
   if (length(items) == 0) return(EmptyCandidates())

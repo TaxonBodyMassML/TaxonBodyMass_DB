@@ -66,7 +66,20 @@ Expect(r$recommendation == 'self' && r$rule == 'self_role', 'self_role: a self r
 r <- R(QRow(), PRow(owner_review = 'book chapter cited without the chapter'))
 Expect(is.na(r$recommendation) && r$rule == 'owner_review_flagged' && grepl('book chapter', r$reason), 'owner_review_flagged: empty, the review text as the reason')
 r <- R(QRow(title = NA, author1 = NA))
-Expect(is.na(r$recommendation) && r$rule == 'titleless_journal_key' && grepl('#128', r$reason), 'titleless_journal_key: no title, container + volume + pages present -> empty')
+Expect(is.na(r$recommendation) && r$rule == 'titleless_journal_key' && grepl('#128', r$reason) && grepl('container-filtered', r$reason) && grepl('cite:', r$reason, fixed = TRUE),
+       'titleless_journal_key: no title, container + volume + pages present, no agreeing candidate -> empty (the reason names both queries and the cite: route)')
+Expect(R(QRow(title = NA, author1 = NA, reason = 'below_threshold', c1 = '10.1/a', c2 = '10.1/b', c1_sim = '0', c2_sim = '0'))$rule == 'titleless_journal_key',
+       'titleless_journal_key: candidates that did not agree (below_threshold) give no recommendation')
+r <- R(QRow(title = NA, author1 = NA, reason = 'ambiguous', c1 = '10.1644/1545-1542(2002)083<0001:sotacs>2.0.co;2', c2 = '10.1093/jmammal/83.1.1', c1_sim = '0', c2_sim = '0', c2_services = 'crossref'))
+Expect(r$recommendation == '1' && r$rule == 'titleless_twin' && grepl('c1 10.1644', r$reason, fixed = TRUE) && grepl('change to 2', r$reason, fixed = TRUE),
+       'titleless_twin: a title-less key whose two Crossref candidates agree on journal, volume, page and year (reason ambiguous, #128) -> 1, the top-scored one')
+r <- R(QRow(title = NA, author1 = NA, reason = 'ambiguous', c1 = '10.2307/1382000', c2 = '10.1093/jmammal/83.1.1', c1_sim = '0', c2_sim = '0', c2_services = 'crossref'))
+Expect(r$recommendation == '2' && r$rule == 'titleless_twin' && grepl('JSTOR', r$reason), 'titleless_twin: the publisher DOI over the JSTOR twin')
+Expect(R(QRow(title = NA, author1 = NA, reason = 'ambiguous', c1 = '10.1/a', c2 = '10.1/b', c1_sim = '0', c2_sim = '0', c2_services = 'openalex'))$rule == 'titleless_journal_key' &&
+         R(QRow(title = NA, author1 = NA, reason = 'ambiguous', c1 = '10.1/a', c2 = NA, c1_sim = '0'))$rule == 'titleless_journal_key',
+       'titleless_twin needs both twins from Crossref')
+Expect(CrossrefReturned(QRow(), 1) && !CrossrefReturned(QRow(c1_services = 'openalex'), 1) && !CrossrefReturned(QRow(c2 = NA), 2) && !CrossrefReturned(QRow(c1_services = NA), 1),
+       'CrossrefReturned(): a DOI with crossref among its services')
 r <- R(QRow(title = NA, author1 = NA, volume = NA))
 Expect(r$recommendation == 'drop' && r$rule == 'titleless_incomplete', 'titleless_incomplete: no title and no whole journal key -> drop')
 r <- R(QRow(reason = 'retracted', scite_note = 'crossref:updated-by:correction', c1_sim = '1'))

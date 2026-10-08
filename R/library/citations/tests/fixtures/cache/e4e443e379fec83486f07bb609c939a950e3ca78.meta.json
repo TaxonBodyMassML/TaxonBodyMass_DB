@@ -1,0 +1,6 @@
+{
+  "url": "https://api.crossref.org/works?query.container-title=Global%20Ecology%20and%20Biogeography&query.bibliographic=18%2019-29&filter=from-pub-date:2008,until-pub-date:2010&rows=10&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-08T21:13:28Z",
+  "tool_version": "tbmcite 0.1.0"
+}

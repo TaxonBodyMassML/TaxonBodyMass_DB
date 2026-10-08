@@ -40,6 +40,15 @@ HasJournalKey <- function(row) { row <- as.list(row); Nz(row$parsed_container) &
 
 IsJSTOR <- function(doi) !is.na(doi) && startsWith(tolower(doi), citations_recommend$jstor_prefix)
 
+# Candidate k of a queue row has a DOI and Crossref among the services that
+# returned it (the entry is built from the Crossref record, #114 item 3).
+CrossrefReturned <- function(row, k) {
+  row <- as.list(row)
+  if (!Nz(row[[paste0('c', k, '_doi')]])) return(FALSE)
+  svc <- row[[paste0('c', k, '_services')]]
+  Nz(svc) && 'crossref' %in% strsplit(svc, ';', fixed = TRUE)[[1]]
+}
+
 # Candidate k of a queue row is strong when its title similarity reaches
 # `sim`, its year and the parsed year are both known and within
 # `year_window`, and (`need_crossref`) Crossref is among the services that
@@ -55,11 +64,7 @@ CandidateStrong <- function(row, k, sim = citations_recommend$accept_sim, need_c
   py <- suppressWarnings(as.integer(row$parsed_year))
   if (is.na(ts) || ts < sim) return(FALSE)
   if (is.na(cy) || is.na(py) || abs(cy - py) > citations_recommend$year_window) return(FALSE)
-  if (need_crossref) {
-    svc <- row[[paste0('c', k, '_services')]]
-    svc <- if (!Nz(svc)) character(0) else strsplit(svc, ';', fixed = TRUE)[[1]]
-    if (!'crossref' %in% svc) return(FALSE)
-  }
+  if (need_crossref && !CrossrefReturned(row, k)) return(FALSE)
   TRUE
 }
 
@@ -74,7 +79,19 @@ RecommendRow <- function(row, prim_row = NULL) {
   if (role %in% 'self') return(Out('self', 'role self in primary_references.csv', 'self_role'))
   if (Nz(review)) return(Out(NA_character_, paste0('owner_review: ', trimws(review)), 'owner_review_flagged'))
   if (!Nz(row$parsed_title)) {
-    if (HasJournalKey(row)) return(Out(NA_character_, 'title-less journal key: re-verify under #128', 'titleless_journal_key'))
+    if (HasJournalKey(row)) {
+      # a title-less key is searched twice at Crossref (#128) and decided on
+      # journal, volume, first page and year alone; `ambiguous` then means two
+      # DOIs agree on all four (the Allen Press / OUP twins of the Journal of
+      # Mammalogy): the owner policies of 2026-10-06 apply -- the publisher DOI
+      # over a JSTOR twin, else the top-scored one
+      if (row$reason %in% 'ambiguous' && CrossrefReturned(row, 1) && CrossrefReturned(row, 2)) {
+        j1 <- IsJSTOR(row$c1_doi); j2 <- IsJSTOR(row$c2_doi)
+        if (xor(j1, j2)) return(Out(if (j1) '2' else '1', 'publisher DOI over the JSTOR twin (title-less key: both agree on journal, volume, page and year)', 'titleless_twin'))
+        return(Out('1', sprintf('two DOIs agree on journal, volume, page and year (c1 %s, c2 %s): change to 2 if preferred', row$c1_doi, row$c2_doi), 'titleless_twin'))
+      }
+      return(Out(NA_character_, 'title-less journal key: no Crossref candidate agrees on journal, volume, page and year (raw-string and container-filtered queries, #128); cite: the full citation for nodoi, or drop', 'titleless_journal_key'))
+    }
     return(Out('drop', 'no title and no journal key', 'titleless_incomplete'))
   }
   if (row$reason %in% 'retracted') {

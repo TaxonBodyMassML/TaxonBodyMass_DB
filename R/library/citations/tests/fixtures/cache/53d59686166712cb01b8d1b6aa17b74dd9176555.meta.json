@@ -1,0 +1,6 @@
+{
+  "url": "https://api.crossref.org/works?query.bibliographic=Journal%20of%20Mammalogy%2083%3A%201-19%20%282002%29&rows=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-08T21:05:45Z",
+  "tool_version": "tbmcite 0.1.0"
+}
