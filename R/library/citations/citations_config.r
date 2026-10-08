@@ -40,6 +40,7 @@ CitationsPaths <- function(wd_root) {
     snapshot_decisions = file.path(wd_root, 'Bib', 'BM_decisions_snapshot.csv'),
     snapshot_decision_items = file.path(wd_root, 'Bib', 'BM_decision_items_snapshot.csv'),
     decision_items_csv = file.path(wd_root, 'Bib', 'decision_items.csv'),
+    corrections_csv    = file.path(wd_root, 'Bib', 'bib_corrections.csv'),
     snapshot_data      = file.path(wd_root, 'sources', 'BM_data_snapshot.csv'),
     provenance_csv     = file.path(wd_root, 'TaxonBodyMass_Provenance.csv.gz'),
     warnings_md        = file.path(wd_root, 'reports', 'warnings_citations.md')
@@ -331,6 +332,31 @@ provenance_columns <- c('genus', 'species', 'taxon', 'source_mass', 'source_bibc
                         'hop', 'via_cite_id', 'ref_role', 'provenance_type',
                         'primary_cite_id', 'primary_bibcite', 'primary_doi', 'match_status', 'n_records',
                         'record_status')   # #34: kept, or excluded_<rule> for a value left out of the mean
+
+# Bib/bib_corrections.csv (issue #141): the owner's corrections to the
+# generated bib entries, one row per bib key and field. A Crossref record
+# may carry damaged text (Scherer:1984aa: 'B�ger' for Böger, a replacement
+# character deposited by the publisher) that the tool must not type over by
+# itself; the owner records the correction here and --bib applies it after
+# BuildBibEntry() has built the entry from the record (ApplyBibCorrections()),
+# only while the entry's field still equals `crossref_value` -- a record fixed
+# upstream, or a stale row, is skipped and reported (the --bib report and
+# reports/warnings_citations.md through CheckBibCorrections()). Both values
+# are stored as plain UTF-8 text, the way the service record gives it and
+# the way the owner wants it to read ('Böger, Peter', not 'B{\"o}ger'): the
+# builder escapes them with EscapeLaTeX() exactly as it escapes Crossref's
+# text, so the bib keeps its UTF-8 names ('Båmstedt, Ulf') and the Sheet's
+# Citation cell (FormatCitationText(), which applies the same corrections)
+# gets the plain text. `field` is one of the entry fields BuildBibEntry()
+# writes (bib_correction_fields; an author field is the BibTeX list
+# 'Family, Given and Family, Given', a corporate name in braces); an empty
+# `crossref_value` says the record carries no such field and the correction
+# supplies it (the author-less Mammalian Species accounts). The year is not
+# corrected here: it has the ':year=YYYY' decision route. `decided_by` /
+# `decided_at` record the owner's decision; `notes` says why.
+bib_corrections_columns <- c('bibcite', 'field', 'crossref_value', 'corrected_value', 'decided_by', 'decided_at', 'notes')
+bib_correction_fields   <- c('author', 'title', 'journal', 'booktitle', 'publisher', 'series', 'school', 'institution',
+                             'howpublished', 'volume', 'number', 'pages')
 
 # Bib/TaxonBodyMass_CitationCiteIDs.csv: the first two columns are unchanged
 # (TaxonBodyMassML reads them and nothing else); the rest were added by #1.

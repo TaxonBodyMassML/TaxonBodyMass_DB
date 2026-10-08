@@ -355,6 +355,17 @@ prim_bad <- prim; prim_bad$match_reason[prim_bad$native_key == '3'] <- 'owner_ca
 ck3 <- CheckCitations(prov, bib, citeids, prim_bad, sheet_bibcites = character())
 Expect(Has(ck3$problems, '1 certain/approved reference(s) without a DOI: Comp 3') && Has(ck3$problems, 'accepted bibcite(s) with no CiteID row yet (run --sheet): New:2007aa'),
        'an approved row without DOI or manual bibcite and an accepted bibcite without a CiteID row are reported')
+# the owner's bib corrections (#141): CheckBibCorrections() against the generated file, read-only, then the problem lines
+bc <- data.frame(bibcite = c('Scherer:1984aa', 'Doyle:2007aa', 'Gone:2000aa', 'Late:2001aa'), field = c('author', 'title', 'author', 'pages'),
+                 status = c('applied', 'stale', 'no_entry', 'unapplied'), current = c('Scherer, S. and Böger, P.', 'A new title', NA, '1--9'), stringsAsFactors = FALSE)
+ck4 <- CheckCitations(prov, bib, citeids, prim, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'), bib_corrections = bc)
+Expect(length(ck4$problems) == 4 && Has(ck4$problems, "2 bib correction(s) no longer match the Crossref value (Bib/bib_corrections.csv; the generated entry carries neither the corrected value nor the recorded crossref_value: the record changed upstream or the row is stale -- retire or update the row): Doyle:2007aa title ('A new title'); Gone:2000aa author (no such field)") &&
+         Has(ck4$problems, "1 bib correction(s) not yet applied to the generated bib (run --bib): Late:2001aa pages ('1--9')") &&
+         ck4$counts[['bib_corrections']] == 4 && ck4$counts[['bib_corrections_applied']] == 1 && identical(ck4$problems[1:2], ck$problems),
+       'a stale or entry-less correction and an unapplied one are problems; an applied one is counted and no problem; the other checks are unchanged')
+Expect(identical(CheckCitations(prov, bib, citeids, prim, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'), bib_corrections = bc[bc$status == 'applied', ])$problems, ck$problems) &&
+         ck$counts[['bib_corrections']] == 0 && identical(CheckCitations(prov, bib, citeids, prim, sheet_bibcites = c('Doyle:2007aa', 'Term:2010aa'), bib_corrections = bc[0, ])$problems, ck$problems),
+       'applied corrections only, no corrections, or none given: no problem line')
 rp <- tempfile(fileext = '.md')
 WriteCitationsReport(rp, ck, classes = classes, unmapped_sheet = c('Foo_2001 -> Foo:2001aa'), uncited_labels = 'LabX')
 lines <- readLines(rp)

@@ -402,7 +402,8 @@ if (Flag('--bib')) {
   # this source's rows are taken from memory (they may have just changed)
   all_prim <- rbind(all_prim[all_prim$source_label != src, ], prim)
   ids <- read.csv(cfg$citeids_csv, stringsAsFactors = FALSE, colClasses = 'character', na.strings = c('', 'NA'))
-  res <- AssignPrimaryKeys(all_prim, cfg, curated, ids)
+  corrections <- ReadBibCorrections(cfg$corrections_csv)
+  res <- AssignPrimaryKeys(all_prim, cfg, curated, ids, corrections = corrections)
   all_prim <- res$prim; entries <- res$entries; authorless <- res$authorless
   acc <- which(all_prim$match_status %in% c('certain', 'approved', 'nodoi_approved'))
   WritePrimaryBib(entries, cfg$primary_bib)
@@ -423,6 +424,22 @@ if (Flag('--bib')) {
   if (length(authorless) > 0)
     Note('--bib: %d accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): %s',
          length(authorless), paste(authorless, collapse = '; '))
+  # the owner's corrections (Bib/bib_corrections.csv, #141): applied while the
+  # entry still carries the recorded Crossref value; otherwise skipped and
+  # reported here and, by the pipeline, in reports/warnings_citations.md
+  cr <- res$corrections
+  if (nrow(corrections) > 0) {
+    SayCorr <- function(d) paste(sprintf('%s %s (entry has %s)', d$bibcite, d$field, ifelse(is.na(d$current), 'no such field', paste0("'", d$current, "'"))), collapse = '; ')
+    ap <- cr[cr$status == 'applied', , drop = FALSE]
+    Note('--bib: %d of %d bib correction(s) in %s applied%s', nrow(ap), nrow(corrections), basename(cfg$corrections_csv),
+         if (nrow(ap) == 0) '' else paste0(': ', paste(ap$bibcite, ap$field, collapse = '; ')))
+    st <- cr[cr$status == 'stale', , drop = FALSE]
+    if (nrow(st) > 0)
+      Note('--bib: %d bib correction(s) no longer match the Crossref value and were skipped (the record changed upstream, or the row is stale: retire or update the row): %s', nrow(st), SayCorr(st))
+    ne <- cr[cr$status == 'no_entry', , drop = FALSE]
+    if (nrow(ne) > 0)
+      Note('--bib: %d bib correction(s) name a key no Crossref entry was built for (a curated or DOI-less key, or a key that left the bib): %s', nrow(ne), paste(ne$bibcite, ne$field, collapse = '; '))
+  }
   Note('--bib: %d entries written to %s (%d reuse a curated key); RefManageR parsed %s; %s: %d rows with bibcite',
        length(entries), basename(cfg$primary_bib),
        sum(all_prim$bibcite[acc] %in% curated$key), if (is.na(n_parsed)) 'n/a' else n_parsed, src, sum(!is.na(prim$bibcite)))
@@ -432,7 +449,7 @@ if (Flag('--bib')) {
 if (Flag('--sheet')) {
   works <- list()
   for (d in unique(na.omit(prim$doi[prim$match_status %in% c('certain', 'approved')]))) works[[d]] <- CrossrefWork(d, cfg)
-  rows <- BuildSheetRows(prim, works)
+  rows <- BuildSheetRows(prim, works, corrections = ReadBibCorrections(cfg$corrections_csv))
   dry <- !Flag('--no-dry-run')
   res <- AppendPrimaryCitations(rows, citations_sheet_url, sheet_tab_primary, dry_run = dry, snapshot_path = cfg$snapshot_primary)
   # the existing tab is snapshotted read-only at every --sheet
