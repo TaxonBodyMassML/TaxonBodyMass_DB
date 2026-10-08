@@ -381,10 +381,14 @@ if (Flag('--recommend')) RecommendStep(src)
 # ---- --apply-queue ----
 if (Flag('--apply-queue')) {
   queue <- ReadPendingQueue(cfg$pending_csv)
-  before <- prim$match_status
+  # a decision counts when it changes the row's status, reason, DOI or
+  # decided_at (a doi: re-decision of an approved row keeps the status;
+  # 2026-10-08, the sibling-paper corrections read "0 applied")
+  State <- function(d) paste(d$match_status, d$match_reason, d$doi, d$decided_at)
+  before <- State(prim)
   prim <- ApplyQueueDecisions(queue, prim, cfg)
   WritePrimaryReferences(prim, prim_path)
-  changed <- which(is.na(before) != is.na(prim$match_status) | (!is.na(before) & before != prim$match_status))
+  changed <- which(before != State(prim))
   Note('--apply-queue: %d decision(s) applied: %s', length(changed),
        if (length(changed) == 0) '' else paste(sprintf('%s -> %s', prim$native_key[changed], prim$match_status[changed]), collapse = ', '))
 }

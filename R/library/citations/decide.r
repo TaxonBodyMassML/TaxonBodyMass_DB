@@ -848,23 +848,58 @@ QueueDecisionProblems <- function(q, check_crossref_record = TRUE) {
   problems
 }
 
+# Whether a decided queue row (a one-row frame or list) is already on its
+# primary_references row, or superseded there: TRUE when the row's decided_at
+# is later than the decision's (a decision the owner recorded on the row by
+# hand, under a decision item -- the Makarieva_2008 Gavrilov `self` rows of
+# 2026-10-08 -- after an older queue decision), or when decided_at agrees and
+# the row holds the state the decision produces: a candidate or doi: decision
+# its DOI as approved / owner_candidate or owner_doi, manual: its key as
+# manual_bib, nodoi / self / drop their status and reason. Before 2026-10-08
+# decided_at alone decided, so a second decision taken on the same day as
+# the first (Jones_2009 2655: `nodoi` from the pull, then `doi:` to fold MOM
+# into Smith:2003aa) was never applied.
+DecisionOnRow <- function(q, row) {
+  q <- as.list(q); row <- as.list(row)
+  if (is.na(row$decided_at) || is.na(q$decided_at)) return(FALSE)
+  if (row$decided_at > q$decided_at) return(TRUE)
+  if (row$decided_at != q$decided_at) return(FALSE)
+  act <- SplitDecision(q$decision)$action
+  st <- row$match_status; rs <- row$match_reason
+  if (is.na(st) || is.na(rs)) return(FALSE)
+  if (grepl('^[123]$', act))
+    return(st == 'approved' && rs == 'owner_candidate' && identical(row$doi, CleanDOI(q[[paste0('c', act, '_doi')]])))
+  if (startsWith(act, 'doi:')) return(st == 'approved' && rs == 'owner_doi' && identical(row$doi, CleanDOI(sub('^doi:', '', act))))
+  if (startsWith(act, 'manual:')) return(st == 'approved' && rs == 'manual_bib' && identical(row$bibcite, sub('^manual:', '', act)))
+  switch(act,
+         nodoi = st == 'nodoi_approved' && rs == 'owner_nodoi',
+         self  = st == 'self' && rs == 'owner_self',
+         drop  = st == 'rejected' && rs == 'owner_drop',
+         FALSE)
+}
+
 ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
   decided <- queue[!is.na(queue$decision) & nzchar(trimws(queue$decision)), , drop = FALSE]
+  # a key's current decision is the last decided row the queue holds for it
+  # (the queue is append-only: a fold or an override is a new row after the
+  # old one); the earlier decided rows are history and are not replayed.
+  # Before 2026-10-08 every decided row of a key was applied in queue order,
+  # so a second --apply-queue on a re-decided key (Nowak 1999, Jones_2009
+  # 2152) re-applied the old decision first and cleared the key's bibcite.
+  decided <- decided[!duplicated(paste(decided$source_label, decided$native_key), fromLast = TRUE), , drop = FALSE]
   problems <- character(0)
-  # a decision already applied to its row (same decided_at, a final status) is
-  # history: the Crossref-record rule is not re-imposed on it. Only the rows
-  # of the source being applied are checked: another source's row cannot be
-  # seen as applied from this frame (the Lislevand 24 decision, already
-  # applied with bibcite Fry:1988aa, stopped every other source's
-  # --apply-queue; Hudson round, 2026-10-06)
-  Applied <- function(q) {
+  # a decision already on its row is history: the Crossref-record rule is not
+  # re-imposed on it. Only the rows of the source being applied are checked:
+  # another source's row cannot be seen as applied from this frame (the
+  # Lislevand 24 decision, already applied with bibcite Fry:1988aa, stopped
+  # every other source's --apply-queue; Hudson round, 2026-10-06)
+  Skip <- function(q) {
     i <- which(prim$source_label == q$source_label & prim$native_key == q$native_key)
-    length(i) == 1 && !is.na(prim$match_status[i]) && prim$match_status[i] %in% c('approved', 'nodoi_approved', 'rejected', 'self') &&
-      !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at
+    length(i) == 1 && DecisionOnRow(q, prim[i, ])
   }
   for (j in seq_len(nrow(decided))) {
     q <- decided[j, ]
-    problems <- c(problems, QueueDecisionProblems(q, check_crossref_record = q$source_label %in% prim$source_label && !Applied(q)))
+    problems <- c(problems, QueueDecisionProblems(q, check_crossref_record = q$source_label %in% prim$source_label && !Skip(q)))
   }
   if (length(problems) > 0)
     stop('pending_citations.csv: ', paste(problems, collapse = '; '), call. = FALSE)
@@ -872,8 +907,7 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     q <- decided[j, ]
     i <- which(prim$source_label == q$source_label & prim$native_key == q$native_key)
     if (length(i) != 1) next           # a decision for another source's reference
-    if (!is.na(prim$match_status[i]) && prim$match_status[i] %in% c('approved', 'nodoi_approved', 'rejected') &&
-        !is.na(prim$decided_at[i]) && prim$decided_at[i] == q$decided_at) next   # already applied
+    if (DecisionOnRow(q, prim[i, ])) next   # already applied, or the row carries a newer owner decision
     parts <- SplitDecision(q$decision)
     dec <- parts$action
     old_doi <- prim$doi[i]

@@ -1,10 +1,10 @@
-# Citations of Hebert_etal_2016 -- 2026-10-08 12:32:15 (tbmcite 0.1.0)
+# Citations of Hebert_etal_2016 -- 2026-10-08 13:17:34 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 52 row(s) for Hebert_etal_2016, 9 new, tab had 10387 rows; BM_citations snapshotted (443 rows)
+- --sheet: 52 row(s) for Hebert_etal_2016, 1 new, tab had 10383 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -20,7 +20,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 22 | 2 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.4319/lo.1968.13.1.0051 | 1.000 | Comita:1968aa | Comita_1968 |
 | 23 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.2307/1948496 | 1.000 | Kibby:1971aa | Kibby_1971 |
 | 24 | 1 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1080/03680770.1962.11895586 | 1.000 | Richman:1964aa | Richman_1964 |
-| 25 | 4 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1007/bf01639849 | 0.556 | Speck:1879aa | Speck_1879 |
+| 25 | 4 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.556 | Shcherbakoff:1935aa | Shcherbakoff_1935 |
 | 26 | 1 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1139/z73-131 | 0.923 | Roff:1973aa | Roff_1973 |
 | 27 | 1 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1007/bf00346268 | 0.834 | Laybourn-Parry:1980aa | Laybourn-Parry_1980 |
 | 28 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1111/j.1365-2427.1976.tb01634.x | 1.000 | GOPHEN:1976aa | GOPHEN_1976 |

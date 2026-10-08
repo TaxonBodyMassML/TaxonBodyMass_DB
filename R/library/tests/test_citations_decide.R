@@ -507,6 +507,20 @@ Expect(Has(ErrorOf(ApplyQueueDecisions(rbind(Q('6', 'x'), Q('9', '1', by = '')),
        'every problem is reported in one stop')
 again <- ApplyQueueDecisions(Q('6', '1'), a)
 Expect(identical(again, a), 'an already applied decision (same decided_at) is a no-op')
+fold <- ApplyQueueDecisions(rbind(Q('9', 'nodoi'), Q('9', 'doi:10.1007/bf00392514')), a, cfg)   # a second decision the same day (the MOM fold, 2026-10-08)
+Expect(fold$match_status[fold$native_key == '9'] == 'approved' && fold$match_reason[fold$native_key == '9'] == 'owner_doi' && fold$doi[fold$native_key == '9'] == '10.1007/bf00392514' &&
+         identical(ApplyQueueDecisions(rbind(Q('9', 'nodoi'), Q('9', 'doi:10.1007/bf00392514')), fold, cfg), fold),
+       'a second decision of a key recorded on the same day as the applied one is applied (the row\'s state, not decided_at alone, says whether it is on the row), once')
+Expect(identical(ApplyQueueDecisions(rbind(Q('9', 'doi:10.1007/bf00392514'), Q('9', 'nodoi')), base, cfg)$match_status[base$native_key == '9'], 'nodoi_approved') &&
+         identical(ApplyQueueDecisions(rbind(Q('9', 'nodoi', at = '2026-10-05'), Q('9', 'doi:10.1007/bf00392514', at = '2026-10-06')), fold, cfg), fold),
+       'only the last decided row of a key is applied: the earlier ones are history and are not replayed (the Nowak 1999 re-apply cleared Jones_2009 2152\'s key)')
+hand <- a; hand$match_status[hand$native_key == '6'] <- 'self'; hand$match_reason[hand$native_key == '6'] <- 'owner_self'; hand$decided_at[hand$native_key == '6'] <- '2026-10-08'
+Expect(identical(ApplyQueueDecisions(Q('6', '1'), hand), hand), 'a row carrying a newer owner decision than the queue\'s (a decision item applied by hand) is left alone')
+Expect(DecisionOnRow(Q('6', '1'), a[a$native_key == '6', ]) && !DecisionOnRow(Q('6', '2', c2 = '10.5040/9781472927002'), a[a$native_key == '6', ]) &&
+         DecisionOnRow(Q('9', 'nodoi'), a[a$native_key == '9', ]) && !DecisionOnRow(Q('9', 'drop'), a[a$native_key == '9', ]) &&
+         DecisionOnRow(Q('12', 'manual:Omori:1969aa'), a[a$native_key == '12', ]) && !DecisionOnRow(Q('12', 'manual:Other:1969aa'), a[a$native_key == '12', ]) &&
+         !DecisionOnRow(Q('6', '1', at = '2026-10-07'), a[a$native_key == '6', ]) && DecisionOnRow(Q('6', '1', at = '2026-10-05'), a[a$native_key == '6', ]),
+       'DecisionOnRow(): the state the decision produces on the same day, or any newer owner decision on the row')
 yo <- ApplyQueueDecisions(Q('9', '1:year=1976', c1 = '10.23860/diss-2825'), base)
 Expect(yo$match_status[yo$native_key == '9'] == 'approved' && yo$doi[yo$native_key == '9'] == '10.23860/diss-2825' && yo$year_override[yo$native_key == '9'] == 1976L &&
          is.na(yo$year_override[yo$native_key == '6']),

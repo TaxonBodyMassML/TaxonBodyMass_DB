@@ -1,10 +1,10 @@
-# Citations of Makarieva_2008 -- 2026-10-08 12:31:37 (tbmcite 0.1.0)
+# Citations of Makarieva_2008 -- 2026-10-08 13:17:46 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet: 300 row(s) for Makarieva_2008, 19 new, tab had 10353 rows; BM_citations snapshotted (443 rows)
+- --sheet: 301 row(s) for Makarieva_2008, 2 new, tab had 10384 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -279,9 +279,9 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S4:Thuesen & Childress 1994 | 19 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1542168 | 1.000 | Thuesen:1994aa | Thuesen_1994 |
 | S4:Thuesen et al. 1998 | 50 | measurement | certain | crossref_only | crossref | crossref_only | 10.3354/meps168095 | 1.000 | Thuesen:1998aa | Thuesen_1998 |
 | S4:Tscherbakov & Muragina 1953 | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.484 | Tscherbakov:1953aa | Tscherbakov_1953 |
-| S4:Veerannan 1972 | 7 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1007/bf00389084 | 0.845 | Veerannan:1974aa | Veerannan_1974 |
+| S4:Veerannan 1972 | 7 | measurement | approved | owner_doi | crossref | crossref_only | 10.1007/bf00366738 | 0.813 | Veerannan:1972aa | Veerannan_1972 |
 | S4:Veerannan 1974 | 13 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1007/bf00389084 | 0.797 | Veerannan:1974aa | Veerannan_1974 |
-| S4:Vernberg 1959 | 7 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1929812 | 0.849 | Vernberg:1959aa | Vernberg_1959 |
+| S4:Vernberg 1959 | 7 | measurement | approved | owner_doi | crossref | crossref_only | 10.2307/1539048 | 0.816 | Vernberg:1959ab | Vernberg_1959b |
 | S4:Will 1952 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.450 | Will:1952aa | Will_1952 |
 | S6b:Gavrilov 1974a | 6 | self | self | owner_self | crossref | crossref_only |  |  |  |  |
 | S6b:Gavrilov 1977 | 6 | self | self | owner_self | crossref | crossref_only |  |  |  |  |

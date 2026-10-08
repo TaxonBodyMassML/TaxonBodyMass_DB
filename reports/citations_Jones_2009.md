@@ -1,10 +1,10 @@
-# Citations of Jones_2009 -- 2026-10-08 12:31:11 (tbmcite 0.1.0)
+# Citations of Jones_2009 -- 2026-10-08 13:16:55 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex); 1651 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet: 3056 row(s) for Jones_2009, 597 new, tab had 9733 rows; BM_citations snapshotted (443 rows)
+- --sheet (dry run): 3056 row(s) for Jones_2009, 0 new, tab had 10383 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -2605,7 +2605,7 @@ Verification mode: full (Crossref + OpenAlex); 1651 certain row(s) of this sourc
 | 2652 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504384 | 1.000 | Smith:1997aa | Smith_1997 |
 | 2653 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1017/s0952836998001058 | 1.000 | Smith:1998aa | Smith_1998 |
 | 2654 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1017/s0952836900007056 | 1.000 | Smith:2000ab | Smith_2000b |
-| 2655 | 3263 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.776 | Smith:2003ae | Smith_2003e |
+| 2655 | 3263 | compilation | approved | owner_doi | crossref | crossref_only | 10.1890/02-9003 | 0.607 | Smith:2003aa | Smith_2003 |
 | 2656 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.468 | Smithers:1971aa | Smithers_1971 |
 | 2657 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380043 | 1.000 | Smolen:1980aa | Smolen_1980 |
 | 2658 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/mspecies/147.1 | 1.000 | Smolen:1981aa | Smolen_1981 |
