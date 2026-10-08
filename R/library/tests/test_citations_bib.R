@@ -339,6 +339,16 @@ Expect(mint2$prim$bibcite == 'Villeger:2013aa' && mint2$prim$cite_id == 'Villege
 mint3 <- AssignPrimaryKeys(PRow('SrcD', 'q', 'certain', doi = '10.1/four', author1 = 'Villeger', year = 2013L, year_override = 2011L), cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
 Expect(mint3$prim$bibcite == 'Villeger:2011aa' && grepl('\n\tyear = {2011}', mint3$entries[[1]], fixed = TRUE) && grepl('Year 2011 by owner decision', mint3$entries[[1]], fixed = TRUE),
        'a year override is applied at mint time and in the entry')
+# the override belongs to the work: the row without it (SrcA) sorts first
+# and builds the entry, yet the entry and the key take SrcB's `:year=2011`
+# (Dunning:2008aa had reverted to the record's 2007 when a Myhrvold_2015 row
+# of the same DOI was approved without the override, 2026-10-08)
+mint4 <- AssignPrimaryKeys(rbind(PRow('SrcA', 'a', 'certain', doi = '10.1/four', author1 = 'Villeger', year = 2013L),
+                                 PRow('SrcB', 'b', 'approved', doi = '10.1/four', author1 = 'Villeger', year = 2013L, year_override = 2011L, reason = 'owner_candidate')),
+                           cfg, cur_syn, ids0, work_for = function(doi) { w <- two; w$DOI <- doi; w })
+Expect(length(mint4$entries) == 1 && names(mint4$entries) == 'Villeger:2011aa' && all(mint4$prim$bibcite == 'Villeger:2011aa') &&
+         grepl('\n\tyear = {2011}', mint4$entries[[1]], fixed = TRUE) && grepl('Year 2011 by owner decision', mint4$entries[[1]], fixed = TRUE),
+       'a year override recorded on any accepted row of a DOI applies to the entry and the key, whichever row builds them')
 source(file.path(lib, 'citations', 'provenance.r'))
 tracked <- LoadPrimaryReferences(cfg$wd_db)
 acc_t <- tracked[tracked$match_status %in% c('certain', 'approved', 'nodoi_approved'), ]
