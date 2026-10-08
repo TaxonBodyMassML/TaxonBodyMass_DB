@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-08 12:36:34
+# Citation and provenance warnings -- 2026-10-08 13:20:42
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 217932 (39887 species); distinct primary CiteIDs: 10143; unresolved references (pending / not_found): 0; unverified references: 826
+- provenance rows: 218634 (39887 species); distinct primary CiteIDs: 10143; unresolved references (pending / not_found): 0; unverified references: 826
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 3846
 
 ## Problems
@@ -13,25 +13,9 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: DeMagalhAES_2009 -> De-MagalhAES:2009aa
-- BM_primary_citations: Nowak_1999 -> Nowak:1999aa
-- BM_primary_citations: Gavrilov_1974 -> Gavrilov:1974aa
-- BM_primary_citations: Gavrilov_1977 -> Gavrilov:1977aa
-- BM_primary_citations: Gavrilov_1979 -> Gavrilov:1979aa
-- BM_primary_citations: Gavrilov_1979b -> Gavrilov:1979ab
-- BM_primary_citations: Gavrilov_1980 -> Gavrilov:1980aa
-- BM_primary_citations: Gavrilov_1980b -> Gavrilov:1980ab
-- BM_primary_citations: Gavrilov_1980c -> Gavrilov:1980ac
-- BM_primary_citations: Gavrilov_1981 -> Gavrilov:1981aa
-- BM_primary_citations: Gavrilov_1982 -> Gavrilov:1982aa
-- BM_primary_citations: Gavrilov_1982b -> Gavrilov:1982ab
-- BM_primary_citations: Gavrilov_1985b -> Gavrilov:1985ab
-- BM_primary_citations: Gavrilov_1985c -> Gavrilov:1985ac
-- BM_primary_citations: Gavrilov_1997 -> Gavrilov:1997aa
-- BM_primary_citations: Gavrilov_1999 -> Gavrilov:1999aa
-- BM_primary_citations: Gavrilov_1999b -> Gavrilov:1999ab
-- BM_primary_citations: Gavrilov_1985 -> Gavrilov:1985aa
-- BM_primary_citations: Gavrilov_1998 -> Gavrilov:1998aa
+- BM_primary_citations: Smith_2003e -> Smith:2003ae
+- BM_primary_citations: Vernberg_1959 -> Vernberg:1959aa
+- BM_primary_citations: Speck_1879 -> Speck:1879aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
@@ -75,12 +59,12 @@ One row per source label: species and record links (species x source x reference
 | Herberstein_etal_2022 | compilation | 1653 | 2693 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 380 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hishi_etal_2019 | derived | 320 | 324 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hoehler_etal_2023 | compilation | 1764 | 3066 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hoehler_etal_2023 | compilation | 1764 | 3074 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ikeda_2014 | compilation | 332 | 690 | 99.7 | 37 | 36 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 31 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Jones_2009 | compilation | 3444 | 23010 | 100 | 3066 | 3060 | 1651 | 0 | 0 | 0 | 6 | 0 | 0 | 0 |
+| Jones_2009 | compilation | 3444 | 23719 | 100 | 3066 | 3060 | 1651 | 0 | 0 | 0 | 6 | 0 | 0 | 0 |
 | Kendall_etal_2019 | primary | 424 | 4033 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Killen_etal_2016 | compilation | 35 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kinsella_etal_2020 | primary | 92 | 572 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
