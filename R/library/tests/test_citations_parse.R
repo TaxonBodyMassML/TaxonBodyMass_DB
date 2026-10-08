@@ -320,6 +320,151 @@ Expect(tc$container == 'Bulletin of Entomological Research' && startsWith(tc$tit
          SplitTitleContainer('Growth rates. II. Fish and birds. J. Exp. Biol.')$title == 'Growth rates. II. Fish and birds',
        'SplitTitleContainer(): a title-case sentence is not taken for a journal; dotted abbreviations are (Ann. N.Y. Acad. Sci.)')
 
+cat('ParseCitationString() on the APA style of the owner\'s cite: notes (ParseAPAStyle(); 2026-10-08)\n')
+apa <- ParseCitationString(c(
+  'Álvarez del Toro, M. & Smith, H. M. (1956). Notulae herpetologicae Chiapasiae I. Herpetologica, 12(1): 3–17.',
+  'Cadle, J. E. (2001). A new species of lizard related to Stenocercus caducus (Cope) (Squamata: Iguanidae) from Peru and Bolivia, with a key to the "Ophryoessoides group". Bulletin of the Museum of Comparative Zoology, 157(3): 183–221.',
+  'George, W. (1982). Ctenodactylus (Ctenodactylidae, Rodentia): one species or two?. Mammalia, 46(3), 375–380. https://doi.org',
+  'Mutere, F. A. (1968). The breeding biology of the fruit bat Rousettus aegyptiacus E. Geoffroy living at 0°22\'S. Acta Tropica, 25(2), 97–108. https://jstor.org',
+  'Marshall, A. J., & Corbet, P. S. (1959). The breeding biology of equatorial vertebrates: reproduction of the bat Chaerephon hindei Thomas at latitude 0°26\'N. Proceedings of the Zoological Society of London, 132(4), 607-616.',
+  'Croin Michielsen, N. (1966). Intraspecific and interspecific competition in the shrews Sorex araneus L. and S. minutus L. Archives Néerlandaises de Zoologie, 17(1), 73–174. https://www.semanticscholar.org/paper/1b9f3a4709cdd67ec6b4922d791e8e1c948bcd33',
+  'Ivanova, M.B. and Klekowski, R.Z., 1972. Respiratory and filtration rates in Simocephalus vetulus (OF Müller)(Cladocera) at different pH. Pol. Arch. Hydrobiol, 19(3), p.303.',
+  'Bennett, P. M. (1986). Environmental correlates of evolutionary change in mammals (Doctoral dissertation, University of Sussex). https://bl.uk',
+  'Ikeda, T. (1984). Methods in marine zooplankton ecology. John Wiley & Sons. https://scispace.com',
+  'Allgaier, A. (1993). Bat Research News, 34(4), 100. https://www.eaglehill.us/programs/journals/nabr/BRN-archives/BRN-archives.shtml',
+  'Modrý, D., Nečas, P., Rifai, L., Bischoff, W., Hamidan, N., & Amr, Z. (2013). Revision of the Levantine “Lacerta” laevis / kulzeri-complex: 3. The rock lizard of Wadi Ramm, Phoenicolacerta kulzeri khazaliensis ssp. n. Vertebrate Zoology, 63(3), 307–312. https://senckenberg.de',
+  'Dieterlen, F. (1976). Zweiter Fund von Dendromus kahuziensis (Dendromurinae; Cricetidae; Rodentia) und weitere Dendromus-Fänge im Kivu-Hochland oberhalb 2000 m. Stuttgarter Beiträge zur Naturkunde - Serie A (Biologie), (286), 1–5. https://naturkundemuseum-bw.de',
+  'Benda, P. & Nasher, A. K. (2006). First record of Crocidura dhofarensis Hutterer et Harrison, 1988 (Mammalia: Soricidae) in Yemen. Journal of the National Museum (Prague), Natural History Series, 175(1-2): 27–30. National Museum, Prague.',
+  'Doi, T., Ono, Y., Iwamoto, T., & Nakazono, T. (1987). Distribution of Japanese serow in its southern range, Kyushu. In H. Soma (Ed.), The biology and management of Capricornis and related mountain antelopes (pp. 93–103). Croom Helm. https://link.springer.com/chapter/10.1007/978-94-011-8030-6_6',
+  'Hutterer, R. & Yalden, D. W. (1990). Two new species of shrews from a relic forest in the Bale Mountains, Ethiopia. Vertebrates in the Tropics: Proceedings of the International Symposium on Vertebrate Biogeography and Systematics in the Tropics, pp. 63–72. Museum Alexander Koenig, Bonn.',
+  'Koenig, F., & Schmidt, M. (1995). Gloeobacter violaceus — investigation of an unusual photosynthetic apparatus. Absence of the long wavelength emission of photosystem I in 77 K fluorescence spectra. Physiologia Plantarum, 94(4), 621–628. https://doi.org',
+  'Wroughton, R. C. (1915). Bombay Natural History Society\'s Mammal Survey of India, Burma and Ceylon: Report No. 16. The Journal of the Bombay Natural History Society, 24(1), 57–63. https://biodiversitylibrary.org',
+  'Thomas, O. (1906). On mammals collected in south-west Australia for Mr. W. E. Balston. Proceedings of the Zoological Society of London, 1906(2), 859–864. biodiversitylibrary.org',
+  'Averianov, A. O., Abramov, A. V., & Tikhonov, A. N. (2000). A new species of Nesolagus (Lagomorpha, Leporidae) from Vietnam with osteological description. Contributions from the Zoological Institute, St. Petersburg, 3, 1–22. https://zin.ru',
+  'Freitas, T. R. O. (2001). Tuco-tucos (Rodentia, Octodontidae) in Southern Brazil: *Ctenomys lami* spec. nov. Separated from *C. minutus* Nehring 1887. *Studies on Neotropical Fauna and Environment*, *36*(1), 1–8. https://doi.org',
+  'Barrett, L., Henzi, S. P., & Lusseau, D. (2010). Taking the social network approach seriously. Developments in Primatology: Progress and Prospects, 145–169. https://link.springer.com/content/pdf/10.1007/978-1-4419-6661-2.pdf',
+  'Rathbun, G. B. (1979). The social structure and ecology of elephant-shrews. Zeitschrift für Tierpsychologie, (Suppl. 20), 1–77. https://doi.org',
+  'Wiles, G. J. (1996).  https://animaldiversity.org/accounts/Pteropus_tokudae/?ref=botany.one',
+  'Niethammer, J. (1981). Ein neuer Hamster aus Afghanistan: Calomyscus elburzensis n. sp. Bonner Zoologische Beiträge, 31(3/4), 217–247. https://biodiversitylibrary.org',
+  'Bergmans, Wim. (2001). Notes on distribution and taxonomy of australasian bats. I. Pteropodinae and Nyctimeninae (Mammalia, Megachiroptera, Pteropodidae). Beaufortia, 51(8), 119–152. https://naturalis.nl',
+  'Burton, J. A., & Pearson, B. (1987). Rare mammals of the world. William Collins Sons & Co. Ltd. https://biodiversitylibrary.org',
+  'Smith, J. (2001). A study of things. J Things 5: 1-10.'))
+A <- function(i, author1, year, title, container, volume = NA_character_, pages = NA_character_)
+  identical(apa$parsed_author1[i], author1) && identical(apa$parsed_year[i], year) && identical(apa$parsed_title[i], title) && identical(apa$parsed_container[i], container) &&
+    identical(apa$parsed_volume[i], volume) && identical(apa$parsed_pages[i], pages)
+Expect(A(1, 'Alvarez del Toro', 1956L, 'Notulae herpetologicae Chiapasiae I.', 'Herpetologica', '12', '3-17'),
+       "standard form with an issue number, a colon before the pages and an en-dash: 'Chiapasiae I.' ends the title (one-letter token), the diacritics fold, '&' author list")
+Expect(A(2, 'Cadle', 2001L, 'A new species of lizard related to Stenocercus caducus (Cope) (Squamata: Iguanidae) from Peru and Bolivia, with a key to the "Ophryoessoides group"', 'Bulletin of the Museum of Comparative Zoology', '157', '183-221'),
+       'a title ending in a quoted phrase; the container up to the volume')
+Expect(A(3, 'George', 1982L, 'Ctenodactylus (Ctenodactylidae, Rodentia): one species or two?', 'Mammalia', '46', '375-380') && is.na(apa$parsed_doi[3]),
+       "a title ending in '?.' keeps the question mark and drops the stray period; the trailing DOI URL is stripped")
+Expect(A(4, 'Mutere', 1968L, "The breeding biology of the fruit bat Rousettus aegyptiacus E. Geoffroy living at 0022'S", 'Acta Tropica', '25', '97-108'),
+       "a trailing URL is stripped; \"'S. Acta Tropica\" ends the title (the degree sign folds to a digit)")
+Expect(A(5, 'Marshall', 1959L, "The breeding biology of equatorial vertebrates: reproduction of the bat Chaerephon hindei Thomas at latitude 0026'N", 'Proceedings of the Zoological Society of London', '132', '607-616'),
+       "', &' author list, a plain hyphen in the pages")
+Expect(A(6, 'Croin Michielsen', 1966L, 'Intraspecific and interspecific competition in the shrews Sorex araneus L. and S. minutus L.', 'Archives Neerlandaises de Zoologie', '17', '73-174'),
+       "'Sorex araneus L.' and 'S. minutus L.' stay inside the title; the container follows the last 'L.'")
+Expect(A(7, 'Ivanova', 1972L, 'Respiratory and filtration rates in Simocephalus vetulus (OF Muller)(Cladocera) at different pH', 'Pol. Arch. Hydrobiol', '19', '303'),
+       "an abbreviated journal name is not split ('Pol. Arch. Hydrobiol'); the Elsevier head 'Authors, 1972.'; 'p.303' is the page")
+Expect(A(8, 'Bennett', 1986L, 'Environmental correlates of evolutionary change in mammals', 'PhD thesis, University of Sussex'),
+       "a thesis '(Doctoral dissertation, University of X)' gives the container 'PhD thesis, University of X'")
+Expect(A(9, 'Ikeda', 1984L, 'Methods in marine zooplankton ecology', 'John Wiley & Sons'), 'a book without a volume: the publisher is the container')
+Expect(A(10, 'Allgaier', 1993L, NA_character_, 'Bat Research News', '34', '100'), 'a journal item without a title: container, volume and page, the title NA')
+Expect(A(11, 'Modry', 2013L, 'Revision of the Levantine "Lacerta" laevis / kulzeri-complex: 3. The rock lizard of Wadi Ramm, Phoenicolacerta kulzeri khazaliensis ssp. n.', 'Vertebrate Zoology', '63', '307-312'),
+       "diacritics in the author block fold (Modry); 'ssp. n.' ends the title with its period; '3. The' inside the title is not the container")
+Expect(A(12, 'Dieterlen', 1976L, 'Zweiter Fund von Dendromus kahuziensis (Dendromurinae; Cricetidae; Rodentia) und weitere Dendromus-Fange im Kivu-Hochland oberhalb 2000 m.', 'Stuttgarter Beitrage zur Naturkunde - Serie A (Biologie)', '286', '1-5'),
+       "an issue-only group '(286)' is the volume; '2000 m.' ends the title")
+Expect(A(13, 'Benda', 2006L, 'First record of Crocidura dhofarensis Hutterer et Harrison, 1988 (Mammalia: Soricidae) in Yemen', 'Journal of the National Museum (Prague), Natural History Series', '175', '27-30'),
+       "'. National Museum, Prague' after the pages stays out of the container; ', 1988 (Mammalia' inside the title is not the volume")
+Expect(A(14, 'Doi', 1987L, 'Distribution of Japanese serow in its southern range, Kyushu', 'In: H. Soma (Ed.), The biology and management of Capricornis and related mountain antelopes. Croom Helm', NA_character_, '93-103'),
+       "a chapter 'In Editor (Ed.), Book (pp. 93-103). Publisher.' gives the pages and the form A container of ParseChapterContainer()")
+Expect(A(15, 'Hutterer', 1990L, 'Two new species of shrews from a relic forest in the Bale Mountains, Ethiopia', 'In: Vertebrates in the Tropics: Proceedings of the International Symposium on Vertebrate Biogeography and Systematics in the Tropics. Museum Alexander Koenig, Bonn', NA_character_, '63-72'),
+       "proceedings 'Book, pp. 63-72. Publisher, City.' give the same chapter form without editors")
+Expect(A(16, 'Koenig', 1995L, 'Gloeobacter violaceus - investigation of an unusual photosynthetic apparatus. Absence of the long wavelength emission of photosystem I in 77 K fluorescence spectra', 'Physiologia Plantarum', '94', '621-628'),
+       'a two-sentence title: the container is the last sentence before the volume group')
+Expect(A(17, 'Wroughton', 1915L, "Bombay Natural History Society's Mammal Survey of India, Burma and Ceylon: Report No. 16", 'The Journal of the Bombay Natural History Society', '24', '57-63'),
+       "'Report No. 16.' ends the title: the container never grows over a number")
+Expect(A(18, 'Thomas', 1906L, 'On mammals collected in south-west Australia for Mr. W. E. Balston', 'Proceedings of the Zoological Society of London', '1906', '859-864'),
+       "'Mr. W. E. Balston.' ends the title (initials are not taken for a journal abbreviation); a year-numbered volume; a bare domain after the pages is dropped")
+Expect(A(19, 'Averianov', 2000L, 'A new species of Nesolagus (Lagomorpha, Leporidae) from Vietnam with osteological description', 'Contributions from the Zoological Institute, St. Petersburg', '3', '1-22'),
+       "'St. Petersburg' is not a sentence end")
+Expect(A(20, 'Freitas', 2001L, 'Tuco-tucos (Rodentia, Octodontidae) in Southern Brazil: Ctenomys lami spec. nov. Separated from C. minutus Nehring 1887', 'Studies on Neotropical Fauna and Environment', '36', '1-8'),
+       'markdown emphasis asterisks are ignored')
+Expect(A(21, 'Barrett', 2010L, 'Taking the social network approach seriously', 'Developments in Primatology: Progress and Prospects', NA_character_, '145-169'),
+       'a pages-only tail gives pages without a volume')
+Expect(A(22, 'Rathbun', 1979L, 'The social structure and ecology of elephant-shrews', 'Zeitschrift fur Tierpsychologie', 'Suppl. 20', '1-77'), "'(Suppl. 20)' is the volume")
+Expect(A(23, 'Wiles', 1996L, NA_character_, 'https://animaldiversity.org/accounts/Pteropus_tokudae/?ref=botany.one'),
+       'nothing but a URL after the year: the URL is the container (a web reference), the title NA')
+Expect(A(24, 'Niethammer', 1981L, 'Ein neuer Hamster aus Afghanistan: Calomyscus elburzensis n. sp.', 'Bonner Zoologische Beitrage', '31', '217-247'),
+       "'n. sp.' ends the title; a volume '31(3/4)'")
+Expect(A(25, 'Bergmans', 2001L, 'Notes on distribution and taxonomy of australasian bats. I. Pteropodinae and Nyctimeninae (Mammalia, Megachiroptera, Pteropodidae)', 'Beaufortia', '51', '119-152'),
+       "an author block with a given name written out ('Bergmans, Wim.'); 'I.' inside the title does not start the container")
+Expect(A(26, 'Burton', 1987L, 'Rare mammals of the world', 'William Collins Sons & Co. Ltd'), "a publisher 'William Collins Sons & Co. Ltd' stays whole")
+Expect(A(27, 'Smith', 2001L, 'A study of things', 'J Things', '5', '1-10') && is.null(ParseAPAStyle('Smith, J. (2001). A study of things. J Things 5: 1-10.')),
+       "a body ending in 'Journal 5: 1-10' is not of this style (NULL): the generic path reads it as before")
+Expect(is.null(ParseAPAStyle("O'Shea, M. The Book of Snakes: A life-size guide. University of Chicago Press, (2018).")) && is.null(ParseAPAStyle('Journal of Mammalogy 83: 1-19 (2002)')) &&
+         is.null(ParseAPAStyle('Smith, J. (2001).')),
+       'ParseAPAStyle(): NULL for the Scientific Data style, a title-less citation and an entry with nothing after the year')
+ms <- ParseCitationString(c("Doe, J. (2005). A study of mice (Master's thesis, Some College). https://x.org", 'Roe, R. (2006). A study of rats (PhD thesis, University of Y).', 'Poe, P. (2007). Voles (MSc thesis, Z University).'))
+Expect(identical(ms$parsed_container, c('Master thesis, Some College', 'PhD thesis, University of Y', 'MSc thesis, Z University')) && identical(ms$parsed_title, c('A study of mice', 'A study of rats', 'Voles')),
+       "theses: '(Master's thesis, X)' -> 'Master thesis, X', '(PhD thesis, X)' -> 'PhD thesis, X', an MSc kept as written")
+
+cat('the 26 cite: notes that failed the 2026-10-08 pull (missing: container), verbatim\n')
+failed_notes <- c(
+  'Dieterlen, F. (1976). Zweiter Fund von Dendromus kahuziensis (Dendromurinae; Cricetidae; Rodentia) und weitere Dendromus-Fänge im Kivu-Hochland oberhalb 2000 m. Stuttgarter Beiträge zur Naturkunde - Serie A (Biologie), (286), 1–5. https://naturkundemuseum-bw.de',
+  'Álvarez del Toro, M. & Smith, H. M. (1956). Notulae herpetologicae Chiapasiae I. Herpetologica, 12(1): 3–17.',
+  'Cadle, J. E. (2001). A new species of lizard related to Stenocercus caducus (Cope) (Squamata: Iguanidae) from Peru and Bolivia, with a key to the "Ophryoessoides group". Bulletin of the Museum of Comparative Zoology, 157(3): 183–221.',
+  'Bennett, P. M. (1986). Environmental correlates of evolutionary change in mammals (Doctoral dissertation, University of Sussex). https://bl.uk',
+  'Allgaier, A. (1993). Bat Research News, 34(4), 100. https://www.eaglehill.us/programs/journals/nabr/BRN-archives/BRN-archives.shtml',
+  'Croin Michielsen, N. (1966). Intraspecific and interspecific competition in the shrews Sorex araneus L. and S. minutus L. Archives Néerlandaises de Zoologie, 17(1), 73–174. https://www.semanticscholar.org/paper/1b9f3a4709cdd67ec6b4922d791e8e1c948bcd33',
+  'George, W. (1982). Ctenodactylus (Ctenodactylidae, Rodentia): one species or two?. Mammalia, 46(3), 375–380. https://doi.org',
+  'Marshall, A. J., & Corbet, P. S. (1959). The breeding biology of equatorial vertebrates: reproduction of the bat Chaerephon hindei Thomas at latitude 0°26\'N. Proceedings of the Zoological Society of London, 132(4), 607–616. https://doi.org',
+  'Mutere, F. A. (1968). The breeding biology of the fruit bat Rousettus aegyptiacus E. Geoffroy living at 0°22\'S. Acta Tropica, 25(2), 97–108. https://jstor.org',
+  'Mutere, F. A. (1970). The breeding biology of equatorial vertebrates: Reproduction in the insectivorous bat Hipposideros caffer living at 0°27\'N. Bijdragen tot de Dierkunde, 40(1), 56–58. https://doi.org',
+  'Mutere, F. A. (1973). A comparative study of reproduction in two populations of the insectivorous bat Otomops martiensseni at latitudes 1°5\'S and 2°30\'S. Journal of Zoology, 171(1), 79–92. https://doi.org',
+  'Ruiz, A., & Espinoza, M. (1995). Bat Research News, 36(4), 63. https://eaglehill.us',
+  'Tavares, V. C. (1995).  Bat Research News, 36(4), 114–115. https://eaglehill.us',
+  'van der Merwe, M. (1987). Adaptive breeding strategies in some South African bats between 22 degrees S and 28 degrees S. South African Journal of Science, 83(10), 607–609. https://journals.co.za/doi/pdf/10.10520/AJA00382353_5405',
+  'Wiles, G. J. (1996).  https://animaldiversity.org/accounts/Pteropus_tokudae/?ref=botany.one',
+  'Williams, K. D. (1978). Aspects of the ecology and behavior of the Malayan tapir (Tapirus indicus Desmarest) in the National Park of West Malaysia (Doctoral dissertation, Michigan State University). https://books.google.com/books/about/Aspects_of_the_Ecology_and_Behavior_of_t.html?id=bjl93VuliwIC',
+  'Williams, K. D. (1984). The Central American tapir (Tapirus bairdii Gill) in northwestern Costa Rica (Doctoral dissertation, Michigan State University). https://tapirs.org/wp-content/uploads/2017/03/tapir-TAG-min-hus-guide-eng.doc',
+  'Young, J. A., Saw, R., Trewhella, W., & Cole, C. (1993). Dodo: Journal of the Jersey Wildlife Preservation Trust, 29, 22–33. https://durrell.org',
+  'Mace, G. M. (1979). The evolutionary ecology of small mammals (Doctoral dissertation, University of Sussex). https://bl.uk',
+  'Mutere, F. A. (1967). The breeding biology of equatorial vertebrates: reproduction in the fruit bat, Eidolon helvum, at latitude 0°20\'N. Journal of Zoology, 153(2), 153–161. https://doi.org',
+  'Shillito, J. F. (1963). Field observations on the growth, reproduction and activity of a woodland population of the common shrew, Sorex araneus L. Journal of Zoology, 140(1), 99–114. https://doi.org',
+  'Ambid, L., & Agid, R. (1988). Comparative Biochemistry and Physiology Part A: Physiology, 91(1), 105–202. https://lww.com',
+  'Modrý, D., Nečas, P., Rifai, L., Bischoff, W., Hamidan, N., & Amr, Z. (2013). Revision of the Levantine “Lacerta” laevis / kulzeri-complex: 3. The rock lizard of Wadi Ramm, Phoenicolacerta kulzeri khazaliensis ssp. n. Vertebrate Zoology, 63(3), 307–312. https://senckenberg.de',
+  'Núñez, H., & Navarro, J. (1992). Liolaemus rosenmanni, una nueva especie Chilena de lagartija relacionada al grupo "ruibali". Boletín del Museo Nacional de Historia Natural, Chile, 43, 55–62. https://mnhn.gob.cl',
+  'Schmidtler, J. F., & Bischoff, W. (1999). Revision des levantinischen Lacerta laevis/kulzeri-Komplexes: 1. Die Felseneidechse Lacerta cyanisparsa sp. n. Salamandra, 35(3), 129–146. https://salamandra-journal.com',
+  'Shaw, C. E. (1952). Notes on the eggs and young of some United States and Mexican lizards, I. Herpetologica, 8(3), 71–79. https://jstor.org')
+f26 <- ParseCitationString(failed_notes)
+no_title_26 <- grepl('^(Allgaier|Ruiz|Tavares|Young|Ambid|Wiles)', failed_notes)
+Expect(length(failed_notes) == 26 && all(!is.na(f26$parsed_author1)) && all(!is.na(f26$parsed_year)) && all(!is.na(f26$parsed_container)),
+       'all 26 parse with author1, year and container')
+Expect(all(!is.na(f26$parsed_title[!no_title_26])) && all(is.na(f26$parsed_title[no_title_26])) && sum(no_title_26) == 6,
+       'all but the six title-less notes (three Bat Research News, Dodo, Comparative Biochemistry and Physiology, the URL-only Wiles) have a title')
+Expect(all(!is.na(f26$parsed_volume[grepl('Bat Research News|Dodo|Comparative Biochemistry|Herpetologica|Mammalia', failed_notes)])) &&
+         all(!is.na(f26$parsed_pages[!grepl('dissertation|^Wiles', failed_notes)])) && sum(grepl('thesis', f26$parsed_container)) == 4,
+       'the journal items among them carry volume and pages; the four theses give thesis containers')
+
+cat('every cite: note of the 2026-10-08 BM_decisions snapshot (738, the fixture cite_notes_2026-10-08.csv)\n')
+cn <- read.csv(file.path(repo, 'R', 'library', 'tests', 'fixtures', 'cite_notes_2026-10-08.csv'), stringsAsFactors = FALSE, colClasses = 'character', encoding = 'UTF-8', fileEncoding = 'UTF-8')
+notes <- trimws(sub('^\\s*cite:\\s*', '', cn$owner_note, ignore.case = TRUE))
+pn <- ParseCitationString(notes)
+no_title <- grepl('^(Allgaier|Ruiz|Tavares|Young|Ambid|Wiles)', notes)
+Expect(nrow(cn) == 738 && sum(cn$pull_status == 'error') == 26 && all(!is.na(pn$parsed_author1)) && all(!is.na(pn$parsed_year)) && all(!is.na(pn$parsed_container)),
+       'all 738 notes (712 pulled + 26 errors) parse with author1, year and container')
+Expect(all(!is.na(pn$parsed_title[!no_title])) && sum(is.na(pn$parsed_title)) == 6, 'every note but the six title-less journal / web items has a title')
+journal <- !is.na(pn$parsed_volume) | !is.na(pn$parsed_pages)
+Expect(sum(!is.na(pn$parsed_volume) & !is.na(pn$parsed_pages)) >= 686 && sum(journal) >= 697 && sum(!journal) <= 41 &&
+         all(grepl('thesis|^In: |^https', pn$parsed_container[!journal]) | !grepl('\\d', pn$parsed_container[!journal]) | grepl('^(Bottrell|T.mpling|Musser|C H Merriam)', notes[!journal])),
+       'volume and pages are found for the journal forms (686 with both, 11 pages-only); the 41 without are books, theses, chapters, web references and four notes that carry none in this form')
+long <- !is.na(pn$parsed_container) & nchar(pn$parsed_container) > 60
+Expect(sum(long) <= 28 && all(grepl('^In: |^https|Annals|Occasional Papers|Scientific Papers|Special Publications|Miscellaneous Publications|Bulletin|Proceedings|Zeitschrift|Philosophical|Vestnik|Atti|Mammalogy Papers|Journal of the National Museum', pn$parsed_container[long])),
+       sprintf('%d containers over 60 characters, every one a chapter, a web reference or a genuinely long journal name', sum(long)))
+Expect(!any(grepl('\\d+\\s*[(:,]\\s*\\d', pn$parsed_container[!grepl('^In: |^https', pn$parsed_container)], perl = TRUE)) && !any(grepl('\\. [A-Z][a-z]+ [A-Z][a-z]+, [A-Z]', sub('^In: ', '', pn$parsed_container))),
+       "no container swallows a 'vol(issue): pages' group or a '. Publisher, City' tail")
+
 cat('TitleSimilarity() and the agreement helpers\n')
 Expect(TitleSimilarity('The energy density of jellyfish: Estimates from bomb-calorimetry', 'The energy density of jellyfish: estimates from bomb-calorimetry') == 1,
        'case and punctuation do not matter')

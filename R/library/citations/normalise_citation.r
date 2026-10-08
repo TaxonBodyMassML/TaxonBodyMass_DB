@@ -251,28 +251,43 @@ ParseNatureStyle <- function(s) {
 # of one to fifteen letters, or several such tokens each ending in a period
 # but the last ("Proc. Natl. Acad. Sci. U.S.A.", "Ann. N.Y. Acad. Sci.") --
 # so that the journal keeps all its tokens. A title ending in '?' or '!' keeps
-# its mark. Returns list(title, container), NA when absent.
-SplitTitleContainer <- function(body) {
+# its mark. Returns list(title, container), NA when absent. `boundary` is the
+# sentence-boundary pattern (the APA parser passes the relaxed one below, in
+# which a one-letter token ends a sentence too) and `Extend` the predicate
+# that lets the container grow backwards over the sentence before it.
+sentence_boundary_strict  <- '(?<=\\w\\w|\\)|\\])(?:[.?!]|[?!]\\.)\\s+(?=[A-Z0-9(])'
+# the APA form writes "Title. Container, vol, pages", so the container starts
+# after any sentence end, a one-letter one included ('Sorex araneus L. Journal
+# of Zoology', 'Chiapasiae I. Herpetologica', 'ssp. n. Vertebrate Zoology',
+# "0 22'S. Acta Tropica", '"Ophryoessoides group". Bulletin'), except after an
+# abbreviation that never ends one ('St. Petersburg', 'Mr. W. E. Balston',
+# 'No. XI', 'Co. Ltd', 'Univ. Press', 'cf. P. naso'; a taxonomic 'sp.' / 'n.
+# sp.' does end a title and is not listed)
+non_terminal_abbreviations <- c('St', 'Mr', 'Mrs', 'Ms', 'Dr', 'Prof', 'No', 'Nr', 'Vol', 'Vols', 'cf', 'var', 'ca', 'Co', 'Inc', 'Ltd', 'Corp', 'Univ', 'Pty', 'Publ', 'Bros', 'Cia', 'Mt', 'Ft', 'Pt')
+sentence_boundary_relaxed <- paste0('(?<=\\S)(?<!\\b', paste(non_terminal_abbreviations, collapse = ')(?<!\\b'), ')(?:[.?!]|[?!]\\.)\\s+(?=[A-Z0-9("\\[])')
+# a capitalised word or dotted abbreviation of one to fifteen letters, or
+# several such tokens each ending in a period but the last
+JournalLike <- function(x) {
+  toks <- strsplit(trimws(x), '\\s+', perl = TRUE)[[1]]
+  if (length(toks) == 0 || length(toks) > 6) return(FALSE)
+  word <- grepl("^[A-Z][A-Za-z]{0,14}$", toks, perl = TRUE) | grepl('^(?:[A-Z]\\.)+[A-Z]?$', toks, perl = TRUE)
+  dotted <- grepl('\\.$', toks)
+  all(word) && all(dotted[-length(toks)])
+}
+SplitTitleContainer <- function(body, boundary = sentence_boundary_strict, Extend = JournalLike) {
   body <- trimws(body)
-  sb <- gregexpr('(?<=\\w\\w|\\)|\\])(?:[.?!]|[?!]\\.)\\s+(?=[A-Z0-9(])', body, perl = TRUE)[[1]]
+  sb <- gregexpr(boundary, body, perl = TRUE)[[1]]
   if (sb[1] <= 0) {
     title <- sub('[.,;:]+$', '', body)
     return(list(title = if (nzchar(title)) title else NA_character_, container = NA_character_))
   }
   lens <- attr(sb, 'match.length')
-  JournalLike <- function(x) {
-    toks <- strsplit(trimws(x), '\\s+', perl = TRUE)[[1]]
-    if (length(toks) == 0 || length(toks) > 6) return(FALSE)
-    word <- grepl("^[A-Z][A-Za-z]{0,14}$", toks, perl = TRUE) | grepl('^(?:[A-Z]\\.)+[A-Z]?$', toks, perl = TRUE)
-    dotted <- grepl('\\.$', toks)
-    all(word) && all(dotted[-length(toks)])
-  }
   k <- length(sb)
   # sentences before the last boundary: the one ending at boundary j spans (end of j-1, start of j)
   while (k > 1) {
     prev_end <- sb[k - 1] + lens[k - 1]
     sentence <- substr(body, prev_end, sb[k] - 1)
-    if (substr(body, sb[k], sb[k]) != '.' || !JournalLike(sentence)) break
+    if (substr(body, sb[k], sb[k]) != '.' || !Extend(sentence)) break
     k <- k - 1
   }
   cut <- sb[k]
@@ -407,6 +422,149 @@ ParseCommaStyle <- function(s) {
   res
 }
 
+# The APA reference style, in which the owner writes the `cite:` notes of the
+# BM_decisions tab (2026-10-08): "Authors (Year). Title. Container, volume(issue),
+# pages. [URL]". The author block is everything before the first " (Year)."
+# (initials, '&', ', &', 'et al.', 'Jr.', '(Ed.)'); the Elsevier variant with
+# the year after a comma, "Authors, 1976. Title. ...", is read too. The string
+# arrives with a trailing URL or DOI already removed (ParseCitationString(),
+# which hands the URL over as `url`) and folded to ASCII. The body after the
+# year is read as one of:
+#  * a journal item: the LAST ", volume(issue), pages" / ", volume(issue): pages"
+#    group (gregexpr, so a comma-number pair inside the title cannot be taken)
+#    gives volume and pages -- the volume '24/25', 'Supplement 12', '1903',
+#    or, with the volume absent, the number in parentheses '(2247)', '(Suppl.
+#    20)'; the pages '3-17', 'p.303', '100', the first of several ranges --
+#    and whatever follows the pages ('. National Museum, Prague', a bare
+#    'biodiversitylibrary.org') stays out of every field. The container is the
+#    text between the last sentence boundary (sentence_boundary_relaxed) and
+#    that group, extended backwards over an abbreviated journal name ('Pol.
+#    Arch. Hydrobiol'), never over a roman numeral or a number ('Report No.
+#    16. The Journal ...', 'Survey: No. XI. The Annals ...'); the title is the
+#    text before, a one-letter last token keeping its period ('Sorex araneus
+#    L.', 'ssp. n.') and a '?' or '!' its mark. No boundary at all makes a
+#    title-less journal item (the Bat Research News notes): container, volume
+#    and pages with the title NA. A pages-only tail ', 145-169' gives pages
+#    without a volume.
+#  * a thesis: "Title (Doctoral dissertation, University of X)." / "(PhD
+#    thesis, X)" / "(Master's thesis, X)" -> container 'PhD thesis, University
+#    of X' / 'Master thesis, X', the convention NoDOIEntryType() and
+#    ThesisSchool() read.
+#  * a chapter: "Title. In Editors (Ed.), Book (pp. 93-103). Publisher." or
+#    "Title. Book, pp. 63-72. Publisher, City." -> pages, and the container in
+#    the form A convention of ParseChapterContainer(), 'In: Editors (Ed.),
+#    Book. Publisher'.
+#  * a book: "Title. Publisher." / "Title (2nd ed.). Publisher, City." -> the
+#    publisher as container (the last sentence; 'William Collins Sons & Co.
+#    Ltd' stays whole); 'In X' becomes 'In: X'. A body ending in a number
+#    ("Title. J Things 5: 1-10.") is not of this style: NULL, the generic path.
+#  * nothing but the URL (the body empty, or a title without a container, and
+#    a URL given): the URL is the container, the database-style convention of
+#    build_bib.r (@misc with howpublished and url).
+# Returns NULL when the string does not open with an author block and a
+# year in this form; otherwise list(author1, year, title, container, volume,
+# pages), NA where absent.
+apa_year  <- '((?:1[6-9]|20)\\d{2})[a-z]?'
+apa_head  <- paste0('^(.+?)(?: \\(', apa_year, '\\)|, ', apa_year, ')\\.\\s*(.*)$')
+apa_vol   <- '(?:(?:Suppl(?:ement)?\\.?|Vol(?:ume)?\\.?|No\\.?|Tomo|Band|Bd\\.?)\\s*)?\\d+[A-Za-z]?(?:\\s*[/-]\\s*\\d+[A-Za-z]?)?'
+apa_pages <- '(?:p(?:p|ages?)?\\.?\\s*)?(e?\\d+[A-Za-z]?)(?:\\s*-+\\s*(e?\\d+[A-Za-z]?))?(?:,\\s*\\d+\\s*-+\\s*\\d+)*'
+apa_tail  <- paste0(',\\s*(?:(', apa_vol, ')\\s*(?:\\(([^()]*)\\))?|\\(([^()]*\\d[^()]*)\\))(?:\\s*[,:]\\s*', apa_pages, ')?')
+apa_pages_only <- paste0(',\\s*(?:pp?\\.\\s*)?(e?\\d+[A-Za-z]?)\\s*-+\\s*(e?\\d+[A-Za-z]?)(?:,\\s*\\d+\\s*-+\\s*\\d+)*\\.?\\s*$')
+apa_thesis <- paste0("^(.*?)\\s*[(\\[]\\s*(?:Unpublished\\s+)?(Doctoral|Ph\\.?\\s?D\\.?|D\\.?Phil\\.?|Master'?s|M\\.?\\s?Sc\\.?|MSc|M\\.?A\\.?|MPhil|Diploma|Honours|",
+                     "Bachelor'?s|B\\.?Sc\\.?|Undergraduate)\\s+(dissertation|thesis)(?:,\\s*([^)\\]]+))?[)\\]]\\.?\\s*$")
+apa_chapter <- '^(.*?)\\s*[(,;]\\s*pp?\\.\\s*(\\d+)\\s*-+\\s*(\\d+)\\)?\\s*\\.?\\s*(.*)$'
+ParseAPAStyle <- function(s, url = NA_character_) {
+  s <- gsub('*', '', s, fixed = TRUE)                           # a note pasted with markdown emphasis
+  m <- regmatches(s, regexec(apa_head, s, perl = TRUE))[[1]]
+  if (length(m) == 0) return(NULL)
+  authors <- m[2]; year <- as.integer(if (nzchar(m[3])) m[3] else m[4]); body <- trimws(m[5])
+  # the block must read as authors: initials, 'et al.' or a run of names with no sentence end ("O'Shea,
+  # M. The Book of Snakes ... University of Chicago Press, (2018)." is the Scientific Data style, not this one)
+  if (!grepl("[A-Z]\\.|\\bet al\\b|^[A-Z][^.]*\\.?$", authors, perl = TRUE) || grepl(sentence_boundary_strict, authors, perl = TRUE)) return(NULL)
+  res <- list(year = year, author1 = FirstSurname(sub('\\s*\\((Eds?|eds?)\\.?\\)\\.?$', '', authors, perl = TRUE)),
+              title = NA_character_, container = NA_character_, volume = NA_character_, pages = NA_character_)
+  Tidy <- function(x) { x <- trimws(sub('[.,;:]+\\s*$', '', trimws(x))); if (nzchar(x)) x else NA_character_ }
+  # the title keeps the period of a one-letter last token ('Sorex araneus L.') or a taxonomic abbreviation ('n. sp.', 'ssp. n.')
+  Title <- function(x) { x <- Tidy(x); x <- sub('^"(.*)"$', '\\1', x, perl = TRUE); if (!is.na(x) && grepl('(^|\\s)(?:[A-Za-z]|sp|spp|ssp|nov)$', x, perl = TRUE)) paste0(x, '.') else x }
+  NotNumeral <- function(x) JournalLike(x) && !grepl('^\\s*(?:[IVXLC]+|\\d+)\\s*$', x, perl = TRUE)
+  # the container is the last sentence; it grows backwards over an abbreviated journal name only
+  # when it is itself one or two tokens ('Hydrobiol', 'U.S.A'), so that a title ending in a name
+  # ('for Mr. W. E. Balston. Proceedings of the ...') keeps it
+  Split <- function(pre) {
+    tc <- SplitTitleContainer(pre, sentence_boundary_relaxed, function(x) FALSE)
+    if (!is.na(tc$container) && length(strsplit(tc$container, '\\s+', perl = TRUE)[[1]]) <= 2) tc <- SplitTitleContainer(pre, sentence_boundary_relaxed, NotNumeral)
+    tc
+  }
+  HasURL <- length(url) == 1 && !is.na(url) && nzchar(url)
+  if (!nzchar(body)) { if (!HasURL) return(NULL); res$container <- url; return(res) }
+  # a thesis
+  th <- regmatches(body, regexec(apa_thesis, body, perl = TRUE, ignore.case = TRUE))[[1]]
+  if (length(th) > 0) {
+    degree <- th[3]
+    degree <- if (grepl('^(doctoral|ph|d)', degree, ignore.case = TRUE)) 'PhD' else if (grepl("^master", degree, ignore.case = TRUE)) 'Master' else degree
+    res$title <- Title(th[2])
+    res$container <- paste0(degree, ' thesis', if (nzchar(trimws(th[5]))) paste0(', ', Tidy(th[5])) else '')
+    return(res)
+  }
+  # a journal item: the last acceptable ", volume(issue), pages" group
+  Accept <- function(rest, has_pages) grepl('^\\.?\\s*$', rest) || (has_pages && (grepl('^\\.\\s+', rest) || grepl('^\\.?\\s+\\S+\\.[a-z]{2,}\\S*$', rest, perl = TRUE)))
+  hits <- gregexpr(apa_tail, body, perl = TRUE)[[1]]
+  if (hits[1] > 0) {
+    lens <- attr(hits, 'match.length')
+    for (h in rev(seq_along(hits))) {
+      txt <- substr(body, hits[h], hits[h] + lens[h] - 1L)
+      g <- regmatches(txt, regexec(apa_tail, txt, perl = TRUE))[[1]]
+      rest <- substr(body, hits[h] + lens[h], nchar(body))
+      volume <- if (nzchar(g[2])) g[2] else if (nzchar(g[4])) g[4] else NA_character_
+      pages <- if (nzchar(g[5])) { if (nzchar(g[6])) paste0(g[5], '-', g[6]) else g[5] } else NA_character_
+      if (is.na(pages) && !is.na(volume) && grepl('-', volume, fixed = TRUE)) { pages <- gsub('\\s', '', volume); volume <- NA_character_ }
+      if (!Accept(rest, !is.na(pages))) next
+      pre <- trimws(substr(body, 1, hits[h] - 1L))
+      tc <- Split(pre)
+      res$volume <- sub('^(?:Vol(?:ume)?\\.?|No\\.?|Bd\\.?)\\s*', '', gsub('\\s+', ' ', volume), perl = TRUE); res$pages <- pages
+      if (is.na(tc$container)) { res$container <- Tidy(pre) } else { res$title <- Title(tc$title); res$container <- Tidy(tc$container) }
+      return(res)
+    }
+  }
+  # a chapter: "(pp. 93-103). Publisher" / ", pp. 63-72. Publisher, City"
+  ch <- regmatches(body, regexec(apa_chapter, body, perl = TRUE))[[1]]
+  if (length(ch) > 0) {
+    pre <- ch[2]; post <- Tidy(ch[5])
+    if (!is.na(post) && grepl('^\\S+\\.[a-z]{2,}\\S*$', post, perl = TRUE)) post <- NA_character_     # a bare domain
+    at <- gregexpr('(?<=\\S)[.?!] In:? (?=\\S)', pre, perl = TRUE)[[1]]
+    if (at[1] > 0) {
+      last <- at[length(at)]
+      title <- substr(pre, 1, last - 1L); mark <- substr(pre, last, last)
+      if (mark %in% c('?', '!')) title <- paste0(title, mark)
+      book <- substr(pre, last + attr(at, 'match.length')[length(at)], nchar(pre))
+      res$title <- Title(title)
+    } else {
+      tc <- Split(pre)
+      if (is.na(tc$container)) book <- pre else { res$title <- Title(tc$title); book <- tc$container }
+    }
+    res$pages <- paste0(ch[3], '-', ch[4])
+    res$container <- paste0('In: ', Tidy(book), if (!is.na(post)) paste0('. ', post) else '')
+    return(res)
+  }
+  pg <- regmatches(body, regexec(apa_pages_only, body, perl = TRUE))[[1]]
+  if (length(pg) > 0) {
+    pre <- trimws(substr(body, 1, regexpr(apa_pages_only, body, perl = TRUE) - 1L))
+    tc <- Split(pre)
+    res$pages <- paste0(pg[2], '-', pg[3])
+    if (is.na(tc$container)) res$container <- Tidy(pre) else { res$title <- Title(tc$title); res$container <- Tidy(tc$container) }
+    return(res)
+  }
+  # a body ending in a number is "Journal 12: 1-10" or "241 pp.": the generic path reads those
+  if (grepl('\\d\\.?$|\\d+\\s*pp?\\.?$', body, perl = TRUE)) return(NULL)
+  # a book: the publisher is the last sentence
+  tc <- SplitTitleContainer(body, sentence_boundary_relaxed, function(x) FALSE)
+  res$title <- Title(tc$title)
+  res$container <- Tidy(tc$container)
+  if (!is.na(res$container)) res$container <- sub('^In\\s+(?!:)', 'In: ', res$container, perl = TRUE)
+  if (is.na(res$container) && HasURL) res$container <- url
+  res
+}
+
 # Parse one citation string per element into a data frame of query fields:
 # parsed_author1, parsed_year, parsed_title, parsed_container, parsed_volume,
 # parsed_pages, parsed_doi. Robust to the common styles ("Author, A. B., and
@@ -425,8 +583,12 @@ ParseCitationString <- function(x) {
     if (is.na(s) || !nzchar(trimws(s))) next
     s <- gsub('\\s+', ' ', trimws(FoldASCII(s)), perl = TRUE)
     out$parsed_doi[i] <- ExtractDOI(s)
-    # remove a DOI / URL tail so it does not pollute pages or container
+    # remove a DOI / URL tail so it does not pollute pages or container (the
+    # URL is handed to ParseAPAStyle(), which keeps it only as the container
+    # of a web reference without one)
     s <- sub('\\s*(doi:?\\s*|https?://(dx\\.)?doi\\.org/)10\\.[0-9]{4,9}/\\S+\\s*$', '', s, ignore.case = TRUE, perl = TRUE)
+    url_at <- regexpr('\\s*https?://\\S+\\s*$', s, perl = TRUE)
+    url <- if (url_at > 0) trimws(regmatches(s, url_at)) else NA_character_
     s <- sub('\\s*https?://\\S+\\s*$', '', s, perl = TRUE)
     # a note in brackets after the bracketed year ("... Volume 3 (2013) (as S.
     # hypoleucus southern form)", the PHYLACINE cells) is not part of the entry
@@ -466,6 +628,19 @@ ParseCitationString <- function(x) {
       out$parsed_container[i] <- cs$container
       out$parsed_volume[i]    <- cs$volume
       out$parsed_pages[i]     <- cs$pages
+      next
+    }
+    apa <- ParseAPAStyle(s, url)
+    if (!is.null(apa)) {
+      # "Authors (Year). Title. Container, volume(issue), pages." (the APA
+      # style of the owner's cite: notes): the container is located from the
+      # volume-pages group, which the generic path cannot do
+      out$parsed_year[i]      <- apa$year
+      out$parsed_author1[i]   <- apa$author1
+      out$parsed_title[i]     <- apa$title
+      out$parsed_container[i] <- apa$container
+      out$parsed_volume[i]    <- apa$volume
+      out$parsed_pages[i]     <- apa$pages
       next
     }
     # a bracketed year closing the entry with a comma before it or no volume

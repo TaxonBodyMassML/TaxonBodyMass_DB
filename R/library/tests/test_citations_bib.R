@@ -167,6 +167,17 @@ Expect(FirstOfAuthorList('Ikeda and Hirakawa and Imamura') == 'Ikeda' && FirstOf
        'FirstOfAuthorList() gives the first surname of an author field for keys and CiteIDs')
 
 cat('BuildBibEntryNoDOI(): the conventions of #114 item 1 (theses, chapters, corporate authors, URLs)\n')
+nt <- BuildBibEntryNoDOI(Row(author1 = 'Allgaier', year = 1993L, title = NA_character_, container = 'Bat Research News', volume = '34', pages = '100'), 'Allgaier:1993aa', 'owner', '2026-10-08')
+tfn <- tempfile(fileext = '.bib'); writeLines(nt, tfn)
+Expect(startsWith(nt, '@article{Allgaier:1993aa,') && !grepl('title', nt, fixed = TRUE) && Field(nt, 'journal') == 'Bat Research News' && Field(nt, 'volume') == '34' && Field(nt, 'pages') == '100' &&
+         length(suppressMessages(suppressWarnings(RefManageR::ReadBib(tfn, check = FALSE)))) == 1,
+       'a nodoi row without a title (a journal item cited by journal, volume and page) builds a valid @article with no title field, never title = {NA}')
+apa_ch <- BuildBibEntryNoDOI(Row(author1 = 'Doi', year = 1987L, title = 'Distribution of Japanese serow in its southern range, Kyushu',
+                                 container = 'In: H. Soma (Ed.), The biology and management of Capricornis and related mountain antelopes. Croom Helm', pages = '93-103'), 'Doi:1987aa', 'owner', '2026-10-08')
+Expect(startsWith(apa_ch, '@incollection{') && Field(apa_ch, 'editor') == 'H. Soma' && Field(apa_ch, 'booktitle') == 'The biology and management of Capricornis and related mountain antelopes' &&
+         Field(apa_ch, 'publisher') == 'Croom Helm' && Field(apa_ch, 'pages') == '93--103',
+       "the chapter container ParseAPAStyle() builds from an APA note reads as @incollection with editor, booktitle, publisher and pages")
+
 ms <- BuildBibEntryNoDOI(Row(container = 'MSc thesis, University of British Columbia'), 'Nsiku:1999aa', 'MN', '2026-10-06')
 Expect(startsWith(ms, '@mastersthesis{') && Field(ms, 'school') == 'University of British Columbia', "an 'MSc thesis' container: @mastersthesis with the school")
 Expect(startsWith(BuildBibEntryNoDOI(Row(container = 'M.S. thesis, Middle Tennessee State University'), 'B:2015aa', 'MN', '2026-10-06'), '@mastersthesis{') &&

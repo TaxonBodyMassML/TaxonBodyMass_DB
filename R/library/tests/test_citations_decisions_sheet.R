@@ -207,6 +207,50 @@ Expect(r$decision == 'nodoi' && r$status == 'pulled 2026-10-10' && is.null(r$par
          ResolveTabDecision(TR('maybe', note = 'checked the PDF'), qa, cfg)$status == 'error: \'maybe\' is not a decision (1|2|3, doi:10..., manual:<Key>, nodoi, self, drop; optional :year=YYYY)',
        'a non-cite note changes nothing: plain status, no fields, an empty cell still defers, a bad cell is still the same error')
 
+cat('ResolveTabDecision(): cite: notes in APA style, a journal item without a title, a thesis (2026-10-08)\n')
+nt <- 'cite: Allgaier, A. (1993). Bat Research News, 34(4), 100. https://www.eaglehill.us/programs/journals/nabr/BRN-archives/BRN-archives.shtml'
+pnt <- ParseCiteNote(nt)
+Expect(length(pnt$missing) == 0 && isTRUE(pnt$no_title) && is.na(pnt$parsed$parsed_title) && pnt$parsed$parsed_container == 'Bat Research News' && pnt$parsed$parsed_volume == '34' && pnt$parsed$parsed_pages == '100' &&
+         identical(ParseCiteNote('cite: Allgaier, A. (1993). Bat Research News.')$missing, 'container') && !isTRUE(ParseCiteNote(full)$no_title),
+       'ParseCiteNote(): a journal item cited without a title needs no title when container, volume and pages are there (no_title); without them the text reads as a title and the container is missing')
+r <- ResolveTabDecision(TR(NA, note = nt), qa_nodoi, cfg, pulled_at = '2026-10-10')
+Expect(r$decision == 'nodoi' && r$status == 'pulled 2026-10-10 (cite: Allgaier (1993) Bat Research News 34: 100; no title)' && is.na(r$parsed$parsed_title) && r$parsed$parsed_container == 'Bat Research News',
+       'a title-less journal item pulls as nodoi with the status saying so')
+r <- ResolveTabDecision(TR(NA, note = 'cite: Bennett, P. M. (1986). Environmental correlates of evolutionary change in mammals (Doctoral dissertation, University of Sussex). https://bl.uk'), qa_nodoi, cfg, pulled_at = '2026-10-10')
+Expect(r$decision == 'nodoi' && r$parsed$parsed_container == 'PhD thesis, University of Sussex' && r$parsed$parsed_title == 'Environmental correlates of evolutionary change in mammals' &&
+         NoDOIEntryType(r$parsed)$type == 'phdthesis' && ThesisSchool(r$parsed$parsed_container) == 'University of Sussex' &&
+         r$status == 'pulled 2026-10-10 (cite: Bennett (1986) Environmental correlates of evolutionary change in mammals. PhD thesis, University of Sussex)',
+       'a thesis note gives the thesis container, which the bib layer reads as @phdthesis with the school')
+r <- ResolveTabDecision(TR(NA, note = 'cite: Álvarez del Toro, M. & Smith, H. M. (1956). Notulae herpetologicae Chiapasiae I. Herpetologica, 12(1): 3–17.'), qa_nodoi, cfg, pulled_at = '2026-10-10')
+Expect(r$decision == 'nodoi' && r$parsed$parsed_author1 == 'Alvarez del Toro' && r$parsed$parsed_container == 'Herpetologica' && r$parsed$parsed_volume == '12' && r$parsed$parsed_pages == '3-17' &&
+         r$status == 'pulled 2026-10-10 (cite: Alvarez del Toro (1956) Notulae herpetologicae Chiapasiae I. Herpetologica 12: 3-17)',
+       'an APA note that failed the 2026-10-08 pull (missing: container) now pulls')
+
+cat('ReciteQueue()\n')
+old_apa <- QRow('x', container = 'Biotemas, 12(1): 95-117. Universidade Federal de Santa Catarina, Florianopolis', volume = NA, pages = NA, decision = 'nodoi')
+old_apa$owner_note <- 'cite: Cherem, J. J., Olimpio, J. & Ximénez, A. (1999). Descrição de uma nova espécie do gênero Cavia Pallas, 1766 (Mammalia - Caviidae) das Ilhas dos Moleques do Sul, Santa Catarina, Sul do Brasil. Biotemas, 12(1): 95–117. Universidade Federal de Santa Catarina, Florianópolis.'
+old_apa$parsed_author1 <- 'Cherem'; old_apa$parsed_year <- '1999'; old_apa$parsed_title <- 'Descricao de uma nova especie do genero Cavia Pallas, 1766 (Mammalia - Caviidae) das Ilhas dos Moleques do Sul, Santa Catarina, Sul do Brasil'
+same <- QRow('y', author1 = 'Smith', year = '1987', title = 'Body size of shrews', container = 'Journal of Mammalogy', volume = '68', pages = '123-130'); same$owner_note <- full
+bad <- QRow('z', container = NA); bad$owner_note <- 'cite: Smith, J. (1987) Body size of shrews.'
+plain <- QRow('w'); plain$owner_note <- 'checked the PDF'
+open_apa <- QRow('v', container = NA, volume = NA, pages = NA); open_apa$owner_note <- 'cite: Allgaier, A. (1993). Bat Research News, 34(4), 100. https://eaglehill.us'
+rq <- ReciteQueue(rbind(old_apa, same, bad, plain, open_apa))
+RQ <- function(k, col) rq$queue[[col]][rq$queue$native_key == k]
+Expect(rq$rows == 4 && nrow(rq$unparsed) == 1 && rq$unparsed$native_key == 'z' && rq$unparsed$missing == 'container' && identical(names(rq$per_column), cite_note_fields),
+       'four cite: rows seen (decided or open); the one still missing its container is left alone and listed; a plain note is not a cite: row')
+Expect(RQ('x', 'parsed_container') == 'Biotemas' && RQ('x', 'parsed_volume') == '12' && RQ('x', 'parsed_pages') == '95-117' && RQ('x', 'parsed_title') == old_apa$parsed_title && RQ('x', 'decision') == 'nodoi' &&
+         identical(sort(rq$changes$column[rq$changes$native_key == 'x']), c('parsed_container', 'parsed_pages', 'parsed_volume')) &&
+         rq$changes$old[rq$changes$native_key == 'x' & rq$changes$column == 'parsed_container'] == old_apa$parsed_container && is.na(rq$changes$old[rq$changes$native_key == 'x' & rq$changes$column == 'parsed_volume']),
+       'a decided row whose container swallowed the volume, pages and publisher is re-parsed: three cells changed, the decision untouched, the change table keeps old and new')
+Expect(!any(rq$changes$native_key == 'y') && identical(unlist(rq$queue[rq$queue$native_key == 'y', cite_note_fields], use.names = FALSE), unlist(same[, cite_note_fields], use.names = FALSE)),
+       'a row the parser reads as before is unchanged')
+Expect(identical(unlist(rq$queue[rq$queue$native_key == 'z', cite_note_fields], use.names = FALSE), unlist(bad[, cite_note_fields], use.names = FALSE)) &&
+         identical(unlist(rq$queue[rq$queue$native_key == 'w', cite_note_fields], use.names = FALSE), unlist(plain[, cite_note_fields], use.names = FALSE)),
+       'the unparsable and the plain-note rows keep their fields')
+Expect(RQ('v', 'parsed_container') == 'Bat Research News' && RQ('v', 'parsed_volume') == '34' && RQ('v', 'parsed_pages') == '100' && is.na(RQ('v', 'parsed_title')) && is.na(RQ('v', 'decision')) &&
+         rq$per_column[['parsed_container']] == 2 && rq$per_column[['parsed_title']] == 1 && sum(rq$per_column) == nrow(rq$changes) && identical(names(rq$queue), pending_queue_columns),
+       'an open title-less row takes container, volume and pages and loses the stale title; the per-column counts add up; the queue keeps its schema')
+
 cat('PullDecisions()\n')
 queue <- rbind(QRow('a', recommendation = '1'), QRow('b', recommendation = 'nodoi'), QRow('c', c1_services = 'openalex', recommendation = 'nodoi'),
                QRow('d'), QRow('e', recommendation = 'drop'), QRow('f', recommendation = '1', src = 'Other'), QRow('g'))
