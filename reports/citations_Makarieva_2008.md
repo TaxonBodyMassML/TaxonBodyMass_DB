@@ -1,10 +1,10 @@
-# Citations of Makarieva_2008 -- 2026-10-08 13:17:46 (tbmcite 0.1.0)
+# Citations of Makarieva_2008 -- 2026-10-08 13:46:29 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --sheet --offline --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet: 301 row(s) for Makarieva_2008, 2 new, tab had 10384 rows; BM_citations snapshotted (443 rows)
+- --sheet: 301 row(s) for Makarieva_2008, 1 new, tab had 10382 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

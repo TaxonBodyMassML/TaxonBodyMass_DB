@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-08 13:20:42
+# Citation and provenance warnings -- 2026-10-08 13:49:01
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -13,9 +13,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: Smith_2003e -> Smith:2003ae
-- BM_primary_citations: Vernberg_1959 -> Vernberg:1959aa
-- BM_primary_citations: Speck_1879 -> Speck:1879aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 

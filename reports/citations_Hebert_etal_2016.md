@@ -1,10 +1,10 @@
-# Citations of Hebert_etal_2016 -- 2026-10-08 13:17:34 (tbmcite 0.1.0)
+# Citations of Hebert_etal_2016 -- 2026-10-08 13:39:16 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --sheet --offline
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 52 row(s) for Hebert_etal_2016, 1 new, tab had 10383 rows; BM_citations snapshotted (443 rows)
+- --sheet (dry run): 52 row(s) for Hebert_etal_2016, 0 new, tab had 10383 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
