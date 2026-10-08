@@ -1,13 +1,10 @@
-# Citations of Faurby_etal_2018 -- 2026-10-08 14:34:04 (tbmcite 0.1.0)
+# Citations of Faurby_etal_2018 -- 2026-10-08 15:44:13 (tbmcite 0.1.0)
 
-Steps: --bib --offline
+Steps: --apply-queue --offline
 
 Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --bib: primary_references written for 0 source(s)
-- --bib: 84 accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): Myhrvold_2015 Sibly_2012 (10.1002/9781119968535); Jones_2009 2145 (10.1007/978-1-4419-8770-9); Jones_2009 2329 (10.1007/978-94-010-1944-6); Jones_2009 56 (10.1016/0198-0254(87)90283-4); Jones_2009 139 (10.1016/c2009-0-02373-3); Jones_2009 1766 (10.1017/cbo9780511542466); Myhrvold_2015 Prins_2014 (10.1017/cbo9781139565424); Jones_2009 82 (10.1038/089449b0); Jones_2009 2658 (10.1093/mspecies/147.1); Jones_2009 1182 (10.1093/mspecies/202.1a); Jones_2009 1092 (10.1093/mspecies/261.1); Jones_2009 1962 (10.1093/mspecies/266.1); Jones_2009 911 (10.1093/mspecies/274.1); Jones_2009 304 (10.1093/mspecies/365.1); Jones_2009 309 (10.1093/mspecies/374.1); Smith_2003 84 (10.1093/mspecies/374.1); Jones_2009 163 (10.1093/oxfordjournals.jhered.a111394); Jones_2009 2728 (10.1098/rspb.1993.0143); Jones_2009 490 (10.1098/rspb.1995.0034); Lislevand_etal_2007 49 (10.1201/9781420036305); Jones_2009 342 (10.1644/0.496.1); Jones_2009 343 (10.1644/0.497.1); Jones_2009 345 (10.1644/0.498.1); Jones_2009 1604 (10.1644/0.569.1); Jones_2009 2670 (10.1644/0.571.1); Jones_2009 2211 (10.1644/0.572.1); Smith_2003 220 (10.1644/744); Smith_2003 266 (10.1644/771); Smith_2003 267 (10.1644/772); Smith_2003 269 (10.1644/776); Jones_2009 3100 (10.2307/0.105.1); Jones_2009 592 (10.2307/0.106.1); Jones_2009 1887 (10.2307/0.109.1); Jones_2009 1512 (10.2307/0.112.1); Jones_2009 2445 (10.2307/0.268.1); Jones_2009 611 (10.2307/0.28.1); Jones_2009 468 (10.2307/0.306.1); Jones_2009 2365 (10.2307/0.31.1); Jones_2009 314 (10.2307/0.411.1); Smith_2003 86 (10.2307/0.411.1); Jones_2009 316 (10.2307/0.420.1); Jones_2009 612 (10.2307/0.44.1); Jones_2009 335 (10.2307/0.466.1); Jones_2009 644 (10.2307/0.469.1); Jones_2009 2561 (10.2307/0.49.1); Jones_2009 1985 (10.2307/0.490.1); Jones_2009 2956 (10.2307/0.50.1); Jones_2009 336 (10.2307/0.501.1); Jones_2009 341 (10.2307/0.507.1); Jones_2009 346 (10.2307/0.508.1); Jones_2009 591 (10.2307/0.55.1); Jones_2009 2492 (10.2307/0.595.1); Jones_2009 2459 (10.2307/0.596.1); Jones_2009 1960 (10.2307/0.624.1); Smith_2003 100 (10.2307/0.624.1); Smith_2003 255 (10.2307/0.660.1); Smith_2003 103 (10.2307/0.673.1); Smith_2003 104 (10.2307/0.675.1); Jones_2009 1751 (10.2307/3503849); Jones_2009 3065 (10.2307/3503921); Jones_2009 2611 (10.2307/3503996); Jones_2009 3031 (10.2307/3504073); Jones_2009 2252 (10.2307/3504102); Jones_2009 339 (10.2307/3504147); Jones_2009 651 (10.2307/3504157); Jones_2009 1608 (10.2307/3504217); Jones_2009 1699 (10.2307/3504221); Jones_2009 61 (10.2307/3504270); Jones_2009 1921 (10.2307/3504304); Jones_2009 46 (10.2307/3504312); Smith_2003 265 (10.2307/3504532); Smith_2003 264 (10.2307/3504547); Lislevand_etal_2007 70 (10.5040/9781472597441); Lislevand_etal_2007 27 (10.5040/9781472926975); Lislevand_etal_2007 23 (10.5040/9781472926982); Lislevand_etal_2007 5 (10.5040/9781472926999); Lislevand_etal_2007 24 (10.5040/9781472927002); Lislevand_etal_2007 25 (10.5040/9781472927019); Lislevand_etal_2007 26 (10.5040/9781472927026); Lislevand_etal_2007 28 (10.5040/9781472927033); Jones_2009 978 (10.5860/choice.33-2131); Jones_2009 1004 (10.5860/choice.37-5102); Jones_2009 1635 (10.5962/bhl.part.14575); Myhrvold_2015 MarinhoFilho_2002 (10.7312/oliv12042-015)
-- --bib: 1 of 1 bib correction(s) in bib_corrections.csv applied: Scherer:1984aa author
-- --bib: 10374 entries written to TaxonBodyMass_PrimaryCitations.bib (20 reuse a curated key); RefManageR parsed 10374; Faurby_etal_2018: 594 rows with bibcite
+- --apply-queue: 11 decision(s) applied: h:21af60a3 -> approved, h:509f77e1 -> approved, h:63cee4bc -> approved, h:7381fa3f -> approved, h:96a42173 -> approved, h:9858702a -> approved, h:d98d34d4 -> approved, h:d9ed4ade -> approved, h:da4b1416 -> approved, h:e4b9c7d8 -> approved, h:ff50c9aa -> approved
 
 ## References
 
@@ -84,7 +81,7 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:204b2ff5 | 2 | compilation | certain | crossref_only | crossref | crossref_only | 10.1016/b978-0-12-373553-9.00271-6 | 1.000 | Flores:2009aa | Flores_2009 |
 | h:216acd2e | 31 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/07-mamm-a-217.1 | 0.000 | Hayssen:2008aa | Hayssen_2008 |
 | h:218af9f2 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.279 | Happold:2013aa | Happold_2013 |
-| h:21af60a3 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Nekaris:2003aa | Nekaris_2003 |
+| h:21af60a3 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1159/000073317 | 1.000 |  |  |
 | h:21e13536 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Lariviere:1998ab | Lariviere_1998b |
 | h:21f7ae2c | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.395 | Happold:2013ab | Happold_2013b |
 | h:2214a510 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/002229399300425 | 0.000 | Kefelioglu:1999aa | Kefelioglu_1999 |
@@ -202,7 +199,7 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:4f2bb381 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Argyropulo:1933aa | Argyropulo_1933 |
 | h:4f514781 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Fooden:1990aa | Fooden_1990 |
 | h:5036cdab | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1126/science.1109191 | 0.000 | Jones:2005aa | Jones_2005 |
-| h:509f77e1 | 91 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  |  | Kelt:2009aa | Kelt_2009 |
+| h:509f77e1 | 91 | measurement | approved | owner_doi | crossref | crossref_only | 10.1111/j.1466-8238.2008.00422.x | 1.000 |  |  |
 | h:50c5da4b | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.2004.00091.x | 0.000 | Meijaard:2004aa | Meijaard_2004 |
 | h:50efcf1f | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1080/00222931408693608 | 0.000 | Dollman:1914aa | Dollman_1914 |
 | h:5143e3c6 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1080/00222930608562614 | 0.000 | Thomas:1906aa | Thomas_1906 |
@@ -259,7 +256,7 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:62a88e95 | 32 | compilation | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.1093/oso/9780195343229.001.0001 | 0.828 | Reid:2009aa | Reid_2009 |
 | h:62ec58b7 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/06-mamm-a-075r1.1 | 0.000 | Solari:2007aa | Solari_2007 |
 | h:62f51fae | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.475 | Patterson:2006aa | Patterson_2006 |
-| h:63cee4bc | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Mora:2005aa | Mora_2005 |
+| h:63cee4bc | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1080/09524622.2005.9753546 | 1.000 |  |  |
 | h:63fdfd14 | 3 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1206/582-9.1 | 0.000 | Holden:2009aa | Holden_2009 |
 | h:65e85b55 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.3106/mammalstudy.28.111 | 0.000 | Maryanto:2003aa | Maryanto_2003 |
 | h:663d438d | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.278 | Edwards:2005aa | Edwards_2005 |
@@ -294,7 +291,7 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:72e0e47b | 4 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Gardner:2007aa | Gardner_2007 |
 | h:73085b3e | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Heaney:1984aa | Heaney_1984 |
 | h:73714301 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Fooden:1992aa | Fooden_1992 |
-| h:7381fa3f | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Macholan:2008aa | Macholan_2008 |
+| h:7381fa3f | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1016/j.jcz.2007.07.003 | 1.000 |  |  |
 | h:7397df9a | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2988/0006-324x(2007)120[117:rotelr]2.0.co;2 | 0.000 | McCain:2007aa | McCain_2007 |
 | h:743e5a14 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1080/00222939408677813 | 0.000 | Thomas:1894aa | Thomas_1894 |
 | h:7478ea63 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Goodwin:1940aa | Goodwin_1940 |
@@ -381,12 +378,12 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:9470816d | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1995.tb05134.x | 0.000 | Eger:1995aa | Eger_1995 |
 | h:957f91b8 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Hutterer:2002aa | Hutterer_2002 |
 | h:95a2e466 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.3398/1545-0228-3.1.1 | 0.000 | Carraway:2007aa | Carraway_2007 |
-| h:96a42173 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | de-Winton:1901aa | deWinton_1901 |
+| h:96a42173 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1080/00222930108678437 | 1.000 |  |  |
 | h:96e49e21 | 3 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.5479/si.00963801.45-1976.1 | 0.000 | Lyon:1913aa | Lyon_1913 |
 | h:97832ca8 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1644/1545-1410(2005)774[0001:pm]2.0.co;2 | 0.000 | Alvarez-Castaneda:2005ab | Alvarez-Castaneda_2005b |
 | h:9801ddaa | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1080/00222931008692796 | 0.000 | Thomas:1910ab | Thomas_1910b |
 | h:98403057 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Sinitschenkova:1995aa | Sinitschenkova_1995 |
-| h:9858702a | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Thomas:1904aa | Thomas_1904 |
+| h:9858702a | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1080/03745480409442976 | 0.864 |  |  |
 | h:986bfee3 | 6 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.490 | Field-Museum:ndaa | FieldMuseum_nd |
 | h:986e1582 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/bhl.part.79863 | 0.000 | Adam:1993aa | Adam_1993 |
 | h:9884275d | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Fooden:1992aa | Fooden_1992 |
@@ -521,11 +518,11 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:d7d96dfc | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1206/3740.2 | 0.000 | Voss:2012aa | Voss_2012 |
 | h:d84a05a2 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Malygin:1994aa | Malygin_1994 |
 | h:d92e8c38 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Hutterer:1977aa | Hutterer_1977 |
-| h:d98d34d4 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | van-Roosmalen:2002aa | vanRoosmalen_2002 |
-| h:d9ed4ade | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Churchfield:2004aa | Churchfield_2004 |
+| h:d98d34d4 | 2 | measurement | approved | owner_doi | crossref | crossref_only | 10.62015/np.2002.v10.503 | 0.866 |  |  |
+| h:d9ed4ade | 2 | measurement | approved | owner_doi | crossref | crossref_only | 10.1007/bf03192504 | 1.000 |  |  |
 | h:d9fe031a | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.445 | Happold:2013aa | Happold_2013 |
 | h:da126af5 | 7 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.522 | Wilson:2011aa | Wilson_2011 |
-| h:da4b1416 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Best:1996ac | Best_1996c |
+| h:da4b1416 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.2307/3504077 | 1.000 |  |  |
 | h:dab46d67 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Jones:1955aa | Jones_1955 |
 | h:db60706a | 3 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.884 | Eisenberg:1989aa | Eisenberg_1989 |
 | h:db8cd2ae | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Handley:1959aa | Handley_1959 |
@@ -552,7 +549,7 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:e2e70f7b | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Voss:1992aa | Voss_1992 |
 | h:e31b2350 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Hill:1989aa | Hill_1989 |
 | h:e350b818 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Webster:1985aa | Webster_1985 |
-| h:e4b9c7d8 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Tellez:1999aa | Tellez_1999 |
+| h:e4b9c7d8 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.2307/3504527 | 1.000 |  |  |
 | h:e4f33552 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9960367 | 0.000 | Menzies:1996aa | Menzies_1996 |
 | h:e4fb410e | 1 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
 | h:e58fd6a5 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Hutterer:1990aa | Hutterer_1990 |
@@ -606,6 +603,6 @@ Verification mode: full (Crossref + OpenAlex); 216 certain row(s) of this source
 | h:fdce8ca2 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1080/00222930308678806 | 0.000 | Thomas:1903aa | Thomas_1903 |
 | h:fe97d293 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Tate:1935ab | Tate_1935b |
 | h:feb8f106 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Rummler:1935aa | Rummler_1935 |
-| h:ff50c9aa | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Long:1995ab | Long_1995b |
+| h:ff50c9aa | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.2307/3504264 | 1.000 |  |  |
 | h:ff715e3f | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Thomas:1920ad | Thomas_1920d |
 | h:ffe021de | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | White:2002ab | White_2002b |
