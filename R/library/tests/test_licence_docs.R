@@ -9,8 +9,9 @@
 # absent from the manifest, on an unknown licence and on a carve-out.
 # Part 2 checks the real tree: the committed manifest lists exactly the tracked
 # files with their current size and SHA-256, every source folder has a
-# Licence: line whose class the manifest records, and sources/LICENSES.md is
-# the current regeneration.
+# Licence: line whose class the manifest records, sources/LICENSES.md is
+# the current regeneration, and LICENSE, LICENSES.md, the manifest class and
+# the README name the repository licence CC BY-NC 4.0 (owner decision 2026-10-06).
 #
 #   Rscript R/library/tests/test_licence_docs.R      (from any directory)
 #
@@ -206,6 +207,29 @@ Expect(sum(res$unknown) == sum(ManifestFolders(mr)$unknown[ManifestFolders(mr)$f
 current <- readLines(file.path(repo, 'sources', 'LICENSES.md'), warn = FALSE)
 regen   <- WriteLicensesMd(mr, repo, file.path(tempdir(), 'LICENSES_test.md'))
 Expect(identical(current, regen), 'sources/LICENSES.md is the current regeneration of the manifest')
+# the repository licence is CC BY-NC 4.0 (owner decision 2026-10-06) in the class label,
+# the LICENSE file, the Scope and Position sections of LICENSES.md and the README
+Expect(LICENCE_REPO == 'repository (CC BY-NC 4.0)', 'the repository licence class names CC BY-NC 4.0')
+lic <- readLines(file.path(repo, 'LICENSE'), warn = FALSE)
+Expect(startsWith(lic[1], 'Creative Commons Attribution-NonCommercial 4.0 International') &&
+         any(lic == 'Attribution-NonCommercial 4.0 International') &&
+         any(grepl('^Section 1 -- Definitions', lic)) && any(grepl('NonCommercial means not primarily intended', lic)) &&
+         any(grepl('^Scope: ', lic)) && any(grepl('until 2026-10-06', lic)),
+       'LICENSE is the CC BY-NC 4.0 legal code with the scope paragraph and the change date')
+Expect(!any(grepl('Attribution 4.0 International \\(CC BY 4.0\\)', lic)), 'LICENSE no longer carries the CC BY 4.0 heading')
+scope <- current[grep('^## Scope of the repository licence', current) + 2]
+Expect(grepl('`LICENSE` (CC BY-NC 4.0', scope, fixed = TRUE) && grepl('NonCommercial term', scope),
+       'LICENSES.md names CC BY-NC 4.0 and the NonCommercial term in the scope section')
+pos <- current[grep('^## Position on values from non-commercial', current) + 2]
+Expect(grepl('under the repository licence, CC BY-NC 4.0, as aggregated facts', pos, fixed = TRUE) &&
+         grepl('share-alike term of Pata & Hunt', pos, fixed = TRUE) && grepl('no-derivatives term of Cai', pos, fixed = TRUE),
+       'the position names CC BY-NC 4.0 and keeps the share-alike and no-derivatives carve-outs')
+Expect(!any(grepl('repository (CC BY 4.0)', c(current, mr$licence_class), fixed = TRUE)),
+       'neither LICENSES.md nor the manifest names the old repository class')
+rd <- readLines(file.path(repo, 'README.md'), warn = FALSE)
+Expect(any(grepl('The repository `LICENSE` is CC BY-NC 4.0', rd, fixed = TRUE)) &&
+         !any(grepl('The repository `LICENSE` is CC BY 4.0', rd, fixed = TRUE)),
+       'the README Data licences section states CC BY-NC 4.0')
 regen_m <- BuildLicenceManifest(repo, real_manifest, use_git = TRUE, write = FALSE, quiet = TRUE)
 Expect(identical(as.data.frame(regen_m)[manifest_columns], mr[manifest_columns]),
        'sources/source_files.csv is the current regeneration (no file added or dropped)')

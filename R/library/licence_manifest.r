@@ -25,7 +25,7 @@
 #   bytes, sha256     of the tracked file (empty for `live`)
 #   licence_class     the upstream terms of a raw/live file as recorded on disk
 #                     or decided by the owner; "transcription (facts)" for
-#                     parsed files; "repository (CC BY 4.0)" for our own files;
+#                     parsed files; "repository (CC BY-NC 4.0)" for our own files;
 #                     "unknown; owner to check" when the terms are not on disk
 #   statement_source  where the class is stated: README, Citation.bib, in-file,
 #                     owner decision <date>, repository LICENSE, not on disk
@@ -38,7 +38,7 @@
 # run and stops when a source folder has no row in it.
 
 LICENCE_UNKNOWN <- 'unknown; owner to check'
-LICENCE_REPO    <- 'repository (CC BY 4.0)'
+LICENCE_REPO    <- 'repository (CC BY-NC 4.0)'
 LICENCE_FACTS   <- 'transcription (facts)'
 LICENCE_PUB     <- 'publisher file'
 
@@ -48,9 +48,11 @@ manifest_columns <- c('folder', 'label', 'path', 'role', 'bytes', 'sha256',
 manifest_hand_columns <- setdiff(manifest_columns, c('folder', 'path', 'bytes', 'sha256'))
 
 # Classes whose terms restrict reuse beyond attribution (the carve-outs of
-# sources/LICENSES.md) and the classes that need no carve-out.
+# sources/LICENSES.md) and the classes that need no carve-out. The repository
+# class is itself CC BY-NC 4.0 (owner decision 2026-10-06) but is not a
+# third-party carve-out, so it is excluded here.
 LicenceIsRestricted <- function(cls)
-  grepl('NC|SA|non-commercial', cls) & !grepl('^unknown', cls)
+  grepl('NC|SA|non-commercial', cls) & !grepl('^unknown', cls) & cls != LICENCE_REPO
 LicenceIsUnknown <- function(cls) grepl('^unknown', cls)
 
 # ---- hashing -----------------------------------------------------------------
@@ -278,11 +280,15 @@ WriteLicensesMd <- function(m, wd_root, path = file.path(wd_root, 'sources', 'LI
     '',
     '## Scope of the repository licence',
     '',
-    paste('The repository `LICENSE` (CC BY 4.0) covers what the lab wrote: the pipeline code, the',
-          'per-source parse scripts and READMEs, the parsed and transcribed tables, our reference and',
-          'unit tables, the compiled outputs `TaxonBodyMass.csv`, `TaxonBodyMass_GenusLevel.csv` and',
-          '`TaxonBodyMass_Provenance.csv.gz`, and the bibliographies, to the extent the lab holds',
-          'rights in them. It does not relicense any third-party file. Every raw upstream file kept',
+    paste('The repository `LICENSE` (CC BY-NC 4.0, Creative Commons Attribution-NonCommercial 4.0',
+          'International; owner decision of 2026-10-06, replacing the CC BY 4.0 of earlier commits',
+          'and releases, which keep the licence they carried) covers what the lab wrote: the',
+          'pipeline code, the per-source parse scripts and READMEs, the parsed and transcribed',
+          'tables, our reference and unit tables, the compiled outputs `TaxonBodyMass.csv`,',
+          '`TaxonBodyMass_GenusLevel.csv` and `TaxonBodyMass_Provenance.csv.gz`, and the',
+          'bibliographies, to the extent the lab holds rights in them. The NonCommercial term',
+          'applies to all of it: this material may be shared and adapted with attribution for',
+          'non-commercial purposes only. It does not relicense any third-party file. Every raw upstream file kept',
           'under `sources/` stays under the terms of its licensor, listed below and in the folder',
           'README (the Creative Commons licences ask licensors to "clearly mark any material not',
           'subject to the license"; this file and the `Licence:` lines are that marking). All tracked',
@@ -299,12 +305,15 @@ WriteLicensesMd <- function(m, wd_root, path = file.path(wd_root, 'sources', 'LI
           'CC BY-SA 4.0 (Pata & Hunt 2025) and an author statement limiting use to non-commercial',
           'scientific use (Hechinger et al. 2011). Their raw files, where tracked, are redistributed',
           'here for non-commercial use under those terms and are marked as such; the compiled',
-          'species means that incorporate their values are published under the repository licence',
-          'as aggregated facts. Whether a downstream use, in particular a commercial one or one in a',
-          'jurisdiction with sui generis database rights, is bound by the upstream terms is for the',
-          'user of the aggregated values to decide; the sources behind every value are listed so that',
-          'a user can exclude them (`source_mass`, `TaxonBodyMass_Provenance.csv.gz`). Owner',
-          'decision of 2026-10-06 (issue #6, option A of the audit).'),
+          'species means that incorporate their values are published under the repository licence,',
+          'CC BY-NC 4.0, as aggregated facts, which aligns the repository with the non-commercial',
+          'term of these sources. Whether a downstream use, in particular one in a jurisdiction',
+          'with sui generis database rights, is also bound by the share-alike term of Pata & Hunt',
+          '2025 (CC BY-SA 4.0) or the no-derivatives term of Cai et al. 2025 and Hoehler et al.',
+          '2023 (CC BY-NC-ND 4.0) is for the user of the aggregated values to decide; the sources',
+          'behind every value are listed so that a user can exclude them (`source_mass`,',
+          '`TaxonBodyMass_Provenance.csv.gz`). Owner decisions of 2026-10-06 (issue #6, option A',
+          'of the audit; relicensing to CC BY-NC 4.0).'),
     '',
     '## Summary by licence class',
     '',

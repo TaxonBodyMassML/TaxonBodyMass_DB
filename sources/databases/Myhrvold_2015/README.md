@@ -5,7 +5,7 @@ The data of this label are fetched live by `R/library/data_retrieve.r` (retrieve
 Filters: see `sources/databases/DataRetriever/README.md` (positive `adult_body_mass_g` only; nothing is filtered here).
 Mass type: see the DataRetriever README (body mass in grams as compiled by the Amniote database, the median of the raw values).
 Imputed rows: none flagged (see the DataRetriever README).
-Licence: repository (CC BY 4.0) (the files here are our own working tables: the name table and the transcription of the Supplemental Table 1 literature-cited list, and the tool's `primary_references.csv`; no raw file is stored. The data paper's terms -- `metadata.htm`: "Copyright restrictions: None. Proprietary restrictions: Please cite this data paper when the data are used in publications. Costs: None."; the figshare collection is CC0 1.0 per the retriever script; https://doi.org/10.1890/15-0846R.1 -- apply to the data fetched at run time, see the DataRetriever README).
+Licence: repository (CC BY-NC 4.0) (the files here are our own working tables: the name table and the transcription of the Supplemental Table 1 literature-cited list, and the tool's `primary_references.csv`; no raw file is stored. The data paper's terms -- `metadata.htm`: "Copyright restrictions: None. Proprietary restrictions: Please cite this data paper when the data are used in publications. Costs: None."; the figshare collection is CC0 1.0 per the retriever script; https://doi.org/10.1890/15-0846R.1 -- apply to the data fetched at run time, see the DataRetriever README).
 
 | file | contents |
 | --- | --- |
