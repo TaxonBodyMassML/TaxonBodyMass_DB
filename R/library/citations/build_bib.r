@@ -122,6 +122,27 @@ MatchingNoDOIEntry <- function(row, prim) {
   as.list(prim[hit[1], ])
 }
 
+# The row a DOI-less entry is built from when several accepted rows share
+# its key (a work cited by two compilations, MatchingNoDOIEntry()): the row
+# decided first (`decided_at`, then source label and key), among the rows of
+# `prim` that carry `key`, the row being keyed (`r`) and the twin it takes
+# the key from. Before 2026-10-08 the entry was built from the twin on the
+# run that keyed the new row and from whichever keyed row sorted first on
+# every later run, so a second `--bib` rewrote the text of eight shared
+# entries (Silva 1995, Garbutt 1999, Medway 1969, ... from the Jones_2009
+# rows decided that day instead of the Smith_2003 rows of 2026-10-05).
+# Returns the row as a list.
+NoDOIEntryOwner <- function(key, r, twin, prim) {
+  rows <- list(as.list(r))
+  if (!is.null(twin)) rows <- c(rows, list(as.list(twin)))
+  same <- which(prim$match_status %in% 'nodoi_approved' & prim$bibcite %in% key)
+  rows <- c(rows, lapply(same, function(i) as.list(prim[i, ])))
+  at  <- vapply(rows, function(x) if (is.null(x$decided_at) || is.na(x$decided_at)) '9999-99-99' else as.character(x$decided_at), character(1))
+  src <- vapply(rows, function(x) as.character(x$source_label), character(1))
+  nk  <- vapply(rows, function(x) as.character(x$native_key), character(1))
+  rows[[order(at, src, nk, method = 'radix')[1]]]
+}
+
 TwoLetterSuffixes <- function() {
   l <- letters
   as.vector(t(outer(l, l, paste0)))    # aa, ab, ..., az, ba, ...
@@ -510,6 +531,22 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
   row_dois <- setNames(all_prim$doi[acc], all_prim$bibcite[acc])[!is.na(all_prim$bibcite[acc])]
   has_id <- !is.na(all_prim$bibcite[acc]) & !is.na(all_prim$cite_id[acc])
   row_ids <- setNames(all_prim$cite_id[acc][has_id], all_prim$bibcite[acc][has_id])    # the CiteID the rows already give a key
+  # an owner's year override belongs to the work: recorded on any accepted
+  # row of a DOI (`:year=YYYY`), it applies to the entry and the key year
+  # whichever row builds them (Dunning 2008: the Myhrvold_2015 row decided
+  # `1` without an override sorts before the Wilman_etal_2014 row that
+  # carries `:year=2008`, and the entry had reverted to Crossref's 2007;
+  # 2026-10-08). The first recorded override of a DOI wins.
+  ov_doi <- CleanDOI(all_prim$doi[acc]); ov_yr <- suppressWarnings(as.integer(all_prim$year_override[acc]))
+  has_ov <- which(!is.na(ov_doi) & !is.na(ov_yr))
+  has_ov <- has_ov[!duplicated(ov_doi[has_ov])]
+  override_by_doi <- setNames(ov_yr[has_ov], ov_doi[has_ov])
+  OverrideFor <- function(r) {
+    yo <- suppressWarnings(as.integer(r$year_override))
+    d <- CleanDOI(r$doi)
+    if (is.na(yo) && !is.na(d) && d %in% names(override_by_doi)) yo <- unname(override_by_doi[d])
+    yo
+  }
   Remember <- function(i) {
     if (!is.na(all_prim$cite_id[i]) && !all_prim$cite_id[i] %in% known_ids$CiteID)
       known_ids <<- rbind(known_ids, data.frame(CiteID = all_prim$cite_id[i], Bibcite = all_prim$bibcite[i],
@@ -526,10 +563,11 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
         if (is.na(fam) || !nzchar(fam)) fam <- 'Anon'
         authorless <- c(authorless, sprintf('%s %s (%s)', r$source_label, r$native_key, r$doi))
       }
-      yr <- KeyYear(w, r$year_override, r$parsed_year)
+      yo <- OverrideFor(r)
+      yr <- KeyYear(w, yo, r$parsed_year)
       key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
              else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, row_dois))
-      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, r$year_override)
+      if (!key %in% curated$key && !key %in% names(entries)) entries[key] <- BuildBibEntry(w, key, yo)
       known_keys <- union(known_keys, key)
       row_dois <- c(row_dois, setNames(r$doi, key))       # the next row with this DOI reuses the key
       all_prim$bibcite[i] <- key
@@ -540,7 +578,7 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       twin <- if (is.na(r$bibcite)) MatchingNoDOIEntry(r, all_prim) else NULL
       key <- if (!is.na(r$bibcite)) r$bibcite else if (!is.null(twin)) twin$bibcite else BibKeyFor(surname, r$parsed_year, NA, known_keys)
       if (!key %in% curated$key && !key %in% names(entries)) {
-        own <- if (!is.null(twin)) twin else r
+        own <- NoDOIEntryOwner(key, r, twin, all_prim)
         entries[key] <- BuildBibEntryNoDOI(own, key, own$decided_by, own$decided_at)
       }
       known_keys <- union(known_keys, key)

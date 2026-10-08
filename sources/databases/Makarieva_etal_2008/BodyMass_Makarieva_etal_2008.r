@@ -17,14 +17,30 @@
 # (one row per row of each table, in table order, with the species as a check)
 # and the reference lists into references.csv; the keys are joined here by
 # position and kept as `ref_keys` (SplitRefKeys()).
+# S1a and S7 (owner item Makarieva_2008-2, 2026-10-08): a row whose Source
+# cell names the respiration study and, in brackets, the cell-size source
+# ('De Ley & Schell 1959 [BM, ...]' -> 'S1a:De Ley & Schell 1959; S1a:Holt
+# 1984') keeps only the size source(s), since the database value is the mass
+# the size source gives; record_refs.csv keeps both keys as the SI prints
+# them (the Source column's key first, the bracket's after it), and the first
+# key is dropped here on every row of those two tables that carries two or
+# more. A row with one key (no citable size source) keeps it.
 refs <- read.csv(file.path(wd_source, 'record_refs.csv'), stringsAsFactors = FALSE,
                  colClasses = 'character', na.strings = character(0), encoding = 'UTF-8')
+SizeSourceOnly <- function(keys) {
+  vapply(keys, function(s) {
+    toks <- trimws(strsplit(s, ';', fixed = TRUE)[[1]])
+    toks <- toks[nzchar(toks)]
+    if (length(toks) >= 2) paste(toks[-1], collapse = '; ') else s
+  }, character(1), USE.NAMES = FALSE)
+}
 KeysFor <- function(table, species) {
   r <- refs[refs$table == table, , drop = FALSE]
   r <- r[order(as.integer(r$row)), , drop = FALSE]
   if (nrow(r) != length(species) || !all(enc2utf8(r$species) == enc2utf8(as.character(species))))
     stop('Makarieva_2008: record_refs.csv does not match table ', table, ' row for row')
-  SplitRefKeys(r$ref_keys, ';')
+  keys <- if (table %in% c('S1a', 'S7')) SizeSourceOnly(r$ref_keys) else r$ref_keys
+  SplitRefKeys(keys, ';')
 }
 adat1  <- read.csv(file.path(wd_source, 'S1a.csv'), header = TRUE)
 adat2  <- read.csv(file.path(wd_source, 'S2b.csv'), header = TRUE)

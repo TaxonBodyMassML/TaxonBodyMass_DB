@@ -1,10 +1,10 @@
-# Citations of Myhrvold_2015 -- 2026-10-06 11:53:54 (tbmcite 0.1.0)
+# Citations of Myhrvold_2015 -- 2026-10-08 12:32:26 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --sheet --no-dry-run --offline
 
 Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet: 97 row(s) for Myhrvold_2015, 90 new, tab had 2514 rows; BM_citations snapshotted (443 rows)
+- --sheet: 102 row(s) for Myhrvold_2015, 5 new, tab had 10396 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -18,7 +18,7 @@ Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source 
 | Kot_2010 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.604 | Kot:2010aa | Kot_2010 |
 | Banzato_2012 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1186/1746-6148-8-53 | 1.000 | Banzato:2012aa | Banzato_2012 |
 | Bell_1986 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0003-3472(86)80110-5 | 1.000 | Bell:1986ab | Bell_1986b |
-| Bennett_1986 | 1240 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1007/978-94-009-4684-2 | 0.000 |  |  |
+| Bennett_1986 | 1240 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Bennett:1986ab | Bennett_1986b |
 | Boback_2003 | 1132 | compilation | certain | crossref_only | crossref | crossref_only | 10.1111/j.0014-3820.2003.tb00268.x | 1.000 | Boback:2003aa | Boback_2003 |
 | Borissenko_2003 | 14 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.463 | Borissenko:2003aa | Borissenko_2003 |
 | BrunetRossinni_2004 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1023/b:bgen.0000038022.65024.d8 | 1.000 | Brunet-Rossinni:2004aa | Brunet-Rossinni_2004 |
@@ -28,13 +28,13 @@ Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source 
 | Cordero_2012 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2744/ccb-0874.1 | 1.000 | Cordero:2012aa | Cordero_2012 |
 | Corlett_2011 | 1 | compilation | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 0.541 | Corlett:2011aa | Corlett_2011 |
 | Cuthbert_2004 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/mu03037 | 1.000 | Cuthbert:2004aa | Cuthbert_2004 |
-| deMagalhaes_2009 | 966 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1420-9101.2009.01783.x | 1.000 | De-MagalhAES:2009aa | DeMagalhAES_2009 |
+| deMagalhaes_2009 | 966 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1420-9101.2009.01783.x | 1.000 | De-Magalhaes:2009aa | AnAge |
 | Delson_2000 | 79 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 1.000 | Delson:2000aa | Delson_2000 |
 | Dickman_1996 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.581 | Dickman:1996aa | Dickman_1996 |
 | Dobie_1971 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1442633 | 1.000 | Dobie:1971aa | Dobie_1971 |
 | Dobson_2010 | 18 | compilation | certain | crossref_only | crossref | crossref_only | 10.1139/z10-054 | 1.000 | Dobson:2010aa | Dobson_2010 |
 | Duncan_2009 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1590/s1519-69842009000200012 | 1.000 | Duncan:2009aa | Duncan_2009 |
-| Dunning_1992 | 7580 | compilation | pending | ambiguous | crossref;consensus-mcp | crossref_only | 10.1201/9781420064452 | 1.000 |  |  |
+| Dunning_1992 | 7580 | compilation | approved | owner_candidate | crossref | crossref_only | 10.1201/9781420064452 | 1.000 | Dunning:2008aa | Dunning_2008 |
 | Dyke_2010 | 45 | compilation | certain | crossref_only | crossref | crossref_only | 10.3853/j.0067-1975.62.2010.1547 | 0.600 | Dyke:2010aa | Dyke_2010 |
 | Ernest_2003 | 933 | compilation | certain | crossref_only | crossref | crossref_only | 10.1046/j.1461-0248.2003.00526.x | 1.000 | Ernest:2003ac | Ernest_2003c |
 | Ferreira_2013 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/j.mambio.2013.03.002 | 1.000 | Ferreira:2013aa | Ferreira_2013 |
@@ -64,10 +64,10 @@ Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source 
 | Jouventin_2002 | 1 | compilation | certain | crossref_only | crossref | crossref_only | 10.1098/rspb.2002.2080 | 1.000 | Jouventin:2002aa | Jouventin_2002 |
 | Kays_2009 | 1 | compilation | approved | owner_candidate | crossref | crossref_only | 10.1515/9781400833504 | 0.761 | Kays:2009aa | Kays_2009 |
 | King_1999 | 8 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.467 | King:1999aa | King_1999 |
-| Kratochvil_2006a | 9 | compilation | not_found | below_threshold | crossref | crossref_only | 10.1111/j.1439-0469.2005.00339.x | 0.000 |  |  |
+| Kratochvil_2006a | 9 | compilation | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1439-0469.2005.00339.x | 0.000 | Kratochvil:2006aa | Kratochvil_2006 |
 | Krist_2011 | 52 | compilation | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-185x.2010.00166.x | 1.000 | Krist:2011aa | Krist_2011 |
 | Lambertucci_2009 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-1795.2009.00258.x | 1.000 | Lambertucci:2009aa | Lambertucci_2009 |
-| Lanicci | 1 | compilation | not_found | below_threshold | crossref | crossref_only | 10.15394/jaaer.2011.1338 | 0.274 |  |  |
+| Lanicci | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.274 | Lanicci:2010aa | Lanicci_2010 |
 | Lee_1998 | 20 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.496 | Lee:1998ab | Lee_1998b |
 | Lelievre_2010 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/s00360-009-0423-8 | 1.000 | Lelievre:2010aa | Lelievre_2010 |
 | MarinhoFilho_2002 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.7312/oliv12042-015 | 0.850 | Marinho-Filho:2002aa | Marinho-Filho_2002 |
@@ -79,7 +79,7 @@ Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source 
 | Naughton_2012 | 1 | compilation | approved | owner_candidate | crossref | crossref_only | 10.3138/9781442669574 | 0.797 | Naughton:2012aa | Naughton_2012 |
 | Nowak_1994 | 11 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.370 | Nowak:1994aa | Nowak_1994 |
 | Olifiers_2004 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1466-822x.2004.00115.x | 1.000 | Olifiers:2004aa | Olifiers_2004 |
-| Paleczny_2008 | 4 | measurement | not_found | below_threshold | crossref | crossref_only | 10.12797/politeja.16.2019.61.02 | 0.000 |  |  |
+| Paleczny_2008 | 4 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
 | Palmer_2003 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.506 | Palmer:2003aa | Palmer_2003 |
 | Pangerc_2010 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.333 | Pangerc:2010aa | Pangerc_2010 |
 | Parrott_2009 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.602 | Parrott:2009aa | Parrott_2009 |
@@ -91,7 +91,7 @@ Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source 
 | Rydell_2002 | 4 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1017/s0952836902000626 | 1.000 | Rydell:2002aa | Rydell_2002 |
 | Saber_2010 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.21608/jva.2010.44902 | 1.000 | Saber:2010aa | Saber_2010 |
 | Savage_2004 | 557 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.0269-8463.2004.00856.x | 1.000 | Savage:2004aa | Savage_2004 |
-| Schmidly_2004 | 1 | compilation | pending | weak_match | crossref | crossref_only | 10.7560/308868 | 0.706 |  |  |
+| Schmidly_2004 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.706 | Schmidly:2004aa | Schmidly_2004 |
 | SchuckPaima_2008 | 45 | measurement | certain | crossref_only | crossref | crossref_only | 10.1159/000119710 | 1.000 | Schuck-Paim:2008aa | Schuck-Paim_2008 |
 | Secor_2009 | 4 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1007/s00360-008-0283-7 | 1.000 | Secor:2008aa | Secor_2008 |
 | Seebeck_1998 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.291 | Seebeck:1998aa | Seebeck_1998 |
@@ -107,7 +107,7 @@ Verification mode: full (Crossref + OpenAlex); 57 certain row(s) of this source 
 | Thorbjarnarson_1996 | 18 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.622 | Thorbjarnarson:1996aa | Thorbjarnarson_1996 |
 | Voss_2013 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1206/3778.2 | 1.000 | Voss:2013aa | Voss_2013 |
 | Ward_2004 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.321 | Ward:2004aa | Ward_2004 |
-| Warham_1971 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.2307/1365841 | 0.000 |  |  |
+| Warham_1971 | 1 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
 | Wasser_2010 | 222 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.2009.00671.x | 1.000 | Wasser:2010aa | Wasser_2010 |
 | Watson_2012 | 1 | compilation | certain | crossref_only | crossref | crossref_only | 10.1002/ar.22547 | 1.000 | Watson:2012aa | Watson_2012 |
 | Werner_2012 | 41 | compilation | certain | crossref_only | crossref | crossref_only | 10.1007/s10682-011-9552-0 | 1.000 | Werner:2012aa | Werner_2012 |
