@@ -16,8 +16,10 @@
 #                                  line through DropSciteCheckRows())
 #   QueueDecisionProblems(q)       the problems of one decided queue row (grammar, decided_by,
 #                                  date, candidate DOI and Crossref record, year override)
+#   CiteNote(note)                 the citation text of a `cite: <full citation>` owner_note
 #   ApplyQueueDecisions(...)       validates the owner's `decision` and applies it
-#                                  (1|2|3, doi:..., manual:<Key>, nodoi, self, drop)
+#                                  (1|2|3, doi:..., manual:<Key>, nodoi, self, drop; the
+#                                  parsed_* of a cite: row copied into primary_references)
 #   ScreeningCandidates(...)       the DOIs of a source an agent should screen with Scite
 #                                  (selective screening policy, owner decision 2026-10-05)
 #   DecideMatchCrossrefOnly(...)   the Crossref-only mode of --verify --crossref-only (owner
@@ -781,6 +783,22 @@ SplitDecision <- function(decision) {
   list(action = m[2], year = if (nzchar(m[3])) as.integer(m[3]) else NA_integer_)
 }
 
+# The `cite:` form of owner_note (owner request 2026-10-08): `cite: <full
+# citation>`, the prefix in any case, with or without a space after the
+# colon. Returns the citation text, NA for an empty or any other note. The
+# pull (decisions_sheet.r, ParseCiteNote()) parses it into the queue row's
+# parsed_* fields; ApplyQueueDecisions() copies those into the
+# primary_references row, which a `nodoi` entry is built from.
+cite_note_pattern <- '^\\s*cite:\\s*(.+)$'
+cite_note_fields <- c('parsed_author1', 'parsed_year', 'parsed_title', 'parsed_container', 'parsed_volume', 'parsed_pages')
+CiteNote <- function(note) {
+  if (is.null(note) || length(note) != 1 || is.na(note)) return(NA_character_)
+  m <- regmatches(note, regexec(cite_note_pattern, as.character(note), ignore.case = TRUE, perl = TRUE))[[1]]
+  if (length(m) == 0) return(NA_character_)
+  cite <- trimws(m[2])
+  if (nzchar(cite)) cite else NA_character_
+}
+
 # Apply the owner's decisions: every queue row with a non-empty `decision`
 # must have decided_by and an ISO decided_at, match the grammar and refer to an
 # existing reference; `1|2|3` take that candidate's DOI (approved /
@@ -859,6 +877,13 @@ ApplyQueueDecisions <- function(queue, prim, cfg = NULL) {
     parts <- SplitDecision(q$decision)
     dec <- parts$action
     old_doi <- prim$doi[i]
+    # a `cite:` owner_note: the queue row's parsed_* fields (the pull parsed
+    # the citation into them) replace the row's, so that a nodoi entry is
+    # built from what the owner typed; any other note leaves them alone
+    if (!is.na(CiteNote(q$owner_note))) {
+      for (col in setdiff(cite_note_fields, 'parsed_year')) prim[[col]][i] <- if (is.na(q[[col]]) || !nzchar(trimws(q[[col]]))) NA_character_ else trimws(q[[col]])
+      prim$parsed_year[i] <- suppressWarnings(as.integer(q$parsed_year))
+    }
     prim$decided_by[i] <- q$decided_by; prim$decided_at[i] <- q$decided_at
     prim$tool_version[i] <- citations_tool_version
     prim$year_override[i] <- parts$year

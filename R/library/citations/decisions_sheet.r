@@ -10,9 +10,12 @@
 #                                        native_key + queued_at), dry run by default, snapshot
 #                                        before and after, the decision dropdown set afterwards
 #   SetDecisionValidation(url, tab, col) the dropdown on the `decision` column (Sheets batchUpdate)
+#   CiteNote(note), ParseCiteNote(note) the `cite: <full citation>` form of owner_note (2026-10-08):
+#                                        the citation text, and its parsed fields with the missing ones
 #   ResolveTabDecision(tab_row, q, cfg)  what the owner typed -> a decision, or a per-row error
 #   PullDecisions(queue, tab, ...)       pure: the tab read back -> the queue with the decisions
-#                                        written and one status per tab row, in the read's order
+#                                        (and the parsed fields of a cite: note) written and one
+#                                        status per tab row, in the read's order
 #   PullSummary(results)                 pulled / deferred / errors / ignored per source
 #   ReadDecisionItems(path), WriteDecisionItems(items, path)   Bib/decision_items.csv
 #   PushDecisionItems(items, ...)        the items not yet on BM_decision_items (key item_id)
@@ -201,6 +204,23 @@ PushDecisionRows <- function(queue, url = citations_sheet_url, tab = sheet_tab_d
 }
 
 # ---- the pull -----------------------------------------------------------------------------
+# The `cite:` form of owner_note (owner request 2026-10-08): a note reading
+# `cite: <full citation>` (the prefix in any case, with or without a space)
+# supplies the bibliographic fields of a DOI-less entry, so that the owner
+# never edits parsed_* in primary_references.csv by hand. CiteNote()
+# (decide.r, which --apply-queue uses too) gives the citation text, NA for
+# any other note; ParseCiteNote() parses it with ParseCitationString() into
+# the six parsed_* fields (as the queue stores them, every one character)
+# and names the required ones (author1, year, title, container: what
+# BuildBibEntryNoDOI() needs) that are missing. NULL for any other note.
+ParseCiteNote <- function(note) {
+  cite <- CiteNote(note)
+  if (is.na(cite)) return(NULL)
+  p <- ParseCitationString(cite)
+  parsed <- lapply(setNames(cite_note_fields, cite_note_fields), function(col) { v <- p[[col]][1]; if (Nz(v)) as.character(v) else NA_character_ })
+  list(citation = cite, parsed = parsed, missing = MissingFields(parsed))
+}
+
 # What the owner typed in `decision` of one tab row, resolved against its
 # queue row: an empty cell or `defer` leaves the row open (status deferred);
 # `accept` takes the recommendation shown on the tab (the queue's when the
@@ -208,13 +228,23 @@ PushDecisionRows <- function(queue, url = citations_sheet_url, tab = sheet_tab_d
 # the grammar and pass QueueDecisionProblems() with decided_by / decided_at
 # as the pull will write them; a `doi:` decision is resolved at Crossref
 # when `cfg` is online (offline: pulled unchecked, said in the message, and
-# --apply-queue will still stop on it if it does not resolve). Returns
-# list(decision, status, message): decision NA unless the row is decided.
+# --apply-queue will still stop on it if it does not resolve). An owner_note
+# in the `cite:` form is parsed first: a citation missing a required field
+# is a per-row error whatever the cell says; a complete one makes an empty
+# cell `nodoi`, leaves any typed decision (and `defer`) as it is, and is
+# shown in the status as `pulled <date> (cite: Author (Year) Title.
+# Container vol: pages)`. Returns list(decision, status, message, parsed):
+# decision NA unless the row is decided; `parsed` the cite: fields (a named
+# list of the six parsed_* columns) when a decided row carries them, else NULL.
 ResolveTabDecision <- function(tab_row, queue_row, cfg = NULL, pulled_at = format(Sys.Date()), decided_by = 'owner') {
   tab_row <- as.list(tab_row); queue_row <- as.list(queue_row)
-  Err <- function(msg) list(decision = NA_character_, status = paste0('error: ', msg), message = msg)
+  Err <- function(msg) list(decision = NA_character_, status = paste0('error: ', msg), message = msg, parsed = NULL)
+  cite <- ParseCiteNote(tab_row$owner_note)
+  if (!is.null(cite) && length(cite$missing) > 0)
+    return(Err(sprintf('cite: could not be parsed (missing: %s); edit the note or add the fields in parentheses', paste(cite$missing, collapse = ', '))))
   cell <- Cell(tab_row$decision)
-  if (is.na(cell) || tolower(cell) == 'defer') return(list(decision = NA_character_, status = 'deferred', message = NA_character_))
+  if (is.na(cell) && !is.null(cite)) cell <- 'nodoi'          # the note implies the decision
+  if (is.na(cell) || tolower(cell) == 'defer') return(list(decision = NA_character_, status = 'deferred', message = NA_character_, parsed = NULL))
   decision <- cell
   if (tolower(cell) == 'accept') {
     rec <- Cell(tab_row$recommendation)
@@ -238,17 +268,21 @@ ResolveTabDecision <- function(tab_row, queue_row, cfg = NULL, pulled_at = forma
     if (is.null(cfg) || isTRUE(cfg$offline)) msg <- sprintf('doi:%s not checked at Crossref (offline)', doi)
     else if (is.null(CrossrefWork(doi, cfg))) return(Err(sprintf('doi:%s does not resolve at Crossref', doi)))
   }
-  list(decision = decision, status = sprintf('pulled %s', pulled_at), message = msg)
+  status <- sprintf('pulled %s', pulled_at)
+  if (!is.null(cite)) status <- sprintf('%s (cite: %s)', status, FormatParsedCell(cite$parsed))
+  list(decision = decision, status = status, message = msg, parsed = if (is.null(cite)) NULL else cite$parsed)
 }
 
 # The tab as read back, row by row, against the queue: each tab row is
 # matched on source_label + native_key + queued_at to its queue row (an
 # unknown key, or a key twice on the tab, is an error); a row still open in
 # the queue takes the resolved decision (`decided_by`, `decided_at` =
-# `pulled_at`, `owner_note`); a row already decided in the queue is left as
-# it is -- its status says `pulled <decided_at>` when the cell agrees with
-# the queue, else `ignored: already pulled ...` (a change of mind after the
-# pull is made in the CSV). Pure: nothing is written. Returns list(queue,
+# `pulled_at`, `owner_note`, and the parsed_* fields of a `cite:` note); a
+# row already decided in the queue is left as it is -- its status says
+# `pulled <decided_at>` when the cell agrees with the queue (an empty cell
+# beside a `cite:` note agrees with `nodoi`), else `ignored: already pulled
+# ...` (a change of mind after the pull is made in the CSV). Pure: nothing is
+# written. Returns list(queue,
 # results): `results` has one row per tab row in the tab's order (source_label,
 # native_key, queued_at, cell, decision, status, message), which is what the
 # status column is written from.
@@ -270,9 +304,11 @@ PullDecisions <- function(queue, tab, pulled_at = format(Sys.Date()), decided_by
     j <- which(qkey == tkey[i])
     if (length(j) == 0) { results$status[i] <- 'error: no queue row for this key'; next }
     if (length(j) > 1) j <- if (any(open[j])) j[open[j]][1] else j[1]
+    note <- if ('owner_note' %in% names(tab)) Cell(tab$owner_note[i]) else NA_character_
     if (!open[j]) {
       cell <- results$cell[i]
-      shown <- if (!is.na(cell) && tolower(cell) == 'accept') Cell(if ('recommendation' %in% names(tab)) tab$recommendation[i] else NA) else cell
+      shown <- if (!is.na(cell) && tolower(cell) == 'accept') Cell(if ('recommendation' %in% names(tab)) tab$recommendation[i] else NA)
+               else if (is.na(cell) && !is.na(CiteNote(note))) 'nodoi' else cell
       results$status[i] <- if (!is.na(shown) && shown == queue$decision[j]) sprintf('pulled %s', queue$decided_at[j])
                            else sprintf('ignored: already pulled %s as %s (change it in the CSV)', queue$decided_at[j], queue$decision[j])
       next
@@ -281,7 +317,8 @@ PullDecisions <- function(queue, tab, pulled_at = format(Sys.Date()), decided_by
     results$decision[i] <- r$decision; results$status[i] <- r$status; results$message[i] <- r$message
     if (!is.na(r$decision)) {
       queue$decision[j] <- r$decision; queue$decided_by[j] <- decided_by; queue$decided_at[j] <- pulled_at
-      queue$owner_note[j] <- if ('owner_note' %in% names(tab)) Cell(tab$owner_note[i]) else NA_character_
+      queue$owner_note[j] <- note
+      for (col in names(r$parsed)) queue[[col]][j] <- r$parsed[[col]]    # the fields of a cite: note
       open[j] <- FALSE
     }
   }

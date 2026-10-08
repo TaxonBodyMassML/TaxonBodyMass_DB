@@ -537,6 +537,29 @@ Expect(an$notes[an$native_key == '6'] == 'owner 2026-10-06: looked at the PDF, i
 bn <- base; bn$notes[bn$native_key == '6'] <- 'existing note'
 Expect(ApplyQueueDecisions(qn, bn)$notes[bn$native_key == '6'] == 'existing note; owner 2026-10-06: looked at the PDF, it is the one', 'the note joins existing notes with "; "')
 
+cat('CiteNote(), the cite: owner_note at --apply-queue (2026-10-08)\n')
+Expect(CiteNote('cite: Smith, J. (1987) T. J 1: 2.') == 'Smith, J. (1987) T. J 1: 2.' && CiteNote('CITE:Smith') == 'Smith' && is.na(CiteNote('looked at the PDF')) && is.na(CiteNote(NA)) &&
+         is.na(CiteNote(NULL)) && is.na(CiteNote('cite:  ')) && identical(cite_note_fields, c('parsed_author1', 'parsed_year', 'parsed_title', 'parsed_container', 'parsed_volume', 'parsed_pages')),
+       'CiteNote(): the citation text of a cite: note in any case, with or without a space; NA otherwise')
+cite_note <- 'cite: Smith, J. & Jones, A. (1987) Body size of shrews. Journal of Mammalogy 68: 123-130.'
+qc <- Q('9', 'nodoi'); qc$owner_note <- cite_note          # what --decisions-pull writes: the note and the parsed fields of the citation
+qc$parsed_author1 <- 'Smith'; qc$parsed_year <- '1987'; qc$parsed_title <- 'Body size of shrews'; qc$parsed_container <- 'Journal of Mammalogy'; qc$parsed_volume <- '68'; qc$parsed_pages <- '123-130'
+ac <- ApplyQueueDecisions(qc, base)
+i9 <- which(ac$native_key == '9')
+Expect(ac$parsed_author1[i9] == 'Smith' && identical(ac$parsed_year[i9], 1987L) && ac$parsed_title[i9] == 'Body size of shrews' && ac$parsed_container[i9] == 'Journal of Mammalogy' &&
+         ac$parsed_volume[i9] == '68' && ac$parsed_pages[i9] == '123-130' && is.integer(ac$parsed_year) && ac$match_status[i9] == 'nodoi_approved' && ac$match_reason[i9] == 'owner_nodoi' &&
+         ac$notes[i9] == paste0('owner 2026-10-06: ', cite_note) && base$parsed_container[i9] != 'Journal of Mammalogy' && identical(ApplyQueueDecisions(qc, ac), ac),
+       'a cite: queue row: its parsed_* replace the primary_references row\'s (parsed_year as integer) before nodoi is applied; the full note lands in notes; applied once')
+qc2 <- qc; qc2$parsed_volume <- NA; qc2$parsed_pages <- ''
+ac2 <- ApplyQueueDecisions(qc2, base)
+Expect(is.na(ac2$parsed_volume[i9]) && is.na(ac2$parsed_pages[i9]) && ac2$parsed_title[i9] == 'Body size of shrews',
+       'a cite: row without volume or pages clears those two fields (the citation has none)')
+qp <- Q('9', 'nodoi'); qp$owner_note <- 'looked at the PDF'; qp$parsed_author1 <- 'Smith'; qp$parsed_title <- 'Body size of shrews'
+ap <- ApplyQueueDecisions(qp, base)
+Expect(identical(ap[i9, c('parsed_author1', 'parsed_year', 'parsed_title', 'parsed_container', 'parsed_volume', 'parsed_pages')], base[i9, c('parsed_author1', 'parsed_year', 'parsed_title', 'parsed_container', 'parsed_volume', 'parsed_pages')]) &&
+         ap$match_status[i9] == 'nodoi_approved' && ap$notes[i9] == 'owner 2026-10-06: looked at the PDF',
+       'a non-cite note leaves the primary_references parsed_* alone (the owner\'s hand edits stay the other route)')
+
 cat('DecideMatch() without OpenAlex (service_unavailable), WritePendingQueue() skip\n')
 d <- DecideMatch(Ref(raw_doi = '10.1/thing'), doi_cands = Cand(), services = 'crossref')
 Expect(d$match_status == 'pending' && d$match_reason == 'service_unavailable' && d$doi == '10.1/thing' && d$services == 'crossref',

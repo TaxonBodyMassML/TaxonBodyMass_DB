@@ -169,6 +169,44 @@ Expect(startsWith(ResolveTabDecision(TR('doi:10.1007/bf00392514'), qa, cfg_on)$s
          ResolveTabDecision(TR('doi:10.9999/this-doi-does-not-exist'), qa, cfg_on)$status == 'error: doi:10.9999/this-doi-does-not-exist does not resolve at Crossref',
        'online, a doi: decision is resolved at Crossref (from the recorded fixtures) and an unresolved one is an error')
 
+cat('ResolveTabDecision(): the cite: form of owner_note (2026-10-08)\n')
+full <- 'cite: Smith, J. & Jones, A. (1987) Body size of shrews. Journal of Mammalogy 68: 123-130.'
+want <- list(parsed_author1 = 'Smith', parsed_year = '1987', parsed_title = 'Body size of shrews', parsed_container = 'Journal of Mammalogy', parsed_volume = '68', parsed_pages = '123-130')
+Expect(CiteNote(full) == 'Smith, J. & Jones, A. (1987) Body size of shrews. Journal of Mammalogy 68: 123-130.' && CiteNote('CITE:Smith (1987) T. J 1: 2') == 'Smith (1987) T. J 1: 2' &&
+         CiteNote('  Cite:   x  ') == 'x' && is.na(CiteNote('checked the PDF')) && is.na(CiteNote('cite:')) && is.na(CiteNote('cite: ')) && is.na(CiteNote(NA)) && is.na(CiteNote(NULL)) &&
+         is.na(CiteNote('citation: Smith (1987)')) && is.na(CiteNote('see cite: Smith')),
+       'CiteNote(): the prefix in any case, with or without a space, the text trimmed; any other note, an empty citation and NA give NA')
+pc <- ParseCiteNote(full)
+Expect(identical(pc$parsed, want) && length(pc$missing) == 0 && is.null(ParseCiteNote('checked the PDF')) && is.null(ParseCiteNote(NA)) &&
+         identical(ParseCiteNote('cite: Smith, J. & Jones, A. (1987) Body size of shrews.')$missing, 'container') &&
+         identical(ParseCiteNote('cite: Body size of shrews')$missing, c('year', 'container')),
+       'ParseCiteNote(): the six parsed_* fields as character and the required fields that are missing; NULL for any other note')
+qa_nodoi <- QRow('a', recommendation = 'nodoi')
+r <- ResolveTabDecision(TR(NA, note = full), qa_nodoi, cfg, pulled_at = '2026-10-10')
+Expect(r$decision == 'nodoi' && r$status == 'pulled 2026-10-10 (cite: Smith (1987) Body size of shrews. Journal of Mammalogy 68: 123-130)' && identical(r$parsed, want) && is.na(r$message),
+       'cite: with an empty decision cell: the decision is nodoi, the parsed fields returned, the status shows the parse')
+Expect(ResolveTabDecision(TR('accept', recommendation = 'nodoi', note = full), qa_nodoi, cfg)$decision == 'nodoi' && identical(ResolveTabDecision(TR('accept', recommendation = 'nodoi', note = full), qa_nodoi, cfg)$parsed, want) &&
+         ResolveTabDecision(TR('nodoi', note = full), qa, cfg)$decision == 'nodoi' && ResolveTabDecision(TR(' nodoi ', note = full), qa, cfg)$decision == 'nodoi',
+       'cite: with accept (recommendation nodoi) or a typed nodoi keeps that decision and carries the fields')
+r <- ResolveTabDecision(TR('doi:10.1007/bf00392514', note = full), qa, cfg, pulled_at = '2026-10-10')
+Expect(r$decision == 'doi:10.1007/bf00392514' && identical(r$parsed, want) && startsWith(r$status, 'pulled 2026-10-10 (cite: Smith (1987)') && Has(r$message, 'offline') &&
+         ResolveTabDecision(TR('1', note = full), qa, cfg)$decision == '1' && identical(ResolveTabDecision(TR('1', note = full), qa, cfg)$parsed, want) &&
+         ResolveTabDecision(TR('drop', note = full), qa, cfg)$decision == 'drop',
+       'cite: with a doi:, a candidate or any other valid decision: the decision stands and the parsed fields still update')
+r <- ResolveTabDecision(TR(NA, note = 'cite: Smith, J. & Jones, A. (1987) Body size of shrews.'), qa, cfg)
+Expect(is.na(r$decision) && r$status == 'error: cite: could not be parsed (missing: container); edit the note or add the fields in parentheses' && is.null(r$parsed) &&
+         Has(ResolveTabDecision(TR('nodoi', note = 'cite: Body size of shrews'), qa, cfg)$status, 'error: cite: could not be parsed (missing: year, container)'),
+       'cite: missing a required field is a per-row error whatever the cell says: no decision, no fields, the missing fields named')
+Expect(ResolveTabDecision(TR(NA, note = 'CITE:Smith, J. (1987) Body size of shrews. Journal of Mammalogy 68: 123-130.'), qa, cfg)$decision == 'nodoi' &&
+         ResolveTabDecision(TR(NA, note = 'Cite:   Smith, J. (1987) Body size of shrews. Journal of Mammalogy 68: 123-130.'), qa, cfg)$decision == 'nodoi',
+       'the cite prefix is case-insensitive and works with or without a space after the colon')
+Expect(ResolveTabDecision(TR('defer', note = full), qa, cfg)$status == 'deferred' && is.null(ResolveTabDecision(TR('defer', note = full), qa, cfg)$parsed),
+       'cite: with defer still defers (nothing written)')
+r <- ResolveTabDecision(TR('nodoi', note = 'checked the PDF'), qa, cfg, pulled_at = '2026-10-10')
+Expect(r$decision == 'nodoi' && r$status == 'pulled 2026-10-10' && is.null(r$parsed) && ResolveTabDecision(TR(NA, note = 'checked the PDF'), qa, cfg)$status == 'deferred' &&
+         ResolveTabDecision(TR('maybe', note = 'checked the PDF'), qa, cfg)$status == 'error: \'maybe\' is not a decision (1|2|3, doi:10..., manual:<Key>, nodoi, self, drop; optional :year=YYYY)',
+       'a non-cite note changes nothing: plain status, no fields, an empty cell still defers, a bad cell is still the same error')
+
 cat('PullDecisions()\n')
 queue <- rbind(QRow('a', recommendation = '1'), QRow('b', recommendation = 'nodoi'), QRow('c', c1_services = 'openalex', recommendation = 'nodoi'),
                QRow('d'), QRow('e', recommendation = 'drop'), QRow('f', recommendation = '1', src = 'Other'), QRow('g'))
@@ -220,6 +258,32 @@ Expect(identical(fsp$env$tabs$BM_decisions$status, r$status) && tail(fsp$env$log
 lg <- tempfile(fileext = '.md')
 AppendRoundLog(lg, 'test', c('- one', '- two'), date = '2026-10-10')
 Expect(identical(readLines(lg), c('', '## 2026-10-10 -- test', '', '- one', '- two')), 'a round-log entry: a dated heading and the lines')
+
+cat('PullDecisions() with cite: notes\n')
+qc <- rbind(QRow('p', container = NA, recommendation = 'drop'), QRow('q', recommendation = 'nodoi'), QRow('r', container = NA, recommendation = 'drop'), QRow('s', recommendation = '1'))
+tc <- BuildDecisionRows(qc, '2026-10-07')
+tc$decision[tc$native_key == 'q'] <- 'accept'; tc$decision[tc$native_key == 's'] <- 'nodoi'
+tc$owner_note <- c(full, full, 'cite: Smith, J. (1987) Body size of shrews.', 'checked the PDF')[match(tc$native_key, c('p', 'q', 'r', 's'))]
+resc <- PullDecisions(qc, tc, pulled_at = '2026-10-10', cfg = cfg)
+rc <- resc$results; qcc <- resc$queue
+P <- function(k) unlist(qcc[qcc$native_key == k, cite_note_fields])
+Expect(rc$status[rc$native_key == 'p'] == 'pulled 2026-10-10 (cite: Smith (1987) Body size of shrews. Journal of Mammalogy 68: 123-130)' && qcc$decision[qcc$native_key == 'p'] == 'nodoi' &&
+         qcc$owner_note[qcc$native_key == 'p'] == full && identical(unname(P('p')), unname(unlist(want))) && qcc$decided_by[qcc$native_key == 'p'] == 'owner',
+       'a cite: row with an empty cell is pulled as nodoi: the parsed fields written into the queue row, the note kept in full, the status showing the parse')
+Expect(qcc$decision[qcc$native_key == 'q'] == 'nodoi' && identical(unname(P('q')), unname(unlist(want))) && startsWith(rc$status[rc$native_key == 'q'], 'pulled 2026-10-10 (cite:'),
+       'a cite: row with accept (recommendation nodoi) keeps the decision and takes the fields')
+Expect(rc$status[rc$native_key == 'r'] == 'error: cite: could not be parsed (missing: container); edit the note or add the fields in parentheses' && is.na(qcc$decision[qcc$native_key == 'r']) &&
+         is.na(qcc$parsed_container[qcc$native_key == 'r']) && qcc$parsed_title[qcc$native_key == 'r'] == 'A study of things' && is.na(qcc$owner_note[qcc$native_key == 'r']),
+       'a cite: row missing the container is an error: the row stays open, no field and no note written')
+Expect(rc$status[rc$native_key == 's'] == 'pulled 2026-10-10' && qcc$decision[qcc$native_key == 's'] == 'nodoi' && qcc$owner_note[qcc$native_key == 's'] == 'checked the PDF' &&
+         identical(unname(P('s')), c('Doe', '2001', 'A study of things', 'J Things', '5', '1-10')) && identical(names(qcc), pending_queue_columns),
+       'a non-cite note leaves the parsed fields as they were; the queue keeps its schema')
+Expect(FieldsComplete(qcc[qcc$native_key == 'p', ]) && !FieldsComplete(qc[qc$native_key == 'p', ]) && is.data.frame(ApplyQueueDecisions(qcc, EmptyPrimaryReferences(), cfg)),
+       'the cite: row is complete after the pull where it was not before, and the pulled queue passes the apply-time checks')
+resc2 <- PullDecisions(qcc, tc, pulled_at = '2026-10-11', cfg = cfg)
+Expect(resc2$results$status[resc2$results$native_key == 'p'] == 'pulled 2026-10-10' && resc2$results$status[resc2$results$native_key == 'q'] == 'pulled 2026-10-10' &&
+         identical(resc2$queue, qcc),
+       'a second pull: the cite: row with the empty cell reads as pulled on its date (the empty cell agrees with nodoi), the queue unchanged')
 
 cat('ReadDecisionItems(), WriteDecisionItems(), PushDecisionItems(), PullDecisionItems()\n')
 items <- data.frame(item_id = c('Src-1', 'Src-2', 'Other-1'), asked_at = '2026-10-06', source_label = c('Src', 'Src', 'Other'),
