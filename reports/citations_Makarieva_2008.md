@@ -1,10 +1,10 @@
-# Citations of Makarieva_2008 -- 2026-10-06 10:42:03 (tbmcite 0.1.0)
+# Citations of Makarieva_2008 -- 2026-10-08 10:35:34 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue --offline
 
 Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet: 297 row(s) for Makarieva_2008, 283 new, tab had 2231 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 22 decision(s) applied: S1a:Ensign 1970 -> approved, S1a:Kornberg 1958 -> approved, S1a:Kornberg & Gotto 1961 -> approved, S1a:Wieslander et al. 1987 -> approved, S2a:Edwards & Lloyd 1977 [2] -> nodoi_approved, S2a:Marshall 1948 [1] -> nodoi_approved, S2a:Pace & Frost 1948 -> nodoi_approved, S2a:Zeledon 1960 [1] -> nodoi_approved, S2a:Zeledon 1960 [2] -> nodoi_approved, S4:Armitage & Lei 1979 -> approved, S4:Edwards 1946 -> approved, S4:Lewis & Haefner 1976 -> approved, S4:Moots & Epifanio 1974 -> approved, S4:Müller 1943 -> nodoi_approved, S4:Penkoff & Thurberg 1982 -> approved, S4:Reiche 1968 -> approved, S4:Silverthorn 1975 -> approved, S4:Veerannan 1972 -> approved, S4:Vernberg 1959 -> approved, S4:Will 1952 -> nodoi_approved, S7:Carpenter et al. 2004 -> approved, S7:Koenig & Schmidt 1995 -> nodoi_approved
 
 ## References
 
@@ -49,7 +49,7 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S1a:Dworkin & Niederpruem 1964 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.87.2.316-322.1964 | 1.000 | Dworkin:1964aa | Dworkin_1964 |
 | S1a:Eisenberg et al. 1974 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.120.1.147-153.1974 | 1.000 | Eisenberg:1974aa | Eisenberg_1974 |
 | S1a:Engelhard et al. 1957 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1128/jb.73.2.206-210.1957 | 1.000 | Engelhard:1957aa | Engelhard_1957 |
-| S1a:Ensign 1970 | 1 | measurement | pending | retracted | crossref;consensus-mcp | crossref_only | 10.1128/jb.103.3.569-577.1970 | 1.000 |  |  |
+| S1a:Ensign 1970 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1128/jb.103.3.569-577.1970 | 1.000 |  |  |
 | S1a:Faulkner & Garduño 2002 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.184.24.7025-7041.2002 | 1.000 | Faulkner:2002aa | Faulkner_2002 |
 | S1a:Frederick et al. 1974 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/aac.6.6.712 | 1.000 | Frederick:1974aa | Frederick_1974 |
 | S1a:Frustaci et al. 1991 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1128/jb.173.3.1145-1150.1991 | 0.815 | Frustaci:1991aa | Frustaci_1991 |
@@ -82,8 +82,8 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S1a:Keevil & Anthony 1979 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1042/bj1820071 | 1.000 | Keevil:1979aa | Keevil_1979 |
 | S1a:Kelly & Wood 2000 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1099/00207713-50-2-511 | 0.879 | Kelly:2000aa | Kelly_2000 |
 | S1a:Kenimer & Lapp 1978 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1128/jb.134.2.537-545.1978 | 0.842 | Kenimer:1978aa | Kenimer_1978 |
-| S1a:Kornberg 1958 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1042/bj0680549 | 0.653 |  |  |
-| S1a:Kornberg & Gotto 1961 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1042/bj0680549 | 0.653 |  |  |
+| S1a:Kornberg 1958 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1042/bj0680549 | 0.653 |  |  |
+| S1a:Kornberg & Gotto 1961 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1042/bj0780069 | 0.651 |  |  |
 | S1a:Kornberg & Morris 1965 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1042/bj0950577 | 1.000 | Kornberg:1965aa | Kornberg_1965 |
 | S1a:Kowalski et al. 1999 | 4 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.482 | Kowalski:1999aa | Kowalski_1999 |
 | S1a:Krieg 1976 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/br.40.1.55-115.1976 | 1.000 | Krieg:1976aa | Krieg_1976 |
@@ -149,14 +149,14 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S1a:Walker 1959 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1042/bj0720188 | 1.000 | Walker:1959aa | Walker_1959 |
 | S1a:Weinstein et al. 1962 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.83.5.1010-1016.1962 | 1.000 | Weinstein:1962aa | Weinstein_1962 |
 | S1a:Wen et al. 1999 | 4 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1099/00207713-49-2-567 | 0.797 | Wen:1999aa | Wen_1999 |
-| S1a:Wieslander et al. 1987 | 1 | measurement | pending | ambiguous | crossref | crossref_only | 10.1111/j.1432-1033.1995.0734p.x | 1.000 |  |  |
+| S1a:Wieslander et al. 1987 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1432-1033.1995.0734p.x | 1.000 |  |  |
 | S1a:Youmans et al. 1960 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1128/jb.80.3.394-399.1960 | 0.860 | Youmans:1960aa | Youmans_1960 |
 | S2a:Boell 1945 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1073/pnas.31.12.396 | 0.839 | Boell:1945aa | Boell_1945 |
 | S2a:Chatterjee & Ghosh 1959 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.577 | Chatterjee:1959aa | Chatterjee_1959 |
 | S2a:Crawford et al. 1994 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.3354/meps112135 | 1.000 | Crawford:1994aa | Crawford_1994 |
 | S2a:Doran 1957 | 2 | measurement | approved | owner_doi | crossref | crossref_only | 10.1111/j.1550-7408.1957.tb02506.x | 0.907 | Doran:1957aa | Doran_1957 |
 | S2a:Doran 1958 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1111/j.1550-7408.1958.tb02532.x | 0.972 | Doran:1958aa | Doran_1958 |
-| S2a:Edwards & Lloyd 1977 [2] | 1 | measurement | pending | owner_review | crossref;consensus-mcp | crossref_only | 10.1099/00221287-103-2-207 | 1.000 |  |  |
+| S2a:Edwards & Lloyd 1977 [2] | 1 | measurement | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 1.000 |  |  |
 | S2a:Fenchel & Finlay 1983 | 5 | measurement | approved | owner_doi | crossref | crossref_only | 10.1007/bf02015125 | 1.000 | Fenchel:1983aa | Fenchel_1983 |
 | S2a:Gregg 1950 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1002/jez.1401140109 | 1.000 | Gregg:1950aa | Gregg_1950 |
 | S2a:Hamburger & Zeuthen 1957 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1016/0014-4827(57)90074-5 | 0.961 | Hamburger:1957aa | Hamburger_1957 |
@@ -169,10 +169,10 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S2a:Leiner et al. 1968 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.547 | Leiner:1968aa | Leiner_1968 |
 | S2a:Lund 1918 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1152/ajplegacy.1918.47.2.167 | 0.276 | Lund:1918aa | Lund_1918 |
 | S2a:Maier & Coggeshall 1941 | 2 | measurement | approved | owner_doi | crossref | crossref_only | 10.1093/infdis/69.1.87 | 1.000 | Maier:1941aa | Maier_1941 |
-| S2a:Marshall 1948 [1] | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1016/b978-1-4160-3969-3.00019-6 | 0.595 |  |  |
+| S2a:Marshall 1948 [1] | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.595 |  |  |
 | S2a:Mast et al. 1936 | 2 | measurement | approved | owner_doi | crossref | crossref_only | 10.1002/jcp.1030080202 | 0.979 | Mast:1936aa | Mast_1936 |
 | S2a:Neff et al. 1958 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1086/physzool.31.1.30155380 | 1.000 | Neff:1958aa | Neff_1958 |
-| S2a:Pace & Frost 1948 | 1 | measurement | pending | weak_match | crossref | crossref_only | 10.2307/1538409 | 0.782 |  |  |
+| S2a:Pace & Frost 1948 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.782 |  |  |
 | S2a:Pigon 1955 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.430 | Pigon:1955aa | Pigon_1955 |
 | S2a:Pitts 1932 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.3181/00379727-29-5968 | 0.925 | Pitts:1932aa | Pitts_1932 |
 | S2a:Rajagopal 1962 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1007/bf03051868 | 1.000 | Rajagopal:1962aa | Rajagopal_1962 |
@@ -194,8 +194,8 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S2a:Wilson & James 1963 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1016/0014-4827(63)90105-8 | 0.853 | Wilson:1963aa | Wilson_1963 |
 | S2a:Wilson & Fairbairn 1961 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1111/j.1550-7408.1961.tb01236.x | 1.000 | Wilson:1961aa | Wilson_1961 |
 | S2a:Wirtschafter et al. 1956 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.1111/j.1550-7408.1956.tb02439.x | 1.000 | Wirtschafter:1956aa | Wirtschafter_1956 |
-| S2a:Zeledon 1960 [1] | 2 | measurement | pending | owner_review | crossref;consensus-mcp | crossref_only | 10.1111/j.1550-7408.1960.tb00722.x | 1.000 |  |  |
-| S2a:Zeledon 1960 [2] | 1 | measurement | pending | owner_review | crossref;consensus-mcp | crossref_only | 10.2307/3274935 | 1.000 |  |  |
+| S2a:Zeledon 1960 [1] | 2 | measurement | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 1.000 |  |  |
+| S2a:Zeledon 1960 [2] | 1 | measurement | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 1.000 |  |  |
 | S2a:Zeledon & de Monge 1967 | 1 | measurement | approved | owner_doi | crossref | crossref_only | 10.2307/3276813 | 1.000 | Zeledon:1967aa | Zeledon_1967 |
 | S3:16 | 5 | measurement | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 0.562 | Zachariassen:1988aa | Zachariassen_1988 |
 | S3:20 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1365-2311.1981.tb00634.x | 1.000 | MISPAGEL:1981aa | MISPAGEL_1981 |
@@ -206,7 +206,7 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S4:Abolmasova 1970 | 4 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.426 | Abolmasova:1970aa | Abolmasova_1970 |
 | S4:Adamczewska & Morris 1994 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1242/jeb.188.1.257 | 0.836 | Adamczewska:1994aa | Adamczewska_1994 |
 | S4:Aldrich 1975 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(75)90433-8 | 1.000 | Aldrich:1975aa | Aldrich_1975 |
-| S4:Armitage & Lei 1979 | 18 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1016/0300-9629(79)90007-0 | 0.898 |  |  |
+| S4:Armitage & Lei 1979 | 18 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(79)90007-0 | 0.898 |  |  |
 | S4:Barnes & Barnes 1969 | 12 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0022-0981(69)90022-7 | 1.000 | Barnes:1969aa | Barnes_1969 |
 | S4:Braginski 1957 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.502 | Braginski:1957aa | Braginski_1957 |
 | S4:Bulnheim 1979 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00346402 | 1.000 | Bulnheim:1979aa | Bulnheim_1979 |
@@ -222,7 +222,7 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S4:Dye & van der Veen 1980 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(80)90254-6 | 1.000 | Dye:1980aa | Dye_1980 |
 | S4:Edney 1964 | 4 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1086/physzool.37.4.30152755 | 0.755 | Edney:1964aa | Edney_1964 |
 | S4:Edney & Spencer 1955 | 4 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1242/jeb.32.2.256 | 1.000 | Edney:1955aa | Edney_1955 |
-| S4:Edwards 1946 | 1 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1002/jcp.1030210210 | 0.745 |  |  |
+| S4:Edwards 1946 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1002/jcp.1030210210 | 0.745 |  |  |
 | S4:Edwards & Irving 1943 | 10 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1002/jcp.1030210210 | 0.907 | Edwards:1943aa | Edwards_1943 |
 | S4:Ellis & Morris 1995 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1242/jeb.198.2.409 | 1.000 | Ellis:1995ab | Ellis_1995b |
 | S4:Engelmann 1961 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1948553 | 1.000 | Engelmann:1961aa | Engelmann_1961 |
@@ -249,27 +249,27 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S4:Kotaiah & Rajabai 1972 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.612 | Kotaiah:1972aa | Kotaiah_1972 |
 | S4:Kuzmicheva & Kukina 1974 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.297 | Kuzmicheva:1974aa | Kuzmicheva_1974 |
 | S4:Leffler 1973 | 3 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(73)90241-7 | 1.000 | Leffler:1973aa | Leffler_1973 |
-| S4:Lewis & Haefner 1976 | 4 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1016/s0300-9629(76)80072-2 | 0.890 |  |  |
+| S4:Lewis & Haefner 1976 | 4 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/s0300-9629(76)80072-2 | 0.890 |  |  |
 | S4:Luxmoore 1984 | 4 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.423 | Luxmoore:1984aa | Luxmoore_1984 |
 | S4:MacMillen 1978 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.1086/physzool.51.3.30155740 | 1.000 | MacMillen:1978aa | MacMillen_1978 |
-| S4:Moots & Epifanio 1974 | 2 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.2307/1540396 | 1.000 |  |  |
+| S4:Moots & Epifanio 1974 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1540396 | 1.000 |  |  |
 | S4:Moreira et al. 1983 | 4 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(83)90711-9 | 1.000 | Moreira:1983aa | Moreira_1983 |
 | S4:Morrison 1946 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1538259 | 1.000 | Morrison:1946aa | Morrison_1946 |
-| S4:Müller 1943 | 6 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf00650112 | 0.494 |  |  |
+| S4:Müller 1943 | 6 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.494 |  |  |
 | S4:Nival et al. 1972 | 12 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1007/bf00346954 | 0.908 | Nival:1972aa | Nival_1972 |
 | S4:Opalinski 1991 | 68 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.615 | Opalinski:1991aa | Opalinski_1991 |
 | S4:Pavlova 1961 | 6 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.444 | Pavlova:1961aa | Pavlova_1961 |
 | S4:Pavlova 1975 | 14 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.473 | Pavlova:1975aa | Pavlova_1975 |
-| S4:Penkoff & Thurberg 1982 | 1 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1016/0300-9629(82)90137-2 | 0.821 |  |  |
+| S4:Penkoff & Thurberg 1982 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(82)90137-2 | 0.821 |  |  |
 | S4:Phillipson & Watson 1965 | 4 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3564867 | 0.929 | Phillipson:1965aa | Phillipson_1965 |
 | S4:Rajagopal 1962 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf03051868 | 1.000 | Rajagopal:1962aa | Rajagopal_1962 |
-| S4:Reiche 1968 | 5 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.2307/1934119 | 0.897 |  |  |
+| S4:Reiche 1968 | 5 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1934119 | 0.897 |  |  |
 | S4:Romanova & Khmeleva 1978 | 9 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.455 | Romanova:1978aa | Romanova_1978 |
 | S4:Saito 1965 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.474 | Saito:1965aa | Saito_1965 |
 | S4:Schindler 1968 | 3 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/2954 | 0.925 | Schindler:1968aa | Schindler_1968 |
 | S4:Schmid 1996 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.415 | Schmid:1996aa | Schmid_1996 |
 | S4:Seibel 2007 | 38 | compilation | certain | crossref_only | crossref | crossref_only | 10.1242/jeb.02588 | 1.000 | Seibel:2007aa | Seibel_2007 |
-| S4:Silverthorn 1975 | 4 | measurement | pending | weak_match | crossref;consensus-mcp | crossref_only | 10.1016/0300-9629(75)90014-6 | 0.731 |  |  |
+| S4:Silverthorn 1975 | 4 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(75)90014-6 | 0.731 |  |  |
 | S4:Simčič & Brancelj 2006 | 3 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1365-2427.2006.01522.x | 0.835 | SIMCIC:2006aa | SIMCIC_2006 |
 | S4:Simčič et al. 2005 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1365-2427.2005.01339.x | 1.000 | SIMCIC:2005aa | SIMCIC_2005 |
 | S4:Sutschenya & Abolmasova 1973 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.490 | Sutschenya:1973aa | Sutschenya_1973 |
@@ -279,10 +279,10 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S4:Thuesen & Childress 1994 | 19 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1542168 | 1.000 | Thuesen:1994aa | Thuesen_1994 |
 | S4:Thuesen et al. 1998 | 50 | measurement | certain | crossref_only | crossref | crossref_only | 10.3354/meps168095 | 1.000 | Thuesen:1998aa | Thuesen_1998 |
 | S4:Tscherbakov & Muragina 1953 | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.484 | Tscherbakov:1953aa | Tscherbakov_1953 |
-| S4:Veerannan 1972 | 7 | measurement | pending | ambiguous | crossref;consensus-mcp | crossref_only | 10.1007/bf00389084 | 0.845 |  |  |
+| S4:Veerannan 1972 | 7 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1007/bf00389084 | 0.845 |  |  |
 | S4:Veerannan 1974 | 13 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1007/bf00389084 | 0.797 | Veerannan:1974aa | Veerannan_1974 |
-| S4:Vernberg 1959 | 7 | measurement | pending | ambiguous | crossref | crossref_only | 10.2307/1929812 | 0.849 |  |  |
-| S4:Will 1952 | 2 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/bf00298940 | 0.450 |  |  |
+| S4:Vernberg 1959 | 7 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1929812 | 0.849 |  |  |
+| S4:Will 1952 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.450 |  |  |
 | S6b:Gavrilov 1974a | 6 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.410 | Gavrilov:1974aa | Gavrilov_1974 |
 | S6b:Gavrilov 1977 | 6 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.467 | Gavrilov:1977aa | Gavrilov_1977 |
 | S6b:Gavrilov 1979a | 23 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.328 | Gavrilov:1979aa | Gavrilov_1979 |
@@ -306,7 +306,7 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S7:Biggins 1969 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1128/jb.99.2.570-575.1969 | 1.000 | Biggins:1969aa | Biggins_1969 |
 | S7:Broady & Kibblewhite 1991 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/s095410209100007x | 1.000 | Broady:1991aa | Broady_1991 |
 | S7:Carpenter & Roenneberg 1995 | 3 | measurement | approved | owner_candidate | crossref | crossref_only | 10.3354/meps118267 | 0.881 | Carpenter:1995aa | Carpenter_1995 |
-| S7:Carpenter et al. 2004 | 6 | measurement | pending | retracted | crossref;consensus-mcp | crossref_only | 10.1016/j.dsr.2003.10.006 | 1.000 |  |  |
+| S7:Carpenter et al. 2004 | 6 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/j.dsr.2003.10.006 | 1.000 |  |  |
 | S7:Chen et al. 1989 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0168-9452(89)90166-0 | 0.922 | Chen:1989aa | Chen_1989 |
 | S7:Ciferri 1983 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/mr.47.4.551-578.1983 | 1.000 | Ciferri:1983aa | Ciferri_1983 |
 | S7:Cox 1986 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-8137.1986.tb02910.x | 1.000 | Cox:1986aa | Cox_1986 |
@@ -317,7 +317,7 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S7:Gordillo et al. 1999 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1023/a:1008090402847 | 1.000 | Gordillo:1998aa | Gordillo_1998 |
 | S7:Hammouda & El-Sheekh 1994 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf00213178 | 1.000 | Hammouda:1994aa | Hammouda_1994 |
 | S7:Haury & Spiller 1981 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.147.1.227-235.1981 | 1.000 | Haury:1981aa | Haury_1981 |
-| S7:Koenig & Schmidt 1995 | 1 | measurement | not_found | below_threshold | crossref | crossref_only | 10.1007/978-94-011-3953-3_57 | 0.670 |  |  |
+| S7:Koenig & Schmidt 1995 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.670 |  |  |
 | S7:Kratz & Myers 1955 | 15 | measurement | certain | crossref_only | crossref | crossref_only | 10.1104/pp.30.3.275 | 1.000 | Kratz:1955aa | Kratz_1955 |
 | S7:Padan et al. 1971 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.106.1.45-50.1971 | 1.000 | Padan:1971aa | Padan_1971 |
 | S7:Pereira et al. 2005 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.4067/s0717-66432005000100005 | 1.000 | Pereira:2005aa | Pereira_2005 |
