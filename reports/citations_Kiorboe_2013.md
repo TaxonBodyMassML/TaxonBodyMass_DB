@@ -1,10 +1,10 @@
-# Citations of Kiorboe_2013 -- 2026-10-08 10:35:44 (tbmcite 0.1.0)
+# Citations of Kiorboe_2013 -- 2026-10-08 12:32:38 (tbmcite 0.1.0)
 
-Steps: --apply-queue --offline
+Steps: --sheet --no-dry-run --offline
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 2 decision(s) applied: 5 -> nodoi_approved, 13 -> nodoi_approved
+- --sheet: 17 row(s) for Kiorboe_2013, 1 new, tab had 10401 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -14,14 +14,14 @@ Verification mode: full (Crossref + OpenAlex)
 | 2 | 75 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1016/0022-0981(81)90065-4 | 0.922 | Falk-Petersen:1981aa | Falk-Petersen_1981 |
 | 3 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1007/bf00238291 | 1.000 | Huntley:1989aa | Huntley_1989 |
 | 4 | 37 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1093/plankt/fbh093 | 1.000 | Iguchi:2004aa | Iguchi_2004 |
-| 5 | 153 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.331 |  |  |
+| 5 | 153 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.331 | Ikeda:1974aa | Ikeda_1974 |
 | 6 | 13 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1007/bf00392514 | 1.000 | Ikeda:1986aa | Ikeda_1986 |
 | 7 | 10 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.593 | Ikeda:1998aa | Ikeda_1998 |
 | 8 | 14 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1007/bf00391956 | 1.000 | Ikeda:1989aa | Ikeda_1989 |
 | 9 | 126 | measurement | nodoi_approved | owner_nodoi | crossref;openalex;none |  |  | 1.000 | Kremer:1976aa | Kremer_1976 |
 | 10 | 18 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.4319/lo.2000.45.3.0569 | 1.000 | Menden-Deuer:2000aa | MendenDeuer_2000 |
 | 12 | 34 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1007/bf00355587 | 0.944 | Omori:1969aa | Omori_1969 |
-| 13 | 19 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.708 |  |  |
+| 13 | 19 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.708 | Ikeda:1984aa | Ikeda_1984 |
 | 14 | 13 | measurement | approved | owner_candidate | crossref;openalex |  | 10.4319/lo.1989.34.6.1097 | 0.917 | Putt:1989aa | Putt_1989 |
 | 15 | 3 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1093/plankt/2.4.381 | 0.983 | Reeve:1980aa | Reeve_1980 |
 | 16 | 40 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1016/0022-0981(82)90087-9 | 1.000 | Tande:1982aa | Tande_1982 |

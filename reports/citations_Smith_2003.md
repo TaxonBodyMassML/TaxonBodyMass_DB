@@ -1,10 +1,10 @@
-# Citations of Smith_2003 -- 2026-10-08 10:37:25 (tbmcite 0.1.0)
+# Citations of Smith_2003 -- 2026-10-08 12:32:50 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet --no-dry-run --offline
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 3 decision(s) applied: 56 -> approved, WalkersOnline -> approved, Walkers -> approved
+- --sheet: 240 row(s) for Smith_2003, 0 new, tab had 10402 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -14,7 +14,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 13 | 1 | compilation | approved | owner_candidate | crossref;openalex |  | 10.2307/j.ctv264f91j.36 | 0.826 | Murray:2022aa | Murray_2022 |
 | 15 | 1 | compilation | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.502 | Keast:1972aa | Keast_1972 |
 | 25 | 1 | compilation | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.489 | Kurten:1980aa | Kurten_1980 |
-| 56 | 12 | compilation | approved | owner_doi | crossref |  | 10.56021/9780801857898 | 1.000 |  |  |
+| 56 | 12 | compilation | approved | owner_doi | crossref |  | 10.56021/9780801857898 | 1.000 | Nowak:1999ab | Nowak_1999b |
 | 59 | 224 | compilation | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.489 | Strahan:1995aa | Strahan_1995 |
 | 60 | 991 | compilation | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.431 | Silva:1995aa | Silva_1995 |
 | 61 | 504 | compilation | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.2307/3546496 | 1.000 | Marquet:1999aa | Marquet_1999 |
@@ -221,8 +221,8 @@ Verification mode: full (Crossref + OpenAlex)
 | 281 | 1 | measurement | certain | two_service_agreement | crossref;openalex |  | 10.1023/a:1016660123189 | 1.000 | Lim:2001ab | Lim_2001b |
 | 282 | 1 | measurement | certain | two_service_agreement | crossref;openalex |  | 10.1111/j.1365-2028.2004.00505.x | 1.000 | Webala:2004aa | Webala_2004 |
 | 283 | 1 | measurement | approved | owner_candidate | crossref;openalex |  | 10.1007/s00442-006-0469-1 | 1.000 | Wang:2006aa | Wang_2006 |
-| WalkersOnline | 15 | compilation | approved | owner_doi | crossref |  | 10.56021/9780801857898 | 1.000 |  |  |
-| Walkers | 4 | compilation | approved | owner_doi | crossref |  | 10.56021/9780801857898 | 1.000 |  |  |
+| WalkersOnline | 15 | compilation | approved | owner_doi | crossref |  | 10.56021/9780801857898 | 1.000 | Nowak:1999ab | Nowak_1999b |
+| Walkers | 4 | compilation | approved | owner_doi | crossref |  | 10.56021/9780801857898 | 1.000 | Nowak:1999ab | Nowak_1999b |
 | DamuthWG | 11 | compilation | rejected | owner_drop | crossref;openalex |  | 10.7490/f1000research.1114856.1 | 0.518 |  |  |
 | Goheen | 11 | measurement | rejected | owner_drop | crossref;openalex |  | 10.1093/benz/9780199773787.article.b00018177 | 0.445 |  |  |
 | MorganErnest | 4 | compilation | rejected | owner_drop | crossref;openalex |  | 10.1093/oseo/instance.00284333 | 0.306 |  |  |
