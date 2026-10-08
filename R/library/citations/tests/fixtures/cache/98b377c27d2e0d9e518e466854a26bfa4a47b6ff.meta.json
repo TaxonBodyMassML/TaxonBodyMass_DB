@@ -1,0 +1,6 @@
+{
+  "url": "https://api.crossref.org/works?query.bibliographic=Mammalian%20Species%20612%3A%201-8%20%281999%29&rows=5&mailto=mnovak.m%40gmail.com",
+  "status": 200,
+  "fetched_at": "2026-10-08T21:10:03Z",
+  "tool_version": "tbmcite 0.1.0"
+}

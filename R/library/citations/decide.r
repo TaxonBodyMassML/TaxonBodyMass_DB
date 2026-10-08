@@ -40,7 +40,8 @@
 # ---- scoring --------------------------------------------------------------------------
 # The locally computed agreement between the parsed reference and one
 # candidate row; adds title_sim, author_match, year_match, container_match,
-# volume_match, pages_match and n_agree to the row.
+# volume_match (the candidate's issue standing for a missing volume),
+# pages_match and n_agree to the row.
 ScoreCandidate <- function(parsed, cand, window = citations_thresholds$year_window) {
   if (nrow(cand) == 0) return(cbind(cand, title_sim = numeric(), author_match = logical(), year_match = logical(),
                                      container_match = logical(), volume_match = logical(), pages_match = logical(),
@@ -49,7 +50,12 @@ ScoreCandidate <- function(parsed, cand, window = citations_thresholds$year_wind
   cand$author_match    <- vapply(cand$author1, function(a) AuthorMatch(parsed$parsed_author1, a), logical(1), USE.NAMES = FALSE)
   cand$year_match      <- !is.na(parsed$parsed_year) & !is.na(cand$year) & abs(cand$year - parsed$parsed_year) <= window
   cand$container_match <- vapply(cand$container, function(x) ContainerMatch(parsed$parsed_container, x), logical(1), USE.NAMES = FALSE)
-  cand$volume_match    <- vapply(cand$volume, function(x) VolumeMatch(parsed$parsed_volume, x), logical(1), USE.NAMES = FALSE)
+  # a record without a volume that carries its number as the issue (the
+  # JSTOR-era Mammalian Species accounts, 'Mammalian Species 612: 1-8' deposited
+  # as issue 612, volume none): the issue stands for the volume (#128)
+  cand$volume_match    <- vapply(seq_len(nrow(cand)), function(i)
+    VolumeMatch(parsed$parsed_volume, cand$volume[i]) ||
+      (is.na(cand$volume[i]) && !is.null(cand$issue) && VolumeMatch(parsed$parsed_volume, cand$issue[i])), logical(1))
   cand$pages_match     <- vapply(cand$pages, function(x) PagesMatch(parsed$parsed_pages, x), logical(1), USE.NAMES = FALSE)
   cand$n_agree <- as.integer(cand$author_match) + as.integer(cand$year_match) + as.integer(cand$container_match) +
                   as.integer(cand$volume_match) + as.integer(cand$pages_match)

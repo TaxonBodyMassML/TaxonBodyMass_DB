@@ -160,6 +160,11 @@ Expect(nrow(cc_jm) == 10 && all(c('10.1644/1545-1542(2002)083<0001:sotacs>2.0.co
 cc_mam <- CrossrefQueryContainer('Mammalia', '27', '238-255', 1963L, cfg)
 Expect(nrow(cc_mam) == 10 && all(cc_mam$container == 'Mammalia') && all(is.na(cc_mam$pages)) && any(cc_mam$title %in% 'NOTES'),
        'the recorded response for "Mammalia 27: 238-255 (1963)": de Gruyter\'s issues, NOTES and BIBLIOGRAPHIE items without page numbers (nothing to accept)')
+cc_ms <- CrossrefQueryContainer('Mammalian Species', '612', '1-8', 1999L, cfg)
+cr_ms <- CrossrefQuery('Mammalian Species 612: 1-8 (1999)', cfg)
+Expect(nrow(cc_ms) == 1 && cc_ms$doi == '10.2307/3504526' && cc_ms$title == 'Nycteris thebaica' && is.na(cc_ms$volume) && cc_ms$issue == '612' && cc_ms$pages == '1' &&
+         nrow(cr_ms) == 5 && all(is.na(cr_ms$volume)) && identical(cr_ms$issue, c('612', '610', '609', '608', '615')) && all(cr_ms$pages == '1') && 'issue' %in% names(EmptyCandidates()),
+       'the recorded responses for "Mammalian Species 612: 1-8 (1999)": the JSTOR-era accounts carry the account number as the issue and no volume (kept as `issue` on the candidate row)')
 w <- CrossrefWork('10.1007/BF00392514', cfg)
 Expect(!is.null(w) && w$DOI == '10.1007/bf00392514' && w$author[[1]]$family == 'Ikeda' && w$volume == '92' && length(w$reference) == 28,
        'CrossrefWork() returns the full message of a DOI (case-insensitive, with reference[])')
@@ -176,8 +181,8 @@ syn <- list(DOI = '10.1/ABC', type = 'journal-article', title = list('Main title
             `container-title` = list('J Syn'), volume = '1', page = '2-3', score = 99,
             `update-to` = list(list(type = 'retraction', DOI = '10.1/abc')), `updated-by` = list(list(type = 'erratum', DOI = '10.1/abc-err')))
 si <- NormaliseCrossrefItem(syn, closed_world = TRUE)
-Expect(si$doi == '10.1/abc' && si$title == 'Main title: A subtitle' && si$author1 == 'First' && si$year == 2001L &&
-         si$update_types == 'update-to:retraction;updated-by:erratum' && si$closed_world && si$score == 99,
+Expect(si$doi == '10.1/abc' && si$title == 'Main title: A subtitle' && si$author1 == 'First' && si$year == 2001L && is.na(si$issue) &&
+         si$update_types == 'update-to:retraction;updated-by:erratum' && si$closed_world && si$score == 99 && NormaliseCrossrefItem(c(syn, list(issue = '4')))$issue == '4',
        'synthetic item: subtitle appended, sequence=first author chosen, year from published-online, update types joined')
 org <- NormaliseCrossrefItem(list(DOI = '10.1/org', type = 'report', title = list(), author = list(list(name = 'Some Agency')), publisher = 'Agency Press'))
 Expect(is.na(org$title) && org$author1 == 'Some Agency' && org$container == 'Agency Press' && is.na(org$year),
@@ -252,8 +257,8 @@ Expect(is.null(OpenAlexWork(NA, cfg)) && Has(ErrorOf(OpenAlexWork('10.1234/not-c
 sw <- NormaliseOpenAlexItem(list(id = 'https://openalex.org/W1', doi = 'https://doi.org/10.1/XYZ', display_name = 'Only display name',
                                  publication_year = 1999, type = 'book', is_retracted = TRUE,
                                  authorships = list(list(author = list(display_name = 'Jean-Pierre van der Meer'))),
-                                 biblio = list(volume = '7', first_page = '12', last_page = '12'), relevance_score = 3.5))
-Expect(sw$doi == '10.1/xyz' && sw$title == 'Only display name' && sw$author1 == 'Meer' && sw$year == 1999L && sw$pages == '12' &&
+                                 biblio = list(volume = '7', issue = '2', first_page = '12', last_page = '12'), relevance_score = 3.5))
+Expect(sw$doi == '10.1/xyz' && sw$title == 'Only display name' && sw$author1 == 'Meer' && sw$year == 1999L && sw$pages == '12' && sw$issue == '2' &&
          isTRUE(sw$is_retracted) && is.na(sw$container) && sw$score == 3.5,
        'synthetic OpenAlex work: display_name fallback, last name token, single page, retraction flag')
 

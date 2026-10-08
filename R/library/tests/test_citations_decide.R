@@ -54,6 +54,9 @@ Expect(sc$title_sim == 1 && sc$author_match && sc$year_match && sc$container_mat
 sc <- ScoreCandidate(Ref(), Cand(author1 = 'Roe', year = 2003L, container = 'Other', volume = '6', pages = '2-4'))
 Expect(sc$n_agree == 0L && !sc$year_match, 'year 2003 is outside the +-1 window; nothing else agrees')
 Expect(ScoreCandidate(Ref(), Cand(year = 2002L))$year_match, 'year 2002 is inside the window')
+Expect(ScoreCandidate(Ref(), Cand(volume = NA_character_, issue = '5'))$volume_match && !ScoreCandidate(Ref(), Cand(volume = '6', issue = '5'))$volume_match &&
+         !ScoreCandidate(Ref(), Cand(volume = NA_character_, issue = '6'))$volume_match && !ScoreCandidate(Ref(), Cand(volume = NA_character_))$volume_match,
+       'a candidate without a volume agrees on its issue (the Mammalian Species accounts, #128); a volume that is there is compared as the volume')
 Expect(nrow(ScoreCandidate(Ref(), EmptyCandidates())) == 0 && 'n_agree' %in% names(ScoreCandidate(Ref(), EmptyCandidates())),
        'no candidates: an empty scored frame with the score columns')
 all <- ScoreAll(Ref(), rbind(Cand(doi = '10.1/data', type = 'dataset'), Cand(doi = '10.1/comp', type = 'component'),
@@ -729,6 +732,9 @@ Expect(xj$match_status == 'pending' && xj$match_reason == 'ambiguous' && xj$serv
 xm <- VerifyReference(TLRef('Mammalia 27: 238-255 (1963)'), cfg, crossref_only = TRUE)
 Expect(xm$match_status == 'not_found' && xm$match_reason == 'below_threshold' && all(is.na(xm$candidates$pages)) && !any(xm$candidates$type %in% 'journal-issue'),
        "Mammalia 27: 238-255 (1963): de Gruyter's NOTES / BIBLIOGRAPHIE items carry no page numbers, so nothing agrees: not_found / below_threshold as before")
+xs <- VerifyReference(TLRef('Mammalian Species 612: 1-8 (1999)'), cfg, crossref_only = TRUE)
+Expect(IsXO(xs, '10.2307/3504526') && xs$volume_match && xs$pages_match && nrow(xs$candidates) == 5 && sum(TitlelessAgreement(xs$candidates)) == 1,
+       'Mammalian Species 612: 1-8 (1999): the account deposited as issue 612 without a volume is accepted on its issue; its four sibling accounts (page 1, 1999) do not agree')
 cc_geb <- CrossrefQueryContainer('Global Ecology and Biogeography', '18', '19-29', 2009L, cfg)
 d <- XO(TLRef('Global Ecology and Biogeography 18: 30-40 (2009)'), open_cands = cc_geb)
 Expect(d$match_status == 'not_found' && d$match_reason == 'below_threshold', 'the same candidates against a key at another page (30-40): rejected')

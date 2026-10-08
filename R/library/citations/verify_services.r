@@ -22,9 +22,11 @@
 #   ReadSciteChecks(path)               Bib/scite_checks.csv (written in Claude Code sessions
 #                                       from the Scite MCP tools; read-only here)
 # Candidates are normalised to one row each: service, doi, title, author1, year,
-# container, volume, pages, type, openalex_id, is_retracted, update_types,
+# container, volume, pages, issue, type, openalex_id, is_retracted, update_types,
 # closed_world, score (the service's relevance score, cached but never used by
-# decide.r). No Google Scholar.
+# decide.r). `issue` is kept for the series that deposit their account number
+# as the issue with no volume (the JSTOR-era Mammalian Species accounts):
+# ScoreCandidate() lets it stand for the volume then (#128). No Google Scholar.
 
 CitationsConfig <- function(wd_root, offline = FALSE, mailto = NULL) {
   paths <- CitationsPaths(wd_root)
@@ -165,18 +167,18 @@ Enc <- function(x) utils::URLencode(enc2utf8(as.character(x)), reserved = TRUE, 
 EmptyCandidates <- function() {
   data.frame(service = character(), doi = character(), title = character(), author1 = character(),
              year = integer(), container = character(), volume = character(), pages = character(),
-             type = character(), openalex_id = character(), is_retracted = logical(),
+             issue = character(), type = character(), openalex_id = character(), is_retracted = logical(),
              update_types = character(), closed_world = logical(), score = numeric(),
              stringsAsFactors = FALSE)
 }
 
 CandidateRow <- function(service, doi, title, author1, year, container, volume, pages, type,
                          openalex_id = NA_character_, is_retracted = NA, update_types = NA_character_,
-                         closed_world = FALSE, score = NA_real_) {
+                         closed_world = FALSE, score = NA_real_, issue = NA_character_) {
   Chr <- function(x) if (is.null(x) || length(x) == 0 || identical(x, '')) NA_character_ else as.character(x[[1]])
   data.frame(service = service, doi = CleanDOI(Chr(doi)), title = Chr(title), author1 = Chr(author1),
              year = if (is.null(year) || length(year) == 0) NA_integer_ else suppressWarnings(as.integer(year[[1]])),
-             container = Chr(container), volume = Chr(volume), pages = Chr(pages), type = Chr(type),
+             container = Chr(container), volume = Chr(volume), pages = Chr(pages), issue = Chr(issue), type = Chr(type),
              openalex_id = Chr(openalex_id), is_retracted = if (is.null(is_retracted)) NA else as.logical(is_retracted),
              update_types = Chr(update_types), closed_world = closed_world,
              score = if (is.null(score) || length(score) == 0) NA_real_ else as.numeric(score[[1]]),
@@ -208,7 +210,7 @@ NormaliseCrossrefItem <- function(item, closed_world = FALSE) {
                container = if (length(item[['container-title']]) > 0) item[['container-title']][[1]] else item$publisher,
                volume = item$volume, pages = item$page, type = item$type,
                update_types = if (length(upd) > 0) paste(upd, collapse = ';') else NA_character_,
-               closed_world = closed_world, score = item$score)
+               closed_world = closed_world, score = item$score, issue = item$issue)
 }
 
 # One OpenAlex work as a candidate row.
@@ -224,7 +226,7 @@ NormaliseOpenAlexItem <- function(w) {
   CandidateRow('openalex', doi = w$doi, title = if (!is.null(w$title)) w$title else w$display_name,
                author1 = a1, year = w$publication_year, container = src, volume = w$biblio$volume,
                pages = pages, type = w$type, openalex_id = w$id, is_retracted = w$is_retracted,
-               score = w$relevance_score)
+               score = w$relevance_score, issue = w$biblio$issue)
 }
 
 # ---- Crossref ------------------------------------------------------------------------
