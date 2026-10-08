@@ -647,3 +647,17 @@ Branch `issue-141-bib-corrections` from main ac201cf (worktree seeded with `sour
 - Full run with `DataSheets = TRUE` on `tmp/RunMe_faurby3.r` (`R/RunMe.r` stays FALSE; recompile = TRUE, DataRetrieve / DataVertNet / DataFishbase = FALSE, `ms_dir` to `tmp/ms`): the three tabs re-read, BM_data 1,084, BM_citations 443, BM_primary_citations 10,393 rows, 0 changed against the copies the `--sheet` step wrote. `TaxonBodyMass.csv` and `TaxonBodyMass_GenusLevel.csv` **byte-identical to main c14d07c** (md5 c68dae74 / 0648c480, 39,887 species); `TaxonBodyMass_Provenance.csv.gz` 218,634 rows and 10,143 distinct primary CiteIDs as before (10 CiteIDs out, 11 in: `Long_1995` was already there): the 11 upgraded keys' 103 record links (98 `compiled_from`, 5 `derived_allometry`) now carry a DOI (`Kelt_2009b` 91, `VanRoosmalen_2002` 2, `Churchfield_2004b` 2, the rest 1 each); Faurby coverage unchanged, 5,898 of 5,900 links (100.0%), 737 distinct CiteIDs. `Bib/TaxonBodyMass_CitationCiteIDs.csv` +11 / -10 rows. `reports/warnings_citations.md` **0 problems**; the 10 stale-row warnings above are the expected ones; the other reports differ by their timestamps only.
 - Tests: `test_citations_bib.R` 116, `decide` 219, `decisions_sheet` 71, `parse` 163, `provenance` 92, `recommend` 46, `services` 82, `sheet` 31; `test_licence_docs.R` 56, `test_recompile_guard.R` 27, `test_retriever_ref_keys.R` 24 -- all pass. Faurby README paragraph; manifest regenerated after the README edit (`sources/source_files.csv`).
 - For the owner: (i) delete the 10 stale Sheet rows above; (ii) decide the 19 new `BM_decisions` rows (`source_label` Faurby_etal_2018, `queued_at` 2026-10-08): `1` where the key's record (c1) is the real source, `nodoi` where the citation you typed is, then "pull"; (iii) optional: fold Wilman_etal_2014 `Ref_141` into `Van-Roosmalen:2002aa` with a `doi:` decision.
+
+## 2026-10-08 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 987 tab row(s) read from BM_decisions: 987 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 23, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 9 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-08.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
