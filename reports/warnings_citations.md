@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-08 16:18:49
+# Citation and provenance warnings -- 2026-10-08 21:36:14
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -13,22 +13,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: Thomas_1915 -> Thomas:1915aa
-- BM_primary_citations: Ruedas_1999 -> Ruedas:1999aa
-- BM_primary_citations: Miyazaki_1982 -> Miyazaki:1982aa
-- BM_primary_citations: Lariviere_1998b -> Lariviere:1998ab
-- BM_primary_citations: Verts_1998b -> Verts:1998ab
-- BM_primary_citations: DiFiore_2007 -> Di-Fiore:2007aa
-- BM_primary_citations: Nicolas_2007 -> Nicolas:2007aa
-- BM_primary_citations: Dunlop_1999 -> Dunlop:1999aa
-- BM_primary_citations: Jones_1977 -> Jones:1977aa
-- BM_primary_citations: Ortega_1997 -> Ortega:1997aa
-- BM_primary_citations: Kinlaw_1998 -> Kinlaw:1998aa
-- BM_primary_citations: vanRoosmalen_2002 -> van-Roosmalen:2002aa
-- BM_primary_citations: Webster_1985 -> Webster:1985aa
-- BM_primary_citations: Ambid_1988 -> Ambid:1988aa
-- BM_primary_citations: Best_1997 -> Best:1997aa
-- BM_primary_citations: Pasitschniak-Arts_1998b -> Pasitschniak-Arts:1998ab
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
