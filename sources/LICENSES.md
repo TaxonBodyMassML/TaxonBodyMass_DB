@@ -1,6 +1,6 @@
 # Licences of the source files
 
-Generated from `sources/source_files.csv` by `R/library/licence_manifest.r` (`Rscript R/library/licence_manifest.r`); do not edit by hand. The manifest lists the 534 tracked files under `sources/databases/` and `sources/conversion_factors/` (168 raw upstream files or exports, 40 parsed transcriptions, the rest our own tables, scripts and documentation) with their size, SHA-256, role and licence class, plus 4 `live` rows for the sources that are downloaded at run time and store nothing. Every source folder states the same class in the `Licence:` line of its README (checked by `CheckSourceDocs()` at every pipeline run; a folder absent from the manifest or without the line stops the run). Issue #6; licence audit of 2026-10-02 and 2026-10-06. This file is a record of what the files, READMEs, bibliographies and deposit records say; it is not legal advice.
+Generated from `sources/source_files.csv` by `R/library/licence_manifest.r` (`Rscript R/library/licence_manifest.r`); do not edit by hand. The manifest lists the 533 tracked files under `sources/databases/` and `sources/conversion_factors/` (167 raw upstream files or exports, 40 parsed transcriptions, the rest our own tables, scripts and documentation) with their size, SHA-256, role and licence class, plus 4 `live` rows for the sources that are downloaded at run time and store nothing. Every source folder states the same class in the `Licence:` line of its README (checked by `CheckSourceDocs()` at every pipeline run; a folder absent from the manifest or without the line stops the run). Issue #6; licence audit of 2026-10-02 and 2026-10-06. This file is a record of what the files, READMEs, bibliographies and deposit records say; it is not legal advice.
 
 ## Scope of the repository licence
 
@@ -26,7 +26,7 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | CC BY-NC-SA 3.0 | 1 | 1 | 122 kB | non-commercial |
 | non-commercial (author statement) | 1 | 2 | 732 kB | non-commercial |
 | publisher file | 16 | 24 | 18.8 MB | no |
-| unpublished | 1 | 2 | 2.2 MB | no |
+| unpublished | 1 | 1 | 441 kB | no |
 | unknown; owner to check | 28 | 57 | 118.3 MB | unknown |
 
 Classes: the CC and "no copyright restrictions" classes are the licensors' statements; "author permission" is a statement in the data paper; "transcription (facts)" marks tables the lab typed or parsed from a publication (facts, attributed to the publication); "publisher file" marks verbatim article or supplementary files whose copyright is with the publisher; "unpublished" marks a private file; "unknown; owner to check" marks a source whose terms are not stated on disk (file, README or bibliography), listed at the end with the page to check. Nothing in this file is guessed from a deposit page that is not quoted on disk; the audit's readings of such pages are given in the notes as readings to confirm.
@@ -180,11 +180,11 @@ Verbatim article or supplementary files (PDF, .doc/.docx, html, csv/xlsx supplem
 
 ## Unpublished
 
-`MOM v10.2` (Smith_etal_2003) is an unpublished Smith-lab update of the MOM data set; who supplied it and under what terms is not recorded (issue #4). It stays tracked until F. Smith answers (owner decision of 2026-10-06); the compiled values that rest on it are labelled `Smith_2003`.
+`MOM v10.2` (Smith_etal_2003) is the unpublished Smith-lab version of the MOM data set underlying Smith et al. 2018 (Science 360:310-313); the route by which the workbook reached the lab and its terms are not recorded (issue #4). The full workbook is no longer tracked (removed 2026-10-08, owner decision; it remains in the git history before that date); only the minimal extract `MOM_v10.2_masses.csv` of the columns the pipeline reads is redistributed, as facts with attribution, not under the repository licence. The compiled values that rest on it are labelled `Smith_2003`.
 
 | Source | Files | Stated in | Redistributable | Attribution | URL to check | Notes |
 |---|---|---|---|---|---|---|
-| databases/Smith_etal_2003 (`Smith_2003`) | `MOM v10.2.xlsx` (1.0 MB), `MOMv10.2.csv` (1.2 MB) | README | no | Smith et al. (2003) Ecology 84:3403 (MOM); lab version v10.2, unpublished Smith-lab update | https://github.com/TaxonBodyMassML/TaxonBodyMass_DB/issues/4 | terms of the unpublished workbook not recorded (issue #4); kept tracked while F. Smith's answer is pending (owner decision 2026-10-06) |
+| databases/Smith_etal_2003 (`Smith_2003`) | `MOM_v10.2_masses.csv` (441 kB) | README | no | Smith et al. (2003) Ecology 84:3403 (MOM); lab version v10.2, unpublished Smith-lab update underlying Smith et al. (2018) Science 360:310-313; minimal extract of the data sheet | https://github.com/TaxonBodyMassML/TaxonBodyMass_DB/issues/4 | terms of the unpublished workbook not recorded (issue #4); the full workbook was untracked on 2026-10-08 (owner decision; in the git history before that date) and only this extract of the columns the pipeline reads is redistributed, as facts with attribution |
 
 ## Not redistributed
 

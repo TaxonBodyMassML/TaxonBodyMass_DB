@@ -1,8 +1,10 @@
 # Build audit/extinct_taxa.csv: binomials of extinct (including historically
 # and prehistorically extinct, and extinct-in-the-wild) species, compiled from the
 # status columns of sources already in the database:
-#   - MOM v10.2 (Smith et al. 2003 update), sheet 'MOM v10.0', column 'Status'
-#     in {extinct, historical}; 'introduction'/'introduced' rows are extant.
+#   - MOM v10.2 (Smith et al. 2003 update), column 'Status' of the extract
+#     MOM_v10.2_masses.csv (the data sheet 'MOM v10.0'; the workbook itself is
+#     no longer tracked, issue #4) in {extinct, historical};
+#     'introduction'/'introduced' rows are extant.
 #   - PHYLACINE 1.2 (Faurby et al. 2018), IUCN.Status.1.2 in {EP, EX, EW}.
 #   - AVONET (Tobias et al. 2022), sheet AVONET3_BirdTree, Species.Status == 'Extinct',
 #     mapped to BirdLife names through the BirdLife-BirdTree crosswalk.
@@ -27,8 +29,9 @@ if (!exists('wd_root')) {
 wd_db <- file.path(wd_root, 'sources', 'databases')
 Bin <- function(x) gsub(' ', '_', trimws(x))
 
-mom <- readxl::read_excel(file.path(wd_db, 'Smith_etal_2003', 'MOM v10.2.xlsx'), sheet = 'MOM v10.0')
-mom <- as.data.frame(mom); names(mom) <- trimws(names(mom))
+mom <- read.csv(file.path(wd_db, 'Smith_etal_2003', 'MOM_v10.2_masses.csv'), stringsAsFactors = FALSE,
+                check.names = FALSE, na.strings = '', encoding = 'UTF-8')
+names(mom) <- trimws(names(mom))
 mom <- mom[!is.na(mom$Genus) & tolower(trimws(mom$Status)) %in% c('extinct', 'historical'), ]
 mom_out <- data.frame(taxon = Bin(paste(mom$Genus, mom$Species)),
                       status = paste0('MOM:', tolower(trimws(mom$Status))),

@@ -1,9 +1,13 @@
-# MOM v10.2 (Smith et al. 2003, updated). The xlsx sheet 'MOM v10.0' carries a
-# 'Status' column (extant / extinct / historical / introduction) that the csv
-# export lacks; only extant (incl. introduced) species are kept so that Late
+# MOM v10.2 (Smith et al. 2003, updated), read from MOM_v10.2_masses.csv, the
+# minimal extract of the workbook's data sheet 'MOM v10.0' (all rows, the eight
+# columns the pipeline uses, cell values verbatim; the workbook itself is no
+# longer tracked, issue #4; build_references.r records how the extract was
+# written). Its 'Status' column (extant / extinct / historical / introduction)
+# is the filter: only extant (incl. introduced) species are kept so that Late
 # Quaternary and historically extinct mammals do not enter the database.
-adat <- readxl::read_excel(file.path(wd_source, 'MOM v10.2.xlsx'), sheet = 'MOM v10.0')
-adat <- as.data.frame(adat); names(adat) <- trimws(names(adat))
+adat <- read.csv(file.path(wd_source, 'MOM_v10.2_masses.csv'), stringsAsFactors = FALSE,
+                 check.names = FALSE, na.strings = '', encoding = 'UTF-8')
+names(adat) <- trimws(names(adat))
 adat <- adat[!is.na(adat$Genus) & tolower(trimws(adat$Status)) %in% c('extant', 'introduction', 'introduced'), ]
 names(adat)[names(adat) == 'Combined.Mass (g)'] <- 'Combined.Mass..g.'
 taxon_tax <- adat[, c('Genus', 'Species', 'Order', 'FAMILY')]
