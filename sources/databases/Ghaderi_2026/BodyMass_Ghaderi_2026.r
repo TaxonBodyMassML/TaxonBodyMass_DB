@@ -1,26 +1,27 @@
 # Ghaderi, Nielsen & He (2026) Applied Soil Ecology 217:106605, supplementary
-# workbook 1-s2.0-S0929139325007437-mmc1.xlsx, sheet 'Original': 573 population
-# records (one row per population x life stage) of predatory soil nematodes
-# (Mononchida; 8 families, 48 genera, 242 binomials). Nothing in the workbook is
-# a weighed mass: the authors took the body length L (um) and the de Man ratio
-# a (= L / greatest body diameter) of each population from the taxonomic
-# description cited in `Source` (an author-year key, 85 keys; no reference list
-# ships with the workbook) and computed the fresh (wet) mass with the volumetric
-# formula of Andrassy (1956), Fresh W (ug) = L * D^2 / 1.6e6 with D = L / a; the
-# other mass columns follow from it (Dry W = 0.104 x Fresh W, Pc = Dry W / 48,
-# plus respiration and carbon budget). The sheets 'Order-*', 'Suborder-*',
-# 'Superfamily-*', 'Family-*', 'Subfamil(t)y-*', 'Genera-*', 'Juveniles' and
-# 'G index' are subsets or rank-level averages of 'Original' and are not read.
-# The frame holds Fresh W as grams (ug -> g, no conversion factor): an
-# allometry-derived value from measured dimensions of the species itself, kept
-# by the rules of DropImputed() (helpers.r) and registered as class `derived`
-# (Bib/source_provenance_classes.csv). Adults of both sexes (f, m) are kept, one
-# row per population (n = 1), so Pass 1 of RunMe.r takes the species geometric
-# mean over populations and sexes; the 14 juvenile rows (J1-J4) are dropped as
-# non-adult records. The `Source` key is kept as `ref_keys` (issue #1).
-adat <- readxl::read_excel(file.path(wd_source, '1-s2.0-S0929139325007437-mmc1.xlsx'),
-                           sheet = 'Original', .name_repair = 'minimal')
-adat <- as.data.frame(adat, stringsAsFactors = FALSE)
+# workbook 1-s2.0-S0929139325007437-mmc1.xlsx, sheet 'Original', exported as
+# Ghaderi_2026_data.csv: 573 population records (one row per population x life
+# stage) of predatory soil nematodes (Mononchida; 8 families, 48 genera, 242
+# binomials). Nothing in the workbook is a weighed mass: the authors took the
+# body length L (um) and the de Man ratio a (= L / greatest body diameter) of
+# each population from the taxonomic description cited in `Source` (an
+# author-year key, 85 keys; no reference list ships with the workbook) and
+# computed the fresh (wet) mass with the volumetric formula of Andrassy (1956),
+# Fresh W (ug) = L * D^2 / 1.6e6 with D = L / a; the other mass columns follow
+# from it (Dry W = 0.104 x Fresh W, Pc = Dry W / 48, plus respiration and
+# carbon budget). The other xlsx sheets ('Order-*', 'Suborder-*',
+# 'Superfamily-*', 'Family-*', 'Subfamil(t)y-*', 'Genera-*', 'Juveniles',
+# 'G index') are subsets or rank-level averages of 'Original' and are not read.
+# The CSV was derived from the xlsx by reading with readxl and writing with
+# write.csv (dropping 3 unnamed trailing columns that held only a footnote),
+# then verified that Fresh W satisfies the Andrassy formula to within 1e-6
+# relative tolerance (README.md). The frame holds Fresh W as grams (ug -> g):
+# an allometry-derived value kept by DropImputed() rules, class `derived`
+# (Bib/source_provenance_classes.csv). Adults of both sexes (f, m) are kept,
+# one row per population (n = 1); 14 juvenile rows (J1-J4) are dropped. The
+# `Source` key is kept as `ref_keys` (issue #1).
+adat <- read.csv(file.path(wd_source, 'Ghaderi_2026_data.csv'),
+                 na.strings = '', stringsAsFactors = FALSE, check.names = FALSE)
 names(adat) <- trimws(names(adat))
 needed <- c('Source', 'Order', 'Family', 'Genus', 'Species', 'L', 'a', 'D', 'Life stage', 'Fresh W')
 if (!all(needed %in% names(adat)))

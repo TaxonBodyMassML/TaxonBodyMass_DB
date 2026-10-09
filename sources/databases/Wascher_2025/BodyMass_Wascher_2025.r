@@ -1,17 +1,18 @@
 # CORVIDATA (Wascher 2025, Scientific Data 12:2032), Zenodo 10.5281/zenodo.17531251,
-# CORVIDATA.xlsx sheet 'CORVIDATA': one row per corvid species (135, AviList 2025
-# taxonomy). `bodymass` is the species average in grams ('not reported' when
-# missing) and `bodymass_ref` the reference it was taken from: AVONET (Tobias et
-# al. 2022; 123 rows, the two-decimal values of the BirdLife and BirdTree sheets
-# of its Supplementary dataset 1), the Handbook of the Birds of the World vol.
-# 14 (del Hoyo et al. 2009; 4), BIRDBASE (Sekercioglu et al. 2025; 2), Atwood
-# (1980; 1) or 'not reported' (5). The compilation measured nothing itself:
-# every value is a copy, so the AVONET rows are registered as verbatim copies
-# of Tobias_2022 in Bib/source_dependencies.csv and every row keeps its
-# reference as `ref_keys`. The workbook is read, not the CSV export of the tab
-# (the export rounds the two-decimal masses to one decimal; README.md).
-adat <- readxl::read_excel(file.path(wd_source, 'CORVIDATA.xlsx'), sheet = 'CORVIDATA',
-                           na = c('', 'NA'))
+# CORVIDATA_data.csv (derived from CORVIDATA.xlsx sheet 'CORVIDATA'): one row per
+# corvid species (135, AviList 2025 taxonomy). `bodymass` is the species average
+# in grams ('not reported' when missing) and `bodymass_ref` the reference it was
+# taken from: AVONET (Tobias et al. 2022; 123 rows, the two-decimal values of the
+# BirdLife and BirdTree sheets of its Supplementary dataset 1), the Handbook of
+# the Birds of the World vol. 14 (del Hoyo et al. 2009; 4), BIRDBASE (Sekercioglu
+# et al. 2025; 2), Atwood (1980; 1) or 'not reported' (5). The compilation
+# measured nothing itself: every value is a copy, so the AVONET rows are registered
+# as verbatim copies of Tobias_2022 in Bib/source_dependencies.csv and every row
+# keeps its reference as `ref_keys`. The CSV was derived from the xlsx by reading
+# with readxl and writing with write.csv, standardising bodymass to 2 decimal
+# places to remove floating-point noise stored in the xlsx cells (README.md).
+adat <- read.csv(file.path(wd_source, 'CORVIDATA_data.csv'), na.strings = '',
+                 stringsAsFactors = FALSE, check.names = FALSE)
 adat <- as.data.frame(adat, stringsAsFactors = FALSE)
 adat$taxon  <- trimws(adat$scientific_name)
 adat$mass_g <- suppressWarnings(as.numeric(adat$bodymass))      # 'not reported' -> NA
