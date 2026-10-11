@@ -1,0 +1,103 @@
+﻿Journal,Source,Order,Suborder,Superfamily,Family,Subfamily,Genus,Species,L,a,D,G%,Life stage,cp group,Fresh W,Dry W,Pc,R,Ctot
+Journal,"Jimenez-Guirado & Escuer, 1997",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Anatonchinae,Anatonchus,acutus,1640,30.3,54.1,12.4,f,4,3.00,0.31,0.00651,0.03627,0.04278
+Journal,"Mahdikhani-Moghadam et al., 2017",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Anatonchinae,Anatonchus,kashmirensis,1973,28.4,69.5,16.3,f,4,5.95,0.62,0.01289,0.06059,0.07348
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Anatonchinae,Anatonchus,tridentatus,2800,40,70.0,16.2,f,4,8.58,0.89,0.01858,0.07968,0.09825
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Anatonchinae,Anatonchus,tridentatus,2450,29.1,84.2,18.0,f,4,10.85,1.13,0.02352,0.09508,0.11860
+Journal,"Ahmad, 1998",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Miconchinae,Crassibucca,penicula,920,27,34.1,16.0,f,4,0.67,0.07,0.00145,0.01174,0.01319
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Miconchinae,Miconchus,papillifer,2160,31,69.7,9.0,f,4,6.55,0.68,0.01420,0.06513,0.07933
+Journal,"Ahmad, 1998",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Miconchinae,Miconchus,pararapax,2010,25,80.4,9.5,f,4,8.12,0.84,0.01759,0.07649,0.09408
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Anatonchoidea,Anatonchidae,Miconchinae,Miconchus,studeri,1742,24.9,70.0,16.8,f,4,5.33,0.55,0.01155,0.05577,0.06731
+Journal,"Jana et al., 2008",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Hadronchinae,Parahadronchus,shakili,2800,34.3,81.6,21.6,f,4,11.66,1.21,0.02527,0.10034,0.12561
+Journal,"Ahmad et al., 2005",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Hadronchinae,Parahadronchus,yuenae,2119,36,58.9,8.1,f,4,4.59,0.48,0.00994,0.04985,0.05979
+Journal,"Vinceguerra & Orcelli, 2006",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Iotonchinae,Iotonchus,aequatorialis,2300,26.3,87.5,6.6,f,4,10.99,1.14,0.02382,0.09600,0.11982
+Journal,"Ahmad et al., 2005",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Iotonchinae,Iotonchus,derreni,1152,33,34.9,11.3,f,4,0.88,0.09,0.00190,0.01441,0.01632
+Journal,"Jairajpuri et al., 2000",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Iotonchinae,Iotonchus,litoralis,2500,37,67.6,16.8,f,4,7.13,0.74,0.01546,0.06940,0.08486
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Iotonchinae,Iotonchus,nepotum,1120,23.5,47.7,15.5,f,4,1.59,0.17,0.00345,0.02251,0.02596
+Journal,"Ahmad et al., 2005",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Iotonchinae,Iotonchus,singaporensis,1125,29,38.8,11.5,f,4,1.06,0.11,0.00229,0.01659,0.01888
+Journal,"Jana et al., 2006",Mononchida,Mononchina,Anatonchoidea,Iotonchidae,Iotonchinae,Nullonchus,rafiqi,2800,33.6,83.3,15.4,f,4,12.15,1.26,0.02633,0.10349,0.12982
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Mononchoidea,Cobbonchidae,Cobbonchinae,Cobbonchus,aequatorialis,1770,30,59.0,10.5,f,4,3.85,0.40,0.00834,0.04371,0.05205
+Journal,"Orselli & Vincicuerra, 2007",Mononchida,Mononchina,Mononchoidea,Cobbonchidae,Cobbonchinae,Cobbonchus,macrampulla,1300,27,48.1,12.3,f,4,1.88,0.20,0.00408,0.02556,0.02965
+Journal,"Nusrat et al., 2013",Mononchida,Mononchina,Mononchoidea,Cobbonchidae,Cobbonchinae,Cobbonchus,vulvastriatus,1055,35.5,29.7,13.6,f,4,0.58,0.06,0.00126,0.01060,0.01186
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,altiplanicus,2695,40,67.4,11.0,f,4,7.65,0.80,0.01657,0.07311,0.08968
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,aquaticus,1559,24.4,63.9,20.7,f,4,3.98,0.41,0.00862,0.04478,0.05340
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,aquaticus,1600,25.6,62.5,20.7,f,4,3.91,0.41,0.00846,0.04418,0.05264
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,medius,1615,35,46.1,10.4,f,4,2.15,0.22,0.00466,0.02822,0.03288
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,oblongus,1740,26.5,65.7,8.5,f,4,4.69,0.49,0.01016,0.05066,0.06082
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,pulcher,1808,27.3,66.2,18.1,f,4,4.96,0.52,0.01074,0.05282,0.06355
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,pulcher,1839,33.3,55.2,18.4,f,4,3.51,0.36,0.00760,0.04073,0.04833
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,syrmatus,1635,33.5,48.8,8.0,f,4,2.43,0.25,0.00527,0.03099,0.03626
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,truncatus,1140,27.3,41.8,15.4,f,4,1.24,0.13,0.00269,0.01871,0.02140
+Journal,"Andrassy, 2008",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,truncatus,1920,31,61.9,19.0,f,4,4.60,0.48,0.00997,0.04997,0.05994
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Mononchinae,Mononchus,truncatus,1752,29.2,60.0,20.5,f,4,3.94,0.41,0.00854,0.04448,0.05302
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Clarkus,papillatus,1121,23.2,48.3,16.1,f,4,1.64,0.17,0.00354,0.02300,0.02654
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Clarkus,papillatus,1171,23.8,49.2,19.4,f,4,1.77,0.18,0.00384,0.02442,0.02826
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Clarkus,papillatus,1080,19.5,55.4,23.7,f,4,2.07,0.22,0.00449,0.02744,0.03193
+Journal,"Nusrat et al., 2013",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Clarkus,sheri,1749,23,76.0,10.5,f,4,6.32,0.66,0.01370,0.06339,0.07708
+Journal,"Tam, 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,batxatensis,823,21.3,38.6,10.4,f,4,0.77,0.08,0.00166,0.01304,0.01471
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,composticola,2280,34.9,65.3,9.7,f,4,6.08,0.63,0.01318,0.06158,0.07475
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,gerlachei,3510,36.6,95.9,12.8,f,4,20.18,2.10,0.04372,0.15137,0.19508
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,intestinus,1760,32.5,54.2,15.2,f,4,3.23,0.34,0.00699,0.03827,0.04526
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,magellanicus,1850,28.4,65.1,12.0,f,4,4.91,0.51,0.01063,0.05242,0.06305
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,meridionalis,2410,32.3,74.6,12.2,f,4,8.39,0.87,0.01817,0.07835,0.09652
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,mesadenus,3350,38.8,86.3,12.7,f,4,15.61,1.62,0.03382,0.12486,0.15867
+Journal,"Jimenez-Guirado et al., 1998",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Coomansus,mesadenus,3350,37,90.5,12.6,f,4,17.16,1.79,0.03719,0.13408,0.17127
+Journal,"Tam et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Parkellus,hagiangensis,1950,26.5,73.6,10.3,f,4,6.60,0.69,0.01430,0.06547,0.07976
+Journal,"Tam et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Parkellus,tuyenquangensis,2350,28.5,82.5,12.2,f,4,9.99,1.04,0.02164,0.08932,0.11096
+Journal,"Tam et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Parkellus,zschokkei,2900,33,87.9,12.1,f,4,14.00,1.46,0.03033,0.11506,0.14539
+Journal,"Orselli & Vincicuerra, 2007",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,auritus,2650,27.1,97.8,13.8,f,4,15.84,1.65,0.03431,0.12623,0.16054
+Journal,"Bazgir et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,fagi,2800,27,103.7,19.1,f,4,18.82,1.96,0.04078,0.14367,0.18445
+Journal,"Bazgir et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,girchi,2200,28.7,76.7,17.5,f,4,8.08,0.84,0.01751,0.07620,0.09370
+Journal,"Bazgir et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,girchi,2100,22.2,94.6,20.8,f,4,11.74,1.22,0.02545,0.10087,0.12632
+Journal,"Orselli & Vincicuerra, 2007",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,grazynae,1910,24,79.6,10.5,f,4,7.56,0.79,0.01638,0.07250,0.08888
+Journal,"van Rensburg et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,jonkershoekensis,1970,26.9,73.2,16.5,f,4,6.60,0.69,0.01431,0.06550,0.07981
+Journal,"Jana et al., 2010a",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,kralli,1765,23.2,76.1,17.4,f,4,6.38,0.66,0.01383,0.06386,0.07770
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,muscorum,1750,18.9,92.6,19.9,f,4,9.38,0.98,0.02032,0.08520,0.10552
+Journal,"Bazgir et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,muscorum,2100,21.8,96.3,19.7,f,4,12.18,1.27,0.02639,0.10366,0.13005
+Journal,"Bazgir et al., 2021",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,muscorum,2700,24.6,109.8,19.8,f,4,20.33,2.11,0.04404,0.15222,0.19627
+Journal,"Kim et al., 2018",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,oleksandri,2718,23.1,117.7,15.5,f,4,23.52,2.45,0.05096,0.16980,0.22076
+Journal,"Tam et al., 2018",Mononchida,Mononchina,Mononchoidea,Mononchidae,Prionchulinae,Prionchulus,sturhani,1764,23.3,75.7,13.0,f,4,6.32,0.66,0.01369,0.06337,0.07706
+Journal,"Ahmad, 1998",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Margaronchulus,mulveyi,940,36,26.1,13.5,f,4,0.40,0.04,0.00087,0.00801,0.00887
+Journal,"Orselli & Vincicuerra, 2007",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,aequatorialis,980,26,37.7,10.2,f,4,0.87,0.09,0.00189,0.01433,0.01621
+Journal,"Nusrat et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,amurus,972,19.7,49.3,7.3,f,4,1.48,0.15,0.00320,0.02132,0.02453
+Journal,"Shokoohi & Moyo, 2022",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,brachyuris,1198,28.2,42.5,15.2,f,4,1.35,0.14,0.00293,0.01993,0.02286
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,brachyurus,1221,34.8,35.1,15.1,f,4,0.94,0.10,0.00204,0.01517,0.01721
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,brachyurus,1194,25.9,46.1,14.3,f,4,1.59,0.16,0.00344,0.02247,0.02591
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,brachyurus,1038,25.2,41.2,14.4,f,4,1.10,0.11,0.00238,0.01709,0.01947
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,brachyurus,1358,27.2,49.9,19.3,f,4,2.12,0.22,0.00458,0.02789,0.03248
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,contractus,763,24.1,31.7,11.4,f,4,0.48,0.05,0.00104,0.00914,0.01018
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,hawaiiensis,820,21.8,37.6,12.3,f,4,0.73,0.08,0.00157,0.01249,0.01407
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,hawaiiensis,880,22.6,38.9,12.9,f,4,0.83,0.09,0.00181,0.01387,0.01568
+Journal,"Shokoohi & Moyo, 2022",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,hawaiiensis,1195,24,49.8,16.7,f,4,1.85,0.19,0.00401,0.02524,0.02925
+Journal,"Shokoohi & Moyo, 2022",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,kermaniensis,1357,29,46.8,18.8,f,4,1.86,0.19,0.00402,0.02529,0.02932
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,lacustris,962,25,38.5,10.6,f,4,0.89,0.09,0.00193,0.01457,0.01650
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,lacustris,980,26,37.7,10.4,f,4,0.87,0.09,0.00189,0.01433,0.01621
+Journal,"Shokoohi & Moyo, 2022",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,lacustris,980,26,37.7,10.4,f,4,0.87,0.09,0.00189,0.01433,0.01621
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,lacustris,970,24.4,39.8,12.7,f,4,0.96,0.10,0.00208,0.01540,0.01747
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,lacustris,1080,28.5,37.9,14.9,f,4,0.97,0.10,0.00210,0.01553,0.01763
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,minor,1010,21.1,47.9,14.8,f,4,1.45,0.15,0.00313,0.02097,0.02410
+Journal,"Nusrat et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,mulveyi,924,33,28.0,15.0,f,4,0.45,0.05,0.00098,0.00878,0.00976
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,obtusicaudatus,1400,25.1,55.8,12.1,f,4,2.72,0.28,0.00590,0.03370,0.03959
+Journal,"Ahmad, 1998",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,orbitus,1280,22,58.2,14.5,f,4,2.71,0.28,0.00587,0.03357,0.03943
+Journal,"Shokoohi & Moyo, 2022",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,paitensis,1165,30,38.8,17.5,f,4,1.10,0.11,0.00238,0.01706,0.01943
+Journal,"Nusrat et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,paraindex,886,27.7,32.0,16.1,f,4,0.57,0.06,0.00123,0.01038,0.01161
+Journal,"Ahmad et al., 2005",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,paraindex,850,30,28.3,14.9,f,4,0.43,0.04,0.00092,0.00839,0.00932
+Journal,"Jairajpuri, 1982",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sessus,1465,35,41.9,12.5,f,4,1.60,0.17,0.00348,0.02266,0.02614
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1245,35.7,34.9,13.5,f,4,0.95,0.10,0.00205,0.01526,0.01731
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1135,29.2,38.9,16.8,f,4,1.07,0.11,0.00232,0.01675,0.01907
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1309,33.4,39.2,16.2,f,4,1.26,0.13,0.00272,0.01887,0.02159
+Journal,"Shokoohi & Moyo, 2022",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1263,31.9,39.6,16.3,f,4,1.24,0.13,0.00268,0.01865,0.02134
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1284,30,42.8,16.9,f,4,1.47,0.15,0.00319,0.02123,0.02441
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1203,26.7,45.1,17.0,f,4,1.53,0.16,0.00331,0.02183,0.02514
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1294,31.7,40.8,18.4,f,4,1.35,0.14,0.00292,0.01989,0.02281
+Journal,"Koohkan et al., 2014",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,sigmaturus,1263,27.6,45.8,20.2,f,4,1.65,0.17,0.00358,0.02318,0.02676
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,vasis,917,21.1,43.5,13.7,f,4,1.08,0.11,0.00235,0.01687,0.01922
+Journal,"Ahmad, 1998",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Mylonchulinae,Mylonchulus,vulvalatus,1320,31,42.6,11.3,f,4,1.50,0.16,0.00324,0.02151,0.02475
+Journal,"Tam et al., 2024",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Sporonchulinae,Sporonchulus,ibitensis,1260,29.9,42.1,9.5,f,4,1.40,0.15,0.00303,0.02045,0.02348
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Sporonchulinae,Sporonchulus,ibitensis,1103,27.5,40.1,12.8,f,4,1.11,0.12,0.00240,0.01718,0.01959
+Journal,"Tam et al., 2024",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Sporonchulinae,Sporonchulus,vagabundus,1340,36.5,36.7,6.5,f,4,1.13,0.12,0.00245,0.01741,0.01986
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Sporonchulinae,Sporonchulus,vagabundus,1009,22.1,45.7,9.8,f,4,1.31,0.14,0.00285,0.01952,0.02237
+Journal,"Tahseen et al., 2013",Mononchida,Mononchina,Mononchoidea,Mylonchulidae,Sporonchulinae,Sporonchulus,vagabundus,1023,26.4,38.8,12.6,f,4,0.96,0.10,0.00208,0.01542,0.01750
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
