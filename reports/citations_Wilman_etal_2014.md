@@ -1,10 +1,10 @@
-# Citations of Wilman_etal_2014 -- 2026-10-08 16:16:12 (tbmcite 0.1.0)
+# Citations of Wilman_etal_2014 -- 2026-10-11 13:02:23 (tbmcite 0.1.0)
 
-Steps: --sheet --offline
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 59 row(s) for Wilman_etal_2014, 0 new, tab had 10400 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

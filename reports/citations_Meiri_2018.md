@@ -1,10 +1,10 @@
-# Citations of Meiri_2018 -- 2026-10-08 12:31:26 (tbmcite 0.1.0)
+# Citations of Meiri_2018 -- 2026-10-11 13:03:27 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex); 1690 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet: 5377 row(s) for Meiri_2018, 23 new, tab had 10330 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

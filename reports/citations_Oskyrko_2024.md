@@ -1,10 +1,10 @@
-# Citations of Oskyrko_2024 -- 2026-10-08 12:32:44 (tbmcite 0.1.0)
+# Citations of Oskyrko_2024 -- 2026-10-11 13:02:51 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 19 row(s) for Oskyrko_2024, 0 new, tab had 10402 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 
