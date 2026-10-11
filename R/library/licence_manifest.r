@@ -38,6 +38,7 @@
 # run and stops when a source folder has no row in it.
 
 LICENCE_UNKNOWN <- 'unknown; owner to check'
+LICENCE_UNABLE  <- 'unknown; owner unable to confirm'
 LICENCE_REPO    <- 'repository (CC BY-NC 4.0)'
 LICENCE_FACTS   <- 'transcription (facts)'
 LICENCE_PUB     <- 'publisher file'
@@ -222,12 +223,12 @@ WriteLicensesMd <- function(m, wd_root, path = file.path(wd_root, 'sources', 'LI
                    'transcription (facts)',
                    'CC BY-SA 4.0', 'CC BY-NC 4.0', 'CC BY-NC-ND 4.0', 'CC BY-NC-SA 3.0',
                    'non-commercial (author statement)',
-                   'publisher file', 'unpublished', LICENCE_UNKNOWN)
+                   'publisher file', 'unpublished', LICENCE_UNKNOWN, LICENCE_UNABLE)
   classes <- unique(c(class_order, sort(unique(c(upstream$licence_class, m$licence_class[m$role == 'parsed'])))))
   classes <- classes[classes %in% c(upstream$licence_class, m$licence_class[m$role == 'parsed'])]
 
   ClassTable <- function(cls, roles = c('raw', 'live')) {
-    rows <- m[m$role %in% roles & m$licence_class == cls, ]
+    rows <- m[m$role %in% roles & m$licence_class %in% cls, ]
     if (nrow(rows) == 0) return(character(0))
     folders <- unique(rows$folder)
     df <- do.call(rbind, lapply(folders, function(f) {
@@ -402,13 +403,14 @@ WriteLicensesMd <- function(m, wd_root, path = file.path(wd_root, 'sources', 'LI
                        `Stated in` = m$statement_source[m$role == 'live'],
                        `URL to check` = m$check_url[m$role == 'live'],
                        Notes = m$notes[m$role == 'live'], check.names = FALSE, stringsAsFactors = FALSE)), '',
-    '## Unknown: owner to check', '',
-    sprintf(paste('%d source folders whose terms are not stated on disk. Each is marked `Licence: unknown;',
-                  'owner to check <URL>` in its README and listed in `reports/warnings_licences.md` at',
-                  'every run until the owner records the licence (in the README `Licence:` line and in',
-                  '`sources/source_files.csv`). The notes give the audit\'s reading of the deposit page,',
+    '## Unknown', '',
+    sprintf(paste('%d source folders whose licence terms are not yet confirmed. Each is marked',
+                  '`Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at',
+                  'every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit;',
+                  '`"unknown; owner unable to confirm"` means the owner reviewed but found no explicit',
+                  'licence statement. The notes give the audit\'s reading of the deposit page,',
                   'to confirm, never asserted here.'), nrow(unknown)), '',
-    ClassTable(LICENCE_UNKNOWN), '')
+    ClassTable(c(LICENCE_UNKNOWN, LICENCE_UNABLE)), '')
   writeLines(lines, path, useBytes = TRUE)
   invisible(lines)
 }
