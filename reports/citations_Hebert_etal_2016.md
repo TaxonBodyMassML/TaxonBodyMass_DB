@@ -1,10 +1,10 @@
-# Citations of Hebert_etal_2016 -- 2026-10-08 13:39:16 (tbmcite 0.1.0)
+# Citations of Hebert_etal_2016 -- 2026-10-11 13:02:31 (tbmcite 0.1.0)
 
-Steps: --sheet --offline
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 52 row(s) for Hebert_etal_2016, 0 new, tab had 10383 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

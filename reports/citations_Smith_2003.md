@@ -1,10 +1,10 @@
-# Citations of Smith_2003 -- 2026-10-08 12:32:50 (tbmcite 0.1.0)
+# Citations of Smith_2003 -- 2026-10-11 13:02:16 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run --offline
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 240 row(s) for Smith_2003, 0 new, tab had 10402 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 
