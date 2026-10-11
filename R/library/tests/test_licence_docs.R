@@ -119,7 +119,7 @@ lic_md <- file.path(root, 'sources', 'LICENSES.md')
 lines <- WriteLicensesMd(mr, root, lic_md)
 Expect(file.exists(lic_md) && any(grepl('^## Summary by licence class', lines)) &&
          any(grepl('^## Non-commercial and share-alike sources', lines)) &&
-         any(grepl('^## Unknown: owner to check', lines)) && any(grepl('^## Not redistributed', lines)),
+         any(grepl('^## Unknown', lines)) && any(grepl('^## Not redistributed', lines)),
        'LICENSES.md has the summary, carve-out, not-redistributed and unknown sections')
 Expect(any(grepl('databases/SrcB (`SrcB`)', lines, fixed = TRUE)) && any(grepl('A (2020) Data A', lines, fixed = TRUE)),
        'LICENSES.md lists the carve-out source and the attribution text')
@@ -136,7 +136,7 @@ Expect(!is.null(err) && grepl('without a Licence: line: SrcC', err), 'a README w
 Readme(file.path(db, 'SrcC'), 'unknown; owner to check https://example.org/c (nothing on disk).')
 msgs <- Messages(res <- Check())
 Expect(nrow(res) == 4 && all(res$licence), 'after the fix every folder passes the stop')
-Expect(any(grepl('2 source folder\\(s\\) have Licence: unknown; owner to check: SrcC, ConvD', msgs)),
+Expect(any(grepl('2 source folder\\(s\\) have Licence: unknown: SrcC, ConvD', msgs)),
        'unknown licences are warned about')
 Expect(any(grepl('1 non-commercial / share-alike source\\(s\\).*: SrcB', msgs)), 'the carve-out is listed')
 Expect(all(res$class_ok[!is.na(res$class_ok)]), 'every README class matches the manifest')

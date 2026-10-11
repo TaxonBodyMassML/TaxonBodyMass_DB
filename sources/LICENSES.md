@@ -27,7 +27,7 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | non-commercial (author statement) | 1 | 2 | 732 kB | non-commercial |
 | publisher file | 20 | 29 | 30.7 MB | no |
 | unpublished | 1 | 1 | 441 kB | no |
-| unknown; owner to check | 6 | 16 | 3.7 MB | unknown |
+| unknown; owner unable to confirm | 6 | 16 | 3.7 MB | unknown |
 | repository (CC BY-NC 4.0) | 4 | 4 | 137 B | yes |
 
 Classes: the CC and "no copyright restrictions" classes are the licensors' statements; "author permission" is a statement in the data paper; "transcription (facts)" marks tables the lab typed or parsed from a publication (facts, attributed to the publication); "publisher file" marks verbatim article or supplementary files whose copyright is with the publisher; "unpublished" marks a private file; "unknown; owner to check" marks a source whose terms are not stated on disk (file, README or bibliography), listed at the end with the page to check. Nothing in this file is guessed from a deposit page that is not quoted on disk; the audit's readings of such pages are given in the notes as readings to confirm.
@@ -218,14 +218,14 @@ Sources the pipeline downloads at run time and stores nowhere in the repository 
 
 | Source | Licence class | Stated in | URL to check | Notes |
 |---|---|---|---|---|
-| VertNet (`vertnet-amphibia-sept2016; vertnet-aves-sept2016; vertnet-fishes-sept2016; vertnet-mammalia-sept2016; vertnet-reptilia-sept2016; vertnet-traits-sept2016`) | unknown; owner to check | not on disk | http://vertnet.org/resources/norms.html | the snapshots are git-ignored (sources/VertNet/); every record carries its own licence field; nothing is redistributed here |
+| VertNet (`vertnet-amphibia-sept2016; vertnet-aves-sept2016; vertnet-fishes-sept2016; vertnet-mammalia-sept2016; vertnet-reptilia-sept2016; vertnet-traits-sept2016`) | unknown; owner unable to confirm | not on disk | http://vertnet.org/resources/norms.html | the snapshots are git-ignored (sources/VertNet/); every record carries its own licence field; nothing is redistributed here |
 | databases/DataRetriever (`Brose_2005; Ernest_2003; Jones_2009; Myhrvold_2015; Raymond_2011`) | CC BY 4.0 | Ecological Archives (all five datasets, owner confirmed 2026-10-11) |  | CC BY 4.0 per the Ecological Archives deposit pages (owner confirmed 2026-10-11) |
 | databases/Fishbase (`fishbase`) | CC BY-NC 4.0 | owner decision 2026-10-06 | https://www.fishbase.org | live download through rfishbase at run time; nothing stored in the repository; site terms not on disk; disclosed as a non-commercial carve-out |
 | databases/Sealifebase (`sealifebase`) | CC BY-NC 4.0 | owner decision 2026-10-06 | https://www.sealifebase.org | live download through rfishbase at run time; nothing stored in the repository; site terms not on disk; disclosed as a non-commercial carve-out |
 
-## Unknown: owner to check
+## Unknown
 
-6 source folders whose terms are not stated on disk. Each is marked `Licence: unknown; owner to check <URL>` in its README and listed in `reports/warnings_licences.md` at every run until the owner records the licence (in the README `Licence:` line and in `sources/source_files.csv`). The notes give the audit's reading of the deposit page, to confirm, never asserted here.
+6 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
 
 | Source | Files | Stated in | Redistributable | Attribution | URL to check | Notes |
 |---|---|---|---|---|---|---|

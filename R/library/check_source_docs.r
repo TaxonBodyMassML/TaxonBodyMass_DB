@@ -109,7 +109,7 @@ CheckSourceDocs <- function(wd_db,
                     paste0('  ', mismatch$folder, ': "', substr(mismatch$licence_line, 1, 60),
                            '" vs manifest "', mismatch$manifest_classes, '"', collapse = '\n')))
   if (any(res$unknown))
-    message(sprintf('CheckSourceDocs: %d source folder(s) have Licence: unknown; owner to check: %s',
+    message(sprintf('CheckSourceDocs: %d source folder(s) have Licence: unknown: %s',
                     sum(res$unknown), paste(res$folder[res$unknown], collapse = ', ')))
   if (any(res$restricted))
     message(sprintf('CheckSourceDocs: %d non-commercial / share-alike source(s) (carve-outs, sources/LICENSES.md): %s',
@@ -159,8 +159,8 @@ WriteLicenceReport <- function(res, m, manifest, report) {
     sprintf('Folders checked: %d; unknown licence: %d; non-commercial / share-alike: %d.',
             nrow(res), nrow(unknown), nrow(restricted)),
     '',
-    Block('Licence unknown: owner to check',
-          paste('Sources whose terms are not stated on disk. The owner checks the URL, records the',
+    Block('Licence unknown',
+          paste('Sources whose terms are not confirmed. The owner checks the URL, records the',
                 'licence in the README `Licence:` line and in `sources/source_files.csv`, and',
                 'regenerates `sources/LICENSES.md` (`Rscript R/library/licence_manifest.r`).'), unknown),
     Block('Non-commercial and share-alike sources (carve-outs)',
