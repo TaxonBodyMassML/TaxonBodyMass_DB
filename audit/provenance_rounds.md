@@ -719,3 +719,14 @@ Branch `issue-1-mccoy-2008` from main faae6dd; Rdata rebuilt in-place from the e
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
 - --decisions-pull: 9 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
 - Report: `reports/decisions_pull_2026-10-11.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-11 -- McCoy_2008 Phase C (issue #1)
+
+Branch `issue-1-mccoy-2008-phase-c` from main 78ba721 (PR #154 merge).
+
+- Owner decisions (from BM_decisions tab): refs 1 and 2 accepted as `1` (owner override of `nodoi`; ref 1 = 10.5860/choice.45-5582 Choice review of Carey & Judge 2000; ref 2 = 10.1201/9781420064452 Dunning 2008 2nd edition); refs 9, 11, 25 as `nodoi` (ref 11 changed from `drop` -> `nodoi` as expected).
+- `--apply-queue`: 5 decisions applied (refs 1,2 -> approved; refs 9,11,25 -> nodoi_approved).
+- `--bib`: 22 McCoy rows have bibcite; 10,395 total entries in TaxonBodyMass_PrimaryCitations.bib.
+- `--sheet --no-dry-run`: 20 new rows appended to BM_primary_citations (2 already present: Dunning and Smith DOIs contributed by other sources); tab now 10,404 rows.
+- Pipeline (recompile=TRUE, DataRetrieve/VertNet/Fishbase=FALSE): 39,887 spp, 10,164 distinct primary CiteIDs, 0 problems in warnings_citations.md; 826 unverified (Meiri_2018 crossref_only, pending Scite re-screen after 2026-11-01); 3,846 crossref_only rows as before.
+- Note: `--bib` warns "85 accepted DOI record(s) carry no author names" (pre-existing, mostly Mammal Species and JSTOR records).
