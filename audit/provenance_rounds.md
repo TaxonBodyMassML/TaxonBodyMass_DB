@@ -704,3 +704,29 @@ Branch `issue-1-mccoy-2008` from main faae6dd; Rdata rebuilt in-place from the e
 - Phase A (`--init`): `appendixS1_references.csv` (30 entries; ref/citation/doi columns) yields 22 native keys in `primary_references.csv`; 8 entries in the list are cited by no kept record (refs 15, 16, 17, 19, 21, 24: deep-sea invertebrate drops; 26: euphausiid drop; 29: plant reference). The 30 ref codes are ';'-separated in `ref_keys`.
 - Phase B (`--verify`, full; `--queue`): 22 rows verified; 17 certain / doi_resolves (refs 3-8, 10, 12-14, 18, 20, 22-23, 27-28, 30; OpenAlex available as of 2026-10-11). Pending: ref 1 (Carey & Judge 2000, weak_match: c1 = 10.5860/choice.45-5582 is a Choice review of the book), ref 2 (Dunning 1993, ambiguous: c1 = 10.1201/9781420064452 is the 2008 2nd edition, c2 = 10.2307/1521389 a JSTOR record). Not found: ref 9 (NOAA World Ocean Atlas 2001, grey literature), ref 11 (Orr et al. 1998, NTIS report), ref 25 (Brey 2001, web handbook with URL). Recommendations: `nodoi` for refs 1, 2, 9, 25 (fields complete, candidates are other works); `drop` for ref 11 (field `container` missing in the parsed citation; correct decision is `nodoi` per the standing grey-lit policy -- the owner should change `drop` -> `nodoi` on the tab). 5 open queue rows; `--decisions-push`: tab BM_decisions 987 -> 992.
 - For the owner: (i) BM_decisions rows 988-992 are McCoy_2008; accept the recommendations (`nodoi` for all 5, changing ref 11 from `drop` to `nodoi`) and pull when ready; (ii) the queue otherwise has no open row; (iii) 3,846 crossref_only references (other sources) and the Scite re-screening after 2026-11-01 stand as before; (iv) ref 30 = Taylor 1959 (DOI confirmed, certain): the Siliqua patula mass treatment (wet / 4, issue #7) is unchanged; the open issue #61 on whether this is the right reference for those rows is separate.
+
+## 2026-10-11 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 992 tab row(s) read from BM_decisions: 992 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 23, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 9 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-11.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-11 -- McCoy_2008 Phase C (issue #1)
+
+Branch `issue-1-mccoy-2008-phase-c` from main 78ba721 (PR #154 merge).
+
+- Owner decisions (from BM_decisions tab): refs 1 and 2 accepted as `1` (owner override of `nodoi`; ref 1 = 10.5860/choice.45-5582 Choice review of Carey & Judge 2000; ref 2 = 10.1201/9781420064452 Dunning 2008 2nd edition); refs 9, 11, 25 as `nodoi` (ref 11 changed from `drop` -> `nodoi` as expected).
+- `--apply-queue`: 5 decisions applied (refs 1,2 -> approved; refs 9,11,25 -> nodoi_approved).
+- `--bib`: 22 McCoy rows have bibcite; 10,395 total entries in TaxonBodyMass_PrimaryCitations.bib.
+- `--sheet --no-dry-run`: 20 new rows appended to BM_primary_citations (2 already present: Dunning and Smith DOIs contributed by other sources); tab now 10,404 rows.
+- Pipeline (recompile=TRUE, DataRetrieve/VertNet/Fishbase=FALSE): 39,887 spp, 10,164 distinct primary CiteIDs, 0 problems in warnings_citations.md; 826 unverified (Meiri_2018 crossref_only, pending Scite re-screen after 2026-11-01); 3,846 crossref_only rows as before.
+- Note: `--bib` warns "85 accepted DOI record(s) carry no author names" (pre-existing, mostly Mammal Species and JSTOR records).
