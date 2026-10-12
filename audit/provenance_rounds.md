@@ -704,3 +704,18 @@ Branch `issue-1-mccoy-2008` from main faae6dd; Rdata rebuilt in-place from the e
 - Phase A (`--init`): `appendixS1_references.csv` (30 entries; ref/citation/doi columns) yields 22 native keys in `primary_references.csv`; 8 entries in the list are cited by no kept record (refs 15, 16, 17, 19, 21, 24: deep-sea invertebrate drops; 26: euphausiid drop; 29: plant reference). The 30 ref codes are ';'-separated in `ref_keys`.
 - Phase B (`--verify`, full; `--queue`): 22 rows verified; 17 certain / doi_resolves (refs 3-8, 10, 12-14, 18, 20, 22-23, 27-28, 30; OpenAlex available as of 2026-10-11). Pending: ref 1 (Carey & Judge 2000, weak_match: c1 = 10.5860/choice.45-5582 is a Choice review of the book), ref 2 (Dunning 1993, ambiguous: c1 = 10.1201/9781420064452 is the 2008 2nd edition, c2 = 10.2307/1521389 a JSTOR record). Not found: ref 9 (NOAA World Ocean Atlas 2001, grey literature), ref 11 (Orr et al. 1998, NTIS report), ref 25 (Brey 2001, web handbook with URL). Recommendations: `nodoi` for refs 1, 2, 9, 25 (fields complete, candidates are other works); `drop` for ref 11 (field `container` missing in the parsed citation; correct decision is `nodoi` per the standing grey-lit policy -- the owner should change `drop` -> `nodoi` on the tab). 5 open queue rows; `--decisions-push`: tab BM_decisions 987 -> 992.
 - For the owner: (i) BM_decisions rows 988-992 are McCoy_2008; accept the recommendations (`nodoi` for all 5, changing ref 11 from `drop` to `nodoi`) and pull when ready; (ii) the queue otherwise has no open row; (iii) 3,846 crossref_only references (other sources) and the Scite re-screening after 2026-11-01 stand as before; (iv) ref 30 = Taylor 1959 (DOI confirmed, certain): the Siliqua patula mass treatment (wet / 4, issue #7) is unchanged; the open issue #61 on whether this is the right reference for those rows is separate.
+
+## 2026-10-11 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 992 tab row(s) read from BM_decisions: 992 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 23, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 9 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-11.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
