@@ -730,3 +730,14 @@ Branch `issue-1-mccoy-2008-phase-c` from main 78ba721 (PR #154 merge).
 - `--sheet --no-dry-run`: 20 new rows appended to BM_primary_citations (2 already present: Dunning and Smith DOIs contributed by other sources); tab now 10,404 rows.
 - Pipeline (recompile=TRUE, DataRetrieve/VertNet/Fishbase=FALSE): 39,887 spp, 10,164 distinct primary CiteIDs, 0 problems in warnings_citations.md; 826 unverified (Meiri_2018 crossref_only, pending Scite re-screen after 2026-11-01); 3,846 crossref_only rows as before.
 - Note: `--bib` warns "85 accepted DOI record(s) carry no author names" (pre-existing, mostly Mammal Species and JSTOR records).
+
+## 2026-10-11 -- Meiri_2018 verify round 2 / Scite re-screening (issue #1)
+
+Branch `issue-1-verify-round2` from main b1f2af7 (PR #155 merge).
+
+- **--verify (no --crossref-only)**: processed Meiri_2018 primary_references.csv (6,233 rows). 892 certain/crossref_only rows upgraded to verification_mode=full (doi_resolves or two_service_agreement via OpenAlex). 99 formerly crossref_only rows became pending (ambiguous: OpenAlex DOI differed from Crossref). OpenAlex daily free-tier quota exhausted mid-run; 699 crossref_only rows and 807 unverified rows not completed (quota resets ~22 h from run time).
+- **--queue**: 99 new pending rows appended to pending_citations.csv (6,013 total).
+- **--recommend**: all 99 recommended as `1` (95 strong_candidate, 4 publisher_twin); 0 left to the owner.
+- **Scite**: all 99 c1 DOIs screened via scite-mcp (search_literature + report_citations); 0 editorial notices found; 98 new rows appended to Bib/scite_checks.csv. Scite quota: 2 calls used, 248 remaining.
+- **--decisions-push**: 99 rows appended to BM_decisions (tab now 1,091 rows).
+- **Next**: re-run `--verify` for Meiri_2018 after OpenAlex resets (clears 807 unverified + 699 crossref_only); same re-verify pass needed for Jones_2009, Faurby_etal_2018, Makarieva_2008, Hudson_2013, Myhrvold_2015. For the owner: BM_decisions rows 993-1091 are Meiri_2018; all recommended as `1` (accept c1); fill `accept` down the column and change the 4 publisher_twin rows if a different DOI is preferred.
