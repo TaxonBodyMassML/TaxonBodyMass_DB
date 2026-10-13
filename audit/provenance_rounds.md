@@ -741,3 +741,18 @@ Branch `issue-1-verify-round2` from main b1f2af7 (PR #155 merge).
 - **Scite**: all 99 c1 DOIs screened via scite-mcp (search_literature + report_citations); 0 editorial notices found; 98 new rows appended to Bib/scite_checks.csv. Scite quota: 2 calls used, 248 remaining.
 - **--decisions-push**: 99 rows appended to BM_decisions (tab now 1,091 rows).
 - **Next**: re-run `--verify` for Meiri_2018 after OpenAlex resets (clears 807 unverified + 699 crossref_only); same re-verify pass needed for Jones_2009, Faurby_etal_2018, Makarieva_2008, Hudson_2013, Myhrvold_2015. For the owner: BM_decisions rows 993-1091 are Meiri_2018; all recommended as `1` (accept c1); fill `accept` down the column and change the 4 publisher_twin rows if a different DOI is preferred.
+
+## 2026-10-13 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1091 tab row(s) read from BM_decisions: 1091 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 3 still open
+- Report: `reports/decisions_pull_2026-10-13.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
