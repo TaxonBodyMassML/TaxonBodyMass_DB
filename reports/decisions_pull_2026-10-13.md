@@ -10,7 +10,7 @@
 - --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
 - --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
-- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 3 still open
+- --decisions-pull: 12 item(s) on BM_decision_items: 3 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
 
 ## Per source
 
@@ -1022,102 +1022,108 @@
 | McCoy_2008 | 9 | 2026-10-11 | nodoi |  | pulled 2026-10-11 |
 | McCoy_2008 | 11 | 2026-10-11 | nodoi |  | pulled 2026-10-11 |
 | McCoy_2008 | 25 | 2026-10-11 | nodoi |  | pulled 2026-10-11 |
-| Meiri_2018 | Das and Lim 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Das and Vijayakumar 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Das et al. 2008 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | David et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | de Buffrenil and Rimblot-Baly 1999 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | De Freitas et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Diaz and Hedges 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Diaz and Hedges 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Doan and Lamar 2012 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Doughty and Oliver 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Doughty et al. 2010 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Doughty et al. 2012 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Fitze et al. 2012 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Foufopoulos and Ives 1999 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Fritts et al. 2002 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Garcia-Bastida et al. 2013 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Geissler et al. 2012 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Geniez et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Giri and Bauer 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Giri et al. 2009 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Glaw et al. 2009 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Goldberg 2006 [4] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Goldberg 2006 [5] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer 2002 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer 2008 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer 2010 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer and Ahmed 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer and Onn 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer and Onn 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer and Onn 2010 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2008 [3] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2008 [4] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2009 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2009 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2010 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2010 [4] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2010 [5] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2010 [6] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Grismer et al. 2013 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Harikrishnan et al. 2012 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Harvey et al. 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Heideman 2002 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Heidrich et al. 2007 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Hoskin and Higgie 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Hutchinson et al. 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Ineich 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Irschick et al. 1996 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Iskandar et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Ji et al. 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Johnson et al. 2012 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kay and Keogh 2012 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kizirian et al. 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Koch et al. 2010 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kohler 2010 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kohler et al. 2010 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kohler et al. 2012 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kok 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kok 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kok 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kraus 2005 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kraus 2007 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kraus 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Kraus and Allison 2006 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Laspiur et al. 2007 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Linkem et al. 2010 [3] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Lotzkat et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Luu et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Mahony 2009 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Mahony 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Martinez et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Masroor 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Masroor 2009 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Masroor 2009 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Mecke et al. 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Miralles et al. 2005 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Miralles et al. 2009 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Miralles et al. 2011 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Miralles et al. 2011 [3] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Monguillot et al. 2006 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Moravec et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Mott et al. 2009 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Mozaffari et al. 2011 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Murphy et al. 2000 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Nazarov et al. 2012 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Neang et al. 2011 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Ngo and Grismer 2012 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Nguyen et al. 2010 [4] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Nguyen et al. 2011 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Oliver et al. 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Oliver et al. 2009 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Oliver et al. 2010 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Oliver et al. 2010 [2] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Oliver et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Onn and Grismer 2008 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Onn et al. 2010 [1] | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Ord and Blumstein 2002 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Pal et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Panitvong et al. 2010 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
-| Meiri_2018 | Passos et al. 2011 | 2026-10-11 | 1 | 1 | pulled 2026-10-13 |
+| Meiri_2018 | Das and Lim 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Das and Vijayakumar 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Das et al. 2008 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | David et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | de Buffrenil and Rimblot-Baly 1999 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | De Freitas et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Diaz and Hedges 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Diaz and Hedges 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Doan and Lamar 2012 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Doughty and Oliver 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Doughty et al. 2010 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Doughty et al. 2012 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Fitze et al. 2012 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Foufopoulos and Ives 1999 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Fritts et al. 2002 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Garcia-Bastida et al. 2013 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Geissler et al. 2012 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Geniez et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Giri and Bauer 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Giri et al. 2009 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Glaw et al. 2009 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Goldberg 2006 [4] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Goldberg 2006 [5] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer 2002 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer 2008 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer 2010 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer and Ahmed 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer and Onn 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer and Onn 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer and Onn 2010 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2008 [3] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2008 [4] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2009 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2009 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2010 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2010 [4] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2010 [5] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2010 [6] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Grismer et al. 2013 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Harikrishnan et al. 2012 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Harvey et al. 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Heideman 2002 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Heidrich et al. 2007 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Hoskin and Higgie 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Hutchinson et al. 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Ineich 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Irschick et al. 1996 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Iskandar et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Ji et al. 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Johnson et al. 2012 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kay and Keogh 2012 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kizirian et al. 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Koch et al. 2010 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kohler 2010 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kohler et al. 2010 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kohler et al. 2012 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kok 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kok 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kok 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kraus 2005 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kraus 2007 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kraus 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Kraus and Allison 2006 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Laspiur et al. 2007 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Linkem et al. 2010 [3] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Lotzkat et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Luu et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Mahony 2009 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Mahony 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Martinez et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Masroor 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Masroor 2009 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Masroor 2009 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Mecke et al. 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Miralles et al. 2005 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Miralles et al. 2009 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Miralles et al. 2011 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Miralles et al. 2011 [3] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Monguillot et al. 2006 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Moravec et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Mott et al. 2009 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Mozaffari et al. 2011 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Murphy et al. 2000 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Nazarov et al. 2012 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Neang et al. 2011 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Ngo and Grismer 2012 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Nguyen et al. 2010 [4] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Nguyen et al. 2011 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Oliver et al. 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Oliver et al. 2009 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Oliver et al. 2010 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Oliver et al. 2010 [2] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Oliver et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Onn and Grismer 2008 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Onn et al. 2010 [1] | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Ord and Blumstein 2002 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Pal et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Panitvong et al. 2010 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+| Meiri_2018 | Passos et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
+
+## Items answered
+
+- Makarieva_2008-5: S1a key 'Kowalski et al. 1991' (1 record): the S1a supplementary reference list has Kowalski W., Bahnfleth W., Whittam T. (1999) Filtration of airborne microorganisms: modeling and prediction. ASHRAE Transactions 105: 4-17. The table entry also reads 1999 in the data row. Accept the 1999 paper, or drop this reference? -> accept 1999
+- Makarieva_2008-6: S4 key 'Robertson et al. 2003' (1 record): the S4 supplementary reference list has Robertson R.F., El-Haj A.J., Clarke A., Peck L.S., Taylor E.W. (2001) The effects of temperature on metabolic rate and protein synthesis following a meal in the isopod Glyptonotus antarcticus. Polar Biology 24: 677-686. Accept the 2001 paper, or drop? -> accept 2001
+- Makarieva_2008-7: S4 key 'Ikeda & Skjoldal 1982' (2 records): the S4 supplementary reference list has Ikeda T., Skjoldal H.R. (1989) Metabolism and elemental composition of zooplankton from the Barents Sea during early Arctic summer. Marine Biology 100: 173-183. The 7-year discrepancy is large; there is also a real Ikeda & Skjoldal 1980 paper (Mar. Biol. 57: 37-51) but that is not in the list. Accept the 1989 paper, or drop (2 affected records)? -> accept 1989
