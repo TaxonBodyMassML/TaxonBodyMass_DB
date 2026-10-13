@@ -10,7 +10,7 @@
 - --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
 - --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
-- --decisions-pull: 12 item(s) on BM_decision_items: 3 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
 
 ## Per source
 
@@ -62,13 +62,13 @@
 | Wilman_etal_2014 | Ref_176 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Wilman_etal_2014 | Ref_177 | 2026-10-04 |  |  | pulled 2026-10-08 |
 | Meiri_2018 | Abe 1984 | 2026-10-05 | 1 |  | pulled 2026-10-08 |
-| Meiri_2018 | Alvarez del Toro and Smith 1956 | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Amarasinghe et al. 2014 [1] | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Batista et al. 2015 [1] | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Beebe 1945 | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Bobrov 2013 [2] | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Brown 1954 | 2026-10-05 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Cadle 2001 | 2026-10-05 |  |  | pulled 2026-10-08 |
+| Meiri_2018 | Alvarez del Toro and Smith 1956 | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Amarasinghe et al. 2014 [1] | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Batista et al. 2015 [1] | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Beebe 1945 | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Bobrov 2013 [2] | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Brown 1954 | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Cadle 2001 | 2026-10-05 | nodoi |  | pulled 2026-10-08 |
 | Meiri_2018 | Carey 1975 | 2026-10-05 | 1 |  | pulled 2026-10-08 |
 | Meiri_2018 | Cope 1899 | 2026-10-05 | 1 |  | pulled 2026-10-08 |
 | Makarieva_2008 | S1a:Ensign 1970 | 2026-10-06 | 1 |  | pulled 2026-10-08 |
@@ -899,105 +899,105 @@
 | Faurby_etal_2018 | h:683b1c35 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:e59f5118 | 2026-10-06 |  |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:0e400004 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:8d5d31f2 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:5dfbbc23 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:17841415 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:2a083d73 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:40405bba | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:c637ea17 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:1da7b5e6 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:957f91b8 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:3f39ae92 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:ffe021de | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:b7d1f8e5 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:d98d34d4 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:1f502d48 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:13f9bce6 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:21af60a3 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:e9024a1c | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:6da8f20e | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:7c1fff2f | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:0bdf7875 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:b24768ea | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:b17d8ec6 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:362bc6d9 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:d9ed4ade | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:5faa0e12 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:e658c871 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:4ec62f58 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:42a80afc | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:6bc0f5b5 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:45299435 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:fd189ce4 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:d66ad1b0 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:2bce3489 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:9183e61f | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:63cee4bc | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:ac3818a9 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:5cb319cd | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:113e2a30 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:f1ebb9c2 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:81bef974 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:80e7e92d | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:b6e04671 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:52ad14b5 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:5756b347 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:86a343bc | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:4e18f10f | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:33732c7d | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:c3a2a91b | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:2ec35173 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:28514b46 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:532040a2 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:7f199c9a | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:ca1564e1 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:1dfed1c5 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:72e0e47b | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:613afb83 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:8355bc39 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:5b23eb0a | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:6b486bab | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:77a70129 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:faafbd35 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:7381fa3f | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:45cd6f52 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:44e74f93 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:509f77e1 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:335574c9 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:07a95d0d | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:b222d80c | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:c562452a | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:584d6e91 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:e6de1301 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:68b50843 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:2bc4d142 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:4b0647ef | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:7ecea751 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:7692309c | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:f19e65cf | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:9a0a8b15 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:3350be3f | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:663d438d | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:84182016 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:ce328c8c | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:ec2ff10f | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:4d387026 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:a8bd8cdd | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:92fd5ebd | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Faurby_etal_2018 | h:34089c59 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Goldberg 2006 [1] | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Lettink et al. 2013 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Luo et al. 2012 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Modry et al. 2013 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Nguyen et al. 2013 [4] | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Nunez and Navarro 1992 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Oliver and McDonald 2016 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Pavon-Vazquez et al. 2017 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Scherz et al. 2017 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Schmidtler and Bischoff 1999 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Shaw 1952 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Stuart et al. 2010 | 2026-10-06 |  |  | pulled 2026-10-08 |
-| Meiri_2018 | Zweifel and Lowe 1966 | 2026-10-06 |  |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:8d5d31f2 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:5dfbbc23 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:17841415 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:2a083d73 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:40405bba | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:c637ea17 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:1da7b5e6 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:957f91b8 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:3f39ae92 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:ffe021de | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:b7d1f8e5 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:d98d34d4 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:1f502d48 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:13f9bce6 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:21af60a3 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:e9024a1c | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:6da8f20e | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7c1fff2f | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:0bdf7875 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:b24768ea | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:b17d8ec6 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:362bc6d9 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:d9ed4ade | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:5faa0e12 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:e658c871 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:4ec62f58 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:42a80afc | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:6bc0f5b5 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:45299435 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:fd189ce4 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:d66ad1b0 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:2bce3489 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:9183e61f | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:63cee4bc | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:ac3818a9 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:5cb319cd | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:113e2a30 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:f1ebb9c2 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:81bef974 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:80e7e92d | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:b6e04671 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:52ad14b5 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:5756b347 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:86a343bc | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:4e18f10f | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:33732c7d | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:c3a2a91b | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:2ec35173 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:28514b46 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:532040a2 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7f199c9a | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:ca1564e1 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:1dfed1c5 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:72e0e47b | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:613afb83 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:8355bc39 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:5b23eb0a | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:6b486bab | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:77a70129 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:faafbd35 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7381fa3f | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:45cd6f52 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:44e74f93 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:509f77e1 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:335574c9 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:07a95d0d | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:b222d80c | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:c562452a | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:584d6e91 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:e6de1301 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:68b50843 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:2bc4d142 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:4b0647ef | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7ecea751 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:7692309c | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:f19e65cf | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:9a0a8b15 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:3350be3f | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:663d438d | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:84182016 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:ce328c8c | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:ec2ff10f | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:4d387026 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:a8bd8cdd | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:92fd5ebd | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Faurby_etal_2018 | h:34089c59 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Goldberg 2006 [1] | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Lettink et al. 2013 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Luo et al. 2012 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Modry et al. 2013 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Nguyen et al. 2013 [4] | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Nunez and Navarro 1992 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Oliver and McDonald 2016 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Pavon-Vazquez et al. 2017 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Scherz et al. 2017 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Schmidtler and Bischoff 1999 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Shaw 1952 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Stuart et al. 2010 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
+| Meiri_2018 | Zweifel and Lowe 1966 | 2026-10-06 | nodoi |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:42976958 | 2026-10-08 | 1 |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:21e13536 | 2026-10-08 | 1 |  | pulled 2026-10-08 |
 | Faurby_etal_2018 | h:4c7263e9 | 2026-10-08 | 1 |  | pulled 2026-10-08 |
@@ -1121,9 +1121,3 @@
 | Meiri_2018 | Pal et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
 | Meiri_2018 | Panitvong et al. 2010 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
 | Meiri_2018 | Passos et al. 2011 | 2026-10-11 | 1 |  | pulled 2026-10-13 |
-
-## Items answered
-
-- Makarieva_2008-5: S1a key 'Kowalski et al. 1991' (1 record): the S1a supplementary reference list has Kowalski W., Bahnfleth W., Whittam T. (1999) Filtration of airborne microorganisms: modeling and prediction. ASHRAE Transactions 105: 4-17. The table entry also reads 1999 in the data row. Accept the 1999 paper, or drop this reference? -> accept 1999
-- Makarieva_2008-6: S4 key 'Robertson et al. 2003' (1 record): the S4 supplementary reference list has Robertson R.F., El-Haj A.J., Clarke A., Peck L.S., Taylor E.W. (2001) The effects of temperature on metabolic rate and protein synthesis following a meal in the isopod Glyptonotus antarcticus. Polar Biology 24: 677-686. Accept the 2001 paper, or drop? -> accept 2001
-- Makarieva_2008-7: S4 key 'Ikeda & Skjoldal 1982' (2 records): the S4 supplementary reference list has Ikeda T., Skjoldal H.R. (1989) Metabolism and elemental composition of zooplankton from the Barents Sea during early Arctic summer. Marine Biology 100: 173-183. The 7-year discrepancy is large; there is also a real Ikeda & Skjoldal 1980 paper (Mar. Biol. 57: 37-51) but that is not in the list. Accept the 1989 paper, or drop (2 affected records)? -> accept 1989

@@ -774,3 +774,18 @@ Branch `issue-1-verify-round2` from main b1f2af7 (PR #155 merge).
 - Item answered: Makarieva_2008-6: S4 key 'Robertson et al. 2003' (1 record): the S4 supplementary reference list has Robertson R.F., El-Haj A.J., Clarke A., Peck L.S., Taylor E.W. (2001) The effects of temperature on metabolic rate and protein synthesis following a meal in the isopod Glyptonotus antarcticus. Polar Biology 24: 677-686. Accept the 2001 paper, or drop? -> accept 2001
 - Item answered: Makarieva_2008-7: S4 key 'Ikeda & Skjoldal 1982' (2 records): the S4 supplementary reference list has Ikeda T., Skjoldal H.R. (1989) Metabolism and elemental composition of zooplankton from the Barents Sea during early Arctic summer. Marine Biology 100: 173-183. The 7-year discrepancy is large; there is also a real Ikeda & Skjoldal 1980 paper (Mar. Biol. 57: 37-51) but that is not in the list. Accept the 1989 paper, or drop (2 affected records)? -> accept 1989
 - Report: `reports/decisions_pull_2026-10-13.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-13 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1091 tab row(s) read from BM_decisions: 1091 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-13.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
