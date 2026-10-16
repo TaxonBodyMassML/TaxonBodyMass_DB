@@ -1,10 +1,10 @@
-# Citations of Makarieva_2008 -- 2026-10-11 13:02:18 (tbmcite 0.1.0)
+# Citations of Makarieva_2008 -- 2026-10-13 08:42:45 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet: 308 row(s) for Makarieva_2008, 7 new, tab had 10404 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -332,17 +332,17 @@ Verification mode: full (Crossref + OpenAlex); 145 certain row(s) of this source
 | S5c:FishBase | 266 | database | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.357 | Froese:2008aa | Froese_2008 |
 | S6:McKechnie & Wolf 2004 | 211 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1086/383511 | 1.000 | McKechnie:2004aa | McKechnie_2004 |
 | S1a:Allen et al. 1991 | 0 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S1a:Bisset & Hale 1958 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S1a:Eichler & Pfennig 1988 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S1a:Kowalski et al. 1991 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S1a:Luscombe & Gray 1974 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
+| S1a:Bisset & Hale 1958 | 1 | measurement | approved | owner_doi | crossref;openalex | two_service_agreement | 10.1099/00221287-18-3-688 |  | Hale:1958aa | Hale_1958 |
+| S1a:Eichler & Pfennig 1988 | 1 | measurement | approved | owner_doi | crossref;openalex | two_service_agreement | 10.1007/BF00425577 |  | Eichler:1988aa | Eichler_1988 |
+| S1a:Kowalski et al. 1991 | 1 | measurement | nodoi_approved | supplementary_reflist |  |  |  |  | Kowalski:1999aa | Kowalski_1999 |
+| S1a:Luscombe & Gray 1974 | 1 | measurement | approved | owner_doi | crossref;openalex | two_service_agreement | 10.1099/00221287-82-2-213 |  | Luscombe:1974aa | Luscombe_1974 |
 | S1a:Mickelson 1961 | 0 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
 | S1a:Schäfer 1996 | 0 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S4:Ellenby 1951 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S4:Foulds & Roff 1976 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S4:Ikeda & Skjoldal 1982 | 2 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S4:Robertson et al. 2003 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
-| S4:Wieser 1963 1965 | 1 | measurement |  | key_not_in_reflist |  |  |  |  |  |  |
+| S4:Ellenby 1951 | 1 | measurement | approved | owner_doi | crossref;openalex | two_service_agreement | 10.1242/jeb.28.4.492 |  | Ellenby:1951aa | Ellenby_1951 |
+| S4:Foulds & Roff 1976 | 1 | measurement | approved | owner_doi | crossref;openalex | two_service_agreement | 10.1139/z76-042 |  | Foulds:1976aa | Foulds_1976 |
+| S4:Ikeda & Skjoldal 1982 | 2 | measurement | approved | supplementary_reflist | crossref;openalex | two_service_agreement | 10.1007/bf00391956 |  | Ikeda:1989aa | Ikeda_1989 |
+| S4:Robertson et al. 2003 | 1 | measurement | approved | supplementary_reflist | crossref;openalex | two_service_agreement | 10.1007/s003000100268 |  | Robertson:2001aa | Robertson_2001 |
+| S4:Wieser 1963 1965 | 1 | measurement | approved | owner_doi | crossref;openalex | two_service_agreement | 10.1007/bf00342888 |  | Wieser:1963aa | Wieser_1963 |
 | S6b:Gavrilov 1986 | 4 | self | self | owner_self |  |  |  |  |  |  |
 | S6b:Gavrilov et al. 1995a | 2 | self | self | owner_self |  |  |  |  |  |  |
 | S6b:Gavrilov et al. 1995b | 2 | self | self | owner_self |  |  |  |  |  |  |

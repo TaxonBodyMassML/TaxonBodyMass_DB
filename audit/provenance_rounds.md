@@ -741,3 +741,66 @@ Branch `issue-1-verify-round2` from main b1f2af7 (PR #155 merge).
 - **Scite**: all 99 c1 DOIs screened via scite-mcp (search_literature + report_citations); 0 editorial notices found; 98 new rows appended to Bib/scite_checks.csv. Scite quota: 2 calls used, 248 remaining.
 - **--decisions-push**: 99 rows appended to BM_decisions (tab now 1,091 rows).
 - **Next**: re-run `--verify` for Meiri_2018 after OpenAlex resets (clears 807 unverified + 699 crossref_only); same re-verify pass needed for Jones_2009, Faurby_etal_2018, Makarieva_2008, Hudson_2013, Myhrvold_2015. For the owner: BM_decisions rows 993-1091 are Meiri_2018; all recommended as `1` (accept c1); fill `accept` down the column and change the 4 publisher_twin rows if a different DOI is preferred.
+
+## 2026-10-13 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1091 tab row(s) read from BM_decisions: 1091 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 3 still open
+- Report: `reports/decisions_pull_2026-10-13.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-13 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1091 tab row(s) read from BM_decisions: 1091 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 3 newly answered (written to decision_items.csv), 9 answered before, 0 error(s), 0 still open
+- Item answered: Makarieva_2008-5: S1a key 'Kowalski et al. 1991' (1 record): the S1a supplementary reference list has Kowalski W., Bahnfleth W., Whittam T. (1999) Filtration of airborne microorganisms: modeling and prediction. ASHRAE Transactions 105: 4-17. The table entry also reads 1999 in the data row. Accept the 1999 paper, or drop this reference? -> accept 1999
+- Item answered: Makarieva_2008-6: S4 key 'Robertson et al. 2003' (1 record): the S4 supplementary reference list has Robertson R.F., El-Haj A.J., Clarke A., Peck L.S., Taylor E.W. (2001) The effects of temperature on metabolic rate and protein synthesis following a meal in the isopod Glyptonotus antarcticus. Polar Biology 24: 677-686. Accept the 2001 paper, or drop? -> accept 2001
+- Item answered: Makarieva_2008-7: S4 key 'Ikeda & Skjoldal 1982' (2 records): the S4 supplementary reference list has Ikeda T., Skjoldal H.R. (1989) Metabolism and elemental composition of zooplankton from the Barents Sea during early Arctic summer. Marine Biology 100: 173-183. The 7-year discrepancy is large; there is also a real Ikeda & Skjoldal 1980 paper (Mar. Biol. 57: 37-51) but that is not in the list. Accept the 1989 paper, or drop (2 affected records)? -> accept 1989
+- Report: `reports/decisions_pull_2026-10-13.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-13 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1091 tab row(s) read from BM_decisions: 1091 pulled into pending_citations.csv, 0 deferred, 0 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 122, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-13.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-15 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1510 tab row(s) read from BM_decisions: 1495 pulled into pending_citations.csv, 0 deferred, 15 error(s), 0 ignored
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 608, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 526, deferred 0, errors 15, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-15.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
