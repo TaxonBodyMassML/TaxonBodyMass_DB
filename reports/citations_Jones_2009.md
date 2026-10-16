@@ -1,14 +1,10 @@
-# Citations of Jones_2009 -- 2026-10-16 08:09:39 (tbmcite 0.1.0)
+# Citations of Jones_2009 -- 2026-10-16 15:28:41 (tbmcite 0.1.0)
 
-Steps: --bib --sheet
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --bib: primary_references written for 0 source(s)
-- --bib: 91 accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): Myhrvold_2015 Sibly_2012 (10.1002/9781119968535); Jones_2009 2145 (10.1007/978-1-4419-8770-9); Jones_2009 2329 (10.1007/978-94-010-1944-6); Jones_2009 56 (10.1016/0198-0254(87)90283-4); Jones_2009 139 (10.1016/c2009-0-02373-3); Jones_2009 1766 (10.1017/cbo9780511542466); Myhrvold_2015 Prins_2014 (10.1017/cbo9781139565424); Jones_2009 82 (10.1038/089449b0); Jones_2009 2658 (10.1093/mspecies/147.1); Jones_2009 1182 (10.1093/mspecies/202.1a); Jones_2009 1092 (10.1093/mspecies/261.1); Jones_2009 1962 (10.1093/mspecies/266.1); Jones_2009 911 (10.1093/mspecies/274.1); Jones_2009 304 (10.1093/mspecies/365.1); Jones_2009 309 (10.1093/mspecies/374.1); Smith_2003 84 (10.1093/mspecies/374.1); Jones_2009 163 (10.1093/oxfordjournals.jhered.a111394); Jones_2009 2728 (10.1098/rspb.1993.0143); Jones_2009 490 (10.1098/rspb.1995.0034); Meiri_2018 Grismer 1990 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Lais 1976 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Grismer et al. 2013 [2] (10.1111/zoj12064); Meiri_2018 Recoder et al. 2014 (10.1111/zoj12128); Lislevand_etal_2007 49 (10.1201/9781420036305); Jones_2009 342 (10.1644/0.496.1); Jones_2009 343 (10.1644/0.497.1); Jones_2009 345 (10.1644/0.498.1); Jones_2009 1604 (10.1644/0.569.1); Jones_2009 2670 (10.1644/0.571.1); Jones_2009 2211 (10.1644/0.572.1); Smith_2003 220 (10.1644/744); Smith_2003 266 (10.1644/771); Smith_2003 267 (10.1644/772); Smith_2003 269 (10.1644/776); Jones_2009 3100 (10.2307/0.105.1); Jones_2009 592 (10.2307/0.106.1); Jones_2009 1887 (10.2307/0.109.1); Jones_2009 1512 (10.2307/0.112.1); Jones_2009 2445 (10.2307/0.268.1); Jones_2009 611 (10.2307/0.28.1); Jones_2009 468 (10.2307/0.306.1); Jones_2009 2365 (10.2307/0.31.1); Jones_2009 314 (10.2307/0.411.1); Smith_2003 86 (10.2307/0.411.1); Jones_2009 316 (10.2307/0.420.1); Jones_2009 612 (10.2307/0.44.1); Jones_2009 335 (10.2307/0.466.1); Jones_2009 644 (10.2307/0.469.1); Jones_2009 2561 (10.2307/0.49.1); Jones_2009 1985 (10.2307/0.490.1); Jones_2009 2956 (10.2307/0.50.1); Jones_2009 336 (10.2307/0.501.1); Jones_2009 341 (10.2307/0.507.1); Jones_2009 346 (10.2307/0.508.1); Jones_2009 591 (10.2307/0.55.1); Jones_2009 2492 (10.2307/0.595.1); Jones_2009 2459 (10.2307/0.596.1); Jones_2009 1960 (10.2307/0.624.1); Smith_2003 100 (10.2307/0.624.1); Smith_2003 255 (10.2307/0.660.1); Smith_2003 103 (10.2307/0.673.1); Smith_2003 104 (10.2307/0.675.1); Jones_2009 1751 (10.2307/3503849); Jones_2009 3065 (10.2307/3503921); Jones_2009 2611 (10.2307/3503996); Jones_2009 3031 (10.2307/3504073); Jones_2009 2252 (10.2307/3504102); Jones_2009 339 (10.2307/3504147); Jones_2009 651 (10.2307/3504157); Jones_2009 1608 (10.2307/3504217); Jones_2009 1699 (10.2307/3504221); Jones_2009 61 (10.2307/3504270); Jones_2009 1921 (10.2307/3504304); Jones_2009 46 (10.2307/3504312); Smith_2003 265 (10.2307/3504532); Smith_2003 264 (10.2307/3504547); Lislevand_etal_2007 70 (10.5040/9781472597441); Lislevand_etal_2007 27 (10.5040/9781472926975); Lislevand_etal_2007 23 (10.5040/9781472926982); Lislevand_etal_2007 5 (10.5040/9781472926999); Lislevand_etal_2007 24 (10.5040/9781472927002); Lislevand_etal_2007 25 (10.5040/9781472927019); Lislevand_etal_2007 26 (10.5040/9781472927026); Lislevand_etal_2007 28 (10.5040/9781472927033); Jones_2009 978 (10.5860/choice.33-2131); Jones_2009 1004 (10.5860/choice.37-5102); McCoy_2008 1 (10.5860/choice.45-5582); Jones_2009 1635 (10.5962/bhl.part.14575); Meiri_2018 Chabanaud 1918 (10.5962/bhl.part.19996); Meiri_2018 Chabanaud 1917 (10.5962/p.36933); Myhrvold_2015 MarinhoFilho_2002 (10.7312/oliv12042-015)
-- --bib: 1 of 1 bib correction(s) in bib_corrections.csv applied: Scherer:1984aa author
-- --bib: 10509 entries written to TaxonBodyMass_PrimaryCitations.bib (21 reuse a curated key); RefManageR parsed 10509; Jones_2009: 3060 rows with bibcite
-- --sheet (dry run): 3048 row(s) for Jones_2009, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --sheet (dry run): 3056 row(s) for Jones_2009, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -22,12 +18,12 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 6 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1383246 | 1.000 | Acevedo-Gutierrez:1999aa | Acevedo-Gutierrez_1999 |
 | 7 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.533 | Acharjyo:1978aa | Acharjyo_1978 |
 | 8 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504083 | 1.000 | Acharya:1992aa | Acharya_1992 |
-| 9 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504132 | 1.000 | Acosta:1993aa | Acosta_1993 |
+| 9 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3504132 | 1.000 | Acosta:1993aa | Acosta_1993 |
 | 10 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.641 | Acosta:1996ab | Acosta_1996b |
 | 11 | 1 | measurement | certain | two_service_agreement | crossref;openalex;owner-waiver | full | 10.2307/3504418 | 1.000 | Adam:1998aa | Adam_1998 |
 | 12 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504332 | 1.000 | Adam:1999aa | Adam_1999 |
 | 13 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.618 | Adams:1956aa | Adams_1956 |
-| 15 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504116 | 1.000 | Adams:1989aa | Adams_1989 |
+| 15 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3504116 | 1.000 | Adams:1989aa | Adams_1989 |
 | 16 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.587 | Addink:1997aa | Addink_1997 |
 | 17 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.486 | Aderounmu:1973aa | Aderounmu_1973 |
 | 18 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1997.tb05498.x | 1.000 | Adler:1997aa | Adler_1997 |
@@ -74,7 +70,7 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 61 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3504270 | 1.000 | Alvarez-Castaneda:1996aa | AlvarezCastaneda_1996 |
 | 64 | 1 | measurement | certain | two_service_agreement | crossref;openalex;owner-waiver | full | 10.2307/3504345 | 1.000 | Alvarez-Castaneda:1999aa | Alvarez-Castaneda_1999 |
 | 65 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1644/1545-1410(2001)658<0001:ps>2.0.co;2 | 1.000 | Alvarez-Castaneda:2001aa | Alvarez-Castaneda_2001 |
-| 66 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504146 | 1.000 | Alvarez:1991aa | Alvarez_1991 |
+| 66 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3504146 | 1.000 | Alvarez:1991aa | Alvarez_1991 |
 | 67 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.548 | Alves:1992aa | Alves_1992 |
 | 68 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.504 | Alzueta:2002aa | Alzueta_2002 |
 | 69 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1748-7692.1992.tb00373.x | 1.000 | Amano:1992aa | Amano_1992 |
@@ -232,7 +228,7 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 222 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382788 | 1.000 | Bazhan:1996aa | Bazhan_1996 |
 | 223 | 17 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.330 | Bearder:1987aa | Bearder_1987 |
 | 224 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.660 | Beck:1973aa | Beck_1973 |
-| 225 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.5962/bhl.title.63916 | 1.000 | Bee:1956aa | Bee_1956 |
+| 225 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.5962/bhl.title.63916 | 1.000 | Bee:1956aa | Bee_1956 |
 | 226 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1376827 | 1.000 | Beer:1961aa | Beer_1961 |
 | 227 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.539 | Beg:1972aa | Beg_1972 |
 | 229 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1383221 | 1.000 | Begall:1999aa | Begall_1999 |
@@ -363,7 +359,7 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 360 | 34 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.495 | Bhatnagar:1990aa | Bhatnagar_1990 |
 | 361 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.667 | Bhattacharyya:1975aa | Bhattacharyya_1975 |
 | 362 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1139/z61-012 | 1.000 | Bider:1961aa | Bider_1961 |
-| 363 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1998.tb00027.x | 1.000 | Bieber:1998aa | Bieber_1998 |
+| 363 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1111/j.1469-7998.1998.tb00027.x | 1.000 | Bieber:1998aa | Bieber_1998 |
 | 364 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1644/1545-1542(2000)081<0676:roevts>2.3.co;2 | 1.000 | Biggs:2000aa | Biggs_2000 |
 | 365 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1379476 | 1.000 | Bigler:1975aa | Bigler_1975 |
 | 366 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.542 | Bindra:1968aa | Bindra_1968 |
@@ -438,7 +434,7 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 435 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381630 | 1.000 | Bradley:1988aa | Bradley_1988 |
 | 436 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1997.tb05745.x | 1.000 | Bradley:1997ab | Bradley_1997b |
 | 437 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1997.tb04849.x | 1.000 | Bradley:1997aa | Bradley_1997 |
-| 438 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1126/science.136.3516.645 | 1.000 | Bradshaw:1962aa | Bradshaw_1962 |
+| 438 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1126/science.136.3516.645 | 1.000 | Bradshaw:1962aa | Bradshaw_1962 |
 | 439 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.761 | Brambell:1935aa | Brambell_1935 |
 | 440 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.455 | Brambell:1936aa | Brambell_1936 |
 | 441 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1096-3642.1939.tb03358.x | 1.000 | Brambell:1939aa | Brambell_1939 |
@@ -566,7 +562,7 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 564 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1890/1051-0761(1998)008[1226:hpafau]2.0.co;2 | 1.000 | Caswell:1998aa | Caswell_1998 |
 | 565 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.644 | Catzeflis:1997aa | Catzeflis_1997 |
 | 566 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503981 | 1.000 | Ceballos-G:1985aa | Ceballos-G_1985 |
-| 567 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504140 | 1.000 | Ceballos:1988aa | Ceballos_1988 |
+| 567 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3504140 | 1.000 | Ceballos:1988aa | Ceballos_1988 |
 | 568 | 7 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1382182 | 1.000 | Ceballos:1990aa | Ceballos_1990 |
 | 569 | 4 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.833 | Cerqueira:1993aa | Cerqueira_1993 |
 | 570 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1380413 | 0.910 | Fernando:1981aa | Fernando_1981 |
@@ -765,7 +761,7 @@ Verification mode: full (Crossref + OpenAlex); 1226 certain row(s) of this sourc
 | 765 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1983.tb05080.x | 1.000 | Deag:1983aa | Deag_1983 |
 | 766 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.859 | Deag:1985aa | Deag_1985 |
 | 767 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1096-3642.1939.tb00047.x | 1.000 | Deanesly:1939aa | Deanesly_1939 |
-| 768 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504084 | 1.000 | Decher:1995aa | Decher_1995 |
+| 768 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3504084 | 1.000 | Decher:1995aa | Decher_1995 |
 | 769 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504095 | 1.000 | DeFrees:1988aa | DeFrees_1988 |
 | 770 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1469-7998.1991.tb04755.x | 0.905 | Degen:1991aa | Degen_1991 |
 | 771 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.887 | Degen:1992aa | Degen_1992 |
