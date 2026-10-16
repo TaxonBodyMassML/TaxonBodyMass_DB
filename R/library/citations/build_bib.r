@@ -94,6 +94,50 @@ CrossrefFirstSurname <- function(work) {
   NA_character_
 }
 
+# Parse the author list from a raw academic citation string ("Surname, I. I.,
+# and I. Surname. YEAR. Title...") for use as a BibTeX author fallback when the
+# Crossref record carries no contributors. Returns a BibTeX ' and '-joined name
+# list, or NA. The algorithm: (1) extract text before the year; (2) normalise
+# ' and ' / ', and '; (3) split on ' and '; (4) further split any pre-final
+# part at positions where a period-terminated initial is followed by ", Surname"
+# (uppercase+lowercase start), which identifies boundaries in Crossref-style
+# "Surname, I., Surname2, I." lists. Mixed-format lists (first author inverted,
+# rest as "I. Surname") are handled correctly for the final ' and ' separator
+# but the pre-final comma-run stays unsplit when initials precede a surname
+# with no intervening comma (e.g. "C. L. Lewis" — acceptable best-effort).
+ParseRawCitationAuthors <- function(raw) {
+  if (is.null(raw) || is.na(raw) || !nzchar(trimws(raw))) return(NA_character_)
+  m <- regexpr('\\b(?:1[89]|20)\\d{2}[a-z]?\\.', raw, perl = TRUE)
+  if (m[1] == -1) return(NA_character_)
+  block <- trimws(substr(raw, 1, m[1] - 1))
+  block <- sub(',?\\s+(?:editors?|eds?\\.?)\\.?\\s*$', '', block, ignore.case = TRUE, perl = TRUE)
+  block <- sub('[,;\\s]+$', '', trimws(block), perl = TRUE)
+  block <- sub('(?<![A-Z])\\.$', '', block, perl = TRUE)
+  if (!nzchar(block)) return(NA_character_)
+  block <- gsub(',\\s+and\\s+', ' and ', block, perl = TRUE)
+  block <- gsub('\\s+and\\s+', ' and ', block, perl = TRUE)
+  parts <- trimws(strsplit(block, ' and ', fixed = TRUE)[[1]])
+  parts <- parts[nzchar(parts)]
+  if (length(parts) == 0) return(NA_character_)
+  SplitChunk <- function(p) {
+    # First try the all-inverted-format rule: "Initial., Surname" boundary
+    sub1 <- strsplit(p, '(?<=[A-Z]\\.),\\s+(?=[A-Z][a-z])', perl = TRUE)[[1]]
+    if (length(sub1) > 1) return(trimws(sub1))
+    # Mixed format: extract "Surname, Initials" first author, then split rest on ", [A-Z]"
+    m <- regexpr('^[A-Za-z][^,]+,\\s+(?:[A-Z]\\.[-\\s]*)+', p, perl = TRUE)
+    if (m[1] == -1 || attr(m, 'match.length') >= nchar(p)) return(trimws(p))
+    first <- sub('[,\\s]+$', '', substr(p, 1, attr(m, 'match.length')), perl = TRUE)
+    rest  <- sub('^,\\s*', '', trimws(substr(p, attr(m, 'match.length') + 1, nchar(p))), perl = TRUE)
+    if (!nzchar(rest)) return(first)
+    rest_parts <- trimws(strsplit(rest, ',\\s+(?=[A-Z])', perl = TRUE)[[1]])
+    c(first, rest_parts[nzchar(rest_parts)])
+  }
+  out <- character()
+  for (p in parts) out <- c(out, SplitChunk(p))
+  if (length(out) == 0) return(NA_character_)
+  paste(out, collapse = ' and ')
+}
+
 FoldSurnameForKey <- function(surname) {
   s <- FoldASCII(NormaliseSurname(surname))
   s <- gsub('\\s+', '-', s)
@@ -283,7 +327,7 @@ FormatBibEntry <- function(type, key, fields) {
 # volume, number, pages, year, doi. `year_override` (an owner decision
 # ':year=YYYY' recorded in primary_references.csv) replaces the record's year
 # and is noted in the entry; nothing else is ever typed in. Returns the entry text.
-BuildBibEntry <- function(work, key, year_override = NA_integer_) {
+BuildBibEntry <- function(work, key, year_override = NA_integer_, fallback_author = NA_character_) {
   if (is.null(work) || is.null(work[['DOI']])) stop('BuildBibEntry(): a Crossref work record with a DOI is required', call. = FALSE)
   type <- if (is.null(work[['type']])) NA_character_ else unname(crossref_type_map[work[['type']]])
   if (length(type) != 1 || is.na(type)) type <- 'misc'        # an unmapped or missing type
@@ -291,7 +335,10 @@ BuildBibEntry <- function(work, key, year_override = NA_integer_) {
   publisher <- if (is.null(work[['publisher']])) NA_character_ else work[['publisher']]
   inst <- if (length(work[['institution']]) > 0) work[['institution']][[1]][['name']] else NA_character_
   if (is.null(inst)) inst <- NA_character_
-  f <- list(author = CrossrefAuthors(work), title = EscapeLaTeX(CrossrefTitle(work)))
+  cr_author <- CrossrefAuthors(work)
+  if (is.na(cr_author) && !is.na(fallback_author) && nzchar(fallback_author))
+    cr_author <- NoDOIAuthorField(fallback_author)
+  f <- list(author = cr_author, title = EscapeLaTeX(CrossrefTitle(work)))
   if (type == 'article') { f$journal <- EscapeLaTeX(container) }
   else if (type == 'incollection' || type == 'inproceedings') { f$booktitle <- EscapeLaTeX(container); f$publisher <- EscapeLaTeX(publisher) }
   else if (type == 'book') { f$publisher <- EscapeLaTeX(publisher); if (!is.na(container) && length(work[['title']]) > 0 && container != work[['title']][[1]]) f$series <- EscapeLaTeX(container) }
@@ -750,7 +797,9 @@ AssignPrimaryKeys <- function(all_prim, cfg, curated, ids, work_for = function(d
       key <- if (!is.na(r$bibcite) && (r$bibcite %in% names(entries) || r$bibcite %in% curated$key)) r$bibcite
              else BibKeyFor(fam, yr, r$doi, known_keys, c(known_dois, row_dois))
       if (!key %in% curated$key && !key %in% names(entries)) {
-        ac <- ApplyBibCorrections(BuildBibEntry(w, key, yo), corrections)
+        fallback <- if (is.null(CrossrefAuthors(w)) || is.na(CrossrefAuthors(w)))
+          ParseRawCitationAuthors(r$raw_citation) else NA_character_
+        ac <- ApplyBibCorrections(BuildBibEntry(w, key, yo, fallback_author = fallback), corrections)
         entries[key] <- ac$entry
         corr_out <- rbind(corr_out, ac$corrections)
       }

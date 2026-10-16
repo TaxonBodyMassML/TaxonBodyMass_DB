@@ -422,7 +422,7 @@ if (Flag('--bib')) {
     Note('--bib: %d accepted DOI(s) have no Crossref record, so no entry was built and the row keeps its bibcite / cite_id as they were (an OpenAlex-only candidate approved before #114 item 3: withdraw the decision and give doi:<DOI> once it resolves at Crossref, or nodoi): %s',
          length(res$no_record), paste(res$no_record, collapse = '; '))
   if (length(authorless) > 0)
-    Note('--bib: %d accepted DOI record(s) carry no author names, so their entries have no author field (owner to confirm or switch to nodoi): %s',
+    Note('--bib: %d accepted DOI record(s) carry no Crossref author names; author field populated from raw citation as fallback (check or switch to nodoi if wrong): %s',
          length(authorless), paste(authorless, collapse = '; '))
   # the owner's corrections (Bib/bib_corrections.csv, #141): applied while the
   # entry still carries the recorded Crossref value; otherwise skipped and
