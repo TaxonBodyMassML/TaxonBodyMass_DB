@@ -207,6 +207,22 @@ Expect(r$decision == 'nodoi' && r$status == 'pulled 2026-10-10' && is.null(r$par
          ResolveTabDecision(TR('maybe', note = 'checked the PDF'), qa, cfg)$status == 'error: \'maybe\' is not a decision (1|2|3, doi:10..., manual:<Key>, nodoi, self, drop; optional :year=YYYY)',
        'a non-cite note changes nothing: plain status, no fields, an empty cell still defers, a bad cell is still the same error')
 
+cat('ResolveTabDecision(): cite: DOI search online (2026-10-16)\n')
+# fixture cache entry key 19bd1d0c: Crossref bibliographic query for the Omori 1969 text
+# returns doi:10.1007/bf00355587 with title "Weight and chemical composition..." (high sim)
+omori_note <- 'cite: Omori 1969 Weight and chemical composition of some important oceanic zooplankton in the North Pacific Mar. Biol 3 4-10'
+r_omori <- ResolveTabDecision(TR('nodoi', note = omori_note), qa, cfg_on, pulled_at = '2026-10-16')
+Expect(r_omori$decision == 'doi:10.1007/bf00355587' && startsWith(r_omori$status, 'pulled 2026-10-16'),
+       'cite: online with a high-sim Crossref hit: overrides the typed decision, returns doi:<doi>')
+# fixture keys 800e7dc3 (Crossref) + e5a0d9e8 (OpenAlex): both return empty results for a fictional 2099 ref
+fict_note <- 'cite: Author F (2099) Completely fictional reference. Nonexistent Journal 99: 1-10.'
+r_fict <- ResolveTabDecision(TR('1', note = fict_note), qa, cfg_on, pulled_at = '2026-10-16')
+Expect(r_fict$decision == 'nodoi' && startsWith(r_fict$status, 'pulled 2026-10-16'),
+       'cite: online with no Crossref or OpenAlex hit: returns nodoi regardless of the typed cell')
+r_fict_off <- ResolveTabDecision(TR('1', note = fict_note), qa, cfg, pulled_at = '2026-10-16')
+Expect(r_fict_off$decision == '1',
+       'cite: offline: the typed decision is kept unchanged (old fallback)')
+
 cat('ResolveTabDecision(): cite: notes in APA style, a journal item without a title, a thesis (2026-10-08)\n')
 nt <- 'cite: Allgaier, A. (1993). Bat Research News, 34(4), 100. https://www.eaglehill.us/programs/journals/nabr/BRN-archives/BRN-archives.shtml'
 pnt <- ParseCiteNote(nt)

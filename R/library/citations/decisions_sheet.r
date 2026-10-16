@@ -262,6 +262,28 @@ ReciteQueue <- function(queue) {
   list(queue = queue, rows = rows, changes = changes, per_column = per_column, unparsed = unparsed)
 }
 
+# Search Crossref then OpenAlex for the DOI of a parsed cite: note (owner
+# request 2026-10-16): query Crossref with the raw citation string, score
+# the top candidate; if title_sim >= accept_sim return `doi:<doi>`, else
+# repeat with OpenAlex title+year; if still not found or low-sim return
+# `nodoi` (a low-sim hit is accepted as nodoi because the owner wrote the
+# note intentionally). `cfg` must be non-NULL and online. Pure except for
+# network calls and cache writes.
+ResolveCiteNoteDOI <- function(cite, cfg) {
+  th <- citations_recommend$accept_sim
+  parsed_num <- cite$parsed
+  parsed_num$parsed_year <- suppressWarnings(as.integer(parsed_num$parsed_year))
+  BestDOI <- function(cands) {
+    if (nrow(cands) == 0) return(NA_character_)
+    sc <- ScoreCandidate(parsed_num, cands)
+    best <- sc[which.max(sc$title_sim), , drop = FALSE]
+    if (nrow(best) == 0 || best$title_sim[1] < th || is.na(best$doi[1])) NA_character_ else best$doi[1]
+  }
+  doi <- BestDOI(CrossrefQuery(cite$citation, cfg))
+  if (is.na(doi)) doi <- BestDOI(OpenAlexQuery(cite$parsed$parsed_title, suppressWarnings(as.integer(cite$parsed$parsed_year)), cfg))
+  if (is.na(doi)) 'nodoi' else paste0('doi:', doi)
+}
+
 # What the owner typed in `decision` of one tab row, resolved against its
 # queue row: an empty cell or `defer` leaves the row open (status deferred);
 # `accept` takes the recommendation shown on the tab (the queue's when the
@@ -271,21 +293,27 @@ ReciteQueue <- function(queue) {
 # when `cfg` is online (offline: pulled unchecked, said in the message, and
 # --apply-queue will still stop on it if it does not resolve). An owner_note
 # in the `cite:` form is parsed first: a citation missing a required field
-# is a per-row error whatever the cell says; a complete one makes an empty
-# cell `nodoi`, leaves any typed decision (and `defer`) as it is, and is
-# shown in the status as `pulled <date> (cite: Author (Year) Title.
-# Container vol: pages)` (`; no title` added for a journal item cited
-# without one). Returns list(decision, status, message, parsed):
-# decision NA unless the row is decided; `parsed` the cite: fields (a named
-# list of the six parsed_* columns) when a decided row carries them, else NULL.
+# is a per-row error whatever the cell says; a complete one overrides the
+# decision cell -- online, ResolveCiteNoteDOI() searches Crossref then
+# OpenAlex: high-sim hit -> `doi:<doi>`, not found or low sim -> `nodoi`;
+# offline, an empty cell becomes `nodoi` and a typed decision is kept. The
+# status shows `pulled <date> (cite: Author (Year) Title. Container vol:
+# pages)` (`; no title` added for a title-less journal item). Returns
+# list(decision, status, message, parsed): decision NA unless the row is
+# decided; `parsed` the cite: fields when a decided row carries them, else NULL.
 ResolveTabDecision <- function(tab_row, queue_row, cfg = NULL, pulled_at = format(Sys.Date()), decided_by = 'owner') {
   tab_row <- as.list(tab_row); queue_row <- as.list(queue_row)
   Err <- function(msg) list(decision = NA_character_, status = paste0('error: ', msg), message = msg, parsed = NULL)
   cite <- ParseCiteNote(tab_row$owner_note)
   if (!is.null(cite) && length(cite$missing) > 0)
     return(Err(sprintf('cite: could not be parsed (missing: %s); edit the note or add the fields in parentheses', paste(cite$missing, collapse = ', '))))
-  cell <- Cell(tab_row$decision)
-  if (is.na(cell) && !is.null(cite)) cell <- 'nodoi'          # the note implies the decision
+  online <- !is.null(cfg) && !isTRUE(cfg$offline)
+  if (!is.null(cite) && online) {
+    cell <- ResolveCiteNoteDOI(cite, cfg)                      # overrides whatever the owner typed
+  } else {
+    cell <- Cell(tab_row$decision)
+    if (is.na(cell) && !is.null(cite)) cell <- 'nodoi'        # offline: the note implies nodoi
+  }
   if (is.na(cell) || tolower(cell) == 'defer') return(list(decision = NA_character_, status = 'deferred', message = NA_character_, parsed = NULL))
   decision <- cell
   if (tolower(cell) == 'accept') {
