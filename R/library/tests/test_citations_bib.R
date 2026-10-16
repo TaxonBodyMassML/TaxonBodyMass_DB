@@ -470,6 +470,32 @@ Expect(nrow(acc_t) > 2000 && all(!is.na(acc_t$bibcite)) && all(!is.na(acc_t$cite
 odd <- unique(acc_t$bibcite[grepl('^[A-Za-z-]*[a-z][A-Z]{2,}|^[A-Z]{2,}[:-]|-[A-Z]{2,}:', acc_t$bibcite)])
 Expect(all(c('Evans-WHITE:2005aa', 'VillEGER:2012aa') %in% odd), sprintf('the record-spelt keys the owner may rename are still in the tracked files (%s)', paste(odd, collapse = ', ')))
 
+# ---- ParseRawCitationAuthors() + BuildBibEntry(fallback_author=) (2026-10-16) -------------------
+cat('ParseRawCitationAuthors(), BuildBibEntry(fallback_author=)\n')
+Expect(is.na(ParseRawCitationAuthors(NA)) && is.na(ParseRawCitationAuthors('')) && is.na(ParseRawCitationAuthors('No year here')),
+       'NA / empty / no-year raw citation -> NA')
+Expect(ParseRawCitationAuthors('Alling, A. 1986. Records of Odontocetes.') == 'Alling, A.',
+       'single author: surname+initial extracted before year (trailing period stripped)')
+Expect(ParseRawCitationAuthors('Best, T. L., and H. H. Thomas. 1991. Dipodomys. Mammalian Species 374:1-3.') == 'Best, T. L. and H. H. Thomas',
+       'two authors separated by ", and ": normalised to " and "')
+Expect(startsWith(ParseRawCitationAuthors('Baer, J. F., R. E. Weller, and I. Kakoma. 1994. Aotus.'), 'Baer'),
+       'three authors: starts with first author; last author separated by " and "')
+Expect({
+  a <- ParseRawCitationAuthors('Recoder, R. S., Werneck, F. P., Teixeira, M., Colli, G. R., Sites, J. W. and Rodrigues, M. T. 2014. T.')
+  length(strsplit(a, ' and ', fixed = TRUE)[[1]]) == 6
+}, 'all-inverted format (Surname, I.) splits on initial-period boundary into 6 names')
+Expect(ParseRawCitationAuthors('Urban, E. K., C. H. Fry and S. Keith, editors. 1986. Birds of Africa.') == 'Urban, E. K. and C. H. Fry and S. Keith',
+       '"editors." suffix stripped; remaining names returned and split into BibTeX " and " list')
+wno <- list(DOI = '10.2307/3504312', type = 'journal-article', author = list(),
+            title = list('Marmosa mexicana'), `container-title` = list('Mammalian Species'),
+            volume = '421', page = '1-4', issued = list(`date-parts` = list(list(1992L))))
+e_fa <- BuildBibEntry(wno, 'Alfonso:1992aa', fallback_author = 'Alfonso, A. M. and R. A. Medellin')
+Expect(!is.na(Field(e_fa, 'author')) && grepl('Alfonso', Field(e_fa, 'author')),
+       'BuildBibEntry with empty Crossref author list uses fallback_author')
+e_no <- BuildBibEntry(wno, 'Alfonso:1992aa')
+Expect(is.na(Field(e_no, 'author')),
+       'BuildBibEntry without fallback_author still produces no author field when Crossref has none')
+
 # ---- the file -------------------------------------------------------------------------------------------
 cat('WritePrimaryBib(), CheckBibSyntax(), CheckBibKeysUnique()\n')
 pb <- tempfile(fileext = '.bib')
