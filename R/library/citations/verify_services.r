@@ -342,7 +342,7 @@ ClosedWorldCandidates <- function(parsed, reflist, cfg) {
 # Characters with a meaning in OpenAlex filter syntax are removed from the title.
 OpenAlexSearchText <- function(x) {
   x <- FoldASCII(x)
-  x <- gsub('[,:|&"\'()\\[\\]{}<>!?]', ' ', x, perl = TRUE)
+  x <- gsub('[,:|&"\'()\\[\\]{}<>!?*]', ' ', x, perl = TRUE)
   trimws(gsub('\\s+', ' ', x, perl = TRUE))
 }
 

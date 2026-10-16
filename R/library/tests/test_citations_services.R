@@ -234,6 +234,8 @@ Expect(nrow(ClosedWorldCandidates(list(parsed_author1 = 'Nobody', parsed_year = 
 cat('OpenAlexSearchText(), OpenAlexQueryURL(), OpenAlexQuery(), OpenAlexWork()\n')
 Expect(OpenAlexSearchText('Krill (November-December): a "test", ok? [x]') == 'Krill November-December a test ok x',
        'filter-syntax characters are removed from the search text')
+Expect(OpenAlexSearchText('Tropidurinae* Liolaemini') == 'Tropidurinae Liolaemini',
+       'asterisk stripped from title (HTTP 400 bug, #128)')
 u <- OpenAlexQueryURL('The energy density of jellyfish: Estimates', 2007L, cfg)
 Expect(grepl('filter=title.search%3AThe%20energy%20density%20of%20jellyfish%20Estimates%2Cpublication_year%3A2006-2008&per-page=5&mailto=', u, fixed = TRUE),
        'the title search URL carries the year window')
