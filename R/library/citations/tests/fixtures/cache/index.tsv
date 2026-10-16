@@ -19,3 +19,4 @@ bcef560e65aa7a74755ae336f5ce672d295ce54f	200	2026-10-08T21:05:41Z	https://api.cr
 3ba51c7becf046abb3fb12c3835b200e63c394ed	200	2026-10-08T21:06:50Z	https://api.crossref.org/works?query.container-title=Mammalia&query.bibliographic=27%20238-255&filter=from-pub-date:1962,until-pub-date:1964&rows=10&mailto=mnovak.m%40gmail.com
 98b377c27d2e0d9e518e466854a26bfa4a47b6ff	200	2026-10-08T21:10:03Z	https://api.crossref.org/works?query.bibliographic=Mammalian%20Species%20612%3A%201-8%20%281999%29&rows=5&mailto=mnovak.m%40gmail.com
 7ce3881cb63b9cdc13f986a546ec7177a1d6d2dd	200	2026-10-08T21:10:03Z	https://api.crossref.org/works?query.container-title=Mammalian%20Species&query.bibliographic=612%201-8&filter=from-pub-date:1998,until-pub-date:2000&rows=10&mailto=mnovak.m%40gmail.com
+ac11c2beb0faf48aea9228a9571c2b55fbec7fec	200	2026-10-16T22:12:40Z	https://api.crossref.org/works/10.1007%2Fbf00355587?mailto=offline%40invalid
