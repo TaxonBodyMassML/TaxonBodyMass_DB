@@ -1,10 +1,13 @@
-# Citations of Jones_2009 -- 2026-10-16 20:07:47 (tbmcite 0.1.0)
+# Citations of Jones_2009 -- 2026-10-16 21:28:56 (tbmcite 0.1.0)
 
-Steps: --recommend
+Steps: --bib --offline
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --recommend: Jones_2009: 9 open row(s), 9 with a recommendation, 0 left to the owner (strong_candidate 9)
+- --bib: primary_references written for 0 source(s)
+- --bib: 91 accepted DOI record(s) carry no Crossref author names; author field populated from raw citation as fallback (check or switch to nodoi if wrong): Myhrvold_2015 Sibly_2012 (10.1002/9781119968535); Jones_2009 2145 (10.1007/978-1-4419-8770-9); Jones_2009 2329 (10.1007/978-94-010-1944-6); Jones_2009 56 (10.1016/0198-0254(87)90283-4); Jones_2009 139 (10.1016/c2009-0-02373-3); Jones_2009 1766 (10.1017/cbo9780511542466); Myhrvold_2015 Prins_2014 (10.1017/cbo9781139565424); Jones_2009 82 (10.1038/089449b0); Jones_2009 2658 (10.1093/mspecies/147.1); Jones_2009 1182 (10.1093/mspecies/202.1a); Jones_2009 1092 (10.1093/mspecies/261.1); Jones_2009 1962 (10.1093/mspecies/266.1); Jones_2009 911 (10.1093/mspecies/274.1); Jones_2009 304 (10.1093/mspecies/365.1); Jones_2009 309 (10.1093/mspecies/374.1); Smith_2003 84 (10.1093/mspecies/374.1); Jones_2009 163 (10.1093/oxfordjournals.jhered.a111394); Jones_2009 2728 (10.1098/rspb.1993.0143); Jones_2009 490 (10.1098/rspb.1995.0034); Meiri_2018 Grismer 1990 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Lais 1976 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Grismer et al. 2013 [2] (10.1111/zoj12064); Meiri_2018 Recoder et al. 2014 (10.1111/zoj12128); Lislevand_etal_2007 49 (10.1201/9781420036305); Jones_2009 342 (10.1644/0.496.1); Jones_2009 343 (10.1644/0.497.1); Jones_2009 345 (10.1644/0.498.1); Jones_2009 1604 (10.1644/0.569.1); Jones_2009 2670 (10.1644/0.571.1); Jones_2009 2211 (10.1644/0.572.1); Smith_2003 220 (10.1644/744); Smith_2003 266 (10.1644/771); Smith_2003 267 (10.1644/772); Smith_2003 269 (10.1644/776); Jones_2009 3100 (10.2307/0.105.1); Jones_2009 592 (10.2307/0.106.1); Jones_2009 1887 (10.2307/0.109.1); Jones_2009 1512 (10.2307/0.112.1); Jones_2009 2445 (10.2307/0.268.1); Jones_2009 611 (10.2307/0.28.1); Jones_2009 468 (10.2307/0.306.1); Jones_2009 2365 (10.2307/0.31.1); Jones_2009 314 (10.2307/0.411.1); Smith_2003 86 (10.2307/0.411.1); Jones_2009 316 (10.2307/0.420.1); Jones_2009 612 (10.2307/0.44.1); Jones_2009 335 (10.2307/0.466.1); Jones_2009 644 (10.2307/0.469.1); Jones_2009 2561 (10.2307/0.49.1); Jones_2009 1985 (10.2307/0.490.1); Jones_2009 2956 (10.2307/0.50.1); Jones_2009 336 (10.2307/0.501.1); Jones_2009 341 (10.2307/0.507.1); Jones_2009 346 (10.2307/0.508.1); Jones_2009 591 (10.2307/0.55.1); Jones_2009 2492 (10.2307/0.595.1); Jones_2009 2459 (10.2307/0.596.1); Jones_2009 1960 (10.2307/0.624.1); Smith_2003 100 (10.2307/0.624.1); Smith_2003 255 (10.2307/0.660.1); Smith_2003 103 (10.2307/0.673.1); Smith_2003 104 (10.2307/0.675.1); Jones_2009 1751 (10.2307/3503849); Jones_2009 3065 (10.2307/3503921); Jones_2009 2611 (10.2307/3503996); Jones_2009 3031 (10.2307/3504073); Jones_2009 2252 (10.2307/3504102); Jones_2009 339 (10.2307/3504147); Jones_2009 651 (10.2307/3504157); Jones_2009 1608 (10.2307/3504217); Jones_2009 1699 (10.2307/3504221); Jones_2009 61 (10.2307/3504270); Jones_2009 1921 (10.2307/3504304); Jones_2009 46 (10.2307/3504312); Smith_2003 265 (10.2307/3504532); Smith_2003 264 (10.2307/3504547); Lislevand_etal_2007 70 (10.5040/9781472597441); Lislevand_etal_2007 27 (10.5040/9781472926975); Lislevand_etal_2007 23 (10.5040/9781472926982); Lislevand_etal_2007 5 (10.5040/9781472926999); Lislevand_etal_2007 24 (10.5040/9781472927002); Lislevand_etal_2007 25 (10.5040/9781472927019); Lislevand_etal_2007 26 (10.5040/9781472927026); Lislevand_etal_2007 28 (10.5040/9781472927033); Jones_2009 978 (10.5860/choice.33-2131); Jones_2009 1004 (10.5860/choice.37-5102); McCoy_2008 1 (10.5860/choice.45-5582); Jones_2009 1635 (10.5962/bhl.part.14575); Meiri_2018 Chabanaud 1918 (10.5962/bhl.part.19996); Meiri_2018 Chabanaud 1917 (10.5962/p.36933); Myhrvold_2015 MarinhoFilho_2002 (10.7312/oliv12042-015)
+- --bib: 1 of 1 bib correction(s) in bib_corrections.csv applied: Scherer:1984aa author
+- --bib: 10520 entries written to TaxonBodyMass_PrimaryCitations.bib (21 reuse a curated key); RefManageR parsed 10520; Jones_2009: 3060 rows with bibcite
 
 ## References
 
@@ -2726,13 +2729,13 @@ Verification mode: full (Crossref + OpenAlex)
 | 2777 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.666 | Svitalsky:1991aa | Svitalsky_1991 |
 | 2778 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503901 | 1.000 | Swanepoel:1983ab | Swanepoel_1983b |
 | 2779 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503872 | 1.000 | Swanepoel:1983aa | Swanepoel_1983 |
-| 2780 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb00992.x | 1.000 | Swart:1999aa | Swart_1999 |
+| 2780 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb00992.x | 1.000 | Swart:1999aa | Swart_1999 |
 | 2781 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381921 | 1.000 | Sweitzer:1993aa | Sweitzer_1993 |
-| 2782 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1998.tb00021.x | 1.000 | Sweitzer:1998aa | Sweitzer_1998 |
+| 2782 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1111/j.1469-7998.1998.tb00021.x | 1.000 | Sweitzer:1998aa | Sweitzer_1998 |
 | 2783 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1381718 | 1.000 | Swihart:1989aa | Swihart_1989 |
 | 2784 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382032 | 1.000 | Swihart:1992aa | Swihart_1992 |
 | 2785 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/83.1.252 | 1.000 | Swilling:2002aa | Swilling_2002 |
-| 2786 | 50 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb00768.x | 1.000 | Symonds:1999aa | Symonds_1999 |
+| 2786 | 50 | measurement | approved | owner_candidate | crossref | full | 10.1111/j.1469-7998.1999.tb00768.x | 1.000 | Symonds:1999aa | Symonds_1999 |
 | 2787 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1515/mamm-1988-0314 | 1.000 | O:1988aa | O_1988 |
 | 2788 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1992.tb04404.x | 1.000 | Taber:1992aa | Taber_1992 |
 | 2789 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.11606/issn.2526-3358.bolzoo.1976.121587 | 1.000 | Taddei:1976aa | Taddei_1976 |
@@ -2751,7 +2754,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 2803 | 97 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.513 | Tate:1951aa | Tate_1951 |
 | 2804 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.498 | Tate:1951ab | Tate_1951b |
 | 2805 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1994.tb08591.x | 1.000 | Tattersall:1994aa | Tattersall_1994 |
-| 2806 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb01036.x | 1.000 | Taulman:1999aa | Taulman_1999 |
+| 2806 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb01036.x | 1.000 | Taulman:1999aa | Taulman_1999 |
 | 2807 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.444 | Tavares:1995aa | Tavares_1995 |
 | 2808 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.545 | Taylor:1961aa | Taylor_1961 |
 | 2809 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.426 | Taylor:1966aa | Taylor_1966 |
@@ -2920,11 +2923,11 @@ Verification mode: full (Crossref + OpenAlex)
 | 2978 | 37 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1996.tb05423.x | 1.000 | Webb:1996aa | Webb_1996 |
 | 2979 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380595 | 1.000 | Webster:1981aa | Webster_1981 |
 | 2980 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504020 | 1.000 | Webster:1982ac | Webster_1982c |
-| 2981 | 2 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503879 | 1.000 | Webster:1982aa | Webster_1982 |
-| 2982 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503992 | 1.000 | Webster:1982ab | Webster_1982b |
-| 2983 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503811 | 1.000 | Webster:1983aa | Webster_1983 |
+| 2981 | 2 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3503879 | 1.000 | Webster:1982aa | Webster_1982 |
+| 2982 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3503992 | 1.000 | Webster:1982ab | Webster_1982b |
+| 2983 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3503811 | 1.000 | Webster:1983aa | Webster_1983 |
 | 2984 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.833 | Webster:1986aa | Webster_1986 |
-| 2985 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504303 | 1.000 | Webster:1993aa | Webster_1993 |
+| 2985 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3504303 | 1.000 | Webster:1993aa | Webster_1993 |
 | 2986 | 285 | compilation | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1382840 | 1.000 | Weckerly:1998aa | Weckerly_1998 |
 | 2987 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.437 | Wei:1984aa | Wei_1984 |
 | 2988 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.606 | Weidong:1986aa | Weidong_1986 |
@@ -2974,7 +2977,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 3033 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1017/cbo9780511542466.016 | 1.000 | Williamson:1999aa | Williamson_1999 |
 | 3034 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380788 | 1.000 | Willig:1985aa | Willig_1985 |
 | 3035 | 5 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380793 | 1.000 | Willig:1985ab | Willig_1985b |
-| 3036 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503953 | 1.000 | Willig:1987aa | Willig_1987 |
+| 3036 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/3503953 | 1.000 | Willig:1987aa | Willig_1987 |
 | 3037 | 12 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.854 | Willig:1989aa | Willig_1989 |
 | 3038 | 11 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1381910 | 1.000 | Willig:1993aa | Willig_1993 |
 | 3039 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504016 | 1.000 | Willner:1980aa | Willner_1980 |
