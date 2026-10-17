@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-16 22:03:30
+# Citation and provenance warnings -- 2026-10-17 11:02:44
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 218765 (39887 species); distinct primary CiteIDs: 10285; unresolved references (pending / not_found): 0; unverified references: 0
+- provenance rows: 219763 (39887 species); distinct primary CiteIDs: 10333; unresolved references (pending / not_found): 0; unverified references: 0
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
 
 ## Problems
@@ -13,8 +13,7 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-- BM_primary_citations: Grismer_2013 -> Grismer:2013aa
-- BM_primary_citations: Recoder_2014 -> Recoder:2014aa
+(none)
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
@@ -97,7 +96,7 @@ One row per source label: species and record links (species x source x reference
 | Soria_etal_2021 | compilation | 5529 | 5636 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tobias_2022 | compilation | 9794 | 10172 | 90.5 | 46 | 43 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Trochet_2014 | compilation | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Tsuboi_etal_2018 | compilation | 3633 | 17122 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Tsuboi_etal_2018 | compilation | 3633 | 17122 | 23.7 | 162 | 56 | 0 | 0 | 0 | 2 | 104 | 0 | 0 | 0 |
 | Tucker_etal_2014a | compilation | 182 | 182 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tucker_etal_2014b | compilation | 440 | 443 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 777 | 780 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

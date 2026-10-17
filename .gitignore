@@ -12,3 +12,4 @@ verifications_*.csv
 residuals_full.csv
 
 tmp/
+sources/databases/Tsuboi_etal_2018/crossref_cache.json
