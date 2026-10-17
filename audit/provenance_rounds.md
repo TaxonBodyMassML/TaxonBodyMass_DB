@@ -880,3 +880,71 @@ Branch `issue-1-verify-round2` from main b1f2af7 (PR #155 merge).
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
 - --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
 - Report: `reports/decisions_pull_2026-10-17.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-17 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1748 tab row(s) read from BM_decisions: 1725 pulled into pending_citations.csv, 0 deferred, 8 error(s), 15 ignored
+- --decisions-pull: Cai_etal_2025: pulled 78, deferred 0, errors 8, ignored 0
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 24, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 526, deferred 0, errors 0, ignored 15
+- --decisions-pull: Myhrvold_2015: pulled 9, deferred 0, errors 0, ignored 0
+- --decisions-pull: Tsuboi_etal_2018: pulled 107, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-17.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-17 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1748 tab row(s) read from BM_decisions: 1727 pulled into pending_citations.csv, 0 deferred, 4 error(s), 17 ignored
+- --decisions-pull: Cai_etal_2025: pulled 80, deferred 0, errors 4, ignored 2
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 24, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 526, deferred 0, errors 0, ignored 15
+- --decisions-pull: Myhrvold_2015: pulled 9, deferred 0, errors 0, ignored 0
+- --decisions-pull: Tsuboi_etal_2018: pulled 107, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-17.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-17 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1748 tab row(s) read from BM_decisions: 1729 pulled into pending_citations.csv, 0 deferred, 2 error(s), 17 ignored
+- --decisions-pull: Cai_etal_2025: pulled 82, deferred 0, errors 2, ignored 2
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 24, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 526, deferred 0, errors 0, ignored 15
+- --decisions-pull: Myhrvold_2015: pulled 9, deferred 0, errors 0, ignored 0
+- --decisions-pull: Tsuboi_etal_2018: pulled 107, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-17.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
+
+## 2026-10-17 -- Owner decisions pulled from BM_decisions (issue #1)
+
+- --decisions-pull: 1748 tab row(s) read from BM_decisions: 1731 pulled into pending_citations.csv, 0 deferred, 0 error(s), 17 ignored
+- --decisions-pull: Cai_etal_2025: pulled 84, deferred 0, errors 0, ignored 2
+- --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
+- --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
+- --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 24, deferred 0, errors 0, ignored 0
+- --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
+- --decisions-pull: Meiri_2018: pulled 526, deferred 0, errors 0, ignored 15
+- --decisions-pull: Myhrvold_2015: pulled 9, deferred 0, errors 0, ignored 0
+- --decisions-pull: Tsuboi_etal_2018: pulled 107, deferred 0, errors 0, ignored 0
+- --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
+- --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
+- Report: `reports/decisions_pull_2026-10-17.md`; next: `--apply-queue --bib` per source, `--sheet` dry run then real, pipeline, PR; the answered items implemented by hand.
