@@ -1,10 +1,11 @@
-# Citations of Meiri_2018 -- 2026-10-16 15:25:17 (tbmcite 0.1.0)
+# Citations of Meiri_2018 -- 2026-10-16 21:33:38 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --verify
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --verify: compilation DOI 10.1111/geb.12773; 48 deposited references (42 with DOI)
+- status counts: certain 2056, approved 294, nodoi_approved 3214, rejected 660, self 9
 
 ## References
 
@@ -5695,7 +5696,7 @@ Verification mode: full (Crossref + OpenAlex)
 | Greg Schneider | 1 | measurement | rejected | owner_drop |  |  |  |  |  |  |
 | Grismer | 2 | measurement | rejected | owner_drop |  |  |  |  |  |  |
 | Grismer 1990 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1111/j.1558-5646.1965.tb01719.x | 0.310 | Grismer:1965aa | Grismer_1965 |
-| Grismer 2008 | 6 | measurement | approved | owner_candidate | crossref;openalex | full | 10.11646/zootaxa.1691.1.2 | 1.000 | Grismer:2008aa | Grismer_2008 |
+| Grismer 2008 | 6 | measurement | approved | owner_candidate | crossref;openalex;scite-mcp | full | 10.11646/zootaxa.1691.1.2 | 1.000 | Grismer:2008aa | Grismer_2008 |
 | Grismer 2011 | 126 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | Grismer 2011b | 34 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
 | Grismer 2011bh | 1 | measurement | rejected | owner_drop |  |  |  |  |  |  |
@@ -5705,7 +5706,7 @@ Verification mode: full (Crossref + OpenAlex)
 | Grismer et al. 2008 | 4 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.11646/zootaxa.1931.1.1 | 1.000 | Grismer:2008af | Grismer_2008f |
 | Grismer et al. 2008b | 19 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
 | Grismer et al. 2008d | 2 | measurement | rejected | owner_drop |  |  |  |  |  |  |
-| Grismer et al. 2009 | 9 | measurement | approved | owner_candidate | crossref;openalex | full | 10.11646/zootaxa.2312.1.2 | 1.000 | Grismer:2009ac | Grismer_2009c |
+| Grismer et al. 2009 | 9 | measurement | approved | owner_candidate | crossref;openalex;scite-mcp | full | 10.11646/zootaxa.2312.1.2 | 1.000 | Grismer:2009ac | Grismer_2009c |
 | Grismer et al. 2009b | 1 | measurement | rejected | owner_drop |  |  |  |  |  |  |
 | Grismer et al. 2010 | 25 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1670/08-211.1 | 1.000 | Grismer:2010ag | Grismer_2010g |
 | Grismer et al. 2010c | 24 | measurement | rejected | owner_drop | crossref;scite-mcp | crossref_only |  |  |  |  |
@@ -5855,8 +5856,8 @@ Verification mode: full (Crossref + OpenAlex)
 | Mesquita et al. 2016 (min 32) | 1 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
 | Michael et al. 2011 | 18 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1016/j.biocon.2010.09.019 | 1.000 | Michael:2011aa | Michael_2011 |
 | Miguel Angel Carretero | 7 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
-| Miralles et al. 2009 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.11646/zootaxa.2012.1.3 | 1.000 | Miralles:2009ab | Miralles_2009b |
-| Miralles et al. 2011 | 4 | measurement | approved | owner_candidate | crossref;openalex | full | 10.11646/zootaxa.2876.1.1 | 1.000 | Miralles:2011ac | Miralles_2011c |
+| Miralles et al. 2009 | 1 | measurement | approved | owner_candidate | crossref;openalex;scite-mcp | full | 10.11646/zootaxa.2012.1.3 | 1.000 | Miralles:2009ab | Miralles_2009b |
+| Miralles et al. 2011 | 4 | measurement | approved | owner_candidate | crossref;openalex;scite-mcp | full | 10.11646/zootaxa.2876.1.1 | 1.000 | Miralles:2011ac | Miralles_2011c |
 | Miralles pers. Comm to Shai Meiri | 1 | measurement | rejected | owner_drop |  |  |  |  |  |  |
 | Mitchell 1999 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | Mitchell et al. 2007 | 1 | measurement | rejected | owner_drop | crossref | crossref_only |  |  |  |  |
