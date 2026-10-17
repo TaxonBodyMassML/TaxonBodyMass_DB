@@ -1,14 +1,14 @@
 # Owner decisions pulled from BM_decisions -- 2026-10-16 (tbmcite 0.1.0)
 
-- --decisions-pull: 1518 tab row(s) read from BM_decisions: 1503 pulled into pending_citations.csv, 0 deferred, 0 error(s), 15 ignored
+- --decisions-pull: 1522 tab row(s) read from BM_decisions: 1507 pulled into pending_citations.csv, 0 deferred, 0 error(s), 15 ignored
 - --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
 - --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
 - --decisions-pull: Jones_2009: pulled 616, deferred 0, errors 0, ignored 0
 - --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
-- --decisions-pull: Makarieva_2008: pulled 22, deferred 0, errors 0, ignored 0
+- --decisions-pull: Makarieva_2008: pulled 24, deferred 0, errors 0, ignored 0
 - --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
 - --decisions-pull: Meiri_2018: pulled 526, deferred 0, errors 0, ignored 15
-- --decisions-pull: Myhrvold_2015: pulled 7, deferred 0, errors 0, ignored 0
+- --decisions-pull: Myhrvold_2015: pulled 9, deferred 0, errors 0, ignored 0
 - --decisions-pull: Wilman_etal_2014: pulled 19, deferred 0, errors 0, ignored 0
 - --decisions-pull: 12 item(s) on BM_decision_items: 0 newly answered (written to decision_items.csv), 12 answered before, 0 error(s), 0 still open
 
@@ -20,10 +20,10 @@
 | Hebert_etal_2016 | 10 | 0 | 0 | 0 |
 | Jones_2009 | 616 | 0 | 0 | 0 |
 | Kiorboe_2013 | 2 | 0 | 0 | 0 |
-| Makarieva_2008 | 22 | 0 | 0 | 0 |
+| Makarieva_2008 | 24 | 0 | 0 | 0 |
 | McCoy_2008 | 5 | 0 | 0 | 0 |
 | Meiri_2018 | 526 | 0 | 0 | 15 |
-| Myhrvold_2015 | 7 | 0 | 0 | 0 |
+| Myhrvold_2015 | 9 | 0 | 0 | 0 |
 | Wilman_etal_2014 | 19 | 0 | 0 | 0 |
 
 ## Rows
@@ -1540,11 +1540,15 @@
 | Meiri_2018 | de Buffrenil et al. 2005 | 2026-10-15 | drop |  | pulled 2026-10-15 |
 | Meiri_2018 | de Roij 1915 | 2026-10-15 | drop |  | pulled 2026-10-15 |
 | Meiri_2018 | see Langerwerf 2006 | 2026-10-15 | drop |  | pulled 2026-10-15 |
-| Jones_2009 | 9 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 15 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 66 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 225 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 363 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 438 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 567 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 768 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 9 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 15 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 66 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 225 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 363 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 438 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 567 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 768 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Makarieva_2008 | S1a:Kanso et al. 2002 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Makarieva_2008 | S7:Ciferri 1983 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Myhrvold_2015 | Jones_2003 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Myhrvold_2015 | Jones_2003_2 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |

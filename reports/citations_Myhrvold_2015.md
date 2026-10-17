@@ -1,10 +1,10 @@
-# Citations of Myhrvold_2015 -- 2026-10-16 15:25:20 (tbmcite 0.1.0)
+# Citations of Myhrvold_2015 -- 2026-10-16 19:39:49 (tbmcite 0.1.0)
 
 Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --apply-queue: 2 decision(s) applied: Jones_2003 -> approved, Jones_2003_2 -> approved
 
 ## References
 
@@ -57,8 +57,8 @@ Verification mode: full (Crossref + OpenAlex)
 | Hofmeyr_2005 | 8 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1139/z05-132 | 1.000 | Hofmeyr:2005aa | Hofmeyr_2005 |
 | Iverson_1993 | 162 | compilation | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.1139/z93-341 | 0.912 | Iverson:1993aa | Iverson_1993 |
 | Jefferson_2008 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.410 | Jefferson:2008aa | Jefferson_2008 |
-| Jones_2003 | 47 | compilation | pending | ambiguous | crossref;openalex;consensus-mcp | full | 10.1071/9780643069862 | 1.000 | Jones:2003ab | Jones_2003b |
-| Jones_2003_2 | 1 | compilation | pending | ambiguous | crossref;openalex;consensus-mcp | full | 10.1071/9780643069862 | 1.000 | Jones:2003ab | Jones_2003b |
+| Jones_2003 | 47 | compilation | approved | owner_candidate | crossref;openalex | full | 10.1071/9780643069862 | 1.000 | Jones:2003ab | Jones_2003b |
+| Jones_2003_2 | 1 | compilation | approved | owner_candidate | crossref;openalex | full | 10.1071/9780643069862 | 1.000 | Jones:2003ab | Jones_2003b |
 | Jones_1967 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1378025 | 0.961 | Jones:1967aa | Jones_1967 |
 | Jones_2009 | 3348 | compilation | certain | doi_resolves | crossref;openalex;consensus-mcp | full | 10.1890/08-1494.1 | 1.000 | Jones:2009aa | Jones_2009 |
 | Jouventin_2002 | 1 | compilation | certain | doi_resolves | crossref;openalex | full | 10.1098/rspb.2002.2080 | 1.000 | Jouventin:2002aa | Jouventin_2002 |
