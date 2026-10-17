@@ -1,9 +1,9 @@
 # Owner decisions pulled from BM_decisions -- 2026-10-16 (tbmcite 0.1.0)
 
-- --decisions-pull: 1546 tab row(s) read from BM_decisions: 1531 pulled into pending_citations.csv, 0 deferred, 0 error(s), 15 ignored
+- --decisions-pull: 1555 tab row(s) read from BM_decisions: 1540 pulled into pending_citations.csv, 0 deferred, 0 error(s), 15 ignored
 - --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
 - --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
-- --decisions-pull: Jones_2009: pulled 640, deferred 0, errors 0, ignored 0
+- --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
 - --decisions-pull: Kiorboe_2013: pulled 2, deferred 0, errors 0, ignored 0
 - --decisions-pull: Makarieva_2008: pulled 24, deferred 0, errors 0, ignored 0
 - --decisions-pull: McCoy_2008: pulled 5, deferred 0, errors 0, ignored 0
@@ -18,7 +18,7 @@
 | --- | ---: | ---: | ---: | ---: |
 | Faurby_etal_2018 | 296 | 0 | 0 | 0 |
 | Hebert_etal_2016 | 10 | 0 | 0 | 0 |
-| Jones_2009 | 640 | 0 | 0 | 0 |
+| Jones_2009 | 649 | 0 | 0 | 0 |
 | Kiorboe_2013 | 2 | 0 | 0 | 0 |
 | Makarieva_2008 | 24 | 0 | 0 | 0 |
 | McCoy_2008 | 5 | 0 | 0 | 0 |
@@ -1552,27 +1552,36 @@
 | Makarieva_2008 | S7:Ciferri 1983 | 2026-10-16 | accept |  | pulled 2026-10-16 |
 | Myhrvold_2015 | Jones_2003 | 2026-10-16 | accept |  | pulled 2026-10-16 |
 | Myhrvold_2015 | Jones_2003_2 | 2026-10-16 | accept |  | pulled 2026-10-16 |
-| Jones_2009 | 907 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1347 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1573 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1644 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1708 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1742 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1773 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1782 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1799 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1967 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 1968 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2046 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2131 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2250 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2300 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2310 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2399 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2401 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2431 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2451 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2517 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2519 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2579 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
-| Jones_2009 | 2625 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 907 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1347 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1573 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1644 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1708 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1742 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1773 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1782 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1799 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1967 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 1968 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2046 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2131 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2250 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2300 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2310 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2399 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2401 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2431 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2451 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2517 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2519 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2579 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2625 | 2026-10-16 | accept |  | pulled 2026-10-16 |
+| Jones_2009 | 2780 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2782 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2786 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2806 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2981 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2982 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2983 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 2985 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
+| Jones_2009 | 3036 | 2026-10-16 | accept | 1 | pulled 2026-10-16 |
