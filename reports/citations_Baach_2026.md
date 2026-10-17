@@ -1,10 +1,10 @@
-# Citations of Baach_2026 -- 2026-10-11 13:03:01 (tbmcite 0.1.0)
+# Citations of Baach_2026 -- 2026-10-16 21:52:53 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 7 row(s) for Baach_2026, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

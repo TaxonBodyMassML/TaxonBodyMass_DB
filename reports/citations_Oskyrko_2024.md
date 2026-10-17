@@ -1,11 +1,10 @@
-# Citations of Oskyrko_2024 -- 2026-10-16 21:45:59 (tbmcite 0.1.0)
+# Citations of Oskyrko_2024 -- 2026-10-16 21:52:16 (tbmcite 0.1.0)
 
-Steps: --verify
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --verify: compilation DOI 10.1038/s41597-024-03079-5; 36 deposited references (29 with DOI)
-- status counts: certain 9, approved 5, nodoi_approved 5, rejected 3
+- --sheet (dry run): 19 row(s) for Oskyrko_2024, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
