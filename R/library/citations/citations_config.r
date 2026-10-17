@@ -509,7 +509,17 @@ reflist_specs <- list(
                        compilation_doi = '10.1890/15-0846R.1'),
   Jones_2009   = list(format = 'csv', file = 'references.csv', frame = 'DataRetrieverAll',
                       key_col = 'key', citation_col = 'citation', sep = ';',
-                      compiler = 'Jones', compilation_doi = '10.1890/08-1494.1')
+                      compiler = 'Jones', compilation_doi = '10.1890/08-1494.1'),
+  # brain-body dataset (Springer Nature figshare CC0): per-row Reference column
+  # across six xlsx files (mammal, bird, reptile, amphibian, teleost, shark_ray);
+  # 163 unique full-citation strings keyed t001-t163 in references.csv; the
+  # parser maps each row's Reference string to its key via the lookup table.
+  # "This study (…)" entries detected as self; FishBase database entry flagged
+  # for owner decision (t004, note col).
+  Tsuboi_etal_2018 = list(format = 'csv', file = 'references.csv',
+                          key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                          type_col = 'note', sep = ';', compiler = 'Tsuboi',
+                          compilation_doi = '10.1038/s41559-018-0632-1')
 )
 
 ReflistSpec <- function(source_label) {
