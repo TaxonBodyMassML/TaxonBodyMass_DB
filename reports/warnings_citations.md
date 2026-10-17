@@ -1,11 +1,11 @@
-# Citation and provenance warnings -- 2026-10-11 17:16:11
+# Citation and provenance warnings -- 2026-10-16 22:03:30
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 218763 (39887 species); distinct primary CiteIDs: 10164; unresolved references (pending / not_found): 0; unverified references: 826
-- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 3846
+- provenance rows: 218765 (39887 species); distinct primary CiteIDs: 10285; unresolved references (pending / not_found): 0; unverified references: 0
+- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
 
 ## Problems
 
@@ -13,7 +13,8 @@ Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
-(none)
+- BM_primary_citations: Grismer_2013 -> Grismer:2013aa
+- BM_primary_citations: Recoder_2014 -> Recoder:2014aa
 
 ## Labels in TaxonBodyMass.csv without a CiteID row
 
@@ -44,7 +45,7 @@ One row per source label: species and record links (species x source x reference
 | Ehnes_etal_2011 | compilation | 464 | 2654 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Eklof_etal_2017 | primary | 6 | 121 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ernest_2003 | compilation | 1304 | 1314 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Faurby_etal_2018 | compilation | 5164 | 5900 | 99.9 | 596 | 593 | 216 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
+| Faurby_etal_2018 | compilation | 5164 | 5900 | 99.9 | 596 | 593 | 1 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
 | Feldman_etal_2016 | derived | 9651 | 9777 | 100 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 152 | 155 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | compilation | 449 | 562 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -57,12 +58,12 @@ One row per source label: species and record links (species x source x reference
 | Herberstein_etal_2022 | compilation | 1653 | 2693 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 380 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hishi_etal_2019 | derived | 320 | 324 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hoehler_etal_2023 | compilation | 1764 | 3074 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hoehler_etal_2023 | compilation | 1764 | 3080 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 87 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ikeda_2014 | compilation | 332 | 690 | 99.7 | 37 | 36 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Jennings_2002 | primary | 31 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Jones_2009 | compilation | 3444 | 23719 | 100 | 3066 | 3060 | 1651 | 0 | 0 | 0 | 6 | 0 | 0 | 0 |
+| Jones_2009 | compilation | 3444 | 23719 | 100 | 3066 | 3060 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 0 |
 | Kendall_etal_2019 | primary | 424 | 4033 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Killen_etal_2016 | compilation | 35 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kinsella_etal_2020 | primary | 92 | 572 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -75,16 +76,16 @@ One row per source label: species and record links (species x source x reference
 | Lislevand_etal_2007 | compilation | 3415 | 7399 | 67.8 | 84 | 81 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 42 | 196 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mahe_2023 | primary | 71 | 14563 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Makarieva_2008 | compilation | 1419 | 2904 | 61.3 | 340 | 304 | 145 | 0 | 0 | 20 | 0 | 16 | 0 | 0 |
+| Makarieva_2008 | compilation | 1419 | 2904 | 61.5 | 340 | 313 | 78 | 0 | 0 | 20 | 7 | 0 | 0 | 0 |
 | Mathieu_2014 | compilation | 96 | 97 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | McCoy_2008 | compilation | 1050 | 3090 | 100 | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Meiri_2018 | derived | 6582 | 46794 | 90.7 | 6233 | 5384 | 1690 | 0 | 0 | 9 | 33 | 807 | 0 | 0 |
+| Meiri_2018 | derived | 6582 | 46794 | 94.6 | 6233 | 5564 | 0 | 0 | 0 | 9 | 660 | 0 | 0 | 0 |
 | Meiri_2024 | compilation | 1162 | 1162 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mercer_etal_2001 | primary | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Myhrvold_2015 | compilation | 16326 | 32806 | 100 | 105 | 103 | 57 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
-| Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 0 | 3 | 0 | 0 |
+| Myhrvold_2015 | compilation | 16326 | 32806 | 100 | 105 | 103 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
+| Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
 | Pata_2025 | compilation | 117 | 117 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 99 | 363 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Quaardvark | database | 2372 | 2392 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
