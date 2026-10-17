@@ -1,10 +1,10 @@
-# Citations of McCoy_2008 -- 2026-10-16 15:25:13 (tbmcite 0.1.0)
+# Citations of McCoy_2008 -- 2026-10-16 21:54:32 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 22 row(s) for McCoy_2008, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

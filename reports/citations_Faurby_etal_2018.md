@@ -1,12 +1,10 @@
-# Citations of Faurby_etal_2018 -- 2026-10-16 21:33:41 (tbmcite 0.1.0)
+# Citations of Faurby_etal_2018 -- 2026-10-16 21:53:13 (tbmcite 0.1.0)
 
-Steps: --verify
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex); 1 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --verify: compilation DOI 10.1002/ecy.2443; 0 deposited references (0 with DOI)
-- --verify: 1 certain / crossref_only row(s) re-checked with OpenAlex: h:eb8f0ff4 kept
-- status counts: certain 216, approved 38, nodoi_approved 339, rejected 3 (certain / crossref_only: 1)
+- --sheet (dry run): 523 row(s) for Faurby_etal_2018, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

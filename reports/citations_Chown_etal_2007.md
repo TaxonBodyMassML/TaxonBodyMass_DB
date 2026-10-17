@@ -1,10 +1,10 @@
-# Citations of Chown_etal_2007 -- 2026-10-11 13:02:36 (tbmcite 0.1.0)
+# Citations of Chown_etal_2007 -- 2026-10-16 21:53:06 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 113 row(s) for Chown_etal_2007, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

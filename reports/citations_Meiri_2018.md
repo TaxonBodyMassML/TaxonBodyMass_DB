@@ -1,11 +1,10 @@
-# Citations of Meiri_2018 -- 2026-10-16 21:33:38 (tbmcite 0.1.0)
+# Citations of Meiri_2018 -- 2026-10-16 21:52:31 (tbmcite 0.1.0)
 
-Steps: --verify
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --verify: compilation DOI 10.1111/geb.12773; 48 deposited references (42 with DOI)
-- status counts: certain 2056, approved 294, nodoi_approved 3214, rejected 660, self 9
+- --sheet (dry run): 5495 row(s) for Meiri_2018, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

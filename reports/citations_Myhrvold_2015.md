@@ -1,10 +1,10 @@
-# Citations of Myhrvold_2015 -- 2026-10-16 19:39:49 (tbmcite 0.1.0)
+# Citations of Myhrvold_2015 -- 2026-10-16 21:54:39 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 2 decision(s) applied: Jones_2003 -> approved, Jones_2003_2 -> approved
+- --sheet (dry run): 102 row(s) for Myhrvold_2015, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
