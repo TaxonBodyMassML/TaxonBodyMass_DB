@@ -527,7 +527,17 @@ reflist_specs <- list(
   Cai_etal_2025 = list(format = 'csv', file = 'references.csv',
                         key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                         type_col = 'note', sep = ';', compiler = 'Cai',
-                        compilation_doi = '10.1073/pnas.2423386122')
+                        compilation_doi = '10.1073/pnas.2423386122'),
+
+  # de Castro (2025) FmrBT field metabolic rate compilation: per-row Reference
+  # column with abbreviated author-year strings (e.g. "LopezUrrutia 2006");
+  # 192 unique values keyed r001-r192 sorted by descending frequency; 151 DOIs
+  # pre-found via Crossref author+year search (build_references.py); r001
+  # (LopezUrrutia 2006, 1079 records) DOI added manually.
+  Castro_2025 = list(format = 'csv', file = 'references.csv',
+                     key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                     sep = ';', compiler = 'de Castro',
+                     compilation_doi = '10.1038/s41597-025-05868-y')
 )
 
 ReflistSpec <- function(source_label) {
