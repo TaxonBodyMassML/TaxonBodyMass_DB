@@ -1,4 +1,4 @@
-# Citations of Castro_2025 -- 2026-10-17 16:01:15 (tbmcite 0.1.0)
+# Citations of Castro_2025 -- 2026-10-17 16:03:26 (tbmcite 0.1.0)
 
 Steps: --init
 
@@ -11,22 +11,22 @@ Verification mode: full (Crossref + OpenAlex)
 
 | native_key | n_records | role | match_status | match_reason | services | verification_mode | doi | title_sim | bibcite | cite_id |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| r001 | 1079 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1073/pnas.0601137103 | 0.000 |  |  |
-| r002 | 218 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1016/b978-0-7506-7580-2.50004-6 | 0.000 |  |  |
-| r003 | 114 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1080/00150198408232555 | 0.000 |  |  |
-| r004 | 98 | measurement | certain | doi_resolves | crossref;openalex | full | 10.2307/4117120 | 0.000 |  |  |
-| r005 | 95 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/j.1095-8649.1978.tb03417.x | 0.000 |  |  |
-| r006 | 85 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1080/09700168009425769 | 0.000 |  |  |
-| r007 | 82 | measurement | certain | doi_resolves | crossref;openalex | full | 10.2307/43626980 | 0.000 |  |  |
-| r008 | 81 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1007/s10787-999-0013-0 | 0.000 |  |  |
-| r009 | 69 | measurement | certain | doi_resolves | crossref;openalex | full | 10.2307/1222044 | 0.000 |  |  |
-| r010 | 64 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1515/9781400856701 | 0.000 |  |  |
-| r011 | 64 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1080/03680770.1959.11899255 | 0.000 |  |  |
-| r012 | 63 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1186/cc3846 | 0.000 |  |  |
-| r013 | 59 | measurement | certain | doi_resolves | crossref;openalex | full | 10.3987/s-1979-01-0097 | 0.000 |  |  |
-| r014 | 57 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1007/978-3-642-95230-2_10 | 0.000 |  |  |
-| r015 | 57 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1016/s0300-9084(76)80303-3 | 0.000 |  |  |
-| r016 | 56 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1016/s0140-6736(61)90779-6 | 0.000 |  |  |
+| r001 | 1079 | measurement |  |  |  |  |  |  |  |  |
+| r002 | 218 | measurement |  |  |  |  |  |  |  |  |
+| r003 | 114 | measurement |  |  |  |  |  |  |  |  |
+| r004 | 98 | measurement |  |  |  |  |  |  |  |  |
+| r005 | 95 | measurement |  |  |  |  |  |  |  |  |
+| r006 | 85 | measurement |  |  |  |  |  |  |  |  |
+| r007 | 82 | measurement |  |  |  |  |  |  |  |  |
+| r008 | 81 | measurement |  |  |  |  |  |  |  |  |
+| r009 | 69 | measurement |  |  |  |  |  |  |  |  |
+| r010 | 64 | measurement |  |  |  |  |  |  |  |  |
+| r011 | 64 | measurement |  |  |  |  |  |  |  |  |
+| r012 | 63 | measurement |  |  |  |  |  |  |  |  |
+| r013 | 59 | measurement |  |  |  |  |  |  |  |  |
+| r014 | 57 | measurement |  |  |  |  |  |  |  |  |
+| r015 | 57 | measurement |  |  |  |  |  |  |  |  |
+| r016 | 56 | measurement |  |  |  |  |  |  |  |  |
 | r017 | 56 | measurement |  |  |  |  |  |  |  |  |
 | r018 | 55 | measurement |  |  |  |  |  |  |  |  |
 | r019 | 54 | measurement |  |  |  |  |  |  |  |  |
