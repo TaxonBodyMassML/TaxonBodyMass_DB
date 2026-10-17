@@ -1,13 +1,10 @@
-# Citations of Jones_2009 -- 2026-10-16 19:51:35 (tbmcite 0.1.0)
+# Citations of Jones_2009 -- 2026-10-16 20:07:47 (tbmcite 0.1.0)
 
-Steps: --bib --offline
+Steps: --recommend
 
-Verification mode: full (Crossref + OpenAlex); 226 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
+Verification mode: full (Crossref + OpenAlex)
 
-- --bib: primary_references written for 0 source(s)
-- --bib: 91 accepted DOI record(s) carry no Crossref author names; author field populated from raw citation as fallback (check or switch to nodoi if wrong): Myhrvold_2015 Sibly_2012 (10.1002/9781119968535); Jones_2009 2145 (10.1007/978-1-4419-8770-9); Jones_2009 2329 (10.1007/978-94-010-1944-6); Jones_2009 56 (10.1016/0198-0254(87)90283-4); Jones_2009 139 (10.1016/c2009-0-02373-3); Jones_2009 1766 (10.1017/cbo9780511542466); Myhrvold_2015 Prins_2014 (10.1017/cbo9781139565424); Jones_2009 82 (10.1038/089449b0); Jones_2009 2658 (10.1093/mspecies/147.1); Jones_2009 1182 (10.1093/mspecies/202.1a); Jones_2009 1092 (10.1093/mspecies/261.1); Jones_2009 1962 (10.1093/mspecies/266.1); Jones_2009 911 (10.1093/mspecies/274.1); Jones_2009 304 (10.1093/mspecies/365.1); Jones_2009 309 (10.1093/mspecies/374.1); Smith_2003 84 (10.1093/mspecies/374.1); Jones_2009 163 (10.1093/oxfordjournals.jhered.a111394); Jones_2009 2728 (10.1098/rspb.1993.0143); Jones_2009 490 (10.1098/rspb.1995.0034); Meiri_2018 Grismer 1990 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Lais 1976 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Grismer et al. 2013 [2] (10.1111/zoj12064); Meiri_2018 Recoder et al. 2014 (10.1111/zoj12128); Lislevand_etal_2007 49 (10.1201/9781420036305); Jones_2009 342 (10.1644/0.496.1); Jones_2009 343 (10.1644/0.497.1); Jones_2009 345 (10.1644/0.498.1); Jones_2009 1604 (10.1644/0.569.1); Jones_2009 2670 (10.1644/0.571.1); Jones_2009 2211 (10.1644/0.572.1); Smith_2003 220 (10.1644/744); Smith_2003 266 (10.1644/771); Smith_2003 267 (10.1644/772); Smith_2003 269 (10.1644/776); Jones_2009 3100 (10.2307/0.105.1); Jones_2009 592 (10.2307/0.106.1); Jones_2009 1887 (10.2307/0.109.1); Jones_2009 1512 (10.2307/0.112.1); Jones_2009 2445 (10.2307/0.268.1); Jones_2009 611 (10.2307/0.28.1); Jones_2009 468 (10.2307/0.306.1); Jones_2009 2365 (10.2307/0.31.1); Jones_2009 314 (10.2307/0.411.1); Smith_2003 86 (10.2307/0.411.1); Jones_2009 316 (10.2307/0.420.1); Jones_2009 612 (10.2307/0.44.1); Jones_2009 335 (10.2307/0.466.1); Jones_2009 644 (10.2307/0.469.1); Jones_2009 2561 (10.2307/0.49.1); Jones_2009 1985 (10.2307/0.490.1); Jones_2009 2956 (10.2307/0.50.1); Jones_2009 336 (10.2307/0.501.1); Jones_2009 341 (10.2307/0.507.1); Jones_2009 346 (10.2307/0.508.1); Jones_2009 591 (10.2307/0.55.1); Jones_2009 2492 (10.2307/0.595.1); Jones_2009 2459 (10.2307/0.596.1); Jones_2009 1960 (10.2307/0.624.1); Smith_2003 100 (10.2307/0.624.1); Smith_2003 255 (10.2307/0.660.1); Smith_2003 103 (10.2307/0.673.1); Smith_2003 104 (10.2307/0.675.1); Jones_2009 1751 (10.2307/3503849); Jones_2009 3065 (10.2307/3503921); Jones_2009 2611 (10.2307/3503996); Jones_2009 3031 (10.2307/3504073); Jones_2009 2252 (10.2307/3504102); Jones_2009 339 (10.2307/3504147); Jones_2009 651 (10.2307/3504157); Jones_2009 1608 (10.2307/3504217); Jones_2009 1699 (10.2307/3504221); Jones_2009 61 (10.2307/3504270); Jones_2009 1921 (10.2307/3504304); Jones_2009 46 (10.2307/3504312); Smith_2003 265 (10.2307/3504532); Smith_2003 264 (10.2307/3504547); Lislevand_etal_2007 70 (10.5040/9781472597441); Lislevand_etal_2007 27 (10.5040/9781472926975); Lislevand_etal_2007 23 (10.5040/9781472926982); Lislevand_etal_2007 5 (10.5040/9781472926999); Lislevand_etal_2007 24 (10.5040/9781472927002); Lislevand_etal_2007 25 (10.5040/9781472927019); Lislevand_etal_2007 26 (10.5040/9781472927026); Lislevand_etal_2007 28 (10.5040/9781472927033); Jones_2009 978 (10.5860/choice.33-2131); Jones_2009 1004 (10.5860/choice.37-5102); McCoy_2008 1 (10.5860/choice.45-5582); Jones_2009 1635 (10.5962/bhl.part.14575); Meiri_2018 Chabanaud 1918 (10.5962/bhl.part.19996); Meiri_2018 Chabanaud 1917 (10.5962/p.36933); Myhrvold_2015 MarinhoFilho_2002 (10.7312/oliv12042-015)
-- --bib: 1 of 1 bib correction(s) in bib_corrections.csv applied: Scherer:1984aa author
-- --bib: 10520 entries written to TaxonBodyMass_PrimaryCitations.bib (21 reuse a curated key); RefManageR parsed 10520; Jones_2009: 3060 rows with bibcite
+- --recommend: Jones_2009: 9 open row(s), 9 with a recommendation, 0 left to the owner (strong_candidate 9)
 
 ## References
 
@@ -1333,7 +1330,7 @@ Verification mode: full (Crossref + OpenAlex); 226 certain row(s) of this source
 | 1344 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3503984 | 1.000 | Hill:1981aa | Hill_1981 |
 | 1345 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380747 | 1.000 | Hill:1983aa | Hill_1983 |
 | 1346 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1993.57.3.401 | 1.000 | Hill:1993aa | Hill_1993 |
-| 1347 | 38 | measurement | approved | owner_candidate | crossref | full | 10.1111/j.1469-7998.1998.tb00119.x | 1.000 | Hill:1998aa | Hill_1998 |
+| 1347 | 38 | measurement | approved | owner_candidate | crossref;consensus-mcp | full | 10.1111/j.1469-7998.1998.tb00119.x | 1.000 | Hill:1998aa | Hill_1998 |
 | 1348 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.310 | Hilllman-Smith:1991aa | HilllmanSmith_1991 |
 | 1349 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504292 | 1.000 | Hillman-Smith:1994aa | Hillman-Smith_1994 |
 | 1350 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1987.tb03731.x | 1.000 | Hillman:1987aa | Hillman_1987 |
@@ -2659,191 +2656,191 @@ Verification mode: full (Crossref + OpenAlex); 226 certain row(s) of this source
 | 2705 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.873 | Stanger:1995aa | Stanger_1995 |
 | 2706 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1365-2028.1996.007-89007.x | 1.000 | Stanley:1996ab | Stanley_1996b |
 | 2707 | 4 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382216 | 1.000 | Stapp:1992aa | Stapp_1992 |
-| 2708 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.203292 | 1.000 | Starrett:1964aa | Starrett_1964 |
+| 2708 | 5 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.5962/p.203292 | 1.000 | Starrett:1964aa | Starrett_1964 |
 | 2709 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.488 | Start:1972aa | Start_1972 |
 | 2710 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.361 | Start:1975aa | Start_1975 |
-| 2711 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1968.tb03042.x | 1.000 | Stebbings:1968aa | Stebbings_1968 |
-| 2712 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1968.tb04372.x | 1.000 | Stebbings:1968ab | Stebbings_1968b |
+| 2711 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1968.tb03042.x | 1.000 | Stebbings:1968aa | Stebbings_1968 |
+| 2712 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1968.tb04372.x | 1.000 | Stebbings:1968ab | Stebbings_1968b |
 | 2713 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.858 | Stebbings:1970aa | Stebbings_1970 |
 | 2714 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.888 | Stebbins:1972aa | Stebbins_1972 |
-| 2715 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504443 | 1.000 | Steele:1998aa | Steele_1998 |
-| 2716 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504475 | 1.000 | Steele:1999aa | Steele_1999 |
+| 2715 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504443 | 1.000 | Steele:1998aa | Steele_1998 |
+| 2716 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504475 | 1.000 | Steele:1999aa | Steele_1999 |
 | 2717 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.801 | Stegman:1930aa | Stegman_1930 |
 | 2718 | 9 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.336 | Stelfox:1993aa | Stelfox_1993 |
 | 2719 | 166 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 1.000 | Stephan:1981aa | Stephan_1981 |
-| 2720 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1993.57.4.553 | 1.000 | Stephenson:1993aa | Stephenson_1993 |
+| 2720 | 8 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1993.57.4.553 | 1.000 | Stephenson:1993aa | Stephenson_1993 |
 | 2721 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.499 | Stephenson:1994ac | Stephenson_1994c |
-| 2722 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.94-11 | 1.000 | Stephenson:1994ab | Stephenson_1994b |
-| 2723 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.95-39 | 1.000 | Stephenson:1995aa | Stephenson_1995 |
-| 2724 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380702 | 1.000 | Stevenson:1981aa | Stevenson_1981 |
+| 2722 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.94-11 | 1.000 | Stephenson:1994ab | Stephenson_1994b |
+| 2723 | 8 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.95-39 | 1.000 | Stephenson:1995aa | Stephenson_1995 |
+| 2724 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380702 | 1.000 | Stevenson:1981aa | Stevenson_1981 |
 | 2725 | 9 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.467 | Stevenson:1988aa | Stevenson_1988 |
 | 2726 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0300-9629(94)90382-4 | 1.000 | Stephenson:1994aa | Stephenson_1994 |
 | 2727 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.291 | Stickel:1968aa | Stickel_1968 |
 | 2728 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1098/rspb.1993.0143 | 1.000 | Stockley:1993aa | Stockley_1993 |
 | 2729 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.521 | Stockley:1994aa | Stockley_1994 |
 | 2730 | 9 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.356 | Stockley:1998aa | Stockley_1998 |
-| 2731 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381765 | 1.000 | Bruns-Stockrahm:1988aa | BrunsStockrahm_1988 |
-| 2732 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2979 | 1.000 | Stoddart:1970aa | Stoddart_1970 |
-| 2733 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3257 | 1.000 | Stoddart:1971aa | Stoddart_1971 |
-| 2734 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04615.x | 1.000 | Stoddart:1994aa | Stoddart_1994 |
+| 2731 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381765 | 1.000 | Bruns-Stockrahm:1988aa | BrunsStockrahm_1988 |
+| 2732 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2979 | 1.000 | Stoddart:1970aa | Stoddart_1970 |
+| 2733 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3257 | 1.000 | Stoddart:1971aa | Stoddart_1971 |
+| 2734 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1994.tb04615.x | 1.000 | Stoddart:1994aa | Stoddart_1994 |
 | 2735 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.587 | Stone:1985aa | Stone_1985 |
 | 2736 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1365-2907.1985.tb00385.x | 0.907 | Stone:1985ab | Stone_1985b |
 | 2737 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.887 | Stone:1985ac | Stone_1985c |
-| 2738 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03680.x | 1.000 | Stone:1987aa | Stone_1987 |
-| 2739 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb05119.x | 1.000 | Stone:1987ab | Stone_1987b |
+| 2738 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1987.tb03680.x | 1.000 | Stone:1987aa | Stone_1987 |
+| 2739 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1987.tb05119.x | 1.000 | Stone:1987ab | Stone_1987b |
 | 2740 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.362 | Stone:1991aa | Stone_1991 |
 | 2741 | 13 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.593 | Stone:1995aa | Stone_1995 |
-| 2742 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/jmammal/11.2.235 | 1.000 | Storer:1930aa | Storer_1930 |
-| 2743 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3799490 | 1.000 | Stout:1970aa | Stout_1970 |
+| 2742 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1093/jmammal/11.2.235 | 1.000 | Storer:1930aa | Storer_1930 |
+| 2743 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3799490 | 1.000 | Stout:1970aa | Stout_1970 |
 | 2744 | 8 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.365 | Strahan:1995ab | Strahan_1995b |
-| 2745 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375926 | 1.000 | Strecker:1952aa | Strecker_1952 |
-| 2746 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504003 | 1.000 | Streubel:1978aa | Streubel_1978 |
+| 2745 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1375926 | 1.000 | Strecker:1952aa | Strecker_1952 |
+| 2746 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504003 | 1.000 | Streubel:1978aa | Streubel_1978 |
 | 2747 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1380682 | 0.902 | Stroud:1982aa | Stroud_1982 |
 | 2748 | 7 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.286 | Struhsaker:1987aa | Struhsaker_1987 |
-| 2749 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374084 | 1.000 | Struthers:1928aa | Struthers_1928 |
-| 2750 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/0010-406x(70)90087-3 | 1.000 | Studier:1970aa | Studier_1970 |
-| 2751 | 23 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380357 | 1.000 | Studier:1983aa | Studier_1983 |
-| 2752 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382515 | 1.000 | Studier:1994aa | Studier_1994 |
+| 2749 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1374084 | 1.000 | Struthers:1928aa | Struthers_1928 |
+| 2750 | 6 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1016/0010-406x(70)90087-3 | 1.000 | Studier:1970aa | Studier_1970 |
+| 2751 | 23 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380357 | 1.000 | Studier:1983aa | Studier_1983 |
+| 2752 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382515 | 1.000 | Studier:1994aa | Studier_1994 |
 | 2753 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.884 | Studier:1995aa | Studier_1995 |
 | 2754 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.841 | Stutterheim:1973aa | Stutterheim_1973 |
 | 2755 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.868 | Styles:1982aa | Styles_1982 |
 | 2756 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.483 | Su:1992aa | Su_1992 |
-| 2757 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9840049 | 1.000 | Suckling:1984aa | Suckling_1984 |
+| 2757 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/wr9840049 | 1.000 | Suckling:1984aa | Suckling_1984 |
 | 2759 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.408 | Sukumar:1989aa | Sukumar_1989 |
-| 2760 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504317 | 1.000 | Sulentich:1991aa | Sulentich_1991 |
-| 2761 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381069 | 1.000 | Sunquist:1987aa | Sunquist_1987 |
+| 2760 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504317 | 1.000 | Sulentich:1991aa | Sulentich_1991 |
+| 2761 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381069 | 1.000 | Sunquist:1987aa | Sunquist_1987 |
 | 2762 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb04872.x | 1.000 | Isaac:1994aa | Isaac_1994 |
 | 2763 | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.424 | Suthers:1980aa | Suthers_1980 |
-| 2764 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504206 | 1.000 | Sutton:1992aa | Sutton_1992 |
-| 2765 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504166 | 1.000 | Sutton:1993aa | Sutton_1993 |
+| 2764 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504206 | 1.000 | Sutton:1992aa | Sutton_1992 |
+| 2765 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504166 | 1.000 | Sutton:1993aa | Sutton_1993 |
 | 2766 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/81.2.299 | 0.934 | Sutton:2000aa | Sutton_2000 |
 | 2767 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.831 | Svendsen:1974aa | Svendsen_1974 |
 | 2769 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.802 | Svihla:1929ab | Svihla_1929b |
-| 2770 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373914 | 1.000 | Svihla:1931ab | Svihla_1931b |
-| 2771 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374016 | 1.000 | Svihla:1933aa | Svihla_1933 |
+| 2770 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1373914 | 1.000 | Svihla:1931ab | Svihla_1931b |
+| 2771 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1374016 | 1.000 | Svihla:1933aa | Svihla_1933 |
 | 2772 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.874 | Svihla:1935aa | Svihla_1935 |
 | 2773 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1374118 | 1.000 | Svihla:1929aa | Svihla_1929 |
 | 2774 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1373871 | 1.000 | Svihla:1931aa | Svihla_1931 |
 | 2775 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.852 | Svihla:1934aa | Svihla_1934 |
 | 2776 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/17.2.172 | 1.000 | Svihla:1936aa | Svihla_1936 |
 | 2777 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.666 | Svitalsky:1991aa | Svitalsky_1991 |
-| 2778 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503901 | 1.000 | Swanepoel:1983ab | Swanepoel_1983b |
-| 2779 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503872 | 1.000 | Swanepoel:1983aa | Swanepoel_1983 |
-| 2780 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb00992.x | 1.000 | Swart:1999aa | Swart_1999 |
-| 2781 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381921 | 1.000 | Sweitzer:1993aa | Sweitzer_1993 |
-| 2782 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1998.tb00021.x | 1.000 | Sweitzer:1998aa | Sweitzer_1998 |
-| 2783 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381718 | 1.000 | Swihart:1989aa | Swihart_1989 |
-| 2784 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382032 | 1.000 | Swihart:1992aa | Swihart_1992 |
+| 2778 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503901 | 1.000 | Swanepoel:1983ab | Swanepoel_1983b |
+| 2779 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503872 | 1.000 | Swanepoel:1983aa | Swanepoel_1983 |
+| 2780 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb00992.x | 1.000 | Swart:1999aa | Swart_1999 |
+| 2781 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381921 | 1.000 | Sweitzer:1993aa | Sweitzer_1993 |
+| 2782 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1998.tb00021.x | 1.000 | Sweitzer:1998aa | Sweitzer_1998 |
+| 2783 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1381718 | 1.000 | Swihart:1989aa | Swihart_1989 |
+| 2784 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382032 | 1.000 | Swihart:1992aa | Swihart_1992 |
 | 2785 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/83.1.252 | 1.000 | Swilling:2002aa | Swilling_2002 |
-| 2786 | 50 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb00768.x | 1.000 | Symonds:1999aa | Symonds_1999 |
+| 2786 | 50 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb00768.x | 1.000 | Symonds:1999aa | Symonds_1999 |
 | 2787 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1515/mamm-1988-0314 | 1.000 | O:1988aa | O_1988 |
-| 2788 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb04404.x | 1.000 | Taber:1992aa | Taber_1992 |
-| 2789 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.11606/issn.2526-3358.bolzoo.1976.121587 | 1.000 | Taddei:1976aa | Taddei_1976 |
-| 2790 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1999.63.2.167 | 1.000 | Talamoni:1999aa | Talamoni_1999 |
-| 2791 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382240 | 1.000 | Tallmon:1994aa | Tallmon_1994 |
-| 2792 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379041 | 1.000 | Tamarin:1972aa | Tamarin_1972 |
-| 2794 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1038/198104a0 | 1.000 | Tamsitt:1963aa | Tamsitt_1963 |
+| 2788 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1992.tb04404.x | 1.000 | Taber:1992aa | Taber_1992 |
+| 2789 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.11606/issn.2526-3358.bolzoo.1976.121587 | 1.000 | Taddei:1976aa | Taddei_1976 |
+| 2790 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1999.63.2.167 | 1.000 | Talamoni:1999aa | Talamoni_1999 |
+| 2791 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382240 | 1.000 | Tallmon:1994aa | Tallmon_1994 |
+| 2792 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1379041 | 1.000 | Tamarin:1972aa | Tamarin_1972 |
+| 2794 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1038/198104a0 | 1.000 | Tamsitt:1963aa | Tamsitt_1963 |
 | 2795 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.658 | Tamsitt:1965aa | Tamsitt_1965 |
-| 2796 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378153 | 1.000 | Tamsitt:1966ab | Tamsitt_1966b |
-| 2797 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378119 | 1.000 | Tamsitt:1966aa | Tamsitt_1966 |
-| 2798 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503899 | 1.000 | Tamsitt:1982aa | Tamsitt_1982 |
+| 2796 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1378153 | 1.000 | Tamsitt:1966ab | Tamsitt_1966b |
+| 2797 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1378119 | 1.000 | Tamsitt:1966aa | Tamsitt_1966 |
+| 2798 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503899 | 1.000 | Tamsitt:1982aa | Tamsitt_1982 |
 | 2799 | 6 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.899 | Tamura:1988aa | Tamura_1988 |
 | 2800 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.539 | Taplin:1980aa | Taplin_1980 |
-| 2801 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374908 | 1.000 | Tappe:1941aa | Tappe_1941 |
+| 2801 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1374908 | 1.000 | Tappe:1941aa | Tappe_1941 |
 | 2802 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.491 | Tast:1966aa | Tast_1966 |
 | 2803 | 97 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.513 | Tate:1951aa | Tate_1951 |
 | 2804 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.498 | Tate:1951ab | Tate_1951b |
-| 2805 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb08591.x | 1.000 | Tattersall:1994aa | Tattersall_1994 |
-| 2806 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1999.tb01036.x | 1.000 | Taulman:1999aa | Taulman_1999 |
+| 2805 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1994.tb08591.x | 1.000 | Tattersall:1994aa | Tattersall_1994 |
+| 2806 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1469-7998.1999.tb01036.x | 1.000 | Taulman:1999aa | Taulman_1999 |
 | 2807 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.444 | Tavares:1995aa | Tavares_1995 |
 | 2808 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.545 | Taylor:1961aa | Taylor_1961 |
 | 2809 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.426 | Taylor:1966aa | Taylor_1966 |
 | 2810 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.774 | Taylor:1968aa | Taylor_1968 |
-| 2811 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1378526 | 1.000 | Taylor:1970ab | Taylor_1970b |
-| 2812 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9700171 | 1.000 | Taylor:1970aa | Taylor_1970 |
-| 2813 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/cwr9710001 | 1.000 | Taylor:1971aa | Taylor_1971 |
+| 2811 | 2 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1378526 | 1.000 | Taylor:1970ab | Taylor_1970b |
+| 2812 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/zo9700171 | 1.000 | Taylor:1970aa | Taylor_1970 |
+| 2813 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/cwr9710001 | 1.000 | Taylor:1971aa | Taylor_1971 |
 | 2814 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.853 | Taylor:1973aa | Taylor_1973 |
-| 2815 | 4 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1976.tb04683.x | 1.000 | Taylor:1976aa | Taylor_1976 |
+| 2815 | 4 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1111/j.1469-7998.1976.tb04683.x | 1.000 | Taylor:1976aa | Taylor_1976 |
 | 2816 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3503837 | 1.000 | Taylor:1988ab | Taylor_1988b |
-| 2817 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503929 | 1.000 | Taylor:1988aa | Taylor_1988 |
+| 2817 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503929 | 1.000 | Taylor:1988aa | Taylor_1988 |
 | 2818 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.784 | Taylor:1994aa | Taylor_1994 |
 | 2819 | 14 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.533 | Taylor:1998ab | Taylor_1998b |
-| 2820 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1994.58.4.527 | 1.000 | Tchamba:1994aa | Tchamba_1994 |
+| 2820 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1994.58.4.527 | 1.000 | Tchamba:1994aa | Tchamba_1994 |
 | 2821 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.858 | Tedman:1985aa | Tedman_1985 |
 | 2822 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.484 | Tedman:1990aa | Tedman_1990 |
 | 2823 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1380042 | 0.904 | Terman:1980aa | Terman_1980 |
-| 2824 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381104 | 1.000 | Terman:1984aa | Terman_1984 |
-| 2825 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381205 | 1.000 | Terman:1984ab | Terman_1984b |
-| 2826 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382289 | 1.000 | Terman:1993aa | Terman_1993 |
-| 2827 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2387906 | 1.000 | Terwilliger:1978aa | Terwilliger_1978 |
-| 2828 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378568 | 1.000 | Tesh:1970ab | Tesh_1970b |
-| 2829 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378567 | 1.000 | Tesh:1970aa | Tesh_1970 |
+| 2824 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381104 | 1.000 | Terman:1984aa | Terman_1984 |
+| 2825 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381205 | 1.000 | Terman:1984ab | Terman_1984b |
+| 2826 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382289 | 1.000 | Terman:1993aa | Terman_1993 |
+| 2827 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2387906 | 1.000 | Terwilliger:1978aa | Terwilliger_1978 |
+| 2828 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1378568 | 1.000 | Tesh:1970ab | Tesh_1970b |
+| 2829 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1378567 | 1.000 | Tesh:1970aa | Tesh_1970 |
 | 2830 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.483 | Tesh:1970ac | Tesh_1970c |
-| 2831 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422299 | 1.000 | Tevis:1955aa | Tevis_1955 |
-| 2832 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.2000.64.4.447 | 1.000 | Theuerkauf:2000aa | Theuerkauf_2000 |
-| 2833 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1376372 | 1.000 | Thoma:1960aa | Thoma_1960 |
+| 2831 | 4 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2422299 | 1.000 | Tevis:1955aa | Tevis_1955 |
+| 2832 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.2000.64.4.447 | 1.000 | Theuerkauf:2000aa | Theuerkauf_2000 |
+| 2833 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1376372 | 1.000 | Thoma:1960aa | Thoma_1960 |
 | 2834 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.810 | Thomas:1890aa | Thomas_1890 |
-| 2835 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379413 | 1.000 | Thomas:1974aa | Thomas_1974 |
+| 2835 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1379413 | 1.000 | Thomas:1974aa | Thomas_1974 |
 | 2836 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.854 | Thomas:1984aa | Thomas_1984 |
-| 2837 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381342 | 1.000 | Thomas:1988aa | Thomas_1988 |
+| 2837 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381342 | 1.000 | Thomas:1988aa | Thomas_1988 |
 | 2838 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.432 | Thomas:1990aa | Thomas_1990 |
 | 2841 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3504013 | 1.000 | Thomson:1982aa | Thomson_1982 |
-| 2842 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1038/321690a0 | 1.000 | Thompson:1986aa | Thompson_1986 |
+| 2842 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1038/321690a0 | 1.000 | Thompson:1986aa | Thompson_1986 |
 | 2843 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.657 | Thompson:1991aa | Thompson_1991 |
-| 2844 | 26 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380481 | 1.000 | Thorington:1981aa | Thorington_1981 |
-| 2846 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9810119 | 1.000 | Tidemann:1981aa | Tidemann_1981 |
-| 2847 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9930021 | 1.000 | Tidemann:1993aa | Tidemann_1993 |
+| 2844 | 26 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380481 | 1.000 | Thorington:1981aa | Thorington_1981 |
+| 2846 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/zo9810119 | 1.000 | Tidemann:1981aa | Tidemann_1981 |
+| 2847 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/zo9930021 | 1.000 | Tidemann:1993aa | Tidemann_1993 |
 | 2848 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.749 | Tien:1990aa | Tien_1990 |
 | 2849 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/2423393 | 0.902 | Tileston:1966aa | Tileston_1966 |
-| 2850 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503942 | 1.000 | Timm:1982aa | Timm_1982 |
-| 2851 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504062 | 1.000 | Timm:1985aa | Timm_1985 |
+| 2850 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503942 | 1.000 | Timm:1982aa | Timm_1982 |
+| 2851 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504062 | 1.000 | Timm:1985aa | Timm_1985 |
 | 2852 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.481 | Timm:1991aa | Timm_1991 |
 | 2853 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/82.2.545 | 1.000 | Tkadlec:2001aa | Tkadlec_2001 |
 | 2854 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1744-7429.2002.tb00563.x | 0.967 | Tobler:2002aa | Tobler_2002 |
 | 2855 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1644/1545-1410(2001)648<0001:ma>2.0.co;2 | 1.000 | Tognelli:2001aa | Tognelli_2001 |
-| 2856 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422801 | 1.000 | Toll:1960aa | Toll_1960 |
+| 2856 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2422801 | 1.000 | Toll:1960aa | Toll_1960 |
 | 2857 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.615 | Tomes:1860aa | Tomes_1860 |
 | 2858 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.542 | Tomich:1962aa | Tomich_1962 |
-| 2859 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504535 | 1.000 | Torres-Mura:1998aa | Torres-Mura_1998 |
-| 2860 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382901 | 1.000 | Torres-Contreras:1997aa | Torres-Contreras_1997 |
-| 2861 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381442 | 1.000 | Torres-Mura:1989aa | Torres-Mura_1989 |
+| 2859 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504535 | 1.000 | Torres-Mura:1998aa | Torres-Mura_1998 |
+| 2860 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382901 | 1.000 | Torres-Contreras:1997aa | Torres-Contreras_1997 |
+| 2861 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381442 | 1.000 | Torres-Mura:1989aa | Torres-Mura_1989 |
 | 2862 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1071/am85025 | 0.913 | Towers:1985aa | Towers_1985 |
-| 2863 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375861 | 1.000 | Townsend:1953aa | Townsend_1953 |
+| 2863 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1375861 | 1.000 | Townsend:1953aa | Townsend_1953 |
 | 2864 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.639 | Townsend:2001aa | Townsend_2001 |
 | 2865 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/30.4.433 | 0.906 | Trapido:1949aa | Trapido_1949 |
-| 2866 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3800877 | 1.000 | Trent:1974aa | Trent_1974 |
+| 2866 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3800877 | 1.000 | Trent:1974aa | Trent_1974 |
 | 2867 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.792 | Trethewey:1971aa | Trethewey_1971 |
 | 2868 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.807 | Trewhella:1995aa | Trewhella_1995 |
 | 2869 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/81.2.586 | 1.000 | Trillmich:2000aa | Trillmich_2000 |
 | 2870 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1381245 | 0.927 | Trombulak:1985aa | Trombulak_1985 |
-| 2873 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1933771 | 1.000 | Tucker:1966aa | Tucker_1966 |
+| 2873 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1933771 | 1.000 | Tucker:1966aa | Tucker_1966 |
 | 2875 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1515/mamm.1999.63.4.437 | 0.916 | Turkalo:1999aa | Turkalo_1999 |
-| 2876 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2424236 | 1.000 | Turner:1976aa | Turner_1976 |
+| 2876 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2424236 | 1.000 | Turner:1976aa | Turner_1976 |
 | 2877 | 1 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.289 | Turner:1989aa | Turner_1989 |
 | 2878 | 8 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.584 | Tutin:1997aa | Tutin_1997 |
-| 2879 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375680 | 1.000 | Twente:1955aa | Twente_1955 |
+| 2879 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1375680 | 1.000 | Twente:1955aa | Twente_1955 |
 | 2880 | 11 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.552 | Tyndale-Biscoe:1984aa | Tyndale-Biscoe_1984 |
 | 2881 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.577 | Uchida:1951aa | Uchida_1951 |
 | 2882 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.863 | Udell:1983aa | Udell_1983 |
-| 2883 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376716 | 1.000 | Uhlig:1956aa | Uhlig_1956 |
+| 2883 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1376716 | 1.000 | Uhlig:1956aa | Uhlig_1956 |
 | 2884 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.493 | Urbanczyk:1994aa | Urbanczyk_1994 |
-| 2885 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1093/oso/9780198549451.003.0004 | 1.000 | Utzurrum:1995aa | Utzurrum_1995 |
+| 2885 | 9 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1093/oso/9780198549451.003.0004 | 1.000 | Utzurrum:1995aa | Utzurrum_1995 |
 | 2886 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.868 | Vahala:1992aa | Vahala_1992 |
 | 2887 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1748-1090.1993.tb03509.x | 1.000 | Vahala:1993aa | Vahala_1993 |
-| 2888 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382353 | 1.000 | Valone:1995aa | Valone_1995 |
-| 2889 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1994.tb01586.x | 1.000 | Van-Aarde:1994aa | VanAarde_1994 |
+| 2888 | 9 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382353 | 1.000 | Valone:1995aa | Valone_1995 |
+| 2889 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1994.tb01586.x | 1.000 | Van-Aarde:1994aa | VanAarde_1994 |
 | 2890 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.382 | Van-Ballenberghe:1997aa | VanBallenberghe_1997 |
 | 2891 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.468 | Van-Bemmel:1984aa | VanBemmel_1984 |
-| 2892 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1979.11447643 | 1.000 | van-derMerwe:1979aa | vanderMerwe_1979 |
+| 2892 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1080/02541858.1979.11447643 | 1.000 | van-derMerwe:1979aa | vanderMerwe_1979 |
 | 2893 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.550 | van-der-Merwe:1986ac | vanderMerwe_1986c |
-| 2894 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1986.11447955 | 1.000 | van-der-Merwe:1986aa | vanderMerwe_1986 |
-| 2895 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0770355 | 1.000 | van-der-Merwe:1986ab | vanderMerwe_1986b |
+| 2894 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1080/02541858.1986.11447955 | 1.000 | van-der-Merwe:1986aa | vanderMerwe_1986 |
+| 2895 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1530/jrf.0.0770355 | 1.000 | van-der-Merwe:1986ab | vanderMerwe_1986b |
 | 2896 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.404 | van-der-Merwe:1987ab | vanderMerwe_1987b |
 | 2897 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03707.x | 0.927 | Merwe:1987aa | Merwe_1987 |
-| 2898 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0810041 | 0.932 | van-der-Merwe:1987aa | vanderMerwe_1987 |
+| 2898 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1530/jrf.0.0810041 | 0.932 | van-der-Merwe:1987aa | vanderMerwe_1987 |
 | 2899 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.614 | van-der-Merwe:1988aa | vanderMerwe_1988 |
-| 2900 | 25 | measurement | certain | crossref_only | crossref | crossref_only | 10.1080/02541858.1990.11448213 | 1.000 | van-der-Merwe:1990aa | vanderMerwe_1990 |
-| 2901 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0890537 | 1.000 | van-der-Merwe:1990ab | vanderMerwe_1990b |
+| 2900 | 25 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1080/02541858.1990.11448213 | 1.000 | van-der-Merwe:1990aa | vanderMerwe_1990 |
+| 2901 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1530/jrf.0.0890537 | 1.000 | van-der-Merwe:1990ab | vanderMerwe_1990b |
 | 2902 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.536 | van-der-Merwe:1995aa | vanderMerwe_1995 |
 | 2903 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.734 | van-der-Merwe:2001aa | vanderMerwe_2001 |
 | 2904 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1016/0305-0491(83)90355-3 | 1.000 | van-der-Westhuyzen:1983aa | vanderWesthuyzen_1983 |
@@ -2851,231 +2848,231 @@ Verification mode: full (Crossref + OpenAlex); 226 certain row(s) of this source
 | 2906 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1071/am86016 | 1.000 | Van:1986aa | Van_1986 |
 | 2907 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1071/am88018 | 1.000 | Van:1988aa | Van_1988 |
 | 2908 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.604 | Van-Gyseghem:1984aa | VanGyseghem_1984 |
-| 2909 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382983 | 1.000 | Van-Horne:1998aa | VanHorne_1998 |
+| 2909 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382983 | 1.000 | Van-Horne:1998aa | VanHorne_1998 |
 | 2910 | 7 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.472 | van-Peenen:1968aa | vanPeenen_1968 |
 | 2911 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.690 | van-Roosmalen:1981aa | vanRoosmalen_1981 |
 | 2912 | 4 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.412 | van-Roosmalen:1988aa | vanRoosmalen_1988 |
-| 2913 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1987.tb03694.x | 1.000 | Aarde:1987aa | Aarde_1987 |
-| 2914 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1515/mamm.1989.53.1.25 | 1.000 | Van-Hensbergen:1989aa | VanHensbergen_1989 |
-| 2915 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1985.tb03557.x | 1.000 | Schaik:1985aa | Schaik_1985 |
-| 2916 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1163/26660644-05301006 | 1.000 | Varona:1983aa | Varona_1983 |
+| 2913 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1987.tb03694.x | 1.000 | Aarde:1987aa | Aarde_1987 |
+| 2914 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1515/mamm.1989.53.1.25 | 1.000 | Van-Hensbergen:1989aa | VanHensbergen_1989 |
+| 2915 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1985.tb03557.x | 1.000 | Schaik:1985aa | Schaik_1985 |
+| 2916 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1163/26660644-05301006 | 1.000 | Varona:1983aa | Varona_1983 |
 | 2917 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1017/s0952836998003124 | 1.000 | Vassallo:1998aa | Vassallo_1998 |
-| 2918 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376874 | 1.000 | Vaughan:1962aa | Vaughan_1962 |
-| 2919 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379407 | 1.000 | Vaughan:1974aa | Vaughan_1974 |
-| 2920 | 4 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1977.41.4.517 | 1.000 | Vaughan:1977aa | Vaughan_1977 |
+| 2918 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1376874 | 1.000 | Vaughan:1962aa | Vaughan_1962 |
+| 2919 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1379407 | 1.000 | Vaughan:1974aa | Vaughan_1974 |
+| 2920 | 4 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1977.41.4.517 | 1.000 | Vaughan:1977aa | Vaughan_1977 |
 | 2921 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.798 | Vaughan:1980aa | Vaughan_1980 |
 | 2922 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.866 | Vaughan:1980ab | Vaughan_1980b |
-| 2923 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380671 | 1.000 | Vaughan:1982aa | Vaughan_1982 |
-| 2924 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380917 | 1.000 | Vaughan:1985aa | Vaughan_1985 |
-| 2925 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381460 | 1.000 | Vaughan:1987aa | Vaughan_1987 |
+| 2923 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380671 | 1.000 | Vaughan:1982aa | Vaughan_1982 |
+| 2924 | 8 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380917 | 1.000 | Vaughan:1985aa | Vaughan_1985 |
+| 2925 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381460 | 1.000 | Vaughan:1987aa | Vaughan_1987 |
 | 2926 | 3 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/81.1.77 | 1.000 | Vazquez:2000aa | Vazquez_2000 |
 | 2927 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1644/1545-1410(2001)649<0001:pa>2.0.co;2 | 1.000 | Bernardo-Vazquez:2001aa | BernardoVazquez_2001 |
-| 2928 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503858 | 1.000 | Veal:1979aa | Veal_1979 |
+| 2928 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503858 | 1.000 | Veal:1979aa | Veal_1979 |
 | 2929 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.874 | Velazquez:1994aa | Velazquez_1994 |
-| 2930 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1995.59.4.517 | 1.000 | Vernes:1995ab | Vernes_1995b |
-| 2931 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/wr9950699 | 1.000 | Vernes:1995aa | Vernes_1995 |
-| 2932 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.99-36 | 1.000 | Veron:1999aa | Veron_1999 |
-| 2933 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381211 | 1.000 | Verts:1984aa | Verts_1984 |
-| 2934 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503887 | 1.000 | Verts:1987aa | Verts_1987 |
-| 2935 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504014 | 1.000 | Verts:1987ab | Verts_1987b |
-| 2936 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504324 | 1.000 | Verts:1988aa | Verts_1988 |
-| 2937 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504172 | 1.000 | Verts:1995aa | Verts_1995 |
-| 2938 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504451 | 1.000 | Verts:1999aa | Verts_1999 |
+| 2930 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1995.59.4.517 | 1.000 | Vernes:1995ab | Vernes_1995b |
+| 2931 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/wr9950699 | 1.000 | Vernes:1995aa | Vernes_1995 |
+| 2932 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.99-36 | 1.000 | Veron:1999aa | Veron_1999 |
+| 2933 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381211 | 1.000 | Verts:1984aa | Verts_1984 |
+| 2934 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503887 | 1.000 | Verts:1987aa | Verts_1987 |
+| 2935 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504014 | 1.000 | Verts:1987ab | Verts_1987b |
+| 2936 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504324 | 1.000 | Verts:1988aa | Verts_1988 |
+| 2937 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504172 | 1.000 | Verts:1995aa | Verts_1995 |
+| 2938 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504451 | 1.000 | Verts:1999aa | Verts_1999 |
 | 2939 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1644/1545-1410(2000)641<0001:tm>2.0.co;2 | 1.000 | Verts:2000aa | Verts_2000 |
 | 2940 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.589 | Verts:2001aa | Verts_2001 |
 | 2941 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1644/1545-1410(2001)653<0001:tm>2.0.co;2 | 1.000 | Verts:2001ab | Verts_2001b |
-| 2942 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1990.54.1.61 | 1.000 | Verzi:1990aa | Verzi_1990 |
-| 2943 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380484 | 1.000 | Vickery:1981aa | Vickery_1981 |
-| 2944 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1997.61.2.245 | 1.000 | Vieira:1997aa | Vieira_1997 |
+| 2942 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1990.54.1.61 | 1.000 | Verzi:1990aa | Verzi_1990 |
+| 2943 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380484 | 1.000 | Vickery:1981aa | Vickery_1981 |
+| 2944 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1997.61.2.245 | 1.000 | Vieira:1997aa | Vieira_1997 |
 | 2945 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.656 | Viljoen:1977aa | Viljoen_1977 |
 | 2946 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.463 | Viljoen:1978aa | Viljoen_1978 |
-| 2947 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380963 | 1.000 | Viljoen:1985aa | Viljoen_1985 |
-| 2948 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1986.50.3.293 | 1.000 | Viljoen:1986aa | Viljoen_1986 |
-| 2949 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02561.x | 1.000 | Viljoen:1989aa | Viljoen_1989 |
-| 2950 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02779.x | 1.000 | Virgl:1997aa | Virgl_1997 |
+| 2947 | 8 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380963 | 1.000 | Viljoen:1985aa | Viljoen_1985 |
+| 2948 | 6 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1986.50.3.293 | 1.000 | Viljoen:1986aa | Viljoen_1986 |
+| 2949 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1989.tb02561.x | 1.000 | Viljoen:1989aa | Viljoen_1989 |
+| 2950 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1997.tb02779.x | 1.000 | Virgl:1997aa | Virgl_1997 |
 | 2951 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.540 | Vlasak:1972aa | Vlasak_1972 |
-| 2952 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.76-18 | 1.000 | Vogel:1976aa | Vogel_1976 |
+| 2952 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.76-18 | 1.000 | Vogel:1976aa | Vogel_1976 |
 | 2953 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.492 | Vogel:1983aa | Vogel_1983 |
-| 2954 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511721830.004 | 1.000 | Vogel:1998aa | Vogel_1998 |
+| 2954 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1017/cbo9780511721830.004 | 1.000 | Vogel:1998aa | Vogel_1998 |
 | 2955 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.449 | von-Djordje:1960aa | vonDjordje_1960 |
 | 2956 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/0.50.1 | 1.000 | von-Richter:1974aa | vonRichter_1974 |
-| 2957 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380570 | 1.000 | Van-Vuren:1983aa | VanVuren_1983 |
+| 2957 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380570 | 1.000 | Van-Vuren:1983aa | VanVuren_1983 |
 | 2958 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/1373322 | 0.915 | Wade:1927aa | Wade_1927 |
 | 2959 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.805 | Wadsworth:1969aa | Wadsworth_1969 |
-| 2960 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.5962/p.363987 | 1.000 | Waldron:2000aa | Waldron_2000 |
+| 2960 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.5962/p.363987 | 1.000 | Waldron:2000aa | Waldron_2000 |
 | 2961 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1017/s095283699800106x | 1.000 | Wallace:1998aa | Wallace_1998 |
-| 2962 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1016/s0006-3207(00)00219-6 | 1.000 | Walpole:2001aa | Walpole_2001 |
-| 2963 | 2 | measurement | certain | crossref_only | crossref;owner-waiver | crossref_only | 10.2307/3503993 | 1.000 | Wang:1987aa | Wang_1987 |
-| 2964 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382232 | 1.000 | Wang:1994aa | Wang_1994 |
+| 2962 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1016/s0006-3207(00)00219-6 | 1.000 | Walpole:2001aa | Walpole_2001 |
+| 2963 | 2 | measurement | certain | two_service_agreement | crossref;openalex;owner-waiver | full | 10.2307/3503993 | 1.000 | Wang:1987aa | Wang_1987 |
+| 2964 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382232 | 1.000 | Wang:1994aa | Wang_1994 |
 | 2965 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.545 | Ward:1971aa | Ward_1971 |
-| 2966 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1988.tb02427.x | 1.000 | Ward:1988ab | Ward_1988b |
-| 2967 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1988.tb02428.x | 1.000 | Ward:1988ac | Ward_1988c |
-| 2968 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9900423 | 1.000 | Ward:1990aa | Ward_1990 |
-| 2969 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383108 | 1.000 | Ward:1998aa | Ward_1998 |
-| 2970 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503940 | 1.000 | Warner:1982aa | Warner_1982 |
-| 2971 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1374405 | 1.000 | Warren:1936aa | Warren_1936 |
-| 2972 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb01963.x | 1.000 | Warren:1997aa | Warren_1997 |
-| 2973 | 6 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1997.tb02790.x | 1.000 | Warren:1997ab | Warren_1997b |
-| 2974 | 25 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382715 | 1.000 | Waterman:1996aa | Waterman_1996 |
-| 2975 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2772 | 1.000 | Watts:1969aa | Watts_1969 |
+| 2966 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1111/j.1469-7998.1988.tb02427.x | 1.000 | Ward:1988ab | Ward_1988b |
+| 2967 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1988.tb02428.x | 1.000 | Ward:1988ac | Ward_1988c |
+| 2968 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/zo9900423 | 1.000 | Ward:1990aa | Ward_1990 |
+| 2969 | 8 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1383108 | 1.000 | Ward:1998aa | Ward_1998 |
+| 2970 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503940 | 1.000 | Warner:1982aa | Warner_1982 |
+| 2971 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1374405 | 1.000 | Warren:1936aa | Warren_1936 |
+| 2972 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1997.tb01963.x | 1.000 | Warren:1997aa | Warren_1997 |
+| 2973 | 6 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1997.tb02790.x | 1.000 | Warren:1997ab | Warren_1997b |
+| 2974 | 25 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382715 | 1.000 | Waterman:1996aa | Waterman_1996 |
+| 2975 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2772 | 1.000 | Watts:1969aa | Watts_1969 |
 | 2976 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.887 | Wauters:1992aa | Wauters_1992 |
 | 2977 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.834 | Webb:1994ac | Webb_1994c |
-| 2978 | 37 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05423.x | 1.000 | Webb:1996aa | Webb_1996 |
-| 2979 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380595 | 1.000 | Webster:1981aa | Webster_1981 |
-| 2980 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504020 | 1.000 | Webster:1982ac | Webster_1982c |
-| 2981 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503879 | 1.000 | Webster:1982aa | Webster_1982 |
-| 2982 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503992 | 1.000 | Webster:1982ab | Webster_1982b |
-| 2983 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503811 | 1.000 | Webster:1983aa | Webster_1983 |
+| 2978 | 37 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1996.tb05423.x | 1.000 | Webb:1996aa | Webb_1996 |
+| 2979 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380595 | 1.000 | Webster:1981aa | Webster_1981 |
+| 2980 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504020 | 1.000 | Webster:1982ac | Webster_1982c |
+| 2981 | 2 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503879 | 1.000 | Webster:1982aa | Webster_1982 |
+| 2982 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503992 | 1.000 | Webster:1982ab | Webster_1982b |
+| 2983 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503811 | 1.000 | Webster:1983aa | Webster_1983 |
 | 2984 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.833 | Webster:1986aa | Webster_1986 |
-| 2985 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504303 | 1.000 | Webster:1993aa | Webster_1993 |
-| 2986 | 285 | compilation | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1382840 | 1.000 | Weckerly:1998aa | Weckerly_1998 |
+| 2985 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3504303 | 1.000 | Webster:1993aa | Webster_1993 |
+| 2986 | 285 | compilation | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1382840 | 1.000 | Weckerly:1998aa | Weckerly_1998 |
 | 2987 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.437 | Wei:1984aa | Wei_1984 |
 | 2988 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.606 | Weidong:1986aa | Weidong_1986 |
-| 2989 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0240193 | 1.000 | Weir:1971aa | Weir_1971 |
-| 2990 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0250355 | 1.000 | Weir:1971ab | Weir_1971b |
-| 2991 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503926 | 1.000 | Wells-Gosling:1984aa | Wells-Gosling_1984 |
+| 2989 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1530/jrf.0.0240193 | 1.000 | Weir:1971aa | Weir_1971 |
+| 2990 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1530/jrf.0.0250355 | 1.000 | Weir:1971ab | Weir_1971b |
+| 2991 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503926 | 1.000 | Wells-Gosling:1984aa | Wells-Gosling_1984 |
 | 2993 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1748-1090.1971.tb01870.x | 0.916 | Wemmer:1971aa | Wemmer_1971 |
-| 2994 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380679 | 1.000 | West:1982aa | West_1982 |
+| 2994 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380679 | 1.000 | West:1982aa | West_1982 |
 | 2995 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.590 | West:1987aa | West_1987 |
-| 2996 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1530/jrf.0.0840505 | 1.000 | Westlin-van-Aarde:1988aa | Westlin-vanAarde_1988 |
+| 2996 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1530/jrf.0.0840505 | 1.000 | Westlin-van-Aarde:1988aa | Westlin-vanAarde_1988 |
 | 2997 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1093/jmammal/83.1.81 | 1.000 | Westman:2002aa | Westman_2002 |
 | 2998 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.882 | Wetzel:1977aa | Wetzel_1977 |
-| 2999 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375292 | 1.000 | Wharton:1950aa | Wharton_1950 |
+| 2999 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1375292 | 1.000 | Wharton:1950aa | Wharton_1950 |
 | 3000 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.491 | Wharton:1987aa | Wharton_1987 |
 | 3001 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.496 | Whitaker:1907aa | Whitaker_1907 |
 | 3002 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.532 | Whitaker:1909aa | Whitaker_1909 |
-| 3003 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2422825 | 1.000 | Whitaker:1962aa | Whitaker_1962 |
-| 3004 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503916 | 1.000 | Whitaker:1972aa | Whitaker_1972 |
-| 3005 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504066 | 1.000 | Whitaker:1972ab | Whitaker_1972b |
-| 3006 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504033 | 1.000 | Whitaker:1974aa | Whitaker_1974 |
+| 3003 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2422825 | 1.000 | Whitaker:1962aa | Whitaker_1962 |
+| 3004 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503916 | 1.000 | Whitaker:1972aa | Whitaker_1972 |
+| 3005 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504066 | 1.000 | Whitaker:1972ab | Whitaker_1972b |
+| 3006 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504033 | 1.000 | Whitaker:1974aa | Whitaker_1974 |
 | 3007 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.678 | Whitaker:1976aa | Whitaker_1976 |
-| 3008 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504284 | 1.000 | White:1992aa | White_1992 |
+| 3008 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504284 | 1.000 | White:1992aa | White_1992 |
 | 3009 | 12 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.574 | Whitehead:1972aa | Whitehead_1972 |
 | 3010 | 40 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.453 | Whitehead:1993aa | Whitehead_1993 |
 | 3011 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.531 | Whitney:1966aa | Whitney_1966 |
-| 3012 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1935606 | 1.000 | Whitney:1977aa | Whitney_1977 |
+| 3012 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1935606 | 1.000 | Whitney:1977aa | Whitney_1977 |
 | 3013 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.868 | Whitten:1981aa | Whitten_1981 |
 | 3014 | 6 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.446 | Wible:1988aa | Wible_1988 |
-| 3015 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1373783 | 1.000 | Wight:1930aa | Wight_1930 |
-| 3016 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/am87019 | 1.000 | Wiles:1987aa | Wiles_1987 |
+| 3015 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1373783 | 1.000 | Wight:1930aa | Wight_1930 |
+| 3016 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/am87019 | 1.000 | Wiles:1987aa | Wiles_1987 |
 | 3017 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.573 | Wiles:1991aa | Wiles_1991 |
 | 3018 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Wiles:1996aa | Wiles_1996 |
-| 3019 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503989 | 1.000 | Wiley:1980aa | Wiley_1980 |
-| 3020 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503969 | 1.000 | Wilkins:1986aa | Wilkins_1986 |
-| 3021 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504023 | 1.000 | Wilkins:1987aa | Wilkins_1987 |
-| 3022 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504148 | 1.000 | Wilkins:1989aa | Wilkins_1989 |
+| 3019 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503989 | 1.000 | Wiley:1980aa | Wiley_1980 |
+| 3020 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503969 | 1.000 | Wilkins:1986aa | Wilkins_1986 |
+| 3021 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504023 | 1.000 | Wilkins:1987aa | Wilkins_1987 |
+| 3022 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504148 | 1.000 | Wilkins:1989aa | Wilkins_1989 |
 | 3023 | 95 | compilation | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.373 | Wilkinson:2003aa | Wilkinson_2003 |
-| 3024 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/2423325 | 1.000 | Williams:1965aa | Williams_1965 |
-| 3025 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503970 | 1.000 | Williams:1974aa | Williams_1974 |
+| 3024 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/2423325 | 1.000 | Williams:1965aa | Williams_1965 |
+| 3025 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503970 | 1.000 | Williams:1974aa | Williams_1974 |
 | 3026 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.502 | Williams:1978aa | Williams_1978 |
 | 3027 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.866 | Williams:1980aa | Williams_1980 |
-| 3028 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503838 | 1.000 | Williams:1982ab | Williams_1982b |
+| 3028 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503838 | 1.000 | Williams:1982ab | Williams_1982b |
 | 3029 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.542 | Williams:1984ac | Williams_1984c |
-| 3030 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503917 | 1.000 | Williams:1985ab | Williams_1985b |
+| 3030 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503917 | 1.000 | Williams:1985ab | Williams_1985b |
 | 3031 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3504073 | 1.000 | Williams:1991ab | Williams_1991b |
-| 3032 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504176 | 1.000 | Williams:1991ac | Williams_1991c |
-| 3033 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1017/cbo9780511542466.016 | 1.000 | Williamson:1999aa | Williamson_1999 |
-| 3034 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380788 | 1.000 | Willig:1985aa | Willig_1985 |
-| 3035 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380793 | 1.000 | Willig:1985ab | Willig_1985b |
-| 3036 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503953 | 1.000 | Willig:1987aa | Willig_1987 |
+| 3032 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504176 | 1.000 | Williams:1991ac | Williams_1991c |
+| 3033 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1017/cbo9780511542466.016 | 1.000 | Williamson:1999aa | Williamson_1999 |
+| 3034 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380788 | 1.000 | Willig:1985aa | Willig_1985 |
+| 3035 | 5 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380793 | 1.000 | Willig:1985ab | Willig_1985b |
+| 3036 | 1 | measurement | pending | ambiguous | crossref;openalex | full | 10.2307/3503953 | 1.000 | Willig:1987aa | Willig_1987 |
 | 3037 | 12 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.854 | Willig:1989aa | Willig_1989 |
-| 3038 | 11 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.2307/1381910 | 1.000 | Willig:1993aa | Willig_1993 |
-| 3039 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504016 | 1.000 | Willner:1980aa | Willner_1980 |
+| 3038 | 11 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.2307/1381910 | 1.000 | Willig:1993aa | Willig_1993 |
+| 3039 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504016 | 1.000 | Willner:1980aa | Willner_1980 |
 | 3040 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3504287 | 1.000 | Willis:1990aa | Willis_1990 |
-| 3041 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1378570 | 1.000 | Wilson:1970aa | Wilson_1970 |
+| 3041 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1378570 | 1.000 | Wilson:1970aa | Wilson_1970 |
 | 3043 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.346 | Wilson:1973aa | Wilson_1973 |
 | 3044 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.283 | Wilson:1984aa | Wilson_1984 |
 | 3045 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.529 | Wilson:1984ab | Wilson_1984b |
 | 3046 | 16 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.504 | Wilson:2001aa | Wilson_2001 |
 | 3047 | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.883 | Wimsatt:1945aa | Wimsatt_1945 |
-| 3048 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1000910304 | 1.000 | Wimsatt:1952aa | Wimsatt_1952 |
+| 3048 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1002/aja.1000910304 | 1.000 | Wimsatt:1952aa | Wimsatt_1952 |
 | 3049 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 1.000 | Wimsatt:1970aa | Wimsatt_1970 |
-| 3050 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1002/aja.1001590208 | 1.000 | Wimsatt:1980aa | Wimsatt_1980 |
-| 3051 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1376515 | 1.000 | Wing:1960aa | Wing_1960 |
+| 3050 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1002/aja.1001590208 | 1.000 | Wimsatt:1980aa | Wimsatt_1980 |
+| 3051 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1376515 | 1.000 | Wing:1960aa | Wing_1960 |
 | 3052 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.444 | Wingate:1986aa | Wingate_1986 |
 | 3053 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.498 | Winkler:1996aa | Winkler_1996 |
-| 3054 | 11 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb02638.x | 1.000 | Wirminghaus:1993aa | Wirminghaus_1993 |
+| 3054 | 11 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1993.tb02638.x | 1.000 | Wirminghaus:1993aa | Wirminghaus_1993 |
 | 3055 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.683 | Wirtz:1967aa | Wirtz_1967 |
 | 3057 | 8 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.864 | Wirtz:1983aa | Wirtz_1983 |
-| 3058 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383020 | 1.000 | Wischusen:1998aa | Wischusen_1998 |
-| 3059 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377798 | 1.000 | Wise:1967aa | Wise_1967 |
-| 3060 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382217 | 1.000 | Witt:1992aa | Witt_1992 |
+| 3058 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1383020 | 1.000 | Wischusen:1998aa | Wischusen_1998 |
+| 3059 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1377798 | 1.000 | Wise:1967aa | Wise_1967 |
+| 3060 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382217 | 1.000 | Witt:1992aa | Witt_1992 |
 | 3061 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.588 | Wodzicki:1975aa | Wodzicki_1975 |
-| 3062 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.70-5 | 1.000 | Wojciechowska:1970aa | Wojciechowska_1970 |
-| 3063 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503898 | 1.000 | Wolfe:1977aa | Wolfe_1977 |
-| 3064 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380591 | 1.000 | Wolfe:1981aa | Wolfe_1981 |
+| 3062 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.70-5 | 1.000 | Wojciechowska:1970aa | Wojciechowska_1970 |
+| 3063 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503898 | 1.000 | Wolfe:1977aa | Wolfe_1977 |
+| 3064 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380591 | 1.000 | Wolfe:1981aa | Wolfe_1981 |
 | 3065 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/3503921 | 1.000 | Wolfe:1982aa | Wolfe_1982 |
-| 3066 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380812 | 1.000 | Wolff:1985ab | Wolff_1985b |
-| 3067 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380900 | 1.000 | Wolff:1986aa | Wolff_1986 |
-| 3068 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382469 | 1.000 | Wolff:1994aa | Wolff_1994 |
+| 3066 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380812 | 1.000 | Wolff:1985ab | Wolff_1985b |
+| 3067 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380900 | 1.000 | Wolff:1986aa | Wolff_1986 |
+| 3068 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382469 | 1.000 | Wolff:1994aa | Wolff_1994 |
 | 3069 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1439-0310.1976.tb00941.x | 1.000 | Wickler:1976aa | Wickler_1976 |
 | 3070 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.888 | Woloszyn:1985aa | Woloszyn_1985 |
 | 3071 | 9 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.796 | Wolton:1982aa | Wolton_1982 |
 | 3072 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.871 | Wood:1935aa | Wood_1935 |
-| 3073 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1375195 | 1.000 | Wood:1949aa | Wood_1949 |
+| 3073 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1375195 | 1.000 | Wood:1949aa | Wood_1949 |
 | 3074 | 2 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1071/zo9710371 | 0.908 | Wood:1971aa | Wood_1971 |
-| 3075 | 7 | measurement | certain | crossref_only | crossref | crossref_only | 10.1515/mamm.1987.51.4.537 | 1.000 | Woodall:1987aa | Woodall_1987 |
-| 3076 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb02482.x | 1.000 | Woodall:1989aa | Woodall_1989 |
-| 3077 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504036 | 1.000 | Woods:1973aa | Woods_1973 |
-| 3078 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503820 | 1.000 | Woods:1975aa | Woods_1975 |
-| 3079 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504182 | 1.000 | Woods:1992aa | Woods_1992 |
-| 3080 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1981.tb03464.x | 1.000 | Wooller:1981aa | Wooller_1981 |
-| 3081 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1992.tb07491.x | 1.000 | Wooller:1992aa | Wooller_1992 |
+| 3075 | 7 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1515/mamm.1987.51.4.537 | 1.000 | Woodall:1987aa | Woodall_1987 |
+| 3076 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1989.tb02482.x | 1.000 | Woodall:1989aa | Woodall_1989 |
+| 3077 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504036 | 1.000 | Woods:1973aa | Woods_1973 |
+| 3078 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503820 | 1.000 | Woods:1975aa | Woods_1975 |
+| 3079 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504182 | 1.000 | Woods:1992aa | Woods_1992 |
+| 3080 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1981.tb03464.x | 1.000 | Wooller:1981aa | Wooller_1981 |
+| 3081 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1992.tb07491.x | 1.000 | Wooller:1992aa | Wooller_1992 |
 | 3082 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1017/s0952836999007013 | 1.000 | Wooller:1999aa | Wooller_1999 |
-| 3083 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1989.tb05010.x | 1.000 | Woolley:1989aa | Woolley_1989 |
-| 3084 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1071/zo9910661 | 1.000 | Woolley:1991aa | Woolley_1991 |
+| 3083 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1989.tb05010.x | 1.000 | Woolley:1989aa | Woolley_1989 |
+| 3084 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/zo9910661 | 1.000 | Woolley:1991aa | Woolley_1991 |
 | 3085 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.479 | Woolley:1996aa | Woolley_1996 |
 | 3086 | 17 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1007/bf00173778 | 0.904 | Wrangham:1993aa | Wrangham_1993 |
 | 3088 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.533 | Wright:1981aa | Wright_1981 |
-| 3089 | 2 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1002/evan.1360010108 | 1.000 | Wright:1992aa | Wright_1992 |
+| 3089 | 2 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1002/evan.1360010108 | 1.000 | Wright:1992aa | Wright_1992 |
 | 3090 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.858 | Wright:1995aa | Wright_1995 |
 | 3091 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.798 | Wrigley:1974aa | Wrigley_1974 |
-| 3092 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1381482 | 1.000 | Wroot:1987aa | Wroot_1987 |
+| 3092 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1381482 | 1.000 | Wroot:1987aa | Wroot_1987 |
 | 3093 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1017/s0266467400009421 | 1.000 | Wu:1996aa | Wu_1996 |
-| 3094 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380350 | 1.000 | Yahner:1983aa | Yahner_1983 |
-| 3095 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.76-39 | 1.000 | Yalden:1976aa | Yalden_1976 |
-| 3096 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503827 | 1.000 | Yalden:1985aa | Yalden_1985 |
+| 3094 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380350 | 1.000 | Yahner:1983aa | Yahner_1983 |
+| 3095 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.76-39 | 1.000 | Yalden:1976aa | Yalden_1976 |
+| 3096 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503827 | 1.000 | Yalden:1985aa | Yalden_1985 |
 | 3097 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.434 | Yang:1989aa | Yang_1989 |
 | 3098 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.311 | Yao-ting:1983aa | Yao-ting_1983 |
 | 3099 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1469-7998.1965.tb05163.x | 1.000 | The-Earl-Of-Cranbrook:1965aa | TheEarlOfCranbrook_1965 |
 | 3100 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/0.105.1 | 1.000 | Yates:1978aa | Yates_1978 |
-| 3101 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf02739363 | 1.000 | Yeager:1989aa | Yeager_1989 |
-| 3102 | 5 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/bf02557727 | 1.000 | Yeager:1998aa | Yeager_1998 |
-| 3103 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504405 | 1.000 | Yensen:1997aa | Yensen_1997 |
+| 3101 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1007/bf02739363 | 1.000 | Yeager:1989aa | Yeager_1989 |
+| 3102 | 5 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1007/bf02557727 | 1.000 | Yeager:1998aa | Yeager_1998 |
+| 3103 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504405 | 1.000 | Yensen:1997aa | Yensen_1997 |
 | 3105 | 5 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.554 | Yin:1967aa | Yin_1967 |
 | 3107 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.403 | Yokohata:1999aa | Yokohata_1999 |
-| 3108 | 1 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1111/j.1469-7998.1979.tb07715.x | 1.000 | Yokoyama:1979aa | Yokoyama_1979 |
-| 3109 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1986.tb01525.x | 1.000 | Yom-Tov:1986aa | Yom-Tov_1986 |
+| 3108 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1111/j.1469-7998.1979.tb07715.x | 1.000 | Yokoyama:1979aa | Yokoyama_1979 |
+| 3109 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1986.tb01525.x | 1.000 | Yom-Tov:1986aa | Yom-Tov_1986 |
 | 3110 | 14 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.577 | Yom-Tov:1992aa | Yom-Tov_1992 |
-| 3111 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3504254 | 1.000 | Yom-Tov:1995aa | Yom-Tov_1995 |
-| 3112 | 8 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1382941 | 1.000 | Yoshinaga:1997aa | Yoshinaga_1997 |
+| 3111 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3504254 | 1.000 | Yom-Tov:1995aa | Yom-Tov_1995 |
+| 3112 | 8 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1382941 | 1.000 | Yoshinaga:1997aa | Yoshinaga_1997 |
 | 3114 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.547 | Yoshiyuki:1991aa | Yoshiyuki_1991 |
 | 3115 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1515/mamm.1975.39.1.75 | 0.916 | Young:1975aa | Young_1975 |
 | 3116 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.564 | Young:1979aa | Young_1979 |
-| 3117 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503778 | 1.000 | Young:1982aa | Young_1982 |
-| 3118 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503978 | 1.000 | Young:1983aa | Young_1983 |
-| 3119 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503973 | 1.000 | Young:1984aa | Young_1984 |
+| 3117 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503778 | 1.000 | Young:1982aa | Young_1982 |
+| 3118 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503978 | 1.000 | Young:1983aa | Young_1983 |
+| 3119 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503973 | 1.000 | Young:1984aa | Young_1984 |
 | 3120 | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.458 | Young:1993aa | Young_1993 |
-| 3121 | 9 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1993.tb01928.x | 1.000 | Yu:1993aa | Yu_1993 |
+| 3121 | 9 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1993.tb01928.x | 1.000 | Yu:1993aa | Yu_1993 |
 | 3122 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.539 | Zahler:1998aa | Zahler_1998 |
 | 3123 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.356 | Zahmel:2002aa | Zahmel_2002 |
-| 3124 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1380791 | 1.000 | Zammuto:1985aa | Zammuto_1985 |
+| 3124 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1380791 | 1.000 | Zammuto:1985aa | Zammuto_1985 |
 | 3125 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.1111/j.1748-1090.1973.tb02128.x | 0.903 | Zara:1973aa | Zara_1973 |
-| 3126 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503955 | 1.000 | Zegers:1984aa | Zegers_1984 |
+| 3126 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503955 | 1.000 | Zegers:1984aa | Zegers_1984 |
 | 3127 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.538 | Zejda:1969aa | Zejda_1969 |
-| 3128 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.3406/revec.1965.4434 | 1.000 | Zelenka:1965aa | Zelenka_1965 |
-| 3129 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1007/978-94-011-8030-6_18 | 1.000 | Zhang:1987aa | Zhang_1987 |
+| 3128 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.3406/revec.1965.4434 | 1.000 | Zelenka:1965aa | Zelenka_1965 |
+| 3129 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1007/978-94-011-8030-6_18 | 1.000 | Zhang:1987aa | Zhang_1987 |
 | 3130 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.475 | Zhang:1993aa | Zhang_1993 |
 | 3131 | 2 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.529 | Ziegler:1982aa | Ziegler_1982 |
 | 3132 | 1 | measurement | approved | owner_candidate | crossref | crossref_only | 10.2307/2423564 | 1.000 | Zimmerman:1972aa | Zimmerman_1972 |
-| 3133 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1377664 | 1.000 | Zimny:1965aa | Zimny_1965 |
-| 3134 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2460/ajvr.1990.51.03.408 | 0.978 | Zinkl:1990aa | Zinkl_1990 |
+| 3133 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1377664 | 1.000 | Zimny:1965aa | Zimny_1965 |
+| 3134 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2460/ajvr.1990.51.03.408 | 0.978 | Zinkl:1990aa | Zinkl_1990 |
 | 3135 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.529 | Zoloth:1969aa | Zoloth_1969 |
-| 3136 | 3 | measurement | certain | crossref_only | crossref | crossref_only | 10.1139/z02-183 | 1.000 | Zschokke:2002aa | Zschokke_2002 |
-| 3137 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1383292 | 1.000 | Zuercher:1999aa | Zuercher_1999 |
-| 3138 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/3503822 | 1.000 | Nitikman:1985aa | Nitikman_1985 |
+| 3136 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1139/z02-183 | 1.000 | Zschokke:2002aa | Zschokke_2002 |
+| 3137 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1383292 | 1.000 | Zuercher:1999aa | Zuercher_1999 |
+| 3138 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/3503822 | 1.000 | Nitikman:1985aa | Nitikman_1985 |
 | 3139 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.602 | Zumpt:1970aa | Zumpt_1970 |
-| 3140 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1469-7998.1996.tb05490.x | 1.000 | Zuri:1996aa | Zuri_1996 |
-| 3141 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.2307/1379417 | 1.000 | Zurowski:1974aa | Zurowski_1974 |
-| 3142 | 1 | measurement | certain | crossref_only | crossref | crossref_only | 10.4098/at.arch.75-8 | 0.970 | Zurowski:1975aa | Zurowski_1975 |
+| 3140 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-7998.1996.tb05490.x | 1.000 | Zuri:1996aa | Zuri_1996 |
+| 3141 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1379417 | 1.000 | Zurowski:1974aa | Zurowski_1974 |
+| 3142 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4098/at.arch.75-8 | 0.970 | Zurowski:1975aa | Zurowski_1975 |
 | 3143 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.499 | Zwahlen:1975aa | Zwahlen_1975 |
