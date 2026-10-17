@@ -1,6 +1,7 @@
 # Owner decisions pulled from BM_decisions -- 2026-10-17 (tbmcite 0.1.0)
 
-- --decisions-pull: 1662 tab row(s) read from BM_decisions: 1647 pulled into pending_citations.csv, 0 deferred, 0 error(s), 15 ignored
+- --decisions-pull: 1748 tab row(s) read from BM_decisions: 1731 pulled into pending_citations.csv, 0 deferred, 0 error(s), 17 ignored
+- --decisions-pull: Cai_etal_2025: pulled 84, deferred 0, errors 0, ignored 2
 - --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
 - --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
 - --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
@@ -17,6 +18,7 @@
 
 | source_label | pulled | deferred | errors | ignored |
 | --- | ---: | ---: | ---: | ---: |
+| Cai_etal_2025 | 84 | 0 | 0 | 2 |
 | Faurby_etal_2018 | 296 | 0 | 0 | 0 |
 | Hebert_etal_2016 | 10 | 0 | 0 | 0 |
 | Jones_2009 | 649 | 0 | 0 | 0 |
@@ -1587,110 +1589,196 @@
 | Jones_2009 | 2983 | 2026-10-16 | accept |  | pulled 2026-10-16 |
 | Jones_2009 | 2985 | 2026-10-16 | accept |  | pulled 2026-10-16 |
 | Jones_2009 | 3036 | 2026-10-16 | accept |  | pulled 2026-10-16 |
-| Tsuboi_etal_2018 | t004 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t005 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t006 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t007 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t009 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t012 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t014 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t017 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t020 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t021 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t022 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t023 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t025 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t026 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t028 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t029 | 2026-10-17 | accept | 1 | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t030 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t032 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t033 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t036 | 2026-10-17 | nodoi | nodoi | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t037 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t038 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t042 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t044 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t047 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t048 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t049 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t052 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t053 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t055 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t056 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t057 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t061 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t064 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t072 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t074 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t079 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t080 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t083 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t084 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t085 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t087 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t088 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t089 | 2026-10-17 | accept | 1 | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t090 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t091 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t092 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t093 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t094 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t095 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t096 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t097 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t098 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t100 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t101 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t102 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t103 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t104 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t105 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t107 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t108 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t110 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t112 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t114 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t115 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t116 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t117 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t118 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t119 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t120 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t121 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t123 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t124 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t125 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t126 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t127 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t128 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t129 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t130 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t131 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t132 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t133 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t134 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t136 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t137 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t138 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t139 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t140 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t141 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t142 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t143 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t144 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t145 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t147 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t148 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t150 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t151 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t153 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t154 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t155 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t156 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t157 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t158 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t159 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t160 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t161 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
-| Tsuboi_etal_2018 | t162 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t004 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t005 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t006 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t007 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t009 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t012 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t014 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t017 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t020 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t021 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t022 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t023 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t025 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t026 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t028 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t029 | 2026-10-17 | accept |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t030 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t032 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t033 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t036 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t037 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t038 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t042 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t044 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t047 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t048 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t049 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t052 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t053 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t055 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t056 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t057 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t061 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t064 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t072 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t074 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t079 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t080 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t083 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t084 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t085 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t087 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t088 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t089 | 2026-10-17 | accept |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t090 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t091 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t092 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t093 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t094 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t095 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t096 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t097 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t098 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t100 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t101 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t102 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t103 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t104 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t105 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t107 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t108 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t110 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t112 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t114 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t115 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t116 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t117 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t118 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t119 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t120 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t121 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t123 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t124 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t125 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t126 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t127 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t128 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t129 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t130 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t131 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t132 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t133 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t134 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t136 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t137 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t138 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t139 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t140 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t141 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t142 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t143 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t144 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t145 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t147 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t148 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t150 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t151 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t153 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t154 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t155 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t156 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t157 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t158 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t159 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t160 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t161 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Tsuboi_etal_2018 | t162 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c001 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Cai_etal_2025 | c005 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c006 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c007 | 2026-10-17 | nodoi |  | ignored: already pulled 2026-10-17 as doi:10.1111/j.1420-9101.2009.01783.x (change it in the CSV) |
+| Cai_etal_2025 | c009 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c011 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c012 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c013 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c014 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c015 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c016 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Cai_etal_2025 | c018 | 2026-10-17 | doi:10.3897/natureconservation.9.8908 |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c022 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c023 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c024 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c025 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c026 | 2026-10-17 | doi:10.11646/zootaxa.4420.2.1 |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c027 | 2026-10-17 | doi:10.1080/00222933.2018.1481236 |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c029 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c030 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c031 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c032 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c033 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c034 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c035 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c036 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c037 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c038 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c039 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c040 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c041 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c042 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c043 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c045 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c046 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c047 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c048 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c049 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c050 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c051 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c052 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c053 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c054 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c056 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c057 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c058 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c059 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c060 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c061 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c064 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c065 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c066 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c067 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c068 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c069 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c070 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c071 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c072 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c073 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c074 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c075 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c076 | 2026-10-17 | doi:10.58837/tnh.12.2.103048 |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c077 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c078 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c079 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c080 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c081 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c082 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c083 | 2026-10-17 |  |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c084 | 2026-10-17 | drop |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c085 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c086 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c087 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c088 | 2026-10-17 |  |  | ignored: already pulled 2026-10-17 as doi:10.15560/16.3.571 (change it in the CSV) |
+| Cai_etal_2025 | c089 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c090 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c091 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c092 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c093 | 2026-10-17 |  |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c094 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c095 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c096 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c097 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c098 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c099 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Cai_etal_2025 | c100 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |

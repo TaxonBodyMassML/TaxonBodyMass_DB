@@ -519,7 +519,15 @@ reflist_specs <- list(
   Tsuboi_etal_2018 = list(format = 'csv', file = 'references.csv',
                           key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                           type_col = 'note', sep = ';', compiler = 'Tsuboi',
-                          compilation_doi = '10.1038/s41559-018-0632-1')
+                          compilation_doi = '10.1038/s41559-018-0632-1'),
+  # Cai et al. (2025) Dataset S27: per-row Ref.BodyMass column with full paper
+  # titles or database names; 99 unique values keyed c001-c100 (c019 removed
+  # as NA artifact); 18 DOIs pre-found via Crossref title search; databases
+  # and websites flagged in the note column for owner review.
+  Cai_etal_2025 = list(format = 'csv', file = 'references.csv',
+                        key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                        type_col = 'note', sep = ';', compiler = 'Cai',
+                        compilation_doi = '10.1073/pnas.2423386122')
 )
 
 ReflistSpec <- function(source_label) {
