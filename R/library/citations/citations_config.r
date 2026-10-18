@@ -572,7 +572,13 @@ reflist_specs <- list(
   Tucker_etal_2014a = list(format = 'csv', file = 'references.csv',
                            key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                            type_col = 'note', sep = ';', compiler = 'Tucker',
-                           compilation_doi = '10.1111/ele.12216')
+                           compilation_doi = '10.1111/ele.12216'),
+  # Tucker_etal_2014b: full citations from Appendix S1 References (pdf supplement);
+  # 387 DOIs found via Crossref; type_col = 'note' flags books and not_matched entries.
+  Tucker_etal_2014b = list(format = 'csv', file = 'references.csv',
+                           key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                           type_col = 'note', sep = ';', compiler = 'Tucker',
+                           compilation_doi = '10.1111/geb.12194')
 )
 
 ReflistSpec <- function(source_label) {
