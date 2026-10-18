@@ -1,10 +1,10 @@
-# Citations of Cai_etal_2025 -- 2026-10-17 15:31:35 (tbmcite 0.1.0)
+# Citations of Cai_etal_2025 -- 2026-10-18 12:12:44 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 89 row(s) for Cai_etal_2025, 87 new, tab had 10582 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

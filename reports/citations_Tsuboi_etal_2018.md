@@ -1,10 +1,10 @@
-# Citations of Tsuboi_etal_2018 -- 2026-10-17 10:57:42 (tbmcite 0.1.0)
+# Citations of Tsuboi_etal_2018 -- 2026-10-18 12:13:59 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 55 row(s) for Tsuboi_etal_2018, 50 new, tab had 10532 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 
