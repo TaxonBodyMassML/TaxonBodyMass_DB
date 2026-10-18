@@ -18,5 +18,6 @@ adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon) & !grepl('\\b(sp|spp|cf|a
 adat$phylum <- 'Nematoda'
 adat$n <- 1
 adat$source_mass <- 'Mulder_2011'
-MUD <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum')]
+adat$ref_keys <- 'Mulder_2011'
+MUD <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'ref_keys')]
 save(MUD, file = file.path(wd_rdata, 'BodyMass_Mulder_2011.Rdata'))

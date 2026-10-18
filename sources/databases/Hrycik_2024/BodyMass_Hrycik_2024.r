@@ -17,5 +17,6 @@ adat <- adat[!is.na(adat$mass_g), ]
 adat <- adat[adat$mass_g > 0, ]
 adat$n <- 1
 adat$source_mass <- 'Hrycik_2024'
+adat$ref_keys <- 'Hrycik_2024'
 HRY <- adat
 save(HRY, file = file.path(wd_rdata, 'BodyMass_Hrycik_2024.Rdata'))

@@ -23,6 +23,7 @@ adat <- DropImputed(adat, is.na(adat$mass_g) & !is.na(adat$mr.mass_g), 'AnAge',
 adat <- adat[, c('taxon', 'mass_g')]
 adat$n <- 1
 adat$source_mass <- 'AnAge'
+adat$ref_keys <- 'AnAge'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 AN <- adat[!is.na(adat$mass_g), ]
 save(AN, file = file.path(wd_rdata, 'BodyMass_AnAge.Rdata'))

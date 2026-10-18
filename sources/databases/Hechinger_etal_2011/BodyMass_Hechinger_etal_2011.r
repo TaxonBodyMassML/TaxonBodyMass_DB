@@ -25,6 +25,7 @@ for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
   adat[[col]] <- iconv(as.character(adat[[col]]), to = 'ASCII//TRANSLIT')
 adat$n <- 1
 adat$source_mass <- 'Hechinger_etal_2011'
+adat$ref_keys <- 'Hechinger_etal_2011'
 HEC <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
-                'order', 'family')]
+                'order', 'family', 'ref_keys')]
 save(HEC, file = file.path(wd_rdata, 'BodyMass_Hechinger_etal_2011.Rdata'))

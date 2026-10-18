@@ -8,5 +8,6 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'Mahe_2023'
+adat$ref_keys <- 'Mahe_2023'
 MAH <- adat
 save(MAH, file = file.path(wd_rdata, 'BodyMass_Mahe_2023.Rdata'))

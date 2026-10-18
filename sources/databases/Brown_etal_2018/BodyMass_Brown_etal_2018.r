@@ -16,5 +16,6 @@ colnames(adat) <- c('taxon', 'mass_g')
 adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat$n <- 1
 adat$source_mass <- 'Brown_etal_2018'
+adat$ref_keys <- 'Brown_etal_2018'
 BR <- adat
 save(BR, file = file.path(wd_rdata, 'BodyMass_Brown_etal_2018.Rdata'))

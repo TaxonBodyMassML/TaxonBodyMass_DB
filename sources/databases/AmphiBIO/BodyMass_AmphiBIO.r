@@ -10,6 +10,7 @@ colnames(adat) <- c('taxon', 'mass_g')
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'AmphiBIO'
+adat$ref_keys <- 'AmphiBIO'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 AM <- adat
 save(AM, file = file.path(wd_rdata, 'BodyMass_AmphiBIO.Rdata'))

@@ -17,5 +17,6 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat$phylum <- 'Ciliophora'
 adat$n <- 1
 adat$source_mass <- 'Lukic_2022'
-LUK <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum')]
+adat$ref_keys <- 'Lukic_2022'
+LUK <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'ref_keys')]
 save(LUK, file = file.path(wd_rdata, 'BodyMass_Lukic_2022.Rdata'))

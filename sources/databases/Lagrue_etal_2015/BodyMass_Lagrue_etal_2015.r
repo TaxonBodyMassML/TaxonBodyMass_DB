@@ -22,5 +22,6 @@ grp_map <- c(Fish = 'Chordata', Insect = 'Arthropoda', Crustacean = 'Arthropoda'
 adat$phylum <- unname(grp_map[adat[['Taxonomic group']]])
 adat$n <- 1
 adat$source_mass <- 'Lagrue_etal_2015'
-LAG <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum')]
+adat$ref_keys <- 'Lagrue_etal_2015'
+LAG <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'ref_keys')]
 save(LAG, file = file.path(wd_rdata, 'BodyMass_Lagrue_etal_2015.Rdata'))

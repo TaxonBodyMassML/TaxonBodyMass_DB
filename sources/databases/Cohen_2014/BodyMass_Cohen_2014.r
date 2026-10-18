@@ -22,5 +22,6 @@ adat <- adat[!duplicated(adat[, c('taxon', 'logm')]), ]
 adat$mass_g <- (10^adat$logm) * 1e-6 / 0.20                                          # ug dry -> g wet
 adat$n <- 1
 adat$source_mass <- 'Cohen_2014'
-COH <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
+adat$ref_keys <- 'Cohen_2014'
+COH <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(COH, file = file.path(wd_rdata, 'BodyMass_Cohen_2014.Rdata'))
