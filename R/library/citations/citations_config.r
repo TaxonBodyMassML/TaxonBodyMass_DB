@@ -762,7 +762,14 @@ reflist_specs <- list(
   GuoBailly_2024 = list(format = 'csv', file = 'references.csv',
                         key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                         type_col = 'note', sep = ';', compiler = 'Guo',
-                        compilation_doi = '')
+                        compilation_doi = ''),
+  # Ghaderi_2026: per-row Source column holds verbatim author-year keys
+  # (e.g. "Ahmad & Jairajpuri, 1993"); build_references.py resolves them to
+  # full citations and DOIs. Key strings in references.csv match Source verbatim.
+  Ghaderi_2026 = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                      type_col = 'note', sep = ';', compiler = 'Ghaderi',
+                      compilation_doi = '10.1016/j.apsoil.2025.106605')
 )
 
 ReflistSpec <- function(source_label) {
