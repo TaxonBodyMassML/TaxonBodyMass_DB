@@ -584,7 +584,13 @@ reflist_specs <- list(
   Killen_etal_2016 = list(format = 'csv', file = 'references.csv',
                           key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                           type_col = 'note', sep = ';', compiler = 'Killen',
-                          compilation_doi = '10.1111/gcb.13105')
+                          compilation_doi = '10.1111/gcb.13105'),
+  # Gillooly_etal_2016: data CSV uses negative integer reference indices (e.g. -1 = ref 1);
+  # R script converts abs(M.1) to string key; references.csv integer keys 1..67 (PNAS format).
+  Gillooly_etal_2016 = list(format = 'csv', file = 'references.csv',
+                            key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                            type_col = 'note', sep = ';', compiler = 'Gillooly',
+                            compilation_doi = '10.1073/pnas.1519617113')
 )
 
 ReflistSpec <- function(source_label) {
