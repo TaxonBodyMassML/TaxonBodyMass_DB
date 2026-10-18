@@ -51,6 +51,7 @@ for (col in c('kingdom', 'phylum', 'class', 'order', 'family'))
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'carbon', group = adat$mass_group)
 adat$n <- 1
 adat$source_mass <- LabelWithConversion('Kiorboe_2014', adat$mass_group)
-KIO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'kingdom', 'phylum', 'class',
-                'order', 'family')]
+adat$ref_keys <- 'Kiorboe_2014'
+KIO <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys', 'kingdom', 'phylum',
+                'class', 'order', 'family')]
 save(KIO, file = file.path(wd_rdata, 'BodyMass_Kiorboe_2014.Rdata'))

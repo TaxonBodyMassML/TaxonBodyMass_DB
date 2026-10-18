@@ -608,7 +608,36 @@ reflist_specs <- list(
   Verberk_2020 = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                       type_col = 'note', sep = ';', compiler = 'Verberk',
-                      compilation_doi = '10.1098/rspb.2020.0488')
+                      compilation_doi = '10.1098/rspb.2020.0488'),
+  # Single-citation sources: all rows from one paper; ref_keys = source_label for all rows.
+  Barnes_2008 = list(format = 'csv', file = 'references.csv',
+                     key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                     type_col = 'note', sep = ';', compiler = 'Barnes',
+                     compilation_doi = '10.1890/07-1551.1'),
+  DeLong_etal_2010 = list(format = 'csv', file = 'references.csv',
+                          key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                          type_col = 'note', sep = ';', compiler = 'DeLong',
+                          compilation_doi = '10.1073/pnas.1007783107'),
+  Feldman_etal_2016 = list(format = 'csv', file = 'references.csv',
+                           key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                           type_col = 'note', sep = ';', compiler = 'Feldman',
+                           compilation_doi = '10.1111/geb.12398'),
+  Kiorboe_2014 = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                      type_col = 'note', sep = ';', compiler = 'Kiorboe',
+                      compilation_doi = '10.1086/675241'),
+  Soria_etal_2021 = list(format = 'csv', file = 'references.csv',
+                         key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                         type_col = 'note', sep = ';', compiler = 'Soria',
+                         compilation_doi = '10.1002/ecy.3344'),
+  Meiri_2024 = list(format = 'csv', file = 'references.csv',
+                    key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                    type_col = 'note', sep = ';', compiler = 'Meiri',
+                    compilation_doi = '10.1111/geb.13812'),
+  Lemoine_2026 = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                      type_col = 'note', sep = ';', compiler = 'Lemoine',
+                      compilation_doi = '10.1016/j.ejsobi.2026.103854')
 )
 
 ReflistSpec <- function(source_label) {

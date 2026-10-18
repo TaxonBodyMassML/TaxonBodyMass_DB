@@ -54,6 +54,7 @@ adat <- DropImputed(adat, adat$larve %in% TRUE, 'Lemoine_2026',
                     'larval or nymphal stage (larve = TRUE): not adult records')
 adat$n <- 1
 adat$source_mass <- 'Lemoine_2026'
+adat$ref_keys <- 'Lemoine_2026'
 # Taxonomy hints from the file (class, order, family); a family cell that is
 # not a family name (the genus 'Cryptops' written for Cryptops doriae) is
 # blanked, and the phylum follows from the class.
@@ -61,7 +62,7 @@ adat$family[!grepl('idae$', adat$family)] <- NA_character_
 adat$phylum <- ifelse(adat$class == 'Clitellata', 'Annelida',
                       ifelse(adat$class == 'Gastropoda', 'Mollusca', 'Arthropoda'))
 LEM <- data.frame(taxon = adat$taxon, mass_g = adat$mass_g, n = adat$n,
-                  source_mass = adat$source_mass, phylum = adat$phylum,
-                  class = adat$class, order = adat$order, family = adat$family,
-                  stringsAsFactors = FALSE)
+                  source_mass = adat$source_mass, ref_keys = adat$ref_keys,
+                  phylum = adat$phylum, class = adat$class, order = adat$order,
+                  family = adat$family, stringsAsFactors = FALSE)
 save(LEM, file = file.path(wd_rdata, 'BodyMass_Lemoine_2026.Rdata'))

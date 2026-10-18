@@ -15,5 +15,6 @@ adat$class <- 'Reptilia'
 adat$order <- 'Squamata'
 adat$n <- 1
 adat$source_mass <- 'Meiri_2024'
-MEI <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
+adat$ref_keys <- 'Meiri_2024'
+MEI <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys', 'class', 'order', 'family')]
 save(MEI, file = file.path(wd_rdata, 'BodyMass_Meiri_2024.Rdata'))

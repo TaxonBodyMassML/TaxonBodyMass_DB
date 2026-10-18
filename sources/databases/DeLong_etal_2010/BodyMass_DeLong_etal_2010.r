@@ -70,5 +70,6 @@ if (any(too_big))
 
 adat$n <- 1
 adat$source_mass <- 'DeLong_etal_2010'
-DLa <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'dataset', 'group')]
+adat$ref_keys <- 'DeLong_etal_2010'
+DLa <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys', 'dataset', 'group')]
 save(DLa, file = file.path(wd_rdata, 'BodyMass_DeLong_etal_2010.Rdata'))
