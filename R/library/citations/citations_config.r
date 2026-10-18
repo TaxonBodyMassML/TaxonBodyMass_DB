@@ -590,7 +590,13 @@ reflist_specs <- list(
   Gillooly_etal_2016 = list(format = 'csv', file = 'references.csv',
                             key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                             type_col = 'note', sep = ';', compiler = 'Gillooly',
-                            compilation_doi = '10.1073/pnas.1519617113')
+                            compilation_doi = '10.1073/pnas.1519617113'),
+  # DeLong_etal_2018: FoRAGE database; 'Source' column has abbreviated refs
+  # "Lastname YEAR JOURNAL"; these are the native keys in references.csv (key=Source).
+  DeLong_etal_2018 = list(format = 'csv', file = 'references.csv',
+                          key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                          type_col = 'note', sep = ';', compiler = 'DeLong',
+                          compilation_doi = '10.5063/F17H1GTQ')
 )
 
 ReflistSpec <- function(source_label) {

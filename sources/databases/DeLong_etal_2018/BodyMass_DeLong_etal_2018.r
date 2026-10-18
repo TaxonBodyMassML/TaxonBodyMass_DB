@@ -11,10 +11,10 @@ keep_prey <- is.na(adat$Prey.type)    | trimws(adat$Prey.type) == '' |
              grepl('^adult|female|male', trimws(adat$Prey.type), ignore.case = TRUE)
 
 adat1 <- adat[keep_pred, c('Predator.scientific.name', 'Predator.mass..mg.',
-                           'Predator.mass.source.code')]
+                           'Predator.mass.source.code', 'Source')]
 adat2 <- adat[keep_prey, c('Prey.scientific.name', 'Prey.mass..mg.',
-                           'Prey.mass.source.code')]
-colnames(adat1) <- colnames(adat2) <- c('taxon', 'mass_mg', 'code')
+                           'Prey.mass.source.code', 'Source')]
+colnames(adat1) <- colnames(adat2) <- c('taxon', 'mass_mg', 'code', 'source_ref')
 
 adat <- rbind(adat1, adat2)
 adat$mass_g <- suppressWarnings(as.numeric(adat$mass_mg)) / 1000
@@ -32,8 +32,14 @@ adat <- DropImputed(adat,
                       grepl('^average (genus|order)', adat$code),
                     'DeLong_etal_2018',
                     'mass source code: alternate taxon, % adult mass or genus/order average')
-adat <- adat[, c('taxon', 'mass_g')]
+# Reference key lookup: source_ref -> abbreviated key in references.csv
+ref_lookup_path <- file.path(wd_source, 'references.csv')
+ref_lookup <- if (file.exists(ref_lookup_path)) {
+  rl <- read.csv(ref_lookup_path, stringsAsFactors = FALSE, colClasses = 'character')
+  setNames(rl$key, rl$key)
+} else character(0)
+adat$ref_keys <- ref_lookup[trimws(adat$source_ref)]
 adat$n <- 1
 adat$source_mass <- 'DeLong_etal_2018'
-DLb <- adat
+DLb <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(DLb, file = file.path(wd_rdata, 'BodyMass_DeLong_etal_2018.Rdata'))
