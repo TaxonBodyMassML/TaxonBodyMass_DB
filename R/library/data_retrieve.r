@@ -78,6 +78,7 @@ mlh$family <- as.character(mlh$family)
 mlh <- mlh[which(!is.na(mlh$mass_g) & mlh$mass_g > 0), ]
 mlh$n <- 1
 mlh$source_mass <- 'Ernest_2003'
+mlh$ref_keys <- 'Ernest_2003'
 
 
 # bird-size (Lislevand et al. 2007, Ecological Archives E088-096) is no longer
@@ -199,6 +200,7 @@ sdd <- bind_rows(sdd1, sdd2)
 sdd <- sdd[which(!is.na(sdd$mass_g) & sdd$mass_g > 0), ]
 sdd$n <- 1
 sdd$source_mass <- 'Raymond_2011'
+sdd$ref_keys <- 'Raymond_2011'
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Every record is one frame row, named as the source wrote it (issue #69):

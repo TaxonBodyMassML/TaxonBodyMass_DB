@@ -1,10 +1,11 @@
-# Citations of Makarieva_etal_2008 -- 2026-10-16 21:54:26 (tbmcite 0.1.0)
+# Citations of Makarieva_etal_2008 -- 2026-10-18 15:14:15 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --verify
 
 Verification mode: full (Crossref + OpenAlex); 78 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet (dry run): 308 row(s) for Makarieva_etal_2008, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --verify: compilation DOI none; 0 deposited references (0 with DOI)
+- status counts: certain 143, approved 126, nodoi_approved 44, rejected 7, self 20 (certain / crossref_only: 78)
 
 ## References
 
