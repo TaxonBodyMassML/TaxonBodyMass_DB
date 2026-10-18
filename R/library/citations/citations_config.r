@@ -602,7 +602,13 @@ reflist_specs <- list(
   Ehnes_etal_2011 = list(format = 'csv', file = 'references.csv',
                          key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                          type_col = 'note', sep = ';', compiler = 'Ehnes',
-                         compilation_doi = '10.1111/j.1461-0248.2011.01620.x')
+                         compilation_doi = '10.1111/j.1461-0248.2011.01620.x'),
+  # Verberk_2020: Literature.source column has full APA citations; key_map.csv maps these
+  # to abbreviated keys (built by build_references.py).
+  Verberk_2020 = list(format = 'csv', file = 'references.csv',
+                      key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                      type_col = 'note', sep = ';', compiler = 'Verberk',
+                      compilation_doi = '10.1098/rspb.2020.0488')
 )
 
 ReflistSpec <- function(source_label) {
