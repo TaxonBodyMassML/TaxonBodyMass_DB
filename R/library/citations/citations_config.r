@@ -596,7 +596,13 @@ reflist_specs <- list(
   DeLong_etal_2018 = list(format = 'csv', file = 'references.csv',
                           key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                           type_col = 'note', sep = ';', compiler = 'DeLong',
-                          compilation_doi = '10.5063/F17H1GTQ')
+                          compilation_doi = '10.5063/F17H1GTQ'),
+  # Ehnes_etal_2011: studies column "METASTUDY   ORIGINAL_STUDY" (2+ spaces); second part
+  # is the abbreviated mass-source key ("Author & Author YEAR" or "this study").
+  Ehnes_etal_2011 = list(format = 'csv', file = 'references.csv',
+                         key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                         type_col = 'note', sep = ';', compiler = 'Ehnes',
+                         compilation_doi = '10.1111/j.1461-0248.2011.01620.x')
 )
 
 ReflistSpec <- function(source_label) {

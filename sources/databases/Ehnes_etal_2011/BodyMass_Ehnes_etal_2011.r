@@ -22,7 +22,19 @@ adat$class  <- unname(class_map[adat$g2])
 adat$phylum <- adat$g1
 adat$order  <- ifelse(adat$g2 %in% c('Insecta', 'Clitellata', 'Isopoda', 'Progoneata'), adat$g3,
                       ifelse(adat$g2 %in% c('Chilopoda', 'Arachnida'), adat$g4, adat$g2))
+# studies column: "METASTUDY   ORIGINAL_STUDY" (2+ spaces separator).
+# The second part is the body mass primary source; "this study" = Ehnes et al. 2011.
+orig_study <- vapply(adat$studies, function(s) {
+  parts <- trimws(strsplit(s, '\\s{2,}', perl = TRUE)[[1]])
+  if (length(parts) >= 2) parts[2] else parts[1]
+}, character(1), USE.NAMES = FALSE)
+ref_lookup_path <- file.path(wd_source, 'references.csv')
+ref_lookup <- if (file.exists(ref_lookup_path)) {
+  rl <- read.csv(ref_lookup_path, stringsAsFactors = FALSE, colClasses = 'character')
+  setNames(rl$key, rl$key)
+} else character(0)
+adat$ref_keys <- ref_lookup[orig_study]
 adat$n <- 1
 adat$source_mass <- 'Ehnes_etal_2011'
-EHN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'class', 'order')]
+EHN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(EHN, file = file.path(wd_rdata, 'BodyMass_Ehnes_etal_2011.Rdata'))
