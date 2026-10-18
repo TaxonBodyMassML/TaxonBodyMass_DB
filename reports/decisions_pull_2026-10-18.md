@@ -1,11 +1,11 @@
 # Owner decisions pulled from BM_decisions -- 2026-10-18 (tbmcite 0.1.0)
 
-- --decisions-pull: 2495 tab row(s) read from BM_decisions: 2474 pulled into pending_citations.csv, 0 deferred, 4 error(s), 17 ignored
+- --decisions-pull: 2492 tab row(s) read from BM_decisions: 2475 pulled into pending_citations.csv, 0 deferred, 0 error(s), 17 ignored
 - --decisions-pull: AndersonGillooly_2017: pulled 1, deferred 0, errors 0, ignored 0
 - --decisions-pull: Cai_etal_2025: pulled 84, deferred 0, errors 0, ignored 2
-- --decisions-pull: Castro_2025: pulled 51, deferred 0, errors 3, ignored 0
+- --decisions-pull: Castro_2025: pulled 51, deferred 0, errors 0, ignored 0
 - --decisions-pull: DeLong_etal_2018: pulled 54, deferred 0, errors 0, ignored 0
-- --decisions-pull: Ehnes_etal_2011: pulled 43, deferred 0, errors 1, ignored 0
+- --decisions-pull: Ehnes_etal_2011: pulled 44, deferred 0, errors 0, ignored 0
 - --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
 - --decisions-pull: GalanAcedo_etal_2026: pulled 183, deferred 0, errors 0, ignored 0
 - --decisions-pull: Ghaderi_2026: pulled 80, deferred 0, errors 0, ignored 0
@@ -39,9 +39,9 @@
 | --- | ---: | ---: | ---: | ---: |
 | AndersonGillooly_2017 | 1 | 0 | 0 | 0 |
 | Cai_etal_2025 | 84 | 0 | 0 | 2 |
-| Castro_2025 | 51 | 0 | 3 | 0 |
+| Castro_2025 | 51 | 0 | 0 | 0 |
 | DeLong_etal_2018 | 54 | 0 | 0 | 0 |
-| Ehnes_etal_2011 | 43 | 0 | 1 | 0 |
+| Ehnes_etal_2011 | 44 | 0 | 0 | 0 |
 | Faurby_etal_2018 | 296 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | 183 | 0 | 0 | 0 |
 | Ghaderi_2026 | 80 | 0 | 0 | 0 |
@@ -1843,7 +1843,6 @@
 | Castro_2025 | r061 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r069 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r072 | 2026-10-17 | drop |  | pulled 2026-10-17 |
-| Castro_2025 | r073 | 2026-10-17 |  |  | error: no queue row for this key |
 | Castro_2025 | r074 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r075 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r079 | 2026-10-17 | drop |  | pulled 2026-10-17 |
@@ -1851,7 +1850,6 @@
 | Castro_2025 | r095 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r098 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r099 | 2026-10-17 | drop |  | pulled 2026-10-17 |
-| Castro_2025 | r100 | 2026-10-17 |  |  | error: no queue row for this key |
 | Castro_2025 | r101 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r102 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r105 | 2026-10-17 | drop |  | pulled 2026-10-17 |
@@ -1870,7 +1868,6 @@
 | Castro_2025 | r160 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r161 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r173 | 2026-10-17 | drop |  | pulled 2026-10-17 |
-| Castro_2025 | r179 | 2026-10-17 |  |  | error: no queue row for this key |
 | Castro_2025 | r180 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r182 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Castro_2025 | r183 | 2026-10-17 | drop |  | pulled 2026-10-17 |
@@ -2390,7 +2387,7 @@
 | Ehnes_etal_2011 | Kotiaho et al. 1998 | 2026-10-18 | accept |  | pulled 2026-10-18 |
 | Ehnes_etal_2011 | Krüger 1958 | 2026-10-18 | accept |  | pulled 2026-10-18 |
 | Ehnes_etal_2011 | Lam et al. 1991 | 2026-10-18 | accept |  | pulled 2026-10-18 |
-| Ehnes_etal_2011 | Luxton 1975 | 2026-10-18 | accept |  | error: accept with no recommendation: type the decision |
+| Ehnes_etal_2011 | Luxton 1975 | 2026-10-18 | 1 |  | pulled 2026-10-18 |
 | Ehnes_etal_2011 | Mac Nally & Doolan 1982 | 2026-10-18 | accept |  | pulled 2026-10-18 |
 | Ehnes_etal_2011 | Myrcha & Stejgwillo‐Laudanska 1973 | 2026-10-18 | accept |  | pulled 2026-10-18 |
 | Ehnes_etal_2011 | Nielsen & Baroni­Urbani 1990 | 2026-10-18 | accept |  | pulled 2026-10-18 |
