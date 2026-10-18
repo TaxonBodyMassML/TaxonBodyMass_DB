@@ -1,189 +1,189 @@
 key,citation,doi,parsed_author,parsed_year,n_records
 r001,LopezUrrutia 2006,10.1073/pnas.0601137103,LopezUrrutia,2006,1079
-r002,Anderson 2005,,Anderson,2005,218
+r002,Anderson 2005,10.1111/j.1461-0248.2005.00723.x,Anderson,2005,218
 r003,Saint-Paul 1983,,Saint-Paul,1983,114
-r004,Marais 1978,,Marais,1978,98
+r004,Marais 1978,10.1007/bf00390537,Marais,1978,98
 r005,Caulton 1978,10.1111/j.1095-8649.1978.tb03417.x,Caulton,1978,95
-r006,Subrahmanyam 1980,,Subrahmanyam,1980,85
-r007,"Evans, Purdie, Hickmann 1962",,Evans,1962,82
-r008,Nagy 1999,,Nagy,1999,81
+r006,Subrahmanyam 1980,10.1016/0300-9629(80)90417-x,Subrahmanyam,1980,85
+r007,"Evans, Purdie, Hickmann 1962",10.1139/z62-012,Evans,1962,82
+r008,Nagy 1999,10.1146/annurev.nutr.19.1.247,Nagy,1999,81
 r009,"Panigrahi, Panigrahi, Misra 1984",,Panigrahi,1984,69
 r010,"Roy, Munshi 1984",,Roy,1984,64
 r011,Winberg 1961,,Winberg,1961,64
 r012,"Ikeda, Shinada 2001",,Ikeda,2001,63
 r013,"Umezawa, Watanabe 1979",,Umezawa,1979,59
 r014,Petit 1973,,Petit,1973,57
-r015,Courtois 1976,,Courtois,1976,57
-r016,"Moss, Scott 1961",,Moss,1961,56
-r017,Job 1957,,Job,1957,56
-r018,"Stevens, Holeton 1978",,Stevens,1978,55
-r019,Niven 2005,,Niven,2005,54
+r015,Courtois 1976,10.1016/s0300-9629(76)80002-3,Courtois,1976,57
+r016,"Moss, Scott 1961",10.1577/1548-8659(1961)90[377:drotso]2.0.co;2,Moss,1961,56
+r017,Job 1957,10.1007/bf03051032,Job,1957,56
+r018,"Stevens, Holeton 1978",10.1139/z78-133,Stevens,1978,55
+r019,Niven 2005,10.1098/rsbl.2005.0311,Niven,2005,54
 r020,Mathew 1978,,Mathew,1978,54
-r021,"Wu, Woo 1984",,Wu,1984,54
-r022,"van Aardt, Frey 1986",,van Aardt,1986,50
-r023,"Pierce, Wissing, Megrey 1981",,Pierce,1981,48
+r021,"Wu, Woo 1984",10.1007/bf00015211,Wu,1984,54
+r022,"van Aardt, Frey 1986",10.1080/02541858.1986.11447973,van Aardt,1986,50
+r023,"Pierce, Wissing, Megrey 1981",10.1577/1548-8659(1981)110<51:rmogs>2.0.co;2,Pierce,1981,48
 r024,Mironova 1975,,Mironova,1975,45
 r025,Brett 1976,,Brett,1976,44
 r026,"Mishra, Singh 1979 a",,Mishra,1979,44
-r027,Congleton 1974,,Congleton,1974,43
-r028,"Soofiani, Hawkins 1982",,Soofiani,1982,40
-r029,Wieser 1985,,Wieser,1985,39
-r030,Tatrai 1980,,Tatrai,1980,37
-r031,Carrick 1981,,Carrick,1981,36
+r027,Congleton 1974,10.2307/1540617,Congleton,1974,43
+r028,"Soofiani, Hawkins 1982",10.1111/j.1095-8649.1982.tb02861.x,Soofiani,1982,40
+r029,Wieser 1985,10.1242/jeb.118.1.133,Wieser,1985,39
+r030,Tatrai 1980,10.1007/978-94-009-9206-1_14,Tatrai,1980,37
+r031,Carrick 1981,10.1111/j.1095-8649.1981.tb03761.x,Carrick,1981,36
 r032,"Prasad, Singh 1984",,Prasad,1984,35
 r033,"Chhina, Edwards 1971",,Chhina,1971,35
-r034,"Wohlschlag, Juliano 1959",,Wohlschlag,1959,34
-r035,Coche 1967,,Coche,1967,32
-r036,"Prosser, Barr, Pinc, Lauer 1957",,Prosser,1957,31
-r037,Pusey 1986,,Pusey,1986,31
-r038,"Torres, Belman, Childress 1979",,Torres,1979,31
+r034,"Wohlschlag, Juliano 1959",10.4319/lo.1959.4.2.0195,Wohlschlag,1959,34
+r035,Coche 1967,10.1007/bf00142062,Coche,1967,32
+r036,"Prosser, Barr, Pinc, Lauer 1957",10.1086/physzool.30.2.30155362,Prosser,1957,31
+r037,Pusey 1986,10.1007/bf00692748,Pusey,1986,31
+r038,"Torres, Belman, Childress 1979",10.1016/0198-0149(79)90075-X,Torres,1979,31
 r039,"Umezawa, Yokoyama, Taneda 1986",,Umezawa,1986,31
 r040,"Brown, Jones, Matty 1984",,Brown,1984,30
-r041,"Du Preez, McLachlan, Marais 1986",,Du Preez,1986,30
-r042,Eccles 1985,,Eccles,1985,28
+r041,"Du Preez, McLachlan, Marais 1986",10.1016/0300-9629(86)90043-5,Du Preez,1986,30
+r042,Eccles 1985,10.1111/j.1095-8649.1985.tb04017.x,Eccles,1985,28
 r043,"Fasihuddin, Choubey, Munshi 1972",,Fasihuddin,1972,28
-r044,Morris 1967,,Morris,1967,28
-r045,"Spitzer, Marvin, Heath 1969",,Spitzer,1969,28
-r046,"Jobling, Davies 1980",,Jobling,1980,24
-r047,Pandey 1978,,Pandey,1978,24
-r048,"Ege, Krogh 1914",,Ege,1914,24
+r044,Morris 1967,10.1086/physzool.40.4.30158459,Morris,1967,28
+r045,"Spitzer, Marvin, Heath 1969",10.1016/0010-406x(69)91299-7,Spitzer,1969,28
+r046,"Jobling, Davies 1980",10.1111/j.1095-8649.1980.tb03742.x,Jobling,1980,24
+r047,Pandey 1978,10.1111/j.1439-0396.1978.tb00536.x,Pandey,1978,24
+r048,"Ege, Krogh 1914",10.1002/iroh.19140070105,Ege,1914,24
 r049,"Munshi, Patra, Biswas, Ojha 1979",,Munshi,1979,24
 r050,Schulze-Wiehenbrauck 1978,,Schulze-Wiehenbrauck,1978,24
-r051,"Singh, Prasad, Mishra, Singh 1982",,Singh,1982,24
-r052,Paul 1986,,Paul,1986,23
-r053,Merino 2009,,Merino,2009,22
-r054,O'Hara 1971,,O'Hara,1971,22
-r055,Saunders 1963,,Saunders,1963,22
-r056,"Brafield, Matthiessen 1976",,Brafield,1976,21
-r057,"Cech, Massingill, Vondracek, Linden 1985",,Cech,1985,21
+r051,"Singh, Prasad, Mishra, Singh 1982",10.1007/bf00007230,Singh,1982,24
+r052,Paul 1986,10.1016/0022-0981(86)90246-7,Paul,1986,23
+r053,Merino 2009,10.1016/j.aquaeng.2009.07.004,Merino,2009,22
+r054,O'Hara 1971,10.1139/z71-054,O'Hara,1971,22
+r055,Saunders 1963,10.1139/f63-031,Saunders,1963,22
+r056,"Brafield, Matthiessen 1976",10.1111/j.1095-8649.1976.tb04684.x,Brafield,1976,21
+r057,"Cech, Massingill, Vondracek, Linden 1985",10.1007/bf00002914,Cech,1985,21
 r058,"Penaz, Prokes 1973",,Penaz,1973,20
-r059,"Talbot, Baird 1985",,Talbot,1985,20
+r059,"Talbot, Baird 1985",10.1080/02541858.1985.11447903,Talbot,1985,20
 r060,"Geevarghese, John 1984 b",,Geevarghese,1984,20
 r061,Prasad 1986,,Prasad,1986,20
-r062,Dabrowski 1986,,Dabrowski,1986,19
-r063,Kutty 1968,,Kutty,1968,19
-r064,Darveau 2005,,Darveau,2005,18
-r065,Prestwich 1994,,Prestwich,1994,18
-r066,"Eduardo, Bicudo, Johansen 1979",,Eduardo,1979,18
-r067,Hettler 1976,,Hettler,1976,18
-r068,"Horkel, Pearson 1976",,Horkel,1976,18
+r062,Dabrowski 1986,10.1111/j.1095-8649.1986.tb05147.x,Dabrowski,1986,19
+r063,Kutty 1968,10.1139/f68-150,Kutty,1968,19
+r064,Darveau 2005,10.1242/jeb.01776,Darveau,2005,18
+r065,Prestwich 1994,10.1093/icb/34.6.625,Prestwich,1994,18
+r066,"Eduardo, Bicudo, Johansen 1979",10.1007/bf00005928,Eduardo,1979,18
+r067,Hettler 1976,10.1111/j.1095-8649.1976.tb03907.x,Hettler,1976,18
+r068,"Horkel, Pearson 1976",10.1577/1548-8659(1976)105<107:eotovr>2.0.co;2,Horkel,1976,18
 r069,"Ojha, Munshi, Choubey, Saha 1974",,Ojha,1974,18
-r070,Tarby 1981,,Tarby,1981,18
-r071,Crawford 1978,,Crawford,1978,16
+r070,Tarby 1981,10.1139/z81-126,Tarby,1981,18
+r071,Crawford 1978,10.1007/bf00390901,Crawford,1978,16
 r072,Korovin 1976,,Korovin,1976,16
 r073,"Peer Mohamed, Kutty 1981",,Peer Mohamed,1981,16
 r074,"Geevarghese, John 1984 a",,Geevarghese,1984,15
 r075,"Ojha, Singh 1984",,Ojha,1984,15
-r076,Wells 1986,,Wells,1986,15
-r077,Bergheim 1991,,Bergheim,1991,14
-r078,Christian 1995,,Christian,1995,14
+r076,Wells 1986,10.1007/bf00441697,Wells,1986,15
+r077,Bergheim 1991,10.1016/0144-8609(91)90015-c,Bergheim,1991,14
+r078,Christian 1995,10.1007/bf00328624,Christian,1995,14
 r079,Graham 1983,,Graham,1983,14
-r080,"Hughes, Albers, Muster, Gotz 1983",,Hughes,1983,14
-r081,"Meek, Childress 1973",,Meek,1973,14
-r082,"Prasad, Pandey, Sinha 1983",,Prasad,1983,13
-r083,Blazka 1958,,Blazka,1958,12
+r080,"Hughes, Albers, Muster, Gotz 1983",10.1111/j.1095-8649.1983.tb04221.x,Hughes,1983,14
+r081,"Meek, Childress 1973",10.1016/0011-7471(73)90024-7,Meek,1973,14
+r082,"Prasad, Pandey, Sinha 1983",10.1111/j.1439-0396.1983.tb00792.x,Prasad,1983,13
+r083,Blazka 1958,10.1086/physzool.31.2.30155385,Blazka,1958,12
 r084,"Mishra, Singh 1979 b",,Mishra,1979,12
-r085,Targett 1978,,Targett,1978,12
-r086,"Ultsch, Boschung, Ross 1978",,Ultsch,1978,12
-r087,"Voyer, Morrison 1971",,Voyer,1971,12
-r088,"Anderson, Beitinger, Fitzpatrick, Zimmer 1980",,Anderson,1980,11
-r089,Beamish 1964,,Beamish,1964,10
-r090,"Farmer, Beamish 1969",,Farmer,1969,10
-r091,Nordlie 1978,,Nordlie,1978,10
-r092,"Ojha, Mishra, Saha, Munshi 1979",,Ojha,1979,10
-r093,Thomas SL 1997,,Thomas SL,1997,9
-r094,"Degani, Lee-Gallagher 1985",,Degani,1985,9
+r085,Targett 1978,10.1016/0022-0981(78)90115-6,Targett,1978,12
+r086,"Ultsch, Boschung, Ross 1978",10.2307/1936635,Ultsch,1978,12
+r087,"Voyer, Morrison 1971",10.1139/f71-287,Voyer,1971,12
+r088,"Anderson, Beitinger, Fitzpatrick, Zimmer 1980",10.1016/s0300-9629(80)80029-6,Anderson,1980,11
+r089,Beamish 1964,10.1577/1548-8659(1964)93[103:IOSOSA]2.0.CO;2,Beamish,1964,10
+r090,"Farmer, Beamish 1969",10.1139/f69-277,Farmer,1969,10
+r091,Nordlie 1978,10.1016/0300-9629(78)90160-3,Nordlie,1978,10
+r092,"Ojha, Mishra, Saha, Munshi 1979",10.1007/bf00030078,Ojha,1979,10
+r093,Thomas SL 1997,10.1016/S0144-8609(97)81775-X,Thomas SL,1997,9
+r094,"Degani, Lee-Gallagher 1985",10.1111/j.1095-8649.1985.tb03208.x,Degani,1985,9
 r095,"Ojha, Dandotia, Munshi 1977",,Ojha,1977,9
-r096,Duthie 1982,,Duthie,1982,8
-r097,"Forstner, Hinterleitner, Mahr, Wieser 1983",,Forstner,1983,8
+r096,Duthie 1982,10.1242/jeb.97.1.359,Duthie,1982,8
+r097,"Forstner, Hinterleitner, Mahr, Wieser 1983",10.1139/f83-139,Forstner,1983,8
 r098,Moore 1976,,Moore,1976,8
 r099,"Durve, Sharma 1977",,Durve,1977,8
 r100,"Belman, Gordon 1979",,Belman,1979,8
 r101,"Broberg, Kristoffersson 1983",,Broberg,1983,8
 r102,"Hingorani, Diwan, Naidu 1977",,Hingorani,1977,8
-r103,"Morris, North 1984",,Morris,1984,8
-r104,"Muir, Nimi 1972",,Muir,1972,8
+r103,"Morris, North 1984",10.1016/0022-0981(84)90070-4,Morris,1984,8
+r104,"Muir, Nimi 1972",10.1139/f72-009,Muir,1972,8
 r105,"Shivaraj, Patil 1985",,Shivaraj,1985,8
-r106,Carlson 1999,,Carlson,1999,7
-r107,Claireaux 2006,,Claireaux,2006,7
-r108,Cooper 1993,,Cooper,1993,7
-r109,Davenport 1990,,Davenport,1990,7
-r110,"Jensen, Weber 1985",,Jensen,1985,7
-r111,Caulton 1977,,Caulton,1977,7
-r112,"Moffit, Crawshaw 1983",,Moffit,1983,7
-r113,"Sukumaran, Kutty 1977",,Sukumaran,1977,7
-r114,Calabi 1989,,Calabi,1989,6
-r115,Jones 2009,,Jones,2009,6
-r116,Rogowitz 2000,,Rogowitz,2000,6
-r117,"Vondracek, Cech, Longanecker 1982",,Vondracek,1982,6
+r106,Carlson 1999,10.2307/1447382,Carlson,1999,7
+r107,Claireaux 2006,10.1242/jeb.02346,Claireaux,2006,7
+r108,Cooper 1993,10.1006/jare.1993.1015,Cooper,1993,7
+r109,Davenport 1990,10.1016/0044-8486(90)90251-h,Davenport,1990,7
+r110,"Jensen, Weber 1985",10.1007/bf00695774,Jensen,1985,7
+r111,Caulton 1977,10.1111/j.1095-8649.1977.tb05711.x,Caulton,1977,7
+r112,"Moffit, Crawshaw 1983",10.1086/physzool.56.3.30152604,Moffit,1983,7
+r113,"Sukumaran, Kutty 1977",10.1007/bf03050948,Sukumaran,1977,7
+r114,Calabi 1989,10.1016/0022-1910(89)90127-3,Calabi,1989,6
+r115,Jones 2009,10.1242/jeb.029330,Jones,2009,6
+r116,Rogowitz 2000,10.1242/jeb.203.7.1131,Rogowitz,2000,6
+r117,"Vondracek, Cech, Longanecker 1982",10.1016/0300-9629(82)90084-6,Vondracek,1982,6
 r118,"Peer Mohamed, Gupta 1984",,Peer Mohamed,1984,6
-r119,"Dixon, Milton 1978",,Dixon,1978,6
-r120,"Fry, Hart 1948",,Fry,1948,6
-r121,Spoor 1977,,Spoor,1977,6
-r122,Christian 1998,,Christian,1998,5
-r123,"Levitan, Taylor 1979",,Levitan,1979,5
-r124,"Skadhauge, Lotan 1974",,Skadhauge,1974,5
-r125,"Hoss, Peters, Hettler, Clements 1978",,Hoss,1978,4
+r119,"Dixon, Milton 1978",10.1111/j.1095-8649.1978.tb04180.x,Dixon,1978,6
+r120,"Fry, Hart 1948",10.2307/1538211,Fry,1948,6
+r121,Spoor 1977,10.1111/j.1095-8649.1977.tb04100.x,Spoor,1977,6
+r122,Christian 1998,10.1007/s004420050595,Christian,1998,5
+r123,"Levitan, Taylor 1979",10.1139/f79-089,Levitan,1979,5
+r124,"Skadhauge, Lotan 1974",10.1242/jeb.60.2.547,Skadhauge,1974,5
+r125,"Hoss, Peters, Hettler, Clements 1978",10.1016/0022-0981(78)90061-8,Hoss,1978,4
 r126,"Gopal, Anand, Mehrotra, Ray 1985",,Gopal,1985,4
-r127,"Maceina, Nordlie, Shireman 1980",,Maceina,1980,4
+r127,"Maceina, Nordlie, Shireman 1980",10.1111/j.1095-8649.1980.tb03740.x,Maceina,1980,4
 r128,"Negonovskaya, Rudenko 1975",,Negonovskaya,1975,4
 r129,"Peer Mohamed, Kutty 1983",,Peer Mohamed,1983,4
-r130,"Zuim, Macari 1985",,Zuim,1985,4
-r131,Claireaux 2000,,Claireaux,2000,3
-r132,Corp 1999,,Corp,1999,3
+r130,"Zuim, Macari 1985",10.1016/0300-9629(85)90038-6,Zuim,1985,4
+r131,Claireaux 2000,10.1016/s1385-1101(00)00053-8,Claireaux,2000,3
+r132,Corp 1999,10.1046/j.1365-2435.1999.00353.x,Corp,1999,3
 r133,Prestwich 1998,,Prestwich,1998,3
-r134,Priede 1980,,Priede,1980,3
-r135,Schurmann 1997,,Schurmann,1997,3
-r136,"Webb, Brett 1972",,Webb,1972,3
-r137,Burggren 1979,,Burggren,1979,3
-r138,"Bushnell, Steffensen, Johansen 1984",,Bushnell,1984,3
-r139,"Sheel, Singh 1981",,Sheel,1981,3
+r134,Priede 1980,10.1242/jeb.85.1.295,Priede,1980,3
+r135,Schurmann 1997,10.1111/j.1095-8649.1997.tb01645.x,Schurmann,1997,3
+r136,"Webb, Brett 1972",10.1139/f72-243,Webb,1972,3
+r137,Burggren 1979,10.1242/jeb.82.1.197,Burggren,1979,3
+r138,"Bushnell, Steffensen, Johansen 1984",10.1242/jeb.113.1.225,Bushnell,1984,3
+r139,"Sheel, Singh 1981",10.1007/bf00011944,Sheel,1981,3
 r140,"Singh, Prasad, Mishra 1986",,Singh,1986,3
-r141,Smith 1978,,Smith,1978,3
-r142,"Smith, Laver 1981",,Smith,1981,3
-r143,Wohlschag 1957,,Wohlschag,1957,3
-r144,Altimiras 2002,,Altimiras,2002,2
-r145,Anava 2002,,Anava,2002,2
-r146,Butler 2002,,Butler,2002,2
+r141,Smith 1978,10.1038/274362a0,Smith,1978,3
+r142,"Smith, Laver 1981",10.1007/bf00401564,Smith,1981,3
+r143,Wohlschag 1957,10.2307/1929895,Wohlschag,1957,3
+r144,Altimiras 2002,10.1006/jfbi.2001.1814,Altimiras,2002,2
+r145,Anava 2002,10.1242/jeb.205.22.3571,Anava,2002,2
+r146,Butler 2002,10.1242/jeb.205.13.1917,Butler,2002,2
 r147,CerezoValverde 2004,,CerezoValverde,2004,2
 r148,Dewar1994,,,,2
-r149,Froget 2002,,Froget,2002,2
+r149,Froget 2002,10.1242/jeb.205.16.2511,Froget,2002,2
 r150,LeFrancois 03,,,,2
-r151,Prestwich 2005,,Prestwich,2005,2
-r152,Southwood 2006,,Southwood,2006,2
-r153,Thompson 1997,,Thompson,1997,2
-r154,Weathers 2002,,Weathers,2002,2
-r155,Webster 2000,,Webster,2000,2
-r156,"Wakeman, Arnold, Wohlschlag, Rabalais 1979",,Wakeman,1979,2
+r151,Prestwich 2005,10.1242/jeb.01550,Prestwich,2005,2
+r152,Southwood 2006,10.1139/z05-185,Southwood,2006,2
+r153,Thompson 1997,10.1016/s0300-9629(96)00159-4,Thompson,1997,2
+r154,Weathers 2002,10.1242/jeb.205.18.2915,Weathers,2002,2
+r155,Webster 2000,10.1242/jeb.203.21.3333,Webster,2000,2
+r156,"Wakeman, Arnold, Wohlschlag, Rabalais 1979",10.1577/1548-8659(1979)108<288:oceeag>2.0.co;2,Wakeman,1979,2
 r157,Natarajan 1979,,Natarajan,1979,2
 r158,Natarajan 1980a,,,,2
 r159,Natarajan 1980b,,,,2
 r160,Natarajan 1978,,Natarajan,1978,2
 r161,"Ramasamy, Reddy 1978",,Ramasamy,1978,2
-r162,"Brett, Blackburn 1978",,Brett,1978,2
-r163,"Piiper, Meyer, Worth, Willmer 1977",,Piiper,1977,2
-r164,"Sebert, Barthelemy, Peyraud 1984",,Sebert,1984,2
-r165,Perera 2007,,Perera,2007,1
-r166,Penkoff 1982,,Penkoff,1982,1
-r167,CerezoValverde 2009,,CerezoValverde,2009,1
-r168,Aldrich 1975,,Aldrich,1975,1
-r169,Dykstra 1993,,Dykstra,1993,1
-r170,Geiser 1999,,Geiser,1999,1
-r171,Gisbert 2001,,Gisbert,2001,1
-r172,Halsey 2010,,Halsey,2010,1
+r162,"Brett, Blackburn 1978",10.1139/f78-131,Brett,1978,2
+r163,"Piiper, Meyer, Worth, Willmer 1977",10.1016/0034-5687(77)90032-9,Piiper,1977,2
+r164,"Sebert, Barthelemy, Peyraud 1984",10.1016/0300-9629(84)90622-4,Sebert,1984,2
+r165,Perera 2007,10.1016/j.aquaculture.2006.11.012,Perera,2007,1
+r166,Penkoff 1982,10.1016/0300-9629(82)90137-2,Penkoff,1982,1
+r167,CerezoValverde 2009,10.1016/j.aquaculture.2009.10.007,CerezoValverde,2009,1
+r168,Aldrich 1975,10.1016/0300-9629(75)90002-x,Aldrich,1975,1
+r169,Dykstra 1993,10.2307/4088412,Dykstra,1993,1
+r170,Geiser 1999,10.1007/s003600050203,Geiser,1999,1
+r171,Gisbert 2001,10.1023/a:1022260627062,Gisbert,2001,1
+r172,Halsey 2010,10.1371/journal.pone.0010170,Halsey,2010,1
 r173,Sullivan 1992,,Sullivan,1992,1
-r174,Wallis 1992,,Wallis,1992,1
-r175,Weathers 2003,,Weathers,2003,1
-r176,Williams 1993,,Williams,1993,1
-r177,"Baumgarten-Schumann, Piiper 1968",,Baumgarten-Schumann,1968,1
-r178,"Brett, Zala 1975",,Brett,1975,1
+r174,Wallis 1992,10.1071/zo9920279,Wallis,1992,1
+r175,Weathers 2003,10.1093/condor/105.4.707,Weathers,2003,1
+r176,Williams 1993,10.1111/j.1365-2427.1993.tb00749.x,Williams,1993,1
+r177,"Baumgarten-Schumann, Piiper 1968",10.1016/0034-5687(68)90023-6,Baumgarten-Schumann,1968,1
+r178,"Brett, Zala 1975",10.1139/f75-285,Brett,1975,1
 r179,Forster 1981,,Forster,1981,1
 r180,"Itazawa, Takeda 1979",,Itazawa,1979,1
-r181,Kutty 1969,,Kutty,1969,1
+r181,Kutty 1969,10.1007/bf00393900,Kutty,1969,1
 r182,Toryu 1927,,Toryu,1927,1
 r183,van den Thillart 1986,,van den Thillart,1986,1
-r184,"Verheyen, Blust, Doumen 1985",,Verheyen,1985,1
-r185,"Waiwood, Johansen 1974",,Waiwood,1974,1
+r184,"Verheyen, Blust, Doumen 1985",10.1016/0300-9629(85)90158-6,Verheyen,1985,1
+r185,"Waiwood, Johansen 1974",10.1016/0043-1354(74)90070-0,Waiwood,1974,1
 r186,"Bi, Hou, Owens, et al.Â 2021",,Bi,2021,1
 r187,"Bi, Hou, Owens, et al.Â 2022",,Bi,2022,1
 r188,"Bi, Hou, Owens, et al.Â 2023",,Bi,2023,1
