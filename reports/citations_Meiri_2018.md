@@ -1,10 +1,12 @@
-# Citations of Meiri_2018 -- 2026-10-18 12:13:44 (tbmcite 0.1.0)
+# Citations of Meiri_2018 -- 2026-10-18 14:29:48 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --queue (re-scoring pending rows from the cache): compilation DOI 10.1111/geb.12773; 48 deposited references (42 with DOI)
+- status counts: certain 2056, approved 294, nodoi_approved 3214, rejected 660, self 9
+- --queue: 0 open queue row(s) for Meiri_2018 in pending_citations.csv (7424 rows in the file)
 
 ## References
 
