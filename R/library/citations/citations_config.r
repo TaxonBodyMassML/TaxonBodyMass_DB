@@ -578,7 +578,13 @@ reflist_specs <- list(
   Tucker_etal_2014b = list(format = 'csv', file = 'references.csv',
                            key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                            type_col = 'note', sep = ';', compiler = 'Tucker',
-                           compilation_doi = '10.1111/geb.12194')
+                           compilation_doi = '10.1111/geb.12194'),
+  # Killen_etal_2016: MMRref column contains full APA citations; key_map.csv maps these to
+  # abbreviated keys; references.csv holds those keys with DOIs (31 of 50 from Crossref).
+  Killen_etal_2016 = list(format = 'csv', file = 'references.csv',
+                          key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                          type_col = 'note', sep = ';', compiler = 'Killen',
+                          compilation_doi = '10.1111/gcb.13105')
 )
 
 ReflistSpec <- function(source_label) {
