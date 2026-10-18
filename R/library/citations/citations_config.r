@@ -555,7 +555,24 @@ reflist_specs <- list(
   Hirt_etal_2017 = list(format = 'csv', file = 'references.csv',
                         key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                         type_col = 'note', sep = ';', compiler = 'Hirt',
-                        compilation_doi = '10.1038/s41559-017-0241-4')
+                        compilation_doi = '10.1038/s41559-017-0241-4'),
+
+  # Galán-Acedo et al. (2019, Scientific Data 6:55): per-row Refs1 integer column
+  # in BodyMass.csv; 256 unique keys (max=1158) from 1216 references in References.docx;
+  # citations extracted by build_references.py; DOIs resolved via --verify/--queue.
+  GalanAcedo_etal_2026 = list(format = 'csv', file = 'references.csv',
+                              key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                              sep = ';', compiler = 'Galán-Acedo',
+                              compilation_doi = '10.1038/s41597-019-0059-9'),
+
+  # Tucker et al. (2014, Ecology Letters 17:239-248): per-row 'Predator Body Mass Source'
+  # abbreviated author-year strings; 47 unique keys (multi-ref cells split on ', ');
+  # full citations from Appendix S1 References; 28 DOIs pre-filled; type_col = 'note'
+  # flags books, PANGAEA datasets, and refs not in the appendix.
+  Tucker_etal_2014a = list(format = 'csv', file = 'references.csv',
+                           key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                           type_col = 'note', sep = ';', compiler = 'Tucker',
+                           compilation_doi = '10.1111/ele.12216')
 )
 
 ReflistSpec <- function(source_label) {
