@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-17 20:14:42
+# Citation and provenance warnings -- 2026-10-18 14:39:28
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 219824 (39887 species); distinct primary CiteIDs: 10476; unresolved references (pending / not_found): 0; unverified references: 0
+- provenance rows: 232302 (39887 species); distinct primary CiteIDs: 11653; unresolved references (pending / not_found): 0; unverified references: 2
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
 
 ## Problems
 
-(none)
+- 16 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Brocher_2025, Uyeda_2017, Mahe_2023b, DeLong_2010, Mulder_2011b, Pekar_2021, Barnes_2008b, Mathieu_2014b, Mercer_2001, Trochet_2014b, Brown_2018, Eklof_2017, Jennings_2002b, RibeiroAnunciacao_2025, Reum_2013b, Reum_2012b
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -25,85 +25,85 @@ One row per source label: species and record links (species x source x reference
 
 | source_label | class | n_species | n_record_links | pct_resolved | refs_total | refs_resolved | refs_crossref_only | refs_pending | refs_not_found | refs_self | refs_rejected | refs_unverified | unmatched_key_links | uningested_links |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| AmphiBIO | compilation | 560 | 561 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| AnAge | database | 2748 | 2755 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| AndersonGillooly_2017 | compilation | 103 | 316 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Anunciacao_etal_2025 | compilation | 100 | 619 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| AmphiBIO | compilation | 560 | 561 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| AnAge | database | 2748 | 2755 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| AndersonGillooly_2017 | compilation | 103 | 316 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Anunciacao_etal_2025 | compilation | 100 | 619 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AyalaBerdon_2025 | compilation | 39 | 154 | 55.2 | 22 | 20 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | Baach_2026 | compilation | 550 | 1066 | 99.2 | 8 | 7 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
-| Barnes_2008 | compilation | 79 | 11547 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brocher_etal_2025 | derived | 1346 | 1351 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Barnes_2008 | compilation | 79 | 11547 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brocher_etal_2025 | derived | 1346 | 1351 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 319 | 9258 | 93.2 | 12 | 7 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
 | Brose_etal_2018 | compilation | 1916 | 183741 | 89.8 | 24 | 22 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
-| Brown_etal_2018 | compilation | 33 | 33 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brown_etal_2018 | compilation | 33 | 33 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Cai_etal_2025 | compilation | 5069 | 5081 | 52.3 | 99 | 89 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 516 | 1967 | 64.5 | 185 | 134 | 0 | 0 | 0 | 0 | 51 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 307 | 550 | 54.4 | 115 | 113 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
-| DeLong_etal_2010 | compilation | 336 | 425 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| DeLong_etal_2018 | compilation | 164 | 563 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Ehnes_etal_2011 | compilation | 464 | 2654 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Eklof_etal_2017 | primary | 6 | 121 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| DeLong_etal_2010 | compilation | 336 | 425 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| DeLong_etal_2018 | compilation | 164 | 563 | 75.8 | 186 | 135 | 0 | 0 | 0 | 0 | 51 | 0 | 0 | 0 |
+| Ehnes_etal_2011 | compilation | 464 | 2724 | 91.9 | 184 | 158 | 0 | 0 | 0 | 0 | 26 | 0 | 0 | 0 |
+| Eklof_etal_2017 | primary | 6 | 121 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ernest_2003 | compilation | 1304 | 1314 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Faurby_etal_2018 | compilation | 5164 | 5900 | 99.9 | 596 | 593 | 1 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
-| Feldman_etal_2016 | derived | 9651 | 9777 | 100 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Fisher_2001 | compilation | 152 | 155 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| GalanAcedo_etal_2026 | compilation | 449 | 562 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Ghaderi_2026 | derived | 221 | 553 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 553 |
-| Gillooly_etal_2016 | compilation | 85 | 89 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Feldman_etal_2016 | derived | 9651 | 19554 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Fisher_2001 | compilation | 152 | 155 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| GalanAcedo_etal_2026 | compilation | 449 | 563 | 64.7 | 249 | 111 | 0 | 0 | 0 | 0 | 138 | 0 | 0 | 0 |
+| Ghaderi_2026 | derived | 221 | 553 | 18.8 | 85 | 5 | 0 | 0 | 0 | 0 | 80 | 0 | 0 | 0 |
+| Gillooly_etal_2016 | compilation | 85 | 90 | 100 | 34 | 33 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Gonzalez_2025 | compilation | 233 | 2201 | 78.5 | 50 | 35 | 0 | 0 | 0 | 13 | 2 | 0 | 0 | 0 |
-| GuoBailly_2024 | primary | 283 | 283 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| GuoBailly_2024 | primary | 283 | 283 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 146 | 742 | 94.3 | 53 | 52 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
-| Hechinger_etal_2011 | primary | 139 | 264 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hechinger_etal_2011 | primary | 139 | 264 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Herberstein_etal_2022 | compilation | 1653 | 2693 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hirt_etal_2017 | compilation | 380 | 513 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hishi_etal_2019 | derived | 320 | 324 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hirt_etal_2017 | compilation | 380 | 513 | 82.7 | 54 | 45 | 0 | 0 | 0 | 0 | 9 | 0 | 0 | 0 |
+| Hishi_etal_2019 | derived | 320 | 324 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1764 | 3080 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Hrycik_2024 | primary | 70 | 92 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hrycik_2024 | primary | 70 | 92 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ikeda_2014 | compilation | 332 | 690 | 99.7 | 37 | 36 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| Jennings_2002 | primary | 31 | 31 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Jennings_2002 | primary | 31 | 31 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Jones_2009 | compilation | 3444 | 23719 | 100 | 3066 | 3060 | 0 | 0 | 0 | 0 | 6 | 0 | 0 | 0 |
-| Kendall_etal_2019 | primary | 424 | 4033 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Killen_etal_2016 | compilation | 35 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Kinsella_etal_2020 | primary | 92 | 572 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Kendall_etal_2019 | primary | 424 | 4033 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Killen_etal_2016 | compilation | 35 | 35 | 97.1 | 50 | 48 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
+| Kinsella_etal_2020 | primary | 92 | 572 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Kiorboe_2013 | compilation | 127 | 324 | 100 | 17 | 17 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Kiorboe_2014 | compilation | 222 | 1524 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Lagrue_etal_2015 | primary | 19 | 115 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Lane_2019 | primary | 10 | 30 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Kiorboe_2014 | compilation | 222 | 1524 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Lagrue_etal_2015 | primary | 19 | 115 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Lane_2019 | primary | 10 | 30 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Leahy_2025 | primary | 56 | 1551 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
-| Lemoine_2026 | primary | 55 | 800 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Lemoine_2026 | primary | 55 | 800 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lislevand_etal_2007 | compilation | 3415 | 7399 | 67.8 | 84 | 81 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
-| Lukic_2022 | compilation | 42 | 196 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Mahe_2023 | primary | 71 | 14563 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Lukic_2022 | compilation | 42 | 196 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Mahe_2023 | primary | 71 | 14563 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Makarieva_2008 | compilation | 1419 | 2904 | 61.5 | 340 | 313 | 78 | 0 | 0 | 20 | 7 | 0 | 0 | 0 |
-| Mathieu_2014 | compilation | 96 | 97 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Mathieu_2014 | compilation | 96 | 97 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | McCoy_2008 | compilation | 1050 | 3090 | 100 | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Meiri_2018 | derived | 6582 | 46794 | 94.6 | 6233 | 5564 | 0 | 0 | 0 | 9 | 660 | 0 | 0 | 0 |
-| Meiri_2024 | compilation | 1162 | 1162 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Mercer_etal_2001 | primary | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Mulder_2011 | primary | 103 | 4630 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Mull_etal_2022 | compilation | 18 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Meiri_2024 | compilation | 1162 | 1162 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Mercer_etal_2001 | primary | 51 | 52 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Mulder_2011 | primary | 103 | 4630 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Mull_etal_2022 | compilation | 18 | 35 | 100 | 23 | 23 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Myhrvold_2015 | compilation | 16326 | 32806 | 100 | 105 | 103 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
-| Pata_2025 | compilation | 117 | 117 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Pekar_etal_2021 | compilation | 99 | 363 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Pata_2025 | compilation | 117 | 117 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Pekar_etal_2021 | compilation | 99 | 363 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Quaardvark | database | 2372 | 2392 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Raymond_2011 | compilation | 120 | 1743 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Reum_2012 | primary | 22 | 22 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Reum_2013 | primary | 28 | 28 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Sarmiento-Lezcano_2023 | primary | 3 | 99 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Reum_2012 | primary | 22 | 22 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Reum_2013 | primary | 28 | 28 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Sarmiento-Lezcano_2023 | primary | 3 | 99 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Smith_2003 | compilation | 3679 | 5047 | 98.2 | 255 | 244 | 0 | 0 | 0 | 0 | 11 | 0 | 0 | 0 |
-| Soria_etal_2021 | compilation | 5529 | 5636 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Soria_etal_2021 | compilation | 5529 | 5636 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tobias_2022 | compilation | 9794 | 10172 | 90.5 | 46 | 43 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
-| Trochet_2014 | compilation | 51 | 52 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Trochet_2014 | compilation | 51 | 52 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tsuboi_etal_2018 | compilation | 3633 | 17122 | 23.7 | 162 | 56 | 0 | 0 | 0 | 2 | 104 | 0 | 0 | 0 |
-| Tucker_etal_2014a | compilation | 182 | 182 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Tucker_etal_2014b | compilation | 440 | 443 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Uyeda_etal_2017 | compilation | 777 | 780 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Tucker_etal_2014a | compilation | 182 | 235 | 97.4 | 47 | 37 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
+| Tucker_etal_2014b | compilation | 440 | 2626 | 99.7 | 580 | 571 | 0 | 0 | 0 | 1 | 6 | 2 | 0 | 0 |
+| Uyeda_etal_2017 | compilation | 777 | 780 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Vanni_2017 | compilation | 217 | 5007 | 96.4 | 73 | 67 | 0 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
-| Verberk_2020 | compilation | 214 | 1244 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Verberk_2020 | compilation | 214 | 1244 | 94.4 | 447 | 440 | 0 | 0 | 0 | 0 | 7 | 0 | 0 | 0 |
 | Wascher_2025 | compilation | 124 | 124 | 100 | 4 | 4 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Weisse_2024 | compilation | 43 | 85 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Weisse_2024 | compilation | 43 | 85 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 12511 | 15251 | 99.8 | 67 | 60 | 0 | 0 | 0 | 0 | 7 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 149 | 150 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2209 | 3153 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
