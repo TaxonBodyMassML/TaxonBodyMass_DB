@@ -537,7 +537,25 @@ reflist_specs <- list(
   Castro_2025 = list(format = 'csv', file = 'references.csv',
                      key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                      sep = ';', compiler = 'de Castro',
-                     compilation_doi = '10.1038/s41597-025-05868-y')
+                     compilation_doi = '10.1038/s41597-025-05868-y'),
+
+  # Sharkipedia (Mull et al. 2022, Scientific Data 9:559): per-row
+  # reference_name column with abbreviated author-year keys (e.g. "finucci2017");
+  # 23 unique keys in references.csv; 18 DOIs taken directly from reference_doi
+  # column; 5 entries without a DOI resolved via --verify/--queue.
+  Mull_etal_2022 = list(format = 'csv', file = 'references.csv',
+                        key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                        sep = ';', compiler = 'Mull',
+                        compilation_doi = '10.1038/s41597-022-01655-1'),
+
+  # Hirt et al. (2017, Nature Ecology & Evolution 1:1116): per-row mass.ref
+  # integer column in Hirt_etal_2017.csv (values 1-101); 54 unique keys in
+  # references.csv (full citations transcribed from Supplementary PDF); 5 DOIs
+  # pre-found via Crossref; remaining resolved via --verify/--queue.
+  Hirt_etal_2017 = list(format = 'csv', file = 'references.csv',
+                        key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                        type_col = 'note', sep = ';', compiler = 'Hirt',
+                        compilation_doi = '10.1038/s41559-017-0241-4')
 )
 
 ReflistSpec <- function(source_label) {
