@@ -16,5 +16,6 @@ mass_group <- 'insect'
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
 adat$source_mass <- LabelWithConversion('Kinsella_etal_2020', mass_group)
-KIN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
+adat$ref_keys <- 'Kinsella_etal_2020'
+KIN <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family', 'ref_keys')]
 save(KIN, file = file.path(wd_rdata, 'BodyMass_Kinsella_etal_2020.Rdata'))

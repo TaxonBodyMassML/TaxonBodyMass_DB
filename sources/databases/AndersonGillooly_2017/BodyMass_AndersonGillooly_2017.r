@@ -4,5 +4,6 @@ colnames(adat) <- c('taxon', 'mass_g')
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'AndersonGillooly_2017'
+adat$ref_keys <- 'AndersonGillooly_2017'
 AG <- adat
 save(AG, file = file.path(wd_rdata, 'BodyMass_AndersonGillooly_2017.Rdata'))

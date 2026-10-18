@@ -24,5 +24,6 @@ adat$phylum <- 'Ciliophora'
 adat$order  <- adat$order
 adat$n <- 1
 adat$source_mass <- 'Weisse_2024'
-WEI <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'order')]
+adat$ref_keys <- 'Weisse_2024'
+WEI <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'phylum', 'order', 'ref_keys')]
 save(WEI, file = file.path(wd_rdata, 'BodyMass_Weisse_2024.Rdata'))

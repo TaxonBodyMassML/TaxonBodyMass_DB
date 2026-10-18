@@ -35,7 +35,8 @@ adat <- adat[keep, ]; grp <- grp[keep]; from <- from[keep]; val <- val[keep]; sh
 adat$mass_g <- ToWetMass(val, from = from, group = grp, whole = shelled, shell_group = shell)
 adat$n <- 1
 adat$source_mass <- LabelWithConversion('Eklof_etal_2017', grp, shell)
+adat$ref_keys <- 'Eklof_etal_2017'
 # Crustacea is a subphylum, not a class: leave class NA for those rows
 adat$class <- ifelse(adat$Class == 'Crustacea', NA_character_, adat$Class)
-EK <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class')]
+EK <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'ref_keys')]
 save(EK, file = file.path(wd_rdata, 'BodyMass_Eklof_etal_2017.Rdata'))

@@ -21,5 +21,6 @@ mass_group <- 'insect'
 adat$mass_g <- ToWetMass(adat$mass_g, from = 'dry', group = mass_group)
 adat$n <- 1
 adat$source_mass <- LabelWithConversion('Hishi_etal_2019', mass_group)
-HIS <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family')]
+adat$ref_keys <- 'Hishi_etal_2019'
+HIS <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family', 'ref_keys')]
 save(HIS, file = file.path(wd_rdata, 'BodyMass_Hishi_etal_2019.Rdata'))

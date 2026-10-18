@@ -20,5 +20,6 @@ adat <- adat[!(adat$endo == 0 & sub(' .*$', '', adat$taxon) %in% fish_genera), ]
 adat <- adat[!grepl('\\b(sp|spp|cf|aff|indet)\\b', adat$taxon), ]
 adat$n <- 1
 adat$source_mass <- 'Uyeda_etal_2017'
-UYE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass')]
+adat$ref_keys <- 'Uyeda_etal_2017'
+UYE <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(UYE, file = file.path(wd_rdata, 'BodyMass_Uyeda_etal_2017.Rdata'))

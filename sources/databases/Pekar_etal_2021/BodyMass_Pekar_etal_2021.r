@@ -16,6 +16,7 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'Pekar_etal_2021'
+adat$ref_keys <- 'Pekar_etal_2021'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 PE <- adat
 save(PE, file = file.path(wd_rdata, 'BodyMass_Pekar_etal_2021.Rdata'))

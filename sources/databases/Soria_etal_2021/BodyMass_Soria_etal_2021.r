@@ -12,5 +12,6 @@ adat$family <- iconv(as.character(adat$family), to = 'ASCII//TRANSLIT')
 adat$class <- 'Mammalia'
 adat$n <- 1
 adat$source_mass <- 'Soria_etal_2021'
-SOR <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
+adat$ref_keys <- 'Soria_etal_2021'
+SOR <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys', 'class', 'order', 'family')]
 save(SOR, file = file.path(wd_rdata, 'BodyMass_Soria_etal_2021.Rdata'))

@@ -13,5 +13,6 @@ adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon) & !grepl('\\b(sp|spp|cf|a
 adat$class <- 'Clitellata'
 adat$n <- 1
 adat$source_mass <- 'Mathieu_2014'
-MAT <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family')]
+adat$ref_keys <- 'Mathieu_2014'
+MAT <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'family', 'ref_keys')]
 save(MAT, file = file.path(wd_rdata, 'BodyMass_Mathieu_2014.Rdata'))

@@ -13,5 +13,6 @@ adat <- adat[!is.na(adat$mass_g) & adat$mass_g > 0, ]
 adat <- adat[grepl('^[A-Z][a-z]+ [a-z]+$', adat$taxon) & !grepl('\\b(sp|spp|cf|aff|agg)\\b', adat$taxon), ]
 adat$n <- 1
 adat$source_mass <- 'Brocher_etal_2025'
-BRC <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
+adat$ref_keys <- 'Brocher_etal_2025'
+BRC <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family', 'ref_keys')]
 save(BRC, file = file.path(wd_rdata, 'BodyMass_Brocher_etal_2025.Rdata'))

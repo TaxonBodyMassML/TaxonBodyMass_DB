@@ -12,6 +12,7 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'Fisher_2001'
+adat$ref_keys <- 'Fisher_2001'
 adat <- merge(adat, taxon_tax, by = 'taxon', all.x = TRUE)
 FI <- adat
 save(FI, file = file.path(wd_rdata, 'BodyMass_Fisher_2001.Rdata'))

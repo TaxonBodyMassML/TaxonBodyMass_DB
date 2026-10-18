@@ -23,5 +23,6 @@ out$order  <- 'Coleoptera'
 out$family <- 'Scarabaeidae'
 out$n <- 1
 out$source_mass <- 'Anunciacao_etal_2025'
-ANU <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'class', 'order', 'family')]
+out$ref_keys <- 'Anunciacao_etal_2025'
+ANU <- out[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys', 'class', 'order', 'family')]
 save(ANU, file = file.path(wd_rdata, 'BodyMass_Anunciacao_etal_2025.Rdata'))

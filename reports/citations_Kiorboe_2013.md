@@ -1,10 +1,10 @@
-# Citations of Kiorboe_2013 -- 2026-10-16 21:54:07 (tbmcite 0.1.0)
+# Citations of Kiorboe_2013 -- 2026-10-18 12:13:30 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 17 row(s) for Kiorboe_2013, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

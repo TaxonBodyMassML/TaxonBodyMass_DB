@@ -6,5 +6,6 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g)) / 1000
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'Sarmiento-Lezcano_2023'
+adat$ref_keys <- 'Sarmiento-Lezcano_2023'
 SA <- adat
 save(SA, file = file.path(wd_rdata, 'BodyMass_Sarmiento-Lezcano_2023.Rdata'))

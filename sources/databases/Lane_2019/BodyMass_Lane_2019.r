@@ -8,5 +8,6 @@ adat <- adat[!is.na(adat$mass_g), ]
 adat <- adat[, c('taxon', 'mass_g')]
 adat$n <- 1
 adat$source_mass <- 'Lane_2019'
+adat$ref_keys <- 'Lane_2019'
 LA <- adat
 save(LA, file = file.path(wd_rdata, 'BodyMass_Lane_2019.Rdata'))

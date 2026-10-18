@@ -5,6 +5,7 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'GuoBailly_2024'
+adat$ref_keys <- 'GuoBailly_2024'
 GUO <- adat
 # This source was labelled Pauly_2024 and cached as BodyMass_Pauly_2024.Rdata
 # until 2026-10 (issue #3). sources/Rdata is git-ignored, so an existing

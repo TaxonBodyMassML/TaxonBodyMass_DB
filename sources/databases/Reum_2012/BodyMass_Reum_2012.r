@@ -5,5 +5,6 @@ adat$mass_g <- suppressWarnings(as.numeric(adat$mass_g))
 adat <- adat[!is.na(adat$mass_g), ]
 adat$n <- 1
 adat$source_mass <- 'Reum_2012'
+adat$ref_keys <- 'Reum_2012'
 REa <- adat
 save(REa, file = file.path(wd_rdata, 'BodyMass_Reum_2012.Rdata'))

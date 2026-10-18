@@ -1,10 +1,10 @@
-# Citations of Faurby_etal_2018 -- 2026-10-16 21:53:13 (tbmcite 0.1.0)
+# Citations of Faurby_etal_2018 -- 2026-10-18 12:12:56 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex); 1 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet (dry run): 523 row(s) for Faurby_etal_2018, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

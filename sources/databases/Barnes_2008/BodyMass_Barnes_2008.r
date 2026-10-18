@@ -47,5 +47,6 @@ adat <- DropImputed(adat, adat$quality %in% c(4, 5), 'Barnes_2008',
 adat <- adat[, c('taxon', 'mass_g')]
 adat$n <- 1
 adat$source_mass <- 'Barnes_2008'
-BA <- adat
+adat$ref_keys <- 'Barnes_2008'
+BA <- adat[, c('taxon', 'mass_g', 'n', 'source_mass', 'ref_keys')]
 save(BA, file = file.path(wd_rdata, 'BodyMass_Barnes_2008.Rdata'))
