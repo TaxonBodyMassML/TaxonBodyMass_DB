@@ -28,11 +28,11 @@ if (nchar(Sys.getenv('ENTREZ_KEY')) == 0) {
 # TRUE: re-parse all raw source files to Rdata files
 recompile    <- TRUE
 # TRUE: re-download from rdataretriever (requires Python + Retriever)
-DataRetrieve <- TRUE
+DataRetrieve <- FALSE
 # TRUE: re-download VertNet Sept2016 from CyVerse and extract body mass (~3 GB)
-DataVertNet  <- TRUE
+DataVertNet  <- FALSE
 # TRUE: re-download FishBase and SeaLifeBase via rfishbase
-DataFishbase <- TRUE
+DataFishbase <- FALSE
 # TRUE: read the lab Google Sheet (tabs BM_data, BM_citations, BM_primary_citations;
 # needs a googlesheets4 token) and refresh the tracked CSV copies. FALSE: load the
 # copies (sources/BM_data_snapshot.csv, Bib/BM_citations_snapshot.csv,
