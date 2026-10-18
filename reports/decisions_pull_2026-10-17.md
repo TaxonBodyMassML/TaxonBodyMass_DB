@@ -1,7 +1,8 @@
 # Owner decisions pulled from BM_decisions -- 2026-10-17 (tbmcite 0.1.0)
 
-- --decisions-pull: 1748 tab row(s) read from BM_decisions: 1731 pulled into pending_citations.csv, 0 deferred, 0 error(s), 17 ignored
+- --decisions-pull: 1802 tab row(s) read from BM_decisions: 1782 pulled into pending_citations.csv, 0 deferred, 3 error(s), 17 ignored
 - --decisions-pull: Cai_etal_2025: pulled 84, deferred 0, errors 0, ignored 2
+- --decisions-pull: Castro_2025: pulled 51, deferred 0, errors 3, ignored 0
 - --decisions-pull: Faurby_etal_2018: pulled 296, deferred 0, errors 0, ignored 0
 - --decisions-pull: Hebert_etal_2016: pulled 10, deferred 0, errors 0, ignored 0
 - --decisions-pull: Jones_2009: pulled 649, deferred 0, errors 0, ignored 0
@@ -19,6 +20,7 @@
 | source_label | pulled | deferred | errors | ignored |
 | --- | ---: | ---: | ---: | ---: |
 | Cai_etal_2025 | 84 | 0 | 0 | 2 |
+| Castro_2025 | 51 | 0 | 3 | 0 |
 | Faurby_etal_2018 | 296 | 0 | 0 | 0 |
 | Hebert_etal_2016 | 10 | 0 | 0 | 0 |
 | Jones_2009 | 649 | 0 | 0 | 0 |
@@ -1696,7 +1698,7 @@
 | Tsuboi_etal_2018 | t160 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Tsuboi_etal_2018 | t161 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Tsuboi_etal_2018 | t162 | 2026-10-17 | drop |  | pulled 2026-10-17 |
-| Cai_etal_2025 | c001 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Cai_etal_2025 | c001 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c005 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c006 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c007 | 2026-10-17 | nodoi |  | ignored: already pulled 2026-10-17 as doi:10.1111/j.1420-9101.2009.01783.x (change it in the CSV) |
@@ -1706,7 +1708,7 @@
 | Cai_etal_2025 | c013 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c014 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c015 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
-| Cai_etal_2025 | c016 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Cai_etal_2025 | c016 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c018 | 2026-10-17 | doi:10.3897/natureconservation.9.8908 |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c022 | 2026-10-17 | drop |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c023 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
@@ -1782,3 +1784,57 @@
 | Cai_etal_2025 | c098 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c099 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
 | Cai_etal_2025 | c100 | 2026-10-17 | nodoi |  | pulled 2026-10-17 |
+| Castro_2025 | r003 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r009 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r010 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r011 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r012 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r013 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r014 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r020 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r024 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r025 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r026 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r032 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r033 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r039 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r040 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r043 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r049 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r050 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r058 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r060 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r061 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r069 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r072 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r073 | 2026-10-17 |  |  | error: no queue row for this key |
+| Castro_2025 | r074 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r075 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r079 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r084 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r095 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r098 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r099 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r100 | 2026-10-17 |  |  | error: no queue row for this key |
+| Castro_2025 | r101 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r102 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r105 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r118 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r126 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r128 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r129 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r133 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r140 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r147 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r148 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r150 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r157 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r158 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r159 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r160 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r161 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r173 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r179 | 2026-10-17 |  |  | error: no queue row for this key |
+| Castro_2025 | r180 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r182 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
+| Castro_2025 | r183 | 2026-10-17 | drop | drop | pulled 2026-10-17 |
