@@ -1,10 +1,12 @@
-# Citations of Tucker_etal_2014b -- 2026-10-18 13:29:18 (tbmcite 0.1.0)
+# Citations of Tucker_etal_2014b -- 2026-10-18 14:29:50 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 559 row(s) for Tucker_etal_2014b, 488 new, tab had 11274 rows; BM_citations snapshotted (443 rows)
+- --queue (re-scoring pending rows from the cache): compilation DOI 10.1111/geb.12194; 51 deposited references (43 with DOI)
+- status counts: certain 407, approved 3, nodoi_approved 161, rejected 6, self 1, unverified 2
+- --queue: 0 open queue row(s) for Tucker_etal_2014b in pending_citations.csv (7424 rows in the file)
 
 ## References
 

@@ -1,10 +1,11 @@
-# Citations of Ghaderi_2026 -- 2026-10-18 13:27:01 (tbmcite 0.1.0)
+# Citations of Ghaderi_2026 -- 2026-10-18 14:28:39 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --verify
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 5 row(s) for Ghaderi_2026, 5 new, tab had 11089 rows; BM_citations snapshotted (443 rows)
+- --verify: compilation DOI 10.1016/j.apsoil.2025.106605; 30 deposited references (19 with DOI)
+- status counts: certain 5, rejected 80
 
 ## References
 
