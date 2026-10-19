@@ -1,10 +1,10 @@
-# Citations of sealifebase -- 2026-10-18 20:51:18 (tbmcite 0.1.0)
+# Citations of sealifebase -- 2026-10-19 06:41:38 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --recommend
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 58 row(s) for sealifebase, 54 new, tab had 12630 rows; BM_citations snapshotted (443 rows)
+- --recommend: sealifebase: 87 open row(s), 87 with a recommendation, 0 left to the owner (jstor_twin 2, publisher_twin 2, strong_candidate 6, openalex_only_candidate 1, grey_complete 2, fields_complete_no_match 33, fields_incomplete 41)
 
 ## References
 

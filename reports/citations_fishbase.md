@@ -1,10 +1,10 @@
-# Citations of fishbase -- 2026-10-18 20:51:03 (tbmcite 0.1.0)
+# Citations of fishbase -- 2026-10-19 06:41:37 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --recommend
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 433 row(s) for fishbase, 430 new, tab had 12200 rows; BM_citations snapshotted (443 rows)
+- --recommend: fishbase: 444 open row(s), 444 with a recommendation, 0 left to the owner (correction_notice 3, jstor_twin 1, publisher_twin 8, strong_candidate 57, openalex_only_candidate 10, grey_complete 1, fields_complete_no_match 151, fields_incomplete 213)
 
 ## References
 
