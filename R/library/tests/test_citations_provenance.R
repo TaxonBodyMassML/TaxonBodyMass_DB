@@ -53,9 +53,12 @@ Expect(all(reg$default_provenance_type %in% provenance_types) &&
          all(reg$default_provenance_type[reg$class == 'derived'] == 'derived_allometry') &&
          all(reg$default_provenance_type[reg$class == 'live'] == 'database_record'),
        'default types follow the class: primary -> measured_in_source, derived -> derived_allometry, live -> database_record')
-Expect(reg$equation_bibcite[reg$source_label == 'Feldman_etal_2016'] == 'Feldman:2016aa' && reg$equation_bibcite[reg$source_label == 'Meiri_2018'] == 'Feldman:2016aa' &&
-         Has(msgs, 'derived source(s) without an equation_bibcite yet') && Has(msgs, 'Brocher_etal_2025') && Has(msgs, 'Hishi_etal_2019'),
-       'the Feldman equation is registered for Feldman_etal_2016 and Meiri_2018; Brocher and Hishi are reported as lacking one')
+Expect(reg$equation_bibcite[reg$source_label == 'Feldman_etal_2016'] == 'Feldman:2016aa' &&
+         reg$equation_bibcite[reg$source_label == 'Meiri_2018']       == 'Feldman:2016aa' &&
+         reg$equation_bibcite[reg$source_label == 'Brocher_etal_2025'] == 'Sohlstrom:2018aa' &&
+         reg$equation_bibcite[reg$source_label == 'Hishi_etal_2019']  == 'Petersen:1975aa' &&
+         reg$equation_bibcite[reg$source_label == 'Ghaderi_2026']     == 'Andrassy:1956aa',
+       'equation_bibcites: Feldman/Meiri_2018=Feldman:2016aa, Brocher=Sohlstrom:2018aa, Hishi=Petersen:1975aa, Ghaderi=Andrassy:1956aa')
 Expect(all(c('fishbase', 'sealifebase', 'vertnet-aves-sept2016', 'Myhrvold_2015', 'Jones_2009', 'Raymond_2011', 'Ernest_2003', 'Brose_2005', 'McCoy_2008', 'GuoBailly_2024') %in% reg$source_label),
        'the live, DataRetriever and recently added labels are registered')
 # value_tier (#34): the trust tiers approved on 2026-10-06
