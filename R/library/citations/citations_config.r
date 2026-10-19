@@ -769,7 +769,14 @@ reflist_specs <- list(
   Ghaderi_2026 = list(format = 'csv', file = 'references.csv',
                       key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                       type_col = 'note', sep = ';', compiler = 'Ghaderi',
-                      compilation_doi = '10.1016/j.apsoil.2025.106605')
+                      compilation_doi = '10.1016/j.apsoil.2025.106605'),
+  # Grimm et al. (2014) Nature Conservation 9:45-67: per-row Ref_Abbr keys from
+  # the MS Access database References table, extracted to references.csv by
+  # extract_body_mass.py; 175 entries (the full database reference list).
+  Grimm_2014 = list(format = 'csv', file = 'references.csv',
+                    key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                    sep = ';', compiler = 'Grimm',
+                    compilation_doi = '10.3897/natureconservation.9.8908')
 )
 
 ReflistSpec <- function(source_label) {

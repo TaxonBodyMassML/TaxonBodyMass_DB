@@ -1,10 +1,10 @@
-# Citations of Hirt_etal_2017 -- 2026-10-18 13:27:35 (tbmcite 0.1.0)
+# Citations of Hirt_etal_2017 -- 2026-10-19 07:53:17 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 45 row(s) for Hirt_etal_2017, 42 new, tab had 11127 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

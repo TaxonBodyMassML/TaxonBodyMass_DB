@@ -1,10 +1,10 @@
-# Citations of Gillooly_etal_2016 -- 2026-10-18 13:27:13 (tbmcite 0.1.0)
+# Citations of Gillooly_etal_2016 -- 2026-10-19 07:53:00 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 33 row(s) for Gillooly_etal_2016, 32 new, tab had 11094 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

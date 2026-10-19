@@ -1,4 +1,4 @@
-# Citations of McCoy_2008 -- 2026-10-18 12:13:39 (tbmcite 0.1.0)
+# Citations of McCoy_2008 -- 2026-10-19 07:53:59 (tbmcite 0.1.0)
 
 Steps: --apply-queue
 

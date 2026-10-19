@@ -1,10 +1,10 @@
-# Citations of Sarmiento-Lezcano_2023 -- 2026-10-18 13:28:54 (tbmcite 0.1.0)
+# Citations of Sarmiento-Lezcano_2023 -- 2026-10-19 07:54:22 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 1 row(s) for Sarmiento-Lezcano_2023, 1 new, tab had 11239 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

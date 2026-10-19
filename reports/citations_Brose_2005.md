@@ -1,4 +1,4 @@
-# Citations of Brose_2005 -- 2026-10-11 13:02:46 (tbmcite 0.1.0)
+# Citations of Brose_2005 -- 2026-10-19 07:52:25 (tbmcite 0.1.0)
 
 Steps: --apply-queue
 
@@ -16,7 +16,7 @@ Verification mode: full (Crossref + OpenAlex)
 | Pinnegar_2003 | 364 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp |  | 10.1111/j.1095-8649.2003.00204.x | 1.000 | Pinnegar:2003aa | Pinnegar_2003 |
 | Ruess_unpublished | 236 | measurement | rejected | owner_drop | crossref;openalex |  | 10.1093/benz/9780199773787.article.b00157695 | 0.589 |  |  |
 | Rayner_unpublished | 198 | measurement | rejected | owner_drop | crossref;openalex |  | 10.1093/benz/9780199773787.article.b00149560 | 0.530 |  |  |
-| Jacob_unpublished | 168 | measurement | rejected | owner_drop | crossref;openalex;none |  | 10.1016/b978-0-12-417015-5.00008-6 | 0.298 |  |  |
+| Jacob_unpublished | 168 | measurement | rejected | owner_drop | crossref;openalex |  | 10.1016/b978-0-12-417015-5.00008-6 | 0.298 |  |  |
 | Ulrich_1999 | 41 | measurement | nodoi_approved | owner_nodoi | crossref;openalex |  |  | 0.513 | Ulrich:1999aa | Ulrich_1999 |
 | Dell_unpublished | 16 | measurement | rejected | owner_drop | crossref;openalex |  | 10.5040/9781350910317 | 0.395 |  |  |
 | Woodward_2001 | 11 | measurement | approved | owner_doi | crossref |  | 10.1046/j.1365-2656.2002.00669.x | 0.000 | Woodward:2002aa | Woodward_2002 |

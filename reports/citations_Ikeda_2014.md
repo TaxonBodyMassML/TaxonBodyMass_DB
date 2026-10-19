@@ -1,10 +1,10 @@
-# Citations of Ikeda_2014 -- 2026-10-16 21:53:51 (tbmcite 0.1.0)
+# Citations of Ikeda_2014 -- 2026-10-19 07:53:34 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 36 row(s) for Ikeda_2014, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

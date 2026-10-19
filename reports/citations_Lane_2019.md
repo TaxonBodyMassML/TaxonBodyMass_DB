@@ -1,10 +1,10 @@
-# Citations of Lane_2019 -- 2026-10-18 13:28:20 (tbmcite 0.1.0)
+# Citations of Lane_2019 -- 2026-10-19 07:53:49 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 1 row(s) for Lane_2019, 1 new, tab had 11214 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 
