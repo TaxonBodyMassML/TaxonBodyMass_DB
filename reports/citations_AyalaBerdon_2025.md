@@ -1,10 +1,10 @@
-# Citations of AyalaBerdon_2025 -- 2026-10-16 21:52:47 (tbmcite 0.1.0)
+# Citations of AyalaBerdon_2025 -- 2026-10-19 07:52:18 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 19 row(s) for AyalaBerdon_2025, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

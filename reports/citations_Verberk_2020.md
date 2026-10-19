@@ -1,10 +1,10 @@
-# Citations of Verberk_2020 -- 2026-10-18 13:29:31 (tbmcite 0.1.0)
+# Citations of Verberk_2020 -- 2026-10-19 07:54:46 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 425 row(s) for Verberk_2020, 417 new, tab had 11762 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

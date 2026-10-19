@@ -1,10 +1,10 @@
-# Citations of Pata_2025 -- 2026-10-18 13:28:42 (tbmcite 0.1.0)
+# Citations of Pata_2025 -- 2026-10-19 07:54:18 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 1 row(s) for Pata_2025, 1 new, tab had 11238 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

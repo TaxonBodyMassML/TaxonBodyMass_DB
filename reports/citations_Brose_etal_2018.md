@@ -1,10 +1,10 @@
-# Citations of Brose_etal_2018 -- 2026-10-16 21:52:59 (tbmcite 0.1.0)
+# Citations of Brose_etal_2018 -- 2026-10-19 07:52:28 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 22 row(s) for Brose_etal_2018, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

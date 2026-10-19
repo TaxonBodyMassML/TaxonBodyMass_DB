@@ -1,10 +1,10 @@
-# Citations of DeLong_etal_2018 -- 2026-10-18 13:26:27 (tbmcite 0.1.0)
+# Citations of DeLong_etal_2018 -- 2026-10-19 07:52:42 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 134 row(s) for DeLong_etal_2018, 134 new, tab had 10799 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

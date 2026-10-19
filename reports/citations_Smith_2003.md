@@ -1,12 +1,10 @@
-# Citations of Smith_2003 -- 2026-10-18 14:29:50 (tbmcite 0.1.0)
+# Citations of Smith_2003 -- 2026-10-19 07:54:25 (tbmcite 0.1.0)
 
-Steps: --queue
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --queue (re-scoring pending rows from the cache): compilation DOI 10.1890/02-9003; 0 deposited references (0 with DOI)
-- status counts: certain 43, approved 87, nodoi_approved 114, rejected 11
-- --queue: 0 open queue row(s) for Smith_2003 in pending_citations.csv (7424 rows in the file)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

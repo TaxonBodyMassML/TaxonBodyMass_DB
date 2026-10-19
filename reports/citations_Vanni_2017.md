@@ -1,10 +1,10 @@
-# Citations of Vanni_2017 -- 2026-10-16 21:54:58 (tbmcite 0.1.0)
+# Citations of Vanni_2017 -- 2026-10-19 08:13:30 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 66 row(s) for Vanni_2017, 0 new, tab had 10531 rows; BM_citations snapshotted (443 rows)
+- --sheet: 66 row(s) for Vanni_2017, 0 new, tab had 12964 rows; BM_citations snapshotted (443 rows)
 
 ## References
 

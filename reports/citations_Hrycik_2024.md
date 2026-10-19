@@ -1,10 +1,10 @@
-# Citations of Hrycik_2024 -- 2026-10-18 13:27:58 (tbmcite 0.1.0)
+# Citations of Hrycik_2024 -- 2026-10-19 07:53:27 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 1 row(s) for Hrycik_2024, 1 new, tab had 11170 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 

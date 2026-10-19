@@ -1,13 +1,13 @@
-# Citations of Hechinger_etal_2011 -- 2026-10-18 11:48:25 (tbmcite 0.1.0)
+# Citations of Hechinger_etal_2011 -- 2026-10-19 08:11:38 (tbmcite 0.1.0)
 
-Steps: --recommend
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex)
 
-- 
+- --sheet: 1 row(s) for Hechinger_etal_2011, 1 new, tab had 12955 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
 | native_key | n_records | role | match_status | match_reason | services | verification_mode | doi | title_sim | bibcite | cite_id |
 | --- | ---: | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Hechinger_etal_2011 | 289 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1890/10-1383.1 | 1.000 |  |  |
+| Hechinger_etal_2011 | 289 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1890/10-1383.1 | 1.000 | Hechinger:2011aa | Hechinger_etal_2011 |
