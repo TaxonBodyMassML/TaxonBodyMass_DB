@@ -41,8 +41,9 @@ DataSheets   <- FALSE
 # TRUE: ignore enrichment cache and re-enrich all taxa from scratch (hours of
 # API calls). FALSE: reuse sources/enrich_cache.Rdata and enrich only new taxa.
 fresh_start  <- FALSE
-# Remove taxa occurring in multiple sources whose sources differ by more than
-# and order of magnitude in the value they ascribe to the taxa
+# Remove taxa whose independent values (from multiple sources) span more than 
+# one order of magnitude (log10(max/min) > 1) and were not resolved by a
+# record-level range rule (#34)
 RemoveHighMaxMinRatio <- TRUE
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

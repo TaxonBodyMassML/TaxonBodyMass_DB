@@ -154,6 +154,9 @@ FixTaxonomyRanks <- function(dat) {
     'Aulopiformes'       = 'Actinopterygii',
     'Batrachoidiformes'  = 'Actinopterygii',
     'Osmeriformes'       = 'Actinopterygii',
+    'Perciformes'        = 'Actinopterygii',  # GBIF backbone omits class for gobies and groupers
+    'Cypriniformes'      = 'Actinopterygii',  # GBIF backbone omits class for carps (Capoeta spp.)
+    'Characiformes'      = 'Actinopterygii',  # GBIF backbone omits class for characins
     # Flatworms — order present in cache but class missing (GBIF backbone gap)
     'Tricladida'         = 'Rhabditophora',
     # Nematodes — GBIF backbone omits class for these orders

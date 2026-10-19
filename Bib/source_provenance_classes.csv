@@ -25,6 +25,7 @@ Fisher_2001,compilation,unknown,,1,tier A2; Source (female mass) short keys -> a
 GalanAcedo_etal_2026,compilation,unknown,,1,"tier C; Refs1 integers -> Zenodo References.docx (1,216 entries)"
 Gillooly_etal_2016,compilation,unknown,,1,tier A2; negative-number codes -> article References / Appendix 1 (pdf)
 Gonzalez_2025,compilation,unknown,,3,"#74; data.source1 keys per row (paper / template / database sub-sources) -> references.csv built from the Dryad sheet References (build_references.r); 'unpublished - <contributor>' template rows are self (first published in StoichLife)"
+Grimm_2014,compilation,unknown,,1,"tier A2; ref_abbr keys per row -> references.csv (176 entries, extracted from Access DB by extract_body_mass.py); primary_references.csv initialised (issue #1)"
 GuoBailly_2024,primary,measured_in_source,,1,"tier F; FCRR 32(4) chapter, primary (label renamed from Pauly_2024 under #3)"
 Hebert_etal_2016,compilation,unknown,,1,tier A0 pilot; Ref.dm codes -> references.csv (198 refs)
 Hechinger_etal_2011,primary,measured_in_source,,1,tier F; mixed: BodySizeEstimation per row to become prov_type

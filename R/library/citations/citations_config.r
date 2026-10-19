@@ -759,6 +759,13 @@ reflist_specs <- list(
                key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                type_col = 'note', sep = ';', compiler = 'AnAge',
                compilation_doi = '10.1111/j.1420-9101.2009.01783.x'),
+  # ADW body masses (no per-record reference fields exported from Quaardvark;
+  # single self-citation: the ADW database itself, no DOI; manual:Quaardvark
+  # assigned via queue to match the curated bib key)
+  Quaardvark = list(format = 'csv', file = 'references.csv',
+                    key_col = 'key', citation_col = 'citation', doi_col = 'doi',
+                    type_col = 'note', sep = ';', csv_sep = ';', compiler = 'ADW',
+                    compilation_doi = ''),
   GuoBailly_2024 = list(format = 'csv', file = 'references.csv',
                         key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                         type_col = 'note', sep = ';', compiler = 'Guo',
