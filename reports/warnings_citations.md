@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-19 14:44:39
+# Citation and provenance warnings -- 2026-10-19 15:57:12
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 234971 (39887 species); distinct primary CiteIDs: 12344; unresolved references (pending / not_found): 13; unverified references: 0
+- provenance rows: 234972 (39887 species); distinct primary CiteIDs: 12370; unresolved references (pending / not_found): 0; unverified references: 0
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
 
 ## Problems
 
-- 17 accepted reference(s) without a bib entry (run --bib): fishbase 5825, fishbase 7074, fishbase 39875, fishbase 56212, fishbase 85123, fishbase 108907, fishbase 119162, fishbase 119268, fishbase 121491, fishbase 126422, fishbase 126428, fishbase 126430, fishbase 130795, fishbase 132202, sealifebase 128035, sealifebase 128726, sealifebase 129557
+(none)
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -36,7 +36,7 @@ One row per source label: species and record links (species x source x reference
 | Brose_2005 | compilation | 319 | 9258 | 93.2 | 12 | 7 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
 | Brose_etal_2018 | compilation | 1916 | 183741 | 89.8 | 24 | 22 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 33 | 33 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Cai_etal_2025 | compilation | 5069 | 5083 | 52.3 | 99 | 89 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
+| Cai_etal_2025 | compilation | 5069 | 5084 | 52.3 | 99 | 89 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 516 | 1967 | 64.5 | 185 | 134 | 0 | 0 | 0 | 0 | 51 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 307 | 550 | 54.4 | 115 | 113 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 336 | 425 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -51,7 +51,7 @@ One row per source label: species and record links (species x source x reference
 | Ghaderi_2026 | derived | 221 | 1106 | 59.4 | 86 | 6 | 0 | 0 | 0 | 0 | 80 | 0 | 0 | 0 |
 | Gillooly_etal_2016 | compilation | 85 | 90 | 100 | 34 | 33 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Gonzalez_2025 | compilation | 233 | 2201 | 78.5 | 50 | 35 | 0 | 0 | 0 | 13 | 2 | 0 | 0 | 0 |
-| Grimm_2014 | compilation | 15 | 58 | 37.9 | 23 | 10 | 0 | 4 | 9 | 0 | 0 | 0 | 0 | 0 |
+| Grimm_2014 | compilation | 15 | 58 | 87.9 | 23 | 21 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 283 | 283 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 146 | 742 | 94.3 | 53 | 52 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 139 | 264 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -88,7 +88,7 @@ One row per source label: species and record links (species x source x reference
 | Oskyrko_2024 | compilation | 30 | 34 | 91.2 | 22 | 19 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
 | Pata_2025 | compilation | 117 | 117 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 99 | 363 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Quaardvark | database | 2372 | 2392 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Quaardvark | database | 2372 | 2392 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Raymond_2011 | compilation | 120 | 1743 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2012 | primary | 22 | 22 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2013 | primary | 28 | 28 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -107,8 +107,8 @@ One row per source label: species and record links (species x source x reference
 | Weisse_2024 | compilation | 43 | 85 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 12511 | 15251 | 99.8 | 67 | 60 | 0 | 0 | 0 | 0 | 7 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 149 | 150 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| fishbase | live | 2209 | 3153 | 61 | 891 | 675 | 0 | 0 | 0 | 0 | 216 | 0 | 1 | 0 |
-| sealifebase | live | 319 | 591 | 43 | 148 | 106 | 0 | 0 | 0 | 0 | 42 | 0 | 0 | 0 |
+| fishbase | live | 2209 | 3153 | 62.1 | 891 | 675 | 0 | 0 | 0 | 0 | 216 | 0 | 1 | 0 |
+| sealifebase | live | 319 | 591 | 43.8 | 148 | 106 | 0 | 0 | 0 | 0 | 42 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 139 | 980 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-aves-sept2016 | live | 5807 | 80315 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-fishes-sept2016 | live | 146 | 315 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

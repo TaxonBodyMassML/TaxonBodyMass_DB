@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Licence Warnings -- 2026-10-19 14:42:45
+# TaxonBodyMass_DB Licence Warnings -- 2026-10-19 15:55:41
 
 Written by `CheckSourceDocs()` (`R/library/check_source_docs.r`) from the `Licence:` lines of the source READMEs and the manifest `source_files.csv` (issue #6). The full record is `sources/LICENSES.md`.
 

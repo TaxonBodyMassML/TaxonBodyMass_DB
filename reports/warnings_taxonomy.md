@@ -1,52 +1,13 @@
-# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-19 14:44:31
+# TaxonBodyMass_DB Taxonomy Warnings -- 2026-10-19 15:57:04
 
 ## Summary
 
-- Missing `class` after all enrichment stages: 18 rows
 - genus column does not match species prefix: 5 rows
 - Low GBIF confidence (75-89): 167 rows
 - Source family != GBIF family: 1 rows
 - Source order != GBIF order: 1 rows
 - Names unresolved after all enrichment stages: 172 names, 1817 rows
 - Kingdom conflicts corrected before the autotroph filter: 5 names, 38 rows (2 unresolved)
-
-## Missing `class` after all enrichment stages (18 rows)
-
-Asterropteryx_semipunctata
-
-Awaous_lateristriga
-
-Awaous_ocellaris
-
-Bathygobius_cyclopterus
-
-Brachygobius_sua
-
-Caffrogobius_caffer
-
-Callogobius_sclateri
-
-Capoeta_erhani
-
-Capoeta_mandica
-
-Drombus_triangularis
-
-Epinephelus_hexagonatus
-
-Epinephelus_maculatus
-
-Epinephelus_polyphekadion
-
-Eviota_guttata
-
-Eviota_prasina
-
-Gymnogobius_isaza
-
-Hemigrammus_ocellifer
-
-Altolamprologus_fasciatus
 
 ## genus column does not match species prefix (5 rows)
 
