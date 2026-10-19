@@ -1,11 +1,10 @@
-# Citations of Ghaderi_2026 -- 2026-10-18 14:28:39 (tbmcite 0.1.0)
+# Citations of Ghaderi_2026 -- 2026-10-18 19:02:38 (tbmcite 0.1.0)
 
-Steps: --verify
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --verify: compilation DOI 10.1016/j.apsoil.2025.106605; 30 deposited references (19 with DOI)
-- status counts: certain 5, rejected 80
+- --sheet: 6 row(s) for Ghaderi_2026, 1 new, tab had 12197 rows; BM_citations snapshotted (443 rows)
 
 ## References
 
@@ -96,3 +95,4 @@ Verification mode: full (Crossref + OpenAlex)
 | de Braun & Heyns, 1992 | 1 | measurement | rejected | owner_drop |  |  |  |  |  |  |
 | de Bruin & Heyns, 1992 | 7 | measurement | rejected | owner_drop |  |  |  |  |  |  |
 | van Rensburg et al., 2021 | 1 | measurement | rejected | owner_drop |  |  |  |  |  |  |
+| Andrassy_1956 | 573 | equation | nodoi_approved | owner_nodoi |  |  |  |  | Andrassy:1956aa | Andrassy_1956 |
