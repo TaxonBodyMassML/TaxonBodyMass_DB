@@ -43,7 +43,10 @@ vn_dir <- file.path(wd_root, 'sources', 'VertNet')
 dir.create(vn_dir, showWarnings = FALSE)
 
 needed_cols <- c('genus', 'specificepithet', 'class', 'order', 'family',
-                 'hasmass', 'massing')
+                 'hasmass', 'massing',
+                 'occurrenceid', 'institutioncode', 'collectioncode',
+                 'catalognumber', 'bibliographiccitation',
+                 'license', 'datasetname', 'gbifdatasetid', 'icode')
 
 records_list <- vector('list', length(vn_datasets))
 
@@ -76,7 +79,8 @@ for (i in seq_along(vn_datasets)) {
 
   if (all(c('hasmass', 'massing') %in% header_cols)) {
     # Standard VertNet Sept 2016 class-level schema
-    dat <- suppressWarnings(fread(csv_path, select = needed_cols, showProgress = FALSE))
+    read_cols <- intersect(needed_cols, header_cols)
+    dat <- suppressWarnings(fread(csv_path, select = read_cols, showProgress = FALSE))
     file.remove(csv_path); file.remove(zip_path)
 
     dat <- dat[as.logical(hasmass) %in% TRUE]
@@ -86,9 +90,12 @@ for (i in seq_along(vn_datasets)) {
   } else if ('dynamicproperties' %in% header_cols) {
     # Older Darwin Core format (e.g. Traits): mass buried in dynamicproperties
     message('Parsing mass from dynamicproperties ...')
+    prov_cols   <- c('occurrenceid', 'institutioncode', 'collectioncode',
+                     'catalognumber', 'bibliographiccitation',
+                     'license', 'datasetname', 'gbifdatasetid', 'icode')
     traits_cols <- intersect(
       c('genus', 'specificepithet', 'class', 'order', 'family',
-        'dynamicproperties', 'lifestage'),
+        'dynamicproperties', 'lifestage', prov_cols),
       header_cols
     )
     dat <- suppressWarnings(fread(csv_path, select = traits_cols, showProgress = FALSE))
@@ -140,7 +147,22 @@ for (i in seq_along(vn_datasets)) {
   dat[, n           := 1L]
   dat[, source_mass := paste0('vertnet-', tolower(ds$name), '-sept2016')]
 
-  records_list[[i]] <- dat[, .(taxon, mass_g, class, order, family, n, source_mass)]
+  # ref_keys = publisher dataset identifier for provenance (Phase 3).
+  # Use gbifdatasetid when present; fall back to institutioncode:collectioncode.
+  if ('gbifdatasetid' %in% names(dat) && any(!is.na(dat$gbifdatasetid))) {
+    dat[, ref_keys := ifelse(!is.na(gbifdatasetid) & gbifdatasetid != '',
+                             gbifdatasetid,
+                             paste0(institutioncode, ':', collectioncode))]
+  } else if (all(c('institutioncode', 'collectioncode') %in% names(dat))) {
+    dat[, ref_keys := paste0(institutioncode, ':', collectioncode)]
+  }
+
+  prov_keep <- intersect(
+    c('taxon', 'mass_g', 'class', 'order', 'family', 'n', 'source_mass',
+      'ref_keys', 'occurrenceid', 'bibliographiccitation', 'license'),
+    names(dat)
+  )
+  records_list[[i]] <- dat[, ..prov_keep]
   message(format(nrow(records_list[[i]]), big.mark = ','),
           ' mass records retained for ', ds$name)
 }
