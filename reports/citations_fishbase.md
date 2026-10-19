@@ -1,10 +1,15 @@
-# Citations of fishbase -- 2026-10-19 08:10:17 (tbmcite 0.1.0)
+# Citations of fishbase -- 2026-10-19 15:01:15 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --apply-queue --bib
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 660 row(s) for fishbase, 227 new, tab had 12684 rows; BM_citations snapshotted (443 rows)
+- --apply-queue: 14 decision(s) applied: 5825 -> nodoi_approved, 7074 -> nodoi_approved, 39875 -> nodoi_approved, 56212 -> nodoi_approved, 85123 -> nodoi_approved, 108907 -> nodoi_approved, 119162 -> nodoi_approved, 119268 -> nodoi_approved, 121491 -> nodoi_approved, 126422 -> nodoi_approved, 126428 -> nodoi_approved, 126430 -> nodoi_approved, 130795 -> nodoi_approved, 132202 -> nodoi_approved
+- --bib: primary_references written for 1 source(s): fishbase
+- --bib: 3 accepted DOI(s) have no Crossref record, so no entry was built and the row keeps its bibcite / cite_id as they were (an OpenAlex-only candidate approved before #114 item 3: withdraw the decision and give doi:<DOI> once it resolves at Crossref, or nodoi): sealifebase 128035 (10.21411/cbm.a.4d7e8748); sealifebase 128726 (10.21411/cbm.a.e6edb8b2); sealifebase 129557 (10.22034/ijab.v11i2.1627)
+- --bib: 120 accepted DOI record(s) carry no Crossref author names; author field populated from raw citation as fallback (check or switch to nodoi if wrong): Myhrvold_2015 Sibly_2012 (10.1002/9781119968535); Jones_2009 2145 (10.1007/978-1-4419-8770-9); DeLong_etal_2018 Yoo et al 2018 MBR (10.1007/978-3-319-17885-1_100757); fishbase 167 (10.1007/978-3-642-82858-4); DeLong_etal_2018 Bosch and Santer 1993 OIK (10.1007/978-3-662-00904-8); Jones_2009 2329 (10.1007/978-94-010-1944-6); DeLong_etal_2018 Yen 1987 J OF EXP MAR BIOL & ECOL (10.1007/bf00447498); DeLong_etal_2018 Buskey et al 1994 MAR BIOL (10.1007/bf00680225); DeLong_etal_2018 Hansen et al 1990 J PLANK RES (10.1016/0010-4361(90)90184-x); sealifebase 81132 (10.1016/0198-0254(83)90279-0); Jones_2009 56 (10.1016/0198-0254(87)90283-4); Tucker_etal_2014a Jefferson 2008 (10.1016/b978-0-12-383853-7.x5001-x); Jones_2009 139 (10.1016/c2009-0-02373-3); DeLong_etal_2018 Kushner and Hovel 2006 JEMBE (10.1016/j.aodf.2006.02.013); DeLong_etal_2018 Alexander et al 2013 J OF EXP MARINE BIOL AND ECOL (10.1016/j.jembe.2013.01.017); DeLong_etal_2018 Colin and Dam 2007 HARMFUL ALGAE (10.1016/s1568-9883(07)00133-3); DeLong_etal_2018 Frangopulos et al 2011 HARMFUL ALGAE (10.1016/s1568-9883(11)00163-6); Jones_2009 1766 (10.1017/cbo9780511542466); Myhrvold_2015 Prins_2014 (10.1017/cbo9781139565424); DeLong_etal_2018 Kamiyama et al 2005 MAR BIOL (10.1017/s0025315405012786); Jones_2009 82 (10.1038/089449b0); fishbase 114953 (10.1071/9780643109148); DeLong_etal_2018 Jeong et al 2001 JEM (10.1084/jem.194.12.1883); DeLong_etal_2018 Townsend and Risebrow 1982 OEC (10.1089/blr.1982.1.163); DeLong_etal_2018 Isari and Saiz 2011 J PLANK RES (10.1093/benz/9780199773787.article.b00143009); Jones_2009 2658 (10.1093/mspecies/147.1); Jones_2009 1182 (10.1093/mspecies/202.1a); Jones_2009 1092 (10.1093/mspecies/261.1); Jones_2009 1962 (10.1093/mspecies/266.1); Jones_2009 911 (10.1093/mspecies/274.1); Jones_2009 304 (10.1093/mspecies/365.1); Jones_2009 309 (10.1093/mspecies/374.1); Smith_2003 84 (10.1093/mspecies/374.1); Jones_2009 163 (10.1093/oxfordjournals.jhered.a111394); Jones_2009 2728 (10.1098/rspb.1993.0143); Jones_2009 490 (10.1098/rspb.1995.0034); Meiri_2018 Grismer 1990 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Lais 1976 (10.1111/j.1558-5646.1965.tb01719.x); Meiri_2018 Grismer et al. 2013 [2] (10.1111/zoj12064); Meiri_2018 Recoder et al. 2014 (10.1111/zoj12128); DeLong_etal_2018 Ware 1972 J FISHERIES RES BOARD CANADA (10.1139/f72-187); DeLong_etal_2018 Lee and Kang 2004 BIO CONTROL (10.1177/14690446040050030201); Lislevand_etal_2007 49 (10.1201/9781420036305); DeLong_etal_2018 Vega 1997 IRGH (10.1353/boc.1997.0038); fishbase 120602 (10.14321/j.ctv65sxrf.18); DeLong_etal_2018 Witz 1996 J HERP (10.1553/0x003c15a6); Jones_2009 342 (10.1644/0.496.1); Jones_2009 343 (10.1644/0.497.1); Jones_2009 345 (10.1644/0.498.1); Jones_2009 1604 (10.1644/0.569.1); Jones_2009 2670 (10.1644/0.571.1); Jones_2009 2211 (10.1644/0.572.1); Smith_2003 220 (10.1644/744); Smith_2003 266 (10.1644/771); Smith_2003 267 (10.1644/772); Smith_2003 269 (10.1644/776); Jones_2009 3100 (10.2307/0.105.1); Jones_2009 592 (10.2307/0.106.1); Jones_2009 1887 (10.2307/0.109.1); Jones_2009 1512 (10.2307/0.112.1); Jones_2009 2445 (10.2307/0.268.1); Jones_2009 611 (10.2307/0.28.1); Jones_2009 468 (10.2307/0.306.1); Jones_2009 2365 (10.2307/0.31.1); Jones_2009 314 (10.2307/0.411.1); Smith_2003 86 (10.2307/0.411.1); Jones_2009 316 (10.2307/0.420.1); Jones_2009 612 (10.2307/0.44.1); Jones_2009 335 (10.2307/0.466.1); Jones_2009 644 (10.2307/0.469.1); Jones_2009 2561 (10.2307/0.49.1); Jones_2009 1985 (10.2307/0.490.1); Jones_2009 2956 (10.2307/0.50.1); Jones_2009 336 (10.2307/0.501.1); Jones_2009 341 (10.2307/0.507.1); Jones_2009 346 (10.2307/0.508.1); Jones_2009 591 (10.2307/0.55.1); Jones_2009 2492 (10.2307/0.595.1); Jones_2009 2459 (10.2307/0.596.1); Jones_2009 1960 (10.2307/0.624.1); Smith_2003 100 (10.2307/0.624.1); Smith_2003 255 (10.2307/0.660.1); Smith_2003 103 (10.2307/0.673.1); Smith_2003 104 (10.2307/0.675.1); Jones_2009 1751 (10.2307/3503849); Jones_2009 3065 (10.2307/3503921); Jones_2009 2611 (10.2307/3503996); Jones_2009 3031 (10.2307/3504073); Jones_2009 2252 (10.2307/3504102); Jones_2009 339 (10.2307/3504147); Jones_2009 651 (10.2307/3504157); Jones_2009 1608 (10.2307/3504217); Jones_2009 1699 (10.2307/3504221); Jones_2009 61 (10.2307/3504270); Jones_2009 1921 (10.2307/3504304); Jones_2009 46 (10.2307/3504312); Smith_2003 265 (10.2307/3504532); Smith_2003 264 (10.2307/3504547); fishbase 120613 (10.2307/j.ctt21215sk.19); fishbase 117245 (10.3138/9781442667297); DeLong_etal_2018 Jeong et al 2011 (10.5040/9781350914360); Lislevand_etal_2007 70 (10.5040/9781472597441); Lislevand_etal_2007 27 (10.5040/9781472926975); Lislevand_etal_2007 23 (10.5040/9781472926982); Lislevand_etal_2007 5 (10.5040/9781472926999); Lislevand_etal_2007 24 (10.5040/9781472927002); Lislevand_etal_2007 25 (10.5040/9781472927019); Lislevand_etal_2007 26 (10.5040/9781472927026); Lislevand_etal_2007 28 (10.5040/9781472927033); DeLong_etal_2018 Jeong et al. 2002 AME (10.5465/ame.2002.8951318); DeLong_etal_2018 Tillmann and Reckermann 2002 AME (10.5465/ame.2002.8951318); fishbase 132181 (10.56042/ijms.v52i12.6639); fishbase 2334 (10.5860/choice.28-6264); Jones_2009 978 (10.5860/choice.33-2131); Jones_2009 1004 (10.5860/choice.37-5102); McCoy_2008 1 (10.5860/choice.45-5582); Jones_2009 1635 (10.5962/bhl.part.14575); Meiri_2018 Chabanaud 1918 (10.5962/bhl.part.19996); Meiri_2018 Chabanaud 1917 (10.5962/p.36933); Myhrvold_2015 MarinhoFilho_2002 (10.7312/oliv12042-015)
+- --bib: 1 of 1 bib correction(s) in bib_corrections.csv applied: Scherer:1984aa author
+- --bib: 12962 entries written to TaxonBodyMass_PrimaryCitations.bib (41 reuse a curated key); RefManageR parsed 12962; fishbase: 675 rows with bibcite
 
 ## References
 
@@ -89,7 +94,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 5749 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | 5761 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.33997/j.afs.1992.5.2.003 | 1.000 | Barry:1992aa | Barry_1992 |
 | 5765 | 3 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1071/mf9921269 | 0.932 | McPherson:1992aa | McPherson_1992 |
-| 5825 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/1989-134-006 | 1.000 |  |  |
+| 5825 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Krug:1989aa | Krug_1989 |
 | 5951 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.2307/1445533 | 1.000 | Markle:1989aa | Markle_1989 |
 | 5982 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.33997/j.afs.1992.5.1.007 | 1.000 | Yu:1992aa | Yu_1992 |
 | 6112 | 4 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
@@ -113,7 +118,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 6996 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.857 | Pidgeon:1989aa | Pidgeon_1989 |
 | 7006 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.592 | Smith:1977ad | Smith_1977d |
 | 7016 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.878 | Harris:1987ab | Harris_1987b |
-| 7074 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/1990-143-006 | 1.000 |  |  |
+| 7074 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Tankevich:1990aa | Tankevich_1990 |
 | 7086 | 2 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.538 | Schwartz:1990aa | Schwartz_1990 |
 | 7188 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1577/1548-8659(1990)119<0537:aagobd>2.3.co;2 | 1.000 | Beckman:1990aa | Beckman_1990 |
 | 7225 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.444 | Florencio:1981aa | Florencio_1981 |
@@ -188,7 +193,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 39349 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.2307/1447348 | 1.000 | Eakin:1998aa | Eakin_1998 |
 | 39376 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.789 | Haimovici:2000aa | Haimovici_2000 |
 | 39589 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1139/z79-287 | 1.000 | Dadswell:1979aa | Dadswell_1979 |
-| 39875 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2001-252-009 | 0.846 |  |  |
+| 39875 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.846 | Borges:2001aa | Borges_2001 |
 | 39936 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1577/1548-8659(2000)129<0119:aagosf>2.0.co;2 | 1.000 | Stunz:2000aa | Stunz_2000 |
 | 40142 | 2 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1023/a:1007358027263 | 1.000 | Krykhtin:1997aa | Krykhtin_1997 |
 | 40637 | 22 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
@@ -272,7 +277,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 55729 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1007/s10228-003-0165-7 | 1.000 | Yano:2003aa | Yano_2003 |
 | 56081 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.457 | Gobert:2005aa | Gobert_2005 |
 | 56144 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.3750/aip2005.35.2.12 | 1.000 | Pais:2005aa | Pais_2005 |
-| 56212 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2004-284-006 | 1.000 |  |  |
+| 56212 | 2 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Iglesias:2004aa | Iglesias_2004 |
 | 56312 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.4314/tfb.v10i1.20841 | 1.000 | Ikomi:2001aa | Ikomi_2001 |
 | 56333 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | 56334 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
@@ -354,7 +359,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 84913 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1439-0426.2010.01391.x | 1.000 | Sprem:2010aa | Sprem_2010 |
 | 85089 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.486 | Treer:2003aa | Treer_2003 |
 | 85107 | 65 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
-| 85123 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2008-322-013 | 1.000 |  |  |
+| 85123 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Randall:2008aa | Randall_2008 |
 | 85472 | 2 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.454 | Prokes:2006aa | Prokes_2006 |
 | 85475 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.570 | Treer:2003ab | Treer_2003b |
 | 85576 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.502 | Ahmed:2007aa | Ahmed_2007 |
@@ -480,7 +485,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 108733 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1016/j.fishres.2007.12.022 | 1.000 | Pajuelo:2008aa | Pajuelo_2008 |
 | 108876 | 4 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.12925 | 1.000 | Zhou:2016aa | Zhou_2016 |
 | 108878 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.12939 | 1.000 | Zulkafli:2016aa | Zulkafli_2016 |
-| 108907 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2013-374-004 | 1.000 |  |  |
+| 108907 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Santic:2013aa | Santic_2013 |
 | 108908 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | 108923 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.568 | Akyol:2014aa | Akyol_2014 |
 | 110394 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.539 | Erdogan:2016aa | Erdogan_2016 |
@@ -585,11 +590,11 @@ Verification mode: full (Crossref + OpenAlex)
 | 118722 | 11 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.615 | Islam:2017aa | Islam_2017 |
 | 118750 | 3 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1071/mf15369 | 1.000 | Raoult:2017aa | Raoult_2017 |
 | 118918 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1007/s10641-017-0695-x | 1.000 | Severo-Neto:2018aa | Severo-Neto_2018 |
-| 119162 | 8 | measurement | certain | doi_resolves | crossref;openalex | full | 10.21411/cbm.a.645c2013 | 1.000 |  |  |
+| 119162 | 8 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Jawad:2017aa | Jawad_2017 |
 | 119164 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1590/1982-0224-20170139 | 1.000 | Bonilla-Castillo:2018aa | Bonilla-Castillo_2018 |
 | 119187 | 2 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  |  | Hajiahmadian:2018aa | Hajiahmadian_2018 |
 | 119189 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.578 | Ozcan:2018aa | Ozcan_2018 |
-| 119268 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.22092/ijfs.2018.115488 | 1.000 |  |  |
+| 119268 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Salarpouri:2018aa | Salarpouri_2018 |
 | 119290 | 29 | measurement | certain | doi_resolves | crossref;openalex | full | 10.12681/mms.463 | 1.000 | Kasapoglu:2013aa | Kasapoglu_2013 |
 | 119325 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.15578/ifrj.24.2.2018.125-131 | 0.789 | Sawetri:2018aa | Sawetri_2018 |
 | 119332 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1016/j.ejar.2018.10.003 | 1.000 | Farrag:2018aa | Farrag_2018 |
@@ -629,7 +634,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 121268 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.11609/jott.3089.9.12.11074-11080 | 1.000 | Shirke:2017aa | Shirke_2017 |
 | 121466 | 21 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | 121472 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.21608/ejabf.2019.60554 | 1.000 | Dahel:2019aa | Dahel_2019 |
-| 121491 | 3 | measurement | certain | doi_resolves | crossref;openalex | full | 10.22092/ijfs.2019.118803 | 1.000 |  |  |
+| 121491 | 3 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Emiroglu:2019aa | Emiroglu_2019 |
 | 121501 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.13882 | 1.000 | Hajializadeh:2019aa | Hajializadeh_2019 |
 | 121522 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/jai.13677 | 1.000 | Gim:2018aa | Gim_2018 |
 | 121524 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Mouladi-Saleh:2019aa | Mouladi-Saleh_2019 |
@@ -761,9 +766,9 @@ Verification mode: full (Crossref + OpenAlex)
 | 126305 | 4 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.14250 | 0.926 | Mattalakkal-Unnikrishnan:2021aa | MattalakkalUnnikrishnan_2021 |
 | 126306 | 4 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.14251 | 1.000 | Pinheiro:2021aa | Pinheiro_2021 |
 | 126345 | 7 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1016/j.fishres.2004.08.031 | 1.000 | Cedrola:2005aa | Cedrola_2005 |
-| 126422 | 7 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2021-451-007 | 1.000 |  |  |
-| 126428 | 12 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2021-452-007 | 1.000 |  |  |
-| 126430 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2021-453-001 | 1.000 |  |  |
+| 126422 | 7 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Sadio:2021aa | Sadio_2021 |
+| 126428 | 12 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Sadio:2021ab | Sadio_2021b |
+| 126430 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Iglesias:2021aa | Iglesias_2021 |
 | 126480 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | 126511 | 1 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1002/nafm.10385 | 1.000 | Roth:2020aa | Roth_2020 |
 | 126675 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.12974 | 1.000 | Garcia-Vasquez:2015aa | Garcia-Vasquez_2015 |
@@ -850,7 +855,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 130455 | 7 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | 130696 | 5 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jai.13549 | 1.000 | Wang:2017ae | Wang_2017e |
 | 130775 | 19 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1155/2024/6408697 | 1.000 | Gonzalez-Acosta:2024aa | Gonzalez-Acosta_2024 |
-| 130795 | 1 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2023-036 | 1.000 |  |  |
+| 130795 | 1 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 1.000 | Sadio:2023aa | Sadio_2023 |
 | 131016 | 16 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1155/2023/5573054 | 0.859 | Driehaus:2023aa | Driehaus_2023 |
 | 131019 | 19 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1155/2024/1454131 | 1.000 | Pombo-Ayora:2024aa | Pombo-Ayora_2024 |
 | 131020 | 1 | measurement | approved | owner_candidate | crossref;openalex | full | 10.1155/2023/6654237 | 1.000 | Nasren:2023aa | Nasren_2023 |
@@ -879,7 +884,7 @@ Verification mode: full (Crossref + OpenAlex)
 | 132178 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1016/j.ejar.2021.10.003 | 1.000 | Sepa:2022aa | Sepa_2022 |
 | 132180 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.12714/egejfas.41.3.02 | 1.000 | Das:2024aa | Das_2024 |
 | 132181 | 11 | measurement | certain | doi_resolves | crossref;openalex | full | 10.56042/ijms.v52i12.6639 | 1.000 | Swain:2024aa | Swain_2024 |
-| 132202 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.26028/cybium/2024-013 | 0.883 |  |  |
+| 132202 | 2 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.883 | Aranha-Graca:2024aa | AranhaGraca_2024 |
 | 132220 | 14 | measurement | certain | doi_resolves | crossref;openalex | full | 10.3897/aiep.54.126623 | 1.000 | Bagley:2024aa | Bagley_2024 |
 | 132224 | 4 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/jfb.15039 | 1.000 | Sawai:2022aa | Sawai_2022 |
 | 132229 | 4 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1007/s41208-023-00588-9 | 1.000 | Ravikumar:2023aa | Ravikumar_2023 |

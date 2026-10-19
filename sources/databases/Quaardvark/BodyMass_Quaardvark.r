@@ -11,5 +11,6 @@ adat <- adat[!is.na(adat$mass_g), c(1, ncol(adat))]
 colnames(adat) <- c('taxon', 'mass_g')
 adat$n <- 1
 adat$source_mass <- 'Quaardvark'
+adat$ref_keys <- 'Quaardvark'
 AA <- adat
 save(AA, file = file.path(wd_rdata, 'BodyMass_Quaardvark.Rdata'))

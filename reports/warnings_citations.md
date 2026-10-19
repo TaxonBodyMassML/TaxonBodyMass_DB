@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-18 17:11:46
+# Citation and provenance warnings -- 2026-10-19 14:44:39
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 232302 (39887 species); distinct primary CiteIDs: 11654; unresolved references (pending / not_found): 0; unverified references: 0
+- provenance rows: 234971 (39887 species); distinct primary CiteIDs: 12344; unresolved references (pending / not_found): 13; unverified references: 0
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
 
 ## Problems
 
-(none)
+- 17 accepted reference(s) without a bib entry (run --bib): fishbase 5825, fishbase 7074, fishbase 39875, fishbase 56212, fishbase 85123, fishbase 108907, fishbase 119162, fishbase 119268, fishbase 121491, fishbase 126422, fishbase 126428, fishbase 126430, fishbase 130795, fishbase 132202, sealifebase 128035, sealifebase 128726, sealifebase 129557
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -32,11 +32,11 @@ One row per source label: species and record links (species x source x reference
 | AyalaBerdon_2025 | compilation | 39 | 154 | 55.2 | 22 | 20 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | Baach_2026 | compilation | 550 | 1066 | 99.2 | 8 | 7 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 79 | 11547 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Brocher_etal_2025 | derived | 1346 | 1351 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Brocher_etal_2025 | derived | 1346 | 2702 | 100 | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brose_2005 | compilation | 319 | 9258 | 93.2 | 12 | 7 | 0 | 0 | 0 | 0 | 5 | 0 | 0 | 0 |
 | Brose_etal_2018 | compilation | 1916 | 183741 | 89.8 | 24 | 22 | 0 | 0 | 0 | 0 | 2 | 0 | 0 | 0 |
 | Brown_etal_2018 | compilation | 33 | 33 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Cai_etal_2025 | compilation | 5069 | 5081 | 52.3 | 99 | 89 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
+| Cai_etal_2025 | compilation | 5069 | 5083 | 52.3 | 99 | 89 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
 | Castro_2025 | compilation | 516 | 1967 | 64.5 | 185 | 134 | 0 | 0 | 0 | 0 | 51 | 0 | 0 | 0 |
 | Chown_etal_2007 | compilation | 307 | 550 | 54.4 | 115 | 113 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
 | DeLong_etal_2010 | compilation | 336 | 425 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -48,15 +48,16 @@ One row per source label: species and record links (species x source x reference
 | Feldman_etal_2016 | derived | 9651 | 19554 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 152 | 155 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | compilation | 449 | 563 | 64.7 | 249 | 111 | 0 | 0 | 0 | 0 | 138 | 0 | 0 | 0 |
-| Ghaderi_2026 | derived | 221 | 553 | 18.8 | 85 | 5 | 0 | 0 | 0 | 0 | 80 | 0 | 0 | 0 |
+| Ghaderi_2026 | derived | 221 | 1106 | 59.4 | 86 | 6 | 0 | 0 | 0 | 0 | 80 | 0 | 0 | 0 |
 | Gillooly_etal_2016 | compilation | 85 | 90 | 100 | 34 | 33 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Gonzalez_2025 | compilation | 233 | 2201 | 78.5 | 50 | 35 | 0 | 0 | 0 | 13 | 2 | 0 | 0 | 0 |
+| Grimm_2014 | compilation | 15 | 58 | 37.9 | 23 | 10 | 0 | 4 | 9 | 0 | 0 | 0 | 0 | 0 |
 | GuoBailly_2024 | primary | 283 | 283 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hebert_etal_2016 | compilation | 146 | 742 | 94.3 | 53 | 52 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Hechinger_etal_2011 | primary | 139 | 264 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Herberstein_etal_2022 | compilation | 1653 | 2693 | 100 | 193 | 193 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hirt_etal_2017 | compilation | 380 | 513 | 82.7 | 54 | 45 | 0 | 0 | 0 | 0 | 9 | 0 | 0 | 0 |
-| Hishi_etal_2019 | derived | 320 | 324 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Hishi_etal_2019 | derived | 320 | 648 | 100 | 3 | 3 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hoehler_etal_2023 | compilation | 1764 | 3080 | 100 | 16 | 16 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hrycik_2024 | primary | 70 | 92 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Hudson_2013 | compilation | 125 | 1371 | 100 | 122 | 122 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -106,8 +107,8 @@ One row per source label: species and record links (species x source x reference
 | Weisse_2024 | compilation | 43 | 85 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Wilman_etal_2014 | compilation | 12511 | 15251 | 99.8 | 67 | 60 | 0 | 0 | 0 | 0 | 7 | 0 | 0 | 0 |
 | Wisnionski_2026 | compilation | 149 | 150 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| fishbase | live | 2209 | 3153 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| sealifebase | live | 319 | 591 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| fishbase | live | 2209 | 3153 | 61 | 891 | 675 | 0 | 0 | 0 | 0 | 216 | 0 | 1 | 0 |
+| sealifebase | live | 319 | 591 | 43 | 148 | 106 | 0 | 0 | 0 | 0 | 42 | 0 | 0 | 0 |
 | vertnet-amphibia-sept2016 | live | 139 | 980 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-aves-sept2016 | live | 5807 | 80315 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | vertnet-fishes-sept2016 | live | 146 | 315 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |

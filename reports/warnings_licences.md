@@ -1,8 +1,8 @@
-# TaxonBodyMass_DB Licence Warnings -- 2026-10-18 17:09:54
+# TaxonBodyMass_DB Licence Warnings -- 2026-10-19 14:42:45
 
 Written by `CheckSourceDocs()` (`R/library/check_source_docs.r`) from the `Licence:` lines of the source READMEs and the manifest `source_files.csv` (issue #6). The full record is `sources/LICENSES.md`.
 
-Folders checked: 88; unknown licence: 5; non-commercial / share-alike: 8.
+Folders checked: 89; unknown licence: 5; non-commercial / share-alike: 8.
 
 ## Licence unknown
 
@@ -23,13 +23,13 @@ Tracked and redistributed under their own terms, not under the repository licenc
 | Folder | Licence line (first 160 characters) | Raw files | URL to check |
 |---|---|---|---|
 | Cai_etal_2025 | CC BY-NC-ND 4.0 (owner decision 2026-10-06 after the 2026-10-02 audit of the PNAS licence line, not on disk; https://doi.org/10.1073/pnas.2423386122). `Dataset  | `Dataset S27.csv` | https://doi.org/10.1073/pnas.2423386122 |
-| Fishbase | CC BY-NC 4.0 (owner decision 2026-10-06; FishBase site terms, not on disk; https://www.fishbase.org). Nothing is stored here: the records are downloaded at run  | `Fishbase` | https://www.fishbase.org |
+| Fishbase | CC BY-NC 4.0 (owner decision 2026-10-06; FishBase site terms, not on disk; <https://www.fishbase.org>). Nothing is stored here: the records are downloaded at ru | `Fishbase` | https://www.fishbase.org |
 | Hechinger_etal_2011 | non-commercial (author statement) (in-file: `metadata.htm` "These data sets are freely available for non-commercial scientific use, given the appropriate schola | `Metaweb_Nodes.txt`, `metadata.htm` | https://doi.org/10.1890/10-1383.1 |
 | Hoehler_etal_2023 | CC BY-NC-ND 4.0 (owner decision 2026-10-06 after the 2026-10-02 audit of the PNAS licence line, not on disk; https://doi.org/10.1073/pnas.2303764120). `pnas.230 | `pnas.2303764120.sapp.pdf`, `pnas.2303764120.sd01.xlsx` | https://doi.org/10.1073/pnas.2303764120 |
 | Lane_2019 | CC BY-NC 4.0 (owner decision 2026-10-06 after the 2026-10-02 audit of the USAP-DC record, not on disk; https://www.usap-dc.org/view/dataset/601150). `PRSB_data. | `PRSB_data.csv` | https://www.usap-dc.org/view/dataset/601150 |
 | Pata_2025 | CC BY-SA 4.0 (in-file: `License.txt` is the CC BY-SA 4.0 legal code shipped with the database; https://doi.org/10.1002/lno.12478). The level-2 csv is tracked as | `License.txt`, `trait_dataset_level2-2023-09-14.csv` | https://doi.org/10.1002/lno.12478 |
 | Quaardvark | CC BY-NC-SA 3.0 (owner's note of 2026-10-02 on the ADW conditions-of-use page, not on disk; https://animaldiversity.org). `report-201802270108.csv` is tracked a | `report-201802270108.csv` | https://animaldiversity.org |
-| Sealifebase | CC BY-NC 4.0 (owner decision 2026-10-06; SeaLifeBase site terms, not on disk; https://www.sealifebase.org). Nothing is stored here: the records are downloaded a | `Sealifebase` | https://www.sealifebase.org |
+| Sealifebase | CC BY-NC 4.0 (owner decision 2026-10-06; SeaLifeBase site terms, not on disk; <https://www.sealifebase.org>). Nothing is stored here: the records are downloaded | `Sealifebase` | https://www.sealifebase.org |
 
 ## README Licence: line not matching the manifest
 
