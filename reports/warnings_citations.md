@@ -1,15 +1,15 @@
-# Citation and provenance warnings -- 2026-10-18 14:39:28
+# Citation and provenance warnings -- 2026-10-18 17:11:46
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 232302 (39887 species); distinct primary CiteIDs: 11653; unresolved references (pending / not_found): 0; unverified references: 2
+- provenance rows: 232302 (39887 species); distinct primary CiteIDs: 11654; unresolved references (pending / not_found): 0; unverified references: 0
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
 
 ## Problems
 
-- 16 primary_cite_id(s) without a CiteID row (Sheet tabs / snapshots): Brocher_2025, Uyeda_2017, Mahe_2023b, DeLong_2010, Mulder_2011b, Pekar_2021, Barnes_2008b, Mathieu_2014b, Mercer_2001, Trochet_2014b, Brown_2018, Eklof_2017, Jennings_2002b, RibeiroAnunciacao_2025, Reum_2013b, Reum_2012b
+(none)
 
 ## Sheet rows whose Bibcite is in neither bib file
 
@@ -43,7 +43,7 @@ One row per source label: species and record links (species x source x reference
 | DeLong_etal_2018 | compilation | 164 | 563 | 75.8 | 186 | 135 | 0 | 0 | 0 | 0 | 51 | 0 | 0 | 0 |
 | Ehnes_etal_2011 | compilation | 464 | 2724 | 91.9 | 184 | 158 | 0 | 0 | 0 | 0 | 26 | 0 | 0 | 0 |
 | Eklof_etal_2017 | primary | 6 | 121 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Ernest_2003 | compilation | 1304 | 1314 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Ernest_2003 | compilation | 1304 | 1314 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Faurby_etal_2018 | compilation | 5164 | 5900 | 99.9 | 596 | 593 | 1 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
 | Feldman_etal_2016 | derived | 9651 | 19554 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 152 | 155 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -88,7 +88,7 @@ One row per source label: species and record links (species x source x reference
 | Pata_2025 | compilation | 117 | 117 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Pekar_etal_2021 | compilation | 99 | 363 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Quaardvark | database | 2372 | 2392 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Raymond_2011 | compilation | 120 | 1743 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| Raymond_2011 | compilation | 120 | 1743 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2012 | primary | 22 | 22 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Reum_2013 | primary | 28 | 28 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Sarmiento-Lezcano_2023 | primary | 3 | 99 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -98,7 +98,7 @@ One row per source label: species and record links (species x source x reference
 | Trochet_2014 | compilation | 51 | 52 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Tsuboi_etal_2018 | compilation | 3633 | 17122 | 23.7 | 162 | 56 | 0 | 0 | 0 | 2 | 104 | 0 | 0 | 0 |
 | Tucker_etal_2014a | compilation | 182 | 235 | 97.4 | 47 | 37 | 0 | 0 | 0 | 0 | 10 | 0 | 0 | 0 |
-| Tucker_etal_2014b | compilation | 440 | 2626 | 99.7 | 580 | 571 | 0 | 0 | 0 | 1 | 6 | 2 | 0 | 0 |
+| Tucker_etal_2014b | compilation | 440 | 2626 | 99.7 | 580 | 571 | 0 | 0 | 0 | 1 | 8 | 0 | 0 | 0 |
 | Uyeda_etal_2017 | compilation | 777 | 780 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Vanni_2017 | compilation | 217 | 5007 | 96.4 | 73 | 67 | 0 | 0 | 0 | 1 | 5 | 0 | 0 | 0 |
 | Verberk_2020 | compilation | 214 | 1244 | 94.4 | 447 | 440 | 0 | 0 | 0 | 0 | 7 | 0 | 0 | 0 |
