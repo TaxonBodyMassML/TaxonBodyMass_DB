@@ -1,6 +1,6 @@
 # Licences of the source files
 
-Generated from `sources/source_files.csv` by `R/library/licence_manifest.r` (`Rscript R/library/licence_manifest.r`); do not edit by hand. The manifest lists the 543 tracked files under `sources/databases/` and `sources/conversion_factors/` (171 raw upstream files or exports, 39 parsed transcriptions, the rest our own tables, scripts and documentation) with their size, SHA-256, role and licence class, plus 4 `live` rows for the sources that are downloaded at run time and store nothing. Every source folder states the same class in the `Licence:` line of its README (checked by `CheckSourceDocs()` at every pipeline run; a folder absent from the manifest or without the line stops the run). Issue #6; licence audit of 2026-10-02 and 2026-10-06. This file is a record of what the files, READMEs, bibliographies and deposit records say; it is not legal advice.
+Generated from `sources/source_files.csv` by `R/library/licence_manifest.r` (`Rscript R/library/licence_manifest.r`); do not edit by hand. The manifest lists the 678 tracked files under `sources/databases/` and `sources/conversion_factors/` (279 raw upstream files or exports, 40 parsed transcriptions, the rest our own tables, scripts and documentation) with their size, SHA-256, role and licence class, plus 4 `live` rows for the sources that are downloaded at run time and store nothing. Every source folder states the same class in the `Licence:` line of its README (checked by `CheckSourceDocs()` at every pipeline run; a folder absent from the manifest or without the line stops the run). Issue #6; licence audit of 2026-10-02 and 2026-10-06. This file is a record of what the files, READMEs, bibliographies and deposit records say; it is not legal advice.
 
 ## Scope of the repository licence
 
@@ -15,7 +15,7 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | Licence class | Folders | Raw files | Size | Redistributable |
 |---|---|---|---|---|
 | CC0 1.0 | 16 | 44 | 32.6 MB | yes |
-| CC BY 4.0 | 23 | 44 | 141.9 MB | yes |
+| CC BY 4.0 | 23 | 44 | 138.6 MB | yes |
 | CC BY 3.0 | 3 | 7 | 1.6 MB | yes |
 | no copyright restrictions (Ecological Archives) | 6 | 22 | 35.8 MB | yes |
 | author permission (free to use with attribution) | 1 | 2 | 3.4 MB | yes |
@@ -25,8 +25,9 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | CC BY-NC-ND 4.0 | 2 | 2 | 3.5 MB | non-commercial |
 | CC BY-NC-SA 3.0 | 1 | 1 | 122 kB | non-commercial |
 | non-commercial (author statement) | 1 | 2 | 732 kB | non-commercial |
-| publisher file | 15 | 23 | 17.6 MB | no |
+| publisher file | 6 | 12 | 7.3 MB | no |
 | unpublished | 1 | 1 | 441 kB | no |
+| unknown; owner to check | 54 | 120 | 6.9 MB | unknown |
 | unknown; owner unable to confirm | 6 | 16 | 3.7 MB | unknown |
 | repository (CC BY-NC 4.0) | 4 | 4 | 99 B | yes |
 
@@ -82,7 +83,6 @@ Files redistributed under their upstream licence; the attribution text is the on
 | databases/Trochet_2014 (`Trochet_2014`) | `oo_32985.csv` (62 kB), `oo_32986.csv` (45 kB) | BDJ article (owner confirmed 2026-10-11) | yes | Trochet et al. (2014) Biodiversity Data Journal 2:e4123, supplementary tables |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.3897/BDJ.2.e4123) |
 | databases/Tucker_etal_2014a (`Tucker_etal_2014a`) | `TrophicLevel_Appendix1.csv` (29 kB) | figshare record (owner confirmed 2026-10-11) | yes | Tucker & Rogers (2014) Proceedings of the Royal Society B 281:20142103, Appendix 1; figshare 10.6084/m9.figshare.988696 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.6084/m9.figshare.988696) |
 | databases/Wascher_2025 (`Wascher_2025`) | `CORVIDATA.csv` (178 kB), `CORVIDATA_data.csv` (195 kB), `CORVIDATA_metadata.csv` (19 kB) | Zenodo record (README); README | yes | CORVIDATA (Wascher 2025, Scientific Data 12:2032), Zenodo 10.5281/zenodo.17531251 / CORVIDATA (Wascher 2025, Scientific Data 12:2032), Zenodo 10.5281/zenodo.17531251; CC BY 4.0 | https://doi.org/10.5281/zenodo.17531251 | raw xlsx export (CORVIDATA tab, 135 rows); CORVIDATA_data.csv is the authoritative float-normalised version / derived from CORVIDATA.xlsx by write.csv; 19 bodymass floating-point noise values standardised to 2 dp |
-| databases/Wisnionski_2026 (`Wisnionski_2026`) | `ece374243-sup-0001-supinfo.pdf` (3.3 MB) | not on disk | yes | Wisnionski et al. (2026) Ecology and Evolution 16:e74243 (CC BY 4.0); data: Dryad 10.5061/dryad.79cnp5jbt | https://doi.org/10.5061/dryad.79cnp5jbt | the owner's PDF rendering of the Word supplement of the CC BY 4.0 article (README) |
 | databases/DataRetriever (`Brose_2005; Ernest_2003; Jones_2009; Myhrvold_2015; Raymond_2011`) | `DataRetriever` | Ecological Archives (all five datasets, owner confirmed 2026-10-11) | yes | Ecological Archives data papers fetched by rdataretriever: Ernest (2003) E084-093, Brose et al. (2005) E086-135, Jones et al. (2009) E090-184, Myhrvold et al. (2015) E096-269, Raymond et al. (2011) E092-097 |  | CC BY 4.0 per the Ecological Archives deposit pages (owner confirmed 2026-10-11) |
 
 ### CC BY 3.0
@@ -185,19 +185,10 @@ Verbatim article or supplementary files (PDF, .doc/.docx, html, csv/xlsx supplem
 |---|---|---|---|---|---|---|
 | conversion_factors/Kiorboe_2013 (`Kiorboe_2013`) | `1843a_TableA1_raw.html` (619 kB) | README | no | Kiorboe (2013) Limnology and Oceanography 58:1843-1850, Web Appendix Table A1 | https://doi.org/10.4319/lo.2013.58.5.1843 | Wiley web-appendix html (duplicate of the databases copy); the parsed csv is a transcription |
 | databases/Brown_etal_2018 (`Brown_etal_2018`) | `41559_2017_430_MOESM2_ESM.csv` (4 kB), `41559_2017_430_MOESM3_ESM.csv` (136 kB) | README | no | Brown, Hall & Sibly (2018) Nature Ecology & Evolution 2:262-268, Supplementary Tables 2 and 3 | https://doi.org/10.1038/s41559-017-0430-1 | Springer Nature supplementary files; copyright with the publisher; kept for reproducibility of the parser |
-| databases/Chown_etal_2007 (`Chown_etal_2007`) | `fec1245_supmat.pdf` (304 kB) | README | no | Chown et al. (2007) Functional Ecology 21:282-290, Supporting Information (Appendix S1, S2) | https://doi.org/10.1111/j.1365-2435.2007.01245.x | Wiley supplementary PDF tracked since 2026-10-04; copyright with the publisher; the parsed tables are transcriptions |
-| databases/DeLong_etal_2010 (`DeLong_etal_2010`) | `sd01.doc` (486 kB), `sd02.doc` (234 kB) | README | no | DeLong et al. (2010) PNAS 107:12941-12945, Supplemental Data 1 and 2 | https://doi.org/10.1073/pnas.1007783107 | PNAS supplementary .doc files; copyright with the publisher; sd01.csv/sd02.csv are our transcriptions |
-| databases/Ehnes_etal_2011 (`Ehnes_etal_2011`) | `ele_1660_sm_meta-scaling-appendix.pdf` (3.5 MB) | Citation.bib | no | Ehnes, Rall & Brose (2011) Ecology Letters 14:993-1000, supplementary appendix | https://doi.org/10.1111/j.1461-0248.2011.01660.x | Wiley supplementary PDF; copyright with the publisher; the parsed csv is a transcription |
 | databases/Feldman_etal_2016 (`Feldman_etal_2016`) | `Appendix S1 - Lepidosaur body sizes.csv` (1.2 MB), `Appendix S1 - Lepidosaur body sizes.xlsx` (1.0 MB), `Appendix S2 - length-mass conversion equations.docx` (487 kB), `Appendix S3.docx` (28 kB), `Appendix S4 - MacroCAIC.docx` (24 kB), `Appendix S5 - Size-frequency distributions of amphisbaenians, lizards and snakes.docx` (61 kB) | README | no | Feldman et al. (2016) Global Ecology and Biogeography 25:187-197, Appendices S1-S5 | https://doi.org/10.1111/geb.12398 | Wiley Supporting Information; no public deposit found (2026-10-02); copyright with the publisher; 9,474 species depend on Appendix S1 |
-| databases/Gillooly_etal_2016 (`Gillooly_etal_2016`) | `Gillooly_etal_2016.pdf` (1.4 MB) | README | no | Gillooly et al. (2016) PNAS 113:5340-5345 | https://doi.org/10.1073/pnas.1519617113 | article PDF (PNAS); copyright with the publisher; the csv is our transcription |
-| databases/Hirt_etal_2017 (`Hirt_etal_2017`) | `41559_2017_241_MOESM1_ESM.pdf` (664 kB) | README | no | Hirt et al. (2017) Nature Ecology & Evolution 1:1116-1122, Supplementary Information | https://doi.org/10.1038/s41559-017-0241-4 | Springer Nature supplementary PDF; copyright with the publisher; the csv is our transcription |
-| databases/Hoehler_etal_2023 (`Hoehler_etal_2023`) | `pnas.2303764120.sapp.pdf` (1.6 MB) | owner decision 2026-10-06 | no | Hoehler et al. (2023) PNAS 120:e2303764120, Dataset S01; CC BY-NC-ND 4.0 | https://doi.org/10.1073/pnas.2303764120 | PNAS SI appendix PDF; copyright with the publisher |
-| databases/Ikeda_2014 (`Ikeda_2014`) | `227_2014_2540_MOESM1_ESM.pdf` (188 kB) | README | no | Ikeda (2014) Marine Biology 161:2753-2766, Electronic Supplementary Material | https://doi.org/10.1007/s00227-014-2540-5 | Springer ESM PDF; copyright with the publisher; the parsed csv is a transcription |
 | databases/Kiorboe_2013 (`Kiorboe_2013`) | `1843a_TableA1_raw.html` (619 kB) | Citation.bib | no | Kiorboe (2013) Limnology and Oceanography 58:1843-1850, Web Appendix Table A1 | https://doi.org/10.4319/lo.2013.58.5.1843 | Wiley web-appendix html (duplicate of the conversion_factors copy); the parsed csv is a transcription |
-| databases/Lagrue_etal_2015 (`Lagrue_etal_2015`) | `pnas.1422475112.sapp.pdf` (301 kB), `pnas.1422475112.sd01.txt` (133 kB) | README | no | Lagrue, Poulin & Cohen (2015) PNAS 112:1791-1796, Dataset S1 and SI Appendix | https://doi.org/10.1073/pnas.1422475112 | PNAS supplementary files; copyright with the publisher |
+| databases/Lagrue_etal_2015 (`Lagrue_etal_2015`) | `pnas.1422475112.sd01.txt` (133 kB) | README | no | Lagrue, Poulin & Cohen (2015) PNAS 112:1791-1796, Dataset S1 and SI Appendix | https://doi.org/10.1073/pnas.1422475112 | PNAS supplementary files; copyright with the publisher |
 | databases/Meiri_2018 (`Meiri_2018`) | `geb12773-sup-0003-appendixs3.txt` (3.0 MB) | not on disk | no | Meiri (2018) Traits of lizards of the world. Global Ecology and Biogeography 27:1168-1172; Dryad 10.5061/dryad.f6t39kj | https://doi.org/10.5061/dryad.f6t39kj | Appendix S3 (reference key) is a Wiley-only supplement, not in the Dryad deposit |
-| databases/Mercer_etal_2001 (`Mercer_etal_2001`) | `Invertebrate_body_sizes_from_Marion_Island.pdf` (932 kB) | README | no | Mercer, Chown & Marshall (2001) Antarctic Science 13:135-143 | https://doi.org/10.1017/S0954102001000219 | article PDF (Cambridge University Press); copyright with the publisher; the csv is our transcription |
-| databases/Tucker_etal_2014b (`Tucker_etal_2014b`) | `geb12194-sup-0001-si-2.pdf` (754 kB) | README | no | Tucker, Ord & Rogers (2014) Global Ecology and Biogeography 23:1105-1114, Supporting Information | https://doi.org/10.1111/geb.12194 | Wiley supplementary PDF; copyright with the publisher; the csv is our transcription; the 2014a/2014b Citation.bib entries are swapped (side issue) |
 
 ## Unpublished
 
@@ -220,14 +211,65 @@ Sources the pipeline downloads at run time and stores nowhere in the repository 
 
 ## Unknown
 
-6 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
+57 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
 
 | Source | Files | Stated in | Redistributable | Attribution | URL to check | Notes |
 |---|---|---|---|---|---|---|
 | conversion_factors/Brey_2010 (`Brey_2010`) | `Conversion04.zip` (2.9 MB) | not on disk | unknown | Brey et al. (2010) Journal of Sea Research 64:334-340; Conversion04 data bank (Virtual Handbook, thomas-brey.de) | http://www.thomas-brey.de/science/DBconversion/ | the zip holds Conversion04.xlsm only, no licence file; ask T. Brey |
-| databases/Brocher_etal_2025 (`Brocher_etal_2025`) | `703_10_datastructure.txt` (10 kB), `JExIS_703_data_structure_401.csv` (2 kB), `JExIS_703_data_structure_401.html` (12 kB), `JExIS_703_data_structure_401.json` (19 kB), `JExIS_703_v10_data.csv` (182 kB), `JExIS_703_v10_general_metadata.json` (4 kB), `JExIS_703_v10_metadata.html` (133 kB), `JExIS_703_v10_metadata.xml` (9 kB), `S1_references.docx` (55 kB), `schema_JE_bexis8.xsd` (41 kB), `terms.txt` (2 kB) | not on disk | unknown | Brocher et al. (2025) Ecology 106:e70077; data: JEXIS dataset 703 v10, 10.25829/Q570-JR82 | https://doi.org/10.25829/Q570-JR82 | the local json/xml carry no access-policy field; the JEXIS page shows no licence and offers login; terms.txt is the BEXIS2 sample Terms and Conditions, not the dataset terms / BEXIS2 sample Terms and Conditions shipped with the download, not the dataset terms |
+| databases/AmphiBIO (`AmphiBIO`) | `primary_references.csv` (1 kB), `references.csv` (176 B) | not on disk | unknown |  |  |  |
+| databases/AnAge (`AnAge`) | `primary_references.csv` (1 kB), `references.csv` (240 B) | not on disk | unknown |  |  |  |
+| databases/AndersonGillooly_2017 (`AndersonGillooly_2017`) | `primary_references.csv` (1 kB), `references.csv` (206 B) | not on disk | unknown |  |  |  |
+| databases/Anunciacao_etal_2025 (`Anunciacao_etal_2025`) | `primary_references.csv` (1 kB), `references.csv` (254 B) | not on disk | unknown |  |  |  |
+| databases/Barnes_2008 (`Barnes_2008`) | `primary_references.csv` (1 kB), `references.csv` (283 B) | not on disk | unknown |  |  |  |
+| databases/Brocher_etal_2025 (`Brocher_etal_2025`) | `703_10_datastructure.txt` (10 kB), `JExIS_703_data_structure_401.csv` (2 kB), `JExIS_703_data_structure_401.html` (12 kB), `JExIS_703_data_structure_401.json` (19 kB), `JExIS_703_v10_data.csv` (182 kB), `JExIS_703_v10_general_metadata.json` (4 kB), `JExIS_703_v10_metadata.html` (133 kB), `JExIS_703_v10_metadata.xml` (9 kB), `S1_references.docx` (55 kB), `schema_JE_bexis8.xsd` (41 kB), `primary_references.csv` (2 kB), `references.csv` (202 B), `terms.txt` (2 kB) | not on disk | unknown | Brocher et al. (2025) Ecology 106:e70077; data: JEXIS dataset 703 v10, 10.25829/Q570-JR82 | https://doi.org/10.25829/Q570-JR82 | the local json/xml carry no access-policy field; the JEXIS page shows no licence and offers login; terms.txt is the BEXIS2 sample Terms and Conditions, not the dataset terms / BEXIS2 sample Terms and Conditions shipped with the download, not the dataset terms |
+| databases/Brown_etal_2018 (`Brown_etal_2018`) | `primary_references.csv` (1 kB), `references.csv` (247 B) | not on disk | unknown |  |  |  |
+| databases/Cai_etal_2025 (`Cai_etal_2025`) | `primary_references.csv` (42 kB), `references.csv` (13 kB) | not on disk | unknown |  |  |  |
+| databases/Castro_2025 (`Castro_2025`) | `primary_references.csv` (56 kB), `references.csv` (12 kB) | not on disk | unknown |  |  |  |
+| databases/Cohen_2014 (`Cohen_2014`) | `primary_references.csv` (1 kB), `references.csv` (224 B) | not on disk | unknown |  |  |  |
+| databases/DeLong_etal_2010 (`DeLong_etal_2010`) | `primary_references.csv` (1 kB), `references.csv` (319 B) | not on disk | unknown |  |  |  |
+| databases/DeLong_etal_2018 (`DeLong_etal_2018`) | `crossref_cache.json` (1.9 MB), `primary_references.csv` (97 kB), `references.csv` (79 kB) | not on disk | unknown |  |  |  |
+| databases/Ehnes_etal_2011 (`Ehnes_etal_2011`) | `build_references.cpython-314.pyc` (19 kB), `crossref_cache.json` (250 kB), `primary_references.csv` (105 kB), `references.csv` (34 kB) | not on disk | unknown |  |  |  |
+| databases/Eklof_etal_2017 (`Eklof_etal_2017`) | `primary_references.csv` (1 kB), `references.csv` (215 B) | not on disk | unknown |  |  |  |
+| databases/Feldman_etal_2016 (`Feldman_etal_2016`) | `primary_references.csv` (1 kB), `references.csv` (275 B) | not on disk | unknown |  |  |  |
+| databases/Fishbase (`fishbase`) | `primary_references.csv` (537 kB) | not on disk | unknown |  |  |  |
+| databases/Fisher_2001 (`Fisher_2001`) | `primary_references.csv` (1 kB), `references.csv` (215 B) | not on disk | unknown |  |  |  |
+| databases/GalanAcedo_etal_2026 (`GalanAcedo_etal_2026`) | `References.docx` (231 kB), `primary_references.csv` (116 kB), `references.csv` (207 kB) | not on disk | unknown |  |  |  |
+| databases/Ghaderi_2026 (`Ghaderi_2026`) | `crossref_cache.json` (14 kB), `primary_references.csv` (26 kB), `references.csv` (9 kB) | not on disk | unknown |  |  |  |
+| databases/Gillooly_etal_2016 (`Gillooly_etal_2016`) | `crossref_cache.json` (45 kB), `primary_references.csv` (23 kB), `references.csv` (15 kB) | not on disk | unknown |  |  |  |
+| databases/GuoBailly_2024 (`GuoBailly_2024`) | `primary_references.csv` (1 kB), `references.csv` (226 B) | not on disk | unknown |  |  |  |
+| databases/Hechinger_etal_2011 (`Hechinger_etal_2011`) | `primary_references.csv` (1 kB), `references.csv` (228 B) | not on disk | unknown |  |  |  |
+| databases/Hirt_etal_2017 (`Hirt_etal_2017`) | `primary_references.csv` (29 kB), `references.csv` (9 kB) | not on disk | unknown |  |  |  |
+| databases/Hishi_etal_2019 (`Hishi_etal_2019`) | `primary_references.csv` (2 kB), `references.csv` (204 B) | not on disk | unknown |  |  |  |
+| databases/Hrycik_2024 (`Hrycik_2024`) | `primary_references.csv` (928 B), `references.csv` (156 B) | not on disk | unknown |  |  |  |
 | databases/Hudson_2013 (`Hudson_2013`) | `jane12086-sup-0003-AppendixS5.csv` (142 kB) | README (open access, version not stated) | unknown | Hudson, Isaac & Reuman (2013) Journal of Animal Ecology 82:1009-1020, Appendix S5 | https://doi.org/10.1111/1365-2656.12086 | open-access article (README); the CC licence version is not on disk; the Appendix S1-S4 PDF is not committed |
-| databases/Kendall_etal_2019 (`Kendall_etal_2019`) | `pollimetry_dataset.rdata` (71 kB) | not on disk | unknown | pollimetry specimen data set (Kendall et al. 2019, Ecology and Evolution 9:1702-1714), github.com/liamkendall/pollimetry | https://github.com/liamkendall/pollimetry | no explicit data licence stated in the GitHub repository (owner confirmed 2026-10-11); package DESCRIPTION carries GPL >= 2 for code |
-| databases/Kinsella_etal_2020 (`Kinsella_etal_2020`) | `Species_macro.csv` (132 kB), `moth_data.csv` (43 kB) | README (no licence upstream) | unknown | Kinsella et al. (2020) Ecology and Evolution 10:8394-8404; data: Zenodo 10.5281/zenodo.3786303 | https://doi.org/10.5281/zenodo.3786303 | the GitHub/Zenodo repository carries no LICENSE file; the article is CC BY; ask C. Macgregor |
+| databases/Jennings_2002 (`Jennings_2002`) | `primary_references.csv` (1 kB), `references.csv` (231 B) | not on disk | unknown |  |  |  |
+| databases/Kendall_etal_2019 (`Kendall_etal_2019`) | `pollimetry_dataset.rdata` (71 kB), `primary_references.csv` (1 kB), `references.csv` (220 B) | not on disk | unknown | pollimetry specimen data set (Kendall et al. 2019, Ecology and Evolution 9:1702-1714), github.com/liamkendall/pollimetry | https://github.com/liamkendall/pollimetry | no explicit data licence stated in the GitHub repository (owner confirmed 2026-10-11); package DESCRIPTION carries GPL >= 2 for code |
+| databases/Killen_etal_2016 (`Killen_etal_2016`) | `crossref_cache.json` (75 kB), `key_map.csv` (12 kB), `primary_references.csv` (35 kB), `references.csv` (12 kB) | not on disk | unknown |  |  |  |
+| databases/Kinsella_etal_2020 (`Kinsella_etal_2020`) | `Species_macro.csv` (132 kB), `moth_data.csv` (43 kB), `primary_references.csv` (1 kB), `references.csv` (215 B) | README (no licence upstream); not on disk | unknown | Kinsella et al. (2020) Ecology and Evolution 10:8394-8404; data: Zenodo 10.5281/zenodo.3786303 | https://doi.org/10.5281/zenodo.3786303 | the GitHub/Zenodo repository carries no LICENSE file; the article is CC BY; ask C. Macgregor |
+| databases/Kiorboe_2014 (`Kiorboe_2014`) | `primary_references.csv` (1 kB), `references.csv` (260 B) | not on disk | unknown |  |  |  |
+| databases/Lagrue_etal_2015 (`Lagrue_etal_2015`) | `primary_references.csv` (1 kB), `references.csv` (266 B) | not on disk | unknown |  |  |  |
+| databases/Lane_2019 (`Lane_2019`) | `primary_references.csv` (959 B), `references.csv` (173 B) | not on disk | unknown |  |  |  |
+| databases/Lemoine_2026 (`Lemoine_2026`) | `primary_references.csv` (1 kB), `references.csv` (271 B) | not on disk | unknown |  |  |  |
+| databases/Lukic_2022 (`Lukic_2022`) | `primary_references.csv` (1 kB), `references.csv` (206 B) | not on disk | unknown |  |  |  |
+| databases/Mahe_2023 (`Mahe_2023`) | `primary_references.csv` (1 kB), `references.csv` (192 B) | not on disk | unknown |  |  |  |
+| databases/Mathieu_2014 (`Mathieu_2014`) | `primary_references.csv` (1 kB), `references.csv` (193 B) | not on disk | unknown |  |  |  |
+| databases/Meiri_2024 (`Meiri_2024`) | `primary_references.csv` (1 kB), `references.csv` (189 B) | not on disk | unknown |  |  |  |
+| databases/Mercer_etal_2001 (`Mercer_etal_2001`) | `primary_references.csv` (1 kB), `references.csv` (188 B) | not on disk | unknown |  |  |  |
+| databases/Mulder_2011 (`Mulder_2011`) | `primary_references.csv` (1 kB), `references.csv` (170 B) | not on disk | unknown |  |  |  |
+| databases/Mull_etal_2022 (`Mull_etal_2022`) | `primary_references.csv` (8 kB), `references.csv` (1 kB) | not on disk | unknown |  |  |  |
+| databases/Pata_2025 (`Pata_2025`) | `primary_references.csv` (1 kB), `references.csv` (174 B) | not on disk | unknown |  |  |  |
+| databases/Pekar_etal_2021 (`Pekar_etal_2021`) | `primary_references.csv` (1 kB), `references.csv` (224 B) | not on disk | unknown |  |  |  |
+| databases/Reum_2012 (`Reum_2012`) | `primary_references.csv` (1 kB), `references.csv` (243 B) | not on disk | unknown |  |  |  |
+| databases/Reum_2013 (`Reum_2013`) | `primary_references.csv` (1 kB), `references.csv` (190 B) | not on disk | unknown |  |  |  |
+| databases/Sarmiento-Lezcano_2023 (`Sarmiento-Lezcano_2023`) | `primary_references.csv` (930 B), `references.csv` (149 B) | not on disk | unknown |  |  |  |
+| databases/Sealifebase (`sealifebase`) | `primary_references.csv` (90 kB) | not on disk | unknown |  |  |  |
+| databases/Soria_etal_2021 (`Soria_etal_2021`) | `primary_references.csv` (1 kB), `references.csv` (240 B) | not on disk | unknown |  |  |  |
+| databases/Trochet_2014 (`Trochet_2014`) | `primary_references.csv` (1 kB), `references.csv` (179 B) | not on disk | unknown |  |  |  |
+| databases/Tsuboi_etal_2018 (`Tsuboi_etal_2018`) | `primary_references.csv` (55 kB), `references.csv` (13 kB) | not on disk | unknown |  |  |  |
+| databases/Tucker_etal_2014a (`Tucker_etal_2014a`) | `References.csv` (10 kB), `crossref_cache_tucker1.json` (215 kB), `primary_references.csv` (27 kB) | not on disk | unknown |  |  |  |
+| databases/Tucker_etal_2014b (`Tucker_etal_2014b`) | `build_references.cpython-314.pyc` (20 kB), `crossref_cache_tucker2.json` (802 kB), `primary_references.csv` (348 kB), `references.csv` (115 kB) | not on disk | unknown |  |  |  |
+| databases/Uyeda_etal_2017 (`Uyeda_etal_2017`) | `primary_references.csv` (1 kB), `references.csv` (205 B) | not on disk | unknown |  |  |  |
+| databases/Verberk_2020 (`Verberk_2020`) | `build_references.cpython-314.pyc` (14 kB), `crossref_cache.json` (613 kB), `key_map.csv` (88 kB), `primary_references.csv` (276 kB), `references.csv` (97 kB) | not on disk | unknown |  |  |  |
+| databases/Weisse_2024 (`Weisse_2024`) | `primary_references.csv` (1 kB), `references.csv` (202 B) | not on disk | unknown |  |  |  |
 | VertNet (`vertnet-amphibia-sept2016; vertnet-aves-sept2016; vertnet-fishes-sept2016; vertnet-mammalia-sept2016; vertnet-reptilia-sept2016; vertnet-traits-sept2016`) | `VertNet` | not on disk | unknown | VertNet September 2016 CyVerse snapshots (six dumps); per-record licences | http://vertnet.org/resources/norms.html | the snapshots are git-ignored (sources/VertNet/); every record carries its own licence field; nothing is redistributed here |
 
