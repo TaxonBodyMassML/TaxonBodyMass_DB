@@ -1,10 +1,10 @@
-# Citations of Faurby_etal_2018 -- 2026-10-19 18:38:08 (tbmcite 0.1.0)
+# Citations of Faurby_etal_2018 -- 2026-10-19 20:02:18 (tbmcite 0.1.0)
 
-Steps: --recommend
+Steps: --apply-queue
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --recommend: Faurby_etal_2018: 1 open row(s), 0 with a recommendation, 1 left to the owner (titleless_journal_key 1)
+- --apply-queue: 0 decision(s) applied: 
 
 ## References
 
@@ -564,7 +564,7 @@ Verification mode: full (Crossref + OpenAlex)
 | h:e86c5889 | 5 | measurement | certain | container_volume_page | crossref;openalex | full | 10.1098/rsbl.2007.0113 | 0.000 | Bromham:2007aa | Bromham_2007 |
 | h:e9024a1c | 1 | measurement | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 0.000 | Heckel:2003aa | Heckel_2003 |
 | h:e9bd039f | 2 | measurement | certain | container_volume_page | crossref;openalex | full | 10.1644/1545-1542(2001)082<1059:arotwt>2.0.co;2 | 0.000 | Jiang:2001aa | Jiang_2001 |
-| h:eb8f0ff4 | 2 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1096-3642.1997.tb01277.x | 0.000 | Groves:1997aa | Groves_1997 |
+| h:eb8f0ff4 | 2 | measurement | approved | owner_candidate | crossref | full | 10.1111/j.1096-3642.1997.tb01277.x | 0.000 | Groves:1997aa | Groves_1997 |
 | h:ebc9f0e7 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Fooden:1998aa | Fooden_1998 |
 | h:ec2ff10f | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.691 | Iwasa:2002aa | Iwasa_2002 |
 | h:ec4f6824 | 1 | measurement | certain | container_volume_page | crossref;openalex;consensus-mcp | full | 10.1080/00222939308677610 | 0.000 | Thomas:1893aa | Thomas_1893 |
