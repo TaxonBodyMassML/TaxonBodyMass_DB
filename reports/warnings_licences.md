@@ -1,4 +1,4 @@
-# TaxonBodyMass_DB Licence Warnings -- 2026-10-19 16:44:05
+# TaxonBodyMass_DB Licence Warnings -- 2026-10-19 20:12:17
 
 Written by `CheckSourceDocs()` (`R/library/check_source_docs.r`) from the `Licence:` lines of the source READMEs and the manifest `source_files.csv` (issue #6). The full record is `sources/LICENSES.md`.
 
@@ -35,16 +35,7 @@ Tracked and redistributed under their own terms, not under the repository licenc
 
 The line must start with a class the manifest records for the folder.
 
-| Folder | Licence line (first 160 characters) | Raw files | URL to check |
-|---|---|---|---|
-| Chown_etal_2007 | publisher file (README; https://doi.org/10.1111/j.1365-2435.2007.01245.x). `fec1245_supmat.pdf` is the Wiley Supporting Information file, tracked since 2026-10- | `` | https://doi.org/10.1111/j.1365-2435.2007.01245.x |
-| DeLong_etal_2010 | publisher file (README; https://doi.org/10.1073/pnas.1007783107). `sd01.doc` and `sd02.doc` are the PNAS Supplemental Data files, copyright of the publisher ("C | `primary_references.csv`, `references.csv` | https://doi.org/10.1073/pnas.1007783107 |
-| Ehnes_etal_2011 | publisher file (Citation.bib note; https://doi.org/10.1111/j.1461-0248.2011.01660.x). `ele_1660_sm_meta-scaling-appendix.pdf` is the Wiley supplementary file, c | `build_references.cpython-314.pyc`, `crossref_cache.json`, `primary_references.csv`, `references.csv` | https://doi.org/10.1111/j.1461-0248.2011.01660.x |
-| Gillooly_etal_2016 | publisher file (README; https://doi.org/10.1073/pnas.1519617113). `Gillooly_etal_2016.pdf` is the PNAS article ("Copyright (2016) National Academy of Sciences") | `crossref_cache.json`, `primary_references.csv`, `references.csv` | https://doi.org/10.1073/pnas.1519617113 |
-| Hirt_etal_2017 | publisher file (README; https://doi.org/10.1038/s41559-017-0241-4). `41559_2017_241_MOESM1_ESM.pdf` is the Springer Nature Supplementary Information file, copyr | `primary_references.csv`, `references.csv` | https://doi.org/10.1038/s41559-017-0241-4 |
-| Ikeda_2014 | publisher file (README; https://doi.org/10.1007/s00227-014-2540-5). `227_2014_2540_MOESM1_ESM.pdf` is the Springer Electronic Supplementary Material, copyright  | `` | https://doi.org/10.1007/s00227-014-2540-5 |
-| Mercer_etal_2001 | publisher file (README; https://doi.org/10.1017/S0954102001000219). `Invertebrate_body_sizes_from_Marion_Island.pdf` is the Cambridge University Press article,  | `primary_references.csv`, `references.csv` | https://doi.org/10.1017/S0954102001000219 |
-| Tucker_etal_2014b | publisher file (README; https://doi.org/10.1111/geb.12194). `geb12194-sup-0001-si-2.pdf` is the Wiley Supporting Information file, copyright of the publisher, t | `build_references.cpython-314.pyc`, `crossref_cache_tucker2.json`, `primary_references.csv`, `references.csv` | https://doi.org/10.1111/geb.12194 |
+(none)
 
 ## Folders without a Licence: line
 
