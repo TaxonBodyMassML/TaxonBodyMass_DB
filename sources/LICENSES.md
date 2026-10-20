@@ -15,7 +15,7 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | Licence class | Folders | Raw files | Size | Redistributable |
 |---|---|---|---|---|
 | CC0 1.0 | 16 | 44 | 32.6 MB | yes |
-| CC BY 4.0 | 23 | 44 | 138.6 MB | yes |
+| CC BY 4.0 | 23 | 43 | 138.5 MB | yes |
 | CC BY 3.0 | 3 | 7 | 1.6 MB | yes |
 | no copyright restrictions (Ecological Archives) | 6 | 22 | 35.8 MB | yes |
 | author permission (free to use with attribution) | 1 | 2 | 3.4 MB | yes |
@@ -27,7 +27,7 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | non-commercial (author statement) | 1 | 2 | 732 kB | non-commercial |
 | publisher file | 6 | 12 | 7.3 MB | no |
 | unpublished | 1 | 1 | 441 kB | no |
-| unknown; owner to check | 54 | 120 | 6.9 MB | unknown |
+| unknown; owner to check | 55 | 121 | 6.9 MB | unknown |
 | unknown; owner unable to confirm | 6 | 16 | 3.7 MB | unknown |
 | repository (CC BY-NC 4.0) | 4 | 4 | 99 B | yes |
 
@@ -66,7 +66,7 @@ Files redistributed under their upstream licence; the attribution text is the on
 | databases/AmphiBIO (`AmphiBIO`) | `AmphiBIO_v1.csv` (1.1 MB), `AmphiBIO_v1_literature_cited.pdf` (1.4 MB), `AmphiBIO_v1_references.csv` (744 kB), `Metadata.pdf` (152 kB) | figshare record (owner confirmed 2026-10-11) | yes | AmphiBIO v1 (Oliveira et al. 2017, Scientific Data 4:170123), figshare 10.6084/m9.figshare.4644424 |  | CC BY 4.0 per the figshare record (owner confirmed 2026-10-11) |
 | databases/Anunciacao_etal_2025 (`Anunciacao_etal_2025`) | `ATLANTIC_DUNG_BEETLE_TRAITS_revised.csv` (415 kB) | figshare record (owner confirmed 2026-10-11) | yes | Atlantic Dung Beetle Traits (Ribeiro Anunciacao et al. 2025), figshare 10.6084/m9.figshare.29951609 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.6084/m9.figshare.29951609) |
 | databases/Baach_2026 (`Baach_2026`) | `Abundance Richness - References.csv` (11 kB), `individual mass.csv` (158 kB) | Zenodo record (owner confirmed 2026-10-11) | yes | Baach & Dormann (2026) Scientific Data 13:1132 (CC BY 4.0); data: Zenodo 10.5281/zenodo.18630029 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.5281/zenodo.18630029) |
-| databases/Brose_etal_2018 (`Brose_etal_2018`) | `283_2_FoodWebDataBase_2018_12_10.csv` (96.4 MB), `283_2_FoodWebDatabase_metadata.doc` (65 kB), `iDiv Data Repository_283_v3_general_metadata.json` (1 kB), `iDiv Data Repository_283_v3_metadata.html` (48 kB), `iDiv Data Repository_283_v3_metadata.xml` (2 kB) | iDiv metadata XML (owner confirmed 2026-10-11) | yes | GATEWAy v1.0 (Brose 2018), iDiv Data Repository 283 v3, 10.25829/idiv.283-3-756 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.25829/idiv.283-3-756) |
+| databases/Brose_etal_2018 (`Brose_etal_2018`) | `283_2_FoodWebDataBase_2018_12_10.csv` (96.4 MB), `iDiv Data Repository_283_v3_general_metadata.json` (1 kB), `iDiv Data Repository_283_v3_metadata.html` (48 kB), `iDiv Data Repository_283_v3_metadata.xml` (2 kB) | iDiv metadata XML (owner confirmed 2026-10-11) | yes | GATEWAy v1.0 (Brose 2018), iDiv Data Repository 283 v3, 10.25829/idiv.283-3-756 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.25829/idiv.283-3-756) |
 | databases/Castro_2025 (`Castro_2025`) | `FieldMR_SciDataPub.csv` (703 kB) | Zenodo record (owner confirmed 2026-10-11) | yes | FmrBT (de Castro 2025, Scientific Data 12:1589), Zenodo 10.5281/zenodo.16894769 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.5281/zenodo.16894769) |
 | databases/Eklof_etal_2017 (`Eklof_etal_2017`) | `Eklof_etal_2017.csv` (18 kB) | PeerJ article (owner confirmed 2026-10-11) | yes | Eklof et al. (2017) PeerJ 5:e2906, supplemental data set |  | CC BY 4.0 per the PeerJ article (owner confirmed 2026-10-11; csv export of the supplemental xlsx) |
 | databases/GalanAcedo_etal_2026 (`GalanAcedo_etal_2026`) | `BodyMass.csv` (63 kB) | Zenodo record (owner confirmed 2026-10-11) | yes | Galan-Acedo et al. (2019) Ecological traits of the world's primates. Scientific Data 6:55; data: Zenodo 10.5281/zenodo.2600338 |  | CC BY 4.0 per the deposit/article (owner confirmed 2026-10-11; https://doi.org/10.5281/zenodo.2600338) |
@@ -211,7 +211,7 @@ Sources the pipeline downloads at run time and stores nowhere in the repository 
 
 ## Unknown
 
-57 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
+58 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
 
 | Source | Files | Stated in | Redistributable | Attribution | URL to check | Notes |
 |---|---|---|---|---|---|---|
@@ -222,6 +222,7 @@ Sources the pipeline downloads at run time and stores nowhere in the repository 
 | databases/Anunciacao_etal_2025 (`Anunciacao_etal_2025`) | `primary_references.csv` (1 kB), `references.csv` (254 B) | not on disk | unknown |  |  |  |
 | databases/Barnes_2008 (`Barnes_2008`) | `primary_references.csv` (1 kB), `references.csv` (283 B) | not on disk | unknown |  |  |  |
 | databases/Brocher_etal_2025 (`Brocher_etal_2025`) | `703_10_datastructure.txt` (10 kB), `JExIS_703_data_structure_401.csv` (2 kB), `JExIS_703_data_structure_401.html` (12 kB), `JExIS_703_data_structure_401.json` (19 kB), `JExIS_703_v10_data.csv` (182 kB), `JExIS_703_v10_general_metadata.json` (4 kB), `JExIS_703_v10_metadata.html` (133 kB), `JExIS_703_v10_metadata.xml` (9 kB), `S1_references.docx` (55 kB), `schema_JE_bexis8.xsd` (41 kB), `primary_references.csv` (2 kB), `references.csv` (202 B), `terms.txt` (2 kB) | not on disk | unknown | Brocher et al. (2025) Ecology 106:e70077; data: JEXIS dataset 703 v10, 10.25829/Q570-JR82 | https://doi.org/10.25829/Q570-JR82 | the local json/xml carry no access-policy field; the JEXIS page shows no licence and offers login; terms.txt is the BEXIS2 sample Terms and Conditions, not the dataset terms / BEXIS2 sample Terms and Conditions shipped with the download, not the dataset terms |
+| databases/Brose_etal_2018 (`Brose_etal_2018`) | `283_2_FoodWebDatabase_metadata.pdf` (65 kB) | not on disk | unknown |  |  |  |
 | databases/Brown_etal_2018 (`Brown_etal_2018`) | `primary_references.csv` (1 kB), `references.csv` (247 B) | not on disk | unknown |  |  |  |
 | databases/Cai_etal_2025 (`Cai_etal_2025`) | `primary_references.csv` (42 kB), `references.csv` (13 kB) | not on disk | unknown |  |  |  |
 | databases/Castro_2025 (`Castro_2025`) | `primary_references.csv` (56 kB), `references.csv` (12 kB) | not on disk | unknown |  |  |  |
