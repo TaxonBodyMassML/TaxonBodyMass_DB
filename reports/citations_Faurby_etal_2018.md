@@ -1,10 +1,12 @@
-# Citations of Faurby_etal_2018 -- 2026-10-19 07:52:49 (tbmcite 0.1.0)
+# Citations of Faurby_etal_2018 -- 2026-10-19 17:52:11 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --queue
 
-Verification mode: full (Crossref + OpenAlex); 1 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
+Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --queue (re-scoring pending rows from the cache): compilation DOI 10.1002/ecy.2443; 0 deposited references (0 with DOI)
+- status counts: certain 215, pending 1, approved 38, nodoi_approved 339, rejected 3
+- --queue: 1 open queue row(s) for Faurby_etal_2018 in pending_citations.csv (7988 rows in the file)
 
 ## References
 
@@ -564,7 +566,7 @@ Verification mode: full (Crossref + OpenAlex); 1 certain row(s) of this source r
 | h:e86c5889 | 5 | measurement | certain | container_volume_page | crossref;openalex | full | 10.1098/rsbl.2007.0113 | 0.000 | Bromham:2007aa | Bromham_2007 |
 | h:e9024a1c | 1 | measurement | nodoi_approved | owner_nodoi | crossref;consensus-mcp | crossref_only |  | 0.000 | Heckel:2003aa | Heckel_2003 |
 | h:e9bd039f | 2 | measurement | certain | container_volume_page | crossref;openalex | full | 10.1644/1545-1542(2001)082<1059:arotwt>2.0.co;2 | 0.000 | Jiang:2001aa | Jiang_2001 |
-| h:eb8f0ff4 | 2 | measurement | certain | crossref_only | crossref | crossref_only | 10.1111/j.1096-3642.1997.tb01277.x | 0.000 | Groves:1997aa | Groves_1997 |
+| h:eb8f0ff4 | 2 | measurement | pending | ambiguous | crossref;openalex | full | 10.1111/j.1096-3642.1997.tb01277.x | 0.000 | Groves:1997aa | Groves_1997 |
 | h:ebc9f0e7 | 1 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.000 | Fooden:1998aa | Fooden_1998 |
 | h:ec2ff10f | 3 | measurement | nodoi_approved | owner_nodoi | crossref | crossref_only |  | 0.691 | Iwasa:2002aa | Iwasa_2002 |
 | h:ec4f6824 | 1 | measurement | certain | container_volume_page | crossref;openalex;consensus-mcp | full | 10.1080/00222939308677610 | 0.000 | Thomas:1893aa | Thomas_1893 |

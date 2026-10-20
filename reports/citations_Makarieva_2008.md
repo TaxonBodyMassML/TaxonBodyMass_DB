@@ -1,10 +1,11 @@
-# Citations of Makarieva_2008 -- 2026-10-19 07:53:56 (tbmcite 0.1.0)
+# Citations of Makarieva_2008 -- 2026-10-19 17:50:51 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --verify --force
 
 Verification mode: full (Crossref + OpenAlex); 78 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --apply-queue: 0 decision(s) applied: 
+- --verify: compilation DOI 10.1073/pnas.0802148105; 49 deposited references (43 with DOI)
+- status counts: certain 143, approved 126, nodoi_approved 44, rejected 7, self 20 (certain / crossref_only: 78)
 
 ## References
 
