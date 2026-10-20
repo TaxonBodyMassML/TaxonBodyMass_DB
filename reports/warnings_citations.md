@@ -1,11 +1,11 @@
-# Citation and provenance warnings -- 2026-10-19 15:57:12
+# Citation and provenance warnings -- 2026-10-19 20:13:50
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
 - provenance rows: 234972 (39887 species); distinct primary CiteIDs: 12370; unresolved references (pending / not_found): 0; unverified references: 0
-- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 79
+- certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 78
 
 ## Problems
 
@@ -44,7 +44,7 @@ One row per source label: species and record links (species x source x reference
 | Ehnes_etal_2011 | compilation | 464 | 2724 | 91.9 | 184 | 158 | 0 | 0 | 0 | 0 | 26 | 0 | 0 | 0 |
 | Eklof_etal_2017 | primary | 6 | 121 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Ernest_2003 | compilation | 1304 | 1314 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Faurby_etal_2018 | compilation | 5164 | 5900 | 99.9 | 596 | 593 | 1 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
+| Faurby_etal_2018 | compilation | 5164 | 5900 | 99.9 | 596 | 593 | 0 | 0 | 0 | 0 | 3 | 0 | 0 | 0 |
 | Feldman_etal_2016 | derived | 9651 | 19554 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Fisher_2001 | compilation | 152 | 155 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | GalanAcedo_etal_2026 | compilation | 449 | 563 | 64.7 | 249 | 111 | 0 | 0 | 0 | 0 | 138 | 0 | 0 | 0 |
