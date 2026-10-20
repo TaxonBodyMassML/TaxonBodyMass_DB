@@ -1,12 +1,10 @@
-# Citations of Faurby_etal_2018 -- 2026-10-19 17:52:11 (tbmcite 0.1.0)
+# Citations of Faurby_etal_2018 -- 2026-10-19 18:38:08 (tbmcite 0.1.0)
 
-Steps: --queue
+Steps: --recommend
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --queue (re-scoring pending rows from the cache): compilation DOI 10.1002/ecy.2443; 0 deposited references (0 with DOI)
-- status counts: certain 215, pending 1, approved 38, nodoi_approved 339, rejected 3
-- --queue: 1 open queue row(s) for Faurby_etal_2018 in pending_citations.csv (7988 rows in the file)
+- --recommend: Faurby_etal_2018: 1 open row(s), 0 with a recommendation, 1 left to the owner (titleless_journal_key 1)
 
 ## References
 
