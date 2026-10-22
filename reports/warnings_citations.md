@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-10-19 20:13:50
+# Citation and provenance warnings -- 2026-10-22 06:57:33
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 

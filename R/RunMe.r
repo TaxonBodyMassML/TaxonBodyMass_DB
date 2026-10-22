@@ -1008,6 +1008,25 @@ rownames(dcite) <- NULL
 write.csv(dcite, file = file.path(wd_bib, 'TaxonBodyMass_CitationCiteIDs.csv'),
           row.names = FALSE)
 
+# Propagate bib keys into TaxonBodyMass.csv as CiteID column (issue #1).
+# Each semicolon-separated token in source_mass is a CiteID (source label or
+# conversion reference); dcite maps every such token to its Bibcite key.
+# Tokens with no mapping are kept verbatim (unmapped labels already warned above).
+label_to_bibcite <- stats::setNames(dcite$Bibcite, dcite$CiteID)
+label_to_bibcite <- label_to_bibcite[!is.na(label_to_bibcite) & nzchar(label_to_bibcite)]
+MapSourceToBibcite <- function(sm) {
+  tokens <- trimws(unlist(strsplit(sm, ';', fixed = TRUE)))
+  mapped <- label_to_bibcite[tokens]
+  tokens[!is.na(mapped)] <- mapped[!is.na(mapped)]
+  paste(tokens, collapse = '; ')
+}
+sm_col <- match('source_mass', names(enriched))
+enriched <- cbind(enriched[seq_len(sm_col)],
+                  CiteID = vapply(enriched$source_mass, MapSourceToBibcite, character(1)),
+                  enriched[seq(sm_col + 1L, ncol(enriched))])
+write.csv(enriched, file = file.path(wd_root, 'TaxonBodyMass.csv'), row.names = FALSE)
+message(sprintf('TaxonBodyMass.csv: CiteID column added (%d rows)', nrow(enriched)))
+
 # The provenance table (R/library/citations/provenance.r): one row per species
 # x source label x reference for the species of TaxonBodyMass.csv, with the
 # hop and provenance type of each reference, the primary CiteID / bib key /
