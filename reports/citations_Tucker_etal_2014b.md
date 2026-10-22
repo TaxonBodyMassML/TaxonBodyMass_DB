@@ -1,10 +1,10 @@
-# Citations of Tucker_etal_2014b -- 2026-10-19 07:54:39 (tbmcite 0.1.0)
+# Citations of Tucker_etal_2014b -- 2026-10-21 20:13:48 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 559 row(s) for Tucker_etal_2014b, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

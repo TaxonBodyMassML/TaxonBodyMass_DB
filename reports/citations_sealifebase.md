@@ -1,10 +1,10 @@
-# Citations of sealifebase -- 2026-10-19 15:54:44 (tbmcite 0.1.0)
+# Citations of sealifebase -- 2026-10-21 20:14:03 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 106 row(s) for sealifebase, 3 new, tab had 12984 rows; BM_citations snapshotted (444 rows)
+- --sheet (dry run): 106 row(s) for sealifebase, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

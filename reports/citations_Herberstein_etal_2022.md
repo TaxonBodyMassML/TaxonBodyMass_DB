@@ -1,10 +1,10 @@
-# Citations of Herberstein_etal_2022 -- 2026-10-19 07:53:13 (tbmcite 0.1.0)
+# Citations of Herberstein_etal_2022 -- 2026-10-21 20:16:09 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 193 row(s) for Herberstein_etal_2022, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

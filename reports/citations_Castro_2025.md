@@ -1,10 +1,10 @@
-# Citations of Castro_2025 -- 2026-10-19 07:52:35 (tbmcite 0.1.0)
+# Citations of Castro_2025 -- 2026-10-21 20:14:55 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 134 row(s) for Castro_2025, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

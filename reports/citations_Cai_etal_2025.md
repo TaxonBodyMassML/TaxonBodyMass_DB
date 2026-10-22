@@ -1,10 +1,10 @@
-# Citations of Cai_etal_2025 -- 2026-10-19 07:52:32 (tbmcite 0.1.0)
+# Citations of Cai_etal_2025 -- 2026-10-21 20:19:43 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet --no-dry-run
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet: 89 row(s) for Cai_etal_2025, 1 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 
@@ -27,7 +27,7 @@ Verification mode: full (Crossref + OpenAlex)
 | c015 | 12 | measurement | nodoi_approved | owner_nodoi | crossref;openalex | full |  | 0.806 | Fleagle:2013aa | Fleagle_2013 |
 | c016 | 10 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |
 | c017 | 4 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1111/geb.13124 | 1.000 | Meiri:2020aa | Meiri_2020 |
-| c018 | 3 | measurement | approved | owner_doi | crossref | full | 10.3897/natureconservation.9.8908 | 0.000 | Henle:2014aa | Henle_2014 |
+| c018 | 3 | measurement | approved | owner_doi | crossref | full | 10.3897/natureconservation.9.8908 | 0.000 | Grimm:2014aa | Henle_2014 |
 | c020 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.17520/biods.2021520 | 1.000 | Ding:2022aa | Ding_2022 |
 | c021 | 2 | measurement | certain | doi_resolves | crossref;openalex | full | 10.1371/journal.pone.0229689 | 1.000 | Rachmansah:2020aa | Rachmansah_2020 |
 | c022 | 1 | measurement | rejected | owner_drop | crossref;openalex | full |  |  |  |  |

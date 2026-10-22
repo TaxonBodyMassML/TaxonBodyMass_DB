@@ -1,10 +1,10 @@
-# Citations of fishbase -- 2026-10-19 15:54:27 (tbmcite 0.1.0)
+# Citations of fishbase -- 2026-10-21 20:13:10 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 674 row(s) for fishbase, 14 new, tab had 12970 rows; BM_citations snapshotted (444 rows)
+- --sheet (dry run): 674 row(s) for fishbase, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 
