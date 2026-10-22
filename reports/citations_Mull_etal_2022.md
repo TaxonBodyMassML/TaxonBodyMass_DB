@@ -1,10 +1,10 @@
-# Citations of Mull_etal_2022 -- 2026-10-19 07:54:07 (tbmcite 0.1.0)
+# Citations of Mull_etal_2022 -- 2026-10-21 20:15:47 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 23 row(s) for Mull_etal_2022, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

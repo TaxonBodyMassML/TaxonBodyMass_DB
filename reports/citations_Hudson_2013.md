@@ -1,10 +1,10 @@
-# Citations of Hudson_2013 -- 2026-10-19 07:53:30 (tbmcite 0.1.0)
+# Citations of Hudson_2013 -- 2026-10-21 20:15:17 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 122 row(s) for Hudson_2013, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

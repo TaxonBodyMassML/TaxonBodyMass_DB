@@ -1,10 +1,10 @@
-# Citations of Ghaderi_2026 -- 2026-10-19 07:52:56 (tbmcite 0.1.0)
+# Citations of Ghaderi_2026 -- 2026-10-21 20:14:17 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 6 row(s) for Ghaderi_2026, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

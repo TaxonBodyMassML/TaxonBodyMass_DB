@@ -1,10 +1,10 @@
-# Citations of Brose_2005 -- 2026-10-19 07:52:25 (tbmcite 0.1.0)
+# Citations of Brose_2005 -- 2026-10-21 20:16:46 (tbmcite 0.1.0)
 
-Steps: --apply-queue
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --apply-queue: 0 decision(s) applied: 
+- --sheet (dry run): 7 row(s) for Brose_2005, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 

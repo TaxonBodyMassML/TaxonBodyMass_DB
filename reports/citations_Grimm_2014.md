@@ -1,10 +1,10 @@
-# Citations of Grimm_2014 -- 2026-10-19 15:55:01 (tbmcite 0.1.0)
+# Citations of Grimm_2014 -- 2026-10-21 20:16:31 (tbmcite 0.1.0)
 
-Steps: --sheet --no-dry-run
+Steps: --sheet
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet: 20 row(s) for Grimm_2014, 9 new, tab had 12987 rows; BM_citations snapshotted (444 rows)
+- --sheet (dry run): 20 row(s) for Grimm_2014, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
 
 ## References
 
