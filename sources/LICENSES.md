@@ -1,6 +1,6 @@
 # Licences of the source files
 
-Generated from `sources/source_files.csv` by `R/library/licence_manifest.r` (`Rscript R/library/licence_manifest.r`); do not edit by hand. The manifest lists the 678 tracked files under `sources/databases/` and `sources/conversion_factors/` (279 raw upstream files or exports, 40 parsed transcriptions, the rest our own tables, scripts and documentation) with their size, SHA-256, role and licence class, plus 4 `live` rows for the sources that are downloaded at run time and store nothing. Every source folder states the same class in the `Licence:` line of its README (checked by `CheckSourceDocs()` at every pipeline run; a folder absent from the manifest or without the line stops the run). Issue #6; licence audit of 2026-10-02 and 2026-10-06. This file is a record of what the files, READMEs, bibliographies and deposit records say; it is not legal advice.
+Generated from `sources/source_files.csv` by `R/library/licence_manifest.r` (`Rscript R/library/licence_manifest.r`); do not edit by hand. The manifest lists the 685 tracked files under `sources/databases/` and `sources/conversion_factors/` (285 raw upstream files or exports, 40 parsed transcriptions, the rest our own tables, scripts and documentation) with their size, SHA-256, role and licence class, plus 4 `live` rows for the sources that are downloaded at run time and store nothing. Every source folder states the same class in the `Licence:` line of its README (checked by `CheckSourceDocs()` at every pipeline run; a folder absent from the manifest or without the line stops the run). Issue #6; licence audit of 2026-10-02 and 2026-10-06. This file is a record of what the files, READMEs, bibliographies and deposit records say; it is not legal advice.
 
 ## Scope of the repository licence
 
@@ -27,7 +27,7 @@ Individual body-mass values are facts; the database redistributes them as facts 
 | non-commercial (author statement) | 1 | 2 | 732 kB | non-commercial |
 | publisher file | 6 | 12 | 7.3 MB | no |
 | unpublished | 1 | 1 | 441 kB | no |
-| unknown; owner to check | 55 | 121 | 6.9 MB | unknown |
+| unknown; owner to check | 56 | 127 | 7.0 MB | unknown |
 | unknown; owner unable to confirm | 6 | 16 | 3.7 MB | unknown |
 | repository (CC BY-NC 4.0) | 4 | 4 | 99 B | yes |
 
@@ -211,7 +211,7 @@ Sources the pipeline downloads at run time and stores nowhere in the repository 
 
 ## Unknown
 
-58 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
+59 source folders whose licence terms are not yet confirmed. Each is marked `Licence: unknown; ...` in its README and listed in `reports/warnings_licences.md` at every run. `"unknown; owner to check"` means the owner has not yet reviewed the deposit; `"unknown; owner unable to confirm"` means the owner reviewed but found no explicit licence statement. The notes give the audit's reading of the deposit page, to confirm, never asserted here.
 
 | Source | Files | Stated in | Redistributable | Attribution | URL to check | Notes |
 |---|---|---|---|---|---|---|
@@ -271,6 +271,7 @@ Sources the pipeline downloads at run time and stores nowhere in the repository 
 | databases/Tucker_etal_2014b (`Tucker_etal_2014b`) | `build_references.cpython-314.pyc` (20 kB), `crossref_cache_tucker2.json` (802 kB), `primary_references.csv` (348 kB), `references.csv` (115 kB) | not on disk | unknown |  |  |  |
 | databases/Uyeda_etal_2017 (`Uyeda_etal_2017`) | `primary_references.csv` (1 kB), `references.csv` (205 B) | not on disk | unknown |  |  |  |
 | databases/Verberk_2020 (`Verberk_2020`) | `build_references.cpython-314.pyc` (14 kB), `crossref_cache.json` (613 kB), `key_map.csv` (88 kB), `primary_references.csv` (276 kB), `references.csv` (97 kB) | not on disk | unknown |  |  |  |
+| databases/VertNet (`VertNet`) | `primary_references_vertnet-amphibia-sept2016.csv` (5 kB), `primary_references_vertnet-aves-sept2016.csv` (22 kB), `primary_references_vertnet-fishes-sept2016.csv` (8 kB), `primary_references_vertnet-mammalia-sept2016.csv` (13 kB), `primary_references_vertnet-reptilia-sept2016.csv` (10 kB), `primary_references_vertnet-traits-sept2016.csv` (18 kB) | not on disk | unknown |  |  |  |
 | databases/Weisse_2024 (`Weisse_2024`) | `primary_references.csv` (1 kB), `references.csv` (202 B) | not on disk | unknown |  |  |  |
 | VertNet (`vertnet-amphibia-sept2016; vertnet-aves-sept2016; vertnet-fishes-sept2016; vertnet-mammalia-sept2016; vertnet-reptilia-sept2016; vertnet-traits-sept2016`) | `VertNet` | not on disk | unknown | VertNet September 2016 CyVerse snapshots (six dumps); per-record licences | http://vertnet.org/resources/norms.html | the snapshots are git-ignored (sources/VertNet/); every record carries its own licence field; nothing is redistributed here |
 

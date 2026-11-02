@@ -1,8 +1,8 @@
-# TaxonBodyMass_DB Licence Warnings -- 2026-10-22 06:55:54
+# TaxonBodyMass_DB Licence Warnings -- 2026-11-02 12:00:01
 
 Written by `CheckSourceDocs()` (`R/library/check_source_docs.r`) from the `Licence:` lines of the source READMEs and the manifest `source_files.csv` (issue #6). The full record is `sources/LICENSES.md`.
 
-Folders checked: 89; unknown licence: 5; non-commercial / share-alike: 8.
+Folders checked: 90; unknown licence: 5; non-commercial / share-alike: 8.
 
 ## Licence unknown
 
@@ -35,7 +35,9 @@ Tracked and redistributed under their own terms, not under the repository licenc
 
 The line must start with a class the manifest records for the folder.
 
-(none)
+| Folder | Licence line (first 160 characters) | Raw files | URL to check |
+|---|---|---|---|
+| VertNet | per-record licences (CC0, CC BY 4.0, CC BY-NC 4.0) carried by individual institution occurrence datasets hosted via GBIF; the VertNet dump ZIPs are git-ignored; | `` |  |
 
 ## Folders without a Licence: line
 

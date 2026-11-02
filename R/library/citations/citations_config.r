@@ -783,7 +783,21 @@ reflist_specs <- list(
   Grimm_2014 = list(format = 'csv', file = 'references.csv',
                     key_col = 'key', citation_col = 'citation', doi_col = 'doi',
                     sep = ';', compiler = 'Grimm',
-                    compilation_doi = '10.3897/natureconservation.9.8908')
+                    compilation_doi = '10.3897/natureconservation.9.8908'),
+  # VertNet Sept 2016 snapshots (Bloom:2016aa-af): primary_references CSVs built
+  # directly from GBIF Registry API (Phase 3, issue #1); --init is not used.
+  `vertnet-mammalia-sept2016` = list(format = 'dataset', folder = 'VertNet',
+                                     prim_file = 'primary_references_vertnet-mammalia-sept2016.csv'),
+  `vertnet-amphibia-sept2016` = list(format = 'dataset', folder = 'VertNet',
+                                     prim_file = 'primary_references_vertnet-amphibia-sept2016.csv'),
+  `vertnet-traits-sept2016`   = list(format = 'dataset', folder = 'VertNet',
+                                     prim_file = 'primary_references_vertnet-traits-sept2016.csv'),
+  `vertnet-reptilia-sept2016` = list(format = 'dataset', folder = 'VertNet',
+                                     prim_file = 'primary_references_vertnet-reptilia-sept2016.csv'),
+  `vertnet-fishes-sept2016`   = list(format = 'dataset', folder = 'VertNet',
+                                     prim_file = 'primary_references_vertnet-fishes-sept2016.csv'),
+  `vertnet-aves-sept2016`     = list(format = 'dataset', folder = 'VertNet',
+                                     prim_file = 'primary_references_vertnet-aves-sept2016.csv')
 )
 
 ReflistSpec <- function(source_label) {
