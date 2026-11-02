@@ -1,10 +1,10 @@
-# Citation and provenance warnings -- 2026-10-22 06:57:33
+# Citation and provenance warnings -- 2026-11-02 12:01:50
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
 ## Totals
 
-- provenance rows: 234972 (39887 species); distinct primary CiteIDs: 12370; unresolved references (pending / not_found): 0; unverified references: 0
+- provenance rows: 254590 (39887 species); distinct primary CiteIDs: 12460; unresolved references (pending / not_found): 0; unverified references: 0
 - certain references resting on Crossref alone (verification_mode crossref_only, owner decision 2026-10-06; re-checked in full by the next `--verify` without `--crossref-only`): 78
 
 ## Problems
@@ -109,9 +109,9 @@ One row per source label: species and record links (species x source x reference
 | Wisnionski_2026 | compilation | 149 | 150 | 100 | 53 | 53 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | fishbase | live | 2209 | 3153 | 62.1 | 891 | 675 | 0 | 0 | 0 | 0 | 216 | 0 | 1 | 0 |
 | sealifebase | live | 319 | 591 | 43.8 | 148 | 106 | 0 | 0 | 0 | 0 | 42 | 0 | 0 | 0 |
-| vertnet-amphibia-sept2016 | live | 139 | 980 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-aves-sept2016 | live | 5807 | 80315 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-fishes-sept2016 | live | 146 | 315 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-mammalia-sept2016 | live | 833 | 9302 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-reptilia-sept2016 | live | 310 | 2108 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| vertnet-traits-sept2016 | live | 5509 | 86681 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-amphibia-sept2016 | live | 139 | 980 | 100 | 9 | 9 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-aves-sept2016 | live | 5807 | 80315 | 100 | 42 | 42 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-fishes-sept2016 | live | 146 | 315 | 100 | 14 | 14 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-mammalia-sept2016 | live | 833 | 9302 | 100 | 25 | 25 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-reptilia-sept2016 | live | 310 | 2108 | 100 | 18 | 18 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+| vertnet-traits-sept2016 | live | 5509 | 86681 | 100 | 35 | 35 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
