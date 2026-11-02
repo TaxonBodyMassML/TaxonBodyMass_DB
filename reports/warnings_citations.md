@@ -1,4 +1,4 @@
-# Citation and provenance warnings -- 2026-11-02 12:01:50
+# Citation and provenance warnings -- 2026-11-02 13:34:45
 
 Checks of RunMe.r section 8 (issue #1): bib keys of both files, CiteID rows of both Sheet tabs, the accepted primary references and the per-source coverage of TaxonBodyMass_Provenance.csv.gz.
 
@@ -29,7 +29,7 @@ One row per source label: species and record links (species x source x reference
 | AnAge | database | 2748 | 2755 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | AndersonGillooly_2017 | compilation | 103 | 316 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Anunciacao_etal_2025 | compilation | 100 | 619 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| AyalaBerdon_2025 | compilation | 39 | 154 | 55.2 | 22 | 20 | 0 | 0 | 0 | 2 | 0 | 0 | 0 | 0 |
+| AyalaBerdon_2025 | compilation | 39 | 154 | 80.5 | 22 | 21 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
 | Baach_2026 | compilation | 550 | 1066 | 99.2 | 8 | 7 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 |
 | Barnes_2008 | compilation | 79 | 11547 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Brocher_etal_2025 | derived | 1346 | 2702 | 100 | 2 | 2 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
@@ -71,7 +71,7 @@ One row per source label: species and record links (species x source x reference
 | Kiorboe_2014 | compilation | 222 | 1524 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lagrue_etal_2015 | primary | 19 | 115 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lane_2019 | primary | 10 | 30 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
-| Leahy_2025 | primary | 56 | 1551 | 0 | 1 | 0 | 0 | 0 | 0 | 1 | 0 | 0 | 0 | 0 |
+| Leahy_2025 | primary | 56 | 1551 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lemoine_2026 | primary | 55 | 800 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 | Lislevand_etal_2007 | compilation | 3415 | 7399 | 67.8 | 84 | 81 | 0 | 0 | 0 | 2 | 1 | 0 | 0 | 0 |
 | Lukic_2022 | compilation | 42 | 196 | 100 | 1 | 1 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
