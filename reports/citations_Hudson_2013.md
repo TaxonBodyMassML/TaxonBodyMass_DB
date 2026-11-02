@@ -1,10 +1,11 @@
-# Citations of Hudson_2013 -- 2026-10-21 20:15:17 (tbmcite 0.1.0)
+# Citations of Hudson_2013 -- 2026-11-02 12:38:49 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --verify
 
 Verification mode: full (Crossref + OpenAlex)
 
-- --sheet (dry run): 122 row(s) for Hudson_2013, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
+- --verify: compilation DOI 10.1111/1365-2656.12086; 65 deposited references (61 with DOI)
+- status counts: certain 87, approved 25, nodoi_approved 10
 
 ## References
 

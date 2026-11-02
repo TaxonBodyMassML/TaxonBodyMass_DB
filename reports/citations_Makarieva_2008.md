@@ -1,10 +1,11 @@
-# Citations of Makarieva_2008 -- 2026-10-21 20:13:33 (tbmcite 0.1.0)
+# Citations of Makarieva_2008 -- 2026-11-02 12:40:04 (tbmcite 0.1.0)
 
-Steps: --sheet
+Steps: --verify
 
 Verification mode: full (Crossref + OpenAlex); 78 certain row(s) of this source rest on Crossref alone (verification_mode crossref_only)
 
-- --sheet (dry run): 308 row(s) for Makarieva_2008, 0 new, tab had 12996 rows; BM_citations snapshotted (444 rows)
+- --verify: compilation DOI 10.1073/pnas.0802148105; 49 deposited references (43 with DOI)
+- status counts: certain 143, approved 126, nodoi_approved 44, rejected 7, self 20 (certain / crossref_only: 78)
 
 ## References
 
@@ -49,7 +50,7 @@ Verification mode: full (Crossref + OpenAlex); 78 certain row(s) of this source 
 | S1a:Dworkin & Niederpruem 1964 | 0 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.87.2.316-322.1964 | 1.000 | Dworkin:1964aa | Dworkin_1964 |
 | S1a:Eisenberg et al. 1974 | 0 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/jb.120.1.147-153.1974 | 1.000 | Eisenberg:1974aa | Eisenberg_1974 |
 | S1a:Engelhard et al. 1957 | 0 | measurement | certain | crossref_only | crossref;consensus-mcp | crossref_only | 10.1128/jb.73.2.206-210.1957 | 1.000 | Engelhard:1957aa | Engelhard_1957 |
-| S1a:Ensign 1970 | 1 | measurement | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.1128/jb.103.3.569-577.1970 | 1.000 | Ensign:1970aa | Ensign_1970 |
+| S1a:Ensign 1970 | 1 | measurement | approved | owner_candidate | crossref;scite-mcp | crossref_only | 10.1128/jb.103.3.569-577.1970 | 1.000 | Ensign:1970aa | Ensign_1970 |
 | S1a:Faulkner & Garduño 2002 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1128/jb.184.24.7025-7041.2002 | 1.000 | Faulkner:2002aa | Faulkner_2002 |
 | S1a:Frederick et al. 1974 | 0 | measurement | certain | crossref_only | crossref | crossref_only | 10.1128/aac.6.6.712 | 1.000 | Frederick:1974aa | Frederick_1974 |
 | S1a:Frustaci et al. 1991 | 0 | measurement | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.1128/jb.173.3.1145-1150.1991 | 0.815 | Frustaci:1991aa | Frustaci_1991 |
@@ -306,7 +307,7 @@ Verification mode: full (Crossref + OpenAlex); 78 certain row(s) of this source 
 | S7:Biggins 1969 | 1 | measurement | certain | two_service_agreement | crossref;openalex;consensus-mcp | full | 10.1128/jb.99.2.570-575.1969 | 1.000 | Biggins:1969aa | Biggins_1969 |
 | S7:Broady & Kibblewhite 1991 | 5 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1017/s095410209100007x | 1.000 | Broady:1991aa | Broady_1991 |
 | S7:Carpenter & Roenneberg 1995 | 0 | measurement | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.3354/meps118267 | 0.881 | Carpenter:1995aa | Carpenter_1995 |
-| S7:Carpenter et al. 2004 | 6 | measurement | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.1016/j.dsr.2003.10.006 | 1.000 | Carpenter:2004aa | Carpenter_2004 |
+| S7:Carpenter et al. 2004 | 6 | measurement | approved | owner_candidate | crossref;scite-mcp | crossref_only | 10.1016/j.dsr.2003.10.006 | 1.000 | Carpenter:2004aa | Carpenter_2004 |
 | S7:Chen et al. 1989 | 1 | measurement | approved | owner_candidate | crossref;consensus-mcp | crossref_only | 10.1016/0168-9452(89)90166-0 | 0.922 | Chen:1989aa | Chen_1989 |
 | S7:Ciferri 1983 | 8 | measurement | approved | owner_candidate | crossref | full | 10.1128/mr.47.4.551-578.1983 | 1.000 | Ciferri:1983aa | Ciferri_1983 |
 | S7:Cox 1986 | 2 | measurement | certain | two_service_agreement | crossref;openalex | full | 10.1111/j.1469-8137.1986.tb02910.x | 1.000 | Cox:1986aa | Cox_1986 |
