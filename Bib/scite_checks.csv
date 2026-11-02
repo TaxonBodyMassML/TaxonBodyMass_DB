@@ -125,7 +125,7 @@ doi,is_retracted,notice_type,notice_doi,checked_at,checked_by
 10.1007/bf00379087,,unchecked,,2026-10-04,consensus-mcp
 10.1007/bf00798176,,unchecked,,2026-10-04,consensus-mcp
 10.1086/physzool.54.3.30159943,,unchecked,,2026-10-04,consensus-mcp
-10.1007/s10164-017-0530-z,,unchecked,,2026-10-04,consensus-mcp
+10.1007/s10164-017-0530-z,FALSE,none,10.1007/s10164-018-0574-8,2026-11-02T20:20:03Z,scite-mcp
 10.1007/bf00714589,,unchecked,,2026-10-04,consensus-mcp
 10.1111/ele.13464,,unchecked,,2026-10-04,consensus-mcp
 10.1101/721779,,unchecked,,2026-10-04,consensus-mcp
@@ -689,7 +689,7 @@ doi,is_retracted,notice_type,notice_doi,checked_at,checked_by
 10.1016/0300-9629(80)90254-6,,unchecked,,2026-10-06,consensus-mcp
 10.1016/0300-9629(82)90137-2,,unchecked,,2026-10-06,consensus-mcp
 10.1016/0300-9629(83)90711-9,,unchecked,,2026-10-06,consensus-mcp
-10.1016/j.dsr.2003.10.006,,unchecked,,2026-10-06,consensus-mcp
+10.1016/j.dsr.2003.10.006,FALSE,none,10.1016/j.dsr.2005.06.002,2026-11-02T20:20:03Z,scite-mcp
 10.1016/s0006-3495(69)86418-0,,unchecked,,2026-10-06,consensus-mcp
 10.1016/s0021-9258(18)56290-6,,unchecked,,2026-10-06,consensus-mcp
 10.1016/s0300-9629(75)80141-1,,unchecked,,2026-10-06,consensus-mcp
@@ -731,7 +731,7 @@ doi,is_retracted,notice_type,notice_doi,checked_at,checked_by
 10.1128/am.15.4.857-865.1967,,unchecked,,2026-10-06,consensus-mcp
 10.1128/am.4.4.171-175.1956,,unchecked,,2026-10-06,consensus-mcp
 10.1128/am.5.5.281-285.1957,,unchecked,,2026-10-06,consensus-mcp
-10.1128/jb.103.3.569-577.1970,,unchecked,,2026-10-06,consensus-mcp
+10.1128/jb.103.3.569-577.1970,FALSE,none,10.1128/jb.104.2.1033-1033.1970,2026-11-02T20:20:03Z,scite-mcp
 10.1128/jb.107.1.295-302.1971,,unchecked,,2026-10-06,consensus-mcp
 10.1128/jb.113.3.1280-1288.1973,,unchecked,,2026-10-06,consensus-mcp
 10.1128/jb.122.3.866-873.1975,,unchecked,,2026-10-06,consensus-mcp
@@ -938,7 +938,7 @@ doi,is_retracted,notice_type,notice_doi,checked_at,checked_by
 10.1206/0003-0082(2005)478[0001:ansoor]2.0.co;2,,unchecked,,2026-10-06,consensus-mcp
 10.1644/733,,none,,2026-10-06,none
 10.1644/06-mamm-a-210r1.1,,unchecked,,2026-10-06,consensus-mcp
-10.1007/s00114-016-1422-8,,unchecked,,2026-10-06,consensus-mcp
+10.1007/s00114-016-1422-8,FALSE,none,10.1007/s00114-016-1428-2,2026-11-02T20:20:03Z,scite-mcp
 10.1098/rsos.160018,,unchecked,,2026-10-06,consensus-mcp
 10.1016/j.biocon.2010.07.002,,unchecked,,2026-10-06,consensus-mcp
 10.1206/3852.1,,unchecked,,2026-10-06,consensus-mcp
@@ -1044,3 +1044,6 @@ doi,is_retracted,notice_type,notice_doi,checked_at,checked_by
 10.47605/tapro.v3i1.41,,,,2026-10-11,scite-mcp
 10.11646/zootaxa.2671.1.4,,,,2026-10-11,scite-mcp
 10.11646/zootaxa.2930.1.5,,,,2026-10-11,scite-mcp
+10.1084/jem.194.12.1883,FALSE,none,,2026-11-02T20:20:03Z,scite-mcp
+10.1016/s0031-4056(23)00035-5,FALSE,none,10.1016/s0031-4056(23)02186-8,2026-11-02T20:20:03Z,scite-mcp
+10.1111/1440-1703.12022,FALSE,has_correction,10.1111/1440-1703.70039,2026-11-02T20:20:03Z,scite-mcp
